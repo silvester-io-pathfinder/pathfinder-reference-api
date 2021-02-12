@@ -11,6 +11,19 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
         
+      - name: Read properties.proj
+        id: read-properties
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./Sources/Properties.proj
+        
+      - name: Determine semantic version from properties.
+        id: get-semantic-version
+        uses: actions-ecosystem/action-regex-match@v2
+        with:
+          text: ${{ steps.read-properties.outputs.content }}
+          regex: '<Version>(.*?)</Version>'  
+        
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
         
@@ -27,4 +40,6 @@ jobs:
           password: ${{ secrets.ARTIFACTORY_PASSWORD }}
           registry: silvester.jfrog.io
           repository: silvester-docker/pathfinder-official-api
-          tag_with_ref: true
+          tags: |
+            ${{ steps.get-semantic-version.outputs.group1 }}
+            latest
