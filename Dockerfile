@@ -14,4 +14,4 @@ EXPOSE 80
 WORKDIR /app
 COPY --from=build /build/publish ./
 
-CMD["dotnet", "Silvester.Pathfinder.Official.Api.dll"]
+CMD ["dotnet", "Silvester.Pathfinder.Official.Api.dll"]
