@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+    branches: master
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+        
+      - name: Build and push to Artifactory
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.ARTIFACTORY_USERNAME }}
+          password: ${{ secrets.ARTIFACTORY_PASSWORD }}
+          registry: silvester.jfrog.io
+          repository: silvester-docker/pathfinder-official-api
+          tag_with_ref: true
