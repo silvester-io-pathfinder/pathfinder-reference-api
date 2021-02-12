@@ -1,0 +1,2 @@
+﻿dotnet ef migrations add Initial --startup-project Silvester.Pathfinder.Official.Api --project Silvester.Pathfinder.Official.Database
+dotnet ef database update --startup-project Silvester.Pathfinder.Official.Api --project Silvester.Pathfinder.Official.Database
