@@ -26,7 +26,6 @@ jobs:
         
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
-        id:   
         
       - name: Login to GitHub Packages Docker Registry
         uses: docker/login-action@v1
