@@ -43,7 +43,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          repository: silvester-docker/pathfinder-official-api
           tags: |
             silvester-docker/pathfinder-official-api:${{ steps.get-semantic-version.outputs.group1 }}
             silvester-docker/pathfinder-official-api:latest
