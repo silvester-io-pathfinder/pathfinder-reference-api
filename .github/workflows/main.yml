@@ -44,5 +44,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            silvester-docker/pathfinder-official-api:${{ steps.get-semantic-version.outputs.group1 }}
-            silvester-docker/pathfinder-official-api:latest
+            silvester.jfrog.io/silvester-docker/pathfinder-official-api:${{ steps.get-semantic-version.outputs.group1 }}
+            silvester.jfrog.io/silvester-docker/pathfinder-official-api:latest
