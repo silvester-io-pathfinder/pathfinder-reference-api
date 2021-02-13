@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Silvester.Pathfinder.Official.Api.Graphql;
 using Silvester.Pathfinder.Official.Api.Graphql.Interceptors;
+using Silvester.Pathfinder.Official.Api.Probes.Liveness;
+using Silvester.Pathfinder.Official.Api.Probes.Readiness;
 using Silvester.Pathfinder.Official.Database;
 using System;
 using System.Collections;
@@ -85,6 +87,9 @@ namespace Silvester.Pathfinder.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseLivenessProbe();
+            app.UseReadinessProbe();
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>

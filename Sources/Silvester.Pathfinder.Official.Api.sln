@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Offici
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Official.Api", "Silvester.Pathfinder.Official.Api\Silvester.Pathfinder.Official.Api.csproj", "{D37CA9AC-1BEF-4354-A3D6-4708B8CC0248}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{E7526797-2CB9-47EE-A9CF-602F33375545}"
+	ProjectSection(SolutionItems) = preProject
+		Properties.proj = Properties.proj
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
