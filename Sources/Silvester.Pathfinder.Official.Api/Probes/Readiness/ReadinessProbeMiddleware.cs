@@ -24,11 +24,11 @@ namespace Silvester.Pathfinder.Official.Api.Probes.Readiness
                 IReadinessProbe probe = GetReadinessProbe(services);
                 if (await probe.IsReadyToAcceptTrafficAsync())
                 {
-                    httpContext.Response.StatusCode = (int)HttpStatusCode.ServiceUnavailable;
+                    httpContext.Response.StatusCode = (int)HttpStatusCode.OK;
                 }
                 else
                 {
-                    httpContext.Response.StatusCode = (int)HttpStatusCode.OK;
+                    httpContext.Response.StatusCode = (int)HttpStatusCode.ServiceUnavailable;
                 }
             }
             else
