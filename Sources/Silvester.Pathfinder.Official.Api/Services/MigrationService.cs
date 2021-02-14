@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Official.Api.Services
             try
             {
                 IConfigurationSection section = Configuration.GetSection("Databases").GetSection("Official");
-                Logger.LogInformation(string.Join(", ", new[] { section["Server"], section["UserId"], section["Password"], section["Database"], }));
+                Logger.LogInformation(string.Join(", ", new[] { section["Server"], section["UserId"], section["Password"], section["Database"], section["Port"]}));
                 
                 await DatabaseContext.Database.MigrateAsync();
             }
