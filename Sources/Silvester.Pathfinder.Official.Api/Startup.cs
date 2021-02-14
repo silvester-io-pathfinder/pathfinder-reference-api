@@ -13,6 +13,7 @@ using Silvester.Pathfinder.Official.Api.Graphql;
 using Silvester.Pathfinder.Official.Api.Graphql.Interceptors;
 using Silvester.Pathfinder.Official.Api.Probes.Liveness;
 using Silvester.Pathfinder.Official.Api.Probes.Readiness;
+using Silvester.Pathfinder.Official.Api.Services;
 using Silvester.Pathfinder.Official.Database;
 using System;
 using System.Collections;
@@ -47,6 +48,7 @@ namespace Silvester.Pathfinder.Api
             services
                 .AddSwaggerGen();
 
+            services.AddTransient<IHostedService, MigrationService>();
             services
                 .AddPooledDbContextFactory<OfficialDatabase>(options =>
                 {
@@ -54,7 +56,6 @@ namespace Silvester.Pathfinder.Api
                     string connectionString = $"Server={section["Server"]};Database={section["Database"]};User Id={section["UserId"]};Password={section["Password"]};";
 
                     options.UseNpgsql(connectionString);
-                    options.EnableSensitiveDataLogging(true);
                 });
 
             IRequestExecutorBuilder graphql = services
