@@ -62,6 +62,7 @@ namespace Silvester.Pathfinder.Api
                     options.UseNpgsql(connectionString);
                 });
 
+
             IRequestExecutorBuilder graphql = services
                 .AddGraphQLServer()
                 .AddQueryType<Query>();
