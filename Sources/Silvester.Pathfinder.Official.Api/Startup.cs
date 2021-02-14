@@ -51,16 +51,16 @@ namespace Silvester.Pathfinder.Api
             if(bool.Parse(Configuration.GetSection("Databases").GetSection("Official")["Enabled"]))
             {
                 services.AddTransient<IHostedService, MigrationService>();
-
-                services
-                    .AddPooledDbContextFactory<OfficialDatabase>(options =>
-                    {
-                        IConfigurationSection section = Configuration.GetSection("Databases").GetSection("Official");
-                        string connectionString = $"Server={section["Server"]};Database={section["Database"]};User Id={section["UserId"]};Password={section["Password"]};";
-
-                        options.UseNpgsql(connectionString);
-                    });
             }
+
+            services
+                .AddPooledDbContextFactory<OfficialDatabase>(options =>
+                {
+                    IConfigurationSection section = Configuration.GetSection("Databases").GetSection("Official");
+                    string connectionString = $"Server={section["Server"]};Database={section["Database"]};User Id={section["UserId"]};Password={section["Password"]};";
+
+                    options.UseNpgsql(connectionString);
+                });
 
             IRequestExecutorBuilder graphql = services
                 .AddGraphQLServer()
