@@ -11,15 +11,15 @@ namespace Silvester.Pathfinder.Official.Api.Services
 {
     public class MigrationService : IHostedService
     {
-        private OfficialDatabase DatabaseContext { get; }
-        
+        private IDbContextFactory<OfficialDatabase> Factory { get; }
+
         private ILogger<MigrationService> Logger { get; }
         
         private IConfiguration Configuration { get; }
 
         public MigrationService(IDbContextFactory<OfficialDatabase> factory, ILogger<MigrationService> logger, IConfiguration configuration)
         {
-            DatabaseContext = factory.CreateDbContext();
+            Factory = factory;
             Logger = logger;
             Configuration = configuration;
         }
@@ -30,8 +30,10 @@ namespace Silvester.Pathfinder.Official.Api.Services
             {
                 IConfigurationSection section = Configuration.GetSection("Databases").GetSection("Official");
                 Logger.LogInformation(string.Join(", ", new[] { section["Server"], section["UserId"], section["Password"], section["Database"], section["Port"]}));
-                
-                await DatabaseContext.Database.MigrateAsync();
+
+                OfficialDatabase context = Factory.CreateDbContext();
+
+                await context.Database.MigrateAsync();
             }
             catch(Exception exception)
             {

@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Silvester.Pathfinder.Official.Api.Graphql;
 using Silvester.Pathfinder.Official.Api.Graphql.Interceptors;
 using Silvester.Pathfinder.Official.Api.Probes.Liveness;
@@ -54,10 +55,14 @@ namespace Silvester.Pathfinder.Api
             }
 
             services
-                .AddPooledDbContextFactory<OfficialDatabase>(options =>
+                .AddPooledDbContextFactory<OfficialDatabase>((sp, options) =>
                 {
+                    ILogger<Startup> logger = sp.GetRequiredService<ILogger<Startup>>();
+
                     IConfigurationSection section = Configuration.GetSection("Databases").GetSection("Official");
                     string connectionString = $"Server={section["Server"]};Database={section["Database"]};User Id={section["UserId"]};Password={section["Password"]};Port={section["Port"]};Timeout={section["Timeout"]};CommandTimeout={section["CommandTimeout"]};";
+
+                    logger.LogInformation("Using connection string: " + connectionString);
 
                     options.UseNpgsql(connectionString);
                 });
