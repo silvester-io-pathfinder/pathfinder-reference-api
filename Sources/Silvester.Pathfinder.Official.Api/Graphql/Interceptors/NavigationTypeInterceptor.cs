@@ -38,6 +38,7 @@ namespace Silvester.Pathfinder.Official.Api.Graphql.Interceptors
                         ObjectFieldDescriptor fieldDescriptor = ObjectFieldDescriptor.From(context.DescriptorContext, fieldDefinition);
 
                         fieldDescriptor
+                            .UseSorting()
                             .UseFiltering();
 
                         int index = definition.Fields.IndexOf(fieldDefinition);

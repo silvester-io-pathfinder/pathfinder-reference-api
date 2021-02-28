@@ -25,7 +25,6 @@ namespace Silvester.Pathfinder.Official.Api.Graphql
         {
             foreach (PropertyInfo property in typeof(OfficialDatabase).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty))
             {
-
                 if (property.PropertyType.IsAssignableTo(typeof(DbSet<>)) || property.PropertyType.IsGenericType == false)
                 {
                     continue;

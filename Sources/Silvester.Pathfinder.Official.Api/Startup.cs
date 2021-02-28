@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Silvester.Pathfinder.Official.Api.Graphql;
+using Silvester.Pathfinder.Official.Api.Graphql.Extensions;
 using Silvester.Pathfinder.Official.Api.Graphql.Interceptors;
 using Silvester.Pathfinder.Official.Api.Probes.Liveness;
 using Silvester.Pathfinder.Official.Api.Probes.Readiness;
@@ -70,36 +71,19 @@ namespace Silvester.Pathfinder.Api
 
             IRequestExecutorBuilder graphql = services
                 .AddGraphQLServer()
-                .AddQueryType<Query>();
-
-            foreach(PropertyInfo property in typeof(OfficialDatabase).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty))
-            {
-                if (property.PropertyType.IsAssignableTo(typeof(DbSet<>)) || property.PropertyType.IsGenericType == false)
-                {
-                    continue;
-                }
-
-                Type genericType = property.PropertyType.GetGenericArguments().First();
-                if (genericType.IsAssignableTo(typeof(BaseEntity)) == false)
-                {
-                    continue;
-                }
-
-                graphql.AddType(genericType);
-            }
+                .AddQueryType<Query>()
+                .AddEntityTypes()
+                .AddFiltering()
+                .AddSorting()
+                .AddProjections()
+                .AddType<QueryType>()
+                .TryAddTypeInterceptor<NavigationTypeInterceptor>();
 
             services
                 .Configure<ForwardedHeadersOptions>(options =>
                 {
                     options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedHost | ForwardedHeaders.XForwardedProto;
                 });
-
-            graphql
-                .AddFiltering()
-                .AddSorting()
-                .AddProjections()
-                .AddType<QueryType>()
-                .TryAddTypeInterceptor<NavigationTypeInterceptor>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
