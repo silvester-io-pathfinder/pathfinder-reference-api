@@ -2,6 +2,9 @@ using HotChocolate;
 using HotChocolate.Data;
 using HotChocolate.Execution.Configuration;
 using HotChocolate.Types;
+using HotChocolate.Types.Descriptors;
+using HotChocolate.Types.Descriptors.Definitions;
+using HotChocolate.Types.Pagination;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -77,6 +80,7 @@ namespace Silvester.Pathfinder.Api
                 .AddSorting()
                 .AddProjections()
                 .AddType<QueryType>()
+                .SetPagingOptions(new PagingOptions { MaxPageSize = 100, DefaultPageSize = 25, IncludeTotalCount = true })
                 .TryAddTypeInterceptor<NavigationTypeInterceptor>();
 
             services
@@ -92,7 +96,7 @@ namespace Silvester.Pathfinder.Api
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
             }
 
             app.UseLivenessProbe();

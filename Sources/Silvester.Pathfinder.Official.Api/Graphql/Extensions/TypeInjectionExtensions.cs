@@ -1,4 +1,5 @@
-﻿using HotChocolate.Data.Sorting;
+﻿using HotChocolate.Data.Filters;
+using HotChocolate.Data.Sorting;
 using HotChocolate.Execution.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -43,6 +44,7 @@ namespace Silvester.Pathfinder.Official.Api.Graphql.Extensions
                 visitor.Add(type, true);
                 graphql.AddType(type);
                 graphql.AddType(typeof(SortInputType<>).MakeGenericType(type));
+                graphql.AddType(typeof(FilterInputType<>).MakeGenericType(type));
                 graphql.AddNestedTypesRecursive(type, visitor);
 
                 Console.WriteLine("Injected: " + type.Name);

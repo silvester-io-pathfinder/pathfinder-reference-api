@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Silvester.Pathfinder.Official.Database;
 using Silvester.Pathfinder.Official.Database.Models;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
@@ -36,16 +37,18 @@ namespace Silvester.Pathfinder.Official.Api.Graphql
                     continue;
                 }
 
+
                 //TODO: Try and get a hold of the injected naming convention here.
                 string fieldName = char.ToLowerInvariant(property.Name[0]) + property.Name.Substring(1);
 
                 IObjectFieldDescriptor field = descriptor
                     .Field(fieldName)
-                    .Type(typeof(IQueryable<>).MakeGenericType(genericType))
-                    .UseDbContext<OfficialDatabase>();
+                    .Type(genericType)
+                    .UseDbContext<OfficialDatabase>()
+                    .UseOffsetPaging(typeof(ObjectType<>).MakeGenericType(genericType));
 
                 InvokeUseProjectionMethod(genericType, field);
-
+                
                 field
                     .UseFiltering(genericType)
                     .UseSorting(genericType)
