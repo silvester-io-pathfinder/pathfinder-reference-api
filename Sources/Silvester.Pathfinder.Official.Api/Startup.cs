@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Api
             {
                 options.AddPolicy(name: LOCALHOST_CORS_POLICY_NAME, builder =>
                 {
-                    builder.WithOrigins("http://localhost", "https://localhost");
+                    builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost");
                     builder.AllowAnyHeader();
                     builder.AllowAnyMethod();
                     builder.AllowCredentials();
