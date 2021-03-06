@@ -32,6 +32,8 @@ namespace Silvester.Pathfinder.Api
 {
     public class Startup
     {
+        private const string LOCALHOST_CORS_POLICY_NAME = "CORS_POLICY_LOCALHOST";
+
         private IConfiguration Configuration { get; }
 
         public Startup(IConfiguration configuration)
@@ -41,6 +43,17 @@ namespace Silvester.Pathfinder.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: LOCALHOST_CORS_POLICY_NAME, builder =>
+                {
+                    builder.WithOrigins("http://localhost", "https://localhost");
+                    builder.AllowAnyHeader();
+                    builder.AllowAnyMethod();
+                    builder.AllowCredentials();
+                });
+            });
+
             services
                 .AddControllers()
                 .AddJsonOptions(options =>
@@ -109,11 +122,15 @@ namespace Silvester.Pathfinder.Api
             });
 
             app.UseRouting();
+            app.UseCors(LOCALHOST_CORS_POLICY_NAME);
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
                 endpoints.MapGraphQL();
             });
+
+            app.UseCors()
         }
     }
 }
