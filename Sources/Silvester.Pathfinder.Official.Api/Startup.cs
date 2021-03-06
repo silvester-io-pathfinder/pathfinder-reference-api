@@ -129,8 +129,6 @@ namespace Silvester.Pathfinder.Api
                 endpoints.MapControllers();
                 endpoints.MapGraphQL();
             });
-
-            app.UseCors()
         }
     }
 }
