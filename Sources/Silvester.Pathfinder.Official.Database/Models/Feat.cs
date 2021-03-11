@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<FeatDetailsBlock> Details { get; set; } = new List<FeatDetailsBlock>();
 
-        public ICollection<Prerequisite.FeatBinding> Prerequisites { get; set; } = new List<Prerequisite.FeatBinding>();
+        public ICollection<Prerequisite.FeatPrerequisiteBinding> Prerequisites { get; set; } = new List<Prerequisite.FeatPrerequisiteBinding>();
 
         public ICollection<FeatRequirement> Requirements { get; set; } = new List<FeatRequirement>();
 

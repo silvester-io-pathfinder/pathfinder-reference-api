@@ -18,20 +18,9 @@ namespace Silvester.Pathfinder.Official.Api.Graphql.Extensions
         public static IRequestExecutorBuilder AddEntityTypes(this IRequestExecutorBuilder graphql)
         {
             IDictionary<Type, bool> visitor = new Dictionary<Type, bool>();
-            foreach (PropertyInfo property in typeof(OfficialDatabase).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty))
+            foreach (Type baseEntityType in typeof(BaseEntity).Assembly.GetTypes().Where(e => e.IsAssignableTo(typeof(BaseEntity))))
             {
-                if (property.PropertyType.IsAssignableTo(typeof(DbSet<>)) || property.PropertyType.IsGenericType == false)
-                {
-                    continue;
-                }
-
-                Type genericType = property.PropertyType.GetGenericArguments().First();
-                if (genericType.IsAssignableTo(typeof(BaseEntity)) == false)
-                {
-                    continue;
-                }
-
-                Visit(graphql, visitor, genericType);
+                Visit(graphql, visitor, baseEntityType);
             }
 
             return graphql;

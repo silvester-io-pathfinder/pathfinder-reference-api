@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Official.Database;
 namespace Silvester.Pathfinder.Official.Database.Migrations
 {
     [DbContext(typeof(OfficialDatabase))]
-    [Migration("20210209172455_Initial")]
+    [Migration("20210311183232_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -14751,7 +14751,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasDiscriminator().HasValue("OrFeatEffect");
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FeatEffect+FeatBinding", b =>
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FeatEffect+FeatEffectBinding", b =>
                 {
                     b.HasBaseType("Silvester.Pathfinder.Official.Database.Models.FeatEffect+BaseFeatEffectBinding");
 
@@ -14760,7 +14760,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("FeatId");
 
-                    b.HasDiscriminator().HasValue("FeatBinding");
+                    b.HasDiscriminator().HasValue("FeatEffectBinding");
 
                     b.HasData(
                         new
@@ -16173,7 +16173,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Prerequisite+FeatBinding", b =>
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Prerequisite+FeatPrerequisiteBinding", b =>
                 {
                     b.HasBaseType("Silvester.Pathfinder.Official.Database.Models.Prerequisite+BasePrerequisiteBinding");
 
@@ -16182,7 +16182,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("FeatId");
 
-                    b.HasDiscriminator().HasValue("FeatBinding");
+                    b.HasDiscriminator().HasValue("FeatPrerequisiteBinding");
 
                     b.HasData(
                         new
@@ -17429,7 +17429,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Proficiency");
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FeatEffect+FeatBinding", b =>
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FeatEffect+FeatEffectBinding", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Feat", "Feat")
                         .WithMany()
@@ -17534,7 +17534,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("RequiredStat");
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Prerequisite+FeatBinding", b =>
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Prerequisite+FeatPrerequisiteBinding", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Feat", "Feat")
                         .WithMany("Prerequisites")

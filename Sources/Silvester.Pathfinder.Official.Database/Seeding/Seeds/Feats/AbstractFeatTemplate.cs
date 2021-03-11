@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
 
             foreach (Prerequisite prerequisite in GetPrerequisites(seeder))
             {
-                Prerequisite.FeatBinding binding = seeder.Builder.AddData(new Prerequisite.FeatBinding { Id = prerequisite.Id, FeatId = feat.Id});
+                Prerequisite.FeatPrerequisiteBinding binding = seeder.Builder.AddData(new Prerequisite.FeatPrerequisiteBinding { Id = prerequisite.Id, FeatId = feat.Id});
                 prerequisite.BindingId = binding.Id;
 
                 if(prerequisite is OrPrerequisite or)
@@ -55,7 +55,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
             
             foreach (FeatEffect featEffect in GetEffects(seeder))
             {
-                FeatEffect.FeatBinding binding = seeder.Builder.AddData(new FeatEffect.FeatBinding { Id = featEffect.Id, FeatId = feat.Id });
+                FeatEffect.FeatEffectBinding binding = seeder.Builder.AddData(new FeatEffect.FeatEffectBinding { Id = featEffect.Id, FeatId = feat.Id });
                 featEffect.BindingId = binding.Id;
 
                 if(featEffect is OrFeatEffect or)

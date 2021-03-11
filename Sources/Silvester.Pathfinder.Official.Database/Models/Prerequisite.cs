@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         }
 
-        public class FeatBinding : BasePrerequisiteBinding
+        public class FeatPrerequisiteBinding : BasePrerequisiteBinding
         {
             public Guid FeatId { get; set; }
             public Feat Feat { get; set; } = default!;
