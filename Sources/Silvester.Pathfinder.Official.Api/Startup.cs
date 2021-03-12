@@ -68,18 +68,17 @@ namespace Silvester.Pathfinder.Api
 
             if(bool.Parse(Configuration.GetSection("Databases").GetSection("Official")["Enabled"]))
             {
-                services.AddTransient<IHostedService, MigrationService>();
+                services.AddSingleton<IHostedService, MigrationService>();
             }
+
+            services
+                .AddSingleton<IReadinessProbe, DatabaseReadinessProbe>();
 
             services
                 .AddPooledDbContextFactory<OfficialDatabase>((sp, options) =>
                 {
-                    ILogger<Startup> logger = sp.GetRequiredService<ILogger<Startup>>();
-
                     IConfigurationSection section = Configuration.GetSection("Databases").GetSection("Official");
                     string connectionString = $"Server={section["Server"]};Database={section["Database"]};User Id={section["UserId"]};Password={section["Password"]};Port={section["Port"]};Timeout={section["Timeout"]};CommandTimeout={section["CommandTimeout"]};";
-
-                    logger.LogInformation("Using connection string: " + connectionString);
 
                     options.UseNpgsql(connectionString);
                 });

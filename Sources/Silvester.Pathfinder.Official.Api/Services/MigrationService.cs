@@ -2,59 +2,78 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Npgsql;
 using Silvester.Pathfinder.Official.Database;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Api.Services
 {
-    public class MigrationService : IHostedService
+    public enum DatabaseState
     {
+        Unready,
+        Ready
+    }
+
+    public class MigrationService : BackgroundService
+    { 
         private IDbContextFactory<OfficialDatabase> Factory { get; }
 
         private ILogger<MigrationService> Logger { get; }
-        
-        private IConfiguration Configuration { get; }
 
-        public MigrationService(IDbContextFactory<OfficialDatabase> factory, ILogger<MigrationService> logger, IConfiguration configuration)
+        private IHostApplicationLifetime ApplicationLifetime { get; }
+
+        public DatabaseState DatabaseState { get; set; }
+
+        public MigrationService(IDbContextFactory<OfficialDatabase> factory, ILogger<MigrationService> logger, IHostApplicationLifetime applicationLifetime)
         {
             Factory = factory;
             Logger = logger;
-            Configuration = configuration;
+            ApplicationLifetime = applicationLifetime;
+            DatabaseState = DatabaseState.Unready;
         }
 
-        public async Task StartAsync(CancellationToken cancellationToken)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-
-            try
+            while(stoppingToken.IsCancellationRequested == false)
             {
-                IConfigurationSection section = Configuration.GetSection("Databases").GetSection("Official");
-                Logger.LogInformation("Connecting using: " + string.Join(", ", new[] { section["Server"], section["UserId"], section["Password"], section["Database"], section["Port"]}));
+                try
+                {
+                    using(OfficialDatabase context = Factory.CreateDbContext())
+                    {
+                        IEnumerable<string> appliedMigrations = await context.Database.GetAppliedMigrationsAsync();
+                        if (appliedMigrations.Any() == false)
+                        {
+                            await context.Database.MigrateAsync();
+                            
+                            DatabaseState = DatabaseState.Ready;
+                            Logger.LogInformation("Database state set to ready.");
+                        }
+                    }
+                }
+                catch(NpgsqlException exception) when (exception.InnerException != null && exception.InnerException is SocketException)
+                {
+                    Logger.LogInformation("Socket exception on database connection. Interpreting as 'database not ready'.");
 
-                OfficialDatabase context = Factory.CreateDbContext();
-                Logger.LogInformation($"Database creation succeeded in {stopwatch.ElapsedMilliseconds} milliseconds.");
+                    //Retry next loop. 
+                    //Because we run on preemptible nodes, this can happen after it's been running successfully for hours, so we do have to potentially reset the state to Unready.
 
-                await context.Database.MigrateAsync();
-                Logger.LogInformation($"Migration succeeded in {stopwatch.ElapsedMilliseconds} milliseconds.");
-            }
-            catch (Exception exception)
-            {
-                Logger.LogError(exception, exception.Message);
-                Logger.LogInformation($"Migration failed after {stopwatch.ElapsedMilliseconds} milliseconds.");
-            }
-            finally
-            {
-                stopwatch.Stop();
-            }
-        }
+                    DatabaseState = DatabaseState.Unready;
+                    Logger.LogInformation("Database state set to unready.");
+                }
+                catch(Exception exception)
+                {
+                    Logger.LogCritical(exception, $"Something went wrong in the background service `{nameof(MigrationService)}`.");
+                    ApplicationLifetime.StopApplication();
+                }
 
-        public Task StopAsync(CancellationToken cancellationToken)
-        {
-            return Task.CompletedTask;
+                await Task.Delay(10000);
+            }
         }
     }
 }
