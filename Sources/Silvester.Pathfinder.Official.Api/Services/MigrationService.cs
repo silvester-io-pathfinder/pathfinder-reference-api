@@ -50,10 +50,10 @@ namespace Silvester.Pathfinder.Official.Api.Services
                         if (appliedMigrations.Any() == false)
                         {
                             await context.Database.MigrateAsync();
-                            
-                            DatabaseState = DatabaseState.Ready;
-                            Logger.LogInformation("Database state set to ready.");
                         }
+
+                        DatabaseState = DatabaseState.Ready;
+                        Logger.LogInformation("Database state set to ready.");
                     }
                 }
                 catch(NpgsqlException exception) when (exception.InnerException != null && exception.InnerException is SocketException)
