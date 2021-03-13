@@ -15,6 +15,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Silvester.Pathfinder.Official.Api.Graphql;
 using Silvester.Pathfinder.Official.Api.Graphql.Extensions;
+using Silvester.Pathfinder.Official.Api.Graphql.Handlers;
+using Silvester.Pathfinder.Official.Api.Graphql.Handlers.Queryable.String.CaseInsensitive;
 using Silvester.Pathfinder.Official.Api.Graphql.Interceptors;
 using Silvester.Pathfinder.Official.Api.Probes.Liveness;
 using Silvester.Pathfinder.Official.Api.Probes.Readiness;
@@ -89,7 +91,7 @@ namespace Silvester.Pathfinder.Api
                 .AddType(new UuidType('D'))
                 .AddQueryType<Query>()
                 .AddEntityTypes()
-                .AddFiltering()
+                .AddCaseInsensitiveFilterConvention()
                 .AddSorting()
                 .AddProjections()
                 .AddType<QueryType>()
