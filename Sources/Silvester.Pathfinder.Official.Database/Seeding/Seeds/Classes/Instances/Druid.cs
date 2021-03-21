@@ -1,0 +1,70 @@
+﻿using Silvester.Pathfinder.Official.Database.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
+{
+    public class Druid : AbstractClassTemplate
+    {
+        public static readonly Guid ID = Guid.Parse("73f7051c-8eff-4337-a87c-183deb7a998c");
+
+        protected override Class GetClass(ClassSeeder seeder)
+        {
+            return new Class
+            {
+                Id = ID,
+                Name = "Druid",
+                BaseHealth = 8,
+
+                Description = "The power of nature is impossible to resist. It can bring ruin to the stoutest fortress in minutes, reducing even the mightiest works to rubble, burning them to ash, burying them beneath an avalanche of snow, or drowning them beneath the waves. It can provide endless bounty and breathtaking splendor to those who respect it— and an agonizing death to those who take it too lightly. You are one of those who hear nature’s call. You stand in awe of the majesty of its power and give yourself over to its service.",
+                DuringCombatEncounters = "You call upon the forces of nature to defeat your enemies and protect your allies. You cast spells that draw upon primal magic to protect yourself and your friends, heal their wounds, or summon deadly animals to fight at your side. Depending on your bond to nature, you might call upon powerful elemental magic or change shape into a terrifying beast.",
+                DuringSocialEncounters = "You represent balance and a reasoned approach to problems, looking for solutions that not only are best for the natural world, but also allow the creatures within it to live in harmony and peace.You often propose compromises that allow both sides to gain what they truly need, even if they can’t have all that they desire.",
+                WhileExploring = "Your nature skills are invaluable. You track down enemies, navigate the wilderness, and use spells to detect magical auras around you.You might even ask wild animals to lend their extraordinary senses and scouting abilities to your group.",
+                InDowntime = "You might craft magic items or potions. Alternatively, your tie to nature might lead you to tend a wilderness area, befriending beasts and healing the wounds caused by  civilization.You might even teach sustainable farming and animal husbandry techniquesthat allow others to subsist off the land without harming the natural balance.",
+
+                ClassDcProficiencyId = seeder.GetProficiency("Untrained"),
+                PerceptionProficiencyId = seeder.GetProficiency("Trained"),
+
+                FortitudeProficiencyId = seeder.GetProficiency("Trained"),
+                ReflexProficiencyId = seeder.GetProficiency("Trained"),
+                WillProficiencyId = seeder.GetProficiency("Expert"),
+
+                SimpleWeaponProficiencyId = seeder.GetProficiency("Trained"),
+                MartialWeaponProficiencyId = seeder.GetProficiency("Untrained"),
+                AdvancedWeaponProficiencyId = seeder.GetProficiency("Untrained"),
+                UnarmedWeaponProficiencyId = seeder.GetProficiency("Trained"),
+
+                UnarmoredProficiencyId = seeder.GetProficiency("Trained"),
+                LightArmorProficiencyId = seeder.GetProficiency("Trained"),
+                MediumArmorProficiencyId = seeder.GetProficiency("Trained"),
+                HeavyArmorProficiencyId = seeder.GetProficiency("Untrained"),
+
+                SpellAttackProficiencyId = seeder.GetProficiency("Trained"),
+                SpellDcProficiencyId = seeder.GetProficiency("Trained"),
+                PredefinedMagicTraditionId = seeder.GetMagicTradition("Primal")
+            };
+        }
+
+        protected override IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder)
+        {
+            return seeder.FilterStats("Wisdom");
+        }
+
+        protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
+        {
+            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Have a deep and meaningful respect for the power of nature." };
+            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Be in constant awe of the natural world, eager to share it with others but wary of their influence upon it." };
+            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Treat plants and animals as allies, working with them to reach your goals." };
+        }
+
+        protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
+        {
+            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "View you as a representative of nature, and are sure you can control it." };
+            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Assume you’re a recluse who avoids society and cities and prefers to live in the wild." };
+            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Consider you a mystic, similar to a priest, but answering only to the forces of nature." };
+        }
+    }
+}

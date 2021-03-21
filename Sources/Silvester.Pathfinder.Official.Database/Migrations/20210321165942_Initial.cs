@@ -70,19 +70,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Classes",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    BaseHealth = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Classes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "DeityCategories",
                 columns: table => new
                 {
@@ -254,18 +241,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SavingThrowStats",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SavingThrowStats", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Sources",
                 columns: table => new
                 {
@@ -288,40 +263,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SpellTypes", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Stats",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Abbreviation = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Stats", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Skills",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    HasArmorCheckPenalty = table.Column<bool>(type: "boolean", nullable: false),
-                    HasRecallKnowledgeAction = table.Column<bool>(type: "boolean", nullable: false),
-                    StatModifierId = table.Column<Guid>(type: "uuid", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Skills", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Skills_Stats_StatModifierId",
-                        column: x => x.StatModifierId,
-                        principalTable: "Stats",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -513,12 +454,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Spells_SavingThrowStats_SavingThrowStatId",
-                        column: x => x.SavingThrowStatId,
-                        principalTable: "SavingThrowStats",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_Spells_SpellTypes_SpellTypeId",
                         column: x => x.SpellTypeId,
                         principalTable: "SpellTypes",
@@ -671,6 +606,136 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Classes",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    BaseHealth = table.Column<int>(type: "integer", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
+                    DuringCombatEncounters = table.Column<string>(type: "text", nullable: false),
+                    DuringSocialEncounters = table.Column<string>(type: "text", nullable: false),
+                    WhileExploring = table.Column<string>(type: "text", nullable: false),
+                    InDowntime = table.Column<string>(type: "text", nullable: false),
+                    PerceptionProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    FortitudeProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    WillProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    ReflexProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    SimpleWeaponProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    MartialWeaponProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    AdvancedWeaponProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    UnarmedWeaponProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    UnarmoredProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    LightArmorProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    MediumArmorProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    HeavyArmorProficiencyId = table.Column<Guid>(type: "uuid", nullable: false),
+                    ClassDcProficiencyId = table.Column<Guid>(type: "uuid", nullable: true),
+                    SpellDcProficiencyId = table.Column<Guid>(type: "uuid", nullable: true),
+                    SpellAttackProficiencyId = table.Column<Guid>(type: "uuid", nullable: true),
+                    PredefinedMagicTraditionId = table.Column<Guid>(type: "uuid", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Classes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Classes_MagicTraditions_PredefinedMagicTraditionId",
+                        column: x => x.PredefinedMagicTraditionId,
+                        principalTable: "MagicTraditions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_AdvancedWeaponProficiencyId",
+                        column: x => x.AdvancedWeaponProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_ClassDcProficiencyId",
+                        column: x => x.ClassDcProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_FortitudeProficiencyId",
+                        column: x => x.FortitudeProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_HeavyArmorProficiencyId",
+                        column: x => x.HeavyArmorProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_LightArmorProficiencyId",
+                        column: x => x.LightArmorProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_MartialWeaponProficiencyId",
+                        column: x => x.MartialWeaponProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_MediumArmorProficiencyId",
+                        column: x => x.MediumArmorProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_PerceptionProficiencyId",
+                        column: x => x.PerceptionProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_ReflexProficiencyId",
+                        column: x => x.ReflexProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_SimpleWeaponProficiencyId",
+                        column: x => x.SimpleWeaponProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_SpellAttackProficiencyId",
+                        column: x => x.SpellAttackProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_SpellDcProficiencyId",
+                        column: x => x.SpellDcProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_UnarmedWeaponProficiencyId",
+                        column: x => x.UnarmedWeaponProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_UnarmoredProficiencyId",
+                        column: x => x.UnarmoredProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Classes_Proficiencies_WillProficiencyId",
+                        column: x => x.WillProficiencyId,
+                        principalTable: "Proficiencies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MagicTraditionSpell",
                 columns: table => new
                 {
@@ -781,6 +846,125 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         name: "FK_SpellTrait_Traits_TraitsId",
                         column: x => x.TraitsId,
                         principalTable: "Traits",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ClassCharacteristic",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Text = table.Column<string>(type: "text", nullable: false),
+                    ClassId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ClassCharacteristic", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ClassCharacteristic_Classes_ClassId",
+                        column: x => x.ClassId,
+                        principalTable: "Classes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ClassFeature",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
+                    Level = table.Column<int>(type: "integer", nullable: false),
+                    ClassId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ClassFeature", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ClassFeature_Classes_ClassId",
+                        column: x => x.ClassId,
+                        principalTable: "Classes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ClassMannerism",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Text = table.Column<string>(type: "text", nullable: false),
+                    ClassId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ClassMannerism", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ClassMannerism_Classes_ClassId",
+                        column: x => x.ClassId,
+                        principalTable: "Classes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SavingThrowStats",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    ClassId = table.Column<Guid>(type: "uuid", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SavingThrowStats", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SavingThrowStats_Classes_ClassId",
+                        column: x => x.ClassId,
+                        principalTable: "Classes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Stats",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Abbreviation = table.Column<string>(type: "text", nullable: false),
+                    ClassId = table.Column<Guid>(type: "uuid", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Stats", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Stats_Classes_ClassId",
+                        column: x => x.ClassId,
+                        principalTable: "Classes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Skills",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    HasArmorCheckPenalty = table.Column<bool>(type: "boolean", nullable: false),
+                    HasRecallKnowledgeAction = table.Column<bool>(type: "boolean", nullable: false),
+                    StatModifierId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Skills", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Skills_Stats_StatModifierId",
+                        column: x => x.StatModifierId,
+                        principalTable: "Stats",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -1328,9 +1512,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     { new Guid("3a4f993d-9f0c-4615-b18a-39feb5b25a11"), "Neutral Evil" },
                     { new Guid("54f32060-3da3-4edf-b6dc-3839b8b7415d"), "Lawful Evil" },
                     { new Guid("094aecb0-6e14-433f-afa5-eb7d0f3ab64a"), "True Neutral" },
+                    { new Guid("e45c48a5-db00-4056-8ef3-7bd3662cfd9f"), "Neutral Good" },
                     { new Guid("2ad80bbd-a735-4431-9e3a-f784e053b756"), "Chaotic Neutral" },
                     { new Guid("add12009-9c8a-4287-b02b-7e5b9459bf44"), "Chaotic Good" },
-                    { new Guid("e45c48a5-db00-4056-8ef3-7bd3662cfd9f"), "Neutral Good" },
                     { new Guid("2006ffe6-8a03-4d40-99ac-935d814140ec"), "Lawful Good" },
                     { new Guid("617c34ca-c11b-4c02-9f97-5ce7269f98bc"), "Lawful Neutral" }
                 });
@@ -1340,10 +1524,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("3e53fcd2-e07b-4af5-b331-b4372acacf74"), "Unarmored" },
-                    { new Guid("f3d2b25b-e222-4af2-9287-a6036e6bb0b7"), "Heavy Armor" },
+                    { new Guid("28f6b905-0c5e-4cc0-8164-8e623fdfb367"), "Light Armor" },
                     { new Guid("199f2e7d-5249-45ee-af4d-b3f7cdd257b8"), "Medium Armor" },
-                    { new Guid("28f6b905-0c5e-4cc0-8164-8e623fdfb367"), "Light Armor" }
+                    { new Guid("f3d2b25b-e222-4af2-9287-a6036e6bb0b7"), "Heavy Armor" },
+                    { new Guid("3e53fcd2-e07b-4af5-b331-b4372acacf74"), "Unarmored" }
                 });
 
             migrationBuilder.InsertData(
@@ -1356,35 +1540,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "BulkWeight", "LightWeight", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("61e784de-dd93-4d53-acda-61dff663e2a3"), 4, 0, "4" },
+                    { new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"), 0, 0, "-" },
+                    { new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"), 0, 1, "L" },
+                    { new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"), 1, 0, "1" },
                     { new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"), 2, 0, "2" },
                     { new Guid("d09af7fc-06b3-41c5-89f7-7cbb3fb6f93b"), 3, 0, "3" },
-                    { new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"), 0, 1, "L" },
-                    { new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"), 0, 0, "-" },
-                    { new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"), 1, 0, "1" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Classes",
-                columns: new[] { "Id", "BaseHealth", "Name" },
-                values: new object[,]
-                {
-                    { new Guid("de966e73-2c40-40b4-956f-57e326f7ce8e"), 6, "Witch" },
-                    { new Guid("deb62736-af71-4600-bd4b-59e55961b74d"), 10, "Swashbuckler" },
-                    { new Guid("bc25beea-18e8-4417-8ada-a0f58bc79585"), 8, "Oracle" },
-                    { new Guid("2483fb2b-b7cc-4eab-9c4e-0118477e46ed"), 8, "Investigator" },
-                    { new Guid("0e53c45a-9ab8-4d4a-bb5b-51af257c56bc"), 6, "Wizard" },
-                    { new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"), 8, "Rogue" },
-                    { new Guid("ceb15fca-8288-456e-9769-98cce79bb104"), 10, "Ranger" },
-                    { new Guid("05d42777-0744-4a72-85ad-d27186c96deb"), 6, "Sorcerer" },
-                    { new Guid("9cace213-82ff-4751-a438-8afd87d433e4"), 10, "Fighter" },
-                    { new Guid("73f7051c-8eff-4337-a87c-183deb7a998c"), 8, "Druid" },
-                    { new Guid("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade"), 8, "Cleric" },
-                    { new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"), 10, "Champion" },
-                    { new Guid("9c08f598-a180-4a59-984a-a26a67607054"), 8, "Bard" },
-                    { new Guid("a171edb5-59c0-4468-b710-a6b9df2f4497"), 12, "Barbarian" },
-                    { new Guid("df6b0137-7082-470f-939f-5d241ef7d651"), 8, "Alchemist" },
-                    { new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"), 10, "Monk" }
+                    { new Guid("61e784de-dd93-4d53-acda-61dff663e2a3"), 4, 0, "4" }
                 });
 
             migrationBuilder.InsertData(
@@ -1401,7 +1562,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     { new Guid("45bda584-ba71-45c5-a91d-a3e9e07ee0a3"), "While fiends exploit mortals' baser natures and celestials encourage their better selves, monitors are concerned more with method than morality, from the rigid law of aeons and inevitables to the pragmatic neutrality of psychopomps, to the unpredictable chaos of proteans. Rather than immersing themselves in issues of philosophy, monitors take a more cosmic approach, battling each other over universal laws, the planes, and reality itself. Mortals worship monitor demigods just as they do empyreal lords and fiendish demigods. Some are drawn to the enigmatic Monad or primordial inevitables out of a desire for control or the reassurance of an orderly universe—often those in governance or academia. Artists and bon vivants who seek the creativity and freedom offered by the paragons of chaos revere protean lords. While many assume worshippers of psychopomp ushers to be morbid, that is rarely the case. Psychopomp worship is also found among those who bring life into the world, such as midwives and farmers, and those who eschew idealism for more practical philosophies.", "Monitor Demigods" },
                     { new Guid("cb6ebc9d-9a0e-4d7c-9a7d-d5da7ea043bd"), "The Queens of the Night have won their own measure of power in Hell.", "Queens of the Night" },
                     { new Guid("4d699f44-5321-4d9b-ba78-026c638260e9"), "At the end of the River Styx await the rulers of Abaddon: the Four Horsemen of the Apocalypse and their daemonic brood. Hatred for living things fuels all of daemonkind, who see existence as a great mistake. Though all of the Horsemen began their lives as mortals, they are completely devoted to the eradication of reality itself. Riding atop their dreaded steeds, they strive for true apocalypse. Only when all life has been snuffed out does their mission end, and they can then consign themselves to the waiting oblivion. Only the truly nihilistic worship the Horsemen. Those who seek vengeance on all the world or lust for power are drawn to the Horsemen's easy promises, thinking they will be spared from their masters' cataclysmic mission. They never are. To the Horsemen, their followers are entirely disposable, tools with a purpose until they too are devoured.", "Horsemen" },
-                    { new Guid("ab7e9ca8-6361-4309-83c6-6e3b1e5064cc"), "The 20 primary deities of the Inner Sea region are well known due to either widespread worship or their historical tendency to help or harm the people who live there.", "Gods of the Inner Sea" },
                     { new Guid("21e59657-5e46-4c14-87ac-a7349f030f19"), "The traditional deities of the elven pantheon are Calistria, Desna, Findeladlara (goddess of twilight and traditional art and architecture), Ketephys (god of hunting and the moon), and Yuelral (goddess of gems, craft, and magic). Elves have also adopted Alseta, a minor goddess of doors and transitions, as their patron of teleportation and aiudara (commonly known as elf gates). Most elves value magic, beauty, freedom, and friendship as part of a fulfilling life and tend to worship all of the deities together as exemplars of these values. Alongside fullblooded elves, many half-elves—whether raised by elves or seeking a closer connection to their elven heritage— worship the elven pantheon.", "Elven Gods" },
                     { new Guid("88b9adbd-19a6-43ae-8086-01688c9c84b2"), "Born amid the primal chaos of the multiverse's earliest days, the eight elemental lords are divine embodiments of the Inner Spheres' raw elemental forces. With two lords of air, two of earth, two of fire, and two of water, half their number represent the aspects of each element that mortals consider benevolent, while the others represent the malicious and destructive aspects of those same elements. When the Material Plane was born, the benevolent elemental lords seeded it with all the potential of their elements, creating planets, stars, oceans, and life. Yet as mortality evolved, it began harnessing the elements for malevolent purposes, causing anguished dissent between the benevolent elemental lords and emboldening their evil counterparts. Kelizandri, the fearsome lord of water, forged an alliance with the other evil elemental lords— Ayrzul, Hshurha, and Ymeri—to seal each good elemental lord in a prison penetrable only by combining the other three elemental powers once more; this feat has been achieved only once in the ages since. The four surviving lords have ruled their respective planes mercilessly for time uncounted, free to write the stories of their own creations, invent their own titles of nobility, and claim sole dominion over the elemental planes.", "Elemental Lords" },
                     { new Guid("e2cdeaf6-9ea1-464c-aa82-045d042da2b5"), "When the gods abandoned the First World—their initial rough draft of creation shaped in distant prehistory— native beings of incredible power stepped in to fill the vacuum. These beings, called the Eldest, hold deific power over the First World but have little of the other gods' aspirations. The Eldest don't concern themselves with expanding their followings or advocating particular ideologies. Many barely acknowledge their worshippers at all, concerning themselves only with their own mysterious motivations and doling out divine power merely because they have much to spare and doing so amuses them.", "Eldest" },
@@ -1410,6 +1570,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     { new Guid("dd52c19b-ce83-4e46-ae17-6560d42c8c1a"), "Each archdevil holds uncontested rule over one of the first eight realms of Hell.", "Archdevils" },
                     { new Guid("064c64d0-17be-4237-89b0-f04cf6e0fbfe"), " No official description was provided.", "Ancient Osirian Gods" },
                     { new Guid("d4f49f9c-0107-478c-9d21-c9c5214e76bb"), "These deities are not quite as widely worshiped as the 20 primary deities of the Inner Sea region, though they grant their worshippers just as much power and are just as important in their worshippers' lives.", "Other Gods" },
+                    { new Guid("ab7e9ca8-6361-4309-83c6-6e3b1e5064cc"), "The 20 primary deities of the Inner Sea region are well known due to either widespread worship or their historical tendency to help or harm the people who live there.", "Gods of the Inner Sea" },
                     { new Guid("50493d06-f3a6-4247-abb8-58202aa07447"), "Much as demon lords and archdevils are the preeminent incarnations of malice and sin, on the side of righteousness stand the empyreal lords—exceptional beings that represent the good in the myriad everyday actions of the multiverse. Drawn from the most powerful ranks of the celestial host, the multitudinous empyreal lords include agathions, angels, archons, and azatas alike. Most of these beings gained prominence as immortal champions of virtue, though some are instead mortal paragons who ascended, while others spontaneously formed from exceptional deeds of good that echoed throughout the planes. While all empyreal lords are dedicated to good, their philosophies, interests, and personalities vary, and they don't always agree with one another. Worship of the empyreal lords is not nearly as widespread as that of the major deities, but it is still surprisingly common. Most worship takes place at small shrines, statues, or artifacts (such as the sculpture known as the Mistress of Angels in Magnimar), or simply through the doing of deeds that reflect an empyreal lord's interest or beliefs. Centers of worship like churches or cathedrals are extremely uncommon. Most followers consider worship to be an individual matter, and it is rare to see a follower of any empyreal lord proselytizing. However, adherents sometimes congregate in small groups called mystery cults, and some of these groups maintain small temples. The city of Magnimar is home to several mystery cults, as the Varisian people have long held the empyreal lords in high esteem. It is not uncommon for mystery cultists to worship multiple empyreal lords in various combinations, or even all of them, though most have a favorite patron.", "Empyreal Lords" }
                 });
 
@@ -1427,16 +1588,16 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "DeitiesId", "Description", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("da053ff5-4d67-4b00-bce6-19eb9a5f94bd"), null, "You command the power of the stars.", "Star" },
-                    { new Guid("9cc28967-eeee-4300-8723-a1fb61075bbc"), null, "You fill minds with horror and dread.", "Nightmares" },
-                    { new Guid("526ee5b8-2123-45ea-9711-123252645561"), null, "You punish those who displease you with the sharp sting of pain.", "Pain" },
-                    { new Guid("e3128860-aa47-47ac-a090-8252e83cec96"), null, "You evoke passion, whether as love or lust.", "Passion" },
-                    { new Guid("8eb27986-a0a7-433c-90b0-fe992c088bfe"), null, "You strive to perfect your mind, body, and spirit.", "Perfection" },
-                    { new Guid("9eafb500-89d8-46ff-b315-856f11aca152"), null, "You ward yourself and others.", "Protection" },
-                    { new Guid("4387ee8e-ad61-4d20-817a-deeebc8bb1da"), null, "You ease mental burdens", "Repose" },
-                    { new Guid("ab621b51-801a-4e47-9581-c7fa211731b3"), null, "You hold power over animals and plants.", "Nature" },
-                    { new Guid("433f01f4-387d-4cb7-b327-2b63bf21c16c"), null, "You protect secrets and keep them hidden.", "Secrecy" },
                     { new Guid("d3a39e59-080b-4324-8921-124763c5b6af"), null, "You harness the power of the sun and other light sources, and punish undead.", "Sun" },
+                    { new Guid("433f01f4-387d-4cb7-b327-2b63bf21c16c"), null, "You protect secrets and keep them hidden.", "Secrecy" },
+                    { new Guid("4387ee8e-ad61-4d20-817a-deeebc8bb1da"), null, "You ease mental burdens", "Repose" },
+                    { new Guid("9eafb500-89d8-46ff-b315-856f11aca152"), null, "You ward yourself and others.", "Protection" },
+                    { new Guid("62a8bd3c-1541-43a7-b1ab-5e4c0b63be84"), null, "You command powers associated with the moon.", "Moon" },
+                    { new Guid("e3128860-aa47-47ac-a090-8252e83cec96"), null, "You evoke passion, whether as love or lust.", "Passion" },
+                    { new Guid("526ee5b8-2123-45ea-9711-123252645561"), null, "You punish those who displease you with the sharp sting of pain.", "Pain" },
+                    { new Guid("9cc28967-eeee-4300-8723-a1fb61075bbc"), null, "You fill minds with horror and dread.", "Nightmares" },
+                    { new Guid("da053ff5-4d67-4b00-bce6-19eb9a5f94bd"), null, "You command the power of the stars.", "Star" },
+                    { new Guid("8eb27986-a0a7-433c-90b0-fe992c088bfe"), null, "You strive to perfect your mind, body, and spirit.", "Perfection" },
                     { new Guid("4c7d189c-915f-4c09-b711-fa65a68a34d7"), null, "You exert control over masses of creatures.", "Swarm" },
                     { new Guid("3c78a88a-9b78-4dc7-8f97-231a5788714e"), null, "You wield power to rule and enslave others.", "Tyranny" },
                     { new Guid("3658060d-b09b-4e73-b949-0255b77bd07b"), null, "You reign over the flow of time.", "Time" },
@@ -1449,34 +1610,34 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     { new Guid("e41819f7-aa1b-416f-99c5-62bde7886a79"), null, "You control water and bodies of water.", "Water" },
                     { new Guid("794329a6-ca37-4ec4-b3bf-e979c639d628"), null, "You hold power over wealth, trade, and treasure.", "Wealth" },
                     { new Guid("1fc1a8d3-cf3d-4e81-a1d5-f737a2e747f6"), null, "Your inner fire increases your combat prowess.", "Zeal" },
-                    { new Guid("62a8bd3c-1541-43a7-b1ab-5e4c0b63be84"), null, "You command powers associated with the moon.", "Moon" },
                     { new Guid("175bf44e-7909-46eb-b135-a7e97297d8df"), null, "You wield power over the spiritual..", "Soul" },
                     { new Guid("3eb1a047-7ae9-481b-a9ab-675684b2a67e"), null, "Your physical power is bolstered by divine strength.", "Might" },
-                    { new Guid("49ba8be3-a11f-4d61-9b64-d8d1fd208ffe"), null, "You aid and protect your family and community more effectively.", "Family" },
+                    { new Guid("ab621b51-801a-4e47-9581-c7fa211731b3"), null, "You hold power over animals and plants.", "Nature" },
                     { new Guid("8ab289e9-baf0-407e-80af-280774a66c15"), null, "You control electricity, thunder, and storms.", "Lightning" },
+                    { new Guid("9eadaa7c-bb04-4017-a31c-77a5355e0d2c"), null, "You perform the unexpected and inexplicable.", "Magic" },
                     { new Guid("09797fbb-48b5-42fa-abf3-5468c06dbbce"), null, "You can control winds and the weather.", "Air" },
-                    { new Guid("78d1b6a0-7f67-4e3c-a25c-dbf4aa4cd838"), null, "You strive to keep up with and outpace the competition.", "Ambition" },
                     { new Guid("768a6f8b-75cb-4439-a95a-1a41ef36abd8"), null, "You have powers over urban environments and denizens.", "Cities" },
                     { new Guid("3020bd98-a4f8-4e92-9c92-58110679137f"), null, "You overcome your fear and project pride.", "Confidence" },
                     { new Guid("eceea1c6-3be5-49dd-bfb4-fca321132069"), null, "You control ice, snow, and freezing temperatures.", "Cold" },
                     { new Guid("0b2dd6ec-60ae-4cab-ade5-b5bccdc8a993"), null, "You have divine abilities related to crafting and art.", "Creation" },
                     { new Guid("9c5f23af-1bf7-46c8-bdba-8067b03f752f"), null, "You can restructure the physical and metaphysical.", "Change" },
+                    { new Guid("c750af99-1697-4c06-abb1-cb91bc2f8099"), null, "You operate in the darkness and take away the light.", "Darkness" },
                     { new Guid("21481675-8a0d-4e7c-a373-fad64f4c14e7"), null, "You have the power to end lives and destroy undead.", "Death" },
                     { new Guid("ab698922-2a43-4eb1-a400-2b96abcbb255"), null, "You have the power to spoil and deteriorate matter.", "Decay" },
                     { new Guid("d09b4a1e-21fd-4dda-9fe6-8679bd6e3eef"), null, "You are a conduit for divine devastation.", "Destruction" },
                     { new Guid("e214011e-7af3-4a53-9b4a-e0ed7ae4479a"), null, "You have the power to enter and manipulate dreams.", "Dreams" },
-                    { new Guid("c750af99-1697-4c06-abb1-cb91bc2f8099"), null, "You operate in the darkness and take away the light.", "Darkness" },
+                    { new Guid("78d1b6a0-7f67-4e3c-a25c-dbf4aa4cd838"), null, "You strive to keep up with and outpace the competition.", "Ambition" },
                     { new Guid("41f79fe2-6ac6-42ec-a69c-15046cd962f4"), null, "You control soil and stone.", "Earth" },
-                    { new Guid("ef17f4d2-95cd-4561-86fc-487a749244e4"), null, "You defend oaths and carry out your divine missions with great dedication.", "Duty" },
-                    { new Guid("a434a214-22db-4d03-bd31-d2af7f4c4f76"), null, "You receive divine insights.", "Knowledge" },
-                    { new Guid("7463725f-9db1-45ce-8bde-57857ab6a2f9"), null, "You feast mightily and can shake off the effects of overindulging.", "Indulgence" },
-                    { new Guid("3b1c75b0-524c-4a08-b04b-9e66b69b42fc"), null, "Your healing magic is particularly potent.", "Healing" },
-                    { new Guid("bc369149-d7c5-4319-b7d8-8137f9cfdcd8"), null, "You wield power over written words and symbols.", "Glyph" },
-                    { new Guid("87a70253-a298-467a-92e1-a3be315e34b0"), null, "You’re unnaturally lucky and keep out of harm’s way.", "Luck" },
-                    { new Guid("f1a372b7-a9bc-4571-b0ca-69780008e40a"), null, "You control flame.", "Fire" },
+                    { new Guid("49ba8be3-a11f-4d61-9b64-d8d1fd208ffe"), null, "You aid and protect your family and community more effectively.", "Family" },
                     { new Guid("696cb38a-1f8f-4506-b3e6-06c5b5e802af"), null, "You see and understand hidden inevitabilities.", "Fate" },
+                    { new Guid("f1a372b7-a9bc-4571-b0ca-69780008e40a"), null, "You control flame.", "Fire" },
                     { new Guid("216d5607-4d52-4581-a669-06d0f2773b65"), null, "You liberate yourself and others from shackles and constraints.", "Freedom" },
-                    { new Guid("9eadaa7c-bb04-4017-a31c-77a5355e0d2c"), null, "You perform the unexpected and inexplicable.", "Magic" }
+                    { new Guid("bc369149-d7c5-4319-b7d8-8137f9cfdcd8"), null, "You wield power over written words and symbols.", "Glyph" },
+                    { new Guid("3b1c75b0-524c-4a08-b04b-9e66b69b42fc"), null, "Your healing magic is particularly potent.", "Healing" },
+                    { new Guid("7463725f-9db1-45ce-8bde-57857ab6a2f9"), null, "You feast mightily and can shake off the effects of overindulging.", "Indulgence" },
+                    { new Guid("a434a214-22db-4d03-bd31-d2af7f4c4f76"), null, "You receive divine insights.", "Knowledge" },
+                    { new Guid("87a70253-a298-467a-92e1-a3be315e34b0"), null, "You’re unnaturally lucky and keep out of harm’s way.", "Luck" },
+                    { new Guid("ef17f4d2-95cd-4561-86fc-487a749244e4"), null, "You defend oaths and carry out your divine missions with great dedication.", "Duty" }
                 });
 
             migrationBuilder.InsertData(
@@ -1494,11 +1655,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Amount", "Name", "TimeSpan" },
                 values: new object[,]
                 {
-                    { new Guid("e1160af3-7dae-49e2-bacf-2d558be08fd6"), 1, "Once per day.", new TimeSpan(1, 0, 0, 0, 0) },
-                    { new Guid("effdc3c2-b381-4a3b-883c-12c9e9479878"), 1, "Once per hour.", new TimeSpan(0, 1, 0, 0, 0) },
-                    { new Guid("6d3d62d7-9630-4933-9db4-983720eb6042"), 2, "Twice per day.", new TimeSpan(1, 0, 0, 0, 0) },
+                    { new Guid("aa64b0f6-fb62-4af8-bba8-a174f19a1b73"), 1, "Once per ten minutes.", new TimeSpan(0, 0, 10, 0, 0) },
                     { new Guid("7d26de34-8d31-4b00-8ce8-3d2712c2ee3d"), 1, "Once per round.", new TimeSpan(0, 0, 0, 6, 0) },
-                    { new Guid("aa64b0f6-fb62-4af8-bba8-a174f19a1b73"), 1, "Once per ten minutes.", new TimeSpan(0, 0, 10, 0, 0) }
+                    { new Guid("6d3d62d7-9630-4933-9db4-983720eb6042"), 2, "Twice per day.", new TimeSpan(1, 0, 0, 0, 0) },
+                    { new Guid("e1160af3-7dae-49e2-bacf-2d558be08fd6"), 1, "Once per day.", new TimeSpan(1, 0, 0, 0, 0) },
+                    { new Guid("effdc3c2-b381-4a3b-883c-12c9e9479878"), 1, "Once per hour.", new TimeSpan(0, 1, 0, 0, 0) }
                 });
 
             migrationBuilder.InsertData(
@@ -1506,10 +1667,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("6ccbbd83-6da1-488b-9a1f-9a658fcdbd84"), "Rare" },
-                    { new Guid("8def5893-8645-4396-9692-cebfad1ea649"), "Unique" },
+                    { new Guid("dff7388d-fd99-4a7d-8d0b-3d9b18dcb807"), "Common" },
                     { new Guid("7eb0082a-50c0-44ef-a990-7aae6cb9cf27"), "Uncommon" },
-                    { new Guid("dff7388d-fd99-4a7d-8d0b-3d9b18dcb807"), "Common" }
+                    { new Guid("6ccbbd83-6da1-488b-9a1f-9a658fcdbd84"), "Rare" },
+                    { new Guid("8def5893-8645-4396-9692-cebfad1ea649"), "Unique" }
                 });
 
             migrationBuilder.InsertData(
@@ -1517,26 +1678,26 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Description", "Name", "PageNumber" },
                 values: new object[,]
                 {
-                    { new Guid("680c5c0f-dc56-4937-a179-b78c90a94164"), "Buildings, tents, and other larger items.", "Structures", 596 },
                     { new Guid("d907ade1-335e-48cd-9e9f-d407d11fd82b"), "Consist of a vast collection of clothing and other items you wear on your body.", "Worn Items", 603 },
                     { new Guid("7c5752cf-64d2-4d3e-a4ba-604969266172"), "The rules for basic magical weapons, weapons made from precious materials, and specific magic weapons.", "Weapons", 599 },
                     { new Guid("8f737ba1-e70a-4583-b55c-cc874f0f5660"), "Hold a spell of the crafter’s choice, and can be used to repeatedly cast that spell.", "Wands", 597 },
-                    { new Guid("559392e9-b613-46bd-87d8-e7f74a6c5d56"), "Consumables that are affixed to items and then activated for a one-time combat or physical benefit.", "Talismans", 565 },
-                    { new Guid("64a4ddc3-6da3-475e-a65c-dafc742dfea7"), "Provide flexible spellcasting options.", "Staves", 592 },
-                    { new Guid("eed4990e-e635-4683-a920-1937bf9736f2"), "More durable shields and ones with special magical powers.", "Shields", 586 },
                     { new Guid("44429e3b-ba5c-4733-826b-2a21758ebfca"), "Consumables that allow spellcasters to cast more spells.", "Scrolls", 564 },
-                    { new Guid("8a494ffa-3f11-4e4e-9373-b376942fc75d"), "Modify armor and weapons when etched onto them. This section includes fundamental runes for weapons (weapon potency and striking) and armor (armor potency and resilient).", "Runes", 580 },
+                    { new Guid("559392e9-b613-46bd-87d8-e7f74a6c5d56"), "Consumables that are affixed to items and then activated for a one-time combat or physical benefit.", "Talismans", 565 },
+                    { new Guid("680c5c0f-dc56-4937-a179-b78c90a94164"), "Buildings, tents, and other larger items.", "Structures", 596 },
+                    { new Guid("64a4ddc3-6da3-475e-a65c-dafc742dfea7"), "Provide flexible spellcasting options.", "Staves", 592 },
                     { new Guid("4557c11d-e0fb-40ee-8b3c-b6c3340fc151"), "Single-use traps typically made by rangers.", "Snares", 589 },
-                    { new Guid("cea8ef00-93a9-4657-a712-c4904a79a6c7"), "Consumables applied to the surface of an object or person.", "Oils", 561 },
-                    { new Guid("f18f1a5c-790a-42ce-b629-1db465289c25"), "Consumable magical liquids you drink to activate.", "Potions", 562 },
-                    { new Guid("a3d34e6e-4c6e-4351-8b66-3e9faf08ca8f"), "Includes different types of magical arrows, crossbow bolts, and other types of ammunition.", "Ammunition", 559 },
+                    { new Guid("eed4990e-e635-4683-a920-1937bf9736f2"), "More durable shields and ones with special magical powers.", "Shields", 586 },
+                    { new Guid("8a494ffa-3f11-4e4e-9373-b376942fc75d"), "Modify armor and weapons when etched onto them. This section includes fundamental runes for weapons (weapon potency and striking) and armor (armor potency and resilient).", "Runes", 580 },
                     { new Guid("76b819ea-1c05-4a54-9b9a-3528535e8b68"), "A subcategory of worn items of a high level that increase an ability score.", "Apex Items", 603 },
-                    { new Guid("5d8aa60d-58e9-425a-9c92-0cac9eb5202d"), "Includes the rules for basic magical armor as well as special suits of armor.", "Armor", 555 },
-                    { new Guid("40c1e3c7-9870-4c2d-a45f-0f70f0d8139f"), "Powered by the reactions of alchemical reagents. Almost all alchemical items are consumable items that are used up when you activate them. This category includes bombs, elixirs (including mutagens), poisons, and alchemical tools.", "Alchemical Items", 543 },
-                    { new Guid("14299b81-a8c5-4136-b230-ecbb7653a150"), "Used up when you activate them, and include ammunition, oils, potions, scrolls, and talismans, among others. Categories of items that are consumables but have specific rules, such as alchemical items, are presented separately.", "Consumables", 559 },
-                    { new Guid("4346421f-aa3b-46aa-8783-3bdb5095df43"), "A wide variety of items you use with your hands. This doesn’t include more narrow categories of held items, such as weapons.", "Held Items", 572 },
+                    { new Guid("cea8ef00-93a9-4657-a712-c4904a79a6c7"), "Consumables applied to the surface of an object or person.", "Oils", 561 },
                     { new Guid("9229852f-02cb-43d5-ae10-c1ab7bc66cfa"), "Can be used to make items with unique properties and other advantages.", "Materials", 577 },
-                    { new Guid("60022ff2-b13c-4a74-a82f-a084b5b9f44e"), "A category of worn items meant for animal companions and mounts.", "Companion Items", 604 }
+                    { new Guid("4346421f-aa3b-46aa-8783-3bdb5095df43"), "A wide variety of items you use with your hands. This doesn’t include more narrow categories of held items, such as weapons.", "Held Items", 572 },
+                    { new Guid("14299b81-a8c5-4136-b230-ecbb7653a150"), "Used up when you activate them, and include ammunition, oils, potions, scrolls, and talismans, among others. Categories of items that are consumables but have specific rules, such as alchemical items, are presented separately.", "Consumables", 559 },
+                    { new Guid("60022ff2-b13c-4a74-a82f-a084b5b9f44e"), "A category of worn items meant for animal companions and mounts.", "Companion Items", 604 },
+                    { new Guid("5d8aa60d-58e9-425a-9c92-0cac9eb5202d"), "Includes the rules for basic magical armor as well as special suits of armor.", "Armor", 555 },
+                    { new Guid("a3d34e6e-4c6e-4351-8b66-3e9faf08ca8f"), "Includes different types of magical arrows, crossbow bolts, and other types of ammunition.", "Ammunition", 559 },
+                    { new Guid("40c1e3c7-9870-4c2d-a45f-0f70f0d8139f"), "Powered by the reactions of alchemical reagents. Almost all alchemical items are consumable items that are used up when you activate them. This category includes bombs, elixirs (including mutagens), poisons, and alchemical tools.", "Alchemical Items", 543 },
+                    { new Guid("f18f1a5c-790a-42ce-b629-1db465289c25"), "Consumable magical liquids you drink to activate.", "Potions", 562 }
                 });
 
             migrationBuilder.InsertData(
@@ -1556,10 +1717,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Description", "Name" },
                 values: new object[,]
                 {
+                    { new Guid("044429ac-181c-46a8-b031-c163ae407509"), "Also called heart, faith, instinct, or vital essence, life represents the animating universal force within all things. Whereas matter provides the base materials for a body, life keeps it alive and well. This essence is responsible for unconscious responses and belief, such as ancestral instincts and divine guidance. The divine and primal traditions hold power over life. Life spells are usually necromancy.", "Life" },
                     { new Guid("b5228b30-f243-4ad2-94f4-499eb98919ac"), "Also called thought, mental, or astral essence, mind is what allows thinking creatures to have rational thoughts, ideas, plans, logic, and memories. Mind touches even nonsapient creatures like animals, though in a more limited capacity. Arcane and occult casters usually excel at mind spells. Spells that use mind essence are usually found in the divination, enchantment, and illusion schools.", "Mind" },
-                    { new Guid("c02c29d8-351b-4690-bfd6-85447ee129e1"), "Also called body, material essence, or physical essence, matter is the fundamental building block that makes up all physical things in the universe. The arcane and primal traditions are especially attuned toward manipulating and shaping matter. Spells that are used to create or alter matter most often come from the conjuration, evocation, or transmutation schools.", "Matter" },
                     { new Guid("3a378975-c527-4240-a39c-4b854bc00573"), "Also called soul, ethereal essence, or spiritual essence, spirit is an otherworldly building block that makes up a being’s immaterial and immortal self. The spirit travels through the Ethereal Plane and into the Great Beyond after the death of the physical body. The spirit is most easily affected by divine and occult spells. Spirit spells are usually of the divination or necromancy schools.", "Spirit" },
-                    { new Guid("044429ac-181c-46a8-b031-c163ae407509"), "Also called heart, faith, instinct, or vital essence, life represents the animating universal force within all things. Whereas matter provides the base materials for a body, life keeps it alive and well. This essence is responsible for unconscious responses and belief, such as ancestral instincts and divine guidance. The divine and primal traditions hold power over life. Life spells are usually necromancy.", "Life" }
+                    { new Guid("c02c29d8-351b-4690-bfd6-85447ee129e1"), "Also called body, material essence, or physical essence, matter is the fundamental building block that makes up all physical things in the universe. The arcane and primal traditions are especially attuned toward manipulating and shaping matter. Spells that are used to create or alter matter most often come from the conjuration, evocation, or transmutation schools.", "Matter" }
                 });
 
             migrationBuilder.InsertData(
@@ -1567,14 +1728,14 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Abbreviation", "Description", "Name" },
                 values: new object[,]
                 {
+                    { new Guid("76c4e166-abdb-471f-8fde-4c08a765ce2b"), "ABJ", "Abjurations protect and ward. They create barriers that keep out attacks effects, or even certain types of creatures. They also create effects that harm trespassers or banish interlopers.", "Abjuration" },
+                    { new Guid("1c401dd4-21d6-477d-9ca1-1a6a9d1a8a0d"), "CON", "Conjuration spells transport creatures via teleportation, create an object, bring a creature or object from somewhere else (typically from plane) to follow your commands Conjuration spells often have the teleportation trait, and creatures summoned by conjuration spells have the summoned trait.", "Conjuration" },
+                    { new Guid("cbb0592d-be14-4588-a0af-1f16aad3a4a6"), "DIV", "Divinations allow you to learn the secrets of the present, past, and future.They bestow good fortune, grant you the ability to perceive remote locations, and reveal secret knowledge. Divinations often have the detection trait if they find something, the prediction trait if they grant you insight about what might happen in the future, the revelation trait if they show things as they truly are, or the scrying trait if they let you perceive another location.", "Divination" },
+                    { new Guid("652580a1-b993-4326-9baa-460b5f6c9ba0"), "ENC", "Enchantments affect the minds and emotions of other creatures—sometimes to influence and control them, and other times to bolster them to greater heights of courage. Enchantment spells almost always have the mental trait, and many have the emotion trait or the fear trait.", "Enchantment" },
+                    { new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"), "EVO", "Evocations capture magical energy and then shape it to harm your foes or protect your allies. Evocation spells often have a trait that comes from the type of damage they deal, such as acid, cold, fire, force, or sonic.", "Evocation" },
                     { new Guid("dd5fe60b-e821-4f80-86cb-ed5a9791d1e7"), "ILL", "Illusions create the semblance of something real, the eyes, ears, and other senses.Depending on how the illusion is perceived, it might have the auditory or traits, and some also have the mental trait.", "Illusion" },
                     { new Guid("fe316215-5436-422b-bd3f-c499d05b5b99"), "NEC", "Necromancy spells harness the power of life and death. They can sap life essence or sustain creatures with life-saving healing. Necromancy spells often have the curse, death, healing, negative, or positive traits.", "Necromancy" },
-                    { new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"), "EVO", "Evocations capture magical energy and then shape it to harm your foes or protect your allies. Evocation spells often have a trait that comes from the type of damage they deal, such as acid, cold, fire, force, or sonic.", "Evocation" },
-                    { new Guid("ab0fac81-a9ed-410e-9886-99923111080a"), "TRA", "Transmutation spells make alterations to or transform the physical form of a creature or object.The morph and polymorph traits appear primarily in transmutation spells.", "Transmutation" },
-                    { new Guid("cbb0592d-be14-4588-a0af-1f16aad3a4a6"), "DIV", "Divinations allow you to learn the secrets of the present, past, and future.They bestow good fortune, grant you the ability to perceive remote locations, and reveal secret knowledge. Divinations often have the detection trait if they find something, the prediction trait if they grant you insight about what might happen in the future, the revelation trait if they show things as they truly are, or the scrying trait if they let you perceive another location.", "Divination" },
-                    { new Guid("1c401dd4-21d6-477d-9ca1-1a6a9d1a8a0d"), "CON", "Conjuration spells transport creatures via teleportation, create an object, bring a creature or object from somewhere else (typically from plane) to follow your commands Conjuration spells often have the teleportation trait, and creatures summoned by conjuration spells have the summoned trait.", "Conjuration" },
-                    { new Guid("76c4e166-abdb-471f-8fde-4c08a765ce2b"), "ABJ", "Abjurations protect and ward. They create barriers that keep out attacks effects, or even certain types of creatures. They also create effects that harm trespassers or banish interlopers.", "Abjuration" },
-                    { new Guid("652580a1-b993-4326-9baa-460b5f6c9ba0"), "ENC", "Enchantments affect the minds and emotions of other creatures—sometimes to influence and control them, and other times to bolster them to greater heights of courage. Enchantment spells almost always have the mental trait, and many have the emotion trait or the fear trait.", "Enchantment" }
+                    { new Guid("ab0fac81-a9ed-410e-9886-99923111080a"), "TRA", "Transmutation spells make alterations to or transform the physical form of a creature or object.The morph and polymorph traits appear primarily in transmutation spells.", "Transmutation" }
                 });
 
             migrationBuilder.InsertData(
@@ -1582,10 +1743,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Description", "Name", "SpellsId" },
                 values: new object[,]
                 {
+                    { new Guid("fffa34af-0ad5-4e1e-9de9-92becba8c30b"), "An instinctual connection to and faith in the world, the cycle of day and night, the turning of the seasons, and the natural selection of predator and prey drive the primal tradition. Druids are the most iconic primal spellcasters, calling upon the magic of nature through deep faith and a connection to the plants and animals around them, and primal sorcerers call upon their fey or beast blood to harness the same natural energies.", "Primal", null },
                     { new Guid("10dddda5-a943-4ecb-ba33-57ceba60245e"), "Arcane spellcasters use logic and rationality to categorize the magic inherent in the world around them. Because of its far-reaching approach, the arcane tradition has the broadest spell list, though it’s generally poor at affecting the spirit or the soul. Wizards are the most iconic arcane spellcasters, poring over tomes and grimoires, though arcane sorcerers study the secrets of their blood to unlock the power within themselves.", "Arcane", null },
                     { new Guid("9dfb8bc7-ade4-4ce4-8aa5-1a17ab541698"), "The power of the divine is steeped in faith, the unseen, and belief in a power source from beyond the Material Plane. Clerics are the most iconic divine spellcasters, beseeching the gods to grant them their magic. Divine sorcerers can use the blood of their celestial or fiendish ancestors as a divine conduit, and champions call upon their gods to grant them martial prowess through divine guidance.", "Divine", null },
-                    { new Guid("8e4b2e84-303a-42eb-a4df-348d1c4fbbf8"), "The practitioners of occult traditions seek to understand the unexplainable, categorize the bizarre, and otherwise access the ephemeral in a systematic way. Bards are the most iconic occult spellcasters, collecting strange esoterica and using their performances to influence the mind or elevate the soul, and occult sorcerers strive to understand the mysterious power in their blood.", "Occult", null },
-                    { new Guid("fffa34af-0ad5-4e1e-9de9-92becba8c30b"), "An instinctual connection to and faith in the world, the cycle of day and night, the turning of the seasons, and the natural selection of predator and prey drive the primal tradition. Druids are the most iconic primal spellcasters, calling upon the magic of nature through deep faith and a connection to the plants and animals around them, and primal sorcerers call upon their fey or beast blood to harness the same natural energies.", "Primal", null }
+                    { new Guid("8e4b2e84-303a-42eb-a4df-348d1c4fbbf8"), "The practitioners of occult traditions seek to understand the unexplainable, categorize the bizarre, and otherwise access the ephemeral in a systematic way. Bards are the most iconic occult spellcasters, collecting strange esoterica and using their performances to influence the mind or elevate the soul, and occult sorcerers strive to understand the mysterious power in their blood.", "Occult", null }
                 });
 
             migrationBuilder.InsertData(
@@ -1604,7 +1765,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Description", "Name", "PlanesId" },
                 values: new object[,]
                 {
-                    { new Guid("8112fec1-79be-4738-9dc1-d98222fc1a6f"), "Objects remain where they are (and what they are) unless affected by physical force or magic. Creatures can change the immediate environment as a result of tangible effort, such as by digging a hole.", "Metamorphic", null },
+                    { new Guid("44acf71b-a1e2-4cb4-9596-dace6c47d0f1"), "Some planes enhance certain magic and impede opposing effects. A plane that enhances a particular type of magic grants anyone Casting a Spell with that trait a +1 circumstance bonus to their spell DC or spell attack roll with that spell. Impeded magic means a character who Casts a Spell or Activates an Item with the specified trait must succeed at a DC 6 flat check or lose the spell or activation.", "Enhanced and Impeded Magic", null },
                     { new Guid("7b459163-b6bf-4471-976f-3489eab76349"), "Planes with this trait loop back on themselves when a creature reaches the plane’s edge.", "Unbounded", null },
                     { new Guid("97dd8e80-f871-4a0b-943c-c6fc6b532d81"), "Planes with this trait are umbral with murky light. On a shadow plane, the radius of all light from light sources and the areas of light spells are halved. Darkness and shadow magic are enhanced, and light magic is impeded.", "Shadow", null },
                     { new Guid("348aeff9-7683-4763-b61d-79cba5b4547d"), "These planes are awash with life energy. Colors are brighter, fires are hotter, noises are louder, and sensations are more intense. At the end of each round, an undead creature takes at least minor positive environmental damage. In the strongest areas of a positive plane, they could take moderate or even major positive damage at the end of each round. While this might seem safe for living creatures, positive planes present a different danger. Living creatures regain an amount of HP each round equal to the environmental damage undead take in the same area. If this would bring the living creature above their maximum HP, any excess becomes temporary HP. Unlike normal, these temporary HP combine with each other, and they last until the creature leaves the plane. If a creature’s temporary HP from a positive plane ever exceeds its maximum HP, it explodes in a burst of overloaded positive energy, spreading across the area to birth new souls. Positive magic is enhanced, and negative magic is impeded.", "Positive", null },
@@ -1612,22 +1773,22 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     { new Guid("83998080-dd80-4522-b1ef-75c6918c35ff"), "These planes are mostly liquid. Visitors who can’t breathe water or reach an air pocket likely drown. Water magic is enhanced, and fire magic is impeded. Creatures with a weakness to water take damage equal to double their weakness at the end of each round.", "Water", null },
                     { new Guid("a415e74d-e174-4573-b311-c02ea2fc2875"), "Planes with this trait are composed of flames that continually burn with no fuel source. Fire planes are extremely hostile to non-fire creatures. Unprotected wood, paper,cloth, and other flammable materials catch fire almost immediately, and creatures wearing unprotected flammable clothing catch fire, typically taking 1d6 persistent fire damage.Extraplanar creatures take moderate environmental fire damage at the end of each round(sometimes minor environmental damage in safer areas, or major or massive damage in even more fiery areas).Fire magic is enhanced, and cold and water magic are impeded.Water creatures are extremely uncomfortable on a fire plane, and any natural resistance they have against fire doesn’t function against this environmental fire damage.", "Fire", null },
                     { new Guid("9740e5d6-b49e-4827-8962-e70ffaa4e8be"), "These planes are mostly solid. Travelers arriving upon an earth plane risk suffocation if they don’t reach a cavern or some other air pocket within the plane’s solid matter. Creatures who can’t burrow are entombed in the plane’s substance and must attempt to dig their way toward an air pocket. Earth magic is enhanced, and air magic is impeded. Air creatures are ill at ease, as they rarely have the space to move freely through even the most lofty warrens.", "Earth", null },
-                    { new Guid("76206317-bdb6-4f71-b4c6-6536d06172d9"), "Planes with this trait consist mostly of open spaces and air of various levels of turbulence, though they also contain rare islands of floating stone and other elements and energies. Air planes usually have breathable atmospheres, though they may include clouds of acidic or toxic gas. Air magic is enhanced, and earth magic is impeded. Earth creatures often find themselves at a disadvantage within air planes, which tend to at least make them uncomfortable, as there is little solid ground for them to gain their bearings.", "Air", null },
                     { new Guid("c5358cea-44ea-4ef0-b6eb-281bdbc80e2a"), "Visitors can’t affect living residents of the plane or objects the denizens carry in any way. Any spells that would affect those on the plane have no effect unless the static trait is somehow removed or suppressed.", "Static", null },
                     { new Guid("9c610160-b8ea-4d22-833b-f3dd8bf068c1"), "The plane changes based on its own whims.", "Sentient", null },
+                    { new Guid("8112fec1-79be-4738-9dc1-d98222fc1a6f"), "Objects remain where they are (and what they are) unless affected by physical force or magic. Creatures can change the immediate environment as a result of tangible effort, such as by digging a hole.", "Metamorphic", null },
                     { new Guid("eba4f250-66db-48f2-b902-1398ba91a753"), "Time still passes, but the effects of time are diminished. Creatures on these planes don’t feel hunger, thirst, or the effects of aging or natural healing. The effects of poison, diseases, and other kinds of healing may also be diminished on certain timeless planes. Spell energy and other effects still dissipate, so the durations of spells and other effects function as normal. The danger of this trait is that when a creature leaves a timeless plane and enters a plane with another time trait, the effects of hunger, thirst, aging, and other effects slowed or arrested by the timeless trait occur retroactively in the instant of transition, possibly causing the creature to immediately starve or die of old age.", "Timeless", null },
-                    { new Guid("f3d65fdd-a015-4432-a2bd-5f85b00159a3"), "There is little to no gravity on this plane. Creatures float in space unless they can push off a surface or use some force to propel themselves throughout the plane.", "Microgravity", null },
+                    { new Guid("76206317-bdb6-4f71-b4c6-6536d06172d9"), "Planes with this trait consist mostly of open spaces and air of various levels of turbulence, though they also contain rare islands of floating stone and other elements and energies. Air planes usually have breathable atmospheres, though they may include clouds of acidic or toxic gas. Air magic is enhanced, and earth magic is impeded. Earth creatures often find themselves at a disadvantage within air planes, which tend to at least make them uncomfortable, as there is little solid ground for them to gain their bearings.", "Air", null },
                     { new Guid("2556952c-915d-4bc6-85f2-39b640854c9b"), "Time slows down and speeds up, so an individual may lose or gain time as they move between planes. When a creature moves from a plane with erratic time to one with normal time, roll a DC 11 flat check. Creatures that leave an erratic time plane together share the same result.", "Erratic Time", null },
-                    { new Guid("5dca1675-95f7-4411-b1c3-307e98aaf2c7"), " Time passes the same way it does on the Material Plane. One hour on a plane with normal time equals 1 hour on the Material Plane.", "Normal Time", null },
-                    { new Guid("5f8d1fc6-5199-4c64-9633-f22db88b0b9e"), "All bodies of mass can be centers of gravity with the same force, but only if a non-mindless creature wills it. Unattended items, objects, and mindless creatures treat the plane as having microgravity. Creatures on a plane with subjective gravity can move normally along a solid surface by imagining “down” near their feet. Designating this downward direction is a free action that has the concentration trait. If suspended in midair, a creature can replicate flight by choosing a “down” direction and falling in that direction, moving up to their Speed or fly Speed. This pseudo-flight uses the Fly action.", "Subjective Gravity", null },
-                    { new Guid("fe17801c-43b7-4bbc-802d-40e2bc8b4b5b"), "All bodies of mass are centers of gravity with roughly the same force. A creature can stand on any solid objects that is as large as or larger than themself.", "Strange Gravity", null },
-                    { new Guid("9cb4a5c0-d672-47f3-9d21-6b91c5714d5b"), "As in normal gravity, bodies of great mass act as centers of gravity, but the force relative to the size of the body is less than on the Material Plane. The Bulk of all creatures and objects is halved, meaning creatures acclimated to normal gravity can carry twice as much and jump twice as high and far. Physical ranged attacks are possible up to the twelfth range increment (instead of the sixth). Creatures that fall in low gravity take no damage for the first 10 feet of a fall, and then take bludgeoning damage equal to a quarter of the remaining distance it fell.", "Low Gravity", null },
-                    { new Guid("75c056af-e3c7-4c22-866a-f27533399b6b"), " As in normal gravity, bodies of great mass act as centers of gravity, but the force relative to the size of the body is greater than on the Material Plane. The Bulk of all creatures and objects is doubled, meaning creatures acclimated to normal gravity can carry only half as much. Creatures used to normal gravity move at half Speed and can jump only half as high and far. Physical ranged attacks are impossible beyond the third range increment (instead of the sixth). Creatures that fall in high gravity take bludgeoning damage equal to the distance they fell.", "High Gravity", null },
-                    { new Guid("48204675-e1dd-4ec1-89d6-7fee012a50d5"), "Bodies of great mass are the centers of gravity, and objects fall toward those centers with a measured amount of force relative to the size of the body.", "Normal Gravity", null },
+                    { new Guid("ccc03793-3fbe-4947-b411-96b49613e5c6"), "Planes with this trait have a flow of time that is consistently faster or slower than that of other planes", "Flowing", null },
                     { new Guid("2f525514-878f-4127-a702-b349b9bfb777"), "Most planes are immeasurable, so immense they are impossible to quantify. Which immeasurable planes, if any, are infinite is a subject of debate among philosophers and scholars alike. Since so many planes are immeasurable, those planes omit a scope trait. Otherwise, the plane likely has either the finite or unbounded trait.", "Scope", null },
+                    { new Guid("48204675-e1dd-4ec1-89d6-7fee012a50d5"), "Bodies of great mass are the centers of gravity, and objects fall toward those centers with a measured amount of force relative to the size of the body.", "Normal Gravity", null },
+                    { new Guid("75c056af-e3c7-4c22-866a-f27533399b6b"), " As in normal gravity, bodies of great mass act as centers of gravity, but the force relative to the size of the body is greater than on the Material Plane. The Bulk of all creatures and objects is doubled, meaning creatures acclimated to normal gravity can carry only half as much. Creatures used to normal gravity move at half Speed and can jump only half as high and far. Physical ranged attacks are impossible beyond the third range increment (instead of the sixth). Creatures that fall in high gravity take bludgeoning damage equal to the distance they fell.", "High Gravity", null },
+                    { new Guid("9cb4a5c0-d672-47f3-9d21-6b91c5714d5b"), "As in normal gravity, bodies of great mass act as centers of gravity, but the force relative to the size of the body is less than on the Material Plane. The Bulk of all creatures and objects is halved, meaning creatures acclimated to normal gravity can carry twice as much and jump twice as high and far. Physical ranged attacks are possible up to the twelfth range increment (instead of the sixth). Creatures that fall in low gravity take no damage for the first 10 feet of a fall, and then take bludgeoning damage equal to a quarter of the remaining distance it fell.", "Low Gravity", null },
                     { new Guid("b04c60f8-feab-4d1f-964c-63674f871191"), "Certain planes, particularly in the Outer Sphere, are attuned to an alignment. Most inhabitants share that alignment— even powerful creatures such as deities. Planes with the neutral alignment trait are more often a mix of alignments than strongly neutral, and planes with no alignment affinity simply don’t have an alignment trait, rather than being neutral. Alignments are given as an abbreviation (Pathfinder Bestiary 345), which appears first in the plane’s list of traits. Spells that share any of the plane’s alignment traits are enhanced, and those with opposing traits are impeded.For instance, in the chaotic evil Abyss, chaotic and evil spells are enhanced, and lawful and good spells are impeded.", "Alignment", null },
-                    { new Guid("44acf71b-a1e2-4cb4-9596-dace6c47d0f1"), "Some planes enhance certain magic and impede opposing effects. A plane that enhances a particular type of magic grants anyone Casting a Spell with that trait a +1 circumstance bonus to their spell DC or spell attack roll with that spell. Impeded magic means a character who Casts a Spell or Activates an Item with the specified trait must succeed at a DC 6 flat check or lose the spell or activation.", "Enhanced and Impeded Magic", null },
-                    { new Guid("ccc03793-3fbe-4947-b411-96b49613e5c6"), "Planes with this trait have a flow of time that is consistently faster or slower than that of other planes", "Flowing", null }
+                    { new Guid("fe17801c-43b7-4bbc-802d-40e2bc8b4b5b"), "All bodies of mass are centers of gravity with roughly the same force. A creature can stand on any solid objects that is as large as or larger than themself.", "Strange Gravity", null },
+                    { new Guid("5f8d1fc6-5199-4c64-9633-f22db88b0b9e"), "All bodies of mass can be centers of gravity with the same force, but only if a non-mindless creature wills it. Unattended items, objects, and mindless creatures treat the plane as having microgravity. Creatures on a plane with subjective gravity can move normally along a solid surface by imagining “down” near their feet. Designating this downward direction is a free action that has the concentration trait. If suspended in midair, a creature can replicate flight by choosing a “down” direction and falling in that direction, moving up to their Speed or fly Speed. This pseudo-flight uses the Fly action.", "Subjective Gravity", null },
+                    { new Guid("5dca1675-95f7-4411-b1c3-307e98aaf2c7"), " Time passes the same way it does on the Material Plane. One hour on a plane with normal time equals 1 hour on the Material Plane.", "Normal Time", null },
+                    { new Guid("f3d65fdd-a015-4432-a2bd-5f85b00159a3"), "There is little to no gravity on this plane. Creatures float in space unless they can push off a surface or use some force to propel themselves throughout the plane.", "Microgravity", null }
                 });
 
             migrationBuilder.InsertData(
@@ -1635,11 +1796,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("5184371d-aad0-4d76-b43c-b03d5e930ddb"), "Legendary" },
-                    { new Guid("3c0b8610-4da2-4bb2-b7c9-1bd130ae8a56"), "Master" },
                     { new Guid("b5a58093-b365-4b88-8f0e-05317473522b"), "Untrained" },
                     { new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"), "Trained" },
-                    { new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"), "Expert" }
+                    { new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"), "Expert" },
+                    { new Guid("3c0b8610-4da2-4bb2-b7c9-1bd130ae8a56"), "Master" },
+                    { new Guid("5184371d-aad0-4d76-b43c-b03d5e930ddb"), "Legendary" }
                 });
 
             migrationBuilder.InsertData(
@@ -1657,12 +1818,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "BreadthReach", "HeightReach", "Name", "Space" },
                 values: new object[,]
                 {
-                    { new Guid("f44c1295-604f-443b-9ecc-870d82264eb5"), 0, 0, "Tiny", 3 },
-                    { new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2"), 5, 5, "Small", 5 },
-                    { new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991"), 5, 5, "Medium", 5 },
                     { new Guid("eba80c08-8f5b-4dee-8d43-f1aa5fc30d8b"), 15, 20, "Huge", 15 },
+                    { new Guid("abe0e587-0fda-48d3-9206-1d43e727bcab"), 10, 5, "Large", 10 },
                     { new Guid("93daa531-f40c-4db8-8cc2-65f8e32b951b"), 20, 15, "Gargantuan", 20 },
-                    { new Guid("abe0e587-0fda-48d3-9206-1d43e727bcab"), 10, 5, "Large", 10 }
+                    { new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2"), 5, 5, "Small", 5 },
+                    { new Guid("f44c1295-604f-443b-9ecc-870d82264eb5"), 0, 0, "Tiny", 3 },
+                    { new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991"), 5, 5, "Medium", 5 }
                 });
 
             migrationBuilder.InsertData(
@@ -1670,18 +1831,18 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Name", "RacesId" },
                 values: new object[,]
                 {
-                    { new Guid("aab5afb3-53d2-4b4f-a070-bf6e697844f3"), "Human", null },
+                    { new Guid("4f75a119-344a-488a-b905-ed558e450f33"), "Tengu", null },
                     { new Guid("2ee1182b-590e-4ba0-b25a-404ebdfa365d"), "Ratfolk", null },
                     { new Guid("06fa7847-6549-48a9-81cf-54be921e98bb"), "Orc", null },
                     { new Guid("e6ec055e-2598-48c4-b003-2b07f8847a41"), "Kobold", null },
                     { new Guid("ca44727c-ddd1-45b3-bb03-2e0cf7c10dc6"), "Catfolk", null },
-                    { new Guid("4f75a119-344a-488a-b905-ed558e450f33"), "Tengu", null },
-                    { new Guid("6857833c-2458-4ece-b784-69b45a8afa63"), "Halfling", null },
+                    { new Guid("aab5afb3-53d2-4b4f-a070-bf6e697844f3"), "Human", null },
+                    { new Guid("54611353-c19f-452b-91c3-557a80a661c4"), "Humanoid", null },
+                    { new Guid("d15ee066-6c0e-4068-825e-79a87e3fecd6"), "Goblin", null },
                     { new Guid("5138d6c9-4abf-446c-9e1b-5660a956242a"), "Gnome", null },
                     { new Guid("852a5dc2-9cc6-4fb0-9250-801e27b1f8a3"), "Dwarf", null },
                     { new Guid("21de256c-7e2c-401c-bc8e-d2ad49ac1473"), "Elf", null },
-                    { new Guid("54611353-c19f-452b-91c3-557a80a661c4"), "Humanoid", null },
-                    { new Guid("d15ee066-6c0e-4068-825e-79a87e3fecd6"), "Goblin", null }
+                    { new Guid("6857833c-2458-4ece-b784-69b45a8afa63"), "Halfling", null }
                 });
 
             migrationBuilder.InsertData(
@@ -1689,8 +1850,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "CriticalFailure", "CriticalSuccess", "Failure", "Success" },
                 values: new object[,]
                 {
-                    { new Guid("1220f4e1-8504-4702-9fcc-5318b162bb12"), null, "The target can teleport if it wants, but it chooses the destination within range.", "You teleport the target and choose its destination.", "The target is unaffected." },
                     { new Guid("1d9d9b1c-7036-46dd-9067-f132780d776c"), "The creature takes double damage and is enfeebled 2 for 1 minute. On your home plane, a creature that critically fails is banished with the effect of a failed banishment save. A 10th-level creature or lower must attempt a Will save. On a failure, it’s paralyzed for 1 minute; on a critical failure, it dies.", "The creature is unaffected.", "The creature takes full damage and is enfeebled 2 for 1 minute.", "The creature takes half damage." },
+                    { new Guid("7c7d9f59-2899-4af7-9596-cf6a7711da5a"), "The creature is also enfeebled 1 for 1 round.", null, null, null },
                     { new Guid("7a397e05-ef94-4531-a4d8-24e4596d37c7"), "The effect’s duration is 1 hour.", "The target is unaffected.", "The effect’s duration is 10 minutes.", "The effect’s duration is 1 minute." },
                     { new Guid("1d97f155-61d4-4e3e-b56a-5db39776f857"), null, "The target is unaffected.", "The target dies.", "The target’s dying value increases by 1." },
                     { new Guid("fa67be43-2108-4e4d-ab58-18edad117031"), "The target is deafened permanently.", "The target is unaffected.", "The target is deafened for 10 minutes.", "The target is deafened for 1 round." },
@@ -1699,29 +1860,29 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     { new Guid("c52f431c-b8b3-4c0b-946d-1491a8e5168f"), "The target is confused for 1 minute, with no save to end early.", "The target is unaffected.", "The target is confused for 1 minute. It can attempt a new save at the end of each of its turns to end the confusion.", "The target babbles incoherently and is stunned 1." },
                     { new Guid("45c9b2e8-2604-494e-a500-7f16a680eb4c"), "The target must use all its actions on its next turn to obey your command.", null, "For the first action on its next turn, the creature must use a single action to do as you command.", "The creature is unaffected." },
                     { new Guid("c5391ad6-09cd-42a9-ac94-74f04f4efc97"), "The creature is stunned for 1 round and blinded for 1 minute.", "The creature is unaffected.", "The creature is stunned 1, blinded for 1 round, and dazzled for 1 minute.", "The creature is dazzled for 1 round." },
-                    { new Guid("1396db52-7879-4bee-afcb-71cc424a3726"), "The attacker is stunned for 1 round. The creature is temporarily immune until the end of its turn; this effect has the incapacitation trait.", null, "The attacker is blinded for 1 round.", "The attacker is unaffected." },
-                    { new Guid("7c7d9f59-2899-4af7-9596-cf6a7711da5a"), "The creature is also enfeebled 1 for 1 round.", null, null, null },
-                    { new Guid("ace65902-0a3b-4cec-acb6-6f8282687977"), "The target’s attitude becomes helpful toward you, and it can’t use hostile actions against you.", "The target is unaffected and aware you tried to charm it.", "The target’s attitude becomes friendly toward you. If it was friendly, it becomes helpful. It can’t use hostile actions against you.", "The target is unaffected but thinks your spell was something harmless instead of charm, unless it identifies the spell (see Identifying Spells on page 305)." },
-                    { new Guid("ab1082ab-df6b-4a9d-880f-7ab186891b2f"), "You misidentify the spell as another spell entirely, of the GM’s choice.", "You correctly recognize the spell and gain a +1 circumstance bonus to your saving throw or your AC against it.", "You fail to recognize the spell.", "You correctly recognize the spell." },
-                    { new Guid("a2a1dedd-eaa8-49bd-9189-7ce92039987e"), "The target is unaffected.", "The target must succeed at a Fortitude save against your Intimidation DC or die. If the target succeeds at its save, it becomes frightened 2 and is fleeing for 1 round; it suffers no effect on a critical success.", "The target becomes frightened 1.", "The target becomes frightened 2." },
-                    { new Guid("e2d96fa8-70a4-45cf-b7a1-010a8790b583"), null, null, "The animal doesn’t learn the trick.", "The animal learns the action. If it was an action the animal already knew, you can Command the Animal to take that action without attempting a Nature check. If it was a new basic action, add that action to the actions the animal can take when Commanded, but you must still roll." },
-                    { new Guid("14481cdc-273c-4a73-9c45-58d2db7309f4"), "You can’t use the item, and you can’t try to trick it again until your next daily preparations.", null, "You can’t use the item or try to trick it again this turn, but you can try again on subsequent turns.", "For the rest of the current turn, you can spend actions to activate the item as if you could normally use it." },
+                    { new Guid("1220f4e1-8504-4702-9fcc-5318b162bb12"), null, "The target can teleport if it wants, but it chooses the destination within range.", "You teleport the target and choose its destination.", "The target is unaffected." },
                     { new Guid("c067daf9-15b6-4f2a-9bac-303584f7f85d"), null, "The target takes double damage.", null, "The target takes full damage." },
-                    { new Guid("f5e8d362-20e3-4342-bd65-73ca29c1825b"), "The target is transformed into the chosen harmless animal, body and mind, for an unlimited duration.", "The target is unaffected.", "The target transforms for 1 minute but keeps its mind. If it spends all its actions on its turn concentrating on its original form, it can attempt a Will save to end the effect immediately.", "The target’s body gains minor features of the harmless animal. Its insides churn as they partially transform, causing it to be sickened 1. When it recovers from the sickened condition, its features revert to normal." },
-                    { new Guid("dd05b759-b382-42f9-bfef-e8600b2b28f9"), "The target is banished and can’t return by any means to the plane it’s banished from for 1 week.", "The target resists being banished and you are stunned 1.", "The target is banished.", "The target resists being banished." },
-                    { new Guid("2130dd1b-4239-4b15-9565-f962a6bf3cee"), "The target is blinded permanently.", "The target is unaffected.", "The target is blinded for 1 minute.", "The target is blinded until its next turn begins." },
+                    { new Guid("ace65902-0a3b-4cec-acb6-6f8282687977"), "The target’s attitude becomes helpful toward you, and it can’t use hostile actions against you.", "The target is unaffected and aware you tried to charm it.", "The target’s attitude becomes friendly toward you. If it was friendly, it becomes helpful. It can’t use hostile actions against you.", "The target is unaffected but thinks your spell was something harmless instead of charm, unless it identifies the spell (see Identifying Spells on page 305)." },
                     { new Guid("ca435a76-e666-4d33-8087-ca973e4cd537"), "As failure, but hostility doesn’t end the effect.", "The creature is unaffected.", "Any emotion effects that would affect the creature are suppressed and the creature can’t use hostile actions. If the target is subject to hostility from any other creature, it ceases to be affected by calm emotions.", "Calming urges impose a –1 status penalty to the creature’s attack rolls." },
-                    { new Guid("0450af9d-7660-403b-8970-5515635a7779"), "The target is afflicted with Abyssal plague at stage 2.", "The target is unaffected.", "The target is afflicted with Abyssal plague at stage 1.", "The target takes 2 evil damage per spell level, and takes a –2 status penalty to saves against Abyssal plague for 1 day or until the target contracts it, whichever comes first." }
+                    { new Guid("2130dd1b-4239-4b15-9565-f962a6bf3cee"), "The target is blinded permanently.", "The target is unaffected.", "The target is blinded for 1 minute.", "The target is blinded until its next turn begins." },
+                    { new Guid("dd05b759-b382-42f9-bfef-e8600b2b28f9"), "The target is banished and can’t return by any means to the plane it’s banished from for 1 week.", "The target resists being banished and you are stunned 1.", "The target is banished.", "The target resists being banished." },
+                    { new Guid("0450af9d-7660-403b-8970-5515635a7779"), "The target is afflicted with Abyssal plague at stage 2.", "The target is unaffected.", "The target is afflicted with Abyssal plague at stage 1.", "The target takes 2 evil damage per spell level, and takes a –2 status penalty to saves against Abyssal plague for 1 day or until the target contracts it, whichever comes first." },
+                    { new Guid("14481cdc-273c-4a73-9c45-58d2db7309f4"), "You can’t use the item, and you can’t try to trick it again until your next daily preparations.", null, "You can’t use the item or try to trick it again this turn, but you can try again on subsequent turns.", "For the rest of the current turn, you can spend actions to activate the item as if you could normally use it." },
+                    { new Guid("e2d96fa8-70a4-45cf-b7a1-010a8790b583"), null, null, "The animal doesn’t learn the trick.", "The animal learns the action. If it was an action the animal already knew, you can Command the Animal to take that action without attempting a Nature check. If it was a new basic action, add that action to the actions the animal can take when Commanded, but you must still roll." },
+                    { new Guid("a2a1dedd-eaa8-49bd-9189-7ce92039987e"), "The target is unaffected.", "The target must succeed at a Fortitude save against your Intimidation DC or die. If the target succeeds at its save, it becomes frightened 2 and is fleeing for 1 round; it suffers no effect on a critical success.", "The target becomes frightened 1.", "The target becomes frightened 2." },
+                    { new Guid("ab1082ab-df6b-4a9d-880f-7ab186891b2f"), "You misidentify the spell as another spell entirely, of the GM’s choice.", "You correctly recognize the spell and gain a +1 circumstance bonus to your saving throw or your AC against it.", "You fail to recognize the spell.", "You correctly recognize the spell." },
+                    { new Guid("1396db52-7879-4bee-afcb-71cc424a3726"), "The attacker is stunned for 1 round. The creature is temporarily immune until the end of its turn; this effect has the incapacitation trait.", null, "The attacker is blinded for 1 round.", "The attacker is unaffected." },
+                    { new Guid("f5e8d362-20e3-4342-bd65-73ca29c1825b"), "The target is transformed into the chosen harmless animal, body and mind, for an unlimited duration.", "The target is unaffected.", "The target transforms for 1 minute but keeps its mind. If it spends all its actions on its turn concentrating on its original form, it can attempt a Will save to end the effect immediately.", "The target’s body gains minor features of the harmless animal. Its insides churn as they partially transform, causing it to be sickened 1. When it recovers from the sickened condition, its features revert to normal." }
                 });
 
             migrationBuilder.InsertData(
                 table: "SavingThrowStats",
-                columns: new[] { "Id", "Name" },
+                columns: new[] { "Id", "ClassId", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a"), "Fortitude" },
-                    { new Guid("5048e38a-a47c-4832-b37f-fd3818eced35"), "Reflex" },
-                    { new Guid("a71929b0-9dff-492a-9bf9-8f9cadda198c"), "Will" }
+                    { new Guid("a71929b0-9dff-492a-9bf9-8f9cadda198c"), null, "Will" },
+                    { new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a"), null, "Fortitude" },
+                    { new Guid("5048e38a-a47c-4832-b37f-fd3818eced35"), null, "Reflex" }
                 });
 
             migrationBuilder.InsertData(
@@ -1729,9 +1890,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
+                    { new Guid("f81a5e37-0ec8-443d-924b-75769a2d321b"), "Custom" },
                     { new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75"), "Core Rulebook" },
-                    { new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc"), "Advanced Rulebook" },
-                    { new Guid("f81a5e37-0ec8-443d-924b-75769a2d321b"), "Custom" }
+                    { new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc"), "Advanced Rulebook" }
                 });
 
             migrationBuilder.InsertData(
@@ -1739,10 +1900,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Description", "Name", "SpellsId" },
                 values: new object[,]
                 {
-                    { new Guid("1438bb9e-3ce3-4b33-93a5-1728b134b9ff"), "A focus is an object that funnels the magical energy of the spell. The spell gains the manipulate trait and requires you to either have a free hand to retrieve the focus listed in the spell or already be holding the focus in your hand. As part of Casting the Spell, you retrieve the focus (if necessary), manipulate it, and can put it away again if you so choose. Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.", "Focus", null },
                     { new Guid("4a9cf550-0cb7-4df1-8519-45765fc23af3"), "A material component is a bit of physical matter consumed in the casting of the spell. The spell gains the manipulate trait and requires you to have a free hand to retrieve and manipulate a material component. That component is expended in the casting (even if the spell is disrupted). Except in extreme circumstances, you can assume all common components are included in a material component pouch.", "Material", null },
                     { new Guid("8665739e-a938-4927-afb6-be0c2d15fdc0"), "A somatic component is a specific hand movement or gesture that generates a magical nexus.The spell gains the manipulate trait and requires you to make gestures.You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely. Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target(even if it’s through a glove or gauntlet).", "Somatic", null },
-                    { new Guid("dacdeaaa-2a0e-4cf8-b011-d896947fbf3f"), "A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it’s hard to conceal that you’re Casting a Spell.The spell gains the concentrate trait.You must be able to speak to provide this component.", "Verbal", null }
+                    { new Guid("dacdeaaa-2a0e-4cf8-b011-d896947fbf3f"), "A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it’s hard to conceal that you’re Casting a Spell.The spell gains the concentrate trait.You must be able to speak to provide this component.", "Verbal", null },
+                    { new Guid("1438bb9e-3ce3-4b33-93a5-1728b134b9ff"), "A focus is an object that funnels the magical energy of the spell. The spell gains the manipulate trait and requires you to either have a free hand to retrieve the focus listed in the spell or already be holding the focus in your hand. As part of Casting the Spell, you retrieve the focus (if necessary), manipulate it, and can put it away again if you so choose. Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.", "Focus", null }
                 });
 
             migrationBuilder.InsertData(
@@ -1750,22 +1911,22 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Description", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("69863985-2984-4514-9299-588c6dd32cd7"), "Focus spells are a special type of spell attained directly from a branch of study, from a deity, or from another specific source. You can learn focus spells only through special class features or feats, rather than choosing them from a spell list. Furthermore, you cast focus spells using a special pool of Focus Points—you can’t prepare a focus spell in a spell slot or use your spell slots to cast focus spells; similarly, you can’t spend your Focus Points to cast spells that aren’t focus spells. Even some classes that don’t normally grant spellcasting, such as the champion and monk, can grant focus spells. Focus spells are automatically heightened to half your level rounded up, just like cantrips are. You can’t cast a focus spell if its minimum level is greater than half your level rounded up, even if you somehow gain access to it. Casting any of your focus spells costs you 1 Focus Point. You automatically gain a focus pool of 1 Focus Point the first time you gain an ability that gives you a focus spell. You replenish all the Focus Points in your pool during your daily preparations. You can also use the Refocus activity to pray, study, meditate, or otherwise reattune yourself to the source of your focus magic and regain a Focus Point. Some abilities allow you to increase the Focus Points in your pool beyond 1. Typically, these are feats that give you a new focus spell and increase the number of points in your pool by 1. Your focus pool can’t have a capacity beyond 3 Focus Points, even if feats that increase your pool would cause it to exceed this number.", "Focus" },
                     { new Guid("daeadc1d-bf76-442b-9b4c-8276fa9effac"), "A regular spell that has to be prepared or can be cast spontaneously, without any additional focus requirements, using a spell slot in the process.", "Spell" },
-                    { new Guid("fbd536e4-6468-4ca5-84de-aa2e5a33776f"), "A cantrip is a special type of spell that’s weaker than other spells but can be used with greater freedom and flexibility. The title of a cantrip’s stat block says “Cantrip” instead of “Spell.” Casting a cantrip doesn’t use up your spell slots; you can cast a cantrip at will, any number of times per day. If you’re a prepared caster, you can prepare a specific number of cantrips each day. You can’t prepare a cantrip in a spell slot. A cantrip is always automatically heightened to half your level, rounded up. For a typical spellcaster, this means its level is equal to the highest level of spell slot you have.", "Cantrip" }
+                    { new Guid("fbd536e4-6468-4ca5-84de-aa2e5a33776f"), "A cantrip is a special type of spell that’s weaker than other spells but can be used with greater freedom and flexibility. The title of a cantrip’s stat block says “Cantrip” instead of “Spell.” Casting a cantrip doesn’t use up your spell slots; you can cast a cantrip at will, any number of times per day. If you’re a prepared caster, you can prepare a specific number of cantrips each day. You can’t prepare a cantrip in a spell slot. A cantrip is always automatically heightened to half your level, rounded up. For a typical spellcaster, this means its level is equal to the highest level of spell slot you have.", "Cantrip" },
+                    { new Guid("69863985-2984-4514-9299-588c6dd32cd7"), "Focus spells are a special type of spell attained directly from a branch of study, from a deity, or from another specific source. You can learn focus spells only through special class features or feats, rather than choosing them from a spell list. Furthermore, you cast focus spells using a special pool of Focus Points—you can’t prepare a focus spell in a spell slot or use your spell slots to cast focus spells; similarly, you can’t spend your Focus Points to cast spells that aren’t focus spells. Even some classes that don’t normally grant spellcasting, such as the champion and monk, can grant focus spells. Focus spells are automatically heightened to half your level rounded up, just like cantrips are. You can’t cast a focus spell if its minimum level is greater than half your level rounded up, even if you somehow gain access to it. Casting any of your focus spells costs you 1 Focus Point. You automatically gain a focus pool of 1 Focus Point the first time you gain an ability that gives you a focus spell. You replenish all the Focus Points in your pool during your daily preparations. You can also use the Refocus activity to pray, study, meditate, or otherwise reattune yourself to the source of your focus magic and regain a Focus Point. Some abilities allow you to increase the Focus Points in your pool beyond 1. Typically, these are feats that give you a new focus spell and increase the number of points in your pool by 1. Your focus pool can’t have a capacity beyond 3 Focus Points, even if feats that increase your pool would cause it to exceed this number.", "Focus" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Stats",
-                columns: new[] { "Id", "Abbreviation", "Name" },
+                columns: new[] { "Id", "Abbreviation", "ClassId", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137"), "STR", "Strength" },
-                    { new Guid("21b2cca1-66cd-48d1-a91b-085521659548"), "DEX", "Dexterity" },
-                    { new Guid("10e9f065-a160-47e5-97df-72df4ec5ea15"), "CON", "Constitution" },
-                    { new Guid("37406a59-0dd9-4766-8713-33b13b7740fd"), "INT", "Intellect" },
-                    { new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a"), "WIS", "Wisdom" },
-                    { new Guid("f4206177-80d3-4c9c-8f79-357a608897fa"), "CHA", "Charisma" }
+                    { new Guid("f4206177-80d3-4c9c-8f79-357a608897fa"), "CHA", null, "Charisma" },
+                    { new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a"), "WIS", null, "Wisdom" },
+                    { new Guid("37406a59-0dd9-4766-8713-33b13b7740fd"), "INT", null, "Intellect" },
+                    { new Guid("21b2cca1-66cd-48d1-a91b-085521659548"), "DEX", null, "Dexterity" },
+                    { new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137"), "STR", null, "Strength" },
+                    { new Guid("10e9f065-a160-47e5-97df-72df4ec5ea15"), "CON", null, "Constitution" }
                 });
 
             migrationBuilder.InsertData(
@@ -1773,40 +1934,39 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "Description", "FeatsId", "Name", "SpellsId" },
                 values: new object[,]
                 {
-                    { new Guid("a23df7f5-acc6-4f87-9244-0fbbc77c70d2"), "Effects with this trait attempt to determine the presence or location of a person, object, or aura.", null, "Detection", null },
-                    { new Guid("551070c6-e73a-4c0c-9a9c-f6425f38f5f0"), "This poison is delivered when breathed in.", null, "Inhaled", null },
                     { new Guid("f1f5c47a-fec2-4983-8229-3c4e8b43f0b5"), "An effect with the death trait kills you immediately if it reduces you to 0 HP. Some death effects can bring you closer to death or slay you outright without reducing you to 0 HP.", null, "Death", null },
                     { new Guid("e5b98ff4-8503-461c-870d-7b8c8e4811fa"), "Chaotic effects often manipulate energy from chaos-aligned Outer Planes and are anathema to lawful divine servants or divine servants of lawful deities.", null, "Chaotic", null },
                     { new Guid("9da1e40e-f9b8-4381-9167-229fee66f4f7"), "A spell you can cast at will that is automatically heightened to half your level rounded up.", null, "Cantrip", null },
                     { new Guid("856db08f-edad-472b-b870-65a8f16252a5"), "An ability with this trait involves an attack. For each attack you make beyond the first on your turn, you take a multiple attack penalty.", null, "Attack", null },
-                    { new Guid("c90d2554-1af6-45d7-9f20-f98aa0799887"), "Light effects overcome non-magical darkness in the area, and can counteract magical darkness. You must usually target darkness magic with your light magic directly to counteract the darkness, but some light spells automatically attempt to counteract darkness.", null, "Light", null },
+                    { new Guid("4fbbdfad-330f-4e0f-92dd-d070a59d7498"), "A general feat with the skill trait improves your skills and their actions or gives you new actions for a skill. A feat with this trait can be selected when a class grants a skill feat or general feat. Archetype feats with the skill trait can be selected in place of a skill feat if you have that archetype’s dedication feat.", null, "Skill", null },
                     { new Guid("3d4c67f6-d5a1-4529-9559-02aa18d81054"), "A type of feat that any character can select, regardless of ancestry and class, as long as they meet the prerequisites. You can select a feat with this trait when your class grants a general feat.", null, "General", null },
-                    { new Guid("23655aa4-871f-416f-be14-1fc03bedef16"), "An effect with this trait is not inherently deadly. Damage from a nonlethal effect knocks a creature out rather than killing it. You can use a nonlethal weapon to make a lethal attack with a –2 circumstance penalty.", null, "Nonlethal", null },
+                    { new Guid("ccae1335-3555-4e55-9fe4-d22f6b9bc162"), "An activity with this trait takes a day or more, and can be used only during downtime", null, "Downtime", null },
+                    { new Guid("c90d2554-1af6-45d7-9f20-f98aa0799887"), "Light effects overcome non-magical darkness in the area, and can counteract magical darkness. You must usually target darkness magic with your light magic directly to counteract the darkness, but some light spells automatically attempt to counteract darkness.", null, "Light", null },
                     { new Guid("aa2b017d-2e8c-460a-9069-6bf61b69dd72"), "Darkness effects extinguish non-magical light in the area, and can counteract less powerful magical light. You must usually target light magic with your darkness magic directly to counteract the light, but some darkness spells automatically attempt to counteract light.", null, "Darkness", null },
                     { new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0"), "An effect with this trait delivers a poison or deals poison damage. An item with this trait is poisonous and might cause an affliction.", null, "Poison", null },
                     { new Guid("574e4077-83a5-4865-95a3-29a556f873ed"), "This poison is delivered by damaging the recipient.", null, "Injury", null },
-                    { new Guid("4fbbdfad-330f-4e0f-92dd-d070a59d7498"), "A general feat with the skill trait improves your skills and their actions or gives you new actions for a skill. A feat with this trait can be selected when a class grants a skill feat or general feat. Archetype feats with the skill trait can be selected in place of a skill feat if you have that archetype’s dedication feat.", null, "Skill", null },
+                    { new Guid("a23df7f5-acc6-4f87-9244-0fbbc77c70d2"), "Effects with this trait attempt to determine the presence or location of a person, object, or aura.", null, "Detection", null },
+                    { new Guid("23655aa4-871f-416f-be14-1fc03bedef16"), "An effect with this trait is not inherently deadly. Damage from a nonlethal effect knocks a creature out rather than killing it. You can use a nonlethal weapon to make a lethal attack with a –2 circumstance penalty.", null, "Nonlethal", null },
                     { new Guid("0cb3dbbc-941b-4e27-b46c-d0246dacc056"), "An effect with this trait applies one or more diseases. A disease is typically an affliction.", null, "Disease", null },
-                    { new Guid("9979d44e-3a35-4eef-a767-d3c974b5fbf6"), "A fortune effect beneficially alters how you roll your dice. You can never have more than one fortune effect alter a single roll. If multiple fortune effects would apply, you have to pick which to use. If a fortune effect and a misfortune effect would apply to the same roll, the two cancel each other out, and you roll normally.", null, "Fortune", null },
+                    { new Guid("33bf3198-48a1-4559-9a48-9881901f880b"), "Effects that slightly alter a creature’s form have the morph trait. Any Strikes specifically granted by a morph effect are magical. You can be affected by multiple morph spells at once, but if you morph the same body part more than once, the second morph effect attempts to counteract the first (in the same manner as two polymorph effects, described in that trait). Your morph effects might also end if you are polymorphed and the polymorph effect invalidates or overrides your morph effect. The GM determines which morph effects can be used together and which can’t.", null, "Morph", null },
                     { new Guid("fc3cb057-dcb6-4508-915a-0abd25679211"), "Evil effects often manipulate energy from evil-aligned Outer Planes and are antithetical to good divine servants or divine servants of good deities.", null, "Evil", null },
                     { new Guid("be9994ab-79ef-4ec0-9761-492059b0083a"), "An ability with this trait can take a character completely out of the fight or even kill them, and it’s harder to use on a more powerful character. If a spell has the incapacitation trait, any creature of more than twice the spell’s level treats the result of their check to prevent being incapacitated by the spell as one degree of success better, or the result of any check the spellcaster made to incapacitate them as one degree of success worse. If any other effect has the incapacitation trait, a creature of higher level than the item, creature, or hazard generating the effect gains the same benefits.", null, "Incapacitation", null },
                     { new Guid("06f2cf99-b089-4e34-b443-53028fdc2ae0"), "A healing effect restores a creature's body, typically by restoring Hit Points, but sometimes by removing diseases or other debilitating effects.", null, "Healing", null },
                     { new Guid("315bf80d-594e-46ca-944e-cb8287df46fa"), "An effect with this trait depends on language comprehension. A linguistic effect that targets a creature works only if the target understands the language you are using.", null, "Linguistic", null },
                     { new Guid("2cbfa741-d7b5-465c-98b4-7a6bceae533e"), "A mental effect can alter the target’s mind. It has no effect on an object or a mindless creature.", null, "Mental", null },
-                    { new Guid("33bf3198-48a1-4559-9a48-9881901f880b"), "Effects that slightly alter a creature’s form have the morph trait. Any Strikes specifically granted by a morph effect are magical. You can be affected by multiple morph spells at once, but if you morph the same body part more than once, the second morph effect attempts to counteract the first (in the same manner as two polymorph effects, described in that trait). Your morph effects might also end if you are polymorphed and the polymorph effect invalidates or overrides your morph effect. The GM determines which morph effects can be used together and which can’t.", null, "Morph", null },
+                    { new Guid("551070c6-e73a-4c0c-9a9c-f6425f38f5f0"), "This poison is delivered when breathed in.", null, "Inhaled", null },
                     { new Guid("1a83b706-d9c1-4b46-bcf3-3c9bb82219ee"), "These effects transform the target into a new form. A target can’t be under the effect of more than one polymorph effect at a time. If it comes under the effect of a second polymorph effect, the second polymorph effect attempts to counteract the first. If it succeeds, it takes effect, and if it fails, the spell has no effect on that target. Any Strikes specifically granted by a polymorph effect are magical. Unless otherwise stated, polymorph spells don’t allow the target to take on the appearance of a specific individual creature, but rather just a generic creature of a general type or ancestry. If you take on a battle form with a polymorph spell, the special statistics can be adjusted only by circumstance bonuses, status bonuses, and penalties. Unless otherwise noted, the battle form prevents you from casting spells, speaking, and using most manipulate actions that require hands. (If there’s doubt about whether you can use an action, the GM decides.) Your gear is absorbed into you; the constant abilities of your gear still function, but you can’t activate any items.", null, "Polymorph", null },
                     { new Guid("2bc07fcc-2113-4b39-a257-17851f1f216d"), "Vegetable creatures have the plant trait. They are distinct from normal plants. Magical effects with this trait manipulate or conjure plants or plant matter in some way. Those that manipulate plants have no effect in an area with no plants.", null, "Plant", null },
                     { new Guid("7684fa81-e3a5-4224-8d57-bc61df53d54a"), "Effects with this trait determine what is likely to happen in the near future. Most predictions are divinations.", null, "Prediction", null },
                     { new Guid("4f8453ab-e7f8-4d2f-95e7-e0e53a32cbde"), "Effects with this trait see things as they truly are.", null, "Revelation", null },
                     { new Guid("f91abbe0-0bec-4278-99d0-b12f044f8061"), "A scrying effect lets you see, hear, or otherwise get sensory information from a distance using a sensor or apparatus, rather than your own eyes and ears.", null, "Scrying", null },
                     { new Guid("340e83a5-5a6e-4a5f-8658-7aede58da5a9"), "Teleportation effects allow you to instantaneously move from one point in space to another. Teleportation does not usually trigger reactions based on movement.", null, "Teleportation", null },
-                    { new Guid("3078e40b-db78-4f39-9ffc-304e6a1993cf"), "This poison is delivered when drunk or eaten.", null, "Ingested", null },
+                    { new Guid("9979d44e-3a35-4eef-a767-d3c974b5fbf6"), "A fortune effect beneficially alters how you roll your dice. You can never have more than one fortune effect alter a single roll. If multiple fortune effects would apply, you have to pick which to use. If a fortune effect and a misfortune effect would apply to the same roll, the two cancel each other out, and you roll normally.", null, "Fortune", null },
                     { new Guid("dee6c869-337c-4f4c-ba3c-3c3e77c19857"), "You must physically manipulate an item or make gestures to use an action with this trait. Creatures without a suitable appendage can’t perform actions with this trait. Manipulate actions often trigger reactions.", null, "Manipulate", null },
                     { new Guid("1ee8c64b-ad34-4b3b-a01c-a1057eea01f6"), "This effect alters a creature's emotions. Effects with this trait always have the mental trait as well. Creatures with special training or that have mechanical or artificial intelligence are immune to emotion effects.", null, "Emotion", null },
-                    { new Guid("0b49fe13-7684-43b9-b5a5-81b8c038dc9c"), "This poison is delivered by contact with the skin.", null, "Contact", null },
-                    { new Guid("0c06a5b8-24e7-486b-bb98-91caef377013"), "Something of uncommon rarity requires special training or comes from a particular culture or part of the world. Some character choices give access to uncommon options, and the GM can choose to allow access for anyone. Less is known about uncommon creatures than common creatures. They typically can’t be summoned. The DC of Recall Knowledge checks related to these creature is increased by 2.", null, "Uncommon", null },
-                    { new Guid("e2bb08cb-cf59-4e29-8738-52c751405fb0"), "A visual effect can affect only creatures that can see it. This applies only to visible parts of the effect, as determined by the GM.", null, "Visual", null },
-                    { new Guid("ccae1335-3555-4e55-9fe4-d22f6b9bc162"), "An activity with this trait takes a day or more, and can be used only during downtime", null, "Downtime", null },
+                    { new Guid("3078e40b-db78-4f39-9ffc-304e6a1993cf"), "This poison is delivered when drunk or eaten.", null, "Ingested", null },
+                    { new Guid("7f9fe1cb-c607-44c3-8f1a-b26d508cfce6"), "Effects and magic items with this trait are associated with the illusion school of magic, typically involving false sensory stimuli.", null, "Illusion", null },
+                    { new Guid("d748ac0d-6af3-4475-af4e-a72455960fe0"), "A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it’s hard to conceal that you’re Casting a Spell. The spell gains the concentrate trait. You must be able to speak to provide this component.", null, "Verbal", null },
                     { new Guid("7cb74b87-4e13-4d8c-afa5-da8cbe671bfc"), "Effects with the air trait either manipulate or conjure air. Those that manipulate air have no effect in a vacuum or an area without air. Creatures with this trait consist primarily of air or have a magical connection to that element. Planes with this trait consist mostly of open spaces and air with various degrees of turbulence, though they also contain rare islands of floating stone and other elements and energies.", null, "Air", null },
                     { new Guid("ae21e02b-11a1-4c53-96ec-5961beb2761d"), "Effects with the water trait either manipulate or conjure water. Those that manipulate water have no effect in an area without water. Creatures with this trait consist primarily of water or have a magical connection to the element. Planes with this trait are mostly liquid, perhaps with pockets of breathable air.", null, "Water", null },
                     { new Guid("d1aabc8c-b3fe-40eb-bfc2-ea72d3b7e0c0"), "Effects with the fire trait deal fire damage or either conjure or manipulate fire. Those that manipulate fire have no effect in an area without fire. Creatures with this trait consist primarily of fire or have a magical connection to that element. Planes with this trait are composed of flames that continually burn with no fuel source. Fire planes are extremely hostile to non-fire creatures.", null, "Fire", null },
@@ -1823,6 +1983,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     { new Guid("0e3307ce-952d-4d93-bcac-95bbf495ee85"), "This magic comes from the occult tradition, calling upon bizarre and ephemeral mysteries. Anything with this trait is magical.", null, "Occult", null },
                     { new Guid("3de4876d-2336-4d5e-bbbb-5b4e83ea6d49"), "This magic comes from the primal tradition, connecting to the natural world and instinct. Anything with this trait is magical.", null, "Primal", null },
                     { new Guid("5b33384c-0c98-4238-8257-8b911933308e"), "Anything that doesn't list another rarity trait (uncommon, rare, or unique) automatically has the common trait. This rarity indicates that an ability, item, or spell is available to all players who meet the prerequisites for it. A creature of this rarity is generally known and can be summoned with the appropriate summon spell.", null, "Common", null },
+                    { new Guid("0c06a5b8-24e7-486b-bb98-91caef377013"), "Something of uncommon rarity requires special training or comes from a particular culture or part of the world. Some character choices give access to uncommon options, and the GM can choose to allow access for anyone. Less is known about uncommon creatures than common creatures. They typically can’t be summoned. The DC of Recall Knowledge checks related to these creature is increased by 2.", null, "Uncommon", null },
                     { new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff"), "This rarity indicates that a rules element is very difficult to find in the game world. A rare feat, spell, item or the like is available to players only if the GM decides to include it in the game, typically through discovery during play. Creatures with this trait are rare. They typically can’t be summoned. The DC of Recall Knowledge checks related to these creatures is increased by 5.", null, "Rare", null },
                     { new Guid("68d3b3ab-d2ed-4691-8609-7403c843c77f"), "A rules element with this trait is one-of-a-kind. The DC of Recall Knowledge checks related to creatures with this trait is increased by 10.", null, "Unique", null },
                     { new Guid("c499214b-94fc-4103-8c7c-6f7a56b5c980"), "Effects and magic items with this trait are associated with the abjuration school of magic, typically involving protection or wards.", null, "Abjuration", null },
@@ -1830,12 +1991,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     { new Guid("5bce1594-6c07-460f-b306-0db1fa30833b"), "The divination school of magic typically involves obtaining or transferring information, or predicting events.", null, "Divination", null },
                     { new Guid("e7fd1927-8c01-4945-899e-a99d2e44662a"), "Effects and magic items with this trait are associated with the enchantment school of magic, typically involving mind control, emotion alteration, and other mental effects.", null, "Enchantment", null },
                     { new Guid("f5f7ca8a-100a-4d93-aa07-e0f1bb3cbc49"), "Effects and magic items with this trait are associated with the evocation school of magic, typically involving energy and elemental forces.", null, "Evocation", null },
-                    { new Guid("7f9fe1cb-c607-44c3-8f1a-b26d508cfce6"), "Effects and magic items with this trait are associated with the illusion school of magic, typically involving false sensory stimuli.", null, "Illusion", null },
                     { new Guid("2d643d25-b9aa-4544-b482-04b3475eb82b"), "Effects and magic items with this trait are associated with the necromancy school of magic, typically involving forces of life and death.", null, "Necromancy", null },
                     { new Guid("d751d93f-cff9-448f-8ab0-9a3c07eacbef"), "Effects and magic items with this trait are associated with the transmutation school of magic, typically changing something’s form.", null, "Transmutation", null },
                     { new Guid("44a18bec-0799-41a7-9b07-16113bb0623f"), "Auditory actions and effects rely on sound. An action with the auditory trait can be successfully performed only if the creature using the action can speak or otherwise produce the required sounds. A spell or effect with the auditory trait has its effect only if the target can hear it. This applies only to sound-based parts of the effect, as determined by the GM. This is different from a sonic effect, which still affects targets who can't hear it (such as deaf targets) as long as the effect itself makes sound.", null, "Auditory", null },
                     { new Guid("a6217da0-ad2a-43a0-88d4-ac85f1d68591"), "An olfactory effect can affect only creatures that can smell it. This applies only to olfactory parts of the effect, as determined by the GM.", null, "Olfactory", null },
-                    { new Guid("d748ac0d-6af3-4475-af4e-a72455960fe0"), "A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it’s hard to conceal that you’re Casting a Spell. The spell gains the concentrate trait. You must be able to speak to provide this component.", null, "Verbal", null },
+                    { new Guid("e2bb08cb-cf59-4e29-8738-52c751405fb0"), "A visual effect can affect only creatures that can see it. This applies only to visible parts of the effect, as determined by the GM.", null, "Visual", null },
+                    { new Guid("0b49fe13-7684-43b9-b5a5-81b8c038dc9c"), "This poison is delivered by contact with the skin.", null, "Contact", null },
                     { new Guid("f7ad867e-49e3-40e3-ad95-bbf461be2087"), "Fear effects evoke the emotion of fear. Effects with this trait always have the mental and emotion traits as well.", null, "Fear", null }
                 });
 
@@ -4490,6 +4651,101 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 column: "PrerequisiteId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ClassCharacteristic_ClassId",
+                table: "ClassCharacteristic",
+                column: "ClassId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_AdvancedWeaponProficiencyId",
+                table: "Classes",
+                column: "AdvancedWeaponProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_ClassDcProficiencyId",
+                table: "Classes",
+                column: "ClassDcProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_FortitudeProficiencyId",
+                table: "Classes",
+                column: "FortitudeProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_HeavyArmorProficiencyId",
+                table: "Classes",
+                column: "HeavyArmorProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_LightArmorProficiencyId",
+                table: "Classes",
+                column: "LightArmorProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_MartialWeaponProficiencyId",
+                table: "Classes",
+                column: "MartialWeaponProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_MediumArmorProficiencyId",
+                table: "Classes",
+                column: "MediumArmorProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_PerceptionProficiencyId",
+                table: "Classes",
+                column: "PerceptionProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_PredefinedMagicTraditionId",
+                table: "Classes",
+                column: "PredefinedMagicTraditionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_ReflexProficiencyId",
+                table: "Classes",
+                column: "ReflexProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_SimpleWeaponProficiencyId",
+                table: "Classes",
+                column: "SimpleWeaponProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_SpellAttackProficiencyId",
+                table: "Classes",
+                column: "SpellAttackProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_SpellDcProficiencyId",
+                table: "Classes",
+                column: "SpellDcProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_UnarmedWeaponProficiencyId",
+                table: "Classes",
+                column: "UnarmedWeaponProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_UnarmoredProficiencyId",
+                table: "Classes",
+                column: "UnarmoredProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Classes_WillProficiencyId",
+                table: "Classes",
+                column: "WillProficiencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ClassFeature_ClassId",
+                table: "ClassFeature",
+                column: "ClassId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ClassMannerism_ClassId",
+                table: "ClassMannerism",
+                column: "ClassId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Deities_AlignmentId",
                 table: "Deities",
                 column: "AlignmentId");
@@ -4760,6 +5016,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 column: "RacesId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_SavingThrowStats_ClassId",
+                table: "SavingThrowStats",
+                column: "ClassId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Skills_StatModifierId",
                 table: "Skills",
                 column: "StatModifierId");
@@ -4845,6 +5106,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 column: "SpellId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Stats_ClassId",
+                table: "Stats",
+                column: "ClassId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Traits_FeatsId",
                 table: "Traits",
                 column: "FeatsId");
@@ -4867,6 +5133,14 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 table: "Spells",
                 column: "TraditionsId",
                 principalTable: "MagicTraditions",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Spells_SavingThrowStats_SavingThrowStatId",
+                table: "Spells",
+                column: "SavingThrowStatId",
+                principalTable: "SavingThrowStats",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
 
@@ -4970,6 +5244,14 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 table: "BasePrerequisiteBinding");
 
             migrationBuilder.DropForeignKey(
+                name: "FK_SavingThrowStats_Classes_ClassId",
+                table: "SavingThrowStats");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Spells_MagicTraditions_TraditionsId",
+                table: "Spells");
+
+            migrationBuilder.DropForeignKey(
                 name: "FK_Deities_Alignments_AlignmentId",
                 table: "Deities");
 
@@ -5022,10 +5304,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 table: "PlaneTraits");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_MagicTraditions_Spells_SpellsId",
-                table: "MagicTraditions");
-
-            migrationBuilder.DropForeignKey(
                 name: "FK_SpellComponents_Spells_SpellsId",
                 table: "SpellComponents");
 
@@ -5039,7 +5317,13 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 name: "Bulks");
 
             migrationBuilder.DropTable(
-                name: "Classes");
+                name: "ClassCharacteristic");
+
+            migrationBuilder.DropTable(
+                name: "ClassFeature");
+
+            migrationBuilder.DropTable(
+                name: "ClassMannerism");
 
             migrationBuilder.DropTable(
                 name: "DeityDivineFont");
@@ -5129,13 +5413,19 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 name: "BasePrerequisiteBinding");
 
             migrationBuilder.DropTable(
-                name: "Proficiencies");
-
-            migrationBuilder.DropTable(
                 name: "Skills");
 
             migrationBuilder.DropTable(
                 name: "Stats");
+
+            migrationBuilder.DropTable(
+                name: "Classes");
+
+            migrationBuilder.DropTable(
+                name: "Proficiencies");
+
+            migrationBuilder.DropTable(
+                name: "MagicTraditions");
 
             migrationBuilder.DropTable(
                 name: "Alignments");
@@ -5199,9 +5489,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "MagicSchools");
-
-            migrationBuilder.DropTable(
-                name: "MagicTraditions");
 
             migrationBuilder.DropTable(
                 name: "SavingThrowStats");

@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Official.Database;
 namespace Silvester.Pathfinder.Official.Database.Migrations
 {
     [DbContext(typeof(OfficialDatabase))]
-    [Migration("20210321131839_Initial")]
+    [Migration("20210321165942_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -3941,7 +3941,152 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<Guid>("AdvancedWeaponProficiencyId")
+                        .HasColumnType("uuid");
+
                     b.Property<int>("BaseHealth")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid?>("ClassDcProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("DuringCombatEncounters")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("DuringSocialEncounters")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("FortitudeProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("HeavyArmorProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("InDowntime")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("LightArmorProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("MartialWeaponProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("MediumArmorProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("PerceptionProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("PredefinedMagicTraditionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ReflexProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SimpleWeaponProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("SpellAttackProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("SpellDcProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UnarmedWeaponProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UnarmoredProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("WhileExploring")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("WillProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdvancedWeaponProficiencyId");
+
+                    b.HasIndex("ClassDcProficiencyId");
+
+                    b.HasIndex("FortitudeProficiencyId");
+
+                    b.HasIndex("HeavyArmorProficiencyId");
+
+                    b.HasIndex("LightArmorProficiencyId");
+
+                    b.HasIndex("MartialWeaponProficiencyId");
+
+                    b.HasIndex("MediumArmorProficiencyId");
+
+                    b.HasIndex("PerceptionProficiencyId");
+
+                    b.HasIndex("PredefinedMagicTraditionId");
+
+                    b.HasIndex("ReflexProficiencyId");
+
+                    b.HasIndex("SimpleWeaponProficiencyId");
+
+                    b.HasIndex("SpellAttackProficiencyId");
+
+                    b.HasIndex("SpellDcProficiencyId");
+
+                    b.HasIndex("UnarmedWeaponProficiencyId");
+
+                    b.HasIndex("UnarmoredProficiencyId");
+
+                    b.HasIndex("WillProficiencyId");
+
+                    b.ToTable("Classes");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ClassCharacteristic", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ClassId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClassId");
+
+                    b.ToTable("ClassCharacteristic");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ClassFeature", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ClassId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Level")
                         .HasColumnType("integer");
 
                     b.Property<string>("Name")
@@ -3950,105 +4095,29 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Classes");
+                    b.HasIndex("ClassId");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("df6b0137-7082-470f-939f-5d241ef7d651"),
-                            BaseHealth = 8,
-                            Name = "Alchemist"
-                        },
-                        new
-                        {
-                            Id = new Guid("a171edb5-59c0-4468-b710-a6b9df2f4497"),
-                            BaseHealth = 12,
-                            Name = "Barbarian"
-                        },
-                        new
-                        {
-                            Id = new Guid("9c08f598-a180-4a59-984a-a26a67607054"),
-                            BaseHealth = 8,
-                            Name = "Bard"
-                        },
-                        new
-                        {
-                            Id = new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"),
-                            BaseHealth = 10,
-                            Name = "Champion"
-                        },
-                        new
-                        {
-                            Id = new Guid("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade"),
-                            BaseHealth = 8,
-                            Name = "Cleric"
-                        },
-                        new
-                        {
-                            Id = new Guid("73f7051c-8eff-4337-a87c-183deb7a998c"),
-                            BaseHealth = 8,
-                            Name = "Druid"
-                        },
-                        new
-                        {
-                            Id = new Guid("9cace213-82ff-4751-a438-8afd87d433e4"),
-                            BaseHealth = 10,
-                            Name = "Fighter"
-                        },
-                        new
-                        {
-                            Id = new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"),
-                            BaseHealth = 10,
-                            Name = "Monk"
-                        },
-                        new
-                        {
-                            Id = new Guid("ceb15fca-8288-456e-9769-98cce79bb104"),
-                            BaseHealth = 10,
-                            Name = "Ranger"
-                        },
-                        new
-                        {
-                            Id = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
-                            BaseHealth = 8,
-                            Name = "Rogue"
-                        },
-                        new
-                        {
-                            Id = new Guid("05d42777-0744-4a72-85ad-d27186c96deb"),
-                            BaseHealth = 6,
-                            Name = "Sorcerer"
-                        },
-                        new
-                        {
-                            Id = new Guid("0e53c45a-9ab8-4d4a-bb5b-51af257c56bc"),
-                            BaseHealth = 6,
-                            Name = "Wizard"
-                        },
-                        new
-                        {
-                            Id = new Guid("2483fb2b-b7cc-4eab-9c4e-0118477e46ed"),
-                            BaseHealth = 8,
-                            Name = "Investigator"
-                        },
-                        new
-                        {
-                            Id = new Guid("bc25beea-18e8-4417-8ada-a0f58bc79585"),
-                            BaseHealth = 8,
-                            Name = "Oracle"
-                        },
-                        new
-                        {
-                            Id = new Guid("deb62736-af71-4600-bd4b-59e55961b74d"),
-                            BaseHealth = 10,
-                            Name = "Swashbuckler"
-                        },
-                        new
-                        {
-                            Id = new Guid("de966e73-2c40-40b4-956f-57e326f7ce8e"),
-                            BaseHealth = 6,
-                            Name = "Witch"
-                        });
+                    b.ToTable("ClassFeature");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ClassMannerism", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ClassId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClassId");
+
+                    b.ToTable("ClassMannerism");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Deity", b =>
@@ -9437,11 +9506,16 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("ClassId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClassId");
 
                     b.ToTable("SavingThrowStats");
 
@@ -12355,11 +12429,16 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("ClassId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClassId");
 
                     b.ToTable("Stats");
 
@@ -17034,6 +17113,162 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "AdvancedWeaponProficiency")
+                        .WithMany()
+                        .HasForeignKey("AdvancedWeaponProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "ClassDcProficiency")
+                        .WithMany()
+                        .HasForeignKey("ClassDcProficiencyId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "FortitudeProficiency")
+                        .WithMany()
+                        .HasForeignKey("FortitudeProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "HeavyArmorProficiency")
+                        .WithMany()
+                        .HasForeignKey("HeavyArmorProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "LightArmorProficiency")
+                        .WithMany()
+                        .HasForeignKey("LightArmorProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "MartialWeaponProficiency")
+                        .WithMany()
+                        .HasForeignKey("MartialWeaponProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "MediumArmorProficiency")
+                        .WithMany()
+                        .HasForeignKey("MediumArmorProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "PerceptionProficiency")
+                        .WithMany()
+                        .HasForeignKey("PerceptionProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.MagicTradition", "PredefinedMagicTradition")
+                        .WithMany()
+                        .HasForeignKey("PredefinedMagicTraditionId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "ReflexProficiency")
+                        .WithMany()
+                        .HasForeignKey("ReflexProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "SimpleWeaponProficiency")
+                        .WithMany()
+                        .HasForeignKey("SimpleWeaponProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "SpellAttackProficiency")
+                        .WithMany()
+                        .HasForeignKey("SpellAttackProficiencyId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "SpellDcProficiency")
+                        .WithMany()
+                        .HasForeignKey("SpellDcProficiencyId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "UnarmedWeaponProficiency")
+                        .WithMany()
+                        .HasForeignKey("UnarmedWeaponProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "UnarmoredProficiency")
+                        .WithMany()
+                        .HasForeignKey("UnarmoredProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "WillProficiency")
+                        .WithMany()
+                        .HasForeignKey("WillProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AdvancedWeaponProficiency");
+
+                    b.Navigation("ClassDcProficiency");
+
+                    b.Navigation("FortitudeProficiency");
+
+                    b.Navigation("HeavyArmorProficiency");
+
+                    b.Navigation("LightArmorProficiency");
+
+                    b.Navigation("MartialWeaponProficiency");
+
+                    b.Navigation("MediumArmorProficiency");
+
+                    b.Navigation("PerceptionProficiency");
+
+                    b.Navigation("PredefinedMagicTradition");
+
+                    b.Navigation("ReflexProficiency");
+
+                    b.Navigation("SimpleWeaponProficiency");
+
+                    b.Navigation("SpellAttackProficiency");
+
+                    b.Navigation("SpellDcProficiency");
+
+                    b.Navigation("UnarmedWeaponProficiency");
+
+                    b.Navigation("UnarmoredProficiency");
+
+                    b.Navigation("WillProficiency");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ClassCharacteristic", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Class", "Class")
+                        .WithMany("Characteristics")
+                        .HasForeignKey("ClassId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Class");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ClassFeature", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Class", "Class")
+                        .WithMany("Features")
+                        .HasForeignKey("ClassId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Class");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ClassMannerism", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Class", "Class")
+                        .WithMany("Manerisms")
+                        .HasForeignKey("ClassId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Class");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Deity", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Alignment", "Alignment")
@@ -17297,6 +17532,13 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasForeignKey("RacesId");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SavingThrowStat", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Class", null)
+                        .WithMany("SavingThrowProficiencies")
+                        .HasForeignKey("ClassId");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Skill", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Stat", "StatModifier")
@@ -17417,6 +17659,13 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
 
                     b.Navigation("Spell");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Stat", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Class", null)
+                        .WithMany("KeyAbilities")
+                        .HasForeignKey("ClassId");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Trait", b =>
@@ -17621,6 +17870,19 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Deities");
 
                     b.Navigation("Planes");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
+                {
+                    b.Navigation("Characteristics");
+
+                    b.Navigation("Features");
+
+                    b.Navigation("KeyAbilities");
+
+                    b.Navigation("Manerisms");
+
+                    b.Navigation("SavingThrowProficiencies");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Deity", b =>

@@ -2,6 +2,7 @@
 using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells;
 using System;
@@ -129,7 +130,6 @@ namespace Silvester.Pathfinder.Official.Database
             Source[] sourceSeed = modelBuilder.Entity<Source>().HasBaseEntityKey().HasDataSeed(new SourceSeeder());
             ArmorGroup[] armourGroupSeed = modelBuilder.Entity<ArmorGroup>().HasBaseEntityKey().HasDataSeed(new ArmorGroupSeeder());
             Proficiency[] proficiencySeed = modelBuilder.Entity<Proficiency>().HasBaseEntityKey().HasDataSeed(new ProficiencySeeder());
-            Class[] classSeed = modelBuilder.Entity<Class>().HasBaseEntityKey().HasDataSeed(new ClassSeeder());
             Bulk[] bulkSeed = modelBuilder.Entity<Bulk>().HasBaseEntityKey().HasDataSeed(new BulkSeeder());
             Stat[] statSeed = modelBuilder.Entity<Stat>().HasBaseEntityKey().HasDataSeed(new StatSeeder());
             Skill[] skillSeed = modelBuilder.Entity<Skill>().HasBaseEntityKey().HasDataSeed(new SkillSeeder());
@@ -184,6 +184,7 @@ namespace Silvester.Pathfinder.Official.Database
             //More complex seeds for Feats and Spells.
             new FeatSeeder(modelBuilder, traitSeed, actionTypeSeed, featTypeSeed, proficiencySeed, loreSeed, heritageRaritySeed, itemCategorySeed, skillSeed, statSeed).Seed();
             new SpellSeeder(modelBuilder, magicSchoolSeed, magicTraditionSeed, spellComponentSeed, traitSeed, actionTypeSeed, spellTypeSeed, savingThrowStatSeed).Seed();
+            new ClassSeeder(modelBuilder, traitSeed, actionTypeSeed, featTypeSeed, proficiencySeed, loreSeed, heritageRaritySeed, itemCategorySeed, skillSeed, statSeed, magicTraditionSeed);
         }
     }
 }

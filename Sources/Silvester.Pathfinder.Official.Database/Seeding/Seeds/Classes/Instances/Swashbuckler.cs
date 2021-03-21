@@ -1,0 +1,66 @@
+﻿using Silvester.Pathfinder.Official.Database.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
+{
+    public class Swashbuckler : AbstractClassTemplate
+    {
+        public static readonly Guid ID = Guid.Parse("deb62736-af71-4600-bd4b-59e55961b74d");
+
+        protected override Class GetClass(ClassSeeder seeder)
+        {
+            return new Class
+            {
+                Id = ID,
+                Name = "Swashbuckler",
+                BaseHealth = 10,
+
+                Description = "Many warriors rely on brute force, weighty armor, or cumbersome weapons. For you, battle is a dance where you move among foes with style and grace. You dart among combatants with flair and land powerful finishing moves with a flick of the wrist and a flash of the blade, all while countering attacks with elegant ripostes that keep enemies off balance. Harassing and thwarting your foes lets you charm fate and cheat death time and again with aplomb and plenty of flair.",
+                DuringCombatEncounters = "You show off to gain panache, leveraging your flair to build up to powerful finishing moves. You stay nimble, moving into the best position to perform your maneuvers while dodging enemy blows and responding with swift ripostes. Depending on your swashbuckler’s style, you might dance among your foes; slip past their defenses; or beguile, distract, or frighten them.",
+                DuringSocialEncounters = "You are equally likely to charm or intimidate others—or both. You might be an adept socialite, or you might create distractions for others who do the talking.",
+                WhileExploring = "You keep a careful eye on your surroundings and other people, always prepared to leap into action with bravado and flair. You interact with the environment in bold, sweeping strokes rather than skulking to avoid detection.",
+                InDowntime = "You might carouse at the tavern, repair and maintain your armaments, or train to learn new techniques. To maintain your impressive reputation, you might build an organization in your name or establish a following of admirers.",
+
+                ClassDcProficiencyId = seeder.GetProficiency("Trained"),
+                PerceptionProficiencyId = seeder.GetProficiency("Expert"),
+
+                FortitudeProficiencyId = seeder.GetProficiency("Trained"),
+                ReflexProficiencyId = seeder.GetProficiency("Expert"),
+                WillProficiencyId = seeder.GetProficiency("Expert"),
+
+                SimpleWeaponProficiencyId = seeder.GetProficiency("Trained"),
+                MartialWeaponProficiencyId = seeder.GetProficiency("Trained"),
+                AdvancedWeaponProficiencyId = seeder.GetProficiency("Untrained"),
+                UnarmedWeaponProficiencyId = seeder.GetProficiency("Trained"),
+
+                UnarmoredProficiencyId = seeder.GetProficiency("Trained"),
+                LightArmorProficiencyId = seeder.GetProficiency("Trained"),
+                MediumArmorProficiencyId = seeder.GetProficiency("Untrained"),
+                HeavyArmorProficiencyId = seeder.GetProficiency("Untrained"),
+            };
+        }
+
+        protected override IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder)
+        {
+            return seeder.FilterStats("Dexterity");
+        }
+
+        protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
+        {
+            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Portray yourself as a heroic daredevil or a roguish braggart, knowing you can live up to the image you present." };
+            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Hold yourself in high esteem, confident in your abilities and your reputation." };
+            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Practice your skills and maneuvers regularly to ensure you never grow rusty." };
+        }
+
+        protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
+        {
+            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Admire your theatrics, bravado, and skill with a blade." };
+            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Find you arrogant unless they know you well enough to appreciate your style." };
+            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Underestimate how much of a threat you pose until they face the end of your deadly blade." };
+        }
+    }
+}
