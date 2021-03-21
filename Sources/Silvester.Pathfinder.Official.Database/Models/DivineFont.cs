@@ -7,6 +7,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
     {
         public string Name { get; set; } = default!;
 
+        public string Description { get; set; } = default!;
+
         public ICollection<Deity> Deities { get; set; } = new List<Deity>();
     }
 }
