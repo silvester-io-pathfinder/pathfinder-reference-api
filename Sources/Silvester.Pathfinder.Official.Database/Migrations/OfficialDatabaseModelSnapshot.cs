@@ -17186,7 +17186,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasForeignKey("RacesId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.LanguageType", "Type")
-                        .WithMany()
+                        .WithMany("Languages")
                         .HasForeignKey("TypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -17648,6 +17648,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HeritageRarity", b =>
                 {
                     b.Navigation("Heritages");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.LanguageType", b =>
+                {
+                    b.Navigation("Languages");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.MagicSchool", b =>

@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Official.Database;
 namespace Silvester.Pathfinder.Official.Database.Migrations
 {
     [DbContext(typeof(OfficialDatabase))]
-    [Migration("20210321114926_Initial")]
+    [Migration("20210321131839_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -17188,7 +17188,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasForeignKey("RacesId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.LanguageType", "Type")
-                        .WithMany()
+                        .WithMany("Languages")
                         .HasForeignKey("TypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -17650,6 +17650,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HeritageRarity", b =>
                 {
                     b.Navigation("Heritages");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.LanguageType", b =>
+                {
+                    b.Navigation("Languages");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.MagicSchool", b =>
