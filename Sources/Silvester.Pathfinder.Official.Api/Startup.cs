@@ -37,10 +37,13 @@ namespace Silvester.Pathfinder.Api
         private const string LOCALHOST_CORS_POLICY_NAME = "CORS_POLICY_LOCALHOST";
 
         private IConfiguration Configuration { get; }
+        
+        private IWebHostEnvironment Environment { get; }
 
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Configuration = configuration;
+            Environment = environment;
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -82,9 +85,9 @@ namespace Silvester.Pathfinder.Api
                     IConfigurationSection section = Configuration.GetSection("Databases").GetSection("Official");
                     string connectionString = $"Server={section["Server"]};Database={section["Database"]};User Id={section["UserId"]};Password={section["Password"]};Port={section["Port"]};Timeout={section["Timeout"]};CommandTimeout={section["CommandTimeout"]};";
 
+                    options.EnableSensitiveDataLogging(Environment.IsDevelopment());
                     options.UseNpgsql(connectionString);
                 });
-
 
             IRequestExecutorBuilder graphql = services
                 .AddGraphQLServer()

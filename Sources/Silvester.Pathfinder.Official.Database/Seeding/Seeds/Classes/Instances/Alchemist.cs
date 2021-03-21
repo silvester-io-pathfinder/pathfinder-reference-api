@@ -43,7 +43,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 
         protected override IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder)
         {
-            return seeder.FilterStats("Intelligence");
+            return seeder.FilterStats("Intellect");
         }
 
         protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)

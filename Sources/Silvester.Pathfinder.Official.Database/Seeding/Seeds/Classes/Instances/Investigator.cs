@@ -46,13 +46,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 
         protected override IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder)
         {
-            return seeder.FilterStats("Intelligence");
+            return seeder.FilterStats("Intellect");
         }
 
         protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
         {
             yield return new ClassMannerism { Id = Guid.Parse("ac5fd47c-1575-4a05-8850-bd323519a40a"), Text = "Start asking questions—including several that are quite involved—immediately after you’re presented with a conundrum." };
-            yield return new ClassMannerism { Id = Guid.Parse("5382ffaa-7a1a-4b92-80e9-556a58c966eb"), Text = "Strive to uncover the deeper meanings behind anything you encounter and to identify the social machinations that truly drive events behind the scenes." };
+            yield return new ClassMannerism { Id = Guid.Parse("cf543469-df67-41eb-9738-90b0dd6cb22a"), Text = "Strive to uncover the deeper meanings behind anything you encounter and to identify the social machinations that truly drive events behind the scenes." };
             yield return new ClassMannerism { Id = Guid.Parse("5382ffaa-7a1a-4b92-80e9-556a58c966eb"), Text = "Get so involved in a case that you ignore other matters, deeming them trivial." };
         }
 

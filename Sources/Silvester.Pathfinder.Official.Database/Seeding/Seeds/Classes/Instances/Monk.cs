@@ -51,16 +51,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 
         protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
         {
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Maintain a regimen of physical training and meditation." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Face adversity with a calm and measured approach, never panicking or succumbing to despair." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Look to the future for ways you can improve, while remaining at peace with your present self." };
+            yield return new ClassMannerism { Id = Guid.Parse("cee3ea9b-e7cd-43ab-a2e0-1cfaa5abcc61"), Text = "Maintain a regimen of physical training and meditation." };
+            yield return new ClassMannerism { Id = Guid.Parse("25352f03-9d39-46fe-af17-39417ec66512"), Text = "Face adversity with a calm and measured approach, never panicking or succumbing to despair." };
+            yield return new ClassMannerism { Id = Guid.Parse("7e27c04c-ae5e-4a6e-b18a-fbdf61ed93e4"), Text = "Look to the future for ways you can improve, while remaining at peace with your present self." };
         }
 
         protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
         {
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Marvel at your feats of physical prowess." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Think you’re more than a bit uptight, given your vows and tenets." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Come to you for philosophical advice." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("01a10cfa-4e2b-4668-bc1c-939754abd9b4"), Text = "Marvel at your feats of physical prowess." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("2d776caa-fcbf-420b-aed9-a56ee5c6a8aa"), Text = "Think you’re more than a bit uptight, given your vows and tenets." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("16536a58-583e-454b-a549-c2a2f6496c11"), Text = "Come to you for philosophical advice." };
         }
     }
 }

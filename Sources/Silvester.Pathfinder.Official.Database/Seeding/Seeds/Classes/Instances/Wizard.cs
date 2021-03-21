@@ -50,21 +50,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 
         protected override IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder)
         {
-            return seeder.FilterStats("Intelligence");
+            return seeder.FilterStats("Intellect");
         }
 
         protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
         {
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Have an unquenchable intellectual curiosity about how everything in the world around you works—magic in particular." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Believe fervently that your school of magic is superior (if you’re a specialist) or that true mastery of magic requires knowledge of all schools(if you’re a universalist)." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Use esoteric jargon and technical terms to precisely describe the minutiae of magical effects, even though the difference is probably lost on other people." };
+            yield return new ClassMannerism { Id = Guid.Parse("e9e050bf-ac84-414e-84be-516165f99eb3"), Text = "Have an unquenchable intellectual curiosity about how everything in the world around you works—magic in particular." };
+            yield return new ClassMannerism { Id = Guid.Parse("7363708a-d989-4f1c-8366-a2f7715cbb64"), Text = "Believe fervently that your school of magic is superior (if you’re a specialist) or that true mastery of magic requires knowledge of all schools(if you’re a universalist)." };
+            yield return new ClassMannerism { Id = Guid.Parse("4ccd6d2e-c2e1-412d-9e11-982f22168293"), Text = "Use esoteric jargon and technical terms to precisely describe the minutiae of magical effects, even though the difference is probably lost on other people." };
         }
 
         protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
         {
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Consider you to be incredibly powerful and potentially dangerous." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Fear what your magic can do to their minds, bodies, and souls, and ask that you avoid casting spells in polite company, as few can identify whether one of your spells is harmless or malevolent until it’s too late." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Assume you can easily solve all their problems, from dangerous weather to poor crop yields, and ask you for spells that can help them get whatever they desire." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("05ba17eb-b08a-4cf0-a4b8-2d98799f24ef"), Text = "Consider you to be incredibly powerful and potentially dangerous." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("74db8994-017c-46d9-9e2c-fa40c541c477"), Text = "Fear what your magic can do to their minds, bodies, and souls, and ask that you avoid casting spells in polite company, as few can identify whether one of your spells is harmless or malevolent until it’s too late." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("e0930221-ec07-49cd-b8a9-fa2392eeefb9"), Text = "Assume you can easily solve all their problems, from dangerous weather to poor crop yields, and ask you for spells that can help them get whatever they desire." };
         }
     }
 }

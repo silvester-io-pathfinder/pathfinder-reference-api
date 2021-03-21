@@ -51,16 +51,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 
         protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
         {
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Portray yourself as a heroic daredevil or a roguish braggart, knowing you can live up to the image you present." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Hold yourself in high esteem, confident in your abilities and your reputation." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Practice your skills and maneuvers regularly to ensure you never grow rusty." };
+            yield return new ClassMannerism { Id = Guid.Parse("f4565e71-6154-49e4-b152-9e67df99750b"), Text = "Portray yourself as a heroic daredevil or a roguish braggart, knowing you can live up to the image you present." };
+            yield return new ClassMannerism { Id = Guid.Parse("fde67e42-2e4a-4abc-9bb4-e84e70a4cc18"), Text = "Hold yourself in high esteem, confident in your abilities and your reputation." };
+            yield return new ClassMannerism { Id = Guid.Parse("d2983995-904d-4f96-a4ce-55abbefbd81b"), Text = "Practice your skills and maneuvers regularly to ensure you never grow rusty." };
         }
 
         protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
         {
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Admire your theatrics, bravado, and skill with a blade." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Find you arrogant unless they know you well enough to appreciate your style." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Underestimate how much of a threat you pose until they face the end of your deadly blade." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("1c6d2032-af7f-4685-8eae-868aa5711e2e"), Text = "Admire your theatrics, bravado, and skill with a blade." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("0b8205e3-3820-4e28-b3e1-e4ead143b5ce"), Text = "Find you arrogant unless they know you well enough to appreciate your style." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("29f951f9-21c2-4063-bbaf-4c2b227cf204"), Text = "Underestimate how much of a threat you pose until they face the end of your deadly blade." };
         }
     }
 }

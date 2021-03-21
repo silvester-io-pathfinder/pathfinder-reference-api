@@ -48,16 +48,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 
         protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
         {
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Have a deep-seated well of anger, hatred, or frustration." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Prefer a straightforward approach to one requiring patience and tedium." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Engage in a regimen of intense physical fitness—and punch anyone who says this conflicts with your distaste for patience and tedium." };
+            yield return new ClassMannerism { Id = Guid.Parse("c7197881-4e0a-4816-b64e-bf0bb2eaf5f5"), Text = "Have a deep-seated well of anger, hatred, or frustration." };
+            yield return new ClassMannerism { Id = Guid.Parse("9d16d728-b78b-47e8-adca-e6a8d75f2580"), Text = "Prefer a straightforward approach to one requiring patience and tedium." };
+            yield return new ClassMannerism { Id = Guid.Parse("3de123ba-e38d-417b-a229-f84b6effa669"), Text = "Engage in a regimen of intense physical fitness—and punch anyone who says this conflicts with your distaste for patience and tedium." };
         }
 
         protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
         {
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Rely on your courage and your strength, and trust that you can hold your own in a fight." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "See you as uncivilized or a boorish lout unfit for high society." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Believe that you are loyal to your friends and allies and will never relent until the fight is done." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("47d4e38b-f03a-4127-a673-243af7a327dc"), Text = "Rely on your courage and your strength, and trust that you can hold your own in a fight." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("42556a95-e0e0-40b5-8a5d-e031fd221d8d"), Text = "See you as uncivilized or a boorish lout unfit for high society." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("91bb3e45-7f52-441d-babc-b05303471515"), Text = "Believe that you are loyal to your friends and allies and will never relent until the fight is done." };
         }
     }
 }

@@ -65,11 +65,9 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid? PredefinedMagicTraditionId { get; set; }
         public MagicTradition? PredefinedMagicTradition { get; set; }
 
-        public ICollection<SavingThrowStat> SavingThrowProficiencies { get; set; } = new List<SavingThrowStat>();
-
         public ICollection<Stat> KeyAbilities { get; set; } = new List<Stat>();
 
-        public ICollection<ClassMannerism> Manerisms { get; set; } = new List<ClassMannerism>();
+        public ICollection<ClassMannerism> Mannerisms { get; set; } = new List<ClassMannerism>();
 
         public ICollection<ClassCharacteristic> Characteristics { get; set; } = new List<ClassCharacteristic>();
 

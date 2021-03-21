@@ -184,7 +184,7 @@ namespace Silvester.Pathfinder.Official.Database
             //More complex seeds for Feats and Spells.
             new FeatSeeder(modelBuilder, traitSeed, actionTypeSeed, featTypeSeed, proficiencySeed, loreSeed, heritageRaritySeed, itemCategorySeed, skillSeed, statSeed).Seed();
             new SpellSeeder(modelBuilder, magicSchoolSeed, magicTraditionSeed, spellComponentSeed, traitSeed, actionTypeSeed, spellTypeSeed, savingThrowStatSeed).Seed();
-            new ClassSeeder(modelBuilder, traitSeed, actionTypeSeed, featTypeSeed, proficiencySeed, loreSeed, heritageRaritySeed, itemCategorySeed, skillSeed, statSeed, magicTraditionSeed);
+            new ClassSeeder(modelBuilder, traitSeed, actionTypeSeed, featTypeSeed, proficiencySeed, loreSeed, heritageRaritySeed, itemCategorySeed, skillSeed, statSeed, magicTraditionSeed).Seed();
         }
     }
 }

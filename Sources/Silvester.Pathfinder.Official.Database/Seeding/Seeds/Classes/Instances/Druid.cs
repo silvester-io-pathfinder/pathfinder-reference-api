@@ -55,16 +55,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 
         protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
         {
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Have a deep and meaningful respect for the power of nature." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Be in constant awe of the natural world, eager to share it with others but wary of their influence upon it." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Treat plants and animals as allies, working with them to reach your goals." };
+            yield return new ClassMannerism { Id = Guid.Parse("fdb38cc9-5b9e-45c3-ae43-660d5aaa3675"), Text = "Have a deep and meaningful respect for the power of nature." };
+            yield return new ClassMannerism { Id = Guid.Parse("22d2fbc4-04ce-4b41-b119-9459dd877a65"), Text = "Be in constant awe of the natural world, eager to share it with others but wary of their influence upon it." };
+            yield return new ClassMannerism { Id = Guid.Parse("1d27448a-3fb0-47cb-b126-85f4a433fe9e"), Text = "Treat plants and animals as allies, working with them to reach your goals." };
         }
 
         protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
         {
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "View you as a representative of nature, and are sure you can control it." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Assume you’re a recluse who avoids society and cities and prefers to live in the wild." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Consider you a mystic, similar to a priest, but answering only to the forces of nature." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("2a801590-b596-4584-ac5a-1c65015ef184"), Text = "View you as a representative of nature, and are sure you can control it." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("62e621eb-b0ee-4622-914f-a70b8e84dbfc"), Text = "Assume you’re a recluse who avoids society and cities and prefers to live in the wild." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("82532d8e-b943-4aed-b14e-e3a302ade578"), Text = "Consider you a mystic, similar to a priest, but answering only to the forces of nature." };
         }
     }
 }

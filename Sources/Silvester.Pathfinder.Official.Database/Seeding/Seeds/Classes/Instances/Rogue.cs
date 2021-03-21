@@ -51,16 +51,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 
         protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
         {
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Hone your skills through intense practice, both on your own and out in the world." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Know where to attain illicit goods." };
-            yield return new ClassMannerism { Id = Guid.Parse(""), Text = "Skirt or break the law because you think it’s meaningless or have your own code." };
+            yield return new ClassMannerism { Id = Guid.Parse("2050d6a7-747d-4e76-8c0d-1ddc09b4ec53"), Text = "Hone your skills through intense practice, both on your own and out in the world." };
+            yield return new ClassMannerism { Id = Guid.Parse("75025372-a5b4-49f9-89e6-b46f146ca281"), Text = "Know where to attain illicit goods." };
+            yield return new ClassMannerism { Id = Guid.Parse("7a5115d6-8a23-4616-83bc-a2ff379db0c2"), Text = "Skirt or break the law because you think it’s meaningless or have your own code." };
         }
 
         protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
         {
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Find you charming or fascinating, even if they think they know better than to trust you." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Come to you when they need someone who is willing to take risks or use questionable methods." };
-            yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Suspect you’re motivated primarily by greed." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("4184690e-d9de-4daa-959f-cd13811949a1"), Text = "Find you charming or fascinating, even if they think they know better than to trust you." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("5a54de41-6cf6-4bb4-a971-06f01270cf9e"), Text = "Come to you when they need someone who is willing to take risks or use questionable methods." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("8f67f4eb-f9d6-4c17-915f-950eb88ccccd"), Text = "Suspect you’re motivated primarily by greed." };
         }
     }
 }

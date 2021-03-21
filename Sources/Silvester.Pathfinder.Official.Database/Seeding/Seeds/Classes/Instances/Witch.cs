@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
                 ReflexProficiencyId = seeder.GetProficiency("Trained"),
                 WillProficiencyId = seeder.GetProficiency("Expert"),
 
-                SimpleWeaponProficiencyId = seeder.GetProficiency("TraineUntrained"),
+                SimpleWeaponProficiencyId = seeder.GetProficiency("Trained"),
                 MartialWeaponProficiencyId = seeder.GetProficiency("Untrained"),
                 AdvancedWeaponProficiencyId = seeder.GetProficiency("Untrained"),
                 UnarmedWeaponProficiencyId = seeder.GetProficiency("Trained"),
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 
         protected override IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder)
         {
-            return seeder.FilterStats("Intelligence");
+            return seeder.FilterStats("Intellect");
         }
 
         protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)

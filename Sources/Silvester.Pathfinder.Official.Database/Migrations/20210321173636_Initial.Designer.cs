@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Official.Database;
 namespace Silvester.Pathfinder.Official.Database.Migrations
 {
     [DbContext(typeof(OfficialDatabase))]
-    [Migration("20210321165942_Initial")]
+    [Migration("20210321173636_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,133 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 .UseIdentityByDefaultColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.2");
+
+            modelBuilder.Entity("ClassStat", b =>
+                {
+                    b.Property<Guid>("KeyAbilityClassesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("KeyAbilitiesId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("KeyAbilityClassesId", "KeyAbilitiesId");
+
+                    b.HasIndex("KeyAbilitiesId");
+
+                    b.ToTable("ClassStat");
+
+                    b.HasData(
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("df6b0137-7082-470f-939f-5d241ef7d651"),
+                            KeyAbilitiesId = new Guid("37406a59-0dd9-4766-8713-33b13b7740fd")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("a171edb5-59c0-4468-b710-a6b9df2f4497"),
+                            KeyAbilitiesId = new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("9c08f598-a180-4a59-984a-a26a67607054"),
+                            KeyAbilitiesId = new Guid("f4206177-80d3-4c9c-8f79-357a608897fa")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"),
+                            KeyAbilitiesId = new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"),
+                            KeyAbilitiesId = new Guid("21b2cca1-66cd-48d1-a91b-085521659548")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade"),
+                            KeyAbilitiesId = new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("73f7051c-8eff-4337-a87c-183deb7a998c"),
+                            KeyAbilitiesId = new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("9cace213-82ff-4751-a438-8afd87d433e4"),
+                            KeyAbilitiesId = new Guid("21b2cca1-66cd-48d1-a91b-085521659548")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("9cace213-82ff-4751-a438-8afd87d433e4"),
+                            KeyAbilitiesId = new Guid("37406a59-0dd9-4766-8713-33b13b7740fd")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("2483fb2b-b7cc-4eab-9c4e-0118477e46ed"),
+                            KeyAbilitiesId = new Guid("37406a59-0dd9-4766-8713-33b13b7740fd")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"),
+                            KeyAbilitiesId = new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"),
+                            KeyAbilitiesId = new Guid("21b2cca1-66cd-48d1-a91b-085521659548")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("bc25beea-18e8-4417-8ada-a0f58bc79585"),
+                            KeyAbilitiesId = new Guid("f4206177-80d3-4c9c-8f79-357a608897fa")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("ceb15fca-8288-456e-9769-98cce79bb104"),
+                            KeyAbilitiesId = new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("ceb15fca-8288-456e-9769-98cce79bb104"),
+                            KeyAbilitiesId = new Guid("21b2cca1-66cd-48d1-a91b-085521659548")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
+                            KeyAbilitiesId = new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
+                            KeyAbilitiesId = new Guid("37406a59-0dd9-4766-8713-33b13b7740fd")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
+                            KeyAbilitiesId = new Guid("f4206177-80d3-4c9c-8f79-357a608897fa")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("05d42777-0744-4a72-85ad-d27186c96deb"),
+                            KeyAbilitiesId = new Guid("f4206177-80d3-4c9c-8f79-357a608897fa")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("deb62736-af71-4600-bd4b-59e55961b74d"),
+                            KeyAbilitiesId = new Guid("21b2cca1-66cd-48d1-a91b-085521659548")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("de966e73-2c40-40b4-956f-57e326f7ce8e"),
+                            KeyAbilitiesId = new Guid("37406a59-0dd9-4766-8713-33b13b7740fd")
+                        },
+                        new
+                        {
+                            KeyAbilityClassesId = new Guid("0e53c45a-9ab8-4d4a-bb5b-51af257c56bc"),
+                            KeyAbilitiesId = new Guid("37406a59-0dd9-4766-8713-33b13b7740fd")
+                        });
+                });
 
             modelBuilder.Entity("DeityDivineFont", b =>
                 {
@@ -3972,6 +4099,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("KeyAbilitiesId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid>("LightArmorProficiencyId")
                         .HasColumnType("uuid");
 
@@ -4026,6 +4156,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("HeavyArmorProficiencyId");
 
+                    b.HasIndex("KeyAbilitiesId");
+
                     b.HasIndex("LightArmorProficiencyId");
 
                     b.HasIndex("MartialWeaponProficiencyId");
@@ -4051,6 +4183,417 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasIndex("WillProficiencyId");
 
                     b.ToTable("Classes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("df6b0137-7082-470f-939f-5d241ef7d651"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 8,
+                            ClassDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Description = "There’s no sight more beautiful to you than a strange brew bubbling in a beaker, and you consume your ingenious elixirs with abandon. You’re fascinated by uncovering the secrets of science and the natural world, and you’re constantly experimenting in your lab or on the go with inventive concoctions for every eventuality. You are fearless in the face of risk, hurling explosive or toxic creations at your foes. Your unique path toward greatness is lined with alchemical brews that push your mind and body to their limits.",
+                            DuringCombatEncounters = "You lob bombs at your foes, harry your enemies, and support the rest of your party with potent elixirs. At higher levels, your mutagens warp your body into a resilient and powerful weapon.",
+                            DuringSocialEncounters = "You provide knowledge and experience about alchemical items and related secrets, such as poisons and diseases.",
+                            FortitudeProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You experiment in an alchemical lab, brewing elixirs, making bombs, and furthering your alchemical knowledge.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MediumArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Name = "Alchemist",
+                            PerceptionProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            ReflexProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You keep an eye out for trouble with your bombs at the ready, while giving advice on all things alchemical and mysterious.",
+                            WillProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8")
+                        },
+                        new
+                        {
+                            Id = new Guid("a171edb5-59c0-4468-b710-a6b9df2f4497"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 12,
+                            ClassDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Description = "Rage consumes you in battle. You delight in wreaking havoc and using powerful weapons to carve through your enemies, relying on astonishing durability without needing complicated techniques or rigid training. Your rages draw upon a vicious instinct, which you might associate with an animal, a spirit, or some part of yourself. To many barbarians, brute force is a hammer and every problem looks like a nail, whereas others try to hold back the storm of emotions inside them and release their rage only when it matters most.",
+                            DuringCombatEncounters = "You summon your rage and rush to the front lines to smash your way through. Offense is your best defense—you’ll need to drop foes before they can exploit your relatively low defenses.",
+                            DuringSocialEncounters = "You use intimidation to get what you need, especially when gentler persuasion can’t get the job done.",
+                            FortitudeProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You might head to a tavern to carouse, build up the fearsome legend of your mighty deeds, or recruit followers to become a warlord in your own right.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MediumArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Name = "Barbarian",
+                            PerceptionProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            ReflexProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You look out for danger, ready to rush headfirst into battle in an instant. You climb the challenging rock wall and drop a rope for others to follow, and you wade into the risky currents to reach the hidden switch beneath the water’s surface. If something needs breaking, you’re up to the task!",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("9c08f598-a180-4a59-984a-a26a67607054"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 8,
+                            ClassDcProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Description = "You are a master of artistry, a scholar of hidden secrets, and a captivating persuader. Using powerful performances, you influence minds and elevate souls to new levels of heroics. You might use your powers to become a charismatic leader, or perhaps you might instead be a counselor, manipulator, scholar, scoundrel, or virtuoso. While your versatility leads some to consider you a beguiling ne’erdo- well and a jack-of-all-trades, it’s dangerous to dismiss you as a master of none.",
+                            DuringCombatEncounters = "You use magical performances to alter the odds in favor of your allies. You confidently alternate between attacks, healing, and helpful spells as needed.",
+                            DuringSocialEncounters = "You persuade, prevaricate, and threaten with ease.",
+                            FortitudeProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You can earn money and prestige with your performances, gaining a name for yourself and acquiring patrons. Eventually, tales of your talents and triumphs might attract other bards to study your techniques in a bardic college.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MediumArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Name = "Bard",
+                            PerceptionProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            PredefinedMagicTraditionId = new Guid("8e4b2e84-303a-42eb-a4df-348d1c4fbbf8"),
+                            ReflexProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellAttackProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You’re a font of knowledge, folktales, legends, and lore that provide a deeper context and helpful reconnaissance for the group’s adventure. Your spells and performances inspire your allies to greater discovery and success.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 10,
+                            ClassDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Description = "You are an emissary of a deity, a devoted servant who has taken up a weighty mantle, and you adhere to a code that holds you apart from those around you. While champions exist for every alignment, as a champion of good, you provide certainty and hope to the innocent. You have powerful defenses that you share freely with your allies and innocent bystanders, as well as holy power you use to end the threat of evil. Your devotion even attracts the attention of holy spirits who aid you on your journey.",
+                            DuringCombatEncounters = "You confront enemies in hand-to-hand combat while carefully positioning yourself to protect your allies.",
+                            DuringSocialEncounters = "You are a voice of hope, striving to reach a peaceful solution that strengthens bonds and yields good results for all.",
+                            FortitudeProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            HeavyArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            InDowntime = "You spend much of your time in solemn prayer and contemplation, rigorous training, charity work, and fulfilling the tenets of your code, but that doesn’t mean there isn’t time to take up a craft or hobby.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MediumArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Name = "Champion",
+                            PerceptionProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            PredefinedMagicTraditionId = new Guid("9dfb8bc7-ade4-4ce4-8aa5-1a17ab541698"),
+                            ReflexProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellAttackProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You overcome barriers both physical and spiritual, providing inspiration to your allies through your actions and—when your fellow adventurers ask for it—providing moral and ethical guidance.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 8,
+                            ClassDcProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Description = "Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. Blessed with divine magic, you live the ideals of your faith, adorn yourself with the symbols of your church, and train diligently to wield your deity’s favored weapon. Your spells might protect and heal your allies, or they might punish foes and enemies of your faith, as your deity wills. Yours is a life of devotion, spreading the teachings of your faith through both word and deed.",
+                            DuringCombatEncounters = "If you’re a warpriest, you balance between casting spells and attacking with weapons, typically the favored weapon of your deity. If you’re a cloistered cleric, you primarily cast spells. Most of your spells can boost, protect, or heal your allies. Depending on your deity, you get extra spells to heal your allies or harm your enemies.",
+                            DuringSocialEncounters = "You might make diplomatic overtures or deliver impressive speeches. Because you’re wise, you also pick up on falsehoods others tell.",
+                            FortitudeProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You might perform services at a temple, travel to spread the word of your deity, research scripture, celebrate holy days, or even found a new temple.",
+                            LightArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MartialWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MediumArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Name = "Cleric",
+                            PerceptionProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            PredefinedMagicTraditionId = new Guid("9dfb8bc7-ade4-4ce4-8aa5-1a17ab541698"),
+                            ReflexProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellAttackProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You detect nearby magic and interpret any religious writing you come across. You might also concentrate on a protective spell for your allies in case of attack.After a battle or hazard, you might heal anyone who was hurt.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("73f7051c-8eff-4337-a87c-183deb7a998c"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 8,
+                            ClassDcProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Description = "The power of nature is impossible to resist. It can bring ruin to the stoutest fortress in minutes, reducing even the mightiest works to rubble, burning them to ash, burying them beneath an avalanche of snow, or drowning them beneath the waves. It can provide endless bounty and breathtaking splendor to those who respect it— and an agonizing death to those who take it too lightly. You are one of those who hear nature’s call. You stand in awe of the majesty of its power and give yourself over to its service.",
+                            DuringCombatEncounters = "You call upon the forces of nature to defeat your enemies and protect your allies. You cast spells that draw upon primal magic to protect yourself and your friends, heal their wounds, or summon deadly animals to fight at your side. Depending on your bond to nature, you might call upon powerful elemental magic or change shape into a terrifying beast.",
+                            DuringSocialEncounters = "You represent balance and a reasoned approach to problems, looking for solutions that not only are best for the natural world, but also allow the creatures within it to live in harmony and peace.You often propose compromises that allow both sides to gain what they truly need, even if they can’t have all that they desire.",
+                            FortitudeProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You might craft magic items or potions. Alternatively, your tie to nature might lead you to tend a wilderness area, befriending beasts and healing the wounds caused by  civilization.You might even teach sustainable farming and animal husbandry techniquesthat allow others to subsist off the land without harming the natural balance.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MediumArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Name = "Druid",
+                            PerceptionProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            PredefinedMagicTraditionId = new Guid("fffa34af-0ad5-4e1e-9de9-92becba8c30b"),
+                            ReflexProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellAttackProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "Your nature skills are invaluable. You track down enemies, navigate the wilderness, and use spells to detect magical auras around you.You might even ask wild animals to lend their extraordinary senses and scouting abilities to your group.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("9cace213-82ff-4751-a438-8afd87d433e4"),
+                            AdvancedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            BaseHealth = 10,
+                            ClassDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Description = "Fighting for honor, greed, loyalty, or simply the thrill of battle, you are an undisputed master of weaponry and combat techniques. You combine your actions through clever combinations of opening moves, finishing strikes, and counterattacks whenever your foes are unwise enough to drop their guard. Whether you are a knight, mercenary, sharpshooter, or blade master, you have honed your martial skills into an art form and perform devastating critical attacks on your enemies.",
+                            DuringCombatEncounters = "You strike with unmatched accuracy and use specialized combat techniques. A melee fighter stands between allies and enemies, attacking foes who try to get past. A ranged fighter delivers precise shots from a distance.",
+                            DuringSocialEncounters = "You can be an intimidating presence. This can be useful when negotiating with enemies, but is sometimes a liability in more genteel interactions.",
+                            FortitudeProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            HeavyArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            InDowntime = "You might perform manual labor or craft and repair armaments. If you know techniques you no longer favor, you might train yourself in new ones. If you’ve established your reputation, you might build an organization or a stronghold of your own.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            MediumArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Name = "Fighter",
+                            PerceptionProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            ReflexProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SimpleWeaponProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SpellAttackProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            SpellDcProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            UnarmedWeaponProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You keep up your defenses in preparation for combat, and keep an eye out for hidden threats. You also overcome physical challenges in your way, breaking down doors, lifting obstacles, climbing adeptly, and leaping across pits.",
+                            WillProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8")
+                        },
+                        new
+                        {
+                            Id = new Guid("2483fb2b-b7cc-4eab-9c4e-0118477e46ed"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 8,
+                            ClassDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Description = "You seek to uncover the truth, doggedly pursuing leads to reveal the plots of devious villains, discover ancient secrets, or unravel other mysteries. Your analytical mind quickly formulates solutions to complicated problems and your honed senses identify even the most obscure clues. Wielding knowledge as a weapon, you study the creatures and dangers you encounter to exploit their weaknesses.",
+                            DuringCombatEncounters = "Your keen insights regarding your foes make you more dangerous than your physical strength would suggest. After spending a moment to study your enemies, your perceptiveness allows you to act quickly, striking them where it hurts most. You often assist tougher members of your party, wisely protecting yourself while providing vital aid.",
+                            DuringSocialEncounters = "Few can stand up against your scrutiny. You might not be the most charming, but you see things for what they really are and develop an understanding of a social situation rapidly. Every conversation is an investigation, after all, and you never know what you might uncover!",
+                            FortitudeProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You study up on subjects new and old, make new allies you can share information with, and pursue hobbies that keep your active mind satisfied. You might make a bit of coin on the side working as a private detective or consulting with the local constabulary.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MediumArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Name = "Investigator",
+                            PerceptionProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            ReflexProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You look for clues in your environment. You often prove yourself to be a valuable ally by serving as a party scout, analyzing the intricacies of puzzles or mysterious phenomena, and pursuing leads that could reveal beneficial information.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 10,
+                            ClassDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Description = "The strength of your fist flows from your mind and spirit. You seek perfection—honing your body into a flawless instrument and your mind into an orderly bastion of wisdom.You’re a fierce combatant renowned for martial arts skills and combat stances that grant you unique fighting moves.While the challenge of mastering many fighting styles drives you to great heights, you also enjoy meditating on philosophical questions and discovering new ways to obtain peace and enlightenment.",
+                            DuringCombatEncounters = "You speed into the fray, dodging or leaping past obstacles with acrobatic maneuvers. You strike opponents in a rapid flurry of attacks, using your bare fists or wielding specialized weapons that you mastered during your monastic training. Stances let you change up your combat style for different situations, and ki abilities allow you to perform mystic feats like healing yourself and soaring through the air.",
+                            DuringSocialEncounters = "Your perceptiveness lets you see through falsehoods, and your philosophical trainingprovides insight into any situation.",
+                            FortitudeProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You diligently exercise, eat healthy foods, meditate, and study various philosophies. You might also take up a craft that you strive to perfect.",
+                            LightArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MartialWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MediumArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Name = "Monk",
+                            PerceptionProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            ReflexProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You climb up walls, dodge traps, overcome obstacles, and leap over pits. You usually stay toward the outside of the group to protect more vulnerable members, and you’re well suited to looking for danger or moving stealthily.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("bc25beea-18e8-4417-8ada-a0f58bc79585"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 8,
+                            ClassDcProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Description = "Your conduit to divine power eschews the traditional channels of prayer and servitude—you instead glean divine truths that extend beyond any single deity. You understand the great mysteries of the universe embodied in overarching concepts that transcend good and evil or chaos and law, whether because you perceive the common ground across multiple deities or circumvent their power entirely. You explore one of these mysteries and draw upon its power to cast miraculous spells, but that power comes with a terrible price: a curse that grows stronger the more you draw upon it. Your abilities are a double-edged sword, which you might uphold as an instrument of the divine or view as a curse from the gods.",
+                            DuringCombatEncounters = "You draw upon your mystery to empower yourself in combat, balancing miraculous effects with the increasing severity of your curse as conflicting divine demands overtax your physical body. You cast spells to aid your allies and devastate your foes, or depending on your mystery, you might wade into battle yourself.",
+                            DuringSocialEncounters = "You rely upon the insights drawn from your mystery. You might leverage your curse to intimidate people or hide its effects to better blend in.",
+                            FortitudeProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You might seek to learn more about your mystery and the divine wellsprings that fuel your power. Associating with others interested in the subject of your mystery can make it easier to live with your curse. You could associate with an organized religion or even start your own faithful following devoted to your mystery.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MediumArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Name = "Oracle",
+                            PerceptionProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            PredefinedMagicTraditionId = new Guid("9dfb8bc7-ade4-4ce4-8aa5-1a17ab541698"),
+                            ReflexProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellAttackProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You recenter yourself to bring the terrible metaphysical conflicts causing your curse back under control so you can draw upon your mystery’s power again later. You remain aware of supernatural forces acting around you, perhaps peeking into the future to gain insights.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("ceb15fca-8288-456e-9769-98cce79bb104"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 10,
+                            ClassDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Description = "Some rangers believe civilization wears down the soul, but still needs to be protected from wild creatures.Others say nature needs to be protected from the greedy, who wish to tame its beauty and plunder its treasures.You could champion either goal, or both. You might be a scout, tracker, or hunter of fugitives or beasts, haunting the edge of civilization or exploring the wilds.You know how to live off the land and are skilled at spotting and taking down both opportune prey and hated enemies.",
+                            DuringCombatEncounters = "You can single out particular foes to hunt, making you better at defeating them. You target and brutalize your chosen foe with either a bow or melee weapons, while supporting your allies with your skills.",
+                            DuringSocialEncounters = "When you speak, it’s with the voice of practical experience, especially involving wilderness exploration.",
+                            FortitudeProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You craft weapons and train animals in preparation for your next venture. If you prefer to get outside, you might go on hunts or scout nearby areas to better understand your environment.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MediumArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Name = "Ranger",
+                            PerceptionProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            ReflexProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You guide your allies through the wilderness or follow tracks. You keep an eye out for trouble, constantly alert for danger even when it’s not overt.",
+                            WillProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8")
+                        },
+                        new
+                        {
+                            Id = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 8,
+                            ClassDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Description = "You are skilled and opportunistic . Using your sharp wits and quick reactions, you take advantage of your opponents’ missteps and strike where it hurts most. You play a dangerous game, seeking thrills and testing your skills, and likely don’t care much for any laws that happen to get in your way. While the path of every rogue is unique and riddled with danger, the one thing you all share in common is the breadth and depth of your skills.",
+                            DuringCombatEncounters = "You move about stealthily so you can catch foes unawares. You’re a precision instrument, more useful against a tough boss or distant spellcaster than againstrank - and - file soldiers.",
+                            DuringSocialEncounters = "Your skills give you multiple tools to influence your opposition. Pulling cons and ferreting out information are second nature to you.",
+                            FortitudeProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You might pick pockets or trade in illegal goods. You can also become part of a thieves’ guild, or even found one of your own.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MediumArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Name = "Rogue",
+                            PerceptionProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            ReflexProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You sneak to get the drop on foes and scout for danger or traps. You’re a great asset, since you can disable traps, solve puzzles, and anticipate dangers.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("05d42777-0744-4a72-85ad-d27186c96deb"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 6,
+                            ClassDcProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Description = "You didn’t choose to become a spellcaster—you were born one. There’s magic in your blood, whether a divinity touched one of your ancestors, a forebear communed with a primal creature, or a powerful occult ritual influenced your line. Self-reflection and study allow you to refine your inherent magical skills and unlock new, more powerful abilities. The power in your blood carries a risk, however, and you constantly face the choice of whether you’ll rise to become a master spellcaster or fall into destruction.",
+                            DuringCombatEncounters = "You use spells to injure your enemies, influence their minds, and hamper their movements. You might be too vulnerable to get into melee combat, or your bloodline might give you abilities that help you hold your own in a brawl. While your magic is powerful, to conserve your best spells—or when you’ve used them all up—you also rely on cantrips.",
+                            DuringSocialEncounters = "Your natural charisma makes you good at interacting with people.",
+                            FortitudeProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You craft magic items or scribe scrolls. Your bloodline might drive you to research your ancestry or associate with affiliated people or creatures.",
+                            LightArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MartialWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MediumArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Name = "Sorcerer",
+                            PerceptionProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            ReflexProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellAttackProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You detect the magic around you, finding treasures and warning your adventuring group of magical traps. When the group encounters mysteries or problems related to your bloodline, you try to solve them.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("deb62736-af71-4600-bd4b-59e55961b74d"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 10,
+                            ClassDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            Description = "Many warriors rely on brute force, weighty armor, or cumbersome weapons. For you, battle is a dance where you move among foes with style and grace. You dart among combatants with flair and land powerful finishing moves with a flick of the wrist and a flash of the blade, all while countering attacks with elegant ripostes that keep enemies off balance. Harassing and thwarting your foes lets you charm fate and cheat death time and again with aplomb and plenty of flair.",
+                            DuringCombatEncounters = "You show off to gain panache, leveraging your flair to build up to powerful finishing moves. You stay nimble, moving into the best position to perform your maneuvers while dodging enemy blows and responding with swift ripostes. Depending on your swashbuckler’s style, you might dance among your foes; slip past their defenses; or beguile, distract, or frighten them.",
+                            DuringSocialEncounters = "You are equally likely to charm or intimidate others—or both. You might be an adept socialite, or you might create distractions for others who do the talking.",
+                            FortitudeProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You might carouse at the tavern, repair and maintain your armaments, or train to learn new techniques. To maintain your impressive reputation, you might build an organization in your name or establish a following of admirers.",
+                            LightArmorProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MartialWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            MediumArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Name = "Swashbuckler",
+                            PerceptionProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            ReflexProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You keep a careful eye on your surroundings and other people, always prepared to leap into action with bravado and flair. You interact with the environment in bold, sweeping strokes rather than skulking to avoid detection.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("de966e73-2c40-40b4-956f-57e326f7ce8e"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 6,
+                            ClassDcProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Description = "You command powerful magic, not through study or devotion to any ideal, but as a vessel or agent for a mysterious, otherworldly patron that even you don’t entirely understand. This entity might be a covert divinity, a powerful fey, a manifestation of natural energies, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to anyone else. Through a special familiar, your patron grants you versatile spells and powerful hexes to use as you see fit, though you’re never certain if these gifts will end up serving your patron’s larger plan.",
+                            DuringCombatEncounters = "You cast spells to change the course of battle. You use magical hexes to hamper enemies and aid allies, while leveraging more powerful spells to control the battlefield, heal, or harm, aided by your extraordinary familiar, brewed potions, and magical items.",
+                            DuringSocialEncounters = "You provide knowledge on numerous topics, including a variety of magical matters, and you might call upon your patron’s magic to charm or deceive others.",
+                            FortitudeProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You brew potions, craft other magical items, or hunt for new spells for your familiar to learn. You might try to learn more about your patron, their aims, or your own powers, and you might seek out the company of other witches for collaboration or community.",
+                            LightArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MartialWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MediumArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Name = "Witch",
+                            PerceptionProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            PredefinedMagicTraditionId = new Guid("10dddda5-a943-4ecb-ba33-57ceba60245e"),
+                            ReflexProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SimpleWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellAttackProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You remain alert for magical traps and treasures, employing a clever array of spells to overcome obstacles that stand in your way. Your familiar might aid you through its own considerable set of exceptional abilities.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        },
+                        new
+                        {
+                            Id = new Guid("0e53c45a-9ab8-4d4a-bb5b-51af257c56bc"),
+                            AdvancedWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            BaseHealth = 6,
+                            ClassDcProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Description = "You are an eternal student of the arcane secrets of the universe, using your mastery of magic to cast powerful and devastating spells. You treat magic like a science, cross-referencing the latest texts on practical spellcraft with ancient esoteric tomes to discover and understand how magic works. Yet magical theory is vast, and there’s no way you can study it all. You either specialize in one of the eight schools of magic, gaining deeper understanding of the nuances of those spells above all others, or favor a broader approach that emphasizes the way all magic comes together at the expense of depth.",
+                            DuringCombatEncounters = "You likely try to stay out of the fray, carefully judging when to use your spells. You save your most powerful magic to incapacitate threatening foes and use your cantrips when only weaker foes remain. When enemies pull out tricks like invisibility or flight, you answer with spells like glitterdust or earth bind, leveling the field for your allies.",
+                            DuringSocialEncounters = "You provide a well of knowledge about arcane matters and solve arguments with logic.",
+                            FortitudeProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            HeavyArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            InDowntime = "You learn new spells, craft magic items, or scribe scrolls for your party, and seek out new and exciting formulas in addition to spells. You might even forge scholarly connections and establish a school or guild of your own.",
+                            LightArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MartialWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            MediumArmorProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            Name = "Wizard",
+                            PerceptionProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            PredefinedMagicTraditionId = new Guid("10dddda5-a943-4ecb-ba33-57ceba60245e"),
+                            ReflexProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SimpleWeaponProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            SpellAttackProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SpellDcProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmedWeaponProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            UnarmoredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            WhileExploring = "You locate magical auras and determine the arcane significance of magical writing or phenomena you uncover. When you run across an unusual obstacle to further exploration, you probably have a scroll that will make it easier to overcome.",
+                            WillProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9")
+                        });
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ClassCharacteristic", b =>
@@ -4071,6 +4614,296 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasIndex("ClassId");
 
                     b.ToTable("ClassCharacteristic");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("1d2ddb19-c3f5-46c9-81ce-5307e7f66fb4"),
+                            ClassId = new Guid("df6b0137-7082-470f-939f-5d241ef7d651"),
+                            Text = "Think you’re some kind of sorcerer or an eccentric wizard and don’t understand that you don’t cast spells; spellcasters who clumsily dabble in alchemy only heighten this misconception."
+                        },
+                        new
+                        {
+                            Id = new Guid("2ac61aa9-12df-4c66-a4ab-191cb396d316"),
+                            ClassId = new Guid("df6b0137-7082-470f-939f-5d241ef7d651"),
+                            Text = "Don’t understand your zeal for alchemy, creativity, and invention."
+                        },
+                        new
+                        {
+                            Id = new Guid("b08d6ce0-c333-4a87-9e45-3c3815ad24b7"),
+                            ClassId = new Guid("df6b0137-7082-470f-939f-5d241ef7d651"),
+                            Text = "Assume that if you haven’t caused a catastrophe with your experimentations, you inevitably will."
+                        },
+                        new
+                        {
+                            Id = new Guid("47d4e38b-f03a-4127-a673-243af7a327dc"),
+                            ClassId = new Guid("a171edb5-59c0-4468-b710-a6b9df2f4497"),
+                            Text = "Rely on your courage and your strength, and trust that you can hold your own in a fight."
+                        },
+                        new
+                        {
+                            Id = new Guid("42556a95-e0e0-40b5-8a5d-e031fd221d8d"),
+                            ClassId = new Guid("a171edb5-59c0-4468-b710-a6b9df2f4497"),
+                            Text = "See you as uncivilized or a boorish lout unfit for high society."
+                        },
+                        new
+                        {
+                            Id = new Guid("91bb3e45-7f52-441d-babc-b05303471515"),
+                            ClassId = new Guid("a171edb5-59c0-4468-b710-a6b9df2f4497"),
+                            Text = "Believe that you are loyal to your friends and allies and will never relent until the fight is done."
+                        },
+                        new
+                        {
+                            Id = new Guid("cf449731-4015-418d-81b2-849947fd3199"),
+                            ClassId = new Guid("9c08f598-a180-4a59-984a-a26a67607054"),
+                            Text = "Relish the opportunity to invite you to social events, either as a performer or a guest, but consider you to be something of a curiosity in their social circles."
+                        },
+                        new
+                        {
+                            Id = new Guid("25bef97c-829a-416b-acb8-f35b60bc986f"),
+                            ClassId = new Guid("9c08f598-a180-4a59-984a-a26a67607054"),
+                            Text = "Underestimate you compared to other spellcasters, believing you are little more than a foppish minstrel and overlooking the subtle power of your magic."
+                        },
+                        new
+                        {
+                            Id = new Guid("77e73740-36fc-4df3-8840-cfad8baae88e"),
+                            ClassId = new Guid("9c08f598-a180-4a59-984a-a26a67607054"),
+                            Text = "Respond favorably to your social charm and abilities, but remain suspicious of your beguiling magic."
+                        },
+                        new
+                        {
+                            Id = new Guid("42ac891a-1c2f-4751-84cd-e0b8ee6c8140"),
+                            ClassId = new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"),
+                            Text = "See you as a symbol of hope, especially in a time of great need."
+                        },
+                        new
+                        {
+                            Id = new Guid("9030eece-2379-444d-b633-c9095ff74139"),
+                            ClassId = new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"),
+                            Text = "Worry you secretly despise them for not living up to your impossible standard, or that you are unwilling to compromise when necessary."
+                        },
+                        new
+                        {
+                            Id = new Guid("3b024cdb-5520-43de-8e41-82659ad63dfb"),
+                            ClassId = new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"),
+                            Text = "Know that you’ve sworn divine oaths of service they can trust you to keep."
+                        },
+                        new
+                        {
+                            Id = new Guid("8723a71e-24b5-49b5-8357-b36acc8a68ad"),
+                            ClassId = new Guid("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade"),
+                            Text = "Find your devotion impressive, even if they don’t understand it."
+                        },
+                        new
+                        {
+                            Id = new Guid("a2e4b7a8-09ed-47f3-8f09-3d87b28c56d4"),
+                            ClassId = new Guid("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade"),
+                            Text = "Expect you to heal their wounds."
+                        },
+                        new
+                        {
+                            Id = new Guid("747f91ce-3349-4317-bc31-2ad6be7fa6c6"),
+                            ClassId = new Guid("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade"),
+                            Text = "Rely on you to interact with other religious figures."
+                        },
+                        new
+                        {
+                            Id = new Guid("2a801590-b596-4584-ac5a-1c65015ef184"),
+                            ClassId = new Guid("73f7051c-8eff-4337-a87c-183deb7a998c"),
+                            Text = "View you as a representative of nature, and are sure you can control it."
+                        },
+                        new
+                        {
+                            Id = new Guid("62e621eb-b0ee-4622-914f-a70b8e84dbfc"),
+                            ClassId = new Guid("73f7051c-8eff-4337-a87c-183deb7a998c"),
+                            Text = "Assume you’re a recluse who avoids society and cities and prefers to live in the wild."
+                        },
+                        new
+                        {
+                            Id = new Guid("82532d8e-b943-4aed-b14e-e3a302ade578"),
+                            ClassId = new Guid("73f7051c-8eff-4337-a87c-183deb7a998c"),
+                            Text = "Consider you a mystic, similar to a priest, but answering only to the forces of nature."
+                        },
+                        new
+                        {
+                            Id = new Guid("34c4e6c1-937c-475e-ba53-bdfcdd4d6d0d"),
+                            ClassId = new Guid("9cace213-82ff-4751-a438-8afd87d433e4"),
+                            Text = "Find you intimidating until they get to know you, and maybe even after they get to know you."
+                        },
+                        new
+                        {
+                            Id = new Guid("fe9a7547-e4df-455a-a33c-00634db55fde"),
+                            ClassId = new Guid("9cace213-82ff-4751-a438-8afd87d433e4"),
+                            Text = "Expect you’re all brawn and no brains."
+                        },
+                        new
+                        {
+                            Id = new Guid("29d18b56-1b93-456b-9a0e-a0189bd86dbf"),
+                            ClassId = new Guid("9cace213-82ff-4751-a438-8afd87d433e4"),
+                            Text = "Respect your expertise in the art of warfare and value your opinion on the quality of armaments."
+                        },
+                        new
+                        {
+                            Id = new Guid("17d41939-22da-493c-a121-452a8f5dba1c"),
+                            ClassId = new Guid("2483fb2b-b7cc-4eab-9c4e-0118477e46ed"),
+                            Text = "Find the cascades of information you spout forth extremely helpful, if difficult to fully comprehend."
+                        },
+                        new
+                        {
+                            Id = new Guid("f4ce7778-674f-4ac4-9c81-69956c1872af"),
+                            ClassId = new Guid("2483fb2b-b7cc-4eab-9c4e-0118477e46ed"),
+                            Text = "Get a bit annoyed that you’re such a know-it-all."
+                        },
+                        new
+                        {
+                            Id = new Guid("ed7d4d66-8b4b-48a5-ab82-417677f36b9d"),
+                            ClassId = new Guid("2483fb2b-b7cc-4eab-9c4e-0118477e46ed"),
+                            Text = "Rely on you to solve mysteries, puzzles, or other challenges requiring intellectual curiosity and reasoning."
+                        },
+                        new
+                        {
+                            Id = new Guid("01a10cfa-4e2b-4668-bc1c-939754abd9b4"),
+                            ClassId = new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"),
+                            Text = "Marvel at your feats of physical prowess."
+                        },
+                        new
+                        {
+                            Id = new Guid("2d776caa-fcbf-420b-aed9-a56ee5c6a8aa"),
+                            ClassId = new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"),
+                            Text = "Think you’re more than a bit uptight, given your vows and tenets."
+                        },
+                        new
+                        {
+                            Id = new Guid("16536a58-583e-454b-a549-c2a2f6496c11"),
+                            ClassId = new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"),
+                            Text = "Come to you for philosophical advice."
+                        },
+                        new
+                        {
+                            Id = new Guid("fb491a4e-9c96-4e57-8c71-38c0069feb5a"),
+                            ClassId = new Guid("bc25beea-18e8-4417-8ada-a0f58bc79585"),
+                            Text = "Don’t realize your spellcasting draws upon divine power and instead believe you command stranger—and possibly evil—powers."
+                        },
+                        new
+                        {
+                            Id = new Guid("2e58f436-410b-44a4-b763-ff3b5a0b87df"),
+                            ClassId = new Guid("bc25beea-18e8-4417-8ada-a0f58bc79585"),
+                            Text = "Assume you performed some terrible transgression to become cursed by the gods."
+                        },
+                        new
+                        {
+                            Id = new Guid("7a73ed7d-74c3-432b-89f1-a73282c8bead"),
+                            ClassId = new Guid("bc25beea-18e8-4417-8ada-a0f58bc79585"),
+                            Text = "Admire your determination and the sacrifices you make to perform wondrous acts."
+                        },
+                        new
+                        {
+                            Id = new Guid("97b80324-7529-4d87-86b2-bed2f01577d4"),
+                            ClassId = new Guid("ceb15fca-8288-456e-9769-98cce79bb104"),
+                            Text = "Call upon you to protect them from the wilds or the encroachment of civilization."
+                        },
+                        new
+                        {
+                            Id = new Guid("4979afa1-38b9-45c1-a9a8-c64fd66912a9"),
+                            ClassId = new Guid("ceb15fca-8288-456e-9769-98cce79bb104"),
+                            Text = "Expect you to be a quiet or taciturn loner."
+                        },
+                        new
+                        {
+                            Id = new Guid("56e1268b-2f13-47e6-95ca-5755e37ca9e7"),
+                            ClassId = new Guid("ceb15fca-8288-456e-9769-98cce79bb104"),
+                            Text = "Think there is something dangerous and wild about you."
+                        },
+                        new
+                        {
+                            Id = new Guid("4184690e-d9de-4daa-959f-cd13811949a1"),
+                            ClassId = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
+                            Text = "Find you charming or fascinating, even if they think they know better than to trust you."
+                        },
+                        new
+                        {
+                            Id = new Guid("5a54de41-6cf6-4bb4-a971-06f01270cf9e"),
+                            ClassId = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
+                            Text = "Come to you when they need someone who is willing to take risks or use questionable methods."
+                        },
+                        new
+                        {
+                            Id = new Guid("8f67f4eb-f9d6-4c17-915f-950eb88ccccd"),
+                            ClassId = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
+                            Text = "Suspect you’re motivated primarily by greed."
+                        },
+                        new
+                        {
+                            Id = new Guid("9266174a-c40c-4aa9-a834-44c58fde1056"),
+                            ClassId = new Guid("05d42777-0744-4a72-85ad-d27186c96deb"),
+                            Text = "Marvel at your ability to create magic from thin air and view your abilities with equal parts admiration and mistrust."
+                        },
+                        new
+                        {
+                            Id = new Guid("3844b3a3-6ece-44f4-aa24-3da8c2a50ce1"),
+                            ClassId = new Guid("05d42777-0744-4a72-85ad-d27186c96deb"),
+                            Text = "Consider you less dedicated than studious wizards, devoted clerics, and other practitioners of magic, since power comes to you naturally."
+                        },
+                        new
+                        {
+                            Id = new Guid("417aafb9-414d-44cd-834f-a41bd953f331"),
+                            ClassId = new Guid("05d42777-0744-4a72-85ad-d27186c96deb"),
+                            Text = "Assume you’re as unpredictable as the magic you bring forth, even if your personality proves otherwise."
+                        },
+                        new
+                        {
+                            Id = new Guid("1c6d2032-af7f-4685-8eae-868aa5711e2e"),
+                            ClassId = new Guid("deb62736-af71-4600-bd4b-59e55961b74d"),
+                            Text = "Admire your theatrics, bravado, and skill with a blade."
+                        },
+                        new
+                        {
+                            Id = new Guid("0b8205e3-3820-4e28-b3e1-e4ead143b5ce"),
+                            ClassId = new Guid("deb62736-af71-4600-bd4b-59e55961b74d"),
+                            Text = "Find you arrogant unless they know you well enough to appreciate your style."
+                        },
+                        new
+                        {
+                            Id = new Guid("29f951f9-21c2-4063-bbaf-4c2b227cf204"),
+                            ClassId = new Guid("deb62736-af71-4600-bd4b-59e55961b74d"),
+                            Text = "Underestimate how much of a threat you pose until they face the end of your deadly blade."
+                        },
+                        new
+                        {
+                            Id = new Guid("4fb1e29a-92c0-4d15-8963-fb39b9a39887"),
+                            ClassId = new Guid("de966e73-2c40-40b4-956f-57e326f7ce8e"),
+                            Text = "Consider you to be incredibly powerful and potentially dangerous."
+                        },
+                        new
+                        {
+                            Id = new Guid("09921c78-f5c8-4fe2-a8bb-7f5ae4d33ec3"),
+                            ClassId = new Guid("de966e73-2c40-40b4-956f-57e326f7ce8e"),
+                            Text = "Fear what your magic can do to their minds, bodies, and souls, and ask that you avoid casting spells in polite company, as few can identify whether one of your spells is harmless or malevolent until it’s too late."
+                        },
+                        new
+                        {
+                            Id = new Guid("8c20d58a-927d-4ea5-83c9-be47682cb32b"),
+                            ClassId = new Guid("de966e73-2c40-40b4-956f-57e326f7ce8e"),
+                            Text = "Assume you can easily solve all their problems, from dangerous weather to poor crop yields, and ask you for spells that can help them get whatever they desire."
+                        },
+                        new
+                        {
+                            Id = new Guid("05ba17eb-b08a-4cf0-a4b8-2d98799f24ef"),
+                            ClassId = new Guid("0e53c45a-9ab8-4d4a-bb5b-51af257c56bc"),
+                            Text = "Consider you to be incredibly powerful and potentially dangerous."
+                        },
+                        new
+                        {
+                            Id = new Guid("74db8994-017c-46d9-9e2c-fa40c541c477"),
+                            ClassId = new Guid("0e53c45a-9ab8-4d4a-bb5b-51af257c56bc"),
+                            Text = "Fear what your magic can do to their minds, bodies, and souls, and ask that you avoid casting spells in polite company, as few can identify whether one of your spells is harmless or malevolent until it’s too late."
+                        },
+                        new
+                        {
+                            Id = new Guid("e0930221-ec07-49cd-b8a9-fa2392eeefb9"),
+                            ClassId = new Guid("0e53c45a-9ab8-4d4a-bb5b-51af257c56bc"),
+                            Text = "Assume you can easily solve all their problems, from dangerous weather to poor crop yields, and ask you for spells that can help them get whatever they desire."
+                        });
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ClassFeature", b =>
@@ -4118,6 +4951,296 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasIndex("ClassId");
 
                     b.ToTable("ClassMannerism");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("f20c0e04-8d8a-42e0-b96f-1065ad387b86"),
+                            ClassId = new Guid("df6b0137-7082-470f-939f-5d241ef7d651"),
+                            Text = "Enjoy tinkering with strange formulas and alchemical reagents, often with a single - minded dedication and recklessness that gives others pause."
+                        },
+                        new
+                        {
+                            Id = new Guid("3553ea25-69b9-436e-a064-ed8fc9ea9b15"),
+                            ClassId = new Guid("df6b0137-7082-470f-939f-5d241ef7d651"),
+                            Text = "Get a kick out of wreaking havoc with the alchemical concoctions you’ve made, and enjoy watching things burn, dissolve, freeze, and jolt."
+                        },
+                        new
+                        {
+                            Id = new Guid("6560d9a9-d4ed-4db1-aa66-9d58aba19a0b"),
+                            ClassId = new Guid("df6b0137-7082-470f-939f-5d241ef7d651"),
+                            Text = "Endlessly experiment to discover new, more potent alchemical tools."
+                        },
+                        new
+                        {
+                            Id = new Guid("c7197881-4e0a-4816-b64e-bf0bb2eaf5f5"),
+                            ClassId = new Guid("a171edb5-59c0-4468-b710-a6b9df2f4497"),
+                            Text = "Have a deep-seated well of anger, hatred, or frustration."
+                        },
+                        new
+                        {
+                            Id = new Guid("9d16d728-b78b-47e8-adca-e6a8d75f2580"),
+                            ClassId = new Guid("a171edb5-59c0-4468-b710-a6b9df2f4497"),
+                            Text = "Prefer a straightforward approach to one requiring patience and tedium."
+                        },
+                        new
+                        {
+                            Id = new Guid("3de123ba-e38d-417b-a229-f84b6effa669"),
+                            ClassId = new Guid("a171edb5-59c0-4468-b710-a6b9df2f4497"),
+                            Text = "Engage in a regimen of intense physical fitness—and punch anyone who says this conflicts with your distaste for patience and tedium."
+                        },
+                        new
+                        {
+                            Id = new Guid("0a4f9595-7e77-468a-b87c-b99d8d3a76fc"),
+                            ClassId = new Guid("9c08f598-a180-4a59-984a-a26a67607054"),
+                            Text = "Have a passion for your art so strong that you forge a spiritual connection with it."
+                        },
+                        new
+                        {
+                            Id = new Guid("9bfdd4d6-3cb2-41c0-95ff-37bf69699243"),
+                            ClassId = new Guid("9c08f598-a180-4a59-984a-a26a67607054"),
+                            Text = "Take point when tact and nonviolent solutions are required."
+                        },
+                        new
+                        {
+                            Id = new Guid("8aa705e5-ec47-4553-a673-7bed0a7ae57f"),
+                            ClassId = new Guid("9c08f598-a180-4a59-984a-a26a67607054"),
+                            Text = "Follow your muse, whether it’s a mysterious fey creature, a philosophical concept, a psychic force, or a deity of art or music, and with its aid learn secret lore that few others have."
+                        },
+                        new
+                        {
+                            Id = new Guid("5a4bfb01-6a81-4d56-b4a0-20b0d3caf405"),
+                            ClassId = new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"),
+                            Text = "Believe there is always hope that good will triumph over evil, no matter how grim the odds."
+                        },
+                        new
+                        {
+                            Id = new Guid("5b4f9efb-8fe3-45a3-ab30-c5ea31fb37e3"),
+                            ClassId = new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"),
+                            Text = "Know the ends don’t justify the means, since evil acts increase the power of evil."
+                        },
+                        new
+                        {
+                            Id = new Guid("7752d7ec-e22e-4d95-b0eb-e41113a8a8a6"),
+                            ClassId = new Guid("3f3362c2-09a1-47da-8945-cea25e313f80"),
+                            Text = "Have a strong sense of right and wrong, and grow frustrated when greed or shortsightedness breeds evil."
+                        },
+                        new
+                        {
+                            Id = new Guid("ebb75ed7-bfa4-40c5-8bb4-3f19794d2a70"),
+                            ClassId = new Guid("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade"),
+                            Text = "Visit the temples and holy places sacred to your faith, and have an immediate affinity with other worshippers of your deity."
+                        },
+                        new
+                        {
+                            Id = new Guid("1be1a716-5449-4961-893d-67e7a4e84269"),
+                            ClassId = new Guid("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade"),
+                            Text = "Know the teachings of your religion’s holy texts and how they apply to a dilemma."
+                        },
+                        new
+                        {
+                            Id = new Guid("6a44f1c6-54c0-49ea-a3cc-8c61d3096138"),
+                            ClassId = new Guid("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade"),
+                            Text = "Cooperate with your allies, provided they don’t ask you to go against divine will."
+                        },
+                        new
+                        {
+                            Id = new Guid("fdb38cc9-5b9e-45c3-ae43-660d5aaa3675"),
+                            ClassId = new Guid("73f7051c-8eff-4337-a87c-183deb7a998c"),
+                            Text = "Have a deep and meaningful respect for the power of nature."
+                        },
+                        new
+                        {
+                            Id = new Guid("22d2fbc4-04ce-4b41-b119-9459dd877a65"),
+                            ClassId = new Guid("73f7051c-8eff-4337-a87c-183deb7a998c"),
+                            Text = "Be in constant awe of the natural world, eager to share it with others but wary of their influence upon it."
+                        },
+                        new
+                        {
+                            Id = new Guid("1d27448a-3fb0-47cb-b126-85f4a433fe9e"),
+                            ClassId = new Guid("73f7051c-8eff-4337-a87c-183deb7a998c"),
+                            Text = "Treat plants and animals as allies, working with them to reach your goals."
+                        },
+                        new
+                        {
+                            Id = new Guid("c65bfa42-aaad-401e-a6ad-2fa61272635d"),
+                            ClassId = new Guid("9cace213-82ff-4751-a438-8afd87d433e4"),
+                            Text = "Know the purpose and quality of every weapon and piece of armor you own."
+                        },
+                        new
+                        {
+                            Id = new Guid("0ddc24b5-5b32-433f-9468-1e07d0c05483"),
+                            ClassId = new Guid("9cace213-82ff-4751-a438-8afd87d433e4"),
+                            Text = "Recognize that the danger of an adventurer’s life must be balanced out with great revelry or ambitious works."
+                        },
+                        new
+                        {
+                            Id = new Guid("e0e2f9fc-a9d3-4d41-be08-999ba0878101"),
+                            ClassId = new Guid("9cace213-82ff-4751-a438-8afd87d433e4"),
+                            Text = "Have little patience for puzzles or problems that require detailed logic or study."
+                        },
+                        new
+                        {
+                            Id = new Guid("ac5fd47c-1575-4a05-8850-bd323519a40a"),
+                            ClassId = new Guid("2483fb2b-b7cc-4eab-9c4e-0118477e46ed"),
+                            Text = "Start asking questions—including several that are quite involved—immediately after you’re presented with a conundrum."
+                        },
+                        new
+                        {
+                            Id = new Guid("cf543469-df67-41eb-9738-90b0dd6cb22a"),
+                            ClassId = new Guid("2483fb2b-b7cc-4eab-9c4e-0118477e46ed"),
+                            Text = "Strive to uncover the deeper meanings behind anything you encounter and to identify the social machinations that truly drive events behind the scenes."
+                        },
+                        new
+                        {
+                            Id = new Guid("5382ffaa-7a1a-4b92-80e9-556a58c966eb"),
+                            ClassId = new Guid("2483fb2b-b7cc-4eab-9c4e-0118477e46ed"),
+                            Text = "Get so involved in a case that you ignore other matters, deeming them trivial."
+                        },
+                        new
+                        {
+                            Id = new Guid("cee3ea9b-e7cd-43ab-a2e0-1cfaa5abcc61"),
+                            ClassId = new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"),
+                            Text = "Maintain a regimen of physical training and meditation."
+                        },
+                        new
+                        {
+                            Id = new Guid("25352f03-9d39-46fe-af17-39417ec66512"),
+                            ClassId = new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"),
+                            Text = "Face adversity with a calm and measured approach, never panicking or succumbing to despair."
+                        },
+                        new
+                        {
+                            Id = new Guid("7e27c04c-ae5e-4a6e-b18a-fbdf61ed93e4"),
+                            ClassId = new Guid("a0dcd60b-b52e-4f96-a96c-50ac2ca73d91"),
+                            Text = "Look to the future for ways you can improve, while remaining at peace with your present self."
+                        },
+                        new
+                        {
+                            Id = new Guid("ccdda615-ea42-4aa1-9b39-4e69974a94a2"),
+                            ClassId = new Guid("bc25beea-18e8-4417-8ada-a0f58bc79585"),
+                            Text = "View your oracular powers as a blessing, a curse, or both."
+                        },
+                        new
+                        {
+                            Id = new Guid("27b78d7c-dfea-4d9c-ab76-cf18b899afce"),
+                            ClassId = new Guid("bc25beea-18e8-4417-8ada-a0f58bc79585"),
+                            Text = "Push yourself to the limits of what you can withstand to work great acts of magic."
+                        },
+                        new
+                        {
+                            Id = new Guid("03338b7c-68a3-4299-bcef-95f1a1439fb2"),
+                            ClassId = new Guid("bc25beea-18e8-4417-8ada-a0f58bc79585"),
+                            Text = "Rely on magical items to provide a pool of safer and more reliable magic."
+                        },
+                        new
+                        {
+                            Id = new Guid("a6ef7d5a-5f11-4395-bf46-28966b389f03"),
+                            ClassId = new Guid("ceb15fca-8288-456e-9769-98cce79bb104"),
+                            Text = "Respect the raw power of nature and understand how to make the best of its bounty."
+                        },
+                        new
+                        {
+                            Id = new Guid("e4bd8f4d-0774-435c-8b5f-6e4dcc3d18a4"),
+                            ClassId = new Guid("ceb15fca-8288-456e-9769-98cce79bb104"),
+                            Text = "Enjoy the thrill of the hunt."
+                        },
+                        new
+                        {
+                            Id = new Guid("91551570-edd4-4240-8bea-cc80473f9e5b"),
+                            ClassId = new Guid("ceb15fca-8288-456e-9769-98cce79bb104"),
+                            Text = "Scout out ahead of the party, reconnoitering dangers before combat begins."
+                        },
+                        new
+                        {
+                            Id = new Guid("2050d6a7-747d-4e76-8c0d-1ddc09b4ec53"),
+                            ClassId = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
+                            Text = "Hone your skills through intense practice, both on your own and out in the world."
+                        },
+                        new
+                        {
+                            Id = new Guid("75025372-a5b4-49f9-89e6-b46f146ca281"),
+                            ClassId = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
+                            Text = "Know where to attain illicit goods."
+                        },
+                        new
+                        {
+                            Id = new Guid("7a5115d6-8a23-4616-83bc-a2ff379db0c2"),
+                            ClassId = new Guid("4087e406-d324-45af-b9b9-9adf0283a17c"),
+                            Text = "Skirt or break the law because you think it’s meaningless or have your own code."
+                        },
+                        new
+                        {
+                            Id = new Guid("e076f25a-3cf1-48f2-a7a5-83671f564522"),
+                            ClassId = new Guid("05d42777-0744-4a72-85ad-d27186c96deb"),
+                            Text = "Have a strong independent streak, and whether you embrace or reject your magical heritage, you long to distinguish yourself both as a spellcaster and as an individual."
+                        },
+                        new
+                        {
+                            Id = new Guid("ca503052-4fc3-4997-ac3e-3c5f70a15ec3"),
+                            ClassId = new Guid("05d42777-0744-4a72-85ad-d27186c96deb"),
+                            Text = "View your lineage with fascination, fear, or something in between—anything from wholehearted acceptance to vehement rejection."
+                        },
+                        new
+                        {
+                            Id = new Guid("8f31f877-c43f-493f-a6cb-9db65fba60cb"),
+                            ClassId = new Guid("05d42777-0744-4a72-85ad-d27186c96deb"),
+                            Text = "Rely on magic items, such as scrolls and wands, to supplement your limited selection of spells."
+                        },
+                        new
+                        {
+                            Id = new Guid("f4565e71-6154-49e4-b152-9e67df99750b"),
+                            ClassId = new Guid("deb62736-af71-4600-bd4b-59e55961b74d"),
+                            Text = "Portray yourself as a heroic daredevil or a roguish braggart, knowing you can live up to the image you present."
+                        },
+                        new
+                        {
+                            Id = new Guid("fde67e42-2e4a-4abc-9bb4-e84e70a4cc18"),
+                            ClassId = new Guid("deb62736-af71-4600-bd4b-59e55961b74d"),
+                            Text = "Hold yourself in high esteem, confident in your abilities and your reputation."
+                        },
+                        new
+                        {
+                            Id = new Guid("d2983995-904d-4f96-a4ce-55abbefbd81b"),
+                            ClassId = new Guid("deb62736-af71-4600-bd4b-59e55961b74d"),
+                            Text = "Practice your skills and maneuvers regularly to ensure you never grow rusty."
+                        },
+                        new
+                        {
+                            Id = new Guid("c0b4b5d3-a43d-4fa0-9382-f361f2c307c5"),
+                            ClassId = new Guid("de966e73-2c40-40b4-956f-57e326f7ce8e"),
+                            Text = "Have an unquenchable intellectual curiosity about how everything in the world around you works—magic in particular."
+                        },
+                        new
+                        {
+                            Id = new Guid("0496b73c-c75f-4ea3-a549-e76e18fca052"),
+                            ClassId = new Guid("de966e73-2c40-40b4-956f-57e326f7ce8e"),
+                            Text = "Believe fervently that your school of magic is superior (if you’re a specialist) or that true mastery of magic requires knowledge of all schools (if you’re a universalist)."
+                        },
+                        new
+                        {
+                            Id = new Guid("72df3174-ac1c-47b0-bb8c-ef962e743bc4"),
+                            ClassId = new Guid("de966e73-2c40-40b4-956f-57e326f7ce8e"),
+                            Text = "Use esoteric jargon and technical terms to precisely describe the minutiae of magical effects, even though the difference is probably lost on other people."
+                        },
+                        new
+                        {
+                            Id = new Guid("e9e050bf-ac84-414e-84be-516165f99eb3"),
+                            ClassId = new Guid("0e53c45a-9ab8-4d4a-bb5b-51af257c56bc"),
+                            Text = "Have an unquenchable intellectual curiosity about how everything in the world around you works—magic in particular."
+                        },
+                        new
+                        {
+                            Id = new Guid("7363708a-d989-4f1c-8366-a2f7715cbb64"),
+                            ClassId = new Guid("0e53c45a-9ab8-4d4a-bb5b-51af257c56bc"),
+                            Text = "Believe fervently that your school of magic is superior (if you’re a specialist) or that true mastery of magic requires knowledge of all schools(if you’re a universalist)."
+                        },
+                        new
+                        {
+                            Id = new Guid("4ccd6d2e-c2e1-412d-9e11-982f22168293"),
+                            ClassId = new Guid("0e53c45a-9ab8-4d4a-bb5b-51af257c56bc"),
+                            Text = "Use esoteric jargon and technical terms to precisely describe the minutiae of magical effects, even though the difference is probably lost on other people."
+                        });
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Deity", b =>
@@ -9506,16 +10629,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("ClassId")
-                        .HasColumnType("uuid");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ClassId");
 
                     b.ToTable("SavingThrowStats");
 
@@ -12429,7 +13547,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid?>("ClassId")
+                    b.Property<Guid?>("KeyAbilityClassesId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Name")
@@ -12438,7 +13556,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClassId");
+                    b.HasIndex("KeyAbilityClassesId");
 
                     b.ToTable("Stats");
 
@@ -16993,6 +18111,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ClassStat", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Stat", null)
+                        .WithMany()
+                        .HasForeignKey("KeyAbilitiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Class", null)
+                        .WithMany()
+                        .HasForeignKey("KeyAbilityClassesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("DeityDivineFont", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Deity", null)
@@ -17137,6 +18270,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Stat", null)
+                        .WithMany()
+                        .HasForeignKey("KeyAbilitiesId");
+
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "LightArmorProficiency")
                         .WithMany()
                         .HasForeignKey("LightArmorProficiencyId")
@@ -17261,7 +18398,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ClassMannerism", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Class", "Class")
-                        .WithMany("Manerisms")
+                        .WithMany("Mannerisms")
                         .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -17532,13 +18669,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasForeignKey("RacesId");
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SavingThrowStat", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Class", null)
-                        .WithMany("SavingThrowProficiencies")
-                        .HasForeignKey("ClassId");
-                });
-
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Skill", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Stat", "StatModifier")
@@ -17664,8 +18794,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Stat", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Class", null)
-                        .WithMany("KeyAbilities")
-                        .HasForeignKey("ClassId");
+                        .WithMany()
+                        .HasForeignKey("KeyAbilityClassesId");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Trait", b =>
@@ -17878,11 +19008,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.Navigation("Features");
 
-                    b.Navigation("KeyAbilities");
-
-                    b.Navigation("Manerisms");
-
-                    b.Navigation("SavingThrowProficiencies");
+                    b.Navigation("Mannerisms");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Deity", b =>
