@@ -4091,7 +4091,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("eda61d79-9877-483f-b660-bc282d270bb6"),
-                            AlignmentId = new Guid("094aecb0-6e14-433f-afa5-eb7d0f3ab64a"),
+                            AlignmentId = new Guid("617c34ca-c11b-4c02-9f97-5ce7269f98bc"),
                             CategoryId = new Guid("ab7e9ca8-6361-4309-83c6-6e3b1e5064cc"),
                             Description = "Abadar is worshipped as the god of cities, law, merchants, and wealth. Abadar’s cathedral-banks are found in many cities and places where order thrives or is gaining a foothold. Aristocrats, city guards, merchants, and those working in legal practice or who have the well-being of their community on their mind are common worshippers of the god of cities, along with dwarves in general. Abadaran priests living in cities often serve as judges, lawyers, and clerks, while those who live on the frontier work as roving magistrates, acting as judge, jury, and executioners in the name of order.",
                             Name = "Abadar"
@@ -17041,7 +17041,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.DeityCategory", "Category")
-                        .WithMany()
+                        .WithMany("Deities")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -17624,6 +17624,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Deity", b =>
                 {
                     b.Navigation("FollowerAlignments");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.DeityCategory", b =>
+                {
+                    b.Navigation("Deities");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Feat", b =>
