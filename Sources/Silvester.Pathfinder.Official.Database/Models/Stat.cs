@@ -12,5 +12,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public string Description { get; set; } = default!;
 
         public ICollection<Class> KeyAbilityClasses { get; set; } = new List<Class>();
+
+        public ICollection<Skill> Skills { get; set; } = new List<Skill>();
     }
 }
