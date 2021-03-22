@@ -8,6 +8,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
     {
         public string Name { get; set; } = default!;
 
+        public string Description { get; set; } = default!;
+
         public int BaseSpeed { get; set; }
         
         public int BaseHealth { get; set; }

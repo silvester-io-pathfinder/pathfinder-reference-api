@@ -9,6 +9,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public string Abbreviation { get; set; } = default!;
 
+        public string Description { get; set; } = default!;
+
         public ICollection<Class> KeyAbilityClasses { get; set; } = new List<Class>();
     }
 }

@@ -10122,6 +10122,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<int>("BaseSpeed")
                         .HasColumnType("integer");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<Guid?>("HeritagesId")
                         .HasColumnType("uuid");
 
@@ -10161,6 +10165,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("14f3ef0d-aba9-4bed-8419-e9ffb1594cf5"),
                             BaseHealth = 8,
                             BaseSpeed = 25,
+                            Description = "Curious and gregarious wanderers, catfolk combine features of felines and humanoids in both appearance and temperament. They enjoy learning new things, collecting new tales and trinkets, and ensuring their loved ones are safe and happy. Catfolk view themselves as chosen guardians of natural places in the world and are often recklessly brave, even in the face of overwhelming opposition.",
                             Name = "Catfolk",
                             RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
                             SizeId = new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991")
@@ -10170,6 +10175,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("a6f1c39a-feb8-4f62-95ce-1b5ffabbbbbf"),
                             BaseHealth = 6,
                             BaseSpeed = 25,
+                            Description = "Every kobold knows that their slight frame belies true, mighty draconic power. They are ingenious crafters and devoted allies within their warrens, but those who trespass into their territory find them to be inspired skirmishers, especially when they have the backing of a draconic sorcerer or true dragon overlord. However, these reptilian opportunists prove happy to cooperate with other humanoids when it’s to their benefit, combining caution and cunning to make their fortunes in the wider world.",
                             Name = "Kobold",
                             RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
                             SizeId = new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2")
@@ -10179,6 +10185,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("903f97e5-6972-4ad2-9377-447b7d6758a3"),
                             BaseHealth = 10,
                             BaseSpeed = 25,
+                            Description = "Orcs are forged in the fires of violence and conflict, often from the moment they are born. As they live lives that are frequently cut brutally short, orcs revel in testing their strength against worthy foes, whether by challenging a higher-ranking member of their community for dominance or raiding a neighboring settlement. Many orcs seek glory as soon as they can walk and carry a blade or club, taming wild beasts or hunting deadly monsters.",
                             Name = "Orc",
                             RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
                             SizeId = new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991")
@@ -10188,6 +10195,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("a8430e0c-d52e-477c-a058-bc970a2113ea"),
                             BaseHealth = 6,
                             BaseSpeed = 25,
+                            Description = "Ysoki—as ratfolk call themselves—are a clever, adaptable, and fastidious ancestry who happily crowd their large families into the smallest of living spaces.",
                             Name = "Ratfolk",
                             RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
                             SizeId = new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2")
@@ -10197,6 +10205,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("8fec37b8-ec4a-4094-90a0-4e70b12fd6ce"),
                             BaseHealth = 6,
                             BaseSpeed = 25,
+                            Description = "Tengus are a gregarious and resourceful people that have spread far and wide from their ancestral home in Tian Xia, collecting and combining whatever innovations and traditions they happen across with those from their own long history.",
                             Name = "Tengu",
                             RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
                             SizeId = new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991")
@@ -10206,6 +10215,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("96a536c5-7fe0-4a25-af8b-881a2892b576"),
                             BaseHealth = 10,
                             BaseSpeed = 20,
+                            Description = "Dwarves have a well-earned reputation as a stoic and stern people, ensconced within citadels and cities carved from solid rock. While some see them as dour and humorless crafters of stone and metal, dwarves and those who have spent time among them understand their unbridled zeal for their work, caring far more about quality than quantity. To a stranger, they can seem untrusting and clannish, but to their friends and family, they are warm and caring, their halls filled with the sounds of laughter and hammers hitting anvils.",
                             Name = "Dwarf",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SizeId = new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991")
@@ -10215,6 +10225,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("e6ac68fc-98bf-4012-97a1-9910f988a1a4"),
                             BaseHealth = 6,
                             BaseSpeed = 30,
+                            Description = "As an ancient people, elves have seen great change and have the perspective that can come only from watching the arc of history. After leaving the world in ancient times, they returned to a changed land, and they still struggle to reclaim their ancestral homes, most notably from terrible demons that have invaded parts of their lands. To some, the elves are objects of awe—graceful and beautiful, with immense talent and knowledge. Among themselves, however, the elves place far more importance on personal freedom than on living up to these ideals.",
                             Name = "Elf",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SizeId = new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991")
@@ -10224,6 +10235,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("3404bf2c-eb1c-4cc6-b376-450a969af548"),
                             BaseHealth = 6,
                             BaseSpeed = 25,
+                            Description = "Long ago, early gnome ancestors emigrated from the First World, realm of the fey. While it’s unclear why the first gnomes wandered to Golarion, this lineage manifests in modern gnomes as bizarre reasoning, eccentricity, obsessive tendencies, and what some see as naivete. These qualities are further reflected in their physical characteristics, such as spindly limbs, brightly colored hair, and childlike and extremely expressive facial features that further reflect their otherworldly origins.",
                             Name = "Gnome",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SizeId = new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2")
@@ -10233,6 +10245,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("519063b5-7283-4c0b-bb3a-d5d5edeba551"),
                             BaseHealth = 6,
                             BaseSpeed = 25,
+                            Description = "The convoluted histories other people cling to don’t interest goblins. These small folk live in the moment, and they prefer tall tales over factual records. The wars of a few decades ago might as well be from the ancient past. Misunderstood by other people, goblins are happy how they are. Goblin virtues are about being present, creative, and honest. They strive to lead fulfilled lives, rather than worrying about how their journeys will end. To tell stories, not nitpick the facts. To be small, but dream big.",
                             Name = "Goblin",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SizeId = new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2")
@@ -10242,6 +10255,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("ed816fd4-9e13-43b4-b80f-30d2b5c910ff"),
                             BaseHealth = 6,
                             BaseSpeed = 25,
+                            Description = "Claiming no place as their own, halflings control few settlements larger than villages. Instead, they frequently live among humans within the walls of larger cities, carving out small communities alongside taller folk. Many halflings lead perfectly fulfilling lives in the shadows of their larger neighbors, while others prefer a nomadic existence, traveling the world and taking advantage of opportunities and adventures as they come.",
                             Name = "Halfling",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SizeId = new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2")
@@ -10251,6 +10265,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("7fc53559-4776-482c-910c-be3bd84d2de4"),
                             BaseHealth = 8,
                             BaseSpeed = 25,
+                            Description = "As unpredictable and varied as any of Golarion’s peoples, humans have exceptional drive and the capacity to endure and expand. Though many civilizations thrived before humanity rose to prominence, humans have built some of the greatest and the most terrible societies throughout the course of history, and today they are the most populous people in the realms around the Inner Sea.",
                             Name = "Human",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SizeId = new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991")
@@ -10680,6 +10695,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<bool>("HasArmorCheckPenalty")
                         .HasColumnType("boolean");
 
@@ -10703,6 +10722,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("13d2e35c-3829-4bab-85c1-de00ff96248a"),
+                            Description = "Acrobatics measures your ability to perform tasks requiring coordination and grace. When you use the Escape basic action (page 470), you can use your Acrobatics modifier instead of your unarmed attack modifier.",
                             HasArmorCheckPenalty = true,
                             HasRecallKnowledgeAction = false,
                             Name = "Acrobatics",
@@ -10711,6 +10731,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("6f23369f-e91f-4472-a254-648ba3ed1850"),
+                            Description = "Arcana measures how much you know about arcane magic and creatures. Even if you’re untrained, you can Recall Knowledge (page 238).",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = true,
                             Name = "Arcana",
@@ -10719,6 +10740,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("8b35c13a-46fd-4018-bb18-11c0f156f708"),
+                            Description = "Athletics allows you to perform deeds of physical prowess. When you use the Escape basic action (page 470), you can use your Athletics modifier instead of your unarmed attack modifier.",
                             HasArmorCheckPenalty = true,
                             HasRecallKnowledgeAction = false,
                             Name = "Athletics",
@@ -10727,6 +10749,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("bef3fdab-348a-4024-9095-1ab69ded3fed"),
+                            Description = "You can use this skill to create and repair items. Even if you’re untrained, you can Recall Knowledge (page 238).",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = true,
                             Name = "Crafting",
@@ -10735,6 +10758,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("2f33e759-98f4-4a19-a955-e2133197de04"),
+                            Description = "You can trick and mislead others using disguises, lies, and other forms of subterfuge.",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = false,
                             Name = "Deception",
@@ -10743,6 +10767,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("ab6c56d1-8f95-45db-b4a1-6bae20e30c47"),
+                            Description = "You influence others through negotiation and flattery.",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = false,
                             Name = "Diplomacy",
@@ -10751,6 +10776,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("a14f7dbb-8a76-4b6e-8e67-6adb4f1b39b2"),
+                            Description = "You bend others to your will using threats.",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = false,
                             Name = "Intimidation",
@@ -10759,6 +10785,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("b64e4795-0efe-4cf5-82e3-f4219c041137"),
+                            Description = "You can patch up wounds and help people recover from diseases and poisons. Even if you’re untrained in Medicine, you can use it to Recall Knowledge (page 238).",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = true,
                             Name = "Medicine",
@@ -10767,6 +10794,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("3707c645-9e77-4eb7-bf63-f4d65f471f25"),
+                            Description = "You know about the natural world, and you command and train animals and magical beasts. Even if you’re untrained in Nature, you can use it to Recall Knowledge (page 238).",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = true,
                             Name = "Nature",
@@ -10775,6 +10803,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("feb60159-48a5-4164-b2e2-54b1f0a52a26"),
+                            Description = "You know a great deal about ancient philosophies, esoteric lore, obscure mysticism, and supernatural creatures. Even if you’re untrained in Occultism, you can use it to Recall Knowledge (page 238).",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = true,
                             Name = "Occultism",
@@ -10783,6 +10812,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("b41f214e-5d45-46fe-8495-263c3d117a86"),
+                            Description = "You are skilled at a form of performance, using your talents to impress a crowd or make a living.",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = false,
                             Name = "Performance",
@@ -10791,6 +10821,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("6a672190-7918-4fbd-a2d7-2d69f9d2a794"),
+                            Description = "The secrets of deities, dogma, faith, and the realms of divine creatures both sublime and sinister are open to you. You also understand how magic works, though your training imparts a religious slant to that knowledge. Even if you’re untrained in Religion, you can use it to Recall Knowledge (page 238).",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = true,
                             Name = "Religion",
@@ -10799,6 +10830,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("641be10d-b069-45e9-b890-7f1254cd042c"),
+                            Description = "You understand the people and systems that make civilization run, and you know the historical events that make societies what they are today. Further, you can use that knowledge to navigate the complex physical, societal, and economic workings of settlements. Even if you’re untrained in Society, you can use it for the following general skill actions (page 234).",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = true,
                             Name = "Society",
@@ -10807,6 +10839,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("252ee579-951c-414e-bb69-7d2dfc324280"),
+                            Description = "You are skilled at avoiding detection, allowing you to slip past foes, hide, or conceal an item.",
                             HasArmorCheckPenalty = true,
                             HasRecallKnowledgeAction = false,
                             Name = "Stealth",
@@ -10815,6 +10848,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("d8fd543c-7284-451d-8882-583970e9d917"),
+                            Description = "You are adept at living in the wilderness, foraging for food and building shelter, and with training you discover the secrets of tracking and hiding your trail. Even if you’re untrained, you can still use Survival to Subsist (page 240).",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = false,
                             Name = "Survival",
@@ -10823,6 +10857,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("ca854fef-a519-472f-badd-f677cd8871fc"),
+                            Description = "You are trained in a particular set of skills favored by thieves and miscreants.",
                             HasArmorCheckPenalty = true,
                             HasRecallKnowledgeAction = false,
                             Name = "Thievery",
@@ -10831,6 +10866,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("eeb5a099-361f-41ab-aafd-7672f47bf9c3"),
+                            Description = "Perception measures your ability to be aware of your environment. Every creature has Perception, which works with and is limited by a creature’s senses (described on page 464). Whenever you need to attempt a check based on your awareness, you’ll attempt a Perception check. Your Perception uses your Wisdom modifier, so you’ll use the following formula when attempting a Perception check.",
                             HasArmorCheckPenalty = false,
                             HasRecallKnowledgeAction = false,
                             Name = "Perception",
@@ -13566,6 +13602,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<Guid?>("KeyAbilityClassesId")
                         .HasColumnType("uuid");
 
@@ -13584,36 +13624,42 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137"),
                             Abbreviation = "STR",
+                            Description = "Strength measures your character’s physical power.  Strength is important if your character plans to engage in hand - to - hand combat.Your Strength modifier gets added to melee damage rolls and determines how much your character can carry.",
                             Name = "Strength"
                         },
                         new
                         {
                             Id = new Guid("21b2cca1-66cd-48d1-a91b-085521659548"),
                             Abbreviation = "DEX",
+                            Description = "Dexterity measures your character’s agility, balance, and reflexes. Dexterity is important if your character plans to make attacks with ranged weapons or use stealth to surprise foes. Your Dexterity modifier is also added to your character’s AC and Reflex saving throws.",
                             Name = "Dexterity"
                         },
                         new
                         {
                             Id = new Guid("10e9f065-a160-47e5-97df-72df4ec5ea15"),
                             Abbreviation = "CON",
+                            Description = "Constitution measures your character’s overall health and stamina. Constitution is an important statistic for all characters, especially those who fight in close combat.  Your Constitution modifier is added to your Hit Points and Fortitude saving throws.",
                             Name = "Constitution"
                         },
                         new
                         {
                             Id = new Guid("37406a59-0dd9-4766-8713-33b13b7740fd"),
                             Abbreviation = "INT",
+                            Description = "Intelligence measures how well your character can learn and reason. A high Intelligence allows your character to analyze situations and understand patterns, and it means they can become trained in additional skills and might be able to master additional languages.",
                             Name = "Intellect"
                         },
                         new
                         {
                             Id = new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a"),
                             Abbreviation = "WIS",
+                            Description = "Wisdom measures your character’s common sense, awareness, and intuition. Your Wisdom modifier is added to your Perception and Will saving throws.",
                             Name = "Wisdom"
                         },
                         new
                         {
                             Id = new Guid("f4206177-80d3-4c9c-8f79-357a608897fa"),
                             Abbreviation = "CHA",
+                            Description = "Charisma measures your character’s personal magnetism and strength of personality. A high Charisma score helps you influence the thoughts and moods of others.",
                             Name = "Charisma"
                         });
                 });

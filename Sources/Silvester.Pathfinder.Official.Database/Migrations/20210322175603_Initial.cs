@@ -1100,6 +1100,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Abbreviation = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
                     KeyAbilityClassesId = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
@@ -1288,6 +1289,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
                     HasArmorCheckPenalty = table.Column<bool>(type: "boolean", nullable: false),
                     HasRecallKnowledgeAction = table.Column<bool>(type: "boolean", nullable: false),
                     StatModifierId = table.Column<Guid>(type: "uuid", nullable: false)
@@ -1348,6 +1350,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
                     BaseSpeed = table.Column<int>(type: "integer", nullable: false),
                     BaseHealth = table.Column<int>(type: "integer", nullable: false),
                     SizeId = table.Column<Guid>(type: "uuid", nullable: false),
@@ -1902,15 +1905,15 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             migrationBuilder.InsertData(
                 table: "Stats",
-                columns: new[] { "Id", "Abbreviation", "KeyAbilityClassesId", "Name" },
+                columns: new[] { "Id", "Abbreviation", "Description", "KeyAbilityClassesId", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("f4206177-80d3-4c9c-8f79-357a608897fa"), "CHA", null, "Charisma" },
-                    { new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a"), "WIS", null, "Wisdom" },
-                    { new Guid("37406a59-0dd9-4766-8713-33b13b7740fd"), "INT", null, "Intellect" },
-                    { new Guid("21b2cca1-66cd-48d1-a91b-085521659548"), "DEX", null, "Dexterity" },
-                    { new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137"), "STR", null, "Strength" },
-                    { new Guid("10e9f065-a160-47e5-97df-72df4ec5ea15"), "CON", null, "Constitution" }
+                    { new Guid("f4206177-80d3-4c9c-8f79-357a608897fa"), "CHA", "Charisma measures your character’s personal magnetism and strength of personality. A high Charisma score helps you influence the thoughts and moods of others.", null, "Charisma" },
+                    { new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a"), "WIS", "Wisdom measures your character’s common sense, awareness, and intuition. Your Wisdom modifier is added to your Perception and Will saving throws.", null, "Wisdom" },
+                    { new Guid("37406a59-0dd9-4766-8713-33b13b7740fd"), "INT", "Intelligence measures how well your character can learn and reason. A high Intelligence allows your character to analyze situations and understand patterns, and it means they can become trained in additional skills and might be able to master additional languages.", null, "Intellect" },
+                    { new Guid("21b2cca1-66cd-48d1-a91b-085521659548"), "DEX", "Dexterity measures your character’s agility, balance, and reflexes. Dexterity is important if your character plans to make attacks with ranged weapons or use stealth to surprise foes. Your Dexterity modifier is also added to your character’s AC and Reflex saving throws.", null, "Dexterity" },
+                    { new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137"), "STR", "Strength measures your character’s physical power.  Strength is important if your character plans to engage in hand - to - hand combat.Your Strength modifier gets added to melee damage rolls and determines how much your character can carry.", null, "Strength" },
+                    { new Guid("10e9f065-a160-47e5-97df-72df4ec5ea15"), "CON", "Constitution measures your character’s overall health and stamina. Constitution is an important statistic for all characters, especially those who fight in close combat.  Your Constitution modifier is added to your Hit Points and Fortitude saving throws.", null, "Constitution" }
                 });
 
             migrationBuilder.InsertData(
@@ -2320,44 +2323,44 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             migrationBuilder.InsertData(
                 table: "Races",
-                columns: new[] { "Id", "BaseHealth", "BaseSpeed", "HeritagesId", "LanguagesId", "Name", "RaceTraitsId", "RarityId", "SizeId" },
+                columns: new[] { "Id", "BaseHealth", "BaseSpeed", "Description", "HeritagesId", "LanguagesId", "Name", "RaceTraitsId", "RarityId", "SizeId" },
                 values: new object[,]
                 {
-                    { new Guid("8fec37b8-ec4a-4094-90a0-4e70b12fd6ce"), 6, 25, null, null, "Tengu", null, new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") },
-                    { new Guid("a6f1c39a-feb8-4f62-95ce-1b5ffabbbbbf"), 6, 25, null, null, "Kobold", null, new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"), new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2") },
-                    { new Guid("a8430e0c-d52e-477c-a058-bc970a2113ea"), 6, 25, null, null, "Ratfolk", null, new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"), new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2") },
-                    { new Guid("3404bf2c-eb1c-4cc6-b376-450a969af548"), 6, 25, null, null, "Gnome", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2") },
-                    { new Guid("519063b5-7283-4c0b-bb3a-d5d5edeba551"), 6, 25, null, null, "Goblin", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2") },
-                    { new Guid("ed816fd4-9e13-43b4-b80f-30d2b5c910ff"), 6, 25, null, null, "Halfling", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2") },
-                    { new Guid("7fc53559-4776-482c-910c-be3bd84d2de4"), 8, 25, null, null, "Human", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") },
-                    { new Guid("e6ac68fc-98bf-4012-97a1-9910f988a1a4"), 6, 30, null, null, "Elf", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") },
-                    { new Guid("96a536c5-7fe0-4a25-af8b-881a2892b576"), 10, 20, null, null, "Dwarf", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") },
-                    { new Guid("14f3ef0d-aba9-4bed-8419-e9ffb1594cf5"), 8, 25, null, null, "Catfolk", null, new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") },
-                    { new Guid("903f97e5-6972-4ad2-9377-447b7d6758a3"), 10, 25, null, null, "Orc", null, new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") }
+                    { new Guid("8fec37b8-ec4a-4094-90a0-4e70b12fd6ce"), 6, 25, "Tengus are a gregarious and resourceful people that have spread far and wide from their ancestral home in Tian Xia, collecting and combining whatever innovations and traditions they happen across with those from their own long history.", null, null, "Tengu", null, new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") },
+                    { new Guid("a6f1c39a-feb8-4f62-95ce-1b5ffabbbbbf"), 6, 25, "Every kobold knows that their slight frame belies true, mighty draconic power. They are ingenious crafters and devoted allies within their warrens, but those who trespass into their territory find them to be inspired skirmishers, especially when they have the backing of a draconic sorcerer or true dragon overlord. However, these reptilian opportunists prove happy to cooperate with other humanoids when it’s to their benefit, combining caution and cunning to make their fortunes in the wider world.", null, null, "Kobold", null, new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"), new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2") },
+                    { new Guid("a8430e0c-d52e-477c-a058-bc970a2113ea"), 6, 25, "Ysoki—as ratfolk call themselves—are a clever, adaptable, and fastidious ancestry who happily crowd their large families into the smallest of living spaces.", null, null, "Ratfolk", null, new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"), new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2") },
+                    { new Guid("3404bf2c-eb1c-4cc6-b376-450a969af548"), 6, 25, "Long ago, early gnome ancestors emigrated from the First World, realm of the fey. While it’s unclear why the first gnomes wandered to Golarion, this lineage manifests in modern gnomes as bizarre reasoning, eccentricity, obsessive tendencies, and what some see as naivete. These qualities are further reflected in their physical characteristics, such as spindly limbs, brightly colored hair, and childlike and extremely expressive facial features that further reflect their otherworldly origins.", null, null, "Gnome", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2") },
+                    { new Guid("519063b5-7283-4c0b-bb3a-d5d5edeba551"), 6, 25, "The convoluted histories other people cling to don’t interest goblins. These small folk live in the moment, and they prefer tall tales over factual records. The wars of a few decades ago might as well be from the ancient past. Misunderstood by other people, goblins are happy how they are. Goblin virtues are about being present, creative, and honest. They strive to lead fulfilled lives, rather than worrying about how their journeys will end. To tell stories, not nitpick the facts. To be small, but dream big.", null, null, "Goblin", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2") },
+                    { new Guid("ed816fd4-9e13-43b4-b80f-30d2b5c910ff"), 6, 25, "Claiming no place as their own, halflings control few settlements larger than villages. Instead, they frequently live among humans within the walls of larger cities, carving out small communities alongside taller folk. Many halflings lead perfectly fulfilling lives in the shadows of their larger neighbors, while others prefer a nomadic existence, traveling the world and taking advantage of opportunities and adventures as they come.", null, null, "Halfling", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("0a06e806-0314-455c-8af8-c81ecc1e0dd2") },
+                    { new Guid("7fc53559-4776-482c-910c-be3bd84d2de4"), 8, 25, "As unpredictable and varied as any of Golarion’s peoples, humans have exceptional drive and the capacity to endure and expand. Though many civilizations thrived before humanity rose to prominence, humans have built some of the greatest and the most terrible societies throughout the course of history, and today they are the most populous people in the realms around the Inner Sea.", null, null, "Human", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") },
+                    { new Guid("e6ac68fc-98bf-4012-97a1-9910f988a1a4"), 6, 30, "As an ancient people, elves have seen great change and have the perspective that can come only from watching the arc of history. After leaving the world in ancient times, they returned to a changed land, and they still struggle to reclaim their ancestral homes, most notably from terrible demons that have invaded parts of their lands. To some, the elves are objects of awe—graceful and beautiful, with immense talent and knowledge. Among themselves, however, the elves place far more importance on personal freedom than on living up to these ideals.", null, null, "Elf", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") },
+                    { new Guid("96a536c5-7fe0-4a25-af8b-881a2892b576"), 10, 20, "Dwarves have a well-earned reputation as a stoic and stern people, ensconced within citadels and cities carved from solid rock. While some see them as dour and humorless crafters of stone and metal, dwarves and those who have spent time among them understand their unbridled zeal for their work, caring far more about quality than quantity. To a stranger, they can seem untrusting and clannish, but to their friends and family, they are warm and caring, their halls filled with the sounds of laughter and hammers hitting anvils.", null, null, "Dwarf", null, new Guid("52091c82-7a39-4a66-919e-ac268375b792"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") },
+                    { new Guid("14f3ef0d-aba9-4bed-8419-e9ffb1594cf5"), 8, 25, "Curious and gregarious wanderers, catfolk combine features of felines and humanoids in both appearance and temperament. They enjoy learning new things, collecting new tales and trinkets, and ensuring their loved ones are safe and happy. Catfolk view themselves as chosen guardians of natural places in the world and are often recklessly brave, even in the face of overwhelming opposition.", null, null, "Catfolk", null, new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") },
+                    { new Guid("903f97e5-6972-4ad2-9377-447b7d6758a3"), 10, 25, "Orcs are forged in the fires of violence and conflict, often from the moment they are born. As they live lives that are frequently cut brutally short, orcs revel in testing their strength against worthy foes, whether by challenging a higher-ranking member of their community for dominance or raiding a neighboring settlement. Many orcs seek glory as soon as they can walk and carry a blade or club, taming wild beasts or hunting deadly monsters.", null, null, "Orc", null, new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"), new Guid("b2fb5eb7-73ac-4aad-9e20-ceb0487c1991") }
                 });
 
             migrationBuilder.InsertData(
                 table: "Skills",
-                columns: new[] { "Id", "HasArmorCheckPenalty", "HasRecallKnowledgeAction", "Name", "StatModifierId" },
+                columns: new[] { "Id", "Description", "HasArmorCheckPenalty", "HasRecallKnowledgeAction", "Name", "StatModifierId" },
                 values: new object[,]
                 {
-                    { new Guid("bef3fdab-348a-4024-9095-1ab69ded3fed"), false, true, "Crafting", new Guid("37406a59-0dd9-4766-8713-33b13b7740fd") },
-                    { new Guid("252ee579-951c-414e-bb69-7d2dfc324280"), true, false, "Stealth", new Guid("21b2cca1-66cd-48d1-a91b-085521659548") },
-                    { new Guid("ca854fef-a519-472f-badd-f677cd8871fc"), true, false, "Thievery", new Guid("21b2cca1-66cd-48d1-a91b-085521659548") },
-                    { new Guid("ab6c56d1-8f95-45db-b4a1-6bae20e30c47"), false, false, "Diplomacy", new Guid("f4206177-80d3-4c9c-8f79-357a608897fa") },
-                    { new Guid("13d2e35c-3829-4bab-85c1-de00ff96248a"), true, false, "Acrobatics", new Guid("21b2cca1-66cd-48d1-a91b-085521659548") },
-                    { new Guid("2f33e759-98f4-4a19-a955-e2133197de04"), false, false, "Deception", new Guid("f4206177-80d3-4c9c-8f79-357a608897fa") },
-                    { new Guid("eeb5a099-361f-41ab-aafd-7672f47bf9c3"), false, false, "Perception", new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a") },
-                    { new Guid("d8fd543c-7284-451d-8882-583970e9d917"), false, false, "Survival", new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a") },
-                    { new Guid("6a672190-7918-4fbd-a2d7-2d69f9d2a794"), false, true, "Religion", new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a") },
-                    { new Guid("3707c645-9e77-4eb7-bf63-f4d65f471f25"), false, true, "Nature", new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a") },
-                    { new Guid("b64e4795-0efe-4cf5-82e3-f4219c041137"), false, true, "Medicine", new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a") },
-                    { new Guid("641be10d-b069-45e9-b890-7f1254cd042c"), false, true, "Society", new Guid("37406a59-0dd9-4766-8713-33b13b7740fd") },
-                    { new Guid("feb60159-48a5-4164-b2e2-54b1f0a52a26"), false, true, "Occultism", new Guid("37406a59-0dd9-4766-8713-33b13b7740fd") },
-                    { new Guid("6f23369f-e91f-4472-a254-648ba3ed1850"), false, true, "Arcana", new Guid("37406a59-0dd9-4766-8713-33b13b7740fd") },
-                    { new Guid("8b35c13a-46fd-4018-bb18-11c0f156f708"), true, false, "Athletics", new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137") },
-                    { new Guid("b41f214e-5d45-46fe-8495-263c3d117a86"), false, false, "Performance", new Guid("f4206177-80d3-4c9c-8f79-357a608897fa") },
-                    { new Guid("a14f7dbb-8a76-4b6e-8e67-6adb4f1b39b2"), false, false, "Intimidation", new Guid("f4206177-80d3-4c9c-8f79-357a608897fa") }
+                    { new Guid("bef3fdab-348a-4024-9095-1ab69ded3fed"), "You can use this skill to create and repair items. Even if you’re untrained, you can Recall Knowledge (page 238).", false, true, "Crafting", new Guid("37406a59-0dd9-4766-8713-33b13b7740fd") },
+                    { new Guid("252ee579-951c-414e-bb69-7d2dfc324280"), "You are skilled at avoiding detection, allowing you to slip past foes, hide, or conceal an item.", true, false, "Stealth", new Guid("21b2cca1-66cd-48d1-a91b-085521659548") },
+                    { new Guid("ca854fef-a519-472f-badd-f677cd8871fc"), "You are trained in a particular set of skills favored by thieves and miscreants.", true, false, "Thievery", new Guid("21b2cca1-66cd-48d1-a91b-085521659548") },
+                    { new Guid("ab6c56d1-8f95-45db-b4a1-6bae20e30c47"), "You influence others through negotiation and flattery.", false, false, "Diplomacy", new Guid("f4206177-80d3-4c9c-8f79-357a608897fa") },
+                    { new Guid("13d2e35c-3829-4bab-85c1-de00ff96248a"), "Acrobatics measures your ability to perform tasks requiring coordination and grace. When you use the Escape basic action (page 470), you can use your Acrobatics modifier instead of your unarmed attack modifier.", true, false, "Acrobatics", new Guid("21b2cca1-66cd-48d1-a91b-085521659548") },
+                    { new Guid("2f33e759-98f4-4a19-a955-e2133197de04"), "You can trick and mislead others using disguises, lies, and other forms of subterfuge.", false, false, "Deception", new Guid("f4206177-80d3-4c9c-8f79-357a608897fa") },
+                    { new Guid("eeb5a099-361f-41ab-aafd-7672f47bf9c3"), "Perception measures your ability to be aware of your environment. Every creature has Perception, which works with and is limited by a creature’s senses (described on page 464). Whenever you need to attempt a check based on your awareness, you’ll attempt a Perception check. Your Perception uses your Wisdom modifier, so you’ll use the following formula when attempting a Perception check.", false, false, "Perception", new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a") },
+                    { new Guid("d8fd543c-7284-451d-8882-583970e9d917"), "You are adept at living in the wilderness, foraging for food and building shelter, and with training you discover the secrets of tracking and hiding your trail. Even if you’re untrained, you can still use Survival to Subsist (page 240).", false, false, "Survival", new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a") },
+                    { new Guid("6a672190-7918-4fbd-a2d7-2d69f9d2a794"), "The secrets of deities, dogma, faith, and the realms of divine creatures both sublime and sinister are open to you. You also understand how magic works, though your training imparts a religious slant to that knowledge. Even if you’re untrained in Religion, you can use it to Recall Knowledge (page 238).", false, true, "Religion", new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a") },
+                    { new Guid("3707c645-9e77-4eb7-bf63-f4d65f471f25"), "You know about the natural world, and you command and train animals and magical beasts. Even if you’re untrained in Nature, you can use it to Recall Knowledge (page 238).", false, true, "Nature", new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a") },
+                    { new Guid("b64e4795-0efe-4cf5-82e3-f4219c041137"), "You can patch up wounds and help people recover from diseases and poisons. Even if you’re untrained in Medicine, you can use it to Recall Knowledge (page 238).", false, true, "Medicine", new Guid("e9e25044-7005-48c7-81bc-372c8a9f829a") },
+                    { new Guid("641be10d-b069-45e9-b890-7f1254cd042c"), "You understand the people and systems that make civilization run, and you know the historical events that make societies what they are today. Further, you can use that knowledge to navigate the complex physical, societal, and economic workings of settlements. Even if you’re untrained in Society, you can use it for the following general skill actions (page 234).", false, true, "Society", new Guid("37406a59-0dd9-4766-8713-33b13b7740fd") },
+                    { new Guid("feb60159-48a5-4164-b2e2-54b1f0a52a26"), "You know a great deal about ancient philosophies, esoteric lore, obscure mysticism, and supernatural creatures. Even if you’re untrained in Occultism, you can use it to Recall Knowledge (page 238).", false, true, "Occultism", new Guid("37406a59-0dd9-4766-8713-33b13b7740fd") },
+                    { new Guid("6f23369f-e91f-4472-a254-648ba3ed1850"), "Arcana measures how much you know about arcane magic and creatures. Even if you’re untrained, you can Recall Knowledge (page 238).", false, true, "Arcana", new Guid("37406a59-0dd9-4766-8713-33b13b7740fd") },
+                    { new Guid("8b35c13a-46fd-4018-bb18-11c0f156f708"), "Athletics allows you to perform deeds of physical prowess. When you use the Escape basic action (page 470), you can use your Athletics modifier instead of your unarmed attack modifier.", true, false, "Athletics", new Guid("3e44bfc5-4aeb-4b46-9bdd-d4da39d40137") },
+                    { new Guid("b41f214e-5d45-46fe-8495-263c3d117a86"), "You are skilled at a form of performance, using your talents to impress a crowd or make a living.", false, false, "Performance", new Guid("f4206177-80d3-4c9c-8f79-357a608897fa") },
+                    { new Guid("a14f7dbb-8a76-4b6e-8e67-6adb4f1b39b2"), "You bend others to your will using threats.", false, false, "Intimidation", new Guid("f4206177-80d3-4c9c-8f79-357a608897fa") }
                 });
 
             migrationBuilder.InsertData(
