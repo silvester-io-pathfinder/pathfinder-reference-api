@@ -18711,7 +18711,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasForeignKey("RaceTraitsId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.RaceRarity", "Rarity")
-                        .WithMany()
+                        .WithMany("Race")
                         .HasForeignKey("RarityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -18737,7 +18737,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Skill", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Stat", "StatModifier")
-                        .WithMany()
+                        .WithMany("Skills")
                         .HasForeignKey("StatModifierId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -19120,6 +19120,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Planes");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.RaceRarity", b =>
+                {
+                    b.Navigation("Race");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.RaceSize", b =>
                 {
                     b.Navigation("Races");
@@ -19144,6 +19149,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellType", b =>
                 {
                     b.Navigation("Spells");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Stat", b =>
+                {
+                    b.Navigation("Skills");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.OrFeatEffect", b =>
