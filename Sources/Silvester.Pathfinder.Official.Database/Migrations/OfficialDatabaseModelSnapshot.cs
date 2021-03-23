@@ -18711,7 +18711,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasForeignKey("RaceTraitsId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.RaceRarity", "Rarity")
-                        .WithMany("Race")
+                        .WithMany("Races")
                         .HasForeignKey("RarityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -19122,7 +19122,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.RaceRarity", b =>
                 {
-                    b.Navigation("Race");
+                    b.Navigation("Races");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.RaceSize", b =>

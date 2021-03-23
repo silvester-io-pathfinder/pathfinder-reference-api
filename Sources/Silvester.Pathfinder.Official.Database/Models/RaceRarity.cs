@@ -7,6 +7,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
     {
         public string Name { get; set; } = default!;
 
-        public ICollection<Race> Race{ get; set; } = new List<Race>();
+        public ICollection<Race> Races { get; set; } = new List<Race>();
     }
 }

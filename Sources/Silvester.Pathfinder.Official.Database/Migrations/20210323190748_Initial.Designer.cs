@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Official.Database;
 namespace Silvester.Pathfinder.Official.Database.Migrations
 {
     [DbContext(typeof(OfficialDatabase))]
-    [Migration("20210323185544_Initial")]
+    [Migration("20210323190748_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18713,7 +18713,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasForeignKey("RaceTraitsId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.RaceRarity", "Rarity")
-                        .WithMany("Race")
+                        .WithMany("Races")
                         .HasForeignKey("RarityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -19124,7 +19124,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.RaceRarity", b =>
                 {
-                    b.Navigation("Race");
+                    b.Navigation("Races");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.RaceSize", b =>
