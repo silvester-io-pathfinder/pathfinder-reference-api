@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database;
+using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
@@ -12,5 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<Spell> Spells { get; set; } = new List<Spell>();
 
         public ICollection<Feat> Feats { get; set; } = new List<Feat>();
+
+        public ICollection<Models.Action> Actions { get; set; } = new List<Models.Action>();
     }
 }

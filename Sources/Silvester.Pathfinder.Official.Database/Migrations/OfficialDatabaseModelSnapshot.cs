@@ -19,6 +19,128 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.2");
 
+            modelBuilder.Entity("ActionTrait", b =>
+                {
+                    b.Property<Guid>("ActionsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("ActionsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("ActionTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            ActionsId = new Guid("eb1f9f32-3d35-479a-a3e2-bf965e32fc3d"),
+                            TraitsId = new Guid("08bac763-e881-4a70-b253-916191ee9713")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("5f770553-dac1-4377-8416-1a2a2e8f43be"),
+                            TraitsId = new Guid("08bac763-e881-4a70-b253-916191ee9713")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("e5d48006-5153-4ebf-a71e-401cc0bc3d4a"),
+                            TraitsId = new Guid("08bac763-e881-4a70-b253-916191ee9713")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("c2bcb0d1-7feb-4f52-8046-d630a6c8f09f"),
+                            TraitsId = new Guid("856db08f-edad-472b-b870-65a8f16252a5")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("31fb2827-6ed7-455e-b135-9f4893b298fb"),
+                            TraitsId = new Guid("08bac763-e881-4a70-b253-916191ee9713")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("90d27bd9-31ed-46f4-a174-467e165ed1b9"),
+                            TraitsId = new Guid("dee6c869-337c-4f4c-ba3c-3c3e77c19857")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            TraitsId = new Guid("dee6c869-337c-4f4c-ba3c-3c3e77c19857")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
+                            TraitsId = new Guid("08bac763-e881-4a70-b253-916191ee9713")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("ab48c6d8-a194-4595-8358-c751fdc934d8"),
+                            TraitsId = new Guid("08bac763-e881-4a70-b253-916191ee9713")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("187ebb2b-c829-4d40-81dd-414a48ea766e"),
+                            TraitsId = new Guid("44a18bec-0799-41a7-9b07-16113bb0623f")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("187ebb2b-c829-4d40-81dd-414a48ea766e"),
+                            TraitsId = new Guid("dee6c869-337c-4f4c-ba3c-3c3e77c19857")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("187ebb2b-c829-4d40-81dd-414a48ea766e"),
+                            TraitsId = new Guid("e2bb08cb-cf59-4e29-8738-52c751405fb0")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"),
+                            TraitsId = new Guid("c5e1a5e7-5d45-4826-b2ea-018b361770de")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("ed94ef79-c37c-4591-a520-557916925352"),
+                            TraitsId = new Guid("dee6c869-337c-4f4c-ba3c-3c3e77c19857")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
+                            TraitsId = new Guid("c5e1a5e7-5d45-4826-b2ea-018b361770de")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
+                            TraitsId = new Guid("5f7b92e7-09d2-4717-8588-56b45c08a111")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("f715d730-9ad4-4922-b893-cda88fe25ea4"),
+                            TraitsId = new Guid("c5e1a5e7-5d45-4826-b2ea-018b361770de")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("f715d730-9ad4-4922-b893-cda88fe25ea4"),
+                            TraitsId = new Guid("5f7b92e7-09d2-4717-8588-56b45c08a111")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("4deb6d4d-0808-4755-897e-412a0d6e1f21"),
+                            TraitsId = new Guid("08bac763-e881-4a70-b253-916191ee9713")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"),
+                            TraitsId = new Guid("08bac763-e881-4a70-b253-916191ee9713")
+                        },
+                        new
+                        {
+                            ActionsId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
+                            TraitsId = new Guid("856db08f-edad-472b-b870-65a8f16252a5")
+                        });
+                });
+
             modelBuilder.Entity("ClassStat", b =>
                 {
                     b.Property<Guid>("KeyAbilityClassesId")
@@ -3814,6 +3936,420 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             RacesId = new Guid("7fc53559-4776-482c-910c-be3bd84d2de4"),
                             RaceTraitsId = new Guid("54611353-c19f-452b-91c3-557a80a661c4")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Action", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionTypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Requirements")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("RollableEffectId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Trigger")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActionTypeId");
+
+                    b.HasIndex("RollableEffectId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("Action");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("185abe1a-6c43-4884-bb8a-4f596e75442f"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            Name = "Aid",
+                            Requirements = "The ally is willing to accept your aid, and you have prepared to help.",
+                            RollableEffectId = new Guid("5c94d039-e421-42b3-af86-d33a8f266410"),
+                            Trigger = "An ally is about to use an action that requires a skill check or attack roll."
+                        },
+                        new
+                        {
+                            Id = new Guid("3367ce7a-8cc0-11eb-8dcd-0242ac130003"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            Name = "Arrest Fall",
+                            Requirements = "You have a fly speed.",
+                            RollableEffectId = new Guid("3d116422-8cc0-11eb-8dcd-0242ac130003"),
+                            Trigger = "You fall."
+                        },
+                        new
+                        {
+                            Id = new Guid("4384a058-8cc0-11eb-8dcd-0242ac130003"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Avert Gaze",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("eb1f9f32-3d35-479a-a3e2-bf965e32fc3d"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Burrow",
+                            Requirements = "You have a burrow speed.",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("5f770553-dac1-4377-8416-1a2a2e8f43be"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Crawl",
+                            Requirements = "You are prone and your Speed is at least 10 feet.",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("4163f1f7-245b-4989-b4a9-8638d75f2cdc"),
+                            ActionTypeId = new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"),
+                            Name = "Delay",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Trigger = "Your turn begins."
+                        },
+                        new
+                        {
+                            Id = new Guid("e5d48006-5153-4ebf-a71e-401cc0bc3d4a"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Drop Prone",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("c2bcb0d1-7feb-4f52-8046-d630a6c8f09f"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Escape",
+                            RollableEffectId = new Guid("42f02449-6552-40db-adea-e635cb50c071")
+                        },
+                        new
+                        {
+                            Id = new Guid("31fb2827-6ed7-455e-b135-9f4893b298fb"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Fly",
+                            Requirements = "You have a fly speed.",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("90d27bd9-31ed-46f4-a174-467e165ed1b9"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            Name = "Grab Edge",
+                            Requirements = "Your hands are not tied behind your back or otherwise restrained.",
+                            RollableEffectId = new Guid("f5c01f9a-15de-47c0-8f65-470f0c4442dd"),
+                            Trigger = "You fall from or past an edge or handhold."
+                        },
+                        new
+                        {
+                            Id = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Interact",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Leap",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("ab48c6d8-a194-4595-8358-c751fdc934d8"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Mount",
+                            Requirements = "You are adjacent to a creature that is at least one size larger than you and is willing to be your mount.",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("187ebb2b-c829-4d40-81dd-414a48ea766e"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Point Out",
+                            Requirements = "A creature is undetected by one or more of your allies but isn’t undetected by you.",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            Name = "Ready",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("ed94ef79-c37c-4591-a520-557916925352"),
+                            ActionTypeId = new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"),
+                            Name = "Release",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Seek",
+                            RollableEffectId = new Guid("c6c59505-6b03-46fe-b154-1c303d7176e4")
+                        },
+                        new
+                        {
+                            Id = new Guid("f715d730-9ad4-4922-b893-cda88fe25ea4"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Sense Motive",
+                            RollableEffectId = new Guid("e83cff43-911b-41f0-a5d3-e67bed0ca36b")
+                        },
+                        new
+                        {
+                            Id = new Guid("4deb6d4d-0808-4755-897e-412a0d6e1f21"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Stand",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Step",
+                            Requirements = "Your Speed is at least 10 feet.",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        },
+                        new
+                        {
+                            Id = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Stride",
+                            RollableEffectId = new Guid("9dab564c-885e-492a-a52e-af745342c53d")
+                        },
+                        new
+                        {
+                            Id = new Guid("55bca308-af52-4da5-a1e4-a6c1059c5321"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Take Cover",
+                            Requirements = "You are benefiting from cover, are near a feature that allows you to take cover, or are prone.",
+                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ActionDetailsBlock", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActionId");
+
+                    b.ToTable("ActionDetailsBlock");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("cb5d193c-21b9-44a4-8370-766b898ceae9"),
+                            ActionId = new Guid("185abe1a-6c43-4884-bb8a-4f596e75442f"),
+                            Text = "You try to help your ally with a task. To use this reaction, you must first prepare to help, usually by using an action during your turn. You must explain to the GM exactly how you’re trying to help, and they determine whether you can Aid your ally."
+                        },
+                        new
+                        {
+                            Id = new Guid("60fe2d98-ba32-435e-ac1c-1abb6e8a5691"),
+                            ActionId = new Guid("185abe1a-6c43-4884-bb8a-4f596e75442f"),
+                            Text = "When you use your Aid reaction, attempt a skill check or attack roll of a type decided by the GM. The typical DC is 20, but the GM might adjust this DC for particularly hard or easy tasks. The GM can add any relevant traits to your preparatory action or to your Aid reaction depending on the situation, or even allow you to Aid checks other than skill checks and attack rolls."
+                        },
+                        new
+                        {
+                            Id = new Guid("386cc768-8cc0-11eb-8dcd-0242ac130003"),
+                            ActionId = new Guid("3367ce7a-8cc0-11eb-8dcd-0242ac130003"),
+                            Text = "You attempt an Acrobatics check to slow your fall. The DC is typically 15, but it might be higher due to air turbulence or other circumstances."
+                        },
+                        new
+                        {
+                            Id = new Guid("1345cbb1-4a0d-47e6-918f-f09fa0bd859b"),
+                            ActionId = new Guid("4384a058-8cc0-11eb-8dcd-0242ac130003"),
+                            Text = "You avert your gaze from danger. You gain a +2 circumstance bonus to saves against visual abilities that require you to look at a creature or object, such as a medusa’s petrifying gaze. Your gaze remains averted until the start of your next turn."
+                        },
+                        new
+                        {
+                            Id = new Guid("015a016b-90ec-42b1-9e9b-28c230d06999"),
+                            ActionId = new Guid("eb1f9f32-3d35-479a-a3e2-bf965e32fc3d"),
+                            Text = "You dig your way through dirt, sand, or a similar loose material at a rate up to your burrow Speed. You can’t burrow through rock or other substances denser than dirt unless you have an ability that allows you to do so."
+                        },
+                        new
+                        {
+                            Id = new Guid("ea4b9697-2a26-4b33-aa9d-f6908ab082e3"),
+                            ActionId = new Guid("5f770553-dac1-4377-8416-1a2a2e8f43be"),
+                            Text = "You move 5 feet by crawling and continue to stay prone."
+                        },
+                        new
+                        {
+                            Id = new Guid("f2def960-90a3-4293-9649-24a380ce33e5"),
+                            ActionId = new Guid("4163f1f7-245b-4989-b4a9-8638d75f2cdc"),
+                            Text = "You wait for the right moment to act. The rest of your turn doesn’t happen yet. Instead, you’re removed from the initiative order. You can return to the initiative order as a free action triggered by the end of any other creature’s turn. This permanently changes your initiative to the new position. You can’t use reactions until you return to the initiative order. If you Delay an entire round without returning to the initiative order, the actions from the Delayed turn are lost, your initiative doesn’t change, and your next turn occurs at your original position in the initiative order."
+                        },
+                        new
+                        {
+                            Id = new Guid("c9a4cd10-fd21-4bb9-a356-a47d4837599a"),
+                            ActionId = new Guid("4163f1f7-245b-4989-b4a9-8638d75f2cdc"),
+                            Text = "When you Delay, any persistent damage or other negative effects that normally occur at the start or end of your turn occur immediately when you use the Delay action. Any beneficial effects that would end at any point during your turn also end. The GM might determine that other effects end when you Delay as well. Essentially, you can’t Delay to avoid negative consequences that would happen on your turn or to extend beneficial effects that would end on your turn."
+                        },
+                        new
+                        {
+                            Id = new Guid("609e4ef2-f376-48d0-8f70-620733c8b8d5"),
+                            ActionId = new Guid("e5d48006-5153-4ebf-a71e-401cc0bc3d4a"),
+                            Text = "You fall prone."
+                        },
+                        new
+                        {
+                            Id = new Guid("5055a0f7-a922-4b49-b57f-40938f30d803"),
+                            ActionId = new Guid("c2bcb0d1-7feb-4f52-8046-d630a6c8f09f"),
+                            Text = "You attempt to escape from being grabbed, immobilized, or restrained. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a check using your unarmed attack modifier against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC for a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an Acrobatics or Athletics check instead of using your attack modifier if you choose (but this action still has the attack trait)."
+                        },
+                        new
+                        {
+                            Id = new Guid("a92602b3-303e-448f-91a1-8cf3dbce6c5a"),
+                            ActionId = new Guid("31fb2827-6ed7-455e-b135-9f4893b298fb"),
+                            Text = "You move through the air up to your fly Speed. Moving upward (straight up or diagonally) uses the rules for moving through difficult terrain. You can move straight down 10 feet for every 5 feet of movement you spend. If you Fly to the ground, you don’t take falling damage. You can use an action to Fly 0 feet to hover in place. If you’re airborne at the end of your turn and didn’t use a Fly action this round, you fall."
+                        },
+                        new
+                        {
+                            Id = new Guid("135aadcd-6eaf-4401-909d-de2414c5ccbc"),
+                            ActionId = new Guid("90d27bd9-31ed-46f4-a174-467e165ed1b9"),
+                            Text = "When you fall off or past an edge or other handhold, you can try to grab it, potentially stopping your fall. You must succeed at a Reflex save, usually at the Climb DC. If you grab the edge or handhold, you can then Climb up using Athletics."
+                        },
+                        new
+                        {
+                            Id = new Guid("3628f76a-d2f7-4391-9282-f7812e69ae26"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            Text = "You use your hand or hands to manipulate an object or the terrain. You can grab an unattended or stored object, open a door, or produce some similar effect. You might have to attempt a skill check to determine if your Interact action was successful."
+                        },
+                        new
+                        {
+                            Id = new Guid("2e208301-e15b-4adc-9929-d35835141a08"),
+                            ActionId = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
+                            Text = "You take a careful, short jump. You can Leap up to 10 feet horizontally if your Speed is at least 15 feet, or up to 15 feet horizontally if your Speed is at least 30 feet. You land in the space where your Leap ends (meaning you can typically clear a 5-foot gap, or a 10-foot gap if your Speed is 30 feet or more)."
+                        },
+                        new
+                        {
+                            Id = new Guid("d4aeb760-f7a2-4095-bc96-e2f70ab49b80"),
+                            ActionId = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
+                            Text = "If you Leap vertically, you can move up to 3 feet vertically and 5 feet horizontally onto an elevated surface."
+                        },
+                        new
+                        {
+                            Id = new Guid("6a431cbd-e07c-41e9-b824-179847fe0207"),
+                            ActionId = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
+                            Text = "Jumping a greater distance requires using the Athletics skill."
+                        },
+                        new
+                        {
+                            Id = new Guid("37cbf292-bc7b-46d3-909a-0bf344afe97b"),
+                            ActionId = new Guid("ab48c6d8-a194-4595-8358-c751fdc934d8"),
+                            Text = "You move onto the creature and ride it. If you’re already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it."
+                        },
+                        new
+                        {
+                            Id = new Guid("e9c5de9d-eef6-46d4-ae1b-0dee8958af0c"),
+                            ActionId = new Guid("187ebb2b-c829-4d40-81dd-414a48ea766e"),
+                            Text = "You indicate a creature that you can see to one or more allies, gesturing in a direction and describing the distance verbally. That creature is hidden to your allies, rather than undetected (page 466). This works only for allies who can see you and are in a position where they could potentially detect the target. If your allies can’t hear or understand you, they must succeed at a Perception check against the creature’s Stealth DC or they misunderstand and believe the target is in a different location."
+                        },
+                        new
+                        {
+                            Id = new Guid("1a320b87-a7f6-4d18-b4e2-3ea5dd7008a6"),
+                            ActionId = new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"),
+                            Text = "You prepare to use an action that will occur outside your turn. Choose a single action or free action you can use, and designate a trigger. Your turn then ends. If the trigger you designated occurs before the start of your next turn, you can use the chosen action as a reaction (provided you still meet the requirements to use it). You can’t Ready a free action that already has a trigger."
+                        },
+                        new
+                        {
+                            Id = new Guid("23ce08c6-58c9-43a0-8028-aa462b266f98"),
+                            ActionId = new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"),
+                            Text = "If you have a multiple attack penalty and your readied action is an attack action, your readied attack takes the multiple attack penalty you had at the time you used Ready. This is one of the few times the multiple attack penalty applies when it’s not your turn."
+                        },
+                        new
+                        {
+                            Id = new Guid("4014c48b-23f3-4382-81c7-3b9e7c1eec47"),
+                            ActionId = new Guid("ed94ef79-c37c-4591-a520-557916925352"),
+                            Text = "You release something you’re holding in your hand or hands. This might mean dropping an item, removing one hand from your weapon while continuing to hold it in another hand, releasing a rope suspending a chandelier, or performing a similar action. Unlike most manipulate actions, Release does not trigger reactions that can be triggered by actions with the manipulate trait (such as Attack of Opportunity)."
+                        },
+                        new
+                        {
+                            Id = new Guid("168a4329-2ae8-48a5-8fa6-a5508a9b1b86"),
+                            ActionId = new Guid("ed94ef79-c37c-4591-a520-557916925352"),
+                            Text = "If you want to prepare to Release something outside of your turn, use the Ready activity."
+                        },
+                        new
+                        {
+                            Id = new Guid("e2a4876a-0d17-4bca-9874-8a0f708e39c3"),
+                            ActionId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
+                            Text = "You scan an area for signs of creatures or objects. If you’re looking for creatures, choose an area you’re scanning. If precision is necessary, the GM can have you select a 30-foot cone or a 15-foot burst within line of sight. You might take a penalty if you choose an area that’s far away."
+                        },
+                        new
+                        {
+                            Id = new Guid("722290ac-d0fa-43f9-9406-291d071f0fc9"),
+                            ActionId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
+                            Text = "If you’re using Seek to search for objects (including secret doors and hazards), you search up to a 10-foot square adjacent to you. The GM might determine you need to Seek as an activity, taking more actions or even minutes or hours if you’re searching a particularly cluttered area."
+                        },
+                        new
+                        {
+                            Id = new Guid("d666a8f0-877c-4b2d-8bac-7c3cbe35b525"),
+                            ActionId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
+                            Text = "The GM attempts a single secret Perception check for you and compares the result to the Stealth DCs of any undetected or hidden creatures in the area or the DC to detect each object in the area (as determined by the GM or by someone Concealing the Object). A creature you detect might remain hidden, rather than becoming observed, if you’re using an imprecise sense or if an effect (such as invisibility) prevents the subject from being observed."
+                        },
+                        new
+                        {
+                            Id = new Guid("65547cff-999a-493d-a6c1-4f56d3f0662a"),
+                            ActionId = new Guid("f715d730-9ad4-4922-b893-cda88fe25ea4"),
+                            Text = "You try to tell whether a creature’s behavior is abnormal. Choose one creature, and assess it for odd body language, signs of nervousness, and other indicators that it might be trying to deceive someone. The GM attempts a single secret Perception check for you and compares the result to the Deception DC of the creature, the DC of a spell affecting the creature’s mental state, or another appropriate DC determined by the GM. You typically can’t try to Sense the Motive of the same creature again until the situation changes significantly."
+                        },
+                        new
+                        {
+                            Id = new Guid("d04ec0db-0e06-4422-963e-1161dcbc2ba9"),
+                            ActionId = new Guid("4deb6d4d-0808-4755-897e-412a0d6e1f21"),
+                            Text = "You stand up from prone."
+                        },
+                        new
+                        {
+                            Id = new Guid("1bf68b96-2ca3-4353-ab9a-657394acdadc"),
+                            ActionId = new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"),
+                            Text = "You carefully move 5 feet. Unlike most types of movement, Stepping doesn’t trigger reactions, such as Attacks of Opportunity, that can be triggered by move actions or upon leaving or entering a square."
+                        },
+                        new
+                        {
+                            Id = new Guid("9aea3dfc-ee32-48c0-b420-1e9ffbd3d318"),
+                            ActionId = new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"),
+                            Text = "You can’t Step into difficult terrain (page 475), and you can’t Step using a Speed other than your land Speed."
+                        },
+                        new
+                        {
+                            Id = new Guid("36548991-704d-4a82-a2c4-0622eb57f728"),
+                            ActionId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
+                            Text = "You attack with a weapon you’re wielding or with an unarmed attack, targeting one creature within your reach (for a melee attack) or within range (for a ranged attack). Roll the attack roll for the weapon or unarmed attack you are using, and compare the result to the target creature’s AC to determine the effect. See Attack Rolls on page 446 and Damage on page 450 for details on calculating your attack and damage rolls."
+                        },
+                        new
+                        {
+                            Id = new Guid("3fb46634-1f05-49e3-afbc-4cc2c1553980"),
+                            ActionId = new Guid("55bca308-af52-4da5-a1e4-a6c1059c5321"),
+                            Text = "You press yourself against a wall or duck behind an obstacle to take better advantage of cover (page 477). If you would have standard cover, you instead gain greater cover, which provides a +4 circumstance bonus to AC; to Reflex saves against area effects; and to Stealth checks to Hide, Sneak, or otherwise avoid detection. Otherwise, you gain the benefits of standard cover (a +2 circumstance bonus instead). This lasts until you move from your current space, use an attack action, become unconscious, or end this effect as a free action."
                         });
                 });
 
@@ -10654,6 +11190,52 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             CriticalSuccess = "The creature is unaffected.",
                             Failure = "The creature takes full damage and is enfeebled 2 for 1 minute.",
                             Success = "The creature takes half damage."
+                        },
+                        new
+                        {
+                            Id = new Guid("5c94d039-e421-42b3-af86-d33a8f266410"),
+                            CriticalFailure = "Your ally takes a –1 circumstance penalty to the triggering check.",
+                            CriticalSuccess = " You grant your ally a +2 circumstance bonus to the triggering check. If you’re a master with the check you attempted, the bonus is +3, and if you’re legendary, it’s +4.",
+                            Success = "You grant your ally a +1 circumstance bonus to the triggering check."
+                        },
+                        new
+                        {
+                            Id = new Guid("3d116422-8cc0-11eb-8dcd-0242ac130003"),
+                            Success = "You fall gently, taking no damage from the fall."
+                        },
+                        new
+                        {
+                            Id = new Guid("42f02449-6552-40db-adea-e635cb50c071"),
+                            CriticalFailure = "You don’t get free, and you can’t attempt to Escape again until your next turn.",
+                            CriticalSuccess = "You get free and remove the grabbed, immobilized, and restrained conditions imposed by your chosen target. You can then Stride up to 5 feet.",
+                            Success = "You get free and remove the grabbed, immobilized, and restrained conditions imposed by your chosen target."
+                        },
+                        new
+                        {
+                            Id = new Guid("f5c01f9a-15de-47c0-8f65-470f0c4442dd"),
+                            CriticalFailure = "You continue to fall, and if you’ve fallen 20 feet or more before you use this reaction, you take 10 bludgeoning damage from the impact for every 20 feet fallen.",
+                            CriticalSuccess = "You grab the edge or handhold, whether or not you have a hand free, typically by using a suitable held item to catch yourself (catching a battle axe on a ledge, for example). You still take damage from the distance fallen so far, but you treat the fall as though it were 30 feet shorter.",
+                            Success = "If you have at least one hand free, you grab the edge or handhold, stopping your fall. You still take damage from the distance fallen so far, but you treat the fall as though it were 20 feet shorter. If you have no hands free, you continue to fall as if you had failed the check."
+                        },
+                        new
+                        {
+                            Id = new Guid("c6c59505-6b03-46fe-b154-1c303d7176e4"),
+                            CriticalSuccess = "If you were searching for creatures, any undetected or hidden creature you critically succeeded against becomes observed by you. If you were searching for an object, you learn its location.",
+                            Success = "If you were searching for creatures, any undetected creature you succeeded against becomes hidden from you instead of undetected, and any hidden creature you succeeded against becomes observed by you. If you were searching for an object, you learn its location or get a clue to its whereabouts, as determined by the GM."
+                        },
+                        new
+                        {
+                            Id = new Guid("e83cff43-911b-41f0-a5d3-e67bed0ca36b"),
+                            CriticalFailure = "You get a false sense of the creature’s intentions.",
+                            CriticalSuccess = "You determine the creature’s true intentions and get a solid idea of any mental magic affecting it.",
+                            Failure = "You detect what a deceptive creature wants you to believe. If they’re not being deceptive, you believe they’re behaving normally.",
+                            Success = "You can tell whether the creature is behaving normally, but you don’t know its exact intentions or what magic might be affecting it."
+                        },
+                        new
+                        {
+                            Id = new Guid("9dab564c-885e-492a-a52e-af745342c53d"),
+                            CriticalSuccess = "As success, but you deal double damage (page 451).",
+                            Success = "You deal damage according to the weapon or unarmed attack, including any modifiers, bonuses, and penalties you have to damage."
                         });
                 });
 
@@ -13670,6 +14252,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("ActionsId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
@@ -13685,6 +14270,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ActionsId");
 
                     b.HasIndex("FeatsId");
 
@@ -14076,6 +14663,24 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("f7ad867e-49e3-40e3-ad95-bbf461be2087"),
                             Description = "Fear effects evoke the emotion of fear. Effects with this trait always have the mental and emotion traits as well.",
                             Name = "Fear"
+                        },
+                        new
+                        {
+                            Id = new Guid("08bac763-e881-4a70-b253-916191ee9713"),
+                            Description = "An action with this trait involves moving from one space to another.",
+                            Name = "Move"
+                        },
+                        new
+                        {
+                            Id = new Guid("c5e1a5e7-5d45-4826-b2ea-018b361770de"),
+                            Description = "An action with this trait requires a degree of mental concentration and discipline.",
+                            Name = "Concentrate"
+                        },
+                        new
+                        {
+                            Id = new Guid("5f7b92e7-09d2-4717-8588-56b45c08a111"),
+                            Description = "The GM rolls the check for this ability in secret.",
+                            Name = "Secret"
                         });
                 });
 
@@ -18176,6 +18781,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ActionTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", null)
+                        .WithMany()
+                        .HasForeignKey("ActionsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("ClassStat", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Stat", null)
@@ -18309,6 +18929,40 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasForeignKey("RacesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Action", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ActionType", "ActionType")
+                        .WithMany("Actions")
+                        .HasForeignKey("ActionTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.RollableEffect", "RollableEffect")
+                        .WithMany()
+                        .HasForeignKey("RollableEffectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.Navigation("ActionType");
+
+                    b.Navigation("RollableEffect");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ActionDetailsBlock", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", "Action")
+                        .WithMany("Details")
+                        .HasForeignKey("ActionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Action");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
@@ -18865,6 +19519,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Trait", b =>
                 {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", null)
+                        .WithMany()
+                        .HasForeignKey("ActionsId");
+
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Feat", null)
                         .WithMany()
                         .HasForeignKey("FeatsId");
@@ -19053,8 +19711,15 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Prerequisite");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Action", b =>
+                {
+                    b.Navigation("Details");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ActionType", b =>
                 {
+                    b.Navigation("Actions");
+
                     b.Navigation("Feats");
 
                     b.Navigation("Spells");

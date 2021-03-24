@@ -93,6 +93,24 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
             yield return new Trait { Id = Guid.Parse("dee6c869-337c-4f4c-ba3c-3c3e77c19857"), Name = "Manipulate", Description = "You must physically manipulate an item or make gestures to use an action with this trait. Creatures without a suitable appendage can’t perform actions with this trait. Manipulate actions often trigger reactions." };
             yield return new Trait { Id = Guid.Parse("ccae1335-3555-4e55-9fe4-d22f6b9bc162"), Name = "Downtime", Description = "An activity with this trait takes a day or more, and can be used only during downtime" };
             yield return new Trait { Id = Guid.Parse("f7ad867e-49e3-40e3-ad95-bbf461be2087"), Name = "Fear", Description = "Fear effects evoke the emotion of fear. Effects with this trait always have the mental and emotion traits as well." };
+
+            //Action Traits
+            yield return new Trait { Id = Guid.Parse("08bac763-e881-4a70-b253-916191ee9713"), Name = "Move", Description = "An action with this trait involves moving from one space to another." };
+            yield return new Trait { Id = Guid.Parse("c5e1a5e7-5d45-4826-b2ea-018b361770de"), Name = "Concentrate", Description = "An action with this trait requires a degree of mental concentration and discipline." };
+            yield return new Trait { Id = Guid.Parse("5f7b92e7-09d2-4717-8588-56b45c08a111"), Name = "Secret", Description = "The GM rolls the check for this ability in secret." };
+            /*
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
+            */
         }
     }
 }

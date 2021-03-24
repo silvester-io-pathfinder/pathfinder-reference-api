@@ -10,5 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<Spell> Spells { get; set; } = new List<Spell>();
         
         public ICollection<Feat> Feats { get; set; } = new List<Feat>();
+     
+        public ICollection<Action> Actions{ get; set; } = new List<Action>();
     }
 }

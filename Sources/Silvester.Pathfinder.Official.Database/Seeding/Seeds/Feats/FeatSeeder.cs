@@ -53,42 +53,42 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
 
         public ActionType[] FilterActionTypes(params string[] actionTypeNames)
         {
-            return Filter(ActionTypes, (e) => e.Name, actionTypeNames);
+            return ActionTypes.Filter((e) => e.Name, actionTypeNames);
         }
 
         public FeatType[] FilterFeatTypes(params string[] featTypeNames)
         {
-            return Filter(FeatTypes, (e) => e.Name, featTypeNames);
+            return FeatTypes.Filter((e) => e.Name, featTypeNames);
         }
 
         public Trait[] FilterTraits(params string[] traitNames)
         {
-            return Filter(Traits, (e) => e.Name, traitNames);
+            return Traits.Filter((e) => e.Name, traitNames);
         }
 
         public Proficiency[] FilterProficiencies(params string[] proficiencyNames)
         {
-            return Filter(Proficiencies, (e) => e.Name, proficiencyNames);
+            return Proficiencies.Filter((e) => e.Name, proficiencyNames);
         }
 
         public Lore[] FilterLores(params string[] loreNames)
         {
-            return Filter(Lores, (e) => e.Name, loreNames);
+            return Lores.Filter((e) => e.Name, loreNames);
         }
 
         public HeritageRarity[] FilterHeritageRarities(params string[] heritageRarityNames)
         {
-            return Filter(HeritageRarities, (e) => e.Name, heritageRarityNames);
+            return HeritageRarities.Filter((e) => e.Name, heritageRarityNames);
         }
 
         public Skill[] FilterSkills(params string[] skillNames)
         {
-            return Filter(Skills, (e) => e.Name, skillNames);
+            return Skills.Filter((e) => e.Name, skillNames);
         }
 
         public Stat[] FilterStats(params string[] statNames)
         {
-            return Filter(Stats, (e) => e.Name, statNames);
+            return Stats.Filter((e) => e.Name, statNames);
         }
 
         public Guid GetProficiency(string name)
@@ -114,25 +114,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
         public Guid GetHeritageRarity(string name)
         {
             return FilterHeritageRarities(name)[0].Id;
-        }
-
-        protected T[] Filter<T>(T[] options, Func<T, string> selector, params string[] names)
-        {
-            T[] matches = options
-                .Where(option => names.Contains(selector.Invoke(option)))
-                .ToArray();
-
-            return matches.Length == names.Length
-                ? matches
-                : throw InvalidSelectorException(matches, selector, names);
-        }
-
-        public Exception InvalidSelectorException<T>(T[] matches, Func<T, string> selector, params string[] names)
-        {
-            Console.WriteLine("NAMES: " + string.Join(", ", names));
-            Console.WriteLine("MATCHES: " + string.Join(", ", matches.Select(selector)));
-
-            return new InvalidOperationException($"Not all entity names could be found: {string.Join(", ", matches.Select(selector).GetMissing(names))}.");
         }
     }
 }
