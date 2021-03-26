@@ -3955,7 +3955,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<string>("Requirements")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("RollableEffectId")
+                    b.Property<Guid?>("RollableEffectId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid?>("TraitsId")
@@ -3997,39 +3997,34 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("4384a058-8cc0-11eb-8dcd-0242ac130003"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
-                            Name = "Avert Gaze",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Name = "Avert Gaze"
                         },
                         new
                         {
                             Id = new Guid("eb1f9f32-3d35-479a-a3e2-bf965e32fc3d"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
                             Name = "Burrow",
-                            Requirements = "You have a burrow speed.",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Requirements = "You have a burrow speed."
                         },
                         new
                         {
                             Id = new Guid("5f770553-dac1-4377-8416-1a2a2e8f43be"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
                             Name = "Crawl",
-                            Requirements = "You are prone and your Speed is at least 10 feet.",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Requirements = "You are prone and your Speed is at least 10 feet."
                         },
                         new
                         {
                             Id = new Guid("4163f1f7-245b-4989-b4a9-8638d75f2cdc"),
                             ActionTypeId = new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"),
                             Name = "Delay",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000"),
                             Trigger = "Your turn begins."
                         },
                         new
                         {
                             Id = new Guid("e5d48006-5153-4ebf-a71e-401cc0bc3d4a"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
-                            Name = "Drop Prone",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Name = "Drop Prone"
                         },
                         new
                         {
@@ -4043,8 +4038,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("31fb2827-6ed7-455e-b135-9f4893b298fb"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
                             Name = "Fly",
-                            Requirements = "You have a fly speed.",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Requirements = "You have a fly speed."
                         },
                         new
                         {
@@ -4059,45 +4053,39 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
-                            Name = "Interact",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Name = "Interact"
                         },
                         new
                         {
                             Id = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
-                            Name = "Leap",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Name = "Leap"
                         },
                         new
                         {
                             Id = new Guid("ab48c6d8-a194-4595-8358-c751fdc934d8"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
                             Name = "Mount",
-                            Requirements = "You are adjacent to a creature that is at least one size larger than you and is willing to be your mount.",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Requirements = "You are adjacent to a creature that is at least one size larger than you and is willing to be your mount."
                         },
                         new
                         {
                             Id = new Guid("187ebb2b-c829-4d40-81dd-414a48ea766e"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
                             Name = "Point Out",
-                            Requirements = "A creature is undetected by one or more of your allies but isn’t undetected by you.",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Requirements = "A creature is undetected by one or more of your allies but isn’t undetected by you."
                         },
                         new
                         {
                             Id = new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Name = "Ready",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Name = "Ready"
                         },
                         new
                         {
                             Id = new Guid("ed94ef79-c37c-4591-a520-557916925352"),
                             ActionTypeId = new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"),
-                            Name = "Release",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Name = "Release"
                         },
                         new
                         {
@@ -4117,16 +4105,14 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("4deb6d4d-0808-4755-897e-412a0d6e1f21"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
-                            Name = "Stand",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Name = "Stand"
                         },
                         new
                         {
                             Id = new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
                             Name = "Step",
-                            Requirements = "Your Speed is at least 10 feet.",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Requirements = "Your Speed is at least 10 feet."
                         },
                         new
                         {
@@ -4140,8 +4126,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("55bca308-af52-4da5-a1e4-a6c1059c5321"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
                             Name = "Take Cover",
-                            Requirements = "You are benefiting from cover, are near a feature that allows you to take cover, or are prone.",
-                            RollableEffectId = new Guid("00000000-0000-0000-0000-000000000000")
+                            Requirements = "You are benefiting from cover, are near a feature that allows you to take cover, or are prone."
                         });
                 });
 
@@ -18941,9 +18926,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.RollableEffect", "RollableEffect")
                         .WithMany()
-                        .HasForeignKey("RollableEffectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RollableEffectId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
                         .WithMany()

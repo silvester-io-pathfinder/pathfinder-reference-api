@@ -26,8 +26,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes
             RollableEffect? rollableEffect = GetRollableEffect(seeder);
             if(rollableEffect != null)
             {
-                seeder.Builder.AddData(rollableEffect);
                 action.RollableEffectId = rollableEffect.Id;
+                seeder.Builder.AddData(rollableEffect);
             }
 
             seeder.Builder.AddData(action);

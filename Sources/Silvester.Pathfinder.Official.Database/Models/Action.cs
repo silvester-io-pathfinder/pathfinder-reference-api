@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid ActionTypeId { get; set; }
         public ActionType ActionType { get; set; } = default!;
 
-        public Guid RollableEffectId { get; set; }
+        public Guid? RollableEffectId { get; set; }
         public RollableEffect? RollableEffect { get; set; }
 
         public ICollection<ActionDetailsBlock> Details { get; set; } = new List<ActionDetailsBlock>();

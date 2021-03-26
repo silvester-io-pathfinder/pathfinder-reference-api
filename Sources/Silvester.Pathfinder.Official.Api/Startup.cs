@@ -83,7 +83,7 @@ namespace Silvester.Pathfinder.Api
                 .AddPooledDbContextFactory<OfficialDatabase>((sp, options) =>
                 {
                     IConfigurationSection section = Configuration.GetSection("Databases").GetSection("Official");
-                    string connectionString = $"Server={section["Server"]};Database={section["Database"]};User Id={section["UserId"]};Password={section["Password"]};Port={section["Port"]};Timeout={section["Timeout"]};CommandTimeout={section["CommandTimeout"]};";
+                    string connectionString = $"Server={section["Server"]};Database={section["Database"]};User Id={section["UserId"]};Password={section["Password"]};Port={section["Port"]};Timeout={section["Timeout"]};CommandTimeout={section["CommandTimeout"]};Include Error Detail={section["IncludeErrorDetails"]}";
 
                     options.EnableSensitiveDataLogging(Environment.IsDevelopment());
                     options.UseNpgsql(connectionString);

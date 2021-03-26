@@ -329,7 +329,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     Trigger = table.Column<string>(type: "text", nullable: true),
                     Requirements = table.Column<string>(type: "text", nullable: true),
                     ActionTypeId = table.Column<Guid>(type: "uuid", nullable: false),
-                    RollableEffectId = table.Column<Guid>(type: "uuid", nullable: false),
+                    RollableEffectId = table.Column<Guid>(type: "uuid", nullable: true),
                     TraitsId = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
@@ -346,7 +346,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         column: x => x.RollableEffectId,
                         principalTable: "RollableEffect",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Action_Traits_TraitsId",
                         column: x => x.TraitsId,
@@ -2063,28 +2063,28 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: new[] { "Id", "ActionTypeId", "Name", "Requirements", "RollableEffectId", "TraitsId", "Trigger" },
                 values: new object[,]
                 {
-                    { new Guid("4163f1f7-245b-4989-b4a9-8638d75f2cdc"), new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"), "Delay", null, new Guid("00000000-0000-0000-0000-000000000000"), null, "Your turn begins." },
+                    { new Guid("4163f1f7-245b-4989-b4a9-8638d75f2cdc"), new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"), "Delay", null, null, null, "Your turn begins." },
                     { new Guid("185abe1a-6c43-4884-bb8a-4f596e75442f"), new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"), "Aid", "The ally is willing to accept your aid, and you have prepared to help.", new Guid("5c94d039-e421-42b3-af86-d33a8f266410"), null, "An ally is about to use an action that requires a skill check or attack roll." },
                     { new Guid("3367ce7a-8cc0-11eb-8dcd-0242ac130003"), new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"), "Arrest Fall", "You have a fly speed.", new Guid("3d116422-8cc0-11eb-8dcd-0242ac130003"), null, "You fall." },
                     { new Guid("c2bcb0d1-7feb-4f52-8046-d630a6c8f09f"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Escape", null, new Guid("42f02449-6552-40db-adea-e635cb50c071"), null, null },
                     { new Guid("90d27bd9-31ed-46f4-a174-467e165ed1b9"), new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"), "Grab Edge", "Your hands are not tied behind your back or otherwise restrained.", new Guid("f5c01f9a-15de-47c0-8f65-470f0c4442dd"), null, "You fall from or past an edge or handhold." },
                     { new Guid("f715d730-9ad4-4922-b893-cda88fe25ea4"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Sense Motive", null, new Guid("e83cff43-911b-41f0-a5d3-e67bed0ca36b"), null, null },
                     { new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Stride", null, new Guid("9dab564c-885e-492a-a52e-af745342c53d"), null, null },
-                    { new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"), new Guid("fe122850-b449-482d-8350-ac21e8985594"), "Ready", null, new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("55bca308-af52-4da5-a1e4-a6c1059c5321"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Take Cover", "You are benefiting from cover, are near a feature that allows you to take cover, or are prone.", new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Step", "Your Speed is at least 10 feet.", new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("4deb6d4d-0808-4755-897e-412a0d6e1f21"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Stand", null, new Guid("00000000-0000-0000-0000-000000000000"), null, null },
+                    { new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"), new Guid("fe122850-b449-482d-8350-ac21e8985594"), "Ready", null, null, null, null },
+                    { new Guid("55bca308-af52-4da5-a1e4-a6c1059c5321"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Take Cover", "You are benefiting from cover, are near a feature that allows you to take cover, or are prone.", null, null, null },
+                    { new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Step", "Your Speed is at least 10 feet.", null, null, null },
+                    { new Guid("4deb6d4d-0808-4755-897e-412a0d6e1f21"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Stand", null, null, null, null },
                     { new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Seek", null, new Guid("c6c59505-6b03-46fe-b154-1c303d7176e4"), null, null },
-                    { new Guid("ab48c6d8-a194-4595-8358-c751fdc934d8"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Mount", "You are adjacent to a creature that is at least one size larger than you and is willing to be your mount.", new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Leap", null, new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Interact", null, new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("31fb2827-6ed7-455e-b135-9f4893b298fb"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Fly", "You have a fly speed.", new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("e5d48006-5153-4ebf-a71e-401cc0bc3d4a"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Drop Prone", null, new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("5f770553-dac1-4377-8416-1a2a2e8f43be"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Crawl", "You are prone and your Speed is at least 10 feet.", new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("eb1f9f32-3d35-479a-a3e2-bf965e32fc3d"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Burrow", "You have a burrow speed.", new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("4384a058-8cc0-11eb-8dcd-0242ac130003"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Avert Gaze", null, new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("ed94ef79-c37c-4591-a520-557916925352"), new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"), "Release", null, new Guid("00000000-0000-0000-0000-000000000000"), null, null },
-                    { new Guid("187ebb2b-c829-4d40-81dd-414a48ea766e"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Point Out", "A creature is undetected by one or more of your allies but isn’t undetected by you.", new Guid("00000000-0000-0000-0000-000000000000"), null, null }
+                    { new Guid("ab48c6d8-a194-4595-8358-c751fdc934d8"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Mount", "You are adjacent to a creature that is at least one size larger than you and is willing to be your mount.", null, null, null },
+                    { new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Leap", null, null, null, null },
+                    { new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Interact", null, null, null, null },
+                    { new Guid("31fb2827-6ed7-455e-b135-9f4893b298fb"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Fly", "You have a fly speed.", null, null, null },
+                    { new Guid("e5d48006-5153-4ebf-a71e-401cc0bc3d4a"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Drop Prone", null, null, null, null },
+                    { new Guid("5f770553-dac1-4377-8416-1a2a2e8f43be"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Crawl", "You are prone and your Speed is at least 10 feet.", null, null, null },
+                    { new Guid("eb1f9f32-3d35-479a-a3e2-bf965e32fc3d"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Burrow", "You have a burrow speed.", null, null, null },
+                    { new Guid("4384a058-8cc0-11eb-8dcd-0242ac130003"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Avert Gaze", null, null, null, null },
+                    { new Guid("ed94ef79-c37c-4591-a520-557916925352"), new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"), "Release", null, null, null, null },
+                    { new Guid("187ebb2b-c829-4d40-81dd-414a48ea766e"), new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"), "Point Out", "A creature is undetected by one or more of your allies but isn’t undetected by you.", null, null, null }
                 });
 
             migrationBuilder.InsertData(
