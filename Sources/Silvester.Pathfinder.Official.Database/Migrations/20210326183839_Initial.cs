@@ -321,7 +321,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Action",
+                name: "Actions",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -334,21 +334,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Action", x => x.Id);
+                    table.PrimaryKey("PK_Actions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Action_ActionTypes_ActionTypeId",
+                        name: "FK_Actions_ActionTypes_ActionTypeId",
                         column: x => x.ActionTypeId,
                         principalTable: "ActionTypes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Action_RollableEffect_RollableEffectId",
+                        name: "FK_Actions_RollableEffect_RollableEffectId",
                         column: x => x.RollableEffectId,
                         principalTable: "RollableEffect",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Action_Traits_TraitsId",
+                        name: "FK_Actions_Traits_TraitsId",
                         column: x => x.TraitsId,
                         principalTable: "Traits",
                         principalColumn: "Id",
@@ -2059,7 +2059,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Action",
+                table: "Actions",
                 columns: new[] { "Id", "ActionTypeId", "Name", "Requirements", "RollableEffectId", "TraitsId", "Trigger" },
                 values: new object[,]
                 {
@@ -4960,24 +4960,24 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Action_ActionTypeId",
-                table: "Action",
-                column: "ActionTypeId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Action_RollableEffectId",
-                table: "Action",
-                column: "RollableEffectId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Action_TraitsId",
-                table: "Action",
-                column: "TraitsId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_ActionDetailsBlock_ActionId",
                 table: "ActionDetailsBlock",
                 column: "ActionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Actions_ActionTypeId",
+                table: "Actions",
+                column: "ActionTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Actions_RollableEffectId",
+                table: "Actions",
+                column: "RollableEffectId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Actions_TraitsId",
+                table: "Actions",
+                column: "TraitsId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ActionTrait_TraitsId",
@@ -5480,18 +5480,18 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 column: "SpellsId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_ActionDetailsBlock_Action_ActionId",
+                name: "FK_ActionDetailsBlock_Actions_ActionId",
                 table: "ActionDetailsBlock",
                 column: "ActionId",
-                principalTable: "Action",
+                principalTable: "Actions",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_ActionTrait_Action_ActionsId",
+                name: "FK_ActionTrait_Actions_ActionsId",
                 table: "ActionTrait",
                 column: "ActionsId",
-                principalTable: "Action",
+                principalTable: "Actions",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
 
@@ -5504,10 +5504,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Traits_Action_ActionsId",
+                name: "FK_Traits_Actions_ActionsId",
                 table: "Traits",
                 column: "ActionsId",
-                principalTable: "Action",
+                principalTable: "Actions",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
 
@@ -5675,8 +5675,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Action_ActionTypes_ActionTypeId",
-                table: "Action");
+                name: "FK_Traits_Actions_ActionsId",
+                table: "Traits");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_Feats_ActionTypes_ActionTypeId",
@@ -5687,20 +5687,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 table: "Spells");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Action_RollableEffect_RollableEffectId",
-                table: "Action");
-
-            migrationBuilder.DropForeignKey(
                 name: "FK_Feats_RollableEffect_RollableEffectId",
                 table: "Feats");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_Spells_RollableEffect_RollableEffectId",
                 table: "Spells");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Action_Traits_TraitsId",
-                table: "Action");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_Feats_Traits_TraitsId",
@@ -5874,6 +5866,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 name: "SpellHeightening");
 
             migrationBuilder.DropTable(
+                name: "Actions");
+
+            migrationBuilder.DropTable(
                 name: "ActionTypes");
 
             migrationBuilder.DropTable(
@@ -5881,9 +5876,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "Traits");
-
-            migrationBuilder.DropTable(
-                name: "Action");
 
             migrationBuilder.DropTable(
                 name: "Feats");

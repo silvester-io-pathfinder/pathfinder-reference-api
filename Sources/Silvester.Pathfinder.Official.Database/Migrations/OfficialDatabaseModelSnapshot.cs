@@ -3972,7 +3972,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("TraitsId");
 
-                    b.ToTable("Action");
+                    b.ToTable("Actions");
 
                     b.HasData(
                         new
