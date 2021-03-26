@@ -104,6 +104,8 @@ namespace Silvester.Pathfinder.Official.Database
 
         public DbSet<ItemCategory> ItemCategories { get; set; } = default!;
 
+        public DbSet<Models.Action> Actions { get; set; } = default!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
