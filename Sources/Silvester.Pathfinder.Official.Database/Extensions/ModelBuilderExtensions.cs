@@ -156,6 +156,11 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             return builder;
         }
 
+        public static object AddData(this ModelBuilder builder, Type type, object entity)
+        {
+            return builder.Entity(type).AddData(entity);
+        }
+
         public static T AddData<T>(this ModelBuilder builder, T entity)
             where T : class
         {

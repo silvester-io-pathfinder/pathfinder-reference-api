@@ -98,8 +98,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
             yield return new Trait { Id = Guid.Parse("08bac763-e881-4a70-b253-916191ee9713"), Name = "Move", Description = "An action with this trait involves moving from one space to another." };
             yield return new Trait { Id = Guid.Parse("c5e1a5e7-5d45-4826-b2ea-018b361770de"), Name = "Concentrate", Description = "An action with this trait requires a degree of mental concentration and discipline." };
             yield return new Trait { Id = Guid.Parse("5f7b92e7-09d2-4717-8588-56b45c08a111"), Name = "Secret", Description = "The GM rolls the check for this ability in secret." };
+
+            yield return new Trait { Id = Guid.Parse("739ead1c-4020-4673-96d2-4d0b543f6295"), Name = "Curse", Description = "A curse is an effect that places some long-term affliction on a creature. Curses are always magical and are typically the result of a spell or trap. Effects with this trait can be removed only by effects that specifically target curses.  Afflictions with this trait are manifestations of potent ill will.A curse either lasts a specified amount of time or can be removed only by certain actions a character must perform or conditions they must meet.A curse with stages follows the rules for afflictions. (Gamemastery Guide pg. 251)" };
+            yield return new Trait { Id = Guid.Parse("39aba859-33a5-45df-b1fe-902f8e3c2273"), Name = "Magical", Description = "Something with the magical trait is imbued with magical energies not tied to a specific tradition of magic. A magical item radiates a magic aura infused with its dominant school of magic.  Some items or effects are closely tied to a particular tradition of magic. In these cases, the item has the arcane, divine, occult, or primal trait instead of the magical trait. Any of these traits indicate that the item is magical." };
+            yield return new Trait { Id = Guid.Parse("4b9d47d5-3e89-41ba-8183-9e743c49a41a"), Name = "Sleep", Description = "This effect can cause a creature to fall asleep or get drowsy." };
+            yield return new Trait { Id = Guid.Parse("7b601f4a-9c05-426c-aa46-14e8fa989066"), Name = "Virulent", Description = "Afflictions with the virulent trait are harder to remove. You must succeed at two consecutive saves to reduce a virulent affliction’s stage by 1. A critical success reduces a virulent affliction’s stage by only 1 instead of by 2." };
+
             /*
-            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
             yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
             yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
             yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };

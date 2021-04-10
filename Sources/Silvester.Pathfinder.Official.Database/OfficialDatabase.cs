@@ -3,11 +3,14 @@ using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using static Silvester.Pathfinder.Official.Database.Seeding.Seeds.CurseSeeder;
 
 namespace Silvester.Pathfinder.Official.Database
 {
@@ -23,6 +26,8 @@ namespace Silvester.Pathfinder.Official.Database
         {
 
         }
+
+        public DbSet<DamageType> DamageTypes{ get; set; } = default!;
 
         public DbSet<Alignment> Alignments { get; set; } = default!;
 
@@ -106,6 +111,14 @@ namespace Silvester.Pathfinder.Official.Database
 
         public DbSet<Models.Action> Actions { get; set; } = default!;
 
+        public DbSet<Curse> Curses { get; set; } = default!;
+
+        public DbSet<Condition> Conditions{ get; set; } = default!;
+
+        public DbSet<Disease> Diseases{ get; set; } = default!;
+
+        public DbSet<ConditionCategory> ConditionCategories { get; set; } = default!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -113,6 +126,7 @@ namespace Silvester.Pathfinder.Official.Database
             modelBuilder.Entity<SpellDetailBlock>().HasBaseEntityKey();
             modelBuilder.Entity<SpellTrigger>().HasBaseEntityKey();
 
+            DamageType[] damageTypeSeed = modelBuilder.Entity<DamageType>().HasBaseEntityKey().HasDataSeed(new DamageTypeSeeder());
             ItemCategory[] itemCategorySeed = modelBuilder.Entity<ItemCategory>().HasBaseEntityKey().HasDataSeed(new ItemCategorySeeder());
             SpellType[] spellTypeSeed = modelBuilder.Entity<SpellType>().HasBaseEntityKey().HasDataSeed(new SpellTypeSeeder());
             Trait[] traitSeed = modelBuilder.Entity<Trait>().HasBaseEntityKey().HasDataSeed(new TraitSeeder());
@@ -147,6 +161,8 @@ namespace Silvester.Pathfinder.Official.Database
             PlaneCategory[] planeCategoriesSeed = modelBuilder.Entity<PlaneCategory>().HasBaseEntityKey().HasDataSeed(new PlaneCategorySeeder());
             PlaneTrait[] planeTraitSeed = modelBuilder.Entity<PlaneTrait>().HasBaseEntityKey().HasDataSeed(new PlaneTraitSeeder());
             Plane[] planeSeed = modelBuilder.Entity<Plane>().HasBaseEntityKey().HasDataSeed(new PlaneSeeder());
+            Curse[] curseSeed = modelBuilder.Entity<Curse>().HasBaseEntityKey().HasDataSeed(new CurseSeeder());
+            ConditionCategory[] conditionCategoriesSeed = modelBuilder.Entity<ConditionCategory>().HasBaseEntityKey().HasDataSeed(new ConditionCategorySeeder());
 
             //Feat effects
             modelBuilder.Entity<FeatEffect>().HasBaseEntityKey();
@@ -182,12 +198,15 @@ namespace Silvester.Pathfinder.Official.Database
             modelBuilder.Join(deitySeed, divineFontSeed, new DeityDivineFontJoiner());
             modelBuilder.Join(deitySeed, alignmentSeed, new DeityFollowerAlignmentJoiner());
             modelBuilder.Join(heritageSeed, raceSeed, new HeritageRaceJoiner());
+            modelBuilder.Join(curseSeed, traitSeed, new CurseTraitJoiner());
 
-            //More complex seeds for Feats and Spells.
+            //More complex seeds for Feats, Spells, et cetera.
             new FeatSeeder(modelBuilder, traitSeed, actionTypeSeed, featTypeSeed, proficiencySeed, loreSeed, heritageRaritySeed, itemCategorySeed, skillSeed, statSeed).Seed();
             new SpellSeeder(modelBuilder, magicSchoolSeed, magicTraditionSeed, spellComponentSeed, traitSeed, actionTypeSeed, spellTypeSeed, savingThrowStatSeed).Seed();
             new ClassSeeder(modelBuilder, traitSeed, actionTypeSeed, featTypeSeed, proficiencySeed, loreSeed, heritageRaritySeed, itemCategorySeed, skillSeed, statSeed, magicTraditionSeed).Seed();
             new ActionSeeder(modelBuilder, actionTypeSeed, traitSeed).Seed();
+            new ConditionSeeder(modelBuilder, sourceSeed, conditionCategoriesSeed).Seed();
+            new DiseaseSeeder(modelBuilder, sourceSeed, traitSeed, savingThrowStatSeed, damageTypeSeed).Seed();
         }
     }
 }
