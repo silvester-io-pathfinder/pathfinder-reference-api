@@ -2,10 +2,15 @@
 using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells;
 using System;
 using System.Collections.Generic;
@@ -119,12 +124,32 @@ namespace Silvester.Pathfinder.Official.Database
 
         public DbSet<ConditionCategory> ConditionCategories { get; set; } = default!;
 
+        public DbSet<HazardComplexity> HazardComplexities { get; set; } = default!;
+
+        public DbSet<HazardImmunity> HazardImmunities { get; set; } = default!;
+
+        public DbSet<HazardType> HazardTypes { get; set; } = default!;
+
+        public DbSet<AttackType> AttackTypes { get; set; } = default!;
+
+        public DbSet<PotionPotency> PotionPotencies { get; set; } = default!;
+
+        public DbSet<AlchemicalBomb> AlchemicalBombs { get; set; } = default!;
+
+        public DbSet<AlchemicalElixir> AlchemicalElixirs { get; set; } = default!;
+
+        public DbSet<AlchemicalPoison> AlchemicalPoisons { get; set; } = default!;
+
+        public DbSet<AlchemicalToolPotency> AlchemicalToolPotencies { get; set; } = default!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<SpellDetailBlock>().HasBaseEntityKey();
             modelBuilder.Entity<SpellTrigger>().HasBaseEntityKey();
+
+            modelBuilder.Entity<SourcePage>().HasBaseEntityKey().HasDataSeed(new HazardTypeSourcePageSeeder());
 
             DamageType[] damageTypeSeed = modelBuilder.Entity<DamageType>().HasBaseEntityKey().HasDataSeed(new DamageTypeSeeder());
             ItemCategory[] itemCategorySeed = modelBuilder.Entity<ItemCategory>().HasBaseEntityKey().HasDataSeed(new ItemCategorySeeder());
@@ -163,6 +188,12 @@ namespace Silvester.Pathfinder.Official.Database
             Plane[] planeSeed = modelBuilder.Entity<Plane>().HasBaseEntityKey().HasDataSeed(new PlaneSeeder());
             Curse[] curseSeed = modelBuilder.Entity<Curse>().HasBaseEntityKey().HasDataSeed(new CurseSeeder());
             ConditionCategory[] conditionCategoriesSeed = modelBuilder.Entity<ConditionCategory>().HasBaseEntityKey().HasDataSeed(new ConditionCategorySeeder());
+            HazardComplexity[] hazardComplexitySeed = modelBuilder.Entity<HazardComplexity>().HasBaseEntityKey().HasDataSeed(new HazardComplexitySeeder());
+            HazardImmunity[] hazardImmunitySeed = modelBuilder.Entity<HazardImmunity>().HasBaseEntityKey().HasDataSeed(new HazardImmunitySeeder());
+            HazardType[] hazardTypeSeed = modelBuilder.Entity<HazardType>().HasBaseEntityKey().HasDataSeed(new HazardTypeSeeder());
+            AttackType[] attackTypeSeed = modelBuilder.Entity<AttackType>().HasBaseEntityKey().HasDataSeed(new AttackTypeSeeder());
+            PotionPotency[] potionPotencySeed = modelBuilder.Entity<PotionPotency>().HasBaseEntityKey().HasDataSeed(new PotionPotencySeeder());
+            AlchemicalToolPotency[] alchemicalToolPotencySeed = modelBuilder.Entity<AlchemicalToolPotency>().HasBaseEntityKey().HasDataSeed(new AlchemicalToolPotencySeeder());
 
             //Feat effects
             modelBuilder.Entity<FeatEffect>().HasBaseEntityKey();
@@ -207,6 +238,11 @@ namespace Silvester.Pathfinder.Official.Database
             new ActionSeeder(modelBuilder, actionTypeSeed, traitSeed).Seed();
             new ConditionSeeder(modelBuilder, sourceSeed, conditionCategoriesSeed).Seed();
             new DiseaseSeeder(modelBuilder, sourceSeed, traitSeed, savingThrowStatSeed, damageTypeSeed).Seed();
+            new HazardSeeder(modelBuilder, traitSeed, hazardImmunitySeed, hazardComplexitySeed, skillSeed, proficiencySeed, hazardTypeSeed, attackTypeSeed).Seed();
+            new AlchemicalBombSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, potionPotencySeed).Seed();
+            new AlchemicalElixirSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, potionPotencySeed).Seed();
+            new AlchemicalPoisonSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, savingThrowStatSeed, damageTypeSeed, actionTypeSeed).Seed();
+            new AlchemicalToolSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, alchemicalToolPotencySeed, actionTypeSeed).Seed();
         }
     }
 }

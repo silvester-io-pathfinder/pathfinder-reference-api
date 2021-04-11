@@ -1,0 +1,57 @@
+﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.Instances
+{
+    public class PhilosophersStone : AbstractAlchemicalToolTemplate
+    {
+        public static readonly Guid ID = Guid.Parse("b6393c4f-dc42-4218-b0cd-71c78d2af105");
+
+        protected override AlchemicalTool GetAlchemicalTool(AlchemicalToolSeeder seeder)
+        {
+            return new AlchemicalTool
+            {
+                Id = ID,
+                Name = "Philosopher's Stone",
+                ItemLevel = 20,
+                Usage = "Held in 2 hands",
+                BulkId = seeder.GetBulkByName("2").Id,
+                ActionId = Interact.ID,
+                ActionTypeId = seeder.GetActionTypeByName("One Action").Id,
+                ActivationAddendum = "Or 1 or more days; see description."
+            };
+        }
+
+        protected override IEnumerable<string> GetTraits()
+        {
+            yield return "Alchemical";
+            yield return "Consumable";
+            yield return "Uncommon";
+        }
+
+        protected override IEnumerable<AlchemicalToolDetailBlock> GetDetailBlocks()
+        {
+            yield return new AlchemicalToolDetailBlock { Id = Guid.Parse("1b782fba-1f25-45e6-9c4e-1c5302f158f6"), Type = AlchemicalToolDetailBlockType.Text, Text = "An alchemist with the Craft Philosopher’s Stone feat can create a philosopher’s stone once per month by spending 1 batch of infused reagents during their daily preparations using the advanced alchemy class feature. This is the only way to create a philosopher’s stone." };
+            yield return new AlchemicalToolDetailBlock { Id = Guid.Parse("aae5d4ac-27ba-4142-8927-313f73134489"), Type = AlchemicalToolDetailBlockType.Text, Text = "At a glance, a philosopher’s stone appears to be an ordinary, sooty piece of natural rock.Breaking the rock open with a Force Open action(DC 35) reveals a cavity at the stone’s heart.The cavity is lined with a rare type of quicksilver that can transmute base metals into precious metals or create an elixir of rejuvenation(page 548)." };
+            yield return new AlchemicalToolDetailBlock { Id = Guid.Parse("0906dbf5-774b-4fbc-93b4-785e00c0e9be"), Type = AlchemicalToolDetailBlockType.Text, Text = "To use the quicksilver, you must be legendary in Crafting and have the Alchemical Crafting feat.You can then use the stone’s quicksilver for one of two effects:" };
+            yield return new AlchemicalToolDetailBlock { Id = Guid.Parse("5d0baac6-aa97-439b-9f15-f41924e85403"), Type = AlchemicalToolDetailBlockType.Enumeration, Text = "You can apply the stone’s quicksilver to an infused true elixir of life using an Interact action.This turns the elixir into an infused elixir of rejuvenation instantaneously.This doesn’t require any crafting time or additional materials." };
+            yield return new AlchemicalToolDetailBlock { Id = Guid.Parse("7176e4f6-3ecd-4af5-88b1-77adb4690dab"), Type = AlchemicalToolDetailBlockType.Enumeration, Text = "You can spend up to a month of downtime applying the quicksilver either to iron to create silver or to leadto create gold.Treat this as a 20th - level task to Earn Income using Crafting, except that you create 500 gp worth of your chosen metal per day on a success or 750 gp worth per day on a critical success." };
+        }
+
+        protected override SourcePage GetSourcePage(AlchemicalToolSeeder seeder)
+        {
+            return new SourcePage 
+            {
+                Id = Guid.Parse("92157e81-6f5b-41bf-82d1-32ab6b31b709"),
+                SourceId = seeder.GetSourceByName("Core Rulebook").Id,
+                Page = 554
+            };
+        }
+
+    }
+}

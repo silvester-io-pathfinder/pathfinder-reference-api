@@ -21,5 +21,15 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 
             return new Guid(bytes);
         }
+
+        public static Guid Increment(this Guid guid, int incrementBy)
+        {
+            for(int i = 0; i < incrementBy; i ++)
+            {
+                guid = guid.Increment();
+            }
+
+            return guid;
+        }
     }
 }

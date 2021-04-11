@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 {
     public class Stride : AbstractActionTemplate
     {
-        public static readonly Guid ID = Guid.Parse("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd");
+        public static readonly Guid ID = Guid.Parse("4293eca5-4b6c-42f2-8e22-cd09796984fd");
 
         protected override Models.Action GetAction(ActionSeeder seeder)
         {
@@ -24,22 +24,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 
         protected override IEnumerable<ActionDetailsBlock> GetDetails(ActionSeeder seeder)
         {
-            yield return new ActionDetailsBlock { Id = Guid.Parse("36548991-704d-4a82-a2c4-0622eb57f728"), Text = "You attack with a weapon you’re wielding or with an unarmed attack, targeting one creature within your reach (for a melee attack) or within range (for a ranged attack). Roll the attack roll for the weapon or unarmed attack you are using, and compare the result to the target creature’s AC to determine the effect. See Attack Rolls on page 446 and Damage on page 450 for details on calculating your attack and damage rolls." };
+            yield return new ActionDetailsBlock { Id = Guid.Parse("829f3140-7228-4996-8315-8302402acf15"), Text = "You move up to your Speed." };
         }
 
         protected override IEnumerable<Trait> GetTraits(ActionSeeder seeder)
         {
-            yield return seeder.GetTrait("Attack");
-        }
-
-        protected override RollableEffect? GetRollableEffect(ActionSeeder seeder)
-        {
-            return new RollableEffect
-            {
-                Id = Guid.Parse("9dab564c-885e-492a-a52e-af745342c53d"),
-                CriticalSuccess = "As success, but you deal double damage (page 451).",
-                Success = "You deal damage according to the weapon or unarmed attack, including any modifiers, bonuses, and penalties you have to damage."
-            };
+            yield return seeder.GetTrait("Move");
         }
     }
 }
