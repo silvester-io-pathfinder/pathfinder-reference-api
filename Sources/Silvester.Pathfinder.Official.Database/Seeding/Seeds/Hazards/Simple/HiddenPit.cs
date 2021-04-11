@@ -16,51 +16,55 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             return new Hazard
             {
                 Id = ID,
-                Description = "",
-                Level = ,
-                ArmorClass = ,
-                Fortitude = ,
-                Reflex = ,
-                HitPoints = ,
-                Hardness = ,
-                BrokenThreshold = ,
-                Reset = "",
-                CanBeDetectedMagically = ,
-                CanBeDetectedAtAll = ,
-                TypeId = seeder.GetHazardTypeByName("").Id,
-                AttackTypeId = seeder.GetAttackTypeByName("").Id,
-                Damage = ""
+                Name = "Hidden Pit",
+                Description = "A wooden trapdoor covers a pit that’s 10 feet square and 20 feet deep.",
+                Level = 0,
+                ArmorClass = 10,
+                Fortitude = 1,
+                Reflex = 1,
+                HitPoints = 12,
+                Hardness = 3,
+                BrokenThreshold = 6,
+                Reset = "Creatures can still fall into the trap, but the trapdoor must be reset manually for the trap to become hidden again.",
+                CanBeDetectedMagically = false,
+                TypeId = seeder.GetHazardTypeByName("Traps").Id,
+                ComplexityId = seeder.GetComplexityByName("Simple").Id
             };
         }
 
         protected override IEnumerable<string> GetImmunities()
         {
-            yield return "";
+            yield return "Critical Hits";
+            yield return "Object Immunities";
+            yield return "Precision Damage";
         }
 
         protected override IEnumerable<string> GetTraits()
         {
-            yield return "";
+            yield return "Mechanical";
+            yield return "Trap";
         }
 
-        protected override HazardReaction GetReaction(HazardSeeder seeder)
+        protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
         {
-            return new HazardReaction
+            yield return new HazardAction
             {
-                Name = "",
-                Effect = "",
-                Trigger = ""
+                Id = Guid.Parse(""),
+                Name = "Pitfall",
+                Effect = "The triggering creature falls in and takes falling damage (typically 10 bludgeoning damage). That creature can use the Grab an Edge reaction to avoid falling.",
+                Trigger = "A creature walks onto the trapdoor",
+                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id
             };
         }
 
-        protected override HazardDetectionRequirement? GetDetectionRequirement(HazardSeeder seeder)
+        protected override HazardDetectionRequirement GetDetectionRequirement(HazardSeeder seeder)
         {
             return new HazardDetectionRequirement
             {
                 Id = Guid.Parse(""),
-                Addendum = "",
-                RequiredProficiencyId = seeder.GetProficiencyByName("").Id,
-                DifficultyCheck =
+                Addendum = "If the trapdoor is disabled or broken, the Difficulty Check becomes 0.",
+                RequiredProficiencyId = seeder.GetProficiencyByName("Untrained").Id,
+                DifficultyCheck = 18
             };
         }
 
@@ -69,22 +73,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             yield return new HazardDisableRequirement
             {
                 Id = Guid.Parse(""),
-                SkillId = seeder.GetSkillByName("").Id,
-                RequiredProficiencyId = seeder.GetProficiencyByName("").Id,
-                Description = "",
-                DifficultyCheck =
+                SkillId = seeder.GetSkillByName("Thievery").Id,
+                RequiredProficiencyId = seeder.GetProficiencyByName("Untrained").Id,
+                Description = "to remove the trapdoor",
+                DifficultyCheck = 12
             };
         }
 
         protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements(HazardSeeder seeder)
         {
-            yield return new HazardDispellRequirement
-            {
-                Id = Guid.Parse(""),
-                Level = ,
-                Description = "",
-                CounteractDifficultyCheck =
-            };
+            yield break;
         }
     }
 }

@@ -25,6 +25,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 BulkId = seeder.GetBulkByName("L").Id,
                 ActionId = Interact.ID,
                 ActionTypeId = seeder.GetActionTypeByName("One Action").Id,
+            };
+        }
+
+        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        {
+            return new PoisonEffect
+            {
+                Id = Guid.Parse(""),
+                Name = "Blightburn Resin",
                 DifficultyCheck = 31,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "1 Minute",
@@ -45,32 +54,35 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("785aa516-6335-4df7-9078-4230d4bdf0e7"), Text = "This tacky, hardened sap is harvested from trees infected by fungal blights and exposed to open flames." };
         }
 
-        protected override IEnumerable<AlchemicalPoisonStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("7da7d5d7-7109-4181-8ffe-9a08570559e8"),
                 Duration = "1 Round",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "8d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("1a85f9c6-5743-433a-a7b3-687ab32981cb"), Damage = "8d6", DamageType = seeder.GetDamageTypeByName("Poison")},
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("2853ce52-ea4a-4f9c-b8a3-dded56127ad2"),
                 Duration = "1 Round",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "10d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("4fd42652-15b6-4286-aa70-b81e34ec90a7"), Damage = "10d6", DamageType = seeder.GetDamageTypeByName("Poison")},
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("a1608314-f954-4c33-b6a4-ce5cabc1b52c"),
                 Duration = "1 Round",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "15d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("d09dd3cd-e867-463c-b911-106662f84b44"), Damage = "15d6", DamageType = seeder.GetDamageTypeByName("Poison")},
                 }
             };
         }

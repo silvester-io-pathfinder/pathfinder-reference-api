@@ -25,7 +25,9 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<AlchemicalBomb> AlchemicalBombs { get; set; } = new List<AlchemicalBomb>();
      
         public ICollection<AlchemicalElixir> AlchemicalElixirs{ get; set; } = new List<AlchemicalElixir>();
-        
-        public ICollection<AlchemicalPoison> AlchemicalPoisons { get; set; } = new List<AlchemicalPoison>();
+
+        public ICollection<AlchemicalTool> AlchemicalTools { get; set; } = new List<AlchemicalTool>();
+
+        public ICollection<PoisonEffect> AlchemicalPoisons { get; set; } = new List<PoisonEffect>();
     }
 }

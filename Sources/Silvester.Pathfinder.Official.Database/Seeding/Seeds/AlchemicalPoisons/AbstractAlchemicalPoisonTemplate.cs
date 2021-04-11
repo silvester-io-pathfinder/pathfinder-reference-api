@@ -25,44 +25,54 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 seeder.Builder.AddData(detailBlock);
             }
 
-            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
-            {
-                seeder.Builder.HasJoinData((poison, trait));
-            }
-
-            AlchemicalPoisonStage[] stages = GetAlchemicalPoisonStages(seeder).ToArray();
-            Guid currentGuid = poison.Id;
-            for (int i = 0; i < stages.Length; i++)
-            {
-                currentGuid = currentGuid.Increment();
-
-                AlchemicalPoisonStage stage = stages[i];
-                stage.Id = currentGuid;
-                stage.AlchemicalPoisonId = poison.Id;
-                stage.Stage = i + 1;
-
-                foreach (AlchemicalPoisonStageEffect effect in stage.Effects)
-                {
-                    Type type = effect.GetType();
-                    currentGuid = currentGuid.Increment();
-                    effect.Id = currentGuid;
-                    effect.AlchemicalPoisonStageId = stage.Id;
-
-                    seeder.Builder.AddData(effect.GetType(), effect);
-                }
-
-                stage.Effects = new AlchemicalPoisonStageEffect[] { };
-
-                seeder.Builder.AddData(stage);
-            }
+            SeedPoisonEffect(seeder);
 
             seeder.Builder.AddData(poison);
         }
 
+        private void SeedPoisonEffect(AlchemicalPoisonSeeder seeder)
+        {
+            PoisonEffect poisonEffect = GetPoisonEffect(seeder);
+            seeder.Builder.AddData(poisonEffect);
+
+            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
+            {
+                seeder.Builder.HasJoinData((poisonEffect, trait));
+            }
+
+            PoisonEffectStage[] stages = GetAlchemicalPoisonStages(seeder).ToArray();
+            for (int i = 0; i < stages.Length; i++)
+            {
+                PoisonEffectStage poisonEffectStage = stages[i];
+                SeedPoisonEffectStage(seeder, poisonEffect.Id, i + 1, poisonEffectStage);
+            }
+        }
+
+        private static void SeedPoisonEffectStage(AlchemicalPoisonSeeder seeder, Guid poisonEffectId, int stageNumber, PoisonEffectStage poisonEffectStage)
+        {
+            poisonEffectStage.PoisonEffectId = poisonEffectId;
+            poisonEffectStage.Stage = stageNumber;
+
+            foreach (PoisonEffectStageEffect stageEffect in poisonEffectStage.Effects)
+            {
+                SeedPoisonEffectStageEffect(seeder, poisonEffectStage, stageEffect);
+            }
+
+            poisonEffectStage.Effects = new PoisonEffectStageEffect[] { };
+            seeder.Builder.AddData(poisonEffectStage);
+        }
+
+        private static void SeedPoisonEffectStageEffect(AlchemicalPoisonSeeder seeder, PoisonEffectStage poisonEffectStage, PoisonEffectStageEffect stageEffect)
+        {
+            stageEffect.PoisonEffectStageId = poisonEffectStage.Id;
+            seeder.Builder.AddData(stageEffect.GetType(), stageEffect);
+        }
+
         protected abstract AlchemicalPoison GetAlchemicalPoison(AlchemicalPoisonSeeder seeder);
+        protected abstract PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder);
         protected abstract SourcePage? GetSourcePage(AlchemicalPoisonSeeder seeder);
         protected abstract IEnumerable<string> GetTraits();
         protected abstract IEnumerable<AlchemicalPoisonDetailBlock> GetDetailBlocks();
-        protected abstract IEnumerable<AlchemicalPoisonStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder);
+        protected abstract IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder);
     }
 }

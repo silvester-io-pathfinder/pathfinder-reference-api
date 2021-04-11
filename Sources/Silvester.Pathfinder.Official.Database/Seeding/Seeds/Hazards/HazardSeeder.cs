@@ -19,12 +19,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
         private HazardType[] HazardTypes { get; }
         
         private AttackType[] AttackTypes { get; }
+        
+        private ActionType[] ActionTypes { get; }
+        
+        private DamageType[] DamageTypes { get; }
+
+        private SavingThrowStat[] SavingThrowStats { get; }
 
         private Skill[] Skills { get; }
 
         private Proficiency[] Proficiencies{ get; }
 
-        public HazardSeeder(ModelBuilder builder, Trait[] traits, HazardImmunity[] immunities, HazardComplexity[] complexities, Skill[] skills, Proficiency[] proficiencies, HazardType[] types, AttackType[] attackTypes)
+        public HazardSeeder(ModelBuilder builder, Trait[] traits, HazardImmunity[] immunities, HazardComplexity[] complexities, Skill[] skills, Proficiency[] proficiencies, HazardType[] types, AttackType[] attackTypes, ActionType[] actionTypes, DamageType[] damageTypes, SavingThrowStat[] savingThrowStats)
         {
             Builder = builder;
             Traits = traits;
@@ -34,6 +40,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
             Proficiencies = proficiencies;
             HazardTypes = types;
             AttackTypes = attackTypes;
+            ActionTypes = actionTypes;
+            DamageTypes = damageTypes;
+            SavingThrowStats = savingThrowStats;
         }
 
         public void Seed()
@@ -78,6 +87,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
         public AttackType GetAttackTypeByName(string name)
         {
             return AttackTypes.Filter((e) => e.Name, name).First();
+        }
+
+        public ActionType GetActionTypeByName(string name)
+        {
+            return ActionTypes.Filter((e) => e.Name, name).First();
+        }
+
+        public DamageType GetDamageTypeByName(string name)
+        {
+            return DamageTypes.Filter((e) => e.Name, name).First();
+        }
+
+        public SavingThrowStat GetSavingThrowStatByName(string name)
+        {
+            return SavingThrowStats.Filter((e) => e.Name, name).First();
         }
     }
 }

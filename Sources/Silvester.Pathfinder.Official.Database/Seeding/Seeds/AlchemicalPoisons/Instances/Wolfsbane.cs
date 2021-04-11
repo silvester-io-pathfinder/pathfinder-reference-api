@@ -24,7 +24,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Usage = "Held in 1 hand",
                 BulkId = seeder.GetBulkByName("L").Id,
                 ActionId = Interact.ID,
-                ActionTypeId = seeder.GetActionTypeByName("One Action").Id,
+                ActionTypeId = seeder.GetActionTypeByName("One Action").Id
+            };
+        }
+
+        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        {
+            return new PoisonEffect
+            {
+                Id = Guid.Parse(""),
+                Name = "Wolfsbane",
                 DifficultyCheck = 30,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "10 Minutes",
@@ -45,32 +54,35 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("e864228b-0a29-43de-bebb-175ea6468573"), Text = "Wolfsbane appears in folklore for its link to werecreatures. If you are afflicted with lycanthropy and survive stage 3 of wolfsbane, you’re immediately cured of the lycanthropy." };
         }
 
-        protected override IEnumerable<AlchemicalPoisonStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("4e559a7a-d1c2-4c97-841a-56a1133d5dd0"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "12d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("2499800c-521f-414e-92f2-5df2fcfafe36"), Damage = "12d6", DamageType = seeder.GetDamageTypeByName("Poison")},
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("58e92f10-359f-4c0c-8de8-41b297e185f4"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "16d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("2499800c-521f-414e-92f2-5df2fcfafe36"), Damage = "16d6", DamageType = seeder.GetDamageTypeByName("Poison")},
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("58e92f10-359f-4c0c-8de8-41b297e185f4"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "20d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("53314a91-0060-4517-8192-fa4fa6cacf74"), Damage = "20d6", DamageType = seeder.GetDamageTypeByName("Poison")},
                 }
             };
         }

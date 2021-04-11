@@ -25,6 +25,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 BulkId = seeder.GetBulkByName("L").Id,
                 ActionId = Interact.ID,
                 ActionTypeId = seeder.GetActionTypeByName("One Action").Id,
+            };
+        }
+
+        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        {
+            return new PoisonEffect
+            {
+                Id = Guid.Parse(""),
+                Name = "Tears of Death",
                 DifficultyCheck = 46,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "1 Minute",
@@ -46,35 +55,38 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("e61c1c37-3720-4a0d-8c2b-956bc8f7e9d1"), Text = "Tears of death are among the most powerful of alchemical poisons, distilled from extracts of five other deadly poisons in just the right ratios." };
         }
 
-        protected override IEnumerable<AlchemicalPoisonStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("4cdc2685-68fc-4b72-a7cd-0aa14e057ef3"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "18d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Paralyzed.ID}
+                    new DamagePoisonStageEffect { Id = Guid.Parse(""), Damage = "18d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("dd54ff19-7b01-40c7-80e7-f2c80cc3d5da"),  ConditionId = Paralyzed.ID}
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("608b96fd-baa6-4acf-9c71-983a8a11ea6e"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "25d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Paralyzed.ID}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("8971c661-b31b-41aa-a17d-36641bd8d368"), Damage = "25d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("6a7a8f08-e882-4f8d-9aa6-d69febb46bf8"),  ConditionId = Paralyzed.ID}
                 }
             };
             
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("78f1b6ff-e864-4e1e-9792-5d7315050373"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "30d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Paralyzed.ID}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("0efd65bc-b1ab-4577-a023-ce31044392dd"), Damage = "30d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("5232864d-00f2-4081-b065-7d25921188b5"),  ConditionId = Paralyzed.ID}
                 }
             };
         }

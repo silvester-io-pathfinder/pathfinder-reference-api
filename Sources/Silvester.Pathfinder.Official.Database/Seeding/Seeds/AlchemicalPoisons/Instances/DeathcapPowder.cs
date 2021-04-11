@@ -25,6 +25,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 BulkId = seeder.GetBulkByName("L").Id,
                 ActionId = Interact.ID,
                 ActionTypeId = seeder.GetActionTypeByName("One Action").Id,
+            };
+        }
+
+        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        {
+            return new PoisonEffect
+            {
+                Id = Guid.Parse(""),
+                Name = "Deathcap Powder",
                 DifficultyCheck = 33,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "10 Minutes",
@@ -45,34 +54,37 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("86a05df2-37ef-4162-9576-46a53b42e381"), Text = "" };
         }
 
-        protected override IEnumerable<AlchemicalPoisonStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("101a5abd-b68c-4ec5-92ac-a568358d2eda"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "13d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("522e11c6-2156-4c69-8ced-b2ff70428e30"), Damage = "13d6", DamageType = seeder.GetDamageTypeByName("Poison")},
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("03e91a70-68d4-4048-b785-2f7c52e1a5ab"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "17d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Sickened.ID, Severity = 2}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("289600b9-a130-42f0-84eb-9d0875ef6d45"), Damage = "17d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("802df304-2287-4d04-99d6-c5a3dee6eb31"),  ConditionId = Sickened.ID, Severity = 2}
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("37604a6a-f8cb-40a2-8ad8-15dc110662f8"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "20d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Sickened.ID, Severity = 3}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("0927240a-dbdf-41a5-a145-a63234f3398b"), Damage = "20d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("3efd49c0-5197-484d-862d-0f00e9357f5a"),  ConditionId = Sickened.ID, Severity = 3}
                 }
             };
         }

@@ -24,7 +24,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Usage = "Held in 2 hands",
                 BulkId = seeder.GetBulkByName("L").Id,
                 ActionId = Interact.ID,
-                ActionTypeId = seeder.GetActionTypeByName("One Action").Id,
+                ActionTypeId = seeder.GetActionTypeByName("One Action").Id
+            };
+        }
+
+        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        {
+            return new PoisonEffect
+            {
+                Id = Guid.Parse(""),
+                Name = "Spider Root",
                 DifficultyCheck = 28,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "1  Minute",
@@ -45,35 +54,38 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("7891623b-6f09-4e17-b565-40ac365b6b59"), Text = "A paste made by mashing the fine, threadlike roots of a certain creeper vine, spider root renders a victim clumsy and maladroit." };
         }
 
-        protected override IEnumerable<AlchemicalPoisonStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("038ae784-9e97-4b76-9474-7e71f2e866f9"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "8d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Clumsy.ID, Severity = 1}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("0829c1e6-8249-4419-ad41-dbd6da1aaa01"), Damage = "8d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("d355d61d-32bb-441c-b612-2a38d98928c1"),  ConditionId = Clumsy.ID, Severity = 1}
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("959cd97b-8af6-43d3-b464-96f192c4e0d3"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "9d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Clumsy.ID, Severity = 2}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("908525b2-5ebc-4927-8cdb-2226cc29d631"), Damage = "9d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("506ecf2b-2aff-4e39-9744-10e4a502b7ed"),  ConditionId = Clumsy.ID, Severity = 2}
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("cb8ec76e-2ed6-4157-9edf-eb54cc553f0b"),
                 Duration = "1 Minute",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "10d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Clumsy.ID, Severity = 3}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("26c7cf57-a9f3-4df1-8ef4-e6f296d3431c"), Damage = "10d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("26c7cf57-a9f3-4df1-8ef4-e6f296d3431c"),  ConditionId = Clumsy.ID, Severity = 3}
                 }
             };
         }

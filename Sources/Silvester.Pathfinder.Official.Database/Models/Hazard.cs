@@ -22,6 +22,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public int? BrokenThreshold { get; set; }
 
+        public int? Speed { get; set; }
+
         public int HitPoints { get; set; }
 
         public int? Fortitude { get; set; }
@@ -30,13 +32,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public bool CanBeDetectedMagically { get; set; }
 
-        public bool CanBeDetectedAtAll { get; set; }
-
-        public Guid? AttackTypeId { get; set; }
-        public AttackType? AttackType { get; set; }
-
-        public Guid? DetectionRequirementId { get; set; }
-        public HazardDetectionRequirement? DetectionRequirement { get; set; } 
+        public Guid DetectionRequirementId { get; set; }
+        public HazardDetectionRequirement DetectionRequirement { get; set; } = default!;
         
         public Guid ComplexityId{ get; set; }
         public HazardComplexity Complexity { get; set; } = default!;
@@ -54,5 +51,24 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<HazardDisableRequirement> DisableRequirements { get; set; } = new List<HazardDisableRequirement>();
      
         public ICollection<HazardDispellRequirement> DispellRequirements { get; set; } = new List<HazardDispellRequirement>();
+            
+        public ICollection<HazardAction> Actions{ get; set; } = new List<HazardAction>();
+     
+        public ICollection<HazardRoutineDetailBlock> RoutineDetails { get; set; } = new List<HazardRoutineDetailBlock>();
+    }
+
+    public enum HazardRoutineDetailBlockType
+    {
+        Text,
+        Enumeration
+    }
+
+    public class HazardRoutineDetailBlock : BaseEntity
+    {
+        public Guid HazardId { get; set; }
+        public Hazard Hazard { get; set; } = default!;
+
+        public string Text { get; set; } = default!;
+        public HazardRoutineDetailBlockType Type { get; set; }
     }
 }

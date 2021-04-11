@@ -25,6 +25,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 BulkId = seeder.GetBulkByName("L").Id,
                 ActionId = Interact.ID,
                 ActionTypeId = seeder.GetActionTypeByName("One Action").Id,
+            };
+        }
+
+        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        {
+            return new PoisonEffect
+            {
+                Id = Guid.Parse(""),
+                Name = "Dragon Bile",
                 DifficultyCheck = 37,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "1 Minute",
@@ -45,35 +54,38 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("f8d404e3-12fb-4647-adb6-60888962e8f2"), Text = "A mix of digestive juices and green dragon poison glands nauseates the victim as its flesh is digested from within." };
         }
 
-        protected override IEnumerable<AlchemicalPoisonStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("dadede4d-28bb-4cbc-b825-4cd8a7e1901f"),
                 Duration = "1 Round",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "6d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Sickened.ID, Severity = 2}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("b81c29ee-7c52-465e-87f7-70c46b8c71fe"), Damage = "6d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("35b50894-a2c7-468e-8ba0-5cd4a107b51e"),  ConditionId = Sickened.ID, Severity = 2}
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("6f2a640f-b71e-4c13-a457-17767f74a6d3"),
                 Duration = "1 Round",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "7d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Sickened.ID, Severity = 3}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("4c826d4b-41fc-4b85-b43e-e43bd48862d6"), Damage = "7d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("049755e3-4e91-453c-981b-9ee1f657d318"),  ConditionId = Sickened.ID, Severity = 3}
                 }
             };
 
-            yield return new AlchemicalPoisonStage
+            yield return new PoisonEffectStage
             {
+                Id = Guid.Parse("ecc2dccf-0d82-4d85-b11d-74656cec77c6"),
                 Duration = "1 Round",
-                Effects = new AlchemicalPoisonStageEffect[]
+                Effects = new PoisonEffectStageEffect[]
                 {
-                    new DamageAlchemicalPoisonStageEffect {Damage = "9d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionAlchemicalPoisonStageEffect { ConditionId = Sickened.ID, Severity = 4}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("9877f704-09a9-401a-956d-26533fa67458"), Damage = "9d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("06db10c0-1c72-4baa-80d9-5ddd27243912"),  ConditionId = Sickened.ID, Severity = 4}
                 }
             };
         }
