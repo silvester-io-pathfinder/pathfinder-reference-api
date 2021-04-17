@@ -41,6 +41,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
         {
             yield return new AlchemicalToolPotencyBinding
             {
+                Id = Guid.Parse("44ea3349-f059-4d50-ab21-6076b0d3a05a"),
                 PotencyId = seeder.GetAlchemicalToolPotencyByName("Lesser").Id,
                 Level = 1,
                 Price = 300,
@@ -49,6 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
 
             yield return new AlchemicalToolPotencyBinding
             {
+                Id = Guid.Parse("21dc61b1-76f2-437e-9475-e2ab515c606f"),
                 PotencyId = seeder.GetAlchemicalToolPotencyByName("Greater").Id,
                 Level = 7,
                 Price = 5300,

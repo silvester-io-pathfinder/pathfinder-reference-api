@@ -14,17 +14,11 @@ namespace Silvester.Pathfinder.Official.Database.Models
         
         public string Description { get; set; } = default!;
 
-        public int ArmorClass { get; set; }
+        public int? ArmorClass { get; set; }
 
         public string? Reset { get; set; }
 
-        public int? Hardness { get; set; }
-
-        public int? BrokenThreshold { get; set; }
-
         public int? Speed { get; set; }
-
-        public int HitPoints { get; set; }
 
         public int? Fortitude { get; set; }
 
@@ -32,9 +26,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public bool CanBeDetectedMagically { get; set; }
 
-        public Guid DetectionRequirementId { get; set; }
-        public HazardDetectionRequirement DetectionRequirement { get; set; } = default!;
-        
         public Guid ComplexityId{ get; set; }
         public HazardComplexity Complexity { get; set; } = default!;
 
@@ -45,6 +36,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public HazardType Type { get; set; } = default!;
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
+
+        public ICollection<HazardComponent> HazardComponents { get; set; } = new List<HazardComponent>();
 
         public ICollection<HazardImmunity> Immunities { get; set; } = new List<HazardImmunity>();
 

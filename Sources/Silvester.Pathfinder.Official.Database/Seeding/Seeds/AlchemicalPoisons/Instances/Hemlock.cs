@@ -28,12 +28,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "Hemlock",
+                Id = Guid.Parse("9531647b-d08d-4c79-8993-c1e9fc5aebb3"),
                 DifficultyCheck = 40,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "30 Minutes",
@@ -54,37 +53,37 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("7045ff07-e29c-4f30-9a90-8d4b94e64335"), Text = "Concentrated hemlock is a particularly deadly toxin that halts muscle action—including that of the victim’s heart." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("0b046df0-35c7-4ce5-9e8a-ef267997af29"),
                 Duration = "10 Minutes",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("5fe5412a-564e-4a9a-bf76-c34b7d3da595"), Damage = "17d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("5fe5412a-564e-4a9a-bf76-c34b7d3da595"), Damage = "17d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("6ae69ff8-919d-4a88-a8a6-b0292096d4cc"),  ConditionId = Enfeebled.ID, Severity = 2}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("a9d1a6a2-beff-45bd-8557-83718005de78"),
                 Duration = "10 Minutes",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("610afeb6-7789-4aaf-b020-483aff478009"), Damage = "21d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("610afeb6-7789-4aaf-b020-483aff478009"), Damage = "21d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("7762e24a-96b6-44a5-b5e6-fa0810975e64"),  ConditionId = Enfeebled.ID, Severity = 3}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("4ee75b8e-2d54-4748-abbc-280cae951532"),
                 Duration = "10 Minutes",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("c239d60f-0e66-4b61-9f04-311b09d80272"), Damage = "26d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("c239d60f-0e66-4b61-9f04-311b09d80272"), Damage = "26d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("bbd15e86-b959-4126-b304-9d7991c252bf"),  ConditionId = Enfeebled.ID, Severity = 4}
                 }
             };

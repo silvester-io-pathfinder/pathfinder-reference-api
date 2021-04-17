@@ -28,12 +28,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "Brimstone Fumes",
+                Id = Guid.Parse("0860cb5f-6bf5-423b-944e-1c4e79802565"),
                 DifficultyCheck = 36,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "1 Round",
@@ -55,37 +54,37 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("5b28e3fa-1348-41cb-ba9f-25f5230e45d3"), Text = "Fumes from the forges of Hell drain health and strength alike." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("8b833ef5-c504-4580-bee7-b124e0d63981"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("9058f97d-0aac-4d3b-b68c-adb1e8c7f84a"), Damage = "7d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("9058f97d-0aac-4d3b-b68c-adb1e8c7f84a"), Damage = "7d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("bb63ec34-7c71-4ac0-bc8b-8b4316f78364"),  ConditionId = Enfeebled.ID, Severity = 1}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("b52f55c1-44e0-479a-8d1e-24cbeb57189e"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("b065f341-8bac-49ee-83a1-87d03f27e66e"), Damage = "8d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("b065f341-8bac-49ee-83a1-87d03f27e66e"), Damage = "8d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("488cc010-f4d3-44cc-b0b9-ebbd408c4e5e"),  ConditionId = Enfeebled.ID, Severity = 2}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("8b8011f3-58a5-4e72-9e3f-db705c384bf8"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("2a2a1976-91a5-40dd-b293-db3608f5398c"), Damage = "10d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("2a2a1976-91a5-40dd-b293-db3608f5398c"), Damage = "10d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("8c8ab084-efcb-455d-9029-28b2ac9b3b4c"),  ConditionId = Enfeebled.ID, Severity = 3}
                 }
             };

@@ -11,7 +11,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
         public ModelBuilder Builder { get; }
         
         private Trait[] Traits { get; }
-
+        
+        private Source[] Sources { get; }
+        
         private HazardImmunity[] Immunities { get; }
 
         private HazardComplexity[] Complexities { get; }
@@ -30,10 +32,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
 
         private Proficiency[] Proficiencies{ get; }
 
-        public HazardSeeder(ModelBuilder builder, Trait[] traits, HazardImmunity[] immunities, HazardComplexity[] complexities, Skill[] skills, Proficiency[] proficiencies, HazardType[] types, AttackType[] attackTypes, ActionType[] actionTypes, DamageType[] damageTypes, SavingThrowStat[] savingThrowStats)
+        public HazardSeeder(ModelBuilder builder, Trait[] traits, Source[] sources, HazardImmunity[] immunities, HazardComplexity[] complexities, Skill[] skills, Proficiency[] proficiencies, HazardType[] types, AttackType[] attackTypes, ActionType[] actionTypes, DamageType[] damageTypes, SavingThrowStat[] savingThrowStats)
         {
             Builder = builder;
             Traits = traits;
+            Sources = sources;
             Immunities = immunities;
             Complexities = complexities;
             Skills = skills;
@@ -92,6 +95,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
         public ActionType GetActionTypeByName(string name)
         {
             return ActionTypes.Filter((e) => e.Name, name).First();
+        }
+
+        public Source GetSourceByName(string name)
+        {
+            return Sources.Filter((e) => e.Name, name).First();
         }
 
         public DamageType GetDamageTypeByName(string name)

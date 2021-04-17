@@ -238,11 +238,11 @@ namespace Silvester.Pathfinder.Official.Database
             new ActionSeeder(modelBuilder, actionTypeSeed, traitSeed).Seed();
             new ConditionSeeder(modelBuilder, sourceSeed, conditionCategoriesSeed).Seed();
             new DiseaseSeeder(modelBuilder, sourceSeed, traitSeed, savingThrowStatSeed, damageTypeSeed).Seed();
-            new HazardSeeder(modelBuilder, traitSeed, hazardImmunitySeed, hazardComplexitySeed, skillSeed, proficiencySeed, hazardTypeSeed, attackTypeSeed).Seed();
             new AlchemicalBombSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, potionPotencySeed).Seed();
             new AlchemicalElixirSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, potionPotencySeed).Seed();
             new AlchemicalPoisonSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, savingThrowStatSeed, damageTypeSeed, actionTypeSeed).Seed();
             new AlchemicalToolSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, alchemicalToolPotencySeed, actionTypeSeed).Seed();
+            new HazardSeeder(modelBuilder, traitSeed, sourceSeed, hazardImmunitySeed, hazardComplexitySeed, skillSeed, proficiencySeed, hazardTypeSeed, attackTypeSeed, actionTypeSeed, damageTypeSeed, savingThrowStatSeed).Seed();
         }
     }
 }

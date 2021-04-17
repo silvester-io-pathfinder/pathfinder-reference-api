@@ -18,6 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             return new AlchemicalPoison
             {
                 Id = ID,
+                Name = "Arsenic",
                 ItemLevel = 1,
                 Price = 300,
                 Usage = "Held in 1 hand",
@@ -27,13 +28,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "Arsenic",
+                Id = Guid.Parse("37764fda-a770-40e6-98e5-1207002f7708"),
                 DifficultyCheck = 18,
+                MaximumDuration = "5 Minutes",
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "10 Minutes",
             };
@@ -52,38 +53,38 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("ab9af6c8-886c-4cc4-8347-d5d5b6c520e5"), Text = "This toxin is a compound of arsenic and other substances. You can’t reduce your sickened condition while affected." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("0468236a-951d-4f4b-ba55-9677d2872063"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
                     new ConditionPoisonStageEffect { Id = Guid.Parse("0bf453a8-ad63-4059-a589-a47a771a388a"), ConditionId = Sickened.ID, Severity = 1},
-                    new DamagePoisonStageEffect {Id = Guid.Parse("901de562-81e9-4a7a-ad10-cc865341ed13"), Damage = "1d4", DamageType = seeder.GetDamageTypeByName("Poison")}
+                    new DamagePoisonStageEffect {Id = Guid.Parse("901de562-81e9-4a7a-ad10-cc865341ed13"), Damage = "1d4", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("3abafdfd-bb76-4211-8bd2-733116b08360"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
                     new ConditionPoisonStageEffect { Id = Guid.Parse("3af0f5a8-e26c-4328-8bfd-586297d76416"), ConditionId = Sickened.ID, Severity = 2},
-                    new DamagePoisonStageEffect {Id = Guid.Parse("c27b7d34-8fa2-4373-9c8d-5c042e168fe1"), Damage = "1d6", DamageType = seeder.GetDamageTypeByName("Poison")}
+                    new DamagePoisonStageEffect {Id = Guid.Parse("c27b7d34-8fa2-4373-9c8d-5c042e168fe1"), Damage = "1d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("39bc0f47-bd42-488e-bb8c-bbd82bc20771"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
                     new ConditionPoisonStageEffect { Id = Guid.Parse("aad3acd9-12b3-4aec-ae90-c5f96235837e"), ConditionId = Sickened.ID, Severity = 3},
-                    new DamagePoisonStageEffect {Id = Guid.Parse("9a349ef1-5a02-4309-a095-d298f879328d"), Damage = "2d6", DamageType = seeder.GetDamageTypeByName("Poison")}
+                    new DamagePoisonStageEffect {Id = Guid.Parse("9a349ef1-5a02-4309-a095-d298f879328d"), Damage = "2d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id}
                 }
             };
         }

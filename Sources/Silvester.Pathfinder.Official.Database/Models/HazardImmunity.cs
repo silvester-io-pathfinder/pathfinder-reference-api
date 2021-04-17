@@ -10,7 +10,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
     {
         public string Name { get; set; } = default!;
 
-        public Guid HazardId { get; set; }
-        public Hazard Hazard { get; set; } = default!;
+        public ICollection<Hazard> Hazards { get; set; } = default!;
     }
 }

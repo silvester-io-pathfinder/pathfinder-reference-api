@@ -28,10 +28,11 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
 
-        public Guid PoisonEffectId { get; set; }
-        public PoisonEffect PoisonEffect { get; set; } = default!;
+        public Guid EffectId { get; set; }
+        public StaggeredEffect Effect { get; set; } = default!;
 
         public ICollection<AlchemicalPoisonDetailBlock> Details { get; set; } = new List<AlchemicalPoisonDetailBlock>();
+        public ICollection<Trait> Traits { get; set; } = new List<Trait>();
     }
 
     public class AlchemicalPoisonDetailBlock : BaseEntity

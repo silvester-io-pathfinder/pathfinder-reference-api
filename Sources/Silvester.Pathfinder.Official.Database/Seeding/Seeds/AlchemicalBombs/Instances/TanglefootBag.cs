@@ -39,44 +39,42 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
             yield return new AlchemicalBombDetailBlock { Id = Guid.Parse("3d23b44a-67d3-4cbe-b73e-528f36790ac4"), Text = "The target can end any effects by Escaping or spending a total of 3 Interact actions to carefully remove the sticky substances. These Interact actions don’t have to be consecutive, and other creatures can provide the actions as well." };
         }
 
-        protected override AlchemicalBombPotencyBinding GetLesserPotency(AlchemicalBombSeeder seeder)
+        protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies(AlchemicalBombSeeder seeder)
         {
-            return new AlchemicalBombPotencyBinding
+            yield return new AlchemicalBombPotencyBinding
             {
+                Id = Guid.Parse("294e2585-b769-4685-8a98-5174ec4d4fc2"),
                 Level = 1,
                 Benefits = "The target takes a –10-foot penalty, and the Escape DC is 17.",
-                Price = 300
+                Price = 300,
+                PotionPotencyId = seeder.GetPotionPotencyByName("Lesser").Id
             };
-        }
 
-        protected override AlchemicalBombPotencyBinding GetModeratePotency(AlchemicalBombSeeder seeder)
-        {
-            return new AlchemicalBombPotencyBinding
+            yield return new AlchemicalBombPotencyBinding
             {
+                Id = Guid.Parse("6778bc68-53d6-4432-8f96-ccca5073ee48"),
                 Level = 3,
                 Benefits = "You gain a +1 item bonus to attack rolls, the target takes a –15-foot penalty, and the Escape DC is 19.",
-                Price = 1000
+                Price = 1000,
+                PotionPotencyId = seeder.GetPotionPotencyByName("Moderate").Id
             };
 
-        }
-
-        protected override AlchemicalBombPotencyBinding GetGreaterPotency(AlchemicalBombSeeder seeder)
-        {
-            return new AlchemicalBombPotencyBinding
+            yield return new AlchemicalBombPotencyBinding
             {
+                Id = Guid.Parse("44ac5c08-5ccd-4cba-b822-f4b6a37573c4"),
                 Level = 11,
                 Benefits = "You gain a +2 item bonus to attack rolls, the target takes a –15-foot penalty, and the Escape DC is 28.",
-                Price = 25000
+                Price = 25000,
+                PotionPotencyId = seeder.GetPotionPotencyByName("Greater").Id
             };
-        }
 
-        protected override AlchemicalBombPotencyBinding GetMajorPotency(AlchemicalBombSeeder seeder)
-        {
-            return new AlchemicalBombPotencyBinding
+            yield return new AlchemicalBombPotencyBinding
             {
+                Id = Guid.Parse("ebfa4694-3931-4d55-9b70-ac6cc73e2837"),
                 Level = 17,
                 Benefits = "You gain a +3 item bonus to attack rolls, the target takes a –20-foot penalty, and the Escape DC is 37.",
-                Price = 250000
+                Price = 250000,
+                PotionPotencyId = seeder.GetPotionPotencyByName("Major").Id
             };
         }
 

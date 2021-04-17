@@ -136,8 +136,1376 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            ActionsId = new Guid("4293eca5-4b6c-42f2-8e22-cd09796984fd"),
+                            TraitsId = new Guid("08bac763-e881-4a70-b253-916191ee9713")
+                        },
+                        new
+                        {
                             ActionsId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
                             TraitsId = new Guid("856db08f-edad-472b-b870-65a8f16252a5")
+                        });
+                });
+
+            modelBuilder.Entity("AlchemicalBombTrait", b =>
+                {
+                    b.Property<Guid>("AlchemicalBombsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("AlchemicalBombsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("AlchemicalBombTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            TraitsId = new Guid("44a15dce-b0cf-4d6a-a4be-92d759fdbaa3")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            TraitsId = new Guid("74d0e1f3-cbab-44df-b024-fdfebb5b27f3")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            TraitsId = new Guid("7c5d73c4-d239-4cdf-ae95-e3f802156f6b")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            TraitsId = new Guid("d1aabc8c-b3fe-40eb-bfc2-ea72d3b7e0c0")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            TraitsId = new Guid("74d0e1f3-cbab-44df-b024-fdfebb5b27f3")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            TraitsId = new Guid("7c5d73c4-d239-4cdf-ae95-e3f802156f6b")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            TraitsId = new Guid("dc6ca4d1-85f2-4be9-bc39-9a48b943b392")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            TraitsId = new Guid("74d0e1f3-cbab-44df-b024-fdfebb5b27f3")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            TraitsId = new Guid("7c5d73c4-d239-4cdf-ae95-e3f802156f6b")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            TraitsId = new Guid("36d65d85-b689-46da-86b6-4f0838f296e6")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            TraitsId = new Guid("74d0e1f3-cbab-44df-b024-fdfebb5b27f3")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            TraitsId = new Guid("7c5d73c4-d239-4cdf-ae95-e3f802156f6b")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            TraitsId = new Guid("74d0e1f3-cbab-44df-b024-fdfebb5b27f3")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            TraitsId = new Guid("812b4b93-b467-438f-9561-ef020545755f")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            TraitsId = new Guid("74d0e1f3-cbab-44df-b024-fdfebb5b27f3")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalBombsId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            TraitsId = new Guid("7c5d73c4-d239-4cdf-ae95-e3f802156f6b")
+                        });
+                });
+
+            modelBuilder.Entity("AlchemicalElixirTrait", b =>
+                {
+                    b.Property<Guid>("AlchemicalElixirsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("AlchemicalElixirsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("AlchemicalElixirTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                            TraitsId = new Guid("06f2cf99-b089-4e34-b443-53028fdc2ae0")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            TraitsId = new Guid("1a83b706-d9c1-4b46-bcf3-3c9bb82219ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            TraitsId = new Guid("e3574cce-b028-4a4a-a2c7-fc3e0cfdd4ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c1fbd9e7-e36e-49d7-b3c2-772400e1fc5e"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c1fbd9e7-e36e-49d7-b3c2-772400e1fc5e"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c1fbd9e7-e36e-49d7-b3c2-772400e1fc5e"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
+                            TraitsId = new Guid("2cbfa741-d7b5-465c-98b4-7a6bceae533e")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("9273e6ad-3f3c-4e7d-9b9c-4a8faec61145"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("9273e6ad-3f3c-4e7d-9b9c-4a8faec61145"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("9273e6ad-3f3c-4e7d-9b9c-4a8faec61145"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("7a89776c-ffcc-4766-8ddb-d0d6f2227c30"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("7a89776c-ffcc-4766-8ddb-d0d6f2227c30"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("7a89776c-ffcc-4766-8ddb-d0d6f2227c30"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            TraitsId = new Guid("1a83b706-d9c1-4b46-bcf3-3c9bb82219ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            TraitsId = new Guid("e3574cce-b028-4a4a-a2c7-fc3e0cfdd4ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("787a099b-e070-4e58-b0b7-89c5e2f0aac9"),
+                            TraitsId = new Guid("2cbfa741-d7b5-465c-98b4-7a6bceae533e")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("787a099b-e070-4e58-b0b7-89c5e2f0aac9"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("787a099b-e070-4e58-b0b7-89c5e2f0aac9"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("787a099b-e070-4e58-b0b7-89c5e2f0aac9"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("82b662fa-09dc-4cc6-a7e1-13085af44f63"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("82b662fa-09dc-4cc6-a7e1-13085af44f63"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("82b662fa-09dc-4cc6-a7e1-13085af44f63"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            TraitsId = new Guid("06f2cf99-b089-4e34-b443-53028fdc2ae0")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            TraitsId = new Guid("0c06a5b8-24e7-486b-bb98-91caef377013")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            TraitsId = new Guid("06f2cf99-b089-4e34-b443-53028fdc2ae0")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                            TraitsId = new Guid("1a83b706-d9c1-4b46-bcf3-3c9bb82219ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            TraitsId = new Guid("1a83b706-d9c1-4b46-bcf3-3c9bb82219ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            TraitsId = new Guid("e3574cce-b028-4a4a-a2c7-fc3e0cfdd4ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("fce1d931-7808-4e03-8615-f9f0210c405a"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("fce1d931-7808-4e03-8615-f9f0210c405a"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("fce1d931-7808-4e03-8615-f9f0210c405a"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                            TraitsId = new Guid("7f9fe1cb-c607-44c3-8f1a-b26d508cfce6")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                            TraitsId = new Guid("e2bb08cb-cf59-4e29-8738-52c751405fb0")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            TraitsId = new Guid("1a83b706-d9c1-4b46-bcf3-3c9bb82219ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            TraitsId = new Guid("e3574cce-b028-4a4a-a2c7-fc3e0cfdd4ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("edf0d3e8-4400-4feb-8326-7d98976ebae7"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("edf0d3e8-4400-4feb-8326-7d98976ebae7"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("edf0d3e8-4400-4feb-8326-7d98976ebae7"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
+                            TraitsId = new Guid("1a83b706-d9c1-4b46-bcf3-3c9bb82219ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            TraitsId = new Guid("1a83b706-d9c1-4b46-bcf3-3c9bb82219ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            TraitsId = new Guid("e3574cce-b028-4a4a-a2c7-fc3e0cfdd4ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            TraitsId = new Guid("1a83b706-d9c1-4b46-bcf3-3c9bb82219ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            TraitsId = new Guid("e3574cce-b028-4a4a-a2c7-fc3e0cfdd4ee")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("58f3f7fd-4244-4a42-b684-d995220d4ade"),
+                            TraitsId = new Guid("33bf3198-48a1-4559-9a48-9881901f880b")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("58f3f7fd-4244-4a42-b684-d995220d4ade"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("58f3f7fd-4244-4a42-b684-d995220d4ade"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("58f3f7fd-4244-4a42-b684-d995220d4ade"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalElixirsId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            TraitsId = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7")
+                        });
+                });
+
+            modelBuilder.Entity("AlchemicalPoisonTrait", b =>
+                {
+                    b.Property<Guid>("AlchemicalPoisonsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("AlchemicalPoisonsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("AlchemicalPoisonTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            TraitsId = new Guid("3078e40b-db78-4f39-9ffc-304e6a1993cf")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("28f803a7-f093-4be7-a3d2-623a77560f93"),
+                            TraitsId = new Guid("3078e40b-db78-4f39-9ffc-304e6a1993cf")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("28f803a7-f093-4be7-a3d2-623a77560f93"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("28f803a7-f093-4be7-a3d2-623a77560f93"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("28f803a7-f093-4be7-a3d2-623a77560f93"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c65fd194-6210-42c8-80a2-b54ff81b6585"),
+                            TraitsId = new Guid("574e4077-83a5-4865-95a3-29a556f873ed")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c65fd194-6210-42c8-80a2-b54ff81b6585"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c65fd194-6210-42c8-80a2-b54ff81b6585"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c65fd194-6210-42c8-80a2-b54ff81b6585"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("fa11da7d-e05b-486b-a6e0-444dee34bae9"),
+                            TraitsId = new Guid("0b49fe13-7684-43b9-b5a5-81b8c038dc9c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("fa11da7d-e05b-486b-a6e0-444dee34bae9"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("fa11da7d-e05b-486b-a6e0-444dee34bae9"),
+                            TraitsId = new Guid("7b601f4a-9c05-426c-aa46-14e8fa989066")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("fa11da7d-e05b-486b-a6e0-444dee34bae9"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("fa11da7d-e05b-486b-a6e0-444dee34bae9"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("dc73bb29-2a4e-429e-bc99-26d85ae74e1c"),
+                            TraitsId = new Guid("0b49fe13-7684-43b9-b5a5-81b8c038dc9c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("dc73bb29-2a4e-429e-bc99-26d85ae74e1c"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("dc73bb29-2a4e-429e-bc99-26d85ae74e1c"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("dc73bb29-2a4e-429e-bc99-26d85ae74e1c"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("81b07f7b-2e70-4b38-80f7-0b28a4c6f399"),
+                            TraitsId = new Guid("551070c6-e73a-4c0c-9a9c-f6425f38f5f0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("81b07f7b-2e70-4b38-80f7-0b28a4c6f399"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("81b07f7b-2e70-4b38-80f7-0b28a4c6f399"),
+                            TraitsId = new Guid("fc3cb057-dcb6-4508-915a-0abd25679211")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("81b07f7b-2e70-4b38-80f7-0b28a4c6f399"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("81b07f7b-2e70-4b38-80f7-0b28a4c6f399"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0381fe8b-2404-42fb-9abd-74e28f1401d5"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0381fe8b-2404-42fb-9abd-74e28f1401d5"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0381fe8b-2404-42fb-9abd-74e28f1401d5"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ae0386af-cfaf-40c0-83b4-8dd5a8d80d9a"),
+                            TraitsId = new Guid("3078e40b-db78-4f39-9ffc-304e6a1993cf")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ae0386af-cfaf-40c0-83b4-8dd5a8d80d9a"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ae0386af-cfaf-40c0-83b4-8dd5a8d80d9a"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ae0386af-cfaf-40c0-83b4-8dd5a8d80d9a"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b2e3f38f-f570-4cf8-ba74-633bdc0a1405"),
+                            TraitsId = new Guid("0b49fe13-7684-43b9-b5a5-81b8c038dc9c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b2e3f38f-f570-4cf8-ba74-633bdc0a1405"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b2e3f38f-f570-4cf8-ba74-633bdc0a1405"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b2e3f38f-f570-4cf8-ba74-633bdc0a1405"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("acc877c9-ea44-4977-b0da-6bf6ec70922a"),
+                            TraitsId = new Guid("574e4077-83a5-4865-95a3-29a556f873ed")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("acc877c9-ea44-4977-b0da-6bf6ec70922a"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("acc877c9-ea44-4977-b0da-6bf6ec70922a"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("acc877c9-ea44-4977-b0da-6bf6ec70922a"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7b143b21-75a9-4d41-9c09-1e4a872526b9"),
+                            TraitsId = new Guid("574e4077-83a5-4865-95a3-29a556f873ed")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7b143b21-75a9-4d41-9c09-1e4a872526b9"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7b143b21-75a9-4d41-9c09-1e4a872526b9"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7b143b21-75a9-4d41-9c09-1e4a872526b9"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("862bacf9-a11f-4f56-8c94-2452d636db79"),
+                            TraitsId = new Guid("574e4077-83a5-4865-95a3-29a556f873ed")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("862bacf9-a11f-4f56-8c94-2452d636db79"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("862bacf9-a11f-4f56-8c94-2452d636db79"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("862bacf9-a11f-4f56-8c94-2452d636db79"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b445e986-a45a-4d3a-8089-a2d33fee60dc"),
+                            TraitsId = new Guid("574e4077-83a5-4865-95a3-29a556f873ed")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b445e986-a45a-4d3a-8089-a2d33fee60dc"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b445e986-a45a-4d3a-8089-a2d33fee60dc"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("b445e986-a45a-4d3a-8089-a2d33fee60dc"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7c923c5c-7005-4f1b-9005-5c79b289b056"),
+                            TraitsId = new Guid("3078e40b-db78-4f39-9ffc-304e6a1993cf")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7c923c5c-7005-4f1b-9005-5c79b289b056"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7c923c5c-7005-4f1b-9005-5c79b289b056"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7c923c5c-7005-4f1b-9005-5c79b289b056"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1e830309-8b32-4860-85d0-a704be45b0f6"),
+                            TraitsId = new Guid("574e4077-83a5-4865-95a3-29a556f873ed")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1e830309-8b32-4860-85d0-a704be45b0f6"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1e830309-8b32-4860-85d0-a704be45b0f6"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1e830309-8b32-4860-85d0-a704be45b0f6"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7d31dbce-9230-4960-99cc-71de51c18977"),
+                            TraitsId = new Guid("3078e40b-db78-4f39-9ffc-304e6a1993cf")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7d31dbce-9230-4960-99cc-71de51c18977"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7d31dbce-9230-4960-99cc-71de51c18977"),
+                            TraitsId = new Guid("7b601f4a-9c05-426c-aa46-14e8fa989066")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7d31dbce-9230-4960-99cc-71de51c18977"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("7d31dbce-9230-4960-99cc-71de51c18977"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            TraitsId = new Guid("0c06a5b8-24e7-486b-bb98-91caef377013")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            TraitsId = new Guid("574e4077-83a5-4865-95a3-29a556f873ed")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            TraitsId = new Guid("be9994ab-79ef-4ec0-9761-492059b0083a")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            TraitsId = new Guid("4b9d47d5-3e89-41ba-8183-9e743c49a41a")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("949064c1-4862-4a51-a4fe-8ac7c91559d1"),
+                            TraitsId = new Guid("3078e40b-db78-4f39-9ffc-304e6a1993cf")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("949064c1-4862-4a51-a4fe-8ac7c91559d1"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("949064c1-4862-4a51-a4fe-8ac7c91559d1"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("949064c1-4862-4a51-a4fe-8ac7c91559d1"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("aef8461a-019a-4c5e-baeb-949f8ebd6e66"),
+                            TraitsId = new Guid("0b49fe13-7684-43b9-b5a5-81b8c038dc9c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("aef8461a-019a-4c5e-baeb-949f8ebd6e66"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("aef8461a-019a-4c5e-baeb-949f8ebd6e66"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("aef8461a-019a-4c5e-baeb-949f8ebd6e66"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c55ad542-1fba-49e6-ab84-f95050cc3d7f"),
+                            TraitsId = new Guid("551070c6-e73a-4c0c-9a9c-f6425f38f5f0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c55ad542-1fba-49e6-ab84-f95050cc3d7f"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c55ad542-1fba-49e6-ab84-f95050cc3d7f"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c55ad542-1fba-49e6-ab84-f95050cc3d7f"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("427af463-394a-423e-be07-d4788fc27ec7"),
+                            TraitsId = new Guid("0b49fe13-7684-43b9-b5a5-81b8c038dc9c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("427af463-394a-423e-be07-d4788fc27ec7"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("427af463-394a-423e-be07-d4788fc27ec7"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("427af463-394a-423e-be07-d4788fc27ec7"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("d493d861-70f0-4362-a954-2d0609869352"),
+                            TraitsId = new Guid("551070c6-e73a-4c0c-9a9c-f6425f38f5f0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("d493d861-70f0-4362-a954-2d0609869352"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("d493d861-70f0-4362-a954-2d0609869352"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("d493d861-70f0-4362-a954-2d0609869352"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0a713a66-44df-45ff-8917-5977c0c90e8f"),
+                            TraitsId = new Guid("574e4077-83a5-4865-95a3-29a556f873ed")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0a713a66-44df-45ff-8917-5977c0c90e8f"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0a713a66-44df-45ff-8917-5977c0c90e8f"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0a713a66-44df-45ff-8917-5977c0c90e8f"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("eec5e097-c60a-4a1d-91d3-57bcf30e6a31"),
+                            TraitsId = new Guid("30ed464b-6bf4-4a80-8c42-8bb95ecb751c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("eec5e097-c60a-4a1d-91d3-57bcf30e6a31"),
+                            TraitsId = new Guid("574e4077-83a5-4865-95a3-29a556f873ed")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("eec5e097-c60a-4a1d-91d3-57bcf30e6a31"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("eec5e097-c60a-4a1d-91d3-57bcf30e6a31"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("eec5e097-c60a-4a1d-91d3-57bcf30e6a31"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1a0af776-3dc1-48f7-bc0a-17c676e4f044"),
+                            TraitsId = new Guid("3078e40b-db78-4f39-9ffc-304e6a1993cf")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1a0af776-3dc1-48f7-bc0a-17c676e4f044"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1a0af776-3dc1-48f7-bc0a-17c676e4f044"),
+                            TraitsId = new Guid("4b9d47d5-3e89-41ba-8183-9e743c49a41a")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1a0af776-3dc1-48f7-bc0a-17c676e4f044"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1a0af776-3dc1-48f7-bc0a-17c676e4f044"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c4f4ddce-c112-44b3-90a5-06aaaed80f1e"),
+                            TraitsId = new Guid("0b49fe13-7684-43b9-b5a5-81b8c038dc9c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c4f4ddce-c112-44b3-90a5-06aaaed80f1e"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c4f4ddce-c112-44b3-90a5-06aaaed80f1e"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("c4f4ddce-c112-44b3-90a5-06aaaed80f1e"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0e9adbb7-41e0-4935-8e1e-5339b7b076d0"),
+                            TraitsId = new Guid("0b49fe13-7684-43b9-b5a5-81b8c038dc9c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0e9adbb7-41e0-4935-8e1e-5339b7b076d0"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0e9adbb7-41e0-4935-8e1e-5339b7b076d0"),
+                            TraitsId = new Guid("7b601f4a-9c05-426c-aa46-14e8fa989066")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0e9adbb7-41e0-4935-8e1e-5339b7b076d0"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("0e9adbb7-41e0-4935-8e1e-5339b7b076d0"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("25956d4a-b3ee-49fe-9660-b1ee2b67b1de"),
+                            TraitsId = new Guid("3078e40b-db78-4f39-9ffc-304e6a1993cf")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("25956d4a-b3ee-49fe-9660-b1ee2b67b1de"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("25956d4a-b3ee-49fe-9660-b1ee2b67b1de"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("25956d4a-b3ee-49fe-9660-b1ee2b67b1de"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1f8e9d8a-52ba-4b7c-b041-6e797a91e25b"),
+                            TraitsId = new Guid("574e4077-83a5-4865-95a3-29a556f873ed")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1f8e9d8a-52ba-4b7c-b041-6e797a91e25b"),
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1f8e9d8a-52ba-4b7c-b041-6e797a91e25b"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalPoisonsId = new Guid("1f8e9d8a-52ba-4b7c-b041-6e797a91e25b"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        });
+                });
+
+            modelBuilder.Entity("AlchemicalToolTrait", b =>
+                {
+                    b.Property<Guid>("AlchemicalToolsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("AlchemicalToolsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("AlchemicalToolTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                            TraitsId = new Guid("0c06a5b8-24e7-486b-bb98-91caef377013")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("3707bdeb-7db4-4473-b963-f9adc2f2c1fa"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("3707bdeb-7db4-4473-b963-f9adc2f2c1fa"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("3c31b16b-1804-4e2e-ba66-9bb8faaca03e"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("3c31b16b-1804-4e2e-ba66-9bb8faaca03e"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("fe623283-bc94-42a6-9a63-05fe74c06ab5"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("fe623283-bc94-42a6-9a63-05fe74c06ab5"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("cad37b1b-7d1e-4a1a-acb4-23a9814683ab"),
+                            TraitsId = new Guid("c90d2554-1af6-45d7-9f20-f98aa0799887")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("cad37b1b-7d1e-4a1a-acb4-23a9814683ab"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("cad37b1b-7d1e-4a1a-acb4-23a9814683ab"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("37fff04c-1d07-49d9-ae10-02fb910e782b"),
+                            TraitsId = new Guid("d1aabc8c-b3fe-40eb-bfc2-ea72d3b7e0c0")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("37fff04c-1d07-49d9-ae10-02fb910e782b"),
+                            TraitsId = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11")
+                        },
+                        new
+                        {
+                            AlchemicalToolsId = new Guid("37fff04c-1d07-49d9-ae10-02fb910e782b"),
+                            TraitsId = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c")
                         });
                 });
 
@@ -2598,6 +3966,36 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("HazardHazardImmunity", b =>
+                {
+                    b.Property<Guid>("HazardsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ImmunitiesId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("HazardsId", "ImmunitiesId");
+
+                    b.HasIndex("ImmunitiesId");
+
+                    b.ToTable("HazardHazardImmunity");
+                });
+
+            modelBuilder.Entity("HazardTrait", b =>
+                {
+                    b.Property<Guid>("HazardsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("HazardsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("HazardTrait");
+                });
+
             modelBuilder.Entity("HeritageRace", b =>
                 {
                     b.Property<Guid>("HeritagesId")
@@ -4575,9 +5973,15 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("4293eca5-4b6c-42f2-8e22-cd09796984fd"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            Name = "Stride"
+                        },
+                        new
+                        {
                             Id = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
                             ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
-                            Name = "Stride",
+                            Name = "Strike",
                             RollableEffectId = new Guid("9dab564c-885e-492a-a52e-af745342c53d")
                         },
                         new
@@ -4785,6 +6189,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("829f3140-7228-4996-8315-8302402acf15"),
+                            ActionId = new Guid("4293eca5-4b6c-42f2-8e22-cd09796984fd"),
+                            Text = "You move up to your Speed."
+                        },
+                        new
+                        {
                             Id = new Guid("36548991-704d-4a82-a2c4-0622eb57f728"),
                             ActionId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
                             Text = "You attack with a weapon you’re wielding or with an unarmed attack, targeting one creature within your reach (for a melee attack) or within range (for a ranged attack). Roll the attack roll for the weapon or unarmed attack you are using, and compare the result to the target creature’s AC to determine the effect. See Attack Rolls on page 446 and Damage on page 450 for details on calculating your attack and damage rolls."
@@ -4851,6 +6261,2515 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("80db0630-824c-4664-8ed8-460979a18404"),
                             Name = "Two or Three Actions"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ItemBonus")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActionId");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("AlchemicalBombs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            ActionId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Acid Flask",
+                            SourcePageId = new Guid("05e99663-a3fb-498d-8cdb-702190ac8f65"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            ActionId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Alchemist's Fire",
+                            SourcePageId = new Guid("7ea74824-5235-4b72-bc3e-813400c45c57"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            ActionId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Bottled Lightning",
+                            SourcePageId = new Guid("e69c3d9f-ec8d-43d5-89b4-68c8aae4eafa"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            ActionId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Frost Vial",
+                            SourcePageId = new Guid("af1a9b81-dd1c-4fb3-8266-c9f932ce4e88"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            ActionId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Tanglefoot Bag",
+                            SourcePageId = new Guid("b3cc038d-b67e-4cf7-a23e-cdb9464ad5a8"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            ActionId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Thunderstone",
+                            SourcePageId = new Guid("797f5f94-6919-4064-9fde-9823f4bc73b9"),
+                            Usage = "Held in 1 hand"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBombDetailBlock", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("AlchemicalBombId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlchemicalBombId");
+
+                    b.ToTable("AlchemicalBombDetailBlock");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("575fcbde-26ab-4b04-8856-d3ff1612f7f3"),
+                            AlchemicalBombId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            Text = "This flask filled with corrosive acid deals 1 acid damage, the listed persistent acid damage, and the listed acid splash damage. Many types grant an item bonus to attack rolls."
+                        },
+                        new
+                        {
+                            Id = new Guid("7ea74824-5235-4b72-bc3e-813400c45c57"),
+                            AlchemicalBombId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            Text = "Alchemist’s fire is a combination of volatile liquids that ignite when exposed to air. Alchemist’s fire deals the listed fire damage, persistent fire damage, and splash damage. Many types grant an item bonus to attack rolls."
+                        },
+                        new
+                        {
+                            Id = new Guid("d487c00d-1ea3-4f9a-83cd-eba70c9614fd"),
+                            AlchemicalBombId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            Text = "Bottled lightning is packed with volatile reagents that create a blast of electricity when they are exposed to air. Bottled lightning deals the listed electricity damage and electricity splash damage. On a hit, the target becomes flat-footed until the start of your next turn. Many types grant an item bonus to attack rolls."
+                        },
+                        new
+                        {
+                            Id = new Guid("3a949c9e-d4c8-4496-bb1a-71fea4bef008"),
+                            AlchemicalBombId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            Text = "The liquid reagents in this vial rapidly absorb heat when exposed to air. A frost vial deals the listed cold damage and cold splash damage. On a hit, the target takes a status penalty to its Speeds until the end of its next turn. Many types of frost vial also grant an item bonus to attack rolls."
+                        },
+                        new
+                        {
+                            Id = new Guid("f7f13e63-3728-470d-8a1f-b7cd65d855df"),
+                            AlchemicalBombId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            Text = "A tanglefoot bag is filled with sticky substances. When you hit a creature with a tanglefoot bag, that creature takes a status penalty to its Speeds for 1 minute. Many types of tanglefoot bag also grant an item bonus on attack rolls."
+                        },
+                        new
+                        {
+                            Id = new Guid("694ea8b3-8bd7-4a4e-b925-446ba77959f6"),
+                            AlchemicalBombId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            Text = "On a critical hit, a creature in contact with a solid surface becomes stuck to the surface and immobilized for 1 round, and a creature flying via wings has its wings tangled, causing it to fall safely to the ground and become unable to Fly again for 1 round. Tanglefoot bags are not effective when used on a creature that is in water."
+                        },
+                        new
+                        {
+                            Id = new Guid("3d23b44a-67d3-4cbe-b73e-528f36790ac4"),
+                            AlchemicalBombId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            Text = "The target can end any effects by Escaping or spending a total of 3 Interact actions to carefully remove the sticky substances. These Interact actions don’t have to be consecutive, and other creatures can provide the actions as well."
+                        },
+                        new
+                        {
+                            Id = new Guid("670226b5-e794-4898-b2be-94c63cf5408e"),
+                            AlchemicalBombId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            Text = "When this stone hits a creature or a hard surface, it explodes with a deafening bang. A thunderstone deals the listed sonic damage and sonic splash damage, and each creature within 10 feet of the space in which the stone exploded must succeed at a Fortitude saving throw with the listed DC or be deafened until the end of its next turn. Many types of thunderstone grant an item bonus to attack rolls."
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBombPotencyBinding", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("AlchemicalBombId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Benefits")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("PotionPotencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlchemicalBombId");
+
+                    b.HasIndex("PotionPotencyId");
+
+                    b.ToTable("AlchemicalBombPotencyBinding");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("5929e181-19f4-45bf-9d37-8ac1d3018211"),
+                            AlchemicalBombId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            Benefits = "It deals 1d6 persistent acid damage and 1 acid splash damage.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 300
+                        },
+                        new
+                        {
+                            Id = new Guid("a96f62ca-457c-4e96-8271-a134db850874"),
+                            AlchemicalBombId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            Benefits = "You gain a +1 item bonus to attack rolls. The bomb deals 2d6 persistent acid damage and 2 acid splash damage.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1000
+                        },
+                        new
+                        {
+                            Id = new Guid("080939ae-8ab4-4b7a-986e-861ba3828efc"),
+                            AlchemicalBombId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            Benefits = "You gain a +2 item bonus to attack rolls. The bomb deals 3d6 persistent acid damage and 3 acid splash damage.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 25000
+                        },
+                        new
+                        {
+                            Id = new Guid("ec84fb6f-a71f-44a8-8064-7d41cfd4d565"),
+                            AlchemicalBombId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                            Benefits = "You gain a +3 item bonus to attack rolls. The bomb deals 4d6 persistent acid damage and 4 acid splash damage.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 250000
+                        },
+                        new
+                        {
+                            Id = new Guid("a430f92d-8144-4dfb-80c9-7bfa3da00c9e"),
+                            AlchemicalBombId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            Benefits = "The bomb deals 1d8 fire damage, 1 persistent fire damage, and 1 fire splash damage.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 300
+                        },
+                        new
+                        {
+                            Id = new Guid("bac95f2d-c862-47b0-a9c0-f8cbfa3c76c3"),
+                            AlchemicalBombId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            Benefits = "You gain a +1 item bonus to attack rolls. The bomb deals 2d8 fire damage, 2 persistent fire damage, and 2 fire splash damage.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1000
+                        },
+                        new
+                        {
+                            Id = new Guid("9a02b6aa-995e-4058-8609-b480970e8a7a"),
+                            AlchemicalBombId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            Benefits = "You gain a +2 item bonus to attack rolls. The bomb deals 3d8 fire damage, 3 persistent fire damage, and 3 fire splash damage.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 25000
+                        },
+                        new
+                        {
+                            Id = new Guid("80b7856f-fd70-49bd-8616-f5e6d6d01cce"),
+                            AlchemicalBombId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                            Benefits = "You gain a +3 item bonus to attack rolls. The bomb deals 4d8 fire damage, 4 persistent fire damage, and 4 fire splash damage.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 250000
+                        },
+                        new
+                        {
+                            Id = new Guid("0733aabb-aa51-4405-a5fa-d8368288f106"),
+                            AlchemicalBombId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            Benefits = "It deals 1d6 electricity damage and 1 electricity splash damage.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 300
+                        },
+                        new
+                        {
+                            Id = new Guid("26abf99d-95ab-46a8-af26-3fac3af578be"),
+                            AlchemicalBombId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            Benefits = "You gain a +1 item bonus to attack rolls. The bomb deals 2d6 electricity damage and 2 electricity splash damage.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1000
+                        },
+                        new
+                        {
+                            Id = new Guid("449e0cb8-5e05-42ea-b12a-73d059829315"),
+                            AlchemicalBombId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            Benefits = "You gain a +2 item bonus to attack rolls. The bomb deals 3d6 electricity damage and 3 electricity splash damage.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 25000
+                        },
+                        new
+                        {
+                            Id = new Guid("41e63f50-d1c8-400a-a74b-8299172bdf08"),
+                            AlchemicalBombId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                            Benefits = "You gain a +3 item bonus to attack rolls. The bomb deals 4d6 electricity damage and 4 electricity splash damage.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 250000
+                        },
+                        new
+                        {
+                            Id = new Guid("9d329a79-8888-4d7a-b0b5-07cc3a58ccaf"),
+                            AlchemicalBombId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            Benefits = "The bomb deals 1d6 cold damage and 1 cold splash damage, and the target takes a –5-foot penalty.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 300
+                        },
+                        new
+                        {
+                            Id = new Guid("f77093af-ad47-474a-b8cd-b1913ec62145"),
+                            AlchemicalBombId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            Benefits = "You gain a +1 item bonus to attack rolls, the bomb deals 2d6 cold damage and 2 cold splash damage, and the target takes a –10-foot penalty.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1000
+                        },
+                        new
+                        {
+                            Id = new Guid("ec955cf0-b5c3-43f1-90ee-c3aaeae9d329"),
+                            AlchemicalBombId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            Benefits = "You gain a +2 item bonus to attack rolls, the bomb deals 3d6 cold damage and 3 cold splash damage, and the target takes a –10-foot penalty.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 25000
+                        },
+                        new
+                        {
+                            Id = new Guid("d0289952-2f3e-4bfd-baa0-3209e37da2b6"),
+                            AlchemicalBombId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                            Benefits = "You gain a +3 item bonus to attack rolls, the bomb deals 4d6 cold damage and 4 cold splash damage, and the target takes a –15-foot penalty.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 250000
+                        },
+                        new
+                        {
+                            Id = new Guid("294e2585-b769-4685-8a98-5174ec4d4fc2"),
+                            AlchemicalBombId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            Benefits = "The target takes a –10-foot penalty, and the Escape DC is 17.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 300
+                        },
+                        new
+                        {
+                            Id = new Guid("6778bc68-53d6-4432-8f96-ccca5073ee48"),
+                            AlchemicalBombId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            Benefits = "You gain a +1 item bonus to attack rolls, the target takes a –15-foot penalty, and the Escape DC is 19.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1000
+                        },
+                        new
+                        {
+                            Id = new Guid("44ac5c08-5ccd-4cba-b822-f4b6a37573c4"),
+                            AlchemicalBombId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            Benefits = "You gain a +2 item bonus to attack rolls, the target takes a –15-foot penalty, and the Escape DC is 28.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 25000
+                        },
+                        new
+                        {
+                            Id = new Guid("ebfa4694-3931-4d55-9b70-ac6cc73e2837"),
+                            AlchemicalBombId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                            Benefits = "You gain a +3 item bonus to attack rolls, the target takes a –20-foot penalty, and the Escape DC is 37.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 250000
+                        },
+                        new
+                        {
+                            Id = new Guid("2442bad4-86cc-4145-bee7-d696a7ccb2cc"),
+                            AlchemicalBombId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            Benefits = "The bomb deals 1d4 sonic damage and 1 sonic splash damage, and the DC is 17.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 300
+                        },
+                        new
+                        {
+                            Id = new Guid("592cf1a3-5509-4b31-b436-c5ccd88e9b59"),
+                            AlchemicalBombId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            Benefits = "You gain a +1 item bonus to attack rolls. The bomb deals 2d4 sonic damage and 2 sonic splash damage, and the DC is 20.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1000
+                        },
+                        new
+                        {
+                            Id = new Guid("8a0c09f3-8d30-4bb6-b6e3-19b9f7b87f13"),
+                            AlchemicalBombId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            Benefits = "You gain a +2 item bonus to attack rolls. The bomb deals 3d4 sonic damage and 3 sonic splash damage, and the DC is 28.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 25000
+                        },
+                        new
+                        {
+                            Id = new Guid("e2361f6e-5c3d-4caa-a11d-e55d5dda3f2a"),
+                            AlchemicalBombId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                            Benefits = "You gain a +3 item bonus to attack rolls. The bomb deals 4d4 sonic damage and 4 sonic splash damage, and the DC is 36.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 250000
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixir", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Benefit")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Drawback")
+                        .HasColumnType("text");
+
+                    b.Property<int>("ItemBonus")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActionId");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("AlchemicalElixirs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Antiplague",
+                            SourcePageId = new Guid("1ef3438b-f3b0-4362-85bf-3d1f55ec01ac"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            Benefit = "You gain an item bonus to Athletics checks and unarmed attack rolls. You gain a claw unarmed attack with the agile trait and a jaws unarmed attack.",
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Drawback = "You take a –1 penalty to AC and a –2 penalty to Reflex saves.",
+                            ItemBonus = 1,
+                            Name = "Bestial Mutagen",
+                            SourcePageId = new Guid("b71b9fc1-1ec2-4c5e-85cf-83ab3b3722e3"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("c1fbd9e7-e36e-49d7-b3c2-772400e1fc5e"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 4,
+                            Name = "Bomber's Eye Elixir",
+                            SourcePageId = new Guid("059586d6-6a3c-4369-b92b-4f589f1d0323"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 2,
+                            Name = "Bravo's Brew",
+                            SourcePageId = new Guid("8b4598c1-dd52-41da-aadb-13768ee8f885"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("9273e6ad-3f3c-4e7d-9b9c-4a8faec61145"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 2,
+                            Name = "Cat's Eye Elixir",
+                            SourcePageId = new Guid("6773943d-c2fc-4e8a-ba93-e1d4d9766757"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("7a89776c-ffcc-4766-8ddb-d0d6f2227c30"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Cheetah's Elixir",
+                            SourcePageId = new Guid("35bda9da-c238-43e3-8446-b5e2ebefdae1"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            Benefit = "You gain an item bonus to Arcana, Crafting, Lore, Occultism, and Society checks and all checks to Recall Knowledge. Your critical failures on Recall Knowledge checks become failures instead.",
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Drawback = "You take a –2 penalty to weapon and unarmed attack rolls, Athletics checks, and Acrobatics checks. You can carry 2 less Bulk than normal before becoming encumbered, and the maximum Bulk you can carry is reduced by 4.",
+                            ItemBonus = 1,
+                            Name = "Cognitive Mutagen",
+                            SourcePageId = new Guid("dfbada3b-aff5-4d11-bdae-51982a4d79a3"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("787a099b-e070-4e58-b0b7-89c5e2f0aac9"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 2,
+                            Name = "Comprehension Elixir",
+                            SourcePageId = new Guid("e859dce4-cd01-4326-816e-c966ccc2a34b"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("82b662fa-09dc-4cc6-a7e1-13085af44f63"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 2,
+                            Name = "Darkvision Elixir",
+                            SourcePageId = new Guid("9d6014ec-8673-4ab8-b0ed-4ab1690a713c"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Eagle-Eye Elixir",
+                            SourcePageId = new Guid("45fac17c-ce11-475b-9f6d-fd2b4fabcee4"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Elixir of Life",
+                            SourcePageId = new Guid("bbefcb2c-8c92-4afa-9bfe-14df0480ea74"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 20,
+                            Name = "Elixir of Rejuvenation",
+                            SourcePageId = new Guid("7b04b283-38a7-4557-ad92-2128845aab30"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 2,
+                            Name = "Infiltrator's Elixir",
+                            SourcePageId = new Guid("57e30628-306c-423f-9d3c-5a6aa4904952"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            Benefit = "You gain an item bonus to Fortitude saves and the listed number of temporary Hit Points. Whenever you are at maximum Hit Points for at least 1 full minute, you regain the temporary Hit Points.",
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Drawback = "You take a –2 penalty to Will saves, Perception checks, and initiative rolls.",
+                            ItemBonus = 1,
+                            Name = "Juggernaut Mutagen",
+                            SourcePageId = new Guid("c10dc1eb-97c5-40ea-9aa3-ca19b2f701ee"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("fce1d931-7808-4e03-8615-f9f0210c405a"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 1,
+                            Name = "Leaper's Elixir",
+                            SourcePageId = new Guid("fb4cba35-f753-4922-b078-0dfbcff780f2"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 4,
+                            Name = "Mistform Elixir",
+                            SourcePageId = new Guid("39900b0b-1dab-41b8-93bf-4af4fa597e8b"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            Benefit = "You gain an item bonus to Acrobatics checks, Stealth checks, Thievery checks, Reflex saves, and Dexterity-based attack rolls, and you gain the listed status bonus to your Speed.",
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Drawback = "You take damage equal to twice your level; you can’t recover Hit Points lost in this way by any means while the mutagen lasts. You take a –2 penalty to Fortitude saves.",
+                            ItemBonus = 1,
+                            Name = "Quicksilver Mutagen",
+                            SourcePageId = new Guid("5fbd3dd2-ede6-4021-8311-36ea949ff120"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("edf0d3e8-4400-4feb-8326-7d98976ebae7"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 4,
+                            Name = "Salamander Elixir",
+                            SourcePageId = new Guid("ba706507-3628-4a2c-815b-cdb54e373a88"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 5,
+                            Name = "Sea Touch Elixir",
+                            SourcePageId = new Guid("8a83ecdc-9097-475c-a98e-1240f6dda74b"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            Benefit = "You gain an item bonus to Will saves and Perception, Medicine, Nature, Religion, and Survival checks. This bonus improves when you attempt Will saves against mental effects.",
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Drawback = "You take a –1 penalty to attack rolls and save DCs of offensive spells, and a –1 penalty per damage die to all weapon, unarmed attack, and spell damage.",
+                            ItemBonus = 1,
+                            Name = "Serene Mutagen",
+                            SourcePageId = new Guid("94b98608-9ba0-46c2-9793-e5421daeb22a"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            Benefit = "You gain an item bonus to Deception, Diplomacy, Intimidation, and Performance checks. Your critical failures with any of these skills become failures instead.",
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Drawback = "You take a –2 item penalty to Arcana, Crafting, Lore, Occultism, and Society checks. Choose one skill in which you are trained; for the duration, you become untrained in that skill. All your failures on checks to Recall Knowledge become critical failures.",
+                            ItemBonus = 1,
+                            Name = "Silvertongue Mutagen",
+                            SourcePageId = new Guid("c1960b59-9b61-4f34-adbb-3ce997fc0fda"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("58f3f7fd-4244-4a42-b684-d995220d4ade"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 4,
+                            Name = "Stone Fist Elixir",
+                            SourcePageId = new Guid("87156a04-1bcc-4ec5-a7b6-ad44e0189935"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemBonus = 4,
+                            Name = "Winter Wolf Elixir",
+                            SourcePageId = new Guid("df8b0c80-d477-4466-9d2d-5e632c0380a3"),
+                            Usage = "Held in 1 hand"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixirCraftingRequirement", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("AlchemicalElixirId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlchemicalElixirId");
+
+                    b.ToTable("AlchemicalElixirCraftingRequirement");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("1209cba6-d323-4476-a577-8d461bf3e0ce"),
+                            AlchemicalElixirId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            Text = "Philosopher's Stone"
+                        },
+                        new
+                        {
+                            Id = new Guid("cc69ec58-f925-487a-9c59-24c7d51649fe"),
+                            AlchemicalElixirId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            Text = "True Elixir of Life"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixirDetailBlock", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("AlchemicalElixirId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlchemicalElixirId");
+
+                    b.ToTable("AlchemicalElixirDetailBlock");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("743b8c94-0516-4c3d-9c02-6e54afceab7d"),
+                            AlchemicalElixirId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                            Text = "Antiplague can fortify the body’s defenses against diseases. Upon drinking an antiplague, you gain an item bonus to Fortitude saving throws against diseases for 24 hours; this applies to your daily save against a disease’s progression."
+                        },
+                        new
+                        {
+                            Id = new Guid("029c1cd3-93f2-472e-90a1-7f67847a6752"),
+                            AlchemicalElixirId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            Text = "Your features transform into something bestial and you take on muscle mass, but your lumbering form is clumsy."
+                        },
+                        new
+                        {
+                            Id = new Guid("47c254c1-8659-4363-8818-143300056126"),
+                            AlchemicalElixirId = new Guid("c1fbd9e7-e36e-49d7-b3c2-772400e1fc5e"),
+                            Text = "This tincture lets you pinpoint your foes. For the next 5 minutes, your alchemical bomb Strikes reduce the circumstance bonus to AC your targets gain from cover."
+                        },
+                        new
+                        {
+                            Id = new Guid("bed0c6dc-af90-431a-93a5-f6a126f7e4d2"),
+                            AlchemicalElixirId = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
+                            Text = "This flask of foaming beer grants courage. For the next hour after drinking this elixir, you gain an item bonus to Will saves, which is greater when attempting Will saves against fear."
+                        },
+                        new
+                        {
+                            Id = new Guid("70db1dfe-abca-4416-b8ba-8825604c77d9"),
+                            AlchemicalElixirId = new Guid("9273e6ad-3f3c-4e7d-9b9c-4a8faec61145"),
+                            Text = "After you consume this elixir, your vision sharpens and you become sensitive to even the most minute movements. For the next minute, you reduce the flat check to target hidden creatures to 5, and you don’t need to attempt a flat check to target concealed creatures. These benefits apply only against creatures within 30 feet of you."
+                        },
+                        new
+                        {
+                            Id = new Guid("c3d0b8fa-4656-44c2-86ad-2247cc2326fd"),
+                            AlchemicalElixirId = new Guid("7a89776c-ffcc-4766-8ddb-d0d6f2227c30"),
+                            Text = "Enzymatic compounds in this elixir strengthen and excite the muscles in your legs. You gain a status bonus to your Speed for the listed duration."
+                        },
+                        new
+                        {
+                            Id = new Guid("e0308f62-e9c4-49b4-ab1e-864a77807cd9"),
+                            AlchemicalElixirId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            Text = "Your mind becomes clear and cognition flows freely, but physical matters seem ephemeral."
+                        },
+                        new
+                        {
+                            Id = new Guid("99f4909b-5fd9-4602-abb9-84a2309b4879"),
+                            AlchemicalElixirId = new Guid("787a099b-e070-4e58-b0b7-89c5e2f0aac9"),
+                            Text = "This bitter draft opens your mind to the potential of the written word. For the listed duration after drinking this elixir, you can understand any words you read, so long as they are written in a common language. This elixir doesn’t automatically allow you to understand codes or extremely esoteric passages—you still need to attempt a skill check to Decipher Writing."
+                        },
+                        new
+                        {
+                            Id = new Guid("47860fc7-facb-4704-b219-ff432eb33b73"),
+                            AlchemicalElixirId = new Guid("82b662fa-09dc-4cc6-a7e1-13085af44f63"),
+                            Text = "After you drink this elixir, your sight becomes sharper in darkness.You gain darkvision for the listed duration."
+                        },
+                        new
+                        {
+                            Id = new Guid("fc565a61-6754-4bea-bdc6-768b53993621"),
+                            AlchemicalElixirId = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
+                            Text = "After you drink this elixir, you notice subtle visual details. For the next hour, you gain an item bonus to Perception checks that is greater when attempting to find secret doors and traps."
+                        },
+                        new
+                        {
+                            Id = new Guid("150dac7f-5e0c-461a-91ea-1d6b6cb5fda9"),
+                            AlchemicalElixirId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            Text = "Elixirs of life accelerate a living creature’s natural healing processes and immune system. Upon drinking this elixir, you regain the listed number of Hit Points and gain an item bonus to saving throws against diseases and poisons for 10 minutes."
+                        },
+                        new
+                        {
+                            Id = new Guid("5b3a9903-a51c-4a10-b932-ee51026807ff"),
+                            AlchemicalElixirId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            Text = "The elixir of rejuvenation restores a creature to full health and eradicates toxins affecting it. When you drink this elixir, you’re restored to your maximum Hit Points, and all afflictions of 20th level or lower affecting you are removed."
+                        },
+                        new
+                        {
+                            Id = new Guid("1bc9c603-c18b-4898-add5-8e6533dbbeb0"),
+                            AlchemicalElixirId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            Text = "You can instead administer this elixir to a creature that has been dead for a week or less. When you do, that creature is instantly brought back to life with 1 Hit Point and no spell slots, Focus Points, or other daily resources."
+                        },
+                        new
+                        {
+                            Id = new Guid("5c24f746-2f04-48a2-9b74-ab5c70e42203"),
+                            AlchemicalElixirId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                            Text = "Favored by spies and tricksters, an infiltrator’s elixir is used to alter your appearance. When imbibed, you take the shape of a humanoid creature of your size, but different enough so you might be unrecognizable. If you aren’t a humanoid, you might take on a form more similar to your own, at the GM’s discretion."
+                        },
+                        new
+                        {
+                            Id = new Guid("1e77fd3e-28cf-47ca-a2e5-085bf9673e30"),
+                            AlchemicalElixirId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                            Text = "The creator of the elixir decides the basics of the appearance you transform into when you imbibe the elixir, including eye color, skin tone, and hair color. The elixir can’t change your form into that of a specific person. After the form takes hold, you retain it for the next 10 minutes."
+                        },
+                        new
+                        {
+                            Id = new Guid("7ea16d23-375f-4b4e-8400-35d31a29f574"),
+                            AlchemicalElixirId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                            Text = "Drinking this elixir counts as setting up a disguise to Impersonate. You gain a +4 status bonus to your Deception DC to avoid others seeing through your disguise, and you add your level to this DC even if untrained."
+                        },
+                        new
+                        {
+                            Id = new Guid("04d5224a-86f5-4533-a931-a1b465cbac1c"),
+                            AlchemicalElixirId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            Text = "After you drink this mutagen, your body becomes thick and sturdy. You exhibit a healthy glow, though you tend to be ponderous and unobservant."
+                        },
+                        new
+                        {
+                            Id = new Guid("83785b35-3536-4517-8ad1-e06c530cba25"),
+                            AlchemicalElixirId = new Guid("fce1d931-7808-4e03-8615-f9f0210c405a"),
+                            Text = "This tingly solution increases the elasticity and contraction of your leg muscles. For 1 minute after drinking this elixir, you can High Jump or Long Jump as a single action instead of 2 actions. If you do, you don’t perform the initial Stride (nor do you fail if you don’t Stride 10 feet)."
+                        },
+                        new
+                        {
+                            Id = new Guid("518dfefb-b42e-457a-a7f2-df253f733f15"),
+                            AlchemicalElixirId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                            Text = "A faint mist emanates from your skin, making you concealed for the listed duration. As usual, if you become concealed when your position is still obvious, you can’t use this concealment to Hide or Sneak."
+                        },
+                        new
+                        {
+                            Id = new Guid("ad64a881-6dc8-4752-8c71-e3486b4977bc"),
+                            AlchemicalElixirId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            Text = "Your features become thin and angular. You become swifter and nimbler, but your body also becomes fragile."
+                        },
+                        new
+                        {
+                            Id = new Guid("e5afe368-8abd-4cc4-b15a-fe449c96daac"),
+                            AlchemicalElixirId = new Guid("edf0d3e8-4400-4feb-8326-7d98976ebae7"),
+                            Text = "This elixir is made from salamander scales to withstand fire. For 24 hours, you are protected from the effects of severe heat."
+                        },
+                        new
+                        {
+                            Id = new Guid("5d023119-60ec-4f88-9056-c3b81e0af2bf"),
+                            AlchemicalElixirId = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
+                            Text = "This briny concoction alters the skin on your hands and feet. The spaces between your fingers and toes become webbed, granting you a swim Speed of 20 feet for the listed duration."
+                        },
+                        new
+                        {
+                            Id = new Guid("26d53eae-b1d3-4e3c-81d1-83d6d86633df"),
+                            AlchemicalElixirId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            Text = "You gain inner serenity, focused on fine details and steeled against mental assaults, but you find violence off-putting."
+                        },
+                        new
+                        {
+                            Id = new Guid("9b681339-c92a-45b5-9bed-aebedf317e72"),
+                            AlchemicalElixirId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            Text = "Your features become striking and your voice becomes musical and commanding, though facts and figures become hazy for you and emotion clouds your ability to reason."
+                        },
+                        new
+                        {
+                            Id = new Guid("cdcd2d5b-5901-4d52-81b9-7645684928c0"),
+                            AlchemicalElixirId = new Guid("58f3f7fd-4244-4a42-b684-d995220d4ade"),
+                            Text = "Your fists become hard as stone. For 1 hour, your fists deal 1d6 bludgeoning damage and lose the nonlethal trait."
+                        },
+                        new
+                        {
+                            Id = new Guid("7b92f530-d78e-4683-b967-9de524ac2063"),
+                            AlchemicalElixirId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            Text = "This elixir warms your core and improves your circulation. For 24 hours, you are protected from the effects of severe cold."
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixirPotencyBinding", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("AlchemicalElixirId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Benefits")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("PotionPotencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int?>("Price")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlchemicalElixirId");
+
+                    b.HasIndex("PotionPotencyId");
+
+                    b.ToTable("AlchemicalElixirPotencyBinding");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("4154b59f-698b-4491-804b-e00f53decb63"),
+                            AlchemicalElixirId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                            Benefits = "You gain a +2 item bonus.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 300
+                        },
+                        new
+                        {
+                            Id = new Guid("1696086f-6b34-4562-adb4-82a41ff3c7b0"),
+                            AlchemicalElixirId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                            Benefits = "You gain a +3 item bonus.",
+                            Level = 6,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 3500
+                        },
+                        new
+                        {
+                            Id = new Guid("2070f995-d30d-49df-b813-74f5e86fee94"),
+                            AlchemicalElixirId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                            Benefits = "You gain a +4 item bonus.",
+                            Level = 10,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 16000
+                        },
+                        new
+                        {
+                            Id = new Guid("0415f0aa-1460-4dd3-9c11-2ce089552a15"),
+                            AlchemicalElixirId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                            Benefits = "You gain a +4 item bonus, and when you drink the antiplague, you can immediately attempt a saving throw against one disease of 14th level or lower affecting you. If you succeed, you are cured of the disease.",
+                            Level = 14,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 67500
+                        },
+                        new
+                        {
+                            Id = new Guid("8174165c-3f20-49c8-98aa-a9a26f730ce0"),
+                            AlchemicalElixirId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            Benefits = "You gain a +1 item bonus, your claw deals 1d4 slashing damage, your jaws deal 1d6 piercing damage, and the duration is 1 minute.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 400
+                        },
+                        new
+                        {
+                            Id = new Guid("d44d57f8-b3f3-494a-8ee0-4e8ac3a1aa1b"),
+                            AlchemicalElixirId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            Benefits = "You gain a +2 item bonus, your claw deals 1d6 slashing damage, your jaws deal 1d8 piercing damage, and the duration is 10 minutes.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1200
+                        },
+                        new
+                        {
+                            Id = new Guid("fb2d067c-923e-468a-99bd-f92fa90011e3"),
+                            AlchemicalElixirId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            Benefits = "You gain a +3 item bonus, your claw deals 1d8 slashing damage, your jaws deal 1d10 piercing damage, and the duration is 1 hour.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 30000
+                        },
+                        new
+                        {
+                            Id = new Guid("b71b9fc1-1ec2-4c5e-85cf-83ab3b3722e3"),
+                            AlchemicalElixirId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                            Benefits = "You gain a +4 item bonus, your claw deals 1d8 slashing damage, your jaws deal 1d10 piercing damage, and the duration is 1 hour. You gain weapon specialization with the claws and jaws, or greater weapon specialization, if you already have weapon specialization with these unarmed attacks.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 300000
+                        },
+                        new
+                        {
+                            Id = new Guid("e87ddbd9-2e31-4b10-b0db-07f4d4ca71c9"),
+                            AlchemicalElixirId = new Guid("c1fbd9e7-e36e-49d7-b3c2-772400e1fc5e"),
+                            Benefits = "Reduce your targets’ circumstance bonus by 1.",
+                            Level = 4,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 1400
+                        },
+                        new
+                        {
+                            Id = new Guid("1c6bf9da-9e46-4f5e-9703-5d48a5a59f73"),
+                            AlchemicalElixirId = new Guid("c1fbd9e7-e36e-49d7-b3c2-772400e1fc5e"),
+                            Benefits = "Reduce your targets’ circumstance bonus by 2.",
+                            Level = 14,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 70000
+                        },
+                        new
+                        {
+                            Id = new Guid("e35d119e-d943-4fac-be53-d75d079be8c4"),
+                            AlchemicalElixirId = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
+                            Benefits = "The bonus on Will saves is +1, or +2 against fear.",
+                            Level = 2,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 700
+                        },
+                        new
+                        {
+                            Id = new Guid("924eb7b5-50b7-48d8-857d-18dd705ec6ab"),
+                            AlchemicalElixirId = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
+                            Benefits = "The bonus on Will saves is +2, or +3 against fear.",
+                            Level = 10,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 15000
+                        },
+                        new
+                        {
+                            Id = new Guid("198da97d-cf25-453b-93ce-94591ba46529"),
+                            AlchemicalElixirId = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
+                            Benefits = "The bonus on Will saves is +3, or +4 against fear. If you roll a success on a save against fear, you get a critical success instead.",
+                            Level = 15,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 70000
+                        },
+                        new
+                        {
+                            Id = new Guid("39b6c273-ce0b-46a5-ab96-6603a5d79ed4"),
+                            AlchemicalElixirId = new Guid("9273e6ad-3f3c-4e7d-9b9c-4a8faec61145"),
+                            Benefits = "The Cat's Eye Elixir only exists in a single form, so no other potencies exist.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 700
+                        },
+                        new
+                        {
+                            Id = new Guid("fe4a4297-984f-492d-b46c-09a59eeadd81"),
+                            AlchemicalElixirId = new Guid("7a89776c-ffcc-4766-8ddb-d0d6f2227c30"),
+                            Benefits = "The bonus is +5 feet, and the duration is 1 minute.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 300
+                        },
+                        new
+                        {
+                            Id = new Guid("45cdabed-781e-4476-810d-3972cd2a68c1"),
+                            AlchemicalElixirId = new Guid("7a89776c-ffcc-4766-8ddb-d0d6f2227c30"),
+                            Benefits = "The bonus is +10 feet, and the duration is 10 minutes.",
+                            Level = 5,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 2500
+                        },
+                        new
+                        {
+                            Id = new Guid("a5799229-afdb-4118-910f-000a05eb7681"),
+                            AlchemicalElixirId = new Guid("7a89776c-ffcc-4766-8ddb-d0d6f2227c30"),
+                            Benefits = "The bonus is +10 feet, and the duration is 1 hour.",
+                            Level = 9,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 11000
+                        },
+                        new
+                        {
+                            Id = new Guid("6a806118-bb1b-4a48-9c61-25cdfb30a144"),
+                            AlchemicalElixirId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            Benefits = "The bonus is +1, and the duration is 1 minute.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 400
+                        },
+                        new
+                        {
+                            Id = new Guid("05a6d03b-b652-4c46-bad5-5ed99753462a"),
+                            AlchemicalElixirId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            Benefits = "The bonus is +2, and the duration is 10 minutes.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1200
+                        },
+                        new
+                        {
+                            Id = new Guid("f34b854e-2b01-426c-8fcc-17a23d7fcd4e"),
+                            AlchemicalElixirId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            Benefits = "The bonus is +3, and the duration is 1 hour. You become trained in one Intelligence-based skill, chosen at creation.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 30000
+                        },
+                        new
+                        {
+                            Id = new Guid("543ebd11-59d5-4174-b8f8-8710b5b4a336"),
+                            AlchemicalElixirId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                            Benefits = "The bonus is +4, and the duration is 1 hour. You become trained in one skill, chosen at creation.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 300000
+                        },
+                        new
+                        {
+                            Id = new Guid("f6d92417-5da6-46d8-b455-adf5d1a6e6ac"),
+                            AlchemicalElixirId = new Guid("787a099b-e070-4e58-b0b7-89c5e2f0aac9"),
+                            Benefits = "The duration is 1 minute.",
+                            Level = 2,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 700
+                        },
+                        new
+                        {
+                            Id = new Guid("557a7b9c-4525-4792-a089-0cd90884bef7"),
+                            AlchemicalElixirId = new Guid("787a099b-e070-4e58-b0b7-89c5e2f0aac9"),
+                            Benefits = "The duration is 10 minutes.",
+                            Level = 7,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 5400
+                        },
+                        new
+                        {
+                            Id = new Guid("83e0b9b4-2eb9-4424-a262-d2deb9180d59"),
+                            AlchemicalElixirId = new Guid("82b662fa-09dc-4cc6-a7e1-13085af44f63"),
+                            Benefits = "The duration is 10 minutes.",
+                            Level = 2,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 600
+                        },
+                        new
+                        {
+                            Id = new Guid("f2649e17-28ff-4859-8121-3f4ad7a0770d"),
+                            AlchemicalElixirId = new Guid("82b662fa-09dc-4cc6-a7e1-13085af44f63"),
+                            Benefits = "The duration is 1 hour.",
+                            Level = 4,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1100
+                        },
+                        new
+                        {
+                            Id = new Guid("cbdea7ef-3204-4e61-a716-0f75432e126a"),
+                            AlchemicalElixirId = new Guid("82b662fa-09dc-4cc6-a7e1-13085af44f63"),
+                            Benefits = "The duration is 24 hours.",
+                            Level = 8,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 9000
+                        },
+                        new
+                        {
+                            Id = new Guid("b38c09ea-4d70-41b1-8abe-f1e564fca8f6"),
+                            AlchemicalElixirId = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
+                            Benefits = "The bonus is +1, or +2 to find secret doors and traps.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 400
+                        },
+                        new
+                        {
+                            Id = new Guid("8a7a3827-e85a-4640-8ac2-e8ee126c858c"),
+                            AlchemicalElixirId = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
+                            Benefits = "The bonus is +2, or +3 to find secret doors and traps.",
+                            Level = 5,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 2700
+                        },
+                        new
+                        {
+                            Id = new Guid("088a145b-55c6-498a-84fe-19a05c03b0aa"),
+                            AlchemicalElixirId = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
+                            Benefits = "The bonus is +3, or +4 to find secret doors and traps.",
+                            Level = 10,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 20000
+                        },
+                        new
+                        {
+                            Id = new Guid("f40a6267-87fa-4c89-a824-2dc1a54e2b55"),
+                            AlchemicalElixirId = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
+                            Benefits = "The bonus is +3, or +4 to find secret doors and traps. Each time you pass within 10 feet of a secret door or trap, the GM automatically rolls a secret check for you to find it.",
+                            Level = 16,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 200000
+                        },
+                        new
+                        {
+                            Id = new Guid("dacf4b83-8fb8-491a-b488-f58b96eab7d5"),
+                            AlchemicalElixirId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            Benefits = "The elixir restores 1d6 Hit Points, and the bonus is +1.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("d48e6d86-0396-4d4e-89dd-3396203ae7ff"),
+                            Price = 300
+                        },
+                        new
+                        {
+                            Id = new Guid("2baf4a62-f1e3-4960-ac8f-a60954b4c9e2"),
+                            AlchemicalElixirId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            Benefits = "The elixir restores 3d6+6 Hit Points and the bonus is +1.",
+                            Level = 5,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 3000
+                        },
+                        new
+                        {
+                            Id = new Guid("a5bc4dfd-5e13-4005-b061-338b4c23826e"),
+                            AlchemicalElixirId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            Benefits = "The elixir restores 5d6+12 Hit Points, and the bonus is +2.",
+                            Level = 9,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 15000
+                        },
+                        new
+                        {
+                            Id = new Guid("d6f46c03-c140-4c4c-8343-f1f4d0ad9b89"),
+                            AlchemicalElixirId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            Benefits = "The elixir restores 7d6+18 Hit Points, and the bonus is +2.",
+                            Level = 13,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 60000
+                        },
+                        new
+                        {
+                            Id = new Guid("56e641d4-48b2-4487-a96e-5e7d301affa1"),
+                            AlchemicalElixirId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            Benefits = "The elixir restores 8d6+21 Hit Points, and the bonus is +3.",
+                            Level = 15,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 130000
+                        },
+                        new
+                        {
+                            Id = new Guid("6b62bddc-b7e5-49cf-8379-67c972f83dd4"),
+                            AlchemicalElixirId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                            Benefits = "The elixir restores 10d6+27 Hit Points, and the bonus is +4.",
+                            Level = 19,
+                            PotionPotencyId = new Guid("cf956f07-1342-4bab-ac64-d71f2832bb54"),
+                            Price = 800000
+                        },
+                        new
+                        {
+                            Id = new Guid("8f2ff716-0305-4642-875f-9325f583b4a8"),
+                            AlchemicalElixirId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                            Benefits = "The Elixir of Rejuvenation only exists as a single unclassified potency.",
+                            Level = 20,
+                            PotionPotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3")
+                        },
+                        new
+                        {
+                            Id = new Guid("747d368f-bf50-4339-91f8-453352f91260"),
+                            AlchemicalElixirId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                            Benefits = "The Infiltrator's Elixir only exists as a single unclassified potency.",
+                            Level = 2,
+                            PotionPotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 6
+                        },
+                        new
+                        {
+                            Id = new Guid("1b1ff22d-3fa6-478f-baec-36db27dc91f9"),
+                            AlchemicalElixirId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            Benefits = "The bonus is +1, you gain 5 temporary Hit Points, and the duration is 1 minute.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 400
+                        },
+                        new
+                        {
+                            Id = new Guid("7784be12-0f34-455d-83cd-a77ed2ccc458"),
+                            AlchemicalElixirId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            Benefits = "The bonus is +2, you gain 10 temporary Hit Points, and the duration is 10 minutes.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1200
+                        },
+                        new
+                        {
+                            Id = new Guid("8ae2a6d5-6e36-48ae-b1bb-41698dd0803d"),
+                            AlchemicalElixirId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            Benefits = "The bonus is +3, you gain 30 temporary Hit Points, and the duration is 1 hour. When you roll a success on a Fortitude save, you get a critical success instead.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 30000
+                        },
+                        new
+                        {
+                            Id = new Guid("c10dc1eb-97c5-40ea-9aa3-ca19b2f701ee"),
+                            AlchemicalElixirId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                            Benefits = "The bonus is +4, you gain 45 temporary Hit Points, and the duration is 1 hour. When you roll a success on a Fortitude save, you get a critical success instead, and your critical failures on Fortitude saves become failures instead.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 300000
+                        },
+                        new
+                        {
+                            Id = new Guid("7e27f203-866b-4aa0-aa90-eac4ddeb63dd"),
+                            AlchemicalElixirId = new Guid("fce1d931-7808-4e03-8615-f9f0210c405a"),
+                            Benefits = "No explicit benefits are listed for the Lesser potency.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 300
+                        },
+                        new
+                        {
+                            Id = new Guid("cb54c6f2-efc7-4075-b4eb-441986ce1558"),
+                            AlchemicalElixirId = new Guid("fce1d931-7808-4e03-8615-f9f0210c405a"),
+                            Benefits = "The maximum vertical distance you can jump with a High Jump is the same as you can jump horizontally with a Long Jump.",
+                            Level = 7,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 3500
+                        },
+                        new
+                        {
+                            Id = new Guid("26b6036e-5be6-4998-a4cb-7e5eb4580f42"),
+                            AlchemicalElixirId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                            Benefits = "The duration is 3 rounds.",
+                            Level = 4,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 1800
+                        },
+                        new
+                        {
+                            Id = new Guid("682c3083-33ff-4b69-b25c-1a249a9d81cd"),
+                            AlchemicalElixirId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                            Benefits = "The duration is 1 minute.",
+                            Level = 6,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 5600
+                        },
+                        new
+                        {
+                            Id = new Guid("70eda229-1d6e-4e66-9adf-6dc941b35eb8"),
+                            AlchemicalElixirId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                            Benefits = "The duration is 5 minutes.",
+                            Level = 10,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 18000
+                        },
+                        new
+                        {
+                            Id = new Guid("598c5a4c-6040-442d-bbf2-7f21e072a143"),
+                            AlchemicalElixirId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            Benefits = "The bonus to rolls is +1, the bonus to Speed is +5 feet, and the duration is 1 minute.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 400
+                        },
+                        new
+                        {
+                            Id = new Guid("68101420-8854-4e3c-a8cc-3ff62b531a13"),
+                            AlchemicalElixirId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            Benefits = "The bonus to rolls is +2, the bonus to Speed is +10 feet, and the duration is 10 minutes.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1200
+                        },
+                        new
+                        {
+                            Id = new Guid("d57cc4b4-6527-45cd-8fbf-cb1574460ed0"),
+                            AlchemicalElixirId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            Benefits = "The bonus to rolls is +3, the bonus to Speed is +15 feet, and the duration is 1 hour.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 30000
+                        },
+                        new
+                        {
+                            Id = new Guid("c4b8ef3f-b0ba-4fbc-92e1-a4824ccd8713"),
+                            AlchemicalElixirId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                            Benefits = "The bonus to rolls is +4, the bonus to Speed is +20 feet, and the duration is 1 hour.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 300000
+                        },
+                        new
+                        {
+                            Id = new Guid("56b36a36-b64e-4971-83e3-0731620051d1"),
+                            AlchemicalElixirId = new Guid("edf0d3e8-4400-4feb-8326-7d98976ebae7"),
+                            Benefits = "No explicit benefits are listed for the Lesser potency.",
+                            Level = 4,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 1500
+                        },
+                        new
+                        {
+                            Id = new Guid("f140633a-a10d-4792-a020-e8ac3d207dff"),
+                            AlchemicalElixirId = new Guid("edf0d3e8-4400-4feb-8326-7d98976ebae7"),
+                            Benefits = "You’re also protected from extreme heat.",
+                            Level = 12,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 32000
+                        },
+                        new
+                        {
+                            Id = new Guid("8d9cceea-4f0e-4059-a024-b7873621fca6"),
+                            AlchemicalElixirId = new Guid("edf0d3e8-4400-4feb-8326-7d98976ebae7"),
+                            Benefits = "You’re also protected from extreme and incredible heat.",
+                            Level = 16,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 140000
+                        },
+                        new
+                        {
+                            Id = new Guid("b9e3fce6-156b-4ff8-b412-81d3250d6713"),
+                            AlchemicalElixirId = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
+                            Benefits = "The duration is 10 minutes.",
+                            Level = 5,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 2200
+                        },
+                        new
+                        {
+                            Id = new Guid("8f3626ff-346a-4eb1-ad3b-82ac2c1060f4"),
+                            AlchemicalElixirId = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
+                            Benefits = "The duration is 1 hour, and you can breathe underwater.",
+                            Level = 12,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 30000
+                        },
+                        new
+                        {
+                            Id = new Guid("e76fa208-fe2c-41f5-8cf6-21c46064a190"),
+                            AlchemicalElixirId = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
+                            Benefits = "The duration is 24 hours, and you can breathe underwater.",
+                            Level = 15,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 92000
+                        },
+                        new
+                        {
+                            Id = new Guid("4ddd60e2-ca4d-4083-abb2-e59eba12ebc9"),
+                            AlchemicalElixirId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            Benefits = "The bonus is +1, or +2 vs. mental, and the duration is 1 minute.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 400
+                        },
+                        new
+                        {
+                            Id = new Guid("34301c2f-2b01-465c-bdf2-e7b562745d59"),
+                            AlchemicalElixirId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            Benefits = "The bonus is +2, or +3 vs. mental, and the duration is 10 minutes.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1200
+                        },
+                        new
+                        {
+                            Id = new Guid("a181f368-f4e7-4dc9-add0-f8fd91c1e82e"),
+                            AlchemicalElixirId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            Benefits = "The bonus is +3, or +4 vs. mental, and the duration is 1 hour. When you roll a success on a Will save against a mental effect, you get a critical success instead.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 30000
+                        },
+                        new
+                        {
+                            Id = new Guid("c25492a4-eb51-4284-9322-13910d9cd42b"),
+                            AlchemicalElixirId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                            Benefits = "The bonus is +4, and the duration is 1 hour. When you roll a success on a Will save against a mental effect, you get a critical success instead, and your critical failures on Will saves against mental effects become failures instead.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 3000
+                        },
+                        new
+                        {
+                            Id = new Guid("b056b057-9364-483b-bdba-4cfe7def1f5e"),
+                            AlchemicalElixirId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            Benefits = "The bonus is +1, and the duration is 1 minute.",
+                            Level = 1,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 400
+                        },
+                        new
+                        {
+                            Id = new Guid("8ce0fa7d-20be-4e6f-a187-ec5dea1195d4"),
+                            AlchemicalElixirId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            Benefits = "The bonus is +2, and the duration is 10 minutes.",
+                            Level = 3,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 1200
+                        },
+                        new
+                        {
+                            Id = new Guid("3dfcbecf-41ba-4742-b096-fab4c9d371bc"),
+                            AlchemicalElixirId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            Benefits = "The bonus is +3, and the duration is 1 hour.",
+                            Level = 11,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 30000
+                        },
+                        new
+                        {
+                            Id = new Guid("0ac53999-7bc7-4e2d-a23c-528b063faf68"),
+                            AlchemicalElixirId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                            Benefits = "The bonus is +4, and the duration is 1 hour.",
+                            Level = 17,
+                            PotionPotencyId = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Price = 300000
+                        },
+                        new
+                        {
+                            Id = new Guid("e393357d-29cf-42ba-bbab-01f227faebfb"),
+                            AlchemicalElixirId = new Guid("58f3f7fd-4244-4a42-b684-d995220d4ade"),
+                            Benefits = "The Stone Fist Elixir only exists as a single unclassified potency.",
+                            Level = 4,
+                            PotionPotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 1300
+                        },
+                        new
+                        {
+                            Id = new Guid("f9db054b-d24c-44d4-b52e-540188a3a862"),
+                            AlchemicalElixirId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            Benefits = "No explicit benefits are listed for the Lesser potency.",
+                            Level = 4,
+                            PotionPotencyId = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Price = 1500
+                        },
+                        new
+                        {
+                            Id = new Guid("1d957ae5-0642-40d9-8f2d-8d8496975a6d"),
+                            AlchemicalElixirId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            Benefits = "You’re also protected from extreme cold.",
+                            Level = 12,
+                            PotionPotencyId = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Price = 32000
+                        },
+                        new
+                        {
+                            Id = new Guid("c62e9b49-532a-474f-8dfe-1cd38fd4c6a5"),
+                            AlchemicalElixirId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            Benefits = "You’re also protected from extreme and incredible cold.",
+                            Level = 16,
+                            PotionPotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 140000
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoison", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionTypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("EffectId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActionId");
+
+                    b.HasIndex("ActionTypeId");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("EffectId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("AlchemicalPoisons");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("37764fda-a770-40e6-98e5-1207002f7708"),
+                            ItemLevel = 1,
+                            Name = "Arsenic",
+                            Price = 300,
+                            SourcePageId = new Guid("3c09132c-90a6-4d8f-a62e-64faf7f8ffca"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("28f803a7-f093-4be7-a3d2-623a77560f93"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("7627c22c-d186-4ff6-bbc3-827ac7235770"),
+                            ItemLevel = 2,
+                            Name = "Belladonna",
+                            Price = 500,
+                            SourcePageId = new Guid("de85d10c-dda0-4b8a-a8c4-75262c40cd56"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("c65fd194-6210-42c8-80a2-b54ff81b6585"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("9ab302d1-94a8-46c3-8ce5-f658e4e63531"),
+                            ItemLevel = 2,
+                            Name = "Black Adder Venom",
+                            Price = 600,
+                            SourcePageId = new Guid("5033a055-e80f-43a5-b42a-14262a046351"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("fa11da7d-e05b-486b-a6e0-444dee34bae9"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("040e91d5-536e-4836-b63d-3f29b0301c9f"),
+                            ItemLevel = 19,
+                            Name = "Black Lotus Extract",
+                            Price = 650000,
+                            SourcePageId = new Guid("df4f9201-28e4-4357-8a2d-e976657da5cf"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("dc73bb29-2a4e-429e-bc99-26d85ae74e1c"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("cf6c8427-6b80-4787-a745-0cc22c85f6cf"),
+                            ItemLevel = 11,
+                            Name = "Blightburn Resin",
+                            Price = 22500,
+                            SourcePageId = new Guid("214ab4fd-cbfe-4533-ab5d-e815fb2c48f0"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("81b07f7b-2e70-4b38-80f7-0b28a4c6f399"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("0860cb5f-6bf5-423b-944e-1c4e79802565"),
+                            ItemLevel = 16,
+                            Name = "Brimstone Fumes",
+                            Price = 150000,
+                            SourcePageId = new Guid("0381fe8b-2404-42fb-9abd-74e28f1401d5"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("0381fe8b-2404-42fb-9abd-74e28f1401d5"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("92a84c99-95e2-4602-8a72-437137c69613"),
+                            ItemLevel = 3,
+                            Name = "Cytillesh Oil",
+                            Price = 1000,
+                            SourcePageId = new Guid("7156a518-fb39-47b8-9579-72db434fac68"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("ae0386af-cfaf-40c0-83b4-8dd5a8d80d9a"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("cbd1a958-ac5e-4a17-9b53-affb4831ffca"),
+                            ItemLevel = 13,
+                            Name = "Deathcap Powder",
+                            Price = 45000,
+                            SourcePageId = new Guid("a2779414-69b9-416c-abda-71ae15fe3b10"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("b2e3f38f-f570-4cf8-ba74-633bdc0a1405"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("fc20616d-7ba0-49dd-94be-cf547dab680e"),
+                            ItemLevel = 15,
+                            Name = "Dragon Bile",
+                            Price = 92500,
+                            SourcePageId = new Guid("6713fbf0-18f0-453e-a361-b339aafad6f3"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("acc877c9-ea44-4977-b0da-6bf6ec70922a"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("bc6151f2-8d2d-4656-8e8d-bdde9641ae1a"),
+                            ItemLevel = 1,
+                            Name = "Giant Centipede Venom",
+                            Price = 400,
+                            SourcePageId = new Guid("b30b8cbc-1230-4e7c-be11-8f7a995a7cf1"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("7b143b21-75a9-4d41-9c09-1e4a872526b9"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("330553c5-7739-45cd-b99e-0f3bd85d5f8d"),
+                            ItemLevel = 6,
+                            Name = "Giant Scorpion Venom",
+                            Price = 4000,
+                            SourcePageId = new Guid("a4412b0d-a84d-4bc3-9430-41e015d7632b"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("862bacf9-a11f-4f56-8c94-2452d636db79"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("f8e3e164-4fbf-4d88-9e99-922b4e9c26b1"),
+                            ItemLevel = 7,
+                            Name = "Giant Wasp Venom",
+                            Price = 5500,
+                            SourcePageId = new Guid("5b2cfa04-9394-4ab9-a5ee-6dba2a814fbc"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("b445e986-a45a-4d3a-8089-a2d33fee60dc"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("f5edfc5f-434a-4838-889e-69265151354a"),
+                            ItemLevel = 3,
+                            Name = "Graveroot",
+                            Price = 1000,
+                            SourcePageId = new Guid("e079a8b8-5730-481b-9ea1-f40cd189a6d3"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("7c923c5c-7005-4f1b-9005-5c79b289b056"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("9531647b-d08d-4c79-8993-c1e9fc5aebb3"),
+                            ItemLevel = 17,
+                            Name = "Hemlock",
+                            Price = 225000,
+                            SourcePageId = new Guid("fc948d2b-fe6e-4a8c-937f-ea8c597e92e5"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("1e830309-8b32-4860-85d0-a704be45b0f6"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("02525cd2-d5b9-4e41-a7e7-8ea60b3b105e"),
+                            ItemLevel = 5,
+                            Name = "Hunting Spider Venom",
+                            Price = 2500,
+                            SourcePageId = new Guid("20c6c8fb-0561-4b49-8649-9f894536f993"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("7d31dbce-9230-4960-99cc-71de51c18977"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("5b2e24eb-1beb-45ab-b69b-750b8f175033"),
+                            ItemLevel = 18,
+                            Name = "King's Sleep",
+                            Price = 400000,
+                            SourcePageId = new Guid("9541ee54-4d19-4904-9161-9412cd2b7905"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("0cad04aa-c37a-40ba-bc39-d936c09a63ed"),
+                            ItemLevel = 2,
+                            Name = "Lethargy Poison",
+                            Price = 700,
+                            SourcePageId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            Usage = "Held in s hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("949064c1-4862-4a51-a4fe-8ac7c91559d1"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("792ba8fd-fe7a-45ac-a7b7-c7a88d8902d9"),
+                            ItemLevel = 9,
+                            Name = "Lich Dust",
+                            Price = 11000,
+                            SourcePageId = new Guid("6ccc8202-a856-4b7b-8660-03390c20d026"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("aef8461a-019a-4c5e-baeb-949f8ebd6e66"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("3fa12bb8-7b63-4c36-8e6e-d3cdd81580b8"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("f18a5fc7-e53f-4851-a988-735d5a61129f"),
+                            ItemLevel = 7,
+                            Name = "Malyass Root Paste",
+                            Price = 5500,
+                            SourcePageId = new Guid("2597f652-2268-4bd5-b1c3-73d4f6df3656"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("c55ad542-1fba-49e6-ab84-f95050cc3d7f"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("478475fe-cd71-477d-a01b-3320f4aa4a32"),
+                            ItemLevel = 15,
+                            Name = "Mindfog Mist",
+                            Price = 100000,
+                            SourcePageId = new Guid("1d06a375-4a3e-4487-95c1-5d207d5f98b0"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("427af463-394a-423e-be07-d4788fc27ec7"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("990ea5c3-22bc-4c51-9aca-c533e5bddd88"),
+                            ItemLevel = 8,
+                            Name = "Nettleweed Residue",
+                            Price = 7500,
+                            SourcePageId = new Guid("d82d7b7d-f861-463d-ba6a-a5f4f331484c"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("d493d861-70f0-4362-a954-2d0609869352"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("a219e285-2d4f-4720-8266-1aefc03cd7ae"),
+                            ItemLevel = 16,
+                            Name = "Nightmare Vapor",
+                            Price = 140000,
+                            SourcePageId = new Guid("dbac34ef-0bee-4110-b002-b65aab1130db"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("0a713a66-44df-45ff-8917-5977c0c90e8f"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("724c0ddf-e5e3-4591-af38-154c62039b50"),
+                            ItemLevel = 13,
+                            Name = "Purple Worm Venom",
+                            Price = 50000,
+                            SourcePageId = new Guid("1c2617fd-4abd-4b17-a689-8ccb94ab206b"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("eec5e097-c60a-4a1d-91d3-57bcf30e6a31"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("91536163-f5f3-4666-b738-76b88e8feab3"),
+                            ItemLevel = 10,
+                            Name = "Shadow Essence",
+                            Price = 16000,
+                            SourcePageId = new Guid("fde5577d-2503-4d43-928a-228fcc34d11f"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("1a0af776-3dc1-48f7-bc0a-17c676e4f044"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("4bdc5466-490e-48c2-b346-43bacd734125"),
+                            ItemLevel = 12,
+                            Name = "Slumber Wine",
+                            Price = 32500,
+                            SourcePageId = new Guid("8885d836-cabf-4a53-a3f2-8d0d6a6a9bff"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("c4f4ddce-c112-44b3-90a5-06aaaed80f1e"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("3935e556-052d-48b8-994d-5163cf9f4ca7"),
+                            ItemLevel = 9,
+                            Name = "Spider Root",
+                            Price = 11000,
+                            SourcePageId = new Guid("0c8431c4-5db9-4ea3-8306-d4db00c4efb7"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("0e9adbb7-41e0-4935-8e1e-5339b7b076d0"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("213ba841-ab7d-40e2-93ef-70f3984b3d26"),
+                            ItemLevel = 20,
+                            Name = "Tears of Death",
+                            Price = 1200000,
+                            SourcePageId = new Guid("4c959f5c-c614-464e-85aa-8157adcf9154"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("25956d4a-b3ee-49fe-9660-b1ee2b67b1de"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("43783b7b-56ff-49e0-a0f2-68e83a373918"),
+                            ItemLevel = 10,
+                            Name = "Wolfsbane",
+                            Price = 15500,
+                            SourcePageId = new Guid("67140723-8d8e-46a2-8971-c7a5ca9b63f8"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("1f8e9d8a-52ba-4b7c-b041-6e797a91e25b"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            EffectId = new Guid("5e4e4683-10b6-452d-8389-77874f60ae04"),
+                            ItemLevel = 8,
+                            Name = "Wyvern Poison",
+                            Price = 8000,
+                            SourcePageId = new Guid("7124c979-03d4-4edf-84e0-d88c267629cf"),
+                            Usage = "Held in 2 hands"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoisonDetailBlock", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("AlchemicalPoisonId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlchemicalPoisonId");
+
+                    b.ToTable("AlchemicalPoisonDetailBlock");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("ab9af6c8-886c-4cc4-8347-d5d5b6c520e5"),
+                            AlchemicalPoisonId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                            Text = "This toxin is a compound of arsenic and other substances. You can’t reduce your sickened condition while affected."
+                        },
+                        new
+                        {
+                            Id = new Guid("ce438b37-57d0-41eb-83ed-65302a63073b"),
+                            AlchemicalPoisonId = new Guid("28f803a7-f093-4be7-a3d2-623a77560f93"),
+                            Text = "Sometimes called “deadly nightshade,” belladonna is a widely available toxin produced from a plant similar to a tomato."
+                        },
+                        new
+                        {
+                            Id = new Guid("26dd2686-7c61-4c86-8724-6d2e336401a0"),
+                            AlchemicalPoisonId = new Guid("c65fd194-6210-42c8-80a2-b54ff81b6585"),
+                            Text = "Adder venom is a simple but effective way to enhance a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("c36e3697-6277-474e-b992-a95f955a857b"),
+                            AlchemicalPoisonId = new Guid("fa11da7d-e05b-486b-a6e0-444dee34bae9"),
+                            Text = "Black lotus extract causes severe internal bleeding."
+                        },
+                        new
+                        {
+                            Id = new Guid("785aa516-6335-4df7-9078-4230d4bdf0e7"),
+                            AlchemicalPoisonId = new Guid("dc73bb29-2a4e-429e-bc99-26d85ae74e1c"),
+                            Text = "This tacky, hardened sap is harvested from trees infected by fungal blights and exposed to open flames."
+                        },
+                        new
+                        {
+                            Id = new Guid("5b28e3fa-1348-41cb-ba9f-25f5230e45d3"),
+                            AlchemicalPoisonId = new Guid("81b07f7b-2e70-4b38-80f7-0b28a4c6f399"),
+                            Text = "Fumes from the forges of Hell drain health and strength alike."
+                        },
+                        new
+                        {
+                            Id = new Guid("062e4990-d0b3-4931-9ee3-ede80d54ec72"),
+                            AlchemicalPoisonId = new Guid("0381fe8b-2404-42fb-9abd-74e28f1401d5"),
+                            Text = "This thick substance is distilled from the mind-robbing cytillesh fungus, though it lacks memory-altering capabilities."
+                        },
+                        new
+                        {
+                            Id = new Guid("86a05df2-37ef-4162-9576-46a53b42e381"),
+                            AlchemicalPoisonId = new Guid("ae0386af-cfaf-40c0-83b4-8dd5a8d80d9a"),
+                            Text = "The toxic deathcap mushroom can be dried, ground, and treated to form a flavorless powder with accelerated effects."
+                        },
+                        new
+                        {
+                            Id = new Guid("f8d404e3-12fb-4647-adb6-60888962e8f2"),
+                            AlchemicalPoisonId = new Guid("b2e3f38f-f570-4cf8-ba74-633bdc0a1405"),
+                            Text = "A mix of digestive juices and green dragon poison glands nauseates the victim as its flesh is digested from within."
+                        },
+                        new
+                        {
+                            Id = new Guid("e9c5a72e-0a96-4f96-ba1f-a64036c4cfda"),
+                            AlchemicalPoisonId = new Guid("acc877c9-ea44-4977-b0da-6bf6ec70922a"),
+                            Text = "Giant centipede venom causes severe muscle stiffness."
+                        },
+                        new
+                        {
+                            Id = new Guid("39eeb491-4cff-4764-89d2-9ce910775200"),
+                            AlchemicalPoisonId = new Guid("7b143b21-75a9-4d41-9c09-1e4a872526b9"),
+                            Text = "Scorpion venom is excruciating and its effects are somewhat debilitating."
+                        },
+                        new
+                        {
+                            Id = new Guid("2d4bb8d3-f0fc-4e20-a407-a73f2824d244"),
+                            AlchemicalPoisonId = new Guid("862bacf9-a11f-4f56-8c94-2452d636db79"),
+                            Text = "Giant wasp venom interferes with a victim’s movement."
+                        },
+                        new
+                        {
+                            Id = new Guid("0b7f7c29-9473-4281-8d95-5264cfe8b23d"),
+                            AlchemicalPoisonId = new Guid("b445e986-a45a-4d3a-8089-a2d33fee60dc"),
+                            Text = "The opaque white sap from the graveroot shrub clouds the mind."
+                        },
+                        new
+                        {
+                            Id = new Guid("7045ff07-e29c-4f30-9a90-8d4b94e64335"),
+                            AlchemicalPoisonId = new Guid("7c923c5c-7005-4f1b-9005-5c79b289b056"),
+                            Text = "Concentrated hemlock is a particularly deadly toxin that halts muscle action—including that of the victim’s heart."
+                        },
+                        new
+                        {
+                            Id = new Guid("84e7645e-26c9-436c-824e-f485cba68ba0"),
+                            AlchemicalPoisonId = new Guid("1e830309-8b32-4860-85d0-a704be45b0f6"),
+                            Text = "This venom erodes its target’s defenses, aiding the spider in securing prey."
+                        },
+                        new
+                        {
+                            Id = new Guid("620d976a-9aa5-421e-a5a0-124b60cdc8db"),
+                            AlchemicalPoisonId = new Guid("7d31dbce-9230-4960-99cc-71de51c18977"),
+                            Text = "King’s sleep is an insidious long-term poison that can seem like a disease or even death from natural causes on a venerable target. The drained condition from king’s sleep is cumulative with each failed save and can’t be removed while the poison lasts."
+                        },
+                        new
+                        {
+                            Id = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            AlchemicalPoisonId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            Text = "Lethargy poison is commonly used in hit-and-run tactics by drow and others who want their victims alive; the ambusher retreats until the poison sets in and the victim falls unconscious. Further exposure to lethargy poison does not require the target to attempt additional saving throws; only failing an saving throw against an ongoing exposure can progress its stage."
+                        },
+                        new
+                        {
+                            Id = new Guid("d4ce3729-a117-4501-b8b3-2526bfb0ff43"),
+                            AlchemicalPoisonId = new Guid("949064c1-4862-4a51-a4fe-8ac7c91559d1"),
+                            Text = "Dust salvaged from the remains of a destroyed lich has paralytic properties that make it a valuable poison."
+                        },
+                        new
+                        {
+                            Id = new Guid("42d4e1ff-92b4-4153-b3eb-42ea8d70eb41"),
+                            AlchemicalPoisonId = new Guid("aef8461a-019a-4c5e-baeb-949f8ebd6e66"),
+                            Text = "Malyass root paste sees use to impede opponents in athletic competitions, in addition to espionage and tracking."
+                        },
+                        new
+                        {
+                            Id = new Guid("765ca329-35c6-4f20-8d10-000b35ce1a78"),
+                            AlchemicalPoisonId = new Guid("c55ad542-1fba-49e6-ab84-f95050cc3d7f"),
+                            Text = "Mindfog mist can be used to undermine spellcasters, as its effect on a victim’s mental faculties are swift and powerful."
+                        },
+                        new
+                        {
+                            Id = new Guid("a7391054-edfc-4951-8efc-8b995fde8148"),
+                            AlchemicalPoisonId = new Guid("427af463-394a-423e-be07-d4788fc27ec7"),
+                            Text = "Concentrated sap of stinging weeds makes an effective toxin."
+                        },
+                        new
+                        {
+                            Id = new Guid("a7f2675e-38a7-4d2e-bb3f-a893a4538f22"),
+                            AlchemicalPoisonId = new Guid("d493d861-70f0-4362-a954-2d0609869352"),
+                            Text = "Purportedly sourced from any number of outlandish locales, nightmare vapor is most often created by boiling the sweat collected from humanoids caught in the throes of terrible nightmares."
+                        },
+                        new
+                        {
+                            Id = new Guid("4de33799-27d7-42f5-a3cc-1458b3aef42d"),
+                            AlchemicalPoisonId = new Guid("0a713a66-44df-45ff-8917-5977c0c90e8f"),
+                            Text = "Venom from enormous purple worms leaves a victim weakened."
+                        },
+                        new
+                        {
+                            Id = new Guid("44e8074e-5cc8-46f9-8829-7ab92e42f176"),
+                            AlchemicalPoisonId = new Guid("eec5e097-c60a-4a1d-91d3-57bcf30e6a31"),
+                            Text = "Distilled from the Plane of Shadow, this oily substance imposes tenebrous effects. The enfeebled condition from shadow essence lasts for 24 hours."
+                        },
+                        new
+                        {
+                            Id = new Guid("a699aced-f89e-4a8e-b70e-f46ef9abdbd3"),
+                            AlchemicalPoisonId = new Guid("1a0af776-3dc1-48f7-bc0a-17c676e4f044"),
+                            Text = "Slumber wine sees its greatest use in games of intrigue, where an absence can be more devastating than injury. Characters unconscious from slumber wine can’t wake up by any means while the poison lasts, don’t need to eat or drink while unconscious in this way, and appear to be recently dead unless an examiner succeeds at a DC 40 Medicine check."
+                        },
+                        new
+                        {
+                            Id = new Guid("7891623b-6f09-4e17-b565-40ac365b6b59"),
+                            AlchemicalPoisonId = new Guid("c4f4ddce-c112-44b3-90a5-06aaaed80f1e"),
+                            Text = "A paste made by mashing the fine, threadlike roots of a certain creeper vine, spider root renders a victim clumsy and maladroit."
+                        },
+                        new
+                        {
+                            Id = new Guid("e61c1c37-3720-4a0d-8c2b-956bc8f7e9d1"),
+                            AlchemicalPoisonId = new Guid("0e9adbb7-41e0-4935-8e1e-5339b7b076d0"),
+                            Text = "Tears of death are among the most powerful of alchemical poisons, distilled from extracts of five other deadly poisons in just the right ratios."
+                        },
+                        new
+                        {
+                            Id = new Guid("e864228b-0a29-43de-bebb-175ea6468573"),
+                            AlchemicalPoisonId = new Guid("25956d4a-b3ee-49fe-9660-b1ee2b67b1de"),
+                            Text = "Wolfsbane appears in folklore for its link to werecreatures. If you are afflicted with lycanthropy and survive stage 3 of wolfsbane, you’re immediately cured of the lycanthropy."
+                        },
+                        new
+                        {
+                            Id = new Guid("240bf270-cf24-434c-983a-4b5217b80772"),
+                            AlchemicalPoisonId = new Guid("1f8e9d8a-52ba-4b7c-b041-6e797a91e25b"),
+                            Text = "Properly harvested and preserved, the poison from a wyvern’s sting is effective and direct."
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionTypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("ActivationAddendum")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int?>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActionId");
+
+                    b.HasIndex("ActionTypeId");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("AlchemicalTool");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            ActivationAddendum = "Or 1 or more days; see description.",
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            ItemLevel = 20,
+                            Name = "Philosopher's Stone",
+                            SourcePageId = new Guid("92157e81-6f5b-41bf-82d1-32ab6b31b709"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("3707bdeb-7db4-4473-b963-f9adc2f2c1fa"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 2,
+                            Name = "Silversheen",
+                            Price = 500,
+                            SourcePageId = new Guid("681100fd-185f-4a99-9f27-58ec73c5b481"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("3c31b16b-1804-4e2e-ba66-9bb8faaca03e"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 1,
+                            Name = "Smokestick",
+                            SourcePageId = new Guid("fadcc111-0da1-42d0-b68d-80a65ab516dd"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("fe623283-bc94-42a6-9a63-05fe74c06ab5"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 1,
+                            Name = "Snake Oil",
+                            Price = 200,
+                            SourcePageId = new Guid("4a59ca8c-7b59-4cb7-bfe3-3afdfc151793"),
+                            Usage = "Held in 2 hands"
+                        },
+                        new
+                        {
+                            Id = new Guid("cad37b1b-7d1e-4a1a-acb4-23a9814683ab"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 1,
+                            Name = "Sunrod",
+                            Price = 300,
+                            SourcePageId = new Guid("64fa1397-8f70-4a14-9cfa-8f078fc31383"),
+                            Usage = "Held in 1 hand"
+                        },
+                        new
+                        {
+                            Id = new Guid("37fff04c-1d07-49d9-ae10-02fb910e782b"),
+                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            ItemLevel = 1,
+                            Name = "Tindertwig",
+                            Price = 20,
+                            SourcePageId = new Guid("14701f2b-1426-4501-b27f-c048f157301e"),
+                            Usage = "Held in 1 hand"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalToolDetailBlock", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("AlchemicalToolId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlchemicalToolId");
+
+                    b.ToTable("AlchemicalToolDetailBlock");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("1b782fba-1f25-45e6-9c4e-1c5302f158f6"),
+                            AlchemicalToolId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                            Text = "An alchemist with the Craft Philosopher’s Stone feat can create a philosopher’s stone once per month by spending 1 batch of infused reagents during their daily preparations using the advanced alchemy class feature. This is the only way to create a philosopher’s stone.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("aae5d4ac-27ba-4142-8927-313f73134489"),
+                            AlchemicalToolId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                            Text = "At a glance, a philosopher’s stone appears to be an ordinary, sooty piece of natural rock.Breaking the rock open with a Force Open action(DC 35) reveals a cavity at the stone’s heart.The cavity is lined with a rare type of quicksilver that can transmute base metals into precious metals or create an elixir of rejuvenation(page 548).",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("0906dbf5-774b-4fbc-93b4-785e00c0e9be"),
+                            AlchemicalToolId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                            Text = "To use the quicksilver, you must be legendary in Crafting and have the Alchemical Crafting feat.You can then use the stone’s quicksilver for one of two effects:",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("5d0baac6-aa97-439b-9f15-f41924e85403"),
+                            AlchemicalToolId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                            Text = "You can apply the stone’s quicksilver to an infused true elixir of life using an Interact action.This turns the elixir into an infused elixir of rejuvenation instantaneously.This doesn’t require any crafting time or additional materials.",
+                            Type = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("7176e4f6-3ecd-4af5-88b1-77adb4690dab"),
+                            AlchemicalToolId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                            Text = "You can spend up to a month of downtime applying the quicksilver either to iron to create silver or to leadto create gold.Treat this as a 20th - level task to Earn Income using Crafting, except that you create 500 gp worth of your chosen metal per day on a success or 750 gp worth per day on a critical success.",
+                            Type = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("10164353-c33e-411e-b631-26a19438ab0a"),
+                            AlchemicalToolId = new Guid("3707bdeb-7db4-4473-b963-f9adc2f2c1fa"),
+                            Text = "You can slather this silvery paste onto one melee weapon, one thrown weapon, or 10 pieces of ammunition. Silversheen spoils quickly, so once you open a vial, you must use it all at once, rather than saving it. For the next hour, the weapon or ammunition counts as silver instead of its normal precious material (such as cold iron) for any physical damage it deals.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("9908505d-e79b-42e7-8f5a-dd4ec3165054"),
+                            AlchemicalToolId = new Guid("3c31b16b-1804-4e2e-ba66-9bb8faaca03e"),
+                            Text = "With a sharp twist of this item, you instantly create a screen of thick, opaque smoke in a burst centered on one corner of your space. All creatures within that area are concealed, and all other creatures are concealed to them. The smoke lasts for 1 minute or until dispersed by a strong wind.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("94cfd7f2-a8a2-44b5-9fbb-3f1893ebd964"),
+                            AlchemicalToolId = new Guid("fe623283-bc94-42a6-9a63-05fe74c06ab5"),
+                            Text = "You can apply snake oil onto a wound or other outward symptom of an affliction or condition (such as sores from a disease or discoloration from a poison). For the next hour, the symptom disappears and the wounded or afflicted creature doesn’t feel as if it still has the wound or affliction, though all effects remain. A creature can uncover the ruse by succeeding at a DC 17 Perception check, but only if it uses a Seek action to specifically examine the snake oil’s effects.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("8238f38f-f33e-4252-9f51-f0ec7ae0b938"),
+                            AlchemicalToolId = new Guid("cad37b1b-7d1e-4a1a-acb4-23a9814683ab"),
+                            Text = "This 1-foot-long, gold-tipped rod glows after it’s struck on a hard surface. For the next 6 hours, it sheds bright light in a 20-foot radius (and dim light to the next 40 feet).",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("237853b6-f295-4158-bb31-dc141d046bae"),
+                            AlchemicalToolId = new Guid("37fff04c-1d07-49d9-ae10-02fb910e782b"),
+                            Text = "An alchemical substance applied to one end of this tiny wooden stick ignites when struck against a rough surface. Creating a flame with a tindertwig is much faster than creating a flame with flint and steel. You can ignite the tindertwig and touch it to a flammable object as part of the same Interact action. Core Rulebook 554",
+                            Type = 0
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalToolPotency", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AlchemicalToolPotencies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("791041b0-b374-431b-9ad5-439e3a6b970e"),
+                            Name = "Lesser"
+                        },
+                        new
+                        {
+                            Id = new Guid("4d437e81-f1e6-477c-8811-e793c6747160"),
+                            Name = "Greater"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalToolPotencyBinding", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Benefits")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("PotencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("ToolId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PotencyId");
+
+                    b.HasIndex("ToolId");
+
+                    b.ToTable("AlchemicalToolPotencyBinding");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("44ea3349-f059-4d50-ab21-6076b0d3a05a"),
+                            Benefits = "The radius of the burst is 5 feet.",
+                            Level = 1,
+                            PotencyId = new Guid("791041b0-b374-431b-9ad5-439e3a6b970e"),
+                            Price = 300,
+                            ToolId = new Guid("3c31b16b-1804-4e2e-ba66-9bb8faaca03e")
+                        },
+                        new
+                        {
+                            Id = new Guid("21dc61b1-76f2-437e-9475-e2ab515c606f"),
+                            Benefits = "The radius of the burst is 20 feet.",
+                            Level = 7,
+                            PotencyId = new Guid("4d437e81-f1e6-477c-8811-e793c6747160"),
+                            Price = 5300,
+                            ToolId = new Guid("3c31b16b-1804-4e2e-ba66-9bb8faaca03e")
                         });
                 });
 
@@ -4963,6 +8882,33 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("28f6b905-0c5e-4cc0-8164-8e623fdfb367"),
                             Name = "Light Armor"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AttackType", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AttackTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("1a61a928-f75d-4c1e-b655-b92a9d40bc77"),
+                            Name = "Melee"
+                        },
+                        new
+                        {
+                            Id = new Guid("4f46c206-80e8-4ff2-a3dd-e4d6a73b5388"),
+                            Name = "Ranged"
                         });
                 });
 
@@ -7113,6 +11059,26 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("b084d3bf-72ac-49bc-bab2-21aa86c31fd2"),
                             Name = "Bleed"
+                        },
+                        new
+                        {
+                            Id = new Guid("b10f2804-9573-4bbf-a11d-aeff35f6b816"),
+                            Name = "Fire"
+                        },
+                        new
+                        {
+                            Id = new Guid("4b4b2444-718f-4f96-a4df-c1a3cfddf263"),
+                            Name = "Electricity"
+                        },
+                        new
+                        {
+                            Id = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            Name = "Poison"
+                        },
+                        new
+                        {
+                            Id = new Guid("d88d0bfa-b079-4ac3-8978-2c65208981ca"),
+                            Name = "Negative"
                         },
                         new
                         {
@@ -11234,6 +15200,327 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Hazard", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int?>("ArmorClass")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("CanBeDetectedMagically")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("ComplexityId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int?>("Fortitude")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int?>("Reflex")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Reset")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int?>("Speed")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("TypeId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ComplexityId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TypeId");
+
+                    b.ToTable("Hazard");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardAction", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionTypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("HazardId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Trigger")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActionTypeId");
+
+                    b.HasIndex("HazardId");
+
+                    b.ToTable("HazardAction");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardActionEffectBlock", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("HazardActionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HazardActionId");
+
+                    b.ToTable("HazardActionEffectBlock");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardComplexity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HazardComplexities");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("bac94513-a759-47b1-843f-3acb4946e83b"),
+                            Name = "Simple"
+                        },
+                        new
+                        {
+                            Id = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Name = "Complex"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardComponent", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int?>("BrokenThreshold")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Hardness")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("HazardId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("HitPoints")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HazardId");
+
+                    b.ToTable("HazardComponent");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardDisableRequirement", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("DifficultyCheck")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("HazardId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("RequiredProficiencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SkillId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HazardId");
+
+                    b.HasIndex("RequiredProficiencyId");
+
+                    b.HasIndex("SkillId");
+
+                    b.ToTable("HazardDisableRequirement");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardDispellRequirement", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("CounteractDifficultyCheck")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("HazardId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HazardId");
+
+                    b.ToTable("HazardDispellRequirement");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardImmunity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HazardImmunities");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("7bbfc8dc-05c1-49f6-938d-07eb81d7ad83"),
+                            Name = "Critical Hits"
+                        },
+                        new
+                        {
+                            Id = new Guid("b4be6e7f-41de-4943-b277-9fff8f56a398"),
+                            Name = "Object Immunities"
+                        },
+                        new
+                        {
+                            Id = new Guid("d9423d3e-cf11-4bd0-9789-89dd60fe61b0"),
+                            Name = "Precision Damage"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardRoutineDetailBlock", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("HazardId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HazardId");
+
+                    b.ToTable("HazardRoutineDetailBlock");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardType", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.ToTable("HazardTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("db68d894-7a5a-489f-a6f5-ca45ef6986f6"),
+                            Description = "Traps are usually built or placed, though they can also form accidentally, such as if a magic portal, through millennia of disuse, malfunctions as its magic warps. Mechanical traps always have some physical component, whereas purely magical traps typically don’t. Magical traps can usually be counteracted by dispel magic, and those without a listed proficiency rank for Stealth can be found using detect magic. Thievery is the most common skill used to disable traps.",
+                            Name = "Traps",
+                            SourcePageId = new Guid("ffe77480-d1b7-4155-9152-4bbb4a651721")
+                        },
+                        new
+                        {
+                            Id = new Guid("6b56b0d2-5b30-4ccf-b72c-532c244d9b73"),
+                            Description = "Environmental hazards are either living things, like dangerous spores and molds, or simply features of the terrain or environment, like avalanches or rockslides. While they are always physical, some environmental hazards can’t reasonably be attacked or damaged, such as a cloud of poisonous gas or a patch of quicksand. Survival is the most common skill used to disable environmental hazards.",
+                            Name = "Environmental Hazards",
+                            SourcePageId = new Guid("3ab73fe4-1b68-42e0-8a0e-c7cc58cb5301")
+                        },
+                        new
+                        {
+                            Id = new Guid("9d0426d4-021e-4822-a114-04840f3bb9c4"),
+                            Description = "Haunts are spiritual hazards, usually formed when the spiritual essence of a location is imprinted with the instincts and emotions from a living being’s demise. Because haunts lack matter, they rarely involve a physical component, and when they do, that component is generally incorporeal or might even be damaged only by positive energy. The skills and options used to disable haunts vary, though using Religion for an exorcism is common. However, even with a successful check to disable a haunt, it can reoccur until its unfinished business is resolved. Typically, successfully disabling or enduring a haunt provides clues to determine what it would take to lay it to rest permanently.",
+                            Name = "Haunts",
+                            SourcePageId = new Guid("8419e536-0368-4dc8-ae2b-72d472a4d869")
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Heritage", b =>
                 {
                     b.Property<Guid>("Id")
@@ -12876,6 +17163,58 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PotionPotency", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PotionPotencies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Name = "Unclassified"
+                        },
+                        new
+                        {
+                            Id = new Guid("d48e6d86-0396-4d4e-89dd-3396203ae7ff"),
+                            Name = "Minor"
+                        },
+                        new
+                        {
+                            Id = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
+                            Name = "Lesser"
+                        },
+                        new
+                        {
+                            Id = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
+                            Name = "Moderate"
+                        },
+                        new
+                        {
+                            Id = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Name = "Greater"
+                        },
+                        new
+                        {
+                            Id = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
+                            Name = "Major"
+                        },
+                        new
+                        {
+                            Id = new Guid("cf956f07-1342-4bab-ac64-d71f2832bb54"),
+                            Name = "True"
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Prerequisite", b =>
                 {
                     b.Property<Guid>("Id")
@@ -13848,6 +18187,24 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasData(
                         new
                         {
+                            Id = new Guid("ffe77480-d1b7-4155-9152-4bbb4a651721"),
+                            Page = 74,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("3ab73fe4-1b68-42e0-8a0e-c7cc58cb5301"),
+                            Page = 74,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("8419e536-0368-4dc8-ae2b-72d472a4d869"),
+                            Page = 74,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
                             Id = new Guid("f743a373-99c3-4e37-973a-cd274745c865"),
                             Page = 618,
                             SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
@@ -14229,6 +18586,504 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("5108e12f-9672-4072-a697-d7602a132ccc"),
                             Page = 13,
                             SourceId = new Guid("51f273bd-9c56-4a21-82ca-df90e1e13955")
+                        },
+                        new
+                        {
+                            Id = new Guid("05e99663-a3fb-498d-8cdb-702190ac8f65"),
+                            Page = 544,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7ea74824-5235-4b72-bc3e-813400c45c57"),
+                            Page = 545,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e69c3d9f-ec8d-43d5-89b4-68c8aae4eafa"),
+                            Page = 544,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("af1a9b81-dd1c-4fb3-8266-c9f932ce4e88"),
+                            Page = 545,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("b3cc038d-b67e-4cf7-a23e-cdb9464ad5a8"),
+                            Page = 545,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("797f5f94-6919-4064-9fde-9823f4bc73b9"),
+                            Page = 546,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1ef3438b-f3b0-4362-85bf-3d1f55ec01ac"),
+                            Page = 546,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("b71b9fc1-1ec2-4c5e-85cf-83ab3b3722e3"),
+                            Page = 546,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("059586d6-6a3c-4369-b92b-4f589f1d0323"),
+                            Page = 547,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("8b4598c1-dd52-41da-aadb-13768ee8f885"),
+                            Page = 547,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6773943d-c2fc-4e8a-ba93-e1d4d9766757"),
+                            Page = 547,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("35bda9da-c238-43e3-8446-b5e2ebefdae1"),
+                            Page = 547,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("dfbada3b-aff5-4d11-bdae-51982a4d79a3"),
+                            Page = 547,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e859dce4-cd01-4326-816e-c966ccc2a34b"),
+                            Page = 547,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("9d6014ec-8673-4ab8-b0ed-4ab1690a713c"),
+                            Page = 547,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("45fac17c-ce11-475b-9f6d-fd2b4fabcee4"),
+                            Page = 548,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("bbefcb2c-8c92-4afa-9bfe-14df0480ea74"),
+                            Page = 548,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7b04b283-38a7-4557-ad92-2128845aab30"),
+                            Page = 548,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("57e30628-306c-423f-9d3c-5a6aa4904952"),
+                            Page = 548,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c10dc1eb-97c5-40ea-9aa3-ca19b2f701ee"),
+                            Page = 548,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("fb4cba35-f753-4922-b078-0dfbcff780f2"),
+                            Page = 549,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("39900b0b-1dab-41b8-93bf-4af4fa597e8b"),
+                            Page = 549,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("5fbd3dd2-ede6-4021-8311-36ea949ff120"),
+                            Page = 549,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ba706507-3628-4a2c-815b-cdb54e373a88"),
+                            Page = 549,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("8a83ecdc-9097-475c-a98e-1240f6dda74b"),
+                            Page = 549,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("94b98608-9ba0-46c2-9793-e5421daeb22a"),
+                            Page = 549,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c1960b59-9b61-4f34-adbb-3ce997fc0fda"),
+                            Page = 550,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("87156a04-1bcc-4ec5-a7b6-ad44e0189935"),
+                            Page = 550,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("df8b0c80-d477-4466-9d2d-5e632c0380a3"),
+                            Page = 550,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3c09132c-90a6-4d8f-a62e-64faf7f8ffca"),
+                            Page = 550,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("de85d10c-dda0-4b8a-a8c4-75262c40cd56"),
+                            Page = 551,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("5033a055-e80f-43a5-b42a-14262a046351"),
+                            Page = 551,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("df4f9201-28e4-4357-8a2d-e976657da5cf"),
+                            Page = 551,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("214ab4fd-cbfe-4533-ab5d-e815fb2c48f0"),
+                            Page = 551,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0381fe8b-2404-42fb-9abd-74e28f1401d5"),
+                            Page = 551,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7156a518-fb39-47b8-9579-72db434fac68"),
+                            Page = 551,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a2779414-69b9-416c-abda-71ae15fe3b10"),
+                            Page = 551,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6713fbf0-18f0-453e-a361-b339aafad6f3"),
+                            Page = 551,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("b30b8cbc-1230-4e7c-be11-8f7a995a7cf1"),
+                            Page = 551,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a4412b0d-a84d-4bc3-9430-41e015d7632b"),
+                            Page = 551,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("5b2cfa04-9394-4ab9-a5ee-6dba2a814fbc"),
+                            Page = 552,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e079a8b8-5730-481b-9ea1-f40cd189a6d3"),
+                            Page = 552,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("fc948d2b-fe6e-4a8c-937f-ea8c597e92e5"),
+                            Page = 552,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("20c6c8fb-0561-4b49-8649-9f894536f993"),
+                            Page = 552,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("9541ee54-4d19-4904-9161-9412cd2b7905"),
+                            Page = 552,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                            Page = 552,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6ccc8202-a856-4b7b-8660-03390c20d026"),
+                            Page = 552,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("2597f652-2268-4bd5-b1c3-73d4f6df3656"),
+                            Page = 552,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1d06a375-4a3e-4487-95c1-5d207d5f98b0"),
+                            Page = 553,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d82d7b7d-f861-463d-ba6a-a5f4f331484c"),
+                            Page = 553,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("dbac34ef-0bee-4110-b002-b65aab1130db"),
+                            Page = 553,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1c2617fd-4abd-4b17-a689-8ccb94ab206b"),
+                            Page = 553,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("fde5577d-2503-4d43-928a-228fcc34d11f"),
+                            Page = 553,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("8885d836-cabf-4a53-a3f2-8d0d6a6a9bff"),
+                            Page = 553,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0c8431c4-5db9-4ea3-8306-d4db00c4efb7"),
+                            Page = 553,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4c959f5c-c614-464e-85aa-8157adcf9154"),
+                            Page = 553,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("67140723-8d8e-46a2-8971-c7a5ca9b63f8"),
+                            Page = 553,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7124c979-03d4-4edf-84e0-d88c267629cf"),
+                            Page = 554,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("92157e81-6f5b-41bf-82d1-32ab6b31b709"),
+                            Page = 554,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("681100fd-185f-4a99-9f27-58ec73c5b481"),
+                            Page = 554,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("fadcc111-0da1-42d0-b68d-80a65ab516dd"),
+                            Page = 554,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4a59ca8c-7b59-4cb7-bfe3-3afdfc151793"),
+                            Page = 554,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("64fa1397-8f70-4a14-9cfa-8f078fc31383"),
+                            Page = 554,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("14701f2b-1426-4501-b27f-c048f157301e"),
+                            Page = 554,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0e1b3b3d-aa2d-4963-8bb4-3485e14be099"),
+                            Page = 526,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0a8c30a8-ccbe-4e93-9e9e-fa12cc3f6c1f"),
+                            Page = 524,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6ac226b9-1707-407a-b1cf-b5dce0b967ff"),
+                            Page = 524,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a83b813a-4c84-482b-b232-30afec68d03b"),
+                            Page = 523,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("bdc2a5c0-085f-4294-aa84-72ad76fc0364"),
+                            Page = 524,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f9217066-3a54-4767-ae52-5eaf6a8f4f28"),
+                            Page = 525,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a5a01655-41be-4e84-b464-fe3a76e4d1bd"),
+                            Page = 524,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7fe355f0-54eb-46b1-9472-7d4a53a4db08"),
+                            Page = 525,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3bcc0fe0-0f4c-4d25-99e3-32db6fdfe7d1"),
+                            Page = 522,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("375da921-2ed7-4ac7-87c5-c738a30e095c"),
+                            Page = 524,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4c0d2ac8-48f8-4612-b8ab-72db8b4aa831"),
+                            Page = 525,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("53f23a87-1e51-4eff-9c24-3a68f6f1a3e8"),
+                            Page = 522,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ae8ab02b-c174-4d9f-8d93-278c34756eea"),
+                            Page = 525,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("719ab320-45f1-4057-aaea-11055889b36a"),
+                            Page = 523,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3aa273d4-ad98-4e64-8ea1-cad0af832e27"),
+                            Page = 525,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("86cca78f-c85b-4691-b633-93f649675e00"),
+                            Page = 523,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ca5b006a-8d72-4b2f-827b-09a48cd3b690"),
+                            Page = 523,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ca2171bd-fde9-4caf-9dd4-6f9ddc14ff5e"),
+                            Page = 525,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7fb587a3-cfa2-4098-8416-8e2eb615b325"),
+                            Page = 524,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         });
                 });
 
@@ -16918,6 +21773,926 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.StaggeredEffect", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("DifficultyCheck")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("MaximumDuration")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Onset")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SavingThrowStatId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SavingThrowStatId");
+
+                    b.ToTable("StaggeredEffect");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("37764fda-a770-40e6-98e5-1207002f7708"),
+                            DifficultyCheck = 18,
+                            MaximumDuration = "5 Minutes",
+                            Onset = "10 Minutes",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("7627c22c-d186-4ff6-bbc3-827ac7235770"),
+                            DifficultyCheck = 19,
+                            MaximumDuration = "30 Minutes",
+                            Onset = "10 Minutes",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("9ab302d1-94a8-46c3-8ce5-f658e4e63531"),
+                            DifficultyCheck = 18,
+                            MaximumDuration = "3 Rounds",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("040e91d5-536e-4836-b63d-3f29b0301c9f"),
+                            DifficultyCheck = 42,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "1 Minute",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("cf6c8427-6b80-4787-a745-0cc22c85f6cf"),
+                            DifficultyCheck = 31,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "1 Minute",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("0860cb5f-6bf5-423b-944e-1c4e79802565"),
+                            DifficultyCheck = 36,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "1 Round",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("92a84c99-95e2-4602-8a72-437137c69613"),
+                            DifficultyCheck = 19,
+                            MaximumDuration = "4 Rounds",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("cbd1a958-ac5e-4a17-9b53-affb4831ffca"),
+                            DifficultyCheck = 33,
+                            MaximumDuration = "6 Minutes",
+                            Onset = "10 Minutes",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("fc20616d-7ba0-49dd-94be-cf547dab680e"),
+                            DifficultyCheck = 37,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "1 Minute",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("bc6151f2-8d2d-4656-8e8d-bdde9641ae1a"),
+                            DifficultyCheck = 17,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("330553c5-7739-45cd-b99e-0f3bd85d5f8d"),
+                            DifficultyCheck = 22,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("f8e3e164-4fbf-4d88-9e99-922b4e9c26b1"),
+                            DifficultyCheck = 25,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "Immedate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("f5edfc5f-434a-4838-889e-69265151354a"),
+                            DifficultyCheck = 19,
+                            MaximumDuration = "4 Rounds",
+                            Onset = "Immedate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("9531647b-d08d-4c79-8993-c1e9fc5aebb3"),
+                            DifficultyCheck = 40,
+                            MaximumDuration = "60 Minutes",
+                            Onset = "30 Minutes",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("02525cd2-d5b9-4e41-a7e7-8ea60b3b105e"),
+                            DifficultyCheck = 21,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("5b2e24eb-1beb-45ab-b69b-750b8f175033"),
+                            DifficultyCheck = 41,
+                            MaximumDuration = "Indefinite",
+                            Onset = "1 Day",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("0cad04aa-c37a-40ba-bc39-d936c09a63ed"),
+                            DifficultyCheck = 18,
+                            MaximumDuration = "4 Hours",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("792ba8fd-fe7a-45ac-a7b7-c7a88d8902d9"),
+                            DifficultyCheck = 28,
+                            MaximumDuration = "6 Minutes",
+                            Onset = "10 Minutes",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("f18a5fc7-e53f-4851-a988-735d5a61129f"),
+                            DifficultyCheck = 26,
+                            MaximumDuration = "6 Minutes",
+                            Onset = "1 Minute",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("478475fe-cd71-477d-a01b-3320f4aa4a32"),
+                            DifficultyCheck = 35,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "1 Round",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("990ea5c3-22bc-4c51-9aca-c533e5bddd88"),
+                            DifficultyCheck = 27,
+                            MaximumDuration = "6 Minutes",
+                            Onset = "1 Minute",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("a219e285-2d4f-4720-8266-1aefc03cd7ae"),
+                            DifficultyCheck = 36,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "1 Round",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("724c0ddf-e5e3-4591-af38-154c62039b50"),
+                            DifficultyCheck = 32,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("91536163-f5f3-4666-b738-76b88e8feab3"),
+                            DifficultyCheck = 29,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("4bdc5466-490e-48c2-b346-43bacd734125"),
+                            DifficultyCheck = 32,
+                            MaximumDuration = "7 Days",
+                            Onset = "1 Hour",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("3935e556-052d-48b8-994d-5163cf9f4ca7"),
+                            DifficultyCheck = 28,
+                            MaximumDuration = "6 Minutes",
+                            Onset = "1  Minute",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("213ba841-ab7d-40e2-93ef-70f3984b3d26"),
+                            DifficultyCheck = 46,
+                            MaximumDuration = "10 Minutes",
+                            Onset = "1 Minute",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("43783b7b-56ff-49e0-a0f2-68e83a373918"),
+                            DifficultyCheck = 30,
+                            MaximumDuration = "6 Minutes",
+                            Onset = "10 Minutes",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("5e4e4683-10b6-452d-8389-77874f60ae04"),
+                            DifficultyCheck = 26,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.StaggeredEffectStage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Duration")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Stage")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("StaggeredEffectId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StaggeredEffectId");
+
+                    b.ToTable("StaggeredEffectStage");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("0468236a-951d-4f4b-ba55-9677d2872063"),
+                            Duration = "1 Minute",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("37764fda-a770-40e6-98e5-1207002f7708")
+                        },
+                        new
+                        {
+                            Id = new Guid("3abafdfd-bb76-4211-8bd2-733116b08360"),
+                            Duration = "1 Minute",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("37764fda-a770-40e6-98e5-1207002f7708")
+                        },
+                        new
+                        {
+                            Id = new Guid("39bc0f47-bd42-488e-bb8c-bbd82bc20771"),
+                            Duration = "1 Minute",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("37764fda-a770-40e6-98e5-1207002f7708")
+                        },
+                        new
+                        {
+                            Id = new Guid("edd921e7-2f4b-4709-9e7f-806d97c2861d"),
+                            Duration = "10 Minutes",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("7627c22c-d186-4ff6-bbc3-827ac7235770")
+                        },
+                        new
+                        {
+                            Id = new Guid("725558bb-745a-4919-a817-30087a434af0"),
+                            Duration = "10 Minutes",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("7627c22c-d186-4ff6-bbc3-827ac7235770")
+                        },
+                        new
+                        {
+                            Id = new Guid("4d2f2a82-e324-4da0-adaa-b5f011fbbc50"),
+                            Duration = "1 Minutes",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("7627c22c-d186-4ff6-bbc3-827ac7235770")
+                        },
+                        new
+                        {
+                            Id = new Guid("d44a502a-e5f1-4014-899a-1b9ac8425764"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("9ab302d1-94a8-46c3-8ce5-f658e4e63531")
+                        },
+                        new
+                        {
+                            Id = new Guid("7e0f3f16-8979-426b-878a-ed4f6223a119"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("9ab302d1-94a8-46c3-8ce5-f658e4e63531")
+                        },
+                        new
+                        {
+                            Id = new Guid("d82f5ea0-0885-4d2f-9073-8715968a98c4"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("040e91d5-536e-4836-b63d-3f29b0301c9f")
+                        },
+                        new
+                        {
+                            Id = new Guid("a22c53f3-6440-4ea1-a0ea-bf7bffeacb7e"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("040e91d5-536e-4836-b63d-3f29b0301c9f")
+                        },
+                        new
+                        {
+                            Id = new Guid("16bef704-1548-4a7a-ad3b-6d307c5cf93e"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("040e91d5-536e-4836-b63d-3f29b0301c9f")
+                        },
+                        new
+                        {
+                            Id = new Guid("7da7d5d7-7109-4181-8ffe-9a08570559e8"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("cf6c8427-6b80-4787-a745-0cc22c85f6cf")
+                        },
+                        new
+                        {
+                            Id = new Guid("2853ce52-ea4a-4f9c-b8a3-dded56127ad2"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("cf6c8427-6b80-4787-a745-0cc22c85f6cf")
+                        },
+                        new
+                        {
+                            Id = new Guid("a1608314-f954-4c33-b6a4-ce5cabc1b52c"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("cf6c8427-6b80-4787-a745-0cc22c85f6cf")
+                        },
+                        new
+                        {
+                            Id = new Guid("8b833ef5-c504-4580-bee7-b124e0d63981"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("0860cb5f-6bf5-423b-944e-1c4e79802565")
+                        },
+                        new
+                        {
+                            Id = new Guid("b52f55c1-44e0-479a-8d1e-24cbeb57189e"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("0860cb5f-6bf5-423b-944e-1c4e79802565")
+                        },
+                        new
+                        {
+                            Id = new Guid("8b8011f3-58a5-4e72-9e3f-db705c384bf8"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("0860cb5f-6bf5-423b-944e-1c4e79802565")
+                        },
+                        new
+                        {
+                            Id = new Guid("f7235d2a-9724-4360-985b-839bab8513c3"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("92a84c99-95e2-4602-8a72-437137c69613")
+                        },
+                        new
+                        {
+                            Id = new Guid("b3de3810-a480-4f26-9d10-b1ef0e16928e"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("92a84c99-95e2-4602-8a72-437137c69613")
+                        },
+                        new
+                        {
+                            Id = new Guid("8b095b9c-c427-4860-8b1a-d012207e6877"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("92a84c99-95e2-4602-8a72-437137c69613")
+                        },
+                        new
+                        {
+                            Id = new Guid("101a5abd-b68c-4ec5-92ac-a568358d2eda"),
+                            Duration = "1 Minute",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("cbd1a958-ac5e-4a17-9b53-affb4831ffca")
+                        },
+                        new
+                        {
+                            Id = new Guid("03e91a70-68d4-4048-b785-2f7c52e1a5ab"),
+                            Duration = "1 Minute",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("cbd1a958-ac5e-4a17-9b53-affb4831ffca")
+                        },
+                        new
+                        {
+                            Id = new Guid("37604a6a-f8cb-40a2-8ad8-15dc110662f8"),
+                            Duration = "1 Minute",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("cbd1a958-ac5e-4a17-9b53-affb4831ffca")
+                        },
+                        new
+                        {
+                            Id = new Guid("dadede4d-28bb-4cbc-b825-4cd8a7e1901f"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("fc20616d-7ba0-49dd-94be-cf547dab680e")
+                        },
+                        new
+                        {
+                            Id = new Guid("6f2a640f-b71e-4c13-a457-17767f74a6d3"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("fc20616d-7ba0-49dd-94be-cf547dab680e")
+                        },
+                        new
+                        {
+                            Id = new Guid("ecc2dccf-0d82-4d85-b11d-74656cec77c6"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("fc20616d-7ba0-49dd-94be-cf547dab680e")
+                        },
+                        new
+                        {
+                            Id = new Guid("7ab45a14-5323-4788-8547-bde6dcef2eea"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("bc6151f2-8d2d-4656-8e8d-bdde9641ae1a")
+                        },
+                        new
+                        {
+                            Id = new Guid("18e5d82c-4e9b-4e03-aa6a-7b2506af4227"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("bc6151f2-8d2d-4656-8e8d-bdde9641ae1a")
+                        },
+                        new
+                        {
+                            Id = new Guid("1acf2634-6f8e-415c-b5be-929dcbf7c174"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("bc6151f2-8d2d-4656-8e8d-bdde9641ae1a")
+                        },
+                        new
+                        {
+                            Id = new Guid("89bdb239-6d05-463b-8cba-8139bc50e0f9"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("330553c5-7739-45cd-b99e-0f3bd85d5f8d")
+                        },
+                        new
+                        {
+                            Id = new Guid("6cbcf457-9203-44fb-a882-4c0886e3c735"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("330553c5-7739-45cd-b99e-0f3bd85d5f8d")
+                        },
+                        new
+                        {
+                            Id = new Guid("e57dcb4e-11ad-4431-8638-776ee1bf0b24"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("330553c5-7739-45cd-b99e-0f3bd85d5f8d")
+                        },
+                        new
+                        {
+                            Id = new Guid("1c67cd5b-de98-4ae0-bd21-ee9f106e14ad"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("f8e3e164-4fbf-4d88-9e99-922b4e9c26b1")
+                        },
+                        new
+                        {
+                            Id = new Guid("34ec0065-42d6-47b4-bf69-d973dba2ef14"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("f8e3e164-4fbf-4d88-9e99-922b4e9c26b1")
+                        },
+                        new
+                        {
+                            Id = new Guid("c0951b2e-31d9-47da-a8d9-7d8b621fc821"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("f8e3e164-4fbf-4d88-9e99-922b4e9c26b1")
+                        },
+                        new
+                        {
+                            Id = new Guid("6bc9fb73-f457-44b8-b248-bcfe9d2424a5"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("f5edfc5f-434a-4838-889e-69265151354a")
+                        },
+                        new
+                        {
+                            Id = new Guid("29db829e-3e03-4f20-b040-1fd524fd7e68"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("f5edfc5f-434a-4838-889e-69265151354a")
+                        },
+                        new
+                        {
+                            Id = new Guid("8d39a64f-67d5-49f9-9937-5bf5d282fc03"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("f5edfc5f-434a-4838-889e-69265151354a")
+                        },
+                        new
+                        {
+                            Id = new Guid("0b046df0-35c7-4ce5-9e8a-ef267997af29"),
+                            Duration = "10 Minutes",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("9531647b-d08d-4c79-8993-c1e9fc5aebb3")
+                        },
+                        new
+                        {
+                            Id = new Guid("a9d1a6a2-beff-45bd-8557-83718005de78"),
+                            Duration = "10 Minutes",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("9531647b-d08d-4c79-8993-c1e9fc5aebb3")
+                        },
+                        new
+                        {
+                            Id = new Guid("4ee75b8e-2d54-4748-abbc-280cae951532"),
+                            Duration = "10 Minutes",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("9531647b-d08d-4c79-8993-c1e9fc5aebb3")
+                        },
+                        new
+                        {
+                            Id = new Guid("67839e5e-b6f6-4ce8-b536-10004c043041"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("02525cd2-d5b9-4e41-a7e7-8ea60b3b105e")
+                        },
+                        new
+                        {
+                            Id = new Guid("6cb56422-0099-4a94-a59d-46cb9ca5f2f6"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("02525cd2-d5b9-4e41-a7e7-8ea60b3b105e")
+                        },
+                        new
+                        {
+                            Id = new Guid("238e7d05-3376-4c19-999f-2675ae1940ca"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("02525cd2-d5b9-4e41-a7e7-8ea60b3b105e")
+                        },
+                        new
+                        {
+                            Id = new Guid("fe6bc444-914b-49bc-93b0-1a87206e99c1"),
+                            Duration = "1 Day",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("5b2e24eb-1beb-45ab-b69b-750b8f175033")
+                        },
+                        new
+                        {
+                            Id = new Guid("14971f7b-66f5-4053-bf38-1a5a23459eea"),
+                            Duration = "1 Day",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("5b2e24eb-1beb-45ab-b69b-750b8f175033")
+                        },
+                        new
+                        {
+                            Id = new Guid("f2ab2c28-5734-4ae9-80fc-2ebaf7481ed3"),
+                            Duration = "1 Day",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("5b2e24eb-1beb-45ab-b69b-750b8f175033")
+                        },
+                        new
+                        {
+                            Id = new Guid("6c9e289f-c6e9-4c1d-bdf8-2f27a8e0f286"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("0cad04aa-c37a-40ba-bc39-d936c09a63ed")
+                        },
+                        new
+                        {
+                            Id = new Guid("7b554a0b-5001-4e46-98a7-fce18cc80c10"),
+                            Duration = "1 Minute",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("0cad04aa-c37a-40ba-bc39-d936c09a63ed")
+                        },
+                        new
+                        {
+                            Id = new Guid("fcad32cd-f3ac-4cb6-a108-f54b16dcbbf9"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("0cad04aa-c37a-40ba-bc39-d936c09a63ed")
+                        },
+                        new
+                        {
+                            Id = new Guid("a85df2c1-e5f2-448b-ac85-03c85869417d"),
+                            Duration = "1d4 Hours",
+                            Stage = 4,
+                            StaggeredEffectId = new Guid("0cad04aa-c37a-40ba-bc39-d936c09a63ed")
+                        },
+                        new
+                        {
+                            Id = new Guid("fd3da93d-0239-4e54-b076-069bbdb0aaac"),
+                            Duration = "1 Minute",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("792ba8fd-fe7a-45ac-a7b7-c7a88d8902d9")
+                        },
+                        new
+                        {
+                            Id = new Guid("d4585a9b-1f6e-4626-89e0-54428475754c"),
+                            Duration = "1 Minute",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("792ba8fd-fe7a-45ac-a7b7-c7a88d8902d9")
+                        },
+                        new
+                        {
+                            Id = new Guid("8dc1ed03-ff8b-49a0-bbf3-6ccabf16b382"),
+                            Duration = "1 Minute",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("792ba8fd-fe7a-45ac-a7b7-c7a88d8902d9")
+                        },
+                        new
+                        {
+                            Id = new Guid("21b5eabd-aff1-436f-a501-1b825aecb69b"),
+                            Duration = "1 Minute",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("f18a5fc7-e53f-4851-a988-735d5a61129f")
+                        },
+                        new
+                        {
+                            Id = new Guid("0919e98f-4b60-4afe-9097-d5a5810e00b3"),
+                            Duration = "1 Minute",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("f18a5fc7-e53f-4851-a988-735d5a61129f")
+                        },
+                        new
+                        {
+                            Id = new Guid("8c04d178-f441-4fcc-82f4-57f97ab22b9d"),
+                            Duration = "4 Minute",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("f18a5fc7-e53f-4851-a988-735d5a61129f")
+                        },
+                        new
+                        {
+                            Id = new Guid("bbdcbd62-49d6-44fe-8bbd-dbb3af8335a0"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("478475fe-cd71-477d-a01b-3320f4aa4a32")
+                        },
+                        new
+                        {
+                            Id = new Guid("ae0e2c13-d597-404b-a347-3022ee522878"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("478475fe-cd71-477d-a01b-3320f4aa4a32")
+                        },
+                        new
+                        {
+                            Id = new Guid("e3c7e67f-fac6-44bc-bca2-4e305a383db2"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("478475fe-cd71-477d-a01b-3320f4aa4a32")
+                        },
+                        new
+                        {
+                            Id = new Guid("12cf4b7b-4c31-43de-b96f-9b8d1999ecf3"),
+                            Duration = "1 Minute",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("990ea5c3-22bc-4c51-9aca-c533e5bddd88")
+                        },
+                        new
+                        {
+                            Id = new Guid("a8c16f0b-6882-4350-8778-9a5c81b30693"),
+                            Duration = "1 Minute",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("990ea5c3-22bc-4c51-9aca-c533e5bddd88")
+                        },
+                        new
+                        {
+                            Id = new Guid("eecd7522-686e-4a45-8171-dfdd005905b6"),
+                            Duration = "1 Minute",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("990ea5c3-22bc-4c51-9aca-c533e5bddd88")
+                        },
+                        new
+                        {
+                            Id = new Guid("e229a0be-7872-494f-8b8d-0d9243b55209"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("a219e285-2d4f-4720-8266-1aefc03cd7ae")
+                        },
+                        new
+                        {
+                            Id = new Guid("61776e14-9ede-46f4-a06c-159dc5449417"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("a219e285-2d4f-4720-8266-1aefc03cd7ae")
+                        },
+                        new
+                        {
+                            Id = new Guid("c818b8ed-9c57-4b0e-91be-91d714eb84be"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("a219e285-2d4f-4720-8266-1aefc03cd7ae")
+                        },
+                        new
+                        {
+                            Id = new Guid("6aeb73f9-a53b-47ff-8902-ede15b5a1650"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("724c0ddf-e5e3-4591-af38-154c62039b50")
+                        },
+                        new
+                        {
+                            Id = new Guid("795ce35a-f3cc-43d9-b6bb-6b9d73564c32"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("724c0ddf-e5e3-4591-af38-154c62039b50")
+                        },
+                        new
+                        {
+                            Id = new Guid("ba8b6a38-0f9e-47a6-942a-858cfaaf2258"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("724c0ddf-e5e3-4591-af38-154c62039b50")
+                        },
+                        new
+                        {
+                            Id = new Guid("4fb01e13-3147-4cd2-ae48-b4b406a65b0a"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("91536163-f5f3-4666-b738-76b88e8feab3")
+                        },
+                        new
+                        {
+                            Id = new Guid("9dafbeca-1a1b-42b5-b5bc-47186caf8647"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("91536163-f5f3-4666-b738-76b88e8feab3")
+                        },
+                        new
+                        {
+                            Id = new Guid("a15a472e-00c7-49d1-961c-3653286ac3d4"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("91536163-f5f3-4666-b738-76b88e8feab3")
+                        },
+                        new
+                        {
+                            Id = new Guid("1ac15651-b0d8-4677-bae9-f6e3d7d63d95"),
+                            Duration = "1 Day",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("4bdc5466-490e-48c2-b346-43bacd734125")
+                        },
+                        new
+                        {
+                            Id = new Guid("4c718a24-8c01-48c3-bd5c-f4df12db2edc"),
+                            Duration = "2 Days",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("4bdc5466-490e-48c2-b346-43bacd734125")
+                        },
+                        new
+                        {
+                            Id = new Guid("e158a6d9-59bd-45e3-ac4b-62c3bd13f0b9"),
+                            Duration = "3 Days",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("4bdc5466-490e-48c2-b346-43bacd734125")
+                        },
+                        new
+                        {
+                            Id = new Guid("038ae784-9e97-4b76-9474-7e71f2e866f9"),
+                            Duration = "1 Minute",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("3935e556-052d-48b8-994d-5163cf9f4ca7")
+                        },
+                        new
+                        {
+                            Id = new Guid("959cd97b-8af6-43d3-b464-96f192c4e0d3"),
+                            Duration = "1 Minute",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("3935e556-052d-48b8-994d-5163cf9f4ca7")
+                        },
+                        new
+                        {
+                            Id = new Guid("cb8ec76e-2ed6-4157-9edf-eb54cc553f0b"),
+                            Duration = "1 Minute",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("3935e556-052d-48b8-994d-5163cf9f4ca7")
+                        },
+                        new
+                        {
+                            Id = new Guid("4cdc2685-68fc-4b72-a7cd-0aa14e057ef3"),
+                            Duration = "1 Minute",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("213ba841-ab7d-40e2-93ef-70f3984b3d26")
+                        },
+                        new
+                        {
+                            Id = new Guid("608b96fd-baa6-4acf-9c71-983a8a11ea6e"),
+                            Duration = "1 Minute",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("213ba841-ab7d-40e2-93ef-70f3984b3d26")
+                        },
+                        new
+                        {
+                            Id = new Guid("78f1b6ff-e864-4e1e-9792-5d7315050373"),
+                            Duration = "1 Minute",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("213ba841-ab7d-40e2-93ef-70f3984b3d26")
+                        },
+                        new
+                        {
+                            Id = new Guid("4e559a7a-d1c2-4c97-841a-56a1133d5dd0"),
+                            Duration = "1 Minute",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("43783b7b-56ff-49e0-a0f2-68e83a373918")
+                        },
+                        new
+                        {
+                            Id = new Guid("58e92f10-359f-4c0c-8de8-41b297e185f4"),
+                            Duration = "1 Minute",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("43783b7b-56ff-49e0-a0f2-68e83a373918")
+                        },
+                        new
+                        {
+                            Id = new Guid("cb73d3c9-853b-403f-ade4-16d27e40bbb8"),
+                            Duration = "1 Minute",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("43783b7b-56ff-49e0-a0f2-68e83a373918")
+                        },
+                        new
+                        {
+                            Id = new Guid("a0475e88-48bd-43c8-8d28-5b9e70fd9fd7"),
+                            Duration = "1 Round",
+                            Stage = 1,
+                            StaggeredEffectId = new Guid("5e4e4683-10b6-452d-8389-77874f60ae04")
+                        },
+                        new
+                        {
+                            Id = new Guid("024442d6-e84c-4eaf-8735-7f8c6e1639c9"),
+                            Duration = "1 Round",
+                            Stage = 2,
+                            StaggeredEffectId = new Guid("5e4e4683-10b6-452d-8389-77874f60ae04")
+                        },
+                        new
+                        {
+                            Id = new Guid("ede8cd6e-8055-4b1e-b613-e373cc316074"),
+                            Duration = "1 Round",
+                            Stage = 3,
+                            StaggeredEffectId = new Guid("5e4e4683-10b6-452d-8389-77874f60ae04")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.StaggeredEffectStageEffect", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<bool>("Permanent")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("StaggeredEffectStageId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StaggeredEffectStageId");
+
+                    b.ToTable("StaggeredEffectStageEffect");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("StaggeredEffectStageEffect");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Stat", b =>
                 {
                     b.Property<Guid>("Id")
@@ -16999,6 +22774,18 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("ActionsId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("AlchemicalBombsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("AlchemicalElixirsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("AlchemicalPoisonsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("AlchemicalToolsId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid?>("CursesId")
                         .HasColumnType("uuid");
 
@@ -17022,6 +22809,14 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ActionsId");
+
+                    b.HasIndex("AlchemicalBombsId");
+
+                    b.HasIndex("AlchemicalElixirsId");
+
+                    b.HasIndex("AlchemicalPoisonsId");
+
+                    b.HasIndex("AlchemicalToolsId");
 
                     b.HasIndex("CursesId");
 
@@ -17282,6 +23077,24 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("08bac763-e881-4a70-b253-916191ee9713"),
+                            Description = "An action with this trait involves moving from one space to another.",
+                            Name = "Move"
+                        },
+                        new
+                        {
+                            Id = new Guid("c5e1a5e7-5d45-4826-b2ea-018b361770de"),
+                            Description = "An action with this trait requires a degree of mental concentration and discipline.",
+                            Name = "Concentrate"
+                        },
+                        new
+                        {
+                            Id = new Guid("5f7b92e7-09d2-4717-8588-56b45c08a111"),
+                            Description = "The GM rolls the check for this ability in secret.",
+                            Name = "Secret"
+                        },
+                        new
+                        {
                             Id = new Guid("856db08f-edad-472b-b870-65a8f16252a5"),
                             Description = "An ability with this trait involves an attack. For each attack you make beyond the first on your turn, you take a multiple attack penalty.",
                             Name = "Attack"
@@ -17420,24 +23233,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
-                            Id = new Guid("08bac763-e881-4a70-b253-916191ee9713"),
-                            Description = "An action with this trait involves moving from one space to another.",
-                            Name = "Move"
-                        },
-                        new
-                        {
-                            Id = new Guid("c5e1a5e7-5d45-4826-b2ea-018b361770de"),
-                            Description = "An action with this trait requires a degree of mental concentration and discipline.",
-                            Name = "Concentrate"
-                        },
-                        new
-                        {
-                            Id = new Guid("5f7b92e7-09d2-4717-8588-56b45c08a111"),
-                            Description = "The GM rolls the check for this ability in secret.",
-                            Name = "Secret"
-                        },
-                        new
-                        {
                             Id = new Guid("739ead1c-4020-4673-96d2-4d0b543f6295"),
                             Description = "A curse is an effect that places some long-term affliction on a creature. Curses are always magical and are typically the result of a spell or trap. Effects with this trait can be removed only by effects that specifically target curses.  Afflictions with this trait are manifestations of potent ill will.A curse either lasts a specified amount of time or can be removed only by certain actions a character must perform or conditions they must meet.A curse with stages follows the rules for afflictions. (Gamemastery Guide pg. 251)",
                             Name = "Curse"
@@ -17459,6 +23254,72 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("7b601f4a-9c05-426c-aa46-14e8fa989066"),
                             Description = "Afflictions with the virulent trait are harder to remove. You must succeed at two consecutive saves to reduce a virulent affliction’s stage by 1. A critical success reduces a virulent affliction’s stage by only 1 instead of by 2.",
                             Name = "Virulent"
+                        },
+                        new
+                        {
+                            Id = new Guid("897e454f-a75b-448d-a75b-8d6e0f681d11"),
+                            Description = "Alchemical items are powered by reactions of alchemical reagents. Alchemical items aren’t magical and don’t radiate a magical aura.",
+                            Name = "Alchemical"
+                        },
+                        new
+                        {
+                            Id = new Guid("74d0e1f3-cbab-44df-b024-fdfebb5b27f3"),
+                            Description = "An alchemical bomb combines volatile alchemical components that explode when the bomb hits a creature or object. Most alchemical bombs deal damage, though some produce other effects.",
+                            Name = "Bomb"
+                        },
+                        new
+                        {
+                            Id = new Guid("00c4abbe-bed2-4e1c-8ef2-826234212f4c"),
+                            Description = "An item with this trait can be used only once. Unless stated otherwise, it's destroyed after activation. Consumable items include alchemical items and magical consumables such as scrolls and talismans. When a character creates consumable items, they can make them in batches of four.",
+                            Name = "Consumable"
+                        },
+                        new
+                        {
+                            Id = new Guid("7c5d73c4-d239-4cdf-ae95-e3f802156f6b"),
+                            Description = "When you use a thrown weapon with the splash trait, you don’t add your Strength modifier to the damage roll. If an attack with a splash weapon fails, succeeds, or critically succeeds, all creatures within 5 feet of the target (including the target) take the listed splash damage. On a failure (but not a critical failure), the target of the attack still takes the splash damage. Add splash damage together with the initial damage against the target before applying the target’s weaknesses or resistances. You don’t multiply splash damage on a critical hit.",
+                            Name = "Splash"
+                        },
+                        new
+                        {
+                            Id = new Guid("69712c6e-b328-46e4-a38a-0dc302c469f7"),
+                            Description = "Elixirs are alchemical liquids that are used by drinking them.",
+                            Name = "Elixir"
+                        },
+                        new
+                        {
+                            Id = new Guid("e3574cce-b028-4a4a-a2c7-fc3e0cfdd4ee"),
+                            Description = "An elixir with the mutagen trait temporarily transmogrifies the subject’s body and alters its mind. A mutagen always conveys one or more beneficial effects paired with one or more detrimental effects. Mutagens are polymorph effects, meaning you can benefit from only one at a time.",
+                            Name = "Mutagen"
+                        },
+                        new
+                        {
+                            Id = new Guid("67f31585-bba4-4a97-8bfc-ab95013410d4"),
+                            Description = "A hazard or item with this trait is constructed to hinder interlopers.",
+                            Name = "Trap"
+                        },
+                        new
+                        {
+                            Id = new Guid("86fb6cb4-506a-43c8-99d6-152b9624594f"),
+                            Description = "A hazard with this trait is a spiritual echo, often of someone with a tragic death. Putting a haunt to rest often involves resolving the haunt’s unfinished business. A haunt that hasn’t been properly put to rest always returns after a time.",
+                            Name = "Haunt"
+                        },
+                        new
+                        {
+                            Id = new Guid("9762a78e-698f-4bbb-81ec-fe1f0784f961"),
+                            Description = "A hazard with this trait is a constructed physical object.",
+                            Name = "Mechanical"
+                        },
+                        new
+                        {
+                            Id = new Guid("b02d26f9-e334-4f2b-b713-767621853861"),
+                            Description = "A hazard with this trait is something dangerous that’s part of the natural world, such as quicksand or harmful mold.",
+                            Name = "Environmental"
+                        },
+                        new
+                        {
+                            Id = new Guid("d052779d-0c7e-4fe0-915b-91d3e71fb517"),
+                            Description = "Fungal creatures have the fungus trait. They are distinct from normal fungi.",
+                            Name = "Fungus"
                         });
                 });
 
@@ -22803,11 +28664,1373 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ConditionPoisonStageEffect", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Official.Database.Models.StaggeredEffectStageEffect");
+
+                    b.Property<Guid>("ConditionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int?>("Severity")
+                        .HasColumnType("integer");
+
+                    b.HasIndex("ConditionId");
+
+                    b.HasDiscriminator().HasValue("ConditionPoisonStageEffect");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("0bf453a8-ad63-4059-a589-a47a771a388a"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("0468236a-951d-4f4b-ba55-9677d2872063"),
+                            ConditionId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("3af0f5a8-e26c-4328-8bfd-586297d76416"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("3abafdfd-bb76-4211-8bd2-733116b08360"),
+                            ConditionId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("aad3acd9-12b3-4aec-ae90-c5f96235837e"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("39bc0f47-bd42-488e-bb8c-bbd82bc20771"),
+                            ConditionId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                            Severity = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("72f8bc3a-e04e-4fad-b2a4-60b786545ca7"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("edd921e7-2f4b-4709-9e7f-806d97c2861d"),
+                            ConditionId = new Guid("ff7b682f-13ff-464f-a230-89cc814186ea")
+                        },
+                        new
+                        {
+                            Id = new Guid("0c5f181c-a6a8-4038-8b7f-3360eaf636ea"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("725558bb-745a-4919-a817-30087a434af0"),
+                            ConditionId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("4ca8d6dd-acfc-4bf5-b8fd-40f2a1322b05"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4d2f2a82-e324-4da0-adaa-b5f011fbbc50"),
+                            ConditionId = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f")
+                        },
+                        new
+                        {
+                            Id = new Guid("e14d989e-2280-4792-9758-fb5d94e4969a"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4d2f2a82-e324-4da0-adaa-b5f011fbbc50"),
+                            ConditionId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("d7873b5f-2373-4e16-bf65-5b5a67bed2d5"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("d82f5ea0-0885-4d2f-9073-8715968a98c4"),
+                            ConditionId = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("fdd9210a-5c37-4805-b2ef-9fb1177d7526"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a22c53f3-6440-4ea1-a0ea-bf7bffeacb7e"),
+                            ConditionId = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("ac0aef9e-5c9d-4984-b589-63889f8f1553"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("16bef704-1548-4a7a-ad3b-6d307c5cf93e"),
+                            ConditionId = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("bb63ec34-7c71-4ac0-bc8b-8b4316f78364"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8b833ef5-c504-4580-bee7-b124e0d63981"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("488cc010-f4d3-44cc-b0b9-ebbd408c4e5e"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("b52f55c1-44e0-479a-8d1e-24cbeb57189e"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("8c8ab084-efcb-455d-9029-28b2ac9b3b4c"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8b8011f3-58a5-4e72-9e3f-db705c384bf8"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("802df304-2287-4d04-99d6-c5a3dee6eb31"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("03e91a70-68d4-4048-b785-2f7c52e1a5ab"),
+                            ConditionId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("3efd49c0-5197-484d-862d-0f00e9357f5a"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("37604a6a-f8cb-40a2-8ad8-15dc110662f8"),
+                            ConditionId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                            Severity = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("35b50894-a2c7-468e-8ba0-5cd4a107b51e"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("dadede4d-28bb-4cbc-b825-4cd8a7e1901f"),
+                            ConditionId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("049755e3-4e91-453c-981b-9ee1f657d318"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6f2a640f-b71e-4c13-a457-17767f74a6d3"),
+                            ConditionId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                            Severity = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("06db10c0-1c72-4baa-80d9-5ddd27243912"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ecc2dccf-0d82-4d85-b11d-74656cec77c6"),
+                            ConditionId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                            Severity = 4
+                        },
+                        new
+                        {
+                            Id = new Guid("c38d3ca0-e6d3-468d-b78f-b16fd0d39bec"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("18e5d82c-4e9b-4e03-aa6a-7b2506af4227"),
+                            ConditionId = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d")
+                        },
+                        new
+                        {
+                            Id = new Guid("195e7a37-1ff5-4c8f-9de4-3b36405c2a01"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("1acf2634-6f8e-415c-b5be-929dcbf7c174"),
+                            ConditionId = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d")
+                        },
+                        new
+                        {
+                            Id = new Guid("78670bc1-771e-4221-8eca-466d80e3aff2"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("1acf2634-6f8e-415c-b5be-929dcbf7c174"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("96174e93-daf0-457c-8122-33dad6e29aaf"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("89bdb239-6d05-463b-8cba-8139bc50e0f9"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("c442ad47-f2f7-40e9-86c4-536f0fad0912"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6cbcf457-9203-44fb-a882-4c0886e3c735"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("8885ee16-dcd3-4d91-bd14-8c6aa1c36326"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("e57dcb4e-11ad-4431-8638-776ee1bf0b24"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("1ddc185b-02a4-4767-b112-29d040653039"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("1c67cd5b-de98-4ae0-bd21-ee9f106e14ad"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("fc788e66-b377-49af-b940-464150d24edf"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("34ec0065-42d6-47b4-bf69-d973dba2ef14"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("5f9c4c7c-f785-4247-ae9c-8fe76d687bb5"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("c0951b2e-31d9-47da-a8d9-7d8b621fc821"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("07ba2ef2-6563-4f3f-8897-3405dfaea9ee"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("29db829e-3e03-4f20-b040-1fd524fd7e68"),
+                            ConditionId = new Guid("a9bb8a46-7442-4480-b008-c706d7d4ef2f"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("3302a027-a721-4d57-a4c8-29b6fe7fb2cf"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8d39a64f-67d5-49f9-9937-5bf5d282fc03"),
+                            ConditionId = new Guid("a9bb8a46-7442-4480-b008-c706d7d4ef2f"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("6ae69ff8-919d-4a88-a8a6-b0292096d4cc"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("0b046df0-35c7-4ce5-9e8a-ef267997af29"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("7762e24a-96b6-44a5-b5e6-fa0810975e64"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a9d1a6a2-beff-45bd-8557-83718005de78"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("bbd15e86-b959-4126-b304-9d7991c252bf"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4ee75b8e-2d54-4748-abbc-280cae951532"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 4
+                        },
+                        new
+                        {
+                            Id = new Guid("58936569-a213-4c32-bad0-8dd632e8c143"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("67839e5e-b6f6-4ce8-b536-10004c043041"),
+                            ConditionId = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d")
+                        },
+                        new
+                        {
+                            Id = new Guid("a4706319-051d-4c98-af73-398cdccec687"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6cb56422-0099-4a94-a59d-46cb9ca5f2f6"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("eb2dce7e-db4d-4bac-a61c-b3e9aea525ed"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6cb56422-0099-4a94-a59d-46cb9ca5f2f6"),
+                            ConditionId = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d")
+                        },
+                        new
+                        {
+                            Id = new Guid("eeb7db98-674f-4052-b325-60e52efca32d"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("238e7d05-3376-4c19-999f-2675ae1940ca"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("e2fcf7f8-043e-44c8-a54b-c30295bd1fff"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("238e7d05-3376-4c19-999f-2675ae1940ca"),
+                            ConditionId = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d")
+                        },
+                        new
+                        {
+                            Id = new Guid("7e1988d4-037a-47bc-85ae-ee1234048ccf"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("fe6bc444-914b-49bc-93b0-1a87206e99c1"),
+                            ConditionId = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("bd39ba66-7b6a-4b5c-9342-66a8019a260a"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("14971f7b-66f5-4053-bf38-1a5a23459eea"),
+                            ConditionId = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("ebdb2091-9058-4809-bf44-87af8f639b03"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("f2ab2c28-5734-4ae9-80fc-2ebaf7481ed3"),
+                            ConditionId = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("d465d853-ec47-4dae-8127-12eb28f7772e"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6c9e289f-c6e9-4c1d-bdf8-2f27a8e0f286"),
+                            ConditionId = new Guid("f253f20f-d7d3-4fe6-bb19-8d521afd9436"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("d879fa2d-c94f-4800-bea2-dae5fbae818e"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("7b554a0b-5001-4e46-98a7-fce18cc80c10"),
+                            ConditionId = new Guid("f253f20f-d7d3-4fe6-bb19-8d521afd9436"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("f07abe26-4519-452c-9ede-9e1324f0af60"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("fcad32cd-f3ac-4cb6-a108-f54b16dcbbf9"),
+                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831")
+                        },
+                        new
+                        {
+                            Id = new Guid("33a4cee8-887e-4b38-b519-1d31ff816a33"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a85df2c1-e5f2-448b-ac85-03c85869417d"),
+                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831")
+                        },
+                        new
+                        {
+                            Id = new Guid("9bff1446-c02c-46f6-8138-1801cb3f549e"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("fd3da93d-0239-4e54-b076-069bbdb0aaac"),
+                            ConditionId = new Guid("48d6ee37-8a18-4162-9164-9f7892045d2d")
+                        },
+                        new
+                        {
+                            Id = new Guid("05ac86bb-0e64-4c15-91db-dec7da56acd4"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("d4585a9b-1f6e-4626-89e0-54428475754c"),
+                            ConditionId = new Guid("48d6ee37-8a18-4162-9164-9f7892045d2d")
+                        },
+                        new
+                        {
+                            Id = new Guid("903e1d6d-379c-4223-8032-88bc21d562e6"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8dc1ed03-ff8b-49a0-bbf3-6ccabf16b382"),
+                            ConditionId = new Guid("48d6ee37-8a18-4162-9164-9f7892045d2d")
+                        },
+                        new
+                        {
+                            Id = new Guid("e8c54635-1a96-4cb1-9175-68f7d7378b45"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8dc1ed03-ff8b-49a0-bbf3-6ccabf16b382"),
+                            ConditionId = new Guid("5007c3b2-b184-43b1-85d7-ad159d14ccb5")
+                        },
+                        new
+                        {
+                            Id = new Guid("65f8e81b-a1a5-4e2e-8438-3a916d6db650"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("21b5eabd-aff1-436f-a501-1b825aecb69b"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("88e24d10-6b18-47b2-88fb-767470c877b4"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("21b5eabd-aff1-436f-a501-1b825aecb69b"),
+                            ConditionId = new Guid("a2d387ce-eec5-439b-9e2e-2ef38f0ff3fb"),
+                            Severity = 10
+                        },
+                        new
+                        {
+                            Id = new Guid("9b240dfe-79d6-4bc6-a125-6c270dab633b"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("0919e98f-4b60-4afe-9097-d5a5810e00b3"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("9ef1187a-3825-4bd4-a0b6-b3bf8ebcd19d"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("0919e98f-4b60-4afe-9097-d5a5810e00b3"),
+                            ConditionId = new Guid("a2d387ce-eec5-439b-9e2e-2ef38f0ff3fb"),
+                            Severity = 20
+                        },
+                        new
+                        {
+                            Id = new Guid("a7046f36-0812-481c-8e53-45d094d2608a"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8c04d178-f441-4fcc-82f4-57f97ab22b9d"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("1f198a30-8ab5-4d93-8750-cca7e6c55141"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8c04d178-f441-4fcc-82f4-57f97ab22b9d"),
+                            ConditionId = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d")
+                        },
+                        new
+                        {
+                            Id = new Guid("cf5f02ee-0a44-4991-a7b6-454880d2d97a"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8c04d178-f441-4fcc-82f4-57f97ab22b9d"),
+                            ConditionId = new Guid("a2d387ce-eec5-439b-9e2e-2ef38f0ff3fb"),
+                            Severity = 30
+                        },
+                        new
+                        {
+                            Id = new Guid("bddebbfc-cc35-4a5e-b652-c0f9a83c3f49"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("bbdcbd62-49d6-44fe-8bbd-dbb3af8335a0"),
+                            ConditionId = new Guid("a9bb8a46-7442-4480-b008-c706d7d4ef2f"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("69312c8d-fa78-4abc-8090-11990a49fbbc"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ae0e2c13-d597-404b-a347-3022ee522878"),
+                            ConditionId = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f")
+                        },
+                        new
+                        {
+                            Id = new Guid("d6ffe1a6-0373-4e2d-bc65-256555bbdf30"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ae0e2c13-d597-404b-a347-3022ee522878"),
+                            ConditionId = new Guid("a9bb8a46-7442-4480-b008-c706d7d4ef2f"),
+                            Severity = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("07c4bb2b-a1b8-4497-bcaf-edd83a10e826"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("e3c7e67f-fac6-44bc-bca2-4e305a383db2"),
+                            ConditionId = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f")
+                        },
+                        new
+                        {
+                            Id = new Guid("af7c7592-da0a-4afa-9a97-4a9fbe98f219"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("e3c7e67f-fac6-44bc-bca2-4e305a383db2"),
+                            ConditionId = new Guid("a9bb8a46-7442-4480-b008-c706d7d4ef2f"),
+                            Severity = 4
+                        },
+                        new
+                        {
+                            Id = new Guid("2fb6cbeb-862a-47d6-8a14-beba496fa865"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("e229a0be-7872-494f-8b8d-0d9243b55209"),
+                            ConditionId = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f")
+                        },
+                        new
+                        {
+                            Id = new Guid("e901e773-4ddd-45b3-b08a-dfcfa2df5bf7"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("61776e14-9ede-46f4-a06c-159dc5449417"),
+                            ConditionId = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f")
+                        },
+                        new
+                        {
+                            Id = new Guid("040091a6-d7c9-4d09-892d-8b47780ad8ba"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("61776e14-9ede-46f4-a06c-159dc5449417"),
+                            ConditionId = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d")
+                        },
+                        new
+                        {
+                            Id = new Guid("a3fe5d9e-596c-4a4c-9bba-15c06efd2771"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("c818b8ed-9c57-4b0e-91be-91d714eb84be"),
+                            ConditionId = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f")
+                        },
+                        new
+                        {
+                            Id = new Guid("597f934c-9fdc-4b2f-a1e8-22e3b4727bf6"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("c818b8ed-9c57-4b0e-91be-91d714eb84be"),
+                            ConditionId = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d")
+                        },
+                        new
+                        {
+                            Id = new Guid("4e11fe72-86a4-462a-8e76-fe7a1a29af16"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("c818b8ed-9c57-4b0e-91be-91d714eb84be"),
+                            ConditionId = new Guid("a9bb8a46-7442-4480-b008-c706d7d4ef2f"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("2ba264b5-6806-41e9-9525-7b7245538a19"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6aeb73f9-a53b-47ff-8902-ede15b5a1650"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("a4ea2ad9-1e02-4f91-bec6-15ab460cdea4"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("795ce35a-f3cc-43d9-b6bb-6b9d73564c32"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("29139073-3fe6-46f0-a36a-210bd33b952d"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ba8b6a38-0f9e-47a6-942a-858cfaaf2258"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("9bed9e22-354a-4d24-ae9a-4d3d9bee650f"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("9dafbeca-1a1b-42b5-b5bc-47186caf8647"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("42f240f3-d15d-46a4-a5ec-bc3777948cfe"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a15a472e-00c7-49d1-961c-3653286ac3d4"),
+                            ConditionId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("caf16477-a14f-4430-aeb3-098cba159e84"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("1ac15651-b0d8-4677-bae9-f6e3d7d63d95"),
+                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831")
+                        },
+                        new
+                        {
+                            Id = new Guid("3b935c66-65ea-48c8-95bf-06adb04e8b49"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4c718a24-8c01-48c3-bd5c-f4df12db2edc"),
+                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831")
+                        },
+                        new
+                        {
+                            Id = new Guid("f8114adf-1e3e-4056-9fac-50e6972e782c"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("e158a6d9-59bd-45e3-ac4b-62c3bd13f0b9"),
+                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831")
+                        },
+                        new
+                        {
+                            Id = new Guid("d355d61d-32bb-441c-b612-2a38d98928c1"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("038ae784-9e97-4b76-9474-7e71f2e866f9"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("506ecf2b-2aff-4e39-9744-10e4a502b7ed"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("959cd97b-8af6-43d3-b464-96f192c4e0d3"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("b4b392eb-6f20-496f-963c-f0939043f235"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("cb8ec76e-2ed6-4157-9edf-eb54cc553f0b"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("dd54ff19-7b01-40c7-80e7-f2c80cc3d5da"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4cdc2685-68fc-4b72-a7cd-0aa14e057ef3"),
+                            ConditionId = new Guid("5007c3b2-b184-43b1-85d7-ad159d14ccb5")
+                        },
+                        new
+                        {
+                            Id = new Guid("6a7a8f08-e882-4f8d-9aa6-d69febb46bf8"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("608b96fd-baa6-4acf-9c71-983a8a11ea6e"),
+                            ConditionId = new Guid("5007c3b2-b184-43b1-85d7-ad159d14ccb5")
+                        },
+                        new
+                        {
+                            Id = new Guid("5232864d-00f2-4081-b065-7d25921188b5"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("78f1b6ff-e864-4e1e-9792-5d7315050373"),
+                            ConditionId = new Guid("5007c3b2-b184-43b1-85d7-ad159d14ccb5")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.DamagePoisonStageEffect", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Official.Database.Models.StaggeredEffectStageEffect");
+
+                    b.Property<string>("Damage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("DamageTypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Every")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsDamagePersistent")
+                        .HasColumnType("boolean");
+
+                    b.HasIndex("DamageTypeId");
+
+                    b.HasDiscriminator().HasValue("DamagePoisonStageEffect");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("901de562-81e9-4a7a-ad10-cc865341ed13"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("0468236a-951d-4f4b-ba55-9677d2872063"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("c27b7d34-8fa2-4373-9c8d-5c042e168fe1"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("3abafdfd-bb76-4211-8bd2-733116b08360"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("9a349ef1-5a02-4309-a095-d298f879328d"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("39bc0f47-bd42-488e-bb8c-bbd82bc20771"),
+                            Damage = "2d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("6175ff55-844c-4783-9a38-61a8bc9bf838"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("725558bb-745a-4919-a817-30087a434af0"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("09f5f419-3e05-450a-ac4e-a040ae6f4615"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4d2f2a82-e324-4da0-adaa-b5f011fbbc50"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("7a7a221e-1e36-4169-9184-af24aeb92769"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("d44a502a-e5f1-4014-899a-1b9ac8425764"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("bdb667b8-4850-4ca8-837c-9b8126773640"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("7e0f3f16-8979-426b-878a-ed4f6223a119"),
+                            Damage = "2d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("876e2ff9-313e-4e44-a314-1170ed53922b"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("d82f5ea0-0885-4d2f-9073-8715968a98c4"),
+                            Damage = "15d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("6396fb33-6c06-448d-b103-b03454ec0e59"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a22c53f3-6440-4ea1-a0ea-bf7bffeacb7e"),
+                            Damage = "17d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("75c1b506-f418-4971-8443-59db5a0ff891"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("16bef704-1548-4a7a-ad3b-6d307c5cf93e"),
+                            Damage = "20d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("1a85f9c6-5743-433a-a7b3-687ab32981cb"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("7da7d5d7-7109-4181-8ffe-9a08570559e8"),
+                            Damage = "8d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("4fd42652-15b6-4286-aa70-b81e34ec90a7"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("2853ce52-ea4a-4f9c-b8a3-dded56127ad2"),
+                            Damage = "10d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("d09dd3cd-e867-463c-b911-106662f84b44"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a1608314-f954-4c33-b6a4-ce5cabc1b52c"),
+                            Damage = "15d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("9058f97d-0aac-4d3b-b68c-adb1e8c7f84a"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8b833ef5-c504-4580-bee7-b124e0d63981"),
+                            Damage = "7d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("b065f341-8bac-49ee-83a1-87d03f27e66e"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("b52f55c1-44e0-479a-8d1e-24cbeb57189e"),
+                            Damage = "8d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("2a2a1976-91a5-40dd-b293-db3608f5398c"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8b8011f3-58a5-4e72-9e3f-db705c384bf8"),
+                            Damage = "10d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("b735be5c-1040-403f-acfa-6f366435b546"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("f7235d2a-9724-4360-985b-839bab8513c3"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("6bb797d7-f7bc-4cb7-bde0-a40a77485bb1"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("b3de3810-a480-4f26-9d10-b1ef0e16928e"),
+                            Damage = "1d12",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("a6a8aa11-5936-4b59-8935-ddfbc34ce833"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8b095b9c-c427-4860-8b1a-d012207e6877"),
+                            Damage = "2d10",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("522e11c6-2156-4c69-8ced-b2ff70428e30"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("101a5abd-b68c-4ec5-92ac-a568358d2eda"),
+                            Damage = "13d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("289600b9-a130-42f0-84eb-9d0875ef6d45"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("03e91a70-68d4-4048-b785-2f7c52e1a5ab"),
+                            Damage = "17d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("0927240a-dbdf-41a5-a145-a63234f3398b"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("37604a6a-f8cb-40a2-8ad8-15dc110662f8"),
+                            Damage = "20d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("b81c29ee-7c52-465e-87f7-70c46b8c71fe"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("dadede4d-28bb-4cbc-b825-4cd8a7e1901f"),
+                            Damage = "6d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("4c826d4b-41fc-4b85-b43e-e43bd48862d6"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6f2a640f-b71e-4c13-a457-17767f74a6d3"),
+                            Damage = "7d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("9877f704-09a9-401a-956d-26533fa67458"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ecc2dccf-0d82-4d85-b11d-74656cec77c6"),
+                            Damage = "9d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("a2a670e4-c86f-453c-b5f2-4c55108bf2b2"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("7ab45a14-5323-4788-8547-bde6dcef2eea"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("c2016d79-d34e-40fc-bda1-255c004de10a"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("18e5d82c-4e9b-4e03-aa6a-7b2506af4227"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("e8135bb7-15ea-4a1c-94da-da193525cd2d"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("1acf2634-6f8e-415c-b5be-929dcbf7c174"),
+                            Damage = "1d12",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("14fb278e-8a07-4a78-ba04-76ba5cea9530"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("89bdb239-6d05-463b-8cba-8139bc50e0f9"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("ea08a570-60de-4df2-8527-9f7788b5ecf3"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6cbcf457-9203-44fb-a882-4c0886e3c735"),
+                            Damage = "2d10",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("8d5e5a88-1588-47aa-8564-6113fffbebc5"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("e57dcb4e-11ad-4431-8638-776ee1bf0b24"),
+                            Damage = "2d10",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("cad292b2-f6c3-4ea9-8dd9-751959708833"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("1c67cd5b-de98-4ae0-bd21-ee9f106e14ad"),
+                            Damage = "2d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("ed57f33c-ff21-4f03-86d2-8990ac64aef9"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("34ec0065-42d6-47b4-bf69-d973dba2ef14"),
+                            Damage = "3d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("9ba4b270-c48a-40f7-b521-37c356429c7d"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("c0951b2e-31d9-47da-a8d9-7d8b621fc821"),
+                            Damage = "4d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("6965f0cd-09aa-404b-a6a0-1a16eb74f9a6"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6bc9fb73-f457-44b8-b248-bcfe9d2424a5"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("50459bf2-fa21-44cc-86b3-4f58965daef7"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("29db829e-3e03-4f20-b040-1fd524fd7e68"),
+                            Damage = "1d12",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("e5d81de4-9af1-4427-80fd-f804ae6534f7"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8d39a64f-67d5-49f9-9937-5bf5d282fc03"),
+                            Damage = "2d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("5fe5412a-564e-4a9a-bf76-c34b7d3da595"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("0b046df0-35c7-4ce5-9e8a-ef267997af29"),
+                            Damage = "17d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("610afeb6-7789-4aaf-b020-483aff478009"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a9d1a6a2-beff-45bd-8557-83718005de78"),
+                            Damage = "21d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("c239d60f-0e66-4b61-9f04-311b09d80272"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4ee75b8e-2d54-4748-abbc-280cae951532"),
+                            Damage = "26d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("a78408c4-2205-480a-8609-2cd28a755fe1"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("67839e5e-b6f6-4ce8-b536-10004c043041"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("0727811c-bfd4-4a38-9166-c94d17fd239f"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6cb56422-0099-4a94-a59d-46cb9ca5f2f6"),
+                            Damage = "1d12",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("de183ff8-e257-433d-8768-043895f2ade5"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("238e7d05-3376-4c19-999f-2675ae1940ca"),
+                            Damage = "2d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("27a4d185-f05c-40d9-950d-f1919356ad85"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("d4585a9b-1f6e-4626-89e0-54428475754c"),
+                            Damage = "5d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("a7f081b2-87db-4a04-91b9-9fa81352e936"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("8dc1ed03-ff8b-49a0-bbf3-6ccabf16b382"),
+                            Damage = "5d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("452e8475-cdf0-44a4-ba16-09560013f210"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("12cf4b7b-4c31-43de-b96f-9b8d1999ecf3"),
+                            Damage = "8d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("7837cfb0-e1b7-49d1-974b-e54579663570"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a8c16f0b-6882-4350-8778-9a5c81b30693"),
+                            Damage = "10d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("eecd7522-686e-4a45-8171-dfdd005905b6"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("eecd7522-686e-4a45-8171-dfdd005905b6"),
+                            Damage = "13d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("05efa5dc-5e14-418c-be89-4d9f4a3500fe"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("6aeb73f9-a53b-47ff-8902-ede15b5a1650"),
+                            Damage = "5d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("e550f252-a0e1-4e50-92ce-fbb0a02a5066"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("795ce35a-f3cc-43d9-b6bb-6b9d73564c32"),
+                            Damage = "6d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("2c234f6c-3c55-4948-acc5-6575b4dedc72"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ba8b6a38-0f9e-47a6-942a-858cfaaf2258"),
+                            Damage = "8d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("255f40bb-16a3-455a-b558-e7238bc000e2"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4fb01e13-3147-4cd2-ae48-b4b406a65b0a"),
+                            Damage = "3d6",
+                            DamageTypeId = new Guid("d88d0bfa-b079-4ac3-8978-2c65208981ca"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("024061f6-ed08-4d12-a9f4-7e547d19e40b"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4fb01e13-3147-4cd2-ae48-b4b406a65b0a"),
+                            Damage = "2d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("21af795d-bfb1-477c-b893-3724811eaeed"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("9dafbeca-1a1b-42b5-b5bc-47186caf8647"),
+                            Damage = "3d6",
+                            DamageTypeId = new Guid("d88d0bfa-b079-4ac3-8978-2c65208981ca"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("76970863-6b34-4ea4-8779-4d894597688b"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("9dafbeca-1a1b-42b5-b5bc-47186caf8647"),
+                            Damage = "2d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("1cff677e-5a7a-4cd1-9ee7-1151cf963153"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a15a472e-00c7-49d1-961c-3653286ac3d4"),
+                            Damage = "3d6",
+                            DamageTypeId = new Guid("d88d0bfa-b079-4ac3-8978-2c65208981ca"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("b28d1d65-738b-4537-a4dc-b4ae742f7b3c"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a15a472e-00c7-49d1-961c-3653286ac3d4"),
+                            Damage = "2d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("0829c1e6-8249-4419-ad41-dbd6da1aaa01"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("038ae784-9e97-4b76-9474-7e71f2e866f9"),
+                            Damage = "8d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("908525b2-5ebc-4927-8cdb-2226cc29d631"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("959cd97b-8af6-43d3-b464-96f192c4e0d3"),
+                            Damage = "9d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("26c7cf57-a9f3-4df1-8ef4-e6f296d3431c"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("cb8ec76e-2ed6-4157-9edf-eb54cc553f0b"),
+                            Damage = "10d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("e1de345d-5e5a-4103-99cc-bf818d653478"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4cdc2685-68fc-4b72-a7cd-0aa14e057ef3"),
+                            Damage = "18d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("8971c661-b31b-41aa-a17d-36641bd8d368"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("608b96fd-baa6-4acf-9c71-983a8a11ea6e"),
+                            Damage = "25d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("0efd65bc-b1ab-4577-a023-ce31044392dd"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("78f1b6ff-e864-4e1e-9792-5d7315050373"),
+                            Damage = "30d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("2499800c-521f-414e-92f2-5df2fcfafe36"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("4e559a7a-d1c2-4c97-841a-56a1133d5dd0"),
+                            Damage = "12d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("a4bc049d-893a-4292-839e-d0930a668b97"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("58e92f10-359f-4c0c-8de8-41b297e185f4"),
+                            Damage = "16d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("53314a91-0060-4517-8192-fa4fa6cacf74"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("cb73d3c9-853b-403f-ade4-16d27e40bbb8"),
+                            Damage = "20d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("73c9d6cf-4a09-4c4f-8092-d498c8d07175"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a0475e88-48bd-43c8-8d28-5b9e70fd9fd7"),
+                            Damage = "5d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("a253ee6c-70ae-4468-9a00-a650af66c45e"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("024442d6-e84c-4eaf-8735-7f8c6e1639c9"),
+                            Damage = "6d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("cd70bf4e-6e09-4447-a5cf-50099eb78ce5"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ede8cd6e-8055-4b1e-b613-e373cc316074"),
+                            Damage = "8d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.OtherPoisonStageEffect", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Official.Database.Models.StaggeredEffectStageEffect");
+
+                    b.Property<string>("Effect")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasDiscriminator().HasValue("OtherPoisonStageEffect");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("c6063c4e-4644-4972-baa0-fab5ae0eb0b0"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("fcad32cd-f3ac-4cb6-a108-f54b16dcbbf9"),
+                            Effect = "You cannot Perception check to wake up from unconsciousness."
+                        },
+                        new
+                        {
+                            Id = new Guid("a4bc689a-bae6-4049-9da8-b5c4eb8a75b6"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("a85df2c1-e5f2-448b-ac85-03c85869417d"),
+                            Effect = "You cannot Perception check to wake up from unconsciousness."
+                        });
+                });
+
             modelBuilder.Entity("ActionTrait", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", null)
                         .WithMany()
                         .HasForeignKey("ActionsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AlchemicalBombTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", null)
+                        .WithMany()
+                        .HasForeignKey("AlchemicalBombsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AlchemicalElixirTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixir", null)
+                        .WithMany()
+                        .HasForeignKey("AlchemicalElixirsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AlchemicalPoisonTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoison", null)
+                        .WithMany()
+                        .HasForeignKey("AlchemicalPoisonsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AlchemicalToolTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", null)
+                        .WithMany()
+                        .HasForeignKey("AlchemicalToolsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -22898,6 +30121,36 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Feat", null)
                         .WithMany()
                         .HasForeignKey("FeatsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("HazardHazardImmunity", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Hazard", null)
+                        .WithMany()
+                        .HasForeignKey("HazardsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardImmunity", null)
+                        .WithMany()
+                        .HasForeignKey("ImmunitiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("HazardTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Hazard", null)
+                        .WithMany()
+                        .HasForeignKey("HazardsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -23013,6 +30266,266 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
 
                     b.Navigation("Action");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", "Action")
+                        .WithMany()
+                        .HasForeignKey("ActionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.Navigation("Action");
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBombDetailBlock", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", "AlchemicalBomb")
+                        .WithMany("Details")
+                        .HasForeignKey("AlchemicalBombId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AlchemicalBomb");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBombPotencyBinding", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", "AlchemicalBomb")
+                        .WithMany("Potencies")
+                        .HasForeignKey("AlchemicalBombId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PotionPotency", "PotionPotency")
+                        .WithMany("AlchemicalBombs")
+                        .HasForeignKey("PotionPotencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AlchemicalBomb");
+
+                    b.Navigation("PotionPotency");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixir", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", "Action")
+                        .WithMany()
+                        .HasForeignKey("ActionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.Navigation("Action");
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixirCraftingRequirement", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixir", "AlchemicalElixir")
+                        .WithMany("CraftingRequirements")
+                        .HasForeignKey("AlchemicalElixirId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AlchemicalElixir");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixirDetailBlock", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixir", "AlchemicalElixir")
+                        .WithMany("Details")
+                        .HasForeignKey("AlchemicalElixirId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AlchemicalElixir");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixirPotencyBinding", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixir", "AlchemicalElixir")
+                        .WithMany("Potencies")
+                        .HasForeignKey("AlchemicalElixirId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PotionPotency", "PotionPotency")
+                        .WithMany()
+                        .HasForeignKey("PotionPotencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AlchemicalElixir");
+
+                    b.Navigation("PotionPotency");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoison", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", "Action")
+                        .WithMany()
+                        .HasForeignKey("ActionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ActionType", "ActionType")
+                        .WithMany()
+                        .HasForeignKey("ActionTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.StaggeredEffect", "Effect")
+                        .WithMany()
+                        .HasForeignKey("EffectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.Navigation("Action");
+
+                    b.Navigation("ActionType");
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("Effect");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoisonDetailBlock", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoison", "AlchemicalPoison")
+                        .WithMany("Details")
+                        .HasForeignKey("AlchemicalPoisonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AlchemicalPoison");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", "Action")
+                        .WithMany()
+                        .HasForeignKey("ActionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ActionType", "ActionType")
+                        .WithMany()
+                        .HasForeignKey("ActionTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.Navigation("Action");
+
+                    b.Navigation("ActionType");
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalToolDetailBlock", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", "AlchemicalTool")
+                        .WithMany("Details")
+                        .HasForeignKey("AlchemicalToolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AlchemicalTool");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalToolPotencyBinding", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalToolPotency", "Potency")
+                        .WithMany("Bindings")
+                        .HasForeignKey("PotencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", "Tool")
+                        .WithMany("Potencies")
+                        .HasForeignKey("ToolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Potency");
+
+                    b.Navigation("Tool");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
@@ -23397,6 +30910,134 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Feat");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Hazard", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardComplexity", "Complexity")
+                        .WithMany()
+                        .HasForeignKey("ComplexityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardType", "Type")
+                        .WithMany("Hazards")
+                        .HasForeignKey("TypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Complexity");
+
+                    b.Navigation("SourcePage");
+
+                    b.Navigation("Type");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardAction", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ActionType", "ActionType")
+                        .WithMany()
+                        .HasForeignKey("ActionTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Hazard", "Hazard")
+                        .WithMany("Actions")
+                        .HasForeignKey("HazardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ActionType");
+
+                    b.Navigation("Hazard");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardActionEffectBlock", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardAction", "HazardAction")
+                        .WithMany("EffectDetails")
+                        .HasForeignKey("HazardActionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("HazardAction");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardComponent", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Hazard", "Hazard")
+                        .WithMany("HazardComponents")
+                        .HasForeignKey("HazardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hazard");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardDisableRequirement", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Hazard", "Hazard")
+                        .WithMany("DisableRequirements")
+                        .HasForeignKey("HazardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Proficiency", "RequiredProficiency")
+                        .WithMany()
+                        .HasForeignKey("RequiredProficiencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Skill", "Skill")
+                        .WithMany()
+                        .HasForeignKey("SkillId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hazard");
+
+                    b.Navigation("RequiredProficiency");
+
+                    b.Navigation("Skill");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardDispellRequirement", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Hazard", "Hazard")
+                        .WithMany("DispellRequirements")
+                        .HasForeignKey("HazardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hazard");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardRoutineDetailBlock", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Hazard", "Hazard")
+                        .WithMany("RoutineDetails")
+                        .HasForeignKey("HazardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hazard");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardType", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("SourcePage");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Heritage", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Race", null)
@@ -23661,6 +31302,39 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Spell");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.StaggeredEffect", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SavingThrowStat", "SavingThrowStat")
+                        .WithMany()
+                        .HasForeignKey("SavingThrowStatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("SavingThrowStat");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.StaggeredEffectStage", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.StaggeredEffect", "StaggeredEffect")
+                        .WithMany("Stages")
+                        .HasForeignKey("StaggeredEffectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("StaggeredEffect");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.StaggeredEffectStageEffect", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.StaggeredEffectStage", "StaggeredEffectStage")
+                        .WithMany("Effects")
+                        .HasForeignKey("StaggeredEffectStageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("StaggeredEffectStage");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Stat", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Class", null)
@@ -23673,6 +31347,22 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", null)
                         .WithMany()
                         .HasForeignKey("ActionsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", null)
+                        .WithMany()
+                        .HasForeignKey("AlchemicalBombsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixir", null)
+                        .WithMany()
+                        .HasForeignKey("AlchemicalElixirsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoison", null)
+                        .WithMany()
+                        .HasForeignKey("AlchemicalPoisonsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", null)
+                        .WithMany()
+                        .HasForeignKey("AlchemicalToolsId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Curse", null)
                         .WithMany()
@@ -23892,6 +31582,28 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Prerequisite");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ConditionPoisonStageEffect", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Condition", "Condition")
+                        .WithMany()
+                        .HasForeignKey("ConditionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Condition");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.DamagePoisonStageEffect", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.DamageType", "DamageType")
+                        .WithMany()
+                        .HasForeignKey("DamageTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("DamageType");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Action", b =>
                 {
                     b.Navigation("Details");
@@ -23904,6 +31616,39 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Feats");
 
                     b.Navigation("Spells");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", b =>
+                {
+                    b.Navigation("Details");
+
+                    b.Navigation("Potencies");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixir", b =>
+                {
+                    b.Navigation("CraftingRequirements");
+
+                    b.Navigation("Details");
+
+                    b.Navigation("Potencies");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoison", b =>
+                {
+                    b.Navigation("Details");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", b =>
+                {
+                    b.Navigation("Details");
+
+                    b.Navigation("Potencies");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalToolPotency", b =>
+                {
+                    b.Navigation("Bindings");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Alignment", b =>
@@ -23966,6 +31711,29 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Feats");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Hazard", b =>
+                {
+                    b.Navigation("Actions");
+
+                    b.Navigation("DisableRequirements");
+
+                    b.Navigation("DispellRequirements");
+
+                    b.Navigation("HazardComponents");
+
+                    b.Navigation("RoutineDetails");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardAction", b =>
+                {
+                    b.Navigation("EffectDetails");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardType", b =>
+                {
+                    b.Navigation("Hazards");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HeritageRarity", b =>
                 {
                     b.Navigation("Heritages");
@@ -23984,6 +31752,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PlaneCategory", b =>
                 {
                     b.Navigation("Planes");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PotionPotency", b =>
+                {
+                    b.Navigation("AlchemicalBombs");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.RaceRarity", b =>
@@ -24015,6 +31788,16 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellType", b =>
                 {
                     b.Navigation("Spells");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.StaggeredEffect", b =>
+                {
+                    b.Navigation("Stages");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.StaggeredEffectStage", b =>
+                {
+                    b.Navigation("Effects");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Stat", b =>

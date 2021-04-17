@@ -28,12 +28,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "Deathcap Powder",
+                Id = Guid.Parse("cbd1a958-ac5e-4a17-9b53-affb4831ffca"),
                 DifficultyCheck = 33,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "10 Minutes",
@@ -51,39 +50,39 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
 
         protected override IEnumerable<AlchemicalPoisonDetailBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("86a05df2-37ef-4162-9576-46a53b42e381"), Text = "" };
+            yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("86a05df2-37ef-4162-9576-46a53b42e381"), Text = "The toxic deathcap mushroom can be dried, ground, and treated to form a flavorless powder with accelerated effects." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("101a5abd-b68c-4ec5-92ac-a568358d2eda"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("522e11c6-2156-4c69-8ced-b2ff70428e30"), Damage = "13d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("522e11c6-2156-4c69-8ced-b2ff70428e30"), Damage = "13d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("03e91a70-68d4-4048-b785-2f7c52e1a5ab"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("289600b9-a130-42f0-84eb-9d0875ef6d45"), Damage = "17d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("289600b9-a130-42f0-84eb-9d0875ef6d45"), Damage = "17d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("802df304-2287-4d04-99d6-c5a3dee6eb31"),  ConditionId = Sickened.ID, Severity = 2}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("37604a6a-f8cb-40a2-8ad8-15dc110662f8"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("0927240a-dbdf-41a5-a145-a63234f3398b"), Damage = "20d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("0927240a-dbdf-41a5-a145-a63234f3398b"), Damage = "20d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("3efd49c0-5197-484d-862d-0f00e9357f5a"),  ConditionId = Sickened.ID, Severity = 3}
                 }
             };

@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools
             if (sourcePage != null)
             {
                 seeder.Builder.AddData(sourcePage);
-                tool.SourcePageId = sourcePage.SourceId;
+                tool.SourcePageId = sourcePage.Id;
             }
 
             foreach (AlchemicalToolDetailBlock detailBlock in GetDetailBlocks())

@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
 
             yield return new AlchemicalElixirPotencyBinding
             {
-                Id = Guid.Parse("f9db054b-d24c-44d4-b52e-540188a3a862"),
+                Id = Guid.Parse("1d957ae5-0642-40d9-8f2d-8d8496975a6d"),
                 PotionPotencyId = seeder.GetPotionPotencyByName("Moderate").Id,
                 Level = 12,
                 Price = 32000,

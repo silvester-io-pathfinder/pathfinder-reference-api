@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class PoisonEffectStageEffect : BaseEntity
+    public class StaggeredEffectStageEffect : BaseEntity
     {
         public bool Permanent { get; set; }
 
-        public Guid PoisonEffectStageId { get; set; }
-        public PoisonEffectStage PoisonEffectStage { get; set; } = default!;
+        public Guid StaggeredEffectStageId { get; set; }
+        public StaggeredEffectStage StaggeredEffectStage { get; set; } = default!;
     }
 
-    public class ConditionPoisonStageEffect : PoisonEffectStageEffect
+    public class ConditionPoisonStageEffect : StaggeredEffectStageEffect
     {
         public Guid ConditionId { get; set; }
         public Condition Condition { get; set; } = default!;
@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public int? Severity { get; set; }
     }
 
-    public class DamagePoisonStageEffect : PoisonEffectStageEffect
+    public class DamagePoisonStageEffect : StaggeredEffectStageEffect
     {
         public string Damage { get; set; } = default!;
 
@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public DamageType DamageType { get; set; } = default!;
     }
 
-    public class OtherPoisonStageEffect : PoisonEffectStageEffect
+    public class OtherPoisonStageEffect : StaggeredEffectStageEffect
     {
         public string Effect { get; set; } = default!;
     }

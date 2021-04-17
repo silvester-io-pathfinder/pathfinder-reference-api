@@ -28,6 +28,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<AlchemicalTool> AlchemicalTools { get; set; } = new List<AlchemicalTool>();
 
-        public ICollection<PoisonEffect> AlchemicalPoisons { get; set; } = new List<PoisonEffect>();
+        public ICollection<AlchemicalPoison> AlchemicalPoisons { get; set; } = new List<AlchemicalPoison>();
     }
 }

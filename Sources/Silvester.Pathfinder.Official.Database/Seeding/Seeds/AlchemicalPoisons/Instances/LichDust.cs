@@ -28,12 +28,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "Lich Dust",
+                Id = Guid.Parse("792ba8fd-fe7a-45ac-a7b7-c7a88d8902d9"),
                 DifficultyCheck = 28,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "10 Minutes",
@@ -54,36 +53,36 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("d4ce3729-a117-4501-b8b3-2526bfb0ff43"), Text = "Dust salvaged from the remains of a destroyed lich has paralytic properties that make it a valuable poison." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("fd3da93d-0239-4e54-b076-069bbdb0aaac"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
                     new ConditionPoisonStageEffect { Id = Guid.Parse("9bff1446-c02c-46f6-8138-1801cb3f549e"),  ConditionId = Fatigued.ID}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("d4585a9b-1f6e-4626-89e0-54428475754c"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("27a4d185-f05c-40d9-950d-f1919356ad85"), Damage = "5d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("27a4d185-f05c-40d9-950d-f1919356ad85"), Damage = "5d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("05ac86bb-0e64-4c15-91db-dec7da56acd4"),  ConditionId = Fatigued.ID}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("8dc1ed03-ff8b-49a0-bbf3-6ccabf16b382"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("a7f081b2-87db-4a04-91b9-9fa81352e936"), Damage = "5d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("a7f081b2-87db-4a04-91b9-9fa81352e936"), Damage = "5d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("903e1d6d-379c-4223-8032-88bc21d562e6"),  ConditionId = Fatigued.ID},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("e8c54635-1a96-4cb1-9175-68f7d7378b45"),  ConditionId = Paralyzed.ID},
                 }

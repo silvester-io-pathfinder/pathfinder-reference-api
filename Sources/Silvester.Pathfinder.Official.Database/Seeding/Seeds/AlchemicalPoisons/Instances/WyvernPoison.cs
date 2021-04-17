@@ -28,12 +28,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "Wyvern Poison",
+                Id = Guid.Parse("5e4e4683-10b6-452d-8389-77874f60ae04"),
                 DifficultyCheck = 26,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "Immediate",
@@ -54,35 +53,35 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("240bf270-cf24-434c-983a-4b5217b80772"), Text = "Properly harvested and preserved, the poison from a wyvern’s sting is effective and direct." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("a0475e88-48bd-43c8-8d28-5b9e70fd9fd7"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("73c9d6cf-4a09-4c4f-8092-d498c8d07175"), Damage = "5d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("73c9d6cf-4a09-4c4f-8092-d498c8d07175"), Damage = "5d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("024442d6-e84c-4eaf-8735-7f8c6e1639c9"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("a253ee6c-70ae-4468-9a00-a650af66c45e"), Damage = "6d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("a253ee6c-70ae-4468-9a00-a650af66c45e"), Damage = "6d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("ede8cd6e-8055-4b1e-b613-e373cc316074"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("cd70bf4e-6e09-4447-a5cf-50099eb78ce5"), Damage = "8d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("cd70bf4e-6e09-4447-a5cf-50099eb78ce5"), Damage = "8d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                 }
             };
         }

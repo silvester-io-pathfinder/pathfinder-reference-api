@@ -27,17 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<AlchemicalBombDetailBlock> Details { get; set; } = new List<AlchemicalBombDetailBlock>();
 
-        public Guid LesserId { get; set; }
-        public AlchemicalBombPotencyBinding Lesser { get; set; } = default!;
-
-        public Guid ModerateId { get; set; }
-        public AlchemicalBombPotencyBinding Moderate { get; set; } = default!;
-
-        public Guid GreaterId { get; set; }
-        public AlchemicalBombPotencyBinding Greater { get; set; } = default!;
-
-        public Guid MajorId { get; set; }
-        public AlchemicalBombPotencyBinding Major { get; set; } = default!;
+        public ICollection<AlchemicalBombPotencyBinding> Potencies { get; set; } = new List<AlchemicalBombPotencyBinding>();
     }
 
     public class AlchemicalBombDetailBlock : BaseEntity

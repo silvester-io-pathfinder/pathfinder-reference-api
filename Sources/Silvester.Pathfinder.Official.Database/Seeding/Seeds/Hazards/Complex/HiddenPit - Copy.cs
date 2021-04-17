@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
-    public class HiddenPit2 : AbstractHazardTemplate
+    /*public class HiddenPit2 : AbstractHazardTemplate
     {
         public static readonly Guid ID = Guid.Parse("");
 
@@ -22,14 +22,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 ArmorClass = ,
                 Fortitude = ,
                 Reflex = ,
-                HitPoints = ,
-                Hardness = ,
-                BrokenThreshold = ,
                 Reset = "",
                 CanBeDetectedMagically = ,
                 TypeId = seeder.GetHazardTypeByName("").Id,
                 ComplexityId = seeder.GetComplexityByName("Simple").Id,
                 Speed =
+            };
+        }
+
+        protected override IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder)
+        {
+            yield return new HazardComponent
+            {
+                Name = "",
+                Hardness = ,
+                HitPoints = ,
+                BrokenThreshold =,
             };
         }
 
@@ -43,15 +51,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             yield return "";
         }
 
-        protected override HazardAction GetActions(HazardSeeder seeder)
+        protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
         {
-            return new HazardAction
+            yield return new HazardAction
             {
                 Id = Guid.Parse(""),
                 Name = "",
-                Effect = "",
+                Traits = seeder.FilterTraits(""),
                 Trigger = "",
-                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id
+                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
+                EffectDetails =
+                {
+                    new HazardActionEffectBlock { Id = Guid.Parse(""), Text = "" },
+                }
             };
         }
 
@@ -88,5 +100,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 CounteractDifficultyCheck =
             };
         }
-    }
+
+        protected override SourcePage GetSourcePage(HazardSeeder seeder)
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse(""),
+                SourceId = seeder.GetSourceByName("Core Rulebook").Id,
+                Page = 525
+            };
+        }
+    }*/
 }

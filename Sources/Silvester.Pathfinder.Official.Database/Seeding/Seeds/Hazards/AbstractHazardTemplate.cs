@@ -12,89 +12,107 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
         {
             Hazard hazard = GetHazard(seeder);
 
-            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
-            {
-                seeder.Builder.HasJoinData((hazard, trait));
-            }
-
-            foreach (HazardImmunity immunity in seeder.FilterImmunities(GetImmunities().ToArray()))
-            {
-                seeder.Builder.HasJoinData((hazard, immunity));
-            }
+            SourcePage source = GetSourcePage(seeder);
+            hazard.SourcePageId = source.Id;
+            seeder.Builder.AddData(source);
 
             foreach (HazardRoutineDetailBlock routineDetail in GetRoutineDetails(seeder))
             {
                 routineDetail.HazardId = hazard.Id;
                 seeder.Builder.AddData(routineDetail);
-            }
 
-            foreach (HazardAction action in GetActions(seeder))
-            {
-                action.HazardId = hazard.Id;
-
-                foreach (HazardActionEffect effect in action.Effects)
+                foreach (HazardComponent component in GetComponents(seeder))
                 {
-                    SeedHazardActionEffect(seeder, effect, action.Id);
-                   
+                    component.HazardId = hazard.Id;
+                    seeder.Builder.AddData(component);
                 }
-                action.Effects = new HazardActionEffect[] { };
 
-                foreach (Trait trait in action.Traits)
+                foreach (HazardAction action in GetActions(seeder))
                 {
-                    seeder.Builder.HasJoinData((action, trait));
+                    action.HazardId = hazard.Id;
+
+                    foreach (HazardActionEffectBlock block in action.EffectDetails)
+                    {
+                        block.HazardActionId = action.Id;
+                        seeder.Builder.AddData(block);
+                    }
+                    action.EffectDetails = new HazardActionEffectBlock[] { };
+
+                    foreach (HazardActionEffect effect in action.Effects)
+                    {
+                        SeedHazardActionEffect(seeder, effect, action.Id);
+
+                    }
+                    action.Effects = new HazardActionEffect[] { };
+
+                    foreach (Trait trait in action.Traits)
+                    {
+                        seeder.Builder.HasJoinData((action, trait));
+                    }
+                    action.Traits = new Trait[] { };
+
+                    seeder.Builder.AddData(action);
                 }
-                action.Traits = new Trait[] { };
 
-                seeder.Builder.AddData(action);
+                foreach (HazardDisableRequirement requirement in GetDisableRequirements(seeder))
+                {
+                    requirement.HazardId = hazard.Id;
+                    seeder.Builder.AddData(requirement);
+                }
+
+                foreach (HazardDispellRequirement requirement in GetDispellRequirements(seeder))
+                {
+                    requirement.HazardId = hazard.Id;
+                    seeder.Builder.AddData(requirement);
+                }
+
+                foreach (HazardAction action in GetActions(seeder))
+                {
+                    action.HazardId = hazard.Id;
+                    seeder.Builder.AddData(action);
+                }
+
+                seeder.Builder.AddData(hazard);
+
+                foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
+                {
+                    seeder.Builder.HasJoinData((hazard, trait));
+                }
+
+                foreach (HazardImmunity immunity in seeder.FilterImmunities(GetImmunities().ToArray()))
+                {
+                    seeder.Builder.HasJoinData((hazard, immunity));
+                }
+
             }
-
-            foreach (HazardDisableRequirement requirement in GetDisableRequirements(seeder))
-            {
-                requirement.HazardId = hazard.Id;
-                seeder.Builder.AddData(requirement);
-            }
-
-            foreach (HazardDispellRequirement requirement in GetDispellRequirements(seeder))
-            {
-                requirement.HazardId = hazard.Id;
-                seeder.Builder.AddData(requirement);
-            }
-
-            foreach(HazardAction action in GetActions(seeder))
-            {
-                action.HazardId = hazard.Id;
-                seeder.Builder.AddData(action);
-            }
-
-            seeder.Builder.AddData(hazard);
         }
 
         private void SeedHazardActionEffect(HazardSeeder seeder, HazardActionEffect effect, Guid actionId)
         {
             effect.HazardActionId = actionId;
 
-            if(effect is PoisonHazardActionEffect poisonHazardActionEffect)
+            foreach (Trait trait in effect.Traits)
             {
-                foreach(Trait trait in poisonHazardActionEffect.PoisonEffect.Traits)
-                {
-                    seeder.Builder.HasJoinData((trait, poisonHazardActionEffect.PoisonEffect));
-                }
-                poisonHazardActionEffect.PoisonEffect.Traits = new Trait[] { };
+                seeder.Builder.HasJoinData((trait, effect));
+            }
+            effect.Traits = new Trait[0];
 
-                foreach(PoisonEffectStage stage in poisonHazardActionEffect.PoisonEffect.Stages)
+            if (effect is PoisonHazardActionEffect poisonHazardActionEffect)
+            {
+                foreach (StaggeredEffectStage stage in poisonHazardActionEffect.PoisonEffect.Stages)
                 {
-                    stage.PoisonEffectId = poisonHazardActionEffect.PoisonEffect.Id;
+                    stage.StaggeredEffectId = poisonHazardActionEffect.PoisonEffect.Id;
 
-                    foreach(PoisonEffectStageEffect stageEffect in stage.Effects)
+                    foreach (StaggeredEffectStageEffect stageEffect in stage.Effects)
                     {
-                        stageEffect.PoisonEffectStageId = stage.Id;
+                        stageEffect.StaggeredEffectStageId = stage.Id;
                         seeder.Builder.AddData(stage);
                     }
-                    stage.Effects = new PoisonEffectStageEffect[] { };
+                    stage.Effects = new StaggeredEffectStageEffect[] { };
 
                     seeder.Builder.AddData(stage);
                 }
-                poisonHazardActionEffect.PoisonEffect.Stages = new PoisonEffectStage[] { };
+                poisonHazardActionEffect.PoisonEffect.Stages = new StaggeredEffectStage[] { };
 
                 seeder.Builder.AddData(poisonHazardActionEffect.PoisonEffect);
             }
@@ -103,7 +121,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
         }
 
         protected abstract Hazard GetHazard(HazardSeeder seeder);
+        protected abstract SourcePage GetSourcePage(HazardSeeder seeder);
         protected abstract HazardDetectionRequirement GetDetectionRequirement(HazardSeeder seeder);
+        protected abstract IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder);
 
         protected abstract IEnumerable<string> GetTraits();
         protected abstract IEnumerable<string> GetImmunities();

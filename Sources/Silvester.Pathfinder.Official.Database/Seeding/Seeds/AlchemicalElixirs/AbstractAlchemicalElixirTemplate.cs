@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             if (sourcePage != null)
             {
                 seeder.Builder.AddData(sourcePage);
-                elixir.SourcePageId = sourcePage.SourceId;
+                elixir.SourcePageId = sourcePage.Id;
             }
 
             foreach (AlchemicalElixirDetailBlock detailBlock in GetDetailBlocks())

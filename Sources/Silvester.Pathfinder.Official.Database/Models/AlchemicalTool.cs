@@ -30,15 +30,11 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid ActionId { get; set; }
         public Action Action { get; set; } = default!;
 
-        public ICollection<Trait> Traits = new List<Trait>();
+        public ICollection<Trait> Traits { get; set; } = new List<Trait>();
 
         public ICollection<AlchemicalToolDetailBlock> Details { get; set; } = new List<AlchemicalToolDetailBlock>();
-    }
-
-    public enum AlchemicalToolDetailBlockType
-    {
-        Text,
-        Enumeration
+    
+        public ICollection<AlchemicalToolPotencyBinding> Potencies { get; set; } = new List<AlchemicalToolPotencyBinding>();
     }
 
     public class AlchemicalToolPotencyBinding : BaseEntity
@@ -60,8 +56,13 @@ namespace Silvester.Pathfinder.Official.Database.Models
     {
         public string Name { get; set; } = default!;
 
-        public Guid BindingId { get; set; }
-        public AlchemicalToolPotencyBinding Binding { get; set; } = default!;
+        public ICollection<AlchemicalToolPotencyBinding> Bindings { get; set; } = default!;
+    }
+
+    public enum AlchemicalToolDetailBlockType
+    {
+        Text,
+        Enumeration
     }
 
     public class AlchemicalToolDetailBlock : BaseEntity
@@ -71,7 +72,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public AlchemicalToolDetailBlockType Type { get; set; }
 
         public Guid AlchemicalToolId { get; set; }
-        public AlchemicalPoison AlchemicalTool { get; set; } = default!;
+        public AlchemicalTool AlchemicalTool { get; set; } = default!;
     }
 
 }

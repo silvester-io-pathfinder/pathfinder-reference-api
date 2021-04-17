@@ -28,12 +28,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "King's Sleep",
+                Id = Guid.Parse("5b2e24eb-1beb-45ab-b69b-750b8f175033"),
                 DifficultyCheck = 41,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "1 Day",
@@ -55,33 +54,33 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("620d976a-9aa5-421e-a5a0-124b60cdc8db"), Text = "King’s sleep is an insidious long-term poison that can seem like a disease or even death from natural causes on a venerable target. The drained condition from king’s sleep is cumulative with each failed save and can’t be removed while the poison lasts." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("fe6bc444-914b-49bc-93b0-1a87206e99c1"),
                 Duration = "1 Day",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
                     new ConditionPoisonStageEffect { Id = Guid.Parse("7e1988d4-037a-47bc-85ae-ee1234048ccf"),  ConditionId = Drained.ID, Severity = 1}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("14971f7b-66f5-4053-bf38-1a5a23459eea"),
                 Duration = "1 Day",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
                     new ConditionPoisonStageEffect { Id = Guid.Parse("bd39ba66-7b6a-4b5c-9342-66a8019a260a"),  ConditionId = Drained.ID, Severity = 1}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("f2ab2c28-5734-4ae9-80fc-2ebaf7481ed3"),
                 Duration = "1 Day",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
                     new ConditionPoisonStageEffect { Id = Guid.Parse("ebdb2091-9058-4809-bf44-87af8f639b03"),  ConditionId = Drained.ID, Severity = 2}
                 }

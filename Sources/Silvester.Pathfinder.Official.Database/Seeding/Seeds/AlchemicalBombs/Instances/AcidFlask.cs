@@ -39,44 +39,42 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
             yield return new AlchemicalBombDetailBlock { Id = Guid.Parse("575fcbde-26ab-4b04-8856-d3ff1612f7f3"), Text = "This flask filled with corrosive acid deals 1 acid damage, the listed persistent acid damage, and the listed acid splash damage. Many types grant an item bonus to attack rolls." };
         }
 
-        protected override AlchemicalBombPotencyBinding GetLesserPotency(AlchemicalBombSeeder seeder)
+        protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies(AlchemicalBombSeeder seeder)
         {
-            return new AlchemicalBombPotencyBinding
+            yield return new AlchemicalBombPotencyBinding
             {
+                Id = Guid.Parse("5929e181-19f4-45bf-9d37-8ac1d3018211"),
                 Level = 1,
                 Benefits = "It deals 1d6 persistent acid damage and 1 acid splash damage.",
-                Price = 300
+                Price = 300,
+                PotionPotencyId = seeder.GetPotionPotencyByName("Lesser").Id
             };
-        }
 
-        protected override AlchemicalBombPotencyBinding GetModeratePotency(AlchemicalBombSeeder seeder)
-        {
-            return new AlchemicalBombPotencyBinding
+            yield return new AlchemicalBombPotencyBinding
             {
+                Id = Guid.Parse("a96f62ca-457c-4e96-8271-a134db850874"),
                 Level = 3,
                 Benefits = "You gain a +1 item bonus to attack rolls. The bomb deals 2d6 persistent acid damage and 2 acid splash damage.",
-                Price = 1000
+                Price = 1000,
+                PotionPotencyId = seeder.GetPotionPotencyByName("Moderate").Id
             };
 
-        }
-
-        protected override AlchemicalBombPotencyBinding GetGreaterPotency(AlchemicalBombSeeder seeder)
-        {
-            return new AlchemicalBombPotencyBinding
+            yield return new AlchemicalBombPotencyBinding
             {
+                Id = Guid.Parse("080939ae-8ab4-4b7a-986e-861ba3828efc"),
                 Level = 11,
                 Benefits = "You gain a +2 item bonus to attack rolls. The bomb deals 3d6 persistent acid damage and 3 acid splash damage.",
-                Price = 25000
+                Price = 25000,
+                PotionPotencyId = seeder.GetPotionPotencyByName("Greater").Id
             };
-        }
 
-        protected override AlchemicalBombPotencyBinding GetMajorPotency(AlchemicalBombSeeder seeder)
-        {
-            return new AlchemicalBombPotencyBinding
+            yield return new AlchemicalBombPotencyBinding
             {
+                Id = Guid.Parse("ec84fb6f-a71f-44a8-8064-7d41cfd4d565"),
                 Level = 17,
                 Benefits = "You gain a +3 item bonus to attack rolls. The bomb deals 4d6 persistent acid damage and 4 acid splash damage.",
-                Price = 250000
+                Price = 250000,
+                PotionPotencyId = seeder.GetPotionPotencyByName("Major").Id
             };
         }
 

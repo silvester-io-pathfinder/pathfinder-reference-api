@@ -28,15 +28,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "Black Adder Venom",
+                Id = Guid.Parse("9ab302d1-94a8-46c3-8ce5-f658e4e63531"),
                 DifficultyCheck = 18,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
-                MaximumDuration = "3 Rounds"
+                MaximumDuration = "3 Rounds",
+                Onset = "Immediate"
             };
         }
         protected override IEnumerable<string> GetTraits()
@@ -52,25 +52,25 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("26dd2686-7c61-4c86-8724-6d2e336401a0"), Text = "Adder venom is a simple but effective way to enhance a weapon." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("d44a502a-e5f1-4014-899a-1b9ac8425764"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("7a7a221e-1e36-4169-9184-af24aeb92769"), Damage = "1d8", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("7a7a221e-1e36-4169-9184-af24aeb92769"), Damage = "1d8", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("7e0f3f16-8979-426b-878a-ed4f6223a119"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("bdb667b8-4850-4ca8-837c-9b8126773640"), Damage = "2d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("bdb667b8-4850-4ca8-837c-9b8126773640"), Damage = "2d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                 }
             };
         }

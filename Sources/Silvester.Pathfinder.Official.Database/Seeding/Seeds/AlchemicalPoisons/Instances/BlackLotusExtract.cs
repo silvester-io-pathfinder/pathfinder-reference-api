@@ -28,12 +28,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "Black Lotus Extract",
+                Id = Guid.Parse("040e91d5-536e-4836-b63d-3f29b0301c9f"),
                 DifficultyCheck = 42,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "1 Minute",
@@ -55,37 +54,37 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("c36e3697-6277-474e-b992-a95f955a857b"), Text = "Black lotus extract causes severe internal bleeding." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("d82f5ea0-0885-4d2f-9073-8715968a98c4"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("876e2ff9-313e-4e44-a314-1170ed53922b"), Damage = "15d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("876e2ff9-313e-4e44-a314-1170ed53922b"), Damage = "15d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("d7873b5f-2373-4e16-bf65-5b5a67bed2d5"),  ConditionId = Drained.ID, Severity = 1},
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("a22c53f3-6440-4ea1-a0ea-bf7bffeacb7e"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("6396fb33-6c06-448d-b103-b03454ec0e59"), Damage = "17d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("6396fb33-6c06-448d-b103-b03454ec0e59"), Damage = "17d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("fdd9210a-5c37-4805-b2ef-9fb1177d7526"),  ConditionId = Drained.ID, Severity = 1},
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("16bef704-1548-4a7a-ad3b-6d307c5cf93e"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("75c1b506-f418-4971-8443-59db5a0ff891"), Damage = "20d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("75c1b506-f418-4971-8443-59db5a0ff891"), Damage = "20d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("ac0aef9e-5c9d-4984-b589-63889f8f1553"),  ConditionId = Drained.ID, Severity = 2},
                 }
             };

@@ -30,7 +30,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return "Alchemical";
             yield return "Elixir";
             yield return "Consumable";
-            yield return "";
         }
 
         protected override IEnumerable<AlchemicalElixirDetailBlock> GetDetailBlocks()

@@ -24,16 +24,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Usage = "Held in 2 hands",
                 BulkId = seeder.GetBulkByName("L").Id,
                 ActionId = Interact.ID,
-                ActionTypeId = seeder.GetActionTypeByName("Teo Actions").Id,
+                ActionTypeId = seeder.GetActionTypeByName("Two Actions").Id,
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "Shadow Essence",
+                Id = Guid.Parse("91536163-f5f3-4666-b738-76b88e8feab3"),
                 DifficultyCheck = 29,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "Immediate",
@@ -55,39 +54,39 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("44e8074e-5cc8-46f9-8829-7ab92e42f176"), Text = "Distilled from the Plane of Shadow, this oily substance imposes tenebrous effects. The enfeebled condition from shadow essence lasts for 24 hours." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("4fb01e13-3147-4cd2-ae48-b4b406a65b0a"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("255f40bb-16a3-455a-b558-e7238bc000e2"), Damage = "3d6", DamageType = seeder.GetDamageTypeByName("Negative")},
-                    new DamagePoisonStageEffect { Id = Guid.Parse("024061f6-ed08-4d12-a9f4-7e547d19e40b"), Damage = "2d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("255f40bb-16a3-455a-b558-e7238bc000e2"), Damage = "3d6", DamageTypeId= seeder.GetDamageTypeByName("Negative").Id},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("024061f6-ed08-4d12-a9f4-7e547d19e40b"), Damage = "2d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("9dafbeca-1a1b-42b5-b5bc-47186caf8647"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("21af795d-bfb1-477c-b893-3724811eaeed"), Damage = "3d6", DamageType = seeder.GetDamageTypeByName("Negative")},
-                    new DamagePoisonStageEffect { Id = Guid.Parse("76970863-6b34-4ea4-8779-4d894597688b"), Damage = "2d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("21af795d-bfb1-477c-b893-3724811eaeed"), Damage = "3d6", DamageTypeId= seeder.GetDamageTypeByName("Negative").Id},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("76970863-6b34-4ea4-8779-4d894597688b"), Damage = "2d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("9bed9e22-354a-4d24-ae9a-4d3d9bee650f"),  ConditionId = Enfeebled.ID, Severity = 1}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("a15a472e-00c7-49d1-961c-3653286ac3d4"),
                 Duration = "1 Round",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("1cff677e-5a7a-4cd1-9ee7-1151cf963153"), Damage = "3d6", DamageType = seeder.GetDamageTypeByName("Negative")},
-                    new DamagePoisonStageEffect { Id = Guid.Parse("b28d1d65-738b-4537-a4dc-b4ae742f7b3c"), Damage = "2d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("1cff677e-5a7a-4cd1-9ee7-1151cf963153"), Damage = "3d6", DamageTypeId= seeder.GetDamageTypeByName("Negative").Id},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("b28d1d65-738b-4537-a4dc-b4ae742f7b3c"), Damage = "2d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("42f240f3-d15d-46a4-a5ec-bc3777948cfe"),  ConditionId = Enfeebled.ID, Severity = 2}
                 }
             };

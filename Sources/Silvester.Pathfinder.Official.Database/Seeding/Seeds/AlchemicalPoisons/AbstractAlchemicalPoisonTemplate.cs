@@ -16,7 +16,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             if (sourcePage != null)
             {
                 seeder.Builder.AddData(sourcePage);
-                poison.SourcePageId = sourcePage.SourceId;
+                poison.SourcePageId = sourcePage.Id;
+            }
+
+            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
+            {
+                seeder.Builder.HasJoinData((poison, trait));
             }
 
             foreach (AlchemicalPoisonDetailBlock detailBlock in GetDetailBlocks())
@@ -25,54 +30,51 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 seeder.Builder.AddData(detailBlock);
             }
 
-            SeedPoisonEffect(seeder);
+            SeedPoisonEffect(seeder, poison);
 
             seeder.Builder.AddData(poison);
         }
 
-        private void SeedPoisonEffect(AlchemicalPoisonSeeder seeder)
+        private void SeedPoisonEffect(AlchemicalPoisonSeeder seeder, AlchemicalPoison poison)
         {
-            PoisonEffect poisonEffect = GetPoisonEffect(seeder);
+            StaggeredEffect poisonEffect = GetPoisonEffect(seeder);
             seeder.Builder.AddData(poisonEffect);
 
-            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
-            {
-                seeder.Builder.HasJoinData((poisonEffect, trait));
-            }
+            poison.EffectId = poisonEffect.Id;
 
-            PoisonEffectStage[] stages = GetAlchemicalPoisonStages(seeder).ToArray();
+            StaggeredEffectStage[] stages = GetAlchemicalPoisonStages(seeder).ToArray();
             for (int i = 0; i < stages.Length; i++)
             {
-                PoisonEffectStage poisonEffectStage = stages[i];
+                StaggeredEffectStage poisonEffectStage = stages[i];
                 SeedPoisonEffectStage(seeder, poisonEffect.Id, i + 1, poisonEffectStage);
             }
         }
 
-        private static void SeedPoisonEffectStage(AlchemicalPoisonSeeder seeder, Guid poisonEffectId, int stageNumber, PoisonEffectStage poisonEffectStage)
+        private static void SeedPoisonEffectStage(AlchemicalPoisonSeeder seeder, Guid poisonEffectId, int stageNumber, StaggeredEffectStage poisonEffectStage)
         {
-            poisonEffectStage.PoisonEffectId = poisonEffectId;
+            poisonEffectStage.StaggeredEffectId = poisonEffectId;
             poisonEffectStage.Stage = stageNumber;
 
-            foreach (PoisonEffectStageEffect stageEffect in poisonEffectStage.Effects)
+            foreach (StaggeredEffectStageEffect stageEffect in poisonEffectStage.Effects)
             {
                 SeedPoisonEffectStageEffect(seeder, poisonEffectStage, stageEffect);
             }
-
-            poisonEffectStage.Effects = new PoisonEffectStageEffect[] { };
+            poisonEffectStage.Effects = new StaggeredEffectStageEffect[] { };
+            
             seeder.Builder.AddData(poisonEffectStage);
         }
 
-        private static void SeedPoisonEffectStageEffect(AlchemicalPoisonSeeder seeder, PoisonEffectStage poisonEffectStage, PoisonEffectStageEffect stageEffect)
+        private static void SeedPoisonEffectStageEffect(AlchemicalPoisonSeeder seeder, StaggeredEffectStage poisonEffectStage, StaggeredEffectStageEffect stageEffect)
         {
-            stageEffect.PoisonEffectStageId = poisonEffectStage.Id;
+            stageEffect.StaggeredEffectStageId = poisonEffectStage.Id;
             seeder.Builder.AddData(stageEffect.GetType(), stageEffect);
         }
 
         protected abstract AlchemicalPoison GetAlchemicalPoison(AlchemicalPoisonSeeder seeder);
-        protected abstract PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder);
+        protected abstract StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder);
         protected abstract SourcePage? GetSourcePage(AlchemicalPoisonSeeder seeder);
         protected abstract IEnumerable<string> GetTraits();
         protected abstract IEnumerable<AlchemicalPoisonDetailBlock> GetDetailBlocks();
-        protected abstract IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder);
+        protected abstract IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder);
     }
 }

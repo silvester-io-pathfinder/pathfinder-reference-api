@@ -9,7 +9,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
     public class HiddenPit : AbstractHazardTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("6d810cbc-bf1f-4232-9517-cbb95e4b5a33");
 
         protected override Hazard GetHazard(HazardSeeder seeder)
         {
@@ -22,13 +22,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 ArmorClass = 10,
                 Fortitude = 1,
                 Reflex = 1,
-                HitPoints = 12,
-                Hardness = 3,
-                BrokenThreshold = 6,
                 Reset = "Creatures can still fall into the trap, but the trapdoor must be reset manually for the trap to become hidden again.",
                 CanBeDetectedMagically = false,
                 TypeId = seeder.GetHazardTypeByName("Traps").Id,
                 ComplexityId = seeder.GetComplexityByName("Simple").Id
+            };
+        }
+
+        protected override IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder)
+        {
+            yield return new HazardComponent
+            {
+                Name = "Trapdoor",
+                HitPoints = 12,
+                Hardness = 3,
+                BrokenThreshold = 6,
             };
         }
 
@@ -49,11 +57,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             yield return new HazardAction
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("a2bfaa34-76eb-43d8-a990-32b7437d8304"),
                 Name = "Pitfall",
-                Effect = "The triggering creature falls in and takes falling damage (typically 10 bludgeoning damage). That creature can use the Grab an Edge reaction to avoid falling.",
                 Trigger = "A creature walks onto the trapdoor",
-                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id
+                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
+                EffectDetails = 
+                {
+                    new HazardActionEffectBlock { Id = Guid.Parse("21077b3a-26c5-4556-b3e5-b48e4970f323"), Text = "The triggering creature falls in and takes falling damage (typically 10 bludgeoning damage). That creature can use the Grab an Edge reaction to avoid falling." },
+                }
             };
         }
 
@@ -61,7 +72,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             return new HazardDetectionRequirement
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("2a2bf76d-3387-4400-b569-ee512180a409"),
                 Addendum = "If the trapdoor is disabled or broken, the Difficulty Check becomes 0.",
                 RequiredProficiencyId = seeder.GetProficiencyByName("Untrained").Id,
                 DifficultyCheck = 18
@@ -72,7 +83,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             yield return new HazardDisableRequirement
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1e0d3792-40ea-4884-921c-58305f558677"),
                 SkillId = seeder.GetSkillByName("Thievery").Id,
                 RequiredProficiencyId = seeder.GetProficiencyByName("Untrained").Id,
                 Description = "to remove the trapdoor",
@@ -83,6 +94,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements(HazardSeeder seeder)
         {
             yield break;
+        }
+
+        protected override SourcePage GetSourcePage(HazardSeeder seeder)
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("3bcc0fe0-0f4c-4d25-99e3-32db6fdfe7d1"),
+                SourceId = seeder.GetSourceByName("Core Rulebook").Id,
+                Page = 522
+            };
         }
     }
 }

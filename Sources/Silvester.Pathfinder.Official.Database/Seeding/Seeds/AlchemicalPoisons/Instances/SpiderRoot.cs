@@ -28,12 +28,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override PoisonEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
         {
-            return new PoisonEffect
+            return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
-                Name = "Spider Root",
+                Id = Guid.Parse("3935e556-052d-48b8-994d-5163cf9f4ca7"),
                 DifficultyCheck = 28,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                 Onset = "1  Minute",
@@ -54,38 +53,38 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("7891623b-6f09-4e17-b565-40ac365b6b59"), Text = "A paste made by mashing the fine, threadlike roots of a certain creeper vine, spider root renders a victim clumsy and maladroit." };
         }
 
-        protected override IEnumerable<PoisonEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
         {
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("038ae784-9e97-4b76-9474-7e71f2e866f9"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("0829c1e6-8249-4419-ad41-dbd6da1aaa01"), Damage = "8d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("0829c1e6-8249-4419-ad41-dbd6da1aaa01"), Damage = "8d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("d355d61d-32bb-441c-b612-2a38d98928c1"),  ConditionId = Clumsy.ID, Severity = 1}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("959cd97b-8af6-43d3-b464-96f192c4e0d3"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("908525b2-5ebc-4927-8cdb-2226cc29d631"), Damage = "9d6", DamageType = seeder.GetDamageTypeByName("Poison")},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("908525b2-5ebc-4927-8cdb-2226cc29d631"), Damage = "9d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("506ecf2b-2aff-4e39-9744-10e4a502b7ed"),  ConditionId = Clumsy.ID, Severity = 2}
                 }
             };
 
-            yield return new PoisonEffectStage
+            yield return new StaggeredEffectStage
             {
                 Id = Guid.Parse("cb8ec76e-2ed6-4157-9edf-eb54cc553f0b"),
                 Duration = "1 Minute",
-                Effects = new PoisonEffectStageEffect[]
+                Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("26c7cf57-a9f3-4df1-8ef4-e6f296d3431c"), Damage = "10d6", DamageType = seeder.GetDamageTypeByName("Poison")},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("26c7cf57-a9f3-4df1-8ef4-e6f296d3431c"),  ConditionId = Clumsy.ID, Severity = 3}
+                    new DamagePoisonStageEffect { Id = Guid.Parse("26c7cf57-a9f3-4df1-8ef4-e6f296d3431c"), Damage = "10d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
+                    new ConditionPoisonStageEffect { Id = Guid.Parse("b4b392eb-6f20-496f-963c-f0939043f235"),  ConditionId = Clumsy.ID, Severity = 3}
                 }
             };
         }
