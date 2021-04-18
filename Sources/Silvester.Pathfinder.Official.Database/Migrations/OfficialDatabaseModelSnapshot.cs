@@ -4010,6 +4010,16 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0"),
                             HazardActionEffectsId = new Guid("33f6a65d-0bb7-40dc-9dc0-04005611c848")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0"),
+                            HazardActionEffectsId = new Guid("acde54a3-3dc8-4855-bd4e-eb12005c8388")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("39e2298b-bab0-49b7-8a0a-4ac1145611b0"),
+                            HazardActionEffectsId = new Guid("f9a67269-e073-4aa6-bf2a-83918c203d16")
                         });
                 });
 
@@ -4187,6 +4197,46 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             HazardActionsId = new Guid("28f30837-d2d0-459a-bcf2-49afac323a2e"),
                             TraitsId = new Guid("d751d93f-cff9-448f-8ab0-9a3c07eacbef")
+                        },
+                        new
+                        {
+                            HazardActionsId = new Guid("b1955fcd-433f-45dc-b9ea-d69baa5fd5d9"),
+                            TraitsId = new Guid("a0e52203-1c57-4a58-bff2-7e262b56181f")
+                        },
+                        new
+                        {
+                            HazardActionsId = new Guid("b1955fcd-433f-45dc-b9ea-d69baa5fd5d9"),
+                            TraitsId = new Guid("6f187720-6664-44c6-8e09-2053ed1054d6")
+                        },
+                        new
+                        {
+                            HazardActionsId = new Guid("b1955fcd-433f-45dc-b9ea-d69baa5fd5d9"),
+                            TraitsId = new Guid("340e83a5-5a6e-4a5f-8658-7aede58da5a9")
+                        },
+                        new
+                        {
+                            HazardActionsId = new Guid("16402edb-38d3-4cae-a93d-687c9e1814b2"),
+                            TraitsId = new Guid("a0e52203-1c57-4a58-bff2-7e262b56181f")
+                        },
+                        new
+                        {
+                            HazardActionsId = new Guid("16402edb-38d3-4cae-a93d-687c9e1814b2"),
+                            TraitsId = new Guid("6f187720-6664-44c6-8e09-2053ed1054d6")
+                        },
+                        new
+                        {
+                            HazardActionsId = new Guid("16402edb-38d3-4cae-a93d-687c9e1814b2"),
+                            TraitsId = new Guid("fe4f319f-4792-41f3-be57-689f0eb65321")
+                        },
+                        new
+                        {
+                            HazardActionsId = new Guid("5ea54988-b386-4036-a0fc-914995d621de"),
+                            TraitsId = new Guid("a0e52203-1c57-4a58-bff2-7e262b56181f")
+                        },
+                        new
+                        {
+                            HazardActionsId = new Guid("5ea54988-b386-4036-a0fc-914995d621de"),
+                            TraitsId = new Guid("f5f7ca8a-100a-4d93-aa07-e0f1bb3cbc49")
                         });
                 });
 
@@ -4353,6 +4403,81 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             HazardsId = new Guid("33cde414-62f3-455d-95a2-f0a63480a006"),
+                            ImmunitiesId = new Guid("d9423d3e-cf11-4bd0-9789-89dd60fe61b0")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            ImmunitiesId = new Guid("7bbfc8dc-05c1-49f6-938d-07eb81d7ad83")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            ImmunitiesId = new Guid("b4be6e7f-41de-4943-b277-9fff8f56a398")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            ImmunitiesId = new Guid("d9423d3e-cf11-4bd0-9789-89dd60fe61b0")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            ImmunitiesId = new Guid("7bbfc8dc-05c1-49f6-938d-07eb81d7ad83")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            ImmunitiesId = new Guid("b4be6e7f-41de-4943-b277-9fff8f56a398")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            ImmunitiesId = new Guid("d9423d3e-cf11-4bd0-9789-89dd60fe61b0")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            ImmunitiesId = new Guid("7bbfc8dc-05c1-49f6-938d-07eb81d7ad83")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            ImmunitiesId = new Guid("b4be6e7f-41de-4943-b277-9fff8f56a398")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            ImmunitiesId = new Guid("d9423d3e-cf11-4bd0-9789-89dd60fe61b0")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            ImmunitiesId = new Guid("7bbfc8dc-05c1-49f6-938d-07eb81d7ad83")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            ImmunitiesId = new Guid("b4be6e7f-41de-4943-b277-9fff8f56a398")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            ImmunitiesId = new Guid("d9423d3e-cf11-4bd0-9789-89dd60fe61b0")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            ImmunitiesId = new Guid("7bbfc8dc-05c1-49f6-938d-07eb81d7ad83")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            ImmunitiesId = new Guid("b4be6e7f-41de-4943-b277-9fff8f56a398")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
                             ImmunitiesId = new Guid("d9423d3e-cf11-4bd0-9789-89dd60fe61b0")
                         });
                 });
@@ -4591,6 +4716,166 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             HazardsId = new Guid("33cde414-62f3-455d-95a2-f0a63480a006"),
                             TraitsId = new Guid("d052779d-0c7e-4fe0-915b-91d3e71fb517")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
+                            TraitsId = new Guid("67f31585-bba4-4a97-8bfc-ab95013410d4")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
+                            TraitsId = new Guid("ad251fb5-0c53-47f9-b850-fcefd4cb3165")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            TraitsId = new Guid("67f31585-bba4-4a97-8bfc-ab95013410d4")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            TraitsId = new Guid("9762a78e-698f-4bbb-81ec-fe1f0784f961")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            TraitsId = new Guid("ad251fb5-0c53-47f9-b850-fcefd4cb3165")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            TraitsId = new Guid("67f31585-bba4-4a97-8bfc-ab95013410d4")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            TraitsId = new Guid("9762a78e-698f-4bbb-81ec-fe1f0784f961")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            TraitsId = new Guid("ad251fb5-0c53-47f9-b850-fcefd4cb3165")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            TraitsId = new Guid("67f31585-bba4-4a97-8bfc-ab95013410d4")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            TraitsId = new Guid("9762a78e-698f-4bbb-81ec-fe1f0784f961")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            TraitsId = new Guid("ad251fb5-0c53-47f9-b850-fcefd4cb3165")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            TraitsId = new Guid("67f31585-bba4-4a97-8bfc-ab95013410d4")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            TraitsId = new Guid("9762a78e-698f-4bbb-81ec-fe1f0784f961")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            TraitsId = new Guid("ad251fb5-0c53-47f9-b850-fcefd4cb3165")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
+                            TraitsId = new Guid("b02d26f9-e334-4f2b-b713-767621853861")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
+                            TraitsId = new Guid("ad251fb5-0c53-47f9-b850-fcefd4cb3165")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            TraitsId = new Guid("67f31585-bba4-4a97-8bfc-ab95013410d4")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            TraitsId = new Guid("9762a78e-698f-4bbb-81ec-fe1f0784f961")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            TraitsId = new Guid("ad251fb5-0c53-47f9-b850-fcefd4cb3165")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("6f1cd8de-db91-4b60-9ae6-e9328c13cceb"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("6f1cd8de-db91-4b60-9ae6-e9328c13cceb"),
+                            TraitsId = new Guid("67f31585-bba4-4a97-8bfc-ab95013410d4")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("6f1cd8de-db91-4b60-9ae6-e9328c13cceb"),
+                            TraitsId = new Guid("ad251fb5-0c53-47f9-b850-fcefd4cb3165")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            TraitsId = new Guid("67f31585-bba4-4a97-8bfc-ab95013410d4")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            TraitsId = new Guid("9762a78e-698f-4bbb-81ec-fe1f0784f961")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            TraitsId = new Guid("ad251fb5-0c53-47f9-b850-fcefd4cb3165")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            TraitsId = new Guid("67f31585-bba4-4a97-8bfc-ab95013410d4")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            TraitsId = new Guid("9762a78e-698f-4bbb-81ec-fe1f0784f961")
+                        },
+                        new
+                        {
+                            HazardsId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            TraitsId = new Guid("ad251fb5-0c53-47f9-b850-fcefd4cb3165")
                         });
                 });
 
@@ -16110,6 +16395,157 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Reflex = 13,
                             SourcePageId = new Guid("7fb587a3-cfa2-4098-8416-8e2eb615b325"),
                             TypeId = new Guid("6b56b0d2-5b30-4ccf-b72c-532c244d9b73")
+                        },
+                        new
+                        {
+                            Id = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
+                            CanBeDetectedMagically = false,
+                            ComplexityId = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Description = "A magically contagious wail of the banshee spell is trapped in the larynx of an invisible, mummified elf.",
+                            Level = 18,
+                            Name = "Banshee's Symphony",
+                            Reset = "The trap ends when the trap is unable to make a creature scream (usually because no creature failed its save on the previous turn or because all creatures have critically succeeded in the past). It then resets over 24 hours, as a new scream builds up in the mummified larynx.",
+                            RoutineActions = 1,
+                            SourcePageId = new Guid("dae57ffc-a1ec-4a36-87fb-6188e72dbd2a"),
+                            TypeId = new Guid("db68d894-7a5a-489f-a6f5-ca45ef6986f6")
+                        },
+                        new
+                        {
+                            Id = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            ArmorClass = 34,
+                            CanBeDetectedMagically = false,
+                            ComplexityId = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Description = "A magic mirror replaces characters with evil mirror duplicates from another dimension.",
+                            Fortitude = 25,
+                            Level = 14,
+                            Name = "Darkside Mirror",
+                            Reflex = 20,
+                            Reset = "The mirror is always ready to absorb creatures into the other dimension. Ten minutes after a creature is sucked into the mirror, if an ally doesn’t rescue the creature with Thievery, it reaches the other dimension, where it might be captured or killed. In the mirror dimension, it counts as a mirror duplicate, so the denizens of the other dimension can’t destroy the mirror on their side while the absorbed creature is there. These dimensions are alternate realities, not planes, so even spells like plane shift can’t reach them.",
+                            RoutineActions = 1,
+                            SourcePageId = new Guid("6230e629-ec2b-40b4-ab4f-eb1bc6619473"),
+                            TypeId = new Guid("db68d894-7a5a-489f-a6f5-ca45ef6986f6")
+                        },
+                        new
+                        {
+                            Id = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            ArmorClass = 19,
+                            CanBeDetectedMagically = false,
+                            ComplexityId = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Description = "A trapdoor covers a 10-foot-square pit that’s 30 feet deep and has 5 feet of water at the bottom. Four water spouts in the walls connect to hidden water tanks. Each water spout extends out of a different wall, 6 inches from the top of the pit.",
+                            Fortitude = 8,
+                            Level = 3,
+                            Name = "Drowning Pit",
+                            Reflex = 5,
+                            Reset = "The trap can be reset if the door is manually reengaged and the water tanks refilled; it can be reset without draining the pit, but doing so renders it less effective.",
+                            RoutineActions = 4,
+                            SourcePageId = new Guid("d08cc06e-0eb7-4f3e-b173-7dbb8dcb1b87"),
+                            TypeId = new Guid("db68d894-7a5a-489f-a6f5-ca45ef6986f6")
+                        },
+                        new
+                        {
+                            Id = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            ArmorClass = 30,
+                            CanBeDetectedMagically = false,
+                            ComplexityId = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Description = "Four gated channels carved into stone allow lava to flow into a 15-foot-tall room; the floor can withdraw to allow the hardened lava to fall into a chamber beneath.",
+                            Fortitude = 20,
+                            Level = 10,
+                            Name = "Lava Flume Tube",
+                            Reflex = 16,
+                            Reset = "The trap deactivates and resets after 1 hour by withdrawing the floor, cracking and dumping the hardened lava (and any creatures trapped inside) into the chamber. Creatures fall 40 feet, taking falling damage (typically 17 bludgeoning damage).",
+                            RoutineActions = 4,
+                            SourcePageId = new Guid("9c7423cd-e07c-4a28-8d25-3b3cc4578690"),
+                            TypeId = new Guid("db68d894-7a5a-489f-a6f5-ca45ef6986f6")
+                        },
+                        new
+                        {
+                            Id = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            ArmorClass = 27,
+                            CanBeDetectedMagically = false,
+                            ComplexityId = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Description = "Countless holes to launch poison darts from line a long hallway with a hidden control panel on the far end.",
+                            Fortitude = 13,
+                            Level = 8,
+                            Name = "Poisoned Dart Gallery",
+                            Reflex = 17,
+                            Reset = "The trap deactivates and resets after 1 minute.",
+                            RoutineActions = 1,
+                            SourcePageId = new Guid("800680a3-465d-4099-b20a-b66da308da97"),
+                            TypeId = new Guid("db68d894-7a5a-489f-a6f5-ca45ef6986f6")
+                        },
+                        new
+                        {
+                            Id = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
+                            CanBeDetectedMagically = false,
+                            ComplexityId = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Description = "A 15-foot-wide patch of water and sand attempts to submerge creatures that step onto it.",
+                            Level = 3,
+                            Name = "Quicksand",
+                            Reset = "The hazard still submerges anyone who walks in, but the surface doesn’t become hidden again until it settles over the course of 24 hours",
+                            RoutineActions = 1,
+                            SourcePageId = new Guid("5285ad8d-011b-4404-861a-6c266475600f"),
+                            TypeId = new Guid("6b56b0d2-5b30-4ccf-b72c-532c244d9b73")
+                        },
+                        new
+                        {
+                            Id = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            ArmorClass = 21,
+                            CanBeDetectedMagically = false,
+                            ComplexityId = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Description = "A metal pole with three razor-sharp spinning blades is hidden in the floor, connected to trigger plates in up to eight floor tiles and a hidden control panel within 30 feet.",
+                            Fortitude = 10,
+                            Level = 4,
+                            Name = "Spinning Blade Pillar",
+                            Reflex = 12,
+                            Reset = "The trap deactivates and resets after 1 minute.",
+                            RoutineActions = 3,
+                            SourcePageId = new Guid("b68c5ba3-4c51-4537-a72a-f1066c6b875f"),
+                            Speed = 10,
+                            TypeId = new Guid("db68d894-7a5a-489f-a6f5-ca45ef6986f6")
+                        },
+                        new
+                        {
+                            Id = new Guid("6f1cd8de-db91-4b60-9ae6-e9328c13cceb"),
+                            CanBeDetectedMagically = false,
+                            ComplexityId = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Description = "A cloud of invisible magical sensors in a 10-foot radius surrounds an invisible wall or floor rune the size of the creature to be summoned.",
+                            Level = 1,
+                            Name = "Summonining Rune",
+                            Reset = "The trap resets each day at dawn.",
+                            SourcePageId = new Guid("d3f23187-4e4d-4989-9b34-40a4f42da1fe"),
+                            TypeId = new Guid("db68d894-7a5a-489f-a6f5-ca45ef6986f6")
+                        },
+                        new
+                        {
+                            Id = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            ArmorClass = 33,
+                            CanBeDetectedMagically = false,
+                            ComplexityId = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Description = "Three innocuous decorations instilled with telekinetic magic pull objects and pieces of the room itself into spinning clouds of debris that attack all creatures in the room.",
+                            Fortitude = 24,
+                            Level = 12,
+                            Name = "Telekinetic Swarm Trap",
+                            Reflex = 19,
+                            Reset = "The trap deactivates and resets 10 minutes after it has no target creatures (because the creatures either moved too far away or died).",
+                            RoutineActions = 9,
+                            SourcePageId = new Guid("766886e3-4c2d-407c-9691-d36cb4a21258"),
+                            TypeId = new Guid("db68d894-7a5a-489f-a6f5-ca45ef6986f6")
+                        },
+                        new
+                        {
+                            Id = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            ArmorClass = 24,
+                            CanBeDetectedMagically = false,
+                            ComplexityId = new Guid("dcc2b25e-1b95-401a-8fc6-17f1e1ee7cbb"),
+                            Description = "An ornate wheel set into a wall—divided into six segments with colored runes on each—is controlled by a magical sensor that detects any creature within 100 feet in front of it.",
+                            Fortitude = 15,
+                            Level = 6,
+                            Name = "Wheel of Misery",
+                            Reflex = 13,
+                            Reset = "The trap deactivates and resets if 1 minute passes without any creature moving within range of its sensor.",
+                            RoutineActions = 2,
+                            SourcePageId = new Guid("742d1efd-6216-4bc1-bbef-e05a55a90fcf"),
+                            TypeId = new Guid("db68d894-7a5a-489f-a6f5-ca45ef6986f6")
                         });
                 });
 
@@ -16298,6 +16734,86 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             HazardId = new Guid("33cde414-62f3-455d-95a2-f0a63480a006"),
                             Name = "Spore Exploison",
                             Trigger = "A creature moves into the mold’s space or damages the mold. The mold can’t use this reaction if it’s in direct sunlight or if the damage was fire damage"
+                        },
+                        new
+                        {
+                            Id = new Guid("d403f5f2-59b1-446b-b31c-a91b8337c776"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            HazardId = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
+                            Name = "Scream",
+                            Trigger = "Three or more living creatures remain within 100 feet of the trap for 6 seconds or longer"
+                        },
+                        new
+                        {
+                            Id = new Guid("b1955fcd-433f-45dc-b9ea-d69baa5fd5d9"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            HazardId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            Name = "Reflection of Evil",
+                            Trigger = "A non-evil creature is reflected in the mirror"
+                        },
+                        new
+                        {
+                            Id = new Guid("ffe63bc7-f008-4d70-9357-e6ada9e45a25"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            HazardId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            Name = "Pitfall",
+                            Trigger = "A creature walks onto the trapdoor"
+                        },
+                        new
+                        {
+                            Id = new Guid("d42112ae-d850-451a-ac03-2aba67ec4a75"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            HazardId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            Name = "Flume Activation",
+                            Trigger = "A creature tries to leave the room"
+                        },
+                        new
+                        {
+                            Id = new Guid("08abae5d-5e71-45ca-9a37-9d44a955d84c"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            HazardId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            Name = "Dart Volley",
+                            Trigger = "A creature enters the hallway or ends its turn in the hallway"
+                        },
+                        new
+                        {
+                            Id = new Guid("edea22d4-1f12-48a8-b1f1-b6ee4de1b4f7"),
+                            ActionTypeId = new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"),
+                            HazardId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            Name = "Continuous Barage",
+                            Trigger = "A creature within the active gallery finishes an action"
+                        },
+                        new
+                        {
+                            Id = new Guid("d1adf885-1c78-4d30-b759-12798dc37a4a"),
+                            ActionTypeId = new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"),
+                            HazardId = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
+                            Name = "Submerge",
+                            Trigger = "A Huge or smaller creature walks onto the quicksand"
+                        },
+                        new
+                        {
+                            Id = new Guid("202a3139-430a-4841-8488-9eefbe0089fe"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            HazardId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            Name = "Rising Pillar",
+                            Trigger = "A creature steps on one of the trapped floor tiles"
+                        },
+                        new
+                        {
+                            Id = new Guid("16402edb-38d3-4cae-a93d-687c9e1814b2"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            HazardId = new Guid("6f1cd8de-db91-4b60-9ae6-e9328c13cceb"),
+                            Name = "Summon Monster",
+                            Trigger = "A creature enters the cloud of magical sensors"
+                        },
+                        new
+                        {
+                            Id = new Guid("5ea54988-b386-4036-a0fc-914995d621de"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            HazardId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            Name = "Agitate",
+                            Trigger = "A creature stays in the room for at least 6 seconds; "
                         });
                 });
 
@@ -16476,6 +16992,66 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("416e47cd-3a39-4e6b-93ba-d7560655d2aa"),
                             HazardActionId = new Guid("dd06ccd9-ca0a-4797-b135-590a5509eb32"),
                             Text = "The triggering creature and all creatures within 10 feet are exposed to yellow mold spores."
+                        },
+                        new
+                        {
+                            Id = new Guid("73e328d7-b078-4c03-a8ac-2f8f2191835e"),
+                            HazardActionId = new Guid("d403f5f2-59b1-446b-b31c-a91b8337c776"),
+                            Text = "The trap releases an arcane wail of the banshee (DC 40) with a 100-foot-radius emanation instead of 40 feet, targeting all living creatures in the area, and rolls initiative."
+                        },
+                        new
+                        {
+                            Id = new Guid("5c6305bf-8791-4678-b24c-ab95f62fa7ab"),
+                            HazardActionId = new Guid("b1955fcd-433f-45dc-b9ea-d69baa5fd5d9"),
+                            Text = "The mirror absorbs the creature into the mirror, replacing it with an evil mirror duplicate (DC 34 Reflex to avoid being absorbed into the mirror), and rolls initiative."
+                        },
+                        new
+                        {
+                            Id = new Guid("b3fae5a4-340d-41a7-821b-80713b7affd8"),
+                            HazardActionId = new Guid("ffe63bc7-f008-4d70-9357-e6ada9e45a25"),
+                            Text = "The triggering creature falls in and takes damage from the fall, reduced by 5 feet for falling into the water (typically 12 bludgeoning damage). A creature can Grab an Edge to avoid falling (page 472). The trapdoor then slams shut, and the hazard rolls initiative."
+                        },
+                        new
+                        {
+                            Id = new Guid("1b710bb7-2c56-42fd-a03d-2b2861a8b23f"),
+                            HazardActionId = new Guid("d42112ae-d850-451a-ac03-2aba67ec4a75"),
+                            Text = "The exits seal instantly and the trap rolls initiative."
+                        },
+                        new
+                        {
+                            Id = new Guid("eb77450e-c55c-43e4-b3c1-aadb7c0fe4e5"),
+                            HazardActionId = new Guid("08abae5d-5e71-45ca-9a37-9d44a955d84c"),
+                            Text = "The trap makes a poisoned dart Strike against the triggering creature, then rolls initiative."
+                        },
+                        new
+                        {
+                            Id = new Guid("f79173f5-49dc-4322-8be4-c4591b89d643"),
+                            HazardActionId = new Guid("edea22d4-1f12-48a8-b1f1-b6ee4de1b4f7"),
+                            Text = "The trap makes a poisoned dart Strike against the triggering creature."
+                        },
+                        new
+                        {
+                            Id = new Guid("a9f37fc2-82d6-466c-adc8-552f4b20da56"),
+                            HazardActionId = new Guid("d1adf885-1c78-4d30-b759-12798dc37a4a"),
+                            Text = "The triggering creature sinks into the quicksand up to its waist. The quicksand rolls initiative if it hasn’t already."
+                        },
+                        new
+                        {
+                            Id = new Guid("8c6ac794-a869-4f98-8fda-c9157022eb44"),
+                            HazardActionId = new Guid("202a3139-430a-4841-8488-9eefbe0089fe"),
+                            Text = "The trap pops up in a grid intersection and makes a spinning blade Strike against one adjacent creature (if any), then rolls initiative."
+                        },
+                        new
+                        {
+                            Id = new Guid("cabdbcb0-95c9-461d-a9f5-e1858af03802"),
+                            HazardActionId = new Guid("16402edb-38d3-4cae-a93d-687c9e1814b2"),
+                            Text = "This trap summons a specific level 1 creature, determined when the trap is created. The creature rolls initiative and remains for 2d6 rounds, after which the spell ends and the creature disappears. The creature also disappears if someone disables the trap before the duration expires. The summoned creature can use 3 actions each round and can use reactions, unlike most summoned creatures."
+                        },
+                        new
+                        {
+                            Id = new Guid("76ef593c-5381-4d39-8935-56aad69cdecf"),
+                            HazardActionId = new Guid("5ea54988-b386-4036-a0fc-914995d621de"),
+                            Text = "Each telekinetic decoration constructs a cloud of objects in the room (three clouds total) and the trap rolls initiative. The creatures in the room when the trap is triggered become the trap’s targets, regardless of whether they leave the room or other creatures later enter the room. Each decoration targets a different creature if possible. A target creature that moves at least 1 mile from the trap ceases being a target, at which point the decoration designates a new target."
                         });
                 });
 
@@ -16633,6 +17209,97 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             HazardId = new Guid("33cde414-62f3-455d-95a2-f0a63480a006"),
                             HitPoints = 70,
                             Name = "Mold"
+                        },
+                        new
+                        {
+                            Id = new Guid("5963a30c-164a-4956-ab02-93a2e503eca9"),
+                            Addendum = "The mirror cannot be damaged while any mirror duplicate is alive.",
+                            BrokenThreshold = 2,
+                            Hardness = 1,
+                            HazardId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            HitPoints = 4,
+                            Name = "Mirror"
+                        },
+                        new
+                        {
+                            Id = new Guid("43590a0a-bc4f-46b3-9c5a-10533b8b164b"),
+                            BrokenThreshold = 30,
+                            Hardness = 15,
+                            HazardId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            HitPoints = 60,
+                            Name = "Trapdoor"
+                        },
+                        new
+                        {
+                            Id = new Guid("39da2418-679b-41c8-a861-6fd7001c52c2"),
+                            BrokenThreshold = 16,
+                            Hardness = 8,
+                            HazardId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            HitPoints = 32,
+                            Name = "Spout"
+                        },
+                        new
+                        {
+                            Id = new Guid("02718d69-a47d-46e1-bc52-00504d473fe7"),
+                            BrokenThreshold = 24,
+                            Hardness = 12,
+                            HazardId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            HitPoints = 48,
+                            Name = "Channel"
+                        },
+                        new
+                        {
+                            Id = new Guid("792ae459-b52a-40da-b131-49c9a459c732"),
+                            BrokenThreshold = 36,
+                            Hardness = 18,
+                            HazardId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            HitPoints = 72,
+                            Name = "Floor"
+                        },
+                        new
+                        {
+                            Id = new Guid("8357fbb6-72b5-426f-a715-b1f3d9eb5344"),
+                            BrokenThreshold = 28,
+                            Hardness = 14,
+                            HazardId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            HitPoints = 56,
+                            Name = "Control Panel"
+                        },
+                        new
+                        {
+                            Id = new Guid("8f90e4f4-a3b6-4419-9dad-63ff61581675"),
+                            BrokenThreshold = 24,
+                            Hardness = 12,
+                            HazardId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            HitPoints = 48,
+                            Name = "Pillar"
+                        },
+                        new
+                        {
+                            Id = new Guid("ee76d481-a163-409a-b298-b28ca4a919ce"),
+                            BrokenThreshold = 10,
+                            Hardness = 5,
+                            HazardId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            HitPoints = 20,
+                            Name = "Panel"
+                        },
+                        new
+                        {
+                            Id = new Guid("30fc20e8-9dfe-445d-baa4-741113fa20a7"),
+                            BrokenThreshold = 44,
+                            Hardness = 22,
+                            HazardId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            HitPoints = 88,
+                            Name = "Trap"
+                        },
+                        new
+                        {
+                            Id = new Guid("21a8c0ca-c205-426c-926e-c9dcbccb8e73"),
+                            BrokenThreshold = 28,
+                            Hardness = 14,
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            HitPoints = 56,
+                            Name = "Wheel"
                         });
                 });
 
@@ -16848,6 +17515,177 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             HazardId = new Guid("33cde414-62f3-455d-95a2-f0a63480a006"),
                             RequiredProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
                             SkillId = new Guid("d8fd543c-7284-451d-8882-583970e9d917")
+                        },
+                        new
+                        {
+                            Id = new Guid("d3d70679-6b55-4f37-9fc9-b1d7059535f5"),
+                            Description = "to pierce the invisible larynx so precisely that the magic releases in a trickle before the trap activates",
+                            DifficultyCheck = 42,
+                            HazardId = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
+                            RequiredProficiencyId = new Guid("3c0b8610-4da2-4bb2-b7c9-1bd130ae8a56"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("f422309b-4d6f-42c6-820f-3870ac4d7891"),
+                            Description = "three times to deconstruct the larynx while the trap is active in such a way that it tears the spell apart",
+                            DifficultyCheck = 44,
+                            HazardId = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
+                            RequiredProficiencyId = new Guid("5184371d-aad0-4d76-b43c-b03d5e930ddb"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("97fdd750-a90e-4fab-a673-7fb5afe93c8c"),
+                            Description = "to retrieve a creature from the other dimension within 10 minutes of the switch (possible only if their mirror duplicate is dead)",
+                            DifficultyCheck = 34,
+                            HazardId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            RequiredProficiencyId = new Guid("5184371d-aad0-4d76-b43c-b03d5e930ddb"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("ddc04b96-97f9-46f5-98ed-011ddade1d22"),
+                            Description = "to permanently disable the mirror once all mirror duplicates are dead.",
+                            DifficultyCheck = 39,
+                            HazardId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            RequiredProficiencyId = new Guid("3c0b8610-4da2-4bb2-b7c9-1bd130ae8a56"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("77b15943-1920-4add-8b1d-ffd953670482"),
+                            Description = "to seal each waterspout",
+                            DifficultyCheck = 18,
+                            HazardId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            RequiredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("75797be2-cd98-4fa7-b542-03d81f397efe"),
+                            Description = "to open the trapdoor",
+                            DifficultyCheck = 22,
+                            HazardId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            RequiredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("f63eb02e-43dc-4f77-a48a-87b37c17d55e"),
+                            Description = "to force open the trapdoor",
+                            DifficultyCheck = 22,
+                            HazardId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            RequiredProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            SkillId = new Guid("8b35c13a-46fd-4018-bb18-11c0f156f708")
+                        },
+                        new
+                        {
+                            Id = new Guid("35b9fe03-9f51-45a9-9e76-32553c8e831f"),
+                            Description = "to block a channel",
+                            DifficultyCheck = 29,
+                            HazardId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            RequiredProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("90759a5b-4504-4109-89eb-00f2d4afeb20"),
+                            Description = "to to release the floor latch and escape to the chamber below",
+                            DifficultyCheck = 31,
+                            HazardId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            RequiredProficiencyId = new Guid("3c0b8610-4da2-4bb2-b7c9-1bd130ae8a56"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("cd624827-5366-4462-be3e-07d2bcfdf8f4"),
+                            Description = "on the control panel deactivates the trap",
+                            DifficultyCheck = 21,
+                            HazardId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            RequiredProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("5af71fdd-656c-4eaa-9c12-e63925f32a0d"),
+                            Description = "to disturb the surface",
+                            DifficultyCheck = 18,
+                            HazardId = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
+                            RequiredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SkillId = new Guid("d8fd543c-7284-451d-8882-583970e9d917")
+                        },
+                        new
+                        {
+                            Id = new Guid("6dea1b71-e27d-44cd-8778-bed39f6a4d73"),
+                            Description = "twice on the pillar to deactivate the whole trap",
+                            DifficultyCheck = 21,
+                            HazardId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            RequiredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("65eb6dd7-c29f-401e-96a0-1aabf4fba4df"),
+                            Description = "once on the control panel to deactive the whole trap. Breakin gthe control panel prevents anyone from disabling the trap using the control panel and prevents the trap from deactivating automatically",
+                            DifficultyCheck = 21,
+                            HazardId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            RequiredProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("04d08fc4-3f5d-4407-8b34-d0cae8372e4c"),
+                            Description = "to approach without triggering the trap",
+                            DifficultyCheck = 15,
+                            HazardId = new Guid("6f1cd8de-db91-4b60-9ae6-e9328c13cceb"),
+                            RequiredProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
+                            SkillId = new Guid("13d2e35c-3829-4bab-85c1-de00ff96248a")
+                        },
+                        new
+                        {
+                            Id = new Guid("e91c1fb3-ddbe-4523-919d-9c70f72a4a82"),
+                            Description = "to erase the rune",
+                            DifficultyCheck = 17,
+                            HazardId = new Guid("6f1cd8de-db91-4b60-9ae6-e9328c13cceb"),
+                            RequiredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("e67d33a3-07a3-4d57-bc2b-3dc160604364"),
+                            Description = "to take apart a telekinetic cloud",
+                            DifficultyCheck = 27,
+                            HazardId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            RequiredProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("a95ccc7b-c497-4240-890c-6205554bc7f2"),
+                            Description = "to disable each telekinetic decoration",
+                            DifficultyCheck = 32,
+                            HazardId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            RequiredProficiencyId = new Guid("3c0b8610-4da2-4bb2-b7c9-1bd130ae8a56"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("4b89222c-71f3-4697-ae14-620c0fa0263b"),
+                            Description = "on the wheel to stop it from spinning",
+                            DifficultyCheck = 26,
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            RequiredProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("9664f9d2-c3f3-4a80-80fa-5c172bf90216"),
+                            Description = "to erase each rune",
+                            DifficultyCheck = 22,
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            RequiredProficiencyId = new Guid("3c0b8610-4da2-4bb2-b7c9-1bd130ae8a56"),
+                            SkillId = new Guid("ca854fef-a519-472f-badd-f677cd8871fc")
                         });
                 });
 
@@ -16924,6 +17762,46 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "to counteract the glyph",
                             HazardId = new Guid("0b60cd6f-d1e8-4373-83f8-a14907af7e10"),
                             Level = 6
+                        },
+                        new
+                        {
+                            Id = new Guid("0f0eee9b-3bb9-44b8-8674-8913633f6ba5"),
+                            CounteractDifficultyCheck = 38,
+                            Description = "to counteract the wail of the banshee before the trap activates",
+                            HazardId = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
+                            Level = 9
+                        },
+                        new
+                        {
+                            Id = new Guid("bbf7d133-7704-4e11-b56a-0c5ce2bcaee6"),
+                            CounteractDifficultyCheck = 32,
+                            Description = "to counteract the mirror for 1 minute and prevent additional replacements during that time",
+                            HazardId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            Level = 7
+                        },
+                        new
+                        {
+                            Id = new Guid("f599f5f3-a8a9-409a-9be4-24efa7bc2eea"),
+                            CounteractDifficultyCheck = 15,
+                            Description = "to counteract the rune",
+                            HazardId = new Guid("6f1cd8de-db91-4b60-9ae6-e9328c13cceb"),
+                            Level = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("efd5de03-fb71-4e23-b059-6d113d24d3cb"),
+                            CounteractDifficultyCheck = 30,
+                            Description = "to counteract each telekinetic decoration",
+                            HazardId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            Level = 6
+                        },
+                        new
+                        {
+                            Id = new Guid("030bed99-367b-4301-8363-e76703d4efb3"),
+                            CounteractDifficultyCheck = 22,
+                            Description = "to counteract each rune",
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            Level = 4
                         });
                 });
 
@@ -16985,6 +17863,134 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasIndex("HazardId");
 
                     b.ToTable("HazardRoutineDetailBlock");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("2411b443-2b72-48d1-b59e-b6688b774df9"),
+                            HazardId = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
+                            Text = "The trap uses its action to force one random creature that failed its save against wail of the banshee last turn to emit a wail of the banshee with the same statistics as the initial one. The creature wails even if it is dead or unable to speak, no matter how far away from the trap it is. Unlike a casting of the spell, the drained condition from this trap’s wail of the banshee spells increases the targets’ drained condition values. A creature that critically succeeds at any of its saves can still be affected by the trap on future rounds, but can’t be forced to wail by the trap.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("087a9701-90ab-4e85-a64d-8bca7032c349"),
+                            HazardId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                            Text = "The mirror absorbs another reflected creature into the mirror and replaces it with a mirror duplicate. Mirror duplicates attack on their own initiative, using the same statistics as the original creature, but with an evil alignment (changing only abilities that shift with the alignment change). A mirror duplicate can spend 3 actions in contact with the mirror to return to its original dimension and release the creature it duplicated, but most mirror duplicates prefer not to.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("d58fd9ed-f604-45d1-ab07-65c3cc68799c"),
+                            HazardId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                            Text = "The trap loses 1 action each turn for each disabled water spout. On each of the trap’s actions, a spout pours water, increasing the depth of the water by 5 feet. Once the pit is full of water, the pit stops using actions, but creatures in the pit begin drowning (page 478).",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("dbc0d3e9-fac4-47d3-8942-09f87c55df5d"),
+                            HazardId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            Text = "The trap loses 1 action per disabled channel each turn. On each action, a different channel spews lava, dealing 4d6 fire damage to each creature within 10 feet of the channel (DC 27 basic Reflex save), and increasing the depth of the lava in the room by 1 foot (4 feet per round if all the channels are active).",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("58d97828-a01d-4101-b04e-d5e3b804b7a8"),
+                            HazardId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                            Text = "A creature that starts its turn in lava takes 8d6 fire damage and is immobilized until it Escapes the hardening lava (DC 27). The creature might suffocate if covered in lava (page 478). Lava from the previous round hardens fully at the start of the trap’s turn, effectively raising the floor of the room. Once the room is full of lava, the trap stops taking actions, but creatures in the room remain stuck until the floor opens and the trap resets.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("85e4e3c2-a458-4da2-851e-16f694b880cc"),
+                            HazardId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                            Text = "The trap launches one dart against every creature in the gallery as 1 action. Because it launches darts continuously, the trap can also use the Continuous Barrage free action (see below) to launch darts at each creature during that creature’s turn.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("f5149d1e-92e7-468d-aaf7-c71f195e464a"),
+                            HazardId = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
+                            Text = "On its initiative, the quicksand pulls down each creature within it. A creature that was submerged up to its waist becomes submerged up to its neck, and a creature that was submerged up to its neck is pulled under and has to hold its breath to avoid suffocation(page 478).",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("4f8f2529-93b8-4bad-8841-59f73d6e119c"),
+                            HazardId = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
+                            Text = "A creature in the quicksand can attempt a DC 20 Athletics check to Swim to either raise itself by one step if it’s submerged to its neck or worse, or to move 5 feet if it’s submerged only up to its waist. On a critical failure, the creature is pulled down one step. A creature that Swims out of the quicksand escapes the hazard and is prone in a space adjacent to the quicksand patch. Other creatures can Aid the creature, typically by using a rope or similar aid, or attempt to pull the creature out with their own DC 20 Athletics check, with the same results as if the creature attempted the check.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("bb0601b7-7b22-47fc-a985-a53eccad97a2"),
+                            HazardId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                            Text = "The trap uses its first action to make a spinning blade Strike against each adjacent creature, its second action to move straight in a random direction (roll 1d4 to determine the direction), and its third action to make a spinning blade Strike against each adjacent creature. This trap doesn’t take a multiple attack penalty.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("5bfc3074-35e2-4406-bcd4-152b4c8f3069"),
+                            HazardId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            Text = "Each decoration uses 3 of the trap’s actions each turn, and the trap loses 3 actions each turn for every decoration that is disabled. A decoration uses its first action to move its cloud of objects up to 200 feet, its second action to make the objects Strike, and its third action to add more objects to the cloud, increasing its damage by 1d12 (to a maximum of 4d12+10). If a decoration’s cloud is already at maximum damage, it does nothing with its third action.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("3564caf0-6c49-4cff-9e37-0cfdc2f57bf2"),
+                            HazardId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                            Text = "If a decoration’s cloud has been destroyed, the decoration instead spends its first action to create a new cloud of objects inside the room (using the starting damage value) and then its second and third actions to have the cloud move and Strike.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("417e2e47-e956-49d4-b01e-82da90ed3027"),
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            Text = "On its initiative, the trap uses its first action to spin, then stops. Roll 1d6 to determine which segment is topmost when the wheel stops spinning. The wheel uses its second action to replicate the spell listed for that segment (3rd level, DC 24, spell attack roll +14). This spell’s target is centered on or otherwise includes the nearest creature in the area. This increases the spell’s range to 100 feet if necessary. Any spell cast by this trap is arcane.",
+                            Type = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("9e4955f6-7270-4de7-ad78-8f728b8a4e57"),
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            Text = "Sleep",
+                            Type = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("35c80760-aec4-41ba-a3d3-e256796bd457"),
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            Text = "Paralyze",
+                            Type = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("c0e914be-277a-4cd2-a30a-ecdb53d8f2c6"),
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            Text = "Lightning Bolt (100-foot line)",
+                            Type = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("22e59604-b410-4183-820b-2dcfff400a8c"),
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            Text = "Blindness",
+                            Type = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("9aea181f-b676-4651-a636-710699c43495"),
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            Text = "Acid Arrow",
+                            Type = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("2fdfb966-1fa4-4286-9409-8c415686c09e"),
+                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                            Text = "Ray of Enfeeblement",
+                            Type = 1
+                        });
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardType", b =>
@@ -20597,6 +21603,66 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("7fb587a3-cfa2-4098-8416-8e2eb615b325"),
                             Page = 524,
                             SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("dae57ffc-a1ec-4a36-87fb-6188e72dbd2a"),
+                            Page = 529,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6230e629-ec2b-40b4-ab4f-eb1bc6619473"),
+                            Page = 528,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d08cc06e-0eb7-4f3e-b173-7dbb8dcb1b87"),
+                            Page = 526,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("9c7423cd-e07c-4a28-8d25-3b3cc4578690"),
+                            Page = 528,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("800680a3-465d-4099-b20a-b66da308da97"),
+                            Page = 528,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("5285ad8d-011b-4404-861a-6c266475600f"),
+                            Page = 526,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("b68c5ba3-4c51-4537-a72a-f1066c6b875f"),
+                            Page = 527,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d3f23187-4e4d-4989-9b34-40a4f42da1fe"),
+                            Page = 526,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("766886e3-4c2d-407c-9691-d36cb4a21258"),
+                            Page = 528,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("742d1efd-6216-4bc1-bbef-e05a55a90fcf"),
+                            Page = 527,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         });
                 });
 
@@ -23560,6 +24626,22 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             MaximumDuration = "6 Rounds",
                             Onset = "Immediate",
                             SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("c2c8231e-19f5-4d6c-914c-5187338f5f6b"),
+                            DifficultyCheck = 22,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
+                        },
+                        new
+                        {
+                            Id = new Guid("67e55344-5967-447f-8050-e87c4bf9bb4f"),
+                            DifficultyCheck = 22,
+                            MaximumDuration = "6 Rounds",
+                            Onset = "Immediate",
+                            SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
                         });
                 });
 
@@ -24236,6 +25318,48 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Duration = "1 Round",
                             Stage = 0,
                             StaggeredEffectId = new Guid("37b2a990-7d21-43a4-9602-7ae524d25cc8")
+                        },
+                        new
+                        {
+                            Id = new Guid("ef935b02-9dbc-435b-ac40-611af0f41d03"),
+                            Duration = "1 Round",
+                            Stage = 0,
+                            StaggeredEffectId = new Guid("c2c8231e-19f5-4d6c-914c-5187338f5f6b")
+                        },
+                        new
+                        {
+                            Id = new Guid("ac19b527-86cf-439e-8843-61ab68bd2459"),
+                            Duration = "1 Round",
+                            Stage = 0,
+                            StaggeredEffectId = new Guid("c2c8231e-19f5-4d6c-914c-5187338f5f6b")
+                        },
+                        new
+                        {
+                            Id = new Guid("136ceb18-07f8-4abe-80f8-1e3f9880d5fb"),
+                            Duration = "1 Round",
+                            Stage = 0,
+                            StaggeredEffectId = new Guid("c2c8231e-19f5-4d6c-914c-5187338f5f6b")
+                        },
+                        new
+                        {
+                            Id = new Guid("1f6c30c9-bc76-48bb-8d68-d0876cb2bb05"),
+                            Duration = "1 Round",
+                            Stage = 0,
+                            StaggeredEffectId = new Guid("67e55344-5967-447f-8050-e87c4bf9bb4f")
+                        },
+                        new
+                        {
+                            Id = new Guid("7de1019f-256d-406f-bc89-ac005d9e96d4"),
+                            Duration = "1 Round",
+                            Stage = 0,
+                            StaggeredEffectId = new Guid("67e55344-5967-447f-8050-e87c4bf9bb4f")
+                        },
+                        new
+                        {
+                            Id = new Guid("9f0dcc6f-8785-47c3-96a0-b37b18da972c"),
+                            Duration = "1 Round",
+                            Stage = 0,
+                            StaggeredEffectId = new Guid("67e55344-5967-447f-8050-e87c4bf9bb4f")
                         });
                 });
 
@@ -24918,6 +26042,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("11d74166-043d-4f9d-93eb-8ae813e2b840"),
                             Description = "On a critical hit, the weapon adds a weapon damage die of the listed size. Roll this after doubling the weapon’s damage. This increases to two dice if the weapon has a greater striking rune and three dice if the weapon has a major striking rune. For instance, a rapier with a greater striking rune deals 2d8 extra piercing damage on a critical hit. An ability that changes the size of the weapon’s normal damage dice doesn’t change the size of its deadly die.",
                             Name = "Deadly"
+                        },
+                        new
+                        {
+                            Id = new Guid("fe4f319f-4792-41f3-be57-689f0eb65321"),
+                            Description = "A creature called by a conjuration spell or effect gains the summoned trait. A summoned creature can't summon other creatures, create things of value, or cast spells that require a cost. It has the minion trait. If it tries to cast a spell of equal or higher level than the spell that summoned it, it overpowers the summoning magic, causing the summoned creature's spell to fail and the summon spell to end. Otherwise, the summoned creature uses the standard abilities for a creature of its kind. It generally attacks your enemies to the best of its abilities. If you can communicate with it, you can attempt to command it, but the GM determines the degree to which it follows your commands. Immediately when you finish Casting the Spell, the summoned creature uses its 2 actions for that turn. A summoned creature can't control any spawn or other creatures generated from it, and such creatures return to their unaltered state (usually a corpse in the case of spawn) once the summoned creature is gone. If it's unclear what this state would be, the GM decides. Summoned creatures can be banished by various spells and effects. They are automatically banished if reduced to 0 Hit Points or if the spell that called them ends.",
+                            Name = "Summon"
                         });
                 });
 
@@ -28277,6 +29407,42 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
                             ProficiencyBonus = 40,
                             Weapon = "Saw Blade"
+                        },
+                        new
+                        {
+                            Id = new Guid("e1ba326b-d859-4b7a-9a89-68a591e8801a"),
+                            HazardActionId = new Guid("08abae5d-5e71-45ca-9a37-9d44a955d84c"),
+                            Name = "Strike",
+                            ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
+                            AttackTypeId = new Guid("4f46c206-80e8-4ff2-a3dd-e4d6a73b5388"),
+                            Damage = "3d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            ProficiencyBonus = 21,
+                            Weapon = "Poisoned Dart"
+                        },
+                        new
+                        {
+                            Id = new Guid("2ac642c0-de8c-48b4-9fbf-3f9a2305bc21"),
+                            HazardActionId = new Guid("edea22d4-1f12-48a8-b1f1-b6ee4de1b4f7"),
+                            Name = "Strike",
+                            ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
+                            AttackTypeId = new Guid("4f46c206-80e8-4ff2-a3dd-e4d6a73b5388"),
+                            Damage = "3d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            ProficiencyBonus = 21,
+                            Weapon = "Poisoned Dart"
+                        },
+                        new
+                        {
+                            Id = new Guid("3a9d125a-3dc2-41a2-80bb-079119e46900"),
+                            HazardActionId = new Guid("5ea54988-b386-4036-a0fc-914995d621de"),
+                            Name = "Strike",
+                            ActionTypeId = new Guid("8a30c5b9-9024-4251-b0d4-147fefad1f2c"),
+                            AttackTypeId = new Guid("1a61a928-f75d-4c1e-b655-b92a9d40bc77"),
+                            Damage = "2d12+10",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            ProficiencyBonus = 24,
+                            Weapon = "Objects"
                         });
                 });
 
@@ -28325,6 +29491,20 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             HazardActionId = new Guid("dd06ccd9-ca0a-4797-b135-590a5509eb32"),
                             Name = "Yellow Mold Spores",
                             PoisonEffectId = new Guid("37b2a990-7d21-43a4-9602-7ae524d25cc8")
+                        },
+                        new
+                        {
+                            Id = new Guid("acde54a3-3dc8-4855-bd4e-eb12005c8388"),
+                            HazardActionId = new Guid("08abae5d-5e71-45ca-9a37-9d44a955d84c"),
+                            Name = "Flesset Poison",
+                            PoisonEffectId = new Guid("c2c8231e-19f5-4d6c-914c-5187338f5f6b")
+                        },
+                        new
+                        {
+                            Id = new Guid("f9a67269-e073-4aa6-bf2a-83918c203d16"),
+                            HazardActionId = new Guid("edea22d4-1f12-48a8-b1f1-b6ee4de1b4f7"),
+                            Name = "Flesset Poison",
+                            PoisonEffectId = new Guid("67e55344-5967-447f-8050-e87c4bf9bb4f")
                         });
                 });
 
@@ -31150,6 +32330,54 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             StaggeredEffectStageId = new Guid("2670560e-815c-429a-b6ff-aa7fd95d0fa8"),
                             ConditionId = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
                             Severity = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("f1cb8577-8a8e-4a97-a540-b14550c803c9"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ef935b02-9dbc-435b-ac40-611af0f41d03"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("6200804d-c0c7-4653-ba70-cbbb91cf448f"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ac19b527-86cf-439e-8843-61ab68bd2459"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("933e0675-6683-42ad-a573-5356fa3366d6"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("136ceb18-07f8-4abe-80f8-1e3f9880d5fb"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 3
+                        },
+                        new
+                        {
+                            Id = new Guid("65041ada-1705-4e91-b0cc-50d4480ba32c"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("1f6c30c9-bc76-48bb-8d68-d0876cb2bb05"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("423150bb-386c-402a-ae7f-e43715df311b"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("7de1019f-256d-406f-bc89-ac005d9e96d4"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 2
+                        },
+                        new
+                        {
+                            Id = new Guid("94e9af9e-f291-4956-92e9-091f1f6dc716"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("9f0dcc6f-8785-47c3-96a0-b37b18da972c"),
+                            ConditionId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                            Severity = 3
                         });
                 });
 
@@ -31847,6 +33075,60 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Permanent = false,
                             StaggeredEffectStageId = new Guid("2670560e-815c-429a-b6ff-aa7fd95d0fa8"),
                             Damage = "3d8",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("c9d62b09-91f1-4e18-bd8e-e127cd634aff"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ef935b02-9dbc-435b-ac40-611af0f41d03"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("044dbf8d-f3cb-4993-afe9-981f70035070"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("ac19b527-86cf-439e-8843-61ab68bd2459"),
+                            Damage = "2d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("6f95b00b-9387-4bf5-9bda-844e25fd15c3"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("136ceb18-07f8-4abe-80f8-1e3f9880d5fb"),
+                            Damage = "3d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("2c36b00c-3d05-4f99-9f29-c7fd4abd3a8c"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("1f6c30c9-bc76-48bb-8d68-d0876cb2bb05"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("f3283d2d-844f-47b0-8995-919fd1e45016"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("7de1019f-256d-406f-bc89-ac005d9e96d4"),
+                            Damage = "2d6",
+                            DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
+                            IsDamagePersistent = false
+                        },
+                        new
+                        {
+                            Id = new Guid("865ab974-a10e-4aef-a231-62232f5c5b1e"),
+                            Permanent = false,
+                            StaggeredEffectStageId = new Guid("9f0dcc6f-8785-47c3-96a0-b37b18da972c"),
+                            Damage = "3d6",
                             DamageTypeId = new Guid("38834ac6-9f9f-4b44-ad45-c2c932ff4b27"),
                             IsDamagePersistent = false
                         });
