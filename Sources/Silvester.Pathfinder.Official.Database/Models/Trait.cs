@@ -16,6 +16,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<Curse> Curses { get; set; } = new List<Curse>();
 
+        public ICollection<ItemCurse> ItemCurses { get; set; } = new List<ItemCurse>();
+
         public ICollection<Disease> Diseases { get; set; } = new List<Disease>();
         
         public ICollection<Action> Actions { get; set; } = new List<Action>();

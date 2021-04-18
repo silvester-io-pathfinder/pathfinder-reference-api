@@ -14,6 +14,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public string Effect { get; set; } = default!;
 
+        public int? Level { get; set; }
+
         public int? DifficultyCheck { get; set; }
 
         public Guid SavingThrowStatId { get; set; }

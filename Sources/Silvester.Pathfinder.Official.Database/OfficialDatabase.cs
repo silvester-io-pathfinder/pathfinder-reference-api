@@ -11,6 +11,7 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells;
 using System;
 using System.Collections.Generic;
@@ -118,6 +119,8 @@ namespace Silvester.Pathfinder.Official.Database
 
         public DbSet<Curse> Curses { get; set; } = default!;
 
+        public DbSet<ItemCurse> ItemCurses { get; set; } = default!;
+
         public DbSet<Condition> Conditions{ get; set; } = default!;
 
         public DbSet<Disease> Diseases{ get; set; } = default!;
@@ -151,6 +154,9 @@ namespace Silvester.Pathfinder.Official.Database
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<SpellTrigger>().HasBaseEntityKey();
+            modelBuilder.Entity<Disease>().HasBaseEntityKey();
+            modelBuilder.Entity<Curse>().HasBaseEntityKey();
+            modelBuilder.Entity<ItemCurse>().HasBaseEntityKey();
             modelBuilder.Entity<Hazard>().HasBaseEntityKey();
             modelBuilder.Entity<SourcePage>().HasBaseEntityKey().HasDataSeed(new HazardTypeSourcePageSeeder());
 
@@ -246,6 +252,7 @@ namespace Silvester.Pathfinder.Official.Database
             new AlchemicalPoisonSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, savingThrowStatSeed, damageTypeSeed, actionTypeSeed).Seed();
             new AlchemicalToolSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, alchemicalToolPotencySeed, actionTypeSeed).Seed();
             new HazardSeeder(modelBuilder, traitSeed, sourceSeed, hazardImmunitySeed, hazardComplexitySeed, skillSeed, proficiencySeed, hazardTypeSeed, attackTypeSeed, actionTypeSeed, damageTypeSeed, savingThrowStatSeed).Seed();
+            new ItemCurseSeeder(modelBuilder, sourceSeed, traitSeed).Seed();
         }
     }
 }

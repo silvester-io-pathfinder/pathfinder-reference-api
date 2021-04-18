@@ -5376,6 +5376,308 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ItemCurseTrait", b =>
+                {
+                    b.Property<Guid>("ItemCursesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("ItemCursesId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("ItemCurseTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            ItemCursesId = new Guid("247f52a1-f309-4e64-9020-6cec69d2a048"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("247f52a1-f309-4e64-9020-6cec69d2a048"),
+                            TraitsId = new Guid("c499214b-94fc-4103-8c7c-6f7a56b5c980")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("247f52a1-f309-4e64-9020-6cec69d2a048"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("247f52a1-f309-4e64-9020-6cec69d2a048"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("77b3847f-7cb6-4d8e-9eb0-8c348b0b755c"),
+                            TraitsId = new Guid("d1aabc8c-b3fe-40eb-bfc2-ea72d3b7e0c0")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("77b3847f-7cb6-4d8e-9eb0-8c348b0b755c"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("77b3847f-7cb6-4d8e-9eb0-8c348b0b755c"),
+                            TraitsId = new Guid("f5f7ca8a-100a-4d93-aa07-e0f1bb3cbc49")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("77b3847f-7cb6-4d8e-9eb0-8c348b0b755c"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("77b3847f-7cb6-4d8e-9eb0-8c348b0b755c"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("11d686ec-2c9a-4c0f-b7da-d8318c38bc64"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("11d686ec-2c9a-4c0f-b7da-d8318c38bc64"),
+                            TraitsId = new Guid("f5f7ca8a-100a-4d93-aa07-e0f1bb3cbc49")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("11d686ec-2c9a-4c0f-b7da-d8318c38bc64"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("11d686ec-2c9a-4c0f-b7da-d8318c38bc64"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("b2f407cf-7fe0-42fa-ac0e-2524621e8a3b"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("b2f407cf-7fe0-42fa-ac0e-2524621e8a3b"),
+                            TraitsId = new Guid("2d643d25-b9aa-4544-b482-04b3475eb82b")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("b2f407cf-7fe0-42fa-ac0e-2524621e8a3b"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("b2f407cf-7fe0-42fa-ac0e-2524621e8a3b"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("ec2335e5-bcde-44c4-b9a6-c352b1c02073"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("ec2335e5-bcde-44c4-b9a6-c352b1c02073"),
+                            TraitsId = new Guid("2d643d25-b9aa-4544-b482-04b3475eb82b")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("ec2335e5-bcde-44c4-b9a6-c352b1c02073"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("ec2335e5-bcde-44c4-b9a6-c352b1c02073"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("6e4d1c6a-b506-4a2f-8ab0-03a1ebea1696"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("6e4d1c6a-b506-4a2f-8ab0-03a1ebea1696"),
+                            TraitsId = new Guid("d751d93f-cff9-448f-8ab0-9a3c07eacbef")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("6e4d1c6a-b506-4a2f-8ab0-03a1ebea1696"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("6e4d1c6a-b506-4a2f-8ab0-03a1ebea1696"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("75b47175-fb61-4cf2-90dd-466970f59b76"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("75b47175-fb61-4cf2-90dd-466970f59b76"),
+                            TraitsId = new Guid("6f187720-6664-44c6-8e09-2053ed1054d6")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("75b47175-fb61-4cf2-90dd-466970f59b76"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("75b47175-fb61-4cf2-90dd-466970f59b76"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("369897ab-d7b6-4077-ad4e-69580e0b95fa"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("369897ab-d7b6-4077-ad4e-69580e0b95fa"),
+                            TraitsId = new Guid("6f187720-6664-44c6-8e09-2053ed1054d6")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("369897ab-d7b6-4077-ad4e-69580e0b95fa"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("369897ab-d7b6-4077-ad4e-69580e0b95fa"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("578a1f3e-8039-4342-a2b1-bcfa67035d7a"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("578a1f3e-8039-4342-a2b1-bcfa67035d7a"),
+                            TraitsId = new Guid("e7fd1927-8c01-4945-899e-a99d2e44662a")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("578a1f3e-8039-4342-a2b1-bcfa67035d7a"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("578a1f3e-8039-4342-a2b1-bcfa67035d7a"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("53cbef47-8c65-4869-9494-4bc53daa4475"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("53cbef47-8c65-4869-9494-4bc53daa4475"),
+                            TraitsId = new Guid("f5f7ca8a-100a-4d93-aa07-e0f1bb3cbc49")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("53cbef47-8c65-4869-9494-4bc53daa4475"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("53cbef47-8c65-4869-9494-4bc53daa4475"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("dade2400-c464-4171-a0f4-5367292b51a3"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("dade2400-c464-4171-a0f4-5367292b51a3"),
+                            TraitsId = new Guid("d751d93f-cff9-448f-8ab0-9a3c07eacbef")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("dade2400-c464-4171-a0f4-5367292b51a3"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("dade2400-c464-4171-a0f4-5367292b51a3"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("c1881624-ab21-4295-bdf7-81617c04b051"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("c1881624-ab21-4295-bdf7-81617c04b051"),
+                            TraitsId = new Guid("f5f7ca8a-100a-4d93-aa07-e0f1bb3cbc49")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("c1881624-ab21-4295-bdf7-81617c04b051"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("c1881624-ab21-4295-bdf7-81617c04b051"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("8170f8c0-0cdb-4c14-8cb3-2e208ae58552"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("8170f8c0-0cdb-4c14-8cb3-2e208ae58552"),
+                            TraitsId = new Guid("d751d93f-cff9-448f-8ab0-9a3c07eacbef")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("8170f8c0-0cdb-4c14-8cb3-2e208ae58552"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("8170f8c0-0cdb-4c14-8cb3-2e208ae58552"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("9d831fff-4d11-444f-b90d-0d3b3d393703"),
+                            TraitsId = new Guid("f2810f2b-6f8a-4fb1-b00f-a9d307f97eff")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("9d831fff-4d11-444f-b90d-0d3b3d393703"),
+                            TraitsId = new Guid("2d643d25-b9aa-4544-b482-04b3475eb82b")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("9d831fff-4d11-444f-b90d-0d3b3d393703"),
+                            TraitsId = new Guid("39aba859-33a5-45df-b1fe-902f8e3c2273")
+                        },
+                        new
+                        {
+                            ItemCursesId = new Guid("9d831fff-4d11-444f-b90d-0d3b3d393703"),
+                            TraitsId = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c")
+                        });
+                });
+
             modelBuilder.Entity("LanguageRace", b =>
                 {
                     b.Property<Guid>("RacesId")
@@ -8749,7 +9051,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("TraitsId");
 
-                    b.ToTable("AlchemicalTool");
+                    b.ToTable("AlchemicalTools");
 
                     b.HasData(
                         new
@@ -10711,6 +11013,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int?>("Level")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
@@ -10744,6 +11049,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "This curse plagues you with terrible nightmares whenever you sleep, preventing you from resting properly.",
                             DifficultyCheck = 16,
                             Effect = "You must rest for 12 hours instead of 8 to avoid becoming fatigued and can’t gain any benefits from resting or long-term rest. You can still make your daily preparations.",
+                            Level = 2,
                             Name = "Curse of Nightmares",
                             SavingThrowStatId = new Guid("a71929b0-9dff-492a-9bf9-8f9cadda198c")
                         },
@@ -10753,6 +11059,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "This curse protects a single book and activates against any creature who Steals it.",
                             DifficultyCheck = 18,
                             Effect = "You begin to lose details from your memories, as well as a portion of your procedural memory. After being cursed, the first time you attempt a check using a skill in which you are trained or better, your proficiency rank in the skill used decreases by one rank for as long as you are cursed.",
+                            Level = 3,
                             Name = "Theft of Thought",
                             SavingThrowStatId = new Guid("a71929b0-9dff-492a-9bf9-8f9cadda198c")
                         },
@@ -10762,6 +11069,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "You are haunted by all those you have killed.",
                             DifficultyCheck = 19,
                             Effect = "You see all creatures around you as those you have slain, still bearing their wounds. You can’t identify, Recall Knowledge about, or otherwise interact with these creatures in any way that involves seeing their true form without first succeeding at a Will save against the curse’s DC to see through the illusion. On a critical failure for such a Will save, you become frightened 1.",
+                            Level = 4,
                             Name = "Slayer's Haunt",
                             SavingThrowStatId = new Guid("a71929b0-9dff-492a-9bf9-8f9cadda198c")
                         },
@@ -10771,6 +11079,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "You find all courage stolen from your heart. When faced with something frightening, you flee in terror or stand frozen in place.",
                             DifficultyCheck = 20,
                             Effect = "At the start of your turn, if you are frightened, you become your choice of immobilized or fleeing until the end of that turn.",
+                            Level = 5,
                             Name = "Coward's Roots",
                             SavingThrowStatId = new Guid("a71929b0-9dff-492a-9bf9-8f9cadda198c")
                         },
@@ -10780,6 +11089,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "This hideous curse kills through constant hunger. You become gaunt and repeatedly gnash your teeth.",
                             DifficultyCheck = 20,
                             Effect = "No matter how much you eat, you aren’t satiated. After 1 day, you begin starving. Each week, you receive a new saving throw against the curse.",
+                            Level = 5,
                             Name = "Curse of the Ravenous",
                             SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
                         },
@@ -10789,6 +11099,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "A wizard’s ward is placed upon a single book, usually a spellbook. If you damage the book, you must attempt a save against the curse’s effect.",
                             DifficultyCheck = 22,
                             Effect = "You take 5d6 damage of the same damage type as the damage you dealt to the book, and the damage can’t be healed as long as the curse lasts. Repairing the book, including replacing any missing text, ends this curse.",
+                            Level = 6,
                             Name = "Wizard's Ward",
                             SavingThrowStatId = new Guid("a71929b0-9dff-492a-9bf9-8f9cadda198c")
                         },
@@ -10798,6 +11109,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "When you swear an oath, you must obey that oath or suffer terrible consequences.",
                             DifficultyCheck = 23,
                             Effect = "Each time you make a promise to someone, an ornate symbol representing that promise is magically carved into your flesh. Breaking any of these promises causes the symbol tattoo to grow into a gaping wound, dealing 3d6 slashing damage to you; damage from the curse can’t be healed as long as the curse is still in effect.",
+                            Level = 7,
                             Name = "Oath of the Fresh",
                             SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
                         },
@@ -10807,6 +11119,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "Even the most experienced combat veteran becomes as reckless as a rookie when suffering from sellsword’s folly.",
                             DifficultyCheck = 26,
                             Effect = "The chaos of combat overwhelms you. Each time you roll initiative for a combat encounter, you must attempt a new saving throw against the curse; on a failure, you become confused for 1 round. This is an incapacitation effect.",
+                            Level = 9,
                             Name = "Sellsword's Folly",
                             SavingThrowStatId = new Guid("a71929b0-9dff-492a-9bf9-8f9cadda198c")
                         },
@@ -10816,6 +11129,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "This legendary curse sends you into a sleep indistinguishable from death.",
                             DifficultyCheck = 28,
                             Effect = "You fall asleep for 1 round (or permanently on a critical failure) and seem to be dead; a creature must succeed at a DC 30 Medicine check to realize you are alive. Noise doesn’t awaken you, but taking damage gives you a new saving throw against the curse.",
+                            Level = 11,
                             Name = "Curse of Slumber",
                             SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
                         },
@@ -10825,6 +11139,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "A reviling earth curse usually appears across a specific geographical region, such as a ruined town, a necromancer’s domain, or a similar area.",
                             DifficultyCheck = 30,
                             Effect = "When you enter the area, you become doomed 1, or doomed 2 on a critical failure.",
+                            Level = 12,
                             Name = "Reviling Earth",
                             SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
                         },
@@ -10834,6 +11149,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "This curse prevents your soul from moving on after death.",
                             DifficultyCheck = 31,
                             Effect = " If you die while affected, your spirit is anchored to the Material Plane, and you become a ghost or other incorporeal undead.",
+                            Level = 13,
                             Name = "Spirit Anchor",
                             SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
                         },
@@ -10843,6 +11159,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "This curse kills through dehydration in the same vein as the curse of the ravenous, but with deadly speed.",
                             DifficultyCheck = 32,
                             Effect = "You gain no benefit from drinking water or other liquids and begin suffering from thirst. Each day, you receive a new saving throw against the curse.",
+                            Level = 15,
                             Name = "Unending Thirst",
                             SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
                         },
@@ -10852,6 +11169,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "This curse makes the hunter into the hunted, drawing the ire of animals wherever you go.",
                             DifficultyCheck = 38,
                             Effect = "Creatures of the natural world abhor you. Whenever an animal becomes aware of you, it must attempt a Will save against the curse. On a failure, it attacks you and fights to the death.",
+                            Level = 18,
                             Name = "Reviled of Nature",
                             SavingThrowStatId = new Guid("a71929b0-9dff-492a-9bf9-8f9cadda198c")
                         },
@@ -10861,6 +11179,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "This punishment causes you to lose something dear to you whenever you rob or steal. If you have nothing to lose, the curse exacts its punishment upon your body instead.",
                             DifficultyCheck = 39,
                             Effect = "Each time you steal something, you lose something more valuable—this item is whisked away and can’t be found again. Typically this item is one of greater monetary value, but it might be one of greater value in another sense, such as one of greater emotional value, or something you need to complete a task. If you aren’t carrying anything of greater value at the time of the theft, you lose one of your limbs instead, taking 10d6 slashing damage and losing use of that limb. The damage can’t be healed, nor the limb restored, until the stolen item is returned, even through use of spells like regenerate.",
+                            Level = 19,
                             Name = "Thief's Retribution",
                             SavingThrowStatId = new Guid("83f532a1-dad3-4dc8-b13d-77e69959444a")
                         },
@@ -10870,6 +11189,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Description = "With divine intervention, followers of a deity can bestow this curse upon an enemy of the faith.",
                             DifficultyCheck = 40,
                             Effect = "You are marked by the deity invoked as an enemy of the church. You gain weakness 10 to damage dealt by worshippers of that deity.",
+                            Level = 20,
                             Name = "Sword of Anathema",
                             SavingThrowStatId = new Guid("a71929b0-9dff-492a-9bf9-8f9cadda198c")
                         });
@@ -16410,6 +16730,152 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ItemCurse", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("ItemCurses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("247f52a1-f309-4e64-9020-6cec69d2a048"),
+                            Level = 8,
+                            Name = "Arrow Attracting",
+                            SourcePageId = new Guid("33411eb6-96e3-4ef9-a3fc-3371cf073dc9"),
+                            Usage = "curses armor or shield"
+                        },
+                        new
+                        {
+                            Id = new Guid("77b3847f-7cb6-4d8e-9eb0-8c348b0b755c"),
+                            Level = 7,
+                            Name = "Arsonous",
+                            SourcePageId = new Guid("949a09f9-a465-43f7-854a-b24e4c9462f4"),
+                            Usage = "curses a ring, staff, or wand"
+                        },
+                        new
+                        {
+                            Id = new Guid("11d686ec-2c9a-4c0f-b7da-d8318c38bc64"),
+                            Level = 4,
+                            Name = "Backbiting",
+                            SourcePageId = new Guid("179f1b27-8e26-4a51-a396-a01a1b2d6f6a"),
+                            Usage = "curses a weapon"
+                        },
+                        new
+                        {
+                            Id = new Guid("b2f407cf-7fe0-42fa-ac0e-2524621e8a3b"),
+                            Level = 6,
+                            Name = "Bloodbiter",
+                            SourcePageId = new Guid("513b8a6b-de2e-4112-8be8-89d52ac74be9"),
+                            Usage = "curses a piercing or slashing weapon"
+                        },
+                        new
+                        {
+                            Id = new Guid("ec2335e5-bcde-44c4-b9a6-c352b1c02073"),
+                            Level = 5,
+                            Name = "Degenerating",
+                            SourcePageId = new Guid("d83fc2c9-c14f-4684-9189-3256ae62fb2e"),
+                            Usage = "curses a weapon"
+                        },
+                        new
+                        {
+                            Id = new Guid("6e4d1c6a-b506-4a2f-8ab0-03a1ebea1696"),
+                            Level = 9,
+                            Name = "Dependent",
+                            SourcePageId = new Guid("9d6def2c-671e-41c5-9422-3fd2f06fd5aa"),
+                            Usage = "curses gear used for skills or a weapon"
+                        },
+                        new
+                        {
+                            Id = new Guid("75b47175-fb61-4cf2-90dd-466970f59b76"),
+                            Level = 3,
+                            Name = "Dreary",
+                            SourcePageId = new Guid("3c6e8c62-8786-481c-9944-f1a849df0228"),
+                            Usage = "curses armor"
+                        },
+                        new
+                        {
+                            Id = new Guid("369897ab-d7b6-4077-ad4e-69580e0b95fa"),
+                            Level = 11,
+                            Name = "Erratic Transposing",
+                            SourcePageId = new Guid("7ec67c91-f70d-4a7d-b79f-8d06e4b1d88f"),
+                            Usage = "curses a weapon"
+                        },
+                        new
+                        {
+                            Id = new Guid("578a1f3e-8039-4342-a2b1-bcfa67035d7a"),
+                            Level = 11,
+                            Name = "Grandstanding",
+                            SourcePageId = new Guid("17a087ee-8738-4035-b4c5-12fe78ff84a7"),
+                            Usage = "curses a weapon"
+                        },
+                        new
+                        {
+                            Id = new Guid("53cbef47-8c65-4869-9494-4bc53daa4475"),
+                            Level = 5,
+                            Name = "Overdramatic",
+                            SourcePageId = new Guid("6f2cfabe-86c5-461a-9aea-dd9eb7f66d65"),
+                            Usage = "curses a weapon"
+                        },
+                        new
+                        {
+                            Id = new Guid("dade2400-c464-4171-a0f4-5367292b51a3"),
+                            Level = 3,
+                            Name = "Raucous",
+                            SourcePageId = new Guid("9283dbff-bc55-44ee-bf3c-8b2ac4f873cd"),
+                            Usage = "curses gear or a weapon"
+                        },
+                        new
+                        {
+                            Id = new Guid("c1881624-ab21-4295-bdf7-81617c04b051"),
+                            Level = 1,
+                            Name = "Ravenous",
+                            SourcePageId = new Guid("1d412b5e-b818-4d4c-aab7-e91471eb46eb"),
+                            Usage = "curses a ring, staff, or wand"
+                        },
+                        new
+                        {
+                            Id = new Guid("8170f8c0-0cdb-4c14-8cb3-2e208ae58552"),
+                            Level = 1,
+                            Name = "Staining",
+                            SourcePageId = new Guid("8bda699e-5ba4-4e33-b363-dd9b65e785bf"),
+                            Usage = "curses gear or a weapon"
+                        },
+                        new
+                        {
+                            Id = new Guid("9d831fff-4d11-444f-b90d-0d3b3d393703"),
+                            Level = 13,
+                            Name = "Withering",
+                            SourcePageId = new Guid("7e2873bd-49f8-4ea4-a3df-d4b7b71b7186"),
+                            Usage = "curses a ring, staff, or wand"
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Language", b =>
                 {
                     b.Property<Guid>("Id")
@@ -19493,6 +19959,90 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("742d1efd-6216-4bc1-bbef-e05a55a90fcf"),
                             Page = 527,
                             SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("33411eb6-96e3-4ef9-a3fc-3371cf073dc9"),
+                            Page = 92,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("949a09f9-a465-43f7-854a-b24e4c9462f4"),
+                            Page = 92,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("179f1b27-8e26-4a51-a396-a01a1b2d6f6a"),
+                            Page = 92,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("513b8a6b-de2e-4112-8be8-89d52ac74be9"),
+                            Page = 92,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("d83fc2c9-c14f-4684-9189-3256ae62fb2e"),
+                            Page = 93,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("9d6def2c-671e-41c5-9422-3fd2f06fd5aa"),
+                            Page = 93,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("3c6e8c62-8786-481c-9944-f1a849df0228"),
+                            Page = 93,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("7ec67c91-f70d-4a7d-b79f-8d06e4b1d88f"),
+                            Page = 93,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("17a087ee-8738-4035-b4c5-12fe78ff84a7"),
+                            Page = 93,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("6f2cfabe-86c5-461a-9aea-dd9eb7f66d65"),
+                            Page = 93,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("9283dbff-bc55-44ee-bf3c-8b2ac4f873cd"),
+                            Page = 93,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("1d412b5e-b818-4d4c-aab7-e91471eb46eb"),
+                            Page = 93,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("8bda699e-5ba4-4e33-b363-dd9b65e785bf"),
+                            Page = 93,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
+                        },
+                        new
+                        {
+                            Id = new Guid("7e2873bd-49f8-4ea4-a3df-d4b7b71b7186"),
+                            Page = 93,
+                            SourceId = new Guid("643d5da8-e766-44c9-9748-7ad1ac97dcbf")
                         });
                 });
 
@@ -22403,6 +22953,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("HazardsId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("ItemCursesId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
@@ -22433,6 +22986,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasIndex("HazardActionsId");
 
                     b.HasIndex("HazardsId");
+
+                    b.HasIndex("ItemCursesId");
 
                     b.HasIndex("SpellsId");
 
@@ -22948,6 +23503,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("fe4f319f-4792-41f3-be57-689f0eb65321"),
                             Description = "A creature called by a conjuration spell or effect gains the summoned trait. A summoned creature can't summon other creatures, create things of value, or cast spells that require a cost. It has the minion trait. If it tries to cast a spell of equal or higher level than the spell that summoned it, it overpowers the summoning magic, causing the summoned creature's spell to fail and the summon spell to end. Otherwise, the summoned creature uses the standard abilities for a creature of its kind. It generally attacks your enemies to the best of its abilities. If you can communicate with it, you can attempt to command it, but the GM determines the degree to which it follows your commands. Immediately when you finish Casting the Spell, the summoned creature uses its 2 actions for that turn. A summoned creature can't control any spawn or other creatures generated from it, and such creatures return to their unaltered state (usually a corpse in the case of spawn) once the summoned creature is gone. If it's unclear what this state would be, the GM decides. Summoned creatures can be banished by various spells and effects. They are automatically banished if reduced to 0 Hit Points or if the spell that called them ends.",
                             Name = "Summon"
+                        },
+                        new
+                        {
+                            Id = new Guid("e307d944-f75e-4859-8a5f-38f572e3e64c"),
+                            Description = "An item with this trait is cursed to cause trouble for its owner. A curse isn’t detected when the item is identified, though a critical success reveals both the presence and exact nature of the curse. Cursed items can’t be discarded once they’ve been triggered or invested the first time. The item can be removed only if the curse is removed.",
+                            Name = "Cursed"
                         });
                 });
 
@@ -30301,6 +30862,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ItemCurseTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ItemCurse", null)
+                        .WithMany()
+                        .HasForeignKey("ItemCursesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("LanguageRace", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Language", null)
@@ -31490,7 +32066,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                             b1.HasIndex("OwnerId");
 
-                            b1.ToTable("AlchemicalTool_Details");
+                            b1.ToTable("AlchemicalTools_Details");
 
                             b1.WithOwner()
                                 .HasForeignKey("OwnerId");
@@ -34267,6 +34843,167 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Rarity");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ItemCurse", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("ItemCurses_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("5fe7530b-0555-4b3e-88a0-6bd6f28e08cc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("247f52a1-f309-4e64-9020-6cec69d2a048"),
+                                    Text = "An item affected by an arrow attracting curse protects you normally, but it draws ranged attacks like a magnet. Whenever a creature within 120 feet misses with a ranged attack, it must immediately reroll the attack against your AC, affecting you depending on the result of the new attack roll. The arrow attraction curse activates only if you could have been a legitimate target. Creatures that intentionally attempt to miss a ranged attack do not activate an arrow attraction curse. Once the curse has activated for the first time, the item fuses to you.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("44a99ce1-b79a-4110-963d-fabbe80784d1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("77b3847f-7cb6-4d8e-9eb0-8c348b0b755c"),
+                                    Text = "An arsonous curse creates flaws in the mystic pathways that channel magic through an item, allowing excess power to escape as sparks. Whenever you activate the magic item, a random ally within 30 feet takes 1d10 persistent fire damage. If no ally is in range, you take the damage instead. At the GM’s discretion, this curse might ignite an unattended object or the surrounding environment instead.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0a648746-7fea-4db6-a7e9-14adb15467ec"),
+                                    Order = 0,
+                                    OwnerId = new Guid("11d686ec-2c9a-4c0f-b7da-d8318c38bc64"),
+                                    Text = "A weapon with the backbiting curse warps space in response to catastrophic mishaps. Whenever you critically fail at a Strike with this weapon, the weapon curls around (or its projectile swerves through the air) to strike you in the back as though you hit yourself, automatically dealing maximum damage to you.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f5ae85ad-0ab5-4862-a27f-9d6813003af0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b2f407cf-7fe0-42fa-ac0e-2524621e8a3b"),
+                                    Text = "A bloodbiter weapon is awakened by violence and fueled by blood. When you make a successful attack with the weapon, it inflicts a wound that deals 1d6 persistent bleed damage (in addition to its normal damage), but it also deals 1d6 persistent bleed damage to you. The curse remains dormant until the weapon hits a creature, at which point black thorns protrude from the weapon and dig into your body; the weapon fuses to you and you can’t use the hand that holds the weapon for any other purpose. If the weapon is two-handed, it attaches itself to only a single hand (GM’s choice).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("76a4cd2a-762d-4674-b7b4-bc23f240b295"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ec2335e5-bcde-44c4-b9a6-c352b1c02073"),
+                                    Text = "Failure makes the weapon crumble. Whenever you critically fail an attack roll with the weapon, the degenerating curse deals 1d10 acid damage to the weapon, ignoring its Hardness and resistances.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d2124045-cd88-43c5-985d-f62755d34242"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6e4d1c6a-b506-4a2f-8ab0-03a1ebea1696"),
+                                    Text = "The dependent curse makes an item function properly only under certain circumstances. Whenever you use the item to perform a skill check or use the weapon in combat, your degree of success is one worse than the result you rolled unless those specific conditions are met. The most common types of dependent curses are nocturnal or diurnal—functioning normally only at night or only during the day, respectively—but more restrictive curses do exist, such as a curse that restricts the item’s use to underground or a curse that allows the item to function effectively only during autumn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("df529fb2-6e29-4350-b747-012e2d9400b8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("75b47175-fb61-4cf2-90dd-466970f59b76"),
+                                    Text = "When you invest this armor, a personal-sized cloud appears over your head and begins to rain on you, and the armor fuses to you. This extinguishes uncovered flames and soaks other objects you are carrying or holding, potentially ruining them. Cold conditions are one step worse under the cloud, and at the GM’s discretion it might cause other problems, such as interfering with sleep.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("58b2dbcb-9d2c-4c0d-9b9f-894c7365accb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("369897ab-d7b6-4077-ad4e-69580e0b95fa"),
+                                    Text = "This curse bursts with uncontrolled teleportation magic when activated, unreliably transporting creatures across the battlefield. On a critical hit with the affected weapon, you and an ally within 60 feet (chosen randomly) teleport to switch places with one another. If either of the affected creatures is unable to entirely fit within its new space, the creature is placed in the nearest available squares instead.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bbc4deb5-bd7e-4dce-aa0d-90d32db6da92"),
+                                    Order = 0,
+                                    OwnerId = new Guid("578a1f3e-8039-4342-a2b1-bcfa67035d7a"),
+                                    Text = "Weapons with the grandstanding curse inspire overconfidence in their wielders, demanding style over pragmatism. Whenever you reduce a foe to 0 Hit Points, you lose all remaining actions on your turn, as you are compelled to flourish, gloat, pose, or otherwise waste your time in response.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e50b741a-3b1e-49f6-8a19-d6d6d18b9678"),
+                                    Order = 0,
+                                    OwnerId = new Guid("53cbef47-8c65-4869-9494-4bc53daa4475"),
+                                    Text = "The weapon flashes excessive light with each attack. On a critical hit with the weapon, you are blinded until the end of your turn and take the effects of a faerie fire spell until the start of your next turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8aeba1cd-97c8-4c5d-92f9-6a48781efa95"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dade2400-c464-4171-a0f4-5367292b51a3"),
+                                    Text = "A weapon with the backbiting curse warps space in response to catastrophic mishaps. Whenever you critically fail at a Strike with this weapon, the weapon curls around (or its projectile swerves through the air) to strike you in the back as though you hit yourself, automatically dealing maximum damage to you.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("72bbc67f-8a60-42ed-bf86-820ee0f80fae"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c1881624-ab21-4295-bdf7-81617c04b051"),
+                                    Text = "A ravenous curse draws power from the wielder’s body. Whenever you activate the item, you become incredibly hungry and immediately begin to starve. You require 10 times as much food as normal for the next day.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f889ad21-5731-4546-bd72-71d323d5be54"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8170f8c0-0cdb-4c14-8cb3-2e208ae58552"),
+                                    Text = "This property is associated with a specific color, which is defined at the time of the curse’s creation. Whenever you use the affected equipment while taking a manipulate action with another object, the second object is permanently stained the associated color. For instance, if you used a set of yellow staining lockpicks to open a door, the lock would permanently become yellow. This color change does not otherwise unnaturally persist and can be changed via any normal mundane or magical means.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("654b78d5-5f42-44fa-930a-25120edfb0d4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9d831fff-4d11-444f-b90d-0d3b3d393703"),
+                                    Text = "A withering curse shrivels vulnerable flesh. Whenever you activate the item, one of your fingers turns black and falls off. You take a –1 status penalty to Thievery checks and Dexterity-based attack rolls with a hand missing two or three fingers; if you lose more than four fingers on one hand, you can’t use that hand to hold objects or use manipulate actions. These fingers can be replaced by magic but are otherwise gone forever. The GM has the final say on how creatures with unusual appendages or numbers of fingers are affected by this curse.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Details");
+
+                    b.Navigation("SourcePage");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Language", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Race", null)
@@ -36855,6 +37592,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Hazard", null)
                         .WithMany()
                         .HasForeignKey("HazardsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ItemCurse", null)
+                        .WithMany()
+                        .HasForeignKey("ItemCursesId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Spell", null)
                         .WithMany()
