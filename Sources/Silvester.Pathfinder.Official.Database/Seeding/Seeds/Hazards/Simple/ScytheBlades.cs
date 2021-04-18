@@ -33,6 +33,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             yield return new HazardComponent
             {
+                Id = Guid.Parse("f86b81de-3078-4de8-9ad0-ab30250b4df5"),
                 Name = "Blades",
                 HitPoints = 44,
                 Hardness = 11,
@@ -61,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Falling Scytehs",
                 Trigger = "The trip wire is pulled or severed",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                EffectDetails = new List<HazardActionEffectBlock>
                 {
                     new HazardActionEffectBlock { Id = Guid.Parse("99511947-964d-4238-bba3-e8f5c44be0b4"), Text = "Both blades swing down, each one Striking all creatures under the ceiling grooves." },
                 },

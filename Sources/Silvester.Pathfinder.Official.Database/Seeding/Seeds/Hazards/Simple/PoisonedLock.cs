@@ -33,6 +33,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             yield return new HazardComponent
             {
+                Id = Guid.Parse("2454c5a3-613e-4cfc-9850-6bc884da0b2d"),
                 Name = "Trap",
                 HitPoints = 24,
                 Hardness = 6,
@@ -61,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Spring",
                 Trigger = "A creature tries to unlock or Pick the Lock.",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                EffectDetails = new List<HazardActionEffectBlock>
                 {
                     new HazardActionEffectBlock { Id = Guid.Parse("5ca24113-9fa9-4802-92db-bf378e003180"), Text = "A spine extends to Strike the triggering creature." },
                 },
@@ -88,6 +89,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                             DifficultyCheck = 19,
                             SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                             MaximumDuration = "4 Hours",
+                            Onset = "Immediate",
                             Stages = 
                             {
                                 new StaggeredEffectStage

@@ -33,6 +33,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             yield return new HazardComponent
             {
+                Id = Guid.Parse("807c4594-4f71-4ce5-828f-232678a7b1f6"),
                 Name = "Trapdoor",
                 HitPoints = 12,
                 Hardness = 3,
@@ -61,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Pitfall",
                 Trigger = "A creature walks onto the trapdoor",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = 
+                EffectDetails = new List<HazardActionEffectBlock>
                 {
                     new HazardActionEffectBlock { Id = Guid.Parse("21077b3a-26c5-4556-b3e5-b48e4970f323"), Text = "The triggering creature falls in and takes falling damage (typically 10 bludgeoning damage). That creature can use the Grab an Edge reaction to avoid falling." },
                 }

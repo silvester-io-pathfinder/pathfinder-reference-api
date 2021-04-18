@@ -35,7 +35,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Id = Guid.Parse("f5edfc5f-434a-4838-889e-69265151354a"),
                 DifficultyCheck = 19,
                 SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
-                Onset = "Immedate",
+                Onset = "Immediate",
                 MaximumDuration = "4 Rounds",
             };
         }

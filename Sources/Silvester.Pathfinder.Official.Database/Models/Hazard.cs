@@ -24,6 +24,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public int? Reflex { get; set; }
 
+        public int? RoutineActions { get; set; }
+
         public bool CanBeDetectedMagically { get; set; }
 
         public Guid ComplexityId{ get; set; }

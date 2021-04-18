@@ -12,16 +12,15 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public string Trigger{ get; set; } = default!;
 
-
         public Guid ActionTypeId { get; set; }
         public ActionType ActionType { get; set; } = default!;
 
         public Guid HazardId { get; set; }
         public Hazard Hazard { get; set; } = default!;
 
-        public ICollection<Trait> Traits = new List<Trait>();
-        public ICollection<HazardActionEffect> Effects = new List<HazardActionEffect>();
-        public ICollection<HazardActionEffectBlock> EffectDetails { get; set; } = default!;
+        public ICollection<Trait> Traits { get; set; } = new List<Trait>();
+        public ICollection<HazardActionEffect> Effects { get; set; } = new List<HazardActionEffect>();
+        public ICollection<HazardActionEffectBlock> EffectDetails { get; set; } = new List<HazardActionEffectBlock>();
     }
 
     public class HazardActionEffectBlock : BaseEntity

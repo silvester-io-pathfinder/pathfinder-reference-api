@@ -33,6 +33,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             yield return new HazardComponent
             {
+                Id = Guid.Parse("bf392e6d-9811-4263-9e96-d21ccfeb3bf4"),
                 Name = "Mold",
                 HitPoints = 70,
             };
@@ -59,7 +60,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Spore Exploison",
                 Trigger = "A creature moves into the mold’s space or damages the mold. The mold can’t use this reaction if it’s in direct sunlight or if the damage was fire damage",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                EffectDetails = new List<HazardActionEffectBlock>
                 {
                     new HazardActionEffectBlock { Id = Guid.Parse("416e47cd-3a39-4e6b-93ba-d7560655d2aa"), Text = "The triggering creature and all creatures within 10 feet are exposed to yellow mold spores." },
                 },
@@ -76,6 +77,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                             DifficultyCheck = 26,
                             SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
                             MaximumDuration = "6 Rounds",
+                            Onset = "Immediate",
                             Stages =
                             {
                                 new StaggeredEffectStage

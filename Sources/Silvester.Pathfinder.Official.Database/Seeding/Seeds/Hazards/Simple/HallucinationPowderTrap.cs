@@ -33,6 +33,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             yield return new HazardComponent
             {
+                Id = Guid.Parse("36cf0609-a973-4ce7-b5c4-8b32d2b4adb3"),
                 Name = "Trap",
                 HitPoints = 1,
                 Hardness = 0
@@ -61,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Traits = seeder.FilterTraits("Mental", "Poison"),
                 Trigger = "The latch is opened or the tube is broken",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                EffectDetails = new List<HazardActionEffectBlock>
                 {
                     new HazardActionEffectBlock { Id = Guid.Parse("06f5fbcf-7e70-4444-8f61-60927a67cef8"), Text = "The tube explodes, spraying hallucinogenic powder in a 30-foot cone. Any creature in the cone must succeed at a DC 24 Will save or be confused for 1 round and take a –2 status penalty to Perception checks and saves against mental effects for 1d4 hours. On a critical failure, the penalty is instead –4." },
                 }

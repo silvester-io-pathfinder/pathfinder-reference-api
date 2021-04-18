@@ -33,6 +33,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             yield return new HazardComponent
             {
+                Id = Guid.Parse("3d2b0564-6171-438a-850b-329c7e33b072"),
                 Name = "Hammer",
                 HitPoints = 88,
                 Hardness = 22,
@@ -41,7 +42,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 
             yield return new HazardComponent
             {
-                Name = "Join",
+                Id = Guid.Parse("363a661a-06ba-4d70-ab3d-dc1156c964be"),
+                Name = "Joint",
                 HitPoints = 64,
                 Hardness = 16,
                 BrokenThreshold = 32,
@@ -71,7 +73,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Traits = seeder.FilterTraits("Abjuration", "Divine"),
                 Trigger = "A creature attempts to enter through the entrance",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                EffectDetails = new List<HazardActionEffectBlock>
                 {
                     new HazardActionEffectBlock { Id = Guid.Parse("356c9040-4be1-4428-a454-8e39c037da0c"), Text = "The hammer swings down, making a Strike against the triggering creature." },
                 },

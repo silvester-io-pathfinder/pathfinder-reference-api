@@ -60,10 +60,8 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
         {
             IMutableEntityType firstEntityType = modelBuilder.Model.FindEntityType(typeof(TFirst));
             IMutableEntityType secondEntityType = modelBuilder.Model.FindEntityType(typeof(TSecond));
-
-            IMutableSkipNavigation firstToSecond = firstEntityType
-                .GetSkipNavigations()
-                .Single(n => n.TargetEntityType == secondEntityType);
+            
+            IMutableSkipNavigation firstToSecond = GetFirstToSecondNavigation<TFirst, TSecond>(firstEntityType, secondEntityType);
 
             IMutableEntityType joinEntityType = firstToSecond.JoinEntityType;
             IMutableProperty firstProperty = firstToSecond.ForeignKey.Properties.Single();
@@ -71,9 +69,9 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             IClrPropertyGetter firstValueGetter = firstToSecond.ForeignKey.PrincipalKey.Properties.Single().GetGetter();
             IClrPropertyGetter secondValueGetter = firstToSecond.Inverse.ForeignKey.PrincipalKey.Properties.Single().GetGetter();
 
-            IEnumerable<object> seedData = data.Select(e => 
+            IEnumerable<object> seedData = data.Select(e =>
             {
-                return (object) new Dictionary<string, object>
+                return (object)new Dictionary<string, object>
                 {
                     [firstProperty.Name] = firstValueGetter.GetClrValue(e.First),
                     [secondProperty.Name] = secondValueGetter.GetClrValue(e.Second),
@@ -103,7 +101,25 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 
             return modelBuilder;
         }
-        
+
+        private static IMutableSkipNavigation GetFirstToSecondNavigation<TFirst, TSecond>(IMutableEntityType firstEntityType, IMutableEntityType secondEntityType)
+        {
+            try
+            {
+                return firstEntityType
+                    .GetSkipNavigations()
+                    .Single(n => n.TargetEntityType == secondEntityType);
+
+            }
+            catch (InvalidOperationException _)
+            {
+                Console.WriteLine("Following navigational properties could not be found. Are you sure they're present and PROPERTIES (as opposed to FIELDS)?");
+                Console.WriteLine($"First: {typeof(TFirst).Name}");
+                Console.WriteLine($"Second: {typeof(TSecond).Name}");
+
+                throw;
+            }
+        }
 
         public static ModelBuilder Join<TSource, TTarget>(this ModelBuilder builder, TSource[] sources, TTarget[] targets, IEntityJoiner<TSource, TTarget> joiner)
             where TSource : class

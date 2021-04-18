@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Traits = seeder.FilterTraits("Death", "Emotion", "Fear", "Illusion", "Mental", "Occult"),
                 Trigger = "A creature moves within 10 feet of the haunted object",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                EffectDetails = new List<HazardActionEffectBlock>
                 {
                     new HazardActionEffectBlock { Id = Guid.Parse("2ac0be1a-c1b5-4269-bbac-40a7665853c4"), Text = "The haunt takes control of the triggering creature, forcing it to attack itself. The creature must attempt a DC 29 Will save." },
                 },

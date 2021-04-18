@@ -21,7 +21,11 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<Models.Action> Actions { get; set; } = new List<Models.Action>();
 
         public ICollection<Hazard> Hazards { get; set; } = new List<Hazard>();
-    
+
+        public ICollection<HazardAction> HazardActions { get; set; } = new List<HazardAction>();
+
+        public ICollection<HazardActionEffect> HazardActionEffects { get; set; } = new List<HazardActionEffect>();
+
         public ICollection<AlchemicalBomb> AlchemicalBombs { get; set; } = new List<AlchemicalBomb>();
      
         public ICollection<AlchemicalElixir> AlchemicalElixirs{ get; set; } = new List<AlchemicalElixir>();

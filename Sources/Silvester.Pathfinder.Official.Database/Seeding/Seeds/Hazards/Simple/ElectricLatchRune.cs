@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Trigger = "A creature grasps the door latch directly or with a tool",
                 Traits = seeder.FilterTraits("Arcane", "Electricity", "Evocation"),
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                EffectDetails = new List<HazardActionEffectBlock>
                 {
                     new HazardActionEffectBlock { Id = Guid.Parse("d1e49618-1459-444d-b843-e65168e0ea3f"), Text = "The trap deals 3d12 electricity damage to the triggering creature (DC 22 basic Reflex save)." },
                 },

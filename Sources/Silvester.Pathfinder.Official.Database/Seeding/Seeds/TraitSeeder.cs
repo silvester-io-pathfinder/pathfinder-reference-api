@@ -114,9 +114,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
             yield return new Trait { Id = Guid.Parse("9762a78e-698f-4bbb-81ec-fe1f0784f961"), Name = "Mechanical", Description = "A hazard with this trait is a constructed physical object." };
             yield return new Trait { Id = Guid.Parse("b02d26f9-e334-4f2b-b713-767621853861"), Name = "Environmental", Description = "A hazard with this trait is something dangerous that’s part of the natural world, such as quicksand or harmful mold." };
             yield return new Trait { Id = Guid.Parse("d052779d-0c7e-4fe0-915b-91d3e71fb517"), Name = "Fungus", Description = "Fungal creatures have the fungus trait. They are distinct from normal fungi." };
+            yield return new Trait { Id = Guid.Parse("ad251fb5-0c53-47f9-b850-fcefd4cb3165"), Name = "Complex", Description = "A hazard with this trait takes turns in an encounter." };
+            yield return new Trait { Id = Guid.Parse("11d74166-043d-4f9d-93eb-8ae813e2b840"), Name = "Deadly", Description = "On a critical hit, the weapon adds a weapon damage die of the listed size. Roll this after doubling the weapon’s damage. This increases to two dice if the weapon has a greater striking rune and three dice if the weapon has a major striking rune. For instance, a rapier with a greater striking rune deals 2d8 extra piercing damage on a critical hit. An ability that changes the size of the weapon’s normal damage dice doesn’t change the size of its deadly die." };
 
             /*
-            yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
             yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
             yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };
             yield return new Trait { Id = Guid.Parse(""), Name = "", Description = "" };

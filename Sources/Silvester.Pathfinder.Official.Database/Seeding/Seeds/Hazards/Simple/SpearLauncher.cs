@@ -32,6 +32,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             yield return new HazardComponent
             {
+                Id = Guid.Parse("1b7f63e1-843d-42c6-b2a4-76372dd89691"),
                 Name = "Pressure Plate",
                 HitPoints = 32,
                 Hardness = 8,
@@ -60,7 +61,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Spear",
                 Trigger = "Pressure is applied to the floor tile",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                EffectDetails = new List<HazardActionEffectBlock>
                 {
                     new HazardActionEffectBlock { Id = Guid.Parse("fd11a9dd-3a82-4d6f-9861-62c108f617a5"), Text = "The trap shoots a spear, making a Strike against the creature or object on the floor tile." },
                 }

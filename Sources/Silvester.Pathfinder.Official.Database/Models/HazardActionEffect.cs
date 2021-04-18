@@ -8,7 +8,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 {
     public class HazardActionEffect : BaseEntity
     {
-        public string Name { get; set; } = default!;
+        public string? Name { get; set; } = default!;
 
         public Guid HazardActionId { get; set; }
         public HazardAction HazardAction { get; set; } = default!;
@@ -18,6 +18,11 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
     public class AttackHazardActionEffect : HazardActionEffect
     {
+        public AttackHazardActionEffect()
+        {
+            Name = "Strike";
+        }
+
         public string Damage { get; set; } = default!;
 
         public string Weapon { get; set; } = default!;
@@ -65,6 +70,11 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
     public class OtherHazardActionEffect : HazardActionEffect
     {
+        public OtherHazardActionEffect()
+        {
+            Name = "Other";
+        }
+
         public string Effect { get; set; } = default!;
     }
 }

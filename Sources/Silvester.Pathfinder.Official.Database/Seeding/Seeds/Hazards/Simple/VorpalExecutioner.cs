@@ -33,6 +33,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
         {
             yield return new HazardComponent
             {
+                Id = Guid.Parse("4637940f-d638-4595-96b2-243eb78c0b6f"),
                 Name = "Per Junction",
                 Hardness = 30,
                 HitPoints = 120,
@@ -61,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Total Decapitation",
                 Trigger = "A creature attempts to exit the room",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                EffectDetails = new List<HazardActionEffectBlock>
                 {
                     new HazardActionEffectBlock { Id = Guid.Parse("23e284eb-40a6-4934-8d0a-88b4a0c0e23c"), Text = "The saw blade travels along its path, making one Strike against each creature in the room, twisting and varying its height for a maximum chance of beheading its targets." },
                 },
