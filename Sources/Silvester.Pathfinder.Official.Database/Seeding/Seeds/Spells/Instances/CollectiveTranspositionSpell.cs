@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -16,11 +17,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("f3fa6c93-ee1d-4da1-982d-55c015c0eeaa"),
                 Name = "Collective Transposition",
-                Description = "You teleport the targets to new positions within the area. The creatures must each be able to fit in their new space, and their positions must be unoccupied, entirely within the area, and in your line of sight. Unwilling creatures can attempt a Will save.",
                 Level = 6,
                 Area = "30-foot emanation",
                 Targets = "Up to 2 creatures."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("2861855c-e59b-403c-932b-0cdbe922a37f"), Type = Utilities.Text.TextBlockType.Text, Text = "You teleport the targets to new positions within the area. The creatures must each be able to fit in their new space, and their positions must be unoccupied, entirely within the area, and in your line of sight. Unwilling creatures can attempt a Will save." };
         }
 
         public override RollableEffect? GetRollableEffect()
@@ -36,7 +41,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
-            yield return new SpellHeightening { Id = Guid.Parse("8e38a5fc-f74d-4c0a-b653-4bc2c4610d9e"), Level = 1, Description = "The number of targets increases by 1." };
+            yield return new SpellHeightening
+            { 
+                Id = Guid.Parse("8e38a5fc-f74d-4c0a-b653-4bc2c4610d9e"),
+                Level = 1,
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse("b76a367e-5acb-4939-af0e-e955b770a0d0"), Type = Utilities.Text.TextBlockType.Text, Text = "The number of targets increases by 1." }
+                }
+            };
         }
 
         public override IEnumerable<string> GetSpellComponents()

@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -21,9 +22,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("d0dfc3c2-425e-4551-9964-bbdf182c468b"), Text = "You can move your full Speed when you Sneak. You can use Swift Sneak while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type." };
+            yield return new TextBlock { Id = Guid.Parse("d0dfc3c2-425e-4551-9964-bbdf182c468b"), Type = Utilities.Text.TextBlockType.Text, Text = "You can move your full Speed when you Sneak. You can use Swift Sneak while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

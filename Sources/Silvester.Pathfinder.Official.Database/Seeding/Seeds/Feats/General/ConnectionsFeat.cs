@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("8327dfe8-9bc4-40ab-8459-51ce05d11517"), Text = "You have social connections you can leverage to trade favors or meet important people. When you’re in an area with connections (typically a settlement where you’ve spent downtime building connections, or possibly another area in the same nation), you can attempt a Society check to arrange a meeting with an important political figure or ask for a favor in exchange for a later favor of your contact’s choice. The GM decides the DC based on the difficulty of the favor and the figure’s prominence." };
+            yield return new TextBlock { Id = Guid.Parse("8327dfe8-9bc4-40ab-8459-51ce05d11517"), Type = Utilities.Text.TextBlockType.Text, Text = "You have social connections you can leverage to trade favors or meet important people. When you’re in an area with connections (typically a settlement where you’ve spent downtime building connections, or possibly another area in the same nation), you can attempt a Society check to arrange a meeting with an important political figure or ask for a favor in exchange for a later favor of your contact’s choice. The GM decides the DC based on the difficulty of the favor and the figure’s prominence." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

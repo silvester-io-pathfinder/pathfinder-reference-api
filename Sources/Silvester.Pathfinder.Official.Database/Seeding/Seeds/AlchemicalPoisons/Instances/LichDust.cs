@@ -1,6 +1,7 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,9 +49,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return "Ingested";
         }
 
-        protected override IEnumerable<AlchemicalPoisonDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("d4ce3729-a117-4501-b8b3-2526bfb0ff43"), Text = "Dust salvaged from the remains of a destroyed lich has paralytic properties that make it a valuable poison." };
+            yield return new TextBlock { Id = Guid.Parse("d4ce3729-a117-4501-b8b3-2526bfb0ff43"), Text = "Dust salvaged from the remains of a destroyed lich has paralytic properties that make it a valuable poison." };
         }
 
         protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)

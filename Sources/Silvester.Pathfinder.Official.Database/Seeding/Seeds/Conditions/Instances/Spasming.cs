@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             return new Condition
             {
                 Id = ID,
-                Name = "Spasming",
-                Description = "You are conflicted with sudden spasms. The rulebooks do not mention any particular effects of spasming, so it is best left up to the discretion of the GM."
+                Name = "Spasming"
             };
+        }
+
+        public override IEnumerable<TextBlock> GetConditionDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("01f03109-d787-433a-afda-4b956c9a209e"), Type = Utilities.Text.TextBlockType.Text, Text = "You are conflicted with sudden spasms. The rulebooks do not mention any particular effects of spasming, so it is best left up to the discretion of the GM." };
         }
 
         public override SourcePage? GetSourcePage(ConditionSeeder seeder)

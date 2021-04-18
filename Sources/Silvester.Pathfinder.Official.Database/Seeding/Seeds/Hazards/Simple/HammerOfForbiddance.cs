@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -73,9 +74,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Traits = seeder.FilterTraits("Abjuration", "Divine"),
                 Trigger = "A creature attempts to enter through the entrance",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("356c9040-4be1-4428-a454-8e39c037da0c"), Text = "The hammer swings down, making a Strike against the triggering creature." },
+                    new TextBlock { Id = Guid.Parse("356c9040-4be1-4428-a454-8e39c037da0c"), Type = TextBlockType.Text, Text = "The hammer swings down, making a Strike against the triggering creature." },
                 },
                 Effects =
                 {

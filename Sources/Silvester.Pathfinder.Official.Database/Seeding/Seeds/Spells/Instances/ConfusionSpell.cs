@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,12 +18,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("068fc3bd-e1ac-4069-8a29-13bd1a0b92f2"),
                 Name = "Confusion",
-                Description = "You befuddle your target with strange impulses, causing it to act randomly. The effects are determined by the target’s Will save. You can Dismiss the spell.",
                 Level = 4,
                 Range = 30,
                 Targets = "1 creature.",
                 Duration = "1 minute."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("1d9ca856-2b8d-40b2-acd8-de53e723931d"), Type = Utilities.Text.TextBlockType.Text, Text = "You befuddle your target with strange impulses, causing it to act randomly. The effects are determined by the target’s Will save. You can Dismiss the spell." };
         }
 
         public override RollableEffect? GetRollableEffect()
@@ -39,7 +44,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
-            yield return new SpellHeightening { Id = Guid.Parse("283ef60d-8ca4-463d-80cc-12bafa287dfc"), Level = 8, Description = "You can target up to 10 creatures." };
+            yield return new SpellHeightening
+            { 
+                Id = Guid.Parse("283ef60d-8ca4-463d-80cc-12bafa287dfc"),
+                Level = 8, 
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse("6af0fd96-e785-48b6-928d-9836e6e0025c"), Type = Utilities.Text.TextBlockType.Text, Text = "You can target up to 10 creatures." }
+                }
+            };
         }
 
         public override IEnumerable<string> GetSpellComponents()

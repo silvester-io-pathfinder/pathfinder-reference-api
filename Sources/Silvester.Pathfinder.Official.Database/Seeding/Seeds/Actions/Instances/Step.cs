@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +24,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
             };
         }
 
-        protected override IEnumerable<ActionDetailsBlock> GetDetails(ActionSeeder seeder)
+        protected override IEnumerable<TextBlock> GetDetails(ActionSeeder seeder)
         {
-            yield return new ActionDetailsBlock { Id = Guid.Parse("1bf68b96-2ca3-4353-ab9a-657394acdadc"), Text = "You carefully move 5 feet. Unlike most types of movement, Stepping doesn’t trigger reactions, such as Attacks of Opportunity, that can be triggered by move actions or upon leaving or entering a square." };
-            yield return new ActionDetailsBlock { Id = Guid.Parse("9aea3dfc-ee32-48c0-b420-1e9ffbd3d318"), Text = "You can’t Step into difficult terrain (page 475), and you can’t Step using a Speed other than your land Speed." };
+            yield return new TextBlock { Id = Guid.Parse("1bf68b96-2ca3-4353-ab9a-657394acdadc"), Text = "You carefully move 5 feet. Unlike most types of movement, Stepping doesn’t trigger reactions, such as Attacks of Opportunity, that can be triggered by move actions or upon leaving or entering a square." };
+            yield return new TextBlock { Id = Guid.Parse("9aea3dfc-ee32-48c0-b420-1e9ffbd3d318"), Text = "You can’t Step into difficult terrain (page 475), and you can’t Step using a Speed other than your land Speed." };
         }
 
         protected override IEnumerable<Trait> GetTraits(ActionSeeder seeder)

@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("0f251d56-cfff-45a5-9133-ddda22b51196"), Text = "In situations where you can physically menace the target when you Coerce or Demoralize, you gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty for not sharing a language. If your Strength score is 20 or higher and you are a master in Intimidation, this bonus increases to +2." };
+            yield return new TextBlock { Id = Guid.Parse("0f251d56-cfff-45a5-9133-ddda22b51196"), Type = Utilities.Text.TextBlockType.Text, Text = "In situations where you can physically menace the target when you Coerce or Demoralize, you gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty for not sharing a language. If your Strength score is 20 or higher and you are a master in Intimidation, this bonus increases to +2." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

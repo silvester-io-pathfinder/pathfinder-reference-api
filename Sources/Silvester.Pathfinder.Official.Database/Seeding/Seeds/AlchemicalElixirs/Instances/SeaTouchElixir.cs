@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,9 +34,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return "Polymorph";
         }
 
-        protected override IEnumerable<AlchemicalElixirDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalElixirDetailBlock { Id = Guid.Parse("5d023119-60ec-4f88-9056-c3b81e0af2bf"), Text = "This briny concoction alters the skin on your hands and feet. The spaces between your fingers and toes become webbed, granting you a swim Speed of 20 feet for the listed duration." };
+            yield return new TextBlock { Id = Guid.Parse("5d023119-60ec-4f88-9056-c3b81e0af2bf"), Text = "This briny concoction alters the skin on your hands and feet. The spaces between your fingers and toes become webbed, granting you a swim Speed of 20 feet for the listed duration." };
         }
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)

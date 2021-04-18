@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,9 +35,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return "Visual";
         }
 
-        protected override IEnumerable<AlchemicalElixirDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalElixirDetailBlock { Id = Guid.Parse("518dfefb-b42e-457a-a7f2-df253f733f15"), Text = "A faint mist emanates from your skin, making you concealed for the listed duration. As usual, if you become concealed when your position is still obvious, you can’t use this concealment to Hide or Sneak." };
+            yield return new TextBlock { Id = Guid.Parse("518dfefb-b42e-457a-a7f2-df253f733f15"), Text = "A faint mist emanates from your skin, making you concealed for the listed duration. As usual, if you become concealed when your position is still obvious, you can’t use this concealment to Hide or Sneak." };
         }
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)

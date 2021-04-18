@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("72e1ef9e-b124-40eb-b185-e1f6199d6c77"), Text = "Your study of magic allows you to instinctively sense its presence. You can cast 1st-level detect magic at will as an arcane innate spell. If you’re a master in Arcana, the spell is heightened to 3rd level; if you’re legendary, it is heightened to 4th level." };
+            yield return new TextBlock { Id = Guid.Parse("72e1ef9e-b124-40eb-b185-e1f6199d6c77"), Type = Utilities.Text.TextBlockType.Text, Text = "Your study of magic allows you to instinctively sense its presence. You can cast 1st-level detect magic at will as an arcane innate spell. If you’re a master in Arcana, the spell is heightened to 3rd level; if you’re legendary, it is heightened to 4th level." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

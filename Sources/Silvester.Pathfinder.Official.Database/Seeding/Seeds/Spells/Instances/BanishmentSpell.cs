@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,11 +18,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("3a8c5edf-e86c-431a-a25a-bb90d590eb35"),
                 Name = "Banishment",
-                Description = "You send the target back to its home plane. The target must attempt a Will save. You can spend an extra action while Casting this Spell and add a material component to give the creature a –2 circumstance penalty to its save. The component must be a specially gathered object that is anathema to the creature, and not from a material component pouch. This spell fails if you aren’t on your home plane when you cast it.",
                 Level = 5,
                 Range = 30,
                 Targets = "1 creature that isn't on its home plane."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("d451add9-b4c2-45ea-84f3-b54202846d17"), Type = Utilities.Text.TextBlockType.Text, Text = "You send the target back to its home plane. The target must attempt a Will save. You can spend an extra action while Casting this Spell and add a material component to give the creature a –2 circumstance penalty to its save. The component must be a specially gathered object that is anathema to the creature, and not from a material component pouch. This spell fails if you aren’t on your home plane when you cast it." };
         }
 
         public override RollableEffect? GetRollableEffect()
@@ -38,7 +43,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
-            yield return new SpellHeightening { Id = Guid.Parse("62d6f3f0-5ae7-4ceb-b943-d716a9d05586"), Level = 9, Description = "You can target up to 10 creatures. The extra material component affects targets to which it is anathema." };
+            yield return new SpellHeightening
+            {
+                Id = Guid.Parse("62d6f3f0-5ae7-4ceb-b943-d716a9d05586"),
+                Level = 9, 
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse("d8510f7f-7901-415d-970e-68f0949a82b7"), Type = Utilities.Text.TextBlockType.Text, Text = "You can target up to 10 creatures. The extra material component affects targets to which it is anathema." }
+                }
+            };
         }
 
         public override IEnumerable<string> GetSpellComponents()

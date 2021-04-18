@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,11 +34,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return "Mental";
         }
 
-        protected override IEnumerable<AlchemicalElixirDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalElixirDetailBlock { Id = Guid.Parse("bed0c6dc-af90-431a-93a5-f6a126f7e4d2"), Text = "This flask of foaming beer grants courage. For the next hour after drinking this elixir, you gain an item bonus to Will saves, which is greater when attempting Will saves against fear." };
+            yield return new TextBlock { Id = Guid.Parse("bed0c6dc-af90-431a-93a5-f6a126f7e4d2"), Text = "This flask of foaming beer grants courage. For the next hour after drinking this elixir, you gain an item bonus to Will saves, which is greater when attempting Will saves against fear." };
         }
-
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)
         {

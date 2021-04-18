@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             {
                 Id = ID,
                 Name = "Undetected",
-                Description = "When you are undetected by a creature, that creature cannot see you at all, has no idea what space you occupy, and can't target you, though you still can be affected by abilities that target an area. When you're undetected by a creature, that creature is flat-footed to you. A creature you're undetected by can guess which square you're in to try targeting you. It must pick a square and attempt an attack.This works like targeting a hidden creature(requiring a DC 11 flat check), but the flat check and attack roll are rolled in secret by the GM, who doesn't reveal whether the attack missed due to failing the flat check, failing the attack roll, or choosing the wrong square. A creature can use the Seek action to try to find you.",
                 ConditionCategoryId = seeder.GetCategoryByName("Degrees of Detection").Id,
             };
+        }
+
+        public override IEnumerable<TextBlock> GetConditionDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("08040555-c8af-43ef-bd71-ba3500bf3ff4"), Type = Utilities.Text.TextBlockType.Text, Text = "When you are undetected by a creature, that creature cannot see you at all, has no idea what space you occupy, and can’t target you, though you still can be affected by abilities that target an area. When you’re undetected by a creature, that creature is flat-footed to you." };
+            yield return new TextBlock { Id = Guid.Parse("379e4285-0155-4d1d-a2e3-5fb70df0a394"), Type = Utilities.Text.TextBlockType.Text, Text = "A creature you’re undetected by can guess which square you’re in to try targeting you. It must pick a square and attempt an attack. This works like targeting a hidden creature (requiring a DC 11 flat check, as described on page 466), but the flat check and attack roll are rolled in secret by the GM, who doesn’t reveal whether the attack missed due to failing the flat check, failing the attack roll, or choosing the wrong square." };
+            yield return new TextBlock { Id = Guid.Parse("a411f8ea-e37b-4cc7-a8c2-0dfb167537f7"), Type = Utilities.Text.TextBlockType.Text, Text = "A creature can use the Seek action to try to find you, as described on page 471." };
         }
 
         public override SourcePage? GetSourcePage(ConditionSeeder seeder)

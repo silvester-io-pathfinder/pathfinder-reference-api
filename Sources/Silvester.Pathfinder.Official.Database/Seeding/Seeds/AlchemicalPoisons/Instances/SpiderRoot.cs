@@ -1,6 +1,7 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,9 +49,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return "Contact";
         }
 
-        protected override IEnumerable<AlchemicalPoisonDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("7891623b-6f09-4e17-b565-40ac365b6b59"), Text = "A paste made by mashing the fine, threadlike roots of a certain creeper vine, spider root renders a victim clumsy and maladroit." };
+            yield return new TextBlock { Id = Guid.Parse("7891623b-6f09-4e17-b565-40ac365b6b59"), Text = "A paste made by mashing the fine, threadlike roots of a certain creeper vine, spider root renders a victim clumsy and maladroit." };
         }
 
         protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)

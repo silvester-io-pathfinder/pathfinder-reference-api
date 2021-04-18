@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
             };
         }
 
-        protected override IEnumerable<ActionDetailsBlock> GetDetails(ActionSeeder seeder)
+        protected override IEnumerable<TextBlock> GetDetails(ActionSeeder seeder)
         {
-            yield return new ActionDetailsBlock { Id = Guid.Parse("a92602b3-303e-448f-91a1-8cf3dbce6c5a"), Text = "You move through the air up to your fly Speed. Moving upward (straight up or diagonally) uses the rules for moving through difficult terrain. You can move straight down 10 feet for every 5 feet of movement you spend. If you Fly to the ground, you don’t take falling damage. You can use an action to Fly 0 feet to hover in place. If you’re airborne at the end of your turn and didn’t use a Fly action this round, you fall." };
+            yield return new TextBlock { Id = Guid.Parse("a92602b3-303e-448f-91a1-8cf3dbce6c5a"), Text = "You move through the air up to your fly Speed. Moving upward (straight up or diagonally) uses the rules for moving through difficult terrain. You can move straight down 10 feet for every 5 feet of movement you spend. If you Fly to the ground, you don’t take falling damage. You can use an action to Fly 0 feet to hover in place. If you’re airborne at the end of your turn and didn’t use a Fly action this round, you fall." };
         }
 
         protected override IEnumerable<Trait> GetTraits(ActionSeeder seeder)

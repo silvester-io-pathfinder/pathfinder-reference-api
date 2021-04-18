@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,9 +57,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             yield return "Trap";
         }
 
-        protected override IEnumerable<HazardRoutineDetailBlock> GetRoutineDetails(HazardSeeder seeder)
+        protected override IEnumerable<TextBlock> GetRoutineDetails(HazardSeeder seeder)
         {
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("087a9701-90ab-4e85-a64d-8bca7032c349"), Type = HazardRoutineDetailBlockType.Text, Text = "The mirror absorbs another reflected creature into the mirror and replaces it with a mirror duplicate. Mirror duplicates attack on their own initiative, using the same statistics as the original creature, but with an evil alignment (changing only abilities that shift with the alignment change). A mirror duplicate can spend 3 actions in contact with the mirror to return to its original dimension and release the creature it duplicated, but most mirror duplicates prefer not to." };
+            yield return new TextBlock { Id = Guid.Parse("087a9701-90ab-4e85-a64d-8bca7032c349"), Type = TextBlockType.Text, Text = "The mirror absorbs another reflected creature into the mirror and replaces it with a mirror duplicate. Mirror duplicates attack on their own initiative, using the same statistics as the original creature, but with an evil alignment (changing only abilities that shift with the alignment change). A mirror duplicate can spend 3 actions in contact with the mirror to return to its original dimension and release the creature it duplicated, but most mirror duplicates prefer not to." };
         }
 
         protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
@@ -70,9 +71,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Traits = seeder.FilterTraits("Arcane", "Conjuration", "Teleportation"),
                 Trigger = "A non-evil creature is reflected in the mirror",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                Details =
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("5c6305bf-8791-4678-b24c-ab95f62fa7ab"), Text = "The mirror absorbs the creature into the mirror, replacing it with an evil mirror duplicate (DC 34 Reflex to avoid being absorbed into the mirror), and rolls initiative." },
+                    new TextBlock { Id = Guid.Parse("5c6305bf-8791-4678-b24c-ab95f62fa7ab"), Type = Utilities.Text.TextBlockType.Text, Text = "The mirror absorbs the creature into the mirror, replacing it with an evil mirror duplicate (DC 34 Reflex to avoid being absorbed into the mirror), and rolls initiative." },
                 }
             };
         }

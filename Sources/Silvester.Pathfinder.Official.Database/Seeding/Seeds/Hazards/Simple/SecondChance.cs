@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,9 +51,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Traits = seeder.FilterTraits("Divine", "Transmutation"),
                 Trigger = "A creature tries to steal the object or intrude upon the location. If someone uses a proxy or dupe for the theft or intrusion, the trap unerringly targets the true perpetrator or perpetrators at any distance—even across planes",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("87bdb9c5-4d60-4e50-938d-4bd6467d5e62"), Text = "The triggering creature and up to five coconspirators instantly revert to infants, losing all memories, class abilities, and other skills acquired during their lives (DC 44 Fortitude negates). Reversing this effect is nearly impossible, requiring powerful magic such as wish." },
+                    new TextBlock { Id = Guid.Parse("87bdb9c5-4d60-4e50-938d-4bd6467d5e62"), Type = TextBlockType.Text, Text = "The triggering creature and up to five coconspirators instantly revert to infants, losing all memories, class abilities, and other skills acquired during their lives (DC 44 Fortitude negates). Reversing this effect is nearly impossible, requiring powerful magic such as wish." },
                 }
             };
         }

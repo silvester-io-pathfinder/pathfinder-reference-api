@@ -188,5 +188,28 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
         {
             return builder.Entity<T>().AddData(entities);
         }
+
+        public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, Expression<Func<TOwner, IEnumerable<TOwned>>> collectionSelector, TOwned ownedEntity)
+            where TOwned : BaseEntity
+            where TOwner : BaseEntity
+        {
+            return builder.AddOwnedData(collectionSelector, new TOwned[] { ownedEntity });
+        }
+
+        public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, Expression<Func<TOwner, IEnumerable<TOwned>>> collectionSelector, IEnumerable<TOwned> ownedEntities)
+           where TOwned : BaseEntity
+           where TOwner : BaseEntity
+        {
+            return builder
+                .Entity<TOwner>()
+                .OwnsMany(collectionSelector, a =>
+                {
+                    a.HasKey(e => e.Id);
+                    a.Property(e => e.Id).ValueGeneratedOnAdd();
+                    a.Property<Guid>("OwnerId").ValueGeneratedOnAdd();
+                    a.WithOwner().HasForeignKey("OwnerId");
+                    a.HasData(ownedEntities);
+                });
+        }
     }
 }

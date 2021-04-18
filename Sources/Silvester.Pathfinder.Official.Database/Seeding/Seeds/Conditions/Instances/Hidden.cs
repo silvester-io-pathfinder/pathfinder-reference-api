@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             {
                 Id = ID,
                 Name = "Hidden",
-                Description = "While you're hidden from a creature, that creature knows the space you're in but can't tell precisely where you are. You typically become hidden by using Stealth to Hide. When Seeking a creature using only imprecise senses, it remains hidden, rather than observed. A creature you're hidden from is flat-footed to you, and it must succeed at a DC 11 flat check when targeting you with an attack, spell, or other effect or it fails to affect you. Area effects aren't subject to this flat check. A creature might be able to use the Seek action to try to observe you.",
                 ConditionCategoryId = seeder.GetCategoryByName("Degrees of Detection").Id
             };
+        }
+
+        public override IEnumerable<TextBlock> GetConditionDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("1b0fb05d-5c1a-429c-9a8e-65729fa82c9e"), Type = Utilities.Text.TextBlockType.Text, Text = "While you’re hidden from a creature, that creature knows the space you’re in but can’t tell precisely where you are. You typically become hidden by using Stealth to Hide. When Seeking a creature using only imprecise senses, it remains hidden, rather than observed. A creature you’re hidden from is flat-footed to you, and it must succeed at a DC 11 flat check when targeting you with an attack, spell, or other effect or it fails to affect you. Area effects aren’t subject to this flat check." };
+            yield return new TextBlock { Id = Guid.Parse("891ef18a-15d1-4256-b2b9-c67320503e38"), Type = Utilities.Text.TextBlockType.Text, Text = "A creature might be able to use the Seek action to try to observe you, as described on page 471." };
         }
 
         public override SourcePage? GetSourcePage(ConditionSeeder seeder)

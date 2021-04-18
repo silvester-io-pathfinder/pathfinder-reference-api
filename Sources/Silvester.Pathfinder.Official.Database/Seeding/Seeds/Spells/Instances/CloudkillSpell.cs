@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,12 +18,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("1030f973-aee2-4c2f-8cc5-a98aa4594de4"),
                 Name = "Cloudkill",
-                Description = "You conjure a poisonous fog. This functions as obscuring mist (page 355), except the area moves 10 feet away from you each round. You deal 6d8 poison damage to each breathing creature that starts its turn in the spell’s area. You can Dismiss the spell.",
                 Level = 5,
                 Range = 120,
                 Area = "20-foot burst",
                 Duration = "1 minute."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("e7e7b126-33a9-4112-b380-f01b86254c61"), Type = Utilities.Text.TextBlockType.Text, Text = "You conjure a poisonous fog. This functions as obscuring mist (page 355), except the area moves 10 feet away from you each round. You deal 6d8 poison damage to each breathing creature that starts its turn in the spell’s area. You can Dismiss the spell." };
         }
 
         public override IEnumerable<string> GetSpellComponents()

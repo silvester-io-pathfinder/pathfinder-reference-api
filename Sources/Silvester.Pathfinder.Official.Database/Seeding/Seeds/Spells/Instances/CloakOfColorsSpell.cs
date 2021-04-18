@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -16,12 +17,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("2c2d2218-3a46-4075-899c-c4e9353aaec3"),
                 Name = "Cloak of Colors",
-                Description = "A cloak of swirling colors shrouds the target. Creatures are dazzled while adjacent to it, and attacking the target causes a brilliant flash of light. A creature that hits the target with a melee attack must attempt a Will save.",
                 Level = 5,
                 Range = 30,
                 Targets = "1 creature.",
                 Duration = "1 minute."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("9a5617f3-f18c-407c-98f5-f0092737c1cf"), Type = Utilities.Text.TextBlockType.Text, Text = "A cloak of swirling colors shrouds the target. Creatures are dazzled while adjacent to it, and attacking the target causes a brilliant flash of light. A creature that hits the target with a melee attack must attempt a Will save." };
         }
 
         public override RollableEffect? GetRollableEffect()

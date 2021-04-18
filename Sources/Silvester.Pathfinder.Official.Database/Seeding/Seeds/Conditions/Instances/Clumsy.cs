@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             {
                 Id = ID,
                 Name = "Clumsy",
-                Description = "Your movements become clumsy and inexact. Clumsy always includes a value. You take a status penalty equal to the condition value to Dexterity-based checks and DCs, including AC, Reflex saves, ranged attack rolls, and skill checks using Acrobatics, Stealth, and Thievery.",
                 ConditionCategoryId = seeder.GetCategoryByName("Lowered Abilities").Id,
             };
+        }
+
+        public override IEnumerable<TextBlock> GetConditionDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("9d44223c-e20f-49a7-b374-528d6c21e714"), Type = Utilities.Text.TextBlockType.Text, Text = "Your movements become clumsy and inexact. Clumsy always includes a value. You take a status penalty equal to the condition value to Dexterity-based checks and DCs, including AC, Reflex saves, ranged attack rolls, and skill checks using Acrobatics, Stealth, and Thievery." };
         }
 
         public override SourcePage? GetSourcePage(ConditionSeeder seeder)

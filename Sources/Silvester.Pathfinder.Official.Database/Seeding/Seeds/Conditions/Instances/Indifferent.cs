@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             {
                 Id = ID,
                 Name = "Indifferent",
-                Description = "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is indifferent to a character doesn't really care one way or the other about that character. Assume a creature's attitude to a given character is indifferent unless specified otherwise.",
                 ConditionCategoryId = seeder.GetCategoryByName("Attitudes").Id
             };
+        }
+
+        public override IEnumerable<TextBlock> GetConditionDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("291d7186-938c-4caf-a163-8311f6fa9ce3"), Type = Utilities.Text.TextBlockType.Text, Text = "This condition reflects a creature’s disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is indifferent to a character doesn’t really care one way or the other about that character. Assume a creature’s attitude to a given character is indifferent unless specified otherwise." };
         }
 
         public override SourcePage? GetSourcePage(ConditionSeeder seeder)

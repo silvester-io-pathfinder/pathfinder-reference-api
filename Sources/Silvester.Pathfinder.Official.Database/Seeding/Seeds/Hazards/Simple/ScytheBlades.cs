@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,9 +63,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Falling Scytehs",
                 Trigger = "The trip wire is pulled or severed",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("99511947-964d-4238-bba3-e8f5c44be0b4"), Text = "Both blades swing down, each one Striking all creatures under the ceiling grooves." },
+                    new TextBlock { Id = Guid.Parse("99511947-964d-4238-bba3-e8f5c44be0b4"),Type = TextBlockType.Text,  Text = "Both blades swing down, each one Striking all creatures under the ceiling grooves." },
                 },
                 Effects =
                 {

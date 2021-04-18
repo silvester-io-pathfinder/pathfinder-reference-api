@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,9 +61,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Spore Exploison",
                 Trigger = "A creature moves into the mold’s space or damages the mold. The mold can’t use this reaction if it’s in direct sunlight or if the damage was fire damage",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("416e47cd-3a39-4e6b-93ba-d7560655d2aa"), Text = "The triggering creature and all creatures within 10 feet are exposed to yellow mold spores." },
+                    new TextBlock { Id = Guid.Parse("416e47cd-3a39-4e6b-93ba-d7560655d2aa"), Type = TextBlockType.Text, Text = "The triggering creature and all creatures within 10 feet are exposed to yellow mold spores." },
                 },
                 Effects =
                 {

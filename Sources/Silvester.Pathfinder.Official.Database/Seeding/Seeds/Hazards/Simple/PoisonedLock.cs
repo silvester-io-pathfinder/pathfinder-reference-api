@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,9 +63,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Spring",
                 Trigger = "A creature tries to unlock or Pick the Lock.",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("5ca24113-9fa9-4802-92db-bf378e003180"), Text = "A spine extends to Strike the triggering creature." },
+                    new TextBlock { Id = Guid.Parse("5ca24113-9fa9-4802-92db-bf378e003180"), Type = TextBlockType.Text, Text = "A spine extends to Strike the triggering creature." },
                 },
                 Effects = new HazardActionEffect[]
                 {

@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("d8f33acf-ba7f-4aec-a5e0-962dd317b1f8"), Text = "When you critically succeed at the Demoralize action, if the target’s level is lower than yours, the target is fleeing for 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("d8f33acf-ba7f-4aec-a5e0-962dd317b1f8"), Type = Utilities.Text.TextBlockType.Text, Text = "When you critically succeed at the Demoralize action, if the target’s level is lower than yours, the target is fleeing for 1 round." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

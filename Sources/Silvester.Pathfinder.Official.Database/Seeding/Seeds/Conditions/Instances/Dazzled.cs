@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             {
                 Id = ID,
                 Name = "Dazzled",
-                Description = "Your eyes are overstimulated. If vision is your only precise sense, all creatures and objects are concealed from you.",
                 ConditionCategoryId = seeder.GetCategoryByName("Senses").Id
             };
+        }
+
+        public override IEnumerable<TextBlock> GetConditionDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("fae04dbc-8bb8-4771-b3a0-32b0b0da09f8"), Type = Utilities.Text.TextBlockType.Text, Text = "Your eyes are overstimulated. If vision is your only precise sense, all creatures and objects are concealed from you." };
         }
 
         public override SourcePage? GetSourcePage(ConditionSeeder seeder)

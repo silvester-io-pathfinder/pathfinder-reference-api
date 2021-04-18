@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,10 +25,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 seeder.Builder.HasJoinData((poison, trait));
             }
 
-            foreach (AlchemicalPoisonDetailBlock detailBlock in GetDetailBlocks())
+            TextBlock[] details = GetDetailBlocks().ToArray();
+            for(int i = 0; i < details.Length; i ++)
             {
-                detailBlock.AlchemicalPoisonId = poison.Id;
-                seeder.Builder.AddData(detailBlock);
+                TextBlock detail = details[i];
+                detail.Order = i;
+                detail.OwnerId = poison.Id;
+                seeder.Builder.AddOwnedData((AlchemicalPoison e) => e.Details, detail);
             }
 
             SeedPoisonEffect(seeder, poison);
@@ -74,7 +78,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
         protected abstract StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder);
         protected abstract SourcePage? GetSourcePage(AlchemicalPoisonSeeder seeder);
         protected abstract IEnumerable<string> GetTraits();
-        protected abstract IEnumerable<AlchemicalPoisonDetailBlock> GetDetailBlocks();
+        protected abstract IEnumerable<TextBlock> GetDetailBlocks();
         protected abstract IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder);
     }
 }

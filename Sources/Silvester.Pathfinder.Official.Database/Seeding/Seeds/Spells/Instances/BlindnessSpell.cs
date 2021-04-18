@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,11 +18,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("3a320d74-73e9-40ab-a972-eb6b571f21fd"),
                 Name = "Blindness",
-                Description = "You blind the target. The effect is determined by the target’s Fortitude save. The target then becomes temporarily immune for 1 minute.",
                 Level = 3,
                 Range = 30,
                 Targets = "1 creature."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("dd9e4d1c-d272-4b15-9eac-77518d6af7ab"), Type = Utilities.Text.TextBlockType.Text, Text = "You blind the target. The effect is determined by the target’s Fortitude save. The target then becomes temporarily immune for 1 minute." };
         }
 
         public override RollableEffect? GetRollableEffect()

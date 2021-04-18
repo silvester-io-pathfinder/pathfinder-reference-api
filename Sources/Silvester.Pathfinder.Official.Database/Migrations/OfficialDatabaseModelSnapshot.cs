@@ -6876,220 +6876,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ActionDetailsBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("ActionId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ActionId");
-
-                    b.ToTable("ActionDetailsBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("cb5d193c-21b9-44a4-8370-766b898ceae9"),
-                            ActionId = new Guid("185abe1a-6c43-4884-bb8a-4f596e75442f"),
-                            Text = "You try to help your ally with a task. To use this reaction, you must first prepare to help, usually by using an action during your turn. You must explain to the GM exactly how you’re trying to help, and they determine whether you can Aid your ally."
-                        },
-                        new
-                        {
-                            Id = new Guid("60fe2d98-ba32-435e-ac1c-1abb6e8a5691"),
-                            ActionId = new Guid("185abe1a-6c43-4884-bb8a-4f596e75442f"),
-                            Text = "When you use your Aid reaction, attempt a skill check or attack roll of a type decided by the GM. The typical DC is 20, but the GM might adjust this DC for particularly hard or easy tasks. The GM can add any relevant traits to your preparatory action or to your Aid reaction depending on the situation, or even allow you to Aid checks other than skill checks and attack rolls."
-                        },
-                        new
-                        {
-                            Id = new Guid("386cc768-8cc0-11eb-8dcd-0242ac130003"),
-                            ActionId = new Guid("3367ce7a-8cc0-11eb-8dcd-0242ac130003"),
-                            Text = "You attempt an Acrobatics check to slow your fall. The DC is typically 15, but it might be higher due to air turbulence or other circumstances."
-                        },
-                        new
-                        {
-                            Id = new Guid("1345cbb1-4a0d-47e6-918f-f09fa0bd859b"),
-                            ActionId = new Guid("4384a058-8cc0-11eb-8dcd-0242ac130003"),
-                            Text = "You avert your gaze from danger. You gain a +2 circumstance bonus to saves against visual abilities that require you to look at a creature or object, such as a medusa’s petrifying gaze. Your gaze remains averted until the start of your next turn."
-                        },
-                        new
-                        {
-                            Id = new Guid("015a016b-90ec-42b1-9e9b-28c230d06999"),
-                            ActionId = new Guid("eb1f9f32-3d35-479a-a3e2-bf965e32fc3d"),
-                            Text = "You dig your way through dirt, sand, or a similar loose material at a rate up to your burrow Speed. You can’t burrow through rock or other substances denser than dirt unless you have an ability that allows you to do so."
-                        },
-                        new
-                        {
-                            Id = new Guid("ea4b9697-2a26-4b33-aa9d-f6908ab082e3"),
-                            ActionId = new Guid("5f770553-dac1-4377-8416-1a2a2e8f43be"),
-                            Text = "You move 5 feet by crawling and continue to stay prone."
-                        },
-                        new
-                        {
-                            Id = new Guid("f2def960-90a3-4293-9649-24a380ce33e5"),
-                            ActionId = new Guid("4163f1f7-245b-4989-b4a9-8638d75f2cdc"),
-                            Text = "You wait for the right moment to act. The rest of your turn doesn’t happen yet. Instead, you’re removed from the initiative order. You can return to the initiative order as a free action triggered by the end of any other creature’s turn. This permanently changes your initiative to the new position. You can’t use reactions until you return to the initiative order. If you Delay an entire round without returning to the initiative order, the actions from the Delayed turn are lost, your initiative doesn’t change, and your next turn occurs at your original position in the initiative order."
-                        },
-                        new
-                        {
-                            Id = new Guid("c9a4cd10-fd21-4bb9-a356-a47d4837599a"),
-                            ActionId = new Guid("4163f1f7-245b-4989-b4a9-8638d75f2cdc"),
-                            Text = "When you Delay, any persistent damage or other negative effects that normally occur at the start or end of your turn occur immediately when you use the Delay action. Any beneficial effects that would end at any point during your turn also end. The GM might determine that other effects end when you Delay as well. Essentially, you can’t Delay to avoid negative consequences that would happen on your turn or to extend beneficial effects that would end on your turn."
-                        },
-                        new
-                        {
-                            Id = new Guid("609e4ef2-f376-48d0-8f70-620733c8b8d5"),
-                            ActionId = new Guid("e5d48006-5153-4ebf-a71e-401cc0bc3d4a"),
-                            Text = "You fall prone."
-                        },
-                        new
-                        {
-                            Id = new Guid("5055a0f7-a922-4b49-b57f-40938f30d803"),
-                            ActionId = new Guid("c2bcb0d1-7feb-4f52-8046-d630a6c8f09f"),
-                            Text = "You attempt to escape from being grabbed, immobilized, or restrained. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a check using your unarmed attack modifier against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC for a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an Acrobatics or Athletics check instead of using your attack modifier if you choose (but this action still has the attack trait)."
-                        },
-                        new
-                        {
-                            Id = new Guid("a92602b3-303e-448f-91a1-8cf3dbce6c5a"),
-                            ActionId = new Guid("31fb2827-6ed7-455e-b135-9f4893b298fb"),
-                            Text = "You move through the air up to your fly Speed. Moving upward (straight up or diagonally) uses the rules for moving through difficult terrain. You can move straight down 10 feet for every 5 feet of movement you spend. If you Fly to the ground, you don’t take falling damage. You can use an action to Fly 0 feet to hover in place. If you’re airborne at the end of your turn and didn’t use a Fly action this round, you fall."
-                        },
-                        new
-                        {
-                            Id = new Guid("135aadcd-6eaf-4401-909d-de2414c5ccbc"),
-                            ActionId = new Guid("90d27bd9-31ed-46f4-a174-467e165ed1b9"),
-                            Text = "When you fall off or past an edge or other handhold, you can try to grab it, potentially stopping your fall. You must succeed at a Reflex save, usually at the Climb DC. If you grab the edge or handhold, you can then Climb up using Athletics."
-                        },
-                        new
-                        {
-                            Id = new Guid("3628f76a-d2f7-4391-9282-f7812e69ae26"),
-                            ActionId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
-                            Text = "You use your hand or hands to manipulate an object or the terrain. You can grab an unattended or stored object, open a door, or produce some similar effect. You might have to attempt a skill check to determine if your Interact action was successful."
-                        },
-                        new
-                        {
-                            Id = new Guid("2e208301-e15b-4adc-9929-d35835141a08"),
-                            ActionId = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
-                            Text = "You take a careful, short jump. You can Leap up to 10 feet horizontally if your Speed is at least 15 feet, or up to 15 feet horizontally if your Speed is at least 30 feet. You land in the space where your Leap ends (meaning you can typically clear a 5-foot gap, or a 10-foot gap if your Speed is 30 feet or more)."
-                        },
-                        new
-                        {
-                            Id = new Guid("d4aeb760-f7a2-4095-bc96-e2f70ab49b80"),
-                            ActionId = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
-                            Text = "If you Leap vertically, you can move up to 3 feet vertically and 5 feet horizontally onto an elevated surface."
-                        },
-                        new
-                        {
-                            Id = new Guid("6a431cbd-e07c-41e9-b824-179847fe0207"),
-                            ActionId = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
-                            Text = "Jumping a greater distance requires using the Athletics skill."
-                        },
-                        new
-                        {
-                            Id = new Guid("37cbf292-bc7b-46d3-909a-0bf344afe97b"),
-                            ActionId = new Guid("ab48c6d8-a194-4595-8358-c751fdc934d8"),
-                            Text = "You move onto the creature and ride it. If you’re already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it."
-                        },
-                        new
-                        {
-                            Id = new Guid("e9c5de9d-eef6-46d4-ae1b-0dee8958af0c"),
-                            ActionId = new Guid("187ebb2b-c829-4d40-81dd-414a48ea766e"),
-                            Text = "You indicate a creature that you can see to one or more allies, gesturing in a direction and describing the distance verbally. That creature is hidden to your allies, rather than undetected (page 466). This works only for allies who can see you and are in a position where they could potentially detect the target. If your allies can’t hear or understand you, they must succeed at a Perception check against the creature’s Stealth DC or they misunderstand and believe the target is in a different location."
-                        },
-                        new
-                        {
-                            Id = new Guid("1a320b87-a7f6-4d18-b4e2-3ea5dd7008a6"),
-                            ActionId = new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"),
-                            Text = "You prepare to use an action that will occur outside your turn. Choose a single action or free action you can use, and designate a trigger. Your turn then ends. If the trigger you designated occurs before the start of your next turn, you can use the chosen action as a reaction (provided you still meet the requirements to use it). You can’t Ready a free action that already has a trigger."
-                        },
-                        new
-                        {
-                            Id = new Guid("23ce08c6-58c9-43a0-8028-aa462b266f98"),
-                            ActionId = new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"),
-                            Text = "If you have a multiple attack penalty and your readied action is an attack action, your readied attack takes the multiple attack penalty you had at the time you used Ready. This is one of the few times the multiple attack penalty applies when it’s not your turn."
-                        },
-                        new
-                        {
-                            Id = new Guid("4014c48b-23f3-4382-81c7-3b9e7c1eec47"),
-                            ActionId = new Guid("ed94ef79-c37c-4591-a520-557916925352"),
-                            Text = "You release something you’re holding in your hand or hands. This might mean dropping an item, removing one hand from your weapon while continuing to hold it in another hand, releasing a rope suspending a chandelier, or performing a similar action. Unlike most manipulate actions, Release does not trigger reactions that can be triggered by actions with the manipulate trait (such as Attack of Opportunity)."
-                        },
-                        new
-                        {
-                            Id = new Guid("168a4329-2ae8-48a5-8fa6-a5508a9b1b86"),
-                            ActionId = new Guid("ed94ef79-c37c-4591-a520-557916925352"),
-                            Text = "If you want to prepare to Release something outside of your turn, use the Ready activity."
-                        },
-                        new
-                        {
-                            Id = new Guid("e2a4876a-0d17-4bca-9874-8a0f708e39c3"),
-                            ActionId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
-                            Text = "You scan an area for signs of creatures or objects. If you’re looking for creatures, choose an area you’re scanning. If precision is necessary, the GM can have you select a 30-foot cone or a 15-foot burst within line of sight. You might take a penalty if you choose an area that’s far away."
-                        },
-                        new
-                        {
-                            Id = new Guid("722290ac-d0fa-43f9-9406-291d071f0fc9"),
-                            ActionId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
-                            Text = "If you’re using Seek to search for objects (including secret doors and hazards), you search up to a 10-foot square adjacent to you. The GM might determine you need to Seek as an activity, taking more actions or even minutes or hours if you’re searching a particularly cluttered area."
-                        },
-                        new
-                        {
-                            Id = new Guid("d666a8f0-877c-4b2d-8bac-7c3cbe35b525"),
-                            ActionId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
-                            Text = "The GM attempts a single secret Perception check for you and compares the result to the Stealth DCs of any undetected or hidden creatures in the area or the DC to detect each object in the area (as determined by the GM or by someone Concealing the Object). A creature you detect might remain hidden, rather than becoming observed, if you’re using an imprecise sense or if an effect (such as invisibility) prevents the subject from being observed."
-                        },
-                        new
-                        {
-                            Id = new Guid("65547cff-999a-493d-a6c1-4f56d3f0662a"),
-                            ActionId = new Guid("f715d730-9ad4-4922-b893-cda88fe25ea4"),
-                            Text = "You try to tell whether a creature’s behavior is abnormal. Choose one creature, and assess it for odd body language, signs of nervousness, and other indicators that it might be trying to deceive someone. The GM attempts a single secret Perception check for you and compares the result to the Deception DC of the creature, the DC of a spell affecting the creature’s mental state, or another appropriate DC determined by the GM. You typically can’t try to Sense the Motive of the same creature again until the situation changes significantly."
-                        },
-                        new
-                        {
-                            Id = new Guid("d04ec0db-0e06-4422-963e-1161dcbc2ba9"),
-                            ActionId = new Guid("4deb6d4d-0808-4755-897e-412a0d6e1f21"),
-                            Text = "You stand up from prone."
-                        },
-                        new
-                        {
-                            Id = new Guid("1bf68b96-2ca3-4353-ab9a-657394acdadc"),
-                            ActionId = new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"),
-                            Text = "You carefully move 5 feet. Unlike most types of movement, Stepping doesn’t trigger reactions, such as Attacks of Opportunity, that can be triggered by move actions or upon leaving or entering a square."
-                        },
-                        new
-                        {
-                            Id = new Guid("9aea3dfc-ee32-48c0-b420-1e9ffbd3d318"),
-                            ActionId = new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"),
-                            Text = "You can’t Step into difficult terrain (page 475), and you can’t Step using a Speed other than your land Speed."
-                        },
-                        new
-                        {
-                            Id = new Guid("829f3140-7228-4996-8315-8302402acf15"),
-                            ActionId = new Guid("4293eca5-4b6c-42f2-8e22-cd09796984fd"),
-                            Text = "You move up to your Speed."
-                        },
-                        new
-                        {
-                            Id = new Guid("36548991-704d-4a82-a2c4-0622eb57f728"),
-                            ActionId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
-                            Text = "You attack with a weapon you’re wielding or with an unarmed attack, targeting one creature within your reach (for a melee attack) or within range (for a ranged attack). Roll the attack roll for the weapon or unarmed attack you are using, and compare the result to the target creature’s AC to determine the effect. See Attack Rolls on page 446 and Damage on page 450 for details on calculating your attack and damage rolls."
-                        },
-                        new
-                        {
-                            Id = new Guid("3fb46634-1f05-49e3-afbc-4cc2c1553980"),
-                            ActionId = new Guid("55bca308-af52-4da5-a1e4-a6c1059c5321"),
-                            Text = "You press yourself against a wall or duck behind an obstacle to take better advantage of cover (page 477). If you would have standard cover, you instead gain greater cover, which provides a +4 circumstance bonus to AC; to Reflex saves against area effects; and to Stealth checks to Hide, Sneak, or otherwise avoid detection. Otherwise, you gain the benefits of standard cover (a +2 circumstance bonus instead). This lasts until you move from your current space, use an attack action, become unconscious, or end this effect as a free action."
-                        });
-                });
-
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ActionType", b =>
                 {
                     b.Property<Guid>("Id")
@@ -7248,76 +7034,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Name = "Thunderstone",
                             SourcePageId = new Guid("797f5f94-6919-4064-9fde-9823f4bc73b9"),
                             Usage = "Held in 1 hand"
-                        });
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBombDetailBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("AlchemicalBombId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AlchemicalBombId");
-
-                    b.ToTable("AlchemicalBombDetailBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("575fcbde-26ab-4b04-8856-d3ff1612f7f3"),
-                            AlchemicalBombId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
-                            Text = "This flask filled with corrosive acid deals 1 acid damage, the listed persistent acid damage, and the listed acid splash damage. Many types grant an item bonus to attack rolls."
-                        },
-                        new
-                        {
-                            Id = new Guid("7ea74824-5235-4b72-bc3e-813400c45c57"),
-                            AlchemicalBombId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
-                            Text = "Alchemist’s fire is a combination of volatile liquids that ignite when exposed to air. Alchemist’s fire deals the listed fire damage, persistent fire damage, and splash damage. Many types grant an item bonus to attack rolls."
-                        },
-                        new
-                        {
-                            Id = new Guid("d487c00d-1ea3-4f9a-83cd-eba70c9614fd"),
-                            AlchemicalBombId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
-                            Text = "Bottled lightning is packed with volatile reagents that create a blast of electricity when they are exposed to air. Bottled lightning deals the listed electricity damage and electricity splash damage. On a hit, the target becomes flat-footed until the start of your next turn. Many types grant an item bonus to attack rolls."
-                        },
-                        new
-                        {
-                            Id = new Guid("3a949c9e-d4c8-4496-bb1a-71fea4bef008"),
-                            AlchemicalBombId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
-                            Text = "The liquid reagents in this vial rapidly absorb heat when exposed to air. A frost vial deals the listed cold damage and cold splash damage. On a hit, the target takes a status penalty to its Speeds until the end of its next turn. Many types of frost vial also grant an item bonus to attack rolls."
-                        },
-                        new
-                        {
-                            Id = new Guid("f7f13e63-3728-470d-8a1f-b7cd65d855df"),
-                            AlchemicalBombId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
-                            Text = "A tanglefoot bag is filled with sticky substances. When you hit a creature with a tanglefoot bag, that creature takes a status penalty to its Speeds for 1 minute. Many types of tanglefoot bag also grant an item bonus on attack rolls."
-                        },
-                        new
-                        {
-                            Id = new Guid("694ea8b3-8bd7-4a4e-b925-446ba77959f6"),
-                            AlchemicalBombId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
-                            Text = "On a critical hit, a creature in contact with a solid surface becomes stuck to the surface and immobilized for 1 round, and a creature flying via wings has its wings tangled, causing it to fall safely to the ground and become unable to Fly again for 1 round. Tanglefoot bags are not effective when used on a creature that is in water."
-                        },
-                        new
-                        {
-                            Id = new Guid("3d23b44a-67d3-4cbe-b73e-528f36790ac4"),
-                            AlchemicalBombId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
-                            Text = "The target can end any effects by Escaping or spending a total of 3 Interact actions to carefully remove the sticky substances. These Interact actions don’t have to be consecutive, and other creatures can provide the actions as well."
-                        },
-                        new
-                        {
-                            Id = new Guid("670226b5-e794-4898-b2be-94c63cf5408e"),
-                            AlchemicalBombId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
-                            Text = "When this stone hits a creature or a hard surface, it explodes with a deafening bang. A thunderstone deals the listed sonic damage and sonic splash damage, and each creature within 10 feet of the space in which the stone exploded must succeed at a Fortitude saving throw with the listed DC or be deafened until the end of its next turn. Many types of thunderstone grant an item bonus to attack rolls."
                         });
                 });
 
@@ -7893,184 +7609,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("cc69ec58-f925-487a-9c59-24c7d51649fe"),
                             AlchemicalElixirId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
                             Text = "True Elixir of Life"
-                        });
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixirDetailBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("AlchemicalElixirId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AlchemicalElixirId");
-
-                    b.ToTable("AlchemicalElixirDetailBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("743b8c94-0516-4c3d-9c02-6e54afceab7d"),
-                            AlchemicalElixirId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
-                            Text = "Antiplague can fortify the body’s defenses against diseases. Upon drinking an antiplague, you gain an item bonus to Fortitude saving throws against diseases for 24 hours; this applies to your daily save against a disease’s progression."
-                        },
-                        new
-                        {
-                            Id = new Guid("029c1cd3-93f2-472e-90a1-7f67847a6752"),
-                            AlchemicalElixirId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
-                            Text = "Your features transform into something bestial and you take on muscle mass, but your lumbering form is clumsy."
-                        },
-                        new
-                        {
-                            Id = new Guid("47c254c1-8659-4363-8818-143300056126"),
-                            AlchemicalElixirId = new Guid("c1fbd9e7-e36e-49d7-b3c2-772400e1fc5e"),
-                            Text = "This tincture lets you pinpoint your foes. For the next 5 minutes, your alchemical bomb Strikes reduce the circumstance bonus to AC your targets gain from cover."
-                        },
-                        new
-                        {
-                            Id = new Guid("bed0c6dc-af90-431a-93a5-f6a126f7e4d2"),
-                            AlchemicalElixirId = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
-                            Text = "This flask of foaming beer grants courage. For the next hour after drinking this elixir, you gain an item bonus to Will saves, which is greater when attempting Will saves against fear."
-                        },
-                        new
-                        {
-                            Id = new Guid("70db1dfe-abca-4416-b8ba-8825604c77d9"),
-                            AlchemicalElixirId = new Guid("9273e6ad-3f3c-4e7d-9b9c-4a8faec61145"),
-                            Text = "After you consume this elixir, your vision sharpens and you become sensitive to even the most minute movements. For the next minute, you reduce the flat check to target hidden creatures to 5, and you don’t need to attempt a flat check to target concealed creatures. These benefits apply only against creatures within 30 feet of you."
-                        },
-                        new
-                        {
-                            Id = new Guid("c3d0b8fa-4656-44c2-86ad-2247cc2326fd"),
-                            AlchemicalElixirId = new Guid("7a89776c-ffcc-4766-8ddb-d0d6f2227c30"),
-                            Text = "Enzymatic compounds in this elixir strengthen and excite the muscles in your legs. You gain a status bonus to your Speed for the listed duration."
-                        },
-                        new
-                        {
-                            Id = new Guid("e0308f62-e9c4-49b4-ab1e-864a77807cd9"),
-                            AlchemicalElixirId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
-                            Text = "Your mind becomes clear and cognition flows freely, but physical matters seem ephemeral."
-                        },
-                        new
-                        {
-                            Id = new Guid("99f4909b-5fd9-4602-abb9-84a2309b4879"),
-                            AlchemicalElixirId = new Guid("787a099b-e070-4e58-b0b7-89c5e2f0aac9"),
-                            Text = "This bitter draft opens your mind to the potential of the written word. For the listed duration after drinking this elixir, you can understand any words you read, so long as they are written in a common language. This elixir doesn’t automatically allow you to understand codes or extremely esoteric passages—you still need to attempt a skill check to Decipher Writing."
-                        },
-                        new
-                        {
-                            Id = new Guid("47860fc7-facb-4704-b219-ff432eb33b73"),
-                            AlchemicalElixirId = new Guid("82b662fa-09dc-4cc6-a7e1-13085af44f63"),
-                            Text = "After you drink this elixir, your sight becomes sharper in darkness.You gain darkvision for the listed duration."
-                        },
-                        new
-                        {
-                            Id = new Guid("fc565a61-6754-4bea-bdc6-768b53993621"),
-                            AlchemicalElixirId = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
-                            Text = "After you drink this elixir, you notice subtle visual details. For the next hour, you gain an item bonus to Perception checks that is greater when attempting to find secret doors and traps."
-                        },
-                        new
-                        {
-                            Id = new Guid("150dac7f-5e0c-461a-91ea-1d6b6cb5fda9"),
-                            AlchemicalElixirId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
-                            Text = "Elixirs of life accelerate a living creature’s natural healing processes and immune system. Upon drinking this elixir, you regain the listed number of Hit Points and gain an item bonus to saving throws against diseases and poisons for 10 minutes."
-                        },
-                        new
-                        {
-                            Id = new Guid("5b3a9903-a51c-4a10-b932-ee51026807ff"),
-                            AlchemicalElixirId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
-                            Text = "The elixir of rejuvenation restores a creature to full health and eradicates toxins affecting it. When you drink this elixir, you’re restored to your maximum Hit Points, and all afflictions of 20th level or lower affecting you are removed."
-                        },
-                        new
-                        {
-                            Id = new Guid("1bc9c603-c18b-4898-add5-8e6533dbbeb0"),
-                            AlchemicalElixirId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
-                            Text = "You can instead administer this elixir to a creature that has been dead for a week or less. When you do, that creature is instantly brought back to life with 1 Hit Point and no spell slots, Focus Points, or other daily resources."
-                        },
-                        new
-                        {
-                            Id = new Guid("5c24f746-2f04-48a2-9b74-ab5c70e42203"),
-                            AlchemicalElixirId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
-                            Text = "Favored by spies and tricksters, an infiltrator’s elixir is used to alter your appearance. When imbibed, you take the shape of a humanoid creature of your size, but different enough so you might be unrecognizable. If you aren’t a humanoid, you might take on a form more similar to your own, at the GM’s discretion."
-                        },
-                        new
-                        {
-                            Id = new Guid("1e77fd3e-28cf-47ca-a2e5-085bf9673e30"),
-                            AlchemicalElixirId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
-                            Text = "The creator of the elixir decides the basics of the appearance you transform into when you imbibe the elixir, including eye color, skin tone, and hair color. The elixir can’t change your form into that of a specific person. After the form takes hold, you retain it for the next 10 minutes."
-                        },
-                        new
-                        {
-                            Id = new Guid("7ea16d23-375f-4b4e-8400-35d31a29f574"),
-                            AlchemicalElixirId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
-                            Text = "Drinking this elixir counts as setting up a disguise to Impersonate. You gain a +4 status bonus to your Deception DC to avoid others seeing through your disguise, and you add your level to this DC even if untrained."
-                        },
-                        new
-                        {
-                            Id = new Guid("04d5224a-86f5-4533-a931-a1b465cbac1c"),
-                            AlchemicalElixirId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
-                            Text = "After you drink this mutagen, your body becomes thick and sturdy. You exhibit a healthy glow, though you tend to be ponderous and unobservant."
-                        },
-                        new
-                        {
-                            Id = new Guid("83785b35-3536-4517-8ad1-e06c530cba25"),
-                            AlchemicalElixirId = new Guid("fce1d931-7808-4e03-8615-f9f0210c405a"),
-                            Text = "This tingly solution increases the elasticity and contraction of your leg muscles. For 1 minute after drinking this elixir, you can High Jump or Long Jump as a single action instead of 2 actions. If you do, you don’t perform the initial Stride (nor do you fail if you don’t Stride 10 feet)."
-                        },
-                        new
-                        {
-                            Id = new Guid("518dfefb-b42e-457a-a7f2-df253f733f15"),
-                            AlchemicalElixirId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
-                            Text = "A faint mist emanates from your skin, making you concealed for the listed duration. As usual, if you become concealed when your position is still obvious, you can’t use this concealment to Hide or Sneak."
-                        },
-                        new
-                        {
-                            Id = new Guid("ad64a881-6dc8-4752-8c71-e3486b4977bc"),
-                            AlchemicalElixirId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
-                            Text = "Your features become thin and angular. You become swifter and nimbler, but your body also becomes fragile."
-                        },
-                        new
-                        {
-                            Id = new Guid("e5afe368-8abd-4cc4-b15a-fe449c96daac"),
-                            AlchemicalElixirId = new Guid("edf0d3e8-4400-4feb-8326-7d98976ebae7"),
-                            Text = "This elixir is made from salamander scales to withstand fire. For 24 hours, you are protected from the effects of severe heat."
-                        },
-                        new
-                        {
-                            Id = new Guid("5d023119-60ec-4f88-9056-c3b81e0af2bf"),
-                            AlchemicalElixirId = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
-                            Text = "This briny concoction alters the skin on your hands and feet. The spaces between your fingers and toes become webbed, granting you a swim Speed of 20 feet for the listed duration."
-                        },
-                        new
-                        {
-                            Id = new Guid("26d53eae-b1d3-4e3c-81d1-83d6d86633df"),
-                            AlchemicalElixirId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
-                            Text = "You gain inner serenity, focused on fine details and steeled against mental assaults, but you find violence off-putting."
-                        },
-                        new
-                        {
-                            Id = new Guid("9b681339-c92a-45b5-9bed-aebedf317e72"),
-                            AlchemicalElixirId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
-                            Text = "Your features become striking and your voice becomes musical and commanding, though facts and figures become hazy for you and emotion clouds your ability to reason."
-                        },
-                        new
-                        {
-                            Id = new Guid("cdcd2d5b-5901-4d52-81b9-7645684928c0"),
-                            AlchemicalElixirId = new Guid("58f3f7fd-4244-4a42-b684-d995220d4ade"),
-                            Text = "Your fists become hard as stone. For 1 hour, your fists deal 1d6 bludgeoning damage and lose the nonlethal trait."
-                        },
-                        new
-                        {
-                            Id = new Guid("7b92f530-d78e-4683-b967-9de524ac2063"),
-                            AlchemicalElixirId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
-                            Text = "This elixir warms your core and improves your circulation. For 24 hours, you are protected from the effects of severe cold."
                         });
                 });
 
@@ -9161,202 +8699,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoisonDetailBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("AlchemicalPoisonId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AlchemicalPoisonId");
-
-                    b.ToTable("AlchemicalPoisonDetailBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("ab9af6c8-886c-4cc4-8347-d5d5b6c520e5"),
-                            AlchemicalPoisonId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
-                            Text = "This toxin is a compound of arsenic and other substances. You can’t reduce your sickened condition while affected."
-                        },
-                        new
-                        {
-                            Id = new Guid("ce438b37-57d0-41eb-83ed-65302a63073b"),
-                            AlchemicalPoisonId = new Guid("28f803a7-f093-4be7-a3d2-623a77560f93"),
-                            Text = "Sometimes called “deadly nightshade,” belladonna is a widely available toxin produced from a plant similar to a tomato."
-                        },
-                        new
-                        {
-                            Id = new Guid("26dd2686-7c61-4c86-8724-6d2e336401a0"),
-                            AlchemicalPoisonId = new Guid("c65fd194-6210-42c8-80a2-b54ff81b6585"),
-                            Text = "Adder venom is a simple but effective way to enhance a weapon."
-                        },
-                        new
-                        {
-                            Id = new Guid("c36e3697-6277-474e-b992-a95f955a857b"),
-                            AlchemicalPoisonId = new Guid("fa11da7d-e05b-486b-a6e0-444dee34bae9"),
-                            Text = "Black lotus extract causes severe internal bleeding."
-                        },
-                        new
-                        {
-                            Id = new Guid("785aa516-6335-4df7-9078-4230d4bdf0e7"),
-                            AlchemicalPoisonId = new Guid("dc73bb29-2a4e-429e-bc99-26d85ae74e1c"),
-                            Text = "This tacky, hardened sap is harvested from trees infected by fungal blights and exposed to open flames."
-                        },
-                        new
-                        {
-                            Id = new Guid("5b28e3fa-1348-41cb-ba9f-25f5230e45d3"),
-                            AlchemicalPoisonId = new Guid("81b07f7b-2e70-4b38-80f7-0b28a4c6f399"),
-                            Text = "Fumes from the forges of Hell drain health and strength alike."
-                        },
-                        new
-                        {
-                            Id = new Guid("062e4990-d0b3-4931-9ee3-ede80d54ec72"),
-                            AlchemicalPoisonId = new Guid("0381fe8b-2404-42fb-9abd-74e28f1401d5"),
-                            Text = "This thick substance is distilled from the mind-robbing cytillesh fungus, though it lacks memory-altering capabilities."
-                        },
-                        new
-                        {
-                            Id = new Guid("86a05df2-37ef-4162-9576-46a53b42e381"),
-                            AlchemicalPoisonId = new Guid("ae0386af-cfaf-40c0-83b4-8dd5a8d80d9a"),
-                            Text = "The toxic deathcap mushroom can be dried, ground, and treated to form a flavorless powder with accelerated effects."
-                        },
-                        new
-                        {
-                            Id = new Guid("f8d404e3-12fb-4647-adb6-60888962e8f2"),
-                            AlchemicalPoisonId = new Guid("b2e3f38f-f570-4cf8-ba74-633bdc0a1405"),
-                            Text = "A mix of digestive juices and green dragon poison glands nauseates the victim as its flesh is digested from within."
-                        },
-                        new
-                        {
-                            Id = new Guid("e9c5a72e-0a96-4f96-ba1f-a64036c4cfda"),
-                            AlchemicalPoisonId = new Guid("acc877c9-ea44-4977-b0da-6bf6ec70922a"),
-                            Text = "Giant centipede venom causes severe muscle stiffness."
-                        },
-                        new
-                        {
-                            Id = new Guid("39eeb491-4cff-4764-89d2-9ce910775200"),
-                            AlchemicalPoisonId = new Guid("7b143b21-75a9-4d41-9c09-1e4a872526b9"),
-                            Text = "Scorpion venom is excruciating and its effects are somewhat debilitating."
-                        },
-                        new
-                        {
-                            Id = new Guid("2d4bb8d3-f0fc-4e20-a407-a73f2824d244"),
-                            AlchemicalPoisonId = new Guid("862bacf9-a11f-4f56-8c94-2452d636db79"),
-                            Text = "Giant wasp venom interferes with a victim’s movement."
-                        },
-                        new
-                        {
-                            Id = new Guid("0b7f7c29-9473-4281-8d95-5264cfe8b23d"),
-                            AlchemicalPoisonId = new Guid("b445e986-a45a-4d3a-8089-a2d33fee60dc"),
-                            Text = "The opaque white sap from the graveroot shrub clouds the mind."
-                        },
-                        new
-                        {
-                            Id = new Guid("7045ff07-e29c-4f30-9a90-8d4b94e64335"),
-                            AlchemicalPoisonId = new Guid("7c923c5c-7005-4f1b-9005-5c79b289b056"),
-                            Text = "Concentrated hemlock is a particularly deadly toxin that halts muscle action—including that of the victim’s heart."
-                        },
-                        new
-                        {
-                            Id = new Guid("84e7645e-26c9-436c-824e-f485cba68ba0"),
-                            AlchemicalPoisonId = new Guid("1e830309-8b32-4860-85d0-a704be45b0f6"),
-                            Text = "This venom erodes its target’s defenses, aiding the spider in securing prey."
-                        },
-                        new
-                        {
-                            Id = new Guid("620d976a-9aa5-421e-a5a0-124b60cdc8db"),
-                            AlchemicalPoisonId = new Guid("7d31dbce-9230-4960-99cc-71de51c18977"),
-                            Text = "King’s sleep is an insidious long-term poison that can seem like a disease or even death from natural causes on a venerable target. The drained condition from king’s sleep is cumulative with each failed save and can’t be removed while the poison lasts."
-                        },
-                        new
-                        {
-                            Id = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
-                            AlchemicalPoisonId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
-                            Text = "Lethargy poison is commonly used in hit-and-run tactics by drow and others who want their victims alive; the ambusher retreats until the poison sets in and the victim falls unconscious. Further exposure to lethargy poison does not require the target to attempt additional saving throws; only failing an saving throw against an ongoing exposure can progress its stage."
-                        },
-                        new
-                        {
-                            Id = new Guid("d4ce3729-a117-4501-b8b3-2526bfb0ff43"),
-                            AlchemicalPoisonId = new Guid("949064c1-4862-4a51-a4fe-8ac7c91559d1"),
-                            Text = "Dust salvaged from the remains of a destroyed lich has paralytic properties that make it a valuable poison."
-                        },
-                        new
-                        {
-                            Id = new Guid("42d4e1ff-92b4-4153-b3eb-42ea8d70eb41"),
-                            AlchemicalPoisonId = new Guid("aef8461a-019a-4c5e-baeb-949f8ebd6e66"),
-                            Text = "Malyass root paste sees use to impede opponents in athletic competitions, in addition to espionage and tracking."
-                        },
-                        new
-                        {
-                            Id = new Guid("765ca329-35c6-4f20-8d10-000b35ce1a78"),
-                            AlchemicalPoisonId = new Guid("c55ad542-1fba-49e6-ab84-f95050cc3d7f"),
-                            Text = "Mindfog mist can be used to undermine spellcasters, as its effect on a victim’s mental faculties are swift and powerful."
-                        },
-                        new
-                        {
-                            Id = new Guid("a7391054-edfc-4951-8efc-8b995fde8148"),
-                            AlchemicalPoisonId = new Guid("427af463-394a-423e-be07-d4788fc27ec7"),
-                            Text = "Concentrated sap of stinging weeds makes an effective toxin."
-                        },
-                        new
-                        {
-                            Id = new Guid("a7f2675e-38a7-4d2e-bb3f-a893a4538f22"),
-                            AlchemicalPoisonId = new Guid("d493d861-70f0-4362-a954-2d0609869352"),
-                            Text = "Purportedly sourced from any number of outlandish locales, nightmare vapor is most often created by boiling the sweat collected from humanoids caught in the throes of terrible nightmares."
-                        },
-                        new
-                        {
-                            Id = new Guid("4de33799-27d7-42f5-a3cc-1458b3aef42d"),
-                            AlchemicalPoisonId = new Guid("0a713a66-44df-45ff-8917-5977c0c90e8f"),
-                            Text = "Venom from enormous purple worms leaves a victim weakened."
-                        },
-                        new
-                        {
-                            Id = new Guid("44e8074e-5cc8-46f9-8829-7ab92e42f176"),
-                            AlchemicalPoisonId = new Guid("eec5e097-c60a-4a1d-91d3-57bcf30e6a31"),
-                            Text = "Distilled from the Plane of Shadow, this oily substance imposes tenebrous effects. The enfeebled condition from shadow essence lasts for 24 hours."
-                        },
-                        new
-                        {
-                            Id = new Guid("a699aced-f89e-4a8e-b70e-f46ef9abdbd3"),
-                            AlchemicalPoisonId = new Guid("1a0af776-3dc1-48f7-bc0a-17c676e4f044"),
-                            Text = "Slumber wine sees its greatest use in games of intrigue, where an absence can be more devastating than injury. Characters unconscious from slumber wine can’t wake up by any means while the poison lasts, don’t need to eat or drink while unconscious in this way, and appear to be recently dead unless an examiner succeeds at a DC 40 Medicine check."
-                        },
-                        new
-                        {
-                            Id = new Guid("7891623b-6f09-4e17-b565-40ac365b6b59"),
-                            AlchemicalPoisonId = new Guid("c4f4ddce-c112-44b3-90a5-06aaaed80f1e"),
-                            Text = "A paste made by mashing the fine, threadlike roots of a certain creeper vine, spider root renders a victim clumsy and maladroit."
-                        },
-                        new
-                        {
-                            Id = new Guid("e61c1c37-3720-4a0d-8c2b-956bc8f7e9d1"),
-                            AlchemicalPoisonId = new Guid("0e9adbb7-41e0-4935-8e1e-5339b7b076d0"),
-                            Text = "Tears of death are among the most powerful of alchemical poisons, distilled from extracts of five other deadly poisons in just the right ratios."
-                        },
-                        new
-                        {
-                            Id = new Guid("e864228b-0a29-43de-bebb-175ea6468573"),
-                            AlchemicalPoisonId = new Guid("25956d4a-b3ee-49fe-9660-b1ee2b67b1de"),
-                            Text = "Wolfsbane appears in folklore for its link to werecreatures. If you are afflicted with lycanthropy and survive stage 3 of wolfsbane, you’re immediately cured of the lycanthropy."
-                        },
-                        new
-                        {
-                            Id = new Guid("240bf270-cf24-434c-983a-4b5217b80772"),
-                            AlchemicalPoisonId = new Guid("1f8e9d8a-52ba-4b7c-b041-6e797a91e25b"),
-                            Text = "Properly harvested and preserved, the poison from a wyvern’s sting is effective and direct."
-                        });
-                });
-
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", b =>
                 {
                     b.Property<Guid>("Id")
@@ -9480,101 +8822,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 20,
                             SourcePageId = new Guid("14701f2b-1426-4501-b27f-c048f157301e"),
                             Usage = "Held in 1 hand"
-                        });
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalToolDetailBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("AlchemicalToolId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("Type")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AlchemicalToolId");
-
-                    b.ToTable("AlchemicalToolDetailBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("1b782fba-1f25-45e6-9c4e-1c5302f158f6"),
-                            AlchemicalToolId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
-                            Text = "An alchemist with the Craft Philosopher’s Stone feat can create a philosopher’s stone once per month by spending 1 batch of infused reagents during their daily preparations using the advanced alchemy class feature. This is the only way to create a philosopher’s stone.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("aae5d4ac-27ba-4142-8927-313f73134489"),
-                            AlchemicalToolId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
-                            Text = "At a glance, a philosopher’s stone appears to be an ordinary, sooty piece of natural rock.Breaking the rock open with a Force Open action(DC 35) reveals a cavity at the stone’s heart.The cavity is lined with a rare type of quicksilver that can transmute base metals into precious metals or create an elixir of rejuvenation(page 548).",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("0906dbf5-774b-4fbc-93b4-785e00c0e9be"),
-                            AlchemicalToolId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
-                            Text = "To use the quicksilver, you must be legendary in Crafting and have the Alchemical Crafting feat.You can then use the stone’s quicksilver for one of two effects:",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("5d0baac6-aa97-439b-9f15-f41924e85403"),
-                            AlchemicalToolId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
-                            Text = "You can apply the stone’s quicksilver to an infused true elixir of life using an Interact action.This turns the elixir into an infused elixir of rejuvenation instantaneously.This doesn’t require any crafting time or additional materials.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("7176e4f6-3ecd-4af5-88b1-77adb4690dab"),
-                            AlchemicalToolId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
-                            Text = "You can spend up to a month of downtime applying the quicksilver either to iron to create silver or to leadto create gold.Treat this as a 20th - level task to Earn Income using Crafting, except that you create 500 gp worth of your chosen metal per day on a success or 750 gp worth per day on a critical success.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("10164353-c33e-411e-b631-26a19438ab0a"),
-                            AlchemicalToolId = new Guid("3707bdeb-7db4-4473-b963-f9adc2f2c1fa"),
-                            Text = "You can slather this silvery paste onto one melee weapon, one thrown weapon, or 10 pieces of ammunition. Silversheen spoils quickly, so once you open a vial, you must use it all at once, rather than saving it. For the next hour, the weapon or ammunition counts as silver instead of its normal precious material (such as cold iron) for any physical damage it deals.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("9908505d-e79b-42e7-8f5a-dd4ec3165054"),
-                            AlchemicalToolId = new Guid("3c31b16b-1804-4e2e-ba66-9bb8faaca03e"),
-                            Text = "With a sharp twist of this item, you instantly create a screen of thick, opaque smoke in a burst centered on one corner of your space. All creatures within that area are concealed, and all other creatures are concealed to them. The smoke lasts for 1 minute or until dispersed by a strong wind.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("94cfd7f2-a8a2-44b5-9fbb-3f1893ebd964"),
-                            AlchemicalToolId = new Guid("fe623283-bc94-42a6-9a63-05fe74c06ab5"),
-                            Text = "You can apply snake oil onto a wound or other outward symptom of an affliction or condition (such as sores from a disease or discoloration from a poison). For the next hour, the symptom disappears and the wounded or afflicted creature doesn’t feel as if it still has the wound or affliction, though all effects remain. A creature can uncover the ruse by succeeding at a DC 17 Perception check, but only if it uses a Seek action to specifically examine the snake oil’s effects.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("8238f38f-f33e-4252-9f51-f0ec7ae0b938"),
-                            AlchemicalToolId = new Guid("cad37b1b-7d1e-4a1a-acb4-23a9814683ab"),
-                            Text = "This 1-foot-long, gold-tipped rod glows after it’s struck on a hard surface. For the next 6 hours, it sheds bright light in a 20-foot radius (and dim light to the next 40 feet).",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("237853b6-f295-4158-bb31-dc141d046bae"),
-                            AlchemicalToolId = new Guid("37fff04c-1d07-49d9-ae10-02fb910e782b"),
-                            Text = "An alchemical substance applied to one end of this tiny wooden stick ignites when struck against a rough surface. Creating a flame with a tindertwig is much faster than creating a flame with flint and steel. You can ignite the tindertwig and touch it to a flammable object as part of the same Interact action. Core Rulebook 554",
-                            Type = 0
                         });
                 });
 
@@ -11072,10 +10319,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("ConditionCategoryId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
@@ -11101,7 +10344,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("e9e00854-3d42-48b7-9724-017c8a46e3c0"),
                             ConditionCategoryId = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
-                            Description = "You can't see. All normal terrain is difficult terrain to you. You can't detect anything using vision. You automatically critically fail Perception checks that require you to be able to see, and if vision is your only precise sense, you take a –4 status penalty to Perception checks. You are immune to visual effects. Blinded overrides dazzled.",
                             Name = "Blinded",
                             OverridesConditionId = new Guid("ff7b682f-13ff-464f-a230-89cc814186ea"),
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
@@ -11109,27 +10351,23 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("8ecb38b2-d7fb-440f-b096-cf381652b2ff"),
-                            Description = "Broken is a condition that affects objects. An object is broken when damage has reduced its Hit Points to equal or less than its Broken Threshold. A broken object can't be used for its normal function, nor does it grant bonuses— with the exception of armor. Broken armor still grants its item bonus to AC, but it also imparts a status penalty to AC depending on its category: –1 for broken light armor, –2 for broken medium armor, or –3 for broken heavy armor.  A broken item still imposes penalties and limitations normally incurred by carrying, holding, or wearing it. For example, broken armor would still impose its Dexterity modifier cap, check penalty, and so forth.  If an effect makes an item broken automatically and the item has more HP than its Broken Threshold, that effect also reduces the item's current HP to the Broken Threshold.",
                             Name = "Broken",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("d1a95821-ef2b-4c73-8ec6-9ec6789c885d"),
-                            Description = "You are the carrier of a disease, but you do not yet experience symptoms.",
                             Name = "Carrier"
                         },
                         new
                         {
                             Id = new Guid("9c93e839-3ea9-4baa-aada-951d8fbf9807"),
-                            Description = "You are choked, either physically by something or someone, by something magical, or by the the effects of a disease or illness (such as coughing). You need to pass a flat DC check equal to the severity of the condition when you attempt to cast a spell that has a verbal component to it, or activate an item that has a command component to it.",
                             Name = "Choked"
                         },
                         new
                         {
                             Id = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
                             ConditionCategoryId = new Guid("655ed530-4d75-4816-af14-4cbbdd19531e"),
-                            Description = "Your movements become clumsy and inexact. Clumsy always includes a value. You take a status penalty equal to the condition value to Dexterity-based checks and DCs, including AC, Reflex saves, ranged attack rolls, and skill checks using Acrobatics, Stealth, and Thievery.",
                             Name = "Clumsy",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11137,21 +10375,18 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("64d1cfdc-8539-4bf7-95f2-60d53788079b"),
                             ConditionCategoryId = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
-                            Description = "While you are concealed from a creature, such as in a thick fog, you are difficult for that creature to see. You can still be observed, but you're tougher to target. A creature that you're concealed from must succeed at a DC 5 flat check when targeting you with an attack, spell, or other effect. Area effects aren't subject to this flat check. If the check fails, the attack, spell, or effect doesn't affect you.",
                             Name = "Concealed",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f"),
-                            Description = "You don't have your wits about you, and you attack wildly. You are flat-footed, you don't treat anyone as your ally (though they might still treat you as theirs), and you can't Delay, Ready, or use reactions.  You use all your actions to Strike or cast offensive cantrips, though the GM can have you use other actions to facilitate attack, such as draw a weapon, move so that a target is in reach, and so forth. Your targets are determined randomly by the GM. If you have no other viable targets, you target yourself, automatically hitting but not scoring a critical hit. If it's impossible for you to attack or cast spells, you babble incoherently, wasting your actions.  Each time you take damage from an attack or spell, you can attempt a DC 11 flat check to recover from your confusion and end the condition.",
                             Name = "Confused",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("d4d10f5f-e6cc-4acc-a8b3-3a29de451366"),
-                            Description = "Someone else is making your decisions for you, usually because you're being commanded or magically dominated. The controller dictates how you act and can make you use any of your actions, including attacks, reactions, or even Delay. The controller usually does not have to spend their own actions when controlling you.",
                             Name = "Controlled",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11159,14 +10394,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("ff7b682f-13ff-464f-a230-89cc814186ea"),
                             ConditionCategoryId = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
-                            Description = "Your eyes are overstimulated. If vision is your only precise sense, all creatures and objects are concealed from you.",
                             Name = "Dazzled",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("3c3ce9f5-aceb-4db8-810a-1291035cf709"),
-                            Description = "After you die, you can’t act or be affected by spells that target creatures (unless they specifically target dead creatures), and for all other purposes you are an object. When you die, you are reduced to 0 Hit Points if you had a different amount, and you can’t be brought above 0 Hit Points as long as you remain dead. Some magic can bring creatures back to life, such as the resurrect ritual or the raise dead spell",
                             Name = "Dead",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11174,7 +10407,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("31b26b64-2616-4d23-93de-f3dbc0c81b7d"),
                             ConditionCategoryId = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
-                            Description = "You can't hear. You automatically critically fail Perception checks that require you to be able to hear. You take a –2 status penalty to Perception checks for initiative and checks that involve sound but also rely on other senses. If you perform an action with the auditory trait, you must succeed at a DC 5 flat check or the action is lost; attempt the check after spending the action but before any effects are applied. You are immune to auditory effects.",
                             Name = "Deafened",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11182,7 +10414,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("824a03c0-0108-4896-8c0a-8af3a09cd738"),
                             ConditionCategoryId = new Guid("18744a3c-8c8d-4298-8be7-f5e7e5dc0a6b"),
-                            Description = "A powerful force has gripped your soul, calling you closer to death. Doomed always includes a value. The dying value at which you die is reduced by your doomed value. If your maximum dying value is reduced to 0, you instantly die. When you die, you're no longer doomed. Your doomed value decreases by 1 each time you get a full night's rest.",
                             Name = "Doomed",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11190,7 +10421,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
                             ConditionCategoryId = new Guid("655ed530-4d75-4816-af14-4cbbdd19531e"),
-                            Description = "When a creature successfully drains you of blood or life force, you become less healthy. Drained always includes a value. You take a status penalty equal to your drained value on Constitution-based checks, such as Fortitude saves. You also lose a number of Hit Points equal to your level (minimum 1) times the drained value, and your maximum Hit Points are reduced by the same amount. For example, if you’re hit by an effect that inflicts drained 3 and you’re a 3rd-level character, you lose 9 Hit Points and reduce your maximum Hit Points by 9. Losing these Hit Points doesn’t count as taking damage. Each time you get a full night’s rest, your drained value decreases by 1. This increases your maximum Hit Points, but you don’t immediately recover the lost Hit Points.",
                             Name = "Drained",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11198,14 +10428,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("069fffa5-3fe0-4892-a04d-1bd28a6225a3"),
                             ConditionCategoryId = new Guid("18744a3c-8c8d-4298-8be7-f5e7e5dc0a6b"),
-                            Description = "You are bleeding out or otherwise at death’s door. While you have this condition, you are unconscious . Dying always includes a value, and if it ever reaches dying 4, you die. If you’re dying, you must attempt a recovery check at the start of your turn each round to determine whether you get better or worse. Your dying condition increases by 1 if you take damage while dying, or by 2 if you take damage from an enemy’s critical hit or a critical failure on your save. If you lose the dying condition by succeeding at a recovery check and are still at 0 Hit Points, you remain unconscious, but you can wake up as described in that condition. You lose the dying condition automatically and wake up if you ever have 1 Hit Point or more. Any time you lose the dying condition, you gain the wounded 1 condition, or increase your wounded condition value by 1 if you already have that condition.",
                             Name = "Dying",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("5da2ad79-54a0-429e-a52a-d654841fb268"),
-                            Description = "You are carrying more weight than you can manage. While you’re encumbered, you’re clumsy 1 and take a 10-foot penalty to all your Speeds. As with all penalties to your Speed, this can’t reduce your Speed below 5 feet.",
                             Name = "Encumbered",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11213,35 +10441,30 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
                             ConditionCategoryId = new Guid("655ed530-4d75-4816-af14-4cbbdd19531e"),
-                            Description = "You're physically weakened. Enfeebled always includes a value. When you are enfeebled, you take a status penalty equal to the condition value to Strength-based rolls and DCs, including Strength-based melee attack rolls, Strength-based damage rolls, and Athletics checks.",
                             Name = "Enfeebled",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("33b600ff-067e-4a67-a1ce-c85cf2d2382c"),
-                            Description = "You are compelled to focus your attention on something, distracting you from whatever else is going on around you. You take a –2 status penalty to Perception and skill checks, and you can't use actions with the concentrate trait unless they or their intended consequences are related to the subject of your fascination (as determined by the GM). For instance, you might be able to Seek and Recall Knowledge about the subject, but you likely couldn't cast a spell targeting a different creature. This condition ends if a creature uses hostile actions against you or any of your allies.",
                             Name = "Fascinated",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("48d6ee37-8a18-4162-9164-9f7892045d2d"),
-                            Description = "You're tired and can't summon much energy. You take a –1 status penalty to AC and saving throws. You can't use exploration activities performed while traveling, such as those listed here. You recover from fatigue after a full night's rest.",
                             Name = "Fatigued",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d"),
-                            Description = "You’re distracted or otherwise unable to focus your full attention on defense. You take a –2 circumstance penalty to AC. Some effects give you the flat-footed condition only to certain creatures or against certain attacks. Others—especially conditions—can make you universally flat-footed against everything. If a rule doesn’t specify that the condition applies only to certain circumstances, it applies to all of them; for example, many effects simply say “The target is flat-footed.”",
                             Name = "Flat-Footed",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("35e06ece-e68a-4201-a215-8e3a29f30840"),
-                            Description = "You're forced to run away due to fear or some other compulsion. On your turn, you must spend each of your actions trying to escape the source of the fleeing condition as expediently as possible (such as by using move actions to flee, or opening doors barring your escape). The source is usually the effect or caster that gave you the condition, though some effects might define something else as the source. You can't Delay or Ready while fleeing.",
                             Name = "Fleeing",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11249,21 +10472,18 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("87851575-72a5-4935-b284-7cb0551fadf2"),
                             ConditionCategoryId = new Guid("ae1f94c2-5442-4eed-bfdc-54a3faadbcc4"),
-                            Description = "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is friendly to a character likes that character. The character can attempt to Make a Request of a friendly creature, and the friendly creature is likely to agree to a simple and safe request that doesn't cost it much to fulfill. If the character or one of their allies uses hostile actions against the creature, the creature gains a worse attitude condition depending on the severity of the hostile action, as determined by the GM.",
                             Name = "Friendly",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("06cdc6c0-2d59-414e-a1bf-1d1862bae2d7"),
-                            Description = "You’re gripped by fear and struggle to control your nerves. The frightened condition always includes a value. You take a status penalty equal to this value to all your checks and DCs. Unless specified otherwise, at the end of each of your turns, the value of your frightened condition decreases by 1.",
                             Name = "Frightened",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("918a03c5-27d2-458f-8bbf-2d1933738415"),
-                            Description = "You're held in place by another creature, giving you the flat-footed and immobilized conditions. If you attempt a manipulate action while grabbed, you must succeed at a DC 5 flat check or it is lost; roll the check after spending the action, but before any effects are applied.",
                             Name = "Grabbed",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11271,7 +10491,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("170bff5c-bcac-433d-94a0-840da90112af"),
                             ConditionCategoryId = new Guid("ae1f94c2-5442-4eed-bfdc-54a3faadbcc4"),
-                            Description = "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is helpful to a character wishes to actively aid that character. It will accept reasonable Requests from that character, as long as such requests aren't at the expense of the helpful creature's goals or quality of life. If the character or one of their allies uses a hostile action against the creature, the creature gains a worse attitude condition depending on the severity of the hostile action, as determined by the GM.",
                             Name = "Helpful",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11279,7 +10498,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("4f1b10d8-98e2-43f2-b3a4-22e6b11ea699"),
                             ConditionCategoryId = new Guid("d104a1f4-fb11-45c3-84b7-14880d673095"),
-                            Description = "While you're hidden from a creature, that creature knows the space you're in but can't tell precisely where you are. You typically become hidden by using Stealth to Hide. When Seeking a creature using only imprecise senses, it remains hidden, rather than observed. A creature you're hidden from is flat-footed to you, and it must succeed at a DC 11 flat check when targeting you with an attack, spell, or other effect or it fails to affect you. Area effects aren't subject to this flat check. A creature might be able to use the Seek action to try to observe you.",
                             Name = "Hidden",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11287,14 +10505,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("d56a5083-fa2f-4d9c-a968-0b7664e1c9cd"),
                             ConditionCategoryId = new Guid("ae1f94c2-5442-4eed-bfdc-54a3faadbcc4"),
-                            Description = "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is hostile to a character actively seeks to harm that character. It doesn't necessarily attack, but it won't accept Requests from the character.",
                             Name = "Hostile",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("b335312b-5956-436b-a8df-c426704a41ba"),
-                            Description = "You can't use any action with the move trait. If you're immobilized by something holding you in place and an external force would move you out of your space, the force must succeed at a check against either the DC of the effect holding you in place or the relevant defense (usually Fortitude DC) of the monster holding you in place.",
                             Name = "Immobilized",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11302,7 +10518,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("f13e0f97-112a-4ffa-843a-00b406ee963d"),
                             ConditionCategoryId = new Guid("ae1f94c2-5442-4eed-bfdc-54a3faadbcc4"),
-                            Description = "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is indifferent to a character doesn't really care one way or the other about that character. Assume a creature's attitude to a given character is indifferent unless specified otherwise.",
                             Name = "Indifferent",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11310,63 +10525,54 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("b9db96ae-7d84-4616-8831-477d614b4dbd"),
                             ConditionCategoryId = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
-                            Description = "While invisible, you can't be seen. You're undetected to everyone. Creatures can Seek to attempt to detect you; if a creature succeeds at its Perception check against your Stealth DC, you become hidden to that creature until you Sneak to become undetected again. If you become invisible while someone can already see you, you start out hidden to the observer (instead of undetected) until you successfully Sneak. You can't become observed while invisible except via special abilities or magic.",
                             Name = "Invisible",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("b0cbbc02-bec0-4b21-9b61-8af5bb2fc62b"),
-                            Description = "You are unable to communicate verbally with anyone. Additionally, you cannot cast any spells that have a verbal component to it, or activate an item that hase a command component to it.",
                             Name = "Muted"
                         },
                         new
                         {
                             Id = new Guid("6f1426bc-454d-4796-a6b5-a1569dd39ee6"),
                             ConditionCategoryId = new Guid("d104a1f4-fb11-45c3-84b7-14880d673095"),
-                            Description = "Anything in plain view is observed by you. If a creature takes measures to avoid detection, such as by using Stealth to Hide, it can become hidden or undetected instead of observed. If you have another precise sense instead of or in addition to sight, you might be able to observe a creature or object using that sense instead. You can observe a creature only with precise senses. When Seeking a creature using only imprecise senses, it remains hidden, rather than observed.",
                             Name = "Observed",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("5007c3b2-b184-43b1-85d7-ad159d14ccb5"),
-                            Description = "Your body is frozen in place. You have the flat-footed condition and can't act except to Recall Knowledge and use actions that require only the use of your mind (as determined by the GM). Your senses still function, but only in the areas you can perceive without moving your body, so you can't Seek while paralyzed.",
                             Name = "Paralyzed",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Description = "Persistent damage comes from effects like acid, being on fire, or many other situations. It appears as “X persistent [type] damage,” where “X” is the amount of damage dealt and “[type]” is the damage type. Instead of taking persistent damage immediately, you take it at the end of each of your turns as long as you have the condition, rolling any damage dice anew each time. After you take persistent damage, roll a DC 15 flat check to see if you recover from the persistent damage. If you succeed, the condition ends.",
                             Name = "Persistent Damage",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("8d531baa-8a75-4090-83d0-fd8721b76ae7"),
-                            Description = "You have been turned to stone. You can’t act, nor can you sense anything. You become an object with a Bulk double your normal Bulk (typically 12 for a petrified Medium creature or 6 for a petrified Small creature), AC 9, Hardness 8, and the same current Hit Points you had when alive. You don’t have a Broken Threshold. When you’re turned back into flesh, you have the same number of Hit Points you had as a statue. If the statue is destroyed, you immediately die. While petrified, your mind and body are in stasis, so you don’t age or notice the passing of time.",
                             Name = "Petrified",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("b680a37e-cf30-4c4b-886f-a713282892af"),
-                            Description = "You're lying on the ground. You are flat-footed and take a –2 circumstance penalty to attack rolls. The only move actions you can use while you're prone are Crawl and Stand. Standing up ends the prone condition. You can Take Cover while prone to hunker down and gain greater cover against ranged attacks, even if you don't have an object to get behind, gaining a +4 circumstance bonus to AC against ranged attacks (but you remain flat-footed). If you would be knocked prone while you're Climbing or Flying, you fall (see Falling for the rules on falling). You can't be knocked prone when Swimming.",
                             Name = "Prone",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("fce417f7-0b9c-4d87-9f0a-45ae5d9a4e53"),
-                            Description = "You gain 1 additional action at the start of your turn each round. Many effects that make you quickened specify the types of actions you can use with this additional action. If you become quickened from multiple sources, you can use the extra action you’ve been granted for any single action allowed by any of the effects that made you quickened. Because quickened has its effect at the start of your turn, you don’t immediately gain actions if you become quickened during your turn.",
                             Name = "Quickened",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("ecb312a5-4e27-43b9-89ec-1a615d9f9dc2"),
-                            Description = "You're tied up and can barely move, or a creature has you pinned. You have the flat-footed and immobilized conditions, and you can't use any actions with the attack or manipulate traits except to attempt to Escape or Force Open your bonds. Restrained overrides grabbed.",
                             Name = "Restrained",
                             OverridesConditionId = new Guid("918a03c5-27d2-458f-8bbf-2d1933738415"),
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
@@ -11374,27 +10580,23 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
-                            Description = "You feel ill. Sickened always includes a value. You take a status penalty equal to this value on all your checks and DCs. You can't willingly ingest anything—including elixirs and potions—while sickened. You can spend a single action retching in an attempt to recover, which lets you immediately attempt a Fortitude save against the DC of the effect that made you sickened. On a success, you reduce your sickened value by 1 (or by 2 on a critical success).",
                             Name = "Sickened",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("f253f20f-d7d3-4fe6-bb19-8d521afd9436"),
-                            Description = "You have fewer actions. Slowed always includes a value. When you regain your actions at the start of your turn, reduce the number of actions you regain by your slowed value. Because slowed has its effect at the start of your turn, you don't immediately lose actions if you become slowed during your turn.",
                             Name = "Slowed",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
                             Id = new Guid("d9b38c43-deee-4d47-a5a8-ee48ab4daa2d"),
-                            Description = "You are conflicted with sudden spasms. The rulebooks do not mention any particular effects of spasming, so it is best left up to the discretion of the GM.",
                             Name = "Spasming"
                         },
                         new
                         {
                             Id = new Guid("4d045584-3a7f-433b-ad89-0f658c379923"),
-                            Description = "You've become senseless. You can't act while stunned. Stunned usually includes a value, which indicates how many total actions you lose, possibly over multiple turns, from being stunned. Each time you regain actions (such as at the start of your turn), reduce the number you regain by your stunned value, then reduce your stunned value by the number of actions you lost. For example, if you were stunned 4, you would lose all 3 of your actions on your turn, reducing you to stunned 1; on your next turn, you would lose 1 more action, and then be able to use your remaining 2 actions normally. Stunned might also have a duration instead of a value, such as “stunned for 1 minute.” In this case, you lose all your actions for the listed duration. Stunned overrides slowed.If the duration of your stunned condition ends while you are slowed, you count the actions lost to the stunned condition toward those lost to being slowed. So, if you were stunned 1 and slowed 2 at the beginning of your turn, you would lose 1 action from stunned, and then lose only 1 additional action by being slowed, so you would still have 1 action remaining to use that turn.",
                             Name = "Stunned",
                             OverridesConditionId = new Guid("f253f20f-d7d3-4fe6-bb19-8d521afd9436"),
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
@@ -11403,7 +10605,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("a9bb8a46-7442-4480-b008-c706d7d4ef2f"),
                             ConditionCategoryId = new Guid("655ed530-4d75-4816-af14-4cbbdd19531e"),
-                            Description = "Your thoughts and instincts are clouded. Stupefied always includes a value. You take a status penalty equal to this value on Intelligence-, Wisdom-, and Charisma-based checks and DCs, including Will saving throws, spell attack rolls, spell DCs, and skill checks that use these ability scores. Any time you attempt to Cast a Spell while stupefied, the spell is disrupted unless you succeed at a flat check with a DC equal to 5 + your stupefied value.",
                             Name = "Stupefied",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11411,7 +10612,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
                             ConditionCategoryId = new Guid("18744a3c-8c8d-4298-8be7-f5e7e5dc0a6b"),
-                            Description = "You're sleeping, or you've been knocked out. You can't act. You take a –4 status penalty to AC, Perception, and Reflex saves, and you have the blinded and flat-footed conditions. When you gain this condition, you fall prone and drop items you are wielding or holding unless the effect states otherwise or the GM determines you're in a position in which you wouldn't.",
                             Name = "Unconscious",
                             OverridesConditionId = new Guid("ff7b682f-13ff-464f-a230-89cc814186ea"),
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
@@ -11420,7 +10620,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("d7416bc0-79b9-42c0-9335-e420dd3e0f50"),
                             ConditionCategoryId = new Guid("d104a1f4-fb11-45c3-84b7-14880d673095"),
-                            Description = "When you are undetected by a creature, that creature cannot see you at all, has no idea what space you occupy, and can't target you, though you still can be affected by abilities that target an area. When you're undetected by a creature, that creature is flat-footed to you. A creature you're undetected by can guess which square you're in to try targeting you. It must pick a square and attempt an attack.This works like targeting a hidden creature(requiring a DC 11 flat check), but the flat check and attack roll are rolled in secret by the GM, who doesn't reveal whether the attack missed due to failing the flat check, failing the attack roll, or choosing the wrong square. A creature can use the Seek action to try to find you.",
                             Name = "Undetected",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11428,7 +10627,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("ca2e35fe-8529-4ba3-a860-1bbde1c1c8f8"),
                             ConditionCategoryId = new Guid("ae1f94c2-5442-4eed-bfdc-54a3faadbcc4"),
-                            Description = "This condition reflects a creature's disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is unfriendly to a character dislikes and specifically distrusts that character. The unfriendly creature won't accept Requests from the character.",
                             Name = "Unfriendly",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
@@ -11436,7 +10634,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("43bea701-97ae-4ab1-8e30-e42fcff51f41"),
                             ConditionCategoryId = new Guid("d104a1f4-fb11-45c3-84b7-14880d673095"),
-                            Description = "If you are unnoticed by a creature, that creature has no idea you are present at all. When you're unnoticed, you're also undetected by the creature. This condition matters for abilities that can be used only against targets totally unaware of your presence.",
                             Name = "Unnoticed",
                             OverridesConditionId = new Guid("ff7b682f-13ff-464f-a230-89cc814186ea"),
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
@@ -11444,14 +10641,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("a2d387ce-eec5-439b-9e2e-2ef38f0ff3fb"),
-                            Description = "You are weighed down, either physically, magically or otherwise. You take a penalty to all your movement speeds, but your speed can never be reduced below 5 feet.",
                             Name = "Weighed Down"
                         },
                         new
                         {
                             Id = new Guid("8f6d81d5-64f1-455e-80c8-7835accb6613"),
                             ConditionCategoryId = new Guid("18744a3c-8c8d-4298-8be7-f5e7e5dc0a6b"),
-                            Description = "You have been seriously injured. If you lose the dying condition and do not already have the wounded condition, you become wounded 1. If you already have the wounded condition when you lose the dying condition, your wounded condition value increases by 1. If you gain the dying condition while wounded, increase your dying condition value by your wounded value. The wounded condition ends if someone successfully restores Hit Points to you with Treat Wounds, or if you are restored to full Hit Points and rest for 10 minutes.",
                             Name = "Wounded",
                             SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         });
@@ -11496,234 +10691,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
                             Name = "Senses"
-                        });
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ConditionDetailBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("ConditionId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("Type")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ConditionId");
-
-                    b.ToTable("ConditionDetailBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("522f0c99-e56b-4848-9adf-6579947713a2"),
-                            ConditionId = new Guid("069fffa5-3fe0-4892-a04d-1bd28a6225a3"),
-                            Text = "Death and Dying Rules",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("c4e5deec-51aa-4e93-92e1-9dda14f2d903"),
-                            ConditionId = new Guid("069fffa5-3fe0-4892-a04d-1bd28a6225a3"),
-                            Text = "The doomed, dying, unconscious, and wounded conditions all relate to the process of coming closer to death. The full rules are on pages 459–461. The most significant information not contained in the conditions themselves is this: When you’re reduced to 0 Hit Points, you’re knocked out with the following effects:",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("ee821b5c-04d4-4212-8f37-98b8a827cff5"),
-                            ConditionId = new Guid("069fffa5-3fe0-4892-a04d-1bd28a6225a3"),
-                            Text = "You immediately move your initiative position to directly before the turn in which you were reduced to 0 HP.”",
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = new Guid("44052fce-df27-49bc-bc37-537fd6f0a7b0"),
-                            ConditionId = new Guid("069fffa5-3fe0-4892-a04d-1bd28a6225a3"),
-                            Text = "You gain the dying 1 condition. If the effect that knocked you out was a critical success from the attacker or the result of your critical failure, you gain the dying 2 condition instead. If you have the wounded condition, increase these values by your wounded value. If the damage came from a nonlethal attack or effect, you don’t gain the dying condition— you are instead unconscious with 0 Hit Points.",
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = new Guid("d079a8d0-b445-4132-acb8-e9b73c5646d8"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "Persistent Damage Rules",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("9be7ab5f-d8ec-4502-a9db-63cabc34043b"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "The additional rules presented below apply to persistent damage in certain cases.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("7a6f2181-416a-491a-9d86-cce240b39331"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "Persistent damage runs its course and automatically ends after a certain amount of time as fire burns out, blood clots, and the like. The GM determines when this occurs, but it usually takes 1 minute.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("ab2056b6-550f-41a8-a96d-869cc17e3576"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "Assisted Recovery",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("1dd5d5f4-de04-4b34-882d-6fa19e239fbb"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "You can take steps to help yourself recover from persistent damage, or an ally can help you, allowing you to attempt an additional flat check before the end of your turn. This is usually an activity requiring 2 actions, and it must be something that would reasonably improve your chances (as determined by the GM). For example, you might try to smother a flame or wash off acid. This allows you to attempt an extra flat check immediately, but only once per round.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("8347426a-0c25-446e-9ac0-f06ecbd51d73"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "The GM decides how your help works, using the following examples as guidelines when there's not a specific action that applies.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("5fdc64fc-6041-4ab6-aa77-57004d59ac56"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "The action to help might require a skill check or another roll to determine its effectiveness.",
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = new Guid("5732280a-9ddf-402f-a46b-c2aa85c5ec3e"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "Reduce the DC of the flat check to 10 for a particularly appropriate type of help, such as dousing you in water to put out flames.",
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = new Guid("0219a437-77c5-4ecb-a687-b4d22f0b325b"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "Automatically end the condition due to the type of help, such as healing that restores you to your maximum HP to end persistent bleed damage, or submerging yourself in a lake to end persistent fire damage.",
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = new Guid("1d39c09f-0f28-41d5-a6d2-bba9edaca845"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "Alter the number of actions required to help you if the means the helper uses are especially efficient or remarkably inefficient.",
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = new Guid("68a8b2ab-8c1b-4999-8c98-95e27153be58"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "Immunities, Resistances, And Weaknesses",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("efd34683-7804-41ff-9901-17a9c3330359"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "Immunities, resistances, and weaknesses all apply to persistent damage. If an effect deals initial damage in addition to persistent damage, apply immunities, resistances, and weaknesses separately to the initial damage and to the persistent damage. Usually, if an effect negates the initial damage, it also negates the persistent damage, such as with a slashing weapon that also deals persistent bleed damage because it cut you. The GM might rule otherwise in some situations.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("15d4070a-18c0-458d-a6be-3749a7a35b4d"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "Multiple Persistent Damage Conditions",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("2dd9a40b-b519-49b6-b860-1a2a8c89345f"),
-                            ConditionId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
-                            Text = "You can be simultaneously affected by multiple persistent damage conditions so long as they have different damage types. If you would gain more than one persistent damage condition with the same damage type, the higher amount of damage overrides the lower amount. The damage you take from persistent damage occurs all at once, so if something triggers when you take damage, it triggers only once; for example, if you're dying with several types of persistent damage, the persistent damage increases your dying condition only once.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("080c64f0-6e98-49f4-9ed1-b7b39a2b5bb0"),
-                            ConditionId = new Guid("fce417f7-0b9c-4d87-9f0a-45ae5d9a4e53"),
-                            Text = "Gaining and Losing Actions",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("73e3d268-5f96-4ec1-b30e-243ed27e4749"),
-                            ConditionId = new Guid("fce417f7-0b9c-4d87-9f0a-45ae5d9a4e53"),
-                            Text = "Quickened, slowed, and stunned are the primary ways you can gain or lose actions on a turn. The rules for how this works appear on page 462. In brief, these conditions alter how many actions you regain at the start of your turn; thus, gaining the condition in the middle of your turn doesn’t adjust your number of actions on that turn. If you have conflicting conditions that affect your number of actions, you choose which actions you lose. For instance, the action gained from haste lets you only Stride or Strike, so if you need to lose one action because you’re also slowed, you might decide to lose the action from haste, letting you keep your other actions that can be used more flexibly.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("3e517663-a8da-4a37-b25d-42b26182d6a1"),
-                            ConditionId = new Guid("fce417f7-0b9c-4d87-9f0a-45ae5d9a4e53"),
-                            Text = "Some conditions prevent you from taking a certain subset of actions, typically reactions. Other conditions simply say you can’t act. When you can’t act, you’re unable to take any actions at all. Unlike slowed or stunned, these don’t change the number of actions you regain; they just prevent you from using them. That means if you are somehow cured of paralysis on your turn, you can act immediately.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("c6aa5055-28cd-4854-86db-881fab8977e2"),
-                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
-                            Text = "If you're unconscious because you're dying, you can't wake up while you have 0 Hit Points. If you are restored to 1 Hit Point or more via healing, you lose the dying and unconscious conditions and can act normally on your next turn.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("5be411d3-3892-464b-b651-9ccbea01a9c7"),
-                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
-                            Text = "If you are unconscious and at 0 Hit Points, but not dying, you naturally return to 1 Hit Point and awaken after sufficient time passes. The GM determines how long you remain unconscious, from a minimum of 10 minutes to several hours. If you receive healing during this time, you lose the unconscious condition and can act normally on your next turn.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("a4f63976-a4f5-402f-88be-f7e5425d1129"),
-                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
-                            Text = "If you're unconscious and have more than 1 Hit Point (typically because you are asleep or unconscious due to an effect), you wake up in one of the following ways. Each causes you to lose the unconscious condition.",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("6f70d006-bd20-422d-ba07-22db1bf4f59f"),
-                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
-                            Text = "You take damage, provided the damage doesn't reduce you to 0 Hit Points. If the damage reduces you to 0 Hit Points, you remain unconscious and gain the dying condition as normal.",
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = new Guid("a84e3630-44d8-4047-b3d9-d21bd140eadf"),
-                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
-                            Text = "You receive healing, other than the natural healing you get from resting.",
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = new Guid("1c0ad848-d2ea-45b4-a709-9d84395bb14d"),
-                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
-                            Text = "Someone shakes you awake with an Interact action.",
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = new Guid("e60b28de-b1af-43af-ba61-daf960327a05"),
-                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
-                            Text = "There's loud noise going on around you—though this isn't automatic. At the start of your turn, you automatically attempt a Perception check against the noise's DC (or the lowest DC if there is more than one noise), waking up if you succeed. If creatures are attempting to stay quiet around you, this Perception check uses their Stealth DCs. Some magical effects make you sleep so deeply that they don't allow you to attempt this Perception check.",
-                            Type = 2
-                        },
-                        new
-                        {
-                            Id = new Guid("042a7b29-141c-4489-b084-86796a198da4"),
-                            ConditionId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
-                            Text = "If you are simply asleep, the GM decides you wake up either because you have had a restful night's sleep or something disrupted that rest.",
-                            Type = 2
                         });
                 });
 
@@ -15140,784 +14107,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FeatDetailsBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("FeatId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FeatId");
-
-                    b.ToTable("FeatDetailsBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("8c4e02b6-3966-491d-a8e8-aa05e8f6c0cb"),
-                            FeatId = new Guid("2c8b47a4-eb56-491b-82fd-a3f894282025"),
-                            Text = "Your knowledge has expanded to encompass a new field. Choose an additional Lore skill subcategory. You become trained in it. At 3rd, 7th, and 15th levels, you gain an additional skill increase you can apply only to the chosen Lore subcategory."
-                        },
-                        new
-                        {
-                            Id = new Guid("a23693cb-3840-48a8-94fb-7f93f6d118b6"),
-                            FeatId = new Guid("b8193a38-a31c-45f2-a715-2542f09b97ca"),
-                            Text = "You’re fully immersed in another ancestry’s culture and traditions, whether born into them, earned through rite of passage, or bonded through a deep friendship or romance. Choose a common ancestry. You can select ancestry feats from the ancestry you chose, in addition to your character’s own ancestry, as long as the ancestry feats don’t require any physiological feature that you lack, as determined by the GM."
-                        },
-                        new
-                        {
-                            Id = new Guid("447bc70f-fd26-40a6-8663-02d4ccb6c686"),
-                            FeatId = new Guid("57442d19-cae2-465c-9d3d-2e77ecde2a50"),
-                            Text = "Your knowledge has expanded to encompass a new field. Choose an additional Lore skill subcategory. You become trained in it. At 3rd, 7th, and 15th levels, you gain an additional skill increase you can apply only to the chosen Lore subcategory."
-                        },
-                        new
-                        {
-                            Id = new Guid("db6f1680-f693-4b5c-9dae-16516d0bd65a"),
-                            FeatId = new Guid("1d6f005c-1b19-4072-8609-62af32b427e2"),
-                            Text = "Whether through instinct, study, or magic, you feel a deeper connection to your ancestry.You gain a 1st - level ancestry feat."
-                        },
-                        new
-                        {
-                            Id = new Guid("72e1ef9e-b124-40eb-b185-e1f6199d6c77"),
-                            FeatId = new Guid("a6def9d1-3dd5-4d2f-8e75-1773753119d9"),
-                            Text = "Your study of magic allows you to instinctively sense its presence. You can cast 1st-level detect magic at will as an arcane innate spell. If you’re a master in Arcana, the spell is heightened to 3rd level; if you’re legendary, it is heightened to 4th level."
-                        },
-                        new
-                        {
-                            Id = new Guid("96d02376-bd63-4d35-92f0-08c08ca9f2ca"),
-                            FeatId = new Guid("384659b6-1c1c-4612-9727-2d8406c2a328"),
-                            Text = "You become trained in light armor. If you already were trained in light armor, you gain training in medium armor. If you were trained in both, you become trained in heavy armor."
-                        },
-                        new
-                        {
-                            Id = new Guid("1ed675fc-6c30-4ded-a479-961f8bdd3227"),
-                            FeatId = new Guid("e4c0f632-f086-40f7-81c4-2d54f1bcb5b9"),
-                            Text = "Even in the worst circumstances, you can perform basic tasks. Choose a skill you’re trained in. You can forgo rolling a skill check for that skill to instead receive a result of 10 + your proficiency bonus (do not apply any other bonuses, penalties, or modifiers)."
-                        },
-                        new
-                        {
-                            Id = new Guid("f3025adc-d289-42fc-b072-64fb3a523a45"),
-                            FeatId = new Guid("ca8d59e8-f938-4ffb-9890-9bed87134d5b"),
-                            Text = "You know basic facts off the top of your head. Choose a skill you’re an expert in that has the Recall Knowledge action and for which you have the Assurance feat. You can use the Recall Knowledge action with that skill as a free action once per round. If you do, you must use Assurance on the skill check."
-                        },
-                        new
-                        {
-                            Id = new Guid("46646590-2516-4adb-9ae5-7c050520e480"),
-                            FeatId = new Guid("6684d89b-1994-4fa9-8b6b-c5123b642e86"),
-                            Text = "You can Earn Income (page 236) using Diplomacy, spending your days hunting for bargains and reselling at a profit. You can also spend time specifically sniffing out a great bargain on an item; this works as if you were using Earn Income with Diplomacy, except instead of gaining money, you purchase the item at a discount equal to the money you would have gained, gaining the item for free if your earned income equals or exceeds its cost. Finally, if you select Bargain Hunter during character creation at 1st level, you start play with an additional 2 gp."
-                        },
-                        new
-                        {
-                            Id = new Guid("1fe89bb7-ca01-4a5f-9d34-8699b45c9829"),
-                            FeatId = new Guid("5ac7371e-af01-460e-a188-198481c67505"),
-                            Text = "When you roll initiative, you can yell a mighty battle cry and Demoralize an observed foe as a free action. If you’re legendary in Intimidation, you can use a reaction to Demoralize your foe when you critically succeed at an attack roll."
-                        },
-                        new
-                        {
-                            Id = new Guid("60f7edf8-b1cd-4a3b-b412-af7a4b880942"),
-                            FeatId = new Guid("6db67ca1-3fef-4705-9ad3-4d0e121e943b"),
-                            Text = "You can patch up wounds, even in combat. Attempt a Medicine check with the same DC as for Treat Wounds and restore the corresponding amount of HP; this doesn’t remove the wounded condition. As with Treat Wounds, you can attempt checks against higher DCs if you have the minimum proficiency rank. The target is then temporarily immune to your Battle Medicine for 1 day."
-                        },
-                        new
-                        {
-                            Id = new Guid("4ca461d1-0a65-42e2-8171-d30269bccf2c"),
-                            FeatId = new Guid("1acd1549-a4de-477d-a3f4-e862c04c8a7a"),
-                            Text = "You can draw upon strange variations in your spellcasting, whether or not you can cast occult spells. The DCs to Recognize Spells you cast and Identify Magic you use increase by 5."
-                        },
-                        new
-                        {
-                            Id = new Guid("0b8ded86-03cd-412f-a306-67aead75c577"),
-                            FeatId = new Guid("0422a543-ec8f-4c04-9e15-5b4fd5c1f065"),
-                            Text = "You forge strong connections with animals. You can spend 7 days of downtime regularly interacting with a normal animal (not a companion or other special animal) that is friendly or helpful to you. After this duration, attempt a DC 20 Nature check. If successful, you bond with the animal. The animal is permanently helpful to you, unless you do something egregious to break your bond. A helpful animal is easier to direct, as described under Command an Animal on page 249. Bonding with a new animal ends any previous bond you had. You can’t have both a bonded animal and an animal companion (though you can have both a bonded animal and a familiar)."
-                        },
-                        new
-                        {
-                            Id = new Guid("e6d543e3-8f19-45b3-ade2-59d9525160eb"),
-                            FeatId = new Guid("a3395df1-fc95-4989-833c-c0d7465ecd1c"),
-                            Text = "You have incredible breath control, which grants you advantages when air is hazardous or sparse. You can hold your breath for 25 times as long as usual before suffocating. You gain a +1 circumstance bonus to saving throws against inhaled threats, such as inhaled poisons, and if you roll a success on such a saving throw, you get a critical success instead."
-                        },
-                        new
-                        {
-                            Id = new Guid("9f69671b-1e75-49a2-b6a8-d418bbf60f3f"),
-                            FeatId = new Guid("85740fcc-7aaf-494f-81d7-8360620977d1"),
-                            Text = "Your avoidance or observation is beyond the ken of most in your profession. Choose Fortitude saves, Reflex saves, Will saves, or Perception. You become an expert in your choice. At 17th level, you become a master in your choice."
-                        },
-                        new
-                        {
-                            Id = new Guid("1e6015e9-a70f-4e85-810c-bbe811bd477d"),
-                            FeatId = new Guid("9c848549-edaa-49b9-aa64-fcea1ccbc966"),
-                            Text = "Your catlike aerial acrobatics allow you to cushion your falls. Treat falls as 10 feet shorter. If you’re an expert in Acrobatics, treat falls as 25 feet shorter. If you’re a master in Acrobatics, treat them as 50 feet shorter. If you’re legendary in Acrobatics, you always land on your feet and don’t take damage, regardless of the distance of the fall."
-                        },
-                        new
-                        {
-                            Id = new Guid("d7fb4179-4b97-4759-8a00-3984bdb91602"),
-                            FeatId = new Guid("43ae43aa-11d2-420f-bf17-6978f8a45a0f"),
-                            Text = "Your charm allows you to win over those you lie to. When you get a critical success using the Lie action, the target’s attitude toward you improves by one step, as though you’d succeeded at using Diplomacy to Make an Impression. This works only once per conversation, and if you critically succeed against multiple targets using the same result, you choose one creature’s attitude to improve. You must be lying to impart seemingly important information, inflate your status, or ingratiate yourself, which trivial or irrelevant lies can’t achieve."
-                        },
-                        new
-                        {
-                            Id = new Guid("70b38a25-db58-44a1-8785-a7124775e352"),
-                            FeatId = new Guid("9ab4e3c9-f592-4c0d-ac6e-adb33651feca"),
-                            Text = "You unparalleled athletic skill allows you to jump impossible distances. Triple the distance you Long Jump (so you could jump 60 feet on a successful DC 20 check). When you High Jump, use the calculation for a Long Jump but don’t triple the distance."
-                        },
-                        new
-                        {
-                            Id = new Guid("98e7f9c9-8027-485d-af27-2de34ee1e1da"),
-                            FeatId = new Guid("9ab4e3c9-f592-4c0d-ac6e-adb33651feca"),
-                            Text = "You can jump a distance greater than your Speed by spending additional actions when you Long Jump or High Jump. For each additional action spent, add your Speed to the limit on how far you can Leap."
-                        },
-                        new
-                        {
-                            Id = new Guid("c2d3b438-cbb4-43c2-88c1-3903570434c4"),
-                            FeatId = new Guid("269b8813-ba84-42c6-9b73-11de579797bb"),
-                            Text = "Your techniques allow you to fight as you climb. You’re not flat-footed while Climbing and can Climb with a hand occupied. You must still use another hand and both legs to Climb."
-                        },
-                        new
-                        {
-                            Id = new Guid("2084aa10-37e6-4665-b379-32a1c378e09e"),
-                            FeatId = new Guid("38b0c4f7-2ad6-4c04-928d-dc53f2ff39b7"),
-                            Text = "Even when caught in falsehoods, you pile lie upon lie. Reduce the circumstance bonus a target gains for your previous attempts to Create a Diversion or Lie to it from +4 to +2. If you’re a master in Deception, reduce the bonus to +1, and if you’re legendary, your targets don’t get these bonuses at all."
-                        },
-                        new
-                        {
-                            Id = new Guid("8327dfe8-9bc4-40ab-8459-51ce05d11517"),
-                            FeatId = new Guid("a38f19f2-3b2d-4907-8425-d71dc351e8df"),
-                            Text = "You have social connections you can leverage to trade favors or meet important people. When you’re in an area with connections (typically a settlement where you’ve spent downtime building connections, or possibly another area in the same nation), you can attempt a Society check to arrange a meeting with an important political figure or ask for a favor in exchange for a later favor of your contact’s choice. The GM decides the DC based on the difficulty of the favor and the figure’s prominence."
-                        },
-                        new
-                        {
-                            Id = new Guid("ffef847d-bf3b-4b80-9e63-3a2d6714deea"),
-                            FeatId = new Guid("059f1e6a-f8cd-4be2-8024-ddc21dd7cd60"),
-                            Text = "You zealously monitor a patient’s progress to administer treatment faster. When you Treat Wounds, your patient becomes immune for only 10 minutes instead of 1 hour. This applies only to your Treat Wounds activities, not any other the patient receives."
-                        },
-                        new
-                        {
-                            Id = new Guid("38b5844d-0409-48fd-ab87-07bbe0e02f68"),
-                            FeatId = new Guid("5c26de36-847d-4a16-8871-0a2016fdfacc"),
-                            Text = "You were raised among the nobility or have learned proper etiquette and bearing, allowing you to present yourself as a noble and play games of influence and politics. You can use Society to Make an Impression on a noble, as well as with Impersonate to pretend to be a noble if you aren’t one. If you want to impersonate a specific noble, you still need to use Deception to Impersonate normally, and to Lie when necessary."
-                        },
-                        new
-                        {
-                            Id = new Guid("c729dd0c-a2bf-44f0-9d2a-7ff744c09b26"),
-                            FeatId = new Guid("2fbc54de-6f02-49d5-a01c-6adfd732a81e"),
-                            Text = "You can find ways to craft just about anything, despite restrictions. As long as you have the appropriate Crafting skill feat (such as Magical Crafting for magic items) and meet the item’s level and proficiency requirement, you ignore just about any other requirement, such as being of a specific ancestry or providing spells. The only exceptions are requirements that add to the item’s cost, including castings of spells that themselves have a cost, and requirements of special items such as the philosopher’s stone that have exclusive means of access and Crafting. The GM decides whether you can ignore a requirement."
-                        },
-                        new
-                        {
-                            Id = new Guid("49a1d867-7420-4c1d-9c70-3b36f83adf22"),
-                            FeatId = new Guid("15ccc079-da12-4678-8b48-f626e51418df"),
-                            Text = "It takes more to kill you than most. You die from the dying condition at dying 5, rather than dying 4."
-                        },
-                        new
-                        {
-                            Id = new Guid("538628da-6b39-455a-919a-7b2d8de5ff61"),
-                            FeatId = new Guid("17f35e0f-3778-4143-b516-d08faf79bc68"),
-                            Text = "You’re so immersed in divine scripture that you find meaning and guidance in your texts in any situation. Spend 10 minutes Deciphering Writing on religious scriptures of your deity or philosophy while thinking about a particular problem or conundrum you face, and then attempt a Religion check (DC determined by the GM). If you succeed, you unearth a relevant passage, parable, or aphorism that can help you move forward or change your thinking to help solve your conundrum. For example, the GM might provide you with a cryptic poem or hint that can guide you to the next step of solving your problem."
-                        },
-                        new
-                        {
-                            Id = new Guid("28d7b87a-55a3-48f3-9071-ab3e1600f129"),
-                            FeatId = new Guid("fffc0274-b5cd-428f-8144-a7d8b01f5986"),
-                            Text = "You’re a treasure trove of information, but not all of it comes from reputable sources. When you fail (but don’t critically fail) a Recall Knowledge check using any skill, you learn a bit of true knowledge and a bit of erroneous knowledge, but you don’t have any way to differentiate which is which."
-                        },
-                        new
-                        {
-                            Id = new Guid("fd638442-dba6-4c64-a978-6076c474ffa1"),
-                            FeatId = new Guid("dbd06473-8700-438f-b4e1-35474b87171c"),
-                            Text = "You have a system that lets you search at great speed, finding details and secrets twice as quickly as others can. When Searching, you take half as long as usual to Search a given area. This means that while exploring, you double the Speed you can move while ensuring you’ve Searched an area before walking into it (up to half your Speed). If you’re legendary in Perception, you instead Search areas four times as quickly."
-                        },
-                        new
-                        {
-                            Id = new Guid("5ca60765-3953-40b6-8d4a-0532b2e4c80d"),
-                            FeatId = new Guid("0e715099-8cfd-449b-a6b0-37467f68accc"),
-                            Text = "You carefully safeguard your professional endeavors to prevent disaster. When you use Lore to Earn Income, if you roll a critical failure, you instead get a failure. If you’re an expert in Lore, you gain twice as much income from a failed check to Earn Income, unless it was originally a critical failure."
-                        },
-                        new
-                        {
-                            Id = new Guid("0b11531a-68c6-4cd9-a7f9-e4f3494f4ab3"),
-                            FeatId = new Guid("fa30f639-b913-4050-b7bc-a8e9991178f1"),
-                            Text = "You often smuggle things past the authorities. When the GM rolls your Stealth check to see if a passive observer notices a small item you have concealed, the GM uses the number rolled or 10—whichever is higher—as the result of your die roll, adding it to your Stealth modifier to determine your Stealth check result. If you’re a master in Stealth, the GM uses the number rolled or 15, and if you’re legendary in Stealth, you automatically succeed at hiding a small concealed item from passive observers. This provides no benefits when a creature attempts a Perception check while actively searching you for hidden items. Due to your smuggling skill, you’re more likely to find more lucrative smuggling jobs when using Underworld Lore to Earn Income"
-                        },
-                        new
-                        {
-                            Id = new Guid("1c266490-9c64-4913-a6bf-5b9ff4d37a9c"),
-                            FeatId = new Guid("a64ac93e-e7c5-46d1-85ec-72d93d5dcf7a"),
-                            Text = "Tracking is second nature to you, and when necessary you can follow a trail without pause. You can Track while moving at full Speed by taking a –5 penalty to your Survival check. If you’re a master in Survival, you don’t take the –5 penalty. If you’re legendary in Survival, you no longer need to roll a new Survival check every hour when tracking, though you still need to roll whenever there are significant changes in the trail."
-                        },
-                        new
-                        {
-                            Id = new Guid("b95929b6-0cf7-4eb3-aa95-fa8f2f2c9ca0"),
-                            FeatId = new Guid("d76bcd62-20d9-4fce-9fc1-735ec21a0cb2"),
-                            Text = "When you Perform, compare your result to the Will DC of one observer. If you succeed, the target is fascinated by you for 1 round. If the observer is in a situation that demands immediate attention, such as combat, you must critically succeed to fascinate it and the Perform action gains the incapacitation trait. You must choose which creature you’re trying to fascinate before you roll your check, and the target is then temporarily immune for 1 hour."
-                        },
-                        new
-                        {
-                            Id = new Guid("0589bdf3-abf3-4850-a9fe-5f8454150417"),
-                            FeatId = new Guid("d76bcd62-20d9-4fce-9fc1-735ec21a0cb2"),
-                            Text = "If you’re an expert in Performance, you can fascinate up to four observers; if you’re a master, you can fascinate up to 10 observers; and if you’re legendary, you can fascinate any number of observers at the same time."
-                        },
-                        new
-                        {
-                            Id = new Guid("f95849f0-3bba-430f-b44a-6828c1fbdbe9"),
-                            FeatId = new Guid("68a98dbf-4a45-4217-a94f-2d0969915d96"),
-                            Text = "Your body quickly bounces back from afflictions. You regain twice as many Hit Points from resting. Each time you succeed at a Fortitude save against an ongoing disease or poison, you reduce its stage by 2, or by 1 against a virulent disease or poison. Each critical success you achieve against an ongoing disease or poison reduces its stage by 3, or by 2 against a virulent disease or poison. In addition, you reduce the severity of your drained condition by 2 when you rest for a night instead of by 1."
-                        },
-                        new
-                        {
-                            Id = new Guid("6a59de26-a216-4f4f-b81f-094eb8998249"),
-                            FeatId = new Guid("174c21f8-b29a-4141-9070-eca5ecfdee71"),
-                            Text = "You step carefully and quickly. You can Step into difficult terrain."
-                        },
-                        new
-                        {
-                            Id = new Guid("7b4e22c3-cf7d-4ab3-9d47-3bca57cd7ed6"),
-                            FeatId = new Guid("37e3bc29-be7b-4112-92aa-0b7dddbc2da3"),
-                            Text = "You move more quickly on foot. Your Speed increases by 5 feet."
-                        },
-                        new
-                        {
-                            Id = new Guid("a36d8e49-5dd2-44c2-acb0-89d69ed09e80"),
-                            FeatId = new Guid("fccdaf8a-46b0-4a18-9a90-dbb228317b58"),
-                            Text = "You are adept at foiling creatures’ special senses and cautious enough to safeguard against them at all times. Whenever you use the Avoid Notice, Hide, or Sneak actions, you are always considered to be taking precautions against special senses (see the Detecting with Other Senses sidebar on page 465)."
-                        },
-                        new
-                        {
-                            Id = new Guid("89245459-0885-4ec0-bab4-0ce44729a508"),
-                            FeatId = new Guid("3f62ad52-d80b-4662-979c-6eb66a224801"),
-                            Text = "While using Survival to Subsist, if you roll any result worse than a success, you get a success. On a success, you can provide subsistence living for yourself and four additional creatures, and on a critical success, you can take care of twice as many creatures as on a success."
-                        },
-                        new
-                        {
-                            Id = new Guid("a6f780cc-319d-4c0e-84b5-18dd1f1b3889"),
-                            FeatId = new Guid("3f62ad52-d80b-4662-979c-6eb66a224801"),
-                            Text = "Each time your proficiency rank in Survival increases, double the number of additional creatures you can take care of on a success (to eight if you’re an expert, 16 if you’re a master, or 32 if you’re legendary). You can choose to care for half the number of additional creatures and provide a comfortable living instead of subsistence living."
-                        },
-                        new
-                        {
-                            Id = new Guid("a9300d60-b3e5-4b0b-9376-75a590caf556"),
-                            FeatId = new Guid("3f62ad52-d80b-4662-979c-6eb66a224801"),
-                            Text = "Multiple smaller creatures or creatures with significantly smaller appetites than a human are counted as a single creature for this feat, and larger creatures or those with significantly greater appetites each count as multiple creatures. The GM determines how much a non-human creature needs to eat."
-                        },
-                        new
-                        {
-                            Id = new Guid("d0c298c6-63be-431c-80e9-5a95ec712f73"),
-                            FeatId = new Guid("6f59e2f4-2100-436d-8cf8-266585faa937"),
-                            Text = "First impressions are your strong suit. When you meet someone in a casual or social situation, you can immediately attempt a Diplomacy check to Make an Impression on that creature rather than needing to converse for 1 minute. You take a –5 penalty to the check. If you fail or critically fail, you can engage in 1 minute of conversation and attempt a new check at the end of that time rather than accepting the failure or critical failure result."
-                        },
-                        new
-                        {
-                            Id = new Guid("0482965b-932e-407e-a445-337a78cb3eca"),
-                            FeatId = new Guid("ccdd4b23-9813-407e-a7a6-8bc2cdafbab5"),
-                            Text = "When you Coerce, you can compare your Intimidation check result to the Will DCs of two targets instead of one. It’s possible to get a different degree of success for each target. The number of targets you can Coerce in a single action increases to four if you’re an expert, 10 if you’re a master, and 25 if you’re legendary."
-                        },
-                        new
-                        {
-                            Id = new Guid("7dd54aeb-9180-4509-ac60-9d9f31b4d9c9"),
-                            FeatId = new Guid("738f86de-6f73-4ffa-a790-abd8feeb43c5"),
-                            Text = "When you Make an Impression, you can compare your Diplomacy check result to the Will DCs of two targets instead of one. It’s possible to get a different degree of success for each target. The number of targets increases to four if you’re an expert, 10 if you’re a master, and 25 if you’re legendary."
-                        },
-                        new
-                        {
-                            Id = new Guid("b916a391-2032-4ec4-b914-f40d36019fa8"),
-                            FeatId = new Guid("18e0c385-d2ba-4646-989d-2e49d43d5f36"),
-                            Text = "You can carry more than your frame implies. Increase your maximum and encumbered Bulk limits by 2."
-                        },
-                        new
-                        {
-                            Id = new Guid("550d9521-8aa7-45c5-85f0-0d3871077f8d"),
-                            FeatId = new Guid("43f75824-0d49-466f-aa58-e40046c4a6d4"),
-                            Text = "You are skilled at learning information through conversation. The Gather Information exploration activity takes you half as long as normal (typically reducing the time to 1 hour). If you’re a master in Diplomacy and you Gather Information at the normal speed, when you attempt to do so and roll a critical failure, you get a failure instead. There is still no guarantee that a rumor you learn with Gather Information is accurate."
-                        },
-                        new
-                        {
-                            Id = new Guid("6b5087c0-7e76-445c-966e-7a50f572448f"),
-                            FeatId = new Guid("89921651-065e-48f8-98cb-c9b6cf6c71e9"),
-                            Text = "You craft flawless creations with great efficiency. Whenever you roll a success at a Crafting check to make an item of the type you chose with Specialty Crafting, you get a critical success instead."
-                        },
-                        new
-                        {
-                            Id = new Guid("44cfef57-7ea2-4289-bab1-9721399c2190"),
-                            FeatId = new Guid("3d690c93-0e1b-42c8-9d62-4e4219729dec"),
-                            Text = "You react more quickly than others can. You gain a +2 circumstance bonus to initiative rolls."
-                        },
-                        new
-                        {
-                            Id = new Guid("180ac1bb-e6ae-4d53-b33a-71978026a8e5"),
-                            FeatId = new Guid("6f87700e-7194-47d6-a9b2-20e0e2e53482"),
-                            Text = "Your performances inspire admiration and win you fans. You can Make an Impression using Performance instead of Diplomacy."
-                        },
-                        new
-                        {
-                            Id = new Guid("7be3eec5-5c9b-4f76-b412-3bec0c802dd6"),
-                            FeatId = new Guid("9b475bb4-2086-4f81-b4ab-ef3f8f09f5db"),
-                            Text = "You have an incredible ability to invest more magic items. Increase your limit on invested items from 10 to 12."
-                        },
-                        new
-                        {
-                            Id = new Guid("eedd663a-d431-476d-9125-5d45f19d4ec3"),
-                            FeatId = new Guid("a1804dfb-e3e0-45aa-b735-2f37fed15779"),
-                            Text = "You can Demoralize with a mere glare. When you do, Demoralize loses the auditory trait and gains the visual trait, and you don’t take a penalty if the creature doesn’t understand your language."
-                        },
-                        new
-                        {
-                            Id = new Guid("0f251d56-cfff-45a5-9133-ddda22b51196"),
-                            FeatId = new Guid("0f49189c-434c-4490-8cbe-5235e6274441"),
-                            Text = "In situations where you can physically menace the target when you Coerce or Demoralize, you gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty for not sharing a language. If your Strength score is 20 or higher and you are a master in Intimidation, this bonus increases to +2."
-                        },
-                        new
-                        {
-                            Id = new Guid("23d9c608-82be-4500-8430-ece2f345a971"),
-                            FeatId = new Guid("c8dd98a8-e102-4751-9606-88ed457bfdeb"),
-                            Text = "You are a genius at Crafting, easily able to determine how things are made and create new inventions. You can spend downtime to invent a common formula that you don’t know. This works just like the Craft activity: you spend half the Price of the formula up front, attempt a Crafting check, and on a success either finish the formula by paying the difference or work for longer to decrease the Price. The difference is that you spend the additional time in research, design, and development, rather than in creating an item. Once it’s complete, you add the new formula you invented to your formula book."
-                        },
-                        new
-                        {
-                            Id = new Guid("e0ff07c3-5e1e-4258-8e85-c1255b47705e"),
-                            FeatId = new Guid("4f6b0041-df64-4d81-9ddd-baebcfdd28ed"),
-                            Text = "You stand up. This movement doesn’t trigger reactions."
-                        },
-                        new
-                        {
-                            Id = new Guid("f1ce54f4-d426-4acf-bda9-645a50a04a01"),
-                            FeatId = new Guid("37f7d759-3c83-491a-a516-b41b64cf57a7"),
-                            Text = "When you successfully Coerce someone, the maximum time they comply increases to a week, still determined by the GM. If you’re legendary, the maximum increases to a month."
-                        },
-                        new
-                        {
-                            Id = new Guid("c92cea06-9c7d-43a4-906d-e532765fd3f2"),
-                            FeatId = new Guid("06f5008a-8b53-4c11-b0ec-2176e135d8b8"),
-                            Text = "Your skill with languages and codes is so great that you can decipher information with little more than a quick read through a text. You can Decipher Writing using Society while reading at normal speed. If you slow down and spend the full amount of time that’s ordinarily required and roll a success, you get a critical success; if you critically succeed while spending the normal amount of time, you gain a nearly word-for-word understanding of the document."
-                        },
-                        new
-                        {
-                            Id = new Guid("6156f6a0-8ca3-4260-aa1c-8842c9a6d780"),
-                            FeatId = new Guid("3afb7bd6-f0c2-4187-9d47-f7a06d512fd3"),
-                            Text = "You’re so skilled with languages you can create a pidgin instantly. You can always talk to any creature that has a language—even a language you don’t know —by creating a new pidgin language that uses simplified terms and conveys basic concepts. To do so, you must first understand at least what medium of communication the creature uses (speech, sign language, and so on)."
-                        },
-                        new
-                        {
-                            Id = new Guid("af297ffe-fd7d-42b4-93b4-05f79cc46251"),
-                            FeatId = new Guid("c041f814-94c4-43a1-be45-3bcd2621f2bb"),
-                            Text = "You’ve discovered medical breakthroughs or techniques that achieve miraculous results. Once per day for each target, you can spend 1 hour treating that target and attempt a Medicine check to remove a disease or the blinded, deafened, doomed, or drained condition. Use the DC of the disease or of the spell or effect that created the condition. If the effect’s source is an artifact, above 20th level, or similarly powerful, increase the DC by 10."
-                        },
-                        new
-                        {
-                            Id = new Guid("be06ab53-d3f3-48bd-95b0-e5ed0ef51451"),
-                            FeatId = new Guid("5803b272-2368-49ce-ba0b-8c97aa753885"),
-                            Text = "You can negotiate incredibly quickly in adverse situations. You attempt to Make an Impression and then Request your opponent cease their current activity and engage in negotiations. You take a –5 penalty to your Diplomacy check. The GM sets the DC of the Request based on the circumstances—it’s generally at least a very hard DC of the creature’s level. Some creatures might simply refuse, and even those who agree to parley might ultimately find your arguments lacking and return to violence."
-                        },
-                        new
-                        {
-                            Id = new Guid("30714efb-c8ad-4874-a32a-a5361cbe1924"),
-                            FeatId = new Guid("12456924-12d6-4f6e-bde1-100892c683b5"),
-                            Text = "Your fame has spread throughout the lands. NPCs who succeed at a DC 10 Society check to Recall Knowledge have heard of you and usually have an attitude toward you one step better than normal, depending on your reputation and the NPC’s disposition. For instance, if you’re well-known for cruel and demanding behavior, creatures might be intimidated by you, rather than be friendly toward you. When you Earn Income with Performance, you attract higher-level audiences than your location would allow, as audiences flock to see you. For instance, rulers and angels might travel to your small tower in the woods to hear you perform. Typically, this increases the audiences available by 2 levels or more, determined by the GM."
-                        },
-                        new
-                        {
-                            Id = new Guid("b1851b98-e05d-4c7a-bed7-90b4e44ddc0a"),
-                            FeatId = new Guid("171b6ae6-cda9-45a7-8c0a-64672e338e0b"),
-                            Text = "Your fame has spread throughout the lands (for instance, if you have Warfare Lore, you might be a legendary general or tactician). This works as Legendary Performer above, except you gain higher-level jobs when you Earn Income with Lore."
-                        },
-                        new
-                        {
-                            Id = new Guid("4e989ca3-733a-4120-aa84-aaba3aa053f8"),
-                            FeatId = new Guid("ff4b4b20-73c2-4a67-a1a5-e504c8aa2dc6"),
-                            Text = "You’re always sneaking unless you choose to be seen, even when there’s nowhere to hide. You can Hide and Sneak even without cover or being concealed. When you employ an exploration tactic other than Avoiding Notice, you also gain the benefits of Avoiding Notice unless you choose not to. See page 479 for more information about exploration tactics."
-                        },
-                        new
-                        {
-                            Id = new Guid("308d6b71-ee1c-4e7b-b3b5-1ef198b64205"),
-                            FeatId = new Guid("d264d400-645f-4e7e-8100-ae5b2caf9e0e"),
-                            Text = "You can survive indefinitely without food or water and can endure severe, extreme, and incredible cold and heat without taking damage from doing so."
-                        },
-                        new
-                        {
-                            Id = new Guid("9dfdb9a4-49d8-41a6-a8ac-2ea5e9e4626c"),
-                            FeatId = new Guid("9ee79ba9-47ac-4cf5-906d-9e88190e8d22"),
-                            Text = "Your ability to Steal defies belief. You can attempt to Steal something that is actively wielded or that would be extremely noticeable or time consuming to remove (like worn shoes or armor). You must do so slowly and carefully, spending at least 1 minute (and significantly longer for items that are normally time consuming to remove, like armor). Throughout this duration you must have some means of staying hidden, such as the cover of darkness or a bustling crowd. You take a –5 penalty to your Thievery check. Even if you succeed, if the item is extremely prominent—like a suit of full plate armor—onlookers will quickly notice it’s gone after you steal it."
-                        },
-                        new
-                        {
-                            Id = new Guid("c479e6b3-e61e-4e45-8b4e-7375df616325"),
-                            FeatId = new Guid("8bfbc2e3-87d6-480d-8fd7-baeb77e465cd"),
-                            Text = "When you critically succeed to Create a Diversion, you continue to remain hidden after the end of your turn. This effect lasts for an amount of time that depends on the diversion and situation, as determined by the GM (minimum 1 additional round)."
-                        },
-                        new
-                        {
-                            Id = new Guid("2d1ff363-b4d4-43e3-910c-dac144202e6d"),
-                            FeatId = new Guid("1332e046-d8ea-4a33-9a07-69308317891c"),
-                            Text = "You can use Deception to weave traps to trip up anyone trying to deceive you. If you can engage in conversation with someone trying to Lie to you, use your Deception DC if it is higher than your Perception DC to determine whether they succeed. This doesn’t apply if you don’t have a back-and-forth dialogue, such as when someone attempts to Lie during a long speech."
-                        },
-                        new
-                        {
-                            Id = new Guid("8667db8e-760b-4b1d-a0b1-559e02a22b15"),
-                            FeatId = new Guid("a90aba98-98fe-4a4d-86a6-93025e5d558a"),
-                            Text = "You can Craft magic items, though some have other requirements, as listed in Chapter 11. When you select this feat, you gain formulas for four common magic items of 2nd level or lower."
-                        },
-                        new
-                        {
-                            Id = new Guid("52ea6d08-fd50-45a1-8ee9-2dca70178979"),
-                            FeatId = new Guid("53bda5e8-f9d2-461f-9495-c9db35ab99c1"),
-                            Text = "Learning spells comes easily to you. If you’re an expert in a tradition’s associated skill, you take 10 minutes per spell level to learn a spell of that tradition, rather than 1 hour per spell level. If you fail to learn the spell, you can try again after 1 week or after you gain a level, whichever comes first. If you’re a master in the tradition’s associated skill, learning a spell takes 5 minutes per spell level, and if you’re legendary, it takes 1 minute per spell level. You can use downtime to learn and inscribe new spells. This works as if you were using Earn Income with the tradition’s associated skill, but instead of gaining money, you choose a spell available to you to learn and gain a discount on learning it, learning it for free if your earned income equals or exceeds its cost."
-                        },
-                        new
-                        {
-                            Id = new Guid("5983317e-3930-45c3-a5b2-d286fd3bf850"),
-                            FeatId = new Guid("8dc95af1-d049-457f-91f8-311ead81336d"),
-                            Text = "You easily pick up new languages. You learn two new languages, chosen from common languages, uncommon languages, and any others you have access to. You learn an additional language if you are or become a master in Society and again if you are or become legendary."
-                        },
-                        new
-                        {
-                            Id = new Guid("068516d5-9c17-490a-8f75-cf975420ca79"),
-                            FeatId = new Guid("c7443dbf-2f52-48df-a53c-8dd6ad6732c0"),
-                            Text = "You can apply natural cures to heal your allies. You can use Nature instead of Medicine to Treat Wounds. If you’re in the wilderness, you might have easier access to fresh ingredients, allowing you to gain a +2 circumstance bonus to your check to Treat Wounds using Nature, subject to the GM’s determination."
-                        },
-                        new
-                        {
-                            Id = new Guid("614b8596-39fa-4006-903f-355857fc1e2d"),
-                            FeatId = new Guid("df3e0135-e1de-4b1f-a580-19f521c5f328"),
-                            Text = "You can Crawl incredibly swiftly—up to half your Speed, rather than 5 feet. If you’re a master in Acrobatics, you can Crawl at full Speed, and if you’re legendary, you aren’t flat-footed while prone."
-                        },
-                        new
-                        {
-                            Id = new Guid("947e2872-b7c3-4255-839d-6bde545f65e7"),
-                            FeatId = new Guid("f552a716-9e47-457c-a9ec-51fa8cd3a85d"),
-                            Text = "You have a sense for spells that twist minds or reveal secrets. You gain a +2 circumstance bonus to Occultism checks to Identify Magic with the mental, possession, prediction, or scrying traits."
-                        },
-                        new
-                        {
-                            Id = new Guid("d5968cb8-d28f-4615-a56a-00d65455649b"),
-                            FeatId = new Guid("d1f81e6f-f97f-4bf3-8ddb-7db5ff7c351c"),
-                            Text = "You can Steal or Palm an Object that’s closely guarded, such as in a pocket, without taking the –5 penalty. You can’t steal objects that would be extremely noticeable or time consuming to remove (like worn shoes or armor or actively wielded objects). If you’re a master in Thievery, you can attempt to Steal from a creature in combat or otherwise on guard. When doing so, Stealing requires 2 manipulate actions instead of 1, and you take a –5 penalty."
-                        },
-                        new
-                        {
-                            Id = new Guid("3345970c-ae02-486b-a2ea-75eef371f9a4"),
-                            FeatId = new Guid("9415b689-43b4-4177-b861-32cab298b5fe"),
-                            Text = "You can Subsist using Survival on different planes, even those without resources or natural phenomena you normally need. For instance, you can forage for food even if the plane lacks food that could normally sustain you. A success on your check to Subsist can also reduce the damage dealt by the plane, at the GM’s discretion."
-                        },
-                        new
-                        {
-                            Id = new Guid("c30bef55-a24b-4a39-99ef-0e0bd895355a"),
-                            FeatId = new Guid("24bfd707-04bb-4464-a3ad-e1dd040c0377"),
-                            Text = "When you Leap, you can jump 5 feet up with a vertical Leap, and you increase the distance you can jump horizontally by 5 feet."
-                        },
-                        new
-                        {
-                            Id = new Guid("497171c0-318e-4491-b527-ce421ee5ab7f"),
-                            FeatId = new Guid("2a59396f-bf2a-4075-8207-3c906b7624ff"),
-                            Text = "When Climbing, you move 5 more feet on a success and 10 more feet on a critical success, to a maximum of your Speed."
-                        },
-                        new
-                        {
-                            Id = new Guid("3b09f3f6-9075-4013-9bd5-d674e3f00ffc"),
-                            FeatId = new Guid("2a59396f-bf2a-4075-8207-3c906b7624ff"),
-                            Text = "If you’re legendary in Athletics, you gain a climb Speed equal to your Speed."
-                        },
-                        new
-                        {
-                            Id = new Guid("99c2075b-62d3-4927-8c61-c6d4f79d7fd9"),
-                            FeatId = new Guid("89a41605-0006-4a7b-a101-f73d32f75a04"),
-                            Text = "You can bully others with just a few choice implications. You can Coerce a creature after 1 round of conversation instead of 1 minute. You still can’t Coerce a creature in the midst of combat, or without engaging in a conversation."
-                        },
-                        new
-                        {
-                            Id = new Guid("9ac62ad5-c1ab-46ae-8e36-403268396a6e"),
-                            FeatId = new Guid("064690bd-cd97-47a5-9e4c-fb8672bb6225"),
-                            Text = "You can set up a disguise in half the usual time (generally 5 minutes). If you’re a master, it takes one-tenth the usual time (usually 1 minute). If you’re legendary, you can create a full disguise and Impersonate as a 3-action activity."
-                        },
-                        new
-                        {
-                            Id = new Guid("5cdf024f-58b7-4b4b-9170-a8b758d94618"),
-                            FeatId = new Guid("7e3b8e25-d2ad-400e-9b03-a4993d0e5f8b"),
-                            Text = "You can Identify Magic swiftly. You take only 1 minute when using Identify Magic to determine the properties of an item, ongoing effect, or location, rather than 10 minutes. If you’re a master, it takes a 3-action activity, and if you’re legendary, it takes 1 action."
-                        },
-                        new
-                        {
-                            Id = new Guid("e32321a9-80fd-4f59-939d-9a0dd3c98862"),
-                            FeatId = new Guid("7586b528-bef3-41be-b1f0-ea1fcb958c88"),
-                            Text = "You can use High Jump and Long Jump as a single action instead of 2 actions. If you do, you don’t perform the initial Stride (nor do you fail if you don’t Stride 10 feet)."
-                        },
-                        new
-                        {
-                            Id = new Guid("32cdf8c4-ea19-43b2-8cf4-8b462fee385d"),
-                            FeatId = new Guid("8df39189-1886-4523-95b0-5980cad573f4"),
-                            Text = "You Recognize Spells swiftly. Once per round, you can Recognize a Spell using a skill in which you’re a master as a free action."
-                        },
-                        new
-                        {
-                            Id = new Guid("79f8ff8b-a14d-4621-ab56-df66be388a38"),
-                            FeatId = new Guid("48c371fb-6e9c-4d4f-965d-d56694b52100"),
-                            Text = "You take 1 minute to Repair an item. If you’re a master in Crafting, it takes 3 actions. If you’re legendary, it takes 1 action."
-                        },
-                        new
-                        {
-                            Id = new Guid("605cae2e-9971-44ec-9fe2-9df99dd6fa87"),
-                            FeatId = new Guid("8a71ca0e-0c73-4fdd-bde7-431f3237bca6"),
-                            Text = "You Squeeze 5 feet per round (10 feet on a critical success). If you’re legendary in Acrobatics, you Squeeze at full Speed."
-                        },
-                        new
-                        {
-                            Id = new Guid("08b12c02-c83f-43de-be5c-dd9ec87334cf"),
-                            FeatId = new Guid("eda136b0-c9e5-4b60-abd3-cc534c043a00"),
-                            Text = "You Swim 5 feet farther on a success and 10 feet farther on a critical success, to a maximum of your Speed. If you’re legendary in Athletics, you gain a swim Speed equal to your Speed."
-                        },
-                        new
-                        {
-                            Id = new Guid("7e74f923-5877-4e70-b996-be37b21a8fbc"),
-                            FeatId = new Guid("f3cdc428-01a4-4687-8d48-8de530cbd154"),
-                            Text = "You can Pick a Lock using 1 action instead of 2."
-                        },
-                        new
-                        {
-                            Id = new Guid("755917de-c9d7-4d39-a1ea-9e6c72ab7885"),
-                            FeatId = new Guid("f725b35e-73bc-45b9-b5ee-6dfb225147b4"),
-                            Text = "You’re skilled at moving with a group. When you are Avoiding Notice and your allies Follow the Expert, you and those allies can roll a single Stealth check, using the lowest modifier, instead of rolling separately. This doesn’t apply for initiative rolls."
-                        },
-                        new
-                        {
-                            Id = new Guid("600a8c6c-ad12-4e0c-b656-70f740cce02e"),
-                            FeatId = new Guid("73d6b44a-a2a6-4a70-be2c-2dd59c09657a"),
-                            Text = "You easily pull yourself onto ledges. When you Grab an Edge, you can pull yourself onto that surface and stand. You can use Athletics instead of a Reflex save to Grab an Edge."
-                        },
-                        new
-                        {
-                            Id = new Guid("fe9c688e-04a1-4e87-bfea-ad1d9224efd5"),
-                            FeatId = new Guid("ad4fe73a-0518-46c1-bfee-130d1b2053ab"),
-                            Text = "You can read lips of others nearby who you can clearly see. When you’re at your leisure, you can do this automatically. In encounter mode or when attempting a more difficult feat of lipreading, you’re fascinated and flat-footed during each round in which you focus on lip movements, and you must succeed at a Society check (DC determined by the GM) to successfully read someone’s lips. In either case, the language read must be one that you know."
-                        },
-                        new
-                        {
-                            Id = new Guid("aa2b2d06-a965-4e6a-ba72-099e3d2b4def"),
-                            FeatId = new Guid("30763d23-d261-4295-b636-f94bca378bec"),
-                            Text = "If you are trained in the appropriate skill for the spell’s tradition and it’s a common spell of 2nd level or lower, you automatically identify it (you still roll to attempt to get a critical success, but can’t get a worse result than success). The highest level of spell you automatically identify increases to 4 if you’re an expert, 6 if you’re a master, and 10 if you’re legendary. The GM rolls a secret Arcana, Nature, Occultism, or Religion check, whichever corresponds to the tradition of the spell being cast. If you’re not trained in the skill, you can’t get a result better than failure."
-                        },
-                        new
-                        {
-                            Id = new Guid("5a2ebba7-943f-4b48-87e7-23a5bd5891a4"),
-                            FeatId = new Guid("8ee83a83-4763-4423-87ff-c12ef752a494"),
-                            Text = "When you Command an Animal you’re mounted on to take a move action (such as Stride), you automatically succeed instead of needing to attempt a check. Any animal you’re mounted on acts on your turn, like a minion. If you Mount an animal in the middle of an encounter, it skips its next turn and then acts on your next turn. Page 249 has more on Command an Animal."
-                        },
-                        new
-                        {
-                            Id = new Guid("5b465363-62e4-41bb-a073-96f9423c8c4e"),
-                            FeatId = new Guid("2107ba8d-4766-4434-b23e-fe90d9837b02"),
-                            Text = "You learned folk medicine to help recover from diseases and poison, and using it diligently has made you especially resilient. When you Treat a Disease or a Poison, or someone else uses one of these actions on you, increase the circumstance bonus granted on a success to +4, and if the result of the patient’s saving throw is a success, the patient gets a critical success."
-                        },
-                        new
-                        {
-                            Id = new Guid("8a8dd86f-24fc-469c-b760-011217f25d3c"),
-                            FeatId = new Guid("045ae2b1-ef9d-44a3-898d-8feb0832b94c"),
-                            Text = "You can frighten foes so much, they might die. Attempt an Intimidation check against the Will DC of a living creature within 30 feet of you that you sense or observe and who can sense or observe you. If the target can’t hear you or doesn’t understand the language you are speaking, you take a –4 circumstance penalty. The creature is temporarily immune for 1 minute."
-                        },
-                        new
-                        {
-                            Id = new Guid("2f35abd2-9e98-470e-a8a4-12ff83325793"),
-                            FeatId = new Guid("3bb4c8cd-9368-43dd-92b2-99174568570a"),
-                            Text = "You can downplay the consequences or outrageousness of your requests using sheer brazenness and charm. When you Request something, you reduce any DC increases for making an outrageous request by 2, and if you roll a critical failure for your Request, you get a failure instead. While this means you can never cause your target to reduce their attitude toward you by making a Request, they eventually tire of requests, even though they still have a positive attitude toward you."
-                        },
-                        new
-                        {
-                            Id = new Guid("0f984b03-0710-45ec-b3d2-8b79b3bad4d1"),
-                            FeatId = new Guid("7aded813-2325-4a4d-aea7-077680584823"),
-                            Text = "You learn the sign languages associated with the languages you know, allowing you to sign and understand signs. Sign languages typically require both hands to convey more complex concepts, and they are visual rather than auditory."
-                        },
-                        new
-                        {
-                            Id = new Guid("6f804bdb-e8ea-4b94-b8da-9dd428098588"),
-                            FeatId = new Guid("7aded813-2325-4a4d-aea7-077680584823"),
-                            Text = "Sign language is difficult to understand during combat due to the level of attention needed, unlike basic gestures like pointing at a foe to suggest a target. Sign language is hard to use in areas of low visibility, just like speech is difficult in a noisy environment."
-                        },
-                        new
-                        {
-                            Id = new Guid("0edf9962-598d-4813-bdef-f310458b9ea6"),
-                            FeatId = new Guid("b5a95cad-67ab-4716-b582-4a11d8b863d1"),
-                            Text = "You become trained in the skill of your choice."
-                        },
-                        new
-                        {
-                            Id = new Guid("c2f95e6a-d3ee-41a3-b9c5-2ce52b87cb28"),
-                            FeatId = new Guid("d466988f-8d00-4230-ab88-5c963abbecd1"),
-                            Text = "You elude and evade attempts to uncover your true nature or intentions. When a spell or magical effect tries to read your mind, detect whether you are lying, or reveal your alignment, you can attempt a Deception check against the spell or effect’s DC. If you succeed, the effect reveals nothing."
-                        },
-                        new
-                        {
-                            Id = new Guid("ab3c5f8b-1cea-4981-b30d-fc1d811fc593"),
-                            FeatId = new Guid("2b952cb7-5972-4866-a8d3-92410b2ed759"),
-                            Text = "You can use the Craft activity to create snares, using the rules from page 244. When you select this feat, you add the formulas for four common snares to your formula book."
-                        },
-                        new
-                        {
-                            Id = new Guid("19cd7955-cd5b-4133-8967-48d9f9379ef4"),
-                            FeatId = new Guid("b1c71e21-bea7-453b-b23a-13ecc1b3675b"),
-                            Text = "In situations where you can physically menace the target when you Coerce or Demoralize, you gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty for not sharing a language. If your Strength score is 20 or higher and you are a master in Intimidation, this bonus increases to +2."
-                        },
-                        new
-                        {
-                            Id = new Guid("3437ee0d-8348-4ee0-b08f-7cb793843223"),
-                            FeatId = new Guid("b1c71e21-bea7-453b-b23a-13ecc1b3675b"),
-                            Text = "If it’s unclear whether the specialty applies, the GM decides. Some specialties might apply only partially. For example, if you were making a morningstar and had specialty in woodworking, the GM might give you half your bonus because the item requires both blacksmithing and woodworking."
-                        },
-                        new
-                        {
-                            Id = new Guid("be009048-9abe-439f-97f1-d78289d9752c"),
-                            FeatId = new Guid("7ba0d3ef-7d44-42e4-8e2d-0b8bce8c9d16"),
-                            Text = "You can keep your balance easily, even in adverse conditions. Whenever you roll a success using the Balance action, you get a critical success instead. You’re not flat-footed while attempting to Balance on narrow surfaces and uneven ground. Thanks to your incredible balance, you can attempt an Acrobatics check instead of a Reflex save to Grab an Edge."
-                        },
-                        new
-                        {
-                            Id = new Guid("b49e4a7d-a147-40c2-a552-b71770e29367"),
-                            FeatId = new Guid("7de0d323-fc78-4154-a4d0-91e8af5ef631"),
-                            Text = "You know about life on the streets and feel the pulse of your local settlement. You can use your Society modifier instead of your Diplomacy modifier to Gather Information. In any settlement you frequent regularly, you can use the Recall Knowledge action with Society to know the same sorts of information that you could discover with Diplomacy to Gather Information. The DC is usually significantly higher, but you know the information without spending time gathering it. If you fail to recall the information, you can still subsequently attempt to Gather Information normally."
-                        },
-                        new
-                        {
-                            Id = new Guid("9f681c15-5e28-4526-9a4c-aebaf2ec9179"),
-                            FeatId = new Guid("ec332db6-b06a-4a93-9935-756953f7a857"),
-                            Text = "You’ve researched many faiths enough to recognize notions about them that are unlikely to be true. If you roll a critical failure at a Religion check to Decipher Writing of a religious nature or to Recall Knowledge about the tenets of faiths, you get a failure instead. When attempting to Recall Knowledge about the tenets of your own faith, if you roll a failure, you get a success instead, and if you roll a success, you get a critical success instead."
-                        },
-                        new
-                        {
-                            Id = new Guid("78f751ba-70e0-475e-89fc-d2f5f5006e43"),
-                            FeatId = new Guid("2818e8e6-4d55-4f83-ad45-6decff2673c1"),
-                            Text = "When you successfully Steal something, observers (creatures other than the creature you stole from) take a –2 circumstance penalty to their Perception DCs to detect your theft. Additionally, if you first Create a Diversion using Deception, taking a single Palm an Object or Steal action doesn’t end your undetected condition."
-                        },
-                        new
-                        {
-                            Id = new Guid("af6883b2-2994-4d9a-825e-0aaf92040d99"),
-                            FeatId = new Guid("67a42abf-7456-4bca-a74b-ef8d2fdc4459"),
-                            Text = "You can study details in the wilderness to determine the presence of nearby creatures. You can spend 10 minutes assessing the area around you to find out what creatures are nearby, based on nests, scat, and marks on vegetation. Attempt a Survival check against a DC determined by the GM based on how obvious the signs are. On a success, you can attempt a Recall Knowledge check with a –2 penalty to learn more about the creatures just from these signs. If you’re a master in Survival, you don’t take the penalty."
-                        },
-                        new
-                        {
-                            Id = new Guid("d0dfc3c2-425e-4551-9964-bbdf182c468b"),
-                            FeatId = new Guid("3539bdbe-8e7f-45c0-a094-649d85d3adca"),
-                            Text = "You can move your full Speed when you Sneak. You can use Swift Sneak while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type."
-                        },
-                        new
-                        {
-                            Id = new Guid("4ebf2045-8b7f-4573-8f3b-af03c404638b"),
-                            FeatId = new Guid("17232376-8797-4f5b-bee0-2614d6938d5a"),
-                            Text = "Your experience in navigating a certain type of terrain makes you supremely confident while doing so. You gain a +1 circumstance bonus to Survival checks in one of the following types of terrain, chosen when you select this feat: aquatic, arctic, desert, forest, mountain, plains, sky, swamp, or underground."
-                        },
-                        new
-                        {
-                            Id = new Guid("310c2c54-d5b7-408f-81c4-4465fcd9b9f2"),
-                            FeatId = new Guid("288c9224-1ffe-4acc-8343-ba9a40e76c38"),
-                            Text = "Select one type of difficult terrain from the following list: rubble, snow, or underbrush. While undetected by all non-allies in that type of terrain, you can Sneak without attempting a Stealth check as long as you move no more than 5 feet and do not move within 10 feet of an enemy at any point during your movement. This also allows you to automatically approach creatures to within 15 feet while Avoiding Notice during exploration as long as they aren’t actively Searching or on guard."
-                        },
-                        new
-                        {
-                            Id = new Guid("d8f33acf-ba7f-4aec-a5e0-962dd317b1f8"),
-                            FeatId = new Guid("064e540b-673f-4abb-bacc-fda48911b21a"),
-                            Text = "When you critically succeed at the Demoralize action, if the target’s level is lower than yours, the target is fleeing for 1 round."
-                        },
-                        new
-                        {
-                            Id = new Guid("0a652425-e8de-4a6d-83e8-523505d4f747"),
-                            FeatId = new Guid("fee17526-90f5-401c-bdec-d084f40852a7"),
-                            Text = "You can attempt to Disarm, Grapple, Shove, or Trip creatures up to two sizes larger than you, or up to three sizes larger than you if you’re legendary in Athletics."
-                        },
-                        new
-                        {
-                            Id = new Guid("76c25d32-da2f-4db2-af66-56b8b3542db9"),
-                            FeatId = new Guid("5fec7506-9390-4455-83ed-fc3666ca4fa2"),
-                            Text = "You can withstand more punishment than most before succumbing. Increase your maximum Hit Points by your level. You reduce the DC of recovery checks by 1 (page 459)."
-                        },
-                        new
-                        {
-                            Id = new Guid("13825e71-f1db-4f44-9ec8-3bdf31a04712"),
-                            FeatId = new Guid("d1d5b37b-2fcd-4699-892f-5c81cc437323"),
-                            Text = "You spend time teaching an animal to do a certain action. You can either select a basic action the animal already knows how to do (typically those listed in the Command an Animal action on page 249) or attempt to teach the animal a new basic action. The GM determines the DC of any check required and the amount of time the training takes (usually at least a week). It’s usually impossible to teach an animal a trick that uses critical thinking. If you’re expert, master, or legendary in Nature, you might be able to train more unusual creatures, at the GM’s discretion."
-                        },
-                        new
-                        {
-                            Id = new Guid("11d84471-94ee-4c1e-a67e-07c3ad92966e"),
-                            FeatId = new Guid("219b84b9-cb31-44df-b37e-6bf4916e5dfb"),
-                            Text = "You examine a magic item you normally couldn’t use in an effort to fool it and activate it temporarily. For example, this might allow a fighter to cast a spell from a wand or allow a wizard to cast a spell that’s not on the arcane list using a scroll. You must know what activating the item does, or you can’t attempt to trick it."
-                        },
-                        new
-                        {
-                            Id = new Guid("6cd9c0c0-51e4-4c37-96d7-a7c861812b8e"),
-                            FeatId = new Guid("219b84b9-cb31-44df-b37e-6bf4916e5dfb"),
-                            Text = "Attempt a check using the skill matching the item’s magic tradition, or matching a tradition that has the spell on its list, if you’re trying to cast a spell from the item. The relevant skills are Arcana for arcane, Nature for primal, Occultism for occult, Religion for divine, or any of the four for an item that has the magical trait and not a tradition trait. The GM determines the DC based on the item’s level (possibly adjusted depending on the item or situation)."
-                        },
-                        new
-                        {
-                            Id = new Guid("81d98c13-816a-41c5-9d33-476397d08dc7"),
-                            FeatId = new Guid("219b84b9-cb31-44df-b37e-6bf4916e5dfb"),
-                            Text = "If you activate a magic item that requires a spell attack roll or spell DC and you don’t have the ability to cast spells of the relevant tradition, use your level as your proficiency bonus and the highest of your Intelligence, Wisdom, or Charisma modifiers. If you’re a master in the appropriate skill for the item’s tradition, you instead use the trained proficiency bonus, and if you’re legendary, you instead use the expert proficiency bonus."
-                        },
-                        new
-                        {
-                            Id = new Guid("55213e09-5320-4baa-9324-35e22eb06496"),
-                            FeatId = new Guid("dfb5e49e-df3e-443e-bfbf-d41e042306ed"),
-                            Text = "You’ve learned to fight underwater. You are not flat-footed while in water, and you don’t take the usual penalties for using a bludgeoning or slashing melee weapon in water."
-                        },
-                        new
-                        {
-                            Id = new Guid("c53778be-16f6-4284-9f86-328a4191a823"),
-                            FeatId = new Guid("ce1dc7c1-c529-42a2-a2f5-f6ca99df1804"),
-                            Text = "You’ve started to make a meaningful connection about the common underpinnings of the four traditions of magic and magical essences, allowing you to understand them all through an arcane lens. Whenever you use a skill action or a skill feat that requires a Nature, Occultism, or Religion check, depending on the magic tradition, you can use Arcana instead. If you would normally take a penalty or have a higher DC for using Arcana on other magic (such as when using Identify Magic), you no longer do so."
-                        },
-                        new
-                        {
-                            Id = new Guid("95e082e4-1262-4fa5-8937-a0bf794053eb"),
-                            FeatId = new Guid("eb5ca078-b3f2-4e84-8df4-526ced138637"),
-                            Text = "You never get information about your areas of expertise wrong. When you Recall Knowledge using any Lore subcategory in which you’re trained, if you roll a critical failure, you get a failure instead. If you’re a master in a Lore subcategory, on a critical success, you gain even more information or context than usual."
-                        },
-                        new
-                        {
-                            Id = new Guid("eb92aacb-50c4-49d2-8ed0-71860ad8582e"),
-                            FeatId = new Guid("9648e97f-800c-492f-9277-93a17174bab1"),
-                            Text = "You’ve learned how to handle situations when you’re out of your depth. Your proficiency bonus to untrained skill checks is equal to half your level instead of +0. If you’re 7th level or higher, the bonus increases to your full level instead. This doesn’t allow you to use the skill’s trained actions."
-                        },
-                        new
-                        {
-                            Id = new Guid("98b0a02f-62cf-4fd1-bfc1-674b17c90563"),
-                            FeatId = new Guid("8ee11526-08b4-451e-8424-83704f0d1a70"),
-                            Text = "You have exceptional talent with one type of performance. You gain a +1 circumstance bonus when making a certain type of performance. If you are a master in Performance, this bonus increases to +2. Select one of the following specialties and apply the bonus when attempting Performance checks of that type. If it’s unclear whether the specialty applies, the GM decides."
-                        },
-                        new
-                        {
-                            Id = new Guid("8bae76df-a77a-4fb2-a16f-81864f06e55d"),
-                            FeatId = new Guid("76a68ae1-d7e0-4b2a-af54-4978b06db5cb"),
-                            Text = "You can use your momentum from a jump to propel yourself off a wall. If you’re adjacent to a wall at the end of a jump (whether performing a High Jump, Long Jump, or Leap), you don’t fall as long as your next action is another jump. Furthermore, since your previous jump gives you momentum, you can use High Jump or Long Jump as a single action, but you don’t get to Stride as part of the activity."
-                        },
-                        new
-                        {
-                            Id = new Guid("2c4b8bac-89f1-45f3-a60a-c6dfbbb00ea1"),
-                            FeatId = new Guid("76a68ae1-d7e0-4b2a-af54-4978b06db5cb"),
-                            Text = "You can use Wall Jump only once in a turn, unless you’re legendary in Athletics, in which case you can use Wall Jump as many times as you can use consecutive jump actions in that turn."
-                        },
-                        new
-                        {
-                            Id = new Guid("8156a63f-dd8b-45e7-af35-fc4e6552a587"),
-                            FeatId = new Guid("b5d31ebb-d361-4780-93c5-324bfd3c39b8"),
-                            Text = "You’ve studied in large medical wards, treating several patients at once and tending to all their needs. When you use Treat Disease or Treat Wounds, you can treat up to two targets. If you’re a master in Medicine, you can treat up to four targets, and if you’re legendary, you can treat up to eight targets."
-                        },
-                        new
-                        {
-                            Id = new Guid("73719d8e-db64-463a-99f2-c30bc4c50bab"),
-                            FeatId = new Guid("52456558-ce51-4f42-8ff2-fd4dbb72c25d"),
-                            Text = "If you trigger a device or set off a trap while disarming it, you gain a +2 circumstance bonus to your AC or saving throw against the device or trap. This applies only to attacks or effects triggered by your failed attempt, not to any later ones, such as additional attacks from a complex trap."
-                        },
-                        new
-                        {
-                            Id = new Guid("485c9894-7bac-4b39-a277-004d316976ae"),
-                            FeatId = new Guid("8b9edbcc-05ce-4df7-bc51-910ff6be643d"),
-                            Text = "You become trained in all simple weapons. If you were already trained in all simple weapons, you become trained in all martial weapons. If you were already trained in all martial weapons, you become trained in one advanced weapon of your choice."
-                        });
-                });
-
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FeatEffect", b =>
                 {
                     b.Property<Guid>("Id")
@@ -16148,7 +14337,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("TypeId");
 
-                    b.ToTable("Hazard");
+                    b.ToTable("Hazards");
 
                     b.HasData(
                         new
@@ -16845,214 +15034,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.ToTable("HazardActionEffect");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("HazardActionEffect");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardActionEffectBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("HazardActionId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("HazardActionId");
-
-                    b.ToTable("HazardActionEffectBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("bbf0858b-6ab3-4a6e-90f3-8e4ca74206a8"),
-                            HazardActionId = new Guid("ea62e9d7-f1ba-4f23-abb7-0f76ec9dbaeb"),
-                            Text = "Fire rains from the sky in a 100-mile radius, dealing 10d6 fire damage to creatures and objects in the area. Each creature or object can attempt a DC 46 basic Reflex save. Any creature reduced to 0 Hit Points by this damage dies instantly. This is not enough damage to completely burn away a forest or level an entire mountain or city, but it typically kills most creatures in the area."
-                        },
-                        new
-                        {
-                            Id = new Guid("2ac0be1a-c1b5-4269-bbac-40a7665853c4"),
-                            HazardActionId = new Guid("68d1d3fe-bca2-4a85-864c-1359f24d5dbc"),
-                            Text = "The haunt takes control of the triggering creature, forcing it to attack itself. The creature must attempt a DC 29 Will save."
-                        },
-                        new
-                        {
-                            Id = new Guid("63bd40ef-eda7-4641-8d14-e4cd5efbfbaf"),
-                            HazardActionId = new Guid("54b9c0cb-563f-412d-aa62-829de3b015c5"),
-                            Text = "The triggering creature falls in and continues to fall, potentially forever. That creature can try to Grab an Edge to avoid falling (page 472). The DC to Climb the walls or Grab an Edge is 26"
-                        },
-                        new
-                        {
-                            Id = new Guid("3b3bacc8-6bac-46c7-afff-17183a183c5a"),
-                            HazardActionId = new Guid("54b9c0cb-563f-412d-aa62-829de3b015c5"),
-                            Text = "The pit contains many handholds, so the falling creature can try to Grab an Edge again every 6 seconds. If the creature succeeds, it can start to Climb out from that point (though it might be a very long climb, depending on how far the creature fell). Since the creature falls endlessly, it can rest and even prepare spells while falling, though items dropped while falling are usually lost forever."
-                        },
-                        new
-                        {
-                            Id = new Guid("d1e49618-1459-444d-b843-e65168e0ea3f"),
-                            HazardActionId = new Guid("a1bbebc2-a500-44f9-8142-b77421a53107"),
-                            Text = "The trap deals 3d12 electricity damage to the triggering creature (DC 22 basic Reflex save)."
-                        },
-                        new
-                        {
-                            Id = new Guid("a93c5058-494c-4df1-988e-f0dc6dee552c"),
-                            HazardActionId = new Guid("c5259ba8-ad21-4900-bcbf-cf1196ef578a"),
-                            Text = "The rune detonates a fireball centered on the triggering creature’s square. This is a 3rd level fireball spell that deals 6d6 fire damage (DC 22 basic Reflex save)."
-                        },
-                        new
-                        {
-                            Id = new Guid("806735c8-382d-4647-a8fd-b33e379cebad"),
-                            HazardActionId = new Guid("21a56455-6731-4be9-bc6b-02130bac5957"),
-                            Text = "The triggering creature and all creatures within 30 feet are trapped in a disrupted time flow (DC 38 Fortitude negates). The creatures’ minds move so quickly that each round seems to last a century, but their bodies and magical energies move so slowly that they can’t use any actions except Recall Knowledge. An affected creature must attempt a DC 36 Will saving throw against a warp mind spell immediately and again for every minute of real time that passes while the creature is trapped in the frozen moment. This effect has an unlimited duration but can be counteracted."
-                        },
-                        new
-                        {
-                            Id = new Guid("06f5fbcf-7e70-4444-8f61-60927a67cef8"),
-                            HazardActionId = new Guid("3df56b95-79f0-4ed7-bdb0-d0d0bdddcde2"),
-                            Text = "The tube explodes, spraying hallucinogenic powder in a 30-foot cone. Any creature in the cone must succeed at a DC 24 Will save or be confused for 1 round and take a –2 status penalty to Perception checks and saves against mental effects for 1d4 hours. On a critical failure, the penalty is instead –4."
-                        },
-                        new
-                        {
-                            Id = new Guid("356c9040-4be1-4428-a454-8e39c037da0c"),
-                            HazardActionId = new Guid("2eb1837d-c49c-447e-98d7-b30c858912f0"),
-                            Text = "The hammer swings down, making a Strike against the triggering creature."
-                        },
-                        new
-                        {
-                            Id = new Guid("21077b3a-26c5-4556-b3e5-b48e4970f323"),
-                            HazardActionId = new Guid("a2bfaa34-76eb-43d8-a990-32b7437d8304"),
-                            Text = "The triggering creature falls in and takes falling damage (typically 10 bludgeoning damage). That creature can use the Grab an Edge reaction to avoid falling."
-                        },
-                        new
-                        {
-                            Id = new Guid("d9095071-f339-42ec-99a9-b36054c97766"),
-                            HazardActionId = new Guid("deb0f675-09fc-450b-90d2-e04da0e1c699"),
-                            Text = "Each living creature within 60 feet must succeed at a DC 23 Will save or be subjected to the pharaoh’s curse. A cursed creature takes a –2 status penalty to Fortitude saves, and any natural or magical healing it receives is halved. The curse remains until removed by remove curse or similar magic."
-                        },
-                        new
-                        {
-                            Id = new Guid("ae24d667-ccda-431a-a998-7e754abfee8e"),
-                            HazardActionId = new Guid("c2534177-226c-402f-aae3-bc40111eed8d"),
-                            Text = "The triggering creature and all creatures within 30 feet of the rift are drawn into another plane. Each creature can attempt a DC 33 Reflex save to avoid this fate."
-                        },
-                        new
-                        {
-                            Id = new Guid("5ca24113-9fa9-4802-92db-bf378e003180"),
-                            HazardActionId = new Guid("09a54c43-77a9-42c6-a041-aab4c55df5ff"),
-                            Text = "A spine extends to Strike the triggering creature."
-                        },
-                        new
-                        {
-                            Id = new Guid("50fc5c54-2b32-41dc-960f-7aee5dc71077"),
-                            HazardActionId = new Guid("0b60cd6f-d1e8-4373-83f8-a14907af7e10"),
-                            Text = "The creature is targeted by baleful polymorph (DC 32 Will save)."
-                        },
-                        new
-                        {
-                            Id = new Guid("99511947-964d-4238-bba3-e8f5c44be0b4"),
-                            HazardActionId = new Guid("574be793-dfaa-4b21-ac86-4c65fd08bd92"),
-                            Text = "Both blades swing down, each one Striking all creatures under the ceiling grooves."
-                        },
-                        new
-                        {
-                            Id = new Guid("87bdb9c5-4d60-4e50-938d-4bd6467d5e62"),
-                            HazardActionId = new Guid("28f30837-d2d0-459a-bcf2-49afac323a2e"),
-                            Text = "The triggering creature and up to five coconspirators instantly revert to infants, losing all memories, class abilities, and other skills acquired during their lives (DC 44 Fortitude negates). Reversing this effect is nearly impossible, requiring powerful magic such as wish."
-                        },
-                        new
-                        {
-                            Id = new Guid("67f6c155-f410-4fdb-bfdf-ea6988d88003"),
-                            HazardActionId = new Guid("57f67171-9fe7-42a8-9338-9dfcff0c17b1"),
-                            Text = "The door falls, closing off the hallway. The stone slab deals 3d8 bludgeoning damage to anyone beneath or adjacent to the slab when it drops and pushes them out of its space in a random direction. A creature that succeeds at a DC 17 Reflex save takes no damage and rolls out of the way in a random direction. On a critical success, they can choose the direction."
-                        },
-                        new
-                        {
-                            Id = new Guid("85896c21-0853-44e8-90ea-b304cdbb0f14"),
-                            HazardActionId = new Guid("57f67171-9fe7-42a8-9338-9dfcff0c17b1"),
-                            Text = "Lifting the fallen slab requires a successful DC 25 Athletics check. Hitting the floor panels triggers the trap. The slab uses the same AC and saves as the trap, but it has Hardness 12, HP 48 (BT 24)."
-                        },
-                        new
-                        {
-                            Id = new Guid("fd11a9dd-3a82-4d6f-9861-62c108f617a5"),
-                            HazardActionId = new Guid("09e804f4-5f1b-4255-b1d1-31e90811b52a"),
-                            Text = "The trap shoots a spear, making a Strike against the creature or object on the floor tile."
-                        },
-                        new
-                        {
-                            Id = new Guid("23e284eb-40a6-4934-8d0a-88b4a0c0e23c"),
-                            HazardActionId = new Guid("6394bcae-4701-476c-81a6-c154f616ddb5"),
-                            Text = "The saw blade travels along its path, making one Strike against each creature in the room, twisting and varying its height for a maximum chance of beheading its targets."
-                        },
-                        new
-                        {
-                            Id = new Guid("416e47cd-3a39-4e6b-93ba-d7560655d2aa"),
-                            HazardActionId = new Guid("dd06ccd9-ca0a-4797-b135-590a5509eb32"),
-                            Text = "The triggering creature and all creatures within 10 feet are exposed to yellow mold spores."
-                        },
-                        new
-                        {
-                            Id = new Guid("73e328d7-b078-4c03-a8ac-2f8f2191835e"),
-                            HazardActionId = new Guid("d403f5f2-59b1-446b-b31c-a91b8337c776"),
-                            Text = "The trap releases an arcane wail of the banshee (DC 40) with a 100-foot-radius emanation instead of 40 feet, targeting all living creatures in the area, and rolls initiative."
-                        },
-                        new
-                        {
-                            Id = new Guid("5c6305bf-8791-4678-b24c-ab95f62fa7ab"),
-                            HazardActionId = new Guid("b1955fcd-433f-45dc-b9ea-d69baa5fd5d9"),
-                            Text = "The mirror absorbs the creature into the mirror, replacing it with an evil mirror duplicate (DC 34 Reflex to avoid being absorbed into the mirror), and rolls initiative."
-                        },
-                        new
-                        {
-                            Id = new Guid("b3fae5a4-340d-41a7-821b-80713b7affd8"),
-                            HazardActionId = new Guid("ffe63bc7-f008-4d70-9357-e6ada9e45a25"),
-                            Text = "The triggering creature falls in and takes damage from the fall, reduced by 5 feet for falling into the water (typically 12 bludgeoning damage). A creature can Grab an Edge to avoid falling (page 472). The trapdoor then slams shut, and the hazard rolls initiative."
-                        },
-                        new
-                        {
-                            Id = new Guid("1b710bb7-2c56-42fd-a03d-2b2861a8b23f"),
-                            HazardActionId = new Guid("d42112ae-d850-451a-ac03-2aba67ec4a75"),
-                            Text = "The exits seal instantly and the trap rolls initiative."
-                        },
-                        new
-                        {
-                            Id = new Guid("eb77450e-c55c-43e4-b3c1-aadb7c0fe4e5"),
-                            HazardActionId = new Guid("08abae5d-5e71-45ca-9a37-9d44a955d84c"),
-                            Text = "The trap makes a poisoned dart Strike against the triggering creature, then rolls initiative."
-                        },
-                        new
-                        {
-                            Id = new Guid("f79173f5-49dc-4322-8be4-c4591b89d643"),
-                            HazardActionId = new Guid("edea22d4-1f12-48a8-b1f1-b6ee4de1b4f7"),
-                            Text = "The trap makes a poisoned dart Strike against the triggering creature."
-                        },
-                        new
-                        {
-                            Id = new Guid("a9f37fc2-82d6-466c-adc8-552f4b20da56"),
-                            HazardActionId = new Guid("d1adf885-1c78-4d30-b759-12798dc37a4a"),
-                            Text = "The triggering creature sinks into the quicksand up to its waist. The quicksand rolls initiative if it hasn’t already."
-                        },
-                        new
-                        {
-                            Id = new Guid("8c6ac794-a869-4f98-8fda-c9157022eb44"),
-                            HazardActionId = new Guid("202a3139-430a-4841-8488-9eefbe0089fe"),
-                            Text = "The trap pops up in a grid intersection and makes a spinning blade Strike against one adjacent creature (if any), then rolls initiative."
-                        },
-                        new
-                        {
-                            Id = new Guid("cabdbcb0-95c9-461d-a9f5-e1858af03802"),
-                            HazardActionId = new Guid("16402edb-38d3-4cae-a93d-687c9e1814b2"),
-                            Text = "This trap summons a specific level 1 creature, determined when the trap is created. The creature rolls initiative and remains for 2d6 rounds, after which the spell ends and the creature disappears. The creature also disappears if someone disables the trap before the duration expires. The summoned creature can use 3 actions each round and can use reactions, unlike most summoned creatures."
-                        },
-                        new
-                        {
-                            Id = new Guid("76ef593c-5381-4d39-8935-56aad69cdecf"),
-                            HazardActionId = new Guid("5ea54988-b386-4036-a0fc-914995d621de"),
-                            Text = "Each telekinetic decoration constructs a cloud of objects in the room (three clouds total) and the trap rolls initiative. The creatures in the room when the trap is triggered become the trap’s targets, regardless of whether they leave the room or other creatures later enter the room. Each decoration targets a different creature if possible. A target creature that moves at least 1 mile from the trap ceases being a target, at which point the decoration designates a new target."
-                        });
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardComplexity", b =>
@@ -17839,157 +15820,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("d9423d3e-cf11-4bd0-9789-89dd60fe61b0"),
                             Name = "Precision Damage"
-                        });
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardRoutineDetailBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("HazardId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("Type")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("HazardId");
-
-                    b.ToTable("HazardRoutineDetailBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("2411b443-2b72-48d1-b59e-b6688b774df9"),
-                            HazardId = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
-                            Text = "The trap uses its action to force one random creature that failed its save against wail of the banshee last turn to emit a wail of the banshee with the same statistics as the initial one. The creature wails even if it is dead or unable to speak, no matter how far away from the trap it is. Unlike a casting of the spell, the drained condition from this trap’s wail of the banshee spells increases the targets’ drained condition values. A creature that critically succeeds at any of its saves can still be affected by the trap on future rounds, but can’t be forced to wail by the trap.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("087a9701-90ab-4e85-a64d-8bca7032c349"),
-                            HazardId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
-                            Text = "The mirror absorbs another reflected creature into the mirror and replaces it with a mirror duplicate. Mirror duplicates attack on their own initiative, using the same statistics as the original creature, but with an evil alignment (changing only abilities that shift with the alignment change). A mirror duplicate can spend 3 actions in contact with the mirror to return to its original dimension and release the creature it duplicated, but most mirror duplicates prefer not to.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("d58fd9ed-f604-45d1-ab07-65c3cc68799c"),
-                            HazardId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
-                            Text = "The trap loses 1 action each turn for each disabled water spout. On each of the trap’s actions, a spout pours water, increasing the depth of the water by 5 feet. Once the pit is full of water, the pit stops using actions, but creatures in the pit begin drowning (page 478).",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("dbc0d3e9-fac4-47d3-8942-09f87c55df5d"),
-                            HazardId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
-                            Text = "The trap loses 1 action per disabled channel each turn. On each action, a different channel spews lava, dealing 4d6 fire damage to each creature within 10 feet of the channel (DC 27 basic Reflex save), and increasing the depth of the lava in the room by 1 foot (4 feet per round if all the channels are active).",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("58d97828-a01d-4101-b04e-d5e3b804b7a8"),
-                            HazardId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
-                            Text = "A creature that starts its turn in lava takes 8d6 fire damage and is immobilized until it Escapes the hardening lava (DC 27). The creature might suffocate if covered in lava (page 478). Lava from the previous round hardens fully at the start of the trap’s turn, effectively raising the floor of the room. Once the room is full of lava, the trap stops taking actions, but creatures in the room remain stuck until the floor opens and the trap resets.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("85e4e3c2-a458-4da2-851e-16f694b880cc"),
-                            HazardId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
-                            Text = "The trap launches one dart against every creature in the gallery as 1 action. Because it launches darts continuously, the trap can also use the Continuous Barrage free action (see below) to launch darts at each creature during that creature’s turn.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("f5149d1e-92e7-468d-aaf7-c71f195e464a"),
-                            HazardId = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
-                            Text = "On its initiative, the quicksand pulls down each creature within it. A creature that was submerged up to its waist becomes submerged up to its neck, and a creature that was submerged up to its neck is pulled under and has to hold its breath to avoid suffocation(page 478).",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("4f8f2529-93b8-4bad-8841-59f73d6e119c"),
-                            HazardId = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
-                            Text = "A creature in the quicksand can attempt a DC 20 Athletics check to Swim to either raise itself by one step if it’s submerged to its neck or worse, or to move 5 feet if it’s submerged only up to its waist. On a critical failure, the creature is pulled down one step. A creature that Swims out of the quicksand escapes the hazard and is prone in a space adjacent to the quicksand patch. Other creatures can Aid the creature, typically by using a rope or similar aid, or attempt to pull the creature out with their own DC 20 Athletics check, with the same results as if the creature attempted the check.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("bb0601b7-7b22-47fc-a985-a53eccad97a2"),
-                            HazardId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
-                            Text = "The trap uses its first action to make a spinning blade Strike against each adjacent creature, its second action to move straight in a random direction (roll 1d4 to determine the direction), and its third action to make a spinning blade Strike against each adjacent creature. This trap doesn’t take a multiple attack penalty.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("5bfc3074-35e2-4406-bcd4-152b4c8f3069"),
-                            HazardId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
-                            Text = "Each decoration uses 3 of the trap’s actions each turn, and the trap loses 3 actions each turn for every decoration that is disabled. A decoration uses its first action to move its cloud of objects up to 200 feet, its second action to make the objects Strike, and its third action to add more objects to the cloud, increasing its damage by 1d12 (to a maximum of 4d12+10). If a decoration’s cloud is already at maximum damage, it does nothing with its third action.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("3564caf0-6c49-4cff-9e37-0cfdc2f57bf2"),
-                            HazardId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
-                            Text = "If a decoration’s cloud has been destroyed, the decoration instead spends its first action to create a new cloud of objects inside the room (using the starting damage value) and then its second and third actions to have the cloud move and Strike.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("417e2e47-e956-49d4-b01e-82da90ed3027"),
-                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
-                            Text = "On its initiative, the trap uses its first action to spin, then stops. Roll 1d6 to determine which segment is topmost when the wheel stops spinning. The wheel uses its second action to replicate the spell listed for that segment (3rd level, DC 24, spell attack roll +14). This spell’s target is centered on or otherwise includes the nearest creature in the area. This increases the spell’s range to 100 feet if necessary. Any spell cast by this trap is arcane.",
-                            Type = 0
-                        },
-                        new
-                        {
-                            Id = new Guid("9e4955f6-7270-4de7-ad78-8f728b8a4e57"),
-                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
-                            Text = "Sleep",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("35c80760-aec4-41ba-a3d3-e256796bd457"),
-                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
-                            Text = "Paralyze",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("c0e914be-277a-4cd2-a30a-ecdb53d8f2c6"),
-                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
-                            Text = "Lightning Bolt (100-foot line)",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("22e59604-b410-4183-820b-2dcfff400a8c"),
-                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
-                            Text = "Blindness",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("9aea181f-b676-4651-a636-710699c43495"),
-                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
-                            Text = "Acid Arrow",
-                            Type = 1
-                        },
-                        new
-                        {
-                            Id = new Guid("2fdfb966-1fa4-4286-9409-8c415686c09e"),
-                            HazardId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
-                            Text = "Ray of Enfeeblement",
-                            Type = 1
                         });
                 });
 
@@ -21684,10 +19514,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("ComponentsId")
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("Duration")
                         .HasColumnType("text");
 
@@ -21750,7 +19576,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("328dda55-0bc8-461f-a3d3-686df512438c"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "Your touch afflicts the target with Abyssal plague, which siphons fragments of their soul away to empower the Abyss. The effect is based on the target’s Fortitude save.",
                             IsDismissable = false,
                             Level = 5,
                             MagicSchoolId = new Guid("fe316215-5436-422b-bd3f-c499d05b5b99"),
@@ -21764,7 +19589,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("9ff794c4-74a1-412e-9d44-06d64f1570b1"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You conjure an arrow of acid that keeps corroding the target after it hits. Make a spell attack against the target. On a hit, you deal 3d8 acid damage plus 1d6 persistent acid damage. On a critical hit, double the initial damage, but not the persistent damage.",
                             IsDismissable = false,
                             Level = 2,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -21777,7 +19601,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("e6dec1cf-3b35-4abc-9267-4a30e44df08c"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You splash a glob of acid that splatters your target and nearby creatures. Make a spell attack. If you hit, you deal 1d6 acid damage plus 1 splash acid damage. On a critical success, the target also takes 1 persistent acid damage.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -21790,7 +19613,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You harness your mastery of primal forces to reshape your body into a Medium flying animal battle form. When you cast this spell, choose bat, bird, pterosaur, or wasp. You can decide the specific type of animal (such as an owl or eagle for bird), but this has no effect on the form’s Size or statistics. While in this form, you gain the animal trait. You can Dismiss the spell.",
                             Duration = "1 minute.",
                             IsDismissable = true,
                             Level = 4,
@@ -21802,7 +19624,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("fbb8d7cc-6793-484c-80a8-4fafb137e01e"),
                             ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
-                            Description = "A bubble of pure air appears around the target’s head, allowing it to breathe normally.The effect ends as soon as the target returns to an environment where it can breathe normally.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 4,
@@ -21816,7 +19637,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("5c0b6313-4951-4dc4-9289-0ec20210643d"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "The target can walk on air as if it were solid ground. It can ascend and descend in this way at a maximum of a 45 - degree angle.",
                             Duration = "5 minutes.",
                             IsDismissable = false,
                             Level = 4,
@@ -21832,7 +19652,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
                             Area = "20-foot burst",
                             CastTime = new TimeSpan(0, 0, 10, 0, 0),
-                            Description = "You ward an area to alert you when creatures enter without your permission. When you cast alarm, select a password. Whenever a Small or larger corporeal creature enters the spell’s area without speaking the password, alarm sends your choice of a mental alert (in which case the spell gains the mental trait) or an audible alarm with the sound and volume of a hand bell (in which case the spell gains the auditory trait). Either option automatically awakens you, and the bell allows each creature in the area to attempt a DC 15 Perception check to wake up. A creature aware of the alarm must succeed at a Stealth check against the spell’s DC or trigger the spell when moving into the area.",
                             Duration = "8 hours.",
                             IsDismissable = false,
                             Level = 1,
@@ -21845,7 +19664,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
                             ActionTypeId = new Guid("3fa12bb8-7b63-4c36-8e6e-d3cdd81580b8"),
-                            Description = "You use your occult lore and the power of your mind to manipulate the spiritual multiverse",
                             IsDismissable = false,
                             Level = 10,
                             MagicSchoolId = new Guid("76c4e166-abdb-471f-8fde-4c08a765ce2b"),
@@ -21856,7 +19674,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("dcadfb92-e8c7-47a4-a6cc-4de6eefb7c3c"),
                             ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
-                            Description = "You punish a creature that transgresses against your deity, drawing upon the anguish you feel upon seeing one of your deity’s anathema committed. You can cast this spell only when a creature actively commits a unique act of anathema. For example, if creating undead were anathema to your deity, you could use anathematic reprisal on a necromancer who had just created undead in front of you, but not on an undead creature just for existing. You deal 4d6 mental damage to the target, but a basic Will save can reduce this damage. If it fails, it is also stupefied 1 for 1 round. The creature is then temporarily immune for 1 minute.",
                             IsDismissable = false,
                             Level = 4,
                             MagicSchoolId = new Guid("652580a1-b993-4326-9baa-460b5f6c9ba0"),
@@ -21870,7 +19687,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You call upon primal energy to transform yourself into a Medium animal battle form. When you first cast this spell, choose ape, bear, bull, canine, cat, deer, frog, shark, or snake. You can decide the specific type of animal (such as lion or snow leopard for cat), but this has no effect on the form’s Size or statistics. While in this form, you gain the animal trait. You can Dismiss the spell.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 2,
@@ -21884,7 +19700,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("5ca21ccd-2ccc-4900-99fe-40480d6103f2"),
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
                             CastTime = new TimeSpan(0, 0, 1, 0, 0),
-                            Description = "You offer food, and an ordinary Tiny animal within range approaches to eat it. You imprint the image, direction, and distance of an obvious place or landmark well known to you within the animal. You can also attach a small object or note up to light Bulk to it. The animal does its best to reach the destination; if it makes it there, it waits nearby and allows nonhostile creatures to approach and remove the attached object. The spell ends after the message is delivered or after 24 hours, whichever comes first. If there are no Tiny wild animals in range, the spell is lost.",
                             Duration = "24 hours.",
                             IsDismissable = false,
                             Level = 2,
@@ -21898,7 +19713,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("9ebcaed3-689b-4886-939d-a8b0399180c5"),
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
                             CastTime = new TimeSpan(0, 0, 1, 0, 0),
-                            Description = "You tap into the target’s senses, allowing you to see, hear, and otherwise sense whatever it senses for the spell’s duration.If the target wishes to prevent you from doing so, it can attempt a Will save, negating the spell on a success, but most animals don’t bother to do so.While tapping into the target’s senses, you can’t use your own body’s senses, but you can change back and forth from your body’s senses to the target’s senses using a single action, which has the concentrate trait.",
                             Duration = "1 hour.",
                             IsDismissable = false,
                             Level = 3,
@@ -21912,7 +19726,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("001dcfdb-d978-498b-a101-1d13c57b67f2"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You reinforce the target’s musculoskeletal system to bear more weight. The target can carry 3 more Bulk than normal before becoming encumbered and up to a maximum of 6 more Bulk.",
                             Duration = "8 hours.",
                             IsDismissable = false,
                             Level = 1,
@@ -21927,7 +19740,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("3e91401a-203c-4d1e-9a76-0012e2617cd8"),
                             ActionTypeId = new Guid("3fa12bb8-7b63-4c36-8e6e-d3cdd81580b8"),
                             Area = "10-foot emanation, which affects you.",
-                            Description = "You repel all magic from the target area, preventing spells and other magic from functioning. Spells can’t penetrate the area, magic items cease to function within it, and no one inside can cast spells or use magic abilities. Likewise, spells— such as dispel magic—can’t affect the field itself unless they are of a higher level. Magic effects resume the moment they pass outside the field. For example, a ray fired from one side of the field could target a creature on the other side (as long as caster and target are both outside the field). A summoned creature winks out of existence but reappears if the field moves or ends. Invested magic items cease to function, but they remain invested and resume functioning when they exit the field; the ability boost from an apex item isn’t suppressed within the field. Spells of a higher level than the antimagic field overcome its effects, and can even be cast by a creature within the field. The field disrupts only magic, so a +3 longsword still functions as a longsword. Magically created creatures (such as golems) function normally within an antimagic field.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 8,
@@ -21940,7 +19752,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
                             CastTime = new TimeSpan(0, 0, 10, 0, 0),
-                            Description = "You gain a vague glimpse of the future. During the casting of this spell, ask about the results of a particular course of action.",
                             IsDismissable = false,
                             Level = 2,
                             MagicSchoolId = new Guid("cbb0592d-be14-4588-a0af-1f16aad3a4a6"),
@@ -21951,7 +19762,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You transform into an avatar of your deity, assuming a Huge battle form.You must have space to expand or the spell is lost. You have hands in this battle form and can take manipulate actions.",
                             Duration = "1 minute.",
                             IsDismissable = true,
                             Level = 10,
@@ -21963,7 +19773,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("79fbdd8a-c496-4974-af00-14c3640841ab"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You transform the target creature into a harmless animal appropriate to the area, with effects based on its Fortitude save.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 6,
@@ -21980,7 +19789,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("9d06d9f1-deaf-4fd0-8963-9ca6f5a645fa"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "5-foot emanation.",
-                            Description = "You fill the minds of your enemies with doubt. Enemies in the area must succeed at a Will save or take a –1 status penalty to attack rolls as long as they are in the area. Once per turn, starting the turn after you cast bane, you can use a single action, which has the concentrate trait, to increase the emanation’s radius by 5 feet and force enemies in the area that weren’t yet affected to attempt another saving throw. Bane can counteract bless.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 1,
@@ -21993,7 +19801,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("3a8c5edf-e86c-431a-a25a-bb90d590eb35"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You send the target back to its home plane. The target must attempt a Will save. You can spend an extra action while Casting this Spell and add a material component to give the creature a –2 circumstance penalty to its save. The component must be a specially gathered object that is anathema to the creature, and not from a material component pouch. This spell fails if you aren’t on your home plane when you cast it.",
                             IsDismissable = false,
                             Level = 5,
                             MagicSchoolId = new Guid("76c4e166-abdb-471f-8fde-4c08a765ce2b"),
@@ -22008,7 +19815,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("41fcd185-b9ba-41aa-96cf-1a8bcb65a64d"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "The target’s skin becomes covered in bark. The target gains resistance 2 to bludgeoning and piercing damage and weakness 3 to fire. After the target takes fire damage, it can Dismiss the spell as a free action triggered by taking the damage; doing so doesn’t reduce the fire damage the target was dealt.",
                             Duration = "10 minutes.",
                             IsDismissable = false,
                             Level = 2,
@@ -22022,7 +19828,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("a0dc825d-78c6-4464-a62e-17d7001c258e"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You wrench the target’s soul away before it can pass on to the afterlife and imprison it in a black sapphire. While the soul is in the gem, the target can’t be returned to life through any means, even powerful magic such as wish. If the gem is destroyed or bind soul is counteracted on the gem, the soul is freed. The gem has AC 16 and Hardness 10. A gem can’t hold more than one soul, and any attempt wastes the spell.",
                             IsDismissable = false,
                             Level = 2,
                             MagicSchoolId = new Guid("fe316215-5436-422b-bd3f-c499d05b5b99"),
@@ -22035,7 +19840,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("b59d7490-542e-4d17-9463-2e384faf2c0f"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "With a word of necromantic power, you seize control of the target. It gains the minion trait. If you or an ally uses any hostile actions against the target, the spell ends.",
                             Duration = "1 day.",
                             IsDismissable = false,
                             Level = 3,
@@ -22049,7 +19853,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("436d4b2a-846a-4ff1-ae57-63ecfe80f337"),
                             ActionTypeId = new Guid("3fa12bb8-7b63-4c36-8e6e-d3cdd81580b8"),
-                            Description = "Oily black tentacles rise up and attempt to capture creatures in the area. Make spell attack rolls against the Fortitude DC of each creature in the area. Any creature you succeed againstis grabbed by a tentacle and takes 3d6 bludgeoning damage.Whenever a creature ends its turn in the area, the tentacles attempt to grab that creature if they haven’t already, and they deal 1d6 bludgeoning damage to any creature already grabbed. The tentacles’ Escape DC is equal to your spell DC. A creature can attack a tentacle in an attempt to release its grip. Its AC is equal to your spell DC, and it is destroyed if it takes 12 or more damage. Even if destroyed, additional tentacles continue to grow in the area until the duration ends. You can Dismiss the spell.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 5,
@@ -22063,7 +19866,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("54176cd6-c3a3-43fd-8d47-9283811b03bb"),
                             ActionTypeId = new Guid("3fa12bb8-7b63-4c36-8e6e-d3cdd81580b8"),
-                            Description = "Blades of force form a churning wall. The wall is a straight line 20 feet high, 120 feet long, and 2 inches thick, and it provides cover. The wall deals 7d8 force damage to each creature that’s in the wall’s space when it is created, that attempts to pass through the wall, or that ends its turn inside the wall. A basic Reflex save reduces the damage. A creature that succeeds at this save when the wall is created is pushed to the nearest space on the side of its choice. Creatures trying to move through the wall fail to do so if they critically fail the save, ending their movement adjacent to the wall.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 6,
@@ -22077,7 +19879,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("51df17bf-ef57-4eed-973c-55cf33285b61"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "5-foot emanation",
-                            Description = "Blessings from beyond help your companions strike true. You and your allies gain a +1 status bonus to attack rolls while within the emanation. Once per turn, starting the turn after you cast bless, you can use a single action, which has the concentrate trait, to increase the emanation’s radius by 5 feet. Bless can counteract bane.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 1,
@@ -22089,7 +19890,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("3a320d74-73e9-40ab-a972-eb6b571f21fd"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You blind the target. The effect is determined by the target’s Fortitude save. The target then becomes temporarily immune for 1 minute.",
                             IsDismissable = false,
                             Level = 3,
                             MagicSchoolId = new Guid("fe316215-5436-422b-bd3f-c499d05b5b99"),
@@ -22104,7 +19904,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("e130e307-ede2-4a68-9667-cfc482855d95"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You blink quickly between the Material Plane and the Ethereal Plane. You gain resistance 5 to all damage (except force). You can Sustain the Spell to vanish and reappear 10 feet away in a random direction determined by the GM; the movement doesn’t trigger reactions. At the end of your turn, you vanish and reappear as above.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 3,
@@ -22116,7 +19915,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("4f77cd26-f3f0-4e6a-8424-b01480daadc4"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "The target’s form appears blurry. It becomes concealed. As the nature of this effect still leaves the target’s location obvious, the target can’t use this concealment to Hide or Sneak.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 2,
@@ -22130,7 +19928,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("27b176c3-a4ac-425b-b7f1-9e6b7c25063f"),
                             ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
-                            Description = "Your blessing revives a creature at the moment of its death. You prevent the target from dying and restore Hit Points to the target equal to 4d8 plus your spellcasting ability modifier. You can’t use breath of life if the triggering effect was disintegrate or a death effect.",
                             IsDismissable = false,
                             Level = 5,
                             MagicSchoolId = new Guid("fe316215-5436-422b-bd3f-c499d05b5b99"),
@@ -22144,7 +19941,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("ea3e3b79-80ab-4ef4-9dc7-6fb38561a935"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "15-foot cone.",
-                            Description = "Gouts of flame rush from your hands. You deal 2d6 fire damage to creatures in the area.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -22157,7 +19953,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("3a2a1f6e-f8d9-465d-94cc-1253a5c42062"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "10-foot burst.",
-                            Description = "You forcibly calm creatures in the area, soothing them into a nonviolent state; each creature must attempt a Will save.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 2,
@@ -22173,7 +19968,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "60-foot burst.",
-                            Description = "You call upon the unimaginable power of world-ending cataclysms, ripping a small piece of each cataclysm and combining them together into one horrifically powerful attack. The following effects come down upon all creatures in the area. Treat the resistances of creatures in the area as if they were 10 lower for the purpose of determining the cataclysm’s damage.",
                             IsDismissable = false,
                             Level = 10,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -22186,7 +19980,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("7ca414c2-6185-4817-b1d7-9692d7a4433a"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You discharge a powerful bolt of lightning at the target, dealing 8d12 electricity damage. The target must attempt a basic Reflex save. The electricity arcs to another creature within 30 feet of the first target, jumps to another creature within 30 feet of that target, and so on. You can end the chain at any point. You can’t target the same creature more than once, and you must have line of effect to all targets. Roll the damage only once, and apply it to each target (halving or doubling as appropriate for its saving throw outcome). The chain ends if any one of the targets critically succeeds at its save.",
                             IsDismissable = false,
                             Level = 6,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -22200,7 +19993,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("41b3515e-c59f-4ac6-92a2-ef16195cd647"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "To the target, your words are honey and your visage seems bathed in a dreamy haze. It must attempt a Will save, with a +4 circumstance bonus if you or your allies recently threatened it or used hostile actions against it. You can Dismiss the spell. If you use hostile actions against the target, the spell ends. When the spell ends, the target doesn’t necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, meaning you could potentially convince the target to continue being your friend via mundane means.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("652580a1-b993-4326-9baa-460b5f6c9ba0"),
@@ -22215,7 +20007,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("fc8ec088-6c8d-4d90-9293-9fc0720a3855"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You shoot an utterly cold ray of darkness tinged with unholy energy. Make a ranged spell attack against the target. You deal 5d6 cold damage, plus 5d6 evil damage if the target is a celestial. If the ray passes through an area of magical light or targets a creature affected by magical light, chilling darkness attempts to counteract the light. If you need to determine whether the ray passes through an area of light, draw a line between yourself and the spell’s target.",
                             IsDismissable = false,
                             Level = 3,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -22229,7 +20020,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("4ab38c95-8b8a-4f7c-b260-1b842a91ace3"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "Siphoning negative energy into yourself, your hand radiates a pale darkness. Your touch weakens the living and disorients undead, possibly even causing them to flee. The effect depends on whether the target is living or undead.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("fe316215-5436-422b-bd3f-c499d05b5b99"),
@@ -22243,12 +20033,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
                             ActionTypeId = new Guid("3fa12bb8-7b63-4c36-8e6e-d3cdd81580b8"),
-                            Description = "You create an opaque wall of light in a single vibrant color. The wall is straight and vertical, stretching 60 feet long and 30 feet high. If the wall would pass through a creature, the spell is lost. The wall sheds bright light for 20 feet on each side, and dim light for the next 20 feet. You can ignore the wall’s effects.",
                             Duration = "10 minutes.",
                             IsDismissable = false,
                             Level = 5,
                             MagicSchoolId = new Guid("76c4e166-abdb-471f-8fde-4c08a765ce2b"),
-                            Name = "Chromatic Wall",
+                            Name = "Chromatic",
                             Range = 120,
                             SpellTypeId = new Guid("daeadc1d-bf76-442b-9b4c-8276fa9effac")
                         },
@@ -22257,7 +20046,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("35ac23b0-0e3d-4aab-8217-116f931edcb7"),
                             ActionTypeId = new Guid("3fa12bb8-7b63-4c36-8e6e-d3cdd81580b8"),
                             Area = "10-foor emanation centered on the touched creature.",
-                            Description = "You ward a creature and those nearby against a specified alignment. Choose chaotic, evil, good, or lawful; this spell gains the opposing trait. Creatures in the area gain a +1 status bonus to AC against attacks by creatures of the chosen alignment and to saves against effects from such creatures. This bonus increases to +3 against effects from such creatures that directly control the target and attacks made by summoned creatures of the chosen alignment. Summoned creatures of the chosen alignment can’t willingly enter the area without succeeding at a Will save; repeated attempts use the first save result.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 3,
@@ -22271,7 +20059,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("484d98ad-91d1-4b2d-86d0-ec997a6f772b"),
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
                             CastTime = new TimeSpan(0, 0, 1, 0, 0),
-                            Description = "You create an invisible floating ear at a location within range (even if it’s outside your line of sight or line of effect). It can’t move, but you can hear through the ear as if using your normal auditory senses.",
                             Duration = "10 minutes.",
                             IsDismissable = false,
                             Level = 3,
@@ -22285,7 +20072,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("af9903ec-8e9e-4752-bae4-042aca73f91a"),
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
                             CastTime = new TimeSpan(0, 0, 1, 0, 0),
-                            Description = "You create an invisible floating eye at a location within range (even if it’s outside your line of sight or line of effect). The eye can’t move, but you can see in all directions from that point as if using your normal visual senses.",
                             Duration = "10 minutes.",
                             IsDismissable = false,
                             Level = 4,
@@ -22298,7 +20084,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("2c2d2218-3a46-4075-899c-c4e9353aaec3"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "A cloak of swirling colors shrouds the target. Creatures are dazzled while adjacent to it, and attacking the target causes a brilliant flash of light. A creature that hits the target with a melee attack must attempt a Will save.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 5,
@@ -22314,7 +20099,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("1030f973-aee2-4c2f-8cc5-a98aa4594de4"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "20-foot burst",
-                            Description = "You conjure a poisonous fog. This functions as obscuring mist (page 355), except the area moves 10 feet away from you each round. You deal 6d8 poison damage to each breathing creature that starts its turn in the spell’s area. You can Dismiss the spell.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 5,
@@ -22329,7 +20113,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("f3fa6c93-ee1d-4da1-982d-55c015c0eeaa"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "30-foot emanation",
-                            Description = "You teleport the targets to new positions within the area. The creatures must each be able to fit in their new space, and their positions must be unoccupied, entirely within the area, and in your line of sight. Unwilling creatures can attempt a Will save.",
                             IsDismissable = false,
                             Level = 6,
                             MagicSchoolId = new Guid("1c401dd4-21d6-477d-9ca1-1a6a9d1a8a0d"),
@@ -22343,7 +20126,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("060ba321-f5b9-4ac8-907c-fec7bb740713"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "15-foot cone.",
-                            Description = "Swirling colors affect viewers based on their Will saves.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("dd5fe60b-e821-4f80-86cb-ed5a9791d1e7"),
@@ -22355,7 +20137,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("4d709d69-ddde-487c-94a3-c876b4e79969"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You shout a command that’s hard to ignore. You can command the target to approach you, run away (as if it had the fleeing condition), release what it’s holding, drop prone, or stand in place. It can’t Delay or take any reactions until it has obeyed your command. The effects depend on the target’s Will save.",
                             Duration = "Until the end of the target’s next turn.",
                             IsDismissable = false,
                             Level = 1,
@@ -22371,7 +20152,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("6505b7e2-7c35-45ed-8fda-ff4bf3dd2822"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "The target can understand the meaning of a single language it is hearing or reading when you cast the spell. This doesn’t let it understand codes, language couched in metaphor, and the like (subject to GM discretion). If the target can hear multiple languages and knows that, it can choose which language to understand; otherwise, choose one of the languages randomly.",
                             Duration = "1 hour.",
                             IsDismissable = false,
                             Level = 2,
@@ -22386,7 +20166,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("2a4b767b-27d0-4519-b1f7-c554837d0c73"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "60-foot cone.",
-                            Description = "Icy cold rushes forth from your hands. You deal 12d6 cold damage to creatures in the area.",
                             IsDismissable = false,
                             Level = 5,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -22398,7 +20177,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("068fc3bd-e1ac-4069-8a29-13bd1a0b92f2"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You befuddle your target with strange impulses, causing it to act randomly. The effects are determined by the target’s Will save. You can Dismiss the spell.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 4,
@@ -22415,7 +20193,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("94beacae-4765-499c-b93e-934fff8585a4"),
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
                             CastTime = new TimeSpan(0, 0, 10, 0, 0),
-                            Description = "You prepare a spell that will trigger later. While casting contingency, you also cast another spell of 4th level or lower with a casting time of no more than 3 actions. This companion spell must be one that can affect you. You must make any decisions for the spell when you cast contingency, such as choosing a damage type for resist energy. During the casting, choose a trigger under which the spell will be cast, using the same restrictions as for the trigger of a Ready action. Once contingency is cast, you can cause the companion spell to come into effect as a reaction with that trigger. It affects only you, even if it would affect more creatures. If you define complicated conditions, as determined by the GM, the trigger might fail. If you cast contingency again, the newer casting supersedes the older.",
                             Duration = "24 hour.",
                             IsDismissable = false,
                             Level = 7,
@@ -22427,7 +20204,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("d253d16d-cbac-4673-a25f-0a3c33173cd1"),
                             ActionTypeId = new Guid("3fa12bb8-7b63-4c36-8e6e-d3cdd81580b8"),
-                            Description = "A magical flame springs up from the object, as bright as a torch. It doesn’t need oxygen, react to water, or generate heat.",
                             IsDismissable = false,
                             Level = 2,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -22441,7 +20217,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("b2cc63b2-466a-478a-b024-b785f2b722de"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "50 feet long by 50 feet wide",
-                            Description = "By imposing your will upon the water, you can raise or lower the level of water in the chosen area by 10 feet. Water creatures in the area are subjected to the effects of slow.",
                             IsDismissable = false,
                             Level = 5,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -22454,7 +20229,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("2d0fa5a4-eab0-4eca-85cb-23241e5ef814"),
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
                             CastTime = new TimeSpan(0, 1, 0, 0, 0),
-                            Description = "You create enough food to feed six Medium creatures for a day. This food is bland and unappealing, but it is nourishing. After 1 day, if no one has eaten the food, it decays and becomes inedible. Most Small creatures eat one-quarter as much as a Medium creature (one-sixteenth as much for most Tiny creatures), and most Large creatures eat 10 times as much (100 times as much for Huge creatures and so on).",
                             IsDismissable = false,
                             Level = 2,
                             MagicSchoolId = new Guid("1c401dd4-21d6-477d-9ca1-1a6a9d1a8a0d"),
@@ -22466,7 +20240,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("c5bd7524-e3f5-46b6-b1de-527896978d1c"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "As you cup your hands, water begins to flow forth from them. You create 2 gallons of water. If no one drinks it, it evaporates after 1 day.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("1c401dd4-21d6-477d-9ca1-1a6a9d1a8a0d"),
@@ -22479,7 +20252,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("311b0146-7b80-4594-800f-b0046237d47f"),
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
                             CastTime = new TimeSpan(0, 0, 1, 0, 0),
-                            Description = "You conjure a temporary object from eldritch energy. It must be of vegetable matter (such as wood or paper) and 5 cubic feet or smaller. It can’t rely on intricate artistry or complex moving parts, never fulfills a cost or the like, and can’t be made of precious materials or materials with a rarity of uncommon or higher. It is obviously temporarily conjured, and thus can’t be sold or passed off as a genuine item.",
                             Duration = "1 hour.",
                             IsDismissable = false,
                             Level = 4,
@@ -22492,7 +20264,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("b7157338-c1de-4e79-a90c-e0f62abd709c"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You assault the target’s faith, riddling the creature with doubt and mental turmoil that deal 6d6 mental damage, or 6d8 mental damage if it can cast divine spells. The effects are determined by its Will save.",
                             IsDismissable = false,
                             Level = 3,
                             MagicSchoolId = new Guid("652580a1-b993-4326-9baa-460b5f6c9ba0"),
@@ -22507,7 +20278,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("e4568cde-13d1-4684-81b2-180bc291198f"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You issue a divine mandate or proclaim a cause to the targets. It can be to attain an item, claim a patch of land, slay a creature, war with a group, or be entirely peaceful. Your cause can’t force the targets to harm one another or themselves. The targets become completely dedicated to that cause, depending on their levels. They choose their own actions, but they favor direct action over inaction or indirect action.",
                             Duration = "4 minutes.",
                             IsDismissable = false,
                             Level = 9,
@@ -22522,7 +20292,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("2665ca32-131c-43cd-b30b-c763eb024a08"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "30-foot cone.",
-                            Description = "You inflict despair on creatures in the area. The effects for each creature are determined by its Will save.",
                             Duration = "1 or more rounds.",
                             IsDismissable = false,
                             Level = 5,
@@ -22536,7 +20305,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("7b0f3283-1f79-4a64-a697-eb842bb776b2"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You create up to four floating lights, no two of which are more than 10 feet apart. Each sheds light like a torch. When you Sustain the Spell, you can move any number of lights up to 60 feet. Each light must remain within 120 feet of you and within 10 feet of all others, or it winks out.",
                             Duration = "Sustained.",
                             IsDismissable = false,
                             Level = 1,
@@ -22550,7 +20318,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("0f86cd9a-76b2-4bb4-bebe-ea638643fc3e"),
                             ActionTypeId = new Guid("3fa12bb8-7b63-4c36-8e6e-d3cdd81580b8"),
                             Area = "20-foot burst.",
-                            Description = "You create a shroud of darkness that prevents light from penetrating or emanating within the area. Light does not enter the area and any non-magical light sources, such as a torch or lantern, do not emanate any light while inside the area, even if their light radius would extend beyond the darkness. This also suppresses magical light of your darkness spell’s level or lower. Light can’t pass through, so creatures in the area can’t see outside. From outside, it appears as a globe of pure darkness.",
                             Duration = "1 minute.",
                             IsDismissable = false,
                             Level = 2,
@@ -22563,7 +20330,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("66172098-6cdb-4587-89bb-24fe1a8faf7c"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You grant yourself supernatural sight in areas of darkness. You gain darkvision.",
                             Duration = "1 hour.",
                             IsDismissable = false,
                             Level = 2,
@@ -22575,7 +20341,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("2d8be059-3a79-4d4d-a7e8-31dee66680cc"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You cloud the target’s mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also stunned 1.",
                             Duration = "1 round.",
                             IsDismissable = false,
                             Level = 1,
@@ -22590,7 +20355,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("509c9a55-433c-4f99-8a7a-609d38f23ed1"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "The target loses hearing; it must attempt a Fortitude save. The target is then temporarily immune for 1 minute.",
                             IsDismissable = false,
                             Level = 2,
                             MagicSchoolId = new Guid("fe316215-5436-422b-bd3f-c499d05b5b99"),
@@ -22605,7 +20369,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("236cd0a3-a07b-4c9f-ba11-e3c113d91634"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You snuff the life out of a creature on the brink of death. The target must attempt a Will save. If this kills it, you gain 10 temporary HP and a +1 status bonus to attack and damage rolls for 10 minutes.",
                             IsDismissable = false,
                             Level = 2,
                             MagicSchoolId = new Guid("fe316215-5436-422b-bd3f-c499d05b5b99"),
@@ -22620,7 +20383,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("3c902d87-38ff-4aad-acb3-266811986252"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You shield a creature from the ravages of negative energy. It receives a +4 status bonus to saves against death and negative effects, gains negative resistance 10, and suppresses the effects of the doomed condition.",
                             Duration = "10 minutes.",
                             IsDismissable = false,
                             Level = 5,
@@ -22635,7 +20397,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("54d80001-c58b-4524-b23d-3962bb5f7ed4"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "30-foot emanation",
-                            Description = "Your eyes glow as you sense aligned auras. Choose chaotic, evil, good, or lawful. You detect auras of that alignment. You receive no information beyond presence or absence. You can choose not to detect creatures or effects you’re aware have that alignment.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("cbb0592d-be14-4588-a0af-1f16aad3a4a6"),
@@ -22647,7 +20408,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("1e7838ee-f64d-4806-8d3d-e55ba4261c03"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "30-foot emanation",
-                            Description = "You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you’re fully aware of, such as the magic items and ongoing spells of you and your allies.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("cbb0592d-be14-4588-a0af-1f16aad3a4a6"),
@@ -22658,7 +20418,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("8e4669af-e67c-42a4-bd0f-9e117496cb6c"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You detect whether a creature is venomous or poisonous, or if an object is poison or has been poisoned. You do not ascertain whether the target is poisonous in multiple ways, nor do you learn the type or types of poison. Certain substances, like lead and alcohol, are poisons and so mask other poisons.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("cbb0592d-be14-4588-a0af-1f16aad3a4a6"),
@@ -22672,7 +20431,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("2ef1bfc9-3ca3-45b8-804a-ba9d948224de"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "30-foot emanation",
-                            Description = "By tapping into trace divinatory auras, you detect the presence of scrying effects in the area. If detect scrying is higher level than a scrying effect, you gain a glimpse of the scrying creature and learn its approximate distance and direction.",
                             Duration = "1 hour.",
                             IsDismissable = false,
                             Level = 4,
@@ -22684,7 +20442,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("c1546cbd-ec60-459f-b7f5-e29d51beb5f2"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You interfere with the target’s ability to teleport and travel between dimensions. Dimensional anchor attempts to counteract any teleportation effect, or any effect that would move the target to a different plane. The duration is determined by the target’s Will save.",
                             Duration = "Varies.",
                             IsDismissable = false,
                             Level = 4,
@@ -22701,7 +20458,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("1e745c5e-5d8f-4abd-b66c-e0e582833257"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "60-foot burst",
-                            Description = "You create a shimmering barrier that attempts to counteract teleportation effects and planar travel into or out of the area, including items that allow access to extradimensional spaces (such as a bag of holding). Dimensional lock tries to counteract any attempt to summon a creature into the area but doesn’t stop the creature from departing when the summoning ends.",
                             Duration = "1 day.",
                             IsDismissable = false,
                             Level = 7,
@@ -22714,7 +20470,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("73180f19-0c26-4f90-b377-8ae1d3df6525"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "Opening a door that bypasses normal space, you instantly transport yourself and any items you’re wearing and holding from your current space to a clear space within range you can see.If this would bring another creature with you—even if you’re carrying it in an extradimensional container—the spell is lost.",
                             IsDismissable = false,
                             Level = 4,
                             MagicSchoolId = new Guid("1c401dd4-21d6-477d-9ca1-1a6a9d1a8a0d"),
@@ -22726,7 +20481,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You channel the primal forces of nature to transform into a Large animal battle form, specifically that of a powerful and terrifying dinosaur. You must have space to expand or the spell is lost. When you cast this spell, choose ankylosaurus, brontosaurus, deinonychus, stegosaurus, triceratops, or tyrannosaurus. You can decide the specific type of animal, but this has no effect on the form’s Size or statistics. While in this form, you gain the animal and dinosaur traits. You can Dismiss the spell.",
                             Duration = "1 minute",
                             IsDismissable = false,
                             Level = 4,
@@ -22738,7 +20492,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("614267ca-482a-4435-bcea-127594ea342f"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You shroud a creature from others’ senses. The target becomes undetected, not just to sight but to all senses, allowing the target to count as invisible no matter what precise and imprecise senses an observer might have. It’s still possible for a creature to find the target by Seeking, looking for disturbed dust, hearing gaps in the sound spectrum, or finding some other way to discover the presence of an otherwise-undetectable creature",
                             Duration = "10 minutes",
                             IsDismissable = false,
                             Level = 8,
@@ -22752,7 +20505,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("d8cf6802-13fb-4518-a463-538b28bed2da"),
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
-                            Description = "Falsehoods ring in your ears like discordant notes. You gain a +4 status bonus to Perception checks when someone Lies.",
                             Duration = "10 minutes",
                             IsDismissable = false,
                             Level = 4,
@@ -22765,7 +20517,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("31f6e676-dbee-4c8f-9f17-a842afab35e3"),
                             ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
                             CastTime = new TimeSpan(0, 0, 10, 0, 0),
-                            Description = "You learn the name of the target’s exact location (including the building, community, and country) and plane of existence.",
                             Duration = "1 minute",
                             IsDismissable = false,
                             Level = 4,
@@ -22778,7 +20529,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("8280e542-c9e9-41d9-b152-aff2f054d447"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You fire a green ray at your target. Make a spell attack. You deal 12d10 damage, and the target must attempt a basic Fortitude save. On a critical hit, treat the save result as one degree worse. A creature reduced to 0 HP is reduced to fine powder; its gear remains.",
                             IsDismissable = false,
                             Level = 6,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -22792,7 +20542,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("05375af9-4bc5-4eab-8731-2fb74c2062d9"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "Crackling energy disjoins the target. You attempt to counteract it (page 458). If you succeed, it’s deactivated for 1 week. On a critical success, it’s destroyed. If it’s an artifact or similar item, you automatically fail.",
                             IsDismissable = false,
                             Level = 9,
                             MagicSchoolId = new Guid("76c4e166-abdb-471f-8fde-4c08a765ce2b"),
@@ -22805,7 +20554,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("5d1503f3-0176-4480-93b5-c4b4fef56dd3"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You unravel the magic behind a spell or effect. Attempt a counteract check against the target (page 458). If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn’t change the item’s non-magical properties. If the target is an artifact or similar item, you automatically fail.",
                             IsDismissable = false,
                             Level = 2,
                             MagicSchoolId = new Guid("76c4e166-abdb-471f-8fde-4c08a765ce2b"),
@@ -22818,7 +20566,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("9627d10b-e488-4299-9e1b-2c3a511ec007"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You infuse weapons with positive energy. Attacks with these weapons deal an extra 1d4 positive damage to undead.",
                             Duration = "1 minute",
                             IsDismissable = false,
                             Level = 1,
@@ -22832,7 +20579,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("db143e7b-8212-4350-a09f-09205811470e"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You lance the target with energy. You deal 1d6 positive damage plus your spellcasting ability modifier. The target must attempt a basic Fortitude save.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("fe316215-5436-422b-bd3f-c499d05b5b99"),
@@ -22848,7 +20594,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("b6f25115-9358-44eb-bfc2-37b01c3863f4"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "10-foot emanation.",
-                            Description = "Divine power wards the targets, granting each a +1 status bonus to AC and saves while in the area.",
                             Duration = "Sustained up to 1 minute.",
                             IsDismissable = false,
                             Level = 1,
@@ -22862,7 +20607,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
                             Area = "40-foot emanation.",
-                            Description = "You utter a potent litany from your faith, a mandate that harms those who oppose your ideals. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or your deity is true neutral. This spell gains the trait of the alignment you chose. You deal 7d10 damage to creatures in the area; each creature must attempt a Fortitude save. Creatures with an alignment that matches the one you chose are unaffected by the spell. Those that neither match nor oppose it treat the result of their saving throw as one degree better and don’t suffer effects other than damage.",
                             Duration = "Varies.",
                             IsDismissable = false,
                             Level = 7,
@@ -22877,7 +20621,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("eb816f67-17d1-439b-badb-2657b57f64e2"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You unleash a beam of divine energy. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or if your deity is true neutral. Make a ranged spell attack roll against the target’s AC. On a hit, the target takes damage of the chosen alignment type equal to 1d4 + your spellcasting ability modifier (double damage on a critical hit). The spell gains the trait of the alignment you chose.",
                             IsDismissable = false,
                             Level = 1,
                             MagicSchoolId = new Guid("438b96b3-ea22-4131-b938-ce7073c933b4"),
@@ -22890,7 +20633,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
                             ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
-                            Description = "You accept otherworldly energies into your body; while you are still recognizably yourself, you gain the features of one of your deity’s servitors. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or your deity is true neutral. This spell gains the trait of the alignment you chose.",
                             Duration = "1 minute",
                             IsDismissable = false,
                             Level = 7,
@@ -22950,739 +20692,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellDetailBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("SpellId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SpellId");
-
-                    b.ToTable("SpellDetailBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("887e893d-9fcc-497b-8919-8042b3cdc1ec"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "You gain the following statistics and abilities regardless of which battle form you choose:"
-                        },
-                        new
-                        {
-                            Id = new Guid("567dee10-2303-414d-98fa-56f7716db07d"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "- AC = 18 + your level. Ignore your armor’s check penalty and Speed reduction."
-                        },
-                        new
-                        {
-                            Id = new Guid("5ff96a2e-a6ea-4517-aba3-0fe377bae9d5"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "- 5 temporary Hit Points."
-                        },
-                        new
-                        {
-                            Id = new Guid("f75b792f-043d-41cf-b6a9-56f7bd20ba1f"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "- Low-light vision."
-                        },
-                        new
-                        {
-                            Id = new Guid("f70c57db-900e-463b-b89a-c2bd7fe6cf56"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "- One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can use. You’re trained with them. Your attack modifier is +16, and your damage bonus is +5. These attacks are Dexterity based (for the purpose of the clumsy condition, for example). If your attack modifier for Dexterity-based unarmed attacks is higher, you can use it instead."
-                        },
-                        new
-                        {
-                            Id = new Guid("ebc22a9b-b423-46ad-a966-0e1681936c64"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "- Acrobatics modifier of +16, unless your own modifier is higher."
-                        },
-                        new
-                        {
-                            Id = new Guid("ee30e7f9-5884-4454-955c-1da78755dab9"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "You also gain specific abilities based on the form you choose:"
-                        },
-                        new
-                        {
-                            Id = new Guid("1aec42b4-675b-4d61-8575-0115a42e52cc"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "- Bat Speed 20 feet, fly Speed 30 feet; precise echolocation 40 feet; Melee [one-action] fangs, Damage 2d8 piercing; Melee [one-action] wing (agile), Damage 2d6 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("d96945ba-09d9-4b78-acc7-5b09c7afab4c"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "- Bird Speed 10 feet, fly Speed 50 feet; Melee [one-action] beak, Damage 2d8 piercing; Melee [one-action] talon (agile), Damage 1d10 slashing."
-                        },
-                        new
-                        {
-                            Id = new Guid("7c3a524d-46bf-4367-941d-bc97e7c55be8"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "- Pterosaur Speed 10 feet, fly Speed 40 feet; imprecise scent 30 feet; Melee[one-action] beak, Damage 3d6 piercing."
-                        },
-                        new
-                        {
-                            Id = new Guid("f34e506c-12c8-4dad-9cbf-9e543170d9f1"),
-                            SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
-                            Text = "- Wasp Speed 20 feet, fly Speed 40 feet; Melee [one-action] stinger, Damage 1d8 piercing plus 1d6 persistent poison."
-                        },
-                        new
-                        {
-                            Id = new Guid("f2b10f10-1854-4e8b-b052-304b6fe58f9f"),
-                            SpellId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
-                            Text = "The spell has the following effects:"
-                        },
-                        new
-                        {
-                            Id = new Guid("b56cb637-0b05-4b5e-a9c8-41d717987cf7"),
-                            SpellId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
-                            Text = "- Duplicate any occult spell of 9th level or lower."
-                        },
-                        new
-                        {
-                            Id = new Guid("18c4ba08-3dcf-4336-b349-bc3929058dc5"),
-                            SpellId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
-                            Text = "- Duplicate any non-occult spell of 7th level or lower."
-                        },
-                        new
-                        {
-                            Id = new Guid("dadf406b-366a-4ca6-8624-d4f315438b58"),
-                            SpellId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
-                            Text = "- Produce any effect whose power is equivalent to any occult spell 9th level or lower, or non - occult spell 7th level or lower."
-                        },
-                        new
-                        {
-                            Id = new Guid("2e8f36e1-e005-43fd-9ed9-26b6e8710a44"),
-                            SpellId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
-                            Text = "- Reverse certain effects that refer to the wish spell"
-                        },
-                        new
-                        {
-                            Id = new Guid("9b6100f0-8551-4d82-b8a8-c642e5e859cd"),
-                            SpellId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
-                            Text = "At the GM’s discretion, you can try to produce greater effects, but this is dangerous and the spell may have only a partial effect."
-                        },
-                        new
-                        {
-                            Id = new Guid("300ba168-764f-491e-a447-df9f3c2f3c3c"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "You gain the following statistics and abilities regardless of which battle form you choose:"
-                        },
-                        new
-                        {
-                            Id = new Guid("861b2972-0bf6-4ac7-87cf-d7200caf3872"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- AC = 16 + your level. Ignore your armor’s check penalty and Speed reduction."
-                        },
-                        new
-                        {
-                            Id = new Guid("ade20fbb-a1e0-4cb8-8b63-4ed7306f1427"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- 5 temporary Hit Points."
-                        },
-                        new
-                        {
-                            Id = new Guid("a2575b6e-2f53-4c64-92ca-a2e2006809cf"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Low-light vision and imprecise scent 30 feet."
-                        },
-                        new
-                        {
-                            Id = new Guid("54acdc29-8944-49a8-b38b-3bd5bf590358"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can use. You’re trained with them. Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead."
-                        },
-                        new
-                        {
-                            Id = new Guid("59c4fe59-3095-446e-b43f-34a001f7afd3"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Athletics modifier of +9, unless your own modifier is higher."
-                        },
-                        new
-                        {
-                            Id = new Guid("0a3de3aa-3e97-4f6b-a661-88f0f8477e82"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "You also gain specific abilities based on the type of animal you choose:"
-                        },
-                        new
-                        {
-                            Id = new Guid("c7873354-5805-4c8a-8831-1d82a30ee8ed"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Ape Speed 25 feet, climb Speed 20 feet; Melee [one-action] fist, Damage 2d6 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("66e1d25e-9eb7-42dc-b412-220923879e98"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Bear Speed 30 feet; Melee [one-action] jaws, Damage 2d8 piercing; Melee [one-action] claw (agile), Damage 1d8 slashing."
-                        },
-                        new
-                        {
-                            Id = new Guid("dcbaa11d-7b56-43d2-a72e-13ec97f14e3f"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Bull Speed 30 feet; Melee [one-action] horn, Damage 2d8 piercing."
-                        },
-                        new
-                        {
-                            Id = new Guid("e79c445d-4649-4cc9-b427-dbfb754c1ad3"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Canine Speed 40 feet; Melee [one-action] jaws, Damage 2d8 piercing."
-                        },
-                        new
-                        {
-                            Id = new Guid("46f110c3-3c5a-4319-b725-e7ea9a52528a"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Cat Speed 40 feet; Melee [one-action] jaws, Damage 2d6 piercing; Melee[one - action] claw(agile), Damage 1d10 slashing."
-                        },
-                        new
-                        {
-                            Id = new Guid("19cb8dc2-bef1-4622-b4e2-786de8f85b81"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Deer Speed 50 feet; Melee [one-action] antler, Damage 2d6 piercing."
-                        },
-                        new
-                        {
-                            Id = new Guid("b63c6577-1c20-42ef-8bf4-4fd87ec3f16a"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Frog Speed 25 feet, swim Speed 25 feet; Melee [one-action] jaws, Damage 2d6 bludgeoning; Melee [one-action] tongue (reach 15 feet), Damage 2d4 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("69870368-0e1e-43a6-9939-de554f70b183"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Shark swim Speed 35 feet; Melee [one-action] jaws, Damage 2d8 piercing; breathe underwater but not in air."
-                        },
-                        new
-                        {
-                            Id = new Guid("f388440c-c3bf-46ed-8048-109135a6e719"),
-                            SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
-                            Text = "- Snake Speed 20 feet, climb Speed 20 feet, swim Speed 20 feet; Melee[one - action] fangs, Damage 2d4 piercing plus 1d6 poison."
-                        },
-                        new
-                        {
-                            Id = new Guid("7f34d0c1-10ae-4937-a9fb-aae94c21ff6e"),
-                            SpellId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
-                            Text = "The spell can predict results up to 30 minutes into the future and reveals the GM’s best guess among the following outcomes:"
-                        },
-                        new
-                        {
-                            Id = new Guid("62aac3fd-dc88-4275-b479-964d0e390ef0"),
-                            SpellId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
-                            Text = "- Weal: The results will be good."
-                        },
-                        new
-                        {
-                            Id = new Guid("a360bbe1-1f56-4bac-b1b5-a8dab82d5659"),
-                            SpellId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
-                            Text = "- Woe: The results will be bad."
-                        },
-                        new
-                        {
-                            Id = new Guid("ef5d40a9-0203-48f4-9744-f411c7a97342"),
-                            SpellId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
-                            Text = "- Weal and Woe: The results will be a mix of good and bad."
-                        },
-                        new
-                        {
-                            Id = new Guid("ba4c847a-4c45-4d7b-adb4-41a03b562606"),
-                            SpellId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
-                            Text = "- Nothing: There won’t be particularly good or bad results."
-                        },
-                        new
-                        {
-                            Id = new Guid("702a5b5e-0fad-48db-b126-02b58069b5f7"),
-                            SpellId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
-                            Text = "The GM rolls a secret DC 6 flat check. On a failure, the result is always “nothing.” This makes it impossible to tell whether a “nothing” result is accurate. If anyone asks about the same topic as the first casting of augury during an additional casting, the GM uses the secret roll result from the first casting. If circumstances change, though, it’s possible to get a different result."
-                        },
-                        new
-                        {
-                            Id = new Guid("c11e0547-ec12-4c4b-a40b-bc5177fa1527"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "You gain the following statistics and abilities regardless of which deity’s battle form you assume:"
-                        },
-                        new
-                        {
-                            Id = new Guid("2b7a891d-5e49-4e72-86e4-0d0d8fc5f99d"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- AC = 25 + your level. Ignore your armor’s check penalty and Speed reduction."
-                        },
-                        new
-                        {
-                            Id = new Guid("95d2bd40-775a-43e7-b421-e46792dd7ebc"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- 30 temporary Hit Points."
-                        },
-                        new
-                        {
-                            Id = new Guid("0e46e684-dda7-4d66-9a64-0ae231eda72f"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Darkvision."
-                        },
-                        new
-                        {
-                            Id = new Guid("87ae08fa-7ec5-4c5e-99e3-918c6530e65b"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- One or more attacks specific to your deity’s battle form, which are the only attacks you can use. You’re trained with them. Your attack modifier is +33, and you use the listed damage. Melee attacks are Strength based (for the purposes of the enfeebled condition, for example) unless they have the finesse trait, and all ranged attacks are Dexterity based. Attacks that deal positive or negative damage don’t heal creatures."
-                        },
-                        new
-                        {
-                            Id = new Guid("498b0a9a-0524-49bc-877f-3140eac68339"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Athletics modifier of +35, unless your own is higher."
-                        },
-                        new
-                        {
-                            Id = new Guid("90f30a66-c2fc-441e-9f77-5b0054606681"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "You also gain the specific abilities listed for your deity below:"
-                        },
-                        new
-                        {
-                            Id = new Guid("18cfb804-b63c-42c2-8de5-57f110ed13f3"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Abadar: Speed 50 feet, burrow Speed 30 feet, immune to immobilized; Ranged[one - action] crossbow(range increment 120 feet, reload 1), Damage 6d10 + 3 piercing."
-                        },
-                        new
-                        {
-                            Id = new Guid("a0746a57-ce84-495e-b5c9-b41c0161607c"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Asmodeus: Speed 70 feet, air walk; Melee [one-action] mace (reach 15 feet), Damage 6d10+6 bludgeoning; Ranged [one-action] hellfire (range 120 feet), Damage 6d6+3 fire."
-                        },
-                        new
-                        {
-                            Id = new Guid("e0460453-86b5-447b-b407-f5568d63f4a6"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Calistria: Speed 30 feet, fly Speed 70 feet; Melee [one-action] whip (disarm, finesse, nonlethal, reach 20 feet), Damage 6d4+6 slashing; Ranged [one-action] savored sting (range 60 feet), Damage 6d6+3 poison."
-                        },
-                        new
-                        {
-                            Id = new Guid("7abfa2fb-aac3-48fd-81c6-1e6522b70c15"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Cayden Cailean: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Melee [one-action] rapier (deadly, reach 15 feet), Damage 6d6+6 piercing; Ranged [one-action] ale splash (range 120 feet), Damage 6d6+3 poison."
-                        },
-                        new
-                        {
-                            Id = new Guid("5ffa2d79-74e2-4327-9f08-4f3216cd2417"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Desna: Speed 30 feet, fly Speed 70 feet; Melee [one-action] starknife (agile, deadly, finesse, reach 15 feet, silver, thrown 60 feet), Damage 6d4+6 piercing; Ranged [one-action] moonbeam (range 120 feet, silver), Damage 6d6+3 fire."
-                        },
-                        new
-                        {
-                            Id = new Guid("b78b210e-6ae9-4f99-8a09-9d77e4859e6b"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Erastil: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Ranged[one - action] longbow(deadly d8, range increment 150 feet), Damage 6d8 + 3 piercing."
-                        },
-                        new
-                        {
-                            Id = new Guid("799ce61b-2cdb-4ec9-9036-649d279e9c08"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Gorum: Speed 70 feet, immune to immobilized; Melee [one-action] greatsword (versatile P, reach 15 feet), Damage 6d12+6 slashing."
-                        },
-                        new
-                        {
-                            Id = new Guid("615ce084-3dba-407b-9239-3b7008af1d76"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Gozreh: No land Speed, fly Speed 70 feet, swim Speed70 feet, ignore difficult terrain and greater difficult terrain; Melee [one-action] waves (bull rush, reach 15 feet, thrown 20 feet), Damage 6d8+6 bludgeoning; Ranged [one-action] wind (versatile electricity, range 120 feet), Damage 6d6+3 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("039876d3-70a2-4c24-a3a8-ebd2fd3d2504"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Iomedae: Speed 70 feet, air walk; shield (15 Hardness, can’t be damaged); Melee [one-action] longsword (versatile P, reach 15 feet), Damage 6d8+6 slashing."
-                        },
-                        new
-                        {
-                            Id = new Guid("a0ba7a4e-2f91-4988-ab24-505e68e7d734"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Irori: Speed 80 feet, air walk; Melee [one-action] unfettered strike (agile, versatile P or S, finesse, reach 15 feet), Damage 6d8+6 bludgeoning; Ranged [one-action] wind strike (range 60 feet), Damage 6d4+6 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("d21692fa-cd36-4823-80c9-f47bff9b8412"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Lamashtu: Speed 30 feet, fly Speed 70 feet; Melee [one-action] falchion (forceful, reach 15 feet), Damage 6d10+6 slashing; Ranged [one-action] waters of Lamashtu (range 120 feet), Damage 6d6 + 3 poison."
-                        },
-                        new
-                        {
-                            Id = new Guid("ef3ff3a5-bf5b-4e95-89b2-4a96fc08f719"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Nethys: Nethys Speed 70 feet, air walk; Ranged [one-action] raw magic (range 120 feet; versatile cold, electricity, or fire), Damage 6d6 force."
-                        },
-                        new
-                        {
-                            Id = new Guid("a443f87b-292a-437b-a60a-c327af9c27e9"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Norgorber: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Melee [one-action] shortsword (agile, finesse, versatile S, reach 15 feet), Damage 6d6+6 piercing; Ranged [one-action] blackfinger toss (range 120 feet), Damage 6d6+3 poison."
-                        },
-                        new
-                        {
-                            Id = new Guid("1f160434-ebe0-4fee-8fc1-ad761d54f891"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Pharasma: Speed 70 feet, air walk; Melee [one-action] dagger (agile, finesse, reach 15 feet, thrown 40 feet), Damage 6d6+6 slashing; Ranged [one-action] spiral blast (range 120 feet, damages only undead), Damage 6d8+3 positive."
-                        },
-                        new
-                        {
-                            Id = new Guid("d23a21c8-3019-441b-9cbb-85aa284751c5"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Rovagug: Speed 50 feet, burrow Speed 30 feet, immune to immobilized; Melee [one-action] jaws (reach 15 feet), Damage 6d12+6 piercing; Melee [one-action] leg (agile, versatile P, reach 15 feet), Damage 6d8+6 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("2259126a-45a5-4687-9821-c15ce1b70cab"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Sarenrae: Speed 30 feet, fly Speed 70 feet; Melee [one-action] scimitar (forceful, nonlethal, reach 15 feet), Damage 6d6+6 slashing; Ranged [one-action] everflame (nonlethal, range 120 feet), Damage 6d6+3 fire."
-                        },
-                        new
-                        {
-                            Id = new Guid("d1ec7d7c-0749-465f-8582-565703093c6d"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Shelyn: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Melee [one-action] glaive (deadly d8, nonlethal, reach 20 feet), Damage 6d8+6 slashing; Ranged [one-action] melody of inner beauty, (nonlethal, range 120 feet), Damage 6d6+3 sonic."
-                        },
-                        new
-                        {
-                            Id = new Guid("802fe062-ca5f-431f-ae6e-23726d5feac2"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Torag: Speed 50 feet, burrow Speed 30 feet, immune to immobilized; shield (15 Hardness, can’t be damaged); Melee [one-action] warhammer (bull rush, reach 15 feet), Damage 6d8+6 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("a3beeee6-be5e-478b-bc1e-09f401eb8aa7"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Urgathoa: Speed 70 feet, air walk; Melee [one-action] scythe (deadly d10, trip, reach 15 feet), Damage 6d10+6 slashing; Ranged [one-action] pallid plague (range 120 feet), Damage 6d6+3 negative."
-                        },
-                        new
-                        {
-                            Id = new Guid("d7fbbf0f-05e2-416d-960a-ced70a90df6f"),
-                            SpellId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
-                            Text = "- Zon-Kuthon: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Melee [one-action] spiked chain (disarm, trip, reach 15 feet), Damage 6d8+6 slashing; Ranged [one-action] midnight pain (mental, nonlethal, range 120 feet), Damage 6d6+3 mental."
-                        },
-                        new
-                        {
-                            Id = new Guid("cf2e53f8-3cc3-4b6a-b9b4-c923c6d7aacb"),
-                            SpellId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
-                            Text = "Each creature attempts one basic Reflex save that applies to all five types of damage."
-                        },
-                        new
-                        {
-                            Id = new Guid("381ec139-c96a-41af-8fce-22ca8c5dbeb2"),
-                            SpellId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
-                            Text = "- Flesh-dissolving acid rain deals 3d10 acid damage."
-                        },
-                        new
-                        {
-                            Id = new Guid("dcd40c58-78c7-4be6-8ba9-8ab86f679fb3"),
-                            SpellId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
-                            Text = "- A roaring earthquake shakes and bludgeons creatures on the ground, dealing 3d10 bludgeoning damage."
-                        },
-                        new
-                        {
-                            Id = new Guid("6bd47ee1-f4dc-4c6c-97bf-04c1b84e55d1"),
-                            SpellId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
-                            Text = "- A blast of freezing wind deals 3d10 cold damage."
-                        },
-                        new
-                        {
-                            Id = new Guid("077a48c4-a7b5-40db-8538-fc69166f8900"),
-                            SpellId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
-                            Text = "- Incredible lightning lashes the area, dealing 3d10 electricity damage."
-                        },
-                        new
-                        {
-                            Id = new Guid("c8c78ca8-a307-42eb-bb47-0b63589ba7e3"),
-                            SpellId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
-                            Text = "- Beating winds churn across the sky, dealing 3d10 bludgeoning damage to creatures flying in the area."
-                        },
-                        new
-                        {
-                            Id = new Guid("4ed0277b-81ff-4863-b844-79de8e86bc7e"),
-                            SpellId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
-                            Text = "- An instant tsunami sweeps over creatures in the area, dealing 3d10 bludgeoning damage with the water trait (doubled for creatures swimming in the area)."
-                        },
-                        new
-                        {
-                            Id = new Guid("4ed9cd14-123d-4859-9255-c36eac8a062e"),
-                            SpellId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
-                            Text = "- A massive wildfire burns in a sudden inferno, dealing 3d10 fire damage."
-                        },
-                        new
-                        {
-                            Id = new Guid("a08010bb-278e-457b-8a83-9bd955303460"),
-                            SpellId = new Guid("4ab38c95-8b8a-4f7c-b260-1b842a91ace3"),
-                            Text = "- Living Creature: The spell deals negative damage equal to 1d4 plus your spellcasting modifier. The target attempts a basic Fortitude save, but is also enfeebled 1 for 1 round on a critical failure."
-                        },
-                        new
-                        {
-                            Id = new Guid("5a911837-34c2-47c2-b348-125d22fea173"),
-                            SpellId = new Guid("4ab38c95-8b8a-4f7c-b260-1b842a91ace3"),
-                            Text = "- Undead Creature: The target is flat-footed for 1 round on a failed Fortitude save. On a critical failure, the target is also fleeing for 1 round unless it succeeds at a Will save. Heightened (+1)"
-                        },
-                        new
-                        {
-                            Id = new Guid("5d6a8acb-12b1-425e-80f5-6166c16c1826"),
-                            SpellId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
-                            Text = "Roll 1d4 to determine the color of the wall. Each color has a particular effect on items, effects, or creatures that attempt to pass through. Chromatic wall can’t be counteracted normally; rather, each color is automatically counteracted when targeted by a specific spell, even if that spell’s level is lower than that of chromatic wall."
-                        },
-                        new
-                        {
-                            Id = new Guid("66f7ae40-6842-4482-b926-73b19f6dd8f9"),
-                            SpellId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
-                            Text = "- Red: The wall destroys ranged weapon ammunition (such as arrows and crossbow bolts) that would pass through, and it deals 20 fire damage to anyone passing through, with a basic Reflex save. Cone of cold can counteract a red chromatic wall."
-                        },
-                        new
-                        {
-                            Id = new Guid("6256a8a8-31ae-4576-aa8c-722662fa37d7"),
-                            SpellId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
-                            Text = "- Orange: The wall destroys thrown weapons that would pass through, and it deals 25 acid damage to anyone passing through, with a basic Reflex save. Gust of wind can counteract an orange chromatic wall."
-                        },
-                        new
-                        {
-                            Id = new Guid("02ad0292-99e0-42e1-a2f8-da387196a90c"),
-                            SpellId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
-                            Text = "- Yellow :The wall stops acid, cold, electricity, fire, force, negative, positive, and sonic effects from passing through, and it deals 30 electricity damage to anyone passing through, with a basic Reflex save. Disintegrate can counteract a yellow chromatic wall."
-                        },
-                        new
-                        {
-                            Id = new Guid("fc855a59-8d6c-44f2-978d-86551ac8ecbc"),
-                            SpellId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
-                            Text = "- Green: The wall stops toxins, gases, and breath weapons from passing through. It deals 10 poison damage to anyone passing through and makes them enfeebled 1 for 1 minute. A basic Fortitude save reduces the damage and negates the enfeebled condition on a success. Passwall can counteract a green chromatic wall."
-                        },
-                        new
-                        {
-                            Id = new Guid("858468ee-88f6-495c-8cf5-542d9209b061"),
-                            SpellId = new Guid("b7157338-c1de-4e79-a90c-e0f62abd709c"),
-                            Text = "To many deities, casting this spell on a follower of your own deity without significant cause is anathema."
-                        },
-                        new
-                        {
-                            Id = new Guid("9e535072-b4b7-428e-94c3-898de6ca0ab6"),
-                            SpellId = new Guid("e4568cde-13d1-4684-81b2-180bc291198f"),
-                            Text = "- 13th or Lower: The target is so dedicated to the cause that it pursues the cause to the death (unless you say otherwise)."
-                        },
-                        new
-                        {
-                            Id = new Guid("45983a64-0a25-4eba-9eaf-d050a4b49d11"),
-                            SpellId = new Guid("e4568cde-13d1-4684-81b2-180bc291198f"),
-                            Text = "- 14th: The target is dedicated to the cause, but the spell ends for the target if it’s reduced to half its maximum Hit Points or fewer."
-                        },
-                        new
-                        {
-                            Id = new Guid("f3e7e74b-556d-46f8-87fe-861544c2331b"),
-                            SpellId = new Guid("e4568cde-13d1-4684-81b2-180bc291198f"),
-                            Text = "- 15th: As 14th, plus the target can attempt a Will save at the end of each of its turns to end the spell for itself."
-                        },
-                        new
-                        {
-                            Id = new Guid("c474670c-dd98-40b0-a6fc-f5d19f51fec1"),
-                            SpellId = new Guid("e4568cde-13d1-4684-81b2-180bc291198f"),
-                            Text = "The spell ends for all creatures if you or one of your allies uses a hostile action against a target, or when the cause is completed. The GM might determine this spell has alignment traits befitting the cause."
-                        },
-                        new
-                        {
-                            Id = new Guid("93b29669-1b66-422e-96be-17a1c795e34f"),
-                            SpellId = new Guid("54d80001-c58b-4524-b23d-3962bb5f7ed4"),
-                            Text = "Only creatures of 6th level or higher—unless divine spellcasters, undead, or beings from the Outer Sphere—have alignment auras."
-                        },
-                        new
-                        {
-                            Id = new Guid("ba775672-2c5d-43a3-a002-e1214d439f7e"),
-                            SpellId = new Guid("1e7838ee-f64d-4806-8d3d-e55ba4261c03"),
-                            Text = "You detect illusion magic only if that magic’s effect has a lower level than the level of your detect magic spell. However, items that have an illusion aura but aren’t deceptive in appearance (such as an invisibility potion) typically are detected normally."
-                        },
-                        new
-                        {
-                            Id = new Guid("d6d57c2a-5593-4664-a1ce-669c612f62ca"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "You gain the following statistics and abilities regardless of which battle form you choose:"
-                        },
-                        new
-                        {
-                            Id = new Guid("53e6b7c7-4384-4ac0-b0df-5a786b6016cb"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- AC = 18 + your level. Ignore your armor’s check penalty and Speed reduction."
-                        },
-                        new
-                        {
-                            Id = new Guid("5a80550b-1451-46d0-b80a-a28bc7fbdca5"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- 15 temporary Hit Points."
-                        },
-                        new
-                        {
-                            Id = new Guid("f8d811ef-2e56-4548-9127-c1ded8842548"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- Low-light vision and imprecise scent 30 feet."
-                        },
-                        new
-                        {
-                            Id = new Guid("ce26e35f-f33b-4e20-bf3a-1e1d58bb2802"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can use. You’re trained with them. Your attack modifier is +16, and your damage bonus is +9. These attacks are Strength based (for the purpose of the enfeebled condition, for example). If your unarmed attack modifier is higher, you can use it instead."
-                        },
-                        new
-                        {
-                            Id = new Guid("d09af233-4775-4202-a171-23a8b3489dd9"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- Athletics modifier of +18, unless your own is higher."
-                        },
-                        new
-                        {
-                            Id = new Guid("4772e504-4fd7-45fb-a47b-8693e6e2fdd2"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "You also gain specific abilities based on the form you choose:"
-                        },
-                        new
-                        {
-                            Id = new Guid("7c9dd7f8-02bd-4213-affe-ae981c11b182"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- Ankylosaurus: Speed 25 feet; Melee [one-action] tail (backswing, reach 10 feet), Damage 2d6 bludgeoning; Melee [one-action] foot, Damage 2d6 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("451a5567-b1ed-4573-84d6-abd04ee44351"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- Brontosaurus: Speed 25 feet; Melee [one-action] tail (reach 15 feet), Damage 2d6 bludgeoning; Melee [one-action] foot, Damage 2d8 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("fcd2be86-8f04-4d01-bbda-ebea7dec2614"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- Deinonychus: Speed 40 feet; Melee [one-action] talon (agile), Damage 2d4 piercing plus 1 persistent bleed; Melee [one-action] jaws, Damage 1d10 piercing."
-                        },
-                        new
-                        {
-                            Id = new Guid("5c1d6d32-a8a9-4d35-8a55-a75492ce165e"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- Stegosaurus: Speed 30 feet; Melee [one-action] tail (reach 10 feet), Damage 2d8 piercing."
-                        },
-                        new
-                        {
-                            Id = new Guid("59abdf72-d40a-4b6c-93d2-2a91bb5e4784"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- Triceratops: Speed 30 feet; Melee [one-action] horn, Damage 2d8 piercing, plus 1d6 persistent bleed on a critical hit; Melee [one-action] foot, Damage 2d6 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("151544d1-c8dd-4dfe-99de-643f7f4476a9"),
-                            SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
-                            Text = "- Tyrannosaurus: Speed 30 feet; Melee [one-action] jaws (deadly, reach 10 feet), Damage 1d12 piercing; Melee [one-action] tail (reach 10 feet), Damage 1d10 bludgeoning."
-                        },
-                        new
-                        {
-                            Id = new Guid("3f43ac0e-e9bf-431b-adad-1e38650be56e"),
-                            SpellId = new Guid("31f6e676-dbee-4c8f-9f17-a842afab35e3"),
-                            Text = "You can target a creature only if you’ve seen it in person, have one of its significant belongings, or have a piece of its body. To target an object, you must have touched it or have a fragment of it. Discern location automatically overcomes protections against detection and divination of lower level than this spell, even if they would normally have a chance to block it."
-                        },
-                        new
-                        {
-                            Id = new Guid("a36f0b28-ae6d-43ea-8671-40f6db86733c"),
-                            SpellId = new Guid("8280e542-c9e9-41d9-b152-aff2f054d447"),
-                            Text = "An object you hit is destroyed (no save), regardless of Hardness, unless it’s an artifact or similarly hard to destroy. A single casting can destroy no more than a 10-foot cube of matter. This automatically destroys any force construct, such as a wall of force."
-                        },
-                        new
-                        {
-                            Id = new Guid("fd081fec-24f3-4bde-a6c4-44c031947a4a"),
-                            SpellId = new Guid("b6f25115-9358-44eb-bfc2-37b01c3863f4"),
-                            Text = "Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or your deity is true neutral. This spell gains the trait of the alignment you chose. The bonuses granted by the spell increase to +2 against attacks by—and effects created by—creatures with an alignment opposite to the spell (lawful if you chose chaotic, evil if you chose good). These bonuses increase to +4 against effects created by such creatures that attempt to impose the controlled condition on a target of your divine aura, as well as against attacks made by creatures summoned by anything opposite in alignment to your divine aura."
-                        },
-                        new
-                        {
-                            Id = new Guid("dc1ca729-0d82-4e6e-8464-01e612e2d9bd"),
-                            SpellId = new Guid("b6f25115-9358-44eb-bfc2-37b01c3863f4"),
-                            Text = "When a creature of opposite alignment hits a target with a melee attack, the creature must succeed at a Will save or be blinded for 1 minute. It’s then temporarily immune for 1 minute."
-                        },
-                        new
-                        {
-                            Id = new Guid("766add6f-238c-4106-ae46-8595907ce970"),
-                            SpellId = new Guid("b6f25115-9358-44eb-bfc2-37b01c3863f4"),
-                            Text = "The first time you Sustain the Spell each round, the divine aura’s radius grows 10 feet."
-                        },
-                        new
-                        {
-                            Id = new Guid("af0a1742-904c-4467-a3a8-510bff8e19d7"),
-                            SpellId = new Guid("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9"),
-                            Text = "Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or your deity is true neutral. This spell gains the trait of the alignment you chose. The bonuses granted by the spell increase to +2 against attacks by—and effects created by—creatures with an alignment opposite to the spell (lawful if you chose chaotic, evil if you chose good). These bonuses increase to +4 against effects created by such creatures that attempt to impose the controlled condition on a target of your divine aura, as well as against attacks made by creatures summoned by anything opposite in alignment to your divine aura."
-                        },
-                        new
-                        {
-                            Id = new Guid("99d2bb14-6f2f-43d1-b317-3d62407948b0"),
-                            SpellId = new Guid("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9"),
-                            Text = "When a creature of opposite alignment hits a target with a melee attack, the creature must succeed at a Will save or be blinded for 1 minute. It’s then temporarily immune for 1 minute."
-                        },
-                        new
-                        {
-                            Id = new Guid("d03cdf8c-3ba5-4729-b1e1-f3ab158d80db"),
-                            SpellId = new Guid("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9"),
-                            Text = "The first time you Sustain the Spell each round, the divine aura’s radius grows 10 feet."
-                        },
-                        new
-                        {
-                            Id = new Guid("32014b54-ab8b-4c60-be4e-2ab72ae18ea0"),
-                            SpellId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
-                            Text = "If you were Medium or smaller, you become Large, as the effects of enlarge. You must have space to expand into, or the spell is lost. You also gain the following benefits."
-                        },
-                        new
-                        {
-                            Id = new Guid("e38e0b0c-dd32-4e48-8f7c-b5dd74371b98"),
-                            SpellId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
-                            Text = "- 40 temporary Hit Points."
-                        },
-                        new
-                        {
-                            Id = new Guid("efab6a65-c298-4b9e-a580-9ff3726bb950"),
-                            SpellId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
-                            Text = "- A fly Speed equal to your Speed."
-                        },
-                        new
-                        {
-                            Id = new Guid("e25b180f-db39-4c21-9ed3-6d808c006020"),
-                            SpellId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
-                            Text = "- Weakness 10 to the alignment opposite the one you chose."
-                        },
-                        new
-                        {
-                            Id = new Guid("08a3e3f0-9d91-4c27-87b8-df3ff705ca2d"),
-                            SpellId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
-                            Text = "- A +1 status bonus to saves against spells."
-                        },
-                        new
-                        {
-                            Id = new Guid("c16c0f4b-da16-4d0f-9cb2-baab4ba1667c"),
-                            SpellId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
-                            Text = "- Darkvision."
-                        },
-                        new
-                        {
-                            Id = new Guid("e13e5c33-fa04-43d2-9430-8ee5988e2e62"),
-                            SpellId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
-                            Text = "- Your unarmed attacks and weapons deal 1 additional damage of the chosen alignment type."
-                        },
-                        new
-                        {
-                            Id = new Guid("37ac6077-a033-413b-b8f6-1120ec70cb14"),
-                            SpellId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
-                            Text = "- One or more unarmed melee attacks. If you chose good or lawful, your fist attacks deal 2d8 damage. If you chose chaotic, you gain a bite unarmed attack that deals 2d10 piercing damage. If you chose evil, you gain a claws unarmed attack that deals 2d8 slashing damage and has the agile and finesse traits."
-                        });
-                });
-
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellHeightening", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<int>("Level")
                         .HasColumnType("integer");
@@ -23700,524 +20714,410 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("ce2df890-5896-491e-a1f2-18a9808e1682"),
-                            Description = "The initial damage increases by 2d8, and the persistent acid damage increases by 1d6.",
                             Level = 2,
                             SpellId = new Guid("9ff794c4-74a1-412e-9d44-06d64f1570b1")
                         },
                         new
                         {
                             Id = new Guid("9da22e21-d1e7-43d1-88e8-e95065c242db"),
-                            Description = "The initial damage increases to 1d6 + your spellcasting ability modifier, and the persistent damage increases to 2.",
                             Level = 3,
                             SpellId = new Guid("e6dec1cf-3b35-4abc-9267-4a30e44df08c")
                         },
                         new
                         {
                             Id = new Guid("07445e05-eccc-4463-b72a-ab813e961d2e"),
-                            Description = "The initial damage increases to 2d6 + your spellcasting ability modifier, the persistent damage increases to 3, and the splash damage increases to 2.",
                             Level = 5,
                             SpellId = new Guid("e6dec1cf-3b35-4abc-9267-4a30e44df08c")
                         },
                         new
                         {
                             Id = new Guid("107e9a96-572d-40b9-87d9-bf36b2302260"),
-                            Description = "The initial damage increases to 3d6 + your spellcasting ability modifier, the persistent damage increases to 4, and the splash damage increases to 3.",
                             Level = 7,
                             SpellId = new Guid("e6dec1cf-3b35-4abc-9267-4a30e44df08c")
                         },
                         new
                         {
                             Id = new Guid("a7a384da-ca83-4941-969f-668d59f18cb5"),
-                            Description = "The initial damage increases to 4d6 + your spellcasting ability modifier, the persistent damage increases to 5, and the splash damage increases to 4.",
                             Level = 9,
                             SpellId = new Guid("e6dec1cf-3b35-4abc-9267-4a30e44df08c")
                         },
                         new
                         {
                             Id = new Guid("461c1a6c-d9e9-4c24-82df-9799e0001811"),
-                            Description = "Your battle form is Large and your fly Speed gains a +10-foot status bonus. You must have enough space to expand into or the spell is lost. You instead gain 10 temporary HP, attack modifier +18, damage bonus +8, and Acrobatics +20.",
                             Level = 5,
                             SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9")
                         },
                         new
                         {
                             Id = new Guid("0b4eadbc-0ed2-444c-997f-0e248309b869"),
-                            Description = "Your battle form is Huge, your fly Speed gains a +15-foot status bonus, and your attacks have 10-foot reach. You must have enough space to expand into or the spell is lost. You instead gain AC = 21 + your level, 15 temporary HP, attack modifier +21, damage bonus +4 and double damage dice (including persistent damage), and Acrobatics +23.",
                             Level = 6,
                             SpellId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9")
                         },
                         new
                         {
                             Id = new Guid("730097a4-0886-4c81-a15e-b00fc7ec40c9"),
-                            Description = "You can specify criteria for which creatures sound the alarm spell—for instance, orcs or masked people.",
                             Level = 3,
                             SpellId = new Guid("558a6ae1-fc9f-4e11-9c93-18d52be7f5aa")
                         },
                         new
                         {
                             Id = new Guid("96d6be16-ee49-4b00-aa7e-7b364bd363bc"),
-                            Description = "The damage increases by 1d6.",
                             Level = 1,
                             SpellId = new Guid("dcadfb92-e8c7-47a4-a6cc-4de6eefb7c3c")
                         },
                         new
                         {
                             Id = new Guid("63371eec-c1ea-4dcb-8c53-e72fe03224a8"),
-                            Description = "You instead gain 10 temporary HP, AC = 17 + your level, attack modifier +14, damage bonus +5, and Athletics +14.",
                             Level = 3,
                             SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d")
                         },
                         new
                         {
                             Id = new Guid("62d0851a-cc5e-462c-aee1-1b5e812ac054"),
-                            Description = "Your battle form is Large and your attacks have 10-foot reach. You must have enough space to expand into or the spell is lost. You instead gain 15 temporary HP, AC = 18 + your level, attack modifier +16, damage bonus +9, and Athletics +16.",
                             Level = 4,
                             SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d")
                         },
                         new
                         {
                             Id = new Guid("7bd4ff03-9047-4baa-939e-312c7924b42d"),
-                            Description = "Your battle form is Huge and your attacks have 15-foot reach. You must have enough space to expand into or the spell is lost. You instead gain 20 temporary HP, AC = 18 + your level, attack modifier +18, damage bonus +7 and double the number of damage dice, and Athletics +20.",
                             Level = 5,
                             SpellId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d")
                         },
                         new
                         {
                             Id = new Guid("62d6f3f0-5ae7-4ceb-b943-d716a9d05586"),
-                            Description = "You can target up to 10 creatures. The extra material component affects targets to which it is anathema.",
                             Level = 9,
                             SpellId = new Guid("3a8c5edf-e86c-431a-a25a-bb90d590eb35")
                         },
                         new
                         {
                             Id = new Guid("4a665729-f77d-4c8c-8f00-dd3fe078e3d8"),
-                            Description = "The resistances increase by 2, and the weakness increases by 3.",
                             Level = 2,
                             SpellId = new Guid("41fcd185-b9ba-41aa-96cf-1a8bcb65a64d")
                         },
                         new
                         {
                             Id = new Guid("3a1aa8fe-d985-4af4-a664-e7ceed761d9d"),
-                            Description = "The damage increases by 1d8.",
                             Level = 1,
                             SpellId = new Guid("54176cd6-c3a3-43fd-8d47-9283811b03bb")
                         },
                         new
                         {
                             Id = new Guid("84e120a3-6dd6-4348-9a07-934858f71840"),
-                            Description = "The resistance increases by 3.",
                             Level = 2,
                             SpellId = new Guid("e130e307-ede2-4a68-9667-cfc482855d95")
                         },
                         new
                         {
                             Id = new Guid("0433232e-b381-4a6d-bd3c-404bfdedb535"),
-                            Description = "The damage increases by 2d6.",
                             Level = 1,
                             SpellId = new Guid("ea3e3b79-80ab-4ef4-9dc7-6fb38561a935")
                         },
                         new
                         {
                             Id = new Guid("e7d4ce94-e923-43fb-bcc9-e34987534372"),
-                            Description = "The damage increases by 1d12.",
                             Level = 1,
                             SpellId = new Guid("7ca414c2-6185-4817-b1d7-9692d7a4433a")
                         },
                         new
                         {
                             Id = new Guid("8fad2d3e-740c-4f51-bb8d-8abe84a24783"),
-                            Description = "The duration lasts until the next time you make your daily preparations.",
                             Level = 4,
                             SpellId = new Guid("41b3515e-c59f-4ac6-92a2-ef16195cd647")
                         },
                         new
                         {
                             Id = new Guid("99a5bbf6-51c5-4e42-ba6b-e1155c40d500"),
-                            Description = "The duration lasts until the next time you make your daily preparations, and you can target up to 10 creatures.",
                             Level = 8,
                             SpellId = new Guid("41b3515e-c59f-4ac6-92a2-ef16195cd647")
                         },
                         new
                         {
                             Id = new Guid("4e928728-b53f-43e2-acbe-7b93732500e9"),
-                            Description = "The cold damage increases by 2d6, and the evil damage against celestials increases by 2d6.",
                             Level = 1,
                             SpellId = new Guid("fc8ec088-6c8d-4d90-9293-9fc0720a3855")
                         },
                         new
                         {
                             Id = new Guid("4c4341f2-16d9-4a55-b504-418231e4b9fe"),
-                            Description = "The negative damage to living creatures increases by 1d4.",
                             Level = 1,
                             SpellId = new Guid("4ab38c95-8b8a-4f7c-b260-1b842a91ace3")
                         },
                         new
                         {
                             Id = new Guid("070c4a22-2028-4361-89b5-ef690dd3fa6b"),
-                            Description = "The spell’s duration increases to 1 hour. Roll 1d8 to determine the wall’s color; the results for 5–8 are below.A red, orange, yellow, or green wall deals an extra 10 damage.",
                             Level = 7,
                             SpellId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300")
                         },
                         new
                         {
                             Id = new Guid("5da315c4-0930-4154-803d-1d618e8073a4"),
-                            Description = "The duration increases to 1 hour.",
                             Level = 4,
                             SpellId = new Guid("35ac23b0-0e3d-4aab-8217-116f931edcb7")
                         },
                         new
                         {
                             Id = new Guid("8e38a5fc-f74d-4c0a-b653-4bc2c4610d9e"),
-                            Description = "The number of targets increases by 1.",
                             Level = 1,
                             SpellId = new Guid("f3fa6c93-ee1d-4da1-982d-55c015c0eeaa")
                         },
                         new
                         {
                             Id = new Guid("548e581b-6bf6-4a27-9622-996ca1e4e8ff"),
-                            Description = "The number of targets increases by 1.",
                             Level = 1,
                             SpellId = new Guid("060ba321-f5b9-4ac8-907c-fec7bb740713")
                         },
                         new
                         {
                             Id = new Guid("dae11cb9-b62c-4073-827c-635821ed5e74"),
-                            Description = "You can target up to 10 creatures.",
                             Level = 5,
                             SpellId = new Guid("4d709d69-ddde-487c-94a3-c876b4e79969")
                         },
                         new
                         {
                             Id = new Guid("d523848c-c447-477b-b8f3-48dc196055ef"),
-                            Description = "The target can also speak the language.",
                             Level = 3,
                             SpellId = new Guid("6505b7e2-7c35-45ed-8fda-ff4bf3dd2822")
                         },
                         new
                         {
                             Id = new Guid("34a0a521-0496-4876-8e2e-1b7195af1f4b"),
-                            Description = "You can target up to 10 creatures, and targets can also speak the language.",
                             Level = 4,
                             SpellId = new Guid("6505b7e2-7c35-45ed-8fda-ff4bf3dd2822")
                         },
                         new
                         {
                             Id = new Guid("e6a136cc-0056-439b-b6a2-dd406c4b5752"),
-                            Description = "The damage increases by 2d6.",
                             Level = 1,
                             SpellId = new Guid("2a4b767b-27d0-4519-b1f7-c554837d0c73")
                         },
                         new
                         {
                             Id = new Guid("283ef60d-8ca4-463d-80cc-12bafa287dfc"),
-                            Description = "You can target up to 10 creatures.",
                             Level = 8,
                             SpellId = new Guid("068fc3bd-e1ac-4069-8a29-13bd1a0b92f2")
                         },
                         new
                         {
                             Id = new Guid("d896e7f8-a52e-49d1-a1fe-98148ba1c246"),
-                            Description = "You can choose a spell of 5th level or lower.",
                             Level = 8,
                             SpellId = new Guid("94beacae-4765-499c-b93e-934fff8585a4")
                         },
                         new
                         {
                             Id = new Guid("cda1fc96-7b2c-4df9-b65f-04b4a2e0f5c7"),
-                            Description = "You can choose a spell of 6th level or lower.",
                             Level = 9,
                             SpellId = new Guid("94beacae-4765-499c-b93e-934fff8585a4")
                         },
                         new
                         {
                             Id = new Guid("3f51f72d-37e7-4e37-8f3d-48686460b573"),
-                            Description = "You can choose a spell of 7th level or lower.",
                             Level = 10,
                             SpellId = new Guid("94beacae-4765-499c-b93e-934fff8585a4")
                         },
                         new
                         {
                             Id = new Guid("fd04a9d3-8d55-49b6-ab6f-863cfda50de7"),
-                            Description = "The spell is more difficult to counteract and resist, but the cost is increased to 16gp.",
                             Level = 3,
                             SpellId = new Guid("d253d16d-cbac-4673-a25f-0a3c33173cd1")
                         },
                         new
                         {
                             Id = new Guid("c15bae80-bafd-4214-a887-e8dc349d2a51"),
-                            Description = "The spell is more difficult to counteract and resist, but the cost is increased to 30gp.",
                             Level = 4,
                             SpellId = new Guid("d253d16d-cbac-4673-a25f-0a3c33173cd1")
                         },
                         new
                         {
                             Id = new Guid("ecdcd196-a2f7-4eff-a302-36829c060875"),
-                            Description = "The spell is more difficult to counteract and resist, but the cost is increased to 60gp.",
                             Level = 5,
                             SpellId = new Guid("d253d16d-cbac-4673-a25f-0a3c33173cd1")
                         },
                         new
                         {
                             Id = new Guid("20e9bfe7-6e9d-4e2d-ae10-68455f7a75dc"),
-                            Description = "The spell is more difficult to counteract and resist, but the cost is increased to 120gp.",
                             Level = 6,
                             SpellId = new Guid("d253d16d-cbac-4673-a25f-0a3c33173cd1")
                         },
                         new
                         {
                             Id = new Guid("70f8b982-3a29-4498-89e7-eee2ead46d0f"),
-                            Description = "The spell is more difficult to counteract and resist, but the cost is increased to 270gp.",
                             Level = 7,
                             SpellId = new Guid("d253d16d-cbac-4673-a25f-0a3c33173cd1")
                         },
                         new
                         {
                             Id = new Guid("26042150-1558-43d2-acd2-8a75c20f513e"),
-                            Description = "The spell is more difficult to counteract and resist, but the cost is increased to 540gp.",
                             Level = 8,
                             SpellId = new Guid("d253d16d-cbac-4673-a25f-0a3c33173cd1")
                         },
                         new
                         {
                             Id = new Guid("79854345-f541-48f2-8e04-8401e71c598b"),
-                            Description = "The spell is more difficult to counteract and resist, but the cost is increased to 1350gp.",
                             Level = 9,
                             SpellId = new Guid("d253d16d-cbac-4673-a25f-0a3c33173cd1")
                         },
                         new
                         {
                             Id = new Guid("fa60eb32-a8f7-4129-ac79-86db2b0c6e85"),
-                            Description = "The spell is more difficult to counteract and resist, but the cost is increased to 3350gp.",
                             Level = 10,
                             SpellId = new Guid("d253d16d-cbac-4673-a25f-0a3c33173cd1")
                         },
                         new
                         {
                             Id = new Guid("923762df-f025-49e3-9f23-b82e97f15e5a"),
-                            Description = "You can feed 12 Medium creatures.",
                             Level = 4,
                             SpellId = new Guid("2d0fa5a4-eab0-4eca-85cb-23241e5ef814")
                         },
                         new
                         {
                             Id = new Guid("14353fce-2884-4203-ae5c-2a52cc7c629b"),
-                            Description = "You can feed 50 Medium creatures.",
                             Level = 6,
                             SpellId = new Guid("2d0fa5a4-eab0-4eca-85cb-23241e5ef814")
                         },
                         new
                         {
                             Id = new Guid("d5f956fa-1486-461c-9ff5-94db3f1f5cdd"),
-                            Description = "You can feed 200 Medium creatures.",
                             Level = 8,
                             SpellId = new Guid("2d0fa5a4-eab0-4eca-85cb-23241e5ef814")
                         },
                         new
                         {
                             Id = new Guid("480f3fc8-55c9-4961-8572-5cc86cc4ca85"),
-                            Description = "The item is metal and can include common minerals, like feldspar or quartz.",
                             Level = 5,
                             SpellId = new Guid("311b0146-7b80-4594-800f-b0046237d47f")
                         },
                         new
                         {
                             Id = new Guid("ae249d83-3fe3-4e38-8154-4d6b07924f3c"),
-                            Description = "The damage increases by 2d6 (or by 2d8 if the target is a divine spellcaster).",
                             Level = 1,
                             SpellId = new Guid("b7157338-c1de-4e79-a90c-e0f62abd709c")
                         },
                         new
                         {
                             Id = new Guid("7c4a2e8b-867f-4b2b-816a-535e3eb0fc79"),
-                            Description = "The level for each category increases by 2.",
                             Level = 10,
                             SpellId = new Guid("e4568cde-13d1-4684-81b2-180bc291198f")
                         },
                         new
                         {
                             Id = new Guid("cecf2b46-be78-406a-ab01-b1bff4d3917a"),
-                            Description = "The area increases to a 60-foot cone.",
                             Level = 7,
                             SpellId = new Guid("2665ca32-131c-43cd-b30b-c763eb024a08")
                         },
                         new
                         {
                             Id = new Guid("9d5aaa18-2a33-4468-b219-bf3429228901"),
-                            Description = "Even creatures with darkvision (but not greater darkvision) can barely see through the darkness. They treat targets seen through the darkness as concealed.",
                             Level = 4,
                             SpellId = new Guid("0f86cd9a-76b2-4bb4-bebe-ea638643fc3e")
                         },
                         new
                         {
                             Id = new Guid("b2fd64f9-51d7-42fb-b78d-fd29bf47f508"),
-                            Description = "The spell’s range is touch and it targets 1 willing creature.",
                             Level = 3,
                             SpellId = new Guid("66172098-6cdb-4587-89bb-24fe1a8faf7c")
                         },
                         new
                         {
                             Id = new Guid("3d32cc67-f66b-4b7d-a267-ff050108114c"),
-                            Description = "The spell’s range is touch and it targets 1 willing creature.The duration is until the next time you make your daily preparations.",
                             Level = 5,
                             SpellId = new Guid("66172098-6cdb-4587-89bb-24fe1a8faf7c")
                         },
                         new
                         {
                             Id = new Guid("aa381ca0-7a43-4e1b-9d5d-2ad73be5255d"),
-                            Description = "The damage increases by 1d6.",
                             Level = 2,
                             SpellId = new Guid("2d8be059-3a79-4d4d-a7e8-31dee66680cc")
                         },
                         new
                         {
                             Id = new Guid("be4200a2-c623-4146-890a-bddb87f620cf"),
-                            Description = "You learn each aura's location and strength.",
                             Level = 2,
                             SpellId = new Guid("54d80001-c58b-4524-b23d-3962bb5f7ed4")
                         },
                         new
                         {
                             Id = new Guid("c9d1c03b-32b0-4182-ad71-89f87576f5a7"),
-                            Description = "You learn the school of magic for the highestlevel effect within range that the spell detects. If multiple effects are equally strong, the GM determines which you learn.",
                             Level = 3,
                             SpellId = new Guid("1e7838ee-f64d-4806-8d3d-e55ba4261c03")
                         },
                         new
                         {
                             Id = new Guid("0e4f844c-c605-4423-9321-ca5241df1950"),
-                            Description = "As 3rd level, but you also pinpoint the source of the highest-level magic. Like for an imprecise sense, you don’t learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that).",
                             Level = 4,
                             SpellId = new Guid("1e7838ee-f64d-4806-8d3d-e55ba4261c03")
                         },
                         new
                         {
                             Id = new Guid("5f67a8e9-f9f4-4b40-a9b6-f651f6b07886"),
-                            Description = "You learn the number and types of poison.",
                             Level = 2,
                             SpellId = new Guid("8e4669af-e67c-42a4-bd0f-9e117496cb6c")
                         },
                         new
                         {
                             Id = new Guid("9e4831ac-5cfe-4a20-9583-6d18d37fa4d2"),
-                            Description = "The duration is until the next time you make your daily preparations.",
                             Level = 6,
                             SpellId = new Guid("2ef1bfc9-3ca3-45b8-804a-ba9d948224de")
                         },
                         new
                         {
                             Id = new Guid("4d38efb2-763a-44c6-97d6-f67dccc6e8c2"),
-                            Description = "The range increases to 1 mile. You don’t need to be able to see your destination, as long as you have been there in the past and know its relative location and distance from you. You are temporarily immune for 1 hour.",
                             Level = 5,
                             SpellId = new Guid("73180f19-0c26-4f90-b377-8ae1d3df6525")
                         },
                         new
                         {
                             Id = new Guid("2f7a2dd1-f158-490c-9ffe-b67b3a085a5c"),
-                            Description = "Your battle form is Huge and your attacks have 15-foot reach, or 20-foot reach if they started with 15-foot reach. You instead gain 20 temporary HP, an attack modifier of +18, a damage bonus of +6, double the damage dice, and Athletics +21.",
                             Level = 5,
                             SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818")
                         },
                         new
                         {
                             Id = new Guid("a7a1d25e-fd89-4602-8322-e796cc091afd"),
-                            Description = "Your battle form is Gargantuan and your attacks have 20-foot reach, or 25-foot reach if they started with 15-foot reach. You instead gain AC = 21 + your level, 25 temporary HP, an attack modifier of +25, a damage bonus of +15, double the damage dice, and Athletics +25.",
                             Level = 7,
                             SpellId = new Guid("55780227-9986-4a2e-aa35-93a105314818")
                         },
                         new
                         {
                             Id = new Guid("3ce62722-4290-4b4b-949f-d0698ff70202"),
-                            Description = "The damage increases by 2d10.",
                             Level = 1,
                             SpellId = new Guid("8280e542-c9e9-41d9-b152-aff2f054d447")
                         },
                         new
                         {
                             Id = new Guid("25598434-fc72-4c97-b895-060cada42dda"),
-                            Description = "The damage increases to 2d4 damage.",
                             Level = 3,
                             SpellId = new Guid("9627d10b-e488-4299-9e1b-2c3a511ec007")
                         },
                         new
                         {
                             Id = new Guid("766b8628-93b0-4a8f-baf9-d7be6eb4e957"),
-                            Description = "Target up to three weapons, and the damage increases to 3d4 damage.",
                             Level = 5,
                             SpellId = new Guid("9627d10b-e488-4299-9e1b-2c3a511ec007")
                         },
                         new
                         {
                             Id = new Guid("637c1c9a-e2f9-497d-85fc-9ca72fbba552"),
-                            Description = "The damage increases by 1d6.",
                             Level = 1,
                             SpellId = new Guid("db143e7b-8212-4350-a09f-09205811470e")
                         },
                         new
                         {
                             Id = new Guid("18cca2c1-2c7b-4486-b085-734cebf5f52d"),
-                            Description = "The damage increases by 1d10, and the level of creatures that must attempt a second save on a critical failure increases by 2.",
                             Level = 1,
                             SpellId = new Guid("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9")
                         },
                         new
                         {
                             Id = new Guid("94452491-58bd-487f-b187-8525fe6a0160"),
-                            Description = "The damage increased by 1d4.",
                             Level = 1,
                             SpellId = new Guid("eb816f67-17d1-439b-badb-2657b57f64e2")
                         },
                         new
                         {
                             Id = new Guid("842ac0e3-6867-4a83-b8fa-8e60db388251"),
-                            Description = "The temporary Hit Points increase to 60, the weakness increases to 15, and the duration increases to 10 minutes.",
                             Level = 9,
                             SpellId = new Guid("6e689573-2fdb-409f-abd2-a27135775498")
-                        });
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellHeighteningDetailBlock", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("SpellHeighteningId")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SpellHeighteningId");
-
-                    b.ToTable("SpellHeighteningDetailBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("15cbcb57-8a87-4384-83cc-d6fd57200b69"),
-                            SpellHeighteningId = new Guid("070c4a22-2028-4361-89b5-ef690dd3fa6b"),
-                            Text = "- Blue: The wall stops auditory, petrification, and visual effects from passing through, and creatures passing through are subject to the effects of flesh to stone. Magic missile can counteract a blue chromatic wall."
-                        },
-                        new
-                        {
-                            Id = new Guid("64b88f10-e799-4c14-891c-22084ad8ac1c"),
-                            SpellHeighteningId = new Guid("070c4a22-2028-4361-89b5-ef690dd3fa6b"),
-                            Text = "- Indigo: The wall stops divination and mental effects from passing through, and those passing through are subject to the effects of warp mind. Searing light can counteract an indigo chromatic wall."
-                        },
-                        new
-                        {
-                            Id = new Guid("720a973c-28a7-44c6-b327-7c6e165b306c"),
-                            SpellHeighteningId = new Guid("070c4a22-2028-4361-89b5-ef690dd3fa6b"),
-                            Text = "- Violet: The wall prevents spells from targeting the other side (area effects still cross as normal). Creatures passing through must succeed at a Will save or they are slowed 1 for 1 minute; on a critical failure, the creature is instead sent to another plane, with the effect of plane shift. Dispel magic can counteract a violet chromatic wall."
-                        },
-                        new
-                        {
-                            Id = new Guid("12927068-2bf4-49b8-bd09-b92c6a3f8169"),
-                            SpellHeighteningId = new Guid("070c4a22-2028-4361-89b5-ef690dd3fa6b"),
-                            Text = "- Reroll, and creatures that pass through the wall take a –2 circumstance penalty to their saves."
                         });
                 });
 
@@ -33477,20 +30377,299 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("TraitsId");
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("Actions_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("cb5d193c-21b9-44a4-8370-766b898ceae9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("185abe1a-6c43-4884-bb8a-4f596e75442f"),
+                                    Text = "You try to help your ally with a task. To use this reaction, you must first prepare to help, usually by using an action during your turn. You must explain to the GM exactly how you’re trying to help, and they determine whether you can Aid your ally.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("60fe2d98-ba32-435e-ac1c-1abb6e8a5691"),
+                                    Order = 1,
+                                    OwnerId = new Guid("185abe1a-6c43-4884-bb8a-4f596e75442f"),
+                                    Text = "When you use your Aid reaction, attempt a skill check or attack roll of a type decided by the GM. The typical DC is 20, but the GM might adjust this DC for particularly hard or easy tasks. The GM can add any relevant traits to your preparatory action or to your Aid reaction depending on the situation, or even allow you to Aid checks other than skill checks and attack rolls.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("386cc768-8cc0-11eb-8dcd-0242ac130003"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3367ce7a-8cc0-11eb-8dcd-0242ac130003"),
+                                    Text = "You attempt an Acrobatics check to slow your fall. The DC is typically 15, but it might be higher due to air turbulence or other circumstances.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1345cbb1-4a0d-47e6-918f-f09fa0bd859b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4384a058-8cc0-11eb-8dcd-0242ac130003"),
+                                    Text = "You avert your gaze from danger. You gain a +2 circumstance bonus to saves against visual abilities that require you to look at a creature or object, such as a medusa’s petrifying gaze. Your gaze remains averted until the start of your next turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("015a016b-90ec-42b1-9e9b-28c230d06999"),
+                                    Order = 0,
+                                    OwnerId = new Guid("eb1f9f32-3d35-479a-a3e2-bf965e32fc3d"),
+                                    Text = "You dig your way through dirt, sand, or a similar loose material at a rate up to your burrow Speed. You can’t burrow through rock or other substances denser than dirt unless you have an ability that allows you to do so.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ea4b9697-2a26-4b33-aa9d-f6908ab082e3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5f770553-dac1-4377-8416-1a2a2e8f43be"),
+                                    Text = "You move 5 feet by crawling and continue to stay prone.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f2def960-90a3-4293-9649-24a380ce33e5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4163f1f7-245b-4989-b4a9-8638d75f2cdc"),
+                                    Text = "You wait for the right moment to act. The rest of your turn doesn’t happen yet. Instead, you’re removed from the initiative order. You can return to the initiative order as a free action triggered by the end of any other creature’s turn. This permanently changes your initiative to the new position. You can’t use reactions until you return to the initiative order. If you Delay an entire round without returning to the initiative order, the actions from the Delayed turn are lost, your initiative doesn’t change, and your next turn occurs at your original position in the initiative order.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c9a4cd10-fd21-4bb9-a356-a47d4837599a"),
+                                    Order = 1,
+                                    OwnerId = new Guid("4163f1f7-245b-4989-b4a9-8638d75f2cdc"),
+                                    Text = "When you Delay, any persistent damage or other negative effects that normally occur at the start or end of your turn occur immediately when you use the Delay action. Any beneficial effects that would end at any point during your turn also end. The GM might determine that other effects end when you Delay as well. Essentially, you can’t Delay to avoid negative consequences that would happen on your turn or to extend beneficial effects that would end on your turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("609e4ef2-f376-48d0-8f70-620733c8b8d5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e5d48006-5153-4ebf-a71e-401cc0bc3d4a"),
+                                    Text = "You fall prone.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5055a0f7-a922-4b49-b57f-40938f30d803"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c2bcb0d1-7feb-4f52-8046-d630a6c8f09f"),
+                                    Text = "You attempt to escape from being grabbed, immobilized, or restrained. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a check using your unarmed attack modifier against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC for a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an Acrobatics or Athletics check instead of using your attack modifier if you choose (but this action still has the attack trait).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a92602b3-303e-448f-91a1-8cf3dbce6c5a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("31fb2827-6ed7-455e-b135-9f4893b298fb"),
+                                    Text = "You move through the air up to your fly Speed. Moving upward (straight up or diagonally) uses the rules for moving through difficult terrain. You can move straight down 10 feet for every 5 feet of movement you spend. If you Fly to the ground, you don’t take falling damage. You can use an action to Fly 0 feet to hover in place. If you’re airborne at the end of your turn and didn’t use a Fly action this round, you fall.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("135aadcd-6eaf-4401-909d-de2414c5ccbc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("90d27bd9-31ed-46f4-a174-467e165ed1b9"),
+                                    Text = "When you fall off or past an edge or other handhold, you can try to grab it, potentially stopping your fall. You must succeed at a Reflex save, usually at the Climb DC. If you grab the edge or handhold, you can then Climb up using Athletics.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3628f76a-d2f7-4391-9282-f7812e69ae26"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b66bad20-3677-47eb-9344-c78e538adcd3"),
+                                    Text = "You use your hand or hands to manipulate an object or the terrain. You can grab an unattended or stored object, open a door, or produce some similar effect. You might have to attempt a skill check to determine if your Interact action was successful.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2e208301-e15b-4adc-9929-d35835141a08"),
+                                    Order = 0,
+                                    OwnerId = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
+                                    Text = "You take a careful, short jump. You can Leap up to 10 feet horizontally if your Speed is at least 15 feet, or up to 15 feet horizontally if your Speed is at least 30 feet. You land in the space where your Leap ends (meaning you can typically clear a 5-foot gap, or a 10-foot gap if your Speed is 30 feet or more).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d4aeb760-f7a2-4095-bc96-e2f70ab49b80"),
+                                    Order = 1,
+                                    OwnerId = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
+                                    Text = "If you Leap vertically, you can move up to 3 feet vertically and 5 feet horizontally onto an elevated surface.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6a431cbd-e07c-41e9-b824-179847fe0207"),
+                                    Order = 2,
+                                    OwnerId = new Guid("99ab25a7-a541-4074-ae20-fb25b87520cd"),
+                                    Text = "Jumping a greater distance requires using the Athletics skill.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("37cbf292-bc7b-46d3-909a-0bf344afe97b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ab48c6d8-a194-4595-8358-c751fdc934d8"),
+                                    Text = "You move onto the creature and ride it. If you’re already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e9c5de9d-eef6-46d4-ae1b-0dee8958af0c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("187ebb2b-c829-4d40-81dd-414a48ea766e"),
+                                    Text = "You indicate a creature that you can see to one or more allies, gesturing in a direction and describing the distance verbally. That creature is hidden to your allies, rather than undetected (page 466). This works only for allies who can see you and are in a position where they could potentially detect the target. If your allies can’t hear or understand you, they must succeed at a Perception check against the creature’s Stealth DC or they misunderstand and believe the target is in a different location.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1a320b87-a7f6-4d18-b4e2-3ea5dd7008a6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"),
+                                    Text = "You prepare to use an action that will occur outside your turn. Choose a single action or free action you can use, and designate a trigger. Your turn then ends. If the trigger you designated occurs before the start of your next turn, you can use the chosen action as a reaction (provided you still meet the requirements to use it). You can’t Ready a free action that already has a trigger.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("23ce08c6-58c9-43a0-8028-aa462b266f98"),
+                                    Order = 1,
+                                    OwnerId = new Guid("56d03917-ff05-4b95-9455-4cb2ccbc9a60"),
+                                    Text = "If you have a multiple attack penalty and your readied action is an attack action, your readied attack takes the multiple attack penalty you had at the time you used Ready. This is one of the few times the multiple attack penalty applies when it’s not your turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4014c48b-23f3-4382-81c7-3b9e7c1eec47"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ed94ef79-c37c-4591-a520-557916925352"),
+                                    Text = "You release something you’re holding in your hand or hands. This might mean dropping an item, removing one hand from your weapon while continuing to hold it in another hand, releasing a rope suspending a chandelier, or performing a similar action. Unlike most manipulate actions, Release does not trigger reactions that can be triggered by actions with the manipulate trait (such as Attack of Opportunity).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("168a4329-2ae8-48a5-8fa6-a5508a9b1b86"),
+                                    Order = 1,
+                                    OwnerId = new Guid("ed94ef79-c37c-4591-a520-557916925352"),
+                                    Text = "If you want to prepare to Release something outside of your turn, use the Ready activity.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e2a4876a-0d17-4bca-9874-8a0f708e39c3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
+                                    Text = "You scan an area for signs of creatures or objects. If you’re looking for creatures, choose an area you’re scanning. If precision is necessary, the GM can have you select a 30-foot cone or a 15-foot burst within line of sight. You might take a penalty if you choose an area that’s far away.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("722290ac-d0fa-43f9-9406-291d071f0fc9"),
+                                    Order = 1,
+                                    OwnerId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
+                                    Text = "If you’re using Seek to search for objects (including secret doors and hazards), you search up to a 10-foot square adjacent to you. The GM might determine you need to Seek as an activity, taking more actions or even minutes or hours if you’re searching a particularly cluttered area.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d666a8f0-877c-4b2d-8bac-7c3cbe35b525"),
+                                    Order = 2,
+                                    OwnerId = new Guid("ada1f776-2e98-4e7d-96e1-2166837fab6b"),
+                                    Text = "The GM attempts a single secret Perception check for you and compares the result to the Stealth DCs of any undetected or hidden creatures in the area or the DC to detect each object in the area (as determined by the GM or by someone Concealing the Object). A creature you detect might remain hidden, rather than becoming observed, if you’re using an imprecise sense or if an effect (such as invisibility) prevents the subject from being observed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("65547cff-999a-493d-a6c1-4f56d3f0662a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f715d730-9ad4-4922-b893-cda88fe25ea4"),
+                                    Text = "You try to tell whether a creature’s behavior is abnormal. Choose one creature, and assess it for odd body language, signs of nervousness, and other indicators that it might be trying to deceive someone. The GM attempts a single secret Perception check for you and compares the result to the Deception DC of the creature, the DC of a spell affecting the creature’s mental state, or another appropriate DC determined by the GM. You typically can’t try to Sense the Motive of the same creature again until the situation changes significantly.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d04ec0db-0e06-4422-963e-1161dcbc2ba9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4deb6d4d-0808-4755-897e-412a0d6e1f21"),
+                                    Text = "You stand up from prone.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1bf68b96-2ca3-4353-ab9a-657394acdadc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"),
+                                    Text = "You carefully move 5 feet. Unlike most types of movement, Stepping doesn’t trigger reactions, such as Attacks of Opportunity, that can be triggered by move actions or upon leaving or entering a square.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9aea3dfc-ee32-48c0-b420-1e9ffbd3d318"),
+                                    Order = 1,
+                                    OwnerId = new Guid("1e0c25df-54a1-41f0-8f21-2f6cdc08f59a"),
+                                    Text = "You can’t Step into difficult terrain (page 475), and you can’t Step using a Speed other than your land Speed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("829f3140-7228-4996-8315-8302402acf15"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4293eca5-4b6c-42f2-8e22-cd09796984fd"),
+                                    Text = "You move up to your Speed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("36548991-704d-4a82-a2c4-0622eb57f728"),
+                                    Order = 0,
+                                    OwnerId = new Guid("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd"),
+                                    Text = "You attack with a weapon you’re wielding or with an unarmed attack, targeting one creature within your reach (for a melee attack) or within range (for a ranged attack). Roll the attack roll for the weapon or unarmed attack you are using, and compare the result to the target creature’s AC to determine the effect. See Attack Rolls on page 446 and Damage on page 450 for details on calculating your attack and damage rolls.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3fb46634-1f05-49e3-afbc-4cc2c1553980"),
+                                    Order = 0,
+                                    OwnerId = new Guid("55bca308-af52-4da5-a1e4-a6c1059c5321"),
+                                    Text = "You press yourself against a wall or duck behind an obstacle to take better advantage of cover (page 477). If you would have standard cover, you instead gain greater cover, which provides a +4 circumstance bonus to AC; to Reflex saves against area effects; and to Stealth checks to Hide, Sneak, or otherwise avoid detection. Otherwise, you gain the benefits of standard cover (a +2 circumstance bonus instead). This lasts until you move from your current space, use an attack action, become unconscious, or end this effect as a free action.",
+                                    Type = 0
+                                });
+                        });
+
                     b.Navigation("ActionType");
 
+                    b.Navigation("Details");
+
                     b.Navigation("RollableEffect");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ActionDetailsBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", "Action")
-                        .WithMany("Details")
-                        .HasForeignKey("ActionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Action");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", b =>
@@ -33517,22 +30696,109 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("TraitsId");
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("AlchemicalBombs_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("575fcbde-26ab-4b04-8856-d3ff1612f7f3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("05e7fbc0-da5c-4194-bd5a-daa6b05ba421"),
+                                    Text = "This flask filled with corrosive acid deals 1 acid damage, the listed persistent acid damage, and the listed acid splash damage. Many types grant an item bonus to attack rolls.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7ea74824-5235-4b72-bc3e-813400c45c57"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3e95680d-1c87-457c-91b0-e6e5cf29bee8"),
+                                    Text = "Alchemist’s fire is a combination of volatile liquids that ignite when exposed to air. Alchemist’s fire deals the listed fire damage, persistent fire damage, and splash damage. Many types grant an item bonus to attack rolls.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d487c00d-1ea3-4f9a-83cd-eba70c9614fd"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2a6ab15a-5dd7-4c2c-b551-500821023ac7"),
+                                    Text = "Bottled lightning is packed with volatile reagents that create a blast of electricity when they are exposed to air. Bottled lightning deals the listed electricity damage and electricity splash damage. On a hit, the target becomes flat-footed until the start of your next turn. Many types grant an item bonus to attack rolls.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3a949c9e-d4c8-4496-bb1a-71fea4bef008"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f121fc6c-44bd-4528-9673-709f81627688"),
+                                    Text = "The liquid reagents in this vial rapidly absorb heat when exposed to air. A frost vial deals the listed cold damage and cold splash damage. On a hit, the target takes a status penalty to its Speeds until the end of its next turn. Many types of frost vial also grant an item bonus to attack rolls.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f7f13e63-3728-470d-8a1f-b7cd65d855df"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                                    Text = "A tanglefoot bag is filled with sticky substances. When you hit a creature with a tanglefoot bag, that creature takes a status penalty to its Speeds for 1 minute. Many types of tanglefoot bag also grant an item bonus on attack rolls.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("694ea8b3-8bd7-4a4e-b925-446ba77959f6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                                    Text = "On a critical hit, a creature in contact with a solid surface becomes stuck to the surface and immobilized for 1 round, and a creature flying via wings has its wings tangled, causing it to fall safely to the ground and become unable to Fly again for 1 round. Tanglefoot bags are not effective when used on a creature that is in water.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3d23b44a-67d3-4cbe-b73e-528f36790ac4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e7825926-436e-4914-940a-09de6052cab1"),
+                                    Text = "The target can end any effects by Escaping or spending a total of 3 Interact actions to carefully remove the sticky substances. These Interact actions don’t have to be consecutive, and other creatures can provide the actions as well.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("670226b5-e794-4898-b2be-94c63cf5408e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5"),
+                                    Text = "When this stone hits a creature or a hard surface, it explodes with a deafening bang. A thunderstone deals the listed sonic damage and sonic splash damage, and each creature within 10 feet of the space in which the stone exploded must succeed at a Fortitude saving throw with the listed DC or be deafened until the end of its next turn. Many types of thunderstone grant an item bonus to attack rolls.",
+                                    Type = 0
+                                });
+                        });
+
                     b.Navigation("Action");
 
                     b.Navigation("Bulk");
 
+                    b.Navigation("Details");
+
                     b.Navigation("SourcePage");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBombDetailBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", "AlchemicalBomb")
-                        .WithMany("Details")
-                        .HasForeignKey("AlchemicalBombId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AlchemicalBomb");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBombPotencyBinding", b =>
@@ -33578,9 +30844,251 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("TraitsId");
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("AlchemicalElixirs_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("743b8c94-0516-4c3d-9c02-6e54afceab7d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c0369185-db16-46ad-9ac7-c4e269e9a0a8"),
+                                    Text = "Antiplague can fortify the body’s defenses against diseases. Upon drinking an antiplague, you gain an item bonus to Fortitude saving throws against diseases for 24 hours; this applies to your daily save against a disease’s progression.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("029c1cd3-93f2-472e-90a1-7f67847a6752"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1a2e2a1c-f468-48ec-b023-e81756740a11"),
+                                    Text = "Your features transform into something bestial and you take on muscle mass, but your lumbering form is clumsy.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("47c254c1-8659-4363-8818-143300056126"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c1fbd9e7-e36e-49d7-b3c2-772400e1fc5e"),
+                                    Text = "This tincture lets you pinpoint your foes. For the next 5 minutes, your alchemical bomb Strikes reduce the circumstance bonus to AC your targets gain from cover.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bed0c6dc-af90-431a-93a5-f6a126f7e4d2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8d0d85f9-d1bf-49c2-ab32-d6caa627de83"),
+                                    Text = "This flask of foaming beer grants courage. For the next hour after drinking this elixir, you gain an item bonus to Will saves, which is greater when attempting Will saves against fear.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("70db1dfe-abca-4416-b8ba-8825604c77d9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9273e6ad-3f3c-4e7d-9b9c-4a8faec61145"),
+                                    Text = "After you consume this elixir, your vision sharpens and you become sensitive to even the most minute movements. For the next minute, you reduce the flat check to target hidden creatures to 5, and you don’t need to attempt a flat check to target concealed creatures. These benefits apply only against creatures within 30 feet of you.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c3d0b8fa-4656-44c2-86ad-2247cc2326fd"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7a89776c-ffcc-4766-8ddb-d0d6f2227c30"),
+                                    Text = "Enzymatic compounds in this elixir strengthen and excite the muscles in your legs. You gain a status bonus to your Speed for the listed duration.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e0308f62-e9c4-49b4-ab1e-864a77807cd9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4ef08665-b07b-4ced-8876-ef6a15229e17"),
+                                    Text = "Your mind becomes clear and cognition flows freely, but physical matters seem ephemeral.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("99f4909b-5fd9-4602-abb9-84a2309b4879"),
+                                    Order = 0,
+                                    OwnerId = new Guid("787a099b-e070-4e58-b0b7-89c5e2f0aac9"),
+                                    Text = "This bitter draft opens your mind to the potential of the written word. For the listed duration after drinking this elixir, you can understand any words you read, so long as they are written in a common language. This elixir doesn’t automatically allow you to understand codes or extremely esoteric passages—you still need to attempt a skill check to Decipher Writing.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("47860fc7-facb-4704-b219-ff432eb33b73"),
+                                    Order = 0,
+                                    OwnerId = new Guid("82b662fa-09dc-4cc6-a7e1-13085af44f63"),
+                                    Text = "After you drink this elixir, your sight becomes sharper in darkness.You gain darkvision for the listed duration.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fc565a61-6754-4bea-bdc6-768b53993621"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e81eb16e-db86-4869-9cc7-1b5dfa3ba787"),
+                                    Text = "After you drink this elixir, you notice subtle visual details. For the next hour, you gain an item bonus to Perception checks that is greater when attempting to find secret doors and traps.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("150dac7f-5e0c-461a-91ea-1d6b6cb5fda9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("479d0265-a1a4-41f3-afd0-8ad618bdb7a6"),
+                                    Text = "Elixirs of life accelerate a living creature’s natural healing processes and immune system. Upon drinking this elixir, you regain the listed number of Hit Points and gain an item bonus to saving throws against diseases and poisons for 10 minutes.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5b3a9903-a51c-4a10-b932-ee51026807ff"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                                    Text = "The elixir of rejuvenation restores a creature to full health and eradicates toxins affecting it. When you drink this elixir, you’re restored to your maximum Hit Points, and all afflictions of 20th level or lower affecting you are removed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1bc9c603-c18b-4898-add5-8e6533dbbeb0"),
+                                    Order = 1,
+                                    OwnerId = new Guid("c9715348-c813-422b-af5b-e2c9a11884a9"),
+                                    Text = "You can instead administer this elixir to a creature that has been dead for a week or less. When you do, that creature is instantly brought back to life with 1 Hit Point and no spell slots, Focus Points, or other daily resources.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5c24f746-2f04-48a2-9b74-ab5c70e42203"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                                    Text = "Favored by spies and tricksters, an infiltrator’s elixir is used to alter your appearance. When imbibed, you take the shape of a humanoid creature of your size, but different enough so you might be unrecognizable. If you aren’t a humanoid, you might take on a form more similar to your own, at the GM’s discretion.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1e77fd3e-28cf-47ca-a2e5-085bf9673e30"),
+                                    Order = 1,
+                                    OwnerId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                                    Text = "The creator of the elixir decides the basics of the appearance you transform into when you imbibe the elixir, including eye color, skin tone, and hair color. The elixir can’t change your form into that of a specific person. After the form takes hold, you retain it for the next 10 minutes.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7ea16d23-375f-4b4e-8400-35d31a29f574"),
+                                    Order = 2,
+                                    OwnerId = new Guid("f8b7608f-3330-494d-8203-64cb7aeaa477"),
+                                    Text = "Drinking this elixir counts as setting up a disguise to Impersonate. You gain a +4 status bonus to your Deception DC to avoid others seeing through your disguise, and you add your level to this DC even if untrained.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("04d5224a-86f5-4533-a931-a1b465cbac1c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("64cc1e8c-d5c1-4e58-9306-3be2e06a95b9"),
+                                    Text = "After you drink this mutagen, your body becomes thick and sturdy. You exhibit a healthy glow, though you tend to be ponderous and unobservant.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("83785b35-3536-4517-8ad1-e06c530cba25"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fce1d931-7808-4e03-8615-f9f0210c405a"),
+                                    Text = "This tingly solution increases the elasticity and contraction of your leg muscles. For 1 minute after drinking this elixir, you can High Jump or Long Jump as a single action instead of 2 actions. If you do, you don’t perform the initial Stride (nor do you fail if you don’t Stride 10 feet).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("518dfefb-b42e-457a-a7f2-df253f733f15"),
+                                    Order = 0,
+                                    OwnerId = new Guid("87e2ed9e-5358-493d-be9f-0f96150b5b7a"),
+                                    Text = "A faint mist emanates from your skin, making you concealed for the listed duration. As usual, if you become concealed when your position is still obvious, you can’t use this concealment to Hide or Sneak.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ad64a881-6dc8-4752-8c71-e3486b4977bc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("eeca589b-c156-4a4a-8614-d78cc53934c1"),
+                                    Text = "Your features become thin and angular. You become swifter and nimbler, but your body also becomes fragile.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e5afe368-8abd-4cc4-b15a-fe449c96daac"),
+                                    Order = 0,
+                                    OwnerId = new Guid("edf0d3e8-4400-4feb-8326-7d98976ebae7"),
+                                    Text = "This elixir is made from salamander scales to withstand fire. For 24 hours, you are protected from the effects of severe heat.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5d023119-60ec-4f88-9056-c3b81e0af2bf"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ceaaac90-8340-4e2a-aa97-effc5848f12d"),
+                                    Text = "This briny concoction alters the skin on your hands and feet. The spaces between your fingers and toes become webbed, granting you a swim Speed of 20 feet for the listed duration.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("26d53eae-b1d3-4e3c-81d1-83d6d86633df"),
+                                    Order = 0,
+                                    OwnerId = new Guid("baf67e26-cdcd-48fc-b64a-2e68c08bef03"),
+                                    Text = "You gain inner serenity, focused on fine details and steeled against mental assaults, but you find violence off-putting.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9b681339-c92a-45b5-9bed-aebedf317e72"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a4700423-ee77-4ed2-ac68-682da90db27b"),
+                                    Text = "Your features become striking and your voice becomes musical and commanding, though facts and figures become hazy for you and emotion clouds your ability to reason.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cdcd2d5b-5901-4d52-81b9-7645684928c0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("58f3f7fd-4244-4a42-b684-d995220d4ade"),
+                                    Text = "Your fists become hard as stone. For 1 hour, your fists deal 1d6 bludgeoning damage and lose the nonlethal trait.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7b92f530-d78e-4683-b967-9de524ac2063"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                                    Text = "This elixir warms your core and improves your circulation. For 24 hours, you are protected from the effects of severe cold.",
+                                    Type = 0
+                                });
+                        });
+
                     b.Navigation("Action");
 
                     b.Navigation("Bulk");
+
+                    b.Navigation("Details");
 
                     b.Navigation("SourcePage");
                 });
@@ -33589,17 +31097,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixir", "AlchemicalElixir")
                         .WithMany("CraftingRequirements")
-                        .HasForeignKey("AlchemicalElixirId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AlchemicalElixir");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixirDetailBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalElixir", "AlchemicalElixir")
-                        .WithMany("Details")
                         .HasForeignKey("AlchemicalElixirId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -33662,26 +31159,281 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("TraitsId");
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("AlchemicalPoisons_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("ab9af6c8-886c-4cc4-8347-d5d5b6c520e5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b28f4309-cc04-4522-8837-b653995b3028"),
+                                    Text = "This toxin is a compound of arsenic and other substances. You can’t reduce your sickened condition while affected.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ce438b37-57d0-41eb-83ed-65302a63073b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("28f803a7-f093-4be7-a3d2-623a77560f93"),
+                                    Text = "Sometimes called “deadly nightshade,” belladonna is a widely available toxin produced from a plant similar to a tomato.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("26dd2686-7c61-4c86-8724-6d2e336401a0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c65fd194-6210-42c8-80a2-b54ff81b6585"),
+                                    Text = "Adder venom is a simple but effective way to enhance a weapon.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c36e3697-6277-474e-b992-a95f955a857b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fa11da7d-e05b-486b-a6e0-444dee34bae9"),
+                                    Text = "Black lotus extract causes severe internal bleeding.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("785aa516-6335-4df7-9078-4230d4bdf0e7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dc73bb29-2a4e-429e-bc99-26d85ae74e1c"),
+                                    Text = "This tacky, hardened sap is harvested from trees infected by fungal blights and exposed to open flames.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5b28e3fa-1348-41cb-ba9f-25f5230e45d3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("81b07f7b-2e70-4b38-80f7-0b28a4c6f399"),
+                                    Text = "Fumes from the forges of Hell drain health and strength alike.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("062e4990-d0b3-4931-9ee3-ede80d54ec72"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0381fe8b-2404-42fb-9abd-74e28f1401d5"),
+                                    Text = "This thick substance is distilled from the mind-robbing cytillesh fungus, though it lacks memory-altering capabilities.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("86a05df2-37ef-4162-9576-46a53b42e381"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ae0386af-cfaf-40c0-83b4-8dd5a8d80d9a"),
+                                    Text = "The toxic deathcap mushroom can be dried, ground, and treated to form a flavorless powder with accelerated effects.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f8d404e3-12fb-4647-adb6-60888962e8f2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b2e3f38f-f570-4cf8-ba74-633bdc0a1405"),
+                                    Text = "A mix of digestive juices and green dragon poison glands nauseates the victim as its flesh is digested from within.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e9c5a72e-0a96-4f96-ba1f-a64036c4cfda"),
+                                    Order = 0,
+                                    OwnerId = new Guid("acc877c9-ea44-4977-b0da-6bf6ec70922a"),
+                                    Text = "Giant centipede venom causes severe muscle stiffness.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("39eeb491-4cff-4764-89d2-9ce910775200"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7b143b21-75a9-4d41-9c09-1e4a872526b9"),
+                                    Text = "Scorpion venom is excruciating and its effects are somewhat debilitating.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2d4bb8d3-f0fc-4e20-a407-a73f2824d244"),
+                                    Order = 0,
+                                    OwnerId = new Guid("862bacf9-a11f-4f56-8c94-2452d636db79"),
+                                    Text = "Giant wasp venom interferes with a victim’s movement.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0b7f7c29-9473-4281-8d95-5264cfe8b23d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b445e986-a45a-4d3a-8089-a2d33fee60dc"),
+                                    Text = "The opaque white sap from the graveroot shrub clouds the mind.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7045ff07-e29c-4f30-9a90-8d4b94e64335"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7c923c5c-7005-4f1b-9005-5c79b289b056"),
+                                    Text = "Concentrated hemlock is a particularly deadly toxin that halts muscle action—including that of the victim’s heart.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("84e7645e-26c9-436c-824e-f485cba68ba0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1e830309-8b32-4860-85d0-a704be45b0f6"),
+                                    Text = "This venom erodes its target’s defenses, aiding the spider in securing prey.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("620d976a-9aa5-421e-a5a0-124b60cdc8db"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7d31dbce-9230-4960-99cc-71de51c18977"),
+                                    Text = "King’s sleep is an insidious long-term poison that can seem like a disease or even death from natural causes on a venerable target. The drained condition from king’s sleep is cumulative with each failed save and can’t be removed while the poison lasts.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ed3a6476-d01d-44c9-a3a5-72e753c48be5"),
+                                    Text = "Lethargy poison is commonly used in hit-and-run tactics by drow and others who want their victims alive; the ambusher retreats until the poison sets in and the victim falls unconscious. Further exposure to lethargy poison does not require the target to attempt additional saving throws; only failing an saving throw against an ongoing exposure can progress its stage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d4ce3729-a117-4501-b8b3-2526bfb0ff43"),
+                                    Order = 0,
+                                    OwnerId = new Guid("949064c1-4862-4a51-a4fe-8ac7c91559d1"),
+                                    Text = "Dust salvaged from the remains of a destroyed lich has paralytic properties that make it a valuable poison.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("42d4e1ff-92b4-4153-b3eb-42ea8d70eb41"),
+                                    Order = 0,
+                                    OwnerId = new Guid("aef8461a-019a-4c5e-baeb-949f8ebd6e66"),
+                                    Text = "Malyass root paste sees use to impede opponents in athletic competitions, in addition to espionage and tracking.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("765ca329-35c6-4f20-8d10-000b35ce1a78"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c55ad542-1fba-49e6-ab84-f95050cc3d7f"),
+                                    Text = "Mindfog mist can be used to undermine spellcasters, as its effect on a victim’s mental faculties are swift and powerful.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a7391054-edfc-4951-8efc-8b995fde8148"),
+                                    Order = 0,
+                                    OwnerId = new Guid("427af463-394a-423e-be07-d4788fc27ec7"),
+                                    Text = "Concentrated sap of stinging weeds makes an effective toxin.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a7f2675e-38a7-4d2e-bb3f-a893a4538f22"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d493d861-70f0-4362-a954-2d0609869352"),
+                                    Text = "Purportedly sourced from any number of outlandish locales, nightmare vapor is most often created by boiling the sweat collected from humanoids caught in the throes of terrible nightmares.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4de33799-27d7-42f5-a3cc-1458b3aef42d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0a713a66-44df-45ff-8917-5977c0c90e8f"),
+                                    Text = "Venom from enormous purple worms leaves a victim weakened.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("44e8074e-5cc8-46f9-8829-7ab92e42f176"),
+                                    Order = 0,
+                                    OwnerId = new Guid("eec5e097-c60a-4a1d-91d3-57bcf30e6a31"),
+                                    Text = "Distilled from the Plane of Shadow, this oily substance imposes tenebrous effects. The enfeebled condition from shadow essence lasts for 24 hours.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a699aced-f89e-4a8e-b70e-f46ef9abdbd3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1a0af776-3dc1-48f7-bc0a-17c676e4f044"),
+                                    Text = "Slumber wine sees its greatest use in games of intrigue, where an absence can be more devastating than injury. Characters unconscious from slumber wine can’t wake up by any means while the poison lasts, don’t need to eat or drink while unconscious in this way, and appear to be recently dead unless an examiner succeeds at a DC 40 Medicine check.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7891623b-6f09-4e17-b565-40ac365b6b59"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c4f4ddce-c112-44b3-90a5-06aaaed80f1e"),
+                                    Text = "A paste made by mashing the fine, threadlike roots of a certain creeper vine, spider root renders a victim clumsy and maladroit.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e61c1c37-3720-4a0d-8c2b-956bc8f7e9d1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0e9adbb7-41e0-4935-8e1e-5339b7b076d0"),
+                                    Text = "Tears of death are among the most powerful of alchemical poisons, distilled from extracts of five other deadly poisons in just the right ratios.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e864228b-0a29-43de-bebb-175ea6468573"),
+                                    Order = 0,
+                                    OwnerId = new Guid("25956d4a-b3ee-49fe-9660-b1ee2b67b1de"),
+                                    Text = "Wolfsbane appears in folklore for its link to werecreatures. If you are afflicted with lycanthropy and survive stage 3 of wolfsbane, you’re immediately cured of the lycanthropy.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("240bf270-cf24-434c-983a-4b5217b80772"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1f8e9d8a-52ba-4b7c-b041-6e797a91e25b"),
+                                    Text = "Properly harvested and preserved, the poison from a wyvern’s sting is effective and direct.",
+                                    Type = 0
+                                });
+                        });
+
                     b.Navigation("Action");
 
                     b.Navigation("ActionType");
 
                     b.Navigation("Bulk");
 
+                    b.Navigation("Details");
+
                     b.Navigation("Effect");
 
                     b.Navigation("SourcePage");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoisonDetailBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoison", "AlchemicalPoison")
-                        .WithMany("Details")
-                        .HasForeignKey("AlchemicalPoisonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AlchemicalPoison");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", b =>
@@ -33714,24 +31466,127 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("TraitsId");
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("AlchemicalTool_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("1b782fba-1f25-45e6-9c4e-1c5302f158f6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                                    Text = "An alchemist with the Craft Philosopher’s Stone feat can create a philosopher’s stone once per month by spending 1 batch of infused reagents during their daily preparations using the advanced alchemy class feature. This is the only way to create a philosopher’s stone.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("aae5d4ac-27ba-4142-8927-313f73134489"),
+                                    Order = 1,
+                                    OwnerId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                                    Text = "At a glance, a philosopher’s stone appears to be an ordinary, sooty piece of natural rock.Breaking the rock open with a Force Open action(DC 35) reveals a cavity at the stone’s heart.The cavity is lined with a rare type of quicksilver that can transmute base metals into precious metals or create an elixir of rejuvenation(page 548).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0906dbf5-774b-4fbc-93b4-785e00c0e9be"),
+                                    Order = 2,
+                                    OwnerId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                                    Text = "To use the quicksilver, you must be legendary in Crafting and have the Alchemical Crafting feat.You can then use the stone’s quicksilver for one of two effects:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5d0baac6-aa97-439b-9f15-f41924e85403"),
+                                    Order = 3,
+                                    OwnerId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                                    Text = "You can apply the stone’s quicksilver to an infused true elixir of life using an Interact action.This turns the elixir into an infused elixir of rejuvenation instantaneously.This doesn’t require any crafting time or additional materials.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("7176e4f6-3ecd-4af5-88b1-77adb4690dab"),
+                                    Order = 4,
+                                    OwnerId = new Guid("b6393c4f-dc42-4218-b0cd-71c78d2af105"),
+                                    Text = "You can spend up to a month of downtime applying the quicksilver either to iron to create silver or to leadto create gold.Treat this as a 20th - level task to Earn Income using Crafting, except that you create 500 gp worth of your chosen metal per day on a success or 750 gp worth per day on a critical success.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("10164353-c33e-411e-b631-26a19438ab0a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3707bdeb-7db4-4473-b963-f9adc2f2c1fa"),
+                                    Text = "You can slather this silvery paste onto one melee weapon, one thrown weapon, or 10 pieces of ammunition. Silversheen spoils quickly, so once you open a vial, you must use it all at once, rather than saving it. For the next hour, the weapon or ammunition counts as silver instead of its normal precious material (such as cold iron) for any physical damage it deals.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9908505d-e79b-42e7-8f5a-dd4ec3165054"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3c31b16b-1804-4e2e-ba66-9bb8faaca03e"),
+                                    Text = "With a sharp twist of this item, you instantly create a screen of thick, opaque smoke in a burst centered on one corner of your space. All creatures within that area are concealed, and all other creatures are concealed to them. The smoke lasts for 1 minute or until dispersed by a strong wind.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("94cfd7f2-a8a2-44b5-9fbb-3f1893ebd964"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fe623283-bc94-42a6-9a63-05fe74c06ab5"),
+                                    Text = "You can apply snake oil onto a wound or other outward symptom of an affliction or condition (such as sores from a disease or discoloration from a poison). For the next hour, the symptom disappears and the wounded or afflicted creature doesn’t feel as if it still has the wound or affliction, though all effects remain. A creature can uncover the ruse by succeeding at a DC 17 Perception check, but only if it uses a Seek action to specifically examine the snake oil’s effects.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8238f38f-f33e-4252-9f51-f0ec7ae0b938"),
+                                    Order = 0,
+                                    OwnerId = new Guid("cad37b1b-7d1e-4a1a-acb4-23a9814683ab"),
+                                    Text = "This 1-foot-long, gold-tipped rod glows after it’s struck on a hard surface. For the next 6 hours, it sheds bright light in a 20-foot radius (and dim light to the next 40 feet).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("237853b6-f295-4158-bb31-dc141d046bae"),
+                                    Order = 0,
+                                    OwnerId = new Guid("37fff04c-1d07-49d9-ae10-02fb910e782b"),
+                                    Text = "An alchemical substance applied to one end of this tiny wooden stick ignites when struck against a rough surface. Creating a flame with a tindertwig is much faster than creating a flame with flint and steel. You can ignite the tindertwig and touch it to a flammable object as part of the same Interact action. Core Rulebook 554",
+                                    Type = 0
+                                });
+                        });
+
                     b.Navigation("Action");
 
                     b.Navigation("ActionType");
 
                     b.Navigation("Bulk");
 
+                    b.Navigation("Details");
+
                     b.Navigation("SourcePage");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalToolDetailBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", "AlchemicalTool")
-                        .WithMany("Details")
-                        .HasForeignKey("AlchemicalToolId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AlchemicalTool");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalToolPotencyBinding", b =>
@@ -33927,22 +31782,653 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("SourcePageId");
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("Conditions_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("de7bc05a-0a68-407f-9325-18b58b3e4ef1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e9e00854-3d42-48b7-9724-017c8a46e3c0"),
+                                    Text = "You can’t see. All normal terrain is difficult terrain to you. You can’t detect anything using vision. You automatically critically fail Perception checks that require you to be able to see, and if vision is your only precise sense, you take a –4 status penalty to Perception checks. You are immune to visual effects. Blinded overrides dazzled.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4ccf1630-ee1b-4a52-b41a-d80832acccc8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8ecb38b2-d7fb-440f-b096-cf381652b2ff"),
+                                    Text = "Broken is a condition that affects objects. An object is broken when damage has reduced its Hit Points to equal or less than its Broken Threshold. A broken object can’t be used for its normal function, nor does it grant bonuses— with the exception of armor. Broken armor still grants its item bonus to AC, but it also imparts a status penalty to AC depending on its category: –1 for broken light armor, –2 for broken medium armor, or –3 for broken heavy armor.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d5009a32-f90e-465d-a23d-c0d1bf4957e7"),
+                                    Order = 1,
+                                    OwnerId = new Guid("8ecb38b2-d7fb-440f-b096-cf381652b2ff"),
+                                    Text = "A broken item still imposes penalties and limitations normally incurred by carrying, holding, or wearing it. For example, broken armor would still impose its Dexterity modifier cap, check penalty, and so forth.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("91795d9e-e963-4fe4-98ab-bfc3f00b1b63"),
+                                    Order = 2,
+                                    OwnerId = new Guid("8ecb38b2-d7fb-440f-b096-cf381652b2ff"),
+                                    Text = "If an effect makes an item broken automatically and the item has more HP than its Broken Threshold, that effect also reduces the item’s current HP to the Broken Threshold.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2f1bac5d-e528-41a0-b36f-58e680f40a99"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d1a95821-ef2b-4c73-8ec6-9ec6789c885d"),
+                                    Text = "You are the carrier of a disease, but you do not yet experience symptoms.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c9d257ad-4d93-463d-848b-feae9338886c"),
+                                    Order = 1,
+                                    OwnerId = new Guid("d1a95821-ef2b-4c73-8ec6-9ec6789c885d"),
+                                    Text = "This is not an official status condition, but a pf2e.io liberty to smooth out some of the inconsistencies in the rulesbooks.",
+                                    Type = 3
+                                },
+                                new
+                                {
+                                    Id = new Guid("1066b273-a9bc-4fd4-82a4-604ccc824308"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9c93e839-3ea9-4baa-aada-951d8fbf9807"),
+                                    Text = "You are choked, either physically by something or someone, by something magical, or by the the effects of a disease or illness (such as coughing). You need to pass a flat DC check equal to the severity of the condition when you attempt to cast a spell that has a verbal component to it, or activate an item that has a command component to it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ade8b52a-1a01-4f58-b4e9-abf35f44e2d0"),
+                                    Order = 1,
+                                    OwnerId = new Guid("9c93e839-3ea9-4baa-aada-951d8fbf9807"),
+                                    Text = "This is not an official status condition, but a pf2e.io liberty to smooth out some of the inconsistencies in the rulesbooks.",
+                                    Type = 3
+                                },
+                                new
+                                {
+                                    Id = new Guid("9d44223c-e20f-49a7-b374-528d6c21e714"),
+                                    Order = 0,
+                                    OwnerId = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
+                                    Text = "Your movements become clumsy and inexact. Clumsy always includes a value. You take a status penalty equal to the condition value to Dexterity-based checks and DCs, including AC, Reflex saves, ranged attack rolls, and skill checks using Acrobatics, Stealth, and Thievery.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4747231a-c95e-488a-9cf8-6ebef9bfadfa"),
+                                    Order = 0,
+                                    OwnerId = new Guid("64d1cfdc-8539-4bf7-95f2-60d53788079b"),
+                                    Text = "While you are concealed from a creature, such as in a thick fog, you are difficult for that creature to see. You can still be observed, but you’re tougher to target. A creature that you’re concealed from must succeed at a DC 5 flat check when targeting you with an attack, spell, or other effect. Area effects aren’t subject to this flat check. If the check fails, the attack, spell, or effect doesn’t affect you.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ca756fda-2864-47c4-92a2-46392a99aebb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f"),
+                                    Text = "You don’t have your wits about you, and you attack wildly. You are flat-footed, you don’t treat anyone as your ally (though they might still treat you as theirs), and you can’t Delay, Ready, or use reactions.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("99b1c88a-5271-4aab-bbb1-e5ec21a4b3b4"),
+                                    Order = 1,
+                                    OwnerId = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f"),
+                                    Text = "You use all your actions to Strike or cast offensive cantrips, though the GM can have you use other actions to facilitate attack, such as draw a weapon, move so that a target is in reach, and so forth. Your targets are determined randomly by the GM. If you have no other viable targets, you target yourself, automatically hitting but not scoring a critical hit. If it’s impossible for you to attack or cast spells, you babble incoherently, wasting your actions.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("631ddfce-8c66-467a-bb23-d5618e11b941"),
+                                    Order = 2,
+                                    OwnerId = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f"),
+                                    Text = "Each time you take damage from an attack or spell, you can attempt a DC 11 flat check to recover from your confusion and end the condition.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("672f53e9-c341-4d76-befe-8f2f97c3d693"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d4d10f5f-e6cc-4acc-a8b3-3a29de451366"),
+                                    Text = "Someone else is making your decisions for you, usually because you’re being commanded or magically dominated. The controller dictates how you act and can make you use any of your actions, including attacks, reactions, or even Delay. The controller usually does not have to spend their own actions when controlling you.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fae04dbc-8bb8-4771-b3a0-32b0b0da09f8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ff7b682f-13ff-464f-a230-89cc814186ea"),
+                                    Text = "Your eyes are overstimulated. If vision is your only precise sense, all creatures and objects are concealed from you.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("24e658a1-86a6-40da-86a3-6f67b13d4598"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3c3ce9f5-aceb-4db8-810a-1291035cf709"),
+                                    Text = "After you die, you can’t act or be affected by spells that target creatures (unless they specifically target dead creatures), and for all other purposes you are an object. When you die, you are reduced to 0 Hit Points if you had a different amount, and you can’t be brought above 0 Hit Points as long as you remain dead. Some magic can bring creatures back to life, such as the resurrect ritual or the raise dead spell.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a1b5f2c5-4799-468a-a3aa-7742b80487d5"),
+                                    Order = 1,
+                                    OwnerId = new Guid("3c3ce9f5-aceb-4db8-810a-1291035cf709"),
+                                    Text = "This is not an official status condition, but a pf2e.io liberty to smooth out some of the inconsistencies in the rulesbooks.",
+                                    Type = 3
+                                },
+                                new
+                                {
+                                    Id = new Guid("9403c4ab-8ecf-4cba-921d-33164c193893"),
+                                    Order = 0,
+                                    OwnerId = new Guid("31b26b64-2616-4d23-93de-f3dbc0c81b7d"),
+                                    Text = "You can’t hear. You automatically critically fail Perception checks that require you to be able to hear. You take a –2 status penalty to Perception checks for initiative and checks that involve sound but also rely on other senses. If you perform an action with the auditory trait, you must succeed at a DC 5 flat check or the action is lost; attempt the check after spending the action but before any effects are applied. You are immune to auditory effects.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8cf1621e-3546-4afa-a642-b9230fdb4738"),
+                                    Order = 0,
+                                    OwnerId = new Guid("824a03c0-0108-4896-8c0a-8af3a09cd738"),
+                                    Text = "A powerful force has gripped your soul, calling you closer to death. Doomed always includes a value. The dying value at which you die is reduced by your doomed value. If your maximum dying value is reduced to 0, you instantly die. When you die, you’re no longer doomed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("78319886-dc7a-4b52-bf06-737bd98c21e3"),
+                                    Order = 1,
+                                    OwnerId = new Guid("824a03c0-0108-4896-8c0a-8af3a09cd738"),
+                                    Text = "Your doomed value decreases by 1 each time you get a full night’s rest.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("89509236-9bb3-418e-be29-e31380949594"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
+                                    Text = "When a creature successfully drains you of blood or life force, you become less healthy. Drained always includes a value. You take a status penalty equal to your drainedvalue on Constitution-based checks, such as Fortitude saves. You also lose a number of Hit Points equal to your level (minimum 1) times the drained value, and your maximum Hit Points are reduced by the same amount. For example, if you’re hit by an effect that inflicts drained 3 and you’re a 3rd-level character, you lose 9 Hit Points and reduce your maximum Hit Points by 9. Losing these Hit Points doesn’t count as taking damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0b8cf255-bc93-4438-ad6d-efba1a02255e"),
+                                    Order = 1,
+                                    OwnerId = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
+                                    Text = "Each time you get a full night’s rest, your drained value decreases by 1. This increases your maximum Hit Points, but you don’t immediately recover the lost Hit Points.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cbf8d506-afc9-41c1-9d3f-22372c9a3bc3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("069fffa5-3fe0-4892-a04d-1bd28a6225a3"),
+                                    Text = "You are bleeding out or otherwise at death’s door. While you have this condition, you are unconscious. Dying always includes a value, and if it ever reaches dying 4, you die. If you’re dying, you must attempt a recovery check (page 459) at the start of your turn each round to determine whether you get better or worse. Your dying condition increases by 1 if you take damage while dying, or by 2 if you take damage from an enemy’s critical hit or a critical failure on your save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("83f9a4be-3255-4103-a0f9-d5517de0b245"),
+                                    Order = 1,
+                                    OwnerId = new Guid("069fffa5-3fe0-4892-a04d-1bd28a6225a3"),
+                                    Text = "If you lose the dying condition by succeeding at a recovery check and are still at 0 Hit Points, you remain unconscious, but you can wake up as described in that condition. You lose the dying condition automatically and wake up if you ever have 1 Hit Point or more. Any time you lose the dying condition, you gain the wounded 1 condition, or increase your wounded condition value by 1 if you already have that condition.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("29645e9c-1185-49a9-be03-ff02cd827421"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5da2ad79-54a0-429e-a52a-d654841fb268"),
+                                    Text = "You are carrying more weight than you can manage. While you’re encumbered, you’re clumsy 1 and take a 10-foot penalty to all your Speeds. As with all penalties to your Speed, this can’t reduce your Speed below 5 feet.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d07b32ec-d323-4126-a929-b8205acfdbb8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
+                                    Text = "You’re physically weakened. Enfeebled always includes a value. When you are enfeebled, you take a status penalty equal to the condition value to Strength-based rolls and DCs, including Strength-based melee attack rolls, Strength-based damage rolls, and Athletics checks.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5a517c41-8680-4408-bbae-7bbc60409082"),
+                                    Order = 0,
+                                    OwnerId = new Guid("33b600ff-067e-4a67-a1ce-c85cf2d2382c"),
+                                    Text = "You are compelled to focus your attention on something, distracting you from whatever else is going on around you. You take a –2 status penalty to Perception and skill checks, and you can’t use actions with the concentrate trait unless they or their intended consequences are related to the subject of your fascination (as determined by the GM). For instance, you might be able to Seek and Recall Knowledge about the subject, but you likely couldn’t cast a spell targeting a different creature. This condition ends if a creature uses hostile actions against you or any of your allies.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b53d24af-320c-4f46-b25a-d65dd014713b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("48d6ee37-8a18-4162-9164-9f7892045d2d"),
+                                    Text = "You’re tired and can’t summon much energy. You take a –1 status penalty to AC and saving throws. You can’t use exploration activities performed while traveling, such as those on pages 479–480.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ab4a8033-4de6-4f8c-bd8c-8576da289805"),
+                                    Order = 1,
+                                    OwnerId = new Guid("48d6ee37-8a18-4162-9164-9f7892045d2d"),
+                                    Text = "You recover from fatigue after a full night’s rest.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e1d864f8-5b68-4c68-b26a-b615fcddef91"),
+                                    Order = 0,
+                                    OwnerId = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d"),
+                                    Text = "You’re distracted or otherwise unable to focus your full attention on defense. You take a –2 circumstance penalty to AC. Some effects give you the flat-footed condition only to certain creatures or against certain attacks. Others— especially conditions—can make you universally flatfooted against everything. If a rule doesn’t specify that the condition applies only to certain circumstances, it applies to all of them; for example, many effects simply say “The target is flat-footed.”",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("92d8268f-caec-4b0e-abe6-3d325bf3746e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("35e06ece-e68a-4201-a215-8e3a29f30840"),
+                                    Text = "You’re forced to run away due to fear or some other compulsion. On your turn, you must spend each of your actions trying to escape the source of the fleeing condition as expediently as possible (such as by using move actions to flee, or opening doors barring your escape). The source is usually the effect or caster that gave you the condition, though some effects might define something else as the source. You can’t Delay or Ready while fleeing.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("44d2d929-9e51-4618-b433-df0633852619"),
+                                    Order = 0,
+                                    OwnerId = new Guid("87851575-72a5-4935-b284-7cb0551fadf2"),
+                                    Text = "This condition reflects a creature’s disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is friendly to a character likes that character. The character can attempt to make a Request of a friendly creature, and the friendly creature is likely to agree to a simple and safe request that doesn’t cost it much to fulfill. If the character or one of their allies uses hostile actions against the creature, the creature gains a worse attitude condition depending on the severity of the hostile action, as determined by the GM.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b7dabd8d-11d5-4498-a799-c904741c3619"),
+                                    Order = 0,
+                                    OwnerId = new Guid("06cdc6c0-2d59-414e-a1bf-1d1862bae2d7"),
+                                    Text = "You’re gripped by fear and struggle to control your nerves. The frightened condition always includes a value. You take a status penalty equal to this value to all your checks and DCs. Unless specified otherwise, at the end of each of your turns, the value of your frightened condition decreases by 1.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("355e56d4-13ed-47e0-a9ca-9a79ce8d41b9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("918a03c5-27d2-458f-8bbf-2d1933738415"),
+                                    Text = "You’re held in place by another creature, giving you the flat-footed and immobilized conditions. If you attempt a manipulate action while grabbed, you must succeed at a DC 5 flat check or it is lost; roll the check after spending the action, but before any effects are applied.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("38e865fe-53ed-43bd-b220-3c9498fca119"),
+                                    Order = 0,
+                                    OwnerId = new Guid("170bff5c-bcac-433d-94a0-840da90112af"),
+                                    Text = "This condition reflects a creature’s disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is helpful to a character wishes to actively aid that character. It will accept reasonable Requests from that character, as long as such requests aren’t at the expense of the helpful creature’s goals or quality of life. If the character or one of their allies uses a hostile action against the creature, the creature gains a worse attitude condition depending on the severity of the hostile action, as determined by the GM.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1b0fb05d-5c1a-429c-9a8e-65729fa82c9e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4f1b10d8-98e2-43f2-b3a4-22e6b11ea699"),
+                                    Text = "While you’re hidden from a creature, that creature knows the space you’re in but can’t tell precisely where you are. You typically become hidden by using Stealth to Hide. When Seeking a creature using only imprecise senses, it remains hidden, rather than observed. A creature you’re hidden from is flat-footed to you, and it must succeed at a DC 11 flat check when targeting you with an attack, spell, or other effect or it fails to affect you. Area effects aren’t subject to this flat check.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("891ef18a-15d1-4256-b2b9-c67320503e38"),
+                                    Order = 1,
+                                    OwnerId = new Guid("4f1b10d8-98e2-43f2-b3a4-22e6b11ea699"),
+                                    Text = "A creature might be able to use the Seek action to try to observe you, as described on page 471.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c921983d-388a-4891-b90b-7f024cfc9b6b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d56a5083-fa2f-4d9c-a968-0b7664e1c9cd"),
+                                    Text = "This condition reflects a creature’s disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is hostile to a character actively seeks to harm that character. It doesn’t necessarily attack, but it won’t accept Requests from the character.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("eebe0f58-737c-4da3-a349-45e68247f56b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b335312b-5956-436b-a8df-c426704a41ba"),
+                                    Text = "You can’t use any action with the move trait. If you’re immobilized by something holding you in place and an external force would move you out of your space, the force must succeed at a check against either the DC of the effect holding you in place or the relevant defense (usually Fortitude DC) of the monster holding you in place.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("291d7186-938c-4caf-a163-8311f6fa9ce3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f13e0f97-112a-4ffa-843a-00b406ee963d"),
+                                    Text = "This condition reflects a creature’s disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is indifferent to a character doesn’t really care one way or the other about that character. Assume a creature’s attitude to a given character is indifferent unless specified otherwise.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1d7e6205-8464-4e8b-9909-0ddb38f7849d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b9db96ae-7d84-4616-8831-477d614b4dbd"),
+                                    Text = "While invisible, you can’t be seen. You’re undetected to everyone. Creatures can Seek to attempt to detect you; if a creature succeeds at its Perception check against your Stealth DC, you become hidden to that creature until you Sneak to become undetected again. If you become invisible while someone can already see you, you start out hidden to the observer (instead of undetected) until you successfully Sneak. You can’t become observed while invisible except via special abilities or magic.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e35d6973-eac6-461b-92e8-8f12bbcbdb80"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b0cbbc02-bec0-4b21-9b61-8af5bb2fc62b"),
+                                    Text = "You are unable to communicate verbally with anyone. Additionally, you cannot cast any spells that have a verbal component to it, or activate an item that hase a command component to it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ae9953c8-e05c-4a5a-ad62-6958c0fa0478"),
+                                    Order = 1,
+                                    OwnerId = new Guid("b0cbbc02-bec0-4b21-9b61-8af5bb2fc62b"),
+                                    Text = "This is not an official status condition, but a pf2e.io liberty to smooth out some of the inconsistencies in the rulesbooks.",
+                                    Type = 3
+                                },
+                                new
+                                {
+                                    Id = new Guid("0a8a7135-4b51-4671-963e-e1c99a28a9fe"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6f1426bc-454d-4796-a6b5-a1569dd39ee6"),
+                                    Text = "Anything in plain view is observed by you. If a creature takes measures to avoid detection, such as by using Stealth to Hide, it can become hidden or undetected instead of observed. If you have another precise sense instead of or in addition to sight, you might be able to observe a creature or object using that sense instead. You can observe a creature only with precise senses. When Seeking a creature using only imprecise senses, it remains hidden, rather than observed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0ecf6343-5513-4313-817c-2fee4c074167"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5007c3b2-b184-43b1-85d7-ad159d14ccb5"),
+                                    Text = "You are frozen in place. You have the flat-footed condition and can’t act except to Recall Knowledge and use actions that require only your mind (as determined by the GM). Your senses still function, but only in the areas you can perceive without moving, so you can’t Seek while paralyzed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("61aba62f-6e0b-47e6-87dc-cf5d1f2958f3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
+                                    Text = "Persistent damage comes from effects like acid, being on fire, or many other situations. It appears as “X persistent [type] damage,” where “X” is the amount of damage dealt and “[type]” is the damage type. Instead of taking persistent damage immediately, you take it at the end of each of your turns as long as you have the condition, rolling any damage dice anew each time. After you take persistent damage, roll a DC 15 flat check to see if you recover from the persistent damage. If you succeed, the condition ends.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ed6d12ad-822b-45cb-89b3-4318fa50053a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8d531baa-8a75-4090-83d0-fd8721b76ae7"),
+                                    Text = "You have been turned to stone. You can’t act, nor can you sense anything. You become an object with a Bulk double your normal Bulk (typically 12 for a petrified Medium creature or 6 for a petrified Small creature), AC 9, Hardness 8, and the same current Hit Points you had when alive. You don’t have a Broken Threshold. When you’re turned back into flesh, you have the same number of Hit Points you had as a statue. If the statue is destroyed, you immediately die. While petrified, your mind and body are in stasis, so you don’t age or notice the passing of time.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("39ddfdbd-c9a1-47eb-aa6b-96bc572fefda"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b680a37e-cf30-4c4b-886f-a713282892af"),
+                                    Text = "You’re lying on the ground. You are flat-footed and take a –2 circumstance penalty to attack rolls. The only move actions you can use while you’re prone are Crawl and Stand. Standing up ends the prone condition. You can Take Cover while prone to hunker down and gain greater cover against ranged attacks, even if you don’t have an object to get behind, gaining a +4 circumstance bonus to AC against ranged attacks (but you remain flat-footed).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7fe8edf9-1e44-4603-bbab-612a53f2dbc8"),
+                                    Order = 1,
+                                    OwnerId = new Guid("b680a37e-cf30-4c4b-886f-a713282892af"),
+                                    Text = "If you would be knocked prone while you’re Climbing or Flying, you fall (see pages 463–464 for the rules on falling). You can’t be knocked prone when Swimming.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0df66944-a5b6-40d4-a9ce-d00c4d2a0edb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fce417f7-0b9c-4d87-9f0a-45ae5d9a4e53"),
+                                    Text = "You gain 1 additional action at the start of your turn each round. Many effects that make you quickened specify the types of actions you can use with this additional action. If you become quickened from multiple sources, you can use the extra action you’ve been granted for any single action allowed by any of the effects that made you quickened. Because quickened has its effect at the start of your turn, you don’t immediately gain actions if you become quickened during your turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("39067593-a781-4b58-a74a-175b8458e81e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ecb312a5-4e27-43b9-89ec-1a615d9f9dc2"),
+                                    Text = "You’re tied up and can barely move, or a creature has you pinned. You have the flat-footed and immobilized conditions, and you can’t use any actions with the attack or manipulate traits except to attempt to Escape or Force Open your bonds. Restrained overrides grabbed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d8350c52-3a4a-44e0-89d0-6c5cd546bd5e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                                    Text = "You feel ill. Sickened always includes a value. You take a status penalty equal to this value on all your checks and DCs. You can’t willingly ingest anything—including elixirs and potions—while sickened.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("82673ddd-1dab-44ae-bb04-c8cc8c57d0a8"),
+                                    Order = 1,
+                                    OwnerId = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
+                                    Text = "You can spend a single action retching in an attempt to recover, which lets you immediately attempt a Fortitude save against the DC of the effect that made you sickened. On a success, you reduce your sickened value by 1 (or by 2 on a critical success).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("54bff588-112b-46db-a7b9-eeeaf955a417"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f253f20f-d7d3-4fe6-bb19-8d521afd9436"),
+                                    Text = "You have fewer actions. Slowed always includes a value. When you regain your actions at the start of your turn, reduce the number of actions you regain by your slowed value. Because slowed has its effect at the start of your turn, you don’t immediately lose actions if you become slowed during your turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("01f03109-d787-433a-afda-4b956c9a209e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d9b38c43-deee-4d47-a5a8-ee48ab4daa2d"),
+                                    Text = "You are conflicted with sudden spasms. The rulebooks do not mention any particular effects of spasming, so it is best left up to the discretion of the GM.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("48e84c47-e07c-479e-944f-d07f45cc88d4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4d045584-3a7f-433b-ad89-0f658c379923"),
+                                    Text = "You’ve become senseless. You can’t act while stunned. Stunned usually includes a value, which indicates how many total actions you lose, possibly over multiple turns, from being stunned. Each time you regain actions (such as at the start of your turn), reduce the number you regain by your stunned value, then reduce your stunned value by the number of actions you lost. For example, if you were stunned 4, you would lose all 3 of your actions on your turn, reducing you to stunned 1; on your next turn, you would lose 1 more action, and then be able to use your remaining 2 actions normally. Stunned might also have a duration instead of a value, such as “stunned for 1 minute.” In this case, you lose all your actions for the listed duration.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ad411fa0-9af4-4d4e-ac38-00993975437a"),
+                                    Order = 1,
+                                    OwnerId = new Guid("4d045584-3a7f-433b-ad89-0f658c379923"),
+                                    Text = "Stunned overrides slowed. If the duration of your stunned condition ends while you are slowed, you count the actions lost to the stunned condition toward those lost to being slowed. So, if you were stunned 1 and slowed 2 at the beginning of your turn, you would lose 1 action from stunned, and then lose only 1 additional action by being slowed, so you would still have 1 action remaining to use that turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7577f633-3d1c-4a3d-a71b-6310daabf88e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a9bb8a46-7442-4480-b008-c706d7d4ef2f"),
+                                    Text = "Your thoughts and instincts are clouded. Stupefied always includes a value. You take a status penalty equal to this value on Intelligence-, Wisdom-, and Charisma-based checks and DCs, including Will saving throws, spell attack rolls, spell DCs, and skill checks that use these ability scores. Any time you attempt to Cast a Spell while stupefied, the spell is disrupted unless you succeed at a flat check with a DC equal to 5 + your stupefied value.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ccda5475-0435-42f0-aff9-64ed329fc078"),
+                                    Order = 0,
+                                    OwnerId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
+                                    Text = "You’re sleeping, or you’ve been knocked out. You can’t act. You take a –4 status penalty to AC, Perception, and Reflex saves, and you have the blinded and flat-footed conditions. When you gain this condition, you fall prone and drop items you are wielding or holding unless the effect states otherwise or the GM determines you’re in a position in which you wouldn’t.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d56e4fd8-c59b-4f88-b3b0-5b3bd29f2f45"),
+                                    Order = 1,
+                                    OwnerId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
+                                    Text = "If you’re unconscious because you’re dying, you can’t wake up while you have 0 Hit Points. If you are restored to 1 Hit Point or more via healing, you lose the dying and unconscious conditions and can act normally on your next turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("be5208b3-bbef-49f9-94b4-3da0a9dbb2df"),
+                                    Order = 2,
+                                    OwnerId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
+                                    Text = "If you are unconscious and at 0 Hit Points, but not dying, you naturally return to 1 Hit Point and awaken after sufficient time passes. The GM determines how long you remain unconscious, from a minimum of 10 minutes to several hours. If you receive healing during this time, you lose the unconscious condition and can act normally on your next turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("96b1a609-4873-422b-9fad-494547fe4387"),
+                                    Order = 3,
+                                    OwnerId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
+                                    Text = "If you’re unconscious and have more than 1 Hit Point (typically because you are asleep or unconscious due to an effect), you wake up in one of the following ways. Each causes you to lose the unconscious condition.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6f70d006-bd20-422d-ba07-22db1bf4f59f"),
+                                    Order = 4,
+                                    OwnerId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
+                                    Text = "You take damage, provided the damage doesn't reduce you to 0 Hit Points. If the damage reduces you to 0 Hit Points, you remain unconscious and gain the dying condition as normal.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("a84e3630-44d8-4047-b3d9-d21bd140eadf"),
+                                    Order = 5,
+                                    OwnerId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
+                                    Text = "You receive healing, other than the natural healing you get from resting.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("1c0ad848-d2ea-45b4-a709-9d84395bb14d"),
+                                    Order = 6,
+                                    OwnerId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
+                                    Text = "Someone shakes you awake with an Interact action.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("e60b28de-b1af-43af-ba61-daf960327a05"),
+                                    Order = 7,
+                                    OwnerId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
+                                    Text = "There's loud noise going on around you—though this isn't automatic. At the start of your turn, you automatically attempt a Perception check against the noise's DC (or the lowest DC if there is more than one noise), waking up if you succeed. If creatures are attempting to stay quiet around you, this Perception check uses their Stealth DCs. Some magical effects make you sleep so deeply that they don't allow you to attempt this Perception check.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("042a7b29-141c-4489-b084-86796a198da4"),
+                                    Order = 8,
+                                    OwnerId = new Guid("10ef1d07-27bd-4073-96f7-2a55a05a9831"),
+                                    Text = "If you are simply asleep, the GM decides you wake up either because you have had a restful night's sleep or something disrupted that rest.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("08040555-c8af-43ef-bd71-ba3500bf3ff4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d7416bc0-79b9-42c0-9335-e420dd3e0f50"),
+                                    Text = "When you are undetected by a creature, that creature cannot see you at all, has no idea what space you occupy, and can’t target you, though you still can be affected by abilities that target an area. When you’re undetected by a creature, that creature is flat-footed to you.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("379e4285-0155-4d1d-a2e3-5fb70df0a394"),
+                                    Order = 1,
+                                    OwnerId = new Guid("d7416bc0-79b9-42c0-9335-e420dd3e0f50"),
+                                    Text = "A creature you’re undetected by can guess which square you’re in to try targeting you. It must pick a square and attempt an attack. This works like targeting a hidden creature (requiring a DC 11 flat check, as described on page 466), but the flat check and attack roll are rolled in secret by the GM, who doesn’t reveal whether the attack missed due to failing the flat check, failing the attack roll, or choosing the wrong square.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a411f8ea-e37b-4cc7-a8c2-0dfb167537f7"),
+                                    Order = 2,
+                                    OwnerId = new Guid("d7416bc0-79b9-42c0-9335-e420dd3e0f50"),
+                                    Text = "A creature can use the Seek action to try to find you, as described on page 471.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c738f0a6-bf21-43d4-a869-12019f22a359"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ca2e35fe-8529-4ba3-a860-1bbde1c1c8f8"),
+                                    Text = "This condition reflects a creature’s disposition toward a particular character, and only supernatural effects (like a spell) can impose this condition on a PC. A creature that is unfriendly to a character dislikes and specifically distrusts that character. The unfriendly creature won’t accept Requests from the character.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("02af347c-1d15-459a-88ce-3bd53bfcebdd"),
+                                    Order = 0,
+                                    OwnerId = new Guid("43bea701-97ae-4ab1-8e30-e42fcff51f41"),
+                                    Text = "If you are unnoticed by a creature, that creature has no idea you are present at all. When you’re unnoticed, you’re also undetected by the creature. This condition matters for abilities that can be used only against targets totally unaware of your presence.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("105ba368-8a63-48a7-841a-8fa74fdea882"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a2d387ce-eec5-439b-9e2e-2ef38f0ff3fb"),
+                                    Text = "You are weighed down, either physically, magically or otherwise. You take a penalty to all your movement speeds, but your speed can never be reduced below 5 feet.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4e6ccb82-52eb-49c5-975d-7fcb50e4ede5"),
+                                    Order = 1,
+                                    OwnerId = new Guid("a2d387ce-eec5-439b-9e2e-2ef38f0ff3fb"),
+                                    Text = "This is not an official status condition, but a pf2e.io liberty to smooth out some of the inconsistencies in the rulesbooks.",
+                                    Type = 3
+                                },
+                                new
+                                {
+                                    Id = new Guid("7101deb8-d849-472c-9ec6-13c6921c213e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8f6d81d5-64f1-455e-80c8-7835accb6613"),
+                                    Text = "You have been seriously injured. If you lose the dying condition and do not already have the wounded condition, you become wounded 1. If you already have the wounded condition when you lose the dying condition, your wounded condition value increases by 1. If you gain the dying condition while wounded, increase your dying condition value by your wounded value.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0bfacc23-4b09-44c1-a157-49a246b3d704"),
+                                    Order = 1,
+                                    OwnerId = new Guid("8f6d81d5-64f1-455e-80c8-7835accb6613"),
+                                    Text = "The wounded condition ends if someone successfully restores Hit Points to you with Treat Wounds, or if you are restored to full Hit Points and rest for 10 minutes.",
+                                    Type = 0
+                                });
+                        });
+
                     b.Navigation("ConditionCategory");
+
+                    b.Navigation("Details");
 
                     b.Navigation("OverridesCondition");
 
                     b.Navigation("SourcePage");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ConditionDetailBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Condition", "Condition")
-                        .WithMany("Details")
-                        .HasForeignKey("ConditionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Condition");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Curse", b =>
@@ -34089,24 +32575,1055 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("TraitsId");
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("Feats_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("8c4e02b6-3966-491d-a8e8-aa05e8f6c0cb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2c8b47a4-eb56-491b-82fd-a3f894282025"),
+                                    Text = "Your knowledge has expanded to encompass a new field. Choose an additional Lore skill subcategory. You become trained in it. At 3rd, 7th, and 15th levels, you gain an additional skill increase you can apply only to the chosen Lore subcategory.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a23693cb-3840-48a8-94fb-7f93f6d118b6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b8193a38-a31c-45f2-a715-2542f09b97ca"),
+                                    Text = "You’re fully immersed in another ancestry’s culture and traditions, whether born into them, earned through rite of passage, or bonded through a deep friendship or romance. Choose a common ancestry. You can select ancestry feats from the ancestry you chose, in addition to your character’s own ancestry, as long as the ancestry feats don’t require any physiological feature that you lack, as determined by the GM.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("447bc70f-fd26-40a6-8663-02d4ccb6c686"),
+                                    Order = 0,
+                                    OwnerId = new Guid("57442d19-cae2-465c-9d3d-2e77ecde2a50"),
+                                    Text = "Your knowledge has expanded to encompass a new field. Choose an additional Lore skill subcategory. You become trained in it. At 3rd, 7th, and 15th levels, you gain an additional skill increase you can apply only to the chosen Lore subcategory.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("db6f1680-f693-4b5c-9dae-16516d0bd65a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1d6f005c-1b19-4072-8609-62af32b427e2"),
+                                    Text = "Whether through instinct, study, or magic, you feel a deeper connection to your ancestry.You gain a 1st - level ancestry feat.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("72e1ef9e-b124-40eb-b185-e1f6199d6c77"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a6def9d1-3dd5-4d2f-8e75-1773753119d9"),
+                                    Text = "Your study of magic allows you to instinctively sense its presence. You can cast 1st-level detect magic at will as an arcane innate spell. If you’re a master in Arcana, the spell is heightened to 3rd level; if you’re legendary, it is heightened to 4th level.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("96d02376-bd63-4d35-92f0-08c08ca9f2ca"),
+                                    Order = 0,
+                                    OwnerId = new Guid("384659b6-1c1c-4612-9727-2d8406c2a328"),
+                                    Text = "You become trained in light armor. If you already were trained in light armor, you gain training in medium armor. If you were trained in both, you become trained in heavy armor.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1ed675fc-6c30-4ded-a479-961f8bdd3227"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e4c0f632-f086-40f7-81c4-2d54f1bcb5b9"),
+                                    Text = "Even in the worst circumstances, you can perform basic tasks. Choose a skill you’re trained in. You can forgo rolling a skill check for that skill to instead receive a result of 10 + your proficiency bonus (do not apply any other bonuses, penalties, or modifiers).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f3025adc-d289-42fc-b072-64fb3a523a45"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ca8d59e8-f938-4ffb-9890-9bed87134d5b"),
+                                    Text = "You know basic facts off the top of your head. Choose a skill you’re an expert in that has the Recall Knowledge action and for which you have the Assurance feat. You can use the Recall Knowledge action with that skill as a free action once per round. If you do, you must use Assurance on the skill check.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("46646590-2516-4adb-9ae5-7c050520e480"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6684d89b-1994-4fa9-8b6b-c5123b642e86"),
+                                    Text = "You can Earn Income (page 236) using Diplomacy, spending your days hunting for bargains and reselling at a profit. You can also spend time specifically sniffing out a great bargain on an item; this works as if you were using Earn Income with Diplomacy, except instead of gaining money, you purchase the item at a discount equal to the money you would have gained, gaining the item for free if your earned income equals or exceeds its cost. Finally, if you select Bargain Hunter during character creation at 1st level, you start play with an additional 2 gp.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1fe89bb7-ca01-4a5f-9d34-8699b45c9829"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5ac7371e-af01-460e-a188-198481c67505"),
+                                    Text = "When you roll initiative, you can yell a mighty battle cry and Demoralize an observed foe as a free action. If you’re legendary in Intimidation, you can use a reaction to Demoralize your foe when you critically succeed at an attack roll.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("60f7edf8-b1cd-4a3b-b412-af7a4b880942"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6db67ca1-3fef-4705-9ad3-4d0e121e943b"),
+                                    Text = "You can patch up wounds, even in combat. Attempt a Medicine check with the same DC as for Treat Wounds and restore the corresponding amount of HP; this doesn’t remove the wounded condition. As with Treat Wounds, you can attempt checks against higher DCs if you have the minimum proficiency rank. The target is then temporarily immune to your Battle Medicine for 1 day.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4ca461d1-0a65-42e2-8171-d30269bccf2c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1acd1549-a4de-477d-a3f4-e862c04c8a7a"),
+                                    Text = "You can draw upon strange variations in your spellcasting, whether or not you can cast occult spells. The DCs to Recognize Spells you cast and Identify Magic you use increase by 5.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0b8ded86-03cd-412f-a306-67aead75c577"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0422a543-ec8f-4c04-9e15-5b4fd5c1f065"),
+                                    Text = "You forge strong connections with animals. You can spend 7 days of downtime regularly interacting with a normal animal (not a companion or other special animal) that is friendly or helpful to you. After this duration, attempt a DC 20 Nature check. If successful, you bond with the animal. The animal is permanently helpful to you, unless you do something egregious to break your bond. A helpful animal is easier to direct, as described under Command an Animal on page 249. Bonding with a new animal ends any previous bond you had. You can’t have both a bonded animal and an animal companion (though you can have both a bonded animal and a familiar).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e6d543e3-8f19-45b3-ade2-59d9525160eb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a3395df1-fc95-4989-833c-c0d7465ecd1c"),
+                                    Text = "You have incredible breath control, which grants you advantages when air is hazardous or sparse. You can hold your breath for 25 times as long as usual before suffocating. You gain a +1 circumstance bonus to saving throws against inhaled threats, such as inhaled poisons, and if you roll a success on such a saving throw, you get a critical success instead.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9f69671b-1e75-49a2-b6a8-d418bbf60f3f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("85740fcc-7aaf-494f-81d7-8360620977d1"),
+                                    Text = "Your avoidance or observation is beyond the ken of most in your profession. Choose Fortitude saves, Reflex saves, Will saves, or Perception. You become an expert in your choice. At 17th level, you become a master in your choice.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1e6015e9-a70f-4e85-810c-bbe811bd477d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9c848549-edaa-49b9-aa64-fcea1ccbc966"),
+                                    Text = "Your catlike aerial acrobatics allow you to cushion your falls. Treat falls as 10 feet shorter. If you’re an expert in Acrobatics, treat falls as 25 feet shorter. If you’re a master in Acrobatics, treat them as 50 feet shorter. If you’re legendary in Acrobatics, you always land on your feet and don’t take damage, regardless of the distance of the fall.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d7fb4179-4b97-4759-8a00-3984bdb91602"),
+                                    Order = 0,
+                                    OwnerId = new Guid("43ae43aa-11d2-420f-bf17-6978f8a45a0f"),
+                                    Text = "Your charm allows you to win over those you lie to. When you get a critical success using the Lie action, the target’s attitude toward you improves by one step, as though you’d succeeded at using Diplomacy to Make an Impression. This works only once per conversation, and if you critically succeed against multiple targets using the same result, you choose one creature’s attitude to improve. You must be lying to impart seemingly important information, inflate your status, or ingratiate yourself, which trivial or irrelevant lies can’t achieve.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("70b38a25-db58-44a1-8785-a7124775e352"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9ab4e3c9-f592-4c0d-ac6e-adb33651feca"),
+                                    Text = "You unparalleled athletic skill allows you to jump impossible distances. Triple the distance you Long Jump (so you could jump 60 feet on a successful DC 20 check). When you High Jump, use the calculation for a Long Jump but don’t triple the distance.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("98e7f9c9-8027-485d-af27-2de34ee1e1da"),
+                                    Order = 1,
+                                    OwnerId = new Guid("9ab4e3c9-f592-4c0d-ac6e-adb33651feca"),
+                                    Text = "You can jump a distance greater than your Speed by spending additional actions when you Long Jump or High Jump. For each additional action spent, add your Speed to the limit on how far you can Leap.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c2d3b438-cbb4-43c2-88c1-3903570434c4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("269b8813-ba84-42c6-9b73-11de579797bb"),
+                                    Text = "Your techniques allow you to fight as you climb. You’re not flat-footed while Climbing and can Climb with a hand occupied. You must still use another hand and both legs to Climb.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2084aa10-37e6-4665-b379-32a1c378e09e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("38b0c4f7-2ad6-4c04-928d-dc53f2ff39b7"),
+                                    Text = "Even when caught in falsehoods, you pile lie upon lie. Reduce the circumstance bonus a target gains for your previous attempts to Create a Diversion or Lie to it from +4 to +2. If you’re a master in Deception, reduce the bonus to +1, and if you’re legendary, your targets don’t get these bonuses at all.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8327dfe8-9bc4-40ab-8459-51ce05d11517"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a38f19f2-3b2d-4907-8425-d71dc351e8df"),
+                                    Text = "You have social connections you can leverage to trade favors or meet important people. When you’re in an area with connections (typically a settlement where you’ve spent downtime building connections, or possibly another area in the same nation), you can attempt a Society check to arrange a meeting with an important political figure or ask for a favor in exchange for a later favor of your contact’s choice. The GM decides the DC based on the difficulty of the favor and the figure’s prominence.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ffef847d-bf3b-4b80-9e63-3a2d6714deea"),
+                                    Order = 0,
+                                    OwnerId = new Guid("059f1e6a-f8cd-4be2-8024-ddc21dd7cd60"),
+                                    Text = "You zealously monitor a patient’s progress to administer treatment faster. When you Treat Wounds, your patient becomes immune for only 10 minutes instead of 1 hour. This applies only to your Treat Wounds activities, not any other the patient receives.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("38b5844d-0409-48fd-ab87-07bbe0e02f68"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5c26de36-847d-4a16-8871-0a2016fdfacc"),
+                                    Text = "You were raised among the nobility or have learned proper etiquette and bearing, allowing you to present yourself as a noble and play games of influence and politics. You can use Society to Make an Impression on a noble, as well as with Impersonate to pretend to be a noble if you aren’t one. If you want to impersonate a specific noble, you still need to use Deception to Impersonate normally, and to Lie when necessary.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c729dd0c-a2bf-44f0-9d2a-7ff744c09b26"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2fbc54de-6f02-49d5-a01c-6adfd732a81e"),
+                                    Text = "You can find ways to craft just about anything, despite restrictions. As long as you have the appropriate Crafting skill feat (such as Magical Crafting for magic items) and meet the item’s level and proficiency requirement, you ignore just about any other requirement, such as being of a specific ancestry or providing spells. The only exceptions are requirements that add to the item’s cost, including castings of spells that themselves have a cost, and requirements of special items such as the philosopher’s stone that have exclusive means of access and Crafting. The GM decides whether you can ignore a requirement.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("49a1d867-7420-4c1d-9c70-3b36f83adf22"),
+                                    Order = 0,
+                                    OwnerId = new Guid("15ccc079-da12-4678-8b48-f626e51418df"),
+                                    Text = "It takes more to kill you than most. You die from the dying condition at dying 5, rather than dying 4.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("538628da-6b39-455a-919a-7b2d8de5ff61"),
+                                    Order = 0,
+                                    OwnerId = new Guid("17f35e0f-3778-4143-b516-d08faf79bc68"),
+                                    Text = "You’re so immersed in divine scripture that you find meaning and guidance in your texts in any situation. Spend 10 minutes Deciphering Writing on religious scriptures of your deity or philosophy while thinking about a particular problem or conundrum you face, and then attempt a Religion check (DC determined by the GM). If you succeed, you unearth a relevant passage, parable, or aphorism that can help you move forward or change your thinking to help solve your conundrum. For example, the GM might provide you with a cryptic poem or hint that can guide you to the next step of solving your problem.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("28d7b87a-55a3-48f3-9071-ab3e1600f129"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fffc0274-b5cd-428f-8144-a7d8b01f5986"),
+                                    Text = "You’re a treasure trove of information, but not all of it comes from reputable sources. When you fail (but don’t critically fail) a Recall Knowledge check using any skill, you learn a bit of true knowledge and a bit of erroneous knowledge, but you don’t have any way to differentiate which is which.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fd638442-dba6-4c64-a978-6076c474ffa1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dbd06473-8700-438f-b4e1-35474b87171c"),
+                                    Text = "You have a system that lets you search at great speed, finding details and secrets twice as quickly as others can. When Searching, you take half as long as usual to Search a given area. This means that while exploring, you double the Speed you can move while ensuring you’ve Searched an area before walking into it (up to half your Speed). If you’re legendary in Perception, you instead Search areas four times as quickly.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5ca60765-3953-40b6-8d4a-0532b2e4c80d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0e715099-8cfd-449b-a6b0-37467f68accc"),
+                                    Text = "You carefully safeguard your professional endeavors to prevent disaster. When you use Lore to Earn Income, if you roll a critical failure, you instead get a failure. If you’re an expert in Lore, you gain twice as much income from a failed check to Earn Income, unless it was originally a critical failure.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0b11531a-68c6-4cd9-a7f9-e4f3494f4ab3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fa30f639-b913-4050-b7bc-a8e9991178f1"),
+                                    Text = "You often smuggle things past the authorities. When the GM rolls your Stealth check to see if a passive observer notices a small item you have concealed, the GM uses the number rolled or 10—whichever is higher—as the result of your die roll, adding it to your Stealth modifier to determine your Stealth check result. If you’re a master in Stealth, the GM uses the number rolled or 15, and if you’re legendary in Stealth, you automatically succeed at hiding a small concealed item from passive observers. This provides no benefits when a creature attempts a Perception check while actively searching you for hidden items. Due to your smuggling skill, you’re more likely to find more lucrative smuggling jobs when using Underworld Lore to Earn Income",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1c266490-9c64-4913-a6bf-5b9ff4d37a9c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a64ac93e-e7c5-46d1-85ec-72d93d5dcf7a"),
+                                    Text = "Tracking is second nature to you, and when necessary you can follow a trail without pause. You can Track while moving at full Speed by taking a –5 penalty to your Survival check. If you’re a master in Survival, you don’t take the –5 penalty. If you’re legendary in Survival, you no longer need to roll a new Survival check every hour when tracking, though you still need to roll whenever there are significant changes in the trail.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b95929b6-0cf7-4eb3-aa95-fa8f2f2c9ca0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d76bcd62-20d9-4fce-9fc1-735ec21a0cb2"),
+                                    Text = "When you Perform, compare your result to the Will DC of one observer. If you succeed, the target is fascinated by you for 1 round. If the observer is in a situation that demands immediate attention, such as combat, you must critically succeed to fascinate it and the Perform action gains the incapacitation trait. You must choose which creature you’re trying to fascinate before you roll your check, and the target is then temporarily immune for 1 hour.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0589bdf3-abf3-4850-a9fe-5f8454150417"),
+                                    Order = 1,
+                                    OwnerId = new Guid("d76bcd62-20d9-4fce-9fc1-735ec21a0cb2"),
+                                    Text = "If you’re an expert in Performance, you can fascinate up to four observers; if you’re a master, you can fascinate up to 10 observers; and if you’re legendary, you can fascinate any number of observers at the same time.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f95849f0-3bba-430f-b44a-6828c1fbdbe9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("68a98dbf-4a45-4217-a94f-2d0969915d96"),
+                                    Text = "Your body quickly bounces back from afflictions. You regain twice as many Hit Points from resting. Each time you succeed at a Fortitude save against an ongoing disease or poison, you reduce its stage by 2, or by 1 against a virulent disease or poison. Each critical success you achieve against an ongoing disease or poison reduces its stage by 3, or by 2 against a virulent disease or poison. In addition, you reduce the severity of your drained condition by 2 when you rest for a night instead of by 1.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6a59de26-a216-4f4f-b81f-094eb8998249"),
+                                    Order = 0,
+                                    OwnerId = new Guid("174c21f8-b29a-4141-9070-eca5ecfdee71"),
+                                    Text = "You step carefully and quickly. You can Step into difficult terrain.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7b4e22c3-cf7d-4ab3-9d47-3bca57cd7ed6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("37e3bc29-be7b-4112-92aa-0b7dddbc2da3"),
+                                    Text = "You move more quickly on foot. Your Speed increases by 5 feet.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a36d8e49-5dd2-44c2-acb0-89d69ed09e80"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fccdaf8a-46b0-4a18-9a90-dbb228317b58"),
+                                    Text = "You are adept at foiling creatures’ special senses and cautious enough to safeguard against them at all times. Whenever you use the Avoid Notice, Hide, or Sneak actions, you are always considered to be taking precautions against special senses (see the Detecting with Other Senses sidebar on page 465).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("89245459-0885-4ec0-bab4-0ce44729a508"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3f62ad52-d80b-4662-979c-6eb66a224801"),
+                                    Text = "While using Survival to Subsist, if you roll any result worse than a success, you get a success. On a success, you can provide subsistence living for yourself and four additional creatures, and on a critical success, you can take care of twice as many creatures as on a success.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a6f780cc-319d-4c0e-84b5-18dd1f1b3889"),
+                                    Order = 1,
+                                    OwnerId = new Guid("3f62ad52-d80b-4662-979c-6eb66a224801"),
+                                    Text = "Each time your proficiency rank in Survival increases, double the number of additional creatures you can take care of on a success (to eight if you’re an expert, 16 if you’re a master, or 32 if you’re legendary). You can choose to care for half the number of additional creatures and provide a comfortable living instead of subsistence living.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a9300d60-b3e5-4b0b-9376-75a590caf556"),
+                                    Order = 2,
+                                    OwnerId = new Guid("3f62ad52-d80b-4662-979c-6eb66a224801"),
+                                    Text = "Multiple smaller creatures or creatures with significantly smaller appetites than a human are counted as a single creature for this feat, and larger creatures or those with significantly greater appetites each count as multiple creatures. The GM determines how much a non-human creature needs to eat.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d0c298c6-63be-431c-80e9-5a95ec712f73"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6f59e2f4-2100-436d-8cf8-266585faa937"),
+                                    Text = "First impressions are your strong suit. When you meet someone in a casual or social situation, you can immediately attempt a Diplomacy check to Make an Impression on that creature rather than needing to converse for 1 minute. You take a –5 penalty to the check. If you fail or critically fail, you can engage in 1 minute of conversation and attempt a new check at the end of that time rather than accepting the failure or critical failure result.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0482965b-932e-407e-a445-337a78cb3eca"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ccdd4b23-9813-407e-a7a6-8bc2cdafbab5"),
+                                    Text = "When you Coerce, you can compare your Intimidation check result to the Will DCs of two targets instead of one. It’s possible to get a different degree of success for each target. The number of targets you can Coerce in a single action increases to four if you’re an expert, 10 if you’re a master, and 25 if you’re legendary.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7dd54aeb-9180-4509-ac60-9d9f31b4d9c9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("738f86de-6f73-4ffa-a790-abd8feeb43c5"),
+                                    Text = "When you Make an Impression, you can compare your Diplomacy check result to the Will DCs of two targets instead of one. It’s possible to get a different degree of success for each target. The number of targets increases to four if you’re an expert, 10 if you’re a master, and 25 if you’re legendary.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b916a391-2032-4ec4-b914-f40d36019fa8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("18e0c385-d2ba-4646-989d-2e49d43d5f36"),
+                                    Text = "You can carry more than your frame implies. Increase your maximum and encumbered Bulk limits by 2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("550d9521-8aa7-45c5-85f0-0d3871077f8d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("43f75824-0d49-466f-aa58-e40046c4a6d4"),
+                                    Text = "You are skilled at learning information through conversation. The Gather Information exploration activity takes you half as long as normal (typically reducing the time to 1 hour). If you’re a master in Diplomacy and you Gather Information at the normal speed, when you attempt to do so and roll a critical failure, you get a failure instead. There is still no guarantee that a rumor you learn with Gather Information is accurate.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6b5087c0-7e76-445c-966e-7a50f572448f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("89921651-065e-48f8-98cb-c9b6cf6c71e9"),
+                                    Text = "You craft flawless creations with great efficiency. Whenever you roll a success at a Crafting check to make an item of the type you chose with Specialty Crafting, you get a critical success instead.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("44cfef57-7ea2-4289-bab1-9721399c2190"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3d690c93-0e1b-42c8-9d62-4e4219729dec"),
+                                    Text = "You react more quickly than others can. You gain a +2 circumstance bonus to initiative rolls.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("180ac1bb-e6ae-4d53-b33a-71978026a8e5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6f87700e-7194-47d6-a9b2-20e0e2e53482"),
+                                    Text = "Your performances inspire admiration and win you fans. You can Make an Impression using Performance instead of Diplomacy.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7be3eec5-5c9b-4f76-b412-3bec0c802dd6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9b475bb4-2086-4f81-b4ab-ef3f8f09f5db"),
+                                    Text = "You have an incredible ability to invest more magic items. Increase your limit on invested items from 10 to 12.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("eedd663a-d431-476d-9125-5d45f19d4ec3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a1804dfb-e3e0-45aa-b735-2f37fed15779"),
+                                    Text = "You can Demoralize with a mere glare. When you do, Demoralize loses the auditory trait and gains the visual trait, and you don’t take a penalty if the creature doesn’t understand your language.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0f251d56-cfff-45a5-9133-ddda22b51196"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0f49189c-434c-4490-8cbe-5235e6274441"),
+                                    Text = "In situations where you can physically menace the target when you Coerce or Demoralize, you gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty for not sharing a language. If your Strength score is 20 or higher and you are a master in Intimidation, this bonus increases to +2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("23d9c608-82be-4500-8430-ece2f345a971"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c8dd98a8-e102-4751-9606-88ed457bfdeb"),
+                                    Text = "You are a genius at Crafting, easily able to determine how things are made and create new inventions. You can spend downtime to invent a common formula that you don’t know. This works just like the Craft activity: you spend half the Price of the formula up front, attempt a Crafting check, and on a success either finish the formula by paying the difference or work for longer to decrease the Price. The difference is that you spend the additional time in research, design, and development, rather than in creating an item. Once it’s complete, you add the new formula you invented to your formula book.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e0ff07c3-5e1e-4258-8e85-c1255b47705e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4f6b0041-df64-4d81-9ddd-baebcfdd28ed"),
+                                    Text = "You stand up. This movement doesn’t trigger reactions.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f1ce54f4-d426-4acf-bda9-645a50a04a01"),
+                                    Order = 0,
+                                    OwnerId = new Guid("37f7d759-3c83-491a-a516-b41b64cf57a7"),
+                                    Text = "When you successfully Coerce someone, the maximum time they comply increases to a week, still determined by the GM. If you’re legendary, the maximum increases to a month.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c92cea06-9c7d-43a4-906d-e532765fd3f2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("06f5008a-8b53-4c11-b0ec-2176e135d8b8"),
+                                    Text = "Your skill with languages and codes is so great that you can decipher information with little more than a quick read through a text. You can Decipher Writing using Society while reading at normal speed. If you slow down and spend the full amount of time that’s ordinarily required and roll a success, you get a critical success; if you critically succeed while spending the normal amount of time, you gain a nearly word-for-word understanding of the document.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6156f6a0-8ca3-4260-aa1c-8842c9a6d780"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3afb7bd6-f0c2-4187-9d47-f7a06d512fd3"),
+                                    Text = "You’re so skilled with languages you can create a pidgin instantly. You can always talk to any creature that has a language—even a language you don’t know —by creating a new pidgin language that uses simplified terms and conveys basic concepts. To do so, you must first understand at least what medium of communication the creature uses (speech, sign language, and so on).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("af297ffe-fd7d-42b4-93b4-05f79cc46251"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c041f814-94c4-43a1-be45-3bcd2621f2bb"),
+                                    Text = "You’ve discovered medical breakthroughs or techniques that achieve miraculous results. Once per day for each target, you can spend 1 hour treating that target and attempt a Medicine check to remove a disease or the blinded, deafened, doomed, or drained condition. Use the DC of the disease or of the spell or effect that created the condition. If the effect’s source is an artifact, above 20th level, or similarly powerful, increase the DC by 10.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("be06ab53-d3f3-48bd-95b0-e5ed0ef51451"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5803b272-2368-49ce-ba0b-8c97aa753885"),
+                                    Text = "You can negotiate incredibly quickly in adverse situations. You attempt to Make an Impression and then Request your opponent cease their current activity and engage in negotiations. You take a –5 penalty to your Diplomacy check. The GM sets the DC of the Request based on the circumstances—it’s generally at least a very hard DC of the creature’s level. Some creatures might simply refuse, and even those who agree to parley might ultimately find your arguments lacking and return to violence.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("30714efb-c8ad-4874-a32a-a5361cbe1924"),
+                                    Order = 0,
+                                    OwnerId = new Guid("12456924-12d6-4f6e-bde1-100892c683b5"),
+                                    Text = "Your fame has spread throughout the lands. NPCs who succeed at a DC 10 Society check to Recall Knowledge have heard of you and usually have an attitude toward you one step better than normal, depending on your reputation and the NPC’s disposition. For instance, if you’re well-known for cruel and demanding behavior, creatures might be intimidated by you, rather than be friendly toward you. When you Earn Income with Performance, you attract higher-level audiences than your location would allow, as audiences flock to see you. For instance, rulers and angels might travel to your small tower in the woods to hear you perform. Typically, this increases the audiences available by 2 levels or more, determined by the GM.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b1851b98-e05d-4c7a-bed7-90b4e44ddc0a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("171b6ae6-cda9-45a7-8c0a-64672e338e0b"),
+                                    Text = "Your fame has spread throughout the lands (for instance, if you have Warfare Lore, you might be a legendary general or tactician). This works as Legendary Performer above, except you gain higher-level jobs when you Earn Income with Lore.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4e989ca3-733a-4120-aa84-aaba3aa053f8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ff4b4b20-73c2-4a67-a1a5-e504c8aa2dc6"),
+                                    Text = "You’re always sneaking unless you choose to be seen, even when there’s nowhere to hide. You can Hide and Sneak even without cover or being concealed. When you employ an exploration tactic other than Avoiding Notice, you also gain the benefits of Avoiding Notice unless you choose not to. See page 479 for more information about exploration tactics.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("308d6b71-ee1c-4e7b-b3b5-1ef198b64205"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d264d400-645f-4e7e-8100-ae5b2caf9e0e"),
+                                    Text = "You can survive indefinitely without food or water and can endure severe, extreme, and incredible cold and heat without taking damage from doing so.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9dfdb9a4-49d8-41a6-a8ac-2ea5e9e4626c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9ee79ba9-47ac-4cf5-906d-9e88190e8d22"),
+                                    Text = "Your ability to Steal defies belief. You can attempt to Steal something that is actively wielded or that would be extremely noticeable or time consuming to remove (like worn shoes or armor). You must do so slowly and carefully, spending at least 1 minute (and significantly longer for items that are normally time consuming to remove, like armor). Throughout this duration you must have some means of staying hidden, such as the cover of darkness or a bustling crowd. You take a –5 penalty to your Thievery check. Even if you succeed, if the item is extremely prominent—like a suit of full plate armor—onlookers will quickly notice it’s gone after you steal it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c479e6b3-e61e-4e45-8b4e-7375df616325"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8bfbc2e3-87d6-480d-8fd7-baeb77e465cd"),
+                                    Text = "When you critically succeed to Create a Diversion, you continue to remain hidden after the end of your turn. This effect lasts for an amount of time that depends on the diversion and situation, as determined by the GM (minimum 1 additional round).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2d1ff363-b4d4-43e3-910c-dac144202e6d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1332e046-d8ea-4a33-9a07-69308317891c"),
+                                    Text = "You can use Deception to weave traps to trip up anyone trying to deceive you. If you can engage in conversation with someone trying to Lie to you, use your Deception DC if it is higher than your Perception DC to determine whether they succeed. This doesn’t apply if you don’t have a back-and-forth dialogue, such as when someone attempts to Lie during a long speech.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8667db8e-760b-4b1d-a0b1-559e02a22b15"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a90aba98-98fe-4a4d-86a6-93025e5d558a"),
+                                    Text = "You can Craft magic items, though some have other requirements, as listed in Chapter 11. When you select this feat, you gain formulas for four common magic items of 2nd level or lower.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("52ea6d08-fd50-45a1-8ee9-2dca70178979"),
+                                    Order = 0,
+                                    OwnerId = new Guid("53bda5e8-f9d2-461f-9495-c9db35ab99c1"),
+                                    Text = "Learning spells comes easily to you. If you’re an expert in a tradition’s associated skill, you take 10 minutes per spell level to learn a spell of that tradition, rather than 1 hour per spell level. If you fail to learn the spell, you can try again after 1 week or after you gain a level, whichever comes first. If you’re a master in the tradition’s associated skill, learning a spell takes 5 minutes per spell level, and if you’re legendary, it takes 1 minute per spell level. You can use downtime to learn and inscribe new spells. This works as if you were using Earn Income with the tradition’s associated skill, but instead of gaining money, you choose a spell available to you to learn and gain a discount on learning it, learning it for free if your earned income equals or exceeds its cost.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5983317e-3930-45c3-a5b2-d286fd3bf850"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8dc95af1-d049-457f-91f8-311ead81336d"),
+                                    Text = "You easily pick up new languages. You learn two new languages, chosen from common languages, uncommon languages, and any others you have access to. You learn an additional language if you are or become a master in Society and again if you are or become legendary.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("068516d5-9c17-490a-8f75-cf975420ca79"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c7443dbf-2f52-48df-a53c-8dd6ad6732c0"),
+                                    Text = "You can apply natural cures to heal your allies. You can use Nature instead of Medicine to Treat Wounds. If you’re in the wilderness, you might have easier access to fresh ingredients, allowing you to gain a +2 circumstance bonus to your check to Treat Wounds using Nature, subject to the GM’s determination.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("614b8596-39fa-4006-903f-355857fc1e2d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("df3e0135-e1de-4b1f-a580-19f521c5f328"),
+                                    Text = "You can Crawl incredibly swiftly—up to half your Speed, rather than 5 feet. If you’re a master in Acrobatics, you can Crawl at full Speed, and if you’re legendary, you aren’t flat-footed while prone.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("947e2872-b7c3-4255-839d-6bde545f65e7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f552a716-9e47-457c-a9ec-51fa8cd3a85d"),
+                                    Text = "You have a sense for spells that twist minds or reveal secrets. You gain a +2 circumstance bonus to Occultism checks to Identify Magic with the mental, possession, prediction, or scrying traits.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d5968cb8-d28f-4615-a56a-00d65455649b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d1f81e6f-f97f-4bf3-8ddb-7db5ff7c351c"),
+                                    Text = "You can Steal or Palm an Object that’s closely guarded, such as in a pocket, without taking the –5 penalty. You can’t steal objects that would be extremely noticeable or time consuming to remove (like worn shoes or armor or actively wielded objects). If you’re a master in Thievery, you can attempt to Steal from a creature in combat or otherwise on guard. When doing so, Stealing requires 2 manipulate actions instead of 1, and you take a –5 penalty.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3345970c-ae02-486b-a2ea-75eef371f9a4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9415b689-43b4-4177-b861-32cab298b5fe"),
+                                    Text = "You can Subsist using Survival on different planes, even those without resources or natural phenomena you normally need. For instance, you can forage for food even if the plane lacks food that could normally sustain you. A success on your check to Subsist can also reduce the damage dealt by the plane, at the GM’s discretion.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c30bef55-a24b-4a39-99ef-0e0bd895355a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("24bfd707-04bb-4464-a3ad-e1dd040c0377"),
+                                    Text = "When you Leap, you can jump 5 feet up with a vertical Leap, and you increase the distance you can jump horizontally by 5 feet.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("497171c0-318e-4491-b527-ce421ee5ab7f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2a59396f-bf2a-4075-8207-3c906b7624ff"),
+                                    Text = "When Climbing, you move 5 more feet on a success and 10 more feet on a critical success, to a maximum of your Speed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3b09f3f6-9075-4013-9bd5-d674e3f00ffc"),
+                                    Order = 1,
+                                    OwnerId = new Guid("2a59396f-bf2a-4075-8207-3c906b7624ff"),
+                                    Text = "If you’re legendary in Athletics, you gain a climb Speed equal to your Speed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("99c2075b-62d3-4927-8c61-c6d4f79d7fd9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("89a41605-0006-4a7b-a101-f73d32f75a04"),
+                                    Text = "You can bully others with just a few choice implications. You can Coerce a creature after 1 round of conversation instead of 1 minute. You still can’t Coerce a creature in the midst of combat, or without engaging in a conversation.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9ac62ad5-c1ab-46ae-8e36-403268396a6e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("064690bd-cd97-47a5-9e4c-fb8672bb6225"),
+                                    Text = "You can set up a disguise in half the usual time (generally 5 minutes). If you’re a master, it takes one-tenth the usual time (usually 1 minute). If you’re legendary, you can create a full disguise and Impersonate as a 3-action activity.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5cdf024f-58b7-4b4b-9170-a8b758d94618"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7e3b8e25-d2ad-400e-9b03-a4993d0e5f8b"),
+                                    Text = "You can Identify Magic swiftly. You take only 1 minute when using Identify Magic to determine the properties of an item, ongoing effect, or location, rather than 10 minutes. If you’re a master, it takes a 3-action activity, and if you’re legendary, it takes 1 action.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e32321a9-80fd-4f59-939d-9a0dd3c98862"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7586b528-bef3-41be-b1f0-ea1fcb958c88"),
+                                    Text = "You can use High Jump and Long Jump as a single action instead of 2 actions. If you do, you don’t perform the initial Stride (nor do you fail if you don’t Stride 10 feet).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("32cdf8c4-ea19-43b2-8cf4-8b462fee385d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8df39189-1886-4523-95b0-5980cad573f4"),
+                                    Text = "You Recognize Spells swiftly. Once per round, you can Recognize a Spell using a skill in which you’re a master as a free action.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("79f8ff8b-a14d-4621-ab56-df66be388a38"),
+                                    Order = 0,
+                                    OwnerId = new Guid("48c371fb-6e9c-4d4f-965d-d56694b52100"),
+                                    Text = "You take 1 minute to Repair an item. If you’re a master in Crafting, it takes 3 actions. If you’re legendary, it takes 1 action.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("605cae2e-9971-44ec-9fe2-9df99dd6fa87"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8a71ca0e-0c73-4fdd-bde7-431f3237bca6"),
+                                    Text = "You Squeeze 5 feet per round (10 feet on a critical success). If you’re legendary in Acrobatics, you Squeeze at full Speed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("08b12c02-c83f-43de-be5c-dd9ec87334cf"),
+                                    Order = 0,
+                                    OwnerId = new Guid("eda136b0-c9e5-4b60-abd3-cc534c043a00"),
+                                    Text = "You Swim 5 feet farther on a success and 10 feet farther on a critical success, to a maximum of your Speed. If you’re legendary in Athletics, you gain a swim Speed equal to your Speed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7e74f923-5877-4e70-b996-be37b21a8fbc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f3cdc428-01a4-4687-8d48-8de530cbd154"),
+                                    Text = "You can Pick a Lock using 1 action instead of 2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("755917de-c9d7-4d39-a1ea-9e6c72ab7885"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f725b35e-73bc-45b9-b5ee-6dfb225147b4"),
+                                    Text = "You’re skilled at moving with a group. When you are Avoiding Notice and your allies Follow the Expert, you and those allies can roll a single Stealth check, using the lowest modifier, instead of rolling separately. This doesn’t apply for initiative rolls.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("600a8c6c-ad12-4e0c-b656-70f740cce02e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("73d6b44a-a2a6-4a70-be2c-2dd59c09657a"),
+                                    Text = "You easily pull yourself onto ledges. When you Grab an Edge, you can pull yourself onto that surface and stand. You can use Athletics instead of a Reflex save to Grab an Edge.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fe9c688e-04a1-4e87-bfea-ad1d9224efd5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ad4fe73a-0518-46c1-bfee-130d1b2053ab"),
+                                    Text = "You can read lips of others nearby who you can clearly see. When you’re at your leisure, you can do this automatically. In encounter mode or when attempting a more difficult feat of lipreading, you’re fascinated and flat-footed during each round in which you focus on lip movements, and you must succeed at a Society check (DC determined by the GM) to successfully read someone’s lips. In either case, the language read must be one that you know.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("aa2b2d06-a965-4e6a-ba72-099e3d2b4def"),
+                                    Order = 0,
+                                    OwnerId = new Guid("30763d23-d261-4295-b636-f94bca378bec"),
+                                    Text = "If you are trained in the appropriate skill for the spell’s tradition and it’s a common spell of 2nd level or lower, you automatically identify it (you still roll to attempt to get a critical success, but can’t get a worse result than success). The highest level of spell you automatically identify increases to 4 if you’re an expert, 6 if you’re a master, and 10 if you’re legendary. The GM rolls a secret Arcana, Nature, Occultism, or Religion check, whichever corresponds to the tradition of the spell being cast. If you’re not trained in the skill, you can’t get a result better than failure.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5a2ebba7-943f-4b48-87e7-23a5bd5891a4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8ee83a83-4763-4423-87ff-c12ef752a494"),
+                                    Text = "When you Command an Animal you’re mounted on to take a move action (such as Stride), you automatically succeed instead of needing to attempt a check. Any animal you’re mounted on acts on your turn, like a minion. If you Mount an animal in the middle of an encounter, it skips its next turn and then acts on your next turn. Page 249 has more on Command an Animal.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5b465363-62e4-41bb-a073-96f9423c8c4e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2107ba8d-4766-4434-b23e-fe90d9837b02"),
+                                    Text = "You learned folk medicine to help recover from diseases and poison, and using it diligently has made you especially resilient. When you Treat a Disease or a Poison, or someone else uses one of these actions on you, increase the circumstance bonus granted on a success to +4, and if the result of the patient’s saving throw is a success, the patient gets a critical success.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8a8dd86f-24fc-469c-b760-011217f25d3c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("045ae2b1-ef9d-44a3-898d-8feb0832b94c"),
+                                    Text = "You can frighten foes so much, they might die. Attempt an Intimidation check against the Will DC of a living creature within 30 feet of you that you sense or observe and who can sense or observe you. If the target can’t hear you or doesn’t understand the language you are speaking, you take a –4 circumstance penalty. The creature is temporarily immune for 1 minute.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2f35abd2-9e98-470e-a8a4-12ff83325793"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3bb4c8cd-9368-43dd-92b2-99174568570a"),
+                                    Text = "You can downplay the consequences or outrageousness of your requests using sheer brazenness and charm. When you Request something, you reduce any DC increases for making an outrageous request by 2, and if you roll a critical failure for your Request, you get a failure instead. While this means you can never cause your target to reduce their attitude toward you by making a Request, they eventually tire of requests, even though they still have a positive attitude toward you.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0f984b03-0710-45ec-b3d2-8b79b3bad4d1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7aded813-2325-4a4d-aea7-077680584823"),
+                                    Text = "You learn the sign languages associated with the languages you know, allowing you to sign and understand signs. Sign languages typically require both hands to convey more complex concepts, and they are visual rather than auditory.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6f804bdb-e8ea-4b94-b8da-9dd428098588"),
+                                    Order = 1,
+                                    OwnerId = new Guid("7aded813-2325-4a4d-aea7-077680584823"),
+                                    Text = "Sign language is difficult to understand during combat due to the level of attention needed, unlike basic gestures like pointing at a foe to suggest a target. Sign language is hard to use in areas of low visibility, just like speech is difficult in a noisy environment.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0edf9962-598d-4813-bdef-f310458b9ea6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b5a95cad-67ab-4716-b582-4a11d8b863d1"),
+                                    Text = "You become trained in the skill of your choice.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c2f95e6a-d3ee-41a3-b9c5-2ce52b87cb28"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d466988f-8d00-4230-ab88-5c963abbecd1"),
+                                    Text = "You elude and evade attempts to uncover your true nature or intentions. When a spell or magical effect tries to read your mind, detect whether you are lying, or reveal your alignment, you can attempt a Deception check against the spell or effect’s DC. If you succeed, the effect reveals nothing.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ab3c5f8b-1cea-4981-b30d-fc1d811fc593"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2b952cb7-5972-4866-a8d3-92410b2ed759"),
+                                    Text = "You can use the Craft activity to create snares, using the rules from page 244. When you select this feat, you add the formulas for four common snares to your formula book.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("19cd7955-cd5b-4133-8967-48d9f9379ef4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b1c71e21-bea7-453b-b23a-13ecc1b3675b"),
+                                    Text = "In situations where you can physically menace the target when you Coerce or Demoralize, you gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty for not sharing a language. If your Strength score is 20 or higher and you are a master in Intimidation, this bonus increases to +2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3437ee0d-8348-4ee0-b08f-7cb793843223"),
+                                    Order = 1,
+                                    OwnerId = new Guid("b1c71e21-bea7-453b-b23a-13ecc1b3675b"),
+                                    Text = "If it’s unclear whether the specialty applies, the GM decides. Some specialties might apply only partially. For example, if you were making a morningstar and had specialty in woodworking, the GM might give you half your bonus because the item requires both blacksmithing and woodworking.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("be009048-9abe-439f-97f1-d78289d9752c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7ba0d3ef-7d44-42e4-8e2d-0b8bce8c9d16"),
+                                    Text = "You can keep your balance easily, even in adverse conditions. Whenever you roll a success using the Balance action, you get a critical success instead. You’re not flat-footed while attempting to Balance on narrow surfaces and uneven ground. Thanks to your incredible balance, you can attempt an Acrobatics check instead of a Reflex save to Grab an Edge.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b49e4a7d-a147-40c2-a552-b71770e29367"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7de0d323-fc78-4154-a4d0-91e8af5ef631"),
+                                    Text = "You know about life on the streets and feel the pulse of your local settlement. You can use your Society modifier instead of your Diplomacy modifier to Gather Information. In any settlement you frequent regularly, you can use the Recall Knowledge action with Society to know the same sorts of information that you could discover with Diplomacy to Gather Information. The DC is usually significantly higher, but you know the information without spending time gathering it. If you fail to recall the information, you can still subsequently attempt to Gather Information normally.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9f681c15-5e28-4526-9a4c-aebaf2ec9179"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ec332db6-b06a-4a93-9935-756953f7a857"),
+                                    Text = "You’ve researched many faiths enough to recognize notions about them that are unlikely to be true. If you roll a critical failure at a Religion check to Decipher Writing of a religious nature or to Recall Knowledge about the tenets of faiths, you get a failure instead. When attempting to Recall Knowledge about the tenets of your own faith, if you roll a failure, you get a success instead, and if you roll a success, you get a critical success instead.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("78f751ba-70e0-475e-89fc-d2f5f5006e43"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2818e8e6-4d55-4f83-ad45-6decff2673c1"),
+                                    Text = "When you successfully Steal something, observers (creatures other than the creature you stole from) take a –2 circumstance penalty to their Perception DCs to detect your theft. Additionally, if you first Create a Diversion using Deception, taking a single Palm an Object or Steal action doesn’t end your undetected condition.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("af6883b2-2994-4d9a-825e-0aaf92040d99"),
+                                    Order = 0,
+                                    OwnerId = new Guid("67a42abf-7456-4bca-a74b-ef8d2fdc4459"),
+                                    Text = "You can study details in the wilderness to determine the presence of nearby creatures. You can spend 10 minutes assessing the area around you to find out what creatures are nearby, based on nests, scat, and marks on vegetation. Attempt a Survival check against a DC determined by the GM based on how obvious the signs are. On a success, you can attempt a Recall Knowledge check with a –2 penalty to learn more about the creatures just from these signs. If you’re a master in Survival, you don’t take the penalty.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d0dfc3c2-425e-4551-9964-bbdf182c468b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3539bdbe-8e7f-45c0-a094-649d85d3adca"),
+                                    Text = "You can move your full Speed when you Sneak. You can use Swift Sneak while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4ebf2045-8b7f-4573-8f3b-af03c404638b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("17232376-8797-4f5b-bee0-2614d6938d5a"),
+                                    Text = "Your experience in navigating a certain type of terrain makes you supremely confident while doing so. You gain a +1 circumstance bonus to Survival checks in one of the following types of terrain, chosen when you select this feat: aquatic, arctic, desert, forest, mountain, plains, sky, swamp, or underground.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("310c2c54-d5b7-408f-81c4-4465fcd9b9f2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("288c9224-1ffe-4acc-8343-ba9a40e76c38"),
+                                    Text = "Select one type of difficult terrain from the following list: rubble, snow, or underbrush. While undetected by all non-allies in that type of terrain, you can Sneak without attempting a Stealth check as long as you move no more than 5 feet and do not move within 10 feet of an enemy at any point during your movement. This also allows you to automatically approach creatures to within 15 feet while Avoiding Notice during exploration as long as they aren’t actively Searching or on guard.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d8f33acf-ba7f-4aec-a5e0-962dd317b1f8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("064e540b-673f-4abb-bacc-fda48911b21a"),
+                                    Text = "When you critically succeed at the Demoralize action, if the target’s level is lower than yours, the target is fleeing for 1 round.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0a652425-e8de-4a6d-83e8-523505d4f747"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fee17526-90f5-401c-bdec-d084f40852a7"),
+                                    Text = "You can attempt to Disarm, Grapple, Shove, or Trip creatures up to two sizes larger than you, or up to three sizes larger than you if you’re legendary in Athletics.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("76c25d32-da2f-4db2-af66-56b8b3542db9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5fec7506-9390-4455-83ed-fc3666ca4fa2"),
+                                    Text = "You can withstand more punishment than most before succumbing. Increase your maximum Hit Points by your level. You reduce the DC of recovery checks by 1 (page 459).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("13825e71-f1db-4f44-9ec8-3bdf31a04712"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d1d5b37b-2fcd-4699-892f-5c81cc437323"),
+                                    Text = "You spend time teaching an animal to do a certain action. You can either select a basic action the animal already knows how to do (typically those listed in the Command an Animal action on page 249) or attempt to teach the animal a new basic action. The GM determines the DC of any check required and the amount of time the training takes (usually at least a week). It’s usually impossible to teach an animal a trick that uses critical thinking. If you’re expert, master, or legendary in Nature, you might be able to train more unusual creatures, at the GM’s discretion.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("11d84471-94ee-4c1e-a67e-07c3ad92966e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("219b84b9-cb31-44df-b37e-6bf4916e5dfb"),
+                                    Text = "You examine a magic item you normally couldn’t use in an effort to fool it and activate it temporarily. For example, this might allow a fighter to cast a spell from a wand or allow a wizard to cast a spell that’s not on the arcane list using a scroll. You must know what activating the item does, or you can’t attempt to trick it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6cd9c0c0-51e4-4c37-96d7-a7c861812b8e"),
+                                    Order = 1,
+                                    OwnerId = new Guid("219b84b9-cb31-44df-b37e-6bf4916e5dfb"),
+                                    Text = "Attempt a check using the skill matching the item’s magic tradition, or matching a tradition that has the spell on its list, if you’re trying to cast a spell from the item. The relevant skills are Arcana for arcane, Nature for primal, Occultism for occult, Religion for divine, or any of the four for an item that has the magical trait and not a tradition trait. The GM determines the DC based on the item’s level (possibly adjusted depending on the item or situation).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("81d98c13-816a-41c5-9d33-476397d08dc7"),
+                                    Order = 2,
+                                    OwnerId = new Guid("219b84b9-cb31-44df-b37e-6bf4916e5dfb"),
+                                    Text = "If you activate a magic item that requires a spell attack roll or spell DC and you don’t have the ability to cast spells of the relevant tradition, use your level as your proficiency bonus and the highest of your Intelligence, Wisdom, or Charisma modifiers. If you’re a master in the appropriate skill for the item’s tradition, you instead use the trained proficiency bonus, and if you’re legendary, you instead use the expert proficiency bonus.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("55213e09-5320-4baa-9324-35e22eb06496"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dfb5e49e-df3e-443e-bfbf-d41e042306ed"),
+                                    Text = "You’ve learned to fight underwater. You are not flat-footed while in water, and you don’t take the usual penalties for using a bludgeoning or slashing melee weapon in water.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c53778be-16f6-4284-9f86-328a4191a823"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ce1dc7c1-c529-42a2-a2f5-f6ca99df1804"),
+                                    Text = "You’ve started to make a meaningful connection about the common underpinnings of the four traditions of magic and magical essences, allowing you to understand them all through an arcane lens. Whenever you use a skill action or a skill feat that requires a Nature, Occultism, or Religion check, depending on the magic tradition, you can use Arcana instead. If you would normally take a penalty or have a higher DC for using Arcana on other magic (such as when using Identify Magic), you no longer do so.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("95e082e4-1262-4fa5-8937-a0bf794053eb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("eb5ca078-b3f2-4e84-8df4-526ced138637"),
+                                    Text = "You never get information about your areas of expertise wrong. When you Recall Knowledge using any Lore subcategory in which you’re trained, if you roll a critical failure, you get a failure instead. If you’re a master in a Lore subcategory, on a critical success, you gain even more information or context than usual.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("eb92aacb-50c4-49d2-8ed0-71860ad8582e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9648e97f-800c-492f-9277-93a17174bab1"),
+                                    Text = "You’ve learned how to handle situations when you’re out of your depth. Your proficiency bonus to untrained skill checks is equal to half your level instead of +0. If you’re 7th level or higher, the bonus increases to your full level instead. This doesn’t allow you to use the skill’s trained actions.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("98b0a02f-62cf-4fd1-bfc1-674b17c90563"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8ee11526-08b4-451e-8424-83704f0d1a70"),
+                                    Text = "You have exceptional talent with one type of performance. You gain a +1 circumstance bonus when making a certain type of performance. If you are a master in Performance, this bonus increases to +2. Select one of the following specialties and apply the bonus when attempting Performance checks of that type. If it’s unclear whether the specialty applies, the GM decides.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8bae76df-a77a-4fb2-a16f-81864f06e55d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("76a68ae1-d7e0-4b2a-af54-4978b06db5cb"),
+                                    Text = "You can use your momentum from a jump to propel yourself off a wall. If you’re adjacent to a wall at the end of a jump (whether performing a High Jump, Long Jump, or Leap), you don’t fall as long as your next action is another jump. Furthermore, since your previous jump gives you momentum, you can use High Jump or Long Jump as a single action, but you don’t get to Stride as part of the activity.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2c4b8bac-89f1-45f3-a60a-c6dfbbb00ea1"),
+                                    Order = 1,
+                                    OwnerId = new Guid("76a68ae1-d7e0-4b2a-af54-4978b06db5cb"),
+                                    Text = "You can use Wall Jump only once in a turn, unless you’re legendary in Athletics, in which case you can use Wall Jump as many times as you can use consecutive jump actions in that turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8156a63f-dd8b-45e7-af35-fc4e6552a587"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b5d31ebb-d361-4780-93c5-324bfd3c39b8"),
+                                    Text = "You’ve studied in large medical wards, treating several patients at once and tending to all their needs. When you use Treat Disease or Treat Wounds, you can treat up to two targets. If you’re a master in Medicine, you can treat up to four targets, and if you’re legendary, you can treat up to eight targets.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("73719d8e-db64-463a-99f2-c30bc4c50bab"),
+                                    Order = 0,
+                                    OwnerId = new Guid("52456558-ce51-4f42-8ff2-fd4dbb72c25d"),
+                                    Text = "If you trigger a device or set off a trap while disarming it, you gain a +2 circumstance bonus to your AC or saving throw against the device or trap. This applies only to attacks or effects triggered by your failed attempt, not to any later ones, such as additional attacks from a complex trap.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("485c9894-7bac-4b39-a277-004d316976ae"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8b9edbcc-05ce-4df7-bc51-910ff6be643d"),
+                                    Text = "You become trained in all simple weapons. If you were already trained in all simple weapons, you become trained in all martial weapons. If you were already trained in all martial weapons, you become trained in one advanced weapon of your choice.",
+                                    Type = 0
+                                });
+                        });
+
                     b.Navigation("ActionType");
+
+                    b.Navigation("Details");
 
                     b.Navigation("FeatType");
 
                     b.Navigation("Frequency");
 
                     b.Navigation("RollableEffect");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FeatDetailsBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Feat", "Feat")
-                        .WithMany("Details")
-                        .HasForeignKey("FeatId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Feat");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FeatEffect", b =>
@@ -34163,7 +33680,185 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "RoutineDetails", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("Hazards_RoutineDetails");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("2411b443-2b72-48d1-b59e-b6688b774df9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ff781a33-7aa2-426b-adf2-672bcf0e1681"),
+                                    Text = "The trap uses its action to force one random creature that failed its save against wail of the banshee last turn to emit a wail of the banshee with the same statistics as the initial one. The creature wails even if it is dead or unable to speak, no matter how far away from the trap it is. Unlike a casting of the spell, the drained condition from this trap’s wail of the banshee spells increases the targets’ drained condition values. A creature that critically succeeds at any of its saves can still be affected by the trap on future rounds, but can’t be forced to wail by the trap.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("087a9701-90ab-4e85-a64d-8bca7032c349"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e3110eda-b8bf-4599-bfe6-d95ebaf43948"),
+                                    Text = "The mirror absorbs another reflected creature into the mirror and replaces it with a mirror duplicate. Mirror duplicates attack on their own initiative, using the same statistics as the original creature, but with an evil alignment (changing only abilities that shift with the alignment change). A mirror duplicate can spend 3 actions in contact with the mirror to return to its original dimension and release the creature it duplicated, but most mirror duplicates prefer not to.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d58fd9ed-f604-45d1-ab07-65c3cc68799c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("06b3ee8e-446d-49e5-8737-551f94484753"),
+                                    Text = "The trap loses 1 action each turn for each disabled water spout. On each of the trap’s actions, a spout pours water, increasing the depth of the water by 5 feet. Once the pit is full of water, the pit stops using actions, but creatures in the pit begin drowning (page 478).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("dbc0d3e9-fac4-47d3-8942-09f87c55df5d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                                    Text = "The trap loses 1 action per disabled channel each turn. On each action, a different channel spews lava, dealing 4d6 fire damage to each creature within 10 feet of the channel (DC 27 basic Reflex save), and increasing the depth of the lava in the room by 1 foot (4 feet per round if all the channels are active).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("58d97828-a01d-4101-b04e-d5e3b804b7a8"),
+                                    Order = 1,
+                                    OwnerId = new Guid("3a554a92-f873-4560-9a1a-ad10916b7f1a"),
+                                    Text = "A creature that starts its turn in lava takes 8d6 fire damage and is immobilized until it Escapes the hardening lava (DC 27). The creature might suffocate if covered in lava (page 478). Lava from the previous round hardens fully at the start of the trap’s turn, effectively raising the floor of the room. Once the room is full of lava, the trap stops taking actions, but creatures in the room remain stuck until the floor opens and the trap resets.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("85e4e3c2-a458-4da2-851e-16f694b880cc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d609d826-9840-4418-a0a4-9a9531e09f17"),
+                                    Text = "The trap launches one dart against every creature in the gallery as 1 action. Because it launches darts continuously, the trap can also use the Continuous Barrage free action (see below) to launch darts at each creature during that creature’s turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f5149d1e-92e7-468d-aaf7-c71f195e464a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
+                                    Text = "On its initiative, the quicksand pulls down each creature within it. A creature that was submerged up to its waist becomes submerged up to its neck, and a creature that was submerged up to its neck is pulled under and has to hold its breath to avoid suffocation(page 478).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4f8f2529-93b8-4bad-8841-59f73d6e119c"),
+                                    Order = 1,
+                                    OwnerId = new Guid("8bb8a7b1-c597-480b-8a23-5d28157c0310"),
+                                    Text = "A creature in the quicksand can attempt a DC 20 Athletics check to Swim to either raise itself by one step if it’s submerged to its neck or worse, or to move 5 feet if it’s submerged only up to its waist. On a critical failure, the creature is pulled down one step. A creature that Swims out of the quicksand escapes the hazard and is prone in a space adjacent to the quicksand patch. Other creatures can Aid the creature, typically by using a rope or similar aid, or attempt to pull the creature out with their own DC 20 Athletics check, with the same results as if the creature attempted the check.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bb0601b7-7b22-47fc-a985-a53eccad97a2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e417fa19-f7e3-4372-988e-8e2ce524e804"),
+                                    Text = "The trap uses its first action to make a spinning blade Strike against each adjacent creature, its second action to move straight in a random direction (roll 1d4 to determine the direction), and its third action to make a spinning blade Strike against each adjacent creature. This trap doesn’t take a multiple attack penalty.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5bfc3074-35e2-4406-bcd4-152b4c8f3069"),
+                                    Order = 0,
+                                    OwnerId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                                    Text = "Each decoration uses 3 of the trap’s actions each turn, and the trap loses 3 actions each turn for every decoration that is disabled. A decoration uses its first action to move its cloud of objects up to 200 feet, its second action to make the objects Strike, and its third action to add more objects to the cloud, increasing its damage by 1d12 (to a maximum of 4d12+10). If a decoration’s cloud is already at maximum damage, it does nothing with its third action.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3564caf0-6c49-4cff-9e37-0cfdc2f57bf2"),
+                                    Order = 1,
+                                    OwnerId = new Guid("12cbc8b1-311a-4826-bf59-784c2a790e0f"),
+                                    Text = "If a decoration’s cloud has been destroyed, the decoration instead spends its first action to create a new cloud of objects inside the room (using the starting damage value) and then its second and third actions to have the cloud move and Strike.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("417e2e47-e956-49d4-b01e-82da90ed3027"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                                    Text = "On its initiative, the trap uses its first action to spin, then stops. Roll 1d6 to determine which segment is topmost when the wheel stops spinning. The wheel uses its second action to replicate the spell listed for that segment (3rd level, DC 24, spell attack roll +14). This spell’s target is centered on or otherwise includes the nearest creature in the area. This increases the spell’s range to 100 feet if necessary. Any spell cast by this trap is arcane.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9e4955f6-7270-4de7-ad78-8f728b8a4e57"),
+                                    Order = 1,
+                                    OwnerId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                                    Text = "Sleep",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("35c80760-aec4-41ba-a3d3-e256796bd457"),
+                                    Order = 2,
+                                    OwnerId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                                    Text = "Paralyze",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("c0e914be-277a-4cd2-a30a-ecdb53d8f2c6"),
+                                    Order = 3,
+                                    OwnerId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                                    Text = "Lightning Bolt (100-foot line)",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("22e59604-b410-4183-820b-2dcfff400a8c"),
+                                    Order = 4,
+                                    OwnerId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                                    Text = "Blindness",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("9aea181f-b676-4651-a636-710699c43495"),
+                                    Order = 5,
+                                    OwnerId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                                    Text = "Acid Arrow",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("2fdfb966-1fa4-4286-9409-8c415686c09e"),
+                                    Order = 6,
+                                    OwnerId = new Guid("5f206ecc-b2a0-473c-9e09-561e7909787c"),
+                                    Text = "Ray of Enfeeblement",
+                                    Type = 2
+                                });
+                        });
+
                     b.Navigation("Complexity");
+
+                    b.Navigation("RoutineDetails");
 
                     b.Navigation("SourcePage");
 
@@ -34188,7 +33883,289 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("TraitsId");
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("HazardAction_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("bbf0858b-6ab3-4a6e-90f3-8e4ca74206a8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ea62e9d7-f1ba-4f23-abb7-0f76ec9dbaeb"),
+                                    Text = "Fire rains from the sky in a 100-mile radius, dealing 10d6 fire damage to creatures and objects in the area. Each creature or object can attempt a DC 46 basic Reflex save. Any creature reduced to 0 Hit Points by this damage dies instantly. This is not enough damage to completely burn away a forest or level an entire mountain or city, but it typically kills most creatures in the area.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2ac0be1a-c1b5-4269-bbac-40a7665853c4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("68d1d3fe-bca2-4a85-864c-1359f24d5dbc"),
+                                    Text = "The haunt takes control of the triggering creature, forcing it to attack itself. The creature must attempt a DC 29 Will save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("63bd40ef-eda7-4641-8d14-e4cd5efbfbaf"),
+                                    Order = 0,
+                                    OwnerId = new Guid("54b9c0cb-563f-412d-aa62-829de3b015c5"),
+                                    Text = "The triggering creature falls in and continues to fall, potentially forever. That creature can try to Grab an Edge to avoid falling (page 472). The DC to Climb the walls or Grab an Edge is 26",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3b3bacc8-6bac-46c7-afff-17183a183c5a"),
+                                    Order = 1,
+                                    OwnerId = new Guid("54b9c0cb-563f-412d-aa62-829de3b015c5"),
+                                    Text = "The pit contains many handholds, so the falling creature can try to Grab an Edge again every 6 seconds. If the creature succeeds, it can start to Climb out from that point (though it might be a very long climb, depending on how far the creature fell). Since the creature falls endlessly, it can rest and even prepare spells while falling, though items dropped while falling are usually lost forever.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d1e49618-1459-444d-b843-e65168e0ea3f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a1bbebc2-a500-44f9-8142-b77421a53107"),
+                                    Text = "The trap deals 3d12 electricity damage to the triggering creature (DC 22 basic Reflex save).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a93c5058-494c-4df1-988e-f0dc6dee552c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c5259ba8-ad21-4900-bcbf-cf1196ef578a"),
+                                    Text = "The rune detonates a fireball centered on the triggering creature’s square. This is a 3rd level fireball spell that deals 6d6 fire damage (DC 22 basic Reflex save).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("806735c8-382d-4647-a8fd-b33e379cebad"),
+                                    Order = 0,
+                                    OwnerId = new Guid("21a56455-6731-4be9-bc6b-02130bac5957"),
+                                    Text = "The triggering creature and all creatures within 30 feet are trapped in a disrupted time flow (DC 38 Fortitude negates). The creatures’ minds move so quickly that each round seems to last a century, but their bodies and magical energies move so slowly that they can’t use any actions except Recall Knowledge. An affected creature must attempt a DC 36 Will saving throw against a warp mind spell immediately and again for every minute of real time that passes while the creature is trapped in the frozen moment. This effect has an unlimited duration but can be counteracted.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("06f5fbcf-7e70-4444-8f61-60927a67cef8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3df56b95-79f0-4ed7-bdb0-d0d0bdddcde2"),
+                                    Text = "The tube explodes, spraying hallucinogenic powder in a 30-foot cone. Any creature in the cone must succeed at a DC 24 Will save or be confused for 1 round and take a –2 status penalty to Perception checks and saves against mental effects for 1d4 hours. On a critical failure, the penalty is instead –4.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("356c9040-4be1-4428-a454-8e39c037da0c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2eb1837d-c49c-447e-98d7-b30c858912f0"),
+                                    Text = "The hammer swings down, making a Strike against the triggering creature.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("21077b3a-26c5-4556-b3e5-b48e4970f323"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a2bfaa34-76eb-43d8-a990-32b7437d8304"),
+                                    Text = "The triggering creature falls in and takes falling damage (typically 10 bludgeoning damage). That creature can use the Grab an Edge reaction to avoid falling.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d9095071-f339-42ec-99a9-b36054c97766"),
+                                    Order = 0,
+                                    OwnerId = new Guid("deb0f675-09fc-450b-90d2-e04da0e1c699"),
+                                    Text = "Each living creature within 60 feet must succeed at a DC 23 Will save or be subjected to the pharaoh’s curse. A cursed creature takes a –2 status penalty to Fortitude saves, and any natural or magical healing it receives is halved. The curse remains until removed by remove curse or similar magic.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ae24d667-ccda-431a-a998-7e754abfee8e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c2534177-226c-402f-aae3-bc40111eed8d"),
+                                    Text = "The triggering creature and all creatures within 30 feet of the rift are drawn into another plane. Each creature can attempt a DC 33 Reflex save to avoid this fate.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5ca24113-9fa9-4802-92db-bf378e003180"),
+                                    Order = 0,
+                                    OwnerId = new Guid("09a54c43-77a9-42c6-a041-aab4c55df5ff"),
+                                    Text = "A spine extends to Strike the triggering creature.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("50fc5c54-2b32-41dc-960f-7aee5dc71077"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0b60cd6f-d1e8-4373-83f8-a14907af7e10"),
+                                    Text = "The creature is targeted by baleful polymorph (DC 32 Will save).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("99511947-964d-4238-bba3-e8f5c44be0b4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("574be793-dfaa-4b21-ac86-4c65fd08bd92"),
+                                    Text = "Both blades swing down, each one Striking all creatures under the ceiling grooves.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("87bdb9c5-4d60-4e50-938d-4bd6467d5e62"),
+                                    Order = 0,
+                                    OwnerId = new Guid("28f30837-d2d0-459a-bcf2-49afac323a2e"),
+                                    Text = "The triggering creature and up to five coconspirators instantly revert to infants, losing all memories, class abilities, and other skills acquired during their lives (DC 44 Fortitude negates). Reversing this effect is nearly impossible, requiring powerful magic such as wish.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("67f6c155-f410-4fdb-bfdf-ea6988d88003"),
+                                    Order = 0,
+                                    OwnerId = new Guid("57f67171-9fe7-42a8-9338-9dfcff0c17b1"),
+                                    Text = "The door falls, closing off the hallway. The stone slab deals 3d8 bludgeoning damage to anyone beneath or adjacent to the slab when it drops and pushes them out of its space in a random direction. A creature that succeeds at a DC 17 Reflex save takes no damage and rolls out of the way in a random direction. On a critical success, they can choose the direction.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("85896c21-0853-44e8-90ea-b304cdbb0f14"),
+                                    Order = 1,
+                                    OwnerId = new Guid("57f67171-9fe7-42a8-9338-9dfcff0c17b1"),
+                                    Text = "Lifting the fallen slab requires a successful DC 25 Athletics check. Hitting the floor panels triggers the trap. The slab uses the same AC and saves as the trap, but it has Hardness 12, HP 48 (BT 24).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fd11a9dd-3a82-4d6f-9861-62c108f617a5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("09e804f4-5f1b-4255-b1d1-31e90811b52a"),
+                                    Text = "The trap shoots a spear, making a Strike against the creature or object on the floor tile.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("23e284eb-40a6-4934-8d0a-88b4a0c0e23c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6394bcae-4701-476c-81a6-c154f616ddb5"),
+                                    Text = "The saw blade travels along its path, making one Strike against each creature in the room, twisting and varying its height for a maximum chance of beheading its targets.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("416e47cd-3a39-4e6b-93ba-d7560655d2aa"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dd06ccd9-ca0a-4797-b135-590a5509eb32"),
+                                    Text = "The triggering creature and all creatures within 10 feet are exposed to yellow mold spores.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("73e328d7-b078-4c03-a8ac-2f8f2191835e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d403f5f2-59b1-446b-b31c-a91b8337c776"),
+                                    Text = "The trap releases an arcane wail of the banshee (DC 40) with a 100-foot-radius emanation instead of 40 feet, targeting all living creatures in the area, and rolls initiative.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5c6305bf-8791-4678-b24c-ab95f62fa7ab"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b1955fcd-433f-45dc-b9ea-d69baa5fd5d9"),
+                                    Text = "The mirror absorbs the creature into the mirror, replacing it with an evil mirror duplicate (DC 34 Reflex to avoid being absorbed into the mirror), and rolls initiative.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b3fae5a4-340d-41a7-821b-80713b7affd8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ffe63bc7-f008-4d70-9357-e6ada9e45a25"),
+                                    Text = "The triggering creature falls in and takes damage from the fall, reduced by 5 feet for falling into the water (typically 12 bludgeoning damage). A creature can Grab an Edge to avoid falling (page 472). The trapdoor then slams shut, and the hazard rolls initiative.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1b710bb7-2c56-42fd-a03d-2b2861a8b23f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d42112ae-d850-451a-ac03-2aba67ec4a75"),
+                                    Text = "The exits seal instantly and the trap rolls initiative.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("eb77450e-c55c-43e4-b3c1-aadb7c0fe4e5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("08abae5d-5e71-45ca-9a37-9d44a955d84c"),
+                                    Text = "The trap makes a poisoned dart Strike against the triggering creature, then rolls initiative.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f79173f5-49dc-4322-8be4-c4591b89d643"),
+                                    Order = 0,
+                                    OwnerId = new Guid("edea22d4-1f12-48a8-b1f1-b6ee4de1b4f7"),
+                                    Text = "The trap makes a poisoned dart Strike against the triggering creature.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a9f37fc2-82d6-466c-adc8-552f4b20da56"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d1adf885-1c78-4d30-b759-12798dc37a4a"),
+                                    Text = "The triggering creature sinks into the quicksand up to its waist. The quicksand rolls initiative if it hasn’t already.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8c6ac794-a869-4f98-8fda-c9157022eb44"),
+                                    Order = 0,
+                                    OwnerId = new Guid("202a3139-430a-4841-8488-9eefbe0089fe"),
+                                    Text = "The trap pops up in a grid intersection and makes a spinning blade Strike against one adjacent creature (if any), then rolls initiative.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cabdbcb0-95c9-461d-a9f5-e1858af03802"),
+                                    Order = 0,
+                                    OwnerId = new Guid("16402edb-38d3-4cae-a93d-687c9e1814b2"),
+                                    Text = "This trap summons a specific level 1 creature, determined when the trap is created. The creature rolls initiative and remains for 2d6 rounds, after which the spell ends and the creature disappears. The creature also disappears if someone disables the trap before the duration expires. The summoned creature can use 3 actions each round and can use reactions, unlike most summoned creatures.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("76ef593c-5381-4d39-8935-56aad69cdecf"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5ea54988-b386-4036-a0fc-914995d621de"),
+                                    Text = "Each telekinetic decoration constructs a cloud of objects in the room (three clouds total) and the trap rolls initiative. The creatures in the room when the trap is triggered become the trap’s targets, regardless of whether they leave the room or other creatures later enter the room. Each decoration targets a different creature if possible. A target creature that moves at least 1 mile from the trap ceases being a target, at which point the decoration designates a new target.",
+                                    Type = 0
+                                });
+                        });
+
                     b.Navigation("ActionType");
+
+                    b.Navigation("Details");
 
                     b.Navigation("Hazard");
                 });
@@ -34204,17 +34181,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
                         .WithMany()
                         .HasForeignKey("TraitsId");
-
-                    b.Navigation("HazardAction");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardActionEffectBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardAction", "HazardAction")
-                        .WithMany("EffectDetails")
-                        .HasForeignKey("HazardActionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("HazardAction");
                 });
@@ -34273,17 +34239,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Hazard", null)
                         .WithMany()
                         .HasForeignKey("HazardsId");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardRoutineDetailBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Hazard", "Hazard")
-                        .WithMany("RoutineDetails")
-                        .HasForeignKey("HazardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Hazard");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardType", b =>
@@ -34488,7 +34443,1705 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("TraitsId");
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("Spells_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("d3c3fea0-9363-4659-a888-2196a2e88b29"),
+                                    Order = 0,
+                                    OwnerId = new Guid("328dda55-0bc8-461f-a3d3-686df512438c"),
+                                    Text = "Your touch afflicts the target with Abyssal plague, which siphons fragments of their soul away to empower the Abyss. The effect is based on the target’s Fortitude save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ab27ff6e-2d8a-4928-a6ea-88b7d0504011"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9ff794c4-74a1-412e-9d44-06d64f1570b1"),
+                                    Text = "You conjure an arrow of acid that keeps corroding the target after it hits. Make a spell attack against the target. On a hit, you deal 3d8 acid damage plus 1d6 persistent acid damage. On a critical hit, double the initial damage, but not the persistent damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f9a0898b-9cf0-41d2-ba7c-5706a7109e71"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e6dec1cf-3b35-4abc-9267-4a30e44df08c"),
+                                    Text = "You splash a glob of acid that splatters your target and nearby creatures. Make a spell attack. If you hit, you deal 1d6 acid damage plus 1 splash acid damage. On a critical success, the target also takes 1 persistent acid damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7f853b09-3cc4-4c89-a92d-9ecc67fabddb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "You harness your mastery of primal forces to reshape your body into a Medium flying animal battle form. When you cast this spell, choose bat, bird, pterosaur, or wasp. You can decide the specific type of animal (such as an owl or eagle for bird), but this has no effect on the form’s Size or statistics. While in this form, you gain the animal trait. You can Dismiss the spell.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("887e893d-9fcc-497b-8919-8042b3cdc1ec"),
+                                    Order = 1,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "You gain the following statistics and abilities regardless of which battle form you choose:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("567dee10-2303-414d-98fa-56f7716db07d"),
+                                    Order = 2,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "- AC = 18 + your level. Ignore your armor’s check penalty and Speed reduction.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("5ff96a2e-a6ea-4517-aba3-0fe377bae9d5"),
+                                    Order = 3,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "- 5 temporary Hit Points.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("f75b792f-043d-41cf-b6a9-56f7bd20ba1f"),
+                                    Order = 4,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "- Low-light vision.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("f70c57db-900e-463b-b89a-c2bd7fe6cf56"),
+                                    Order = 5,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "- One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can use. You’re trained with them. Your attack modifier is +16, and your damage bonus is +5. These attacks are Dexterity based (for the purpose of the clumsy condition, for example). If your attack modifier for Dexterity-based unarmed attacks is higher, you can use it instead.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("ebc22a9b-b423-46ad-a966-0e1681936c64"),
+                                    Order = 6,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "- Acrobatics modifier of +16, unless your own modifier is higher.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("ee30e7f9-5884-4454-955c-1da78755dab9"),
+                                    Order = 7,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "You also gain specific abilities based on the form you choose:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1aec42b4-675b-4d61-8575-0115a42e52cc"),
+                                    Order = 8,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "- Bat Speed 20 feet, fly Speed 30 feet; precise echolocation 40 feet; Melee [one-action] fangs, Damage 2d8 piercing; Melee [one-action] wing (agile), Damage 2d6 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("d96945ba-09d9-4b78-acc7-5b09c7afab4c"),
+                                    Order = 9,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "- Bird Speed 10 feet, fly Speed 50 feet; Melee [one-action] beak, Damage 2d8 piercing; Melee [one-action] talon (agile), Damage 1d10 slashing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("7c3a524d-46bf-4367-941d-bc97e7c55be8"),
+                                    Order = 10,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "- Pterosaur Speed 10 feet, fly Speed 40 feet; imprecise scent 30 feet; Melee[one-action] beak, Damage 3d6 piercing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("f34e506c-12c8-4dad-9cbf-9e543170d9f1"),
+                                    Order = 11,
+                                    OwnerId = new Guid("aee1f3ae-7c4d-4032-883c-73d4d903b2d9"),
+                                    Text = "- Wasp Speed 20 feet, fly Speed 40 feet; Melee [one-action] stinger, Damage 1d8 piercing plus 1d6 persistent poison.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("eba305d2-2565-417f-8bf4-41ec967add47"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fbb8d7cc-6793-484c-80a8-4fafb137e01e"),
+                                    Text = "A bubble of pure air appears around the target’s head, allowing it to breathe normally.The effect ends as soon as the target returns to an environment where it can breathe normally.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6c32648f-499d-4392-aed9-194555267d3c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5c0b6313-4951-4dc4-9289-0ec20210643d"),
+                                    Text = "The target can walk on air as if it were solid ground. It can ascend and descend in this way at a maximum of a 45 - degree angle.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7ee60bac-8c15-4585-ba13-ddabd9564658"),
+                                    Order = 0,
+                                    OwnerId = new Guid("558a6ae1-fc9f-4e11-9c93-18d52be7f5aa"),
+                                    Text = "You ward an area to alert you when creatures enter without your permission. When you cast alarm, select a password. Whenever a Small or larger corporeal creature enters the spell’s area without speaking the password, alarm sends your choice of a mental alert (in which case the spell gains the mental trait) or an audible alarm with the sound and volume of a hand bell (in which case the spell gains the auditory trait). Either option automatically awakens you, and the bell allows each creature in the area to attempt a DC 15 Perception check to wake up. A creature aware of the alarm must succeed at a Stealth check against the spell’s DC or trigger the spell when moving into the area.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("56f45e68-032c-4929-a269-978e6d27a77c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
+                                    Text = "You use your occult lore and the power of your mind to manipulate the spiritual multiverse",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f2b10f10-1854-4e8b-b052-304b6fe58f9f"),
+                                    Order = 1,
+                                    OwnerId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
+                                    Text = "The spell has the following effects:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b56cb637-0b05-4b5e-a9c8-41d717987cf7"),
+                                    Order = 2,
+                                    OwnerId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
+                                    Text = "Duplicate any occult spell of 9th level or lower.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("18c4ba08-3dcf-4336-b349-bc3929058dc5"),
+                                    Order = 3,
+                                    OwnerId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
+                                    Text = "Duplicate any non-occult spell of 7th level or lower.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("dadf406b-366a-4ca6-8624-d4f315438b58"),
+                                    Order = 4,
+                                    OwnerId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
+                                    Text = "Produce any effect whose power is equivalent to any occult spell 9th level or lower, or non - occult spell 7th level or lower.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("2e8f36e1-e005-43fd-9ed9-26b6e8710a44"),
+                                    Order = 5,
+                                    OwnerId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
+                                    Text = "Reverse certain effects that refer to the wish spell",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("9b6100f0-8551-4d82-b8a8-c642e5e859cd"),
+                                    Order = 6,
+                                    OwnerId = new Guid("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
+                                    Text = "At the GM’s discretion, you can try to produce greater effects, but this is dangerous and the spell may have only a partial effect.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a2732bb4-f4c8-4186-b3a5-cda174bebd7c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dcadfb92-e8c7-47a4-a6cc-4de6eefb7c3c"),
+                                    Text = "You punish a creature that transgresses against your deity, drawing upon the anguish you feel upon seeing one of your deity’s anathema committed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d4987992-bbdd-4122-8baa-db244671e460"),
+                                    Order = 1,
+                                    OwnerId = new Guid("dcadfb92-e8c7-47a4-a6cc-4de6eefb7c3c"),
+                                    Text = "You can cast this spell only when a creature actively commits a unique act of anathema. For example, if creating undead were anathema to your deity, you could use anathematic reprisal on a necromancer who had just created undead in front of you, but not on an undead creature just for existing.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c4da2067-3e39-45c0-afa3-0300488a2ad4"),
+                                    Order = 2,
+                                    OwnerId = new Guid("dcadfb92-e8c7-47a4-a6cc-4de6eefb7c3c"),
+                                    Text = "You deal 4d6 mental damage to the target, but a basic Will save can reduce this damage. If it fails, it is also stupefied 1 for 1 round. The creature is then temporarily immune for 1 minute.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("940f05c8-e8af-4d50-b8a5-388b20075193"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "You call upon primal energy to transform yourself into a Medium animal battle form. When you first cast this spell, choose ape, bear, bull, canine, cat, deer, frog, shark, or snake. You can decide the specific type of animal (such as lion or snow leopard for cat), but this has no effect on the form’s Size or statistics. While in this form, you gain the animal trait. You can Dismiss the spell.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("300ba168-764f-491e-a447-df9f3c2f3c3c"),
+                                    Order = 1,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "You gain the following statistics and abilities regardless of which battle form you choose:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("861b2972-0bf6-4ac7-87cf-d7200caf3872"),
+                                    Order = 2,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "AC = 16 + your level. Ignore your armor’s check penalty and Speed reduction.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("ade20fbb-a1e0-4cb8-8b63-4ed7306f1427"),
+                                    Order = 3,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "5 temporary Hit Points.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("a2575b6e-2f53-4c64-92ca-a2e2006809cf"),
+                                    Order = 4,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Low-light vision and imprecise scent 30 feet.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("54acdc29-8944-49a8-b38b-3bd5bf590358"),
+                                    Order = 5,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can use. You’re trained with them. Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("59c4fe59-3095-446e-b43f-34a001f7afd3"),
+                                    Order = 6,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Athletics modifier of +9, unless your own modifier is higher.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("0a3de3aa-3e97-4f6b-a661-88f0f8477e82"),
+                                    Order = 7,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "You also gain specific abilities based on the type of animal you choose:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c7873354-5805-4c8a-8831-1d82a30ee8ed"),
+                                    Order = 8,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Ape Speed 25 feet, climb Speed 20 feet; Melee [one-action] fist, Damage 2d6 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("66e1d25e-9eb7-42dc-b412-220923879e98"),
+                                    Order = 9,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Bear Speed 30 feet; Melee [one-action] jaws, Damage 2d8 piercing; Melee [one-action] claw (agile), Damage 1d8 slashing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("dcbaa11d-7b56-43d2-a72e-13ec97f14e3f"),
+                                    Order = 10,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Bull Speed 30 feet; Melee [one-action] horn, Damage 2d8 piercing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("e79c445d-4649-4cc9-b427-dbfb754c1ad3"),
+                                    Order = 11,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Canine Speed 40 feet; Melee [one-action] jaws, Damage 2d8 piercing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("46f110c3-3c5a-4319-b725-e7ea9a52528a"),
+                                    Order = 12,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Cat Speed 40 feet; Melee [one-action] jaws, Damage 2d6 piercing; Melee[one - action] claw(agile), Damage 1d10 slashing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("19cb8dc2-bef1-4622-b4e2-786de8f85b81"),
+                                    Order = 13,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Deer Speed 50 feet; Melee [one-action] antler, Damage 2d6 piercing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("b63c6577-1c20-42ef-8bf4-4fd87ec3f16a"),
+                                    Order = 14,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Frog Speed 25 feet, swim Speed 25 feet; Melee [one-action] jaws, Damage 2d6 bludgeoning; Melee [one-action] tongue (reach 15 feet), Damage 2d4 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("69870368-0e1e-43a6-9939-de554f70b183"),
+                                    Order = 15,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Shark swim Speed 35 feet; Melee [one-action] jaws, Damage 2d8 piercing; breathe underwater but not in air.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("f388440c-c3bf-46ed-8048-109135a6e719"),
+                                    Order = 16,
+                                    OwnerId = new Guid("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                                    Text = "Snake Speed 20 feet, climb Speed 20 feet, swim Speed 20 feet; Melee[one - action] fangs, Damage 2d4 piercing plus 1d6 poison.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("1b0611b5-02a7-40ca-9245-23b738f2e6fc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5ca21ccd-2ccc-4900-99fe-40480d6103f2"),
+                                    Text = "You offer food, and an ordinary Tiny animal within range approaches to eat it. You imprint the image, direction, and distance of an obvious place or landmark well known to you within the animal. You can also attach a small object or note up to light Bulk to it. The animal does its best to reach the destination; if it makes it there, it waits nearby and allows nonhostile creatures to approach and remove the attached object. The spell ends after the message is delivered or after 24 hours, whichever comes first.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("53d9891f-038b-459c-a98a-76577a5aac33"),
+                                    Order = 1,
+                                    OwnerId = new Guid("5ca21ccd-2ccc-4900-99fe-40480d6103f2"),
+                                    Text = "If there are no Tiny wild animals in range, the spell is lost.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c34b4717-1df9-49f9-9da9-2f91e2891167"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9ebcaed3-689b-4886-939d-a8b0399180c5"),
+                                    Text = "You tap into the target’s senses, allowing you to see, hear, and otherwise sense whatever it senses for the spell’s duration.If the target wishes to prevent you from doing so, it can attempt a Will save, negating the spell on a success, but most animals don’t bother to do so.While tapping into the target’s senses, you can’t use your own body’s senses, but you can change back and forth from your body’s senses to the target’s senses using a single action, which has the concentrate trait.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("82850481-04c2-4bbd-9b05-13956acaa0f0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("001dcfdb-d978-498b-a101-1d13c57b67f2"),
+                                    Text = "You reinforce the target’s musculoskeletal system to bear more weight. The target can carry 3 more Bulk than normal before becoming encumbered and up to a maximum of 6 more Bulk.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ec44766f-0b53-4071-a7e1-d5e25e7b1ea8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3e91401a-203c-4d1e-9a76-0012e2617cd8"),
+                                    Text = "You repel all magic from the target area, preventing spells and other magic from functioning. Spells can’t penetrate the area, magic items cease to function within it, and no one inside can cast spells or use magic abilities. Likewise, spells— such as dispel magic—can’t affect the field itself unless they are of a higher level. Magic effects resume the moment they pass outside the field. For example, a ray fired from one side of the field could target a creature on the other side (as long as caster and target are both outside the field). A summoned creature winks out of existence but reappears if the field moves or ends. Invested magic items cease to function, but they remain invested and resume functioning when they exit the field; the ability boost from an apex item isn’t suppressed within the field. Spells of a higher level than the antimagic field overcome its effects, and can even be cast by a creature within the field.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("644e4608-c84d-411d-89c4-365b34b755a3"),
+                                    Order = 1,
+                                    OwnerId = new Guid("3e91401a-203c-4d1e-9a76-0012e2617cd8"),
+                                    Text = "The field disrupts only magic, so a +3 longsword still functions as a longsword. Magically created creatures (such as golems) function normally within an antimagic field.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("252c9500-8bda-4a59-ab54-fec870f557e9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
+                                    Text = "You gain a vague glimpse of the future. During the casting of this spell, ask about the results of a particular course of action.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7f34d0c1-10ae-4937-a9fb-aae94c21ff6e"),
+                                    Order = 1,
+                                    OwnerId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
+                                    Text = "The spell can predict results up to 30 minutes into the future and reveals the GM’s best guess among the following outcomes:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("62aac3fd-dc88-4275-b479-964d0e390ef0"),
+                                    Order = 2,
+                                    OwnerId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
+                                    Text = "Weal: The results will be good.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("a360bbe1-1f56-4bac-b1b5-a8dab82d5659"),
+                                    Order = 3,
+                                    OwnerId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
+                                    Text = "Woe: The results will be bad.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("ef5d40a9-0203-48f4-9744-f411c7a97342"),
+                                    Order = 4,
+                                    OwnerId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
+                                    Text = "Weal and Woe: The results will be a mix of good and bad.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("ba4c847a-4c45-4d7b-adb4-41a03b562606"),
+                                    Order = 5,
+                                    OwnerId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
+                                    Text = "Nothing: There won’t be particularly good or bad results.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("702a5b5e-0fad-48db-b126-02b58069b5f7"),
+                                    Order = 6,
+                                    OwnerId = new Guid("cfb3f479-70d2-4275-890f-27920ec70d3d"),
+                                    Text = "The GM rolls a secret DC 6 flat check. On a failure, the result is always “nothing.” This makes it impossible to tell whether a “nothing” result is accurate. If anyone asks about the same topic as the first casting of augury during an additional casting, the GM uses the secret roll result from the first casting. If circumstances change, though, it’s possible to get a different result.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fe2d955b-f3ef-43eb-9ae2-e42430f0a0d0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "You transform into an avatar of your deity, assuming a Huge battle form.You must have space to expand or the spell is lost. You have hands in this battle form and can take manipulate actions.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c11e0547-ec12-4c4b-a40b-bc5177fa1527"),
+                                    Order = 1,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "You gain the following statistics and abilities regardless of which deity’s battle form you assume:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2b7a891d-5e49-4e72-86e4-0d0d8fc5f99d"),
+                                    Order = 2,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "AC = 25 + your level. Ignore your armor’s check penalty and Speed reduction.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("95d2bd40-775a-43e7-b421-e46792dd7ebc"),
+                                    Order = 3,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "30 temporary Hit Points.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("0e46e684-dda7-4d66-9a64-0ae231eda72f"),
+                                    Order = 4,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Darkvision.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("87ae08fa-7ec5-4c5e-99e3-918c6530e65b"),
+                                    Order = 5,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "One or more attacks specific to your deity’s battle form, which are the only attacks you can use. You’re trained with them. Your attack modifier is +33, and you use the listed damage. Melee attacks are Strength based (for the purposes of the enfeebled condition, for example) unless they have the finesse trait, and all ranged attacks are Dexterity based. Attacks that deal positive or negative damage don’t heal creatures.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("498b0a9a-0524-49bc-877f-3140eac68339"),
+                                    Order = 6,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Athletics modifier of +35, unless your own is higher.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("90f30a66-c2fc-441e-9f77-5b0054606681"),
+                                    Order = 7,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "You also gain the specific abilities listed for your deity below:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("18cfb804-b63c-42c2-8de5-57f110ed13f3"),
+                                    Order = 8,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Abadar: Speed 50 feet, burrow Speed 30 feet, immune to immobilized; Ranged[one - action] crossbow(range increment 120 feet, reload 1), Damage 6d10 + 3 piercing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("a0746a57-ce84-495e-b5c9-b41c0161607c"),
+                                    Order = 9,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Asmodeus: Speed 70 feet, air walk; Melee [one-action] mace (reach 15 feet), Damage 6d10+6 bludgeoning; Ranged [one-action] hellfire (range 120 feet), Damage 6d6+3 fire.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("e0460453-86b5-447b-b407-f5568d63f4a6"),
+                                    Order = 10,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Calistria: Speed 30 feet, fly Speed 70 feet; Melee [one-action] whip (disarm, finesse, nonlethal, reach 20 feet), Damage 6d4+6 slashing; Ranged [one-action] savored sting (range 60 feet), Damage 6d6+3 poison.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("7abfa2fb-aac3-48fd-81c6-1e6522b70c15"),
+                                    Order = 11,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Cayden Cailean: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Melee [one-action] rapier (deadly, reach 15 feet), Damage 6d6+6 piercing; Ranged [one-action] ale splash (range 120 feet), Damage 6d6+3 poison.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("5ffa2d79-74e2-4327-9f08-4f3216cd2417"),
+                                    Order = 12,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Desna: Speed 30 feet, fly Speed 70 feet; Melee [one-action] starknife (agile, deadly, finesse, reach 15 feet, silver, thrown 60 feet), Damage 6d4+6 piercing; Ranged [one-action] moonbeam (range 120 feet, silver), Damage 6d6+3 fire.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("b78b210e-6ae9-4f99-8a09-9d77e4859e6b"),
+                                    Order = 13,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Erastil: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Ranged[one - action] longbow(deadly d8, range increment 150 feet), Damage 6d8 + 3 piercing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("799ce61b-2cdb-4ec9-9036-649d279e9c08"),
+                                    Order = 14,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Gorum: Speed 70 feet, immune to immobilized; Melee [one-action] greatsword (versatile P, reach 15 feet), Damage 6d12+6 slashing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("615ce084-3dba-407b-9239-3b7008af1d76"),
+                                    Order = 15,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Gozreh: No land Speed, fly Speed 70 feet, swim Speed70 feet, ignore difficult terrain and greater difficult terrain; Melee [one-action] waves (bull rush, reach 15 feet, thrown 20 feet), Damage 6d8+6 bludgeoning; Ranged [one-action] wind (versatile electricity, range 120 feet), Damage 6d6+3 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("039876d3-70a2-4c24-a3a8-ebd2fd3d2504"),
+                                    Order = 16,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Iomedae: Speed 70 feet, air walk; shield (15 Hardness, can’t be damaged); Melee [one-action] longsword (versatile P, reach 15 feet), Damage 6d8+6 slashing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("a0ba7a4e-2f91-4988-ab24-505e68e7d734"),
+                                    Order = 17,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Irori: Speed 80 feet, air walk; Melee [one-action] unfettered strike (agile, versatile P or S, finesse, reach 15 feet), Damage 6d8+6 bludgeoning; Ranged [one-action] wind strike (range 60 feet), Damage 6d4+6 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("d21692fa-cd36-4823-80c9-f47bff9b8412"),
+                                    Order = 18,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Lamashtu: Speed 30 feet, fly Speed 70 feet; Melee [one-action] falchion (forceful, reach 15 feet), Damage 6d10+6 slashing; Ranged [one-action] waters of Lamashtu (range 120 feet), Damage 6d6 + 3 poison.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("ef3ff3a5-bf5b-4e95-89b2-4a96fc08f719"),
+                                    Order = 19,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Nethys: Nethys Speed 70 feet, air walk; Ranged [one-action] raw magic (range 120 feet; versatile cold, electricity, or fire), Damage 6d6 force.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("a443f87b-292a-437b-a60a-c327af9c27e9"),
+                                    Order = 20,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Norgorber: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Melee [one-action] shortsword (agile, finesse, versatile S, reach 15 feet), Damage 6d6+6 piercing; Ranged [one-action] blackfinger toss (range 120 feet), Damage 6d6+3 poison.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("1f160434-ebe0-4fee-8fc1-ad761d54f891"),
+                                    Order = 21,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Pharasma: Speed 70 feet, air walk; Melee [one-action] dagger (agile, finesse, reach 15 feet, thrown 40 feet), Damage 6d6+6 slashing; Ranged [one-action] spiral blast (range 120 feet, damages only undead), Damage 6d8+3 positive.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("d23a21c8-3019-441b-9cbb-85aa284751c5"),
+                                    Order = 22,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Rovagug: Speed 50 feet, burrow Speed 30 feet, immune to immobilized; Melee [one-action] jaws (reach 15 feet), Damage 6d12+6 piercing; Melee [one-action] leg (agile, versatile P, reach 15 feet), Damage 6d8+6 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("2259126a-45a5-4687-9821-c15ce1b70cab"),
+                                    Order = 23,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Sarenrae: Speed 30 feet, fly Speed 70 feet; Melee [one-action] scimitar (forceful, nonlethal, reach 15 feet), Damage 6d6+6 slashing; Ranged [one-action] everflame (nonlethal, range 120 feet), Damage 6d6+3 fire.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("d1ec7d7c-0749-465f-8582-565703093c6d"),
+                                    Order = 24,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Shelyn: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Melee [one-action] glaive (deadly d8, nonlethal, reach 20 feet), Damage 6d8+6 slashing; Ranged [one-action] melody of inner beauty, (nonlethal, range 120 feet), Damage 6d6+3 sonic.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("802fe062-ca5f-431f-ae6e-23726d5feac2"),
+                                    Order = 25,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Torag: Speed 50 feet, burrow Speed 30 feet, immune to immobilized; shield (15 Hardness, can’t be damaged); Melee [one-action] warhammer (bull rush, reach 15 feet), Damage 6d8+6 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("a3beeee6-be5e-478b-bc1e-09f401eb8aa7"),
+                                    Order = 26,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Urgathoa: Speed 70 feet, air walk; Melee [one-action] scythe (deadly d10, trip, reach 15 feet), Damage 6d10+6 slashing; Ranged [one-action] pallid plague (range 120 feet), Damage 6d6+3 negative.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("d7fbbf0f-05e2-416d-960a-ced70a90df6f"),
+                                    Order = 27,
+                                    OwnerId = new Guid("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                                    Text = "Zon-Kuthon: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Melee [one-action] spiked chain (disarm, trip, reach 15 feet), Damage 6d8+6 slashing; Ranged [one-action] midnight pain (mental, nonlethal, range 120 feet), Damage 6d6+3 mental.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("435f323d-f2ba-4a44-b7fb-05738ce88cdd"),
+                                    Order = 0,
+                                    OwnerId = new Guid("79fbdd8a-c496-4974-af00-14c3640841ab"),
+                                    Text = "You transform the target creature into a harmless animal appropriate to the area, with effects based on its Fortitude save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9b9d980a-4147-43bd-a3b7-90935943b1fe"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9d06d9f1-deaf-4fd0-8963-9ca6f5a645fa"),
+                                    Text = "You fill the minds of your enemies with doubt. Enemies in the area must succeed at a Will save or take a –1 status penalty to attack rolls as long as they are in the area. Once per turn, starting the turn after you cast bane, you can use a single action, which has the concentrate trait, to increase the emanation’s radius by 5 feet and force enemies in the area that weren’t yet affected to attempt another saving throw. Bane can counteract bless.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d451add9-b4c2-45ea-84f3-b54202846d17"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3a8c5edf-e86c-431a-a25a-bb90d590eb35"),
+                                    Text = "You send the target back to its home plane. The target must attempt a Will save. You can spend an extra action while Casting this Spell and add a material component to give the creature a –2 circumstance penalty to its save. The component must be a specially gathered object that is anathema to the creature, and not from a material component pouch. This spell fails if you aren’t on your home plane when you cast it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d60b56d5-b4f6-4bb9-927b-5c26ebceaa33"),
+                                    Order = 0,
+                                    OwnerId = new Guid("41fcd185-b9ba-41aa-96cf-1a8bcb65a64d"),
+                                    Text = "The target’s skin becomes covered in bark. The target gains resistance 2 to bludgeoning and piercing damage and weakness 3 to fire. After the target takes fire damage, it can Dismiss the spell as a free action triggered by taking the damage; doing so doesn’t reduce the fire damage the target was dealt.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bc567753-dd14-46d2-969e-2fb187ae0fbb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a0dc825d-78c6-4464-a62e-17d7001c258e"),
+                                    Text = "You wrench the target’s soul away before it can pass on to the afterlife and imprison it in a black sapphire.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("53346ab9-5ab3-45e8-8692-1d8f9b1249e0"),
+                                    Order = 1,
+                                    OwnerId = new Guid("a0dc825d-78c6-4464-a62e-17d7001c258e"),
+                                    Text = "While the soul is in the gem, the target can’t be returned to life through any means, even powerful magic such as wish. If the gem is destroyed or bind soul is counteracted on the gem, the soul is freed. The gem has AC 16 and Hardness 10. A gem can’t hold more than one soul, and any attempt wastes the spell.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ba4fb28f-c544-4e92-9c3c-540e371b0754"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b59d7490-542e-4d17-9463-2e384faf2c0f"),
+                                    Text = "With a word of necromantic power, you seize control of the target. It gains the minion trait. If you or an ally uses any hostile actions against the target, the spell ends.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("410bc6f5-72ec-4aae-9571-4305984478a9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("436d4b2a-846a-4ff1-ae57-63ecfe80f337"),
+                                    Text = "Oily black tentacles rise up and attempt to capture creatures in the area. Make spell attack rolls against the Fortitude DC of each creature in the area. Any creature you succeed againstis grabbed by a tentacle and takes 3d6 bludgeoning damage.Whenever a creature ends its turn in the area, the tentacles attempt to grab that creature if they haven’t already, and they deal 1d6 bludgeoning damage to any creature already grabbed. The tentacles’ Escape DC is equal to your spell DC. A creature can attack a tentacle in an attempt to release its grip. Its AC is equal to your spell DC, and it is destroyed if it takes 12 or more damage. Even if destroyed, additional tentacles continue to grow in the area until the duration ends. You can Dismiss the spell.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("87e23794-7ae6-427f-9d1b-9c4d7f32e72b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("54176cd6-c3a3-43fd-8d47-9283811b03bb"),
+                                    Text = "Blades of force form a churning wall. The wall is a straight line 20 feet high, 120 feet long, and 2 inches thick, and it provides cover. The wall deals 7d8 force damage to each creature that’s in the wall’s space when it is created, that attempts to pass through the wall, or that ends its turn inside the wall. A basic Reflex save reduces the damage. A creature that succeeds at this save when the wall is created is pushed to the nearest space on the side of its choice. Creatures trying to move through the wall fail to do so if they critically fail the save, ending their movement adjacent to the wall.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("84937ca3-5b7a-4529-9930-4145419e858b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("51df17bf-ef57-4eed-973c-55cf33285b61"),
+                                    Text = "Blessings from beyond help your companions strike true. You and your allies gain a +1 status bonus to attack rolls while within the emanation. Once per turn, starting the turn after you cast bless, you can use a single action, which has the concentrate trait, to increase the emanation’s radius by 5 feet. Bless can counteract bane.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("dd9e4d1c-d272-4b15-9eac-77518d6af7ab"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3a320d74-73e9-40ab-a972-eb6b571f21fd"),
+                                    Text = "You blind the target. The effect is determined by the target’s Fortitude save. The target then becomes temporarily immune for 1 minute.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("06487cd4-8f08-4bda-bbdb-74387d15734e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e130e307-ede2-4a68-9667-cfc482855d95"),
+                                    Text = "You blink quickly between the Material Plane and the Ethereal Plane. You gain resistance 5 to all damage (except force). You can Sustain the Spell to vanish and reappear 10 feet away in a random direction determined by the GM; the movement doesn’t trigger reactions. At the end of your turn, you vanish and reappear as above.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("de383eb7-ec7f-460b-8b53-87dafd843c6e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4f77cd26-f3f0-4e6a-8424-b01480daadc4"),
+                                    Text = "The target’s form appears blurry. It becomes concealed. As the nature of this effect still leaves the target’s location obvious, the target can’t use this concealment to Hide or Sneak.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("dad7233b-d058-464a-a3b2-94820cc93d6d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("27b176c3-a4ac-425b-b7f1-9e6b7c25063f"),
+                                    Text = "Your blessing revives a creature at the moment of its death. You prevent the target from dying and restore Hit Points to the target equal to 4d8 plus your spellcasting ability modifier. You can’t use breath of life if the triggering effect was disintegrate or a death effect.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1158bbf7-f745-4c30-9a1f-d7833f60fda4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ea3e3b79-80ab-4ef4-9dc7-6fb38561a935"),
+                                    Text = "Gouts of flame rush from your hands. You deal 2d6 fire damage to creatures in the area.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1c1b6683-6bf3-4d9a-849c-9bf062facf3c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3a2a1f6e-f8d9-465d-94cc-1253a5c42062"),
+                                    Text = "You forcibly calm creatures in the area, soothing them into a nonviolent state; each creature must attempt a Will save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b14accb0-bbb3-4cef-8c2f-0d42c209292d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
+                                    Text = "You call upon the unimaginable power of world-ending cataclysms, ripping a small piece of each cataclysm and combining them together into one horrifically powerful attack. The following effects come down upon all creatures in the area. Treat the resistances of creatures in the area as if they were 10 lower for the purpose of determining the cataclysm’s damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cf2e53f8-3cc3-4b6a-b9b4-c923c6d7aacb"),
+                                    Order = 1,
+                                    OwnerId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
+                                    Text = "Each creature attempts one basic Reflex save that applies to all five types of damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("381ec139-c96a-41af-8fce-22ca8c5dbeb2"),
+                                    Order = 2,
+                                    OwnerId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
+                                    Text = "Flesh-dissolving acid rain deals 3d10 acid damage.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("dcd40c58-78c7-4be6-8ba9-8ab86f679fb3"),
+                                    Order = 3,
+                                    OwnerId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
+                                    Text = "A roaring earthquake shakes and bludgeons creatures on the ground, dealing 3d10 bludgeoning damage.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("6bd47ee1-f4dc-4c6c-97bf-04c1b84e55d1"),
+                                    Order = 4,
+                                    OwnerId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
+                                    Text = "A blast of freezing wind deals 3d10 cold damage.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("077a48c4-a7b5-40db-8538-fc69166f8900"),
+                                    Order = 5,
+                                    OwnerId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
+                                    Text = "Incredible lightning lashes the area, dealing 3d10 electricity damage.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("c8c78ca8-a307-42eb-bb47-0b63589ba7e3"),
+                                    Order = 6,
+                                    OwnerId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
+                                    Text = "Beating winds churn across the sky, dealing 3d10 bludgeoning damage to creatures flying in the area.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("4ed0277b-81ff-4863-b844-79de8e86bc7e"),
+                                    Order = 7,
+                                    OwnerId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
+                                    Text = "An instant tsunami sweeps over creatures in the area, dealing 3d10 bludgeoning damage with the water trait (doubled for creatures swimming in the area).",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("4ed9cd14-123d-4859-9255-c36eac8a062e"),
+                                    Order = 8,
+                                    OwnerId = new Guid("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
+                                    Text = "A massive wildfire burns in a sudden inferno, dealing 3d10 fire damage.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("be03e567-37d0-462d-ac5e-0d27bec12fe8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7ca414c2-6185-4817-b1d7-9692d7a4433a"),
+                                    Text = "You discharge a powerful bolt of lightning at the target, dealing 8d12 electricity damage. The target must attempt a basic Reflex save. The electricity arcs to another creature within 30 feet of the first target, jumps to another creature within 30 feet of that target, and so on. You can end the chain at any point. You can’t target the same creature more than once, and you must have line of effect to all targets. Roll the damage only once, and apply it to each target (halving or doubling as appropriate for its saving throw outcome). The chain ends if any one of the targets critically succeeds at its save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b0627230-1b6f-41fa-b385-e9315448ce04"),
+                                    Order = 0,
+                                    OwnerId = new Guid("41b3515e-c59f-4ac6-92a2-ef16195cd647"),
+                                    Text = "To the target, your words are honey and your visage seems bathed in a dreamy haze. It must attempt a Will save, with a +4 circumstance bonus if you or your allies recently threatened it or used hostile actions against it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1d038912-70a4-45ee-aa4b-c9b2cae4f931"),
+                                    Order = 1,
+                                    OwnerId = new Guid("41b3515e-c59f-4ac6-92a2-ef16195cd647"),
+                                    Text = "You can Dismiss the spell. If you use hostile actions against the target, the spell ends. When the spell ends, the target doesn’t necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, meaning you could potentially convince the target to continue being your friend via mundane means.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2fa66aff-6516-439b-821c-a0e5aa52c2f5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fc8ec088-6c8d-4d90-9293-9fc0720a3855"),
+                                    Text = "You shoot an utterly cold ray of darkness tinged with unholy energy. Make a ranged spell attack against the target. You deal 5d6 cold damage, plus 5d6 evil damage if the target is a celestial.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1ae42c07-60c6-4292-a8b6-b06568f97f97"),
+                                    Order = 1,
+                                    OwnerId = new Guid("fc8ec088-6c8d-4d90-9293-9fc0720a3855"),
+                                    Text = "If the ray passes through an area of magical light or targets a creature affected by magical light, chilling darkness attempts to counteract the light. If you need to determine whether the ray passes through an area of light, draw a line between yourself and the spell’s target.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8375c268-b418-4cff-9dde-0d0e11f57a48"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4ab38c95-8b8a-4f7c-b260-1b842a91ace3"),
+                                    Text = "Siphoning negative energy into yourself, your hand radiates a pale darkness. Your touch weakens the living and disorients undead, possibly even causing them to flee. The effect depends on whether the target is living or undead.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a08010bb-278e-457b-8a83-9bd955303460"),
+                                    Order = 1,
+                                    OwnerId = new Guid("4ab38c95-8b8a-4f7c-b260-1b842a91ace3"),
+                                    Text = "Living Creature: The spell deals negative damage equal to 1d4 plus your spellcasting modifier. The target attempts a basic Fortitude save, but is also enfeebled 1 for 1 round on a critical failure.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("5a911837-34c2-47c2-b348-125d22fea173"),
+                                    Order = 2,
+                                    OwnerId = new Guid("4ab38c95-8b8a-4f7c-b260-1b842a91ace3"),
+                                    Text = "Undead Creature: The target is flat-footed for 1 round on a failed Fortitude save. On a critical failure, the target is also fleeing for 1 round unless it succeeds at a Will save. Heightened (+1)",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("a7d606b3-9816-4cf5-ad29-fcbb589fa9c6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
+                                    Text = "You create an opaque wall of light in a single vibrant color. The wall is straight and vertical, stretching 60 feet long and 30 feet high. If the wall would pass through a creature, the spell is lost. The wall sheds bright light for 20 feet on each side, and dim light for the next 20 feet. You can ignore the wall’s effects.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5d6a8acb-12b1-425e-80f5-6166c16c1826"),
+                                    Order = 1,
+                                    OwnerId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
+                                    Text = "Roll 1d4 to determine the color of the wall. Each color has a particular effect on items, effects, or creatures that attempt to pass through. Chromatic wall can’t be counteracted normally; rather, each color is automatically counteracted when targeted by a specific spell, even if that spell’s level is lower than that of chromatic wall.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("66f7ae40-6842-4482-b926-73b19f6dd8f9"),
+                                    Order = 2,
+                                    OwnerId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
+                                    Text = "Red: The wall destroys ranged weapon ammunition (such as arrows and crossbow bolts) that would pass through, and it deals 20 fire damage to anyone passing through, with a basic Reflex save. Cone of cold can counteract a red chromatic wall.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("6256a8a8-31ae-4576-aa8c-722662fa37d7"),
+                                    Order = 3,
+                                    OwnerId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
+                                    Text = "Orange: The wall destroys thrown weapons that would pass through, and it deals 25 acid damage to anyone passing through, with a basic Reflex save. Gust of wind can counteract an orange chromatic wall.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("02ad0292-99e0-42e1-a2f8-da387196a90c"),
+                                    Order = 4,
+                                    OwnerId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
+                                    Text = "Yellow :The wall stops acid, cold, electricity, fire, force, negative, positive, and sonic effects from passing through, and it deals 30 electricity damage to anyone passing through, with a basic Reflex save. Disintegrate can counteract a yellow chromatic wall.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("fc855a59-8d6c-44f2-978d-86551ac8ecbc"),
+                                    Order = 5,
+                                    OwnerId = new Guid("8c5da2eb-3188-4c3b-82ab-cae8d4e3c300"),
+                                    Text = "Green: The wall stops toxins, gases, and breath weapons from passing through. It deals 10 poison damage to anyone passing through and makes them enfeebled 1 for 1 minute. A basic Fortitude save reduces the damage and negates the enfeebled condition on a success. Passwall can counteract a green chromatic wall.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("46b66be4-d7be-4409-b1d9-39853f034475"),
+                                    Order = 0,
+                                    OwnerId = new Guid("35ac23b0-0e3d-4aab-8217-116f931edcb7"),
+                                    Text = "You ward a creature and those nearby against a specified alignment. Choose chaotic, evil, good, or lawful; this spell gains the opposing trait. Creatures in the area gain a +1 status bonus to AC against attacks by creatures of the chosen alignment and to saves against effects from such creatures. This bonus increases to +3 against effects from such creatures that directly control the target and attacks made by summoned creatures of the chosen alignment. Summoned creatures of the chosen alignment can’t willingly enter the area without succeeding at a Will save; repeated attempts use the first save result.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("904c4278-3e9a-4846-8443-0b3aa0717974"),
+                                    Order = 0,
+                                    OwnerId = new Guid("484d98ad-91d1-4b2d-86d0-ec997a6f772b"),
+                                    Text = "You create an invisible floating ear at a location within range (even if it’s outside your line of sight or line of effect). It can’t move, but you can hear through the ear as if using your normal auditory senses.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fe688355-a855-421f-bb33-20b2fd2b25d1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("af9903ec-8e9e-4752-bae4-042aca73f91a"),
+                                    Text = "You create an invisible floating eye at a location within range (even if it’s outside your line of sight or line of effect). The eye can’t move, but you can see in all directions from that point as if using your normal visual senses.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9a5617f3-f18c-407c-98f5-f0092737c1cf"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2c2d2218-3a46-4075-899c-c4e9353aaec3"),
+                                    Text = "A cloak of swirling colors shrouds the target. Creatures are dazzled while adjacent to it, and attacking the target causes a brilliant flash of light. A creature that hits the target with a melee attack must attempt a Will save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e7e7b126-33a9-4112-b380-f01b86254c61"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1030f973-aee2-4c2f-8cc5-a98aa4594de4"),
+                                    Text = "You conjure a poisonous fog. This functions as obscuring mist (page 355), except the area moves 10 feet away from you each round. You deal 6d8 poison damage to each breathing creature that starts its turn in the spell’s area. You can Dismiss the spell.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2861855c-e59b-403c-932b-0cdbe922a37f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f3fa6c93-ee1d-4da1-982d-55c015c0eeaa"),
+                                    Text = "You teleport the targets to new positions within the area. The creatures must each be able to fit in their new space, and their positions must be unoccupied, entirely within the area, and in your line of sight. Unwilling creatures can attempt a Will save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b9e2dd3a-42e7-4693-afee-fd55fc5c68c5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("060ba321-f5b9-4ac8-907c-fec7bb740713"),
+                                    Text = "Swirling colors affect viewers based on their Will saves.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("eecbd562-747c-437b-8fb7-ede447f95cb2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4d709d69-ddde-487c-94a3-c876b4e79969"),
+                                    Text = "You shout a command that’s hard to ignore. You can command the target to approach you, run away (as if it had the fleeing condition), release what it’s holding, drop prone, or stand in place. It can’t Delay or take any reactions until it has obeyed your command. The effects depend on the target’s Will save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cfb924de-ffd6-4655-a15a-c9b12e7fce35"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6505b7e2-7c35-45ed-8fda-ff4bf3dd2822"),
+                                    Text = "The target can understand the meaning of a single language it is hearing or reading when you cast the spell. This doesn’t let it understand codes, language couched in metaphor, and the like (subject to GM discretion). If the target can hear multiple languages and knows that, it can choose which language to understand; otherwise, choose one of the languages randomly.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("febabf42-20fa-4193-8215-b9c24c6fc140"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2a4b767b-27d0-4519-b1f7-c554837d0c73"),
+                                    Text = "Icy cold rushes forth from your hands. You deal 12d6 cold damage to creatures in the area.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1d9ca856-2b8d-40b2-acd8-de53e723931d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("068fc3bd-e1ac-4069-8a29-13bd1a0b92f2"),
+                                    Text = "You befuddle your target with strange impulses, causing it to act randomly. The effects are determined by the target’s Will save. You can Dismiss the spell.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("78cf606d-3b0d-4fe9-91d2-e53b758b869b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("94beacae-4765-499c-b93e-934fff8585a4"),
+                                    Text = "You prepare a spell that will trigger later. While casting contingency, you also cast another spell of 4th level or lower with a casting time of no more than 3 actions. This companion spell must be one that can affect you. You must make any decisions for the spell when you cast contingency, such as choosing a damage type for resist energy. During the casting, choose a trigger under which the spell will be cast, using the same restrictions as for the trigger of a Ready action. Once contingency is cast, you can cause the companion spell to come into effect as a reaction with that trigger. It affects only you, even if it would affect more creatures. If you define complicated conditions, as determined by the GM, the trigger might fail. If you cast contingency again, the newer casting supersedes the older.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("105c17e6-07ad-43f7-9868-476bb1f9d1c0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d253d16d-cbac-4673-a25f-0a3c33173cd1"),
+                                    Text = "A magical flame springs up from the object, as bright as a torch. It doesn’t need oxygen, react to water, or generate heat.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ecde9a96-ca65-4f65-85aa-9500e8417229"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b2cc63b2-466a-478a-b024-b785f2b722de"),
+                                    Text = "By imposing your will upon the water, you can raise or lower the level of water in the chosen area by 10 feet. Water creatures in the area are subjected to the effects of slow.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c1648108-d584-408c-a9e0-395e9411b398"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2d0fa5a4-eab0-4eca-85cb-23241e5ef814"),
+                                    Text = "You create enough food to feed six Medium creatures for a day. This food is bland and unappealing, but it is nourishing. After 1 day, if no one has eaten the food, it decays and becomes inedible. Most Small creatures eat one-quarter as much as a Medium creature (one-sixteenth as much for most Tiny creatures), and most Large creatures eat 10 times as much (100 times as much for Huge creatures and so on).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3197459e-c6bc-431b-9a5e-45973bd75f1b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c5bd7524-e3f5-46b6-b1de-527896978d1c"),
+                                    Text = "As you cup your hands, water begins to flow forth from them. You create 2 gallons of water. If no one drinks it, it evaporates after 1 day.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("10f19591-1df1-4976-802c-12a27265350f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("311b0146-7b80-4594-800f-b0046237d47f"),
+                                    Text = "You conjure a temporary object from eldritch energy. It must be of vegetable matter (such as wood or paper) and 5 cubic feet or smaller. It can’t rely on intricate artistry or complex moving parts, never fulfills a cost or the like, and can’t be made of precious materials or materials with a rarity of uncommon or higher. It is obviously temporarily conjured, and thus can’t be sold or passed off as a genuine item.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("06dc06f4-c454-423d-9791-25b2e2fb90e3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b7157338-c1de-4e79-a90c-e0f62abd709c"),
+                                    Text = "You assault the target’s faith, riddling the creature with doubt and mental turmoil that deal 6d6 mental damage, or 6d8 mental damage if it can cast divine spells. The effects are determined by its Will save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("858468ee-88f6-495c-8cf5-542d9209b061"),
+                                    Order = 1,
+                                    OwnerId = new Guid("b7157338-c1de-4e79-a90c-e0f62abd709c"),
+                                    Text = "To many deities, casting this spell on a follower of your own deity without significant cause is anathema.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("df3cba14-93f8-43ef-b3fa-076419919259"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e4568cde-13d1-4684-81b2-180bc291198f"),
+                                    Text = "You issue a divine mandate or proclaim a cause to the targets. It can be to attain an item, claim a patch of land, slay a creature, war with a group, or be entirely peaceful. Your cause can’t force the targets to harm one another or themselves. The targets become completely dedicated to that cause, depending on their levels. They choose their own actions, but they favor direct action over inaction or indirect action.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9e535072-b4b7-428e-94c3-898de6ca0ab6"),
+                                    Order = 1,
+                                    OwnerId = new Guid("e4568cde-13d1-4684-81b2-180bc291198f"),
+                                    Text = "13th or Lower: The target is so dedicated to the cause that it pursues the cause to the death (unless you say otherwise).",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("45983a64-0a25-4eba-9eaf-d050a4b49d11"),
+                                    Order = 2,
+                                    OwnerId = new Guid("e4568cde-13d1-4684-81b2-180bc291198f"),
+                                    Text = "14th: The target is dedicated to the cause, but the spell ends for the target if it’s reduced to half its maximum Hit Points or fewer.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("f3e7e74b-556d-46f8-87fe-861544c2331b"),
+                                    Order = 3,
+                                    OwnerId = new Guid("e4568cde-13d1-4684-81b2-180bc291198f"),
+                                    Text = "15th: As 14th, plus the target can attempt a Will save at the end of each of its turns to end the spell for itself.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("c474670c-dd98-40b0-a6fc-f5d19f51fec1"),
+                                    Order = 4,
+                                    OwnerId = new Guid("e4568cde-13d1-4684-81b2-180bc291198f"),
+                                    Text = "The spell ends for all creatures if you or one of your allies uses a hostile action against a target, or when the cause is completed. The GM might determine this spell has alignment traits befitting the cause.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6f718d20-6acf-4bcf-a4e1-efebf668f6d7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2665ca32-131c-43cd-b30b-c763eb024a08"),
+                                    Text = "You inflict despair on creatures in the area. The effects for each creature are determined by its Will save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b68ff7f1-51e6-44b8-b9c3-0af52ed1082c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7b0f3283-1f79-4a64-a697-eb842bb776b2"),
+                                    Text = "You create up to four floating lights, no two of which are more than 10 feet apart. Each sheds light like a torch. When you Sustain the Spell, you can move any number of lights up to 60 feet. Each light must remain within 120 feet of you and within 10 feet of all others, or it winks out.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3d55aeb6-b47c-4221-a8b0-7117c09da7fe"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0f86cd9a-76b2-4bb4-bebe-ea638643fc3e"),
+                                    Text = "You create a shroud of darkness that prevents light from penetrating or emanating within the area. Light does not enter the area and any non-magical light sources, such as a torch or lantern, do not emanate any light while inside the area, even if their light radius would extend beyond the darkness. This also suppresses magical light of your darkness spell’s level or lower. Light can’t pass through, so creatures in the area can’t see outside. From outside, it appears as a globe of pure darkness.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c9a23b3f-b2ed-40b3-87cc-431369d6297a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("66172098-6cdb-4587-89bb-24fe1a8faf7c"),
+                                    Text = "You grant yourself supernatural sight in areas of darkness. You gain darkvision.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("47e75e5c-6ee0-4c24-bb1e-b51bad67e26a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2d8be059-3a79-4d4d-a7e8-31dee66680cc"),
+                                    Text = "You cloud the target’s mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also stunned 1.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4957d652-3659-4c6f-b259-ea076a4a861b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("509c9a55-433c-4f99-8a7a-609d38f23ed1"),
+                                    Text = "The target loses hearing; it must attempt a Fortitude save. The target is then temporarily immune for 1 minute.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6cd65a55-a167-4782-b67e-4233a73f6cb0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("236cd0a3-a07b-4c9f-ba11-e3c113d91634"),
+                                    Text = "You snuff the life out of a creature on the brink of death. The target must attempt a Will save. If this kills it, you gain 10 temporary HP and a +1 status bonus to attack and damage rolls for 10 minutes.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f42c2728-6212-4aea-a67f-0c87c746330a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3c902d87-38ff-4aad-acb3-266811986252"),
+                                    Text = "You shield a creature from the ravages of negative energy. It receives a +4 status bonus to saves against death and negative effects, gains negative resistance 10, and suppresses the effects of the doomed condition.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d37d719b-1a7d-4c17-bfcf-be3fbd1d9e64"),
+                                    Order = 0,
+                                    OwnerId = new Guid("54d80001-c58b-4524-b23d-3962bb5f7ed4"),
+                                    Text = "Your eyes glow as you sense aligned auras. Choose chaotic, evil, good, or lawful. You detect auras of that alignment. You receive no information beyond presence or absence. You can choose not to detect creatures or effects you’re aware have that alignment.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("93b29669-1b66-422e-96be-17a1c795e34f"),
+                                    Order = 1,
+                                    OwnerId = new Guid("54d80001-c58b-4524-b23d-3962bb5f7ed4"),
+                                    Text = "Only creatures of 6th level or higher—unless divine spellcasters, undead, or beings from the Outer Sphere—have alignment auras.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c254ca49-adf5-438e-bf37-13157c04912d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1e7838ee-f64d-4806-8d3d-e55ba4261c03"),
+                                    Text = "You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you’re fully aware of, such as the magic items and ongoing spells of you and your allies.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ba775672-2c5d-43a3-a002-e1214d439f7e"),
+                                    Order = 1,
+                                    OwnerId = new Guid("1e7838ee-f64d-4806-8d3d-e55ba4261c03"),
+                                    Text = "You detect illusion magic only if that magic’s effect has a lower level than the level of your detect magic spell. However, items that have an illusion aura but aren’t deceptive in appearance (such as an invisibility potion) typically are detected normally.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5c2ce407-d0ba-4516-9420-836238b172c1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8e4669af-e67c-42a4-bd0f-9e117496cb6c"),
+                                    Text = "You detect whether a creature is venomous or poisonous, or if an object is poison or has been poisoned. You do not ascertain whether the target is poisonous in multiple ways, nor do you learn the type or types of poison. Certain substances, like lead and alcohol, are poisons and so mask other poisons.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cfb7389d-5dcb-4251-9f63-8285f2e85105"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2ef1bfc9-3ca3-45b8-804a-ba9d948224de"),
+                                    Text = "By tapping into trace divinatory auras, you detect the presence of scrying effects in the area. If detect scrying is higher level than a scrying effect, you gain a glimpse of the scrying creature and learn its approximate distance and direction.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e47d375a-7490-4544-81be-809b2bd3cbf8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c1546cbd-ec60-459f-b7f5-e29d51beb5f2"),
+                                    Text = "You interfere with the target’s ability to teleport and travel between dimensions. Dimensional anchor attempts to counteract any teleportation effect, or any effect that would move the target to a different plane. The duration is determined by the target’s Will save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0d3057c9-fcc9-4949-a17e-9aa46a0dcd6f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1e745c5e-5d8f-4abd-b66c-e0e582833257"),
+                                    Text = "You create a shimmering barrier that attempts to counteract teleportation effects and planar travel into or out of the area, including items that allow access to extradimensional spaces (such as a bag of holding). Dimensional lock tries to counteract any attempt to summon a creature into the area but doesn’t stop the creature from departing when the summoning ends.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bc66f243-805d-4d6f-93c2-8e9c12d6cf52"),
+                                    Order = 0,
+                                    OwnerId = new Guid("73180f19-0c26-4f90-b377-8ae1d3df6525"),
+                                    Text = "Opening a door that bypasses normal space, you instantly transport yourself and any items you’re wearing and holding from your current space to a clear space within range you can see.If this would bring another creature with you—even if you’re carrying it in an extradimensional container—the spell is lost.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d69e2d90-662f-4af8-8740-a5de98a94469"),
+                                    Order = 0,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "You channel the primal forces of nature to transform into a Large animal battle form, specifically that of a powerful and terrifying dinosaur. You must have space to expand or the spell is lost. When you cast this spell, choose ankylosaurus, brontosaurus, deinonychus, stegosaurus, triceratops, or tyrannosaurus. You can decide the specific type of animal, but this has no effect on the form’s Size or statistics. While in this form, you gain the animal and dinosaur traits. You can Dismiss the spell.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d6d57c2a-5593-4664-a1ce-669c612f62ca"),
+                                    Order = 1,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "You gain the following statistics and abilities regardless of which battle form you choose:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("53e6b7c7-4384-4ac0-b0df-5a786b6016cb"),
+                                    Order = 2,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "AC = 18 + your level. Ignore your armor’s check penalty and Speed reduction.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("5a80550b-1451-46d0-b80a-a28bc7fbdca5"),
+                                    Order = 3,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "15 temporary Hit Points.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("f8d811ef-2e56-4548-9127-c1ded8842548"),
+                                    Order = 4,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "Low-light vision and imprecise scent 30 feet.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("ce26e35f-f33b-4e20-bf3a-1e1d58bb2802"),
+                                    Order = 5,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can use. You’re trained with them. Your attack modifier is +16, and your damage bonus is +9. These attacks are Strength based (for the purpose of the enfeebled condition, for example). If your unarmed attack modifier is higher, you can use it instead.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("d09af233-4775-4202-a171-23a8b3489dd9"),
+                                    Order = 6,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "Athletics modifier of +18, unless your own is higher.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("4772e504-4fd7-45fb-a47b-8693e6e2fdd2"),
+                                    Order = 7,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "You also gain specific abilities based on the form you choose:",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7c9dd7f8-02bd-4213-affe-ae981c11b182"),
+                                    Order = 8,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "Ankylosaurus: Speed 25 feet; Melee [one-action] tail (backswing, reach 10 feet), Damage 2d6 bludgeoning; Melee [one-action] foot, Damage 2d6 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("451a5567-b1ed-4573-84d6-abd04ee44351"),
+                                    Order = 9,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "Brontosaurus: Speed 25 feet; Melee [one-action] tail (reach 15 feet), Damage 2d6 bludgeoning; Melee [one-action] foot, Damage 2d8 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("fcd2be86-8f04-4d01-bbda-ebea7dec2614"),
+                                    Order = 10,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "Deinonychus: Speed 40 feet; Melee [one-action] talon (agile), Damage 2d4 piercing plus 1 persistent bleed; Melee [one-action] jaws, Damage 1d10 piercing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("5c1d6d32-a8a9-4d35-8a55-a75492ce165e"),
+                                    Order = 11,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "Stegosaurus: Speed 30 feet; Melee [one-action] tail (reach 10 feet), Damage 2d8 piercing.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("59abdf72-d40a-4b6c-93d2-2a91bb5e4784"),
+                                    Order = 12,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "Triceratops: Speed 30 feet; Melee [one-action] horn, Damage 2d8 piercing, plus 1d6 persistent bleed on a critical hit; Melee [one-action] foot, Damage 2d6 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("151544d1-c8dd-4dfe-99de-643f7f4476a9"),
+                                    Order = 13,
+                                    OwnerId = new Guid("55780227-9986-4a2e-aa35-93a105314818"),
+                                    Text = "Tyrannosaurus: Speed 30 feet; Melee [one-action] jaws (deadly, reach 10 feet), Damage 1d12 piercing; Melee [one-action] tail (reach 10 feet), Damage 1d10 bludgeoning.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("2d77c0d6-b1c3-4787-a506-6f1b01bfdce1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("614267ca-482a-4435-bcea-127594ea342f"),
+                                    Text = "You shroud a creature from others’ senses. The target becomes undetected, not just to sight but to all senses, allowing the target to count as invisible no matter what precise and imprecise senses an observer might have. It’s still possible for a creature to find the target by Seeking, looking for disturbed dust, hearing gaps in the sound spectrum, or finding some other way to discover the presence of an otherwise-undetectable creature",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cdd7d66f-a83c-40bb-ba6e-ae203c64829a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d8cf6802-13fb-4518-a463-538b28bed2da"),
+                                    Text = "Falsehoods ring in your ears like discordant notes. You gain a +4 status bonus to Perception checks when someone Lies.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("621e7e81-5364-4a90-9ed2-085bd438af31"),
+                                    Order = 0,
+                                    OwnerId = new Guid("31f6e676-dbee-4c8f-9f17-a842afab35e3"),
+                                    Text = "You learn the name of the target’s exact location (including the building, community, and country) and plane of existence.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3f43ac0e-e9bf-431b-adad-1e38650be56e"),
+                                    Order = 1,
+                                    OwnerId = new Guid("31f6e676-dbee-4c8f-9f17-a842afab35e3"),
+                                    Text = "You can target a creature only if you’ve seen it in person, have one of its significant belongings, or have a piece of its body. To target an object, you must have touched it or have a fragment of it. Discern location automatically overcomes protections against detection and divination of lower level than this spell, even if they would normally have a chance to block it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c8d1996c-4bea-42d7-b28a-754df9d5b744"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8280e542-c9e9-41d9-b152-aff2f054d447"),
+                                    Text = "You fire a green ray at your target. Make a spell attack. You deal 12d10 damage, and the target must attempt a basic Fortitude save. On a critical hit, treat the save result as one degree worse. A creature reduced to 0 HP is reduced to fine powder; its gear remains.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a36f0b28-ae6d-43ea-8671-40f6db86733c"),
+                                    Order = 1,
+                                    OwnerId = new Guid("8280e542-c9e9-41d9-b152-aff2f054d447"),
+                                    Text = "An object you hit is destroyed (no save), regardless of Hardness, unless it’s an artifact or similarly hard to destroy. A single casting can destroy no more than a 10-foot cube of matter. This automatically destroys any force construct, such as a wall of force.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d5e2bbdd-edd9-4905-8c2c-1f8f08305001"),
+                                    Order = 0,
+                                    OwnerId = new Guid("05375af9-4bc5-4eab-8731-2fb74c2062d9"),
+                                    Text = "Crackling energy disjoins the target. You attempt to counteract it (page 458). If you succeed, it’s deactivated for 1 week. On a critical success, it’s destroyed. If it’s an artifact or similar item, you automatically fail.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("06d14c23-0dc1-457d-8c49-3fdab5484171"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5d1503f3-0176-4480-93b5-c4b4fef56dd3"),
+                                    Text = "You unravel the magic behind a spell or effect. Attempt a counteract check against the target (page 458). If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn’t change the item’s non-magical properties. If the target is an artifact or similar item, you automatically fail.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("906d1df1-2636-4767-b5e1-f828b458d2c3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9627d10b-e488-4299-9e1b-2c3a511ec007"),
+                                    Text = "You infuse weapons with positive energy. Attacks with these weapons deal an extra 1d4 positive damage to undead.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ac325502-59d1-4250-91b4-917dab957ede"),
+                                    Order = 0,
+                                    OwnerId = new Guid("db143e7b-8212-4350-a09f-09205811470e"),
+                                    Text = "You lance the target with energy. You deal 1d6 positive damage plus your spellcasting ability modifier. The target must attempt a basic Fortitude save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("97f6d208-ccae-4703-8e06-4f807304db67"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b6f25115-9358-44eb-bfc2-37b01c3863f4"),
+                                    Text = "Divine power wards the targets, granting each a +1 status bonus to AC and saves while in the area.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fd081fec-24f3-4bde-a6c4-44c031947a4a"),
+                                    Order = 1,
+                                    OwnerId = new Guid("b6f25115-9358-44eb-bfc2-37b01c3863f4"),
+                                    Text = "Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or your deity is true neutral. This spell gains the trait of the alignment you chose. The bonuses granted by the spell increase to +2 against attacks by—and effects created by—creatures with an alignment opposite to the spell (lawful if you chose chaotic, evil if you chose good). These bonuses increase to +4 against effects created by such creatures that attempt to impose the controlled condition on a target of your divine aura, as well as against attacks made by creatures summoned by anything opposite in alignment to your divine aura.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("dc1ca729-0d82-4e6e-8464-01e612e2d9bd"),
+                                    Order = 2,
+                                    OwnerId = new Guid("b6f25115-9358-44eb-bfc2-37b01c3863f4"),
+                                    Text = "When a creature of opposite alignment hits a target with a melee attack, the creature must succeed at a Will save or be blinded for 1 minute. It’s then temporarily immune for 1 minute.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("766add6f-238c-4106-ae46-8595907ce970"),
+                                    Order = 3,
+                                    OwnerId = new Guid("b6f25115-9358-44eb-bfc2-37b01c3863f4"),
+                                    Text = "The first time you Sustain the Spell each round, the divine aura’s radius grows 10 feet.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a12047e1-53c7-401d-9ce8-360d8f29ca8b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9"),
+                                    Text = "You utter a potent litany from your faith, a mandate that harms those who oppose your ideals. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or your deity is true neutral. This spell gains the trait of the alignment you chose. You deal 7d10 damage to creatures in the area; each creature must attempt a Fortitude save. Creatures with an alignment that matches the one you chose are unaffected by the spell. Those that neither match nor oppose it treat the result of their saving throw as one degree better and don’t suffer effects other than damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("af0a1742-904c-4467-a3a8-510bff8e19d7"),
+                                    Order = 1,
+                                    OwnerId = new Guid("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9"),
+                                    Text = "Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or your deity is true neutral. This spell gains the trait of the alignment you chose. The bonuses granted by the spell increase to +2 against attacks by—and effects created by—creatures with an alignment opposite to the spell (lawful if you chose chaotic, evil if you chose good). These bonuses increase to +4 against effects created by such creatures that attempt to impose the controlled condition on a target of your divine aura, as well as against attacks made by creatures summoned by anything opposite in alignment to your divine aura.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("99d2bb14-6f2f-43d1-b317-3d62407948b0"),
+                                    Order = 2,
+                                    OwnerId = new Guid("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9"),
+                                    Text = "When a creature of opposite alignment hits a target with a melee attack, the creature must succeed at a Will save or be blinded for 1 minute. It’s then temporarily immune for 1 minute.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d03cdf8c-3ba5-4729-b1e1-f3ab158d80db"),
+                                    Order = 3,
+                                    OwnerId = new Guid("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9"),
+                                    Text = "The first time you Sustain the Spell each round, the divine aura’s radius grows 10 feet.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cf9b3fa4-e400-4e53-8e3b-61fa8da555f4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("eb816f67-17d1-439b-badb-2657b57f64e2"),
+                                    Text = "You unleash a beam of divine energy. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or if your deity is true neutral. Make a ranged spell attack roll against the target’s AC. On a hit, the target takes damage of the chosen alignment type equal to 1d4 + your spellcasting ability modifier (double damage on a critical hit). The spell gains the trait of the alignment you chose.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("79f7c04c-7f10-4574-ae4c-5ea1c9921ef0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
+                                    Text = "You accept otherworldly energies into your body; while you are still recognizably yourself, you gain the features of one of your deity’s servitors. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or your deity is true neutral. This spell gains the trait of the alignment you chose.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("32014b54-ab8b-4c60-be4e-2ab72ae18ea0"),
+                                    Order = 1,
+                                    OwnerId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
+                                    Text = "If you were Medium or smaller, you become Large, as the effects of enlarge. You must have space to expand into, or the spell is lost. You also gain the following benefits.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e38e0b0c-dd32-4e48-8f7c-b5dd74371b98"),
+                                    Order = 2,
+                                    OwnerId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
+                                    Text = "40 temporary Hit Points.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("efab6a65-c298-4b9e-a580-9ff3726bb950"),
+                                    Order = 3,
+                                    OwnerId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
+                                    Text = "A fly Speed equal to your Speed.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("e25b180f-db39-4c21-9ed3-6d808c006020"),
+                                    Order = 4,
+                                    OwnerId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
+                                    Text = "Weakness 10 to the alignment opposite the one you chose.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("08a3e3f0-9d91-4c27-87b8-df3ff705ca2d"),
+                                    Order = 5,
+                                    OwnerId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
+                                    Text = "A +1 status bonus to saves against spells.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("c16c0f4b-da16-4d0f-9cb2-baab4ba1667c"),
+                                    Order = 6,
+                                    OwnerId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
+                                    Text = "Darkvision.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("e13e5c33-fa04-43d2-9430-8ee5988e2e62"),
+                                    Order = 7,
+                                    OwnerId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
+                                    Text = "Your unarmed attacks and weapons deal 1 additional damage of the chosen alignment type.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("37ac6077-a033-413b-b8f6-1120ec70cb14"),
+                                    Order = 8,
+                                    OwnerId = new Guid("6e689573-2fdb-409f-abd2-a27135775498"),
+                                    Text = "One or more unarmed melee attacks. If you chose good or lawful, your fist attacks deal 2d8 damage. If you chose chaotic, you gain a bite unarmed attack that deals 2d10 piercing damage. If you chose evil, you gain a claws unarmed attack that deals 2d8 slashing damage and has the agile and finesse traits.",
+                                    Type = 2
+                                });
+                        });
+
                     b.Navigation("ActionType");
+
+                    b.Navigation("Details");
 
                     b.Navigation("MagicSchool");
 
@@ -34506,17 +36159,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasForeignKey("SpellsId");
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellDetailBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Spell", "Spell")
-                        .WithMany("AdditionalDetails")
-                        .HasForeignKey("SpellId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Spell");
-                });
-
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellHeightening", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Spell", "Spell")
@@ -34525,18 +36167,585 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("SpellHeightening_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("aab0c30f-4a1b-499f-bd9c-8a26f616fb98"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ce2df890-5896-491e-a1f2-18a9808e1682"),
+                                    Text = "The initial damage increases by 2d8, and the persistent acid damage increases by 1d6.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("672a2316-1939-4b9f-9cfb-624830f43fce"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9da22e21-d1e7-43d1-88e8-e95065c242db"),
+                                    Text = "The initial damage increases to 1d6 + your spellcasting ability modifier, and the persistent damage increases to 2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9a0f3e61-e70a-43d8-b9b8-83be2811e5a3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("07445e05-eccc-4463-b72a-ab813e961d2e"),
+                                    Text = "The initial damage increases to 2d6 + your spellcasting ability modifier, the persistent damage increases to 3, and the splash damage increases to 2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cc25bc79-a18b-4e1e-81bc-e63aa1a91cfa"),
+                                    Order = 0,
+                                    OwnerId = new Guid("107e9a96-572d-40b9-87d9-bf36b2302260"),
+                                    Text = "The initial damage increases to 3d6 + your spellcasting ability modifier, the persistent damage increases to 4, and the splash damage increases to 3.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("24b63a1a-f410-4c85-b5c4-a11feab9fde1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a7a384da-ca83-4941-969f-668d59f18cb5"),
+                                    Text = "The initial damage increases to 4d6 + your spellcasting ability modifier, the persistent damage increases to 5, and the splash damage increases to 4.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("18b5fdc3-37cc-47e3-ae30-9e510ba66979"),
+                                    Order = 0,
+                                    OwnerId = new Guid("461c1a6c-d9e9-4c24-82df-9799e0001811"),
+                                    Text = "Your battle form is Large and your fly Speed gains a +10-foot status bonus. You must have enough space to expand into or the spell is lost. You instead gain 10 temporary HP, attack modifier +18, damage bonus +8, and Acrobatics +20.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3bf1bb14-bdfd-440d-9066-045783f6932c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0b4eadbc-0ed2-444c-997f-0e248309b869"),
+                                    Text = "Your battle form is Huge, your fly Speed gains a +15-foot status bonus, and your attacks have 10-foot reach. You must have enough space to expand into or the spell is lost. You instead gain AC = 21 + your level, 15 temporary HP, attack modifier +21, damage bonus +4 and double damage dice (including persistent damage), and Acrobatics +23.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("569c330e-2a24-4278-ab38-f238d36ce0b3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("730097a4-0886-4c81-a15e-b00fc7ec40c9"),
+                                    Text = "You can specify criteria for which creatures sound the alarm spell—for instance, orcs or masked people.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6454be59-729b-4090-b4c6-642db9481178"),
+                                    Order = 0,
+                                    OwnerId = new Guid("96d6be16-ee49-4b00-aa7e-7b364bd363bc"),
+                                    Text = "The damage increases by 1d6.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0a64260a-8855-434a-a9b7-1d3ea34ead92"),
+                                    Order = 0,
+                                    OwnerId = new Guid("63371eec-c1ea-4dcb-8c53-e72fe03224a8"),
+                                    Text = "You instead gain 10 temporary HP, AC = 17 + your level, attack modifier +14, damage bonus +5, and Athletics +14.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("81f48c2e-9615-4236-980b-f982843d0ae7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("62d0851a-cc5e-462c-aee1-1b5e812ac054"),
+                                    Text = "Your battle form is Large and your attacks have 10-foot reach. You must have enough space to expand into or the spell is lost. You instead gain 15 temporary HP, AC = 18 + your level, attack modifier +16, damage bonus +9, and Athletics +16.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("50f4a710-bd37-412d-bd42-75ccf627066e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7bd4ff03-9047-4baa-939e-312c7924b42d"),
+                                    Text = "Your battle form is Huge and your attacks have 15-foot reach. You must have enough space to expand into or the spell is lost. You instead gain 20 temporary HP, AC = 18 + your level, attack modifier +18, damage bonus +7 and double the number of damage dice, and Athletics +20.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d8510f7f-7901-415d-970e-68f0949a82b7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("62d6f3f0-5ae7-4ceb-b943-d716a9d05586"),
+                                    Text = "You can target up to 10 creatures. The extra material component affects targets to which it is anathema.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("03056dae-e94d-4ffd-8cf1-f06172f6380c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4a665729-f77d-4c8c-8f00-dd3fe078e3d8"),
+                                    Text = "The resistances increase by 2, and the weakness increases by 3.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9f8a17ee-eb90-4fca-b9a5-345a645fde4f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3a1aa8fe-d985-4af4-a664-e7ceed761d9d"),
+                                    Text = "The damage increases by 1d8.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("74827007-1d12-462a-a927-1324a4bf22ae"),
+                                    Order = 0,
+                                    OwnerId = new Guid("84e120a3-6dd6-4348-9a07-934858f71840"),
+                                    Text = "The resistance increases by 3.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e40d5cb9-53ed-44ed-a996-e81ba3b76103"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0433232e-b381-4a6d-bd3c-404bfdedb535"),
+                                    Text = "The damage increases by 2d6.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("87d75997-6b09-4e5d-9adc-df001c60a730"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e7d4ce94-e923-43fb-bcc9-e34987534372"),
+                                    Text = "The damage increases by 1d12.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("02e87545-e884-4321-8b76-fc41fbb44bd2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8fad2d3e-740c-4f51-bb8d-8abe84a24783"),
+                                    Text = "The duration lasts until the next time you make your daily preparations.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("470cd40d-caa3-4188-8862-a59f41eff543"),
+                                    Order = 0,
+                                    OwnerId = new Guid("99a5bbf6-51c5-4e42-ba6b-e1155c40d500"),
+                                    Text = "The duration lasts until the next time you make your daily preparations, and you can target up to 10 creatures.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("85866a6b-4934-4b35-b98e-0f99876fe455"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4e928728-b53f-43e2-acbe-7b93732500e9"),
+                                    Text = "The cold damage increases by 2d6, and the evil damage against celestials increases by 2d6.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e508583c-8cdb-4634-91ff-dd70e33fd411"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4c4341f2-16d9-4a55-b504-418231e4b9fe"),
+                                    Text = "The negative damage to living creatures increases by 1d4.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("10b435c4-4477-4d2c-87fd-cbaf49922875"),
+                                    Order = 0,
+                                    OwnerId = new Guid("070c4a22-2028-4361-89b5-ef690dd3fa6b"),
+                                    Text = "The spell’s duration increases to 1 hour. Roll 1d8 to determine the wall’s color; the results for 5–8 are below.A red, orange, yellow, or green wall deals an extra 10 damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b1598565-4cb0-4656-bfcb-16b7b5d336fa"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5da315c4-0930-4154-803d-1d618e8073a4"),
+                                    Text = "The duration increases to 1 hour.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b76a367e-5acb-4939-af0e-e955b770a0d0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8e38a5fc-f74d-4c0a-b653-4bc2c4610d9e"),
+                                    Text = "The number of targets increases by 1.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7d8155fe-ac83-40db-89b1-c8cce3e762f5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("548e581b-6bf6-4a27-9622-996ca1e4e8ff"),
+                                    Text = "The number of targets increases by 1.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("baf914d7-0d96-40cb-aac0-fe72bbb3fb37"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dae11cb9-b62c-4073-827c-635821ed5e74"),
+                                    Text = "You can target up to 10 creatures.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7ebed77a-cd19-4c03-ac0d-4cf9eaa438a3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d523848c-c447-477b-b8f3-48dc196055ef"),
+                                    Text = "The target can also speak the language.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fc636ff5-c742-41f6-8ba2-853c7c044221"),
+                                    Order = 0,
+                                    OwnerId = new Guid("34a0a521-0496-4876-8e2e-1b7195af1f4b"),
+                                    Text = "You can target up to 10 creatures, and targets can also speak the language.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c3270595-28ea-4452-a365-8a9d0785edca"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e6a136cc-0056-439b-b6a2-dd406c4b5752"),
+                                    Text = "The damage increases by 2d6.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6af0fd96-e785-48b6-928d-9836e6e0025c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("283ef60d-8ca4-463d-80cc-12bafa287dfc"),
+                                    Text = "You can target up to 10 creatures.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1109b91c-bc25-4ac0-9496-6395e9f0d1ac"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d896e7f8-a52e-49d1-a1fe-98148ba1c246"),
+                                    Text = "You can choose a spell of 5th level or lower.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("636220e6-b967-40ff-88b2-4d35a4cbbcd7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("cda1fc96-7b2c-4df9-b65f-04b4a2e0f5c7"),
+                                    Text = "You can choose a spell of 6th level or lower.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("46b1f716-4b6c-47c8-ad00-101822453564"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3f51f72d-37e7-4e37-8f3d-48686460b573"),
+                                    Text = "You can choose a spell of 7th level or lower.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e524c2fd-7a86-4c19-b8ea-3d8b0734620c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fd04a9d3-8d55-49b6-ab6f-863cfda50de7"),
+                                    Text = "The spell is more difficult to counteract and resist, but the cost is increased to 16gp.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e6c9e4fd-5660-4705-b1cb-6e1e7ed93d9b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c15bae80-bafd-4214-a887-e8dc349d2a51"),
+                                    Text = "The spell is more difficult to counteract and resist, but the cost is increased to 30gp.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c398bd37-7c19-40ce-a838-a28e73c4e02f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ecdcd196-a2f7-4eff-a302-36829c060875"),
+                                    Text = "The spell is more difficult to counteract and resist, but the cost is increased to 60gp.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c96b526b-bd6b-4623-b246-d1a0f65f0caa"),
+                                    Order = 0,
+                                    OwnerId = new Guid("20e9bfe7-6e9d-4e2d-ae10-68455f7a75dc"),
+                                    Text = "The spell is more difficult to counteract and resist, but the cost is increased to 120gp.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("54f377ad-2e27-4f91-bfe8-ea7fded1b56c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("70f8b982-3a29-4498-89e7-eee2ead46d0f"),
+                                    Text = "The spell is more difficult to counteract and resist, but the cost is increased to 270gp.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("29355096-23ed-46cf-a99e-f61317b1616f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("26042150-1558-43d2-acd2-8a75c20f513e"),
+                                    Text = "The spell is more difficult to counteract and resist, but the cost is increased to 540gp.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f0aa21d3-d5ed-4491-af22-e1e7bd3e692c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("79854345-f541-48f2-8e04-8401e71c598b"),
+                                    Text = "The spell is more difficult to counteract and resist, but the cost is increased to 1350gp.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b0047551-8881-4a42-a565-7579beab9b8c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fa60eb32-a8f7-4129-ac79-86db2b0c6e85"),
+                                    Text = "The spell is more difficult to counteract and resist, but the cost is increased to 3350gp.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8dffaa04-8c24-4fa4-b478-2efcc90c1a5b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("923762df-f025-49e3-9f23-b82e97f15e5a"),
+                                    Text = "You can feed 12 Medium creatures.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("dff09106-b5bd-4cfa-b0b3-2d42023285f6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("14353fce-2884-4203-ae5c-2a52cc7c629b"),
+                                    Text = "You can feed 50 Medium creatures.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("186fc125-7b6f-4519-94f4-a2e13d192f61"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d5f956fa-1486-461c-9ff5-94db3f1f5cdd"),
+                                    Text = "You can feed 200 Medium creatures.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("10273eee-70b6-4b64-9119-e1ca2dc37a7f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("480f3fc8-55c9-4961-8572-5cc86cc4ca85"),
+                                    Text = "The item is metal and can include common minerals, like feldspar or quartz.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("654e55bf-4a75-436b-a793-20451384ad00"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ae249d83-3fe3-4e38-8154-4d6b07924f3c"),
+                                    Text = "The damage increases by 2d6 (or by 2d8 if the target is a divine spellcaster).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8f48fd63-265e-421f-9393-46220ae44b5c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7c4a2e8b-867f-4b2b-816a-535e3eb0fc79"),
+                                    Text = "The level for each category increases by 2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("86662ee0-fcca-4c22-ba32-12225ae67d54"),
+                                    Order = 0,
+                                    OwnerId = new Guid("cecf2b46-be78-406a-ab01-b1bff4d3917a"),
+                                    Text = "The area increases to a 60-foot cone.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("179d71a1-ba70-4709-bf82-5905bf06341f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9d5aaa18-2a33-4468-b219-bf3429228901"),
+                                    Text = "Even creatures with darkvision (but not greater darkvision) can barely see through the darkness. They treat targets seen through the darkness as concealed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("12971af1-dc37-4275-8caa-f1b40df0c206"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b2fd64f9-51d7-42fb-b78d-fd29bf47f508"),
+                                    Text = "The spell’s range is touch and it targets 1 willing creature.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("58b96894-4f49-442f-977c-482e7dd65f1c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3d32cc67-f66b-4b7d-a267-ff050108114c"),
+                                    Text = "The spell’s range is touch and it targets 1 willing creature.The duration is until the next time you make your daily preparations.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ef8617df-09c3-4aca-b07d-4e61bd26ed06"),
+                                    Order = 0,
+                                    OwnerId = new Guid("aa381ca0-7a43-4e1b-9d5d-2ad73be5255d"),
+                                    Text = "The damage increases by 1d6.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a5619aec-d3da-4d3e-baaa-fb27eae58a13"),
+                                    Order = 0,
+                                    OwnerId = new Guid("be4200a2-c623-4146-890a-bddb87f620cf"),
+                                    Text = "You learn each aura's location and strength.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("86320f63-c48b-4b85-86fc-1fe0acef448e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c9d1c03b-32b0-4182-ad71-89f87576f5a7"),
+                                    Text = "You learn the school of magic for the highestlevel effect within range that the spell detects. If multiple effects are equally strong, the GM determines which you learn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a1ef296a-a8d5-40bd-94cf-6d2ed7f47ebe"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0e4f844c-c605-4423-9321-ca5241df1950"),
+                                    Text = "As 3rd level, but you also pinpoint the source of the highest-level magic. Like for an imprecise sense, you don’t learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ff710d1a-0b56-42b5-8e50-3892de1914bb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5f67a8e9-f9f4-4b40-a9b6-f651f6b07886"),
+                                    Text = "You learn the number and types of poison.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bf8ce5df-06bb-49f9-9c3f-7b0af705fff0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9e4831ac-5cfe-4a20-9583-6d18d37fa4d2"),
+                                    Text = "The duration is until the next time you make your daily preparations.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("730ac659-7199-4a9f-a784-76fa50311b10"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4d38efb2-763a-44c6-97d6-f67dccc6e8c2"),
+                                    Text = "The range increases to 1 mile. You don’t need to be able to see your destination, as long as you have been there in the past and know its relative location and distance from you. You are temporarily immune for 1 hour.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8686aa9a-88d3-4976-8731-8401612d3964"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2f7a2dd1-f158-490c-9ffe-b67b3a085a5c"),
+                                    Text = "Your battle form is Huge and your attacks have 15-foot reach, or 20-foot reach if they started with 15-foot reach. You instead gain 20 temporary HP, an attack modifier of +18, a damage bonus of +6, double the damage dice, and Athletics +21.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e04f8289-1338-415a-be15-14689980e913"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a7a1d25e-fd89-4602-8322-e796cc091afd"),
+                                    Text = "Your battle form is Gargantuan and your attacks have 20-foot reach, or 25-foot reach if they started with 15-foot reach. You instead gain AC = 21 + your level, 25 temporary HP, an attack modifier of +25, a damage bonus of +15, double the damage dice, and Athletics +25.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("86437516-b358-41b6-81ff-63f6d142fae3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3ce62722-4290-4b4b-949f-d0698ff70202"),
+                                    Text = "The damage increases by 2d10.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8bb751c4-64ba-4146-97fd-b2cac56abf29"),
+                                    Order = 0,
+                                    OwnerId = new Guid("25598434-fc72-4c97-b895-060cada42dda"),
+                                    Text = "The damage increases to 2d4 damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("239f5167-8c42-4002-99cd-8447f93db2dd"),
+                                    Order = 0,
+                                    OwnerId = new Guid("766b8628-93b0-4a8f-baf9-d7be6eb4e957"),
+                                    Text = "Target up to three weapons, and the damage increases to 3d4 damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b80d3ed5-a258-46bf-aba7-9f4623cac77a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("637c1c9a-e2f9-497d-85fc-9ca72fbba552"),
+                                    Text = "The damage increases by 1d6.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4cd9a795-3ecc-42e2-81e7-157af0a80bd6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("18cca2c1-2c7b-4486-b085-734cebf5f52d"),
+                                    Text = "The damage increases by 1d10, and the level of creatures that must attempt a second save on a critical failure increases by 2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("44d1af8e-b3a2-4726-863e-8669acd62fe3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("94452491-58bd-487f-b187-8525fe6a0160"),
+                                    Text = "The damage increased by 1d4.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8683a40b-d930-463a-8063-c4e07c76b89e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("842ac0e3-6867-4a83-b8fa-8e60db388251"),
+                                    Text = "The temporary Hit Points increase to 60, the weakness increases to 15, and the duration increases to 10 minutes.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Details");
+
                     b.Navigation("Spell");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellHeighteningDetailBlock", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SpellHeightening", "SpellHeightening")
-                        .WithMany("Details")
-                        .HasForeignKey("SpellHeighteningId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("SpellHeightening");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellRequirement", b =>
@@ -34932,11 +37141,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("DamageType");
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Action", b =>
-                {
-                    b.Navigation("Details");
-                });
-
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ActionType", b =>
                 {
                     b.Navigation("Actions");
@@ -34948,8 +37152,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", b =>
                 {
-                    b.Navigation("Details");
-
                     b.Navigation("Potencies");
                 });
 
@@ -34957,20 +37159,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 {
                     b.Navigation("CraftingRequirements");
 
-                    b.Navigation("Details");
-
                     b.Navigation("Potencies");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalPoison", b =>
-                {
-                    b.Navigation("Details");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalTool", b =>
                 {
-                    b.Navigation("Details");
-
                     b.Navigation("Potencies");
                 });
 
@@ -34993,11 +37186,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Features");
 
                     b.Navigation("Mannerisms");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Condition", b =>
-                {
-                    b.Navigation("Details");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ConditionCategory", b =>
@@ -35027,8 +37215,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Feat", b =>
                 {
-                    b.Navigation("Details");
-
                     b.Navigation("Prerequisites");
 
                     b.Navigation("Requirements");
@@ -35048,14 +37234,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("DispellRequirements");
 
                     b.Navigation("HazardComponents");
-
-                    b.Navigation("RoutineDetails");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardAction", b =>
                 {
-                    b.Navigation("EffectDetails");
-
                     b.Navigation("Effects");
                 });
 
@@ -35101,18 +37283,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Spell", b =>
                 {
-                    b.Navigation("AdditionalDetails");
-
                     b.Navigation("Heightenings");
 
                     b.Navigation("Requirements");
 
                     b.Navigation("Triggers");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellHeightening", b =>
-                {
-                    b.Navigation("Details");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SpellType", b =>

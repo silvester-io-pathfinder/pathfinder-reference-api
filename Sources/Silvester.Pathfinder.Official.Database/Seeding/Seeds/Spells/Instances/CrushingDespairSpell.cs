@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,11 +18,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("2665ca32-131c-43cd-b30b-c763eb024a08"),
                 Name = "Crushing Despair",
-                Description = "You inflict despair on creatures in the area. The effects for each creature are determined by its Will save.",
                 Level = 5,
                 Area ="30-foot cone.",
                 Duration = "1 or more rounds."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("6f718d20-6acf-4bcf-a4e1-efebf668f6d7"), Type = Utilities.Text.TextBlockType.Text, Text = "You inflict despair on creatures in the area. The effects for each creature are determined by its Will save." };
         }
 
         public override RollableEffect? GetRollableEffect()
@@ -38,7 +43,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
-            yield return new SpellHeightening { Id = Guid.Parse("cecf2b46-be78-406a-ab01-b1bff4d3917a"), Level = 7, Description = "The area increases to a 60-foot cone." };
+            yield return new SpellHeightening
+            { 
+                Id = Guid.Parse("cecf2b46-be78-406a-ab01-b1bff4d3917a"), 
+                Level = 7,
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse("86662ee0-fcca-4c22-ba32-12225ae67d54"), Type = Utilities.Text.TextBlockType.Text, Text = "The area increases to a 60-foot cone." }
+                }
+            };
         }
 
         public override IEnumerable<string> GetSpellComponents()

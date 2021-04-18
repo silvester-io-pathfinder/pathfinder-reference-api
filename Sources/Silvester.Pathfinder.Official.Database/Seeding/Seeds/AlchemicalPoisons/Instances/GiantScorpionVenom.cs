@@ -1,6 +1,7 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,9 +49,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return "Injury";
         }
 
-        protected override IEnumerable<AlchemicalPoisonDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("39eeb491-4cff-4764-89d2-9ce910775200"), Text = "Scorpion venom is excruciating and its effects are somewhat debilitating." };
+            yield return new TextBlock { Id = Guid.Parse("39eeb491-4cff-4764-89d2-9ce910775200"), Text = "Scorpion venom is excruciating and its effects are somewhat debilitating." };
         }
 
         protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)

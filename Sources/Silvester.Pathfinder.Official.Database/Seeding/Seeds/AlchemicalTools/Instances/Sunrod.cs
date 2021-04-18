@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,9 +35,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
             yield return "Light";
         }
 
-        protected override IEnumerable<AlchemicalToolDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalToolDetailBlock { Id = Guid.Parse("8238f38f-f33e-4252-9f51-f0ec7ae0b938"), Type = AlchemicalToolDetailBlockType.Text, Text = "This 1-foot-long, gold-tipped rod glows after it’s struck on a hard surface. For the next 6 hours, it sheds bright light in a 20-foot radius (and dim light to the next 40 feet)." };
+            yield return new TextBlock { Id = Guid.Parse("8238f38f-f33e-4252-9f51-f0ec7ae0b938"), Type = TextBlockType.Text, Text = "This 1-foot-long, gold-tipped rod glows after it’s struck on a hard surface. For the next 6 hours, it sheds bright light in a 20-foot radius (and dim light to the next 40 feet)." };
         }
 
         protected override SourcePage? GetSourcePage(AlchemicalToolSeeder seeder)

@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,10 +20,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
                 elixir.SourcePageId = sourcePage.Id;
             }
 
-            foreach (AlchemicalElixirDetailBlock detailBlock in GetDetailBlocks())
+            TextBlock[] details = GetDetailBlocks().ToArray();
+            for(int i = 0;i < details.Length; i ++)
             {
-                detailBlock.AlchemicalElixirId = elixir.Id;
-                seeder.Builder.AddData(detailBlock);
+                TextBlock detail = details[i];
+                detail.Order = i;
+                detail.OwnerId = elixir.Id;
+                seeder.Builder.AddOwnedData((AlchemicalElixir e) => e.Details, detail);
             }
 
             foreach (AlchemicalElixirPotencyBinding binding in GetPotencies(seeder))
@@ -48,7 +52,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
         protected abstract AlchemicalElixir GetAlchemicalElixir(AlchemicalElixirSeeder seeder);
         protected abstract SourcePage? GetSourcePage(AlchemicalElixirSeeder seeder);
         protected abstract IEnumerable<string> GetTraits();
-        protected abstract IEnumerable<AlchemicalElixirDetailBlock> GetDetailBlocks();
+        protected abstract IEnumerable<TextBlock> GetDetailBlocks();
         protected abstract IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder);
 
         protected virtual IEnumerable<AlchemicalElixirCraftingRequirement> GetCraftingRequirements(AlchemicalElixirSeeder seeder)

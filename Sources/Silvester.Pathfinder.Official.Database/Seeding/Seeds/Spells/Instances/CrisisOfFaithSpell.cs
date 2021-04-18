@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,16 +18,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("b7157338-c1de-4e79-a90c-e0f62abd709c"),
                 Name = "Crisis of Faith",
-                Description = "You assault the target’s faith, riddling the creature with doubt and mental turmoil that deal 6d6 mental damage, or 6d8 mental damage if it can cast divine spells. The effects are determined by its Will save.",
                 Level = 3,
                 Range = 30,
                 Targets = "1 creature."
             };
         }
 
-        public override IEnumerable<SpellDetailBlock> GetSpellDetailBlocks()
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new SpellDetailBlock { Id = Guid.Parse("858468ee-88f6-495c-8cf5-542d9209b061"), Text = "To many deities, casting this spell on a follower of your own deity without significant cause is anathema." }; 
+            yield return new TextBlock { Id = Guid.Parse("06dc06f4-c454-423d-9791-25b2e2fb90e3"), Type = Utilities.Text.TextBlockType.Text, Text = "You assault the target’s faith, riddling the creature with doubt and mental turmoil that deal 6d6 mental damage, or 6d8 mental damage if it can cast divine spells. The effects are determined by its Will save." };
+            yield return new TextBlock { Id = Guid.Parse("858468ee-88f6-495c-8cf5-542d9209b061"), Type = Utilities.Text.TextBlockType.Text, Text = "To many deities, casting this spell on a follower of your own deity without significant cause is anathema." }; 
         }
 
         public override RollableEffect? GetRollableEffect()
@@ -43,7 +44,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
-            yield return new SpellHeightening { Id = Guid.Parse("ae249d83-3fe3-4e38-8154-4d6b07924f3c"), Level = 1, Description = "The damage increases by 2d6 (or by 2d8 if the target is a divine spellcaster)." };
+            yield return new SpellHeightening
+            {
+                Id = Guid.Parse("ae249d83-3fe3-4e38-8154-4d6b07924f3c"),
+                Level = 1,
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse("654e55bf-4a75-436b-a793-20451384ad00"), Type = Utilities.Text.TextBlockType.Text, Text = "The damage increases by 2d6 (or by 2d8 if the target is a divine spellcaster)." }
+                }
+            };
         }
 
         public override IEnumerable<string> GetSpellComponents()

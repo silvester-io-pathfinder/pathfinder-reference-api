@@ -1,6 +1,7 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,9 +49,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return "Inhaled";
         }
 
-        protected override IEnumerable<AlchemicalPoisonDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("765ca329-35c6-4f20-8d10-000b35ce1a78"), Text = "Mindfog mist can be used to undermine spellcasters, as its effect on a victim’s mental faculties are swift and powerful." };
+            yield return new TextBlock { Id = Guid.Parse("765ca329-35c6-4f20-8d10-000b35ce1a78"), Text = "Mindfog mist can be used to undermine spellcasters, as its effect on a victim’s mental faculties are swift and powerful." };
         }
 
         protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)

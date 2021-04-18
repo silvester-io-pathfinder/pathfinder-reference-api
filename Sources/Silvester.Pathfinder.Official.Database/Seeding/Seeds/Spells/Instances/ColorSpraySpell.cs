@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -16,10 +17,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("060ba321-f5b9-4ac8-907c-fec7bb740713"),
                 Name = "Color Spray",
-                Description = "Swirling colors affect viewers based on their Will saves.",
                 Level = 1,
                 Area = "15-foot cone."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("b9e2dd3a-42e7-4693-afee-fd55fc5c68c5"), Type = Utilities.Text.TextBlockType.Text, Text = "Swirling colors affect viewers based on their Will saves." };
         }
 
         public override RollableEffect? GetRollableEffect()
@@ -36,7 +41,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
-            yield return new SpellHeightening { Id = Guid.Parse("548e581b-6bf6-4a27-9622-996ca1e4e8ff"), Level = 1, Description = "The number of targets increases by 1." };
+            yield return new SpellHeightening
+            {
+                Id = Guid.Parse("548e581b-6bf6-4a27-9622-996ca1e4e8ff"),
+                Level = 1,
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse("7d8155fe-ac83-40db-89b1-c8cce3e762f5"), Type = Utilities.Text.TextBlockType.Text, Text = "The number of targets increases by 1." }
+                }
+            };
         }
 
         public override IEnumerable<string> GetSpellComponents()

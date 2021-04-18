@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
             };
         }
 
-        protected override IEnumerable<ActionDetailsBlock> GetDetails(ActionSeeder seeder)
+        protected override IEnumerable<TextBlock> GetDetails(ActionSeeder seeder)
         {
-            yield return new ActionDetailsBlock { Id = Guid.Parse("5055a0f7-a922-4b49-b57f-40938f30d803"), Text = "You attempt to escape from being grabbed, immobilized, or restrained. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a check using your unarmed attack modifier against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC for a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an Acrobatics or Athletics check instead of using your attack modifier if you choose (but this action still has the attack trait)." };
+            yield return new TextBlock { Id = Guid.Parse("5055a0f7-a922-4b49-b57f-40938f30d803"), Text = "You attempt to escape from being grabbed, immobilized, or restrained. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a check using your unarmed attack modifier against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC for a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an Acrobatics or Athletics check instead of using your attack modifier if you choose (but this action still has the attack trait)." };
         }
 
         protected override IEnumerable<Trait> GetTraits(ActionSeeder seeder)

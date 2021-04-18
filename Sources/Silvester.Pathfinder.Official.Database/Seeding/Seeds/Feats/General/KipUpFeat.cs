@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("e0ff07c3-5e1e-4258-8e85-c1255b47705e"), Text = "You stand up. This movement doesn’t trigger reactions." };
+            yield return new TextBlock { Id = Guid.Parse("e0ff07c3-5e1e-4258-8e85-c1255b47705e"), Type = Utilities.Text.TextBlockType.Text, Text = "You stand up. This movement doesn’t trigger reactions." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

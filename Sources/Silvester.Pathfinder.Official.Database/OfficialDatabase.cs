@@ -142,13 +142,16 @@ namespace Silvester.Pathfinder.Official.Database
 
         public DbSet<AlchemicalToolPotency> AlchemicalToolPotencies { get; set; } = default!;
 
+        public DbSet<AlchemicalTool> AlchemicalTools { get; set; } = default!;
+
+        public DbSet<Hazard> Hazards { get; set; } = default!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<SpellDetailBlock>().HasBaseEntityKey();
             modelBuilder.Entity<SpellTrigger>().HasBaseEntityKey();
-
+            modelBuilder.Entity<Hazard>().HasBaseEntityKey();
             modelBuilder.Entity<SourcePage>().HasBaseEntityKey().HasDataSeed(new HazardTypeSourcePageSeeder());
 
             DamageType[] damageTypeSeed = modelBuilder.Entity<DamageType>().HasBaseEntityKey().HasDataSeed(new DamageTypeSeeder());

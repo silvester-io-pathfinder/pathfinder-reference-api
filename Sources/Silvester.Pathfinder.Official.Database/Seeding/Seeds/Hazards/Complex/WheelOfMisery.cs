@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,15 +58,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             yield return "Trap";
         }
 
-        protected override IEnumerable<HazardRoutineDetailBlock> GetRoutineDetails(HazardSeeder seeder)
+        protected override IEnumerable<TextBlock> GetRoutineDetails(HazardSeeder seeder)
         {
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("417e2e47-e956-49d4-b01e-82da90ed3027"), Type = HazardRoutineDetailBlockType.Text, Text = "On its initiative, the trap uses its first action to spin, then stops. Roll 1d6 to determine which segment is topmost when the wheel stops spinning. The wheel uses its second action to replicate the spell listed for that segment (3rd level, DC 24, spell attack roll +14). This spell’s target is centered on or otherwise includes the nearest creature in the area. This increases the spell’s range to 100 feet if necessary. Any spell cast by this trap is arcane." };
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("9e4955f6-7270-4de7-ad78-8f728b8a4e57"), Type = HazardRoutineDetailBlockType.Enumeration, Text = "Sleep" };
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("35c80760-aec4-41ba-a3d3-e256796bd457"), Type = HazardRoutineDetailBlockType.Enumeration, Text = "Paralyze" };
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("c0e914be-277a-4cd2-a30a-ecdb53d8f2c6"), Type = HazardRoutineDetailBlockType.Enumeration, Text = "Lightning Bolt (100-foot line)" };
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("22e59604-b410-4183-820b-2dcfff400a8c"), Type = HazardRoutineDetailBlockType.Enumeration, Text = "Blindness" };
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("9aea181f-b676-4651-a636-710699c43495"), Type = HazardRoutineDetailBlockType.Enumeration, Text = "Acid Arrow" };
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("2fdfb966-1fa4-4286-9409-8c415686c09e"), Type = HazardRoutineDetailBlockType.Enumeration, Text = "Ray of Enfeeblement" };
+            yield return new TextBlock { Id = Guid.Parse("417e2e47-e956-49d4-b01e-82da90ed3027"), Type = TextBlockType.Text, Text = "On its initiative, the trap uses its first action to spin, then stops. Roll 1d6 to determine which segment is topmost when the wheel stops spinning. The wheel uses its second action to replicate the spell listed for that segment (3rd level, DC 24, spell attack roll +14). This spell’s target is centered on or otherwise includes the nearest creature in the area. This increases the spell’s range to 100 feet if necessary. Any spell cast by this trap is arcane." };
+            yield return new TextBlock { Id = Guid.Parse("9e4955f6-7270-4de7-ad78-8f728b8a4e57"), Type = TextBlockType.Enumeration, Text = "Sleep" };
+            yield return new TextBlock { Id = Guid.Parse("35c80760-aec4-41ba-a3d3-e256796bd457"), Type = TextBlockType.Enumeration, Text = "Paralyze" };
+            yield return new TextBlock { Id = Guid.Parse("c0e914be-277a-4cd2-a30a-ecdb53d8f2c6"), Type = TextBlockType.Enumeration, Text = "Lightning Bolt (100-foot line)" };
+            yield return new TextBlock { Id = Guid.Parse("22e59604-b410-4183-820b-2dcfff400a8c"), Type = TextBlockType.Enumeration, Text = "Blindness" };
+            yield return new TextBlock { Id = Guid.Parse("9aea181f-b676-4651-a636-710699c43495"), Type = TextBlockType.Enumeration, Text = "Acid Arrow" };
+            yield return new TextBlock { Id = Guid.Parse("2fdfb966-1fa4-4286-9409-8c415686c09e"), Type = TextBlockType.Enumeration, Text = "Ray of Enfeeblement" };
         }
 
         protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
@@ -77,9 +78,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Name = "Wheel Spin",
                 Trigger = "A creature enters the sensor's detection area",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                Details =
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("78b61a1b-9b9c-4637-a632-d5cac2d621b6"), Text = "The wheel begins to spin and rolls initiative." },
+                    new TextBlock { Id = Guid.Parse("78b61a1b-9b9c-4637-a632-d5cac2d621b6"), Type = Utilities.Text.TextBlockType.Text, Text = "The wheel begins to spin and rolls initiative." },
                 }
             };
         }

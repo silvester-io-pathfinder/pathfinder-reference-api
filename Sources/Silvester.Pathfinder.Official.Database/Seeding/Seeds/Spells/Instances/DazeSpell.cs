@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,7 +18,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("2d8be059-3a79-4d4d-a7e8-31dee66680cc"),
                 Name = "Daze",
-                Description = "You cloud the target’s mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also stunned 1.",
                 Level = 1,
                 Range = 50,
                 Targets = "1 creature.",
@@ -25,9 +25,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("47e75e5c-6ee0-4c24-bb1e-b51bad67e26a"), Type = Utilities.Text.TextBlockType.Text, Text = "You cloud the target’s mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also stunned 1." };
+        }
+
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
-            yield return new SpellHeightening { Id = Guid.Parse("aa381ca0-7a43-4e1b-9d5d-2ad73be5255d"), Level = 2, Description = "The damage increases by 1d6." };
+            yield return new SpellHeightening
+            {
+                Id = Guid.Parse("aa381ca0-7a43-4e1b-9d5d-2ad73be5255d"), 
+                Level = 2, 
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse("ef8617df-09c3-4aca-b07d-4e61bd26ed06"), Type = Utilities.Text.TextBlockType.Text, Text = "The damage increases by 1d6." }
+                }
+            };
         }
 
         public override IEnumerable<string> GetSpellComponents()

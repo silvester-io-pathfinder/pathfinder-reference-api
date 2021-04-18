@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,10 +20,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("70b38a25-db58-44a1-8785-a7124775e352"), Text = "You unparalleled athletic skill allows you to jump impossible distances. Triple the distance you Long Jump (so you could jump 60 feet on a successful DC 20 check). When you High Jump, use the calculation for a Long Jump but don’t triple the distance." };
-            yield return new FeatDetailsBlock { Id = Guid.Parse("98e7f9c9-8027-485d-af27-2de34ee1e1da"), Text = "You can jump a distance greater than your Speed by spending additional actions when you Long Jump or High Jump. For each additional action spent, add your Speed to the limit on how far you can Leap." };
+            yield return new TextBlock { Id = Guid.Parse("70b38a25-db58-44a1-8785-a7124775e352"), Type = Utilities.Text.TextBlockType.Text, Text = "You unparalleled athletic skill allows you to jump impossible distances. Triple the distance you Long Jump (so you could jump 60 feet on a successful DC 20 check). When you High Jump, use the calculation for a Long Jump but don’t triple the distance." };
+            yield return new TextBlock { Id = Guid.Parse("98e7f9c9-8027-485d-af27-2de34ee1e1da"), Type = Utilities.Text.TextBlockType.Text, Text = "You can jump a distance greater than your Speed by spending additional actions when you Long Jump or High Jump. For each additional action spent, add your Speed to the limit on how far you can Leap." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

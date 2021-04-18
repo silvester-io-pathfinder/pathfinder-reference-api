@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,9 +62,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Spear",
                 Trigger = "Pressure is applied to the floor tile",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("fd11a9dd-3a82-4d6f-9861-62c108f617a5"), Text = "The trap shoots a spear, making a Strike against the creature or object on the floor tile." },
+                    new TextBlock { Id = Guid.Parse("fd11a9dd-3a82-4d6f-9861-62c108f617a5"),Type = TextBlockType.Text,  Text = "The trap shoots a spear, making a Strike against the creature or object on the floor tile." },
                 }
             };
         }

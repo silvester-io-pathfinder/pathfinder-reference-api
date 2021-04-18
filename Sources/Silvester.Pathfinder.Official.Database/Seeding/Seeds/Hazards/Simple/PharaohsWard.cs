@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,9 +52,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Traits = seeder.FilterTraits("Curse", "Divine", "Necromancy"),
                 Trigger = "The seal on the tomb is broken from the outside",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("d9095071-f339-42ec-99a9-b36054c97766"), Text = "Each living creature within 60 feet must succeed at a DC 23 Will save or be subjected to the pharaoh’s curse. A cursed creature takes a –2 status penalty to Fortitude saves, and any natural or magical healing it receives is halved. The curse remains until removed by remove curse or similar magic." },
+                    new TextBlock { Id = Guid.Parse("d9095071-f339-42ec-99a9-b36054c97766"), Type = TextBlockType.Text, Text = "Each living creature within 60 feet must succeed at a DC 23 Will save or be subjected to the pharaoh’s curse. A cursed creature takes a –2 status penalty to Fortitude saves, and any natural or magical healing it receives is halved. The curse remains until removed by remove curse or similar magic." },
                 }
             };
         }

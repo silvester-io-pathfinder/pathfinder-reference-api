@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,11 +18,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("236cd0a3-a07b-4c9f-ba11-e3c113d91634"),
                 Name = "Death Knell",
-                Description = "You snuff the life out of a creature on the brink of death. The target must attempt a Will save. If this kills it, you gain 10 temporary HP and a +1 status bonus to attack and damage rolls for 10 minutes.",
                 Level = 2,
                 Range = 0,
                 Targets = "1 living creature that has 0 HP.",
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("6cd65a55-a167-4782-b67e-4233a73f6cb0"), Type = Utilities.Text.TextBlockType.Text, Text = "You snuff the life out of a creature on the brink of death. The target must attempt a Will save. If this kills it, you gain 10 temporary HP and a +1 status bonus to attack and damage rolls for 10 minutes." };
         }
 
         public override RollableEffect? GetRollableEffect()

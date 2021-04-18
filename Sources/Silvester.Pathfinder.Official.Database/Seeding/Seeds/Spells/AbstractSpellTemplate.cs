@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,11 +26,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
                 seeder.Builder.AddData(effect); 
                 spell.RollableEffectId = effect.Id;
             }
-            
-            foreach (SpellDetailBlock detailBlock in GetSpellDetailBlocks())
+
+            TextBlock[] spellDetails = GetSpellDetailBlocks().ToArray();
+            for(int i = 0; i < spellDetails.Length; i ++)
             {
-                detailBlock.SpellId = spell.Id;
-                seeder.Builder.AddData(detailBlock);
+                TextBlock detail = spellDetails[i];
+                detail.Order = i;
+                detail.OwnerId = spell.Id;
+                seeder.Builder.AddOwnedData((Spell s) => s.Details, detail);
             }
 
             foreach (MagicTradition tradition in seeder.FilterTraditions(GetMagicTraditions().ToArray()))
@@ -49,10 +53,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
 
             foreach (SpellHeightening heightening in GetHeightenings())
             {
-                foreach(SpellHeighteningDetailBlock detail in heightening.Details)
+                TextBlock[] heighteningDetails = heightening.Details.ToArray();
+                for(int i = 0; i < heighteningDetails.Length; i ++)
                 {
-                    detail.SpellHeighteningId = heightening.Id;
-                    seeder.Builder.AddData(detail);
+                    TextBlock detail = heighteningDetails[i];
+                    detail.Order = i;
+                    detail.OwnerId = heightening.Id;
+                    seeder.Builder.AddOwnedData((SpellHeightening h) => h.Details, detail);
                 }
                 heightening.Details.Clear();
 
@@ -76,6 +83,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
         }
 
         public abstract Spell GetSpell();
+        public abstract IEnumerable<TextBlock> GetSpellDetailBlocks();
         public abstract IEnumerable<string> GetSpellComponents();
         public abstract IEnumerable<string> GetTraits();
         public abstract IEnumerable<string> GetMagicTraditions();
@@ -91,11 +99,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
             return null;
         }
 
-        public virtual IEnumerable<SpellDetailBlock> GetSpellDetailBlocks()
-        {
-            //Override in concrete subclass to add spell detail blocks for when a single description is not sufficient..
-            yield break;
-        }
 
         public virtual IEnumerable<SpellHeightening> GetHeightenings()
         {

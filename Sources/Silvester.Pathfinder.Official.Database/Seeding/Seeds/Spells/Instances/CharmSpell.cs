@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,11 +18,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("41b3515e-c59f-4ac6-92a2-ef16195cd647"),
                 Name = "Charm",
-                Description = "To the target, your words are honey and your visage seems bathed in a dreamy haze. It must attempt a Will save, with a +4 circumstance bonus if you or your allies recently threatened it or used hostile actions against it. You can Dismiss the spell. If you use hostile actions against the target, the spell ends. When the spell ends, the target doesn’t necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, meaning you could potentially convince the target to continue being your friend via mundane means.",
                 Level = 1,
                 Range = 30,
                 Targets = "1 creature."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("b0627230-1b6f-41fa-b385-e9315448ce04"), Type = Utilities.Text.TextBlockType.Text, Text = "To the target, your words are honey and your visage seems bathed in a dreamy haze. It must attempt a Will save, with a +4 circumstance bonus if you or your allies recently threatened it or used hostile actions against it." };
+            yield return new TextBlock { Id = Guid.Parse("1d038912-70a4-45ee-aa4b-c9b2cae4f931"), Type = Utilities.Text.TextBlockType.Text, Text = "You can Dismiss the spell. If you use hostile actions against the target, the spell ends. When the spell ends, the target doesn’t necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, meaning you could potentially convince the target to continue being your friend via mundane means." };
         }
 
         public override RollableEffect? GetRollableEffect()
@@ -38,8 +44,25 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
-            yield return new SpellHeightening { Id = Guid.Parse("8fad2d3e-740c-4f51-bb8d-8abe84a24783"), Level = 4, Description = "The duration lasts until the next time you make your daily preparations." };
-            yield return new SpellHeightening { Id = Guid.Parse("99a5bbf6-51c5-4e42-ba6b-e1155c40d500"), Level = 8, Description = "The duration lasts until the next time you make your daily preparations, and you can target up to 10 creatures." };
+            yield return new SpellHeightening
+            { 
+                Id = Guid.Parse("8fad2d3e-740c-4f51-bb8d-8abe84a24783"),
+                Level = 4, 
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse("02e87545-e884-4321-8b76-fc41fbb44bd2"), Type = Utilities.Text.TextBlockType.Text, Text = "The duration lasts until the next time you make your daily preparations." }
+                }
+            };
+
+            yield return new SpellHeightening
+            {
+                Id = Guid.Parse("99a5bbf6-51c5-4e42-ba6b-e1155c40d500"),
+                Level = 8, 
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse("470cd40d-caa3-4188-8862-a59f41eff543"), Type = Utilities.Text.TextBlockType.Text, Text = "The duration lasts until the next time you make your daily preparations, and you can target up to 10 creatures." }
+                }
+            };
         }
 
         public override IEnumerable<string> GetSpellComponents()

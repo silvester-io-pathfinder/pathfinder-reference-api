@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,10 +66,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             yield return "Trap";
         }
 
-        protected override IEnumerable<HazardRoutineDetailBlock> GetRoutineDetails(HazardSeeder seeder)
+        protected override IEnumerable<TextBlock> GetRoutineDetails(HazardSeeder seeder)
         {
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("dbc0d3e9-fac4-47d3-8942-09f87c55df5d"), Type = HazardRoutineDetailBlockType.Text, Text = "The trap loses 1 action per disabled channel each turn. On each action, a different channel spews lava, dealing 4d6 fire damage to each creature within 10 feet of the channel (DC 27 basic Reflex save), and increasing the depth of the lava in the room by 1 foot (4 feet per round if all the channels are active)." };
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("58d97828-a01d-4101-b04e-d5e3b804b7a8"), Type = HazardRoutineDetailBlockType.Text, Text = "A creature that starts its turn in lava takes 8d6 fire damage and is immobilized until it Escapes the hardening lava (DC 27). The creature might suffocate if covered in lava (page 478). Lava from the previous round hardens fully at the start of the trap’s turn, effectively raising the floor of the room. Once the room is full of lava, the trap stops taking actions, but creatures in the room remain stuck until the floor opens and the trap resets." };
+            yield return new TextBlock { Id = Guid.Parse("dbc0d3e9-fac4-47d3-8942-09f87c55df5d"), Type = TextBlockType.Text, Text = "The trap loses 1 action per disabled channel each turn. On each action, a different channel spews lava, dealing 4d6 fire damage to each creature within 10 feet of the channel (DC 27 basic Reflex save), and increasing the depth of the lava in the room by 1 foot (4 feet per round if all the channels are active)." };
+            yield return new TextBlock { Id = Guid.Parse("58d97828-a01d-4101-b04e-d5e3b804b7a8"), Type = TextBlockType.Text, Text = "A creature that starts its turn in lava takes 8d6 fire damage and is immobilized until it Escapes the hardening lava (DC 27). The creature might suffocate if covered in lava (page 478). Lava from the previous round hardens fully at the start of the trap’s turn, effectively raising the floor of the room. Once the room is full of lava, the trap stops taking actions, but creatures in the room remain stuck until the floor opens and the trap resets." };
         }
 
         protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
@@ -79,9 +80,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Name = "Flume Activation",
                 Trigger = "A creature tries to leave the room",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                Details =
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("1b710bb7-2c56-42fd-a03d-2b2861a8b23f"), Text = "The exits seal instantly and the trap rolls initiative." },
+                    new TextBlock { Id = Guid.Parse("1b710bb7-2c56-42fd-a03d-2b2861a8b23f"), Type = Utilities.Text.TextBlockType.Text,  Text = "The exits seal instantly and the trap rolls initiative." },
                 }
             };
         }

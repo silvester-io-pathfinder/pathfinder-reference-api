@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
             };
         }
 
-        protected override IEnumerable<ActionDetailsBlock> GetDetails(ActionSeeder seeder)
+        protected override IEnumerable<TextBlock> GetDetails(ActionSeeder seeder)
         {
-            yield return new ActionDetailsBlock { Id = Guid.Parse("3628f76a-d2f7-4391-9282-f7812e69ae26"), Text = "You use your hand or hands to manipulate an object or the terrain. You can grab an unattended or stored object, open a door, or produce some similar effect. You might have to attempt a skill check to determine if your Interact action was successful." };
+            yield return new TextBlock { Id = Guid.Parse("3628f76a-d2f7-4391-9282-f7812e69ae26"), Text = "You use your hand or hands to manipulate an object or the terrain. You can grab an unattended or stored object, open a door, or produce some similar effect. You might have to attempt a skill check to determine if your Interact action was successful." };
         }
 
         protected override IEnumerable<Trait> GetTraits(ActionSeeder seeder)

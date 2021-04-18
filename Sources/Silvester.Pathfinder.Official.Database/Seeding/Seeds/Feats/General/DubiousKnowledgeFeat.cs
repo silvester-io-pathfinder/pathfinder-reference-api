@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("28d7b87a-55a3-48f3-9071-ab3e1600f129"), Text = "You’re a treasure trove of information, but not all of it comes from reputable sources. When you fail (but don’t critically fail) a Recall Knowledge check using any skill, you learn a bit of true knowledge and a bit of erroneous knowledge, but you don’t have any way to differentiate which is which." };
+            yield return new TextBlock { Id = Guid.Parse("28d7b87a-55a3-48f3-9071-ab3e1600f129"), Type = Utilities.Text.TextBlockType.Text, Text = "You’re a treasure trove of information, but not all of it comes from reputable sources. When you fail (but don’t critically fail) a Recall Knowledge check using any skill, you learn a bit of true knowledge and a bit of erroneous knowledge, but you don’t have any way to differentiate which is which." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

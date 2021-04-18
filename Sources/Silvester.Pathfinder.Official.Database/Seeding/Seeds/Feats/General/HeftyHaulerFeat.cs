@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("b916a391-2032-4ec4-b914-f40d36019fa8"), Text = "You can carry more than your frame implies. Increase your maximum and encumbered Bulk limits by 2." };
+            yield return new TextBlock { Id = Guid.Parse("b916a391-2032-4ec4-b914-f40d36019fa8"), Type = Utilities.Text.TextBlockType.Text, Text = "You can carry more than your frame implies. Increase your maximum and encumbered Bulk limits by 2." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

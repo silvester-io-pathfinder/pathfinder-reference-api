@@ -88,7 +88,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
 
             return matches.Length == names.Length
                 ? matches
-                : throw InvalidSelectorException<T>(matches, selector, names);
+                : throw InvalidSelectorException(matches, selector, names);
         }
 
         public Exception InvalidSelectorException<T>(T[] matches, Func<T, string> selector, params string[] names)

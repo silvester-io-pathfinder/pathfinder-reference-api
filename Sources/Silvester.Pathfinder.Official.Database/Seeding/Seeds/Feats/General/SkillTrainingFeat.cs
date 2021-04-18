@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -21,9 +22,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("0edf9962-598d-4813-bdef-f310458b9ea6"), Text = "You become trained in the skill of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("0edf9962-598d-4813-bdef-f310458b9ea6"), Type = Utilities.Text.TextBlockType.Text, Text = "You become trained in the skill of your choice." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,10 +20,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs
                 bomb.SourcePageId = sourcePage.Id;
             }
 
-            foreach (AlchemicalBombDetailBlock detailBlock in GetDetailBlocks())
+            TextBlock[] details = GetDetailBlocks().ToArray();
+            for(int i = 0; i < details.Length; i ++)
             {
-                detailBlock.AlchemicalBombId = bomb.Id;
-                seeder.Builder.AddData(detailBlock);
+                TextBlock detail = details[i];
+                detail.Order = 0;
+                detail.OwnerId = bomb.Id;
+                seeder.Builder.AddOwnedData((AlchemicalBomb f) => f.Details, detail);
             }
 
             foreach (AlchemicalBombPotencyBinding potency in GetPotencies(seeder))
@@ -42,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs
         protected abstract AlchemicalBomb GetAlchemicalBomb(AlchemicalBombSeeder seeder);
         protected abstract SourcePage? GetSourcePage(AlchemicalBombSeeder seeder);
         protected abstract IEnumerable<string> GetTraits();
-        protected abstract IEnumerable<AlchemicalBombDetailBlock> GetDetailBlocks();
+        protected abstract IEnumerable<TextBlock> GetDetailBlocks();
         protected abstract IEnumerable<AlchemicalBombPotencyBinding> GetPotencies(AlchemicalBombSeeder seeder);
     }
 }

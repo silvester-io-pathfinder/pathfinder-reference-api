@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,12 +18,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("c1546cbd-ec60-459f-b7f5-e29d51beb5f2"),
                 Name = "Dimensional Anchor",
-                Description = "You interfere with the target’s ability to teleport and travel between dimensions. Dimensional anchor attempts to counteract any teleportation effect, or any effect that would move the target to a different plane. The duration is determined by the target’s Will save.",
                 Level = 4,
                 Range = 30,
                 Targets = "1 creature",
                 Duration = "Varies."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("e47d375a-7490-4544-81be-809b2bd3cbf8"), Type = Utilities.Text.TextBlockType.Text, Text = "You interfere with the target’s ability to teleport and travel between dimensions. Dimensional anchor attempts to counteract any teleportation effect, or any effect that would move the target to a different plane. The duration is determined by the target’s Will save." };
         }
 
         public override RollableEffect? GetRollableEffect()

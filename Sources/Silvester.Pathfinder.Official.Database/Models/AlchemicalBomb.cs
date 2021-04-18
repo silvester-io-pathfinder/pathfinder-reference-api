@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,17 +26,9 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
 
-        public ICollection<AlchemicalBombDetailBlock> Details { get; set; } = new List<AlchemicalBombDetailBlock>();
+        public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
 
         public ICollection<AlchemicalBombPotencyBinding> Potencies { get; set; } = new List<AlchemicalBombPotencyBinding>();
-    }
-
-    public class AlchemicalBombDetailBlock : BaseEntity
-    {
-        public string Text { get; set; } = default!;
-
-        public Guid AlchemicalBombId { get; set; }
-        public AlchemicalBomb AlchemicalBomb { get; set; } = default!;
     }
 
     public class AlchemicalBombPotencyBinding : BaseEntity

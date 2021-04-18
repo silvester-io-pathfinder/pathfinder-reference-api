@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,9 +51,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Traits = seeder.FilterTraits("Occult", "Transmutation"),
                 Trigger = "A creature touches the warded object or area",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("806735c8-382d-4647-a8fd-b33e379cebad"), Text = "The triggering creature and all creatures within 30 feet are trapped in a disrupted time flow (DC 38 Fortitude negates). The creatures’ minds move so quickly that each round seems to last a century, but their bodies and magical energies move so slowly that they can’t use any actions except Recall Knowledge. An affected creature must attempt a DC 36 Will saving throw against a warp mind spell immediately and again for every minute of real time that passes while the creature is trapped in the frozen moment. This effect has an unlimited duration but can be counteracted." },
+                    new TextBlock { Id = Guid.Parse("806735c8-382d-4647-a8fd-b33e379cebad"), Type = TextBlockType.Text, Text = "The triggering creature and all creatures within 30 feet are trapped in a disrupted time flow (DC 38 Fortitude negates). The creatures’ minds move so quickly that each round seems to last a century, but their bodies and magical energies move so slowly that they can’t use any actions except Recall Knowledge. An affected creature must attempt a DC 36 Will saving throw against a warp mind spell immediately and again for every minute of real time that passes while the creature is trapped in the frozen moment. This effect has an unlimited duration but can be counteracted." },
                 }
             };
         }

@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,9 +35,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
             yield return "Splash";
         }
 
-        protected override IEnumerable<AlchemicalBombDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalBombDetailBlock { Id = Guid.Parse("575fcbde-26ab-4b04-8856-d3ff1612f7f3"), Text = "This flask filled with corrosive acid deals 1 acid damage, the listed persistent acid damage, and the listed acid splash damage. Many types grant an item bonus to attack rolls." };
+            yield return new TextBlock { Id = Guid.Parse("575fcbde-26ab-4b04-8856-d3ff1612f7f3"), Text = "This flask filled with corrosive acid deals 1 acid damage, the listed persistent acid damage, and the listed acid splash damage. Many types grant an item bonus to attack rolls." };
         }
 
         protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies(AlchemicalBombSeeder seeder)

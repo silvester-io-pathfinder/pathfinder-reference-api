@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public RollableEffect? RollableEffect { get; set; }
         public Guid? RollableEffectId { get; set; }
 
-        public ICollection<FeatDetailsBlock> Details { get; set; } = new List<FeatDetailsBlock>();
+        public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
 
         public ICollection<Prerequisite.FeatPrerequisiteBinding> Prerequisites { get; set; } = new List<Prerequisite.FeatPrerequisiteBinding>();
 

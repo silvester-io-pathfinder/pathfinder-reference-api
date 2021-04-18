@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
         public ICollection<HazardActionEffect> Effects { get; set; } = new List<HazardActionEffect>();
-        public ICollection<HazardActionEffectBlock> EffectDetails { get; set; } = new List<HazardActionEffectBlock>();
-    }
-
-    public class HazardActionEffectBlock : BaseEntity
-    {
-        public Guid HazardActionId { get; set; }
-        public HazardAction HazardAction { get; set; } = default!;
-
-        public string Text { get; set; } = default!;
+        public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
     }
 }

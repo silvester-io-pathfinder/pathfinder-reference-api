@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,9 +25,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
             };
         }
 
-        protected override IEnumerable<ActionDetailsBlock> GetDetails(ActionSeeder seeder)
+        protected override IEnumerable<TextBlock> GetDetails(ActionSeeder seeder)
         {
-            yield return new ActionDetailsBlock { Id = Guid.Parse("386cc768-8cc0-11eb-8dcd-0242ac130003"), Text = "You attempt an Acrobatics check to slow your fall. The DC is typically 15, but it might be higher due to air turbulence or other circumstances." };
+            yield return new TextBlock { Id = Guid.Parse("386cc768-8cc0-11eb-8dcd-0242ac130003"), Text = "You attempt an Acrobatics check to slow your fall. The DC is typically 15, but it might be higher due to air turbulence or other circumstances." };
         }
 
         protected override RollableEffect? GetRollableEffect(ActionSeeder seeder)

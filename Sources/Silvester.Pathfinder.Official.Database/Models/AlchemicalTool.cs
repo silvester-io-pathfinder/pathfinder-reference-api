@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
 
-        public ICollection<AlchemicalToolDetailBlock> Details { get; set; } = new List<AlchemicalToolDetailBlock>();
+        public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
     
         public ICollection<AlchemicalToolPotencyBinding> Potencies { get; set; } = new List<AlchemicalToolPotencyBinding>();
     }
@@ -58,21 +59,4 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<AlchemicalToolPotencyBinding> Bindings { get; set; } = default!;
     }
-
-    public enum AlchemicalToolDetailBlockType
-    {
-        Text,
-        Enumeration
-    }
-
-    public class AlchemicalToolDetailBlock : BaseEntity
-    {
-        public string Text { get; set; } = default!;
-
-        public AlchemicalToolDetailBlockType Type { get; set; }
-
-        public Guid AlchemicalToolId { get; set; }
-        public AlchemicalTool AlchemicalTool { get; set; } = default!;
-    }
-
 }

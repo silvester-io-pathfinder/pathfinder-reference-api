@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,9 +35,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
             yield return "Fire";
         }
 
-        protected override IEnumerable<AlchemicalToolDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalToolDetailBlock { Id = Guid.Parse("237853b6-f295-4158-bb31-dc141d046bae"), Type = AlchemicalToolDetailBlockType.Text, Text = "An alchemical substance applied to one end of this tiny wooden stick ignites when struck against a rough surface. Creating a flame with a tindertwig is much faster than creating a flame with flint and steel. You can ignite the tindertwig and touch it to a flammable object as part of the same Interact action. Core Rulebook 554" };
+            yield return new TextBlock { Id = Guid.Parse("237853b6-f295-4158-bb31-dc141d046bae"), Type = TextBlockType.Text, Text = "An alchemical substance applied to one end of this tiny wooden stick ignites when struck against a rough surface. Creating a flame with a tindertwig is much faster than creating a flame with flint and steel. You can ignite the tindertwig and touch it to a flammable object as part of the same Interact action. Core Rulebook 554" };
         }
 
         protected override SourcePage? GetSourcePage(AlchemicalToolSeeder seeder)

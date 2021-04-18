@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("6a59de26-a216-4f4f-b81f-094eb8998249"), Text = "You step carefully and quickly. You can Step into difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("6a59de26-a216-4f4f-b81f-094eb8998249"), Type = Utilities.Text.TextBlockType.Text, Text = "You step carefully and quickly. You can Step into difficult terrain." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,9 +34,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
             yield return "Consumable";
         }
 
-        protected override IEnumerable<AlchemicalToolDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalToolDetailBlock { Id = Guid.Parse("10164353-c33e-411e-b631-26a19438ab0a"), Type = AlchemicalToolDetailBlockType.Text, Text = "You can slather this silvery paste onto one melee weapon, one thrown weapon, or 10 pieces of ammunition. Silversheen spoils quickly, so once you open a vial, you must use it all at once, rather than saving it. For the next hour, the weapon or ammunition counts as silver instead of its normal precious material (such as cold iron) for any physical damage it deals." };
+            yield return new TextBlock { Id = Guid.Parse("10164353-c33e-411e-b631-26a19438ab0a"), Type = TextBlockType.Text, Text = "You can slather this silvery paste onto one melee weapon, one thrown weapon, or 10 pieces of ammunition. Silversheen spoils quickly, so once you open a vial, you must use it all at once, rather than saving it. For the next hour, the weapon or ammunition counts as silver instead of its normal precious material (such as cold iron) for any physical damage it deals." };
         }
 
         protected override SourcePage? GetSourcePage(AlchemicalToolSeeder seeder)

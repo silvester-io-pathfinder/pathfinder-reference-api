@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,9 +33,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return "Consumable";
         }
 
-        protected override IEnumerable<AlchemicalElixirDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalElixirDetailBlock { Id = Guid.Parse("7b92f530-d78e-4683-b967-9de524ac2063"), Text = "This elixir warms your core and improves your circulation. For 24 hours, you are protected from the effects of severe cold." };
+            yield return new TextBlock { Id = Guid.Parse("7b92f530-d78e-4683-b967-9de524ac2063"), Text = "This elixir warms your core and improves your circulation. For 24 hours, you are protected from the effects of severe cold." };
         }
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)

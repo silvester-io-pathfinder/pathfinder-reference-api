@@ -1,6 +1,7 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,9 +48,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return "Consumable";
         }
 
-        protected override IEnumerable<AlchemicalPoisonDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalPoisonDetailBlock { Id = Guid.Parse("062e4990-d0b3-4931-9ee3-ede80d54ec72"), Text = "This thick substance is distilled from the mind-robbing cytillesh fungus, though it lacks memory-altering capabilities." };
+            yield return new TextBlock { Id = Guid.Parse("062e4990-d0b3-4931-9ee3-ede80d54ec72"), Text = "This thick substance is distilled from the mind-robbing cytillesh fungus, though it lacks memory-altering capabilities." };
         }
 
         protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)

@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,12 +18,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("4d709d69-ddde-487c-94a3-c876b4e79969"),
                 Name = "Command",
-                Description = "You shout a command that’s hard to ignore. You can command the target to approach you, run away (as if it had the fleeing condition), release what it’s holding, drop prone, or stand in place. It can’t Delay or take any reactions until it has obeyed your command. The effects depend on the target’s Will save.",
                 Level = 1,
                 Range = 30,
                 Targets = "1 creature.",
                 Duration = "Until the end of the target’s next turn."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("eecbd562-747c-437b-8fb7-ede447f95cb2"), Type = Utilities.Text.TextBlockType.Text, Text = "You shout a command that’s hard to ignore. You can command the target to approach you, run away (as if it had the fleeing condition), release what it’s holding, drop prone, or stand in place. It can’t Delay or take any reactions until it has obeyed your command. The effects depend on the target’s Will save." };
         }
 
         public override RollableEffect? GetRollableEffect()
@@ -38,7 +43,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
-            yield return new SpellHeightening { Id = Guid.Parse("dae11cb9-b62c-4073-827c-635821ed5e74"), Level = 5, Description = "You can target up to 10 creatures." };
+            yield return new SpellHeightening
+            {
+                Id = Guid.Parse("dae11cb9-b62c-4073-827c-635821ed5e74"), 
+                Level = 5,
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse("baf914d7-0d96-40cb-aac0-fe72bbb3fb37"), Type = Utilities.Text.TextBlockType.Text, Text = "You can target up to 10 creatures." }
+                }
+            };
         }
 
         public override IEnumerable<string> GetSpellComponents()

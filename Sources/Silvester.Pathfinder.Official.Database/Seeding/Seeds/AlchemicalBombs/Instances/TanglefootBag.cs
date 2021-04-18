@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,11 +33,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
             yield return "Consumable";
         }
 
-        protected override IEnumerable<AlchemicalBombDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalBombDetailBlock { Id = Guid.Parse("f7f13e63-3728-470d-8a1f-b7cd65d855df"), Text = "A tanglefoot bag is filled with sticky substances. When you hit a creature with a tanglefoot bag, that creature takes a status penalty to its Speeds for 1 minute. Many types of tanglefoot bag also grant an item bonus on attack rolls." };
-            yield return new AlchemicalBombDetailBlock { Id = Guid.Parse("694ea8b3-8bd7-4a4e-b925-446ba77959f6"), Text = "On a critical hit, a creature in contact with a solid surface becomes stuck to the surface and immobilized for 1 round, and a creature flying via wings has its wings tangled, causing it to fall safely to the ground and become unable to Fly again for 1 round. Tanglefoot bags are not effective when used on a creature that is in water." };
-            yield return new AlchemicalBombDetailBlock { Id = Guid.Parse("3d23b44a-67d3-4cbe-b73e-528f36790ac4"), Text = "The target can end any effects by Escaping or spending a total of 3 Interact actions to carefully remove the sticky substances. These Interact actions don’t have to be consecutive, and other creatures can provide the actions as well." };
+            yield return new TextBlock { Id = Guid.Parse("f7f13e63-3728-470d-8a1f-b7cd65d855df"), Text = "A tanglefoot bag is filled with sticky substances. When you hit a creature with a tanglefoot bag, that creature takes a status penalty to its Speeds for 1 minute. Many types of tanglefoot bag also grant an item bonus on attack rolls." };
+            yield return new TextBlock { Id = Guid.Parse("694ea8b3-8bd7-4a4e-b925-446ba77959f6"), Text = "On a critical hit, a creature in contact with a solid surface becomes stuck to the surface and immobilized for 1 round, and a creature flying via wings has its wings tangled, causing it to fall safely to the ground and become unable to Fly again for 1 round. Tanglefoot bags are not effective when used on a creature that is in water." };
+            yield return new TextBlock { Id = Guid.Parse("3d23b44a-67d3-4cbe-b73e-528f36790ac4"), Text = "The target can end any effects by Escaping or spending a total of 3 Interact actions to carefully remove the sticky substances. These Interact actions don’t have to be consecutive, and other creatures can provide the actions as well." };
         }
 
         protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies(AlchemicalBombSeeder seeder)

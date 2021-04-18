@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<Disease> Diseases { get; set; } = new List<Disease>();
         
-        public ICollection<Models.Action> Actions { get; set; } = new List<Models.Action>();
+        public ICollection<Action> Actions { get; set; } = new List<Action>();
 
         public ICollection<Hazard> Hazards { get; set; } = new List<Hazard>();
 

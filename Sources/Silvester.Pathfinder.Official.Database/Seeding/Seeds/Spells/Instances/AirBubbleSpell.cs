@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -16,12 +17,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("fbb8d7cc-6793-484c-80a8-4fafb137e01e"),
                 Name = "Air Bubble",
-                Description = "A bubble of pure air appears around the target’s head, allowing it to breathe normally.The effect ends as soon as the target returns to an environment where it can breathe normally.",
                 Targets = "The triggering creature.",
                 Duration = "1 minute.",
                 Range = 60,
                 Level = 4,
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("eba305d2-2565-417f-8bf4-41ec967add47"), Type = Utilities.Text.TextBlockType.Text, Text = "A bubble of pure air appears around the target’s head, allowing it to breathe normally.The effect ends as soon as the target returns to an environment where it can breathe normally." };
         }
 
         public override IEnumerable<SpellTrigger> GetTriggers()

@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("7b4e22c3-cf7d-4ab3-9d47-3bca57cd7ed6"), Text = "You move more quickly on foot. Your Speed increases by 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("7b4e22c3-cf7d-4ab3-9d47-3bca57cd7ed6"), Type = Utilities.Text.TextBlockType.Text, Text = "You move more quickly on foot. Your Speed increases by 5 feet." };
         }
 
         protected override IEnumerable<string> GetTraits()

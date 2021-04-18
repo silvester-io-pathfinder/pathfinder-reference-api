@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,9 +45,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             yield return "Trap";
         }
 
-        protected override IEnumerable<HazardRoutineDetailBlock> GetRoutineDetails(HazardSeeder seeder)
+        protected override IEnumerable<TextBlock> GetRoutineDetails(HazardSeeder seeder)
         {
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("2411b443-2b72-48d1-b59e-b6688b774df9"), Type = HazardRoutineDetailBlockType.Text, Text = "The trap uses its action to force one random creature that failed its save against wail of the banshee last turn to emit a wail of the banshee with the same statistics as the initial one. The creature wails even if it is dead or unable to speak, no matter how far away from the trap it is. Unlike a casting of the spell, the drained condition from this trap’s wail of the banshee spells increases the targets’ drained condition values. A creature that critically succeeds at any of its saves can still be affected by the trap on future rounds, but can’t be forced to wail by the trap." };
+            yield return new TextBlock { Id = Guid.Parse("2411b443-2b72-48d1-b59e-b6688b774df9"), Type = TextBlockType.Text, Text = "The trap uses its action to force one random creature that failed its save against wail of the banshee last turn to emit a wail of the banshee with the same statistics as the initial one. The creature wails even if it is dead or unable to speak, no matter how far away from the trap it is. Unlike a casting of the spell, the drained condition from this trap’s wail of the banshee spells increases the targets’ drained condition values. A creature that critically succeeds at any of its saves can still be affected by the trap on future rounds, but can’t be forced to wail by the trap." };
         }
 
         protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
@@ -57,9 +58,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Name = "Scream",
                 Trigger = "Three or more living creatures remain within 100 feet of the trap for 6 seconds or longer",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                Details =
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("73e328d7-b078-4c03-a8ac-2f8f2191835e"), Text = "The trap releases an arcane wail of the banshee (DC 40) with a 100-foot-radius emanation instead of 40 feet, targeting all living creatures in the area, and rolls initiative." },
+                    new TextBlock { Id = Guid.Parse("73e328d7-b078-4c03-a8ac-2f8f2191835e"), Type = Utilities.Text.TextBlockType.Text, Text = "The trap releases an arcane wail of the banshee (DC 40) with a 100-foot-radius emanation instead of 40 feet, targeting all living creatures in the area, and rolls initiative." },
                 }
             };
         }

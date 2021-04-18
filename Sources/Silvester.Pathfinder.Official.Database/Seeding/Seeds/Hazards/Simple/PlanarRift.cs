@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,9 +51,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Traits = seeder.FilterTraits("Conjuration", "Occult", "Teleportation"),
                 Trigger = "A creature moves within 10 feet of the rift",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("ae24d667-ccda-431a-a998-7e754abfee8e"), Text = "The triggering creature and all creatures within 30 feet of the rift are drawn into another plane. Each creature can attempt a DC 33 Reflex save to avoid this fate." },
+                    new TextBlock { Id = Guid.Parse("ae24d667-ccda-431a-a998-7e754abfee8e"), Type = TextBlockType.Text, Text = "The triggering creature and all creatures within 30 feet of the rift are drawn into another plane. Each creature can attempt a DC 33 Reflex save to avoid this fate." },
                 }
             };
         }

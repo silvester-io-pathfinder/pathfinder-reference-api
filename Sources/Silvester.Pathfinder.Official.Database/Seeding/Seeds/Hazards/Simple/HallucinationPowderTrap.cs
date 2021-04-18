@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,9 +63,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Traits = seeder.FilterTraits("Mental", "Poison"),
                 Trigger = "The latch is opened or the tube is broken",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("06f5fbcf-7e70-4444-8f61-60927a67cef8"), Text = "The tube explodes, spraying hallucinogenic powder in a 30-foot cone. Any creature in the cone must succeed at a DC 24 Will save or be confused for 1 round and take a –2 status penalty to Perception checks and saves against mental effects for 1d4 hours. On a critical failure, the penalty is instead –4." },
+                    new TextBlock { Id = Guid.Parse("06f5fbcf-7e70-4444-8f61-60927a67cef8"),Type = TextBlockType.Text,  Text = "The tube explodes, spraying hallucinogenic powder in a 30-foot cone. Any creature in the cone must succeed at a DC 24 Will save or be confused for 1 round and take a –2 status penalty to Perception checks and saves against mental effects for 1d4 hours. On a critical failure, the penalty is instead –4." },
                 }
             };
         }

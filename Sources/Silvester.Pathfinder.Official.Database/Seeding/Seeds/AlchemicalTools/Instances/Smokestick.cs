@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,9 +33,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
             yield return "Consumable";
         }
 
-        protected override IEnumerable<AlchemicalToolDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalToolDetailBlock { Id = Guid.Parse("9908505d-e79b-42e7-8f5a-dd4ec3165054"), Type = AlchemicalToolDetailBlockType.Text, Text = "With a sharp twist of this item, you instantly create a screen of thick, opaque smoke in a burst centered on one corner of your space. All creatures within that area are concealed, and all other creatures are concealed to them. The smoke lasts for 1 minute or until dispersed by a strong wind." };
+            yield return new TextBlock { Id = Guid.Parse("9908505d-e79b-42e7-8f5a-dd4ec3165054"), Type = TextBlockType.Text, Text = "With a sharp twist of this item, you instantly create a screen of thick, opaque smoke in a burst centered on one corner of your space. All creatures within that area are concealed, and all other creatures are concealed to them. The smoke lasts for 1 minute or until dispersed by a strong wind." };
         }
 
         protected override IEnumerable<AlchemicalToolPotencyBinding> GetPotencies(AlchemicalToolSeeder seeder)

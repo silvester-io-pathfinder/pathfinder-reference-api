@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,9 +53,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Traits = seeder.FilterTraits("Arcane", "Conjuration", "Summon"),
                 Trigger = "A creature enters the cloud of magical sensors",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = 
+                Details = 
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("cabdbcb0-95c9-461d-a9f5-e1858af03802"), Text = "This trap summons a specific level 1 creature, determined when the trap is created. The creature rolls initiative and remains for 2d6 rounds, after which the spell ends and the creature disappears. The creature also disappears if someone disables the trap before the duration expires. The summoned creature can use 3 actions each round and can use reactions, unlike most summoned creatures." },
+                    new TextBlock { Id = Guid.Parse("cabdbcb0-95c9-461d-a9f5-e1858af03802"), Type = TextBlockType.Text, Text = "This trap summons a specific level 1 creature, determined when the trap is created. The creature rolls initiative and remains for 2d6 rounds, after which the spell ends and the creature disappears. The creature also disappears if someone disables the trap before the duration expires. The summoned creature can use 3 actions each round and can use reactions, unlike most summoned creatures." },
                 }
             };
         }

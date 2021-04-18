@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,10 +35,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return "Healing";
         }
 
-        protected override IEnumerable<AlchemicalElixirDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalElixirDetailBlock { Id = Guid.Parse("5b3a9903-a51c-4a10-b932-ee51026807ff"), Text = "The elixir of rejuvenation restores a creature to full health and eradicates toxins affecting it. When you drink this elixir, you’re restored to your maximum Hit Points, and all afflictions of 20th level or lower affecting you are removed." };
-            yield return new AlchemicalElixirDetailBlock { Id = Guid.Parse("1bc9c603-c18b-4898-add5-8e6533dbbeb0"), Text = "You can instead administer this elixir to a creature that has been dead for a week or less. When you do, that creature is instantly brought back to life with 1 Hit Point and no spell slots, Focus Points, or other daily resources." };
+            yield return new TextBlock { Id = Guid.Parse("5b3a9903-a51c-4a10-b932-ee51026807ff"), Text = "The elixir of rejuvenation restores a creature to full health and eradicates toxins affecting it. When you drink this elixir, you’re restored to your maximum Hit Points, and all afflictions of 20th level or lower affecting you are removed." };
+            yield return new TextBlock { Id = Guid.Parse("1bc9c603-c18b-4898-add5-8e6533dbbeb0"), Text = "You can instead administer this elixir to a creature that has been dead for a week or less. When you do, that creature is instantly brought back to life with 1 Hit Point and no spell slots, Focus Points, or other daily resources." };
         }
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)

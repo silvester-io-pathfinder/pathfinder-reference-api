@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("180ac1bb-e6ae-4d53-b33a-71978026a8e5"), Text = "Your performances inspire admiration and win you fans. You can Make an Impression using Performance instead of Diplomacy." };
+            yield return new TextBlock { Id = Guid.Parse("180ac1bb-e6ae-4d53-b33a-71978026a8e5"), Type = Utilities.Text.TextBlockType.Text, Text = "Your performances inspire admiration and win you fans. You can Make an Impression using Performance instead of Diplomacy." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

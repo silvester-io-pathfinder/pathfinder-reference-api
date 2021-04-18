@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,11 +18,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("509c9a55-433c-4f99-8a7a-609d38f23ed1"),
                 Name = "Deafness",
-                Description = "The target loses hearing; it must attempt a Fortitude save. The target is then temporarily immune for 1 minute.",
                 Level = 2,
                 Range = 30,
                 Targets = "1 creature.",
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("4957d652-3659-4c6f-b259-ea076a4a861b"), Type = Utilities.Text.TextBlockType.Text, Text = "The target loses hearing; it must attempt a Fortitude save. The target is then temporarily immune for 1 minute." };
         }
 
         public override RollableEffect? GetRollableEffect()

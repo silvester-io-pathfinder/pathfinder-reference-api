@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,12 +18,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("3a2a1f6e-f8d9-465d-94cc-1253a5c42062"),
                 Name = "Calm Emotions",
-                Description = "You forcibly calm creatures in the area, soothing them into a nonviolent state; each creature must attempt a Will save.",
                 Level = 2,
                 Range = 120,
                 Area = "10-foot burst.",
                 Duration = "1 minute."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("1c1b6683-6bf3-4d9a-849c-9bf062facf3c"), Type = Utilities.Text.TextBlockType.Text, Text = "You forcibly calm creatures in the area, soothing them into a nonviolent state; each creature must attempt a Will save." };
         }
 
         public override RollableEffect? GetRollableEffect()

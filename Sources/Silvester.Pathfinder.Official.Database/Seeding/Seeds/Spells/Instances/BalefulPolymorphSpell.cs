@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -17,12 +18,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("79fbdd8a-c496-4974-af00-14c3640841ab"),
                 Name = "Baleful Polymorph",
-                Description = "You transform the target creature into a harmless animal appropriate to the area, with effects based on its Fortitude save.",
                 Level = 6,
                 Range = 30,
                 Targets = "1 creature.",
                 Duration = "1 minute."
             };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("435f323d-f2ba-4a44-b7fb-05738ce88cdd"), Type = Utilities.Text.TextBlockType.Text, Text = "You transform the target creature into a harmless animal appropriate to the area, with effects based on its Fortitude save." };
         }
 
         public override RollableEffect? GetRollableEffect()

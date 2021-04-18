@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,10 +20,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("497171c0-318e-4491-b527-ce421ee5ab7f"), Text = "When Climbing, you move 5 more feet on a success and 10 more feet on a critical success, to a maximum of your Speed." };
-            yield return new FeatDetailsBlock { Id = Guid.Parse("3b09f3f6-9075-4013-9bd5-d674e3f00ffc"), Text = "If you’re legendary in Athletics, you gain a climb Speed equal to your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("497171c0-318e-4491-b527-ce421ee5ab7f"), Type = Utilities.Text.TextBlockType.Text, Text = "When Climbing, you move 5 more feet on a success and 10 more feet on a critical success, to a maximum of your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("3b09f3f6-9075-4013-9bd5-d674e3f00ffc"), Type = Utilities.Text.TextBlockType.Text, Text = "If you’re legendary in Athletics, you gain a climb Speed equal to your Speed." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

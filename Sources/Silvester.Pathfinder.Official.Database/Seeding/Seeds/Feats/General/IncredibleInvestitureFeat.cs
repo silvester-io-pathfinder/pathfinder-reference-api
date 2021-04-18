@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("7be3eec5-5c9b-4f76-b412-3bec0c802dd6"), Text = "You have an incredible ability to invest more magic items. Increase your limit on invested items from 10 to 12." };
+            yield return new TextBlock { Id = Guid.Parse("7be3eec5-5c9b-4f76-b412-3bec0c802dd6"), Type = Utilities.Text.TextBlockType.Text, Text = "You have an incredible ability to invest more magic items. Increase your limit on invested items from 10 to 12." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

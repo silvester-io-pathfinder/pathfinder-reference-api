@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,10 +20,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions
                 condition.SourcePageId = sourcePage.SourceId;
             }
 
-            foreach (ConditionDetailBlock detailBlock in GetConditionDetailBlocks())
+            TextBlock[] details = GetConditionDetailBlocks().ToArray();
+            for(int i = 0; i < details.Length; i ++)
             {
-                detailBlock.ConditionId = condition.Id;
-                seeder.Builder.AddData(detailBlock);
+                TextBlock detail = details[i];
+                detail.Order = i;
+                detail.OwnerId = condition.Id;
+                seeder.Builder.AddOwnedData((Condition o) => o.Details, detail);
             }
 
             seeder.Builder.AddData(condition);
@@ -31,7 +35,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions
         public abstract Condition GetCondition(ConditionSeeder seeder);
         public abstract SourcePage? GetSourcePage(ConditionSeeder seeder);
 
-        public virtual IEnumerable<ConditionDetailBlock> GetConditionDetailBlocks()
+        public virtual IEnumerable<TextBlock> GetConditionDetailBlocks()
         {
             yield break;
         }

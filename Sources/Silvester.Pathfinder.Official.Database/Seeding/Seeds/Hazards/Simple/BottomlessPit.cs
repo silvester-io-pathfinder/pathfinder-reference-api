@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,10 +64,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Name = "Infinite Pitfall",
                 Trigger = "A creature walks onto the trapdoor",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("63bd40ef-eda7-4641-8d14-e4cd5efbfbaf"), Text = "The triggering creature falls in and continues to fall, potentially forever. That creature can try to Grab an Edge to avoid falling (page 472). The DC to Climb the walls or Grab an Edge is 26" },
-                    new HazardActionEffectBlock { Id = Guid.Parse("3b3bacc8-6bac-46c7-afff-17183a183c5a"), Text = "The pit contains many handholds, so the falling creature can try to Grab an Edge again every 6 seconds. If the creature succeeds, it can start to Climb out from that point (though it might be a very long climb, depending on how far the creature fell). Since the creature falls endlessly, it can rest and even prepare spells while falling, though items dropped while falling are usually lost forever." },
+                    new TextBlock { Id = Guid.Parse("63bd40ef-eda7-4641-8d14-e4cd5efbfbaf"), Type = TextBlockType.Text, Text = "The triggering creature falls in and continues to fall, potentially forever. That creature can try to Grab an Edge to avoid falling (page 472). The DC to Climb the walls or Grab an Edge is 26" },
+                    new TextBlock { Id = Guid.Parse("3b3bacc8-6bac-46c7-afff-17183a183c5a"), Type = TextBlockType.Text, Text = "The pit contains many handholds, so the falling creature can try to Grab an Edge again every 6 seconds. If the creature succeeds, it can start to Climb out from that point (though it might be a very long climb, depending on how far the creature fell). Since the creature falls endlessly, it can rest and even prepare spells while falling, though items dropped while falling are usually lost forever." },
                 }
             };
         }

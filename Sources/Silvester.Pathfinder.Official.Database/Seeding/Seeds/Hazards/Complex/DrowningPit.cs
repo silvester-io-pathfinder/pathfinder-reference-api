@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,9 +31,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             };
         }
 
-        protected override IEnumerable<HazardRoutineDetailBlock> GetRoutineDetails(HazardSeeder seeder)
+        protected override IEnumerable<TextBlock> GetRoutineDetails(HazardSeeder seeder)
         {
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("d58fd9ed-f604-45d1-ab07-65c3cc68799c"), Type = HazardRoutineDetailBlockType.Text, Text = "The trap loses 1 action each turn for each disabled water spout. On each of the trap’s actions, a spout pours water, increasing the depth of the water by 5 feet. Once the pit is full of water, the pit stops using actions, but creatures in the pit begin drowning (page 478)." };
+            yield return new TextBlock { Id = Guid.Parse("d58fd9ed-f604-45d1-ab07-65c3cc68799c"), Type = TextBlockType.Text, Text = "The trap loses 1 action each turn for each disabled water spout. On each of the trap’s actions, a spout pours water, increasing the depth of the water by 5 feet. Once the pit is full of water, the pit stops using actions, but creatures in the pit begin drowning (page 478)." };
         }
 
         protected override IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder)
@@ -78,9 +79,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Name = "Pitfall",
                 Trigger = "A creature walks onto the trapdoor",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                Details =
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("b3fae5a4-340d-41a7-821b-80713b7affd8"), Text = "The triggering creature falls in and takes damage from the fall, reduced by 5 feet for falling into the water (typically 12 bludgeoning damage). A creature can Grab an Edge to avoid falling (page 472). The trapdoor then slams shut, and the hazard rolls initiative." },
+                    new TextBlock { Id = Guid.Parse("b3fae5a4-340d-41a7-821b-80713b7affd8"), Type = Utilities.Text.TextBlockType.Text, Text = "The triggering creature falls in and takes damage from the fall, reduced by 5 feet for falling into the water (typically 12 bludgeoning damage). A creature can Grab an Edge to avoid falling (page 472). The trapdoor then slams shut, and the hazard rolls initiative." },
                 }
             };
         }

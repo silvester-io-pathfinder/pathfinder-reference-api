@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes
         {
             Models.Action action = GetAction(seeder);
 
-            foreach (ActionDetailsBlock detail in GetDetails(seeder))
+            TextBlock[] details = GetDetails(seeder).ToArray();
+            for(int i = 0; i < details.Length; i ++)
             {
-                detail.ActionId = action.Id;
-                seeder.Builder.AddData(detail);
+                TextBlock detail = details[i];
+                detail.Order = i;
+                detail.OwnerId = action.Id;
+                seeder.Builder.AddOwnedData((Models.Action o) => o.Details, detail);
             }
 
             foreach (Trait trait in GetTraits(seeder))
@@ -34,7 +38,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes
         }
 
         protected abstract Models.Action GetAction(ActionSeeder seeder);
-        protected abstract IEnumerable<ActionDetailsBlock> GetDetails(ActionSeeder seeder);
+        protected abstract IEnumerable<TextBlock> GetDetails(ActionSeeder seeder);
         
         protected virtual RollableEffect? GetRollableEffect(ActionSeeder seeder)
         {

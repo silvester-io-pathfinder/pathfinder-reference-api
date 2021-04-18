@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,21 +50,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
             
         public ICollection<HazardAction> Actions{ get; set; } = new List<HazardAction>();
      
-        public ICollection<HazardRoutineDetailBlock> RoutineDetails { get; set; } = new List<HazardRoutineDetailBlock>();
-    }
-
-    public enum HazardRoutineDetailBlockType
-    {
-        Text,
-        Enumeration
-    }
-
-    public class HazardRoutineDetailBlock : BaseEntity
-    {
-        public Guid HazardId { get; set; }
-        public Hazard Hazard { get; set; } = default!;
-
-        public string Text { get; set; } = default!;
-        public HazardRoutineDetailBlockType Type { get; set; }
+        public ICollection<TextBlock> RoutineDetails { get; set; } = new List<TextBlock>();
     }
 }

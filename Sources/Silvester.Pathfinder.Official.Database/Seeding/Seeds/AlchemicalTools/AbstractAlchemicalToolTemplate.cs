@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,10 +20,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools
                 tool.SourcePageId = sourcePage.Id;
             }
 
-            foreach (AlchemicalToolDetailBlock detailBlock in GetDetailBlocks())
+            TextBlock[] details = GetDetailBlocks().ToArray();
+            for(int i =0; i < details.Length; i ++)
             {
-                detailBlock.AlchemicalToolId = tool.Id;
-                seeder.Builder.AddData(detailBlock);
+                TextBlock detail = details[i];
+                detail.Order = i;
+                detail.OwnerId= tool.Id; 
+                seeder.Builder.AddOwnedData((AlchemicalTool e) => e.Details, detail);
             }
 
             foreach (AlchemicalToolPotencyBinding binding in GetPotencies(seeder))
@@ -42,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools
         protected abstract AlchemicalTool GetAlchemicalTool(AlchemicalToolSeeder seeder);
         protected abstract SourcePage? GetSourcePage(AlchemicalToolSeeder seeder);
         protected abstract IEnumerable<string> GetTraits();
-        protected abstract IEnumerable<AlchemicalToolDetailBlock> GetDetailBlocks();
+        protected abstract IEnumerable<TextBlock> GetDetailBlocks();
         
         protected virtual IEnumerable<AlchemicalToolPotencyBinding> GetPotencies(AlchemicalToolSeeder seeder)
         {

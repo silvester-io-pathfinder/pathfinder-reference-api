@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,9 +37,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return "Polymorph";
         }
 
-        protected override IEnumerable<AlchemicalElixirDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalElixirDetailBlock { Id = Guid.Parse("029c1cd3-93f2-472e-90a1-7f67847a6752"), Text = "Your features transform into something bestial and you take on muscle mass, but your lumbering form is clumsy." };
+            yield return new TextBlock { Id = Guid.Parse("029c1cd3-93f2-472e-90a1-7f67847a6752"), Text = "Your features transform into something bestial and you take on muscle mass, but your lumbering form is clumsy." };
         }
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)

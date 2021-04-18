@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,15 +32,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid EffectId { get; set; }
         public StaggeredEffect Effect { get; set; } = default!;
 
-        public ICollection<AlchemicalPoisonDetailBlock> Details { get; set; } = new List<AlchemicalPoisonDetailBlock>();
+        public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
-    }
-
-    public class AlchemicalPoisonDetailBlock : BaseEntity
-    {
-        public string Text { get; set; } = default!;
-
-        public Guid AlchemicalPoisonId { get; set; }
-        public AlchemicalPoison AlchemicalPoison { get; set; } = default!;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -7,8 +8,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
     public class Spell : BaseEntity
     {
         public string Name { get; set; } = default!;
-
-        public string Description { get; set; } = default!;
 
         public int? Range { get; set; }
 
@@ -39,7 +38,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public MagicSchool MagicSchool { get; set; } = default!;
         public Guid MagicSchoolId { get; set; }
 
-        public ICollection<SpellDetailBlock> AdditionalDetails { get; set; } = new List<SpellDetailBlock>();
+        public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
 
         public ICollection<MagicTradition> Traditions { get; set; } = new List<MagicTradition>();
 

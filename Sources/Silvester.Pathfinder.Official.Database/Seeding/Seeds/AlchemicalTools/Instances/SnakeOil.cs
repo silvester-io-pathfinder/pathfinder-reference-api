@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,9 +34,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
             yield return "Consumable";
         }
 
-        protected override IEnumerable<AlchemicalToolDetailBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new AlchemicalToolDetailBlock { Id = Guid.Parse("94cfd7f2-a8a2-44b5-9fbb-3f1893ebd964"), Type = AlchemicalToolDetailBlockType.Text, Text = "You can apply snake oil onto a wound or other outward symptom of an affliction or condition (such as sores from a disease or discoloration from a poison). For the next hour, the symptom disappears and the wounded or afflicted creature doesn’t feel as if it still has the wound or affliction, though all effects remain. A creature can uncover the ruse by succeeding at a DC 17 Perception check, but only if it uses a Seek action to specifically examine the snake oil’s effects." };
+            yield return new TextBlock { Id = Guid.Parse("94cfd7f2-a8a2-44b5-9fbb-3f1893ebd964"), Type = TextBlockType.Text, Text = "You can apply snake oil onto a wound or other outward symptom of an affliction or condition (such as sores from a disease or discoloration from a poison). For the next hour, the symptom disappears and the wounded or afflicted creature doesn’t feel as if it still has the wound or affliction, though all effects remain. A creature can uncover the ruse by succeeding at a DC 17 Perception check, but only if it uses a Seek action to specifically examine the snake oil’s effects." };
         }
 
         protected override SourcePage? GetSourcePage(AlchemicalToolSeeder seeder)

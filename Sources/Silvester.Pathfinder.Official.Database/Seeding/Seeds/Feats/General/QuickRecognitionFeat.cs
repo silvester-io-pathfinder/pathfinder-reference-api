@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("32cdf8c4-ea19-43b2-8cf4-8b462fee385d"), Text = "You Recognize Spells swiftly. Once per round, you can Recognize a Spell using a skill in which you’re a master as a free action." };
+            yield return new TextBlock { Id = Guid.Parse("32cdf8c4-ea19-43b2-8cf4-8b462fee385d"), Type = Utilities.Text.TextBlockType.Text, Text = "You Recognize Spells swiftly. Once per round, you can Recognize a Spell using a skill in which you’re a master as a free action." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)

@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
             hazard.SourcePageId = source.Id;
             seeder.Builder.AddData(source);
 
-            foreach (HazardRoutineDetailBlock routineDetail in GetRoutineDetails(seeder))
+            TextBlock[] details = GetRoutineDetails(seeder).ToArray();
+            for(int i = 0; i < details.Length; i ++)
             {
-                routineDetail.HazardId = hazard.Id;
-                seeder.Builder.AddData(routineDetail);
+                TextBlock detail = details[i];
+                detail.Order = i;
+                detail.OwnerId = hazard.Id;
+                seeder.Builder.AddOwnedData((Hazard e) => e.RoutineDetails, detail);
             }
-
 
             foreach (HazardComponent component in GetComponents(seeder))
             {
@@ -33,12 +36,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
             {
                 action.HazardId = hazard.Id;
 
-                foreach (HazardActionEffectBlock block in action.EffectDetails)
+                TextBlock[] actionDetails = Enumerable.ToArray(action.Details);
+                for(int i = 0; i < actionDetails.Length; i++)
                 {
-                    block.HazardActionId = action.Id;
-                    seeder.Builder.AddData(block);
+                    TextBlock detail = actionDetails[i];
+                    detail.Order = i;
+                    detail.OwnerId = action.Id;
+                    seeder.Builder.AddOwnedData((HazardAction e) => e.Details, detail);
                 }
-                action.EffectDetails = new HazardActionEffectBlock[] { };
+                action.Details = new TextBlock[] { };
 
                 foreach (HazardActionEffect effect in action.Effects)
                 {
@@ -53,7 +59,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
                 }
                 action.Traits = new Trait[] { };
 
-                Console.WriteLine("Amount of effectDetails: " + action.EffectDetails.Count);
+                Console.WriteLine("Amount of effectDetails: " + action.Details.Count);
                 seeder.Builder.AddData(action);
             }
 
@@ -126,7 +132,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
         protected abstract IEnumerable<HazardDispellRequirement> GetDispellRequirements(HazardSeeder seeder);
         protected abstract IEnumerable<HazardAction> GetActions(HazardSeeder seeder);
 
-        protected virtual IEnumerable<HazardRoutineDetailBlock> GetRoutineDetails(HazardSeeder seeder)
+        protected virtual IEnumerable<TextBlock> GetRoutineDetails(HazardSeeder seeder)
         {
             yield break;
         }

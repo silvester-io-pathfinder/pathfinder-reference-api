@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,9 +67,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             yield return "Trap";
         }
 
-        protected override IEnumerable<HazardRoutineDetailBlock> GetRoutineDetails(HazardSeeder seeder)
+        protected override IEnumerable<TextBlock> GetRoutineDetails(HazardSeeder seeder)
         {
-            yield return new HazardRoutineDetailBlock { Id = Guid.Parse("bb0601b7-7b22-47fc-a985-a53eccad97a2"), Type = HazardRoutineDetailBlockType.Text, Text = "The trap uses its first action to make a spinning blade Strike against each adjacent creature, its second action to move straight in a random direction (roll 1d4 to determine the direction), and its third action to make a spinning blade Strike against each adjacent creature. This trap doesn’t take a multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("bb0601b7-7b22-47fc-a985-a53eccad97a2"), Type = TextBlockType.Text, Text = "The trap uses its first action to make a spinning blade Strike against each adjacent creature, its second action to move straight in a random direction (roll 1d4 to determine the direction), and its third action to make a spinning blade Strike against each adjacent creature. This trap doesn’t take a multiple attack penalty." };
         }
 
         protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
@@ -79,9 +80,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Name = "Rising Pillar",
                 Trigger = "A creature steps on one of the trapped floor tiles",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails =
+                Details =
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("8c6ac794-a869-4f98-8fda-c9157022eb44"), Text = "The trap pops up in a grid intersection and makes a spinning blade Strike against one adjacent creature (if any), then rolls initiative." },
+                    new TextBlock { Id = Guid.Parse("8c6ac794-a869-4f98-8fda-c9157022eb44"), Text = "The trap pops up in a grid intersection and makes a spinning blade Strike against one adjacent creature (if any), then rolls initiative." },
                 }
             };
         }

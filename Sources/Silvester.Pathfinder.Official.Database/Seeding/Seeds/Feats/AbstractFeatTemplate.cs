@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -52,7 +53,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
                 requirement.FeatId = feat.Id;
             }
 
-            
             foreach (FeatEffect featEffect in GetEffects(seeder))
             {
                 FeatEffect.FeatEffectBinding binding = seeder.Builder.AddData(new FeatEffect.FeatEffectBinding { Id = featEffect.Id, FeatId = feat.Id });
@@ -74,10 +74,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
                 seeder.Builder.Entity(featEffect.GetType()).HasData(featEffect);
             }
 
-            foreach(FeatDetailsBlock block in GetDetailBlocks())
+            TextBlock[] details = GetDetailBlocks().ToArray();
+            for(int i = 0; i < details.Length; i ++)
             {
-                block.FeatId = feat.Id;
-                seeder.Builder.AddData(block);
+                TextBlock detail = details[i];
+                detail.Order = i;
+                detail.OwnerId = feat.Id;
+                seeder.Builder.AddOwnedData((Feat f) => f.Details, detail);
             }
 
             seeder.Builder.AddData(feat);
@@ -85,7 +88,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
 
         protected abstract Feat GetFeat();
         protected abstract IEnumerable<string> GetTraits();
-        protected abstract IEnumerable<FeatDetailsBlock> GetDetailBlocks();
+        protected abstract IEnumerable<TextBlock> GetDetailBlocks();
         protected abstract string FeatType { get; }
         protected abstract string ActionType { get; }
 

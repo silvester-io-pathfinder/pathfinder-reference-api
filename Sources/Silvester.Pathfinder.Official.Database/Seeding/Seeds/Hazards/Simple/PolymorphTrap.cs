@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,9 +51,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Traits = seeder.FilterTraits("Primal", "Transmutation"),
                 Trigger = "A creature moves within 30 feet of the glyph without speaking the passphrase in Druidic;",
                 ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
-                EffectDetails = new List<HazardActionEffectBlock>
+                Details = new List<TextBlock>
                 {
-                    new HazardActionEffectBlock { Id = Guid.Parse("50fc5c54-2b32-41dc-960f-7aee5dc71077"), Text = "The creature is targeted by baleful polymorph (DC 32 Will save)." },
+                    new TextBlock { Id = Guid.Parse("50fc5c54-2b32-41dc-960f-7aee5dc71077"), Type = TextBlockType.Text, Text = "The creature is targeted by baleful polymorph (DC 32 Will save)." },
                 }
             };
         }

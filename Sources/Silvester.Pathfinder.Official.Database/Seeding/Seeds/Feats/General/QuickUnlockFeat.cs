@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -19,9 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<FeatDetailsBlock> GetDetailBlocks()
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new FeatDetailsBlock { Id = Guid.Parse("7e74f923-5877-4e70-b996-be37b21a8fbc"), Text = "You can Pick a Lock using 1 action instead of 2." };
+            yield return new TextBlock { Id = Guid.Parse("7e74f923-5877-4e70-b996-be37b21a8fbc"), Type = Utilities.Text.TextBlockType.Text, Text = "You can Pick a Lock using 1 action instead of 2." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
