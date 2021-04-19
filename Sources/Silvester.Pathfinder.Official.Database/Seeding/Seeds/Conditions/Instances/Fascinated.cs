@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             return new SourcePage
             {
                 Id = Guid.Parse("1dbef0bc-4ffe-4e45-964f-83bbad2c884d"),
-                SourceId = seeder.GetSourceByName("Core Rulebook").Id,
+                SourceId = CoreRulebook.ID,
                 Page = 619
             };
         }

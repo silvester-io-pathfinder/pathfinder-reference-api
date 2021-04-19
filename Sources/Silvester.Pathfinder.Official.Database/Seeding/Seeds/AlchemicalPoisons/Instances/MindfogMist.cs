@@ -1,6 +1,7 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -94,7 +95,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             return new SourcePage
             {
                 Id = Guid.Parse("1d06a375-4a3e-4487-95c1-5d207d5f98b0"),
-                SourceId = seeder.GetSourceByName("Core Rulebook").Id,
+                SourceId = CoreRulebook.ID,
                 Page = 553
             };
         }

@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses.Instan
             return new SourcePage
             {
                 Id = Guid.Parse("d83fc2c9-c14f-4684-9189-3256ae62fb2e"),
-                SourceId = seeder.GetSourceByName("Gamemastery Guide").Id,
+                SourceId = GamemasteryGuide.ID,
                 Page = 93
             };
         }

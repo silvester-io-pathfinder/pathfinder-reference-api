@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
             return new SourcePage
             {
                 Id = Guid.Parse("1960dd05-ab39-4e03-9913-43f1d1b6a1b2"),
-                SourceId = seeder.GetSourceByName("Bestiary 2").Id,
+                SourceId = Bestiary2.ID,
                 Page = 72
             };
         }

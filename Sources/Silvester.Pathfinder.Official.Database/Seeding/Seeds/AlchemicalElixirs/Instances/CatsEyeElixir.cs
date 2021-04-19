@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -55,7 +56,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             return new SourcePage
             {
                 Id = Guid.Parse("6773943d-c2fc-4e8a-ba93-e1d4d9766757"),
-                SourceId = seeder.GetSourceByName("Core Rulebook").Id,
+                SourceId = CoreRulebook.ID,
                 Page = 547
             };
         }

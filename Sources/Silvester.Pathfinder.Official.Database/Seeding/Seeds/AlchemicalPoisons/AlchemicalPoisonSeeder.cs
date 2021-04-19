@@ -10,8 +10,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
     {
         public ModelBuilder Builder { get; }
 
-        private Source[] Sources { get; }
-
         private Trait[] Traits { get; }
 
         private Bulk[] Bulks { get; }
@@ -22,10 +20,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
         
         private ActionType[] ActionTypes { get; }
 
-        public AlchemicalPoisonSeeder(ModelBuilder builder, Source[] sources, Trait[] traits, Bulk[] bulks, SavingThrowStat[] savingThrowStats, DamageType[] damageTypes, ActionType[] actionTypes)
+        public AlchemicalPoisonSeeder(ModelBuilder builder, Trait[] traits, Bulk[] bulks, SavingThrowStat[] savingThrowStats, DamageType[] damageTypes, ActionType[] actionTypes)
         {
             Builder = builder;
-            Sources = sources;
             Traits = traits;
             Bulks = bulks;
             SavingThrowStats = savingThrowStats;
@@ -40,11 +37,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 AbstractAlchemicalPoisonTemplate template = (AbstractAlchemicalPoisonTemplate)Activator.CreateInstance(templateType)!;
                 template.Seed(this);
             }
-        }
-
-        public Source GetSourceByName(string name)
-        {
-            return Sources.Filter((e) => e.Name, name).First();
         }
 
         public Bulk GetBulkByName(string name)

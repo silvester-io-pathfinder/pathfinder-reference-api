@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class AlchemicalToolPotencySeeder : IEntitySeeder<AlchemicalToolPotency>
+    public class AlchemicalToolPotencySeeder : IEntitySeed<AlchemicalToolPotency>
     {
         public IEnumerable<AlchemicalToolPotency> GetSeedEntities()
         {

@@ -10,14 +10,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions
     {
         public ModelBuilder Builder { get; }
 
-        public Source[] Sources{ get; }
-
         public ConditionCategory[] ConditionCategories { get; }
 
-        public ConditionSeeder(ModelBuilder builder, Source[] sources, ConditionCategory[] conditionCategories)
+        public ConditionSeeder(ModelBuilder builder, ConditionCategory[] conditionCategories)
         {
             Builder = builder;
-            Sources = sources;
             ConditionCategories = conditionCategories;
         }
 
@@ -28,11 +25,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions
                 AbstractConditionTemplate template = (AbstractConditionTemplate)Activator.CreateInstance(templateType)!;
                 template.Seed(this);
             }
-        }
-
-        public Source GetSourceByName(string name)
-        {
-            return Sources.Filter((e) => e.Name, name).First();
         }
 
         public ConditionCategory GetCategoryByName(string name)

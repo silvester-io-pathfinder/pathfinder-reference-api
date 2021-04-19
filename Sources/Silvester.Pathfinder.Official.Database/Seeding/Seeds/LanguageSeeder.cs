@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class LanguageSeeder : IEntitySeeder<Language>
+    public class LanguageSeeder : IEntitySeed<Language>
     {
         public IEnumerable<Language> GetSeedEntities()
         {

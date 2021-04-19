@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public RaceSize Size { get; set; } = default!;
 
         public Guid RarityId { get; set; }
-        public RaceRarity Rarity { get; set; } = default!;
+        public Rarity Rarity { get; set; } = default!;
 
         public ICollection<Language> Languages { get; set; } = new List<Language>();
 

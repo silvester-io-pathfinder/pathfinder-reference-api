@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
             return new SourcePage
             {
                 Id = Guid.Parse("13952f0f-9ded-47eb-880c-415028b67700"),
-                SourceId = seeder.GetSourceByName("Gamemastery Guide").Id,
+                SourceId = GamemasteryGuide.ID,
                 Page = 120
             };
         }

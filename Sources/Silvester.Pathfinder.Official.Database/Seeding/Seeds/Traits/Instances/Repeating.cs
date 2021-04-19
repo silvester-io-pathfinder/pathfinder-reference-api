@@ -1,0 +1,40 @@
+﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
+{
+    public class Repeating : AbstractTraitTemplate
+    {
+        public static readonly Guid ID = Guid.Parse("");
+
+        protected override Trait GetTrait(TraitSeeder seeder)
+        {
+            return new Trait
+            {
+                Id = ID,
+                Name = "Repeating",
+            };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A repeating weapon is typically a type of crossbow that has a shorter reload time. These weapons can't be loaded with individual bolts like other crossbows; instead, they require a magazine of specialized ammunition to be loaded into a special slot. Once that magazine is in place, the ammunition is automatically loaded each time the weapon is cocked to fire, reducing its reload to the value in its reload entry (typically 0). When the ammunition runs out, a new magazine must be loaded, which requires a free hand and 3 Interact actions (to remove the old magazine, retrieve the new magazine, and slot the new magazine in place). These actions don't need to be consecutive." };
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse(""),
+                SourceId = Pathfinder165.ID,
+                Page = 73
+            };
+        }
+    }
+}

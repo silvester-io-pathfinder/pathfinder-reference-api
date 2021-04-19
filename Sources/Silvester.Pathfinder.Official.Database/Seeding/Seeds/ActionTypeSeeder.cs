@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class ActionTypeSeeder : IEntitySeeder<ActionType>
+    public class ActionTypeSeeder : IEntitySeed<ActionType>
     {
         public IEnumerable<ActionType> GetSeedEntities()
         {

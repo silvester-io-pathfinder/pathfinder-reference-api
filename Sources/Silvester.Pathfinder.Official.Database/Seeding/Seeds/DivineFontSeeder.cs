@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class DivineFontSeeder : IEntitySeeder<DivineFont>
+    public class DivineFontSeeder : IEntitySeed<DivineFont>
     {
         public IEnumerable<DivineFont> GetSeedEntities()
         {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class HeritageRaritySeeder : IEntitySeeder<HeritageRarity>
+    public class HeritageRaritySeeder : IEntitySeed<HeritageRarity>
     {
         public IEnumerable<HeritageRarity> GetSeedEntities()
         {

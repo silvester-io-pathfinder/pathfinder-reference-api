@@ -1,5 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
             return new SourcePage
             {
                 Id = Guid.Parse("26ed3169-4bdd-4ff2-8392-3ea20f036ae9"),
-                SourceId = seeder.GetSourceByName("Pathfinder #155: Lord of the Black Sands").Id,
+                SourceId = Pathfinder155.ID,
                 Page = 73
             };
         }

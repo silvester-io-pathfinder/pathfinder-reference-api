@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class DeitySeeder : IEntitySeeder<Deity>
+    public class DeitySeeder : IEntitySeed<Deity>
     {
         public IEnumerable<Deity> GetSeedEntities()
         {
@@ -33,7 +33,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class DeityFollowerAlignmentJoiner : IEntityJoiner<Deity, Alignment, DeityFollowerAlignment>
+    public class DeityFollowerAlignmentJoiner : IEntityJoin<Deity, Alignment, DeityFollowerAlignment>
     {
         public DeityFollowerAlignment[] Join(Deity deity, Alignment[] alignments)
         {
@@ -84,7 +84,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class DeityDivineFontJoiner : IEntityJoiner<Deity, DivineFont>
+    public class DeityDivineFontJoiner : IEntityJoin<Deity, DivineFont>
     {
         public DivineFont[] Join(Deity deity, DivineFont[] fonts)
         {
@@ -126,7 +126,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class DeityDomainJoiner : IEntityJoiner<Deity, Domain>
+    public class DeityDomainJoiner : IEntityJoin<Deity, Domain>
     {
         public Domain[] Join(Deity deity, Domain[] fonts)
         {

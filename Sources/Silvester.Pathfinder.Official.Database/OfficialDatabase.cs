@@ -12,6 +12,9 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.RaceRarities;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.RaceSizes;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells;
 using System;
 using System.Collections.Generic;
@@ -45,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database
 
         public DbSet<Stat> Stats { get; set; } = default!;
 
-        public DbSet<RaceRarity> RaceRarities { get; set; } = default!;
+        public DbSet<Rarity> RaceRarities { get; set; } = default!;
 
         public DbSet<RaceTrait> RaceTraits { get; set; } = default!;
 
@@ -177,7 +180,6 @@ namespace Silvester.Pathfinder.Official.Database
             Domain[] domainSeed = modelBuilder.Entity<Domain>().HasBaseEntityKey().HasDataSeed(new DomainSeeder());
             Alignment[] alignmentSeed = modelBuilder.Entity<Alignment>().HasBaseEntityKey().HasDataSeed(new AlignmentSeeder());
             ActionType[] actionTypeSeed = modelBuilder.Entity<ActionType>().HasBaseEntityKey().HasDataSeed(new ActionTypeSeeder());
-            Source[] sourceSeed = modelBuilder.Entity<Source>().HasBaseEntityKey().HasDataSeed(new SourceSeeder());
             ArmorGroup[] armourGroupSeed = modelBuilder.Entity<ArmorGroup>().HasBaseEntityKey().HasDataSeed(new ArmorGroupSeeder());
             Proficiency[] proficiencySeed = modelBuilder.Entity<Proficiency>().HasBaseEntityKey().HasDataSeed(new ProficiencySeeder());
             Bulk[] bulkSeed = modelBuilder.Entity<Bulk>().HasBaseEntityKey().HasDataSeed(new BulkSeeder());
@@ -185,10 +187,8 @@ namespace Silvester.Pathfinder.Official.Database
             Skill[] skillSeed = modelBuilder.Entity<Skill>().HasBaseEntityKey().HasDataSeed(new SkillSeeder());
             DeityCategory[] deityCategoriesSeed = modelBuilder.Entity<DeityCategory>().HasBaseEntityKey().HasDataSeed(new DeityCategorySeeder());
             Deity[] deitySeed = modelBuilder.Entity<Deity>().HasBaseEntityKey().HasDataSeed(new DeitySeeder());
-            RaceRarity[] raceRaritySeed = modelBuilder.Entity<RaceRarity>().HasBaseEntityKey().HasDataSeed(new RaceRaritySeeder());
             DivineFont[] divineFontSeed = modelBuilder.Entity<DivineFont>().HasBaseEntityKey().HasDataSeed(new DivineFontSeeder());
             RaceTrait[] raceTraitSeed = modelBuilder.Entity<RaceTrait>().HasBaseEntityKey().HasDataSeed(new RaceTraitSeeder());
-            RaceSize[] raceSizeSeed = modelBuilder.Entity<RaceSize>().HasBaseEntityKey().HasDataSeed(new RaceSizeSeeder());
             LanguageType[] languageTypeSeed = modelBuilder.Entity<LanguageType>().HasBaseEntityKey().HasDataSeed(new LanguageTypeSeeder());
             Language[] languageSeed = modelBuilder.Entity<Language>().HasBaseEntityKey().HasDataSeed(new LanguageSeeder());
             Race[] raceSeed = modelBuilder.Entity<Race>().HasBaseEntityKey().HasDataSeed(new RaceSeeder());
@@ -245,14 +245,17 @@ namespace Silvester.Pathfinder.Official.Database
             new SpellSeeder(modelBuilder, magicSchoolSeed, magicTraditionSeed, spellComponentSeed, traitSeed, actionTypeSeed, spellTypeSeed, savingThrowStatSeed).Seed();
             new ClassSeeder(modelBuilder, traitSeed, actionTypeSeed, featTypeSeed, proficiencySeed, loreSeed, heritageRaritySeed, itemCategorySeed, skillSeed, statSeed, magicTraditionSeed).Seed();
             new ActionSeeder(modelBuilder, actionTypeSeed, traitSeed).Seed();
-            new ConditionSeeder(modelBuilder, sourceSeed, conditionCategoriesSeed).Seed();
-            new DiseaseSeeder(modelBuilder, sourceSeed, traitSeed, savingThrowStatSeed, damageTypeSeed).Seed();
-            new AlchemicalBombSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, potionPotencySeed).Seed();
-            new AlchemicalElixirSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, potionPotencySeed).Seed();
-            new AlchemicalPoisonSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, savingThrowStatSeed, damageTypeSeed, actionTypeSeed).Seed();
-            new AlchemicalToolSeeder(modelBuilder, sourceSeed, traitSeed, bulkSeed, alchemicalToolPotencySeed, actionTypeSeed).Seed();
-            new HazardSeeder(modelBuilder, traitSeed, sourceSeed, hazardImmunitySeed, hazardComplexitySeed, skillSeed, proficiencySeed, hazardTypeSeed, attackTypeSeed, actionTypeSeed, damageTypeSeed, savingThrowStatSeed).Seed();
-            new ItemCurseSeeder(modelBuilder, sourceSeed, traitSeed).Seed();
+            new ConditionSeeder(modelBuilder, conditionCategoriesSeed).Seed();
+            new DiseaseSeeder(modelBuilder, traitSeed, savingThrowStatSeed, damageTypeSeed).Seed();
+            new AlchemicalBombSeeder(modelBuilder, traitSeed, bulkSeed, potionPotencySeed).Seed();
+            new AlchemicalElixirSeeder(modelBuilder, traitSeed, bulkSeed, potionPotencySeed).Seed();
+            new AlchemicalPoisonSeeder(modelBuilder, traitSeed, bulkSeed, savingThrowStatSeed, damageTypeSeed, actionTypeSeed).Seed();
+            new AlchemicalToolSeeder(modelBuilder, traitSeed, bulkSeed, alchemicalToolPotencySeed, actionTypeSeed).Seed();
+            new HazardSeeder(modelBuilder, traitSeed, hazardImmunitySeed, hazardComplexitySeed, skillSeed, proficiencySeed, hazardTypeSeed, attackTypeSeed, actionTypeSeed, damageTypeSeed, savingThrowStatSeed).Seed();
+            new ItemCurseSeeder(modelBuilder, traitSeed).Seed();
+            new RaritySeeder(modelBuilder).Seed();
+            new RaceSizeSeeder(modelBuilder).Seed();
+            new SourceSeeder(modelBuilder).Seed();
         }
     }
 }

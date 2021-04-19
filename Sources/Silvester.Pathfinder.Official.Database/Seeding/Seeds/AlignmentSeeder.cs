@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class AlignmentSeeder : IEntitySeeder<Alignment>
+    public class AlignmentSeeder : IEntitySeed<Alignment>
     {
         public IEnumerable<Alignment> GetSeedEntities()
         {

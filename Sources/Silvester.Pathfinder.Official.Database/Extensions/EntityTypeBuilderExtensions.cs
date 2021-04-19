@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             return builder;
         }
 
-        public static T[] HasDataSeed<T>(this EntityTypeBuilder<T> builder, IEntitySeeder<T> seeder)
+        public static T[] HasDataSeed<T>(this EntityTypeBuilder<T> builder, IEntitySeed<T> seeder)
             where T : class
         {
             T[] array = seeder.GetSeedEntities().ToArray();

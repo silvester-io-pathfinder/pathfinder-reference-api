@@ -1,0 +1,19 @@
+﻿using Silvester.Pathfinder.Official.Database.Models;
+using System;
+
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances
+{
+    public class Pathfinder145 : AbstractSourceTemplate
+    {
+        public static readonly Guid ID = Guid.Parse("7468b780-cb6d-4bdc-a456-3977b1f43410");
+
+        protected override Source GetSource()
+        {
+            return new Source
+            {
+                Id = ID,
+                Name = "Pathfinder #145: Hellknight Hill"
+            };
+        }
+    }
+}

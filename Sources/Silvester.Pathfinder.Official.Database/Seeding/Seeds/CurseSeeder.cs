@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class CurseSeeder : IEntitySeeder<Curse>
+    public class CurseSeeder : IEntitySeed<Curse>
     {
         public IEnumerable<Curse> GetSeedEntities()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
             yield return new Curse { Id = Guid.Parse("777ae2c9-85e4-444a-9bce-8ef9af37eee4"), Level = 20, Name = "Sword of Anathema", DifficultyCheck = 40, SavingThrowStatId = Guid.Parse("a71929b0-9dff-492a-9bf9-8f9cadda198c"), Description = "With divine intervention, followers of a deity can bestow this curse upon an enemy of the faith.", Effect = "You are marked by the deity invoked as an enemy of the church. You gain weakness 10 to damage dealt by worshippers of that deity." };
         }
 
-        public class CurseTraitJoiner : IEntityJoiner<Curse, Trait>
+        public class CurseTraitJoiner : IEntityJoin<Curse, Trait>
         {
             public Trait[] Join(Curse curse, Trait[] traits)
             {

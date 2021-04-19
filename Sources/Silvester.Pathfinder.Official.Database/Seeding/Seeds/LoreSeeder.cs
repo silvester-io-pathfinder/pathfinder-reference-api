@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class LoreSeeder : IEntitySeeder<Lore>
+    public class LoreSeeder : IEntitySeed<Lore>
     {
         public IEnumerable<Lore> GetSeedEntities()
         {
@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class PlaneLoreSeeder : IEntitySeeder<PlaneLore>
+    public class PlaneLoreSeeder : IEntitySeed<PlaneLore>
     {
         public IEnumerable<PlaneLore> GetSeedEntities()
         {
@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class DeityLoreSeeder : IEntitySeeder<DeityLore>
+    public class DeityLoreSeeder : IEntitySeed<DeityLore>
     {
         public IEnumerable<DeityLore> GetSeedEntities()
         {
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class CreatureLoreSeeder : IEntitySeeder<CreatureLore>
+    public class CreatureLoreSeeder : IEntitySeed<CreatureLore>
     {
         public IEnumerable<CreatureLore> GetSeedEntities()
         {
@@ -75,7 +75,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class TerrainLoreSeeder : IEntitySeeder<TerrainLore>
+    public class TerrainLoreSeeder : IEntitySeed<TerrainLore>
     {
         public IEnumerable<TerrainLore> GetSeedEntities()
         {
@@ -84,7 +84,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class SettlementLoreSeeder : IEntitySeeder<SettlementLore>
+    public class SettlementLoreSeeder : IEntitySeed<SettlementLore>
     {
         public IEnumerable<SettlementLore> GetSeedEntities()
         {
@@ -93,7 +93,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class ConsumableLoreSeeder : IEntitySeeder<ConsumableLore>
+    public class ConsumableLoreSeeder : IEntitySeed<ConsumableLore>
     {
         public IEnumerable<ConsumableLore> GetSeedEntities()
         {

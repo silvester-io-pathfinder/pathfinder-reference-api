@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class HazardComplexitySeeder : IEntitySeeder<HazardComplexity>
+    public class HazardComplexitySeeder : IEntitySeed<HazardComplexity>
     {
         public IEnumerable<HazardComplexity> GetSeedEntities()
         {

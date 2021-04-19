@@ -10,18 +10,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases
     {
         public ModelBuilder Builder { get; }
 
-        private Source[] Sources { get; }
-
         private Trait[] Traits { get; }
 
         private SavingThrowStat[] SavingThrowStats { get; }
 
         private DamageType[] DamageTypes { get; }
 
-        public DiseaseSeeder(ModelBuilder builder, Source[] sources, Trait[] traits, SavingThrowStat[] savingThrowStats, DamageType[] damageTypes)
+        public DiseaseSeeder(ModelBuilder builder,  Trait[] traits, SavingThrowStat[] savingThrowStats, DamageType[] damageTypes)
         {
             Builder = builder;
-            Sources = sources;
             Traits = traits;
             SavingThrowStats = savingThrowStats;
             DamageTypes = damageTypes;
@@ -39,11 +36,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases
         public Trait[] FilterTraits(params string[] traitNames)
         {
             return Traits.Filter(e => e.Name, traitNames);
-        }
-
-        public Source GetSourceByName(string name)
-        {
-            return Sources.Filter((e) => e.Name, name).First();
         }
 
         public SavingThrowStat GetSavingThrowStatByName(string name)

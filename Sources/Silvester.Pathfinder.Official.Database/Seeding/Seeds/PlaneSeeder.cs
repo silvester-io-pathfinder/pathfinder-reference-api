@@ -8,7 +8,7 @@ using Plane = Silvester.Pathfinder.Official.Database.Models.Plane;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class PlaneSeeder : IEntitySeeder<Plane>
+    public class PlaneSeeder : IEntitySeed<Plane>
     {
         public IEnumerable<Plane> GetSeedEntities()
         {
@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class PlaneTraitJoiner : IEntityJoiner<Plane, PlaneTrait>
+    public class PlaneTraitJoiner : IEntityJoin<Plane, PlaneTrait>
     {
         public PlaneTrait[] Join(Plane plane, PlaneTrait[] traits)
         {

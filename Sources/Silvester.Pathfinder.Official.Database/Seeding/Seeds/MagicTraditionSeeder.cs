@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class MagicTraditionSeeder : IEntitySeeder<MagicTradition>
+    public class MagicTraditionSeeder : IEntitySeed<MagicTradition>
     {
         public IEnumerable<MagicTradition> GetSeedEntities()
         {

@@ -10,14 +10,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses
     {
         public ModelBuilder Builder { get; }
 
-        private Source[] Sources { get; }
-
         private Trait[] Traits { get; }
 
-        public ItemCurseSeeder(ModelBuilder builder, Source[] sources, Trait[] traits)
+        public ItemCurseSeeder(ModelBuilder builder,  Trait[] traits)
         {
             Builder = builder;
-            Sources = sources;
             Traits = traits;
         }
 
@@ -33,11 +30,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses
         public Trait[] FilterTraits(params string[] traitNames)
         {
             return Traits.Filter(e => e.Name, traitNames);
-        }
-
-        public Source GetSourceByName(string name)
-        {
-            return Sources.Filter((e) => e.Name, name).First();
         }
     }
 }

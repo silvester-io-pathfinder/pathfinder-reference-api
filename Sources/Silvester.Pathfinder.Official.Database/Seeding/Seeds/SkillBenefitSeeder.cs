@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class SkillBenefitTypeSeeder : IEntitySeeder<BenefitType>
+    public class SkillBenefitTypeSeeder : IEntitySeed<BenefitType>
     {
         public IEnumerable<BenefitType> GetSeedEntities()
         {

@@ -121,7 +121,7 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             }
         }
 
-        public static ModelBuilder Join<TSource, TTarget>(this ModelBuilder builder, TSource[] sources, TTarget[] targets, IEntityJoiner<TSource, TTarget> joiner)
+        public static ModelBuilder Join<TSource, TTarget>(this ModelBuilder builder, TSource[] sources, TTarget[] targets, IEntityJoin<TSource, TTarget> joiner)
             where TSource : class
             where TTarget : class
         {
@@ -137,7 +137,7 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             return builder;
         }
 
-        public static ModelBuilder Join<TSource, TTarget>(this ModelBuilder builder, TSource[] sources, IEntityJoiner<TSource, TTarget> joiner)
+        public static ModelBuilder Join<TSource, TTarget>(this ModelBuilder builder, TSource[] sources, IEntityJoin<TSource, TTarget> joiner)
             where TSource : class
             where TTarget : class
         {
@@ -155,7 +155,7 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             return builder;
         }
 
-        public static ModelBuilder Join<TSource, TTarget, TJoin>(this ModelBuilder builder, TSource[] sources, TTarget[] targets, IEntityJoiner<TSource, TTarget, TJoin> joiner)
+        public static ModelBuilder Join<TSource, TTarget, TJoin>(this ModelBuilder builder, TSource[] sources, TTarget[] targets, IEntityJoin<TSource, TTarget, TJoin> joiner)
             where TSource : class
             where TTarget : class
             where TJoin : class

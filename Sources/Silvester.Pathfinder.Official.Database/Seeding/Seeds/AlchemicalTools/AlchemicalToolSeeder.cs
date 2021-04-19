@@ -10,8 +10,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools
     {
         public ModelBuilder Builder { get; }
 
-        private Source[] Sources { get; }
-
         private Trait[] Traits { get; }
 
         private Bulk[] Bulks { get; }
@@ -20,10 +18,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools
         
         private ActionType[] ActionTypes { get; }
 
-        public AlchemicalToolSeeder(ModelBuilder builder, Source[] sources, Trait[] traits, Bulk[] bulks, AlchemicalToolPotency[] alchemicalToolPotencies, ActionType[] actionTypes)
+        public AlchemicalToolSeeder(ModelBuilder builder, Trait[] traits, Bulk[] bulks, AlchemicalToolPotency[] alchemicalToolPotencies, ActionType[] actionTypes)
         {
             Builder = builder;
-            Sources = sources;
             Traits = traits;
             Bulks = bulks;
             AlchemicalToolPotencies = alchemicalToolPotencies;
@@ -37,11 +34,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools
                 AbstractAlchemicalToolTemplate template = (AbstractAlchemicalToolTemplate)Activator.CreateInstance(templateType)!;
                 template.Seed(this);
             }
-        }
-
-        public Source GetSourceByName(string name)
-        {
-            return Sources.Filter((e) => e.Name, name).First();
         }
 
         public Bulk GetBulkByName(string name)

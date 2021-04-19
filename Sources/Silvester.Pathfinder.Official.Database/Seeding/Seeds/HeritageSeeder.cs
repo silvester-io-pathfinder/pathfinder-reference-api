@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class HeritageSeeder : IEntitySeeder<Heritage>
+    public class HeritageSeeder : IEntitySeed<Heritage>
     {
         public IEnumerable<Heritage> GetSeedEntities()
         {
@@ -70,7 +70,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class HeritageRaceJoiner : IEntityJoiner<Heritage, Race>
+    public class HeritageRaceJoiner : IEntityJoin<Heritage, Race>
     {
         public Race[] Join(Heritage heritage, Race[] races)
         {

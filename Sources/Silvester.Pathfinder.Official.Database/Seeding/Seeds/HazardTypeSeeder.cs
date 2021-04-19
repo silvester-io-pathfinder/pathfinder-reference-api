@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class HazardTypeSeeder : IEntitySeeder<HazardType>
+    public class HazardTypeSeeder : IEntitySeed<HazardType>
     {
         public IEnumerable<HazardType> GetSeedEntities()
         {
@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class HazardTypeSourcePageSeeder : IEntitySeeder<SourcePage>
+    public class HazardTypeSourcePageSeeder : IEntitySeed<SourcePage>
     {
         public IEnumerable<SourcePage> GetSeedEntities()
         {

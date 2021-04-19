@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class RaceSeeder : IEntitySeeder<Race>
+    public class RaceSeeder : IEntitySeed<Race>
     {
         public IEnumerable<Race> GetSeedEntities()
         {
@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class RaceTraitJoiner : IEntityJoiner<Race, RaceTrait>
+    public class RaceTraitJoiner : IEntityJoin<Race, RaceTrait>
     {
         public RaceTrait[] Join(Race race, RaceTrait[] raceTraits)
         {
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
         }
     }
 
-    public class RaceLanguageJoiner : IEntityJoiner<Race, Language>
+    public class RaceLanguageJoiner : IEntityJoin<Race, Language>
     {
         public Language[] Join(Race race, Language[] languages)
         {

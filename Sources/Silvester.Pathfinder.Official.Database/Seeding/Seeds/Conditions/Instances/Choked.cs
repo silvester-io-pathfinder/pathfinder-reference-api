@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
 
         public override SourcePage? GetSourcePage(ConditionSeeder seeder)
         {
-            return null; ;
+            return null; 
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds
 {
-    public class PlaneCategorySeeder : IEntitySeeder<PlaneCategory>
+    public class PlaneCategorySeeder : IEntitySeed<PlaneCategory>
     {
         public IEnumerable<PlaneCategory> GetSeedEntities()
         {
