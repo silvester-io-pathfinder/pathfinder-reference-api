@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Good : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("b3fff128-4e31-483e-be2a-6b9d769ced22");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Good effects often manipulate energy from good-aligned Outer Planes and are antithetical to evil divine servants or divine servants of evil deities. A creature with this trait is good in alignment." };
+            yield return new TextBlock { Id = Guid.Parse("70dca6af-f677-47cd-b3a3-5d81369edc61"), Type = TextBlockType.Text, Text = "Good effects often manipulate energy from good-aligned Outer Planes and are antithetical to evil divine servants or divine servants of evil deities. A creature with this trait is good in alignment." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("f1700c40-e8ff-47a9-a84c-63b999e5dd24"),
                 SourceId = CoreRulebook.ID,
                 Page = 632
             };

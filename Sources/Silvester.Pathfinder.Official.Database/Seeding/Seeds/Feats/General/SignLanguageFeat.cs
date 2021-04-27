@@ -7,16 +7,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class SignLanguageFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "No Action";
+        public static readonly Guid ID = Guid.Parse("7aded813-2325-4a4d-aea7-077680584823");
 
         protected override Feat GetFeat()
         {
             return new Feat
             {
-                Id = Guid.Parse("7aded813-2325-4a4d-aea7-077680584823"),
+                Id = ID,
                 Name = "Sign Language",
-                Level = 1
+                Level = 1,
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
 
@@ -26,15 +27,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("6f804bdb-e8ea-4b94-b8da-9dd428098588"), Type = Utilities.Text.TextBlockType.Text, Text = "Sign language is difficult to understand during combat due to the level of attention needed, unlike basic gestures like pointing at a foe to suggest a target. Sign language is hard to use in areas of low visibility, just like speech is difficult in a noisy environment." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("83519dcb-ddc3-4a7f-b404-b6822034a00e"), RequiredSkillId = seeder.GetSkill("Society"), RequiredProficiencyId = seeder.GetProficiency("Trained") };
+            yield return new SkillPrerequisite { Id = Guid.Parse("83519dcb-ddc3-4a7f-b404-b6822034a00e"), RequiredSkillId = Skills.Instances.Society.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "General";
-            yield return "Skill";
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Shoony : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("7e07fa4f-30da-4b49-977a-6ca15743ccba");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "There was not explicit description for this trait." };
+            yield return new TextBlock { Id = Guid.Parse("3748d4f7-2335-449d-9eb3-a4aceb07d8bf"), Type = TextBlockType.Text, Text = "There was not explicit description for this trait." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ffe14b0c-1724-4730-bfdb-0d0b41d55727"),
                 SourceId = Pathfinder153.ID,
                 Page = 70
             };

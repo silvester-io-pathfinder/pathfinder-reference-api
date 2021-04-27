@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
@@ -13,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
     {
         public static readonly Guid ID = Guid.Parse("3ad83166-b025-4e40-8e25-f82778e35c0b");
 
-        protected override Hazard GetHazard(HazardSeeder seeder)
+        protected override Hazard GetHazard()
         {
             return new Hazard
             {
@@ -26,12 +23,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Reflex = 12,
                 Reset = "The trap still causes creatures to fall forever if they fall in, but the trapdoor must be reset manually for the trap to become hidden again.",
                 CanBeDetectedMagically = true,
-                TypeId = seeder.GetHazardTypeByName("Traps").Id,
-                ComplexityId = seeder.GetComplexityByName("Simple").Id
+                TypeId = HazardTypes.Instances.Traps.ID,
+                ComplexityId = HazardComplexities.Instances.Simple.ID
             };
         }
 
-        protected override IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder)
+        protected override IEnumerable<HazardComponent> GetComponents()
         {
             yield return new HazardComponent
             {
@@ -43,28 +40,28 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             };
         }
 
-        protected override IEnumerable<string> GetImmunities()
+        protected override IEnumerable<Guid> GetImmunities()
         {
-            yield return "Critical Hits";
-            yield return "Object Immunities";
-            yield return "Precision Damage";
+            yield return HazardImmunities.Instances.CriticalHits.ID;
+            yield return HazardImmunities.Instances.ObjectImmunities.ID;
+            yield return HazardImmunities.Instances.PrecisionDamage.ID;
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Magical";
-            yield return "Mechanical";
-            yield return "Trap";
+            yield return Traits.Instances.Magical.ID;
+            yield return Traits.Instances.Mechanical.ID;
+            yield return Traits.Instances.Trap.ID;
         }
 
-        protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
+        protected override IEnumerable<HazardAction> GetActions()
         {
             yield return new HazardAction
             {
                 Id = Guid.Parse("54b9c0cb-563f-412d-aa62-829de3b015c5"),
                 Name = "Infinite Pitfall",
                 Trigger = "A creature walks onto the trapdoor",
-                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
+                ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = new List<TextBlock>
                 {
                     new TextBlock { Id = Guid.Parse("63bd40ef-eda7-4641-8d14-e4cd5efbfbaf"), Type = TextBlockType.Text, Text = "The triggering creature falls in and continues to fall, potentially forever. That creature can try to Grab an Edge to avoid falling (page 472). The DC to Climb the walls or Grab an Edge is 26" },
@@ -73,35 +70,35 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             };
         }
 
-        protected override HazardDetectionRequirement GetDetectionRequirement(HazardSeeder seeder)
+        protected override HazardDetectionRequirement GetDetectionRequirement()
         {
             return new HazardDetectionRequirement
             {
                 Id = Guid.Parse("8984fb7e-078f-4a2b-8db0-d373dcb044e6"),
                 Addendum = "The DC for detection becomes 0 if the trapdoor is disabled or broken.",
-                RequiredProficiencyId = seeder.GetProficiencyByName("Untrained").Id,
+                RequiredProficiencyId = Proficiencies.Instances.Untrained.ID,
                 DifficultyCheck = 30
             };
         }
 
-        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements()
         {
             yield return new HazardDisableRequirement
             {
                 Id = Guid.Parse("c95a878d-b931-44dc-b7bb-8ab9b0318774"),
-                SkillId = seeder.GetSkillByName("Thievery").Id,
-                RequiredProficiencyId = seeder.GetProficiencyByName("Trained").Id,
+                SkillId = Skills.Instances.Thievery.ID,
+                RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
                 Description = "to remove the trapdoor",
                 DifficultyCheck = 28
             };
         }
 
-        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements()
         {
             yield break;
         }
 
-        protected override SourcePage GetSourcePage(HazardSeeder seeder)
+        protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {

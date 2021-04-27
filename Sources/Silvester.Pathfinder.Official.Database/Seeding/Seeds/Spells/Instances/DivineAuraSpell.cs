@@ -7,20 +7,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DivineAuraSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Abjuration";
+        public static readonly Guid ID = Guid.Parse("b6f25115-9358-44eb-bfc2-37b01c3863f4");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("b6f25115-9358-44eb-bfc2-37b01c3863f4"),
+                Id = ID,
                 Name = "Divine Aura",
                 Level = 1,
                 Area = "10-foot emanation.",
                 Targets = "Allies in the area.",
-                Duration = "Sustained up to 1 minute."
+                Duration = "Sustained up to 1 minute.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Abjuration.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID
             };
         }
 
@@ -32,20 +34,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("766add6f-238c-4106-ae46-8595907ce970"), Type = Utilities.Text.TextBlockType.Text, Text = "The first time you Sustain the Spell each round, the divine aura’s radius grows 10 feet." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
+            yield return MagicTraditions.Instances.Divine.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Abjuration";
+            yield return Traits.Instances.Abjuration.ID;
         }
     }
 }

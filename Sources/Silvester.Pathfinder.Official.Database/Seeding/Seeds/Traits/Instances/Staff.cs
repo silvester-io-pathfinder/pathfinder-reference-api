@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Staff : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("64e04097-2c65-495f-8f2c-8fbff3b8123a");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "This magic item holds spells of a particular theme and allows a spellcaster to cast additional spells by preparing the staff." };
+            yield return new TextBlock { Id = Guid.Parse("6062dd69-7309-4945-b43d-7212dceb871b"), Type = TextBlockType.Text, Text = "This magic item holds spells of a particular theme and allows a spellcaster to cast additional spells by preparing the staff." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0c4fa786-2d3e-4b57-bf87-5069a5c767a7"),
                 SourceId = CoreRulebook.ID,
                 Page = 637
             };

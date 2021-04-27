@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Revelation : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("162b1085-1426-4953-8f5a-b11ff6432163");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Effects with this trait see things as they truly are." };
+            yield return new TextBlock { Id = Guid.Parse("f8f2c3bc-1d75-4e2f-a5df-78d6d73f5085"), Type = TextBlockType.Text, Text = "Effects with this trait see things as they truly are." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("37dd8a63-be1b-4e2b-912d-2f3be9b05c50"),
                 SourceId = CoreRulebook.ID,
                 Page = 635
             };

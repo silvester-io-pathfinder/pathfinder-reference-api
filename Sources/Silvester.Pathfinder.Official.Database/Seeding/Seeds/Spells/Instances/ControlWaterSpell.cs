@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ControlWaterSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Evocation";
+        public static readonly Guid ID = Guid.Parse("b2cc63b2-466a-478a-b024-b785f2b722de");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("b2cc63b2-466a-478a-b024-b785f2b722de"),
+                Id = ID,
                 Name = "Control Water",
                 Level = 5,
                 Range = 500,
-                Area = "50 feet long by 50 feet wide"
+                Area = "50 feet long by 50 feet wide",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Evocation.ID,
             };
         }
 
@@ -28,22 +29,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("ecde9a96-ca65-4f65-85aa-9500e8417229"), Type = Utilities.Text.TextBlockType.Text, Text = "By imposing your will upon the water, you can raise or lower the level of water in the chosen area by 10 feet. Water creatures in the area are subjected to the effects of slow." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Evocation";
-            yield return "Water";
+            yield return Traits.Instances.Evocation.ID;
+            yield return Traits.Instances.Water.ID;
         }
     }
 }

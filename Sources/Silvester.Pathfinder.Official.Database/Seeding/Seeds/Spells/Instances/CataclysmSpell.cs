@@ -7,20 +7,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class CataclysmSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Evocation";
-        public override string SavingThrowStat => "Reflex";
+        public static readonly Guid ID = Guid.Parse("75ed7032-7a88-407c-a7d5-a4bd3e905ba1");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("75ed7032-7a88-407c-a7d5-a4bd3e905ba1"),
+                Id = ID,
                 Name = "Cataclysm",
                 Level = 10,
                 Range = 1000,
-                Area = "60-foot burst."
+                Area = "60-foot burst.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Evocation.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Reflex.ID
             };
         }
 
@@ -37,28 +38,28 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("4ed9cd14-123d-4859-9255-c36eac8a062e"), Type = Utilities.Text.TextBlockType.Enumeration, Text = "A massive wildfire burns in a sudden inferno, dealing 3d10 fire damage." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Acid";
-            yield return "Air";
-            yield return "Cold";
-            yield return "Earth";
-            yield return "Electricity";
-            yield return "Evocation";
-            yield return "Fire";
-            yield return "Water";
+            yield return Traits.Instances.Acid.ID;
+            yield return Traits.Instances.Air.ID;
+            yield return Traits.Instances.Cold.ID;
+            yield return Traits.Instances.Earth.ID;
+            yield return Traits.Instances.Electricity.ID;
+            yield return Traits.Instances.Evocation.ID;
+            yield return Traits.Instances.Fire.ID;
+            yield return Traits.Instances.Water.ID;
         }
     }
 }

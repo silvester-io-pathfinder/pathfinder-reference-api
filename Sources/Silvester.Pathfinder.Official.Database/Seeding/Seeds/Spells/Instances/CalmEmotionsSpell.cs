@@ -7,21 +7,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class CalmEmotionsSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Enchantment";
-        public override string SavingThrowStat => "Will";
+        public static readonly Guid ID = Guid.Parse("3a2a1f6e-f8d9-465d-94cc-1253a5c42062");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("3a2a1f6e-f8d9-465d-94cc-1253a5c42062"),
+                Id = ID,
                 Name = "Calm Emotions",
                 Level = 2,
                 Range = 120,
                 Area = "10-foot burst.",
-                Duration = "1 minute."
+                Duration = "1 minute.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Enchantment.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Will.ID
             };
         }
 
@@ -42,24 +43,24 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Emotion";
-            yield return "Enchantment";
-            yield return "Incapacitation";
-            yield return "Mental";
+            yield return Traits.Instances.Emotion.ID;
+            yield return Traits.Instances.Enchantment.ID;
+            yield return Traits.Instances.Incapacitation.ID;
+            yield return Traits.Instances.Mental.ID;
         }
     }
 }

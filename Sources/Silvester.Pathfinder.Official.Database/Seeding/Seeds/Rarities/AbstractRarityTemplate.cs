@@ -1,20 +1,17 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Utilities.Text;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RaceRarities
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Rarities
 {
-    public abstract class AbstractRarityTemplate
+    public abstract class AbstractRarityTemplate : EntityTemplate<Rarity>
     {
-        public void Seed(RaritySeeder seeder)
+        protected override Rarity GetEntity(ModelBuilder builder)
         {
-            Rarity rarity = GetRaceRarity(seeder);
-            seeder.Builder.AddData(rarity);
+            Rarity rarity = GetRaceRarity();
+            return rarity;
         }
 
-        protected abstract Rarity GetRaceRarity(RaritySeeder seeder);
+        protected abstract Rarity GetRaceRarity();
     }
 }

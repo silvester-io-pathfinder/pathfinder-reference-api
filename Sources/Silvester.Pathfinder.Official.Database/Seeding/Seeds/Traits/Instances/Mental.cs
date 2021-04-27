@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Mental : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d80c4c8b-646b-420c-a00d-cb15996520e2");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A mental effect can alter the target’s mind. It has no effect on an object or a mindless creature." };
+            yield return new TextBlock { Id = Guid.Parse("75bf6da2-1f43-4aa6-bb7a-2cedf3975b80"), Type = TextBlockType.Text, Text = "A mental effect can alter the target’s mind. It has no effect on an object or a mindless creature." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c16f9a66-551b-48dc-b73a-e701397c8b45"),
                 SourceId = CoreRulebook.ID,
                 Page = 634
             };

@@ -7,20 +7,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DisappearanceSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Illusion";
+        public static readonly Guid ID = Guid.Parse("614267ca-482a-4435-bcea-127594ea342f");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("614267ca-482a-4435-bcea-127594ea342f"),
+                Id = ID,
                 Name = "Disappearance",
                 Level = 8,
                 Range = 0,
                 Targets = "1 creature.",
-                Duration = "10 minutes"
+                Duration = "10 minutes",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Illusion.ID,
             };
         }
 
@@ -29,21 +30,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("2d77c0d6-b1c3-4787-a506-6f1b01bfdce1"), Type = Utilities.Text.TextBlockType.Text, Text = "You shroud a creature from others’ senses. The target becomes undetected, not just to sight but to all senses, allowing the target to count as invisible no matter what precise and imprecise senses an observer might have. It’s still possible for a creature to find the target by Seeking, looking for disturbed dust, hearing gaps in the sound spectrum, or finding some other way to discover the presence of an otherwise-undetectable creature" };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Material";
-            yield return "Somatic";
+            yield return SpellComponents.Instances.Material.ID;
+            yield return SpellComponents.Instances.Somatic.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Illusion";
+            yield return Traits.Instances.Illusion.ID;
         }
     }
 }

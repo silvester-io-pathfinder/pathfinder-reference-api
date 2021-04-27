@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class BurningHandsSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Evocation";
-        public override string SavingThrowStat => "Reflex";
+        public static readonly Guid ID = Guid.Parse("ea3e3b79-80ab-4ef4-9dc7-6fb38561a935");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("ea3e3b79-80ab-4ef4-9dc7-6fb38561a935"),
+                Id = ID,
                 Name = "Burning Hands",
                 Level = 1,
-                Area = "15-foot cone."
+                Area = "15-foot cone.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Evocation.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Reflex.ID
             };
         }
 
@@ -41,22 +42,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Evocation";
-            yield return "Fire";
+            yield return Traits.Instances.Evocation.ID;
+            yield return Traits.Instances.Fire.ID;
         }
     }
 }

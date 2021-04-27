@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
@@ -13,20 +10,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
     {
         public static readonly Guid ID = Guid.Parse("3ba38de5-8542-42e3-a2d4-13f4710177fa");
 
-        public override Disease GetDisease(DiseaseSeeder seeder)
+        public override Disease GetDisease()
         {
             return new Disease
             {
                 Id = ID,
                 Name = "Daemonic Famine",
                 Description = "No description was provided for this disease.",
-                SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = 29,
                 Onset = "Immediate"
             };
         }
 
-        public override SourcePage? GetSourcePage(DiseaseSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {
@@ -36,12 +33,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
             };
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
             yield break;
         }
 
-        public override IEnumerable<DiseaseStage> GetDiseaseStages(DiseaseSeeder seeder)
+        public override IEnumerable<DiseaseStage> GetDiseaseStages()
         {
             yield return new DiseaseStage
             {

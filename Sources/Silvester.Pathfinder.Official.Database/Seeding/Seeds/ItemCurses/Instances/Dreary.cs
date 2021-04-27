@@ -3,31 +3,30 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses.Instances
 {
     public class Dreary : AbstractItemCurseTemplate
     {
-        public override ItemCurse GetItemCurse(ItemCurseSeeder seeder)
+        public static readonly Guid ID = Guid.Parse("75b47175-fb61-4cf2-90dd-466970f59b76");
+
+		public override ItemCurse GetItemCurse()
         {
             return new ItemCurse
             {
-                Id = Guid.Parse("75b47175-fb61-4cf2-90dd-466970f59b76"),
+                Id = ID,
                 Name = "Dreary",
                 Usage = "curses armor",
                 Level = 3
             };
         }
 
-        public override IEnumerable<TextBlock> GetDetailBlocks(ItemCurseSeeder seeder)
+        public override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("df529fb2-6e29-4350-b747-012e2d9400b8"), Type = TextBlockType.Text, Text = "When you invest this armor, a personal-sized cloud appears over your head and begins to rain on you, and the armor fuses to you. This extinguishes uncovered flames and soaks other objects you are carrying or holding, potentially ruining them. Cold conditions are one step worse under the cloud, and at the GM’s discretion it might cause other problems, such as interfering with sleep." };
         }
 
-        public override SourcePage GetSourcePage(ItemCurseSeeder seeder)
+        public override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
@@ -37,12 +36,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses.Instan
             };
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Rare";
-            yield return "Cursed";
-            yield return "Magical";
-            yield return "Conjuration";
+            yield return Traits.Instances.Rare.ID;
+            yield return Traits.Instances.Cursed.ID;
+            yield return Traits.Instances.Magical.ID;
+            yield return Traits.Instances.Conjuration.ID;
         }
     }
 }

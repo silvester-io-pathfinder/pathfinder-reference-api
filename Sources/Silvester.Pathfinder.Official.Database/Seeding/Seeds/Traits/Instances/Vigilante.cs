@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Vigilante : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("115a8b87-c636-4528-91a0-d9d5ddfeebb4");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Using actions and abilities with the vigilante trait while in your social identity risks exposing you as a vigilante." };
+            yield return new TextBlock { Id = Guid.Parse("eb7bab2d-58f7-4bb1-9209-6e3ad3d5cb85"), Type = TextBlockType.Text, Text = "Using actions and abilities with the vigilante trait while in your social identity risks exposing you as a vigilante." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("15136271-9d87-46f4-b91c-0d9eaf221b10"),
                 SourceId = AdvancedPlayersGuide.ID,
                 Page = 271
             };

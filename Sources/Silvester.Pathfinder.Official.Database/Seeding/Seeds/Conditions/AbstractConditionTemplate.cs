@@ -1,39 +1,32 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions
 {
-    public abstract class AbstractConditionTemplate
+    public abstract class AbstractConditionTemplate : EntityTemplate<Condition>
     {
-        public void Seed(ConditionSeeder seeder)
+        protected override Condition GetEntity(ModelBuilder builder)
         {
-            Condition condition = GetCondition(seeder);
+            Condition condition = GetCondition();
             
-            SourcePage? sourcePage = GetSourcePage(seeder);
+            SourcePage? sourcePage = GetSourcePage();
             if(sourcePage != null)
             {
-                seeder.Builder.AddData(sourcePage);
+                builder.AddData(sourcePage);
                 condition.SourcePageId = sourcePage.SourceId;
             }
 
-            TextBlock[] details = GetConditionDetailBlocks().ToArray();
-            for(int i = 0; i < details.Length; i ++)
-            {
-                TextBlock detail = details[i];
-                detail.Order = i;
-                detail.OwnerId = condition.Id;
-                seeder.Builder.AddOwnedData((Condition o) => o.Details, detail);
-            }
+            builder.AddTextBlocks(condition, GetConditionDetailBlocks(), e => e.Details);
 
-            seeder.Builder.AddData(condition);
+            return condition;
         }
 
-        public abstract Condition GetCondition(ConditionSeeder seeder);
-        public abstract SourcePage? GetSourcePage(ConditionSeeder seeder);
+        public abstract Condition GetCondition();
+        public abstract SourcePage? GetSourcePage();
 
         public virtual IEnumerable<TextBlock> GetConditionDetailBlocks()
         {

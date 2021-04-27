@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AcidArrowSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Evocation";
-
+        public static readonly Guid ID = Guid.Parse("9ff794c4-74a1-412e-9d44-06d64f1570b1");
+        
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("9ff794c4-74a1-412e-9d44-06d64f1570b1"),
+                Id = ID,
                 Name = "Acid Arrow",
                 Targets = "1 creature.",
                 Level = 2,
                 Range = 120,
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Evocation.ID,
             };
         }
 
@@ -41,23 +42,23 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Arcane";
-            yield return "Primal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Acid";
-            yield return "Attack";
-            yield return "Evocation";
+            yield return Traits.Instances.Acid.ID;
+            yield return Traits.Instances.Attack.ID;
+            yield return Traits.Instances.Evocation.ID;
         }
     }
 }

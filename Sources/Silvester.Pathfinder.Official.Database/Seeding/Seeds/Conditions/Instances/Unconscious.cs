@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
@@ -13,13 +10,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
     {
         public static readonly Guid ID = Guid.Parse("10ef1d07-27bd-4073-96f7-2a55a05a9831");
 
-        public override Condition GetCondition(ConditionSeeder seeder)
+        public override Condition GetCondition()
         {
             return new Condition
             {
                 Id = ID,
                 Name = "Unconscious",
-                ConditionCategoryId = seeder.GetCategoryByName("Death and Dying").Id,
+                ConditionCategoryId = ConditionCategories.Instances.DeathAndDying.ID,
                 OverridesConditionId = Dazzled.ID
             };
         }
@@ -37,7 +34,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             yield return new TextBlock { Id = Guid.Parse("042a7b29-141c-4489-b084-86796a198da4"), Type = Utilities.Text.TextBlockType.Enumeration, Text = "If you are simply asleep, the GM decides you wake up either because you have had a restful night's sleep or something disrupted that rest." };
         }
 
-        public override SourcePage? GetSourcePage(ConditionSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

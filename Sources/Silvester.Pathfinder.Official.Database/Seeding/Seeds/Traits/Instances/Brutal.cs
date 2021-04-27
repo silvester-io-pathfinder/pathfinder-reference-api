@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Brutal : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("14a69046-3a30-4a80-a708-23f3f121b28a");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A ranged attack with this trait uses its Strength modifier instead of Dexterity on the attack roll." };
+            yield return new TextBlock { Id = Guid.Parse("acc2ee12-144b-4b37-bd39-76fbb9cbd876"), Type = TextBlockType.Text, Text = "A ranged attack with this trait uses its Strength modifier instead of Dexterity on the attack roll." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cd226a4b-c2f5-42d4-85d7-45a9fb8bfcc0"),
                 SourceId = CoreRulebook.ID,
                 Page = 282
             };

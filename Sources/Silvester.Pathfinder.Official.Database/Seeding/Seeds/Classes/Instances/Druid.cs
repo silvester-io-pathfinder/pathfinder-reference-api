@@ -1,9 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 {
@@ -11,7 +8,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
     {
         public static readonly Guid ID = Guid.Parse("73f7051c-8eff-4337-a87c-183deb7a998c");
 
-        protected override Class GetClass(ClassSeeder seeder)
+        protected override Class GetClass()
         {
             return new Class
             {
@@ -25,42 +22,42 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
                 WhileExploring = "Your nature skills are invaluable. You track down enemies, navigate the wilderness, and use spells to detect magical auras around you.You might even ask wild animals to lend their extraordinary senses and scouting abilities to your group.",
                 InDowntime = "You might craft magic items or potions. Alternatively, your tie to nature might lead you to tend a wilderness area, befriending beasts and healing the wounds caused by  civilization.You might even teach sustainable farming and animal husbandry techniquesthat allow others to subsist off the land without harming the natural balance.",
 
-                ClassDcProficiencyId = seeder.GetProficiency("Untrained"),
-                PerceptionProficiencyId = seeder.GetProficiency("Trained"),
+                ClassDcProficiencyId = Proficiencies.Instances.Untrained.ID,
+                PerceptionProficiencyId = Proficiencies.Instances.Trained.ID,
 
-                FortitudeProficiencyId = seeder.GetProficiency("Trained"),
-                ReflexProficiencyId = seeder.GetProficiency("Trained"),
-                WillProficiencyId = seeder.GetProficiency("Expert"),
+                FortitudeProficiencyId = Proficiencies.Instances.Trained.ID,
+                ReflexProficiencyId = Proficiencies.Instances.Trained.ID,
+                WillProficiencyId = Proficiencies.Instances.Expert.ID,
 
-                SimpleWeaponProficiencyId = seeder.GetProficiency("Trained"),
-                MartialWeaponProficiencyId = seeder.GetProficiency("Untrained"),
-                AdvancedWeaponProficiencyId = seeder.GetProficiency("Untrained"),
-                UnarmedWeaponProficiencyId = seeder.GetProficiency("Trained"),
+                SimpleWeaponProficiencyId = Proficiencies.Instances.Trained.ID,
+                MartialWeaponProficiencyId = Proficiencies.Instances.Untrained.ID,
+                AdvancedWeaponProficiencyId = Proficiencies.Instances.Untrained.ID,
+                UnarmedWeaponProficiencyId = Proficiencies.Instances.Trained.ID,
 
-                UnarmoredProficiencyId = seeder.GetProficiency("Trained"),
-                LightArmorProficiencyId = seeder.GetProficiency("Trained"),
-                MediumArmorProficiencyId = seeder.GetProficiency("Trained"),
-                HeavyArmorProficiencyId = seeder.GetProficiency("Untrained"),
+                UnarmoredProficiencyId = Proficiencies.Instances.Trained.ID,
+                LightArmorProficiencyId = Proficiencies.Instances.Trained.ID,
+                MediumArmorProficiencyId = Proficiencies.Instances.Trained.ID,
+                HeavyArmorProficiencyId = Proficiencies.Instances.Untrained.ID,
 
-                SpellAttackProficiencyId = seeder.GetProficiency("Trained"),
-                SpellDcProficiencyId = seeder.GetProficiency("Trained"),
-                PredefinedMagicTraditionId = seeder.GetMagicTradition("Primal")
+                SpellAttackProficiencyId = Proficiencies.Instances.Trained.ID,
+                SpellDcProficiencyId = Proficiencies.Instances.Trained.ID,
+                PredefinedMagicTraditionId = MagicTraditions.Instances.Primal.ID
             };
         }
 
-        protected override IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder)
+        protected override IEnumerable<Guid> GetKeyAbilities()
         {
-            return seeder.FilterStats("Wisdom");
+            yield return Stats.Instances.Wisdom.ID;
         }
 
-        protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
+        protected override IEnumerable<ClassMannerism> GetMannerisms()
         {
             yield return new ClassMannerism { Id = Guid.Parse("fdb38cc9-5b9e-45c3-ae43-660d5aaa3675"), Text = "Have a deep and meaningful respect for the power of nature." };
             yield return new ClassMannerism { Id = Guid.Parse("22d2fbc4-04ce-4b41-b119-9459dd877a65"), Text = "Be in constant awe of the natural world, eager to share it with others but wary of their influence upon it." };
             yield return new ClassMannerism { Id = Guid.Parse("1d27448a-3fb0-47cb-b126-85f4a433fe9e"), Text = "Treat plants and animals as allies, working with them to reach your goals." };
         }
 
-        protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
+        protected override IEnumerable<ClassCharacteristic> GetCharacteristics()
         {
             yield return new ClassCharacteristic { Id = Guid.Parse("2a801590-b596-4584-ac5a-1c65015ef184"), Text = "View you as a representative of nature, and are sure you can control it." };
             yield return new ClassCharacteristic { Id = Guid.Parse("62e621eb-b0ee-4622-914f-a70b8e84dbfc"), Text = "Assume you’re a recluse who avoids society and cities and prefers to live in the wild." };

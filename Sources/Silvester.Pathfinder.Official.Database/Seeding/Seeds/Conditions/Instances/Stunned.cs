@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
@@ -13,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
     {
         public static readonly Guid ID = Guid.Parse("4d045584-3a7f-433b-ad89-0f658c379923");
 
-        public override Condition GetCondition(ConditionSeeder seeder)
+        public override Condition GetCondition()
         {
             return new Condition
             {
@@ -29,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             yield return new TextBlock { Id = Guid.Parse("ad411fa0-9af4-4d4e-ac38-00993975437a"), Type = Utilities.Text.TextBlockType.Text, Text = "Stunned overrides slowed. If the duration of your stunned condition ends while you are slowed, you count the actions lost to the stunned condition toward those lost to being slowed. So, if you were stunned 1 and slowed 2 at the beginning of your turn, you would lose 1 action from stunned, and then lose only 1 additional action by being slowed, so you would still have 1 action remaining to use that turn." };
         }
 
-        public override SourcePage? GetSourcePage(ConditionSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

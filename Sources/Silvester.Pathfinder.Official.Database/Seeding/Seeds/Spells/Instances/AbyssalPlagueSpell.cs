@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AbyssalPlagueSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Necromancy";
-        public override string SavingThrowStat => "Fortitude";
+        public static readonly Guid ID = Guid.Parse("328dda55-0bc8-461f-a3d3-686df512438c");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("328dda55-0bc8-461f-a3d3-686df512438c"),
+                Id = ID,
                 Name = "Abyssal Plague",
                 Level = 5,
                 Range = 0,
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Necromancy.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID
             };
         }
 
@@ -40,24 +41,24 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Divine";
-            yield return "Occult";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Chaotic";
-            yield return "Disease";
-            yield return "Evil";
-            yield return "Necromancy";
+            yield return Traits.Instances.Chaotic.ID;
+            yield return Traits.Instances.Disease.ID;
+            yield return Traits.Instances.Evil.ID;
+            yield return Traits.Instances.Necromancy.ID;
         }
     }
 }

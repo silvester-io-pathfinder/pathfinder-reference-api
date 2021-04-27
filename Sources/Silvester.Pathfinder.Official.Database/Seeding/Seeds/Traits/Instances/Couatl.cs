@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Couatl : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("53781661-e0ae-4d23-816a-41839c2f566c");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A family of supernatural feathered serpents who serve as guardians and messengers on the Material Plane for various good-aligned divinities." };
+            yield return new TextBlock { Id = Guid.Parse("0c0575ba-ad2f-447a-9b07-3a7efe1f41e0"), Type = TextBlockType.Text, Text = "A family of supernatural feathered serpents who serve as guardians and messengers on the Material Plane for various good-aligned divinities." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8810570d-717c-4686-bc2a-93b893e2bedb"),
                 SourceId = Bestiary2.ID,
                 Page = 308
             };

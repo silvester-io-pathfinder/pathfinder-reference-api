@@ -7,9 +7,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class MultilingualFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "No Action";
-
         public static readonly Guid ID = Guid.Parse("8dc95af1-d049-457f-91f8-311ead81336d");
 
         protected override Feat GetFeat()
@@ -19,7 +16,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Multilingual",
                 Level = 1,
-                Special = "You can select this feat multiple times. Each time, you learn additional languages."
+                Special = "You can select this feat multiple times. Each time, you learn additional languages.",
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
 
@@ -28,15 +27,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("5983317e-3930-45c3-a5b2-d286fd3bf850"), Type = Utilities.Text.TextBlockType.Text, Text = "You easily pick up new languages. You learn two new languages, chosen from common languages, uncommon languages, and any others you have access to. You learn an additional language if you are or become a master in Society and again if you are or become legendary." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("620a99f0-9377-498b-a4cb-590441e62b51"), RequiredSkillId = seeder.GetSkill("Society"), RequiredProficiencyId = seeder.GetProficiency("Trained") };
+            yield return new SkillPrerequisite { Id = Guid.Parse("620a99f0-9377-498b-a4cb-590441e62b51"), RequiredSkillId = Skills.Instances.Society.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "General";
-            yield return "Skill";
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

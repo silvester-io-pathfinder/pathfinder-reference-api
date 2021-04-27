@@ -1,9 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 {
@@ -11,7 +8,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
     {
         public static readonly Guid ID = Guid.Parse("05d42777-0744-4a72-85ad-d27186c96deb");
 
-        protected override Class GetClass(ClassSeeder seeder)
+        protected override Class GetClass()
         {
             return new Class
             {
@@ -25,41 +22,41 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
                 WhileExploring = "You detect the magic around you, finding treasures and warning your adventuring group of magical traps. When the group encounters mysteries or problems related to your bloodline, you try to solve them.",
                 InDowntime = "You craft magic items or scribe scrolls. Your bloodline might drive you to research your ancestry or associate with affiliated people or creatures.",
 
-                ClassDcProficiencyId = seeder.GetProficiency("Untrained"),
-                PerceptionProficiencyId = seeder.GetProficiency("Trained"),
+                ClassDcProficiencyId = Proficiencies.Instances.Untrained.ID,
+                PerceptionProficiencyId = Proficiencies.Instances.Trained.ID,
 
-                FortitudeProficiencyId = seeder.GetProficiency("Trained"),
-                ReflexProficiencyId = seeder.GetProficiency("Trained"),
-                WillProficiencyId = seeder.GetProficiency("Expert"),
+                FortitudeProficiencyId = Proficiencies.Instances.Trained.ID,
+                ReflexProficiencyId = Proficiencies.Instances.Trained.ID,
+                WillProficiencyId = Proficiencies.Instances.Expert.ID,
 
-                SimpleWeaponProficiencyId = seeder.GetProficiency("Trained"),
-                MartialWeaponProficiencyId = seeder.GetProficiency("Untrained"),
-                AdvancedWeaponProficiencyId = seeder.GetProficiency("Untrained"),
-                UnarmedWeaponProficiencyId = seeder.GetProficiency("Trained"),
+                SimpleWeaponProficiencyId = Proficiencies.Instances.Trained.ID,
+                MartialWeaponProficiencyId = Proficiencies.Instances.Untrained.ID,
+                AdvancedWeaponProficiencyId = Proficiencies.Instances.Untrained.ID,
+                UnarmedWeaponProficiencyId = Proficiencies.Instances.Trained.ID,
 
-                UnarmoredProficiencyId = seeder.GetProficiency("Trained"),
-                LightArmorProficiencyId = seeder.GetProficiency("Untrained"),
-                MediumArmorProficiencyId = seeder.GetProficiency("Untrained"),
-                HeavyArmorProficiencyId = seeder.GetProficiency("Untrained"),
+                UnarmoredProficiencyId = Proficiencies.Instances.Trained.ID,
+                LightArmorProficiencyId = Proficiencies.Instances.Untrained.ID,
+                MediumArmorProficiencyId = Proficiencies.Instances.Untrained.ID,
+                HeavyArmorProficiencyId = Proficiencies.Instances.Untrained.ID,
 
-                SpellAttackProficiencyId = seeder.GetProficiency("Trained"),
-                SpellDcProficiencyId = seeder.GetProficiency("Trained")
+                SpellAttackProficiencyId = Proficiencies.Instances.Trained.ID,
+                SpellDcProficiencyId = Proficiencies.Instances.Trained.ID
             };
         }
 
-        protected override IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder)
+        protected override IEnumerable<Guid> GetKeyAbilities()
         {
-            return seeder.FilterStats("Charisma");
+            yield return Stats.Instances.Charisma.ID;
         }
 
-        protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
+        protected override IEnumerable<ClassMannerism> GetMannerisms()
         {
             yield return new ClassMannerism { Id = Guid.Parse("e076f25a-3cf1-48f2-a7a5-83671f564522"), Text = "Have a strong independent streak, and whether you embrace or reject your magical heritage, you long to distinguish yourself both as a spellcaster and as an individual." };
             yield return new ClassMannerism { Id = Guid.Parse("ca503052-4fc3-4997-ac3e-3c5f70a15ec3"), Text = "View your lineage with fascination, fear, or something in between—anything from wholehearted acceptance to vehement rejection." };
             yield return new ClassMannerism { Id = Guid.Parse("8f31f877-c43f-493f-a6cb-9db65fba60cb"), Text = "Rely on magic items, such as scrolls and wands, to supplement your limited selection of spells." };
         }
 
-        protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
+        protected override IEnumerable<ClassCharacteristic> GetCharacteristics()
         {
             yield return new ClassCharacteristic { Id = Guid.Parse("9266174a-c40c-4aa9-a834-44c58fde1056"), Text = "Marvel at your ability to create magic from thin air and view your abilities with equal parts admiration and mistrust." };
             yield return new ClassCharacteristic { Id = Guid.Parse("3844b3a3-6ece-44f4-aa24-3da8c2a50ce1"), Text = "Consider you less dedicated than studious wizards, devoted clerics, and other practitioners of magic, since power comes to you naturally." };

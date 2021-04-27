@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Occult : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("2e90b31a-847d-47e6-8701-bde22743f425");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "This magic comes from the occult tradition, calling upon bizarre and ephemeral mysteries. Anything with this trait is magical." };
+            yield return new TextBlock { Id = Guid.Parse("2993bb5e-03c3-4e63-90e6-7047a456e95c"), Type = TextBlockType.Text, Text = "This magic comes from the occult tradition, calling upon bizarre and ephemeral mysteries. Anything with this trait is magical." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("229e0563-7aa2-4d40-a689-d58ca5323daa"),
                 SourceId = CoreRulebook.ID,
                 Page = 634
             };

@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
     {
         public static readonly Guid ID = Guid.Parse("c9715348-c813-422b-af5b-e2c9a11884a9");
 
-        protected override AlchemicalElixir GetAlchemicalElixir(AlchemicalElixirSeeder seeder)
+        protected override AlchemicalElixir GetAlchemicalElixir()
         {
             return new AlchemicalElixir
             {
@@ -23,17 +20,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
                 Name = "Elixir of Rejuvenation",
                 Usage = "Held in 1 hand",
                 ItemBonus = 20,
-                BulkId = seeder.GetBulkByName("L").Id
+                BulkId = Bulks.Instances.LightBulk.ID
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Elixir";
-            yield return "Consumable";
-            yield return "Uncommon";
-            yield return "Healing";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Elixir.ID;
+            yield return Traits.Instances.Consumable.ID;
+            yield return Traits.Instances.Uncommon.ID;
+            yield return Traits.Instances.Healing.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -42,18 +39,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new TextBlock { Id = Guid.Parse("1bc9c603-c18b-4898-add5-8e6533dbbeb0"), Text = "You can instead administer this elixir to a creature that has been dead for a week or less. When you do, that creature is instantly brought back to life with 1 Hit Point and no spell slots, Focus Points, or other daily resources." };
         }
 
-        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)
+        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()
         {
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("8f2ff716-0305-4642-875f-9325f583b4a8"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Unclassified").Id,
+                PotionPotencyId = Potencies.Instances.Unclassified.ID,
                 Level = 20,
                 Benefits = "The Elixir of Rejuvenation only exists as a single unclassified potency."
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalElixirSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {
@@ -63,7 +60,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             };
         }
 
-        protected override IEnumerable<AlchemicalElixirCraftingRequirement> GetCraftingRequirements(AlchemicalElixirSeeder seeder)
+        protected override IEnumerable<AlchemicalElixirCraftingRequirement> GetCraftingRequirements()
         {
             yield return new AlchemicalElixirCraftingRequirement { Id = Guid.Parse("1209cba6-d323-4476-a577-8d461bf3e0ce"), Text = "Philosopher's Stone" };
             yield return new AlchemicalElixirCraftingRequirement { Id = Guid.Parse("cc69ec58-f925-487a-9c59-24c7d51649fe"), Text = "True Elixir of Life" };

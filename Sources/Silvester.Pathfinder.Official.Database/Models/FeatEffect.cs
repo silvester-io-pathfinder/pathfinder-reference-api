@@ -1,5 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
@@ -39,7 +38,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
     public class GainHeritageEffect : FeatEffect
     {
         public Guid HeritageRarityId { get; set; }
-        public HeritageRarity HeritageRarity { get; set; } = default!;
+        public Rarity HeritageRarity { get; set; } = default!;
     }
 
     public class GainLoreEffect : FeatEffect

@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,12 +15,11 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             return builder;
         }
 
-        public static T[] HasDataSeed<T>(this EntityTypeBuilder<T> builder, IEntitySeed<T> seeder)
-            where T : class
+        public static EntityTypeBuilder HasBaseEntityKey(this EntityTypeBuilder builder, Type entityType)
         {
-            T[] array = seeder.GetSeedEntities().ToArray();
-            builder.HasData(array);
-            return array;
+            builder.HasKey(nameof(BaseEntity.Id));
+            builder.Property(nameof(BaseEntity.Id)).ValueGeneratedOnAdd();
+            return builder;
         }
 
         public static T AddData<T>(this EntityTypeBuilder<T> builder, T entity)

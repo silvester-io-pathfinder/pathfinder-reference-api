@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
@@ -13,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
     {
         public static readonly Guid ID = Guid.Parse("d88ecdc0-c9bd-4a42-8409-a215f4a5c034");
 
-        protected override Hazard GetHazard(HazardSeeder seeder)
+        protected override Hazard GetHazard()
         {
             return new Hazard
             {
@@ -26,12 +23,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Reflex = 15,
                 Reset = "The trap resets over the course of the round, and is ready to swing again 1 round later.",
                 CanBeDetectedMagically = false,
-                TypeId = seeder.GetHazardTypeByName("Traps").Id,
-                ComplexityId = seeder.GetComplexityByName("Simple").Id
+                TypeId = HazardTypes.Instances.Traps.ID,
+                ComplexityId = HazardComplexities.Instances.Simple.ID
             };
         }
 
-        protected override IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder)
+        protected override IEnumerable<HazardComponent> GetComponents()
         {
             yield return new HazardComponent
             {
@@ -52,29 +49,29 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             };
         }
 
-        protected override IEnumerable<string> GetImmunities()
+        protected override IEnumerable<Guid> GetImmunities()
         {
-            yield return "Critical Hits";
-            yield return "Object Immunities";
-            yield return "Precision Damage";
+            yield return HazardImmunities.Instances.CriticalHits.ID;
+            yield return HazardImmunities.Instances.ObjectImmunities.ID;
+            yield return HazardImmunities.Instances.PrecisionDamage.ID;
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Magical";
-            yield return "Mechanical";
-            yield return "Trap";
+            yield return Traits.Instances.Magical.ID;
+            yield return Traits.Instances.Mechanical.ID;
+            yield return Traits.Instances.Trap.ID;
         }
 
-        protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
+        protected override IEnumerable<HazardAction> GetActions()
         {
             yield return new HazardAction
             {
                 Id = Guid.Parse("2eb1837d-c49c-447e-98d7-b30c858912f0"),
                 Name = "Forbid Entry",
-                Traits = seeder.FilterTraits("Abjuration", "Divine"),
+                Traits = FilterTraits("Abjuration", "Divine"),
                 Trigger = "A creature attempts to enter through the entrance",
-                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
+                ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = new List<TextBlock>
                 {
                     new TextBlock { Id = Guid.Parse("356c9040-4be1-4428-a454-8e39c037da0c"), Type = TextBlockType.Text, Text = "The hammer swings down, making a Strike against the triggering creature." },
@@ -84,9 +81,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                      new AttackHazardActionEffect
                      {
                         Id = Guid.Parse("12bd4ee5-1bb3-406a-845b-be5e69a7f94b"),
-                        AttackTypeId = seeder.GetAttackTypeByName("Melee").Id,
-                        ActionTypeId = seeder.GetActionTypeByName("No Action").Id,
-                        DamageTypeId = seeder.GetDamageTypeByName("Bludgeoning").Id,
+                        AttackTypeId = AttackTypes.Instances.Melee.ID,
+                        ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                        DamageTypeId = DamageTypes.Instances.Bludgeoning.ID,
                         Addendum = "The target is knocked back 10 feet and must succeed at a DC 30 Will save or be unable to enter the edifice through any entrance for 24 hours (on a critical hit, the target automatically fails the Will save); no multiple attack penalty.",
                         Damage = "6d8+20",
                         Weapon = "Hammer",
@@ -96,34 +93,34 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             };
         }
 
-        protected override HazardDetectionRequirement GetDetectionRequirement(HazardSeeder seeder)
+        protected override HazardDetectionRequirement GetDetectionRequirement()
         {
             return new HazardDetectionRequirement
             {
                 Id = Guid.Parse("9c5b1455-5d22-4b85-baee-aa7a7e9aabd9"),
-                RequiredProficiencyId = seeder.GetProficiencyByName("Expert").Id,
+                RequiredProficiencyId = Proficiencies.Instances.Expert.ID,
                 DifficultyCheck = 30
             };
         }
 
-        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements()
         {
             yield return new HazardDisableRequirement
             {
                 Id = Guid.Parse("b477f38d-c91a-44c7-9095-7e6e9c52d81d"),
-                SkillId = seeder.GetSkillByName("Thievery").Id,
-                RequiredProficiencyId = seeder.GetProficiencyByName("Expert").Id,
+                SkillId = Skills.Instances.Thievery.ID,
+                RequiredProficiencyId = Proficiencies.Instances.Expert.ID,
                 Description = "once on the hammer itself and once on its joint to prevent the hammer from swinging",
                 DifficultyCheck = 28
             };
         }
 
-        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements()
         {
             yield break;
         }
 
-        protected override SourcePage GetSourcePage(HazardSeeder seeder)
+        protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {

@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
@@ -13,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
     {
         public static readonly Guid ID = Guid.Parse("5f206ecc-b2a0-473c-9e09-561e7909787c");
 
-        protected override Hazard GetHazard(HazardSeeder seeder)
+        protected override Hazard GetHazard()
         {
             return new Hazard
             {
@@ -26,13 +23,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Reflex = 13,
                 Reset = "The trap deactivates and resets if 1 minute passes without any creature moving within range of its sensor.",
                 CanBeDetectedMagically = false,
-                TypeId = seeder.GetHazardTypeByName("Traps").Id,
-                ComplexityId = seeder.GetComplexityByName("Complex").Id,
+                TypeId = HazardTypes.Instances.Traps.ID,
+                ComplexityId = HazardComplexities.Instances.Complex.ID,
                 RoutineActions = 2 
             };
         }
 
-        protected override IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder)
+        protected override IEnumerable<HazardComponent> GetComponents()
         {
             yield return new HazardComponent
             {
@@ -44,22 +41,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             };
         }
 
-        protected override IEnumerable<string> GetImmunities()
+        protected override IEnumerable<Guid> GetImmunities()
         {
-            yield return "Critical Hits";
-            yield return "Object Immunities";
-            yield return "Precision Damage";
+            yield return HazardImmunities.Instances.CriticalHits.ID;
+            yield return HazardImmunities.Instances.ObjectImmunities.ID;
+            yield return HazardImmunities.Instances.PrecisionDamage.ID;
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Complex";
-            yield return "Magical";
-            yield return "Mechanical";
-            yield return "Trap";
+            yield return Traits.Instances.Complex.ID;
+            yield return Traits.Instances.Magical.ID;
+            yield return Traits.Instances.Mechanical.ID;
+            yield return Traits.Instances.Trap.ID;
         }
 
-        protected override IEnumerable<TextBlock> GetRoutineDetails(HazardSeeder seeder)
+        protected override IEnumerable<TextBlock> GetRoutineDetails()
         {
             yield return new TextBlock { Id = Guid.Parse("417e2e47-e956-49d4-b01e-82da90ed3027"), Type = TextBlockType.Text, Text = "On its initiative, the trap uses its first action to spin, then stops. Roll 1d6 to determine which segment is topmost when the wheel stops spinning. The wheel uses its second action to replicate the spell listed for that segment (3rd level, DC 24, spell attack roll +14). This spell’s target is centered on or otherwise includes the nearest creature in the area. This increases the spell’s range to 100 feet if necessary. Any spell cast by this trap is arcane." };
             yield return new TextBlock { Id = Guid.Parse("9e4955f6-7270-4de7-ad78-8f728b8a4e57"), Type = TextBlockType.Enumeration, Text = "Sleep" };
@@ -70,15 +67,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             yield return new TextBlock { Id = Guid.Parse("2fdfb966-1fa4-4286-9409-8c415686c09e"), Type = TextBlockType.Enumeration, Text = "Ray of Enfeeblement" };
         }
 
-        protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
+        protected override IEnumerable<HazardAction> GetActions()
         {
-            yield break;
             yield return new HazardAction
             {
                 Id = Guid.Parse("29a2a4fe-936b-4b1a-8aa0-bd1e6ca3fc88"),
                 Name = "Wheel Spin",
                 Trigger = "A creature enters the sensor's detection area",
-                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
+                ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details =
                 {
                     new TextBlock { Id = Guid.Parse("78b61a1b-9b9c-4637-a632-d5cac2d621b6"), Type = Utilities.Text.TextBlockType.Text, Text = "The wheel begins to spin and rolls initiative." },
@@ -86,24 +82,24 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             };
         }
 
-        protected override HazardDetectionRequirement GetDetectionRequirement(HazardSeeder seeder)
+        protected override HazardDetectionRequirement GetDetectionRequirement()
         {
             return new HazardDetectionRequirement
             {
                 Id = Guid.Parse("e8269934-560f-4d2d-bbf8-cea756614569"),
                 Addendum = "to detect the magical sensor; noticing the wheel has a DC of 0.",
-                RequiredProficiencyId = seeder.GetProficiencyByName("Expert").Id,
+                RequiredProficiencyId = Proficiencies.Instances.Expert.ID,
                 DifficultyCheck = 16
             };
         }
 
-        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements()
         {
             yield return new HazardDisableRequirement
             {
                 Id = Guid.Parse("4b89222c-71f3-4697-ae14-620c0fa0263b"),
-                SkillId = seeder.GetSkillByName("Thievery").Id,
-                RequiredProficiencyId = seeder.GetProficiencyByName("Expert").Id,
+                SkillId = Skills.Instances.Thievery.ID,
+                RequiredProficiencyId = Proficiencies.Instances.Expert.ID,
                 Description = "on the wheel to stop it from spinning",
                 DifficultyCheck = 26
             };
@@ -111,14 +107,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             yield return new HazardDisableRequirement
             {
                 Id = Guid.Parse("9664f9d2-c3f3-4a80-80fa-5c172bf90216"),
-                SkillId = seeder.GetSkillByName("Thievery").Id,
-                RequiredProficiencyId = seeder.GetProficiencyByName("Master").Id,
+                SkillId = Skills.Instances.Thievery.ID,
+                RequiredProficiencyId = Proficiencies.Instances.Master.ID,
                 Description = "to erase each rune",
                 DifficultyCheck = 22
             };
         }
 
-        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements()
         {
             yield return new HazardDispellRequirement
             {
@@ -129,7 +125,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             };
         }
 
-        protected override SourcePage GetSourcePage(HazardSeeder seeder)
+        protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {

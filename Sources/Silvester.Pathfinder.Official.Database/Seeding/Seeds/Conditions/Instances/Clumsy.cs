@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
@@ -13,13 +10,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
     {
         public static readonly Guid ID = Guid.Parse("740be8e2-cab8-4cbe-8065-fd71a6d2192e");
 
-        public override Condition GetCondition(ConditionSeeder seeder)
+        public override Condition GetCondition()
         {
             return new Condition
             {
                 Id = ID,
                 Name = "Clumsy",
-                ConditionCategoryId = seeder.GetCategoryByName("Lowered Abilities").Id,
+                ConditionCategoryId = ConditionCategories.Instances.LoweredAbilities.ID,
             };
         }
 
@@ -28,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             yield return new TextBlock { Id = Guid.Parse("9d44223c-e20f-49a7-b374-528d6c21e714"), Type = Utilities.Text.TextBlockType.Text, Text = "Your movements become clumsy and inexact. Clumsy always includes a value. You take a status penalty equal to the condition value to Dexterity-based checks and DCs, including AC, Reflex saves, ranged attack rolls, and skill checks using Acrobatics, Stealth, and Thievery." };
         }
 
-        public override SourcePage? GetSourcePage(ConditionSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

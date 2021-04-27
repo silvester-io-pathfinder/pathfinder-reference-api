@@ -7,16 +7,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class QuickRepairFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "No Action";
+        public static readonly Guid ID = Guid.Parse("48c371fb-6e9c-4d4f-965d-d56694b52100");
 
         protected override Feat GetFeat()
         {
             return new Feat
             {
-                Id = Guid.Parse("48c371fb-6e9c-4d4f-965d-d56694b52100"),
+                Id = ID,
                 Name = "Quick Repair",
-                Level = 1
+                Level = 1,
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
 
@@ -25,15 +26,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("79f8ff8b-a14d-4621-ab56-df66be388a38"), Type = Utilities.Text.TextBlockType.Text, Text = "You take 1 minute to Repair an item. If you’re a master in Crafting, it takes 3 actions. If you’re legendary, it takes 1 action." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("850cf013-7103-4c37-8bb9-b1a66c3fb583"), RequiredSkillId = seeder.GetSkill("Crafting"), RequiredProficiencyId = seeder.GetProficiency("Trained") };
+            yield return new SkillPrerequisite { Id = Guid.Parse("850cf013-7103-4c37-8bb9-b1a66c3fb583"), RequiredSkillId = Skills.Instances.Crafting.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "General";
-            yield return "Skill";
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

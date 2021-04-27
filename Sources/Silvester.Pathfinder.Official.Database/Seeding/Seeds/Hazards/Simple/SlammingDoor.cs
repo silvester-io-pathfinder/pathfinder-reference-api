@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
@@ -13,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
     {
         public static readonly Guid ID = Guid.Parse("504d33ef-0441-4972-b5f5-7019b895e2c6");
 
-        protected override Hazard GetHazard(HazardSeeder seeder)
+        protected override Hazard GetHazard()
         {
             return new Hazard
             {
@@ -25,12 +22,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Fortitude = 10,
                 Reflex = 2,
                 CanBeDetectedMagically = false,
-                TypeId = seeder.GetHazardTypeByName("Traps").Id,
-                ComplexityId = seeder.GetComplexityByName("Simple").Id
+                TypeId = HazardTypes.Instances.Traps.ID,
+                ComplexityId = HazardComplexities.Instances.Simple.ID
             };
         }
 
-        protected override IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder)
+        protected override IEnumerable<HazardComponent> GetComponents()
         {
             yield return new HazardComponent
             {
@@ -42,27 +39,27 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             };
         }
 
-        protected override IEnumerable<string> GetImmunities()
+        protected override IEnumerable<Guid> GetImmunities()
         {
-            yield return "Critical Hits";
-            yield return "Object Immunities";
-            yield return "Precision Damage";
+            yield return HazardImmunities.Instances.CriticalHits.ID;
+            yield return HazardImmunities.Instances.ObjectImmunities.ID;
+            yield return HazardImmunities.Instances.PrecisionDamage.ID;
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Mechanical";
-            yield return "Trap";
+            yield return Traits.Instances.Mechanical.ID;
+            yield return Traits.Instances.Trap.ID;
         }
 
-        protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
+        protected override IEnumerable<HazardAction> GetActions()
         {
             yield return new HazardAction
             {
                 Id = Guid.Parse("57f67171-9fe7-42a8-9338-9dfcff0c17b1"),
                 Name = "Slam Shut",
                 Trigger = "Pressure is placed on any floor tile.",
-                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
+                ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = new List<TextBlock>
                 {
                     new TextBlock { Id = Guid.Parse("67f6c155-f410-4fdb-bfdf-ea6988d88003"), Type = TextBlockType.Text, Text = "The door falls, closing off the hallway. The stone slab deals 3d8 bludgeoning damage to anyone beneath or adjacent to the slab when it drops and pushes them out of its space in a random direction. A creature that succeeds at a DC 17 Reflex save takes no damage and rolls out of the way in a random direction. On a critical success, they can choose the direction." },
@@ -71,34 +68,34 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             };
         }
 
-        protected override HazardDetectionRequirement GetDetectionRequirement(HazardSeeder seeder)
+        protected override HazardDetectionRequirement GetDetectionRequirement()
         {
             return new HazardDetectionRequirement
             {
                 Id = Guid.Parse("1ef8b7a1-e790-4129-81e8-6b172be66f48"),
-                RequiredProficiencyId = seeder.GetProficiencyByName("Trained").Id,
+                RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
                 DifficultyCheck = 17
             };
         }
 
-        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements()
         {
             yield return new HazardDisableRequirement
             {
                 Id = Guid.Parse("489b3fef-ff29-4e09-8436-7905dba58c27"),
-                SkillId = seeder.GetSkillByName("Thievery").Id,
-                RequiredProficiencyId = seeder.GetProficiencyByName("Trained").Id,
+                SkillId = Skills.Instances.Thievery.ID,
+                RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
                 Description = "on the floor panels before the slab falls",
                 DifficultyCheck = 15
             };
         }
 
-        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements()
         {
             yield break;
         }
 
-        protected override SourcePage GetSourcePage(HazardSeeder seeder)
+        protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {

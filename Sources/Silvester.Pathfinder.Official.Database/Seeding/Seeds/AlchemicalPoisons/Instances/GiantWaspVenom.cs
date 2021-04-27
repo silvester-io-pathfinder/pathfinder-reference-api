@@ -5,9 +5,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
@@ -15,7 +12,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
     {
         public static readonly Guid ID = Guid.Parse("862bacf9-a11f-4f56-8c94-2452d636db79");
 
-        protected override AlchemicalPoison GetAlchemicalPoison(AlchemicalPoisonSeeder seeder)
+        protected override AlchemicalPoison GetAlchemicalPoison()
         {
             return new AlchemicalPoison
             {
@@ -24,30 +21,30 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 ItemLevel = 7,
                 Price = 5500,
                 Usage = "Held in 2 hands",
-                BulkId = seeder.GetBulkByName("L").Id,
+                BulkId = Bulks.Instances.LightBulk.ID,
                 ActionId = Interact.ID,
-                ActionTypeId = seeder.GetActionTypeByName("Two Actions").Id,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
             };
         }
 
-        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect()
         {
             return new StaggeredEffect
             {
                 Id = Guid.Parse("f8e3e164-4fbf-4d88-9e99-922b4e9c26b1"),
                 DifficultyCheck = 25,
-                SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 Onset = "Immediate",
                 MaximumDuration = "6 Rounds",
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Poison";
-            yield return "Consumable";
-            yield return "Injury";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Poison.ID;
+            yield return Traits.Instances.Consumable.ID;
+            yield return Traits.Instances.Injury.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -55,7 +52,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new TextBlock { Id = Guid.Parse("2d4bb8d3-f0fc-4e20-a407-a73f2824d244"), Text = "Giant wasp venom interferes with a victim’s movement." };
         }
 
-        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages()
         {
             yield return new StaggeredEffectStage
             {
@@ -63,7 +60,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("cad292b2-f6c3-4ea9-8dd9-751959708833"), Damage = "2d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("cad292b2-f6c3-4ea9-8dd9-751959708833"), Damage = "2d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("1ddc185b-02a4-4767-b112-29d040653039"),  ConditionId = Clumsy.ID, Severity = 1}
                 }
             };
@@ -74,7 +71,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("ed57f33c-ff21-4f03-86d2-8990ac64aef9"), Damage = "3d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("ed57f33c-ff21-4f03-86d2-8990ac64aef9"), Damage = "3d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("fc788e66-b377-49af-b940-464150d24edf"),  ConditionId = Clumsy.ID, Severity = 2}
                 }
             };
@@ -85,13 +82,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("9ba4b270-c48a-40f7-b521-37c356429c7d"), Damage = "4d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id},
+                    new DamagePoisonStageEffect { Id = Guid.Parse("9ba4b270-c48a-40f7-b521-37c356429c7d"), Damage = "4d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
                     new ConditionPoisonStageEffect { Id = Guid.Parse("5f9c4c7c-f785-4247-ae9c-8fe76d687bb5"),  ConditionId = Clumsy.ID, Severity = 2}
                 }
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalPoisonSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
     {
         public static readonly Guid ID = Guid.Parse("58f3f7fd-4244-4a42-b684-d995220d4ade");
 
-        protected override AlchemicalElixir GetAlchemicalElixir(AlchemicalElixirSeeder seeder)
+        protected override AlchemicalElixir GetAlchemicalElixir()
         {
             return new AlchemicalElixir
             {
@@ -23,16 +20,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
                 Name = "Stone Fist Elixir",
                 Usage = "Held in 1 hand",
                 ItemBonus = 4,
-                BulkId = seeder.GetBulkByName("L").Id
+                BulkId = Bulks.Instances.LightBulk.ID
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Elixir";
-            yield return "Consumable";
-            yield return "Morph";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Elixir.ID;
+            yield return Traits.Instances.Consumable.ID;
+            yield return Traits.Instances.Morph.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -40,19 +37,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new TextBlock { Id = Guid.Parse("cdcd2d5b-5901-4d52-81b9-7645684928c0"), Text = "Your fists become hard as stone. For 1 hour, your fists deal 1d6 bludgeoning damage and lose the nonlethal trait." };
         }
 
-        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)
+        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()
         {
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("e393357d-29cf-42ba-bbab-01f227faebfb"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Unclassified").Id,
+                PotionPotencyId = Potencies.Instances.Unclassified.ID,
                 Level = 4,
                 Price = 1300,
                 Benefits = "The Stone Fist Elixir only exists as a single unclassified potency."
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalElixirSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

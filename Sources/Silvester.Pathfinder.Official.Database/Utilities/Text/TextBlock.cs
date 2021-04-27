@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Utilities.Text
 {
-    public class TextBlock : BaseEntity
+    public class TextBlock : BaseEntity, IOwnedEntity
     {
         public string Text { get; set; } = default!;
 

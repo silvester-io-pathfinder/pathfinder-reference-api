@@ -7,20 +7,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class CrisisOfFaithSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Enchantment";
-        public override string SavingThrowStat => "Will";
-        
+        public static readonly Guid ID = Guid.Parse("b7157338-c1de-4e79-a90c-e0f62abd709c");
+
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("b7157338-c1de-4e79-a90c-e0f62abd709c"),
+                Id = ID,
                 Name = "Crisis of Faith",
                 Level = 3,
                 Range = 30,
-                Targets = "1 creature."
+                Targets = "1 creature.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Enchantment.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Will.ID
             };
         }
 
@@ -55,21 +56,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
+            yield return MagicTraditions.Instances.Divine.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Enchantment";
-            yield return "Mental";
+            yield return Traits.Instances.Enchantment.ID;
+            yield return Traits.Instances.Mental.ID;
         }
     }
 }

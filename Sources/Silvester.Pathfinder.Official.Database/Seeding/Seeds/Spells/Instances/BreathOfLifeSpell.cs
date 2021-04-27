@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class BreathOfLifeSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Reaction";
-        public override string MagicSchool => "Necromancy";
+        public static readonly Guid ID = Guid.Parse("27b176c3-a4ac-425b-b7f1-9e6b7c25063f");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("27b176c3-a4ac-425b-b7f1-9e6b7c25063f"),
+                Id = ID,
                 Name = "Breath of Life",
                 Level = 5,
                 Range = 60,
-                Targets = "The triggering creature."
+                Targets = "The triggering creature.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.Reaction.ID,
+                MagicSchoolId = MagicSchools.Instances.Necromancy.ID,
             };
         }
 
@@ -33,21 +34,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new SpellTrigger { Id = Guid.Parse("3992996d-8346-4d1b-9e96-13a13a9139bd"), Text = "A living creature within range would die." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
+            yield return MagicTraditions.Instances.Divine.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Healing";
-            yield return "Necromancy";
-            yield return "Positive";
+            yield return Traits.Instances.Healing.ID;
+            yield return Traits.Instances.Necromancy.ID;
+            yield return Traits.Instances.Positive.ID;
         }
     }
 }

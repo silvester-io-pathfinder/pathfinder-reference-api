@@ -1,4 +1,5 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
@@ -7,46 +8,39 @@ using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs
 {
-    public abstract class AbstractAlchemicalBombTemplate
+    public abstract class AbstractAlchemicalBombTemplate : EntityTemplate<AlchemicalBomb>
     {
-        public void Seed(AlchemicalBombSeeder seeder)
+        protected override AlchemicalBomb GetEntity(ModelBuilder builder)
         {
-            AlchemicalBomb bomb = GetAlchemicalBomb(seeder);
+            AlchemicalBomb bomb = GetAlchemicalBomb();
 
-            SourcePage? sourcePage = GetSourcePage(seeder);
+            SourcePage? sourcePage = GetSourcePage();
             if (sourcePage != null)
             {
-                seeder.Builder.AddData(sourcePage);
+                builder.AddData(sourcePage);
                 bomb.SourcePageId = sourcePage.Id;
             }
 
-            TextBlock[] details = GetDetailBlocks().ToArray();
-            for(int i = 0; i < details.Length; i ++)
-            {
-                TextBlock detail = details[i];
-                detail.Order = 0;
-                detail.OwnerId = bomb.Id;
-                seeder.Builder.AddOwnedData((AlchemicalBomb f) => f.Details, detail);
-            }
+            builder.AddTextBlocks(bomb, GetDetailBlocks(), e => e.Details);
 
-            foreach (AlchemicalBombPotencyBinding potency in GetPotencies(seeder))
+            foreach (AlchemicalBombPotencyBinding potency in GetPotencies())
             {
                 potency.AlchemicalBombId = bomb.Id;
-                seeder.Builder.AddData(potency);
+                builder.AddData(potency);
             }
 
-            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
+            foreach (Guid traitId in GetTraits())
             {
-                seeder.Builder.HasJoinData((bomb, trait));
+                builder.HasJoinData<Trait, AlchemicalBomb>((traitId, bomb.Id));
             }
 
-            seeder.Builder.AddData(bomb);
+            return bomb;
         }
 
-        protected abstract AlchemicalBomb GetAlchemicalBomb(AlchemicalBombSeeder seeder);
-        protected abstract SourcePage? GetSourcePage(AlchemicalBombSeeder seeder);
-        protected abstract IEnumerable<string> GetTraits();
+        protected abstract AlchemicalBomb GetAlchemicalBomb();
+        protected abstract SourcePage? GetSourcePage();
+        protected abstract IEnumerable<Guid> GetTraits();
         protected abstract IEnumerable<TextBlock> GetDetailBlocks();
-        protected abstract IEnumerable<AlchemicalBombPotencyBinding> GetPotencies(AlchemicalBombSeeder seeder);
+        protected abstract IEnumerable<AlchemicalBombPotencyBinding> GetPotencies();
     }
 }

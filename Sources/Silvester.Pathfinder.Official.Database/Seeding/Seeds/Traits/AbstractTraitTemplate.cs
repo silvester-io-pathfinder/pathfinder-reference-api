@@ -1,39 +1,31 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits
 {
-    public abstract class AbstractTraitTemplate
+    public abstract class AbstractTraitTemplate : EntityTemplate<Trait>
     {
-        public void Seed(TraitSeeder seeder)
+        protected override Trait GetEntity(ModelBuilder builder)
         {
-            Trait trait = GetTrait(seeder);
+            Trait trait = GetTrait();
 
-            TextBlock[] details = GetDetailBlocks().ToArray();
-            for(int i = 0; i < details.Length; i ++)
-            {
-                TextBlock detail = details[i];
-                detail.Order = i;
-                detail.OwnerId = trait.Id;
-                seeder.Builder.AddOwnedData((Trait e) => e.Details, detail);
-            }
+            builder.AddTextBlocks(trait, GetDetailBlocks(), e => e.Details);
 
             SourcePage sourcePage = GetSourcePage();
             if (sourcePage != null)
             {
-                seeder.Builder.AddData(sourcePage);
+                builder.AddData(sourcePage);
                 trait.SourcePageId = sourcePage.Id;
             }
 
-            seeder.Builder.AddData(trait);
+            return trait;
         }
 
         protected abstract IEnumerable<TextBlock> GetDetailBlocks();
         protected abstract SourcePage GetSourcePage();
-        protected abstract Trait GetTrait(TraitSeeder seeder);
+        protected abstract Trait GetTrait();
     }
 }

@@ -1,97 +1,71 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
 {
-    public abstract class AbstractSpellTemplate
+    public abstract class AbstractSpellTemplate : EntityTemplate<Spell>
     {
-        public void Seed(SpellSeeder seeder)
+        protected override Spell GetEntity(ModelBuilder builder)
         {
             Spell spell = GetSpell();
-            spell.MagicSchoolId = seeder.FilterSchools(MagicSchool)[0].Id;
-            spell.ActionTypeId= seeder.FilterActionTypes(ActionType)[0].Id;
-            spell.SpellTypeId = seeder.FilterSpellTypes(SpellType)[0].Id;
-
-            if(string.IsNullOrEmpty(SavingThrowStat) == false)
-            {
-                spell.SavingThrowStatId = seeder.FilterSavingThrowStats(SavingThrowStat)[0].Id;
-            }
-
+            
             RollableEffect? effect = GetRollableEffect();
             if(effect != null)
             {
-                seeder.Builder.AddData(effect); 
+                builder.AddData(effect); 
                 spell.RollableEffectId = effect.Id;
             }
 
-            TextBlock[] spellDetails = GetSpellDetailBlocks().ToArray();
-            for(int i = 0; i < spellDetails.Length; i ++)
-            {
-                TextBlock detail = spellDetails[i];
-                detail.Order = i;
-                detail.OwnerId = spell.Id;
-                seeder.Builder.AddOwnedData((Spell s) => s.Details, detail);
-            }
+            builder.AddTextBlocks(spell, GetSpellDetailBlocks(), e => e.Details);
 
-            foreach (MagicTradition tradition in seeder.FilterTraditions(GetMagicTraditions().ToArray()))
+            foreach (Guid traditionId in GetMagicTraditions())
             {
-                seeder.Builder.HasJoinData((spell, tradition));
+                builder.HasJoinData<MagicTradition, Spell>((traditionId, spell.Id));
             }
             
-            foreach (SpellComponent component in seeder.FilterSpellComponents(GetSpellComponents().ToArray()))
+            foreach (Guid spellComponentId in GetSpellComponents())
             {
-                seeder.Builder.HasJoinData((spell, component));
+                builder.HasJoinData<SpellComponent, Spell>((spellComponentId, spell.Id));
             }
 
-            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
+            foreach (Guid traitId in GetTraits())
             {
-                seeder.Builder.HasJoinData((spell, trait));
+                builder.HasJoinData<Trait, Spell>((traitId, spell.Id));
             }
 
             foreach (SpellHeightening heightening in GetHeightenings())
             {
-                TextBlock[] heighteningDetails = heightening.Details.ToArray();
-                for(int i = 0; i < heighteningDetails.Length; i ++)
-                {
-                    TextBlock detail = heighteningDetails[i];
-                    detail.Order = i;
-                    detail.OwnerId = heightening.Id;
-                    seeder.Builder.AddOwnedData((SpellHeightening h) => h.Details, detail);
-                }
+                builder.AddTextBlocks(heightening, heightening.Details, e => e.Details);
                 heightening.Details.Clear();
 
                 heightening.SpellId = spell.Id;
-                seeder.Builder.AddData(heightening);
+                builder.AddData(heightening);
             }
 
             foreach (SpellTrigger trigger in GetTriggers())
             {
-                seeder.Builder.AddData(trigger);
+                builder.AddData(trigger);
                 trigger.SpellId = spell.Id;
             }
 
             foreach (SpellRequirement requirement in GetRequirements())
             {
-                seeder.Builder.AddData(requirement);
+                builder.AddData(requirement);
                 requirement.SpellId = spell.Id;
             }
 
-            seeder.Builder.AddData(spell);
+            return spell;
         }
 
         public abstract Spell GetSpell();
         public abstract IEnumerable<TextBlock> GetSpellDetailBlocks();
-        public abstract IEnumerable<string> GetSpellComponents();
-        public abstract IEnumerable<string> GetTraits();
-        public abstract IEnumerable<string> GetMagicTraditions();
-        public abstract string SpellType { get; }
-        public abstract string ActionType { get; }
-        public abstract string MagicSchool { get; }
-
-        public virtual string SavingThrowStat => "";
+        public abstract IEnumerable<Guid> GetSpellComponents();
+        public abstract IEnumerable<Guid> GetTraits();
+        public abstract IEnumerable<Guid> GetMagicTraditions();
 
         public virtual RollableEffect? GetRollableEffect()
         {

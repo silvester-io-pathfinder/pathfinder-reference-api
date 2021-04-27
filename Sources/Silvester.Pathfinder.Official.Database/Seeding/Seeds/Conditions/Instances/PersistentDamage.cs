@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
@@ -13,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
     {
         public static readonly Guid ID = Guid.Parse("e224b6c0-c7aa-4a58-b00f-7c422a7c6250");
 
-        public override Condition GetCondition(ConditionSeeder seeder)
+        public override Condition GetCondition()
         {
             return new Condition
             {
@@ -27,7 +24,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             yield return new TextBlock { Id = Guid.Parse("61aba62f-6e0b-47e6-87dc-cf5d1f2958f3"), Type = Utilities.Text.TextBlockType.Text, Text = "Persistent damage comes from effects like acid, being on fire, or many other situations. It appears as “X persistent [type] damage,” where “X” is the amount of damage dealt and “[type]” is the damage type. Instead of taking persistent damage immediately, you take it at the end of each of your turns as long as you have the condition, rolling any damage dice anew each time. After you take persistent damage, roll a DC 15 flat check to see if you recover from the persistent damage. If you succeed, the condition ends." };
         }
 
-        public override SourcePage? GetSourcePage(ConditionSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

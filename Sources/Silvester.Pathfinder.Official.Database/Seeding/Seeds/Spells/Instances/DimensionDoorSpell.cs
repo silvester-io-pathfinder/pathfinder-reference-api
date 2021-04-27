@@ -7,18 +7,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DimensionDoorSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Conjuration";
+        public static readonly Guid ID = Guid.Parse("73180f19-0c26-4f90-b377-8ae1d3df6525");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("73180f19-0c26-4f90-b377-8ae1d3df6525"),
+                Id = ID,
                 Name = "Dimension Door",
                 Level = 4,
-                Range = 120
+                Range = 120,
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Conjuration.ID,
             };
         }
 
@@ -40,22 +41,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Conjuration";
-            yield return "Teleportation";
+            yield return Traits.Instances.Conjuration.ID;
+            yield return Traits.Instances.Teleportation.ID;
         }
     }
 }

@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Oil : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("449de570-dc89-488e-9b56-415dcb96ed40");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Oils are magical gels, ointments, pastes, or salves that are typically applied to an object and are used up in the process." };
+            yield return new TextBlock { Id = Guid.Parse("52e4b93a-b726-44a8-aec3-e762131e9dcb"), Type = TextBlockType.Text, Text = "Oils are magical gels, ointments, pastes, or salves that are typically applied to an object and are used up in the process." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cb9d6685-54a5-4bcb-bde6-55e621a18fbd"),
                 SourceId = CoreRulebook.ID,
                 Page = 634
             };

@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Ganzi : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("22cba2be-7f41-44bc-8727-0d5fe65df3d3");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A planar scion descended from a chaotic being of the Maelstrom, such as a protean" };
+            yield return new TextBlock { Id = Guid.Parse("6ed4f00c-ac70-4614-a825-5b0fc486ec42"), Type = TextBlockType.Text, Text = "A planar scion descended from a chaotic being of the Maelstrom, such as a protean" };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("37ccc443-f4cf-4b0f-991f-03cbf12627cc"),
                 SourceId = AncestryGuide.ID,
                 Page = 141
             };

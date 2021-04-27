@@ -1,4 +1,5 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
@@ -7,48 +8,41 @@ using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools
 {
-    public abstract class AbstractAlchemicalToolTemplate
+    public abstract class AbstractAlchemicalToolTemplate : EntityTemplate<AlchemicalTool>
     {
-        public void Seed(AlchemicalToolSeeder seeder)
+        protected override AlchemicalTool GetEntity(ModelBuilder builder)
         {
-            AlchemicalTool tool = GetAlchemicalTool(seeder);
+            AlchemicalTool tool = GetAlchemicalTool();
 
-            SourcePage? sourcePage = GetSourcePage(seeder);
+            SourcePage? sourcePage = GetSourcePage();
             if (sourcePage != null)
             {
-                seeder.Builder.AddData(sourcePage);
+                builder.AddData(sourcePage);
                 tool.SourcePageId = sourcePage.Id;
             }
 
-            TextBlock[] details = GetDetailBlocks().ToArray();
-            for(int i =0; i < details.Length; i ++)
-            {
-                TextBlock detail = details[i];
-                detail.Order = i;
-                detail.OwnerId= tool.Id; 
-                seeder.Builder.AddOwnedData((AlchemicalTool e) => e.Details, detail);
-            }
+            builder.AddTextBlocks(tool, GetDetailBlocks(), e => e.Details);
 
-            foreach (AlchemicalToolPotencyBinding binding in GetPotencies(seeder))
+            foreach (AlchemicalToolPotencyBinding binding in GetPotencies())
             {
                 binding.ToolId = tool.Id;
-                seeder.Builder.AddData(binding);
+                builder.AddData(binding);
             }
 
-            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
+            foreach (Guid traitId in GetTraits())
             {
-                seeder.Builder.HasJoinData((tool, trait));
+                builder.HasJoinData<Trait, AlchemicalTool>((traitId, tool.Id));
             }
 
-            seeder.Builder.AddData(tool);
+            return tool;
         }
 
-        protected abstract AlchemicalTool GetAlchemicalTool(AlchemicalToolSeeder seeder);
-        protected abstract SourcePage? GetSourcePage(AlchemicalToolSeeder seeder);
-        protected abstract IEnumerable<string> GetTraits();
+        protected abstract AlchemicalTool GetAlchemicalTool();
+        protected abstract SourcePage? GetSourcePage();
+        protected abstract IEnumerable<Guid> GetTraits();
         protected abstract IEnumerable<TextBlock> GetDetailBlocks();
         
-        protected virtual IEnumerable<AlchemicalToolPotencyBinding> GetPotencies(AlchemicalToolSeeder seeder)
+        protected virtual IEnumerable<AlchemicalToolPotencyBinding> GetPotencies()
         {
             yield break;
         }

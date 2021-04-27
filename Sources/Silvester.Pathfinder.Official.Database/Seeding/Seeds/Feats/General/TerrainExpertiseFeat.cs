@@ -7,18 +7,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class TerrainExpertiseFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "No Action";
+        public static readonly Guid ID = Guid.Parse("17232376-8797-4f5b-bee0-2614d6938d5a");
 
         protected override Feat GetFeat()
         {
             return new Feat
             {
-                Id = Guid.Parse("17232376-8797-4f5b-bee0-2614d6938d5a"),
+                Id = ID,
                 Name = "Trained Expertise",
                 CanBeLearnedMoreThanOnce = true,
                 Level = 1,
-                Special = "You can select this feat more than once, choosing a different type of terrain each time."
+                Special = "You can select this feat more than once, choosing a different type of terrain each time.",
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
 
@@ -27,15 +28,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("4ebf2045-8b7f-4573-8f3b-af03c404638b"), Type = Utilities.Text.TextBlockType.Text, Text = "Your experience in navigating a certain type of terrain makes you supremely confident while doing so. You gain a +1 circumstance bonus to Survival checks in one of the following types of terrain, chosen when you select this feat: aquatic, arctic, desert, forest, mountain, plains, sky, swamp, or underground." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("38a9dc61-555e-48fb-a398-f72fcb139a55"), RequiredSkillId = seeder.GetSkill("Survival"), RequiredProficiencyId = seeder.GetProficiency("Trained")};
+            yield return new SkillPrerequisite { Id = Guid.Parse("38a9dc61-555e-48fb-a398-f72fcb139a55"), RequiredSkillId = Skills.Instances.Survival.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID};
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "General";
-            yield return "Skill";
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

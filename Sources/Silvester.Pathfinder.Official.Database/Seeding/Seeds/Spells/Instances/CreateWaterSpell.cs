@@ -7,18 +7,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class CreateWaterSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Conjuration";
+        public static readonly Guid ID = Guid.Parse("c5bd7524-e3f5-46b6-b1de-527896978d1c");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("c5bd7524-e3f5-46b6-b1de-527896978d1c"),
+                Id = ID,
                 Name = "Create Water",
                 Level = 1,
-                Range = 0
+                Range = 0,
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Conjuration.ID,
             };
         }
 
@@ -27,23 +28,23 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("3197459e-c6bc-431b-9a5e-45973bd75f1b"), Type = Utilities.Text.TextBlockType.Text, Text = "As you cup your hands, water begins to flow forth from them. You create 2 gallons of water. If no one drinks it, it evaporates after 1 day." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Divine";
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Conjuration";
-            yield return "Water";
+            yield return Traits.Instances.Conjuration.ID;
+            yield return Traits.Instances.Water.ID;
         }
     }
 }

@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
@@ -13,13 +10,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
     {
         public static readonly Guid ID = Guid.Parse("824a03c0-0108-4896-8c0a-8af3a09cd738");
 
-        public override Condition GetCondition(ConditionSeeder seeder)
+        public override Condition GetCondition()
         {
             return new Condition
             {
                 Id = ID,
                 Name = "Doomed",
-                ConditionCategoryId = seeder.GetCategoryByName("Death and Dying").Id
+                ConditionCategoryId = ConditionCategories.Instances.DeathAndDying.ID
             };
         }
 
@@ -29,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             yield return new TextBlock { Id = Guid.Parse("78319886-dc7a-4b52-bf06-737bd98c21e3"), Type = Utilities.Text.TextBlockType.Text, Text = "Your doomed value decreases by 1 each time you get a full night’s rest." };
         }
 
-        public override SourcePage? GetSourcePage(ConditionSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

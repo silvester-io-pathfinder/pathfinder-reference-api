@@ -7,16 +7,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class WallJumpFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "No Action";
+        public static readonly Guid ID = Guid.Parse("76a68ae1-d7e0-4b2a-af54-4978b06db5cb");
 
         protected override Feat GetFeat()
         {
             return new Feat
             {
-                Id = Guid.Parse("76a68ae1-d7e0-4b2a-af54-4978b06db5cb"),
+                Id = ID,
                 Name = "Wall Jump",
-                Level = 7
+                Level = 7,
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
 
@@ -26,15 +27,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("2c4b8bac-89f1-45f3-a60a-c6dfbbb00ea1"), Type = Utilities.Text.TextBlockType.Text, Text = "You can use Wall Jump only once in a turn, unless you’re legendary in Athletics, in which case you can use Wall Jump as many times as you can use consecutive jump actions in that turn." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("d0dafb67-0f82-4c67-866f-75ab3b88580f"), RequiredSkillId = seeder.GetSkill("Athletics"), RequiredProficiencyId = seeder.GetProficiency("Master") };
+            yield return new SkillPrerequisite { Id = Guid.Parse("d0dafb67-0f82-4c67-866f-75ab3b88580f"), RequiredSkillId = Skills.Instances.Athletics.ID, RequiredProficiencyId = Proficiencies.Instances.Master.ID };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "General";
-            yield return "Skill";
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

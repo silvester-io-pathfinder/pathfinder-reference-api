@@ -1,12 +1,9 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.RaceSizes;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.ActionTypes.Instances;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 {
@@ -14,28 +11,28 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
     {
         public static readonly Guid ID = Guid.Parse("f715d730-9ad4-4922-b893-cda88fe25ea4");
 
-        protected override Models.Action GetAction(ActionSeeder seeder)
+        protected override Models.Action GetAction()
         {
             return new Models.Action
             {
                 Id = ID,
                 Name = "Sense Motive",
-                ActionTypeId = seeder.GetActionType("One Action"),
+                ActionTypeId = OneAction.ID,
             };
         }
 
-        protected override IEnumerable<TextBlock> GetDetails(ActionSeeder seeder)
+        protected override IEnumerable<TextBlock> GetDetails()
         {
             yield return new TextBlock { Id = Guid.Parse("65547cff-999a-493d-a6c1-4f56d3f0662a"), Text = "You try to tell whether a creature’s behavior is abnormal. Choose one creature, and assess it for odd body language, signs of nervousness, and other indicators that it might be trying to deceive someone. The GM attempts a single secret Perception check for you and compares the result to the Deception DC of the creature, the DC of a spell affecting the creature’s mental state, or another appropriate DC determined by the GM. You typically can’t try to Sense the Motive of the same creature again until the situation changes significantly." };
         }
 
-        protected override IEnumerable<Trait> GetTraits(ActionSeeder seeder)
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return seeder.GetTrait("Concentrate");
-            yield return seeder.GetTrait("Secret");
+            yield return Concentrate.ID;
+            yield return Secret.ID;
         }
 
-        protected override RollableEffect? GetRollableEffect(ActionSeeder seeder)
+        protected override RollableEffect? GetRollableEffect()
         {
             return new RollableEffect
             {

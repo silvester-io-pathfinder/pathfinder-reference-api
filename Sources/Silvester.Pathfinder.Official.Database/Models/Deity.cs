@@ -1,5 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
@@ -7,7 +6,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
     public class Deity : BaseEntity
     {
         public string Name { get; set; } = default!;
-
+        public string Edicts { get; set; } = default!;
+        public string Anathema { get; set; } = default!;
         public string Description { get; set; } = default!;
 
         public Guid CategoryId { get; set; }
@@ -16,8 +16,12 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid AlignmentId { get; set; }
         public Alignment Alignment { get; set; } = default!;
 
-        public ICollection<DeityFollowerAlignment> FollowerAlignments { get; set; } = new List<DeityFollowerAlignment>();
+        public Guid SourcePageId { get; set; }
+        public SourcePage SourcePage { get; set; } = default!;
+
+        public ICollection<Skill> DivineSkills { get; set; } = new List<Skill>();
         public ICollection<DivineFont> DivineFonts { get; set; } = new List<DivineFont>();
+        public ICollection<Alignment> FollowerAlignments { get; set; } = new List<Alignment>();
         public ICollection<Domain> Domains { get; set; } = new List<Domain>();
     }
 }

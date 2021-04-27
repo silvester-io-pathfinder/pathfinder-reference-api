@@ -1,9 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
@@ -50,13 +47,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public AlchemicalTool Tool { get; set; } = default!;
 
         public Guid PotencyId { get; set; }
-        public AlchemicalToolPotency Potency { get; set; } = default!;
-    }
-
-    public class AlchemicalToolPotency : BaseEntity
-    {
-        public string Name { get; set; } = default!;
-
-        public ICollection<AlchemicalToolPotencyBinding> Bindings { get; set; } = default!;
+        public Potency Potency { get; set; } = default!;
     }
 }

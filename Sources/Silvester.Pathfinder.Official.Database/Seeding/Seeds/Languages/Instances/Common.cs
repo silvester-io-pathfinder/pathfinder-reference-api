@@ -1,0 +1,20 @@
+﻿using Silvester.Pathfinder.Official.Database.Models;
+using System;
+
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Languages.Instances
+{
+    public class Common : AbstractLanguageTemplate
+    {
+        public static readonly Guid ID = Guid.Parse("9200b27c-d210-4b47-bd77-43cfc86440d4");
+
+        protected override Language GetLanguage()
+        {
+            return new Language
+            {
+                Id = ID,
+                TypeId = LanguageTypes.Instances.Common.ID,
+                Name = "Common"
+            };
+        }
+    }
+}

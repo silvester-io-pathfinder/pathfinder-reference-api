@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ContingencySpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "No Action";
-        public override string MagicSchool => "Abjuration";
+        public static readonly Guid ID = Guid.Parse("94beacae-4765-499c-b93e-934fff8585a4");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("94beacae-4765-499c-b93e-934fff8585a4"),
+                Id = ID,
                 Name = "Contingency",
                 Level = 7,
                 CastTime = TimeSpan.FromMinutes(10),
-                Duration = "24 hour."
+                Duration = "24 hour.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                MagicSchoolId = MagicSchools.Instances.Abjuration.ID,
             };
         }
 
@@ -61,21 +62,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Material";
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Material.ID;
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
+            yield return MagicTraditions.Instances.Arcane.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Abjuration";
+            yield return Traits.Instances.Abjuration.ID;
         }
     }
 }

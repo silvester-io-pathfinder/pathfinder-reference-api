@@ -7,21 +7,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class BalefulPolymorphSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Transmutation";
-        public override string SavingThrowStat => "Fortitude";
+        public static readonly Guid ID = Guid.Parse("79fbdd8a-c496-4974-af00-14c3640841ab");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("79fbdd8a-c496-4974-af00-14c3640841ab"),
+                Id = ID,
                 Name = "Baleful Polymorph",
                 Level = 6,
                 Range = 30,
                 Targets = "1 creature.",
-                Duration = "1 minute."
+                Duration = "1 minute.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Transmutation.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID
             };
         }
 
@@ -42,23 +43,23 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Incapacitation";
-            yield return "Transmutation";
-            yield return "Polymorph";
+            yield return Traits.Instances.Incapacitation.ID;
+            yield return Traits.Instances.Transmutation.ID;
+            yield return Traits.Instances.Polymorph.ID;
         }
     }
 }

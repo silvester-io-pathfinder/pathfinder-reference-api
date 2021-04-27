@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Spirit : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("a7bb677c-3efa-4e27-9c61-01e34e08cab8");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Spirits are ephemeral creatures defined by their spiritual self and often lacking a physical form." };
+            yield return new TextBlock { Id = Guid.Parse("c51d9ced-d892-4218-b477-726b8ceb67fe"), Type = TextBlockType.Text, Text = "Spirits are ephemeral creatures defined by their spiritual self and often lacking a physical form." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1e3deb75-de15-439d-bee0-1b11d3d31790"),
                 SourceId = CoreRulebook.ID,
                 Page = 636
             };

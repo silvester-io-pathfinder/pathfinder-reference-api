@@ -5,9 +5,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
@@ -15,7 +12,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
     {
         public static readonly Guid ID = Guid.Parse("7d31dbce-9230-4960-99cc-71de51c18977");
 
-        protected override AlchemicalPoison GetAlchemicalPoison(AlchemicalPoisonSeeder seeder)
+        protected override AlchemicalPoison GetAlchemicalPoison()
         {
             return new AlchemicalPoison
             {
@@ -24,31 +21,31 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 ItemLevel = 18,
                 Price = 400000,
                 Usage = "Held in 1 hand",
-                BulkId = seeder.GetBulkByName("L").Id,
+                BulkId = Bulks.Instances.LightBulk.ID,
                 ActionId = Interact.ID,
-                ActionTypeId = seeder.GetActionTypeByName("One Action").Id,
+                ActionTypeId = ActionTypes.Instances.OneAction.ID,
             };
         }
 
-        protected override StaggeredEffect GetPoisonEffect(AlchemicalPoisonSeeder seeder)
+        protected override StaggeredEffect GetPoisonEffect()
         {
             return new StaggeredEffect
             {
                 Id = Guid.Parse("5b2e24eb-1beb-45ab-b69b-750b8f175033"),
                 DifficultyCheck = 41,
-                SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 Onset = "1 Day",
                 MaximumDuration = "Indefinite",
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Poison";
-            yield return "Consumable";
-            yield return "Ingested";
-            yield return "Virulent";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Poison.ID;
+            yield return Traits.Instances.Consumable.ID;
+            yield return Traits.Instances.Ingested.ID;
+            yield return Traits.Instances.Virulent.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -56,7 +53,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             yield return new TextBlock { Id = Guid.Parse("620d976a-9aa5-421e-a5a0-124b60cdc8db"), Text = "King’s sleep is an insidious long-term poison that can seem like a disease or even death from natural causes on a venerable target. The drained condition from king’s sleep is cumulative with each failed save and can’t be removed while the poison lasts." };
         }
 
-        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages(AlchemicalPoisonSeeder seeder)
+        protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages()
         {
             yield return new StaggeredEffectStage
             {
@@ -89,7 +86,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalPoisonSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

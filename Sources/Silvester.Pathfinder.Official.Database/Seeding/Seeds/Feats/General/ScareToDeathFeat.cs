@@ -7,16 +7,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class ScareToDeathFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "One Action";
+        public static readonly Guid ID = Guid.Parse("045ae2b1-ef9d-44a3-898d-8feb0832b94c");
 
         protected override Feat GetFeat()
         {
             return new Feat
             {
-                Id = Guid.Parse("045ae2b1-ef9d-44a3-898d-8feb0832b94c"),
+                Id = ID,
                 Name = "Scare to Death",
-                Level = 15
+                Level = 15,
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.OneAction.ID
             };
         }
 
@@ -25,9 +26,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("8a8dd86f-24fc-469c-b760-011217f25d3c"), Type = Utilities.Text.TextBlockType.Text, Text = "You can frighten foes so much, they might die. Attempt an Intimidation check against the Will DC of a living creature within 30 feet of you that you sense or observe and who can sense or observe you. If the target can’t hear you or doesn’t understand the language you are speaking, you take a –4 circumstance penalty. The creature is temporarily immune for 1 minute." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("53cb716d-9671-4fe1-9c80-96d7dad779ca"), RequiredSkillId = seeder.GetSkill("Intimidation"), RequiredProficiencyId = seeder.GetProficiency("Legendary") };
+            yield return new SkillPrerequisite { Id = Guid.Parse("53cb716d-9671-4fe1-9c80-96d7dad779ca"), RequiredSkillId = Skills.Instances.Intimidation.ID, RequiredProficiencyId = Proficiencies.Instances.Legendary.ID };
         }
 
         protected override RollableEffect? GetRollableEffect()
@@ -42,14 +43,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Death";
-            yield return "Emotion";
-            yield return "Fear";
-            yield return "General";
-            yield return "Incapacitation";
-            yield return "Skill";
+            yield return Traits.Instances.Death.ID;
+            yield return Traits.Instances.Emotion.ID;
+            yield return Traits.Instances.Fear.ID;
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Incapacitation.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

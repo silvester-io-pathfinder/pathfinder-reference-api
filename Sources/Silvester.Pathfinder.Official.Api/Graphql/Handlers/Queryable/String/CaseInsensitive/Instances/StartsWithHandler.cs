@@ -2,10 +2,7 @@
 using HotChocolate.Data.Filters.Expressions;
 using HotChocolate.Language;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Api.Graphql.Handlers.Queryable.String.CaseInsensitive.Instances
 {

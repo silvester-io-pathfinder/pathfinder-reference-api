@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class BlessSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Enchantment";
+        public static readonly Guid ID = Guid.Parse("51df17bf-ef57-4eed-973c-55cf33285b61");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("51df17bf-ef57-4eed-973c-55cf33285b61"),
+                Id = ID,
                 Name = "Bless",
                 Level = 1,
                 Area = "5-foot emanation",
-                Duration = "1 minute."
+                Duration = "1 minute.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Enchantment.ID,
             };
         }
 
@@ -28,22 +29,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("84937ca3-5b7a-4529-9930-4145419e858b"), Type = Utilities.Text.TextBlockType.Text, Text = "Blessings from beyond help your companions strike true. You and your allies gain a +1 status bonus to attack rolls while within the emanation. Once per turn, starting the turn after you cast bless, you can use a single action, which has the concentrate trait, to increase the emanation’s radius by 5 feet. Bless can counteract bane." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Enchantment";
-            yield return "Mental";
+            yield return Traits.Instances.Enchantment.ID;
+            yield return Traits.Instances.Mental.ID;
         }
     }
 }

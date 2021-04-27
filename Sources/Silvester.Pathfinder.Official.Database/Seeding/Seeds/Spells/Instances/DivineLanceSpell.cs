@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DivineLanceSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Cantrip";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Evocation";
+        public static readonly Guid ID = Guid.Parse("eb816f67-17d1-439b-badb-2657b57f64e2");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("eb816f67-17d1-439b-badb-2657b57f64e2"),
+                Id = ID,
                 Name = "Divine Lance",
                 Level = 1,
                 Range = 30,
-                Targets = "1 creature"
+                Targets = "1 creature",
+                SpellTypeId = SpellTypes.Instances.Cantrip.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Evocation.ID,
             };
         }
 
@@ -41,22 +42,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
+            yield return MagicTraditions.Instances.Divine.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Attack";
-            yield return "Cantrip";
-            yield return "Evocation";
+            yield return Traits.Instances.Attack.ID;
+            yield return Traits.Instances.Cantrip.ID;
+            yield return Traits.Instances.Evocation.ID;
         }
     }
 }

@@ -7,21 +7,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AnimalVisionSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "No Action";
-        public override string MagicSchool => "Divination";
+        public static readonly Guid ID = Guid.Parse("9ebcaed3-689b-4886-939d-a8b0399180c5");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("9ebcaed3-689b-4886-939d-a8b0399180c5"),
+                Id = ID,
                 Name = "Animal Vision",
                 Level = 3,
                 Range = 120,
                 CastTime = TimeSpan.FromMinutes(1),
                 Duration = "1 hour.",
-                Targets = "1 animal."
+                Targets = "1 animal.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                MagicSchoolId = MagicSchools.Instances.Divination.ID,
             };
         }
 
@@ -30,22 +31,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("c34b4717-1df9-49f9-9da9-2f91e2891167"), Type = Utilities.Text.TextBlockType.Text, Text = "You tap into the target’s senses, allowing you to see, hear, and otherwise sense whatever it senses for the spell’s duration.If the target wishes to prevent you from doing so, it can attempt a Will save, negating the spell on a success, but most animals don’t bother to do so.While tapping into the target’s senses, you can’t use your own body’s senses, but you can change back and forth from your body’s senses to the target’s senses using a single action, which has the concentrate trait." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Material";
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Material.ID;
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Divination";
-            yield return "Mental";
+            yield return Traits.Instances.Divination.ID;
+            yield return Traits.Instances.Mental.ID;
         }
     }
 }

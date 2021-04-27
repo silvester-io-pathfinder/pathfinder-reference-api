@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
     {
         public static readonly Guid ID = Guid.Parse("c1fbd9e7-e36e-49d7-b3c2-772400e1fc5e");
 
-        protected override AlchemicalElixir GetAlchemicalElixir(AlchemicalElixirSeeder seeder)
+        protected override AlchemicalElixir GetAlchemicalElixir()
         {
             return new AlchemicalElixir
             {
@@ -23,15 +20,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
                 Name = "Bomber's Eye Elixir",
                 Usage = "Held in 1 hand",
                 ItemBonus = 4,
-                BulkId = seeder.GetBulkByName("L").Id
+                BulkId = Bulks.Instances.LightBulk.ID
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Elixir";
-            yield return "Consumable";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Elixir.ID;
+            yield return Traits.Instances.Consumable.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -39,12 +36,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new TextBlock { Id = Guid.Parse("47c254c1-8659-4363-8818-143300056126"), Text = "This tincture lets you pinpoint your foes. For the next 5 minutes, your alchemical bomb Strikes reduce the circumstance bonus to AC your targets gain from cover." };
         }
 
-        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)
+        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()
         {
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("e87ddbd9-2e31-4b10-b0db-07f4d4ca71c9"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Lesser").Id,
+                PotionPotencyId = Potencies.Instances.Lesser.ID,
                 Level = 4,
                 Price = 1400,
                 Benefits = "Reduce your targets’ circumstance bonus by 1."
@@ -53,14 +50,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("1c6bf9da-9e46-4f5e-9703-5d48a5a59f73"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Greater").Id,
+                PotionPotencyId = Potencies.Instances.Greater.ID,
                 Level = 14,
                 Price = 70000,
                 Benefits = "Reduce your targets’ circumstance bonus by 2."
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalElixirSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

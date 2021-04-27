@@ -1,104 +1,95 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
 {
-    public abstract class AbstractFeatTemplate
+    public abstract class AbstractFeatTemplate :EntityTemplate<Feat>
     {
-        public void Seed(FeatSeeder seeder)
+        protected override Feat GetEntity(ModelBuilder builder)
         {
             Feat feat = GetFeat();
-            feat.ActionTypeId = seeder.FilterActionTypes(ActionType)[0].Id;
-            feat.FeatTypeId = seeder.FilterFeatTypes(FeatType)[0].Id;
 
             RollableEffect? rollableEffect = GetRollableEffect();
             if (rollableEffect != null)
             {
-                seeder.Builder.AddData(rollableEffect);
+                builder.AddData(rollableEffect);
                 feat.RollableEffectId = rollableEffect.Id;
             }
 
-            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
+            foreach (Guid traitId in GetTraits())
             {
-                seeder.Builder.HasJoinData((feat, trait));
+                builder.HasJoinData<Trait, Feat>((traitId, feat.Id));
             }
 
-            foreach (Prerequisite prerequisite in GetPrerequisites(seeder))
+            foreach (Prerequisite prerequisite in GetPrerequisites())
             {
-                Prerequisite.FeatPrerequisiteBinding binding = seeder.Builder.AddData(new Prerequisite.FeatPrerequisiteBinding { Id = prerequisite.Id, FeatId = feat.Id});
+                Prerequisite.FeatPrerequisiteBinding binding = builder.AddData(new Prerequisite.FeatPrerequisiteBinding { Id = prerequisite.Id, FeatId = feat.Id});
                 prerequisite.BindingId = binding.Id;
 
                 if(prerequisite is OrPrerequisite or)
                 {
                     foreach(Prerequisite innerPrerequisite in or.Choices)
                     {
-                        Prerequisite.OrBinding innerBinding = seeder.Builder.AddData(new Prerequisite.OrBinding { Id = innerPrerequisite.Id, PrerequisiteId = prerequisite.Id });
+                        Prerequisite.OrBinding innerBinding = builder.AddData(new Prerequisite.OrBinding { Id = innerPrerequisite.Id, PrerequisiteId = prerequisite.Id });
                         innerPrerequisite.BindingId = innerBinding.Id;
 
-                        seeder.Builder.Entity(innerPrerequisite.GetType()).HasData(innerPrerequisite);
+                        builder.Entity(innerPrerequisite.GetType()).HasData(innerPrerequisite);
                     }
 
                     or.Choices.Clear();
                 }
 
-                seeder.Builder.Entity(prerequisite.GetType()).HasData(prerequisite);
+                builder.Entity(prerequisite.GetType()).HasData(prerequisite);
             }
 
             foreach (FeatRequirement requirement in GetRequirements())
             {
-                seeder.Builder.AddData(requirement);
+                builder.AddData(requirement);
                 requirement.FeatId = feat.Id;
             }
 
-            foreach (FeatEffect featEffect in GetEffects(seeder))
+            foreach (FeatEffect featEffect in GetEffects())
             {
-                FeatEffect.FeatEffectBinding binding = seeder.Builder.AddData(new FeatEffect.FeatEffectBinding { Id = featEffect.Id, FeatId = feat.Id });
+                FeatEffect.FeatEffectBinding binding = builder.AddData(new FeatEffect.FeatEffectBinding { Id = featEffect.Id, FeatId = feat.Id });
                 featEffect.BindingId = binding.Id;
 
                 if(featEffect is OrFeatEffect or)
                 {
                     foreach(FeatEffect innerEffect in or.Choices)
                     {
-                        FeatEffect.OrEffectBinding innerBinding = seeder.Builder.AddData(new FeatEffect.OrEffectBinding { Id = innerEffect.Id, OrFeatEffectId = featEffect.Id });
+                        FeatEffect.OrEffectBinding innerBinding = builder.AddData(new FeatEffect.OrEffectBinding { Id = innerEffect.Id, OrFeatEffectId = featEffect.Id });
                         innerEffect.BindingId = innerBinding.Id;
 
-                        seeder.Builder.Entity(innerEffect.GetType()).HasData(innerEffect);
+                        builder.Entity(innerEffect.GetType()).HasData(innerEffect);
                     }
 
                     or.Choices.Clear();
                 }
               
-                seeder.Builder.Entity(featEffect.GetType()).HasData(featEffect);
+                builder.Entity(featEffect.GetType()).HasData(featEffect);
             }
 
-            TextBlock[] details = GetDetailBlocks().ToArray();
-            for(int i = 0; i < details.Length; i ++)
-            {
-                TextBlock detail = details[i];
-                detail.Order = i;
-                detail.OwnerId = feat.Id;
-                seeder.Builder.AddOwnedData((Feat f) => f.Details, detail);
-            }
+            builder.AddTextBlocks(feat, GetDetailBlocks(), e => e.Details);
 
-            seeder.Builder.AddData(feat);
+            return feat;
         }
 
         protected abstract Feat GetFeat();
-        protected abstract IEnumerable<string> GetTraits();
+        protected abstract IEnumerable<Guid> GetTraits();
         protected abstract IEnumerable<TextBlock> GetDetailBlocks();
-        protected abstract string FeatType { get; }
-        protected abstract string ActionType { get; }
 
-        protected virtual IEnumerable<FeatEffect> GetEffects(FeatSeeder seeder)
+        protected virtual IEnumerable<FeatEffect> GetEffects()
         {
             //Override in concrete subclass to add feat effects.
             yield break;
         }
 
-        protected virtual IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected virtual IEnumerable<Prerequisite> GetPrerequisites()
         {
             //Override in concrete subclass to add prerequisites.
             yield break;

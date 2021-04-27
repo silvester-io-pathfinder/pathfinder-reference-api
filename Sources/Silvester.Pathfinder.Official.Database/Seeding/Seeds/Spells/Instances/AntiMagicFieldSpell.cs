@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AntiMagicFieldSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Three Actions";
-        public override string MagicSchool => "Abjuration";
+        public static readonly Guid ID = Guid.Parse("3e91401a-203c-4d1e-9a76-0012e2617cd8");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("3e91401a-203c-4d1e-9a76-0012e2617cd8"),
+                Id = ID,
                 Name = "Anti-Magic Field",
                 Level = 8,
                 Area = "10-foot emanation, which affects you.",
-                Duration = "1 minute."
+                Duration = "1 minute.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.ThreeActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Abjuration.ID,
             };
         }
 
@@ -29,24 +30,24 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("644e4608-c84d-411d-89c4-365b34b755a3"), Type = Utilities.Text.TextBlockType.Text, Text = "The field disrupts only magic, so a +3 longsword still functions as a longsword. Magically created creatures (such as golems) function normally within an antimagic field." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Material";
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Material.ID;
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Divine";
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Rare";
-            yield return "Abjuration";
+            yield return Traits.Instances.Rare.ID;
+            yield return Traits.Instances.Abjuration.ID;
         }
     }
 }

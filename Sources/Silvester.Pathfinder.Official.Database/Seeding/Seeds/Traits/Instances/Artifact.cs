@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class AddiArtifacttive2 : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("8b3e67ad-f782-49ec-941f-ba99e83811fd");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Items with this trait are artifacts. These magic items can’t be crafted by normal means, and they can’t be damaged by normal means. Artifacts are always rare or unique." };
+            yield return new TextBlock { Id = Guid.Parse("d050f16d-16d9-47d0-b2e1-60b71b75b33f"), Type = TextBlockType.Text, Text = "Items with this trait are artifacts. These magic items can’t be crafted by normal means, and they can’t be damaged by normal means. Artifacts are always rare or unique." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("572e4f63-6528-4717-a7e3-c23624aa54fb"),
                 SourceId = GamemasteryGuide.ID,
                 Page = 250
             };

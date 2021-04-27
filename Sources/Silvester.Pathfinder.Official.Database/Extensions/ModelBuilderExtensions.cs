@@ -1,53 +1,67 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 
 namespace Silvester.Pathfinder.Official.Database.Extensions
 {
     public static class ModelBuilderExtensions
     {
-        /*public static ModelBuilder HasJoinedData<TLeft, TRight>(this ModelBuilder builder, Expression<Func<TLeft, IEnumerable<TRight>>> leftSelector, Expression<Func<TRight, IEnumerable<TLeft>>> rightSelector, params (TLeft left, TRight right)[] data)
-          where TLeft : BaseEntity
-          where TRight : BaseEntity
+        public static ModelBuilder HasJoinData<TFirst, TSecond>(this ModelBuilder modelBuilder, params (Guid First, Guid Second)[] data)
+            where TFirst : class where TSecond : class
         {
-            IMutableEntityType firstEntityType = builder.Model.FindEntityType(typeof(TLeft));
-            IMutableEntityType secondEntityType = builder.Model.FindEntityType(typeof(TRight));
+            return modelBuilder.HasJoinData<TFirst, TSecond>(data.AsEnumerable());
+        }
 
-            IMutableSkipNavigation firstToSecond = firstEntityType
-                .GetSkipNavigations()
-                .Single(n => n.TargetEntityType == secondEntityType);
+        public static ModelBuilder HasJoinData<TFirst, TSecond>(this ModelBuilder modelBuilder, IEnumerable<(Guid First, Guid Second)> data)
+            where TFirst : class where TSecond : class
+        {
+            IMutableEntityType firstEntityType = modelBuilder.Model.FindEntityType(typeof(TFirst));
+            IMutableEntityType secondEntityType = modelBuilder.Model.FindEntityType(typeof(TSecond));
+
+            IMutableSkipNavigation firstToSecond = GetFirstToSecondNavigation<TFirst, TSecond>(firstEntityType, secondEntityType);
 
             IMutableEntityType joinEntityType = firstToSecond.JoinEntityType;
             IMutableProperty firstProperty = firstToSecond.ForeignKey.Properties.Single();
             IMutableProperty secondProperty = firstToSecond.Inverse.ForeignKey.Properties.Single();
-            IClrPropertyGetter firstValueGetter = firstToSecond.ForeignKey.PrincipalKey.Properties.Single().GetGetter();
-            IClrPropertyGetter secondValueGetter = firstToSecond.Inverse.ForeignKey.PrincipalKey.Properties.Single().GetGetter();
 
-            builder
-                .Entity<TLeft>()
-                .HasMany(leftSelector)
-                .WithMany(rightSelector)
-                .Using
-                .UsingEntity<Dictionary<string, object>>(joinEntityType.Name,
-                    r => r.HasOne(typeof(TLeft)).WithMany().HasForeignKey(secondProperty.Name),
-                    l => l.HasOne(typeof(TRight)).WithMany().HasForeignKey(firstProperty.Name),
-                    je =>
-                    {
-                        je.HasKey(firstProperty.Name, secondProperty.Name);
-                        je.HasData(data.Select(e => new Dictionary<string, object>
-                        {
-                            [firstProperty.Name] = firstValueGetter.GetClrValue(e.left),
-                            [secondProperty.Name] = secondValueGetter.GetClrValue(e.right),
-                        }));
-                    });
-         
-            return builder;
-        }*/
+            IEnumerable<object> seedData = data.Select(e =>
+            {
+                return (object)new Dictionary<string, object>
+                {
+                    [firstProperty.Name] = e.First,
+                    [secondProperty.Name] = e.Second,
+                };
+            });
+
+            modelBuilder
+                .Entity(typeof(TFirst))
+                .HasOne(typeof(TSecond))
+                .WithMany()
+                .HasForeignKey(secondProperty.Name);
+
+            modelBuilder
+                .Entity(typeof(TSecond))
+                .HasOne(typeof(TFirst))
+                .WithMany()
+                .HasForeignKey(firstProperty.Name);
+
+            EntityTypeBuilder joinEntity = modelBuilder
+                .Entity(joinEntityType.Name);
+
+            joinEntity
+                .HasKey(firstProperty.Name, secondProperty.Name);
+
+            joinEntity
+                .HasData(seedData);
+
+            return modelBuilder;
+        }
 
         public static ModelBuilder HasJoinData<TFirst, TSecond>(this ModelBuilder modelBuilder, params (TFirst First, TSecond Second)[] data)
             where TFirst : class where TSecond : class
@@ -60,7 +74,7 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
         {
             IMutableEntityType firstEntityType = modelBuilder.Model.FindEntityType(typeof(TFirst));
             IMutableEntityType secondEntityType = modelBuilder.Model.FindEntityType(typeof(TSecond));
-            
+
             IMutableSkipNavigation firstToSecond = GetFirstToSecondNavigation<TFirst, TSecond>(firstEntityType, secondEntityType);
 
             IMutableEntityType joinEntityType = firstToSecond.JoinEntityType;
@@ -104,72 +118,28 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 
         private static IMutableSkipNavigation GetFirstToSecondNavigation<TFirst, TSecond>(IMutableEntityType firstEntityType, IMutableEntityType secondEntityType)
         {
+            IMutableSkipNavigation[] skipNavigations1 = firstEntityType
+                .GetSkipNavigations()
+                .ToArray();
+
+            IMutableSkipNavigation[] skipNavigations2 = secondEntityType
+                .GetSkipNavigations()
+                .ToArray();
             try
             {
-                return firstEntityType
-                    .GetSkipNavigations()
-                    .Single(n => n.TargetEntityType == secondEntityType);
+                return skipNavigations1.Single(n => n.TargetEntityType == secondEntityType);
 
             }
-            catch (InvalidOperationException _)
+            catch (InvalidOperationException)
             {
                 Console.WriteLine("Following navigational properties could not be found. Are you sure they're present and PROPERTIES (as opposed to FIELDS)?");
                 Console.WriteLine($"First: {typeof(TFirst).Name}");
                 Console.WriteLine($"Second: {typeof(TSecond).Name}");
+                Console.WriteLine($"First Count: {skipNavigations1.Length} with entries '{string.Join(", ", skipNavigations1.Select(e => e.Name))}'.");
+                Console.WriteLine($"Second Count: {skipNavigations2.Length} with entries '{string.Join(", ", skipNavigations2.Select(e => e.Name))}'.");
 
                 throw;
             }
-        }
-
-        public static ModelBuilder Join<TSource, TTarget>(this ModelBuilder builder, TSource[] sources, TTarget[] targets, IEntityJoin<TSource, TTarget> joiner)
-            where TSource : class
-            where TTarget : class
-        {
-
-            foreach (TSource source in sources)
-            {
-                foreach (TTarget target in joiner.Join(source, targets))
-                {
-                    builder.HasJoinData((source, target));
-                }
-            }
-
-            return builder;
-        }
-
-        public static ModelBuilder Join<TSource, TTarget>(this ModelBuilder builder, TSource[] sources, IEntityJoin<TSource, TTarget> joiner)
-            where TSource : class
-            where TTarget : class
-        {
-
-            foreach (TSource source in sources)
-            {
-                TTarget[] newTargetEntities = joiner.Join(source, Array.Empty<TTarget>());
-                foreach (TTarget target in newTargetEntities)
-                {
-                    builder.Entity(target.GetType()).HasData(newTargetEntities);
-                    builder.HasJoinData((source, target));
-                }
-            }
-
-            return builder;
-        }
-
-        public static ModelBuilder Join<TSource, TTarget, TJoin>(this ModelBuilder builder, TSource[] sources, TTarget[] targets, IEntityJoin<TSource, TTarget, TJoin> joiner)
-            where TSource : class
-            where TTarget : class
-            where TJoin : class
-        {
-            EntityTypeBuilder<TJoin> typeBuilder = builder.Entity<TJoin>();
-            foreach (TSource source in sources)
-            {
-                foreach (TJoin join in joiner.Join(source, targets))
-                {
-                    typeBuilder.HasData(join);
-                }
-            }
-
-            return builder;
         }
 
         public static object AddData(this ModelBuilder builder, Type type, object entity)
@@ -189,6 +159,19 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             return builder.Entity<T>().AddData(entities);
         }
 
+        public static void AddTextBlocks<TOwner>(this ModelBuilder builder, TOwner owner, IEnumerable<TextBlock> textBlocks, Expression<Func<TOwner, IEnumerable<TextBlock>>> collectionSelector)
+           where TOwner : BaseEntity
+        {
+            TextBlock[] details = textBlocks.ToArray();
+            for (int i = 0; i<details.Length; i++)
+            {
+                TextBlock detail = details[i];
+                detail.Order = i;
+                detail.OwnerId = owner.Id;
+                builder.AddOwnedData(collectionSelector, detail);
+            }
+        }
+
         public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, Expression<Func<TOwner, IEnumerable<TOwned>>> collectionSelector, TOwned ownedEntity)
             where TOwned : BaseEntity
             where TOwner : BaseEntity
@@ -200,16 +183,24 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
            where TOwned : BaseEntity
            where TOwner : BaseEntity
         {
-            return builder
-                .Entity<TOwner>()
-                .OwnsMany(collectionSelector, a =>
-                {
-                    a.HasKey(e => e.Id);
-                    a.Property(e => e.Id).ValueGeneratedOnAdd();
-                    a.Property<Guid>("OwnerId").ValueGeneratedOnAdd();
-                    a.WithOwner().HasForeignKey("OwnerId");
-                    a.HasData(ownedEntities);
-                });
+            try
+            {
+                return builder
+                    .Entity<TOwner>()
+                    .OwnsMany(collectionSelector, a =>
+                    {
+                        a.HasKey(e => e.Id);
+                        a.Property(e => e.Id).ValueGeneratedOnAdd();
+                        a.Property<Guid>("OwnerId").ValueGeneratedOnAdd();
+                        a.WithOwner().HasForeignKey("OwnerId");
+                        a.HasData(ownedEntities);
+                    });
+            } 
+            catch(InvalidOperationException exception)
+            {
+                Console.WriteLine(exception.Message);
+                throw;
+            }
         }
     }
 }

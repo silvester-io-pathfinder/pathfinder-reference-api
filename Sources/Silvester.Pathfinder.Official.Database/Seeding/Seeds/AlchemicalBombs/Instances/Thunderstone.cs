@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
     {
         public static readonly Guid ID = Guid.Parse("cdfc6ce6-04ca-4220-a5c6-73eee8d2f0d5");
 
-        protected override AlchemicalBomb GetAlchemicalBomb(AlchemicalBombSeeder seeder)
+        protected override AlchemicalBomb GetAlchemicalBomb()
         {
             return new AlchemicalBomb
             {
@@ -23,17 +20,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Name = "Thunderstone",
                 Usage = "Held in 1 hand",
                 ItemBonus = 1,
-                BulkId = seeder.GetBulkByName("L").Id
+                BulkId = Bulks.Instances.LightBulk.ID
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Bomb";
-            yield return "Consumable";
-            yield return "Sonic";
-            yield return "Splash";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Bomb.ID;
+            yield return Traits.Instances.Consumable.ID;
+            yield return Traits.Instances.Sonic.ID;
+            yield return Traits.Instances.Splash.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -41,7 +38,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
             yield return new TextBlock { Id = Guid.Parse("670226b5-e794-4898-b2be-94c63cf5408e"), Text = "When this stone hits a creature or a hard surface, it explodes with a deafening bang. A thunderstone deals the listed sonic damage and sonic splash damage, and each creature within 10 feet of the space in which the stone exploded must succeed at a Fortitude saving throw with the listed DC or be deafened until the end of its next turn. Many types of thunderstone grant an item bonus to attack rolls." };
         }
 
-        protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies(AlchemicalBombSeeder seeder)
+        protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies()
         {
             yield return new AlchemicalBombPotencyBinding
             {
@@ -49,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 1,
                 Benefits = "The bomb deals 1d4 sonic damage and 1 sonic splash damage, and the DC is 17.",
                 Price = 300,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Lesser").Id
+                PotionPotencyId = Potencies.Instances.Lesser.ID
             };
 
             yield return new AlchemicalBombPotencyBinding
@@ -58,7 +55,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 3,
                 Benefits = "You gain a +1 item bonus to attack rolls. The bomb deals 2d4 sonic damage and 2 sonic splash damage, and the DC is 20.",
                 Price = 1000,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Moderate").Id
+                PotionPotencyId = Potencies.Instances.Moderate.ID
             };
           
             yield return new AlchemicalBombPotencyBinding
@@ -67,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 11,
                 Benefits = "You gain a +2 item bonus to attack rolls. The bomb deals 3d4 sonic damage and 3 sonic splash damage, and the DC is 28.",
                 Price = 25000,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Greater").Id
+                PotionPotencyId = Potencies.Instances.Greater.ID
             };
          
             yield return new AlchemicalBombPotencyBinding
@@ -76,11 +73,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 17,
                 Benefits = "You gain a +3 item bonus to attack rolls. The bomb deals 4d4 sonic damage and 4 sonic splash damage, and the DC is 36.",
                 Price = 250000,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Major").Id
+                PotionPotencyId = Potencies.Instances.Major.ID
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalBombSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

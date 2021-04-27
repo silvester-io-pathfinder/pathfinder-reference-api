@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Silvester.Pathfinder.Official.Api.Services;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

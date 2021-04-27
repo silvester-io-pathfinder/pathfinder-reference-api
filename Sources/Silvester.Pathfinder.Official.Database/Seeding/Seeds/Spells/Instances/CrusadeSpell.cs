@@ -7,20 +7,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class CrusadeSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Enchantment";
-        
+        public static readonly Guid ID = Guid.Parse("e4568cde-13d1-4684-81b2-180bc291198f");
+
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("e4568cde-13d1-4684-81b2-180bc291198f"),
+                Id = ID,
                 Name = "Crusade",
                 Level = 9,
                 Range = 60,
                 Targets = "Up to 4 creatures.",
-                Duration = "4 minutes."
+                Duration = "4 minutes.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Enchantment.ID,
             };
         }
 
@@ -46,23 +47,23 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
+            yield return MagicTraditions.Instances.Divine.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Uncommon";
-            yield return "Enchantment";
-            yield return "Linguistic";
-            yield return "Mental";
+            yield return Traits.Instances.Uncommon.ID;
+            yield return Traits.Instances.Enchantment.ID;
+            yield return Traits.Instances.Linguistic.ID;
+            yield return Traits.Instances.Mental.ID;
         }
     }
 }

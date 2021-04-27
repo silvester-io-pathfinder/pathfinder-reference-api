@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database;
+﻿using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
@@ -8,14 +8,13 @@ namespace Silvester.Pathfinder.Official.Database.Models
     {
         public string Name { get; set; } = default!;
 
-        public string Description { get; set; } = default!;
-
         public Guid CategoryId { get; set; }
         public PlaneCategory Category { get; set; } = default!;
 
         public Guid AlignmentId { get; set; }
         public Alignment Alignment { get; set; } = default!;
 
-        public ICollection<PlaneTrait> Traits { get; set; } = new List<PlaneTrait>();
+        public ICollection<Trait> Traits { get; set; } = new List<Trait>();
+        public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
     }
 }

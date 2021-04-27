@@ -1,5 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
@@ -22,7 +21,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<Language> Languages { get; set; } = new List<Language>();
 
-        public ICollection<RaceTrait> RaceTraits { get; set; } = new List<RaceTrait>();
+        public ICollection<Trait> RaceTraits { get; set; } = new List<Trait>();
 
         public ICollection<Heritage> Heritages { get; set; } = new List<Heritage>();
     }

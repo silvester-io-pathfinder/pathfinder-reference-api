@@ -1,12 +1,9 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.RaceSizes;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.ActionTypes.Instances;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 {
@@ -14,27 +11,27 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
     {
         public static readonly Guid ID = Guid.Parse("577e96ba-5bf3-46e7-9f4b-eb5b71546bfd");
 
-        protected override Models.Action GetAction(ActionSeeder seeder)
+        protected override Models.Action GetAction()
         {
             return new Models.Action
             {
                 Id = ID,
                 Name = "Strike",
-                ActionTypeId = seeder.GetActionType("One Action"),
+                ActionTypeId = OneAction.ID,
             };
         }
 
-        protected override IEnumerable<TextBlock> GetDetails(ActionSeeder seeder)
+        protected override IEnumerable<TextBlock> GetDetails()
         {
             yield return new TextBlock { Id = Guid.Parse("36548991-704d-4a82-a2c4-0622eb57f728"), Text = "You attack with a weapon you’re wielding or with an unarmed attack, targeting one creature within your reach (for a melee attack) or within range (for a ranged attack). Roll the attack roll for the weapon or unarmed attack you are using, and compare the result to the target creature’s AC to determine the effect. See Attack Rolls on page 446 and Damage on page 450 for details on calculating your attack and damage rolls." };
         }
 
-        protected override IEnumerable<Trait> GetTraits(ActionSeeder seeder)
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return seeder.GetTrait("Attack");
+            yield return Attack.ID;
         }
 
-        protected override RollableEffect? GetRollableEffect(ActionSeeder seeder)
+        protected override RollableEffect? GetRollableEffect()
         {
             return new RollableEffect
             {

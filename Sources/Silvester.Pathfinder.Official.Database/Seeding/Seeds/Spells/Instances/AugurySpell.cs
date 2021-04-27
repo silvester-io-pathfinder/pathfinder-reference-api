@@ -7,18 +7,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AugurySpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "No Action";
-        public override string MagicSchool => "Divination";
+        public static readonly Guid ID = Guid.Parse("cfb3f479-70d2-4275-890f-27920ec70d3d");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("cfb3f479-70d2-4275-890f-27920ec70d3d"),
+                Id = ID,
                 Name = "Augury",
                 Level = 2,
-                CastTime = TimeSpan.FromMinutes(10)
+                CastTime = TimeSpan.FromMinutes(10),
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                MagicSchoolId = MagicSchools.Instances.Divination.ID,
             };
         }
 
@@ -33,23 +34,23 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("702a5b5e-0fad-48db-b126-02b58069b5f7"), Type = Utilities.Text.TextBlockType.Text, Text = "The GM rolls a secret DC 6 flat check. On a failure, the result is always “nothing.” This makes it impossible to tell whether a “nothing” result is accurate. If anyone asks about the same topic as the first casting of augury during an additional casting, the GM uses the secret roll result from the first casting. If circumstances change, though, it’s possible to get a different result." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Material";
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Material.ID;
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Divination";
-            yield return "Prediction";
+            yield return Traits.Instances.Divination.ID;
+            yield return Traits.Instances.Prediction.ID;
         }
     }
 }

@@ -1,46 +1,38 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses
 {
-    public abstract class AbstractItemCurseTemplate
+    public abstract class AbstractItemCurseTemplate : EntityTemplate<ItemCurse>
     {
-        public void Seed(ItemCurseSeeder seeder)
+        protected override ItemCurse GetEntity(ModelBuilder builder)
         {
-            ItemCurse itemCurse = GetItemCurse(seeder);
+            ItemCurse itemCurse = GetItemCurse();
 
-            SourcePage? sourcePage = GetSourcePage(seeder);
+            SourcePage? sourcePage = GetSourcePage();
             if (sourcePage != null)
             {
-                seeder.Builder.AddData(sourcePage);
+                builder.AddData(sourcePage);
                 itemCurse.SourcePageId = sourcePage.Id;
             }
 
-            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
+            foreach (Guid traitId in GetTraits())
             {
-                seeder.Builder.HasJoinData((itemCurse, trait));
+                builder.HasJoinData<Trait, ItemCurse>((traitId, itemCurse.Id));
             }
 
-            TextBlock[] details = GetDetailBlocks(seeder).ToArray();
-            for (int i = 0; i < details.Length; i++)
-            {
-                TextBlock detail = details[i];
-                detail.Order = i;
-                detail.OwnerId = itemCurse.Id;
-                seeder.Builder.AddOwnedData((ItemCurse f) => f.Details, detail);
-            }
-
-            seeder.Builder.AddData(itemCurse);
+            builder.AddTextBlocks(itemCurse, GetDetailBlocks(), e => e.Details);
+            return itemCurse;
         }
 
-        public abstract ItemCurse GetItemCurse(ItemCurseSeeder seeder);
-        public abstract SourcePage? GetSourcePage(ItemCurseSeeder seeder);
-        public abstract IEnumerable<TextBlock> GetDetailBlocks(ItemCurseSeeder seeder);
-        public abstract IEnumerable<string> GetTraits();
+        public abstract ItemCurse GetItemCurse();
+        public abstract SourcePage? GetSourcePage();
+        public abstract IEnumerable<TextBlock> GetDetailBlocks();
+        public abstract IEnumerable<Guid> GetTraits();
     }
 }

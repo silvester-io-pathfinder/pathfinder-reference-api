@@ -7,20 +7,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AnimalMessengerSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "No Action";
-        public override string MagicSchool => "Enchantment";
+        public static readonly Guid ID = Guid.Parse("5ca21ccd-2ccc-4900-99fe-40480d6103f2");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("5ca21ccd-2ccc-4900-99fe-40480d6103f2"),
+                Id = ID,
                 Name = "Animal Messenger",
                 Level = 2,
                 Range = 120,
                 CastTime = TimeSpan.FromMinutes(1),
-                Duration = "24 hours."
+                Duration = "24 hours.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                MagicSchoolId = MagicSchools.Instances.Enchantment.ID,
             };
         }
 
@@ -30,22 +31,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("53d9891f-038b-459c-a98a-76577a5aac33"), Type = Utilities.Text.TextBlockType.Text, Text = "If there are no Tiny wild animals in range, the spell is lost." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Material";
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Material.ID;
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Enchantment";
-            yield return "Mental";
+            yield return Traits.Instances.Enchantment.ID;
+            yield return Traits.Instances.Mental.ID;
         }
     }
 }

@@ -7,16 +7,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class GladHandFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "No Action";
+        public static readonly Guid ID = Guid.Parse("6f59e2f4-2100-436d-8cf8-266585faa937");
 
         protected override Feat GetFeat()
         {
             return new Feat
             {
-                Id = Guid.Parse("6f59e2f4-2100-436d-8cf8-266585faa937"),
+                Id = ID,
                 Name = "Glad-Hand",
-                Level = 2
+                Level = 2,
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
 
@@ -25,15 +26,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("d0c298c6-63be-431c-80e9-5a95ec712f73"), Type = Utilities.Text.TextBlockType.Text, Text = "First impressions are your strong suit. When you meet someone in a casual or social situation, you can immediately attempt a Diplomacy check to Make an Impression on that creature rather than needing to converse for 1 minute. You take a –5 penalty to the check. If you fail or critically fail, you can engage in 1 minute of conversation and attempt a new check at the end of that time rather than accepting the failure or critical failure result." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("0a89ce88-3517-439b-8149-414aa59fbd80"), RequiredSkillId = seeder.GetSkill("Diplomacy"), RequiredProficiencyId = seeder.GetProficiency("Expert") };
+            yield return new SkillPrerequisite { Id = Guid.Parse("0a89ce88-3517-439b-8149-414aa59fbd80"), RequiredSkillId = Skills.Instances.Diplomacy.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "General";
-            yield return "Skill";
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

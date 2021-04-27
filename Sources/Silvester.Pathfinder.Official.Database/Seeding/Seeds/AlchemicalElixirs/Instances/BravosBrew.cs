@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
     {
         public static readonly Guid ID = Guid.Parse("8d0d85f9-d1bf-49c2-ab32-d6caa627de83");
 
-        protected override AlchemicalElixir GetAlchemicalElixir(AlchemicalElixirSeeder seeder)
+        protected override AlchemicalElixir GetAlchemicalElixir()
         {
             return new AlchemicalElixir
             {
@@ -23,16 +20,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
                 Name = "Bravo's Brew",
                 Usage = "Held in 1 hand",
                 ItemBonus = 2,
-                BulkId = seeder.GetBulkByName("L").Id
+                BulkId = Bulks.Instances.LightBulk.ID
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Elixir";
-            yield return "Consumable";
-            yield return "Mental";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Elixir.ID;
+            yield return Traits.Instances.Consumable.ID;
+            yield return Traits.Instances.Mental.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -40,12 +37,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new TextBlock { Id = Guid.Parse("bed0c6dc-af90-431a-93a5-f6a126f7e4d2"), Text = "This flask of foaming beer grants courage. For the next hour after drinking this elixir, you gain an item bonus to Will saves, which is greater when attempting Will saves against fear." };
         }
 
-        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)
+        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()
         {
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("e35d119e-d943-4fac-be53-d75d079be8c4"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Lesser").Id,
+                PotionPotencyId = Potencies.Instances.Lesser.ID,
                 Level = 2,
                 Price = 700,
                 Benefits = "The bonus on Will saves is +1, or +2 against fear.",
@@ -54,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("924eb7b5-50b7-48d8-857d-18dd705ec6ab"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Moderate").Id,
+                PotionPotencyId = Potencies.Instances.Moderate.ID,
                 Level = 10,
                 Price = 15000,
                 Benefits = "The bonus on Will saves is +2, or +3 against fear.",
@@ -63,7 +60,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("198da97d-cf25-453b-93ce-94591ba46529"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Greater").Id,
+                PotionPotencyId = Potencies.Instances.Greater.ID,
 
                 Level = 15,
                 Price = 70000,
@@ -71,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalElixirSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

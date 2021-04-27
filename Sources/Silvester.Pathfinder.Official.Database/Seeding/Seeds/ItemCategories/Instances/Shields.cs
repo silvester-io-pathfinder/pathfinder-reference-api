@@ -1,0 +1,21 @@
+﻿using Silvester.Pathfinder.Official.Database.Models;
+using System;
+
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCategories.Instances
+{
+    public class Shields : AbstractItemCategoryTemplate
+    {
+        public static readonly Guid ID = Guid.Parse("eed4990e-e635-4683-a920-1937bf9736f2");
+
+        protected override ItemCategory GetItemCategory()
+        {
+            return new ItemCategory 
+            {
+                Id = ID, 
+                PageNumber = 586, 
+                Name = "Shields", 
+                Description = "More durable shields and ones with special magical powers." 
+            };
+        }
+    }
+}

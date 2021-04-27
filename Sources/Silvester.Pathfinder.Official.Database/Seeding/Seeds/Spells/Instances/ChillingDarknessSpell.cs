@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ChillingDarknessSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Evocation";
+        public static readonly Guid ID = Guid.Parse("fc8ec088-6c8d-4d90-9293-9fc0720a3855");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("fc8ec088-6c8d-4d90-9293-9fc0720a3855"),
+                Id = ID,
                 Name = "Chilling Darkness",
                 Level = 3,
                 Range = 120,
-                Targets = "1 creature."
+                Targets = "1 creature.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Evocation.ID,
             };
         }
 
@@ -52,24 +53,24 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
+            yield return MagicTraditions.Instances.Divine.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Attack";
-            yield return "Cold";
-            yield return "Darkness";
-            yield return "Evocation";
-            yield return "Evil";
+            yield return Traits.Instances.Attack.ID;
+            yield return Traits.Instances.Cold.ID;
+            yield return Traits.Instances.Darkness.ID;
+            yield return Traits.Instances.Evocation.ID;
+            yield return Traits.Instances.Evil.ID;
         }
     }
 }

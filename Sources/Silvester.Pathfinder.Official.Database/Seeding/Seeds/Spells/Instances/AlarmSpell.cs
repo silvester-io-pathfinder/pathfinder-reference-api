@@ -7,21 +7,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AlarmSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "No Action";
-        public override string MagicSchool => "Abjuration";
+        public static readonly Guid ID = Guid.Parse("558a6ae1-fc9f-4e11-9c93-18d52be7f5aa");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("558a6ae1-fc9f-4e11-9c93-18d52be7f5aa"),
+                Id = ID,
                 Name = "Alarm",
                 CastTime = TimeSpan.FromMinutes(10),
                 Duration = "8 hours.",
                 Range = 0,
                 Level = 1,
-                Area = "20-foot burst"
+                Area = "20-foot burst",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                MagicSchoolId = MagicSchools.Instances.Abjuration.ID,
             };
         }
 
@@ -50,24 +51,24 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
-            yield return "Material";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
+            yield return SpellComponents.Instances.Material.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Divine";
-            yield return "Occult";
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Abjuration";
+            yield return Traits.Instances.Abjuration.ID;
         }
     }
 }

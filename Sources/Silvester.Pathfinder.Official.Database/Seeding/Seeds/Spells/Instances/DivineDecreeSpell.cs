@@ -7,21 +7,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DivineDecreeSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Evocation";
-        public override string SavingThrowStat => "Fortitude";
+        public static readonly Guid ID = Guid.Parse("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("7ebf76e9-a8fb-49a1-956c-f97f784dcbb9"),
+                Id = ID,
                 Name = "Divine Decree",
                 Level = 7,
                 Area = "40-foot emanation.",
                 Range = 40,
-                Duration = "Varies."
+                Duration = "Varies.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Evocation.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID
             };
         }
 
@@ -58,20 +59,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
+            yield return MagicTraditions.Instances.Divine.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Evocation";
+            yield return Traits.Instances.Evocation.ID;
         }
     }
 }

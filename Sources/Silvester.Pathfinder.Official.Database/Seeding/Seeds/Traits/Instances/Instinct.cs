@@ -1,19 +1,15 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Instinct : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("583136ca-8e2e-47bc-b9c4-d6f6286b5aea");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,15 +20,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Instinct abilities require a specific instinct; you lose access if you perform acts anathema to your instinct." };
+            yield return new TextBlock { Id = Guid.Parse("3a002415-2454-4a48-9c48-d486776f289a"), Type = TextBlockType.Text, Text = "Instinct abilities require a specific instinct; you lose access if you perform acts anathema to your instinct." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
-                SourceId = 87.ID,
+                Id = Guid.Parse("ac2f00ac-4ec9-4f5e-9b12-59b1f20cea8b"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 638
             };
         }

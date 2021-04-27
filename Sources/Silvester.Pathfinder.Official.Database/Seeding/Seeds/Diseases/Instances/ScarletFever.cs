@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
@@ -13,20 +10,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
     {
         public static readonly Guid ID = Guid.Parse("f8e30bb2-a932-44b8-bc10-d958d2094645");
 
-        public override Disease GetDisease(DiseaseSeeder seeder)
+        public override Disease GetDisease()
         {
             return new Disease
             {
                 Id = ID,
                 Name = "Scarlet Fever",
                 Description = "he relatively simple sore throat caused by this disease leads many victims to initially dismiss it as a mild illness, but scarlet fever can be deadly if left untreated. You can’t reduce your sickened condition while affected with scarlet fever.",
-                SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = 13,
                 Onset = "2 Days"
             };
         }
 
-        public override SourcePage? GetSourcePage(DiseaseSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {
@@ -36,12 +33,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
             };
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Disease";
+            yield return Traits.Instances.Disease.ID;
         }
 
-        public override IEnumerable<DiseaseStage> GetDiseaseStages(DiseaseSeeder seeder)
+        public override IEnumerable<DiseaseStage> GetDiseaseStages()
         {
             yield return new DiseaseStage 
             { 

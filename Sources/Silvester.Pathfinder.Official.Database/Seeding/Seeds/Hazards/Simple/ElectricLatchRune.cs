@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
@@ -13,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
     {
         public static readonly Guid ID = Guid.Parse("53829d01-6277-47bd-9b7c-9f002c965664");
 
-        protected override Hazard GetHazard(HazardSeeder seeder)
+        protected override Hazard GetHazard()
         {
             return new Hazard
             {
@@ -22,38 +19,38 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Description = "An invisible rune imprinted on a door latch releases a powerful electric discharge.",
                 Level = 3,
                 CanBeDetectedMagically = false,
-                TypeId = seeder.GetHazardTypeByName("Traps").Id,
-                ComplexityId = seeder.GetComplexityByName("Simple").Id
+                TypeId = HazardTypes.Instances.Traps.ID,
+                ComplexityId = HazardComplexities.Instances.Simple.ID
             };
         }
 
-        protected override IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder)
+        protected override IEnumerable<HazardComponent> GetComponents()
         {
             yield break;
         }
 
-        protected override IEnumerable<string> GetImmunities()
+        protected override IEnumerable<Guid> GetImmunities()
         {
             yield break;
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Electricity";
-            yield return "Evocation";
-            yield return "Magical";
-            yield return "Trap";
+            yield return Traits.Instances.Electricity.ID;
+            yield return Traits.Instances.Evocation.ID;
+            yield return Traits.Instances.Magical.ID;
+            yield return Traits.Instances.Trap.ID;
         }
 
-        protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
+        protected override IEnumerable<HazardAction> GetActions()
         {
             yield return new HazardAction
             {
                 Id = Guid.Parse("a1bbebc2-a500-44f9-8142-b77421a53107"),
                 Name = "Electrocution",
                 Trigger = "A creature grasps the door latch directly or with a tool",
-                Traits = seeder.FilterTraits("Arcane", "Electricity", "Evocation"),
-                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
+                Traits = FilterTraits("Arcane", "Electricity", "Evocation"),
+                ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = new List<TextBlock>
                 {
                     new TextBlock { Id = Guid.Parse("d1e49618-1459-444d-b843-e65168e0ea3f"), Type = TextBlockType.Text, Text = "The trap deals 3d12 electricity damage to the triggering creature (DC 22 basic Reflex save)." },
@@ -65,36 +62,36 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                         Id = Guid.Parse("d08408da-a6f3-4720-8e9c-dc19dea63041"),
                         Damage = "3d12",
                         DifficultyCheck = 22,
-                        DamageTypeId = seeder.GetDamageTypeByName("Electricity").Id,
-                        SavingThrowStatId = seeder.GetSavingThrowStatByName("Reflex").Id
+                        DamageTypeId = DamageTypes.Instances.Electricity.ID,
+                        SavingThrowStatId = SavingThrowStats.Instances.Reflex.ID
                     }
                 }
             };
         }
 
-        protected override HazardDetectionRequirement GetDetectionRequirement(HazardSeeder seeder)
+        protected override HazardDetectionRequirement GetDetectionRequirement()
         {
             return new HazardDetectionRequirement
             {
                 Id = Guid.Parse("05218d9d-3f83-40cb-accc-6436829112ae"),
-                RequiredProficiencyId = seeder.GetProficiencyByName("Trained").Id,
+                RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
                 DifficultyCheck = 20
             };
         }
 
-        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements()
         {
             yield return new HazardDisableRequirement
             {
                 Id = Guid.Parse("fc01265c-7160-4b5c-adf8-f6d59d95ff10"),
-                SkillId = seeder.GetSkillByName("Thievery").Id,
-                RequiredProficiencyId = seeder.GetProficiencyByName("Expert").Id,
+                SkillId = Skills.Instances.Thievery.ID,
+                RequiredProficiencyId = Proficiencies.Instances.Expert.ID,
                 Description = "to scratch out the rune without allowing electricity to flow",
                 DifficultyCheck = 20
             };
         }
 
-        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements()
         {
             yield return new HazardDispellRequirement
             {
@@ -105,7 +102,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             };
         }
 
-        protected override SourcePage GetSourcePage(HazardSeeder seeder)
+        protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {

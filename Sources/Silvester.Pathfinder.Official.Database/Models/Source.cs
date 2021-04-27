@@ -1,6 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database;
-
-namespace Silvester.Pathfinder.Official.Database.Models
+﻿namespace Silvester.Pathfinder.Official.Database.Models
 {
     public class Source : BaseEntity
     {

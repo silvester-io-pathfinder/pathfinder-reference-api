@@ -7,16 +7,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class FascinatingPerformanceFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "No Action";
+        public static readonly Guid ID = Guid.Parse("d76bcd62-20d9-4fce-9fc1-735ec21a0cb2");
 
         protected override Feat GetFeat()
         {
             return new Feat
             {
-                Id = Guid.Parse("d76bcd62-20d9-4fce-9fc1-735ec21a0cb2"),
+                Id = ID,
                 Name = "Fascinating Performance",
-                Level = 1
+                Level = 1,
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
 
@@ -26,15 +27,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("0589bdf3-abf3-4850-a9fe-5f8454150417"), Type = Utilities.Text.TextBlockType.Text, Text = "If you’re an expert in Performance, you can fascinate up to four observers; if you’re a master, you can fascinate up to 10 observers; and if you’re legendary, you can fascinate any number of observers at the same time." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("a9682158-d756-4503-a952-454d8396b2a2"), RequiredSkillId = seeder.GetSkill("Performance"), RequiredProficiencyId = seeder.GetProficiency("Trained") };
+            yield return new SkillPrerequisite { Id = Guid.Parse("a9682158-d756-4503-a952-454d8396b2a2"), RequiredSkillId = Skills.Instances.Performance.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "General";
-            yield return "Skill";
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

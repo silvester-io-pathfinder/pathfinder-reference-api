@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
     {
         public static readonly Guid ID = Guid.Parse("3e95680d-1c87-457c-91b0-e6e5cf29bee8");
 
-        protected override AlchemicalBomb GetAlchemicalBomb(AlchemicalBombSeeder seeder)
+        protected override AlchemicalBomb GetAlchemicalBomb()
         {
             return new AlchemicalBomb
             {
@@ -23,17 +20,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Name = "Alchemist's Fire",
                 Usage = "Held in 1 hand",
                 ItemBonus = 1,
-                BulkId = seeder.GetBulkByName("L").Id
+                BulkId = Bulks.Instances.LightBulk.ID
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Bomb";
-            yield return "Consumable";
-            yield return "Fire";
-            yield return "Splash";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Bomb.ID;
+            yield return Traits.Instances.Consumable.ID;
+            yield return Traits.Instances.Fire.ID;
+            yield return Traits.Instances.Splash.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -41,7 +38,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
             yield return new TextBlock { Id = Guid.Parse("7ea74824-5235-4b72-bc3e-813400c45c57"), Text = "Alchemist’s fire is a combination of volatile liquids that ignite when exposed to air. Alchemist’s fire deals the listed fire damage, persistent fire damage, and splash damage. Many types grant an item bonus to attack rolls." };
         }
 
-        protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies(AlchemicalBombSeeder seeder)
+        protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies()
         {
             yield return new AlchemicalBombPotencyBinding
             {
@@ -49,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 1,
                 Benefits = "The bomb deals 1d8 fire damage, 1 persistent fire damage, and 1 fire splash damage.",
                 Price = 300,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Lesser").Id
+                PotionPotencyId = Potencies.Instances.Lesser.ID
             };
 
             yield return new AlchemicalBombPotencyBinding
@@ -58,7 +55,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 3,
                 Benefits = "You gain a +1 item bonus to attack rolls. The bomb deals 2d8 fire damage, 2 persistent fire damage, and 2 fire splash damage.",
                 Price = 1000,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Moderate").Id
+                PotionPotencyId = Potencies.Instances.Moderate.ID
             };
 
             yield return new AlchemicalBombPotencyBinding
@@ -67,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 11,
                 Benefits = "You gain a +2 item bonus to attack rolls. The bomb deals 3d8 fire damage, 3 persistent fire damage, and 3 fire splash damage.",
                 Price = 25000,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Greater").Id
+                PotionPotencyId = Potencies.Instances.Greater.ID
             };
 
             yield return new AlchemicalBombPotencyBinding
@@ -76,11 +73,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 17,
                 Benefits = "You gain a +3 item bonus to attack rolls. The bomb deals 4d8 fire damage, 4 persistent fire damage, and 4 fire splash damage.",
                 Price = 250000,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Major").Id
+                PotionPotencyId = Potencies.Instances.Major.ID
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalBombSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

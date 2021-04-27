@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
     {
         public static readonly Guid ID = Guid.Parse("ceaaac90-8340-4e2a-aa97-effc5848f12d");
 
-        protected override AlchemicalElixir GetAlchemicalElixir(AlchemicalElixirSeeder seeder)
+        protected override AlchemicalElixir GetAlchemicalElixir()
         {
             return new AlchemicalElixir
             {
@@ -23,16 +20,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
                 Name = "Sea Touch Elixir",
                 Usage = "Held in 1 hand",
                 ItemBonus = 5,
-                BulkId = seeder.GetBulkByName("L").Id
+                BulkId = Bulks.Instances.LightBulk.ID
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Elixir";
-            yield return "Consumable";
-            yield return "Polymorph";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Elixir.ID;
+            yield return Traits.Instances.Consumable.ID;
+            yield return Traits.Instances.Polymorph.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -40,12 +37,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new TextBlock { Id = Guid.Parse("5d023119-60ec-4f88-9056-c3b81e0af2bf"), Text = "This briny concoction alters the skin on your hands and feet. The spaces between your fingers and toes become webbed, granting you a swim Speed of 20 feet for the listed duration." };
         }
 
-        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)
+        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()
         {
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("b9e3fce6-156b-4ff8-b412-81d3250d6713"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Lesser").Id,
+                PotionPotencyId = Potencies.Instances.Lesser.ID,
                 Level = 5,
                 Price = 2200,
                 Benefits = "The duration is 10 minutes."
@@ -54,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("8f3626ff-346a-4eb1-ad3b-82ac2c1060f4"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Moderate").Id,
+                PotionPotencyId = Potencies.Instances.Moderate.ID,
                 Level = 12,
                 Price = 30000,
                 Benefits = "The duration is 1 hour, and you can breathe underwater."
@@ -63,14 +60,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("e76fa208-fe2c-41f5-8cf6-21c46064a190"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Greater").Id,
+                PotionPotencyId = Potencies.Instances.Greater.ID,
                 Level = 15,
                 Price = 92000,
                 Benefits = "The duration is 24 hours, and you can breathe underwater."
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalElixirSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

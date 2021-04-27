@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class CreateFoodSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "No Action";
-        public override string MagicSchool => "Conjuration";
+        public static readonly Guid ID = Guid.Parse("2d0fa5a4-eab0-4eca-85cb-23241e5ef814");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("2d0fa5a4-eab0-4eca-85cb-23241e5ef814"),
+                Id = ID,
                 Name = "Create Food",
                 Level = 2,
                 CastTime = TimeSpan.FromHours(1),
-                Range = 30
+                Range = 30,
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                MagicSchoolId = MagicSchools.Instances.Conjuration.ID,
             };
         }
 
@@ -61,22 +62,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Divine";
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Conjuration";
+            yield return Traits.Instances.Conjuration.ID;
         }
     }
 }

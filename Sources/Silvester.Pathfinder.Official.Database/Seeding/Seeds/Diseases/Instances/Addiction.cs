@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
@@ -13,20 +10,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
     {
         public static readonly Guid ID = Guid.Parse("df53fbce-7ea5-4882-8aac-d589381514b2");
 
-        public override Disease GetDisease(DiseaseSeeder seeder)
+        public override Disease GetDisease()
         {
             return new Disease
             {
                 Id = ID,
                 Name = "Addiction",
                 Description = "Track the maximum stage you reach with each drug’s addiction. This maximum stage is separate from your current addiction stage for the drug. The maximum stage can’t be reduced, even if you fully remove the disease. When you take the drug, two things happen: you attempt a saving throw against addiction, and you suppress the effects of addiction for 1 day. Failing a save against addiction caused by taking the drug causes you to go to 1 stage higher than the maximum stage you had previously reached (2 stages higher on a critical failure). If you’re currently suffering from addiction when you attempt a save from taking the drug, you can’t improve your stage; if you succeed at the save, the stage remains the same as it was. When you attempt your save against addiction each week, the stage you are currently at can’t get worse—it can only stay the same or improve. The conditions from addiction can’t be removed while you are affected by the addiction, and suppressing addiction by taking the drug only avoids the effects—it doesn’t remove the disease.",
-                SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = null,
                 Onset = "1 day"
             };
         }
 
-        public override SourcePage GetSourcePage(DiseaseSeeder seeder)
+        public override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
@@ -36,12 +33,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
             };
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
             yield break;
         }
 
-        public override IEnumerable<DiseaseStage> GetDiseaseStages(DiseaseSeeder seeder)
+        public override IEnumerable<DiseaseStage> GetDiseaseStages()
         {
             yield return new DiseaseStage
             {

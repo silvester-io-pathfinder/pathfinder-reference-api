@@ -1,9 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 {
@@ -11,7 +8,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
     {
         public static readonly Guid ID = Guid.Parse("2483fb2b-b7cc-4eab-9c4e-0118477e46ed");
 
-        protected override Class GetClass(ClassSeeder seeder)
+        protected override Class GetClass()
         {
             return new Class
             {
@@ -25,38 +22,38 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
                 WhileExploring = "You look for clues in your environment. You often prove yourself to be a valuable ally by serving as a party scout, analyzing the intricacies of puzzles or mysterious phenomena, and pursuing leads that could reveal beneficial information.",
                 InDowntime = "You study up on subjects new and old, make new allies you can share information with, and pursue hobbies that keep your active mind satisfied. You might make a bit of coin on the side working as a private detective or consulting with the local constabulary.",
 
-                ClassDcProficiencyId = seeder.GetProficiency("Trained"),
-                PerceptionProficiencyId = seeder.GetProficiency("Expert"),
+                ClassDcProficiencyId = Proficiencies.Instances.Trained.ID,
+                PerceptionProficiencyId = Proficiencies.Instances.Expert.ID,
 
-                FortitudeProficiencyId = seeder.GetProficiency("Trained"),
-                ReflexProficiencyId = seeder.GetProficiency("Expert"),
-                WillProficiencyId = seeder.GetProficiency("Expert"),
+                FortitudeProficiencyId = Proficiencies.Instances.Trained.ID,
+                ReflexProficiencyId = Proficiencies.Instances.Expert.ID,
+                WillProficiencyId = Proficiencies.Instances.Expert.ID,
 
-                SimpleWeaponProficiencyId = seeder.GetProficiency("Trained"),
-                MartialWeaponProficiencyId = seeder.GetProficiency("Trained"),
-                AdvancedWeaponProficiencyId = seeder.GetProficiency("Untrained"),
-                UnarmedWeaponProficiencyId = seeder.GetProficiency("Trained"),
+                SimpleWeaponProficiencyId = Proficiencies.Instances.Trained.ID,
+                MartialWeaponProficiencyId = Proficiencies.Instances.Trained.ID,
+                AdvancedWeaponProficiencyId = Proficiencies.Instances.Untrained.ID,
+                UnarmedWeaponProficiencyId = Proficiencies.Instances.Trained.ID,
 
-                UnarmoredProficiencyId = seeder.GetProficiency("Trained"),
-                LightArmorProficiencyId = seeder.GetProficiency("Trained"),
-                MediumArmorProficiencyId = seeder.GetProficiency("Untrained"),
-                HeavyArmorProficiencyId = seeder.GetProficiency("Untrained"),
+                UnarmoredProficiencyId = Proficiencies.Instances.Trained.ID,
+                LightArmorProficiencyId = Proficiencies.Instances.Trained.ID,
+                MediumArmorProficiencyId = Proficiencies.Instances.Untrained.ID,
+                HeavyArmorProficiencyId = Proficiencies.Instances.Untrained.ID,
             };
         }
 
-        protected override IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder)
+        protected override IEnumerable<Guid> GetKeyAbilities()
         {
-            return seeder.FilterStats("Intellect");
+            yield return Stats.Instances.Intelligence.ID;
         }
 
-        protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
+        protected override IEnumerable<ClassMannerism> GetMannerisms()
         {
             yield return new ClassMannerism { Id = Guid.Parse("ac5fd47c-1575-4a05-8850-bd323519a40a"), Text = "Start asking questions—including several that are quite involved—immediately after you’re presented with a conundrum." };
             yield return new ClassMannerism { Id = Guid.Parse("cf543469-df67-41eb-9738-90b0dd6cb22a"), Text = "Strive to uncover the deeper meanings behind anything you encounter and to identify the social machinations that truly drive events behind the scenes." };
             yield return new ClassMannerism { Id = Guid.Parse("5382ffaa-7a1a-4b92-80e9-556a58c966eb"), Text = "Get so involved in a case that you ignore other matters, deeming them trivial." };
         }
 
-        protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
+        protected override IEnumerable<ClassCharacteristic> GetCharacteristics()
         {
             yield return new ClassCharacteristic { Id = Guid.Parse("17d41939-22da-493c-a121-452a8f5dba1c"), Text = "Find the cascades of information you spout forth extremely helpful, if difficult to fully comprehend." };
             yield return new ClassCharacteristic { Id = Guid.Parse("f4ce7778-674f-4ac4-9c81-69956c1872af"), Text = "Get a bit annoyed that you’re such a know-it-all." };

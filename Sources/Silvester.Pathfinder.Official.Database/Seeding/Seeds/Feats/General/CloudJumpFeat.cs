@@ -7,16 +7,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class CloudJumpFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "No Action";
+        public static readonly Guid ID = Guid.Parse("9ab4e3c9-f592-4c0d-ac6e-adb33651feca");
 
         protected override Feat GetFeat()
         {
             return new Feat
             {
-                Id = Guid.Parse("9ab4e3c9-f592-4c0d-ac6e-adb33651feca"),
+                Id = ID,
                 Name = "Cloud Jump",
-                Level = 15
+                Level = 15,
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
 
@@ -26,15 +27,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("98e7f9c9-8027-485d-af27-2de34ee1e1da"), Type = Utilities.Text.TextBlockType.Text, Text = "You can jump a distance greater than your Speed by spending additional actions when you Long Jump or High Jump. For each additional action spent, add your Speed to the limit on how far you can Leap." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("638cc413-e502-4f9c-9183-da9958c38df9"), RequiredSkillId = seeder.GetSkill("Athletics"), RequiredProficiencyId = seeder.GetProficiency("Legendary") };
+            yield return new SkillPrerequisite { Id = Guid.Parse("638cc413-e502-4f9c-9183-da9958c38df9"), RequiredSkillId = Skills.Instances.Athletics.ID, RequiredProficiencyId = Proficiencies.Instances.Legendary.ID };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "General";
-            yield return "Skill";
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
     {
         public static readonly Guid ID = Guid.Parse("7a89776c-ffcc-4766-8ddb-d0d6f2227c30");
 
-        protected override AlchemicalElixir GetAlchemicalElixir(AlchemicalElixirSeeder seeder)
+        protected override AlchemicalElixir GetAlchemicalElixir()
         {
             return new AlchemicalElixir
             {
@@ -23,15 +20,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
                 Name = "Cheetah's Elixir",
                 Usage = "Held in 1 hand",
                 ItemBonus = 1,
-                BulkId = seeder.GetBulkByName("L").Id
+                BulkId = Bulks.Instances.LightBulk.ID
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Elixir";
-            yield return "Consumable";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Elixir.ID;
+            yield return Traits.Instances.Consumable.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -39,12 +36,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new TextBlock { Id = Guid.Parse("c3d0b8fa-4656-44c2-86ad-2247cc2326fd"), Text = "Enzymatic compounds in this elixir strengthen and excite the muscles in your legs. You gain a status bonus to your Speed for the listed duration." };
         }
 
-        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder)
+        protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()
         {
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("fe4a4297-984f-492d-b46c-09a59eeadd81"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Lesser").Id,
+                PotionPotencyId = Potencies.Instances.Lesser.ID,
                 Level = 1,
                 Price = 300,
                 Benefits = "The bonus is +5 feet, and the duration is 1 minute.",
@@ -53,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("45cdabed-781e-4476-810d-3972cd2a68c1"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Moderate").Id,
+                PotionPotencyId = Potencies.Instances.Moderate.ID,
                 Level = 5,
                 Price = 2500,
                 Benefits = "The bonus is +10 feet, and the duration is 10 minutes.",
@@ -62,14 +59,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             yield return new AlchemicalElixirPotencyBinding
             {
                 Id = Guid.Parse("a5799229-afdb-4118-910f-000a05eb7681"),
-                PotionPotencyId = seeder.GetPotionPotencyByName("Greater").Id,
+                PotionPotencyId = Potencies.Instances.Greater.ID,
                 Level = 9,
                 Price = 11000,
                 Benefits = "The bonus is +10 feet, and the duration is 1 hour.",
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalElixirSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
@@ -13,20 +10,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
     {
         public static readonly Guid ID = Guid.Parse("a126527c-f9d1-498f-9d53-ee01009a80e5");
 
-        public override Disease GetDisease(DiseaseSeeder seeder)
+        public override Disease GetDisease()
         {
             return new Disease
             {
                 Id = ID,
                 Name = "Void Death",
                 Description = "An akata implants its parasitic larval young into any creature it bites, but only Medium or Small humanoids make suitable hosts; all other creatures are immune to this disease",
-                SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = 17,
                 Onset = "1 Day"
             };
         }
 
-        public override SourcePage? GetSourcePage(DiseaseSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {
@@ -36,12 +33,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
             };
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
             yield break;
         }
 
-        public override IEnumerable<DiseaseStage> GetDiseaseStages(DiseaseSeeder seeder)
+        public override IEnumerable<DiseaseStage> GetDiseaseStages()
         {
             yield return new DiseaseStage
             {

@@ -1,18 +1,15 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Utilities.Text;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources
 {
-    public abstract class AbstractSourceTemplate
+    public abstract class AbstractSourceTemplate : EntityTemplate<Source>
     {
-        public void Seed(SourceSeeder seeder)
+        protected override Source GetEntity(ModelBuilder builder)
         {
             Source source = GetSource();
-            seeder.Builder.AddData(source);
+            return source;
         }
 
         protected abstract Source GetSource();

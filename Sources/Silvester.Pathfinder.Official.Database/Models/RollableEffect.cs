@@ -1,7 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database;
-using System;
-
-namespace Silvester.Pathfinder.Official.Database.Models
+﻿namespace Silvester.Pathfinder.Official.Database.Models
 {
     public interface IRollableEffect
     {

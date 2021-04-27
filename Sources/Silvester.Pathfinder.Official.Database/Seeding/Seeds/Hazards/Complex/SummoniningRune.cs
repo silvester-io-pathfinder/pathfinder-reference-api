@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
@@ -13,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
     {
         public static readonly Guid ID = Guid.Parse("6f1cd8de-db91-4b60-9ae6-e9328c13cceb");
 
-        protected override Hazard GetHazard(HazardSeeder seeder)
+        protected override Hazard GetHazard()
         {
             return new Hazard
             {
@@ -23,37 +20,37 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Level = 1,
                 Reset = "The trap resets each day at dawn.",
                 CanBeDetectedMagically = false,
-                TypeId = seeder.GetHazardTypeByName("Traps").Id,
-                ComplexityId = seeder.GetComplexityByName("Complex").Id
+                TypeId = HazardTypes.Instances.Traps.ID,
+                ComplexityId = HazardComplexities.Instances.Complex.ID
             };
         }
 
-        protected override IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder)
+        protected override IEnumerable<HazardComponent> GetComponents()
         {
             yield break;
         }
 
-        protected override IEnumerable<string> GetImmunities()
+        protected override IEnumerable<Guid> GetImmunities()
         {
             yield break;
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Complex";
-            yield return "Magical";
-            yield return "Trap";
+            yield return Traits.Instances.Complex.ID;
+            yield return Traits.Instances.Magical.ID;
+            yield return Traits.Instances.Trap.ID;
         }
 
-        protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
+        protected override IEnumerable<HazardAction> GetActions()
         {
             yield return new HazardAction
             {
                 Id = Guid.Parse("16402edb-38d3-4cae-a93d-687c9e1814b2"),
                 Name = "Summon Monster",
-                Traits = seeder.FilterTraits("Arcane", "Conjuration", "Summon"),
+                Traits = FilterTraits("Arcane", "Conjuration", "Summon"),
                 Trigger = "A creature enters the cloud of magical sensors",
-                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
+                ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = 
                 {
                     new TextBlock { Id = Guid.Parse("cabdbcb0-95c9-461d-a9f5-e1858af03802"), Type = TextBlockType.Text, Text = "This trap summons a specific level 1 creature, determined when the trap is created. The creature rolls initiative and remains for 2d6 rounds, after which the spell ends and the creature disappears. The creature also disappears if someone disables the trap before the duration expires. The summoned creature can use 3 actions each round and can use reactions, unlike most summoned creatures." },
@@ -61,23 +58,23 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             };
         }
 
-        protected override HazardDetectionRequirement GetDetectionRequirement(HazardSeeder seeder)
+        protected override HazardDetectionRequirement GetDetectionRequirement()
         {
             return new HazardDetectionRequirement
             {
                 Id = Guid.Parse("921b94a1-3783-49b6-8b5f-b22217494c66"),
-                RequiredProficiencyId = seeder.GetProficiencyByName("Trained").Id,
+                RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
                 DifficultyCheck = 7
             };
         }
 
-        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements()
         {
             yield return new HazardDisableRequirement
             {
                 Id = Guid.Parse("04d08fc4-3f5d-4407-8b34-d0cae8372e4c"),
-                SkillId = seeder.GetSkillByName("Acrobatics").Id,
-                RequiredProficiencyId = seeder.GetProficiencyByName("Untrained").Id,
+                SkillId = Skills.Instances.Acrobatics.ID,
+                RequiredProficiencyId = Proficiencies.Instances.Untrained.ID,
                 Description = "to approach without triggering the trap",
                 DifficultyCheck = 15
             };
@@ -85,14 +82,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             yield return new HazardDisableRequirement
             {
                 Id = Guid.Parse("e91c1fb3-ddbe-4523-919d-9c70f72a4a82"),
-                SkillId = seeder.GetSkillByName("Thievery").Id,
-                RequiredProficiencyId = seeder.GetProficiencyByName("Trained").Id,
+                SkillId = Skills.Instances.Thievery.ID,
+                RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
                 Description = "to erase the rune",
                 DifficultyCheck = 17
             };
         }
 
-        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements()
         {
             yield return new HazardDispellRequirement
             {
@@ -103,7 +100,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
             };
         }
 
-        protected override SourcePage GetSourcePage(HazardSeeder seeder)
+        protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {

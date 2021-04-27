@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AnimalFormSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Transmutation";
-        public override string SavingThrowStat => "Will";
+        public static readonly Guid ID = Guid.Parse("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("1facaf2c-11ad-43fc-a69c-6e18e3e81b4d"),
+                Id = ID,
                 Name = "Animal Form",
                 Level = 2,
-                Duration = "1 minute."
+                Duration = "1 minute.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Transmutation.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Will.ID
             };
         }
         
@@ -77,21 +78,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Polymorph";
-            yield return "Transmutation";
+            yield return Traits.Instances.Polymorph.ID;
+            yield return Traits.Instances.Transmutation.ID;
         }
     }
 }

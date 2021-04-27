@@ -1,9 +1,6 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 {
@@ -11,7 +8,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
     {
         public static readonly Guid ID = Guid.Parse("f7cb4156-4ec7-4c78-bd28-4db83a0f5ade");
 
-        protected override Class GetClass(ClassSeeder seeder)
+        protected override Class GetClass()
         {
             return new Class
             {
@@ -25,42 +22,42 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
                 WhileExploring = "You detect nearby magic and interpret any religious writing you come across. You might also concentrate on a protective spell for your allies in case of attack.After a battle or hazard, you might heal anyone who was hurt.",
                 InDowntime = "You might perform services at a temple, travel to spread the word of your deity, research scripture, celebrate holy days, or even found a new temple.",
 
-                ClassDcProficiencyId = seeder.GetProficiency("Untrained"),
-                PerceptionProficiencyId = seeder.GetProficiency("Trained"),
+                ClassDcProficiencyId = Proficiencies.Instances.Untrained.ID,
+                PerceptionProficiencyId = Proficiencies.Instances.Trained.ID,
 
-                FortitudeProficiencyId = seeder.GetProficiency("Trained"),
-                ReflexProficiencyId = seeder.GetProficiency("Trained"),
-                WillProficiencyId = seeder.GetProficiency("Expert"),
+                FortitudeProficiencyId = Proficiencies.Instances.Trained.ID,
+                ReflexProficiencyId = Proficiencies.Instances.Trained.ID,
+                WillProficiencyId = Proficiencies.Instances.Expert.ID,
 
-                SimpleWeaponProficiencyId = seeder.GetProficiency("Trained"),
-                MartialWeaponProficiencyId = seeder.GetProficiency("Untrained"),
-                AdvancedWeaponProficiencyId = seeder.GetProficiency("Untrained"),
-                UnarmedWeaponProficiencyId = seeder.GetProficiency("Trained"),
+                SimpleWeaponProficiencyId = Proficiencies.Instances.Trained.ID,
+                MartialWeaponProficiencyId = Proficiencies.Instances.Untrained.ID,
+                AdvancedWeaponProficiencyId = Proficiencies.Instances.Untrained.ID,
+                UnarmedWeaponProficiencyId = Proficiencies.Instances.Trained.ID,
 
-                UnarmoredProficiencyId = seeder.GetProficiency("Trained"),
-                LightArmorProficiencyId = seeder.GetProficiency("Untrained"),
-                MediumArmorProficiencyId = seeder.GetProficiency("Untrained"),
-                HeavyArmorProficiencyId = seeder.GetProficiency("Untrained"),
+                UnarmoredProficiencyId = Proficiencies.Instances.Trained.ID,
+                LightArmorProficiencyId = Proficiencies.Instances.Untrained.ID,
+                MediumArmorProficiencyId = Proficiencies.Instances.Untrained.ID,
+                HeavyArmorProficiencyId = Proficiencies.Instances.Untrained.ID,
 
-                SpellAttackProficiencyId = seeder.GetProficiency("Trained"),
-                SpellDcProficiencyId = seeder.GetProficiency("Trained"),
-                PredefinedMagicTraditionId = seeder.GetMagicTradition("Divine")
+                SpellAttackProficiencyId = Proficiencies.Instances.Trained.ID,
+                SpellDcProficiencyId = Proficiencies.Instances.Trained.ID,
+                PredefinedMagicTraditionId = MagicTraditions.Instances.Divine.ID
             };
         }
 
-        protected override IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder)
+        protected override IEnumerable<Guid> GetKeyAbilities()
         {
-            return seeder.FilterStats("Wisdom");
+            yield return Stats.Instances.Wisdom.ID;
         }
 
-        protected override IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder)
+        protected override IEnumerable<ClassMannerism> GetMannerisms()
         {
             yield return new ClassMannerism { Id = Guid.Parse("ebb75ed7-bfa4-40c5-8bb4-3f19794d2a70"), Text = "Visit the temples and holy places sacred to your faith, and have an immediate affinity with other worshippers of your deity." };
             yield return new ClassMannerism { Id = Guid.Parse("1be1a716-5449-4961-893d-67e7a4e84269"), Text = "Know the teachings of your religion’s holy texts and how they apply to a dilemma." };
             yield return new ClassMannerism { Id = Guid.Parse("6a44f1c6-54c0-49ea-a3cc-8c61d3096138"), Text = "Cooperate with your allies, provided they don’t ask you to go against divine will." };
         }
 
-        protected override IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder)
+        protected override IEnumerable<ClassCharacteristic> GetCharacteristics()
         {
             yield return new ClassCharacteristic { Id = Guid.Parse("8723a71e-24b5-49b5-8357-b36acc8a68ad"), Text = "Find your devotion impressive, even if they don’t understand it." };
             yield return new ClassCharacteristic { Id = Guid.Parse("a2e4b7a8-09ed-47f3-8f09-3d87b28c56d4"), Text = "Expect you to heal their wounds." };

@@ -7,20 +7,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class CloakOfColorsSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Illusion";
+        public static readonly Guid ID = Guid.Parse("2c2d2218-3a46-4075-899c-c4e9353aaec3");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("2c2d2218-3a46-4075-899c-c4e9353aaec3"),
+                Id = ID,
                 Name = "Cloak of Colors",
                 Level = 5,
                 Range = 30,
                 Targets = "1 creature.",
-                Duration = "1 minute."
+                Duration = "1 minute.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Illusion.ID,
             };
         }
 
@@ -40,22 +41,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Illusion";
-            yield return "Visual";
+            yield return Traits.Instances.Illusion.ID;
+            yield return Traits.Instances.Visual.ID;
         }
     }
 }

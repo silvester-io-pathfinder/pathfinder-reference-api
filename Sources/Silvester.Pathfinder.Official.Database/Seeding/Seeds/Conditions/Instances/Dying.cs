@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
@@ -13,13 +10,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
     {
         public static readonly Guid ID = Guid.Parse("069fffa5-3fe0-4892-a04d-1bd28a6225a3");
 
-        public override Condition GetCondition(ConditionSeeder seeder)
+        public override Condition GetCondition()
         {
             return new Condition
             {
                 Id = ID,
                 Name = "Dying",
-                ConditionCategoryId = seeder.GetCategoryByName("Death and Dying").Id
+                ConditionCategoryId = ConditionCategories.Instances.DeathAndDying.ID
             };
         }
 
@@ -37,7 +34,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             yield return new TextBlock { Id = Guid.Parse("44052fce-df27-49bc-bc37-537fd6f0a7b0"), Text = "You gain the dying 1 condition. If the effect that knocked you out was a critical success from the attacker or the result of your critical failure, you gain the dying 2 condition instead. If you have the wounded condition, increase these values by your wounded value. If the damage came from a nonlethal attack or effect, you don’t gain the dying condition— you are instead unconscious with 0 Hit Points.", Type = TextBlockType.Enumeration};
         }*/
 
-        public override SourcePage? GetSourcePage(ConditionSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

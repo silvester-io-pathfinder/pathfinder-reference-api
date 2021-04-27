@@ -1,5 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models

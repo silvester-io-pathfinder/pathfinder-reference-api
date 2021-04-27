@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
     {
         public static readonly Guid ID = Guid.Parse("5f593e05-0197-4c12-9102-84501831aaf0");
 
-        protected override Hazard GetHazard(HazardSeeder seeder)
+        protected override Hazard GetHazard()
         {
             return new Hazard
             {
@@ -26,12 +23,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Fortitude = 8,
                 Reflex = 4,
                 CanBeDetectedMagically = false,
-                TypeId = seeder.GetHazardTypeByName("Traps").Id,
-                ComplexityId = seeder.GetComplexityByName("Simple").Id,
+                TypeId = HazardTypes.Instances.Traps.ID,
+                ComplexityId = HazardComplexities.Instances.Simple.ID,
             };
         }
 
-        protected override IEnumerable<HazardComponent> GetComponents(HazardSeeder seeder)
+        protected override IEnumerable<HazardComponent> GetComponents()
         {
             yield return new HazardComponent
             {
@@ -43,27 +40,27 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             };
         }
 
-        protected override IEnumerable<string> GetImmunities()
+        protected override IEnumerable<Guid> GetImmunities()
         {
-            yield return "Critical Hits";
-            yield return "Object Immunities";
-            yield return "Precision Damage";
+            yield return HazardImmunities.Instances.CriticalHits.ID;
+            yield return HazardImmunities.Instances.ObjectImmunities.ID;
+            yield return HazardImmunities.Instances.PrecisionDamage.ID;
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Mechanical";
-            yield return "Trap";
+            yield return Traits.Instances.Mechanical.ID;
+            yield return Traits.Instances.Trap.ID;
         }
 
-        protected override IEnumerable<HazardAction> GetActions(HazardSeeder seeder)
+        protected override IEnumerable<HazardAction> GetActions()
         {
             yield return new HazardAction
             {
                 Id = Guid.Parse("09a54c43-77a9-42c6-a041-aab4c55df5ff"),
                 Name = "Spring",
                 Trigger = "A creature tries to unlock or Pick the Lock.",
-                ActionTypeId = seeder.GetActionTypeByName("Reaction").Id,
+                ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = new List<TextBlock>
                 {
                     new TextBlock { Id = Guid.Parse("5ca24113-9fa9-4802-92db-bf378e003180"), Type = TextBlockType.Text, Text = "A spine extends to Strike the triggering creature." },
@@ -73,9 +70,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                     new AttackHazardActionEffect
                     {
                         Id = Guid.Parse("aa8f66f1-1d58-467d-94bd-9253ed4e0c4f"),
-                        AttackTypeId = seeder.GetAttackTypeByName("Melee").Id,
-                        ActionTypeId = seeder.GetActionTypeByName("No Action").Id,
-                        DamageTypeId = seeder.GetDamageTypeByName("Piercing").Id,
+                        AttackTypeId = AttackTypes.Instances.Melee.ID,
+                        ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                        DamageTypeId = DamageTypes.Instances.Piercing.ID,
                         Damage = "1",
                         Weapon = "Spine",
                         ProficiencyBonus = 13
@@ -84,12 +81,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                     {
                         Id = Guid.Parse("10940c91-248f-4871-a129-b9616740e308"),
                         Name = "Cladis Poison",
-                        Traits = seeder.FilterTraits("Poison"),
+                        Traits = FilterTraits("Poison"),
                         PoisonEffect = new StaggeredEffect
                         {
                             Id = Guid.Parse("3d21bed5-94f4-45b8-82c2-3f42be0502ca"),
                             DifficultyCheck = 19,
-                            SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
+                            SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                             MaximumDuration = "4 Hours",
                             Onset = "Immediate",
                             Stages = 
@@ -100,7 +97,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                                     Duration = "1 Hour",
                                     Effects =
                                     {
-                                        new DamagePoisonStageEffect {Id = Guid.Parse("acd30942-2ef7-48f0-b1f7-88a3e3ba6501"), Damage = "1d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id },
+                                        new DamagePoisonStageEffect {Id = Guid.Parse("acd30942-2ef7-48f0-b1f7-88a3e3ba6501"), Damage = "1d6", DamageTypeId = DamageTypes.Instances.Poison.ID },
                                         new ConditionPoisonStageEffect { Id = Guid.Parse("0439dbdb-3e95-46d8-8d92-20fe516b3676"), ConditionId = Drained.ID, Severity = 1}
                                     }
                                 },
@@ -110,7 +107,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                                     Duration = "1 Hour",
                                     Effects =
                                     {
-                                        new DamagePoisonStageEffect {Id = Guid.Parse("df9f86d2-61cf-465b-897c-83374a1f1cd1"), Damage = "2d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id },
+                                        new DamagePoisonStageEffect {Id = Guid.Parse("df9f86d2-61cf-465b-897c-83374a1f1cd1"), Damage = "2d6", DamageTypeId = DamageTypes.Instances.Poison.ID },
                                         new ConditionPoisonStageEffect { Id = Guid.Parse("87146bef-d285-4709-be49-23f0f938f2e8"), ConditionId = Drained.ID, Severity = 2}
                                     }
                                 },
@@ -120,7 +117,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                                     Duration = "1 Hour",
                                     Effects =
                                     {
-                                        new DamagePoisonStageEffect {Id = Guid.Parse("948bb72f-eb12-4dde-942d-f05fd77c83a3"), Damage = "3d6", DamageTypeId = seeder.GetDamageTypeByName("Poison").Id },
+                                        new DamagePoisonStageEffect {Id = Guid.Parse("948bb72f-eb12-4dde-942d-f05fd77c83a3"), Damage = "3d6", DamageTypeId = DamageTypes.Instances.Poison.ID },
                                         new ConditionPoisonStageEffect { Id = Guid.Parse("61ce8bd6-8df5-4715-a23f-27379c6601bf"), ConditionId = Drained.ID, Severity = 2}
                                     }
                                 },
@@ -131,34 +128,34 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             };
         }
 
-        protected override HazardDetectionRequirement GetDetectionRequirement(HazardSeeder seeder)
+        protected override HazardDetectionRequirement GetDetectionRequirement()
         {
             return new HazardDetectionRequirement
             {
                 Id = Guid.Parse("e00e6998-3b26-4b06-a024-34534da52538"),
-                RequiredProficiencyId = seeder.GetProficiencyByName("Trained").Id,
+                RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
                 DifficultyCheck = 17
             };
         }
 
-        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDisableRequirement> GetDisableRequirements()
         {
             yield return new HazardDisableRequirement
             {
                 Id = Guid.Parse("5dee5085-d947-4cad-8d8a-794d6ac56790"),
-                SkillId = seeder.GetSkillByName("Thievery").Id,
-                RequiredProficiencyId = seeder.GetProficiencyByName("Trained").Id,
+                SkillId = Skills.Instances.Thievery.ID,
+                RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
                 Description = "on the spring mechanism",
                 DifficultyCheck = 17
             };
         }
 
-        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements(HazardSeeder seeder)
+        protected override IEnumerable<HazardDispellRequirement> GetDispellRequirements()
         {
             yield break;
         }
 
-        protected override SourcePage GetSourcePage(HazardSeeder seeder)
+        protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {

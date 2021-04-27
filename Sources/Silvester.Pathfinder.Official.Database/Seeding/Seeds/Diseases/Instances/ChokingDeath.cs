@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
@@ -13,20 +10,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
     {
         public static readonly Guid ID = Guid.Parse("aae01797-c896-4665-9681-4caae8d37800");
 
-        public override Disease GetDisease(DiseaseSeeder seeder)
+        public override Disease GetDisease()
         {
             return new Disease
             {
                 Id = ID,
                 Name = "Choking Death",
                 Description = "This disease is capable of wiping out nations or even entire continents. A few pockets of the disease still remain in Iobaria, keeping that region’s population sparse.",
-                SavingThrowStatId = seeder.GetSavingThrowStatByName("Fortitude").Id,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = 22,
                 Onset = "1 Day"
             };
         }
 
-        public override SourcePage? GetSourcePage(DiseaseSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {
@@ -36,12 +33,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instance
             };
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Disease";
+            yield return Traits.Instances.Disease.ID;
         }
 
-        public override IEnumerable<DiseaseStage> GetDiseaseStages(DiseaseSeeder seeder)
+        public override IEnumerable<DiseaseStage> GetDiseaseStages()
         {
             yield return new DiseaseStage
             {

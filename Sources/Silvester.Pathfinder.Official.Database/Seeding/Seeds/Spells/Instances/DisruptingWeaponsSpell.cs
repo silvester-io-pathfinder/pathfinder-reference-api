@@ -7,20 +7,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DisruptingWeaponsSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Necromancy";
+        public static readonly Guid ID = Guid.Parse("9627d10b-e488-4299-9e1b-2c3a511ec007");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("9627d10b-e488-4299-9e1b-2c3a511ec007"),
+                Id = ID,
                 Name = "Disrupting Weapons",
                 Level = 1,
                 Range = 0,
                 Targets = "Up to two weapons, each of which must be wielded by you or a willing ally, or else is unattended.",
-                Duration = "1 minute"
+                Duration = "1 minute",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Necromancy.ID,
             };
         }
 
@@ -52,21 +53,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
+            yield return MagicTraditions.Instances.Divine.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Necromancy";
-            yield return "Positive";
+            yield return Traits.Instances.Necromancy.ID;
+            yield return Traits.Instances.Positive.ID;
         }
     }
 }

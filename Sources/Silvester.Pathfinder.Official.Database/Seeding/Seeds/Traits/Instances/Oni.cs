@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Oni : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("76792b26-bda8-46cc-ba9f-8e8cdbf4871f");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Oni are a family of fiends who dwell on the Material Plane and take monstrous forms based on humanoid shapes." };
+            yield return new TextBlock { Id = Guid.Parse("523b074e-c81b-46dc-af85-979b3ae1c968"), Type = TextBlockType.Text, Text = "Oni are a family of fiends who dwell on the Material Plane and take monstrous forms based on humanoid shapes." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("24a534e7-1af3-4cd9-96e9-c7c5fba6ce79"),
                 SourceId = Bestiary2.ID,
                 Page = 309
             };

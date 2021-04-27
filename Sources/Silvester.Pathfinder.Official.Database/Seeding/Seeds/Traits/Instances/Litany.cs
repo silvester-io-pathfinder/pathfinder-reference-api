@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Litany : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("c6a2e39a-db66-42d3-8973-21a214fdca57");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Litanies are special devotion spells, typically used by champions and requiring a single action, that usually give temporary immunity to further litanies." };
+            yield return new TextBlock { Id = Guid.Parse("7424e2f0-8f5a-4122-9aa9-fb90343d57a7"), Type = TextBlockType.Text, Text = "Litanies are special devotion spells, typically used by champions and requiring a single action, that usually give temporary immunity to further litanies." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1593fdd2-f778-47a1-953f-c275211811f3"),
                 SourceId = CoreRulebook.ID,
                 Page = 633
             };

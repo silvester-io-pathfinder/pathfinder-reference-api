@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Rakshasa : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("a5fa9ba3-ef36-4180-a603-4bb410aaa56c");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Reincarnations of evil souls, rakshasas are fiends that live on the Material Plane." };
+            yield return new TextBlock { Id = Guid.Parse("6694f8e7-7c60-4a58-a22f-2789a65c0464"), Type = TextBlockType.Text, Text = "Reincarnations of evil souls, rakshasas are fiends that live on the Material Plane." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("f8733ebb-d814-41db-9837-de1c6cbdb6fe"),
                 SourceId = CoreRulebook.ID,
                 Page = 347
             };

@@ -1,5 +1,6 @@
-﻿using Silvester.Pathfinder.Official.Database;
-using System;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
@@ -14,5 +15,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid StatModifierId { get; set; }
         public Stat StatModifier { get; set; } = default!;
 
+        public ICollection<Deity> Deities { get; set; } = new List<Deity>();
     }
 }

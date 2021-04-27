@@ -7,16 +7,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class ImpressivePerformanceFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "No Action";
+        public static readonly Guid ID = Guid.Parse("6f87700e-7194-47d6-a9b2-20e0e2e53482");
 
         protected override Feat GetFeat()
         {
             return new Feat
             {
-                Id = Guid.Parse("6f87700e-7194-47d6-a9b2-20e0e2e53482"),
+                Id = ID,
                 Name = "Impressive Performance",
-                Level = 1
+                Level = 1,
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
 
@@ -25,15 +26,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("180ac1bb-e6ae-4d53-b33a-71978026a8e5"), Type = Utilities.Text.TextBlockType.Text, Text = "Your performances inspire admiration and win you fans. You can Make an Impression using Performance instead of Diplomacy." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("ca730a60-9507-4f6a-8279-33e15fe8d7eb"), RequiredSkillId = seeder.GetSkill("Performance"), RequiredProficiencyId = seeder.GetProficiency("Trained") };
+            yield return new SkillPrerequisite { Id = Guid.Parse("ca730a60-9507-4f6a-8279-33e15fe8d7eb"), RequiredSkillId = Skills.Instances.Performance.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "General";
-            yield return "Skill";
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

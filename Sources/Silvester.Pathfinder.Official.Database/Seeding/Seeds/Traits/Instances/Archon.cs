@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Archon : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("8bbb6788-c4d1-4749-ad5a-054245744acc");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Members of this family of celestials are the protectors of Heaven and are lawful good. They have darkvision and a weakness to evil damage." };
+            yield return new TextBlock { Id = Guid.Parse("c49deecc-3ad0-47fb-8dfd-3a155a57c50a"), Type = TextBlockType.Text, Text = "Members of this family of celestials are the protectors of Heaven and are lawful good. They have darkvision and a weakness to evil damage." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("03be4e06-8f89-498f-9558-165faaa27a37"),
                 SourceId = CoreRulebook.ID,
                 Page = 628
             };

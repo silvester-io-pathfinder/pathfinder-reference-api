@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Arcane : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("fbe4f84d-576e-4d90-87a7-c6f96c213367");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "This magic comes from the arcane tradition, which is built on logic and rationality. Anything with this trait is magical." };
+            yield return new TextBlock { Id = Guid.Parse("e1a68b1b-3382-4f19-b87b-16cda6c95c9d"), Type = TextBlockType.Text, Text = "This magic comes from the arcane tradition, which is built on logic and rationality. Anything with this trait is magical." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ef3e6ec3-3b03-465f-9508-8d6bb0583469"),
                 SourceId = CoreRulebook.ID,
                 Page = 628
             };

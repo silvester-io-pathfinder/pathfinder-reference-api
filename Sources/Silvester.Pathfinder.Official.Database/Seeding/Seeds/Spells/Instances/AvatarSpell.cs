@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AvatarSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Transmutation";
+        public static readonly Guid ID = Guid.Parse("f708a194-3783-46f4-8cb0-bb512ed08727");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("f708a194-3783-46f4-8cb0-bb512ed08727"),
+                Id = ID,
                 Name = "Avatar",
                 IsDismissable = true,
                 Level = 10,
-                Duration = "1 minute."
+                Duration = "1 minute.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Transmutation.ID,
             };
         }
 
@@ -55,21 +56,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("d7fbbf0f-05e2-416d-960a-ced70a90df6f"), Type = Utilities.Text.TextBlockType.Enumeration, Text = "Zon-Kuthon: Speed 70 feet, air walk, ignore difficult terrain and greater difficult terrain; Melee [one-action] spiked chain (disarm, trip, reach 15 feet), Damage 6d8+6 slashing; Ranged [one-action] midnight pain (mental, nonlethal, range 120 feet), Damage 6d6+3 mental." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
+            yield return MagicTraditions.Instances.Divine.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Polymorph";
-            yield return "Transmutation";
+            yield return Traits.Instances.Polymorph.ID;
+            yield return Traits.Instances.Transmutation.ID;
         }
     }
 }

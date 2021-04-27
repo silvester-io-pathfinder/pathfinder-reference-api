@@ -1,22 +1,12 @@
 ﻿using HotChocolate.Configuration;
-using HotChocolate.Data;
-using HotChocolate.Data.Filters;
-using HotChocolate.Data.Sorting;
-using HotChocolate.Internal;
-using HotChocolate.Resolvers;
 using HotChocolate.Types;
 using HotChocolate.Types.Descriptors;
 using HotChocolate.Types.Descriptors.Definitions;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Silvester.Pathfinder.Official.Database;
-using Silvester.Pathfinder.Official.Database.Models;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Api.Graphql.Interceptors
 {

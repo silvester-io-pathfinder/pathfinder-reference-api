@@ -7,20 +7,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AirBubbleSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Reaction";
-        public override string MagicSchool => "Conjuration";
+        public static readonly Guid ID = Guid.Parse("fbb8d7cc-6793-484c-80a8-4fafb137e01e");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("fbb8d7cc-6793-484c-80a8-4fafb137e01e"),
+                Id = ID,
                 Name = "Air Bubble",
                 Targets = "The triggering creature.",
                 Duration = "1 minute.",
                 Range = 60,
                 Level = 4,
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.Reaction.ID,
+                MagicSchoolId = MagicSchools.Instances.Conjuration.ID,
             };
         }
 
@@ -34,22 +35,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new SpellTrigger { Id = Guid.Parse("04745169-cdce-4409-8caf-10a348a60d93"), Text = "A creature within range enters an environment where it can't breathe." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Divine";
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Air";
-            yield return "Conjuration";
+            yield return Traits.Instances.Air.ID;
+            yield return Traits.Instances.Conjuration.ID;
         }
     }
 }

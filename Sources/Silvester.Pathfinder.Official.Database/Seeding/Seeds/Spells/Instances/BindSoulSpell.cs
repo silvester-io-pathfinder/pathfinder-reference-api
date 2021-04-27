@@ -7,19 +7,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class BindSoulSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Necromancy";
+        public static readonly Guid ID = Guid.Parse("a0dc825d-78c6-4464-a62e-17d7001c258e");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("a0dc825d-78c6-4464-a62e-17d7001c258e"),
+                Id = ID,
                 Name = "Bind Soul",
                 Level = 2,
                 Range = 30,
-                Targets = "1 creature that died within the last minute."
+                Targets = "1 creature that died within the last minute.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Necromancy.ID,
             };
         }
 
@@ -34,23 +35,23 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new SpellRequirement { Id = Guid.Parse("5ece9a7b-d3b6-4cd5-bbf9-c5657ec5cd7f"), Text = "Black Sapphire with a gp value of at least the target's level x100." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Uncommon";
-            yield return "Evil";
-            yield return "Necromancy";
+            yield return Traits.Instances.Uncommon.ID;
+            yield return Traits.Instances.Evil.ID;
+            yield return Traits.Instances.Necromancy.ID;
         }
     }
 }

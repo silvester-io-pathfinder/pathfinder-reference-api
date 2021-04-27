@@ -1,16 +1,8 @@
-﻿using HotChocolate;
-using HotChocolate.Data;
-using HotChocolate.Types;
-using HotChocolate.Types.Descriptors;
+﻿using HotChocolate.Types;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Silvester.Pathfinder.Official.Database;
-using Silvester.Pathfinder.Official.Database.Models;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Reflection;
 
 namespace Silvester.Pathfinder.Official.Api.Graphql

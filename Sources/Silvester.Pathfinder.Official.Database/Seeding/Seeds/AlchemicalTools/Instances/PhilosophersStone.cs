@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
     {
         public static readonly Guid ID = Guid.Parse("b6393c4f-dc42-4218-b0cd-71c78d2af105");
 
-        protected override AlchemicalTool GetAlchemicalTool(AlchemicalToolSeeder seeder)
+        protected override AlchemicalTool GetAlchemicalTool()
         {
             return new AlchemicalTool
             {
@@ -22,18 +19,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
                 Name = "Philosopher's Stone",
                 ItemLevel = 20,
                 Usage = "Held in 2 hands",
-                BulkId = seeder.GetBulkByName("2").Id,
+                BulkId = Bulks.Instances.TwoBulk.ID,
                 ActionId = Interact.ID,
-                ActionTypeId = seeder.GetActionTypeByName("One Action").Id,
+                ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 ActivationAddendum = "Or 1 or more days; see description."
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Consumable";
-            yield return "Uncommon";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Consumable.ID;
+            yield return Traits.Instances.Uncommon.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -45,7 +42,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
             yield return new TextBlock { Id = Guid.Parse("7176e4f6-3ecd-4af5-88b1-77adb4690dab"), Type = TextBlockType.Enumeration, Text = "You can spend up to a month of downtime applying the quicksilver either to iron to create silver or to leadto create gold.Treat this as a 20th - level task to Earn Income using Crafting, except that you create 500 gp worth of your chosen metal per day on a success or 750 gp worth per day on a critical success." };
         }
 
-        protected override SourcePage GetSourcePage(AlchemicalToolSeeder seeder)
+        protected override SourcePage GetSourcePage()
         {
             return new SourcePage 
             {

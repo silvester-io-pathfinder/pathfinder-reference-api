@@ -7,18 +7,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ColorSpraySpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Illusion";
+        public static readonly Guid ID = Guid.Parse("060ba321-f5b9-4ac8-907c-fec7bb740713");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("060ba321-f5b9-4ac8-907c-fec7bb740713"),
+                Id = ID,
                 Name = "Color Spray",
                 Level = 1,
-                Area = "15-foot cone."
+                Area = "15-foot cone.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Illusion.ID,
             };
         }
 
@@ -52,23 +53,23 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Arcane";
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Illusion";
-            yield return "Incapacitation";
-            yield return "Visual";
+            yield return Traits.Instances.Illusion.ID;
+            yield return Traits.Instances.Incapacitation.ID;
+            yield return Traits.Instances.Visual.ID;
         }
     }
 }

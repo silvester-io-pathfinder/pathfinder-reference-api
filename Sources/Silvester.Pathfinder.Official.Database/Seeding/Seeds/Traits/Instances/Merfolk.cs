@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Merfolk : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ffd4a22a-42a6-40e5-92ad-f5f9f1fdbfdb");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "These aquatic humanoids have an upper body similar to a human and a lower body similar to a fish." };
+            yield return new TextBlock { Id = Guid.Parse("5a02f889-e842-4fee-aaab-405a45006761"), Type = TextBlockType.Text, Text = "These aquatic humanoids have an upper body similar to a human and a lower body similar to a fish." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("78056fbf-e753-44b3-8eeb-d011d4ee647b"),
                 SourceId = Bestiary.ID,
                 Page = 347
             };

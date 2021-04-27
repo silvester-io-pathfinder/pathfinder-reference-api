@@ -7,16 +7,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
     public class TrickMagicItemFeat : AbstractFeatTemplate
     {
-        protected override string FeatType => "General";
-        protected override string ActionType => "No Action";
+        public static readonly Guid ID = Guid.Parse("219b84b9-cb31-44df-b37e-6bf4916e5dfb");
 
         protected override Feat GetFeat()
         {
             return new Feat
             {
-                Id = Guid.Parse("219b84b9-cb31-44df-b37e-6bf4916e5dfb"),
+                Id = ID,
                 Name = "Trick Magic Item",
-                Level = 1
+                Level = 1,
+                FeatTypeId = FeatTypes.Instances.General.ID,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
 
@@ -27,17 +28,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             yield return new TextBlock { Id = Guid.Parse("81d98c13-816a-41c5-9d33-476397d08dc7"), Type = Utilities.Text.TextBlockType.Text, Text = "If you activate a magic item that requires a spell attack roll or spell DC and you don’t have the ability to cast spells of the relevant tradition, use your level as your proficiency bonus and the highest of your Intelligence, Wisdom, or Charisma modifiers. If you’re a master in the appropriate skill for the item’s tradition, you instead use the trained proficiency bonus, and if you’re legendary, you instead use the expert proficiency bonus." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites(FeatSeeder seeder)
+        protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
             yield return new OrPrerequisite
             {
                 Id = Guid.Parse("8cbd0753-5757-4b8b-b134-4a9aa2196e79"),
                 Choices =
                 {
-                    new SkillPrerequisite { Id = Guid.Parse("10ad44f9-e953-4e72-b4e0-72b6befed8d9"), RequiredSkillId = seeder.GetSkill("Arcana"), RequiredProficiencyId = seeder.GetProficiency("Trained") },
-                    new SkillPrerequisite { Id = Guid.Parse("984e1632-60e9-4775-a654-b0f11d2657ab"), RequiredSkillId = seeder.GetSkill("Nature"), RequiredProficiencyId = seeder.GetProficiency("Trained") },
-                    new SkillPrerequisite { Id = Guid.Parse("f818bf77-4277-406b-8dd7-175d11adbb58"), RequiredSkillId = seeder.GetSkill("Occultism"), RequiredProficiencyId = seeder.GetProficiency("Trained") },
-                    new SkillPrerequisite { Id = Guid.Parse("3f40cd84-3265-437e-98a8-7b55c6583f0e"), RequiredSkillId = seeder.GetSkill("Religion"), RequiredProficiencyId = seeder.GetProficiency("Trained") },
+                    new SkillPrerequisite { Id = Guid.Parse("10ad44f9-e953-4e72-b4e0-72b6befed8d9"), RequiredSkillId = Skills.Instances.Arcana.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID },
+                    new SkillPrerequisite { Id = Guid.Parse("984e1632-60e9-4775-a654-b0f11d2657ab"), RequiredSkillId = Skills.Instances.Nature.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID },
+                    new SkillPrerequisite { Id = Guid.Parse("f818bf77-4277-406b-8dd7-175d11adbb58"), RequiredSkillId = Skills.Instances.Occultism.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID },
+                    new SkillPrerequisite { Id = Guid.Parse("3f40cd84-3265-437e-98a8-7b55c6583f0e"), RequiredSkillId = Skills.Instances.Religion.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID },
                 }
             };
         }
@@ -53,12 +54,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Downtime";
-            yield return "General";
-            yield return "Manipulate";
-            yield return "Skill";
+            yield return Traits.Instances.Downtime.ID;
+            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Manipulate.ID;
+            yield return Traits.Instances.Skill.ID;
         }
     }
 }

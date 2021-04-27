@@ -1,51 +1,44 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions
 {
-    public abstract class AbstractActionTemplate
+    public abstract class AbstractActionTemplate : EntityTemplate<Models.Action>
     {
-        public void Seed(ActionSeeder seeder)
+        protected override Models.Action GetEntity(ModelBuilder builder)
         {
-            Models.Action action = GetAction(seeder);
+            Models.Action action = GetAction();
 
-            TextBlock[] details = GetDetails(seeder).ToArray();
-            for(int i = 0; i < details.Length; i ++)
+            builder.AddTextBlocks(action, GetDetails(), (a) => a.Details);
+
+            foreach (Guid traitId in GetTraits())
             {
-                TextBlock detail = details[i];
-                detail.Order = i;
-                detail.OwnerId = action.Id;
-                seeder.Builder.AddOwnedData((Models.Action o) => o.Details, detail);
+                builder.HasJoinData<Trait, Models.Action>((traitId, action.Id));
             }
 
-            foreach (Trait trait in GetTraits(seeder))
-            {
-                seeder.Builder.HasJoinData((action, trait));
-            }
-
-            RollableEffect? rollableEffect = GetRollableEffect(seeder);
-            if(rollableEffect != null)
+            RollableEffect? rollableEffect = GetRollableEffect();
+            if (rollableEffect != null)
             {
                 action.RollableEffectId = rollableEffect.Id;
-                seeder.Builder.AddData(rollableEffect);
+                builder.AddData(rollableEffect);
             }
 
-            seeder.Builder.AddData(action);
+            return action;
         }
 
-        protected abstract Models.Action GetAction(ActionSeeder seeder);
-        protected abstract IEnumerable<TextBlock> GetDetails(ActionSeeder seeder);
-        
-        protected virtual RollableEffect? GetRollableEffect(ActionSeeder seeder)
+        protected abstract Models.Action GetAction();
+        protected abstract IEnumerable<TextBlock> GetDetails();
+
+        protected virtual RollableEffect? GetRollableEffect()
         {
             return null;
         }
 
-        protected virtual IEnumerable<Trait> GetTraits(ActionSeeder seeder)
+        protected virtual IEnumerable<Guid> GetTraits()
         {
             yield break;
         }

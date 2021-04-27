@@ -1,26 +1,26 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases
 {
-    public abstract class AbstractDiseaseTemplate
+    public abstract class AbstractDiseaseTemplate : EntityTemplate<Disease>
     {
-        public void Seed(DiseaseSeeder seeder)
+        protected override Disease GetEntity(ModelBuilder builder)
         {
-            Disease disease = GetDisease(seeder);
+            Disease disease = GetDisease();
 
-            SourcePage? sourcePage = GetSourcePage(seeder);
+            SourcePage? sourcePage = GetSourcePage();
             if(sourcePage != null)
             {
-                seeder.Builder.AddData(sourcePage);
+                builder.AddData(sourcePage);
                 disease.SourcePageId = sourcePage.Id;
             }
 
-            DiseaseStage[] stages = GetDiseaseStages(seeder).ToArray();
+            DiseaseStage[] stages = GetDiseaseStages().ToArray();
             Guid currentGuid = disease.Id;
             for(int i = 0; i < stages.Length; i ++)
             {
@@ -38,25 +38,25 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases
                     effect.Id = currentGuid;
                     effect.DiseaseStageId = stage.Id;
 
-                    seeder.Builder.AddData(effect.GetType(), effect);
+                    builder.AddData(effect.GetType(), effect);
                 }
 
                 stage.Effects = new DiseaseStageEffect[] { };
 
-                seeder.Builder.AddData(stage);
+                builder.AddData(stage);
             }
 
-            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
+            foreach (Guid traitId in GetTraits())
             {
-                seeder.Builder.HasJoinData((disease, trait));
+                builder.HasJoinData<Trait, Disease>((traitId, disease.Id));
             }
 
-            seeder.Builder.AddData(disease);
+            return disease;
         }
 
-        public abstract Disease GetDisease(DiseaseSeeder seeder);
-        public abstract SourcePage? GetSourcePage(DiseaseSeeder seeder);
-        public abstract IEnumerable<DiseaseStage> GetDiseaseStages(DiseaseSeeder seeder);
-        public abstract IEnumerable<string> GetTraits();
+        public abstract Disease GetDisease();
+        public abstract SourcePage? GetSourcePage();
+        public abstract IEnumerable<DiseaseStage> GetDiseaseStages();
+        public abstract IEnumerable<Guid> GetTraits();
     }
 }

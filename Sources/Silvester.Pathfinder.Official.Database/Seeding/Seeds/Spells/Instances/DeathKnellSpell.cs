@@ -7,20 +7,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DeathKnellSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Necromancy";
-        public override string SavingThrowStat => "Will";
+        public static readonly Guid ID = Guid.Parse("236cd0a3-a07b-4c9f-ba11-e3c113d91634");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("236cd0a3-a07b-4c9f-ba11-e3c113d91634"),
+                Id = ID,
                 Name = "Death Knell",
                 Level = 2,
                 Range = 0,
                 Targets = "1 living creature that has 0 HP.",
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Necromancy.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Will.ID
             };
         }
 
@@ -40,22 +41,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Death";
-            yield return "Necromancy";
+            yield return Traits.Instances.Death.ID;
+            yield return Traits.Instances.Necromancy.ID;
         }
     }
 }

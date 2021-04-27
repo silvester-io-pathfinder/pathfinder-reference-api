@@ -7,20 +7,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DisruptUndeadSpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Cantrip";
-        public override string ActionType => "Two Actions";
-        public override string MagicSchool => "Necromancy";
-        public override string SavingThrowStat => "Fortitude";
+        public static readonly Guid ID = Guid.Parse("db143e7b-8212-4350-a09f-09205811470e");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("db143e7b-8212-4350-a09f-09205811470e"),
+                Id = ID,
                 Name = "Disrupt Undead",
                 Level = 1,
                 Range = 30,
-                Targets = "1 undead creature."
+                Targets = "1 undead creature.",
+                SpellTypeId = SpellTypes.Instances.Cantrip.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Necromancy.ID,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID
             };
         }
 
@@ -52,23 +53,23 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Divine";
-            yield return "Primal";
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Cantrip";
-            yield return "Necromancy";
-            yield return "Positive";
+            yield return Traits.Instances.Cantrip.ID;
+            yield return Traits.Instances.Necromancy.ID;
+            yield return Traits.Instances.Positive.ID;
         }
     }
 }

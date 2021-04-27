@@ -1,20 +1,17 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Utilities.Text;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RaceSizes
 {
-    public abstract class AbstractRaceSizeTemplate
+    public abstract class AbstractRaceSizeTemplate : EntityTemplate<RaceSize>
     {
-        public void Seed(RaceSizeSeeder seeder)
+        protected override RaceSize GetEntity(ModelBuilder builder)
         {
-            RaceSize size = GetRaceSize(seeder);
-            seeder.Builder.AddData(size);
+            RaceSize size = GetRaceSize();
+            return size;
         }
 
-        protected abstract RaceSize GetRaceSize(RaceSizeSeeder seeder);
+        protected abstract RaceSize GetRaceSize();
     }
 }

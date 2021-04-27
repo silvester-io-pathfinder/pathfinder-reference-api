@@ -4,9 +4,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
     {
         public static readonly Guid ID = Guid.Parse("e7825926-436e-4914-940a-09de6052cab1");
 
-        protected override AlchemicalBomb GetAlchemicalBomb(AlchemicalBombSeeder seeder)
+        protected override AlchemicalBomb GetAlchemicalBomb()
         {
             return new AlchemicalBomb
             {
@@ -23,15 +20,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Name = "Tanglefoot Bag",
                 Usage = "Held in 1 hand",
                 ItemBonus = 1,
-                BulkId = seeder.GetBulkByName("L").Id
+                BulkId = Bulks.Instances.LightBulk.ID
             };
         }
 
-        protected override IEnumerable<string> GetTraits()
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return "Alchemical";
-            yield return "Bomb";
-            yield return "Consumable";
+            yield return Traits.Instances.Alchemical.ID;
+            yield return Traits.Instances.Bomb.ID;
+            yield return Traits.Instances.Consumable.ID;
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
@@ -41,7 +38,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
             yield return new TextBlock { Id = Guid.Parse("3d23b44a-67d3-4cbe-b73e-528f36790ac4"), Text = "The target can end any effects by Escaping or spending a total of 3 Interact actions to carefully remove the sticky substances. These Interact actions don’t have to be consecutive, and other creatures can provide the actions as well." };
         }
 
-        protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies(AlchemicalBombSeeder seeder)
+        protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies()
         {
             yield return new AlchemicalBombPotencyBinding
             {
@@ -49,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 1,
                 Benefits = "The target takes a –10-foot penalty, and the Escape DC is 17.",
                 Price = 300,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Lesser").Id
+                PotionPotencyId = Potencies.Instances.Lesser.ID
             };
 
             yield return new AlchemicalBombPotencyBinding
@@ -58,7 +55,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 3,
                 Benefits = "You gain a +1 item bonus to attack rolls, the target takes a –15-foot penalty, and the Escape DC is 19.",
                 Price = 1000,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Moderate").Id
+                PotionPotencyId = Potencies.Instances.Moderate.ID
             };
 
             yield return new AlchemicalBombPotencyBinding
@@ -67,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 11,
                 Benefits = "You gain a +2 item bonus to attack rolls, the target takes a –15-foot penalty, and the Escape DC is 28.",
                 Price = 25000,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Greater").Id
+                PotionPotencyId = Potencies.Instances.Greater.ID
             };
 
             yield return new AlchemicalBombPotencyBinding
@@ -76,11 +73,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.I
                 Level = 17,
                 Benefits = "You gain a +3 item bonus to attack rolls, the target takes a –20-foot penalty, and the Escape DC is 37.",
                 Price = 250000,
-                PotionPotencyId = seeder.GetPotionPotencyByName("Major").Id
+                PotionPotencyId = Potencies.Instances.Major.ID
             };
         }
 
-        protected override SourcePage? GetSourcePage(AlchemicalBombSeeder seeder)
+        protected override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

@@ -1,12 +1,9 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.RaceSizes;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.ActionTypes.Instances;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 {
@@ -14,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
     {
         public static readonly Guid ID = Guid.Parse("90d27bd9-31ed-46f4-a174-467e165ed1b9");
 
-        protected override Models.Action GetAction(ActionSeeder seeder)
+        protected override Models.Action GetAction()
         {
             return new Models.Action
             {
@@ -22,21 +19,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
                 Name = "Grab Edge",
                 Trigger = "You fall from or past an edge or handhold.",
                 Requirements = "Your hands are not tied behind your back or otherwise restrained.",
-                ActionTypeId = seeder.GetActionType("Reaction"),
+                ActionTypeId = Reaction.ID,
             };
         }
 
-        protected override IEnumerable<TextBlock> GetDetails(ActionSeeder seeder)
+        protected override IEnumerable<TextBlock> GetDetails()
         {
             yield return new TextBlock { Id = Guid.Parse("135aadcd-6eaf-4401-909d-de2414c5ccbc"), Text = "When you fall off or past an edge or other handhold, you can try to grab it, potentially stopping your fall. You must succeed at a Reflex save, usually at the Climb DC. If you grab the edge or handhold, you can then Climb up using Athletics." };
         }
 
-        protected override IEnumerable<Trait> GetTraits(ActionSeeder seeder)
+        protected override IEnumerable<Guid> GetTraits()
         {
-            yield return seeder.GetTrait("Manipulate");
+            yield return Manipulate.ID;
         }
 
-        protected override RollableEffect? GetRollableEffect(ActionSeeder seeder)
+        protected override RollableEffect? GetRollableEffect()
         {
             return new RollableEffect
             {

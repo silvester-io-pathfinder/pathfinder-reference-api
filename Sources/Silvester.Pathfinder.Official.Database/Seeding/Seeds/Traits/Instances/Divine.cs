@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Divine : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("5d679bee-63d6-4377-ae25-7ba3f82cb3b5");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "This magic comes from the divine tradition, drawing power from deities or similar sources. Anything with this trait is magical." };
+            yield return new TextBlock { Id = Guid.Parse("31a55c3e-46ca-4765-9388-6b6f5383c154"), Type = TextBlockType.Text, Text = "This magic comes from the divine tradition, drawing power from deities or similar sources. Anything with this trait is magical." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("9cf9b91f-4863-4ff3-bd47-9fc96e709444"),
                 SourceId = CoreRulebook.ID,
                 Page = 631
             };

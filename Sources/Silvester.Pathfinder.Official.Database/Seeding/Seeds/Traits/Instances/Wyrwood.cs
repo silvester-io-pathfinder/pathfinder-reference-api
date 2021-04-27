@@ -3,17 +3,14 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
     public class Wyrwood : AbstractTraitTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("92febdb0-6336-44be-8517-98608257eed6");
 
-        protected override Trait GetTrait(TraitSeeder seeder)
+        protected override Trait GetTrait()
         {
             return new Trait
             {
@@ -24,14 +21,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A wyrwood is a small, sapient living construct crafted of wood and powered with an aeon stone or a similar magical stone." };
+            yield return new TextBlock { Id = Guid.Parse("c480c459-8d98-4978-92d8-882990b0c7cb"), Type = TextBlockType.Text, Text = "A wyrwood is a small, sapient living construct crafted of wood and powered with an aeon stone or a similar magical stone." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("148466a2-bcc4-4467-b321-bc3b2daa7b34"),
                 SourceId = Bestiary3.ID,
                 Page = 310
             };

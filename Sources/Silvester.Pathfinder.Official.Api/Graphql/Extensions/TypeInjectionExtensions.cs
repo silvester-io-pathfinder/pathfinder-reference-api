@@ -1,7 +1,6 @@
 ﻿using HotChocolate.Data.Filters;
 using HotChocolate.Data.Sorting;
 using HotChocolate.Execution.Configuration;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Silvester.Pathfinder.Official.Database;
 using System;
@@ -9,7 +8,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Api.Graphql.Extensions
 {

@@ -1,48 +1,48 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes
 {
-    public abstract class AbstractClassTemplate
+    public abstract class AbstractClassTemplate : EntityTemplate<Class>
     {
-        public void Seed(ClassSeeder seeder)
+        protected override Class GetEntity(ModelBuilder builder)
         {
-            Class @class = GetClass(seeder);
+            Class @class = GetClass();
 
-            foreach(Stat stat in GetKeyAbilities(seeder))
+            foreach(Guid statId in GetKeyAbilities())
             {
-                seeder.Builder.HasJoinData((@class, stat));
+                builder.HasJoinData<Stat, Class>((statId, @class.Id));
             }
 
-            foreach (ClassMannerism mannerism in GetMannerisms(seeder))
+            foreach (ClassMannerism mannerism in GetMannerisms())
             {
                 mannerism.ClassId = @class.Id;
-                seeder.Builder.AddData(mannerism);
+                builder.AddData(mannerism);
             }
 
-            foreach (ClassCharacteristic characteristic in GetCharacteristics(seeder))
+            foreach (ClassCharacteristic characteristic in GetCharacteristics())
             {
                 characteristic.ClassId = @class.Id;
-                seeder.Builder.AddData(characteristic);
+                builder.AddData(characteristic);
             }
 
             /*foreach (ClassFeature feature in GetFeatures(seeder))
             {
                 feature.ClassId = @class.Id;
-                seeder.Builder.AddData(feature);
+                builder.AddData(feature);
             }*/
 
-            seeder.Builder.AddData(@class);
+            return @class;
         }
 
-        protected abstract Class GetClass(ClassSeeder seeder);
-        protected abstract IEnumerable<Stat> GetKeyAbilities(ClassSeeder seeder);
+        protected abstract Class GetClass();
+        protected abstract IEnumerable<Guid> GetKeyAbilities();
 
-        protected abstract IEnumerable<ClassMannerism> GetMannerisms(ClassSeeder seeder);
-        protected abstract IEnumerable<ClassCharacteristic> GetCharacteristics(ClassSeeder seeder);
+        protected abstract IEnumerable<ClassMannerism> GetMannerisms();
+        protected abstract IEnumerable<ClassCharacteristic> GetCharacteristics();
         //protected abstract IEnumerable<ClassFeature> GetFeatures(ClassSeeder seeder);
     }
 }

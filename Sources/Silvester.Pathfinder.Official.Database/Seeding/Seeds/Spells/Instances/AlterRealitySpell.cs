@@ -7,17 +7,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AlterRealitySpell : AbstractSpellTemplate
     {
-        public override string SpellType => "Spell";
-        public override string ActionType => "Three Actions";
-        public override string MagicSchool => "Abjuration";
+        public static readonly Guid ID = Guid.Parse("5cffbfee-9c91-4c00-a8e5-d24c75200deb");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
-                Id = Guid.Parse("5cffbfee-9c91-4c00-a8e5-d24c75200deb"),
+                Id = ID,
                 Name = "Alter Reality",
-                Level = 10
+                Level = 10,
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.ThreeActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Abjuration.ID,
             };
         }
 
@@ -32,21 +33,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("9b6100f0-8551-4d82-b8a8-c642e5e859cd"), Type = Utilities.Text.TextBlockType.Text, Text = "At the GM’s discretion, you can try to produce greater effects, but this is dangerous and the spell may have only a partial effect." };
         }
 
-        public override IEnumerable<string> GetSpellComponents()
+        public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return "Material";
-            yield return "Somatic";
-            yield return "Verbal";
+            yield return SpellComponents.Instances.Material.ID;
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
         }
 
-        public override IEnumerable<string> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
-            yield return "Occult";
+            yield return MagicTraditions.Instances.Occult.ID;
         }
 
-        public override IEnumerable<string> GetTraits()
+        public override IEnumerable<Guid> GetTraits()
         {
-            yield return "Divination";
+            yield return Traits.Instances.Divination.ID;
         }
     }
 }

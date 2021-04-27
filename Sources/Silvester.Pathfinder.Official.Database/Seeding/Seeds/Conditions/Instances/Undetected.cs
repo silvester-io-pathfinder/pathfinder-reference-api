@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
@@ -13,13 +10,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
     {
         public static readonly Guid ID = Guid.Parse("d7416bc0-79b9-42c0-9335-e420dd3e0f50");
 
-        public override Condition GetCondition(ConditionSeeder seeder)
+        public override Condition GetCondition()
         {
             return new Condition
             {
                 Id = ID,
                 Name = "Undetected",
-                ConditionCategoryId = seeder.GetCategoryByName("Degrees of Detection").Id,
+                ConditionCategoryId = ConditionCategories.Instances.DegreesOfDetection.ID,
             };
         }
 
@@ -30,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instan
             yield return new TextBlock { Id = Guid.Parse("a411f8ea-e37b-4cc7-a8c2-0dfb167537f7"), Type = Utilities.Text.TextBlockType.Text, Text = "A creature can use the Seek action to try to find you, as described on page 471." };
         }
 
-        public override SourcePage? GetSourcePage(ConditionSeeder seeder)
+        public override SourcePage? GetSourcePage()
         {
             return new SourcePage
             {

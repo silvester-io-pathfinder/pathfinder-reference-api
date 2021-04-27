@@ -1,4 +1,5 @@
-﻿using Silvester.Pathfinder.Official.Database.Extensions;
+﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
@@ -7,55 +8,48 @@ using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
 {
-    public abstract class AbstractAlchemicalElixirTemplate
+    public abstract class AbstractAlchemicalElixirTemplate : EntityTemplate<AlchemicalElixir>
     {
-        public void Seed(AlchemicalElixirSeeder seeder)
+        protected override AlchemicalElixir GetEntity(ModelBuilder builder)
         {
-            AlchemicalElixir elixir = GetAlchemicalElixir(seeder);
+            AlchemicalElixir elixir = GetAlchemicalElixir();
 
-            SourcePage? sourcePage = GetSourcePage(seeder);
+            SourcePage? sourcePage = GetSourcePage();
             if (sourcePage != null)
             {
-                seeder.Builder.AddData(sourcePage);
+                builder.AddData(sourcePage);
                 elixir.SourcePageId = sourcePage.Id;
             }
 
-            TextBlock[] details = GetDetailBlocks().ToArray();
-            for(int i = 0;i < details.Length; i ++)
-            {
-                TextBlock detail = details[i];
-                detail.Order = i;
-                detail.OwnerId = elixir.Id;
-                seeder.Builder.AddOwnedData((AlchemicalElixir e) => e.Details, detail);
-            }
+            builder.AddTextBlocks(elixir, GetDetailBlocks(), e => e.Details);
 
-            foreach (AlchemicalElixirPotencyBinding binding in GetPotencies(seeder))
+            foreach (AlchemicalElixirPotencyBinding binding in GetPotencies())
             {
                 binding.AlchemicalElixirId = elixir.Id;
-                seeder.Builder.AddData(binding);
+                builder.AddData(binding);
             }
 
-            foreach (Trait trait in seeder.FilterTraits(GetTraits().ToArray()))
+            foreach (Guid traitId in GetTraits())
             {
-                seeder.Builder.HasJoinData((elixir, trait));
+                builder.HasJoinData<Trait, AlchemicalElixir>((traitId, elixir.Id));
             }
 
-            foreach(AlchemicalElixirCraftingRequirement requirement in GetCraftingRequirements(seeder))
+            foreach(AlchemicalElixirCraftingRequirement requirement in GetCraftingRequirements())
             {
                 requirement.AlchemicalElixirId = elixir.Id;
-                seeder.Builder.AddData(requirement);
+                builder.AddData(requirement);
             }
 
-            seeder.Builder.AddData(elixir);
+            return elixir;
         }
 
-        protected abstract AlchemicalElixir GetAlchemicalElixir(AlchemicalElixirSeeder seeder);
-        protected abstract SourcePage? GetSourcePage(AlchemicalElixirSeeder seeder);
-        protected abstract IEnumerable<string> GetTraits();
+        protected abstract AlchemicalElixir GetAlchemicalElixir();
+        protected abstract SourcePage? GetSourcePage();
+        protected abstract IEnumerable<Guid> GetTraits();
         protected abstract IEnumerable<TextBlock> GetDetailBlocks();
-        protected abstract IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies(AlchemicalElixirSeeder seeder);
+        protected abstract IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies();
 
-        protected virtual IEnumerable<AlchemicalElixirCraftingRequirement> GetCraftingRequirements(AlchemicalElixirSeeder seeder)
+        protected virtual IEnumerable<AlchemicalElixirCraftingRequirement> GetCraftingRequirements()
         {
             yield break;
         }
