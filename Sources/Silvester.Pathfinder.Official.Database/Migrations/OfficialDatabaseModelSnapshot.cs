@@ -17785,6 +17785,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("Order")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.ToTable("Potencies");
@@ -17793,37 +17796,44 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
-                            Name = "Greater"
+                            Name = "Greater",
+                            Order = 4
                         },
                         new
                         {
                             Id = new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"),
-                            Name = "Lesser"
+                            Name = "Lesser",
+                            Order = 2
                         },
                         new
                         {
                             Id = new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"),
-                            Name = "Major"
+                            Name = "Major",
+                            Order = 5
                         },
                         new
                         {
                             Id = new Guid("d48e6d86-0396-4d4e-89dd-3396203ae7ff"),
-                            Name = "Minor"
+                            Name = "Minor",
+                            Order = 1
                         },
                         new
                         {
                             Id = new Guid("de779bc7-3125-409a-82bb-49e68820101a"),
-                            Name = "Moderate"
+                            Name = "Moderate",
+                            Order = 3
                         },
                         new
                         {
                             Id = new Guid("cf956f07-1342-4bab-ac64-d71f2832bb54"),
-                            Name = "True"
+                            Name = "True",
+                            Order = 6
                         },
                         new
                         {
                             Id = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
-                            Name = "Unclassified"
+                            Name = "Unclassified",
+                            Order = 0
                         });
                 });
 

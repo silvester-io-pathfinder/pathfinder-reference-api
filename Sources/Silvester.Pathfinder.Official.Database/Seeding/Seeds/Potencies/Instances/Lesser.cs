@@ -13,7 +13,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Potencies.Instanc
             return new Potency
             {
                 Id = ID,
-                Name = "Lesser"
+                Name = "Lesser",
+                Order = 2
             };
         }
     }

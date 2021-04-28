@@ -241,7 +241,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Order = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -3314,16 +3315,16 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             migrationBuilder.InsertData(
                 table: "Potencies",
-                columns: new[] { "Id", "Name" },
+                columns: new[] { "Id", "Name", "Order" },
                 values: new object[,]
                 {
-                    { new Guid("cf956f07-1342-4bab-ac64-d71f2832bb54"), "True" },
-                    { new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"), "Unclassified" },
-                    { new Guid("de779bc7-3125-409a-82bb-49e68820101a"), "Moderate" },
-                    { new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"), "Lesser" },
-                    { new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"), "Major" },
-                    { new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"), "Greater" },
-                    { new Guid("d48e6d86-0396-4d4e-89dd-3396203ae7ff"), "Minor" }
+                    { new Guid("cf956f07-1342-4bab-ac64-d71f2832bb54"), "True", 6 },
+                    { new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"), "Unclassified", 0 },
+                    { new Guid("de779bc7-3125-409a-82bb-49e68820101a"), "Moderate", 3 },
+                    { new Guid("ceca3c25-9aec-4b3e-ba74-2e13dbe60a8c"), "Lesser", 2 },
+                    { new Guid("4852d7fd-20c3-442e-99c2-44416cf925ba"), "Major", 5 },
+                    { new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"), "Greater", 4 },
+                    { new Guid("d48e6d86-0396-4d4e-89dd-3396203ae7ff"), "Minor", 1 }
                 });
 
             migrationBuilder.InsertData(
