@@ -7505,7 +7505,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
-                            Name = "No Action"
+                            Name = "One Action"
                         },
                         new
                         {

@@ -12,7 +12,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ActionTypes.Insta
             return new ActionType
             { 
                 Id = ID, 
-                Name = "No Action" 
+                Name = "One Action" 
             };
         }
     }

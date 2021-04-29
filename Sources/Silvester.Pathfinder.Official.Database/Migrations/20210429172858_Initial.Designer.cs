@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Official.Database;
 namespace Silvester.Pathfinder.Official.Database.Migrations
 {
     [DbContext(typeof(OfficialDatabase))]
-    [Migration("20210428173507_Initial")]
+    [Migration("20210429172858_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -7507,7 +7507,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
-                            Name = "No Action"
+                            Name = "One Action"
                         },
                         new
                         {

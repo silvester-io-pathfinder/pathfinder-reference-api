@@ -3006,7 +3006,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 {
                     { new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"), "Free" },
                     { new Guid("e3494cac-ca2b-41e5-9c3e-d260ebe2afc9"), "No Action" },
-                    { new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"), "No Action" },
+                    { new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"), "One Action" },
                     { new Guid("11d73724-984e-4258-9157-6d0373363faa"), "One or Two Actions" },
                     { new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"), "Reaction" },
                     { new Guid("3fa12bb8-7b63-4c36-8e6e-d3cdd81580b8"), "Three Actions" },
