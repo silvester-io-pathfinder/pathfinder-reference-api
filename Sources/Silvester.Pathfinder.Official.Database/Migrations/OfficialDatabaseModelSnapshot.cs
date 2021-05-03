@@ -10933,13 +10933,13 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             ConditionCategoryId = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
                             Name = "Blinded",
                             OverridesConditionId = new Guid("ff7b682f-13ff-464f-a230-89cc814186ea"),
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("f743a373-99c3-4e37-973a-cd274745c865")
                         },
                         new
                         {
                             Id = new Guid("8ecb38b2-d7fb-440f-b096-cf381652b2ff"),
                             Name = "Broken",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("535f3f02-9a6f-4b34-9080-460f626a969c")
                         },
                         new
                         {
@@ -10956,164 +10956,164 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("740be8e2-cab8-4cbe-8065-fd71a6d2192e"),
                             ConditionCategoryId = new Guid("655ed530-4d75-4816-af14-4cbbdd19531e"),
                             Name = "Clumsy",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("b52512cc-bfab-429f-a40d-a0488043a296")
                         },
                         new
                         {
                             Id = new Guid("64d1cfdc-8539-4bf7-95f2-60d53788079b"),
                             ConditionCategoryId = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
                             Name = "Concealed",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("a0a8e076-7eb6-4e69-a115-b30d318a100a")
                         },
                         new
                         {
                             Id = new Guid("b9c63a02-449e-43c2-a236-5a3f851f766f"),
                             Name = "Confused",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("8d685714-66ec-4b52-bb2c-d105f158ae61")
                         },
                         new
                         {
                             Id = new Guid("d4d10f5f-e6cc-4acc-a8b3-3a29de451366"),
                             Name = "Controlled",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("a6317e26-779a-4558-afa5-525a9be21ca5")
                         },
                         new
                         {
                             Id = new Guid("ff7b682f-13ff-464f-a230-89cc814186ea"),
                             ConditionCategoryId = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
                             Name = "Dazzled",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("23bc81bd-d007-446b-acde-93d6586d4d24")
                         },
                         new
                         {
                             Id = new Guid("3c3ce9f5-aceb-4db8-810a-1291035cf709"),
                             Name = "Dead",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("162fb61e-213f-4fa8-bfa8-36e3ec271847")
                         },
                         new
                         {
                             Id = new Guid("31b26b64-2616-4d23-93de-f3dbc0c81b7d"),
                             ConditionCategoryId = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
                             Name = "Deafened",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("649223d0-1602-442a-8751-34c050b98392")
                         },
                         new
                         {
                             Id = new Guid("824a03c0-0108-4896-8c0a-8af3a09cd738"),
                             ConditionCategoryId = new Guid("18744a3c-8c8d-4298-8be7-f5e7e5dc0a6b"),
                             Name = "Doomed",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("9693cf88-cb25-468d-a60b-becb5e1077a4")
                         },
                         new
                         {
                             Id = new Guid("a263fc00-a122-416e-8213-a7214fa9a30f"),
                             ConditionCategoryId = new Guid("655ed530-4d75-4816-af14-4cbbdd19531e"),
                             Name = "Drained",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("322bb3f0-b548-4f39-893f-1754529921ed")
                         },
                         new
                         {
                             Id = new Guid("069fffa5-3fe0-4892-a04d-1bd28a6225a3"),
                             ConditionCategoryId = new Guid("18744a3c-8c8d-4298-8be7-f5e7e5dc0a6b"),
                             Name = "Dying",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("e7e4aa12-dadc-426b-8b3c-24a60d4abb25")
                         },
                         new
                         {
                             Id = new Guid("5da2ad79-54a0-429e-a52a-d654841fb268"),
                             Name = "Encumbered",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("1ca1a968-dcb9-4353-b15e-e397cda35b48")
                         },
                         new
                         {
                             Id = new Guid("f0366047-21ca-4f51-971e-4f7c72629b74"),
                             ConditionCategoryId = new Guid("655ed530-4d75-4816-af14-4cbbdd19531e"),
                             Name = "Enfeebled",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("8014c08d-23c8-4525-8db4-79c4cef2f7e0")
                         },
                         new
                         {
                             Id = new Guid("33b600ff-067e-4a67-a1ce-c85cf2d2382c"),
                             Name = "Fascinated",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("1dbef0bc-4ffe-4e45-964f-83bbad2c884d")
                         },
                         new
                         {
                             Id = new Guid("48d6ee37-8a18-4162-9164-9f7892045d2d"),
                             Name = "Fatigued",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("7130351e-ad82-4ca7-b613-20b8743f03e3")
                         },
                         new
                         {
                             Id = new Guid("72287426-a2d9-4d8b-8b2a-9a696baa3f1d"),
                             Name = "Flat-Footed",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("3f6ef9b5-9e0d-4ae7-9a3a-de2709f94003")
                         },
                         new
                         {
                             Id = new Guid("35e06ece-e68a-4201-a215-8e3a29f30840"),
                             Name = "Fleeing",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("c2e6c0f8-283e-4580-bec2-26abf8b586e7")
                         },
                         new
                         {
                             Id = new Guid("87851575-72a5-4935-b284-7cb0551fadf2"),
                             ConditionCategoryId = new Guid("ae1f94c2-5442-4eed-bfdc-54a3faadbcc4"),
                             Name = "Friendly",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("22f3b334-9d9c-49fa-890f-e8a869daabc7")
                         },
                         new
                         {
                             Id = new Guid("06cdc6c0-2d59-414e-a1bf-1d1862bae2d7"),
                             Name = "Frightened",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("cf8fd91d-d02e-460e-81c7-6745f5b46690")
                         },
                         new
                         {
                             Id = new Guid("918a03c5-27d2-458f-8bbf-2d1933738415"),
                             Name = "Grabbed",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("d3c67fb1-62b1-4b8d-8017-1b913d634cff")
                         },
                         new
                         {
                             Id = new Guid("170bff5c-bcac-433d-94a0-840da90112af"),
                             ConditionCategoryId = new Guid("ae1f94c2-5442-4eed-bfdc-54a3faadbcc4"),
                             Name = "Helpful",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("6abe2c10-38b3-4b54-b11d-b1914e99b198")
                         },
                         new
                         {
                             Id = new Guid("4f1b10d8-98e2-43f2-b3a4-22e6b11ea699"),
                             ConditionCategoryId = new Guid("d104a1f4-fb11-45c3-84b7-14880d673095"),
                             Name = "Hidden",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("9af352ee-666e-46a3-a976-2d1f0be4bef5")
                         },
                         new
                         {
                             Id = new Guid("d56a5083-fa2f-4d9c-a968-0b7664e1c9cd"),
                             ConditionCategoryId = new Guid("ae1f94c2-5442-4eed-bfdc-54a3faadbcc4"),
                             Name = "Hostile",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("17f5c739-aab8-4631-8ca7-8ab7508205d5")
                         },
                         new
                         {
                             Id = new Guid("b335312b-5956-436b-a8df-c426704a41ba"),
                             Name = "Immobilized",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("57922528-4da2-4416-8e4c-d460798e208c")
                         },
                         new
                         {
                             Id = new Guid("f13e0f97-112a-4ffa-843a-00b406ee963d"),
                             ConditionCategoryId = new Guid("ae1f94c2-5442-4eed-bfdc-54a3faadbcc4"),
                             Name = "Indifferent",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("d86c4397-fff6-431b-8de7-7e7c4024f050")
                         },
                         new
                         {
                             Id = new Guid("b9db96ae-7d84-4616-8831-477d614b4dbd"),
                             ConditionCategoryId = new Guid("224d0ea9-af56-49b9-946d-ce809b894701"),
                             Name = "Invisible",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("f7112785-1068-4ad7-8521-5a46dac22f3c")
                         },
                         new
                         {
@@ -11125,56 +11125,56 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("6f1426bc-454d-4796-a6b5-a1569dd39ee6"),
                             ConditionCategoryId = new Guid("d104a1f4-fb11-45c3-84b7-14880d673095"),
                             Name = "Observed",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("95b85300-604c-4e3c-853c-4699f676bc49")
                         },
                         new
                         {
                             Id = new Guid("5007c3b2-b184-43b1-85d7-ad159d14ccb5"),
                             Name = "Paralyzed",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("17810441-9218-4e9d-a962-1e7697516b2d")
                         },
                         new
                         {
                             Id = new Guid("e224b6c0-c7aa-4a58-b00f-7c422a7c6250"),
                             Name = "Persistent Damage",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("504d4f87-0814-47b5-9377-ad05b72cd72a")
                         },
                         new
                         {
                             Id = new Guid("8d531baa-8a75-4090-83d0-fd8721b76ae7"),
                             Name = "Petrified",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("24ad83ae-b7d1-4b0c-8706-c8cc022225d8")
                         },
                         new
                         {
                             Id = new Guid("b680a37e-cf30-4c4b-886f-a713282892af"),
                             Name = "Prone",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("c928cb5b-b048-4877-9e65-d9e394ff0936")
                         },
                         new
                         {
                             Id = new Guid("fce417f7-0b9c-4d87-9f0a-45ae5d9a4e53"),
                             Name = "Quickened",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("0ec62791-35c3-42a1-9840-eeae27f40c96")
                         },
                         new
                         {
                             Id = new Guid("ecb312a5-4e27-43b9-89ec-1a615d9f9dc2"),
                             Name = "Restrained",
                             OverridesConditionId = new Guid("918a03c5-27d2-458f-8bbf-2d1933738415"),
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("de1236fc-c4e3-4f46-b8e3-1f3e06b2314d")
                         },
                         new
                         {
                             Id = new Guid("c674e766-939d-47fa-9c94-80173d59741f"),
                             Name = "Sickened",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("6b475166-4b71-4da5-b261-3b78d78adcde")
                         },
                         new
                         {
                             Id = new Guid("f253f20f-d7d3-4fe6-bb19-8d521afd9436"),
                             Name = "Slowed",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("32ddb040-0f69-40b1-8c45-693df9034766")
                         },
                         new
                         {
@@ -11186,14 +11186,14 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("4d045584-3a7f-433b-ad89-0f658c379923"),
                             Name = "Stunned",
                             OverridesConditionId = new Guid("f253f20f-d7d3-4fe6-bb19-8d521afd9436"),
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("81b59165-360f-4844-909f-bdff6fe8da0b")
                         },
                         new
                         {
                             Id = new Guid("a9bb8a46-7442-4480-b008-c706d7d4ef2f"),
                             ConditionCategoryId = new Guid("655ed530-4d75-4816-af14-4cbbdd19531e"),
                             Name = "Stupefied",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("83fd1bb7-1466-4cb8-8eb9-3c14b5a90813")
                         },
                         new
                         {
@@ -11201,21 +11201,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             ConditionCategoryId = new Guid("18744a3c-8c8d-4298-8be7-f5e7e5dc0a6b"),
                             Name = "Unconscious",
                             OverridesConditionId = new Guid("ff7b682f-13ff-464f-a230-89cc814186ea"),
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("5486ed38-3692-4186-80e4-1746c21c7130")
                         },
                         new
                         {
                             Id = new Guid("d7416bc0-79b9-42c0-9335-e420dd3e0f50"),
                             ConditionCategoryId = new Guid("d104a1f4-fb11-45c3-84b7-14880d673095"),
                             Name = "Undetected",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("8cbcb7fb-2032-4b91-a811-46753e66f848")
                         },
                         new
                         {
                             Id = new Guid("ca2e35fe-8529-4ba3-a860-1bbde1c1c8f8"),
                             ConditionCategoryId = new Guid("ae1f94c2-5442-4eed-bfdc-54a3faadbcc4"),
                             Name = "Unfriendly",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("3eadd81e-0338-4b94-85a0-6939831d8396")
                         },
                         new
                         {
@@ -11223,7 +11223,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             ConditionCategoryId = new Guid("d104a1f4-fb11-45c3-84b7-14880d673095"),
                             Name = "Unnoticed",
                             OverridesConditionId = new Guid("ff7b682f-13ff-464f-a230-89cc814186ea"),
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("6136be14-61d3-44fa-9e44-f2a5006a6098")
                         },
                         new
                         {
@@ -11235,7 +11235,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("8f6d81d5-64f1-455e-80c8-7835accb6613"),
                             ConditionCategoryId = new Guid("18744a3c-8c8d-4298-8be7-f5e7e5dc0a6b"),
                             Name = "Wounded",
-                            SourcePageId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                            SourcePageId = new Guid("344af983-0fdd-4623-be6c-59587595cfe5")
                         });
                 });
 
@@ -35821,7 +35821,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("OverridesConditionId");
 
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Source", "SourcePage")
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
                         .WithMany()
                         .HasForeignKey("SourcePageId");
 

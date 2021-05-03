@@ -9,7 +9,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public string Name { get; set; } = default!;
      
         public Guid? SourcePageId { get; set; }
-        public Source? SourcePage { get; set; } = default!;
+        public SourcePage? SourcePage { get; set; } = default!;
 
         public Guid? ConditionCategoryId { get; set; }
         public ConditionCategory? ConditionCategory { get; set; } = default!;

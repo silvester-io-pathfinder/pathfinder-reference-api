@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions
             if(sourcePage != null)
             {
                 builder.AddData(sourcePage);
-                condition.SourcePageId = sourcePage.SourceId;
+                condition.SourcePageId = sourcePage.Id;
             }
 
             builder.AddTextBlocks(condition, GetConditionDetailBlocks(), e => e.Details);
