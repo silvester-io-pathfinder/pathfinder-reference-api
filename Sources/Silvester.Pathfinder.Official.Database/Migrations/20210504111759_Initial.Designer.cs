@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Official.Database;
 namespace Silvester.Pathfinder.Official.Database.Migrations
 {
     [DbContext(typeof(OfficialDatabase))]
-    [Migration("20210503153152_Initial")]
+    [Migration("20210504111759_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37863,7 +37863,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Hazard", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardComplexity", "Complexity")
-                        .WithMany()
+                        .WithMany("Hazards")
                         .HasForeignKey("ComplexityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -45078,6 +45078,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardAction", b =>
                 {
                     b.Navigation("Effects");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardComplexity", b =>
+                {
+                    b.Navigation("Hazards");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.HazardType", b =>
