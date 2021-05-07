@@ -10,8 +10,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Seeding\Seeds\ActionTypes\Instances\" />
-  </ItemGroup>
-
 </Project>

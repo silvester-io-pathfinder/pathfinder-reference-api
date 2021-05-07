@@ -74,6 +74,9 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<SpellType> SpellTypes { get; set; } = default!;
         public DbSet<Stat> Stats { get; set; } = default!;
         public DbSet<Trait> Traits { get; set; } = default!;
+        public DbSet<Weapon> Weapons { get; set; } = default!;
+        public DbSet<WeaponGroup> WeaponGroups { get; set; } = default!;
+        public DbSet<WeaponCategory> WeaponCategories { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -126,6 +129,5 @@ namespace Silvester.Pathfinder.Official.Database
                 .CreateInstance<EntitySeeder<TEntity>>()
                 .Seed(builder);
         }
-
     }
 }
