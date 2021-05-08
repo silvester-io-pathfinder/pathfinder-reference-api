@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Weapons.Instances
 {
-    public class Light : AbstractWeaponTemplate
+    public class BastardSword : AbstractWeaponTemplate
     {
         public static readonly Guid ID = Guid.Parse("");
 
@@ -18,22 +18,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Weapons.Instances
             return new Weapon
             {
                 Id = ID,
-                Name = "",
-                Description = "",
-                Level = ,
-                Price = ,
-                Damage = "",
-                Hands = ,
+                Name = "Bastard Sword",
+                Description = "This broad-bladed sword, sometimes called the hand‑and‑a‑half sword, has a longer grip so it can be held in one hand or used with two hands to provide extra piercing or slashing power.",
+                Price = 400,
+                Damage = "1d8",
+                Hands = 1,
                 BulkId = OneBulk.ID,
                 WeaponCategoryId = Martial.ID,
                 WeaponGroupId = Sword.ID,
-                DamageTypeId = Piercing.ID
+                DamageTypeId = Slashing.ID
             };
         }
 
         protected override IEnumerable<Guid> GetTraits()
         {
-            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.TwoHand.ID;
         }
 
         protected override SourcePage GetSourcePage()
@@ -42,7 +41,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Weapons.Instances
             {
                 Id = Guid.Parse(""),
                 SourceId = CoreRulebook.ID,
-                Page =
+                Page = 280
             };
         }
     }

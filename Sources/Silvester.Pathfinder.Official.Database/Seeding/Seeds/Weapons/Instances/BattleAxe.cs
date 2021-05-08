@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Weapons.Instances
 {
-    public class Light : AbstractWeaponTemplate
+    public class BattleAxe : AbstractWeaponTemplate
     {
         public static readonly Guid ID = Guid.Parse("");
 
@@ -18,22 +18,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Weapons.Instances
             return new Weapon
             {
                 Id = ID,
-                Name = "",
-                Description = "",
-                Level = ,
-                Price = ,
-                Damage = "",
-                Hands = ,
+                Name = "Battle Axe",
+                Description = "These axes are designed explicitly as weapons, rather than tools. They typically weigh less, with a shaft reinforced with metal bands or bolts, and have a sharper blade, making them ideal for chopping limbs rather than wood.",
+                Price = 100,
+                Damage = "1d8",
+                Hands = 1,
                 BulkId = OneBulk.ID,
                 WeaponCategoryId = Martial.ID,
-                WeaponGroupId = Sword.ID,
-                DamageTypeId = Piercing.ID
+                WeaponGroupId = Axe.ID,
+                DamageTypeId = Slashing.ID
             };
         }
 
         protected override IEnumerable<Guid> GetTraits()
         {
-            yield return Traits.Instances.General.ID;
+            yield return Traits.Instances.Sweep.ID;
         }
 
         protected override SourcePage GetSourcePage()
@@ -42,7 +41,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Weapons.Instances
             {
                 Id = Guid.Parse(""),
                 SourceId = CoreRulebook.ID,
-                Page =
+                Page = 280
             };
         }
     }
