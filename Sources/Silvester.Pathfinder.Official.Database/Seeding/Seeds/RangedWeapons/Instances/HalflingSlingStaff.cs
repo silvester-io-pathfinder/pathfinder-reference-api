@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Ins
                 AmmunitionId = SlingBullets.ID,
                 BulkId = OneBulk.ID,
                 WeaponCategoryId = Martial.ID,
-                WeaponGroupId = Sling.ID,
+                WeaponGroupId = WeaponGroups.Instances.Sling.ID,
                 DamageTypeId = Bludgeoning.ID
             };
         }

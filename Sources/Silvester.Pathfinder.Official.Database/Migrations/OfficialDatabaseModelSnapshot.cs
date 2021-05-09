@@ -20000,7 +20000,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 500,
                             SourcePageId = new Guid("f87e5121-6a39-400e-898d-8a8e50faedba"),
                             WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20057,7 +20057,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 1500,
                             SourcePageId = new Guid("4249a8a4-14e5-43e3-9d55-61065c75422b"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20071,7 +20071,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 200,
                             SourcePageId = new Guid("f07df8e3-e1fa-4ca6-ae6b-6864594d348a"),
                             WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -20099,7 +20099,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 300,
                             SourcePageId = new Guid("12be0d39-76bb-475b-b107-b2b4a8f87d48"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -20142,7 +20142,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 20,
                             SourcePageId = new Guid("195ba1fc-dbcf-4884-8d33-b0c40b8c9e42"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20198,7 +20198,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 0,
                             SourcePageId = new Guid("b075bf13-2ed1-4686-837f-c5c511af261d"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20213,7 +20213,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 90,
                             SourcePageId = new Guid("53c212b5-cb72-4f75-a597-98bdd4181af0"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -20298,7 +20298,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 0,
                             SourcePageId = new Guid("7c07999f-a858-4646-be52-c7c6655b47e1"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20368,7 +20368,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 100,
                             SourcePageId = new Guid("cd7c2cd0-bfe4-4175-9926-f65cb443f34e"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                            WeaponGroupId = new Guid("2a230c64-c4ef-4f84-ac75-a285f53bf115")
                         },
                         new
                         {
@@ -20382,7 +20382,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 500,
                             SourcePageId = new Guid("6339002f-07a7-4021-a557-3d7bc6c3a120"),
                             WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -20409,7 +20409,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 100,
                             SourcePageId = new Guid("139c816a-ef93-4a2d-9867-0fd641a4f3dd"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -20423,7 +20423,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 100,
                             SourcePageId = new Guid("c2d4425b-1674-4596-828c-11d87458f016"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20451,7 +20451,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 200,
                             SourcePageId = new Guid("dd53aa21-92e7-4268-ad3a-76d4d3f48290"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                            WeaponGroupId = new Guid("2a230c64-c4ef-4f84-ac75-a285f53bf115")
                         },
                         new
                         {
@@ -20479,7 +20479,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 300,
                             SourcePageId = new Guid("477ef8a4-079c-4527-bbea-ab4a0cb22e7d"),
                             WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -20521,7 +20521,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 100,
                             SourcePageId = new Guid("0d581324-e4ad-48a2-97b1-aab565022eb8"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20535,7 +20535,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 200,
                             SourcePageId = new Guid("bdaa0cbd-cd0d-4dc8-b129-d5891cecb88b"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                            WeaponGroupId = new Guid("1c0f6d9d-1473-4505-8aa5-819a7fb94220")
                         },
                         new
                         {
@@ -20633,7 +20633,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 10,
                             SourcePageId = new Guid("2a4d437b-b98a-4786-b5cd-9e4fb0899bb5"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20689,7 +20689,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 200,
                             SourcePageId = new Guid("9b0e10a8-cc3f-4639-b945-72c60f05bf5c"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20731,7 +20731,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 100,
                             SourcePageId = new Guid("ae37faf4-c071-4dd9-bdda-262e1495fc78"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                            WeaponGroupId = new Guid("2a230c64-c4ef-4f84-ac75-a285f53bf115")
                         },
                         new
                         {
@@ -20759,7 +20759,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 40,
                             SourcePageId = new Guid("42c099df-55ea-40f8-81c5-6dfca855bbf2"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20773,7 +20773,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 40,
                             SourcePageId = new Guid("867acff8-88aa-4b8c-a9a0-22f60ce34c83"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                            WeaponGroupId = new Guid("1c0f6d9d-1473-4505-8aa5-819a7fb94220")
                         },
                         new
                         {
@@ -20787,7 +20787,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 50,
                             SourcePageId = new Guid("aae59ef0-a70c-4ef2-88db-be982251fe79"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                            WeaponGroupId = new Guid("2a230c64-c4ef-4f84-ac75-a285f53bf115")
                         },
                         new
                         {
@@ -20815,7 +20815,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 100,
                             SourcePageId = new Guid("56c7cb8f-9fb0-4fc9-95c3-09e592acd1bb"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20885,7 +20885,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 300,
                             SourcePageId = new Guid("01c2bf73-7183-4dce-a282-edc644ada0ce"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -20899,7 +20899,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 10,
                             SourcePageId = new Guid("341b16f6-b1ad-4bd7-b3a0-5b9cccff4e1e"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -20913,7 +20913,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 100,
                             SourcePageId = new Guid("a894bf57-ddd3-4cfa-a05c-0f886d627ae4"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20941,7 +20941,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 100,
                             SourcePageId = new Guid("1fc416c1-9963-4fc1-ba94-dab2a33c37ea"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20969,7 +20969,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 20,
                             SourcePageId = new Guid("c957e89f-fb12-4dd2-a925-d5e7cb81e922"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -20983,7 +20983,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 100,
                             SourcePageId = new Guid("7830364d-bfa3-48a4-9848-3bb4f19de2b8"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                            WeaponGroupId = new Guid("1c0f6d9d-1473-4505-8aa5-819a7fb94220")
                         },
                         new
                         {
@@ -21025,7 +21025,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 70,
                             SourcePageId = new Guid("d4874f3d-88d6-4e29-989a-a32c49adda2a"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                            WeaponGroupId = new Guid("1c0f6d9d-1473-4505-8aa5-819a7fb94220")
                         },
                         new
                         {
@@ -21039,7 +21039,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 20,
                             SourcePageId = new Guid("e034be48-76a2-4af9-ba68-e06d3520a264"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -21110,7 +21110,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 40,
                             SourcePageId = new Guid("4bb96701-ea4f-4e80-a828-fb86b3c81e4b"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -21138,7 +21138,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 10,
                             SourcePageId = new Guid("ff40af4d-5cff-4673-99c5-b7425edc948a"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -21180,7 +21180,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 50,
                             SourcePageId = new Guid("c4d83249-2b91-4078-93b5-5e3a3acfec2e"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -21194,7 +21194,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 10,
                             SourcePageId = new Guid("9525a2a2-bf28-40fe-a616-7d75151e2540"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -21236,7 +21236,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 800,
                             SourcePageId = new Guid("a764b309-d1f9-4236-9c0f-cc9d74c262d9"),
                             WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -21334,7 +21334,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 10,
                             SourcePageId = new Guid("e70de524-eb29-4488-aedf-fe88c9332737"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                            WeaponGroupId = new Guid("2a230c64-c4ef-4f84-ac75-a285f53bf115")
                         },
                         new
                         {
@@ -21348,7 +21348,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 300,
                             SourcePageId = new Guid("a815cf76-79c0-4130-936c-6468b6cda683"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -21376,7 +21376,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 0,
                             SourcePageId = new Guid("c5a6f273-9672-4fdf-9202-727e5f9a3b01"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                            WeaponGroupId = new Guid("b43977e7-788a-4a38-be49-2ed575e74362")
                         },
                         new
                         {
@@ -21503,7 +21503,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 1000,
                             SourcePageId = new Guid("8bf406fa-0c9f-4013-a491-d0ef11f6cc6e"),
                             WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
-                            WeaponGroupId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                            WeaponGroupId = new Guid("1c0f6d9d-1473-4505-8aa5-819a7fb94220")
                         },
                         new
                         {
@@ -21517,7 +21517,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 100,
                             SourcePageId = new Guid("99fbb55f-8b58-4aa3-bf84-21ed96b51695"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                            WeaponGroupId = new Guid("2a230c64-c4ef-4f84-ac75-a285f53bf115")
                         },
                         new
                         {
@@ -21531,7 +21531,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 200,
                             SourcePageId = new Guid("cc09c8b5-2efa-486a-b01b-9319085183f9"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -21559,7 +21559,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 200,
                             SourcePageId = new Guid("9bb4957d-2781-4ee2-9b04-2b0f1a0123e4"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -21601,7 +21601,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 10,
                             SourcePageId = new Guid("e5233e7f-ca17-4835-9efc-2544bef86514"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -21615,7 +21615,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Price = 500,
                             SourcePageId = new Guid("5fcd29f0-25f5-4dd6-b4a4-f8828a27dfe6"),
                             WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
-                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                            WeaponGroupId = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245")
                         },
                         new
                         {
@@ -22376,7 +22376,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Reload = 1,
                             SourcePageId = new Guid("00860b13-76fc-42d7-a5d7-00a6591e21dc"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8")
+                            WeaponGroupId = new Guid("79516d2f-0c2d-47d3-b411-5b02ae26022f")
                         },
                         new
                         {
@@ -22391,7 +22391,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Range = 20,
                             SourcePageId = new Guid("ff4711ed-2ae0-4ec0-bdab-8bbcfb2e2074"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("26d5e7ba-84a2-46d5-966d-c8eeda6cf9a4")
+                            WeaponGroupId = new Guid("92c0ebe3-618f-45e8-b9e2-cbd47a96ea96")
                         },
                         new
                         {
@@ -22472,7 +22472,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Range = 20,
                             SourcePageId = new Guid("fb876b13-2112-4172-8d99-8bc7c0854c8b"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8")
+                            WeaponGroupId = new Guid("79516d2f-0c2d-47d3-b411-5b02ae26022f")
                         },
                         new
                         {
@@ -22489,7 +22489,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Reload = 1,
                             SourcePageId = new Guid("cd06d5ba-e50c-461f-ac71-3271d52c9c3f"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("26d5e7ba-84a2-46d5-966d-c8eeda6cf9a4")
+                            WeaponGroupId = new Guid("92c0ebe3-618f-45e8-b9e2-cbd47a96ea96")
                         },
                         new
                         {
@@ -22538,7 +22538,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Range = 30,
                             SourcePageId = new Guid("589ee43a-13ac-412b-8041-53c542041322"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8")
+                            WeaponGroupId = new Guid("79516d2f-0c2d-47d3-b411-5b02ae26022f")
                         },
                         new
                         {
@@ -22605,7 +22605,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Reload = 0,
                             SourcePageId = new Guid("8ee225e2-9330-431e-809b-6239b917be67"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8")
+                            WeaponGroupId = new Guid("79516d2f-0c2d-47d3-b411-5b02ae26022f")
                         },
                         new
                         {
@@ -22622,7 +22622,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Reload = 1,
                             SourcePageId = new Guid("95ea6700-cabd-4454-8926-4e4a75a55b59"),
                             WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
-                            WeaponGroupId = new Guid("26d5e7ba-84a2-46d5-966d-c8eeda6cf9a4")
+                            WeaponGroupId = new Guid("92c0ebe3-618f-45e8-b9e2-cbd47a96ea96")
                         },
                         new
                         {
@@ -22655,7 +22655,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Reload = 1,
                             SourcePageId = new Guid("d2523e56-dad3-4c5c-8787-4b13ab0c823a"),
                             WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
-                            WeaponGroupId = new Guid("26d5e7ba-84a2-46d5-966d-c8eeda6cf9a4")
+                            WeaponGroupId = new Guid("92c0ebe3-618f-45e8-b9e2-cbd47a96ea96")
                         });
                 });
 

@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Inst
                 Hands = "2",
                 BulkId = OneBulk.ID,
                 WeaponCategoryId = Advanced.ID,
-                WeaponGroupId = Flail.ID,
+                WeaponGroupId = WeaponGroups.Instances.Flail.ID,
                 DamageTypeId = Slashing.ID
             };
         }

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Ins
                 Hands = "1",
                 BulkId = LightBulk.ID,
                 WeaponCategoryId = Martial.ID,
-                WeaponGroupId = Sling.ID,
+                WeaponGroupId = WeaponGroups.Instances.Sling.ID,
                 DamageTypeId = Piercing.ID
             };
         }

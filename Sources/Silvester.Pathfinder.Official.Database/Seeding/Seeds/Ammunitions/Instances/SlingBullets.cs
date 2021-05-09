@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Ammunitions.Insta
                 Price = 1,
                 BatchAmount = 10,
                 BulkId = LightBulk.ID,
-                WeaponGroupId = Sling.ID,
+                WeaponGroupId = WeaponGroups.Instances.Sling.ID,
             };
         }
 

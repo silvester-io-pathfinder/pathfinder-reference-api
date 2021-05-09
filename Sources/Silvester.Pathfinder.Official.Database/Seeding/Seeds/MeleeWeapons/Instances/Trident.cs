@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Inst
                 Hands = "1",
                 BulkId = OneBulk.ID,
                 WeaponCategoryId = Martial.ID,
-                WeaponGroupId = Spear.ID,
+                WeaponGroupId = WeaponGroups.Instances.Spear.ID,
                 DamageTypeId = Piercing.ID
             };
         }
