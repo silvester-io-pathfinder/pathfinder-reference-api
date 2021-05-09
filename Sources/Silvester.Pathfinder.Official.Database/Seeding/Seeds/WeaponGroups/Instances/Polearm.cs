@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Inst
 {
     public class Polearm : AbstractWeaponGroupTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("edfa81fd-1aca-46de-a75b-deb0465712ad");
 
         protected override WeaponGroup GetWeaponGroup()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Inst
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("90e5aac2-6b2e-49a0-a2c2-93e8009d194b"),
                 SourceId = CoreRulebook.ID,
                 Page = 284
             };

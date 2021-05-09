@@ -73,7 +73,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("4c0d2ac8-48f8-4612-b8ab-72db8b4aa831"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Master.ID,
-                Description = "to assemble a rift seal using objects strongly grounded to your plane",
+                Description = "To assemble a rift seal using objects strongly grounded to your plane.",
                 DifficultyCheck = 33
             };
         }
@@ -84,7 +84,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             {
                 Id = Guid.Parse("4c0d2ac8-48f8-4612-b8ab-72db8b4aa831"),
                 Level = 7,
-                Description = "to counteract the rift",
+                Description = "To counteract the rift.",
                 CounteractDifficultyCheck = 31
             };
         }

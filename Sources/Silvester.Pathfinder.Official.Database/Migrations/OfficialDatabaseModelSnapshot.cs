@@ -7026,6 +7026,2063 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("MeleeWeaponTrait", b =>
+                {
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("MeleeWeaponsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("TraitsId", "MeleeWeaponsId");
+
+                    b.HasIndex("MeleeWeaponsId");
+
+                    b.ToTable("MeleeWeaponTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            TraitsId = new Guid("220dd07b-029e-42f9-b541-03c1cac8c816"),
+                            MeleeWeaponsId = new Guid("7cd52d10-6bde-4be4-9435-2ab4d65f5390")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("87603781-d242-4b02-ad1c-53d2748f8878"),
+                            MeleeWeaponsId = new Guid("7cd52d10-6bde-4be4-9435-2ab4d65f5390")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("7cd52d10-6bde-4be4-9435-2ab4d65f5390")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("dcd0b784-a7c5-43dd-ae92-a5c4b94041d5"),
+                            MeleeWeaponsId = new Guid("24f52641-1737-4761-8576-66710f258aab")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("748e8459-f39f-40c6-afc3-dfb1a1ac4043"),
+                            MeleeWeaponsId = new Guid("24f52641-1737-4761-8576-66710f258aab")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("24f52641-1737-4761-8576-66710f258aab")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("24f52641-1737-4761-8576-66710f258aab")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("24f52641-1737-4761-8576-66710f258aab")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("412f2018-c2f7-493f-b213-8fe8ca14b7ff")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("412f2018-c2f7-493f-b213-8fe8ca14b7ff")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("412f2018-c2f7-493f-b213-8fe8ca14b7ff")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("fd2bc373-0742-4272-9d1f-6740d7c5f149"),
+                            MeleeWeaponsId = new Guid("547dfb80-42d1-4cd0-8248-5a654cd4f0d5")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("b4c97173-63ec-42a9-8605-b76a8ff0d352")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5f6680fc-208d-44db-a85f-92d572120738"),
+                            MeleeWeaponsId = new Guid("08a0cd4f-fb35-497e-99ac-3949d11350e5")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("fd2bc373-0742-4272-9d1f-6740d7c5f149"),
+                            MeleeWeaponsId = new Guid("08a0cd4f-fb35-497e-99ac-3949d11350e5")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("08a0cd4f-fb35-497e-99ac-3949d11350e5")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2f14e52a-05b8-4abc-a720-d2e9d943538f"),
+                            MeleeWeaponsId = new Guid("3bf26277-c214-4a31-aa61-6ae3c3f75ea3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("3bf26277-c214-4a31-aa61-6ae3c3f75ea3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("3bf26277-c214-4a31-aa61-6ae3c3f75ea3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("3bf26277-c214-4a31-aa61-6ae3c3f75ea3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("3bf26277-c214-4a31-aa61-6ae3c3f75ea3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("3bf26277-c214-4a31-aa61-6ae3c3f75ea3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("c7facb69-2744-4cec-b9b6-28fab446d5e8")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("c7facb69-2744-4cec-b9b6-28fab446d5e8")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("fd2bc373-0742-4272-9d1f-6740d7c5f149"),
+                            MeleeWeaponsId = new Guid("c7facb69-2744-4cec-b9b6-28fab446d5e8")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("c7facb69-2744-4cec-b9b6-28fab446d5e8")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("2c97c992-70f8-4dfa-950b-ebbaf0148267")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("2c97c992-70f8-4dfa-950b-ebbaf0148267")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("2c97c992-70f8-4dfa-950b-ebbaf0148267")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("2c97c992-70f8-4dfa-950b-ebbaf0148267")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("2c97c992-70f8-4dfa-950b-ebbaf0148267")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("f7b0c42c-87a4-45eb-8de6-12ca3fe71780")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("3e6590db-5cd3-4707-8ca7-3959859f81d4"),
+                            MeleeWeaponsId = new Guid("f7b0c42c-87a4-45eb-8de6-12ca3fe71780")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("d052186d-62ce-46db-9ca9-b4e32aed43f4"),
+                            MeleeWeaponsId = new Guid("f7b0c42c-87a4-45eb-8de6-12ca3fe71780")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("f7b0c42c-87a4-45eb-8de6-12ca3fe71780")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("f7b0c42c-87a4-45eb-8de6-12ca3fe71780")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("c0c4e1e1-fc1c-4a9e-8797-8f2eabaeec50")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5f6680fc-208d-44db-a85f-92d572120738"),
+                            MeleeWeaponsId = new Guid("c0c4e1e1-fc1c-4a9e-8797-8f2eabaeec50")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("c0c4e1e1-fc1c-4a9e-8797-8f2eabaeec50")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("20c99d83-4475-456a-aa3d-18df18dd7991"),
+                            MeleeWeaponsId = new Guid("9966d8d0-e1ae-4e62-9411-988d67474769")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bb4ffbbe-5eb1-485a-85c0-60189414e3d4"),
+                            MeleeWeaponsId = new Guid("9966d8d0-e1ae-4e62-9411-988d67474769")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("9966d8d0-e1ae-4e62-9411-988d67474769")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("9966d8d0-e1ae-4e62-9411-988d67474769")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("09595caf-7209-4ffa-b4cc-524a9c9807c0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("63fa3f81-de0b-4c73-9d92-906df1990dfd"),
+                            MeleeWeaponsId = new Guid("09595caf-7209-4ffa-b4cc-524a9c9807c0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("09595caf-7209-4ffa-b4cc-524a9c9807c0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f6da7ca3-bdb3-4c89-9cd8-4161fcc564c5"),
+                            MeleeWeaponsId = new Guid("09595caf-7209-4ffa-b4cc-524a9c9807c0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("09595caf-7209-4ffa-b4cc-524a9c9807c0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("2ef4b9ed-c528-44ec-9123-6b92234662c1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("3ecd4d1e-ccc1-4620-b223-63aa9031fe5a"),
+                            MeleeWeaponsId = new Guid("2ef4b9ed-c528-44ec-9123-6b92234662c1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bb4ffbbe-5eb1-485a-85c0-60189414e3d4"),
+                            MeleeWeaponsId = new Guid("2ef4b9ed-c528-44ec-9123-6b92234662c1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("2ef4b9ed-c528-44ec-9123-6b92234662c1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("2ef4b9ed-c528-44ec-9123-6b92234662c1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("f5a772c0-8d78-4073-9b73-4b4c9fc8fbe3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("b2cdd51d-5562-4ec2-ba05-b039090c6d2c"),
+                            MeleeWeaponsId = new Guid("f5a772c0-8d78-4073-9b73-4b4c9fc8fbe3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("f5a772c0-8d78-4073-9b73-4b4c9fc8fbe3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("f5a772c0-8d78-4073-9b73-4b4c9fc8fbe3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("f5a772c0-8d78-4073-9b73-4b4c9fc8fbe3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("f5a772c0-8d78-4073-9b73-4b4c9fc8fbe3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("f5a772c0-8d78-4073-9b73-4b4c9fc8fbe3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("6a5291fb-45dc-426b-8605-d808c123759c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("052112be-3cbc-4ca8-bf6f-32587afd62d2"),
+                            MeleeWeaponsId = new Guid("6a5291fb-45dc-426b-8605-d808c123759c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("748e8459-f39f-40c6-afc3-dfb1a1ac4043"),
+                            MeleeWeaponsId = new Guid("6a5291fb-45dc-426b-8605-d808c123759c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("6a5291fb-45dc-426b-8605-d808c123759c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("6a5291fb-45dc-426b-8605-d808c123759c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("d6be6a4e-d82a-4c7f-adc2-2742b985760d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("d6be6a4e-d82a-4c7f-adc2-2742b985760d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("d6be6a4e-d82a-4c7f-adc2-2742b985760d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("d6be6a4e-d82a-4c7f-adc2-2742b985760d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("9bbc2b31-fae2-4ea1-8c7e-45896c24f111")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("58bbbff9-2391-4b10-9dd5-ef55e8dc41ef"),
+                            MeleeWeaponsId = new Guid("9bbc2b31-fae2-4ea1-8c7e-45896c24f111")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("9bbc2b31-fae2-4ea1-8c7e-45896c24f111")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("70348794-b594-4be3-967c-f6ccd30738a8"),
+                            MeleeWeaponsId = new Guid("9bbc2b31-fae2-4ea1-8c7e-45896c24f111")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("9bbc2b31-fae2-4ea1-8c7e-45896c24f111")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("3ecd4d1e-ccc1-4620-b223-63aa9031fe5a"),
+                            MeleeWeaponsId = new Guid("d0b1390b-25b4-4302-91e0-4c80963125ce")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("d0b1390b-25b4-4302-91e0-4c80963125ce")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("fd2bc373-0742-4272-9d1f-6740d7c5f149"),
+                            MeleeWeaponsId = new Guid("d0b1390b-25b4-4302-91e0-4c80963125ce")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("d0b1390b-25b4-4302-91e0-4c80963125ce")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("1efe88ff-776a-4fef-bcda-1ba9b63154e1"),
+                            MeleeWeaponsId = new Guid("07b728c8-b6a9-4d6c-97ec-acda2ef83daa")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("07b728c8-b6a9-4d6c-97ec-acda2ef83daa")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("220dd07b-029e-42f9-b541-03c1cac8c816"),
+                            MeleeWeaponsId = new Guid("07b728c8-b6a9-4d6c-97ec-acda2ef83daa")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("07b728c8-b6a9-4d6c-97ec-acda2ef83daa")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("8d2cf9bb-b236-417e-84b3-3710d02c6dbf")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5cec7ab0-da0f-42d0-89d8-c3d3109e70eb"),
+                            MeleeWeaponsId = new Guid("8d2cf9bb-b236-417e-84b3-3710d02c6dbf")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("8d2cf9bb-b236-417e-84b3-3710d02c6dbf")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bb4ffbbe-5eb1-485a-85c0-60189414e3d4"),
+                            MeleeWeaponsId = new Guid("8d2cf9bb-b236-417e-84b3-3710d02c6dbf")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f6da7ca3-bdb3-4c89-9cd8-4161fcc564c5"),
+                            MeleeWeaponsId = new Guid("8d2cf9bb-b236-417e-84b3-3710d02c6dbf")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("3705d218-3b4f-4849-a69b-a04b0b94fa96")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("3705d218-3b4f-4849-a69b-a04b0b94fa96")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bb4ffbbe-5eb1-485a-85c0-60189414e3d4"),
+                            MeleeWeaponsId = new Guid("3705d218-3b4f-4849-a69b-a04b0b94fa96")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f6da7ca3-bdb3-4c89-9cd8-4161fcc564c5"),
+                            MeleeWeaponsId = new Guid("3705d218-3b4f-4849-a69b-a04b0b94fa96")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("220dd07b-029e-42f9-b541-03c1cac8c816"),
+                            MeleeWeaponsId = new Guid("ea69a9bc-a39b-4a43-90fc-c27ee0f776fd")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("ea69a9bc-a39b-4a43-90fc-c27ee0f776fd")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("0776b01d-d10c-41fa-8832-a7c718b7ff8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("58bbbff9-2391-4b10-9dd5-ef55e8dc41ef"),
+                            MeleeWeaponsId = new Guid("0776b01d-d10c-41fa-8832-a7c718b7ff8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("0776b01d-d10c-41fa-8832-a7c718b7ff8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("0776b01d-d10c-41fa-8832-a7c718b7ff8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("052112be-3cbc-4ca8-bf6f-32587afd62d2"),
+                            MeleeWeaponsId = new Guid("0776b01d-d10c-41fa-8832-a7c718b7ff8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e1b10ce6-01fa-4acd-bd2d-108944d770e1"),
+                            MeleeWeaponsId = new Guid("0776b01d-d10c-41fa-8832-a7c718b7ff8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("0776b01d-d10c-41fa-8832-a7c718b7ff8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("875d97cc-2d8f-4498-8659-00251e3f969c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("875d97cc-2d8f-4498-8659-00251e3f969c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("875d97cc-2d8f-4498-8659-00251e3f969c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("875d97cc-2d8f-4498-8659-00251e3f969c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("3b7c5c1b-8be2-4152-bae1-475f9853919c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("58bbbff9-2391-4b10-9dd5-ef55e8dc41ef"),
+                            MeleeWeaponsId = new Guid("3b7c5c1b-8be2-4152-bae1-475f9853919c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("3b7c5c1b-8be2-4152-bae1-475f9853919c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("3b7c5c1b-8be2-4152-bae1-475f9853919c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("20c99d83-4475-456a-aa3d-18df18dd7991"),
+                            MeleeWeaponsId = new Guid("3b7c5c1b-8be2-4152-bae1-475f9853919c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("3b7c5c1b-8be2-4152-bae1-475f9853919c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("285c5d1b-a837-4065-9005-28420b0b8e00")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("58bbbff9-2391-4b10-9dd5-ef55e8dc41ef"),
+                            MeleeWeaponsId = new Guid("285c5d1b-a837-4065-9005-28420b0b8e00")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("285c5d1b-a837-4065-9005-28420b0b8e00")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("285c5d1b-a837-4065-9005-28420b0b8e00")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("285c5d1b-a837-4065-9005-28420b0b8e00")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("285c5d1b-a837-4065-9005-28420b0b8e00")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("af5dff58-65ad-402e-b78c-4cc9eee8e126")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2f14e52a-05b8-4abc-a720-d2e9d943538f"),
+                            MeleeWeaponsId = new Guid("af5dff58-65ad-402e-b78c-4cc9eee8e126")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("af5dff58-65ad-402e-b78c-4cc9eee8e126")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f6da7ca3-bdb3-4c89-9cd8-4161fcc564c5"),
+                            MeleeWeaponsId = new Guid("af5dff58-65ad-402e-b78c-4cc9eee8e126")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("af5dff58-65ad-402e-b78c-4cc9eee8e126")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("ade86474-5118-4236-81c2-a69905ff4d25")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("ade86474-5118-4236-81c2-a69905ff4d25")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5ff19688-da1d-413b-8766-a37df3e95ca1"),
+                            MeleeWeaponsId = new Guid("ade86474-5118-4236-81c2-a69905ff4d25")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("7f4d2c14-f2ae-4499-abb3-5a618a14b66d"),
+                            MeleeWeaponsId = new Guid("ade86474-5118-4236-81c2-a69905ff4d25")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("591ab477-94f8-40a2-9e03-217f7ebcf2a0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("591ab477-94f8-40a2-9e03-217f7ebcf2a0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("7f512734-c802-4d3e-bb53-4a4314b5807c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c12bd84b-b3f2-4cc8-b579-eee078031c4d"),
+                            MeleeWeaponsId = new Guid("7f512734-c802-4d3e-bb53-4a4314b5807c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("3e6590db-5cd3-4707-8ca7-3959859f81d4"),
+                            MeleeWeaponsId = new Guid("8f28ae9d-f0a6-4ed9-af09-e44de58acd82")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("052112be-3cbc-4ca8-bf6f-32587afd62d2"),
+                            MeleeWeaponsId = new Guid("8f28ae9d-f0a6-4ed9-af09-e44de58acd82")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("8f28ae9d-f0a6-4ed9-af09-e44de58acd82")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("8f28ae9d-f0a6-4ed9-af09-e44de58acd82")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("af49cf0b-69d2-4fa4-820f-7b6806c213f3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("d7be685f-711c-4cf3-8414-670d8dd64144"),
+                            MeleeWeaponsId = new Guid("af49cf0b-69d2-4fa4-820f-7b6806c213f3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("af49cf0b-69d2-4fa4-820f-7b6806c213f3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e108b7ec-3756-4e04-a806-62f55611379c"),
+                            MeleeWeaponsId = new Guid("a954ad09-22bd-4f8b-945a-05dddea08cdc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("a954ad09-22bd-4f8b-945a-05dddea08cdc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("a954ad09-22bd-4f8b-945a-05dddea08cdc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e108b7ec-3756-4e04-a806-62f55611379c"),
+                            MeleeWeaponsId = new Guid("f828cf37-ae7a-4534-a5f3-d12558d731eb")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("f828cf37-ae7a-4534-a5f3-d12558d731eb")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("fd2bc373-0742-4272-9d1f-6740d7c5f149"),
+                            MeleeWeaponsId = new Guid("f828cf37-ae7a-4534-a5f3-d12558d731eb")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("f828cf37-ae7a-4534-a5f3-d12558d731eb")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("f828cf37-ae7a-4534-a5f3-d12558d731eb")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("0b7a0bce-0829-4304-be0d-8fa7cd8c7232")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2f14e52a-05b8-4abc-a720-d2e9d943538f"),
+                            MeleeWeaponsId = new Guid("f436ca8d-2f47-4935-8c36-f98c28d9fccf")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5f6680fc-208d-44db-a85f-92d572120738"),
+                            MeleeWeaponsId = new Guid("f436ca8d-2f47-4935-8c36-f98c28d9fccf")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bd45aa85-b7e8-4425-ad9b-546b1f073e65"),
+                            MeleeWeaponsId = new Guid("35cbbb5f-ca93-4ddb-ae6d-e82b1505a446")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("d68f9149-b9aa-48a1-b9a7-5469575ca977")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("164fced7-fbaa-4e79-8eb2-5ea61cfa4f5e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("164fced7-fbaa-4e79-8eb2-5ea61cfa4f5e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("1aebb2a7-67df-47ed-b4f8-cceffc0b6662")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("1aebb2a7-67df-47ed-b4f8-cceffc0b6662")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("a6a7ebc7-6129-448c-8936-ae2bc8ceda7c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("220dd07b-029e-42f9-b541-03c1cac8c816"),
+                            MeleeWeaponsId = new Guid("a6a7ebc7-6129-448c-8936-ae2bc8ceda7c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("87603781-d242-4b02-ad1c-53d2748f8878"),
+                            MeleeWeaponsId = new Guid("a6a7ebc7-6129-448c-8936-ae2bc8ceda7c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("a6a7ebc7-6129-448c-8936-ae2bc8ceda7c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("a6a7ebc7-6129-448c-8936-ae2bc8ceda7c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("28896820-702d-47fa-8aa8-f3e6e5d9bf67")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("28896820-702d-47fa-8aa8-f3e6e5d9bf67")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("28896820-702d-47fa-8aa8-f3e6e5d9bf67")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("70348794-b594-4be3-967c-f6ccd30738a8"),
+                            MeleeWeaponsId = new Guid("c3d2c58d-904d-4fb5-9246-bc292a95ba8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("c3d2c58d-904d-4fb5-9246-bc292a95ba8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("c3d2c58d-904d-4fb5-9246-bc292a95ba8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("c3d2c58d-904d-4fb5-9246-bc292a95ba8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("c3d2c58d-904d-4fb5-9246-bc292a95ba8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("8a71d87f-4e0a-4041-bb5c-a6902cd161f9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5ff19688-da1d-413b-8766-a37df3e95ca1"),
+                            MeleeWeaponsId = new Guid("8a71d87f-4e0a-4041-bb5c-a6902cd161f9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("8a71d87f-4e0a-4041-bb5c-a6902cd161f9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("8a71d87f-4e0a-4041-bb5c-a6902cd161f9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("bc96e942-df78-4627-8876-f52c0bdb0d17")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("20c99d83-4475-456a-aa3d-18df18dd7991"),
+                            MeleeWeaponsId = new Guid("bc96e942-df78-4627-8876-f52c0bdb0d17")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("bc96e942-df78-4627-8876-f52c0bdb0d17")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("bc96e942-df78-4627-8876-f52c0bdb0d17")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("b3b26911-43d7-4771-b374-19e3aac3033b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("fd2bc373-0742-4272-9d1f-6740d7c5f149"),
+                            MeleeWeaponsId = new Guid("b3b26911-43d7-4771-b374-19e3aac3033b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("b3b26911-43d7-4771-b374-19e3aac3033b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("b3b26911-43d7-4771-b374-19e3aac3033b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("6c3223d1-35e9-4273-a384-ffe2ea1b3da3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("6c3223d1-35e9-4273-a384-ffe2ea1b3da3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("20c99d83-4475-456a-aa3d-18df18dd7991"),
+                            MeleeWeaponsId = new Guid("6c3223d1-35e9-4273-a384-ffe2ea1b3da3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("6c3223d1-35e9-4273-a384-ffe2ea1b3da3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5f6680fc-208d-44db-a85f-92d572120738"),
+                            MeleeWeaponsId = new Guid("50de7f64-76a6-4bf0-9d0e-0b57aea3ba85")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("fd2bc373-0742-4272-9d1f-6740d7c5f149"),
+                            MeleeWeaponsId = new Guid("50de7f64-76a6-4bf0-9d0e-0b57aea3ba85")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("50de7f64-76a6-4bf0-9d0e-0b57aea3ba85")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("50de7f64-76a6-4bf0-9d0e-0b57aea3ba85")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("c86b01ef-ff94-47a5-9f38-158665a053e1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("c86b01ef-ff94-47a5-9f38-158665a053e1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("3a7317bb-6d6a-47b0-8c99-6ac442e23675")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("3a7317bb-6d6a-47b0-8c99-6ac442e23675")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("3a7317bb-6d6a-47b0-8c99-6ac442e23675")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("3a7317bb-6d6a-47b0-8c99-6ac442e23675")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("27dd4f47-af0a-460f-9b4f-6d841b1d702e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("632903e9-caec-4f21-ae87-cc0138297453"),
+                            MeleeWeaponsId = new Guid("27dd4f47-af0a-460f-9b4f-6d841b1d702e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("27dd4f47-af0a-460f-9b4f-6d841b1d702e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("de40fe78-1d20-47a1-8024-b08ab26bcc02")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("de40fe78-1d20-47a1-8024-b08ab26bcc02")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("b40cb041-7b1c-49fc-8c54-8b66afce34ae")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("b40cb041-7b1c-49fc-8c54-8b66afce34ae")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5f6680fc-208d-44db-a85f-92d572120738"),
+                            MeleeWeaponsId = new Guid("b40cb041-7b1c-49fc-8c54-8b66afce34ae")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("c723e7e5-5ee2-42c8-9aa8-3611cb1d5075")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bd45aa85-b7e8-4425-ad9b-546b1f073e65"),
+                            MeleeWeaponsId = new Guid("c723e7e5-5ee2-42c8-9aa8-3611cb1d5075")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("f754f448-fa6a-43df-b1df-36b0c9897c27")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("44cbf854-e9a3-4562-b5d5-f4b4ea583a76")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5f6680fc-208d-44db-a85f-92d572120738"),
+                            MeleeWeaponsId = new Guid("d89d36ee-897d-4aa4-9a07-0689c276cbbc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("afd07976-4043-4ab6-a964-43725fc49c3f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("afd07976-4043-4ab6-a964-43725fc49c3f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("353d5fd0-a2b2-4676-a661-7238de6fe7c4")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("353d5fd0-a2b2-4676-a661-7238de6fe7c4")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("353d5fd0-a2b2-4676-a661-7238de6fe7c4")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bb4ffbbe-5eb1-485a-85c0-60189414e3d4"),
+                            MeleeWeaponsId = new Guid("353d5fd0-a2b2-4676-a661-7238de6fe7c4")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("353d5fd0-a2b2-4676-a661-7238de6fe7c4")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("b40db133-eb32-4046-a667-61c7abcddd57")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("b40db133-eb32-4046-a667-61c7abcddd57")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("b40db133-eb32-4046-a667-61c7abcddd57")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("b40db133-eb32-4046-a667-61c7abcddd57")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5f6680fc-208d-44db-a85f-92d572120738"),
+                            MeleeWeaponsId = new Guid("29839132-c0a9-4422-b490-aa3c0ad8ad8e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2f14e52a-05b8-4abc-a720-d2e9d943538f"),
+                            MeleeWeaponsId = new Guid("1c9e4d66-6360-4215-8686-1ab9d30655e3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("1c9e4d66-6360-4215-8686-1ab9d30655e3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("1c9e4d66-6360-4215-8686-1ab9d30655e3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("1c9e4d66-6360-4215-8686-1ab9d30655e3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("14f657da-fab9-4369-9fac-ded23f1d2b6f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("20c99d83-4475-456a-aa3d-18df18dd7991"),
+                            MeleeWeaponsId = new Guid("14f657da-fab9-4369-9fac-ded23f1d2b6f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5ff19688-da1d-413b-8766-a37df3e95ca1"),
+                            MeleeWeaponsId = new Guid("14f657da-fab9-4369-9fac-ded23f1d2b6f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("9ebc3552-f0fa-450e-96bc-a5d73d18c8ea")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("cea48192-0fda-4dc9-a0ec-5df4ea926d35")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("cea48192-0fda-4dc9-a0ec-5df4ea926d35")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("cea48192-0fda-4dc9-a0ec-5df4ea926d35")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("cea48192-0fda-4dc9-a0ec-5df4ea926d35")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("8dde67f3-49e5-4231-aa23-7e1d4abd63cc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("8dde67f3-49e5-4231-aa23-7e1d4abd63cc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5ff19688-da1d-413b-8766-a37df3e95ca1"),
+                            MeleeWeaponsId = new Guid("8dde67f3-49e5-4231-aa23-7e1d4abd63cc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bb4ffbbe-5eb1-485a-85c0-60189414e3d4"),
+                            MeleeWeaponsId = new Guid("8dde67f3-49e5-4231-aa23-7e1d4abd63cc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("8dde67f3-49e5-4231-aa23-7e1d4abd63cc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("46dd2003-0ce1-492c-955b-508b574c4097")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("46dd2003-0ce1-492c-955b-508b574c4097")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2f14e52a-05b8-4abc-a720-d2e9d943538f"),
+                            MeleeWeaponsId = new Guid("d1ad3308-48ce-4720-8d53-b1152ac0592f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("d1ad3308-48ce-4720-8d53-b1152ac0592f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("d1ad3308-48ce-4720-8d53-b1152ac0592f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("20c99d83-4475-456a-aa3d-18df18dd7991"),
+                            MeleeWeaponsId = new Guid("d1ad3308-48ce-4720-8d53-b1152ac0592f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("d1ad3308-48ce-4720-8d53-b1152ac0592f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("5249b6ac-9cf9-4a95-9e28-e13f50cbc473")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("5249b6ac-9cf9-4a95-9e28-e13f50cbc473")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("5249b6ac-9cf9-4a95-9e28-e13f50cbc473")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("43f6b330-380e-4767-be1f-a49120d115c8")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("43f6b330-380e-4767-be1f-a49120d115c8")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9e1a7583-3f46-410f-9c29-1de74ad87f1c"),
+                            MeleeWeaponsId = new Guid("43f6b330-380e-4767-be1f-a49120d115c8")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("43f6b330-380e-4767-be1f-a49120d115c8")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("220dd07b-029e-42f9-b541-03c1cac8c816"),
+                            MeleeWeaponsId = new Guid("bb3d9d98-06cc-4e04-aedc-bcff42e9389b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9e1a7583-3f46-410f-9c29-1de74ad87f1c"),
+                            MeleeWeaponsId = new Guid("bb3d9d98-06cc-4e04-aedc-bcff42e9389b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("bb3d9d98-06cc-4e04-aedc-bcff42e9389b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("bb3d9d98-06cc-4e04-aedc-bcff42e9389b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bd45aa85-b7e8-4425-ad9b-546b1f073e65"),
+                            MeleeWeaponsId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("a5bb022d-6274-4469-bae7-cb2ebc126b90"),
+                            MeleeWeaponsId = new Guid("c4fd14aa-156a-4efe-9807-90cf492ed32e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("24f3accf-0ba9-491d-94fc-4e8abe71ff23")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e5abbf0f-16df-4710-a810-406156167ef5"),
+                            MeleeWeaponsId = new Guid("24f3accf-0ba9-491d-94fc-4e8abe71ff23")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("24f3accf-0ba9-491d-94fc-4e8abe71ff23")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("ba3999d5-d8fa-4263-b1f7-8d5913a080c0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("ba3999d5-d8fa-4263-b1f7-8d5913a080c0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("15c3e1c8-357a-4c85-86c6-1c095482c6cf")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("15c3e1c8-357a-4c85-86c6-1c095482c6cf")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("15c3e1c8-357a-4c85-86c6-1c095482c6cf")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("c4d0ca3f-2c38-4603-ba33-205882d743a4")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("fd2bc373-0742-4272-9d1f-6740d7c5f149"),
+                            MeleeWeaponsId = new Guid("c4d0ca3f-2c38-4603-ba33-205882d743a4")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("c4d0ca3f-2c38-4603-ba33-205882d743a4")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("87603781-d242-4b02-ad1c-53d2748f8878"),
+                            MeleeWeaponsId = new Guid("361b69e6-127f-4c0b-8a0a-b15f63778a76")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5f6680fc-208d-44db-a85f-92d572120738"),
+                            MeleeWeaponsId = new Guid("361b69e6-127f-4c0b-8a0a-b15f63778a76")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("361b69e6-127f-4c0b-8a0a-b15f63778a76")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("4b438ba2-4e10-4b00-bf4a-7ebb128a26be")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("4b438ba2-4e10-4b00-bf4a-7ebb128a26be")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("4b438ba2-4e10-4b00-bf4a-7ebb128a26be")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("20c99d83-4475-456a-aa3d-18df18dd7991"),
+                            MeleeWeaponsId = new Guid("4b438ba2-4e10-4b00-bf4a-7ebb128a26be")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("4b438ba2-4e10-4b00-bf4a-7ebb128a26be")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("4b438ba2-4e10-4b00-bf4a-7ebb128a26be")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("3f70b226-d857-45b6-9c37-6e00155566c5")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5ff19688-da1d-413b-8766-a37df3e95ca1"),
+                            MeleeWeaponsId = new Guid("3f70b226-d857-45b6-9c37-6e00155566c5")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("cc1b83d3-b2b8-4268-b434-e0d84b418d1b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("cc1b83d3-b2b8-4268-b434-e0d84b418d1b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f6da7ca3-bdb3-4c89-9cd8-4161fcc564c5"),
+                            MeleeWeaponsId = new Guid("cc1b83d3-b2b8-4268-b434-e0d84b418d1b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("cc1b83d3-b2b8-4268-b434-e0d84b418d1b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("220dd07b-029e-42f9-b541-03c1cac8c816"),
+                            MeleeWeaponsId = new Guid("1fab7871-c702-4a9f-b2f7-3571d96d5673")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("1fab7871-c702-4a9f-b2f7-3571d96d5673")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("27e7a989-bd1f-4ed5-8cbe-4c1f5becda8d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("27e7a989-bd1f-4ed5-8cbe-4c1f5becda8d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("27e7a989-bd1f-4ed5-8cbe-4c1f5becda8d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("27e7a989-bd1f-4ed5-8cbe-4c1f5becda8d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("27e7a989-bd1f-4ed5-8cbe-4c1f5becda8d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("299de1cf-c922-4a22-b924-38a9f345f8e7")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("299de1cf-c922-4a22-b924-38a9f345f8e7")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("299de1cf-c922-4a22-b924-38a9f345f8e7")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5ff19688-da1d-413b-8766-a37df3e95ca1"),
+                            MeleeWeaponsId = new Guid("299de1cf-c922-4a22-b924-38a9f345f8e7")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("299de1cf-c922-4a22-b924-38a9f345f8e7")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("ebb0387b-9ca4-4031-b4b2-33ea47f77ebc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("ebb0387b-9ca4-4031-b4b2-33ea47f77ebc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("e3996bab-ff49-45d2-a295-c46fe7347717")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("e3996bab-ff49-45d2-a295-c46fe7347717")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("e3996bab-ff49-45d2-a295-c46fe7347717")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("e3996bab-ff49-45d2-a295-c46fe7347717")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("e3996bab-ff49-45d2-a295-c46fe7347717")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("fdd7f7db-241e-4d1c-bc53-7b280dc679f1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("fdd7f7db-241e-4d1c-bc53-7b280dc679f1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("fdd7f7db-241e-4d1c-bc53-7b280dc679f1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("fdd7f7db-241e-4d1c-bc53-7b280dc679f1")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("1b8c3bae-b8b0-4613-ab32-0103efb6bab0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("1b8c3bae-b8b0-4613-ab32-0103efb6bab0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("1b8c3bae-b8b0-4613-ab32-0103efb6bab0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("1b8c3bae-b8b0-4613-ab32-0103efb6bab0")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bca7730f-377b-429b-ba4b-86ffeacc3f84"),
+                            MeleeWeaponsId = new Guid("144ba3e5-2778-4c37-ab98-7bd61556f902")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bca7730f-377b-429b-ba4b-86ffeacc3f84"),
+                            MeleeWeaponsId = new Guid("9a1f8c50-b677-423b-aada-c0e7f7b6d2ad")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("897a279b-93d3-4467-8145-d3375067727b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("897a279b-93d3-4467-8145-d3375067727b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("897a279b-93d3-4467-8145-d3375067727b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("468f4c04-e696-47d6-a3e6-1f4e5f938ac9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("468f4c04-e696-47d6-a3e6-1f4e5f938ac9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("468f4c04-e696-47d6-a3e6-1f4e5f938ac9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("8ada012d-7bc9-4091-8cf7-889d0bbffe7e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("8ada012d-7bc9-4091-8cf7-889d0bbffe7e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("8ada012d-7bc9-4091-8cf7-889d0bbffe7e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("8ada012d-7bc9-4091-8cf7-889d0bbffe7e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("0863cda6-3b63-4eea-a31d-51d3da39e6ed")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c12bd84b-b3f2-4cc8-b579-eee078031c4d"),
+                            MeleeWeaponsId = new Guid("0863cda6-3b63-4eea-a31d-51d3da39e6ed")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("fd2bc373-0742-4272-9d1f-6740d7c5f149"),
+                            MeleeWeaponsId = new Guid("cda161dd-7e4a-4188-811d-41393677c421")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("46e21ee5-d51f-496f-861e-c50dbe21ccca")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("46e21ee5-d51f-496f-861e-c50dbe21ccca")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("46e21ee5-d51f-496f-861e-c50dbe21ccca")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("46e21ee5-d51f-496f-861e-c50dbe21ccca")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("46e21ee5-d51f-496f-861e-c50dbe21ccca")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("3f47473d-20b7-44af-89d7-0b09b74e0665")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5cec7ab0-da0f-42d0-89d8-c3d3109e70eb"),
+                            MeleeWeaponsId = new Guid("3f47473d-20b7-44af-89d7-0b09b74e0665")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("3f47473d-20b7-44af-89d7-0b09b74e0665")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("3f47473d-20b7-44af-89d7-0b09b74e0665")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("3f47473d-20b7-44af-89d7-0b09b74e0665")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("32548452-7334-4260-b729-00272a3bd933")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5cec7ab0-da0f-42d0-89d8-c3d3109e70eb"),
+                            MeleeWeaponsId = new Guid("32548452-7334-4260-b729-00272a3bd933")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("32548452-7334-4260-b729-00272a3bd933")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("4ac6f2cd-6fc3-400f-b524-fdaeaaaca2bc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("4ac6f2cd-6fc3-400f-b524-fdaeaaaca2bc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("4ac6f2cd-6fc3-400f-b524-fdaeaaaca2bc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("4ac6f2cd-6fc3-400f-b524-fdaeaaaca2bc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("4ac6f2cd-6fc3-400f-b524-fdaeaaaca2bc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("32823fbd-8598-4fc3-a9d9-769043cbce0f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("32823fbd-8598-4fc3-a9d9-769043cbce0f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("32823fbd-8598-4fc3-a9d9-769043cbce0f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bb4ffbbe-5eb1-485a-85c0-60189414e3d4"),
+                            MeleeWeaponsId = new Guid("32823fbd-8598-4fc3-a9d9-769043cbce0f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("32823fbd-8598-4fc3-a9d9-769043cbce0f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("32823fbd-8598-4fc3-a9d9-769043cbce0f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("20c99d83-4475-456a-aa3d-18df18dd7991"),
+                            MeleeWeaponsId = new Guid("a460d789-3935-4629-a976-f9b71d96181c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("a460d789-3935-4629-a976-f9b71d96181c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("a460d789-3935-4629-a976-f9b71d96181c")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("14ab5e55-3b4a-445c-b2e0-9f938b9a4895")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("14ab5e55-3b4a-445c-b2e0-9f938b9a4895")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("14ab5e55-3b4a-445c-b2e0-9f938b9a4895")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9c1ee79b-60f9-453a-9a8a-bfa60ee51196"),
+                            MeleeWeaponsId = new Guid("14ab5e55-3b4a-445c-b2e0-9f938b9a4895")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("14ab5e55-3b4a-445c-b2e0-9f938b9a4895")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("8c5fdda9-9bf1-44e1-9999-f09671d25abc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("8c5fdda9-9bf1-44e1-9999-f09671d25abc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("8c5fdda9-9bf1-44e1-9999-f09671d25abc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f6da7ca3-bdb3-4c89-9cd8-4161fcc564c5"),
+                            MeleeWeaponsId = new Guid("8c5fdda9-9bf1-44e1-9999-f09671d25abc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("8c5fdda9-9bf1-44e1-9999-f09671d25abc")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("58bbbff9-2391-4b10-9dd5-ef55e8dc41ef"),
+                            MeleeWeaponsId = new Guid("c4b2cc2b-36d9-459f-9361-1660a0243944")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("bd45aa85-b7e8-4425-ad9b-546b1f073e65"),
+                            MeleeWeaponsId = new Guid("c4b2cc2b-36d9-459f-9361-1660a0243944")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e1b10ce6-01fa-4acd-bd2d-108944d770e1"),
+                            MeleeWeaponsId = new Guid("c4b2cc2b-36d9-459f-9361-1660a0243944")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e5abbf0f-16df-4710-a810-406156167ef5"),
+                            MeleeWeaponsId = new Guid("c4b2cc2b-36d9-459f-9361-1660a0243944")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("c4b2cc2b-36d9-459f-9361-1660a0243944")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            MeleeWeaponsId = new Guid("9472e2e5-62d8-45b2-8885-af00f2dc2104")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("c6ef5724-8aff-41b3-b15d-dc83efc1299f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("c6ef5724-8aff-41b3-b15d-dc83efc1299f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("c6ef5724-8aff-41b3-b15d-dc83efc1299f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("d3109927-04c6-4ae8-9af1-e661cc2a5440")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("d3109927-04c6-4ae8-9af1-e661cc2a5440")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("d3109927-04c6-4ae8-9af1-e661cc2a5440")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("d3109927-04c6-4ae8-9af1-e661cc2a5440")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("d3109927-04c6-4ae8-9af1-e661cc2a5440")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("551297c6-7253-4b20-aa41-d290ed14cb26")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("2189fed6-32bf-436d-9265-05a5a24eb668"),
+                            MeleeWeaponsId = new Guid("551297c6-7253-4b20-aa41-d290ed14cb26")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("551297c6-7253-4b20-aa41-d290ed14cb26")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5f6680fc-208d-44db-a85f-92d572120738"),
+                            MeleeWeaponsId = new Guid("f6497e4f-3dc4-481b-81f6-ffc53c257503")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("290046a3-6eac-414f-8374-d046ee27cfe9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("58bbbff9-2391-4b10-9dd5-ef55e8dc41ef"),
+                            MeleeWeaponsId = new Guid("290046a3-6eac-414f-8374-d046ee27cfe9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            MeleeWeaponsId = new Guid("290046a3-6eac-414f-8374-d046ee27cfe9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("290046a3-6eac-414f-8374-d046ee27cfe9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("35cd5f74-df96-445c-ac79-76372f2bb36e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("35cd5f74-df96-445c-ac79-76372f2bb36e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5ff19688-da1d-413b-8766-a37df3e95ca1"),
+                            MeleeWeaponsId = new Guid("35cd5f74-df96-445c-ac79-76372f2bb36e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("35cd5f74-df96-445c-ac79-76372f2bb36e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("01eb7172-c3df-4c6e-a13f-43522445f2b3"),
+                            MeleeWeaponsId = new Guid("35cd5f74-df96-445c-ac79-76372f2bb36e")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("b2cdd51d-5562-4ec2-ba05-b039090c6d2c"),
+                            MeleeWeaponsId = new Guid("a3dfa737-402e-48c5-8010-bf305d77ca60")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("a3dfa737-402e-48c5-8010-bf305d77ca60")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("6b08aa5d-7dc6-4dec-bb51-0a0aa0ab925d"),
+                            MeleeWeaponsId = new Guid("a3dfa737-402e-48c5-8010-bf305d77ca60")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e864e521-13c1-4192-a530-9c461132766f"),
+                            MeleeWeaponsId = new Guid("a3dfa737-402e-48c5-8010-bf305d77ca60")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("a3dfa737-402e-48c5-8010-bf305d77ca60")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("d9ea2c6f-772e-455e-8cf3-dd6c5961ed06")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("49269c75-562f-4281-9302-f786e612c9df"),
+                            MeleeWeaponsId = new Guid("d9ea2c6f-772e-455e-8cf3-dd6c5961ed06")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f6438a46-50a0-41ce-b415-0efd40fe05a7"),
+                            MeleeWeaponsId = new Guid("d9ea2c6f-772e-455e-8cf3-dd6c5961ed06")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("fd2bc373-0742-4272-9d1f-6740d7c5f149"),
+                            MeleeWeaponsId = new Guid("d9ea2c6f-772e-455e-8cf3-dd6c5961ed06")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("d9ea2c6f-772e-455e-8cf3-dd6c5961ed06")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            MeleeWeaponsId = new Guid("db430363-1e76-4b5c-ae80-8eae469a2fed")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f20a1378-da0f-4259-9631-a31ff5ca19e7"),
+                            MeleeWeaponsId = new Guid("db430363-1e76-4b5c-ae80-8eae469a2fed")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("438eae4a-2899-4298-b51d-f8aff9c504dd"),
+                            MeleeWeaponsId = new Guid("db430363-1e76-4b5c-ae80-8eae469a2fed")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("49269c75-562f-4281-9302-f786e612c9df"),
+                            MeleeWeaponsId = new Guid("db430363-1e76-4b5c-ae80-8eae469a2fed")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("f6438a46-50a0-41ce-b415-0efd40fe05a7"),
+                            MeleeWeaponsId = new Guid("db430363-1e76-4b5c-ae80-8eae469a2fed")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            MeleeWeaponsId = new Guid("db430363-1e76-4b5c-ae80-8eae469a2fed")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9ec7b435-5128-4245-87ef-958971ac3113"),
+                            MeleeWeaponsId = new Guid("db430363-1e76-4b5c-ae80-8eae469a2fed")
+                        });
+                });
+
             modelBuilder.Entity("PlaneTrait", b =>
                 {
                     b.Property<Guid>("TraitsId")
@@ -7277,6 +9334,203 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             RacesId = new Guid("8fec37b8-ec4a-4094-90a0-4e70b12fd6ce"),
                             RaceTraitsId = new Guid("9c1ee79b-60f9-453a-9a8a-bfa60ee51196")
+                        });
+                });
+
+            modelBuilder.Entity("RangedWeaponTrait", b =>
+                {
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("RangedWeaponsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("TraitsId", "RangedWeaponsId");
+
+                    b.HasIndex("RangedWeaponsId");
+
+                    b.ToTable("RangedWeaponTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            TraitsId = new Guid("d1cba1ea-926f-4724-98ec-5d46b7b1fe9d"),
+                            RangedWeaponsId = new Guid("fc7b92de-da67-4924-8ee2-b07bfbec720d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            RangedWeaponsId = new Guid("fc7b92de-da67-4924-8ee2-b07bfbec720d")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            RangedWeaponsId = new Guid("f7462ef0-62d3-48ad-bc24-e80318b98455")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5ff19688-da1d-413b-8766-a37df3e95ca1"),
+                            RangedWeaponsId = new Guid("f7462ef0-62d3-48ad-bc24-e80318b98455")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("5ff19688-da1d-413b-8766-a37df3e95ca1"),
+                            RangedWeaponsId = new Guid("827647a5-7143-4b19-bfee-a974d3636d96")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("dcd0b784-a7c5-43dd-ae92-a5c4b94041d5"),
+                            RangedWeaponsId = new Guid("827647a5-7143-4b19-bfee-a974d3636d96")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            RangedWeaponsId = new Guid("827647a5-7143-4b19-bfee-a974d3636d96")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            RangedWeaponsId = new Guid("c532d9bd-cc75-4a16-bb46-b63c06fa9917")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9861aaf3-7681-4ed7-9fca-733c0a8b9ad1"),
+                            RangedWeaponsId = new Guid("c532d9bd-cc75-4a16-bb46-b63c06fa9917")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("89c21324-64de-4cd1-9b31-c8e3382b9c91"),
+                            RangedWeaponsId = new Guid("c532d9bd-cc75-4a16-bb46-b63c06fa9917")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            RangedWeaponsId = new Guid("d093010f-0b1b-41d0-b76e-c5532a2d99a5")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9861aaf3-7681-4ed7-9fca-733c0a8b9ad1"),
+                            RangedWeaponsId = new Guid("d093010f-0b1b-41d0-b76e-c5532a2d99a5")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            RangedWeaponsId = new Guid("97d36556-d936-4a4e-a9cb-3ec41cd816aa")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            RangedWeaponsId = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            RangedWeaponsId = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("1927b1c3-5e97-426b-91e3-9618c916dfdf"),
+                            RangedWeaponsId = new Guid("957a55d1-dbc4-4060-ac98-aa4523175510")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9861aaf3-7681-4ed7-9fca-733c0a8b9ad1"),
+                            RangedWeaponsId = new Guid("957a55d1-dbc4-4060-ac98-aa4523175510")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            RangedWeaponsId = new Guid("957a55d1-dbc4-4060-ac98-aa4523175510")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            RangedWeaponsId = new Guid("e8272282-c02b-4e7b-8505-031e4657e7a9")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            RangedWeaponsId = new Guid("59fa141b-7ef8-4ae5-b006-925a1a5e4fc3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("89c21324-64de-4cd1-9b31-c8e3382b9c91"),
+                            RangedWeaponsId = new Guid("59fa141b-7ef8-4ae5-b006-925a1a5e4fc3")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("a07f371f-a95b-4cbb-85d3-094c8fe58fba"),
+                            RangedWeaponsId = new Guid("c5272f9b-93f4-42d6-baa1-7262fb6cd1ec")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            RangedWeaponsId = new Guid("c5272f9b-93f4-42d6-baa1-7262fb6cd1ec")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            RangedWeaponsId = new Guid("7c36bcfe-e828-43ca-baca-1a49be7ebfba")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            RangedWeaponsId = new Guid("1139c9c1-84b6-4e03-85bd-a7d779716297")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("20c99d83-4475-456a-aa3d-18df18dd7991"),
+                            RangedWeaponsId = new Guid("1139c9c1-84b6-4e03-85bd-a7d779716297")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("c70e1bc4-ca02-4d77-b117-415baa4058eb"),
+                            RangedWeaponsId = new Guid("1139c9c1-84b6-4e03-85bd-a7d779716297")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            RangedWeaponsId = new Guid("1139c9c1-84b6-4e03-85bd-a7d779716297")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9861aaf3-7681-4ed7-9fca-733c0a8b9ad1"),
+                            RangedWeaponsId = new Guid("26d5e7ba-84a2-46d5-966d-c8eeda6cf9a4")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("933245cf-38d3-44cf-994c-d353e042afbc"),
+                            RangedWeaponsId = new Guid("7f5df152-e9a8-4918-a561-2aae39f0938b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("e5abbf0f-16df-4710-a810-406156167ef5"),
+                            RangedWeaponsId = new Guid("7f5df152-e9a8-4918-a561-2aae39f0938b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            RangedWeaponsId = new Guid("7f5df152-e9a8-4918-a561-2aae39f0938b")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("34f43b53-1639-4e15-ae03-9cec0ff0fa30"),
+                            RangedWeaponsId = new Guid("2681245d-4754-4426-be9e-34d7ba96128f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9861aaf3-7681-4ed7-9fca-733c0a8b9ad1"),
+                            RangedWeaponsId = new Guid("2681245d-4754-4426-be9e-34d7ba96128f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("9c1ee79b-60f9-453a-9a8a-bfa60ee51196"),
+                            RangedWeaponsId = new Guid("2681245d-4754-4426-be9e-34d7ba96128f")
+                        },
+                        new
+                        {
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0"),
+                            RangedWeaponsId = new Guid("2681245d-4754-4426-be9e-34d7ba96128f")
                         });
                 });
 
@@ -9557,6 +11811,114 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Ammunition", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("BatchAmount")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("WeaponGroupId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("WeaponGroupId");
+
+                    b.ToTable("Ammunitions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("e784b731-7bb1-4e51-b438-3e88eb542a41"),
+                            BatchAmount = 10,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Description = "These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other.",
+                            Name = "Arrows",
+                            Price = 10,
+                            SourcePageId = new Guid("77284f4c-a449-4276-99df-e9aa9222ff5b"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("9230c1f0-09ea-4dd2-b6d4-bb0cfcbeabdd"),
+                            BatchAmount = 10,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Description = "These thin, light darts are typically made of hardwood and stabilized with fletching of down or fur. They are often hollow so they can be used to deliver poison.",
+                            Name = "Blowgun Darts",
+                            Price = 5,
+                            SourcePageId = new Guid("867680b0-acc3-44c6-9e1d-0abd095af230"),
+                            WeaponGroupId = new Guid("79516d2f-0c2d-47d3-b411-5b02ae26022f")
+                        },
+                        new
+                        {
+                            Id = new Guid("c51ef03b-db9b-44ac-92ac-39a0c7834b95"),
+                            BatchAmount = 10,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Description = "Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.",
+                            Name = "Bolts",
+                            Price = 10,
+                            SourcePageId = new Guid("73692529-4560-47a6-988d-7e43046a44ba"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("5ee1520e-e377-4855-8e73-81ebee4c146d"),
+                            BatchAmount = 5,
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Description = "A typical repeating hand crossbow magazine holds five bolts.",
+                            Name = "Repeating Hand Crossbow Magazine",
+                            Price = 90,
+                            SourcePageId = new Guid("91b5e6aa-fe9b-4f36-8a57-d7588c7b876f"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("550fe4e4-da65-4660-93bb-03676930ac11"),
+                            BatchAmount = 10,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Description = "These are small metal balls, typically either iron or lead, designed to be used as ammunition in slings.",
+                            Name = "Sling Bullets",
+                            Price = 1,
+                            SourcePageId = new Guid("489605ad-2019-4607-b4b5-dd06a348fb01"),
+                            WeaponGroupId = new Guid("92c0ebe3-618f-45e8-b9e2-cbd47a96ea96")
+                        },
+                        new
+                        {
+                            Id = new Guid("2981098c-b7f9-40bd-83a4-624eec7ef483"),
+                            BatchAmount = 10,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Description = "No description was provided for this ammunition.",
+                            Name = "Wooden Taws",
+                            Price = 10,
+                            SourcePageId = new Guid("f1971ded-4ed2-4256-9dc7-4887b0867100"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AnimalCompanion", b =>
                 {
                     b.Property<Guid>("Id")
@@ -11515,6 +13877,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("b10f2804-9573-4bbf-a11d-aeff35f6b816"),
                             Name = "Fire"
+                        },
+                        new
+                        {
+                            Id = new Guid("3f2fe0bc-7952-4593-b9a6-d24b8aede62d"),
+                            Name = "Modular"
                         },
                         new
                         {
@@ -15702,7 +18069,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("f5a17566-7306-40d5-b07f-f7152470593d"),
-                            Description = "to rapidly disassemble the spell's myriad components in a single blink of an eye",
+                            Description = "To rapidly disassemble the spell's myriad components in a single blink of an eye.",
                             DifficultyCheck = 38,
                             HazardId = new Guid("a6c694f4-7246-4eb0-8cf9-382017a73fad"),
                             RequiredProficiencyId = new Guid("5184371d-aad0-4d76-b43c-b03d5e930ddb"),
@@ -15711,7 +18078,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("b6283717-721c-4280-9a7e-5a1ec2b2ec85"),
-                            Description = "to disable the hammer that strikes the percussion cap",
+                            Description = "To disable the hammer that strikes the percussion cap.",
                             DifficultyCheck = 26,
                             HazardId = new Guid("cb9ff968-3115-412d-8f69-86b73d9a20c9"),
                             RequiredProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
@@ -15720,7 +18087,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("b477f38d-c91a-44c7-9095-7e6e9c52d81d"),
-                            Description = "once on the hammer itself and once on its joint to prevent the hammer from swinging",
+                            Description = "Once on the hammer itself and once on its joint to prevent the hammer from swinging.",
                             DifficultyCheck = 28,
                             HazardId = new Guid("d88ecdc0-c9bd-4a42-8409-a215f4a5c034"),
                             RequiredProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
@@ -15729,7 +18096,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("1e0d3792-40ea-4884-921c-58305f558677"),
-                            Description = "to remove the trapdoor",
+                            Description = "To remove the trapdoor.",
                             DifficultyCheck = 12,
                             HazardId = new Guid("6d810cbc-bf1f-4232-9517-cbb95e4b5a33"),
                             RequiredProficiencyId = new Guid("b5a58093-b365-4b88-8f0e-05317473522b"),
@@ -15738,7 +18105,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("b4c7e3c6-0802-41b6-be1b-635af1dbc1cb"),
-                            Description = "to painstakingly remove the lintel without triggering the magic",
+                            Description = "To painstakingly remove the lintel without triggering the magic.",
                             DifficultyCheck = 27,
                             HazardId = new Guid("58875d5f-9989-4476-bafe-451b2746e393"),
                             RequiredProficiencyId = new Guid("3c0b8610-4da2-4bb2-b7c9-1bd130ae8a56"),
@@ -15747,7 +18114,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("4c0d2ac8-48f8-4612-b8ab-72db8b4aa831"),
-                            Description = "to assemble a rift seal using objects strongly grounded to your plane",
+                            Description = "To assemble a rift seal using objects strongly grounded to your plane.",
                             DifficultyCheck = 33,
                             HazardId = new Guid("d038f033-4ea9-45ee-b0fa-c5707d5eda89"),
                             RequiredProficiencyId = new Guid("3c0b8610-4da2-4bb2-b7c9-1bd130ae8a56"),
@@ -15756,7 +18123,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("5dee5085-d947-4cad-8d8a-794d6ac56790"),
-                            Description = "on the spring mechanism",
+                            Description = "On the spring mechanism.",
                             DifficultyCheck = 17,
                             HazardId = new Guid("5f593e05-0197-4c12-9102-84501831aaf0"),
                             RequiredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
@@ -15765,7 +18132,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("8874b07f-fdaf-496e-8090-8e89c9993781"),
-                            Description = "to drain the glyph's power harmlessly",
+                            Description = "To drain the glyph's power harmlessly.",
                             DifficultyCheck = 32,
                             HazardId = new Guid("0b60cd6f-d1e8-4373-83f8-a14907af7e10"),
                             RequiredProficiencyId = new Guid("3c0b8610-4da2-4bb2-b7c9-1bd130ae8a56"),
@@ -15774,7 +18141,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("859314b5-6c92-43b6-964b-fad36bd66f0f"),
-                            Description = "to disable each blade",
+                            Description = "To disable each blade.",
                             DifficultyCheck = 21,
                             HazardId = new Guid("b658c798-2ef4-4040-9980-7828bbeeb523"),
                             RequiredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
@@ -15783,7 +18150,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("0fb1e6a3-00c7-4a77-bad1-949bac1cd5a1"),
-                            Description = "to take apart the spell one tiny piece at a time, with eyes closed, while recalling every vivid life memory in order, starting from the earliest memory.",
+                            Description = "To take apart the spell one tiny piece at a time, with eyes closed, while recalling every vivid life memory in order, starting from the earliest memory.",
                             DifficultyCheck = 46,
                             HazardId = new Guid("c235d758-9aa7-42fe-93e0-c5ec36092fc4"),
                             RequiredProficiencyId = new Guid("5184371d-aad0-4d76-b43c-b03d5e930ddb"),
@@ -15792,7 +18159,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("489b3fef-ff29-4e09-8436-7905dba58c27"),
-                            Description = "on the floor panels before the slab falls",
+                            Description = "On the floor panels before the slab falls.",
                             DifficultyCheck = 15,
                             HazardId = new Guid("504d33ef-0441-4972-b5f5-7019b895e2c6"),
                             RequiredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
@@ -15801,7 +18168,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("14f6268a-0806-45c2-8150-5967912b2e24"),
-                            Description = "on the floor tile or wall socket",
+                            Description = "On the floor tile or wall socket.",
                             DifficultyCheck = 18,
                             HazardId = new Guid("9acfc457-78d5-4af1-a8b1-a09f9f2d8312"),
                             RequiredProficiencyId = new Guid("130841fd-de3b-45e7-bb97-c4ded6ec71e8"),
@@ -15810,7 +18177,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("6c4b294a-6018-43f7-8b64-35bd2710d641"),
-                            Description = "at four different junctions to jam all the saw blade's possible paths, preventing it from traveling through the room.",
+                            Description = "At four different junctions to jam all the saw blade's possible paths, preventing it from traveling through the room.",
                             DifficultyCheck = 41,
                             HazardId = new Guid("3594dc7a-7749-4a92-8b2c-0dbe0ece4ce0"),
                             RequiredProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
@@ -15819,7 +18186,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("b7eff338-cc48-4aa8-9e7f-630e3b10d70e"),
-                            Description = "to remove the mold without triggering the spores",
+                            Description = "To remove the mold without triggering the spores.",
                             DifficultyCheck = 26,
                             HazardId = new Guid("33cde414-62f3-455d-95a2-f0a63480a006"),
                             RequiredProficiencyId = new Guid("e75eb2e8-f901-4d74-8497-05b7f2e689a9"),
@@ -16044,7 +18411,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("bb9a1fb9-c343-46e0-a7dc-dcdd239b6107"),
                             CounteractDifficultyCheck = 36,
-                            Description = "to counteract the trap before it triggers or to counteract the effect on one creature after the trap is triggered",
+                            Description = "To counteract the trap before it triggers or to counteract the effect on one creature after the trap is triggered.",
                             HazardId = new Guid("a6c694f4-7246-4eb0-8cf9-382017a73fad"),
                             Level = 8
                         },
@@ -16052,7 +18419,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("6fe47838-2cc2-46ff-abaf-1ded872463e8"),
                             CounteractDifficultyCheck = 25,
-                            Description = "to counteract the rune",
+                            Description = "To counteract the rune.",
                             HazardId = new Guid("58875d5f-9989-4476-bafe-451b2746e393"),
                             Level = 4
                         },
@@ -16060,7 +18427,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("4c0d2ac8-48f8-4612-b8ab-72db8b4aa831"),
                             CounteractDifficultyCheck = 31,
-                            Description = "to counteract the rift",
+                            Description = "To counteract the rift.",
                             HazardId = new Guid("d038f033-4ea9-45ee-b0fa-c5707d5eda89"),
                             Level = 7
                         },
@@ -16068,7 +18435,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("52927b96-561a-43ea-a992-481218889a7c"),
                             CounteractDifficultyCheck = 30,
-                            Description = "to counteract the glyph",
+                            Description = "To counteract the glyph.",
                             HazardId = new Guid("0b60cd6f-d1e8-4373-83f8-a14907af7e10"),
                             Level = 6
                         },
@@ -17544,6 +19911,1742 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.MeleeWeapon", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Damage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("DamageTypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Hands")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int?>("Level")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("WeaponCategoryId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("WeaponGroupId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("DamageTypeId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.HasIndex("WeaponCategoryId");
+
+                    b.HasIndex("WeaponGroupId");
+
+                    b.ToTable("MeleeWeapon");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("7cd52d10-6bde-4be4-9435-2ab4d65f5390"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "A common cutting tool, an adze resembles an axe—but the cutting edge is horizontal, rather than vertical. The adze's shape makes it popular among wood workers, and grippli builders often use them to construct their treetop homes. The tool also serves as an effective weapon, due in part to the immense strength required to swing it.",
+                            Hands = "2",
+                            Name = "Adze",
+                            Price = 100,
+                            SourcePageId = new Guid("fdc045a1-6bbd-4305-95a7-dfbab443580c"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("efc95190-6796-43f8-a457-743c988a0c3b")
+                        },
+                        new
+                        {
+                            Id = new Guid("24f52641-1737-4761-8576-66710f258aab"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "The aklys is a throwing club with a hook on one end and a lengthy cord attached to the other. Though aklyses aren’t available in most shops, one might be purchased for 5 gp from a vendor that specializes in strange weapons.",
+                            Hands = "1",
+                            Name = "Aklys",
+                            Price = 500,
+                            SourcePageId = new Guid("f87e5121-6a39-400e-898d-8a8e50faedba"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("412f2018-c2f7-493f-b213-8fe8ca14b7ff"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "An Aldori dueling sword is a slim, single-bladed dueling sword with a slight curve and a sharp, reinforced point.",
+                            Hands = "1",
+                            Level = 1,
+                            Name = "Aldori Dueling Sword",
+                            Price = 2000,
+                            SourcePageId = new Guid("2a533ae3-a77e-4c69-8d1f-f65ca2ef0042"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("547dfb80-42d1-4cd0-8248-5a654cd4f0d5"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This broad-bladed sword, sometimes called the hand‑and‑a‑half sword, has a longer grip so it can be held in one hand or used with two hands to provide extra piercing or slashing power.",
+                            Hands = "1",
+                            Name = "Bastard Sword",
+                            Price = 400,
+                            SourcePageId = new Guid("8356258e-e975-4a35-90c7-c4d7e5884ce7"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("b4c97173-63ec-42a9-8605-b76a8ff0d352"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "These axes are designed explicitly as weapons, rather than tools. They typically weigh less, with a shaft reinforced with metal bands or bolts, and have a sharper blade, making them ideal for chopping limbs rather than wood.",
+                            Hands = "1",
+                            Name = "Battle Axe",
+                            Price = 100,
+                            SourcePageId = new Guid("e6eb5ab1-dc03-406e-bcca-cef410baa276"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("efc95190-6796-43f8-a457-743c988a0c3b")
+                        },
+                        new
+                        {
+                            Id = new Guid("08a0cd4f-fb35-497e-99ac-3949d11350e5"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This reinforced lute is suitable both for use as a handheld musical instrument and for bashing heads should a crowd turn sour. Its strings are finely braided wires that run along its sturdy metal neck.",
+                            Hands = "1",
+                            Name = "Battle Lute",
+                            Price = 1500,
+                            SourcePageId = new Guid("4249a8a4-14e5-43e3-9d55-61065c75422b"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("3bf26277-c214-4a31-aa61-6ae3c3f75ea3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This weapon consists of two bladed discs joined by a central axel, and is spun on a rope whose ends are attached to wand-like sticks. The wielder can hurl the diabolo from the rope like a stone from a sling, or swing it on the rope in melee.",
+                            Hands = "2",
+                            Name = "Bladed Diabolo",
+                            Price = 200,
+                            SourcePageId = new Guid("f07df8e3-e1fa-4ca6-ae6b-6864594d348a"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("c7facb69-2744-4cec-b9b6-28fab446d5e8"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This circular hoop has blades along its outer edge. You can wield it in two hands (using the two-hand damage) or by spinning it around an arm. While you spin the hoop, it gains the free-hand trait. Setting the hoop spinning takes 1 Interact action. In addition to the normal restrictions of the free-hand trait, extended use of the arm for locomotion (such as to Climb) interferes with the hoop’s spinning and forces you to Release the hoop. You can’t spin a hoop underwater. Keeping the hoop spinning requires a free action each round, which has the concentrate and manipulate traits. You can keep a hoop spinning as an exploration activity, but doing so for more than 10 minutes makes you fatigued, similarly to Hustling.",
+                            Hands = "0+",
+                            Name = "Bladed Hoop",
+                            Price = 250,
+                            SourcePageId = new Guid("9cc2bac0-af81-4e13-8b7a-98d1cc5d7f48"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("2c97c992-70f8-4dfa-950b-ebbaf0148267"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "The thin metal plates interwoven throughout this long scarf turn a fashion accessory into a deadly weapon.",
+                            Hands = "2",
+                            Name = "Bladed Scarf",
+                            Price = 300,
+                            SourcePageId = new Guid("12be0d39-76bb-475b-b107-b2b4a8f87d48"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("f7b0c42c-87a4-45eb-8de6-12ca3fe71780"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This small axe sports a spike opposite the blade that aids in climbing and is useful in clearing obstacles, such as fallen rigging. This weapon is common in the High Seas region, on the Isle of Kortos and within azarketi settlements.",
+                            Hands = "1",
+                            Name = "Boarding Axe",
+                            Price = 100,
+                            SourcePageId = new Guid("e677da1c-767e-4a45-9b62-af9984d2fa85"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("efc95190-6796-43f8-a457-743c988a0c3b")
+                        },
+                        new
+                        {
+                            Id = new Guid("c0c4e1e1-fc1c-4a9e-8797-8f2eabaeec50"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "Taking the form of a longspear fitted with crossbars or hooks, a boarding pike provides its wielder a sharp implement that's as adept at shoving enemies off a ship's railings as facilitating the boarding of other vessels. This is a martial melee weapon.",
+                            Hands = "2",
+                            Level = 1,
+                            Name = "Boarding Pike",
+                            Price = 80,
+                            SourcePageId = new Guid("aa76307d-e009-4ee4-96a5-17aa0bbfa921"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("edfa81fd-1aca-46de-a75b-deb0465712ad")
+                        },
+                        new
+                        {
+                            Id = new Guid("9966d8d0-e1ae-4e62-9411-988d67474769"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This strong but slender staff is tapered at the ends and well balanced. It’s designed to be an offensive and defensive weapon.",
+                            Hands = "2",
+                            Name = "Bo Staf",
+                            Price = 20,
+                            SourcePageId = new Guid("195ba1fc-dbcf-4884-8d33-b0c40b8c9e42"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("09595caf-7209-4ffa-b4cc-524a9c9807c0"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "A blade of conrasu design, a buugeng has a unique, curved shape that allows it to rotate smoothly in the hand of a trained warrior. This spinning motion makes it easier to attack multiple foes at once with the weapon.",
+                            Hands = "1",
+                            Name = "Buugeng",
+                            Price = 400,
+                            SourcePageId = new Guid("0df0f9b4-f422-4334-949b-0c62d75e5454"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("2ef4b9ed-c528-44ec-9123-6b92234662c1"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This broad dagger is carried by dwarves as a weapon, tool, and designation of clan. Losing or having to surrender a clan dagger is considered a mark of embarrassment to most dwarves.",
+                            Hands = "1",
+                            Name = "Clan Dagger",
+                            Price = 200,
+                            SourcePageId = new Guid("4a12349b-087d-4400-b37f-65d5297d16a2"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("f5a772c0-8d78-4073-9b73-4b4c9fc8fbe3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "The three parallel blades of this handheld weapon extend between the fingers to resemble the natural claws of the amurruns who created them, providing a way for those catfolk without suitable natural claws to share the fighting customs of their kin.",
+                            Hands = "1",
+                            Name = "Claw Blade",
+                            Price = 200,
+                            SourcePageId = new Guid("0e11bd8a-0f5e-4de1-82b3-896568dbc2d1"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This is a piece of stout wood shaped or repurposed to bludgeon an enemy. Clubs can be intricately carved pieces of martial art or as simple as a tree branch or piece of wood.",
+                            Hands = "1",
+                            Name = "Club",
+                            Price = 0,
+                            SourcePageId = new Guid("b075bf13-2ed1-4686-837f-c5c511af261d"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("6a5291fb-45dc-426b-8605-d808c123759c"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "Although grappling hooks typically serve as a climbing tool, this specially reinforced grapnel attached to a rope up to 10 feet long can be swung as a weapon. This is a martial melee weapon.",
+                            Hands = "2",
+                            Level = 1,
+                            Name = "Combat Grapnel",
+                            Price = 90,
+                            SourcePageId = new Guid("53c212b5-cb72-4f75-a597-98bdd4181af0"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("d6be6a4e-d82a-4c7f-adc2-2742b985760d"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This small, bladed weapon is held in one hand and used to stab a creature in close combat. It can also be thrown.",
+                            Hands = "1",
+                            Name = "Dagger",
+                            Price = 20,
+                            SourcePageId = new Guid("3bc128c1-e633-49fe-959d-23728af2894c"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("9bbc2b31-fae2-4ea1-8c7e-45896c24f111"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This short, curved, and crude makeshift blade often has holes drilled into it to reduce its weight. It’s a favored weapon of goblins.",
+                            Hands = "1",
+                            Name = "Dogslicer",
+                            Price = 10,
+                            SourcePageId = new Guid("40e2f952-2c1f-4043-8f43-8c4f9f56a6bf"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("d0b1390b-25b4-4302-91e0-4c80963125ce"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This favored weapon of the dwarves has a large, ornate head mounted on a thick handle. This powerful axe can be wielded with one hand or two.",
+                            Hands = "1",
+                            Name = "Dwarven War Axe",
+                            Price = 300,
+                            SourcePageId = new Guid("23fd9739-93e5-4241-aaaa-4160682f213a"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("efc95190-6796-43f8-a457-743c988a0c3b")
+                        },
+                        new
+                        {
+                            Id = new Guid("07b728c8-b6a9-4d6c-97ec-acda2ef83daa"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "Essentially a longer version of the scimitar, this traditional elven weapon has a thinner blade than its cousin.",
+                            Hands = "2",
+                            Name = "Elven Curve Blade",
+                            Price = 400,
+                            SourcePageId = new Guid("6d40f8d4-0dfc-4bb0-9998-288dd43fcfea"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("8d2cf9bb-b236-417e-84b3-3710d02c6dbf"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "An exquisite sword cane is a sword sheathed inside a hollow cane, which itself can be used as a clubbing weapon with or without the sword sheathed inside.",
+                            Hands = "1",
+                            Level = 4,
+                            Name = "Exquisite Sword Cane",
+                            Price = 9000,
+                            SourcePageId = new Guid("c084b21a-06ee-4bc2-b30a-ac60369c99c1"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("3705d218-3b4f-4849-a69b-a04b0b94fa96"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "An exquisite sword cane is a sword sheathed inside a hollow cane, which itself can be used as a clubbing weapon with or without the sword sheathed inside.",
+                            Hands = "1",
+                            Name = "Exquisite Sword Cane Sheath",
+                            Price = 0,
+                            SourcePageId = new Guid("7c07999f-a858-4646-be52-c7c6655b47e1"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("ea69a9bc-a39b-4a43-90fc-c27ee0f776fd"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This weapon is a heavier, two-handed version of the curved-bladed scimitar. It is weighted toward the blade’s end, making it a powerful slashing weapon.",
+                            Hands = "2",
+                            Name = "Falchion",
+                            Price = 300,
+                            SourcePageId = new Guid("232b9f8d-2696-4cb3-b52a-91973e6f4096"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("0776b01d-d10c-41fa-8832-a7c718b7ff8e"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This kobold wire is thin and hard to see, making it perfect for an ambush. The wielder wraps the wire around a vulnerable spot, such as the neck, and twists it to inflict potentially fatal lacerations. The name derives from the use of a similar wire in traps, or slow fangs, with the word “slow” removed, as a fangwire gets quick results.",
+                            Hands = "1",
+                            Name = "Fangwire",
+                            Price = 400,
+                            SourcePageId = new Guid("ae96e147-fe45-4bb1-821b-504c3658cd4a"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("55158194-ce53-4931-818b-5c36289e4dba")
+                        },
+                        new
+                        {
+                            Id = new Guid("875d97cc-2d8f-4498-8659-00251e3f969c"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "A fauchard is similar to a glaive, save that its cutting edge is along the concave side. Fauchards are favored by Crimson Reclaimers for hacking through waves of zombies. The fauchard is a martial melee weapon.",
+                            Hands = "2",
+                            Name = "Fauchard",
+                            Price = 100,
+                            SourcePageId = new Guid("2084884d-e0ed-4656-ab81-14730a7d2607"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("edfa81fd-1aca-46de-a75b-deb0465712ad")
+                        },
+                        new
+                        {
+                            Id = new Guid("3b7c5c1b-8be2-4152-bae1-475f9853919c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This fan is useful for elegant dances as well as for slicing unsuspecting foes with the blades along its outer edge. If used in performances, it might be disguised as a frilly accessory, or it might be an obvious, though elegant, weapon.",
+                            Hands = "1",
+                            Name = "Fighting Fan",
+                            Price = 100,
+                            SourcePageId = new Guid("e8013ef6-44c3-4d26-9818-3723d71e995d"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("285c5d1b-a837-4065-9005-28420b0b8e00"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This halfling weapon looks like a long, two-pronged fork and is used as both a weapon and a cooking implement.",
+                            Hands = "1",
+                            Name = "Filcher's Fork",
+                            Price = 100,
+                            SourcePageId = new Guid("cd7c2cd0-bfe4-4175-9926-f65cb443f34e"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                        },
+                        new
+                        {
+                            Id = new Guid("af5dff58-65ad-402e-b78c-4cc9eee8e126"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4 B + 1d4 F",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "These special poi are made from a rare, light metal or from fire-retardant fibers and can be ignited before being wielded. Igniting a pair of fire poi is an Interact action and requires 1 pint of oil for every 10 minutes the poi remain ignited. While lit, fire poi cast dim light in a 10-foot radius; in combat, they deal 1d4 bludgeoning plus 1d4 fire damage. On a critical hit with a lit fire poi, the target takes 1 persistent fire damage. The fire can be extinguished using the Interact action. When unlit, the poi deal only the listed bludgeoning damage. Regardless of whether it is lit, the poi’s 1d4 bludgeoning damage is the weapon damage dice, so striking runes and other effects don’t affect the fire damage.",
+                            Hands = "1",
+                            Name = "Fire Poi",
+                            Price = 500,
+                            SourcePageId = new Guid("6339002f-07a7-4021-a557-3d7bc6c3a120"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("ade86474-5118-4236-81c2-a69905ff4d25"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "No description was provided for this weapon.",
+                            Hands = "1",
+                            Name = "Fist",
+                            Price = 0,
+                            SourcePageId = new Guid("12830f77-7c87-420a-9a31-d439c3f6f7d1"),
+                            WeaponCategoryId = new Guid("9cfcad6d-a7e2-4833-ba41-86d88bee6fc7"),
+                            WeaponGroupId = new Guid("55158194-ce53-4931-818b-5c36289e4dba")
+                        },
+                        new
+                        {
+                            Id = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This weapon consists of a wooden handle attached to a spiked ball or cylinder by a chain, rope, or strap of leather.",
+                            Hands = "1",
+                            Name = "Flail",
+                            Price = 100,
+                            SourcePageId = new Guid("139c816a-ef93-4a2d-9867-0fd641a4f3dd"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("591ab477-94f8-40a2-9e03-217f7ebcf2a0"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "Many marsh giants fight with oversized gaffs—lengths of wood with a single metal spike affixed to the tip. Used often by fisherfolk to land fish, marsh giants use their gaffs as weapons.",
+                            Hands = "1",
+                            Name = "Gaff",
+                            Price = 100,
+                            SourcePageId = new Guid("c2d4425b-1674-4596-828c-11d87458f016"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("7f512734-c802-4d3e-bb53-4a4314b5807c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "A pair of these metal gloves comes with full plate, half plate, and splint armor; they can also be purchased separately and worn with other types of armor. They not only protect your hands but also transform your hands into lethal weapons.",
+                            Hands = "1",
+                            Name = "Gauntlet",
+                            Price = 20,
+                            SourcePageId = new Guid("8fc6c729-bb8a-4bf2-953f-f1e9063afd6d"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("55158194-ce53-4931-818b-5c36289e4dba")
+                        },
+                        new
+                        {
+                            Id = new Guid("8f28ae9d-f0a6-4ed9-af09-e44de58acd82"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This spear has a specialized hook just before the tip that can catch on the gills of large fish. Azarketis primarily use this to hunt sharks, but it can also be used to hook flesh or armor. This weapon is common on the Isle of Kortos and within azarketi settlements.",
+                            Hands = "2",
+                            Name = "Gill Hook",
+                            Price = 200,
+                            SourcePageId = new Guid("dd53aa21-92e7-4268-ad3a-76d4d3f48290"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                        },
+                        new
+                        {
+                            Id = new Guid("af49cf0b-69d2-4fa4-820f-7b6806c213f3"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This polearm consists of a long, single-edged blade on the end of a 7-foot pole. It is extremely effective at delivering lethal cuts at a distance.",
+                            Hands = "2",
+                            Name = "Glaive",
+                            Price = 100,
+                            SourcePageId = new Guid("ec2e8eb3-97fc-4c12-a81d-fbfc9ad51ad5"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("edfa81fd-1aca-46de-a75b-deb0465712ad")
+                        },
+                        new
+                        {
+                            Id = new Guid("a954ad09-22bd-4f8b-945a-05dddea08cdc"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "More a flail than a mace, this weapon has a short handle attached to a length of chain with a ball at the end. The ball is propelled to its reach with the flick of the wrist, the momentum of which brings the ball back to the wielder after the strike.",
+                            Hands = "1",
+                            Name = "Gnome Flickmace",
+                            Price = 300,
+                            SourcePageId = new Guid("477ef8a4-079c-4527-bbea-ab4a0cb22e7d"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("f828cf37-ae7a-4534-a5f3-d12558d731eb"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This gnome tool and weapon features a hammer at one end and a curved pick on the other. It’s such a strange and awkward weapon that others think the gnomes are slightly erratic for using it.",
+                            Hands = "1",
+                            Name = "Gnome Hooked Hammer",
+                            Price = 200,
+                            SourcePageId = new Guid("cbbc98d4-cb52-4c9a-8d48-973996f7585b"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("3abdc611-2ead-4444-bc8f-68058807c060")
+                        },
+                        new
+                        {
+                            Id = new Guid("0b7a0bce-0829-4304-be0d-8fa7cd8c7232"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d12",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This large battle axe is too heavy to wield with only one hand. Many greataxes incorporate two blades, and they are often 'bearded', having a hook at the bottom to increase the strength of their chopping power.",
+                            Hands = "2",
+                            Name = "Greataxe",
+                            Price = 200,
+                            SourcePageId = new Guid("68c1c395-1656-48cd-82f4-7e26a9354b47"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("efc95190-6796-43f8-a457-743c988a0c3b")
+                        },
+                        new
+                        {
+                            Id = new Guid("f436ca8d-2f47-4935-8c36-f98c28d9fccf"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "While many greatclubs are intricately carved, others are little more than a sturdy tree branch. These massive clubs are too heavy to wield with only one hand.",
+                            Hands = "2",
+                            Name = "Greatclub",
+                            Price = 100,
+                            SourcePageId = new Guid("0d581324-e4ad-48a2-97b1-aab565022eb8"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("35cbbb5f-ca93-4ddb-ae6d-e82b1505a446"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This pick has a longer handle and broader head than a regular pick. It is too heavy to wield in one hand.",
+                            Hands = "2",
+                            Name = "Greatpick",
+                            Price = 200,
+                            SourcePageId = new Guid("bdaa0cbd-cd0d-4dc8-b129-d5891cecb88b"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                        },
+                        new
+                        {
+                            Id = new Guid("d68f9149-b9aa-48a1-b9a7-5469575ca977"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d12",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This immense two-handed sword is nearly as tall as its wielder. Its lower blade is often somewhat dulled to allow it to be gripped for extra leverage in close-quarter fights.",
+                            Hands = "2",
+                            Name = "Greatsword",
+                            Price = 200,
+                            SourcePageId = new Guid("6ccbb228-7ac8-4df1-9092-fcc90f318197"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("164fced7-fbaa-4e79-8eb2-5ea61cfa4f5e"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This polearm bears a long, often one‑sided, curved blade with a hook protruding from the blunt side of the blade, which can allow its wielder to trip opponents at a distance. Its shaft is usually 8 feet long.",
+                            Hands = "2",
+                            Name = "Guisarme",
+                            Price = 200,
+                            SourcePageId = new Guid("ad92e182-3b2f-4b0a-80c2-b3d8fa404015"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("edfa81fd-1aca-46de-a75b-deb0465712ad")
+                        },
+                        new
+                        {
+                            Id = new Guid("1aebb2a7-67df-47ed-b4f8-cceffc0b6662"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This polearm has a relatively short, 5-foot shaft. The business end is a long spike with an axe blade attached.",
+                            Hands = "2",
+                            Name = "Halberd",
+                            Price = 200,
+                            SourcePageId = new Guid("7745b6f3-65fc-4ac1-b6b1-4d53754b0a99"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("edfa81fd-1aca-46de-a75b-deb0465712ad")
+                        },
+                        new
+                        {
+                            Id = new Guid("a6a7ebc7-6129-448c-8936-ae2bc8ceda7c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This is a smaller version of an adze, useful for more delicate woodworking or projects in cramped spaces. Gripplis use the hand adze for crafting and as close quarters weapons.",
+                            Hands = "1",
+                            Name = "Hand Adze",
+                            Price = 50,
+                            SourcePageId = new Guid("43895f3a-5f46-4fae-a25a-85dc5b30acbc"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("efc95190-6796-43f8-a457-743c988a0c3b")
+                        },
+                        new
+                        {
+                            Id = new Guid("28896820-702d-47fa-8aa8-f3e6e5d9bf67"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This small axe can be used in close combat or thrown.",
+                            Hands = "1",
+                            Name = "Hatchet",
+                            Price = 40,
+                            SourcePageId = new Guid("15df22c2-3d04-4e90-b348-13d104f28ec0"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("efc95190-6796-43f8-a457-743c988a0c3b")
+                        },
+                        new
+                        {
+                            Id = new Guid("c3d2c58d-904d-4fb5-9246-bc292a95ba8e"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "Created by goblins to battle horses, this weapon is essentially a long shaft ending in a blade with a large hook.",
+                            Hands = "2",
+                            Name = "Horsechopper",
+                            Price = 90,
+                            SourcePageId = new Guid("4bde76d4-71e5-40d2-994e-473c24c1f2d5"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("edfa81fd-1aca-46de-a75b-deb0465712ad")
+                        },
+                        new
+                        {
+                            Id = new Guid("8a71d87f-4e0a-4041-bb5c-a6902cd161f9"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "A juggling club is lighter than a typical club and balanced to be easily caught and thrown again by a juggler. While a juggling club deals less damage, the extra throwing distance its light weight allows is important for Juggling.",
+                            Hands = "1",
+                            Name = "Juggling Club",
+                            Price = 10,
+                            SourcePageId = new Guid("2a4d437b-b98a-4786-b5cd-9e4fb0899bb5"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("bc96e942-df78-4627-8876-f52c0bdb0d17"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "Similar to a sickle and used in some regions to reap grain, a kama has a short, slightly curved blade and a wooden handle.",
+                            Hands = "1",
+                            Name = "Kama",
+                            Price = 100,
+                            SourcePageId = new Guid("eb2de2e5-441c-4e42-9cd2-0719cba66e57"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("b3b26911-43d7-4771-b374-19e3aac3033b"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "A katana is a curved, single-edged sword known for its wickedly sharped blade.",
+                            Hands = "1",
+                            Name = "Katana",
+                            Price = 200,
+                            SourcePageId = new Guid("9079c6d1-f93b-4916-a0f0-20e0b8a0328d"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("6c3223d1-35e9-4273-a384-ffe2ea1b3da3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "Also known as punching daggers, katars are characterized by their H-shaped hand grip that allows the blade to jut out from the knuckles.",
+                            Hands = "1",
+                            Name = "Katar",
+                            Price = 30,
+                            SourcePageId = new Guid("350e2d8b-27a4-4168-88f9-e7cce0ada9d6"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("50de7f64-76a6-4bf0-9d0e-0b57aea3ba85"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This staff is topped by a pointed metal circle from which hang several smaller rings that jingle and clang noisily as the staff is moved, allowing you to announce your presence and scare off wild animals as you walk.",
+                            Hands = "1",
+                            Name = "Khakkara",
+                            Price = 200,
+                            SourcePageId = new Guid("9b0e10a8-cc3f-4639-b945-72c60f05bf5c"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("c86b01ef-ff94-47a5-9f38-158665a053e1"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This curved sickle sword has a pointed tip, allowing it to be swung like a handaxe or thrust like a short sword. The tip of a khopesh is usually hooked so that it can be used to disarm an opponent’s shield or weapon.",
+                            Hands = "1",
+                            Name = "Khopesh",
+                            Price = 200,
+                            SourcePageId = new Guid("c014a6c2-2d66-4026-b1ae-474a9cc92e8e"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("3a7317bb-6d6a-47b0-8c99-6ac442e23675"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "The blade of this foot-long knife curves inward and lacks a cross guard at the hilt.",
+                            Hands = "1",
+                            Name = "Kukri",
+                            Price = 60,
+                            SourcePageId = new Guid("6c659544-3faf-45d2-be68-df7b72a97005"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("27dd4f47-af0a-460f-9b4f-6d841b1d702e"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This spear-like weapon is used by a mounted creature to deal a great deal of damage.",
+                            Hands = "2",
+                            Name = "Lance",
+                            Price = 100,
+                            SourcePageId = new Guid("ae37faf4-c071-4dd9-bdda-262e1495fc78"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                        },
+                        new
+                        {
+                            Id = new Guid("de40fe78-1d20-47a1-8024-b08ab26bcc02"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This smaller version of the warhammer has a wooden or metal shaft ending in a metal head. Unlike its heavier cousin, it is light enough to throw.",
+                            Hands = "1",
+                            Name = "Light Hammer",
+                            Price = 30,
+                            SourcePageId = new Guid("d53dac66-26be-4dad-9ba5-c19d5857c578"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("3abdc611-2ead-4444-bc8f-68058807c060")
+                        },
+                        new
+                        {
+                            Id = new Guid("b40cb041-7b1c-49fc-8c54-8b66afce34ae"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "A light mace has a short wooden or metal shaft ending with a dense metal head. Used much like a club, it delivers heavy bludgeoning blows, but with extra power derived from the head’s metal ridges or spikes.",
+                            Hands = "1",
+                            Name = "Light Mace",
+                            Price = 40,
+                            SourcePageId = new Guid("42c099df-55ea-40f8-81c5-6dfca855bbf2"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("c723e7e5-5ee2-42c8-9aa8-3611cb1d5075"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "A light pick is a modified mining implement with a wooden shaft ending in a pick head crafted more to pierce armor and flesh than chip rocks.",
+                            Hands = "1",
+                            Name = "Light Pick",
+                            Price = 40,
+                            SourcePageId = new Guid("867acff8-88aa-4b8c-a9a0-22f60ce34c83"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                        },
+                        new
+                        {
+                            Id = new Guid("f754f448-fa6a-43df-b1df-36b0c9897c27"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This very long spear, sometimes called a pike, is purely for thrusting rather than throwing. Used by many soldiers and city watch for crowd control and defense against charging enemies, it must be wielded with two hands.",
+                            Hands = "2",
+                            Name = "Longspear",
+                            Price = 50,
+                            SourcePageId = new Guid("aae59ef0-a70c-4ef2-88db-be982251fe79"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                        },
+                        new
+                        {
+                            Id = new Guid("44cbf854-e9a3-4562-b5d5-f4b4ea583a76"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "Longswords can be one-edged or two‑edged swords. Their blades are heavy and they’re between 3 and 4 feet in length.",
+                            Hands = "1",
+                            Name = "Longsword",
+                            Price = 100,
+                            SourcePageId = new Guid("d2c680c9-f47f-4bce-b8a8-d1c6690f11a4"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("d89d36ee-897d-4aa4-9a07-0689c276cbbc"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "With a stout haft and a heavy metal head, a mace is sturdy and allows its wielder to deliver powerful blows and dent armor.",
+                            Hands = "1",
+                            Name = "Mace",
+                            Price = 100,
+                            SourcePageId = new Guid("56c7cb8f-9fb0-4fc9-95c3-09e592acd1bb"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("afd07976-4043-4ab6-a964-43725fc49c3f"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This medium-length sword has a wide blade and long grip. Though it is typically used to hack through heavy foliage, the machete can also be used as a deadly weapon.",
+                            Hands = "1",
+                            Name = "Machete",
+                            Price = 70,
+                            SourcePageId = new Guid("417e54fd-71ac-4621-83da-f139118aa46b"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("353d5fd0-a2b2-4676-a661-7238de6fe7c4"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This parrying dagger features a robust guard to protect the wielder’s hand.",
+                            Hands = "1",
+                            Name = "Main-Gauche",
+                            Price = 50,
+                            SourcePageId = new Guid("c43594c0-daf3-44c1-a8b7-3753a0f6a089"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("b40db133-eb32-4046-a667-61c7abcddd57"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "Also known as a hunga munga or danisco, this hybrid knife-axe consists of a hilt and a blade that curves backward toward the wielder. The curve of the blade is such that after a victim has been struck by a mambele, more damage is dealt as the weapon is extracted from the victim’s body.",
+                            Hands = "1",
+                            Name = "Mambele",
+                            Price = 60,
+                            SourcePageId = new Guid("8c46b5bd-52f6-49bf-937a-dbc402a35f80"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("efc95190-6796-43f8-a457-743c988a0c3b")
+                        },
+                        new
+                        {
+                            Id = new Guid("29839132-c0a9-4422-b490-aa3c0ad8ad8e"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d12",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "Mauls are massive warhammers that must be swung with two hands.",
+                            Hands = "2",
+                            Name = "Maul",
+                            Price = 300,
+                            SourcePageId = new Guid("f4676440-8f1c-4cfa-9078-ccc025699c50"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("3abdc611-2ead-4444-bc8f-68058807c060")
+                        },
+                        new
+                        {
+                            Id = new Guid("1c9e4d66-6360-4215-8686-1ab9d30655e3"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This weapon consists of a long chain connected to a heavy weight at one end. When a wielder swings the weight by the chain, it builds momentum and can serve as a deadly bludgeon with incredible reach.",
+                            Hands = "2",
+                            Name = "Meteor Hammer",
+                            Price = 300,
+                            SourcePageId = new Guid("01c2bf73-7183-4dce-a282-edc644ada0ce"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("14f657da-fab9-4369-9fac-ded23f1d2b6f"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "Also called a 'slungshot', the monkey's fist is a short length of rope ending in a thick knot wrapped around a metal weight. You can tie the loose end of a monkey's fist to your wrist; if you are Disarmed, the weapon remains secured to your wrist rather than falling to the ground, though you must use an Interact action to grip it before using it again. A monkey's fist is a martial melee weapon.",
+                            Hands = "1",
+                            Name = "Monkey's Fist",
+                            Price = 10,
+                            SourcePageId = new Guid("341b16f6-b1ad-4bd7-b3a0-5b9cccff4e1e"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("9ebc3552-f0fa-450e-96bc-a5d73d18c8ea"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This weapon has a short shaft ending in a metal ball studded with spikes.",
+                            Hands = "1",
+                            Name = "Morningstar",
+                            Price = 100,
+                            SourcePageId = new Guid("a894bf57-ddd3-4cfa-a05c-0f886d627ae4"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("cea48192-0fda-4dc9-a0ec-5df4ea926d35"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This 6-foot staff has a 2-foot-long, slightly curved, swordlike blade attached at one end. The long pole helps keep the wielder out of reach of swords and shorter weapons.",
+                            Hands = "2",
+                            Name = "Naginata",
+                            Price = 300,
+                            SourcePageId = new Guid("a3653698-fe26-4e9d-a5ac-d528f42c6375"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("edfa81fd-1aca-46de-a75b-deb0465712ad")
+                        },
+                        new
+                        {
+                            Id = new Guid("8dde67f3-49e5-4231-aa23-7e1d4abd63cc"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This collapsible baton consists of several nested, telescoping metal shafts that can be extended as a free action by flicking the wrist. Once extended to its full length (usually around 2 feet), the baton locks into shape until the wielder uses an Interact action to collapse it—a collapsed nightstick is 8 inches long, making it easily concealed. Lighter and more maneuverable than an ordinary club or truncheon, nightsticks are designed to subdue foes without causing permanent injury. A nightstick is an uncommon simple melee weapon.",
+                            Hands = "1",
+                            Name = "Nightstick",
+                            Price = 100,
+                            SourcePageId = new Guid("1fc416c1-9963-4fc1-ba94-dab2a33c37ea"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("46dd2003-0ce1-492c-955b-508b574c4097"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This sword has a broad blade, along which are threaded nine heavy metal rings. The rings add weight to the weapon for downward swings, as well as clashing together to make noise.",
+                            Hands = "1",
+                            Name = "Nine-Ring Sword",
+                            Price = 90,
+                            SourcePageId = new Guid("468fdb16-f40a-42fc-9956-77e507fd805e"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("d1ad3308-48ce-4720-8d53-b1152ac0592f"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "The nunchaku is constructed of two wooden or metal bars connected by a short length of rope or chain.",
+                            Hands = "1",
+                            Name = "Nunchaku",
+                            Price = 20,
+                            SourcePageId = new Guid("c957e89f-fb12-4dd2-a925-d5e7cb81e922"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("5249b6ac-9cf9-4a95-9e28-e13f50cbc473"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "Ogres are known for using immense, curved picks called ogre hooks.",
+                            Hands = "2",
+                            Name = "Ogre Hook",
+                            Price = 100,
+                            SourcePageId = new Guid("7830364d-bfa3-48a4-9848-3bb4f19de2b8"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                        },
+                        new
+                        {
+                            Id = new Guid("43f6b330-380e-4767-be1f-a49120d115c8"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This stout, metal blade of orc design has a horizontal basket hilt with blades jutting from each end, or sometimes one blade like that of a katar.",
+                            Hands = "1",
+                            Name = "Orc Knuckl eDagger",
+                            Price = 70,
+                            SourcePageId = new Guid("ae55b9c2-c9ee-4d71-9e74-31e1717845a9"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("bb3d9d98-06cc-4e04-aedc-bcff42e9389b"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This single-bladed bearded axe has a jagged blade that’s perfect for separating bone from tendon and cartilage.",
+                            Hands = "1",
+                            Name = "Orc Necksplitter",
+                            Price = 200,
+                            SourcePageId = new Guid("217fa626-b44b-4373-a436-41b4c4730380"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("efc95190-6796-43f8-a457-743c988a0c3b")
+                        },
+                        new
+                        {
+                            Id = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "A pick designed solely for combat has a sturdy wooden shaft and a heavy, pointed head to deliver devastating blows.",
+                            Hands = "1",
+                            Name = "Pick",
+                            Price = 70,
+                            SourcePageId = new Guid("d4874f3d-88d6-4e29-989a-a32c49adda2a"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                        },
+                        new
+                        {
+                            Id = new Guid("c4fd14aa-156a-4efe-9807-90cf492ed32e"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "Poi are light weights tethered to ropes or chains. Performers swing the weights, usually one in each hand, in rhythmic patterns.",
+                            Hands = "1",
+                            Name = "Poi",
+                            Price = 20,
+                            SourcePageId = new Guid("e034be48-76a2-4af9-ba68-e06d3520a264"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("24f3accf-0ba9-491d-94fc-4e8abe71ff23"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("3f2fe0bc-7952-4593-b9a6-d24b8aede62d"),
+                            Description = "The polytool is a small metal rod with a number of simple tools folded inside. The user can extend a long ceramic blade, as well as an awl, a chisel, a file, flint and steel, a hook, an inkpen, a magnifying glass, pliers, scissors, and a small saw. The flint and steel can be used up to 10 times before needing to be replaced. Though inspired by advanced Numerian technology, the polytool is a simple enough feat of metalworking that any blacksmith could produce it— perfect for the goddess Casandalee to spread innovation farther than actual Numerian tech could reach.",
+                            Hands = "1",
+                            Level = 1,
+                            Name = "Polytool",
+                            Price = 1000,
+                            SourcePageId = new Guid("2f68749e-73f2-4fd7-81ad-440d303de9e5"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("ba3999d5-d8fa-4263-b1f7-8d5913a080c0"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This polearm is a long trident with a central prong that’s longer than the other two.",
+                            Hands = "2",
+                            Name = "Ranseur",
+                            Price = 200,
+                            SourcePageId = new Guid("e7a1dd57-3093-44ef-97de-085239426d5d"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("edfa81fd-1aca-46de-a75b-deb0465712ad")
+                        },
+                        new
+                        {
+                            Id = new Guid("15c3e1c8-357a-4c85-86c6-1c095482c6cf"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "The rapier is a long and thin piercing blade with a basket hilt. It is prized among many as a dueling weapon.",
+                            Hands = "1",
+                            Name = "Rapier",
+                            Price = 200,
+                            SourcePageId = new Guid("329aeeb0-b8a9-4789-a3cc-b36c9f459b5a"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("c4d0ca3f-2c38-4603-ba33-205882d743a4"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "These dual-bladed swords are commonly used by urdefhan warriors.",
+                            Hands = "1",
+                            Name = "Rhoka Sword",
+                            Price = 400,
+                            SourcePageId = new Guid("709fb88f-087b-4029-b388-d02ed75031b1"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("361b69e6-127f-4c0b-8a0a-b15f63778a76"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This specialized club is designed for throwing and is useful for both combat and hunting. Though gripplis didn't create the rungu originally, many grippli communities have adopted it as the weapon of choice for hunting creatures that hide high in treetops.",
+                            Hands = "1",
+                            Name = "Rungu",
+                            Price = 40,
+                            SourcePageId = new Guid("4bb96701-ea4f-4e80-a828-fb86b3c81e4b"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("4b438ba2-4e10-4b00-bf4a-7ebb128a26be"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This piercing dagger is a metal spike flanked by a pair of prongs that can be used to trap an enemy’s weapon.",
+                            Hands = "1",
+                            Name = "Sai",
+                            Price = 60,
+                            SourcePageId = new Guid("9cd382d1-77f8-4f36-9ca2-cb1851de819f"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("3f70b226-d857-45b6-9c37-6e00155566c5"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "A sap has a soft wrapping around a dense core, typically a leather sheath around a lead rod. Its head is wider than its grip to disperse the force of a blow, as the weapon’s purpose is to knock out its victim rather than to draw blood.",
+                            Hands = "1",
+                            Name = "Sap",
+                            Price = 10,
+                            SourcePageId = new Guid("ff40af4d-5cff-4673-99c5-b7425edc948a"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("cc1b83d3-b2b8-4268-b434-e0d84b418d1b"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "The signature weapon of the Red Mantis assassins, this curved blade is serrated like a saw, hence the name.",
+                            Hands = "1",
+                            Name = "Sawtooth Saber",
+                            Price = 500,
+                            SourcePageId = new Guid("f9fe72e6-dd0d-4721-9550-cdb6a86ec81f"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("1fab7871-c702-4a9f-b2f7-3571d96d5673"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This one-handed curved blade is sharp on one side.",
+                            Hands = "1",
+                            Name = "Scimitar",
+                            Price = 100,
+                            SourcePageId = new Guid("45677aa9-d25c-4efe-bc7b-b78ccab28e12"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("27e7a989-bd1f-4ed5-8cbe-4c1f5becda8d"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "A scorpion whip has a series of razor-sharp blades set along its tip. Unlike ordinary whips, a scorpion whip doesn’t have the nonlethal trait, making it deadlier in combat but less effective when the wielder seeks to bring in foes alive.",
+                            Hands = "1",
+                            Name = "Scorpion Whip",
+                            Price = 50,
+                            SourcePageId = new Guid("c4d83249-2b91-4078-93b5-5e3a3acfec2e"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("299de1cf-c922-4a22-b924-38a9f345f8e7"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "A scourge (also known as a cat-o'-nine-tails) is a set of several knotted cords made from cotton or leather and attached to a handle. While most scourges are more suitable for torture than combat, the weapons used by the Order of the Scourge have metal barbs woven in to pierce clothing and armor. The scourge is a martial melee weapon.",
+                            Hands = "1",
+                            Name = "Scourge",
+                            Price = 10,
+                            SourcePageId = new Guid("9525a2a2-bf28-40fe-a616-7d75151e2540"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("ebb0387b-9ca4-4031-b4b2-33ea47f77ebc"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "Derived from a farming tool used to mow down long grains and cereals, this weapon has a long wooden shaft with protruding handles, capped with a curved blade set at a right angle.",
+                            Hands = "2",
+                            Name = "Scythe",
+                            Price = 200,
+                            SourcePageId = new Guid("b7173ed0-6293-4046-ad79-a70cebef4b1e"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("edfa81fd-1aca-46de-a75b-deb0465712ad")
+                        },
+                        new
+                        {
+                            Id = new Guid("e3996bab-ff49-45d2-a295-c46fe7347717"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "These strange curved blades are jagged and deadly weapons made from the alchemically strengthened teeth of dead urdefhans. Each weapon is typically named for the urdefhan whose teeth were forged into the weapon, which are often carried (and revered) by that urdefhan's descendants. Magical shauth blades allow an urdefhan wielder to channel their Wicked Bite ability through shauth blade Strikes.",
+                            Hands = "1",
+                            Name = "Shauth Blade",
+                            Price = 200,
+                            SourcePageId = new Guid("82483b0d-8bf1-4be2-a629-7d51914ce120"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("fdd7f7db-241e-4d1c-bc53-7b280dc679f1"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This metal chain bears hook-like barbs made of alchemically strengthened urdefhan teeth. Magical shauth lashes have the same ability to channel an urdefhan wielder's Wicked Bite as magical shauth blades, and urdefhans hold these weapons with the same reverence as they do shauth blades.",
+                            Hands = "2",
+                            Name = "Shauth Lash",
+                            Price = 800,
+                            SourcePageId = new Guid("a764b309-d1f9-4236-9c0f-cc9d74c262d9"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("1b8c3bae-b8b0-4613-ab32-0103efb6bab0"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "No description was provided for this weapon.",
+                            Hands = "1",
+                            Name = "Shears",
+                            Price = 50,
+                            SourcePageId = new Guid("8fe3990b-51c4-4f74-8279-6b2e7051b614"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("135ab393-82a4-4e63-9422-bac0c4586e10"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "A shield bash is not actually a weapon, but a maneuver in which you thrust or swing your shield to hit your foe with an impromptu attack.",
+                            Hands = "1",
+                            Name = "Shield Bash",
+                            Price = 0,
+                            SourcePageId = new Guid("69470b82-09b8-4fd7-a4f2-8bc6fc1130ce"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("01553c8f-e4df-449c-8be8-cb8b30e1569d")
+                        },
+                        new
+                        {
+                            Id = new Guid("144ba3e5-2778-4c37-ab98-7bd61556f902"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "Typically a round, convex, or conical piece of thick metal attached to the center of a shield, a shield boss increases the bludgeoning damage of a shield bash.",
+                            Hands = "1",
+                            Name = "Shield Boss",
+                            Price = 50,
+                            SourcePageId = new Guid("ece86339-9bf6-4c12-8b41-3c6ab6ff6f13"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("01553c8f-e4df-449c-8be8-cb8b30e1569d")
+                        },
+                        new
+                        {
+                            Id = new Guid("9a1f8c50-b677-423b-aada-c0e7f7b6d2ad"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "These metal spikes are strategically placed on the defensive side of the shield to deal piercing damage with a shield bash.",
+                            Hands = "1",
+                            Name = "Shield Spikes",
+                            Price = 50,
+                            SourcePageId = new Guid("3e8a720e-68c7-41f9-9e34-3fae2ca39c3d"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("01553c8f-e4df-449c-8be8-cb8b30e1569d")
+                        },
+                        new
+                        {
+                            Id = new Guid("897a279b-93d3-4467-8145-d3375067727b"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "These blades come in a variety of shapes and styles, but they are typically 2 feet long.",
+                            Hands = "1",
+                            Name = "Shortsword",
+                            Price = 90,
+                            SourcePageId = new Guid("c42408e5-053d-4e50-8f97-2e50af1451b0"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("468f4c04-e696-47d6-a3e6-1f4e5f938ac9"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "Originally a farming tool used for reaping grain, this one-handed weapon has a short wooden handle ending in a curved blade, sometimes sharpened on both sides.",
+                            Hands = "1",
+                            Name = "Sickle",
+                            Price = 20,
+                            SourcePageId = new Guid("3c1aa5df-53ee-428b-9aa6-d7d41b9a8dd0"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("1ceff7bc-d37e-4931-9428-855519223128"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "A long metal shaft ending with a metal spike, a spear can be used one-handed as a melee weapon and can be thrown.",
+                            Hands = "1",
+                            Name = "Spear",
+                            Price = 10,
+                            SourcePageId = new Guid("e70de524-eb29-4488-aedf-fe88c9332737"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                        },
+                        new
+                        {
+                            Id = new Guid("8ada012d-7bc9-4091-8cf7-889d0bbffe7e"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This 4‑foot‑long length of chain is covered with barbs and has spikes on one or both ends. Some feature metal hoops used as handgrips.",
+                            Hands = "2",
+                            Name = "Spiked Chain",
+                            Price = 300,
+                            SourcePageId = new Guid("a815cf76-79c0-4130-936c-6468b6cda683"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("0863cda6-3b63-4eea-a31d-51d3da39e6ed"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "Providing the same defensive function as a standard gauntlet, this version has a group of spikes protruding from the knuckles to deliver piercing damage with a punch.",
+                            Hands = "1",
+                            Name = "Spiked Gauntlet",
+                            Price = 30,
+                            SourcePageId = new Guid("45507c8c-9c14-4105-bee1-8d74f35c2779"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("55158194-ce53-4931-818b-5c36289e4dba")
+                        },
+                        new
+                        {
+                            Id = new Guid("cda161dd-7e4a-4188-811d-41393677c421"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This long piece of wood can aid in walking and deliver a mighty blow.",
+                            Hands = "1",
+                            Name = "Staff",
+                            Price = 0,
+                            SourcePageId = new Guid("c5a6f273-9672-4fdf-9202-727e5f9a3b01"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("379c8c43-ea7f-4b62-884f-0a58a902d918")
+                        },
+                        new
+                        {
+                            Id = new Guid("46e21ee5-d51f-496f-861e-c50dbe21ccca"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "From a central metal ring, four tapering metal blades extend like points on a compass rose. When gripping a starknife from the center, the wielder can use it as a melee weapon. It can also be thrown short distances.",
+                            Hands = "1",
+                            Name = "Starknife",
+                            Price = 200,
+                            SourcePageId = new Guid("c4485f05-26c5-4afa-9bd0-971c45bf9218"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("3f47473d-20b7-44af-89d7-0b09b74e0665"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This weapon is a fully functional, lavish ink pen with a clip that can be attached to a pocket or bandoleer and easily retrieved as a free action. Using an action to Interact with the pen allows its wielder to disengage a stiletto blade that slides free of the upper body or reattach the previously removed blade.",
+                            Hands = "1",
+                            Level = 1,
+                            Name = "Stiletto Pen",
+                            Price = 800,
+                            SourcePageId = new Guid("83d1411d-23e1-4926-abd0-aa4ab8667b0c"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("79516d2f-0c2d-47d3-b411-5b02ae26022f")
+                        },
+                        new
+                        {
+                            Id = new Guid("32548452-7334-4260-b729-00272a3bd933"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This slender, rapier-like sword is concealed within a wooden or metal cane that serves as a sheath, making it an inconspicuous weapon easy to slip past inspections or into high-society events. A sword cane is typically 4 feet long when sheathed, and its hilt is usually capped with a wooden or metal decoration.",
+                            Hands = "1",
+                            Name = "Sword Cane",
+                            Price = 500,
+                            SourcePageId = new Guid("0a469cd6-e92f-40c6-b7ee-916e412414b3"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("4ac6f2cd-6fc3-400f-b524-fdaeaaaca2bc"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "These circular weapons are among the many strange weapons used by urdefhans. The sharp metal circle contains numerous protruding blades, while an angled central handle provides a decent grip that spins the weapon as it's thrown.",
+                            Hands = "1",
+                            Name = "Tamchal Chakram",
+                            Price = 500,
+                            SourcePageId = new Guid("08b2d76c-3dd8-434f-be2e-87ab70369e8b"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("79516d2f-0c2d-47d3-b411-5b02ae26022f")
+                        },
+                        new
+                        {
+                            Id = new Guid("32823fbd-8598-4fc3-a9d9-769043cbce0f"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "Four curved blades attached to a sturdy handlebar give the wielder of this close-combat weapon the illusion of having claws that extend from their fist. Adherents of Bastet favor the tekko-kagi for catching their foes off guard.",
+                            Hands = "1",
+                            Name = "Tekko-Kagi",
+                            Price = 20,
+                            SourcePageId = new Guid("d59eec71-20e8-49a6-82d4-9e5b309fa763"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("55158194-ce53-4931-818b-5c36289e4dba")
+                        },
+                        new
+                        {
+                            Id = new Guid("a460d789-3935-4629-a976-f9b71d96181c"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This heavy blade is favored by guardians of religious sites. It has a distinctive, crescent-shaped blade that seems to be a mix of a sickle and sword. It often has holes drilled into the blade or the pommel so that bells or other holy trinkets can be affixed to the weapon as an aid for prayer or mediation.",
+                            Hands = "1",
+                            Name = "Temple Sword",
+                            Price = 200,
+                            SourcePageId = new Guid("210b63cd-cf1e-401e-9166-893d1b8bfb09"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("14ab5e55-3b4a-445c-b2e0-9f938b9a4895"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This fan-shaped sword, designed by members of the tengu ancestry, has five broad blades that join at its hilt. Tengu sailors also use gale blades as makeshift weather vanes, as the sword spins to show the wind's direction when loosely held aloft.",
+                            Hands = "1",
+                            Name = "Tengu Gale Blade",
+                            Price = 400,
+                            SourcePageId = new Guid("b47a76b0-18f2-42da-af53-9200251c89b1"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("8c5fdda9-9bf1-44e1-9999-f09671d25abc"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This light knife is optimally balanced to be thrown accurately at a greater distance than a common dagger. While this comes at the cost of a significant cutting edge, the difference is worth it for characters focused on thrown weapons.",
+                            Hands = "1",
+                            Name = "Throwing Knife",
+                            Price = 30,
+                            SourcePageId = new Guid("ea303bb0-d017-41a3-b9c3-58b6dc4cce0a"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("c4b2cc2b-36d9-459f-9361-1660a0243944"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("3f2fe0bc-7952-4593-b9a6-d24b8aede62d"),
+                            Description = "This ingenious kobold pick conceals several hidden traps, which the wielder can activate to trick and befuddle foes with a variety of damaging blades and bludgeoning surfaces.",
+                            Hands = "1",
+                            Name = "Tricky Pick",
+                            Price = 1000,
+                            SourcePageId = new Guid("8bf406fa-0c9f-4013-a491-d0ef11f6cc6e"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("308d3bca-107b-4273-b235-1c6a98715e2b")
+                        },
+                        new
+                        {
+                            Id = new Guid("9472e2e5-62d8-45b2-8885-af00f2dc2104"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This three-pronged, spear-like weapon typically has a 4-foot shaft. Like a spear, it can be wielded with one hand or thrown.",
+                            Hands = "1",
+                            Name = "Trident",
+                            Price = 100,
+                            SourcePageId = new Guid("99fbb55f-8b58-4aa3-bf84-21ed96b51695"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("1ceff7bc-d37e-4931-9428-855519223128")
+                        },
+                        new
+                        {
+                            Id = new Guid("c6ef5724-8aff-41b3-b15d-dc83efc1299f"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "A bouquet of whiplike blades extends from the hilt of this sword.",
+                            Hands = "1",
+                            Name = "Urumi",
+                            Price = 200,
+                            SourcePageId = new Guid("cc09c8b5-2efa-486a-b01b-9319085183f9"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("d3109927-04c6-4ae8-9af1-e661cc2a5440"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This short-bladed, single-edged sword is typically carried as part of a pair alongside a katana.",
+                            Hands = "1",
+                            Name = "Wakizashi",
+                            Price = 100,
+                            SourcePageId = new Guid("4ecf6cc9-2fbc-4bfd-adec-6a60538ffe3e"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("551297c6-7253-4b20-aa41-d290ed14cb26"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This large flail has a long shaft connected to a shorter piece of stout wood or metal that’s sometimes inlaid with spikes.",
+                            Hands = "2",
+                            Name = "War Flail",
+                            Price = 200,
+                            SourcePageId = new Guid("9bb4957d-2781-4ee2-9b04-2b0f1a0123e4"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("f6497e4f-3dc4-481b-81f6-ffc53c257503"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This weapon has a wooden shaft ending in a large, heavy metal head. The head of the hammer might be single-sided or double-sided, but it’s always capable of delivering powerful bludgeoning blows.",
+                            Hands = "1",
+                            Name = "Warhammer",
+                            Price = 100,
+                            SourcePageId = new Guid("0ca55ad9-67ed-4071-92a1-93b1483ba4fc"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("3abdc611-2ead-4444-bc8f-68058807c060")
+                        },
+                        new
+                        {
+                            Id = new Guid("290046a3-6eac-414f-8374-d046ee27cfe9"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "A war razor is an exaggerated version of the barbers’ tool. It is a brittle but extremely sharp weapon that is very easy to slip into a pocket or sleeve.",
+                            Hands = "1",
+                            Name = "War Razor",
+                            Price = 30,
+                            SourcePageId = new Guid("6d6a40c9-a864-4894-8d86-bba7d33c0dce"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        },
+                        new
+                        {
+                            Id = new Guid("35cd5f74-df96-445c-ac79-76372f2bb36e"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "This long strand of thick leather, often braided, delivers a painful but nonlethal slash at a distance, usually accompanied by a distinctive cracking sound.",
+                            Hands = "1",
+                            Name = "Whip",
+                            Price = 10,
+                            SourcePageId = new Guid("e5233e7f-ca17-4835-9efc-2544bef86514"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("a3dfa737-402e-48c5-8010-bf305d77ca60"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "The whip claw is a long tether affixed to clawlike daggers, allowing the wielder to fling and retract them with deadly precision. Catfolk developed this weapon to provide extended reach when hunting dangerous animals and wield them with unmatched expertise.",
+                            Hands = "2",
+                            Name = "Whip Claw",
+                            Price = 500,
+                            SourcePageId = new Guid("5fcd29f0-25f5-4dd6-b4a4-f8828a27dfe6"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("0887fa4f-7650-443d-af1b-2d8e23fe5a8c")
+                        },
+                        new
+                        {
+                            Id = new Guid("d9ea2c6f-772e-455e-8cf3-dd6c5961ed06"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("d047f71a-eead-4685-b09c-03e11ad29d8b"),
+                            Description = "Specialized grooves lined with unique, alchemically treated metals capable of retaining energy score the length of this sword. The first wish blades originated from genie smiths, and the knowledge of these weapons has been passed on to generations of geniekin, earning them the name wish blades.",
+                            Hands = "1",
+                            Name = "Wish Blade",
+                            Price = 500,
+                            SourcePageId = new Guid("64f89b92-6a27-440a-9715-521682b5b35e"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370")
+                        },
+                        new
+                        {
+                            Id = new Guid("db430363-1e76-4b5c-ae80-8eae469a2fed"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "Much like a wish blade, the length of this knife is scored with intricate grooves capable of retaining energy. Wish knives are lighter than their counterparts, making them the weapon of choice for agile combatants.",
+                            Hands = "1",
+                            Name = "Wish Knife",
+                            Price = 200,
+                            SourcePageId = new Guid("b1b09e15-ee47-4679-9b16-bb1a07a98e8b"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973")
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Plane", b =>
                 {
                     b.Property<Guid>("Id")
@@ -18167,6 +22270,395 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.RangedWeapon", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("AmmunitionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Damage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("DamageTypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Hands")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int?>("Level")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Range")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Reload")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("WeaponCategoryId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("WeaponGroupId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AmmunitionId");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("DamageTypeId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.HasIndex("WeaponCategoryId");
+
+                    b.HasIndex("WeaponGroupId");
+
+                    b.ToTable("RangedWeapon");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("fc7b92de-da67-4924-8ee2-b07bfbec720d"),
+                            AmmunitionId = new Guid("c51ef03b-db9b-44ac-92ac-39a0c7834b95"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This crossbow can deliver alchemically infused bolts. The strange weapon has a metal bracket mounted on the side of the stock near the lath. As an action, you can load a single lesser alchemical bomb into the bracket; this bomb must be one that deals energy damage (such as an acid flask, alchemist’s fire, bottled lightning, frost vial, or thunderstone). The next three attacks made with the crossbow deal 1d6 damage of the bomb’s damage type in addition to the crossbow’s normal damage. If the second and third attacks are not all made within 1 minute of the first attack, the bomb’s energy is wasted. These attacks never deal splash damage or other special effects of the bomb and are not modified by any abilities that add to or modify a bomb’s effect. The addition of the bracket serves to unbalance the weapon, reducing its range to 30 feet. It otherwise functions as a crossbow (when determining damage, reload, and so on). Creatures use their crossbow proficiency when using the alchemical crossbow. The alchemical crossbow costs 25 gp.",
+                            Hands = "2",
+                            Name = "Alchemical Crossbow",
+                            Price = 2500,
+                            Range = 30,
+                            Reload = 1,
+                            SourcePageId = new Guid("538738b0-b51d-4e95-9468-2954f72fedba"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("f7462ef0-62d3-48ad-bc24-e80318b98455"),
+                            AmmunitionId = new Guid("9230c1f0-09ea-4dd2-b6d4-bb0cfcbeabdd"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This long, narrow tube is used for shooting blowgun darts, using only the power of a forcefully exhaled breath.",
+                            Hands = "1",
+                            Name = "Blowgun",
+                            Price = 10,
+                            Range = 20,
+                            Reload = 1,
+                            SourcePageId = new Guid("00860b13-76fc-42d7-a5d7-00a6591e21dc"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8")
+                        },
+                        new
+                        {
+                            Id = new Guid("827647a5-7143-4b19-bfee-a974d3636d96"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This throwing weapon consists of weights tied to the end of long cords, which can be used to bludgeon foes or entangle their legs.",
+                            Hands = "1",
+                            Name = "Bola",
+                            Price = 50,
+                            Range = 20,
+                            SourcePageId = new Guid("ff4711ed-2ae0-4ec0-bdab-8bbcfb2e2074"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("26d5e7ba-84a2-46d5-966d-c8eeda6cf9a4")
+                        },
+                        new
+                        {
+                            Id = new Guid("c532d9bd-cc75-4a16-bb46-b63c06fa9917"),
+                            AmmunitionId = new Guid("e784b731-7bb1-4e51-b438-3e88eb542a41"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This projectile weapon is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Like all longbows, its great size also increases the bow’s range and power. You must use two hands to fire it, and it cannot be used while mounted. Any time an ability is specifically restricted to a longbow, such as Erastil’s favored weapon, it also applies to composite longbows unless otherwise stated.",
+                            Hands = "1+",
+                            Name = "Composite Longbow",
+                            Price = 2000,
+                            Range = 100,
+                            Reload = 0,
+                            SourcePageId = new Guid("f98fded2-6dfb-43ef-9ef1-2a0b9a9d6dae"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("d093010f-0b1b-41d0-b76e-c5532a2d99a5"),
+                            AmmunitionId = new Guid("e784b731-7bb1-4e51-b438-3e88eb542a41"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This shortbow is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Its compact size and power make it a favorite of mounted archers. Any time an ability is specifically restricted to a shortbow, it also applies to composite shortbows unless otherwise stated.",
+                            Hands = "1+",
+                            Name = "Composite Shortbow",
+                            Price = 1400,
+                            Range = 60,
+                            Reload = 0,
+                            SourcePageId = new Guid("fb97184c-4af3-4ac7-9bb4-3eb3d5999ab6"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("2ff08622-f9b8-4a19-8cf0-0f6c957762ee"),
+                            AmmunitionId = new Guid("c51ef03b-db9b-44ac-92ac-39a0c7834b95"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This ranged weapon has a bow-like assembly mounted on a handled frame called a tiller. The tiller has a mechanism to lock the bowstring in place, attached to a trigger mechanism that releases the tension and launches a bolt.",
+                            Hands = "2",
+                            Name = "Crossbow",
+                            Price = 300,
+                            Range = 120,
+                            Reload = 1,
+                            SourcePageId = new Guid("e6d8ee85-bb06-4d89-abf3-4a3ba7fae0d6"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("97d36556-d936-4a4e-a9cb-3ec41cd816aa"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This asymmetrical bow, made of laminated bamboo, wood, and leather, stands 6 feet or more in height. Using a daikyu while mounted limits its firing range to your left side.",
+                            Hands = "1+",
+                            Name = "Daikyu",
+                            Price = 800,
+                            Range = 80,
+                            SourcePageId = new Guid("2c9fc2c3-4682-4a38-9585-e3412fee32e2"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This thrown weapon is larger than an arrow but shorter than a javelin. It typically has a short shaft of wood ending in a metal tip and is sometimes stabilized by feathers or fur.",
+                            Hands = "1",
+                            Name = "Dart",
+                            Price = 1,
+                            Range = 20,
+                            SourcePageId = new Guid("fb876b13-2112-4172-8d99-8bc7c0854c8b"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8")
+                        },
+                        new
+                        {
+                            Id = new Guid("957a55d1-dbc4-4060-ac98-aa4523175510"),
+                            AmmunitionId = new Guid("550fe4e4-da65-4660-93bb-03676930ac11"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "This staff ends in a Y-shaped split that cradles a sling. The length of the staff provides excellent leverage when used two‑handed to fling rocks or bullets from the sling.",
+                            Hands = "2",
+                            Name = "Halfling Sling Staff",
+                            Price = 500,
+                            Range = 80,
+                            Reload = 1,
+                            SourcePageId = new Guid("cd06d5ba-e50c-461f-ac71-3271d52c9c3f"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("26d5e7ba-84a2-46d5-966d-c8eeda6cf9a4")
+                        },
+                        new
+                        {
+                            Id = new Guid("bc6f549d-1db3-4414-8f4f-899691cff93d"),
+                            AmmunitionId = new Guid("c51ef03b-db9b-44ac-92ac-39a0c7834b95"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It’s small enough to be shot one-handed, but it still requires two hands to load.",
+                            Hands = "1",
+                            Name = "Hand Crowssbow",
+                            Price = 300,
+                            Range = 60,
+                            Reload = 1,
+                            SourcePageId = new Guid("037182fa-7919-4787-b078-cc6508c4fd0d"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("4db58af2-e60f-44f7-b8b3-88a1a74c3120"),
+                            AmmunitionId = new Guid("c51ef03b-db9b-44ac-92ac-39a0c7834b95"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This large crossbow is harder to load and more substantial than a regular crossbow, but it packs a greater punch.",
+                            Hands = "2",
+                            Name = "Heavy Crossbow",
+                            Price = 400,
+                            Range = 120,
+                            Reload = 2,
+                            SourcePageId = new Guid("6cafd971-2575-43f8-861b-9c1024a3ac11"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("e8272282-c02b-4e7b-8505-031e4657e7a9"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This thin spear is well balanced for throwing but is not designed for melee use.",
+                            Hands = "1",
+                            Name = "Javelin",
+                            Price = 10,
+                            Range = 30,
+                            SourcePageId = new Guid("589ee43a-13ac-412b-8041-53c542041322"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8")
+                        },
+                        new
+                        {
+                            Id = new Guid("59fa141b-7ef8-4ae5-b006-925a1a5e4fc3"),
+                            AmmunitionId = new Guid("e784b731-7bb1-4e51-b438-3e88eb542a41"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Damage = "1d8",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This 5-foot-tall bow, usually made of a single piece of elm, hickory, or yew, has a powerful draw and is excellent at propelling arrows with great force and at an extreme distance. You must use two hands to fire a longbow, and it can’t be used while mounted.",
+                            Hands = "1+",
+                            Name = "Longbow",
+                            Price = 600,
+                            Range = 100,
+                            Reload = 0,
+                            SourcePageId = new Guid("ef9133cf-1818-4e73-9608-d3ed4c5cc288"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("c5272f9b-93f4-42d6-baa1-7262fb6cd1ec"),
+                            AmmunitionId = new Guid("5ee1520e-e377-4855-8e73-81ebee4c146d"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This weapon features an ingeniously designed catch mechanism at the top of the flight grove, just in front of the latch, which automatically loads a bolt from a magazine and resets the string each time the weapon is fired. A typical repeating hand crossbow magazine holds five bolts.",
+                            Hands = "1",
+                            Name = "Repeating Hand Crossbow",
+                            Price = 1000,
+                            Range = 60,
+                            Reload = 0,
+                            SourcePageId = new Guid("f97d2f26-6130-4d23-aac8-015e07958054"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("7c36bcfe-e828-43ca-baca-1a49be7ebfba"),
+                            AmmunitionId = new Guid("e784b731-7bb1-4e51-b438-3e88eb542a41"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This smaller bow is made of a single piece of wood and favored by skirmishers and cavalry.",
+                            Hands = "1+",
+                            Name = "Shortbow",
+                            Price = 300,
+                            Range = 60,
+                            Reload = 0,
+                            SourcePageId = new Guid("49b660af-5244-401f-8802-973448c4f7bd"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("1139c9c1-84b6-4e03-85bd-a7d779716297"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Damage = "1d4",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "This “throwing star” is a small piece of flat metal with sharp edges, designed to be flung with a flick of the wrist.",
+                            Hands = "1",
+                            Name = "Shuriken",
+                            Price = 1,
+                            Range = 20,
+                            Reload = 0,
+                            SourcePageId = new Guid("8ee225e2-9330-431e-809b-6239b917be67"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8")
+                        },
+                        new
+                        {
+                            Id = new Guid("26d5e7ba-84a2-46d5-966d-c8eeda6cf9a4"),
+                            AmmunitionId = new Guid("550fe4e4-da65-4660-93bb-03676930ac11"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("4712d8c3-ffe6-4db2-b28e-f94065b005bc"),
+                            Description = "Little more than a leather cup attached to a pair of straps, a sling can be used to fling smooth stones or sling bullets at a range.",
+                            Hands = "1",
+                            Name = "Sling",
+                            Price = 0,
+                            Range = 50,
+                            Reload = 1,
+                            SourcePageId = new Guid("95ea6700-cabd-4454-8926-4e4a75a55b59"),
+                            WeaponCategoryId = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            WeaponGroupId = new Guid("26d5e7ba-84a2-46d5-966d-c8eeda6cf9a4")
+                        },
+                        new
+                        {
+                            Id = new Guid("7f5df152-e9a8-4918-a561-2aae39f0938b"),
+                            AmmunitionId = new Guid("2981098c-b7f9-40bd-83a4-624eec7ef483"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Damage = "1d10",
+                            DamageTypeId = new Guid("3f2fe0bc-7952-4593-b9a6-d24b8aede62d"),
+                            Description = "Designed by conrasu warriors, this complex device resembles a crossbow and fires small wooden bullets known as taws. A system of blades within the launcher can rapidly reshape a taw as it's loaded, allowing the launcher to fire taws of different shapes, such as fléchettes.",
+                            Hands = "2",
+                            Name = "Taw Launcher",
+                            Price = 1000,
+                            Range = 100,
+                            Reload = 1,
+                            SourcePageId = new Guid("8c2cadd3-1f2e-442b-a75c-2cdfa563852e"),
+                            WeaponCategoryId = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            WeaponGroupId = new Guid("ed766d26-c252-4a47-8e6c-44031f691653")
+                        },
+                        new
+                        {
+                            Id = new Guid("2681245d-4754-4426-be9e-34d7ba96128f"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Damage = "1d6",
+                            DamageTypeId = new Guid("8095023e-8d92-4cdd-b294-846dc71fdb21"),
+                            Description = "Tengu use these specialized slings to fire darts further and with greater force than when thrown by hand, which is particularly effective when attacking from great heights. A thunder sling uses darts as ammunition. It can also hurl blowgun darts as ammunition but deals 1d4 piercing damage instead of 1d6 when used this way.",
+                            Hands = "1",
+                            Name = "Thunder Sling",
+                            Price = 500,
+                            Range = 50,
+                            Reload = 1,
+                            SourcePageId = new Guid("d2523e56-dad3-4c5c-8787-4b13ab0c823a"),
+                            WeaponCategoryId = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            WeaponGroupId = new Guid("26d5e7ba-84a2-46d5-966d-c8eeda6cf9a4")
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Rarity", b =>
                 {
                     b.Property<Guid>("Id")
@@ -18717,6 +23209,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("aa26c82c-86d4-49f3-9fc9-53022c6c9ca8"),
+                            Name = "Azarketi Ancestry Web Supplement"
+                        },
+                        new
+                        {
                             Id = new Guid("2e2cec6f-d049-4c83-b018-86123f6dd183"),
                             Name = "Bestiary"
                         },
@@ -18787,6 +23284,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("e2bce868-644b-4602-815e-e0fce4807063"),
+                            Name = "Pathfinder #151: The Show Must Go On"
+                        },
+                        new
+                        {
                             Id = new Guid("2a277f0c-a448-4de7-8308-5c7f7acc9ced"),
                             Name = "Pathfinder #153: Life's Long Shadow"
                         },
@@ -18799,6 +23301,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("cd192d17-e2a2-4182-b6a7-0b05979376e8"),
                             Name = "Pathfinder #156: The Apocalypse Prophet"
+                        },
+                        new
+                        {
+                            Id = new Guid("9812077c-2f7a-4657-9312-1f44f9a95e3a"),
+                            Name = "Pathfinder #157: Devil at the Dreaming Palace"
                         },
                         new
                         {
@@ -18824,6 +23331,16 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("de4c1dea-3ff2-444e-a7d9-7fab0cf297d8"),
                             Name = "Pathfinder #165: Eyes of Empty Death"
+                        },
+                        new
+                        {
+                            Id = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8"),
+                            Name = "Pathfinder Society Guide"
+                        },
+                        new
+                        {
+                            Id = new Guid("c0123df3-d59f-4a25-b531-00d84438e907"),
+                            Name = "The Fall of Plaguestone"
                         },
                         new
                         {
@@ -19233,6 +23750,42 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("14701f2b-1426-4501-b27f-c048f157301e"),
                             Page = 554,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("77284f4c-a449-4276-99df-e9aa9222ff5b"),
+                            Page = 282,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("867680b0-acc3-44c6-9e1d-0abd095af230"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("73692529-4560-47a6-988d-7e43046a44ba"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("91b5e6aa-fe9b-4f36-8a57-d7588c7b876f"),
+                            Page = 73,
+                            SourceId = new Guid("de4c1dea-3ff2-444e-a7d9-7fab0cf297d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("489605ad-2019-4607-b4b5-dd06a348fb01"),
+                            Page = 282,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f1971ded-4ed2-4256-9dc7-4887b0867100"),
+                            Page = 282,
                             SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
@@ -20113,6 +24666,834 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("fdc045a1-6bbd-4305-95a7-dfbab443580c"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("f87e5121-6a39-400e-898d-8a8e50faedba"),
+                            Page = 85,
+                            SourceId = new Guid("2e2cec6f-d049-4c83-b018-86123f6dd183")
+                        },
+                        new
+                        {
+                            Id = new Guid("2a533ae3-a77e-4c69-8d1f-f65ca2ef0042"),
+                            Page = 28,
+                            SourceId = new Guid("fc93169c-2136-4e9c-9868-c5f0bb79b331")
+                        },
+                        new
+                        {
+                            Id = new Guid("8356258e-e975-4a35-90c7-c4d7e5884ce7"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e6eb5ab1-dc03-406e-bcca-cef410baa276"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4249a8a4-14e5-43e3-9d55-61065c75422b"),
+                            Page = 73,
+                            SourceId = new Guid("a787e8a6-a6ec-4ced-b797-6a41d08920c9")
+                        },
+                        new
+                        {
+                            Id = new Guid("f07df8e3-e1fa-4ca6-ae6b-6864594d348a"),
+                            Page = 77,
+                            SourceId = new Guid("e2bce868-644b-4602-815e-e0fce4807063")
+                        },
+                        new
+                        {
+                            Id = new Guid("9cc2bac0-af81-4e13-8b7a-98d1cc5d7f48"),
+                            Page = 77,
+                            SourceId = new Guid("e2bce868-644b-4602-815e-e0fce4807063")
+                        },
+                        new
+                        {
+                            Id = new Guid("12be0d39-76bb-475b-b107-b2b4a8f87d48"),
+                            Page = 120,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("e677da1c-767e-4a45-9b62-af9984d2fa85"),
+                            Page = 1,
+                            SourceId = new Guid("aa26c82c-86d4-49f3-9fc9-53022c6c9ca8")
+                        },
+                        new
+                        {
+                            Id = new Guid("aa76307d-e009-4ee4-96a5-17aa0bbfa921"),
+                            Page = 80,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("195ba1fc-dbcf-4884-8d33-b0c40b8c9e42"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0df0f9b4-f422-4334-949b-0c62d75e5454"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("4a12349b-087d-4400-b37f-65d5297d16a2"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0e11bd8a-0f5e-4de1-82b3-896568dbc2d1"),
+                            Page = 248,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("b075bf13-2ed1-4686-837f-c5c511af261d"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("53c212b5-cb72-4f75-a597-98bdd4181af0"),
+                            Page = 80,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("3bc128c1-e633-49fe-959d-23728af2894c"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("40e2f952-2c1f-4043-8f43-8c4f9f56a6bf"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("23fd9739-93e5-4241-aaaa-4160682f213a"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6d40f8d4-0dfc-4bb0-9998-288dd43fcfea"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c084b21a-06ee-4bc2-b30a-ac60369c99c1"),
+                            Page = 80,
+                            SourceId = new Guid("9812077c-2f7a-4657-9312-1f44f9a95e3a")
+                        },
+                        new
+                        {
+                            Id = new Guid("7c07999f-a858-4646-be52-c7c6655b47e1"),
+                            Page = 80,
+                            SourceId = new Guid("9812077c-2f7a-4657-9312-1f44f9a95e3a")
+                        },
+                        new
+                        {
+                            Id = new Guid("232b9f8d-2696-4cb3-b52a-91973e6f4096"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ae96e147-fe45-4bb1-821b-504c3658cd4a"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("2084884d-e0ed-4656-ab81-14730a7d2607"),
+                            Page = 92,
+                            SourceId = new Guid("8026612e-b2dc-42d2-8844-bb0bc63c0249")
+                        },
+                        new
+                        {
+                            Id = new Guid("e8013ef6-44c3-4d26-9818-3723d71e995d"),
+                            Page = 120,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("cd7c2cd0-bfe4-4175-9926-f65cb443f34e"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6339002f-07a7-4021-a557-3d7bc6c3a120"),
+                            Page = 77,
+                            SourceId = new Guid("e2bce868-644b-4602-815e-e0fce4807063")
+                        },
+                        new
+                        {
+                            Id = new Guid("12830f77-7c87-420a-9a31-d439c3f6f7d1"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("139c816a-ef93-4a2d-9867-0fd641a4f3dd"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c2d4425b-1674-4596-828c-11d87458f016"),
+                            Page = 125,
+                            SourceId = new Guid("51f273bd-9c56-4a21-82ca-df90e1e13955")
+                        },
+                        new
+                        {
+                            Id = new Guid("8fc6c729-bb8a-4bf2-953f-f1e9063afd6d"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("dd53aa21-92e7-4268-ad3a-76d4d3f48290"),
+                            Page = 1,
+                            SourceId = new Guid("aa26c82c-86d4-49f3-9fc9-53022c6c9ca8")
+                        },
+                        new
+                        {
+                            Id = new Guid("ec2e8eb3-97fc-4c12-a81d-fbfc9ad51ad5"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("477ef8a4-079c-4527-bbea-ab4a0cb22e7d"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("cbbc98d4-cb52-4c9a-8d48-973996f7585b"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("68c1c395-1656-48cd-82f4-7e26a9354b47"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0d581324-e4ad-48a2-97b1-aab565022eb8"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("bdaa0cbd-cd0d-4dc8-b129-d5891cecb88b"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6ccbb228-7ac8-4df1-9092-fcc90f318197"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ad92e182-3b2f-4b0a-80c2-b3d8fa404015"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7745b6f3-65fc-4ac1-b6b1-4d53754b0a99"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("43895f3a-5f46-4fae-a25a-85dc5b30acbc"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("15df22c2-3d04-4e90-b348-13d104f28ec0"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4bde76d4-71e5-40d2-994e-473c24c1f2d5"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("2a4d437b-b98a-4786-b5cd-9e4fb0899bb5"),
+                            Page = 77,
+                            SourceId = new Guid("e2bce868-644b-4602-815e-e0fce4807063")
+                        },
+                        new
+                        {
+                            Id = new Guid("eb2de2e5-441c-4e42-9cd2-0719cba66e57"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("9079c6d1-f93b-4916-a0f0-20e0b8a0328d"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("350e2d8b-27a4-4168-88f9-e7cce0ada9d6"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("9b0e10a8-cc3f-4639-b945-72c60f05bf5c"),
+                            Page = 248,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("c014a6c2-2d66-4026-b1ae-474a9cc92e8e"),
+                            Page = 120,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("6c659544-3faf-45d2-be68-df7b72a97005"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ae37faf4-c071-4dd9-bdda-262e1495fc78"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d53dac66-26be-4dad-9ba5-c19d5857c578"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("42c099df-55ea-40f8-81c5-6dfca855bbf2"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("867acff8-88aa-4b8c-a9a0-22f60ce34c83"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("aae59ef0-a70c-4ef2-88db-be982251fe79"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d2c680c9-f47f-4bce-b8a8-d1c6690f11a4"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("56c7cb8f-9fb0-4fc9-95c3-09e592acd1bb"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("417e54fd-71ac-4621-83da-f139118aa46b"),
+                            Page = 120,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("c43594c0-daf3-44c1-a8b7-3753a0f6a089"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("8c46b5bd-52f6-49bf-937a-dbc402a35f80"),
+                            Page = 121,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("f4676440-8f1c-4cfa-9078-ccc025699c50"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("01c2bf73-7183-4dce-a282-edc644ada0ce"),
+                            Page = 121,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("341b16f6-b1ad-4bd7-b3a0-5b9cccff4e1e"),
+                            Page = 78,
+                            SourceId = new Guid("9812077c-2f7a-4657-9312-1f44f9a95e3a")
+                        },
+                        new
+                        {
+                            Id = new Guid("a894bf57-ddd3-4cfa-a05c-0f886d627ae4"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a3653698-fe26-4e9d-a5ac-d528f42c6375"),
+                            Page = 121,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("1fc416c1-9963-4fc1-ba94-dab2a33c37ea"),
+                            Page = 78,
+                            SourceId = new Guid("9812077c-2f7a-4657-9312-1f44f9a95e3a")
+                        },
+                        new
+                        {
+                            Id = new Guid("468fdb16-f40a-42fc-9956-77e507fd805e"),
+                            Page = 121,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("c957e89f-fb12-4dd2-a925-d5e7cb81e922"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7830364d-bfa3-48a4-9848-3bb4f19de2b8"),
+                            Page = 253,
+                            SourceId = new Guid("2e2cec6f-d049-4c83-b018-86123f6dd183")
+                        },
+                        new
+                        {
+                            Id = new Guid("ae55b9c2-c9ee-4d71-9e74-31e1717845a9"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("217fa626-b44b-4373-a436-41b4c4730380"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d4874f3d-88d6-4e29-989a-a32c49adda2a"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e034be48-76a2-4af9-ba68-e06d3520a264"),
+                            Page = 77,
+                            SourceId = new Guid("e2bce868-644b-4602-815e-e0fce4807063")
+                        },
+                        new
+                        {
+                            Id = new Guid("2f68749e-73f2-4fd7-81ad-440d303de9e5"),
+                            Page = 121,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("e7a1dd57-3093-44ef-97de-085239426d5d"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("329aeeb0-b8a9-4789-a3cc-b36c9f459b5a"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("709fb88f-087b-4029-b388-d02ed75031b1"),
+                            Page = 73,
+                            SourceId = new Guid("de4c1dea-3ff2-444e-a7d9-7fab0cf297d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("4bb96701-ea4f-4e80-a828-fb86b3c81e4b"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("9cd382d1-77f8-4f36-9ca2-cb1851de819f"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ff40af4d-5cff-4673-99c5-b7425edc948a"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f9fe72e6-dd0d-4721-9550-cdb6a86ec81f"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("45677aa9-d25c-4efe-bc7b-b78ccab28e12"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c4d83249-2b91-4078-93b5-5e3a3acfec2e"),
+                            Page = 77,
+                            SourceId = new Guid("e2bce868-644b-4602-815e-e0fce4807063")
+                        },
+                        new
+                        {
+                            Id = new Guid("9525a2a2-bf28-40fe-a616-7d75151e2540"),
+                            Page = 80,
+                            SourceId = new Guid("8026612e-b2dc-42d2-8844-bb0bc63c0249")
+                        },
+                        new
+                        {
+                            Id = new Guid("b7173ed0-6293-4046-ad79-a70cebef4b1e"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("82483b0d-8bf1-4be2-a629-7d51914ce120"),
+                            Page = 73,
+                            SourceId = new Guid("de4c1dea-3ff2-444e-a7d9-7fab0cf297d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("a764b309-d1f9-4236-9c0f-cc9d74c262d9"),
+                            Page = 73,
+                            SourceId = new Guid("de4c1dea-3ff2-444e-a7d9-7fab0cf297d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("8fe3990b-51c4-4f74-8279-6b2e7051b614"),
+                            Page = 184,
+                            SourceId = new Guid("51f273bd-9c56-4a21-82ca-df90e1e13955")
+                        },
+                        new
+                        {
+                            Id = new Guid("69470b82-09b8-4fd7-a4f2-8bc6fc1130ce"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ece86339-9bf6-4c12-8b41-3c6ab6ff6f13"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3e8a720e-68c7-41f9-9e34-3fae2ca39c3d"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c42408e5-053d-4e50-8f97-2e50af1451b0"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3c1aa5df-53ee-428b-9aa6-d7d41b9a8dd0"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e70de524-eb29-4488-aedf-fe88c9332737"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a815cf76-79c0-4130-936c-6468b6cda683"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("45507c8c-9c14-4105-bee1-8d74f35c2779"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c5a6f273-9672-4fdf-9202-727e5f9a3b01"),
+                            Page = 280,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c4485f05-26c5-4afa-9bd0-971c45bf9218"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("83d1411d-23e1-4926-abd0-aa4ab8667b0c"),
+                            Page = 30,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("0a469cd6-e92f-40c6-b7ee-916e412414b3"),
+                            Page = 248,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("08b2d76c-3dd8-434f-be2e-87ab70369e8b"),
+                            Page = 73,
+                            SourceId = new Guid("a787e8a6-a6ec-4ced-b797-6a41d08920c9")
+                        },
+                        new
+                        {
+                            Id = new Guid("d59eec71-20e8-49a6-82d4-9e5b309fa763"),
+                            Page = 121,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("210b63cd-cf1e-401e-9166-893d1b8bfb09"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("b47a76b0-18f2-42da-af53-9200251c89b1"),
+                            Page = 248,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("ea303bb0-d017-41a3-b9c3-58b6dc4cce0a"),
+                            Page = 77,
+                            SourceId = new Guid("e2bce868-644b-4602-815e-e0fce4807063")
+                        },
+                        new
+                        {
+                            Id = new Guid("8bf406fa-0c9f-4013-a491-d0ef11f6cc6e"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("99fbb55f-8b58-4aa3-bf84-21ed96b51695"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("cc09c8b5-2efa-486a-b01b-9319085183f9"),
+                            Page = 121,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("4ecf6cc9-2fbc-4bfd-adec-6a60538ffe3e"),
+                            Page = 248,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("9bb4957d-2781-4ee2-9b04-2b0f1a0123e4"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0ca55ad9-67ed-4071-92a1-93b1483ba4fc"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6d6a40c9-a864-4894-8d86-bba7d33c0dce"),
+                            Page = 121,
+                            SourceId = new Guid("65d128a3-beaa-4d15-829c-5e82ebc3e9e6")
+                        },
+                        new
+                        {
+                            Id = new Guid("e5233e7f-ca17-4835-9efc-2544bef86514"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("5fcd29f0-25f5-4dd6-b4a4-f8828a27dfe6"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("64f89b92-6a27-440a-9715-521682b5b35e"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("b1b09e15-ee47-4679-9b16-bb1a07a98e8b"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("538738b0-b51d-4e95-9468-2954f72fedba"),
+                            Page = 56,
+                            SourceId = new Guid("c0123df3-d59f-4a25-b531-00d84438e907")
+                        },
+                        new
+                        {
+                            Id = new Guid("00860b13-76fc-42d7-a5d7-00a6591e21dc"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ff4711ed-2ae0-4ec0-bdab-8bbcfb2e2074"),
+                            Page = 248,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("f98fded2-6dfb-43ef-9ef1-2a0b9a9d6dae"),
+                            Page = 282,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("fb97184c-4af3-4ac7-9bb4-3eb3d5999ab6"),
+                            Page = 282,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e6d8ee85-bb06-4d89-abf3-4a3ba7fae0d6"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("2c9fc2c3-4682-4a38-9585-e3412fee32e2"),
+                            Page = 248,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("fb876b13-2112-4172-8d99-8bc7c0854c8b"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("cd06d5ba-e50c-461f-ac71-3271d52c9c3f"),
+                            Page = 282,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("037182fa-7919-4787-b078-cc6508c4fd0d"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6cafd971-2575-43f8-861b-9c1024a3ac11"),
+                            Page = 281,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("589ee43a-13ac-412b-8041-53c542041322"),
+                            Page = 282,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ef9133cf-1818-4e73-9608-d3ed4c5cc288"),
+                            Page = 282,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f97d2f26-6130-4d23-aac8-015e07958054"),
+                            Page = 73,
+                            SourceId = new Guid("de4c1dea-3ff2-444e-a7d9-7fab0cf297d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("49b660af-5244-401f-8802-973448c4f7bd"),
+                            Page = 282,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("8ee225e2-9330-431e-809b-6239b917be67"),
+                            Page = 282,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("95ea6700-cabd-4454-8926-4e4a75a55b59"),
+                            Page = 282,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("8c2cadd3-1f2e-442b-a75c-2cdfa563852e"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("d2523e56-dad3-4c5c-8787-4b13ab0c823a"),
+                            Page = 138,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
                             Id = new Guid("23af3b6d-5a83-45fc-8971-6b94ec0fa4df"),
                             Page = 266,
                             SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
@@ -20428,6 +25809,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("a060a8a5-7ebf-4062-b953-c7ae64793cee"),
                             Page = 629,
                             SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("20022ebf-6f0f-41af-8595-df2de32274f1"),
+                            Page = 1,
+                            SourceId = new Guid("aa26c82c-86d4-49f3-9fc9-53022c6c9ca8")
                         },
                         new
                         {
@@ -22246,6 +27633,96 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("a5195bcd-0c04-4940-a0d1-fed9328e51ba"),
                             Page = 347,
                             SourceId = new Guid("2e2cec6f-d049-4c83-b018-86123f6dd183")
+                        },
+                        new
+                        {
+                            Id = new Guid("c05cfd3c-0e8b-49aa-8f8c-ca35c30e5f53"),
+                            Page = 283,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3d13f187-7489-4fc2-8a53-e40db50971be"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("13185dec-473d-468f-9088-4789da47e099"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4da27636-f6de-4c20-8d3c-ea1806d8bace"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("af9b1037-1d63-4bd5-b3ac-18594e8ec42a"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ef30e546-f103-43c0-aa4b-d9f692ebf9ea"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("07214271-97e3-4978-bcf6-5820a660fd4c"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d426a649-6cb7-4fa1-b1ca-4d0488bbe704"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("37932381-100d-4cc9-9e6b-c6701b919705"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f9b50137-8062-4ad4-9610-4dedde9b4e0c"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("90e5aac2-6b2e-49a0-a2c2-93e8009d194b"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a44b3cbc-55fe-466c-8fec-95e9cff4fcba"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("46e50f08-f9eb-48a9-8b34-6193132a526a"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("959a550b-9440-493a-8e31-eaa6df2e5127"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f18bfafa-141d-4bc9-b8f4-6113b12080f8"),
+                            Page = 284,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         });
                 });
 
@@ -25135,6 +30612,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("AlchemicalToolsId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("AmmunitionId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid?>("CursesId")
                         .HasColumnType("uuid");
 
@@ -25156,6 +30636,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("ItemCursesId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("MeleeWeaponsId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
@@ -25164,6 +30647,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<Guid?>("RacesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("RangedWeaponsId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("SourcePageId")
@@ -25184,6 +30670,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("AlchemicalToolsId");
 
+                    b.HasIndex("AmmunitionId");
+
                     b.HasIndex("CursesId");
 
                     b.HasIndex("DiseasesId");
@@ -25198,9 +30686,13 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("ItemCursesId");
 
+                    b.HasIndex("MeleeWeaponsId");
+
                     b.HasIndex("PlanesId");
 
                     b.HasIndex("RacesId");
+
+                    b.HasIndex("RangedWeaponsId");
 
                     b.HasIndex("SourcePageId");
 
@@ -25526,6 +31018,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("6e219362-f25e-4f21-b9b1-494f24e689c1"),
                             Name = "Cleric",
                             SourcePageId = new Guid("a060a8a5-7ebf-4062-b953-c7ae64793cee")
+                        },
+                        new
+                        {
+                            Id = new Guid("d052186d-62ce-46db-9ca9-b4e32aed43f4"),
+                            Name = "Climbing",
+                            SourcePageId = new Guid("20022ebf-6f0f-41af-8595-df2de32274f1")
                         },
                         new
                         {
@@ -27344,6 +32842,174 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("605865dd-e4f9-487c-828d-47ee526c8605"),
                             Name = "Zombie",
                             SourcePageId = new Guid("a5195bcd-0c04-4940-a0d1-fed9328e51ba")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponCategory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("WeaponCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("f2115c27-5192-40f2-a41a-3ddbb8cb16b2"),
+                            Name = "Advanced"
+                        },
+                        new
+                        {
+                            Id = new Guid("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f"),
+                            Name = "Martial"
+                        },
+                        new
+                        {
+                            Id = new Guid("59366b6b-ef53-4be4-97e4-2311301393bd"),
+                            Name = "Simple"
+                        },
+                        new
+                        {
+                            Id = new Guid("9cfcad6d-a7e2-4833-ba41-86d88bee6fc7"),
+                            Name = "Unarmed"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponGroup", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CriticalEffect")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.ToTable("WeaponGroups");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("efc95190-6796-43f8-a457-743c988a0c3b"),
+                            CriticalEffect = "Choose one creature adjacent to the initial target and within reach. If its AC is lower than your attack roll result for the critical hit, you deal damage to that creature equal to the result of the weapon damage die you rolled (including extra dice for its potency rune, if any). This amount isn’t doubled, and no bonuses or other additional dice apply to this damage.",
+                            Name = "Axe",
+                            SourcePageId = new Guid("c05cfd3c-0e8b-49aa-8f8c-ca35c30e5f53")
+                        },
+                        new
+                        {
+                            Id = new Guid("f5a72ab1-3b4b-4687-b0d7-a0190af5b4f5"),
+                            CriticalEffect = "Increase the radius of the bomb’s splash damage (if any) to 10 feet.",
+                            Name = "Bomb",
+                            SourcePageId = new Guid("3d13f187-7489-4fc2-8a53-e40db50971be")
+                        },
+                        new
+                        {
+                            Id = new Guid("ed766d26-c252-4a47-8e6c-44031f691653"),
+                            CriticalEffect = "If the target of the critical hit is adjacent to a surface, it gets stuck to that surface by the missile. The target is immobilized and must spend an Interact action to attempt a DC 10 Athletics check to pull the missile free; it can’t move from its space until it succeeds. The creature doesn’t become stuck if it is incorporeal, is liquid (like a water elemental or some oozes), or could otherwise escape without effort.",
+                            Name = "Bow",
+                            SourcePageId = new Guid("13185dec-473d-468f-9088-4789da47e099")
+                        },
+                        new
+                        {
+                            Id = new Guid("55158194-ce53-4931-818b-5c36289e4dba"),
+                            CriticalEffect = "The target must succeed at a Fortitude save against your class DC or be slowed 1 until the end of your next turn.",
+                            Name = "Brawling",
+                            SourcePageId = new Guid("4da27636-f6de-4c20-8d3c-ea1806d8bace")
+                        },
+                        new
+                        {
+                            Id = new Guid("b43977e7-788a-4a38-be49-2ed575e74362"),
+                            CriticalEffect = "You knock the target away from you up to 10 feet (you choose the distance). This is forced movement.",
+                            Name = "Club",
+                            SourcePageId = new Guid("af9b1037-1d63-4bd5-b3ac-18594e8ec42a")
+                        },
+                        new
+                        {
+                            Id = new Guid("79516d2f-0c2d-47d3-b411-5b02ae26022f"),
+                            CriticalEffect = "The target takes 1d6 persistent bleed damage. You gain an item bonus to this bleed damage equal to the weapon’s item bonus to attack rolls.",
+                            Name = "Dart",
+                            SourcePageId = new Guid("ef30e546-f103-43c0-aa4b-d9f692ebf9ea")
+                        },
+                        new
+                        {
+                            Id = new Guid("708c03ec-921c-4296-8a96-4b48e8c48245"),
+                            CriticalEffect = "The target is knocked prone.",
+                            Name = "Flail",
+                            SourcePageId = new Guid("07214271-97e3-4978-bcf6-5820a660fd4c")
+                        },
+                        new
+                        {
+                            Id = new Guid("3abdc611-2ead-4444-bc8f-68058807c060"),
+                            CriticalEffect = "The target is knocked prone.",
+                            Name = "Hammer",
+                            SourcePageId = new Guid("d426a649-6cb7-4fa1-b1ca-4d0488bbe704")
+                        },
+                        new
+                        {
+                            Id = new Guid("b50c2993-dcd3-4379-9b32-8bd6b9dff973"),
+                            CriticalEffect = "The target takes 1d6 persistent bleed damage. You gain an item bonus to this bleed damage equal to the weapon’s item bonus to attack rolls.",
+                            Name = "Knife",
+                            SourcePageId = new Guid("37932381-100d-4cc9-9e6b-c6701b919705")
+                        },
+                        new
+                        {
+                            Id = new Guid("1c0f6d9d-1473-4505-8aa5-819a7fb94220"),
+                            CriticalEffect = "The weapon viciously pierces the target, who takes 2 additional damage per weapon damage die.",
+                            Name = "Pick",
+                            SourcePageId = new Guid("f9b50137-8062-4ad4-9610-4dedde9b4e0c")
+                        },
+                        new
+                        {
+                            Id = new Guid("edfa81fd-1aca-46de-a75b-deb0465712ad"),
+                            CriticalEffect = "The target is moved 5 feet in a direction of your choice. This is forced movement.",
+                            Name = "Polearm",
+                            SourcePageId = new Guid("90e5aac2-6b2e-49a0-a2c2-93e8009d194b")
+                        },
+                        new
+                        {
+                            Id = new Guid("01553c8f-e4df-449c-8be8-cb8b30e1569d"),
+                            CriticalEffect = "You knock the target back from you 5 feet. This is forced movement.",
+                            Name = "Shield",
+                            SourcePageId = new Guid("a44b3cbc-55fe-466c-8fec-95e9cff4fcba")
+                        },
+                        new
+                        {
+                            Id = new Guid("92c0ebe3-618f-45e8-b9e2-cbd47a96ea96"),
+                            CriticalEffect = "The target must succeed at a Fortitude save against your class DC or be stunned 1.",
+                            Name = "Sling",
+                            SourcePageId = new Guid("46e50f08-f9eb-48a9-8b34-6193132a526a")
+                        },
+                        new
+                        {
+                            Id = new Guid("2a230c64-c4ef-4f84-ac75-a285f53bf115"),
+                            CriticalEffect = "The weapon pierces the target, weakening its attacks. The target is clumsy 1 until the start of your next turn.",
+                            Name = "Spear",
+                            SourcePageId = new Guid("959a550b-9440-493a-8e31-eaa6df2e5127")
+                        },
+                        new
+                        {
+                            Id = new Guid("d8d3f1e4-f414-4b0b-889e-e7cf91cd1370"),
+                            CriticalEffect = "The target is made off-balance by your attack, becoming flat-footed until the start of your next turn.",
+                            Name = "Sword",
+                            SourcePageId = new Guid("f18bfafa-141d-4bc9-b8f4-6113b12080f8")
                         });
                 });
 
@@ -34367,6 +40033,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("MeleeWeaponTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.MeleeWeapon", null)
+                        .WithMany()
+                        .HasForeignKey("MeleeWeaponsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("PlaneTrait", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Plane", null)
@@ -34393,6 +40074,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Race", null)
                         .WithMany()
                         .HasForeignKey("RacesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("RangedWeaponTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.RangedWeapon", null)
+                        .WithMany()
+                        .HasForeignKey("RangedWeaponsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -35649,6 +41345,33 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Deity", null)
                         .WithMany()
                         .HasForeignKey("DeityFollowerAlignmentsId");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Ammunition", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponGroup", "WeaponGroup")
+                        .WithMany()
+                        .HasForeignKey("WeaponGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("SourcePage");
+
+                    b.Navigation("WeaponGroup");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
@@ -38694,6 +44417,51 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .HasForeignKey("SpellsId");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.MeleeWeapon", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.DamageType", "DamageType")
+                        .WithMany()
+                        .HasForeignKey("DamageTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponCategory", "WeaponCategory")
+                        .WithMany("MeleeWeapons")
+                        .HasForeignKey("WeaponCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponGroup", "WeaponGroup")
+                        .WithMany("MeleeWeapons")
+                        .HasForeignKey("WeaponGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("DamageType");
+
+                    b.Navigation("SourcePage");
+
+                    b.Navigation("WeaponCategory");
+
+                    b.Navigation("WeaponGroup");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Plane", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Alignment", "Alignment")
@@ -39147,6 +44915,57 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Rarity");
 
                     b.Navigation("Size");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.RangedWeapon", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Ammunition", "Ammunition")
+                        .WithMany()
+                        .HasForeignKey("AmmunitionId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.DamageType", "DamageType")
+                        .WithMany()
+                        .HasForeignKey("DamageTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponCategory", "WeaponCategory")
+                        .WithMany()
+                        .HasForeignKey("WeaponCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponGroup", "WeaponGroup")
+                        .WithMany()
+                        .HasForeignKey("WeaponGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Ammunition");
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("DamageType");
+
+                    b.Navigation("SourcePage");
+
+                    b.Navigation("WeaponCategory");
+
+                    b.Navigation("WeaponGroup");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.SavingThrowStat", b =>
@@ -41706,6 +47525,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("AlchemicalToolsId");
 
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Ammunition", null)
+                        .WithMany("Traits")
+                        .HasForeignKey("AmmunitionId");
+
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Curse", null)
                         .WithMany()
                         .HasForeignKey("CursesId");
@@ -41734,6 +47557,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("ItemCursesId");
 
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.MeleeWeapon", null)
+                        .WithMany()
+                        .HasForeignKey("MeleeWeaponsId");
+
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Plane", null)
                         .WithMany()
                         .HasForeignKey("PlanesId");
@@ -41741,6 +47568,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Race", null)
                         .WithMany()
                         .HasForeignKey("RacesId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.RangedWeapon", null)
+                        .WithMany()
+                        .HasForeignKey("RangedWeaponsId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
                         .WithMany()
@@ -42204,6 +48035,14 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                                     Order = 0,
                                     OwnerId = new Guid("6e219362-f25e-4f21-b9b1-494f24e689c1"),
                                     Text = "This indicates abilities from the cleric class.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e3da4a63-d85b-47ed-a777-6b483a2545c4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d052186d-62ce-46db-9ca9-b4e32aed43f4"),
+                                    Text = "The hand holding this weapon is freely available to Climb.",
                                     Type = 0
                                 },
                                 new
@@ -44741,6 +50580,17 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("SourcePage");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponGroup", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("SourcePage");
+                });
+
             modelBuilder.Entity("SpellSpellComponent", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.SpellComponent", null)
@@ -45021,6 +50871,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Planes");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Ammunition", b =>
+                {
+                    b.Navigation("Traits");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
                 {
                     b.Navigation("Characteristics");
@@ -45147,6 +51002,16 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Stat", b =>
                 {
                     b.Navigation("Skills");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponCategory", b =>
+                {
+                    b.Navigation("MeleeWeapons");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponGroup", b =>
+                {
+                    b.Navigation("MeleeWeapons");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.OrPrerequisite", b =>

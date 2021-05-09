@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Inst
 {
     public class Hammer : AbstractWeaponGroupTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("3abdc611-2ead-4444-bc8f-68058807c060");
 
         protected override WeaponGroup GetWeaponGroup()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Inst
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d426a649-6cb7-4fa1-b1ca-4d0488bbe704"),
                 SourceId = CoreRulebook.ID,
                 Page = 284
             };

@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Inst
 {
     public class Bomb : AbstractWeaponGroupTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("f5a72ab1-3b4b-4687-b0d7-a0190af5b4f5");
 
         protected override WeaponGroup GetWeaponGroup()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Inst
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("3d13f187-7489-4fc2-8a53-e40db50971be"),
                 SourceId = CoreRulebook.ID,
                 Page = 284
             };

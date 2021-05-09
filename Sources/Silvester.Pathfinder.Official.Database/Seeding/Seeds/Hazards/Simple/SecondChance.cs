@@ -73,7 +73,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("0fb1e6a3-00c7-4a77-bad1-949bac1cd5a1"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Legendary.ID,
-                Description = "to take apart the spell one tiny piece at a time, with eyes closed, while recalling every vivid life memory in order, starting from the earliest memory.",
+                Description = "To take apart the spell one tiny piece at a time, with eyes closed, while recalling every vivid life memory in order, starting from the earliest memory.",
                 DifficultyCheck = 46
             };
         }

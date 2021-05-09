@@ -74,7 +74,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("b4c7e3c6-0802-41b6-be1b-635af1dbc1cb"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Master.ID,
-                Description = "to painstakingly remove the lintel without triggering the magic",
+                Description = "To painstakingly remove the lintel without triggering the magic.",
                 DifficultyCheck = 27
             };
         }
@@ -85,7 +85,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             {
                 Id = Guid.Parse("6fe47838-2cc2-46ff-abaf-1ded872463e8"),
                 Level = 4,
-                Description = "to counteract the rune",
+                Description = "To counteract the rune.",
                 CounteractDifficultyCheck = 25
             };
         }

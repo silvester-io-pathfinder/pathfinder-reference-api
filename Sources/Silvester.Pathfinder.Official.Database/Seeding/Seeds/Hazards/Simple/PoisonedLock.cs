@@ -145,7 +145,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("5dee5085-d947-4cad-8d8a-794d6ac56790"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
-                Description = "on the spring mechanism",
+                Description = "On the spring mechanism.",
                 DifficultyCheck = 17
             };
         }

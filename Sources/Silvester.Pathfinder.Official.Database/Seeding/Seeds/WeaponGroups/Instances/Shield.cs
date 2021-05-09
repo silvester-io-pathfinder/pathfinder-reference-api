@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Inst
 {
     public class Shield : AbstractWeaponGroupTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("01553c8f-e4df-449c-8be8-cb8b30e1569d");
 
         protected override WeaponGroup GetWeaponGroup()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Inst
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("a44b3cbc-55fe-466c-8fec-95e9cff4fcba"),
                 SourceId = CoreRulebook.ID,
                 Page = 284
             };

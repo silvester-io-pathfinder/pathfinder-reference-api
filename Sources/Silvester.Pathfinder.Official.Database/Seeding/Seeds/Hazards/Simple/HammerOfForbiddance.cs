@@ -110,7 +110,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("b477f38d-c91a-44c7-9095-7e6e9c52d81d"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Expert.ID,
-                Description = "once on the hammer itself and once on its joint to prevent the hammer from swinging",
+                Description = "Once on the hammer itself and once on its joint to prevent the hammer from swinging.",
                 DifficultyCheck = 28
             };
         }

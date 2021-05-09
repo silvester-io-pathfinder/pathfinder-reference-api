@@ -85,7 +85,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("489b3fef-ff29-4e09-8436-7905dba58c27"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
-                Description = "on the floor panels before the slab falls",
+                Description = "On the floor panels before the slab falls.",
                 DifficultyCheck = 15
             };
         }

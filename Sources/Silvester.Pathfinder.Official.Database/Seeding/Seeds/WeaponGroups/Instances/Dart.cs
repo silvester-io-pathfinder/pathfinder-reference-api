@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Inst
 {
     public class Dart : AbstractWeaponGroupTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("79516d2f-0c2d-47d3-b411-5b02ae26022f");
 
         protected override WeaponGroup GetWeaponGroup()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Inst
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ef30e546-f103-43c0-aa4b-d9f692ebf9ea"),
                 SourceId = CoreRulebook.ID,
                 Page = 284
             };

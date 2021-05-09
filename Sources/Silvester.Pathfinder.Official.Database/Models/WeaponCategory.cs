@@ -10,6 +10,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
     {
         public string Name { get; set; } = default!;
 
-        public ICollection<Weapon> Weapons { get; set; } = new List<Weapon>();
+        public ICollection<MeleeWeapon> MeleeWeapons { get; set; } = new List<MeleeWeapon>();
     }
 }

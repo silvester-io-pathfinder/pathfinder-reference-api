@@ -105,7 +105,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("6c4b294a-6018-43f7-8b64-35bd2710d641"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Expert.ID,
-                Description = "at four different junctions to jam all the saw blade's possible paths, preventing it from traveling through the room.",
+                Description = "At four different junctions to jam all the saw blade's possible paths, preventing it from traveling through the room.",
                 DifficultyCheck = 41
             };
         }

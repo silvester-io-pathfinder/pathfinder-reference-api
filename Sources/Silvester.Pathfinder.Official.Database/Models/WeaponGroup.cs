@@ -15,6 +15,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
 
-        public ICollection<Weapon> Weapons { get; set; } = new List<Weapon>();
+        public ICollection<MeleeWeapon> MeleeWeapons { get; set; } = new List<MeleeWeapon>();
     }
 }

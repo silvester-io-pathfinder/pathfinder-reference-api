@@ -133,7 +133,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("b7eff338-cc48-4aa8-9e7f-630e3b10d70e"),
                 SkillId = Skills.Instances.Survival.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Expert.ID,
-                Description = "to remove the mold without triggering the spores",
+                Description = "To remove the mold without triggering the spores.",
                 DifficultyCheck = 26
             };
         }

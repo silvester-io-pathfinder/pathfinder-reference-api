@@ -85,7 +85,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("b6283717-721c-4280-9a7e-5a1ec2b2ec85"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Expert.ID,
-                Description = "to disable the hammer that strikes the percussion cap",
+                Description = "To disable the hammer that strikes the percussion cap.",
                 DifficultyCheck = 26
             };
         }

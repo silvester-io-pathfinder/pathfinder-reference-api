@@ -1,5 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Weapons;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponCategories.
 {
     public class Martial : AbstractWeaponCategoriesTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("2f7d0afa-d5fd-4b5a-96ae-94d0d788448f");
 
         protected override WeaponCategory GetWeaponCategory()
         {

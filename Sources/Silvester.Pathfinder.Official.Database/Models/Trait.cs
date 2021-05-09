@@ -43,6 +43,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<Plane> Planes { get; set; } = new List<Plane>();
     
-        public ICollection<Weapon> Weapons { get; set; } = new List<Weapon>();
+        public ICollection<MeleeWeapon> MeleeWeapons { get; set; } = new List<MeleeWeapon>();
+     
+        public ICollection<RangedWeapon> RangedWeapons { get; set; } = new List<RangedWeapon>();
     }
 }

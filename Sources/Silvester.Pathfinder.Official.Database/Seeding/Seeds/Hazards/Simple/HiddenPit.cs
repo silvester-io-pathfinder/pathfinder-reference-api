@@ -86,7 +86,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("1e0d3792-40ea-4884-921c-58305f558677"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Untrained.ID,
-                Description = "to remove the trapdoor",
+                Description = "To remove the trapdoor.",
                 DifficultyCheck = 12
             };
         }

@@ -73,7 +73,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("8874b07f-fdaf-496e-8090-8e89c9993781"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Master.ID,
-                Description = "to drain the glyph's power harmlessly",
+                Description = "To drain the glyph's power harmlessly.",
                 DifficultyCheck = 32
             };
         }
@@ -84,7 +84,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             {
                 Id = Guid.Parse("52927b96-561a-43ea-a992-481218889a7c"),
                 Level = 6,
-                Description = "to counteract the glyph",
+                Description = "To counteract the glyph.",
                 CounteractDifficultyCheck = 30
             };
         }

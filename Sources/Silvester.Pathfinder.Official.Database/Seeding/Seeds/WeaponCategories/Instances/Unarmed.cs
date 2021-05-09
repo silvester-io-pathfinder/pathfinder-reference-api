@@ -1,5 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Weapons;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponCategories.
 {
     public class Unarmed : AbstractWeaponCategoriesTemplate
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("9cfcad6d-a7e2-4833-ba41-86d88bee6fc7");
 
         protected override WeaponCategory GetWeaponCategory()
         {

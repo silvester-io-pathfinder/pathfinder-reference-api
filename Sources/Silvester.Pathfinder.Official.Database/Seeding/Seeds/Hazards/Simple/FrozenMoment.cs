@@ -73,7 +73,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("f5a17566-7306-40d5-b07f-f7152470593d"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Legendary.ID,
-                Description = "to rapidly disassemble the spell's myriad components in a single blink of an eye",
+                Description = "To rapidly disassemble the spell's myriad components in a single blink of an eye.",
                 DifficultyCheck = 38
             };
         }
@@ -84,7 +84,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
             {
                 Id = Guid.Parse("bb9a1fb9-c343-46e0-a7dc-dcdd239b6107"),
                 Level = 8,
-                Description = "to counteract the trap before it triggers or to counteract the effect on one creature after the trap is triggered",
+                Description = "To counteract the trap before it triggers or to counteract the effect on one creature after the trap is triggered.",
                 CounteractDifficultyCheck = 36
             };
         }

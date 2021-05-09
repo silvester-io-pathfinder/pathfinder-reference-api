@@ -100,7 +100,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("859314b5-6c92-43b6-964b-fad36bd66f0f"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
-                Description = "to disable each blade",
+                Description = "To disable each blade.",
                 DifficultyCheck = 21
             };
         }

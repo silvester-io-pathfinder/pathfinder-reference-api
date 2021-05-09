@@ -27,6 +27,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<AlchemicalPoison> AlchemicalPoisons { get; set; } = default!;
         public DbSet<AlchemicalTool> AlchemicalTools { get; set; } = default!;
         public DbSet<Alignment> Alignments { get; set; } = default!;
+        public DbSet<Ammunition> Ammunitions { get; set; } = default!;
         public DbSet<ArmorGroup> ArmorGroups { get; set; } = default!;
         public DbSet<AttackType> AttackTypes { get; set; } = default!;
         public DbSet<BenefitType> BenefitTypes { get; set; } = default!;
@@ -65,6 +66,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<Proficiency> Proficiencies { get; set; } = default!;
         public DbSet<Race> Races { get; set; } = default!;
         public DbSet<RaceSize> RaceSizes { get; set; } = default!;
+        public DbSet<MeleeWeapon> RangedWeapons { get; set; } = default!;
         public DbSet<Rarity> Rarities { get; set; } = default!;
         public DbSet<SavingThrowStat> SavingThrowStats { get; set; } = default!;
         public DbSet<Skill> Skills { get; set; } = default!;
@@ -74,7 +76,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<SpellType> SpellTypes { get; set; } = default!;
         public DbSet<Stat> Stats { get; set; } = default!;
         public DbSet<Trait> Traits { get; set; } = default!;
-        public DbSet<Weapon> Weapons { get; set; } = default!;
+        public DbSet<MeleeWeapon> MeleeWeapons { get; set; } = default!;
         public DbSet<WeaponGroup> WeaponGroups { get; set; } = default!;
         public DbSet<WeaponCategory> WeaponCategories { get; set; } = default!;
 

@@ -84,7 +84,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("14f6268a-0806-45c2-8150-5967912b2e24"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID,
-                Description = "on the floor tile or wall socket",
+                Description = "On the floor tile or wall socket.",
                 DifficultyCheck = 18
             };
         }
