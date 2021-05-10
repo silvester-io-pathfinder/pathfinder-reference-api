@@ -9788,6 +9788,1846 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AdventuringGear", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Hands")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ItemLevel")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("RarityId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("RarityId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.ToTable("AdventuringGear");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("97f361db-58be-487f-a5aa-ced5e1a2197f"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Adventurer's Pack",
+                            Price = 150,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("0aa4ba0e-3c12-4d52-9156-fdbe8562dcb4")
+                        },
+                        new
+                        {
+                            Id = new Guid("8f6a633a-5b05-499b-bcf7-459f0a4710f1"),
+                            BulkId = new Guid("3f86e7c2-2386-4a9a-90cb-f8a633257d24"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Alchemist's Lab",
+                            Price = 500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("2686c706-c844-404b-9420-d87e5fa2caac")
+                        },
+                        new
+                        {
+                            Id = new Guid("9fbc54ea-d3f5-4fd8-8b5d-1b1cd539745e"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Alchemist's Tools",
+                            Price = 300,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("e8e92ed4-2146-44db-a5d0-1c6050e51c93")
+                        },
+                        new
+                        {
+                            Id = new Guid("29638790-400f-407e-8b44-0b25aff858cd"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Armored Skirt",
+                            Price = 200,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("1a1fa3d5-1b85-41e3-8eb6-d17fd109079f")
+                        },
+                        new
+                        {
+                            Id = new Guid("dea91016-311a-4e85-9672-aa9bc2b5da99"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Artisan's Tools",
+                            Price = 400,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("b8b6158c-86ae-4c20-94bc-b29b056974e2")
+                        },
+                        new
+                        {
+                            Id = new Guid("fa034d2e-aa2d-4bea-92d8-fde658807406"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "2",
+                            Name = "Astrolabe",
+                            Price = 3000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("b6b57c60-c14c-4a67-8cf1-c8c0e432af7d")
+                        },
+                        new
+                        {
+                            Id = new Guid("4ca4df89-46d6-41aa-8467-078b97c85852"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Backpack",
+                            Price = 10,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("b04fdee6-3960-4bc9-bc85-e0ea7a6cc1a8")
+                        },
+                        new
+                        {
+                            Id = new Guid("45716613-931a-42c5-8cb0-ce77190b1cb8"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Basic Crafter's Book",
+                            Price = 10,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("6efbc37c-386e-47d0-8b8b-169b2d4e53b8")
+                        },
+                        new
+                        {
+                            Id = new Guid("2e760e65-7138-4baf-8b51-9d7d08d02195"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Bedroll",
+                            Price = 2,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("c62c1853-80fb-4c06-ab1c-8ebd1fbe0930")
+                        },
+                        new
+                        {
+                            Id = new Guid("6f3dd7dc-f4b6-4425-b6bb-97775aeeabda"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "0",
+                            ItemLevel = "2",
+                            Name = "Book of Translation",
+                            Price = 2500,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("1f08b7fc-8ddc-4689-95fd-9c2fd0d298ba")
+                        },
+                        new
+                        {
+                            Id = new Guid("2f13c997-9bf3-4722-8a85-c683c9867756"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Brass Ear",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("852b13ea-b1cc-4028-800f-fbbddaf36362")
+                        },
+                        new
+                        {
+                            Id = new Guid("aa28dbfb-0480-494f-afc1-bbe71b70b19b"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Buoyancy Vest",
+                            Price = 500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("44fab1cc-b993-41d5-9b62-153bd40f3fce")
+                        },
+                        new
+                        {
+                            Id = new Guid("e6026e0d-1fe6-42c1-964b-767e0748b927"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Caltrops",
+                            Price = 30,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("6cac8caf-e1a7-4a50-8813-77896127dd64")
+                        },
+                        new
+                        {
+                            Id = new Guid("bbf20e5e-8af9-46f4-9429-b7582e34eda4"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Candle",
+                            Price = 1,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("d73b403b-3d20-410d-b9dd-7500b7d5bed6")
+                        },
+                        new
+                        {
+                            Id = new Guid("9eaa4740-ca64-457f-b20e-94cbada90b59"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "0",
+                            ItemLevel = "3",
+                            Name = "Cartographer's Kit",
+                            Price = 4200,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("7028a268-35b0-47e5-92a2-1f1353e66e56")
+                        },
+                        new
+                        {
+                            Id = new Guid("86a1f1d8-b158-4ec2-ab49-dc7795b59b48"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Chain",
+                            Price = 400,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("21625357-762f-4ebe-99e2-b3756c24a1bb")
+                        },
+                        new
+                        {
+                            Id = new Guid("aafa026c-7a02-4479-a20a-ddae6fbcd0b8"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Chalk",
+                            Price = 1,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("855558ff-8646-4f0c-bf2d-07ff7e6c901e")
+                        },
+                        new
+                        {
+                            Id = new Guid("02af87d2-7224-4e7b-8b77-f10fec77b4e9"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Chest",
+                            Price = 60,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("9b3f0c24-5127-45fc-8685-39cf0c715f74")
+                        },
+                        new
+                        {
+                            Id = new Guid("517b246c-ab2a-495b-8702-62e266d2251b"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Climbing Kit",
+                            Price = 50,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("4d6eed41-5de9-4166-bc48-7e39f56e176d")
+                        },
+                        new
+                        {
+                            Id = new Guid("9ed3bf9d-c04e-4e0b-8b24-cdd6ca326dc9"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Clockwork Dial",
+                            Price = 2000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("9aa3b1fa-c4a2-40b4-8aae-a6f6044d4744")
+                        },
+                        new
+                        {
+                            Id = new Guid("727c9745-f0dd-4c3d-b76f-ae806792d762"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Ordinary Clothing",
+                            Price = 10,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("66115a16-38f5-4728-ae03-e4d1a17809d4")
+                        },
+                        new
+                        {
+                            Id = new Guid("085cf660-739c-422e-a019-9d821a31e394"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Comealong",
+                            Price = 300,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("6ef31e22-1091-4e65-8fd8-95b8a892b6f0")
+                        },
+                        new
+                        {
+                            Id = new Guid("5c7c6a0d-bfc6-42b1-a265-9509e0ea7fad"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "0",
+                            ItemLevel = "1",
+                            Name = "Communication Bangle",
+                            Price = 1000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("f2dea4f8-a15c-4e72-a738-99eefdb62b56")
+                        },
+                        new
+                        {
+                            Id = new Guid("15b26889-6851-4ce7-8387-3728a52158b5"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Compass",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("3c57c725-c3df-425b-9b04-9e8ab27d017b")
+                        },
+                        new
+                        {
+                            Id = new Guid("63c40f21-1e8c-4273-9bec-79fdbaaaa225"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "3",
+                            Name = "Compass (Lensatic)",
+                            Price = 2000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("c7ad2d60-0c88-454e-adbd-0bb169961fab")
+                        },
+                        new
+                        {
+                            Id = new Guid("ee932950-fb59-4926-beee-dab8ef1c74f4"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "4",
+                            Name = "Concealable Thieves' Tools",
+                            Price = 8000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("2be216d7-886c-496e-ba31-385773a64d96")
+                        },
+                        new
+                        {
+                            Id = new Guid("68bb619b-f10d-4d94-a5a7-0cb71cc4ed69"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "0",
+                            ItemLevel = "3",
+                            Name = "Concealed Sheath",
+                            Price = 2500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("252201d7-de76-47f1-9a5b-219f1a8e68d3")
+                        },
+                        new
+                        {
+                            Id = new Guid("e52c7a7c-7032-4cbf-8200-662ccaf96062"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Cookware",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("abb4d62b-0f95-4ef7-8e1d-dde096062622")
+                        },
+                        new
+                        {
+                            Id = new Guid("dde8580a-9312-438f-b404-125e1229dc4b"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Crowbar",
+                            Price = 50,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("cfdfc8cd-8d4a-4d67-bf20-f095666ea579")
+                        },
+                        new
+                        {
+                            Id = new Guid("4167d470-b6fb-40e1-826f-e3ff02ae8732"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Depth Gauge",
+                            Price = 100,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("2e46d003-82e0-48d4-993d-f4b1d8e4b779")
+                        },
+                        new
+                        {
+                            Id = new Guid("e4eeffb1-68b5-4846-be37-62118863014e"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "3",
+                            Name = "Detective's Kit",
+                            Price = 2500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("c60b4087-35ad-400b-b704-825fce18f256")
+                        },
+                        new
+                        {
+                            Id = new Guid("e428fd54-cd8a-4d30-b6e2-3c48a2490910"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Disguise Kit",
+                            Price = 200,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("b3215583-b79b-4ae2-90ce-0b8ec62fc026")
+                        },
+                        new
+                        {
+                            Id = new Guid("e2e6da71-2f98-46c2-80eb-adb3ba10fcaa"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Dueling Cape",
+                            Price = 50,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("e8459024-60cd-46ec-b64d-7b1b1adb308f")
+                        },
+                        new
+                        {
+                            Id = new Guid("7214321a-e14d-4c1b-bcf5-642d0b1bb41c"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Earplugs",
+                            Price = 1,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("2cad9712-fbd7-42aa-85b0-e1d498651b94")
+                        },
+                        new
+                        {
+                            Id = new Guid("2f83877d-1461-4ea7-b630-72ab935a19de"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "False Manacles",
+                            Price = 1000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("b43cebe4-9433-4a80-94d1-1003b52e41c3")
+                        },
+                        new
+                        {
+                            Id = new Guid("1e2cf39c-7aa0-47df-93cd-81dae8de27a3"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Familiar Satchel",
+                            Price = 500,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("0899601a-1040-474c-abbc-f669c6b26f33")
+                        },
+                        new
+                        {
+                            Id = new Guid("ff7fb3c9-3f56-4260-9aa3-77bf06844661"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "3",
+                            Name = "Fingerprinting Kit",
+                            Price = 3000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("1e3d5cf6-e1ce-4c09-b686-ccd09600541a")
+                        },
+                        new
+                        {
+                            Id = new Guid("48f8e6d1-38dd-4ae7-966b-d85778977991"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Fishing Tackle",
+                            Price = 80,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("2f62d0ad-0edc-4537-97d7-517bae0d0072")
+                        },
+                        new
+                        {
+                            Id = new Guid("e4eb94ea-b8f5-4a36-936f-081fd7c559d4"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Flint and Steel",
+                            Price = 5,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("95650345-46bd-4622-ae7c-f46d33da8dfb")
+                        },
+                        new
+                        {
+                            Id = new Guid("c2ab81a5-73f9-473d-ac8e-7d8f7008d7be"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Formula Book",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("ec8a4a5d-8854-480c-8a9b-9fc3aa34e318")
+                        },
+                        new
+                        {
+                            Id = new Guid("783370e3-5de6-4fb7-8bf2-6b1ea444727d"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Glass Cutter",
+                            Price = 500,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("d2d2dfe5-b1dc-4be9-8335-fedd3ab8d24f")
+                        },
+                        new
+                        {
+                            Id = new Guid("0bb0ef67-0618-4537-9772-fcb3e22c83af"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Grappling Arrow",
+                            Price = 20,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("df8529d1-4ece-4ebc-9774-9d16b4ff6032")
+                        },
+                        new
+                        {
+                            Id = new Guid("bdec1ae5-66cd-40ab-8761-5ce6ba1eb9f1"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Grappling Bolt",
+                            Price = 20,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("79c70f5f-b3a1-42b8-b8b7-e043d23344ce")
+                        },
+                        new
+                        {
+                            Id = new Guid("8bc78d1b-a9fb-4d45-8dd5-fe065566e23e"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Grappling Hook",
+                            Price = 10,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("d8b95427-77bd-4a53-b96a-d3764e7ced7c")
+                        },
+                        new
+                        {
+                            Id = new Guid("fc62d9dd-f547-49d9-9606-1cc49bb30621"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Hammer",
+                            Price = 10,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("a7a6eabd-b402-4485-8dd2-375761338b21")
+                        },
+                        new
+                        {
+                            Id = new Guid("00629e82-1fc3-4f7f-b81e-7750bdd86840"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Handheld Musical Instrument",
+                            Price = 80,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("de7474cc-8673-4069-8cf5-439a5f9581db")
+                        },
+                        new
+                        {
+                            Id = new Guid("0f0bf997-7653-4941-af5f-375d4f5786a3"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Harrow Carrying Case",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("a7ed5c0c-f9d3-4672-b084-b24ffea26ce1")
+                        },
+                        new
+                        {
+                            Id = new Guid("0674b7e7-35f2-4d29-96b6-c98ad8f99422"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Harrow Deck",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("6240d00f-37a0-43a5-8b6c-7797e00372a7")
+                        },
+                        new
+                        {
+                            Id = new Guid("37411366-33fe-469f-93bb-02f2fed76911"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Harrow Mat",
+                            Price = 800,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("2575f21e-b56a-4d81-b428-0994a973632c")
+                        },
+                        new
+                        {
+                            Id = new Guid("b65586b9-cfee-42b5-ab60-881766c60c2e"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Healer's Tools",
+                            Price = 500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("9ffa6270-930f-4d44-b4e0-63bc0383d422")
+                        },
+                        new
+                        {
+                            Id = new Guid("c39b02a3-8ad1-4b2a-99c9-a141e174f52f"),
+                            BulkId = new Guid("bcd4ffa2-a04b-4a74-ae12-c839667caa71"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Heavy Musical Instrument",
+                            Price = 200,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("4368f848-ca6e-41d7-aa78-2fce1566d40b")
+                        },
+                        new
+                        {
+                            Id = new Guid("ba1e620a-1e7f-49c8-904d-52ed144470f8"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Holly and Mistletoe",
+                            Price = 0,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("48037943-1577-48cb-827e-bce1ab507149")
+                        },
+                        new
+                        {
+                            Id = new Guid("3e2b8309-41fd-4258-a236-ed5bbdcefec0"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Hourglass",
+                            Price = 300,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("34dd929b-535d-4122-8c24-cd098a4575ec")
+                        },
+                        new
+                        {
+                            Id = new Guid("16e8493f-7a41-495c-9cf4-c4ecc788d5f9"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Jellyfish Lamp",
+                            Price = 200,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("efa6156c-e0cd-4cd2-a693-c5391ad8f5d3")
+                        },
+                        new
+                        {
+                            Id = new Guid("7769a9fc-e764-47c3-a34a-1eba746e293a"),
+                            BulkId = new Guid("d09af7fc-06b3-41c5-89f7-7cbb3fb6f93b"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Ladder",
+                            Price = 3,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("244f6a18-cc4c-46cb-ba34-6c63cca7b02f")
+                        },
+                        new
+                        {
+                            Id = new Guid("6c60bda0-dcce-4507-980b-370cb919c9ed"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Lantern",
+                            Price = 70,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("8cb4bae4-fcb4-49d8-b285-31bf3f49bd1e")
+                        },
+                        new
+                        {
+                            Id = new Guid("93f381c5-9d0f-4b47-a652-7ae50f5d5fb5"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Lock",
+                            Price = 20,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("a66ba719-19fd-470b-977a-06d1fceedb5f")
+                        },
+                        new
+                        {
+                            Id = new Guid("9417ac00-4b72-460a-a6dc-ad961c03ab14"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Magnifying Glass",
+                            Price = 4000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("1d8a755d-21da-415f-aadf-a0b8b4a4c185")
+                        },
+                        new
+                        {
+                            Id = new Guid("2ee4c581-edef-47ed-8654-086ee333d890"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Manacles",
+                            Price = 30,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("3af578c8-cf70-4cce-b145-ecbafd875738")
+                        },
+                        new
+                        {
+                            Id = new Guid("f0ee4a34-407e-410b-bae1-e84dfe9bef81"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Material Component Pouch",
+                            Price = 50,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("c7235d4c-5b48-42b5-b353-8c55539c78d4")
+                        },
+                        new
+                        {
+                            Id = new Guid("7befcd2d-6e94-4956-af49-2d7206a44d13"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Merchant's Scale",
+                            Price = 20,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("9126f19d-85c1-43dd-8864-3bcd862e3b41")
+                        },
+                        new
+                        {
+                            Id = new Guid("25290e17-81bd-4b8d-89b4-fb9228d33d7b"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Mirror",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("b1f9d05d-10cc-44f2-a393-2366418530c1")
+                        },
+                        new
+                        {
+                            Id = new Guid("2ac8cf6c-028f-4418-96ba-4092b85e5fa5"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Mug",
+                            Price = 1,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("3f65d7e8-d958-4a23-9ef2-f2b31420c231")
+                        },
+                        new
+                        {
+                            Id = new Guid("b9442cf7-650e-4ccc-aff0-26283af75863"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Net",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("aa2629ff-fbdc-4153-bb24-e7a5fa321ee6")
+                        },
+                        new
+                        {
+                            Id = new Guid("cc4d4621-bf02-484a-93ad-9b14f6e93b0b"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Oil",
+                            Price = 1,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("dcfdd5ba-a856-40a3-b30f-445aea929b24")
+                        },
+                        new
+                        {
+                            Id = new Guid("901f8786-d591-43a5-b8cd-8cd049434d65"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Parrying Scabbard",
+                            Price = 50,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("cccb7c93-4624-4aa9-99bd-62c38a80543b")
+                        },
+                        new
+                        {
+                            Id = new Guid("0f20c6ab-6c7a-4f5c-9237-d83ed9bd3f19"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "3",
+                            Name = "Pathfinder Chronicle",
+                            Price = 600,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("a56cbac4-f3e2-4329-ba5f-ff0bd483d7f4")
+                        },
+                        new
+                        {
+                            Id = new Guid("a905c052-59af-4d59-8e6b-3dddbe09675a"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "2",
+                            Name = "Periscope",
+                            Price = 2500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("7441bb2d-ec5e-402c-becb-929d7463ca1e")
+                        },
+                        new
+                        {
+                            Id = new Guid("1a6ef531-3bb2-45ea-8946-b6234ff93796"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Piton",
+                            Price = 1,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("c0269601-b805-4072-bf5e-47dccbc21d78")
+                        },
+                        new
+                        {
+                            Id = new Guid("64de129b-3287-4f24-b01a-b50c5a2123be"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Playing Cards",
+                            Price = 50,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("5ff474cb-42fd-4456-809d-5ea4aac492cf")
+                        },
+                        new
+                        {
+                            Id = new Guid("a11b6ffd-1981-406c-8dc4-e535f00773e1"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Rations",
+                            Price = 40,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("e5bc3747-76e5-43c5-a5fe-1fd6c050ec23")
+                        },
+                        new
+                        {
+                            Id = new Guid("19f6384c-7ccb-48a7-ba5a-610a8477aeb2"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0+",
+                            Name = "Religious Symbol",
+                            Price = 200,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("e4d2d39f-3945-47a2-b7c9-ebcd371cdf6f")
+                        },
+                        new
+                        {
+                            Id = new Guid("81704384-9bf8-495f-8afd-18c68b8074b8"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Religious Text",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("cb548dc0-965a-49a6-9d87-fc756f2c7c68")
+                        },
+                        new
+                        {
+                            Id = new Guid("2857c2fb-c0a6-4b9a-99f4-c6fd1c7e8f33"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Repair Kit",
+                            Price = 200,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("c3ccca65-48ad-4c16-bae0-63b720548909")
+                        },
+                        new
+                        {
+                            Id = new Guid("6e9cb8a6-3ecb-49c2-b660-e6d9bc70709a"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Rope",
+                            Price = 50,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("8c1fc540-c33c-4e58-b476-af7ad39de628")
+                        },
+                        new
+                        {
+                            Id = new Guid("929665f3-dc26-4cd4-aa4b-01c2fee66be2"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Rubbing Set",
+                            Price = 100,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("d87e786e-de4e-4bc8-8290-886eb7fac321")
+                        },
+                        new
+                        {
+                            Id = new Guid("be4541a0-3103-4718-b398-cd2a4dfc9295"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Rule",
+                            Price = 50,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("a30ac35f-e8b5-4d90-ae44-baa07af61855")
+                        },
+                        new
+                        {
+                            Id = new Guid("f2913e46-d954-49e8-82b2-76d1c13e8172"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Sack",
+                            Price = 1,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("eded4e9c-8827-4b66-ade0-acd2bf1d4a0a")
+                        },
+                        new
+                        {
+                            Id = new Guid("53af75a3-f02a-4a31-8a6c-63c292192228"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Saddlebags",
+                            Price = 20,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("f8a0a3c7-2a02-49cf-bb00-7600e9c7a1ae")
+                        },
+                        new
+                        {
+                            Id = new Guid("ca17eabb-a025-4f95-9f26-f5b4a6aeef15"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "3",
+                            Name = "Scholarly Journal",
+                            Price = 600,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("687cad0d-7f10-46a5-98a1-39276f204693")
+                        },
+                        new
+                        {
+                            Id = new Guid("784f13b8-c6eb-461f-a423-34b56f16204e"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Shield Sconce",
+                            Price = 10,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("3736672b-59e1-4653-98b1-0cf05adaeb59")
+                        },
+                        new
+                        {
+                            Id = new Guid("4070e631-7074-48fe-8bb7-00372e865dea"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Shootist Bandolier",
+                            Price = 100,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("9cf1e622-68e4-421e-a556-683b7a928785")
+                        },
+                        new
+                        {
+                            Id = new Guid("6f279ee2-bc01-424a-b17e-458c8d58b303"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Signal Whistle",
+                            Price = 8,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("6cf40523-4844-4ba5-a8d1-e7677c26a64c")
+                        },
+                        new
+                        {
+                            Id = new Guid("9262e9cf-8696-45b1-9612-88a1a91fd7cc"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Snare Kit",
+                            Price = 500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("0bfeaa91-39df-41f1-93fd-fa007f9e4617")
+                        },
+                        new
+                        {
+                            Id = new Guid("361e8665-4225-4915-a3fa-f75b9a619b6b"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Snowshoes",
+                            Price = 1000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("88efa217-6a95-4582-942b-f1af8d98aea8")
+                        },
+                        new
+                        {
+                            Id = new Guid("bc8f44fc-727d-4528-a277-bcc88c5f6028"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Soap",
+                            Price = 2,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("ca8e6b9e-ef46-4629-ae1f-76d13afe203b")
+                        },
+                        new
+                        {
+                            Id = new Guid("b14bf18a-759f-4e77-9d24-b631f31797e5"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Spellbook",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("d81d6b43-2329-41d6-980e-8e01c754f7e5")
+                        },
+                        new
+                        {
+                            Id = new Guid("6afd5c23-72ad-48e0-bb63-6dec160c3e73"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Spyglass",
+                            Price = 2000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("b65a32ec-7241-46a9-ad3a-1e8bce4f75bd")
+                        },
+                        new
+                        {
+                            Id = new Guid("a22483eb-0db6-4677-9097-babb09ab0460"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "0",
+                            ItemLevel = "2",
+                            Name = "Sturdy Stachel",
+                            Price = 3000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("807943a9-5e22-48b3-b3d9-54a747232a65")
+                        },
+                        new
+                        {
+                            Id = new Guid("3b87d2b2-c05c-42b1-a7d5-9682e65aff87"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "3",
+                            Name = "Survey Map",
+                            Price = 1000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("a43f7e62-70e2-42db-9531-46c06eba4447")
+                        },
+                        new
+                        {
+                            Id = new Guid("0dc8ba27-c35d-430b-ac20-5ae0e659ca86"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Swim Fins",
+                            Price = 500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("451042d0-831d-4f24-b3a9-85bbb522f7bb")
+                        },
+                        new
+                        {
+                            Id = new Guid("ef7d64e3-04b3-4af5-9c92-47885fc41838"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "0",
+                            ItemLevel = "0",
+                            Name = "Tack",
+                            Price = 400,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("7c3f6602-bc8e-4e39-ac83-df1a85eb1af8")
+                        },
+                        new
+                        {
+                            Id = new Guid("8969e927-035e-4927-a554-96ced3b112d0"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Ten-Foot Pole",
+                            Price = 1,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("7ba180cd-c1cf-44e4-b432-21d24f909d18")
+                        },
+                        new
+                        {
+                            Id = new Guid("b0ab7469-92c8-40c9-a159-6c677814a54d"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Tent",
+                            Price = 500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("648ef2b0-24cc-4c7f-b8f8-dd55f0a4c2d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("ed04caf1-99ba-4aec-ac16-ca08057f7d22"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Thieves' Tools",
+                            Price = 300,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("1acf0154-8631-4223-9194-45fe850cb93f")
+                        },
+                        new
+                        {
+                            Id = new Guid("473b09f6-8087-4fda-97df-103983c75d44"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Tool",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("a91cebff-b88e-490d-85f2-4d01510c877f")
+                        },
+                        new
+                        {
+                            Id = new Guid("e71752ce-5078-41c3-a4bd-8313073efd3d"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Torch",
+                            Price = 1,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("88e2daa7-f121-495c-9159-084ce47aacb9")
+                        },
+                        new
+                        {
+                            Id = new Guid("008da8ab-fa02-4ad0-9ba2-40dca2c5e0be"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "0",
+                            ItemLevel = "1",
+                            Name = "Waterproof Journal",
+                            Price = 500,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("c79be0a7-c09d-4a03-9bbe-94e6e7a94ed1")
+                        },
+                        new
+                        {
+                            Id = new Guid("0ff1b0d8-a30c-41ed-86b7-e56aec6d93fd"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Water Purifier",
+                            Price = 500,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("c8e483b7-3a9e-416f-ad2e-bb6e08e4ae4b")
+                        },
+                        new
+                        {
+                            Id = new Guid("7787539a-8ec2-461f-9c9a-92b7f8e090b2"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "1",
+                            ItemLevel = "0",
+                            Name = "Waterskin",
+                            Price = 5,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("6483fd5b-441a-4aba-8177-6f7dc051a114")
+                        },
+                        new
+                        {
+                            Id = new Guid("0b6cd783-f3bb-43b9-9d2d-fce9d8fa50f6"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Wax Key Blank",
+                            Price = 100,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("663df493-8f23-493a-a8c4-bbf139fe2de3")
+                        },
+                        new
+                        {
+                            Id = new Guid("a4a36408-ce6b-4f60-b6eb-fe4dfb274319"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = "2",
+                            ItemLevel = "0",
+                            Name = "Wiriting Set",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("b09ae9e9-3fb0-463e-bd24-28529ebfe3fc")
+                        },
+                        new
+                        {
+                            Id = new Guid("a06f430b-4080-4d4c-bd01-d162e3aacee5"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            Hands = "1",
+                            ItemLevel = "2",
+                            Name = "Writ of Authenticity",
+                            Price = 500,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("1f9ccda3-04d9-40cc-af70-2ac31af93981")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AdventuringGearVariant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("AdventuringGearId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("DescriptionAddendum")
+                        .HasColumnType("text");
+
+                    b.Property<int?>("Hands")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("NameAddendum")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("RarityId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdventuringGearId");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("RarityId");
+
+                    b.ToTable("AdventuringGearVariant");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b789ea83-1f28-4146-86e2-fb5193696b72"),
+                            AdventuringGearId = new Guid("8f6a633a-5b05-499b-bcf7-459f0a4710f1"),
+                            BulkId = new Guid("3f86e7c2-2386-4a9a-90cb-f8a633257d24"),
+                            DescriptionAddendum = "An expanded alchemist's lab gives a +1 item bonus to Crafting checks to create alchemical items.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Expanded",
+                            Price = 5500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("342e6d20-16d7-46bd-ac63-8d4669d81aec"),
+                            AdventuringGearId = new Guid("dea91016-311a-4e85-9672-aa9bc2b5da99"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            DescriptionAddendum = "Sterling artisan's tools give you a +1 item bonus to the check.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Sterling",
+                            Price = 50,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("81e94f0b-6555-4c97-a23b-de424a4388ce"),
+                            AdventuringGearId = new Guid("fa034d2e-aa2d-4bea-92d8-fde658807406"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "A mariner's astrolabe contains additional stabilizers that make it suitable for use on moving surfaces, such as the deck of a ship.",
+                            Hands = 0,
+                            ItemLevel = 3,
+                            NameAddendum = "Mariner's",
+                            Price = 5000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0")
+                        },
+                        new
+                        {
+                            Id = new Guid("999126f4-74e7-45f8-ac87-7e200308cb6d"),
+                            AdventuringGearId = new Guid("6f3dd7dc-f4b6-4425-b6bb-97775aeeabda"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "A mariner's astrolabe contains additional stabilizers that make it suitable for use on moving surfaces, such as the deck of a ship.",
+                            Hands = 0,
+                            ItemLevel = 5,
+                            NameAddendum = "Advanced",
+                            Price = 5000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0")
+                        },
+                        new
+                        {
+                            Id = new Guid("b64044b3-3e0b-4f59-91e2-d6e5e70591f9"),
+                            AdventuringGearId = new Guid("517b246c-ab2a-495b-8702-62e266d2251b"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            DescriptionAddendum = "You gain a +1 item bonus to Athletics checks to Climb while using an extreme climbing kit.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Extreme",
+                            Price = 4000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("049b9e51-c47c-4c19-a731-5f9870b6bbd3"),
+                            AdventuringGearId = new Guid("727c9745-f0dd-4c3d-b76f-ae806792d762"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "Explorer’s clothing is sturdy enough that it can be reinforced to protect you, even though it isn’t a suit of armor. It comes in many forms, though the most common sorts look like clerical vestments, monk’s garments, or wizard’s robes, as members of all three classes are likely to avoid wearing armor. For more information on explorer’s clothing, see its entry in the armor category.",
+                            Hands = 0,
+                            ItemLevel = 0,
+                            NameAddendum = "Explorer's",
+                            Price = 10,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("8ef0365d-06c3-4dee-8a95-969554e85466"),
+                            AdventuringGearId = new Guid("727c9745-f0dd-4c3d-b76f-ae806792d762"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "Fine clothing, suitable for a noble or royal, is made with expensive fabrics, precious metals, and intricate patterns. You can wear only one tool set of light Bulk with fine clothing, instead of the normal limit of 2 Bulk.",
+                            Hands = 0,
+                            ItemLevel = 0,
+                            NameAddendum = "Fine",
+                            Price = 200,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("647baa6b-6932-45e7-bf06-e49d5770c68e"),
+                            AdventuringGearId = new Guid("727c9745-f0dd-4c3d-b76f-ae806792d762"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "You gain a +1 item bonus to checks to Make an Impression on upper-class folk while wearing high-fashion fine clothing.",
+                            Hands = 0,
+                            ItemLevel = 3,
+                            NameAddendum = "High-Fashion Fine",
+                            Price = 5500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("6c3264fe-5dc2-495a-b742-27a5d5757c52"),
+                            AdventuringGearId = new Guid("727c9745-f0dd-4c3d-b76f-ae806792d762"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "Winter clothing allows you to negate the damage from severe environmental cold and reduce the damage from extreme cold to that of severe cold.",
+                            Hands = 0,
+                            ItemLevel = 0,
+                            NameAddendum = "Winter",
+                            Price = 40,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("010b5e3a-c275-4af9-b9b5-3d5001b055d2"),
+                            AdventuringGearId = new Guid("ee932950-fb59-4926-beee-dab8ef1c74f4"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "If your thieves' tools are broken, you can repair them by replacing the lock picks with replacement picks appropriate to your tools; this doesn't require using the Repair action.",
+                            ItemLevel = 4,
+                            NameAddendum = "Replacement Picks",
+                            Price = 1000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0")
+                        },
+                        new
+                        {
+                            Id = new Guid("b9d16599-0d0b-4db0-97b6-86043675f8d4"),
+                            AdventuringGearId = new Guid("dde8580a-9312-438f-b404-125e1229dc4b"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "A levered crowbar grants you a +1 item bonus to Athletics checks to Force Open anything that can be pried open.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Levered",
+                            Price = 2000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("f9040db4-e4df-429a-9970-e1fe53d90f12"),
+                            AdventuringGearId = new Guid("e428fd54-cd8a-4d30-b6e2-3c48a2490910"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "If you've crafted a large number of disguises, you can replenish your cosmetics supply with replacement cosmetics suitable for the type of your disguise kit.",
+                            ItemLevel = 0,
+                            NameAddendum = "Replacement Cosmetics",
+                            Price = 10,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("2aa5120f-4773-407e-9347-0aced34e5780"),
+                            AdventuringGearId = new Guid("e428fd54-cd8a-4d30-b6e2-3c48a2490910"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "An elite disguise kit adds a +1 item bonus to relevant checks.",
+                            ItemLevel = 3,
+                            NameAddendum = "Elite",
+                            Price = 4000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("4560c10a-7046-4951-92d5-1b0d358e3ce4"),
+                            AdventuringGearId = new Guid("e428fd54-cd8a-4d30-b6e2-3c48a2490910"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "If you've crafted a large number of disguises, you can replenish your cosmetics supply with replacement cosmetics suitable for the type of your disguise kit.",
+                            ItemLevel = 3,
+                            NameAddendum = "Elite Replacement Cosmetics",
+                            Price = 50,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("d542a4a9-c904-4f82-a535-381329b4378d"),
+                            AdventuringGearId = new Guid("48f8e6d1-38dd-4ae7-966b-d85778977991"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            DescriptionAddendum = "Professional fishing tackle grants a +1 item bonus to checks to fish.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Professional",
+                            Price = 2000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("3f1f65a3-9956-4a35-8ff4-15c6e6e9a97b"),
+                            AdventuringGearId = new Guid("00629e82-1fc3-4f7f-b81e-7750bdd86840"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            DescriptionAddendum = "A virtuoso instrument gives a +1 item bonus to Performance checks using that instrument.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Virtuoso",
+                            Price = 5000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("de573077-4fef-43d7-aee3-47bb47fd275c"),
+                            AdventuringGearId = new Guid("0674b7e7-35f2-4d29-96b6-c98ad8f99422"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = 2,
+                            ItemLevel = 0,
+                            NameAddendum = "Common",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("0d267810-983b-454d-8252-90bdf15be28d"),
+                            AdventuringGearId = new Guid("0674b7e7-35f2-4d29-96b6-c98ad8f99422"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = 2,
+                            ItemLevel = 0,
+                            NameAddendum = "Simple",
+                            Price = 1000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("cad66a2f-ec44-49ad-a5e1-6368f2485b94"),
+                            AdventuringGearId = new Guid("0674b7e7-35f2-4d29-96b6-c98ad8f99422"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = 2,
+                            ItemLevel = 0,
+                            NameAddendum = "Fine",
+                            Price = 1100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("297cce48-9ff9-42ab-b9a3-94a490f029bf"),
+                            AdventuringGearId = new Guid("b65586b9-cfee-42b5-ab60-881766c60c2e"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            DescriptionAddendum = "Expanded healer's tools provide a +1 item bonus to such checks.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Expanded",
+                            Price = 5000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("7a695b7c-0d9e-410e-a048-912ef33e8193"),
+                            AdventuringGearId = new Guid("c39b02a3-8ad1-4b2a-99c9-a141e174f52f"),
+                            BulkId = new Guid("bcd4ffa2-a04b-4a74-ae12-c839667caa71"),
+                            DescriptionAddendum = "A virtuoso instrument gives a +1 item bonus to Performance checks using that instrument.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Virtuoso",
+                            Price = 10000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("a33954b8-34d4-47bc-8a43-d7999bf649fa"),
+                            AdventuringGearId = new Guid("6c60bda0-dcce-4507-980b-370cb919c9ed"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "A hooded lantern sheds light in a 30-foot radius (and dim light in the next 30 feet) and is equipped with shutters, which you can close to block the light. Closing or opening the shutters takes an Interact action.",
+                            Hands = 1,
+                            ItemLevel = 0,
+                            NameAddendum = "Hooded",
+                            Price = 70,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("5ae2a0fc-0840-44a9-a9af-044ab1412416"),
+                            AdventuringGearId = new Guid("6c60bda0-dcce-4507-980b-370cb919c9ed"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            DescriptionAddendum = "A bull’s-eye lantern emits its light in a 60-foot cone (and dim light in the next 60 feet).",
+                            Hands = 1,
+                            ItemLevel = 0,
+                            NameAddendum = "Bull's Eye",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("657fb33a-533a-4138-a4e1-b348704713d8"),
+                            AdventuringGearId = new Guid("93f381c5-9d0f-4b47-a652-7ae50f5d5fb5"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "Picking a poor lock requires two successful DC 15 Thievery checks.",
+                            Hands = 2,
+                            ItemLevel = 0,
+                            NameAddendum = "Poor",
+                            Price = 20,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("40e0eb38-8162-4562-b875-743e53276321"),
+                            AdventuringGearId = new Guid("93f381c5-9d0f-4b47-a652-7ae50f5d5fb5"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "Picking a simple lock requires three successful DC 20 Thievery checks.",
+                            Hands = 2,
+                            ItemLevel = 1,
+                            NameAddendum = "Simple",
+                            Price = 200,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("86ff25f4-1577-428f-b220-c271c58b8437"),
+                            AdventuringGearId = new Guid("93f381c5-9d0f-4b47-a652-7ae50f5d5fb5"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "Picking an average lock requires four successful DC 25 Thievery checks.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Average",
+                            Price = 1500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("007d34fc-a615-4980-9e52-a48ad6380eeb"),
+                            AdventuringGearId = new Guid("93f381c5-9d0f-4b47-a652-7ae50f5d5fb5"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "Picking a good lock requires five successful DC 30 Thievery checks.",
+                            Hands = 2,
+                            ItemLevel = 9,
+                            NameAddendum = "Good",
+                            Price = 20000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("8cc2785d-d1e9-4c35-8b60-3b9b7cc4dfcc"),
+                            AdventuringGearId = new Guid("93f381c5-9d0f-4b47-a652-7ae50f5d5fb5"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "Picking a superior lock requires six successful DC 40 Thievery checks.",
+                            Hands = 2,
+                            ItemLevel = 17,
+                            NameAddendum = "Superior",
+                            Price = 450000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("ab61c34e-6bab-4c85-ad11-7cfaeaa20ac4"),
+                            AdventuringGearId = new Guid("2ee4c581-edef-47ed-8654-086ee333d890"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "Freeing a creature from poor manacles requires two successful DC 17 Thievery checks.",
+                            Hands = 2,
+                            ItemLevel = 0,
+                            NameAddendum = "Poor",
+                            Price = 30,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("696b25d5-5498-4850-a214-dbb752e11696"),
+                            AdventuringGearId = new Guid("2ee4c581-edef-47ed-8654-086ee333d890"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "Freeing a creature from simple manacles three successful DC 22 Thievery checks.",
+                            Hands = 2,
+                            ItemLevel = 1,
+                            NameAddendum = "Simple",
+                            Price = 300,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("0e173d1a-f0d6-48ef-99ad-2fa55099305e"),
+                            AdventuringGearId = new Guid("2ee4c581-edef-47ed-8654-086ee333d890"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "Freeing a creature from average manacles four successful DC 27 Thievery checks.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Average",
+                            Price = 2000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("38297239-ba88-499a-b1bd-d6d333eacf2c"),
+                            AdventuringGearId = new Guid("2ee4c581-edef-47ed-8654-086ee333d890"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "Freeing a creature from good manacles five successful DC 32 Thievery checks.",
+                            Hands = 2,
+                            ItemLevel = 9,
+                            NameAddendum = "Good",
+                            Price = 25000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("2c92133b-cce0-431a-89dd-9cfb260387ce"),
+                            AdventuringGearId = new Guid("2ee4c581-edef-47ed-8654-086ee333d890"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "Freeing a creature from good manacles six successful DC 42 Thievery checks.",
+                            Hands = 2,
+                            ItemLevel = 17,
+                            NameAddendum = "Superior",
+                            Price = 500000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("50ccb809-38cd-4618-aaa6-dd12cef309a0"),
+                            AdventuringGearId = new Guid("64de129b-3287-4f24-b01a-b50c5a2123be"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "A deck of marked playing cards appears to be an ordinary deck upon initial inspection but bears specific folds, colors, scratches, or other markings on each card that allow an informed user to know what's on the other side of a card. A deck of marked cards grants you a +1 item bonus to Games Lore checks or other relevant checks to gamble with the cards. You can determine that an unattended deck of cards is marked with a successful DC 20 Perception check. Determining that a deck is marked during play is more difficult and is typically determined by a Perception check against the dealer's Games Lore or Thievery DC.",
+                            Hands = 2,
+                            ItemLevel = 0,
+                            NameAddendum = "Marked",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("3ef583de-ca10-46ae-b1b5-e2b11c34def9"),
+                            AdventuringGearId = new Guid("19f6384c-7ccb-48a7-ba5a-610a8477aeb2"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = 1,
+                            ItemLevel = 0,
+                            NameAddendum = "Wooden",
+                            Price = 10,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("fb9a0eb4-e301-45ff-a99f-5b1d3f129fea"),
+                            AdventuringGearId = new Guid("19f6384c-7ccb-48a7-ba5a-610a8477aeb2"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hands = 1,
+                            ItemLevel = 0,
+                            NameAddendum = "Silver",
+                            Price = 200,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("1a1c5a04-ce71-45ee-8576-852b35726ccf"),
+                            AdventuringGearId = new Guid("2857c2fb-c0a6-4b9a-99f4-c6fd1c7e8f33"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            DescriptionAddendum = "A superb repair kit gives you a +1 item bonus to the check.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Superb",
+                            Price = 2500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("b255fac2-e663-459a-8325-3cc9840b46da"),
+                            AdventuringGearId = new Guid("ca17eabb-a025-4f95-9f26-f5b4a6aeef15"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "A compendium of journals costs five times as much as a single journal and requires both hands to use; each compendium contains several journals and grants its bonus on a broader topic, such as all undead or a whole city.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Compendium",
+                            Price = 3000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("eada8c43-dde1-4148-8b1f-5694548241d2"),
+                            AdventuringGearId = new Guid("9262e9cf-8696-45b1-9612-88a1a91fd7cc"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            DescriptionAddendum = "A specialist snare kit gives you a +1 item bonus to the check.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Specialist",
+                            Price = 5500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("e75078d5-0865-4a97-aa5c-043de31f462e"),
+                            AdventuringGearId = new Guid("6afd5c23-72ad-48e0-bb63-6dec160c3e73"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "A fine spyglass adds a +1 item bonus to Perception checks to notice details at a distance.",
+                            Hands = 2,
+                            ItemLevel = 4,
+                            NameAddendum = "Fine",
+                            Price = 8000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("db15d73d-9a45-4ac4-9d6f-e0edf5013e97"),
+                            AdventuringGearId = new Guid("3b87d2b2-c05c-42b1-a7d5-9682e65aff87"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "Maps sometimes come in atlases, containing a number of maps of the same quality, often on similar topics. An atlas costs five times as much as a single map and requires both hands to use.",
+                            Hands = 2,
+                            ItemLevel = 3,
+                            NameAddendum = "Atlas",
+                            Price = 5000,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0")
+                        },
+                        new
+                        {
+                            Id = new Guid("4ffc8ec2-7511-4dff-adff-c65242a40923"),
+                            AdventuringGearId = new Guid("b0ab7469-92c8-40c9-a159-6c677814a54d"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "A small tent that can serve as a sleeping shelter for up to two people. An additional person could fit, but would make it very uncomfortable.",
+                            Hands = 2,
+                            ItemLevel = 0,
+                            NameAddendum = "Pup",
+                            Price = 80,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("5b74cfdb-989e-4ff6-b0e9-32e1685a3f9f"),
+                            AdventuringGearId = new Guid("b0ab7469-92c8-40c9-a159-6c677814a54d"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            DescriptionAddendum = "A medium sized tent that can serve as a sleeping shelter for up to four people. An additional person could fit, but would make it very uncomfortable.",
+                            Hands = 2,
+                            ItemLevel = 0,
+                            NameAddendum = "Four-Person",
+                            Price = 500,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("a38f532c-e8b5-4f20-a079-68890665c748"),
+                            AdventuringGearId = new Guid("b0ab7469-92c8-40c9-a159-6c677814a54d"),
+                            BulkId = new Guid("03892ea6-b07b-4163-b29e-7248aa872bba"),
+                            DescriptionAddendum = "A large tent that can serve as a sleeping shelter for up to 10 people. An additional person could fit, but would make it more and more uncomfortable.",
+                            Hands = 2,
+                            ItemLevel = 2,
+                            NameAddendum = "Pavillion",
+                            Price = 4000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("534b3a2f-fc09-471c-93d5-a064eff0dcb2"),
+                            AdventuringGearId = new Guid("ed04caf1-99ba-4aec-ac16-ca08057f7d22"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "If your thieves' tools are broken, you can repair them by replacing the lock picks with replacement picks appropriate to your tools; this doesn't require using the Repair action.",
+                            ItemLevel = 0,
+                            NameAddendum = "Replacement Picks",
+                            Price = 30,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("4efe5c56-7224-49d0-8418-e85a9d5bd414"),
+                            AdventuringGearId = new Guid("ed04caf1-99ba-4aec-ac16-ca08057f7d22"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "Infiltrator thieves' tools add a +1 item bonus to checks to Pick Locks and Disable Devices.",
+                            ItemLevel = 0,
+                            NameAddendum = "Infiltrator",
+                            Price = 5000,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("64ba1b4f-b660-420d-a8b8-43de553396cf"),
+                            AdventuringGearId = new Guid("ed04caf1-99ba-4aec-ac16-ca08057f7d22"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "If your thieves' tools are broken, you can repair them by replacing the lock picks with replacement picks appropriate to your tools; this doesn't require using the Repair action.",
+                            ItemLevel = 3,
+                            NameAddendum = "Infiltrator",
+                            Price = 300,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("c35dfbc6-d401-45bc-bddd-7bba379f115d"),
+                            AdventuringGearId = new Guid("473b09f6-8087-4fda-97df-103983c75d44"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            DescriptionAddendum = "A hoe, shovel, or sledgehammer is a long tool. A tool can usually be used as an improvised weapon, dealing 1d6 for a long tool.",
+                            Hands = 2,
+                            ItemLevel = 0,
+                            NameAddendum = "Long",
+                            Price = 100,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("0bb59651-792b-4c55-8c1a-df199426e5c1"),
+                            AdventuringGearId = new Guid("473b09f6-8087-4fda-97df-103983c75d44"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            DescriptionAddendum = "A hand drill, ice hook, or trowel is a short tool. A tool can usually be used as an improvised weapon, dealing 1d4 damage for a short tool.",
+                            Hands = 1,
+                            ItemLevel = 0,
+                            NameAddendum = "Short",
+                            Price = 40,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        },
+                        new
+                        {
+                            Id = new Guid("45f2c06a-168d-42c1-9cf4-2b2b5361802e"),
+                            AdventuringGearId = new Guid("0ff1b0d8-a30c-41ed-86b7-e56aec6d93fd"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "The counteract modifier is +5 for the level 1 filter.",
+                            ItemLevel = 1,
+                            NameAddendum = "Level 1",
+                            Price = 500,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0")
+                        },
+                        new
+                        {
+                            Id = new Guid("dccdf3d1-7c42-4d81-915e-538a42dfd0c4"),
+                            AdventuringGearId = new Guid("0ff1b0d8-a30c-41ed-86b7-e56aec6d93fd"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "The counteract modifier is +9 for the level 5 filter.",
+                            ItemLevel = 5,
+                            NameAddendum = "Level 5",
+                            Price = 2500,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0")
+                        },
+                        new
+                        {
+                            Id = new Guid("5e0ac2ee-fcf5-4ec3-96da-dddf2dcef9e4"),
+                            AdventuringGearId = new Guid("0ff1b0d8-a30c-41ed-86b7-e56aec6d93fd"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "The counteract modifier is +17 for the level 10 filter.",
+                            ItemLevel = 10,
+                            NameAddendum = "Level 10",
+                            Price = 15500,
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0")
+                        },
+                        new
+                        {
+                            Id = new Guid("40f98c83-06bd-46eb-bf55-db5a5917d157"),
+                            AdventuringGearId = new Guid("a4a36408-ce6b-4f60-b6eb-fe4dfb274319"),
+                            BulkId = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            DescriptionAddendum = "If you’ve written a large amount, you can refill your kit with extra ink and paper.",
+                            ItemLevel = 0,
+                            NameAddendum = "Extra Ink and Paper",
+                            Price = 10,
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792")
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", b =>
                 {
                     b.Property<Guid>("Id")
@@ -12036,13 +13876,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
-                            BulkWeight = 0,
-                            LightWeight = 0,
-                            Name = "-"
-                        },
-                        new
-                        {
                             Id = new Guid("61e784de-dd93-4d53-acda-61dff663e2a3"),
                             BulkWeight = 4,
                             LightWeight = 0,
@@ -12057,6 +13890,13 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("b5de3410-d051-4dfe-be54-dde62ee45bc1"),
+                            BulkWeight = 0,
+                            LightWeight = 0,
+                            Name = "-"
+                        },
+                        new
+                        {
                             Id = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
                             BulkWeight = 1,
                             LightWeight = 0,
@@ -12064,10 +13904,31 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("3f86e7c2-2386-4a9a-90cb-f8a633257d24"),
+                            BulkWeight = 6,
+                            LightWeight = 0,
+                            Name = "6"
+                        },
+                        new
+                        {
+                            Id = new Guid("bcd4ffa2-a04b-4a74-ae12-c839667caa71"),
+                            BulkWeight = 16,
+                            LightWeight = 0,
+                            Name = "16"
+                        },
+                        new
+                        {
                             Id = new Guid("d09af7fc-06b3-41c5-89f7-7cbb3fb6f93b"),
                             BulkWeight = 3,
                             LightWeight = 0,
                             Name = "3"
+                        },
+                        new
+                        {
+                            Id = new Guid("03892ea6-b07b-4163-b29e-7248aa872bba"),
+                            BulkWeight = 12,
+                            LightWeight = 0,
+                            Name = "12"
                         },
                         new
                         {
@@ -23368,6 +25229,624 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.ToTable("SourcePage");
 
                     b.HasData(
+                        new
+                        {
+                            Id = new Guid("0aa4ba0e-3c12-4d52-9156-fdbe8562dcb4"),
+                            Page = 289,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("2686c706-c844-404b-9420-d87e5fa2caac"),
+                            Page = 287,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e8e92ed4-2146-44db-a5d0-1c6050e51c93"),
+                            Page = 289,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1a1fa3d5-1b85-41e3-8eb6-d17fd109079f"),
+                            Page = 91,
+                            SourceId = new Guid("8026612e-b2dc-42d2-8844-bb0bc63c0249")
+                        },
+                        new
+                        {
+                            Id = new Guid("b8b6158c-86ae-4c20-94bc-b29b056974e2"),
+                            Page = 287,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("b6b57c60-c14c-4a67-8cf1-c8c0e432af7d"),
+                            Page = 34,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("b04fdee6-3960-4bc9-bc85-e0ea7a6cc1a8"),
+                            Page = 289,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6efbc37c-386e-47d0-8b8b-169b2d4e53b8"),
+                            Page = 289,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c62c1853-80fb-4c06-ab1c-8ebd1fbe0930"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1f08b7fc-8ddc-4689-95fd-9c2fd0d298ba"),
+                            Page = 93,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("852b13ea-b1cc-4028-800f-fbbddaf36362"),
+                            Page = 249,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("44fab1cc-b993-41d5-9b62-153bd40f3fce"),
+                            Page = 114,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("6cac8caf-e1a7-4a50-8813-77896127dd64"),
+                            Page = 289,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d73b403b-3d20-410d-b9dd-7500b7d5bed6"),
+                            Page = 289,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7028a268-35b0-47e5-92a2-1f1353e66e56"),
+                            Page = 34,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("21625357-762f-4ebe-99e2-b3756c24a1bb"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("855558ff-8646-4f0c-bf2d-07ff7e6c901e"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("9b3f0c24-5127-45fc-8685-39cf0c715f74"),
+                            Page = 289,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4d6eed41-5de9-4166-bc48-7e39f56e176d"),
+                            Page = 287,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("9aa3b1fa-c4a2-40b4-8aae-a6f6044d4744"),
+                            Page = 114,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("66115a16-38f5-4728-ae03-e4d1a17809d4"),
+                            Page = 287,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6ef31e22-1091-4e65-8fd8-95b8a892b6f0"),
+                            Page = 114,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("f2dea4f8-a15c-4e72-a738-99eefdb62b56"),
+                            Page = 26,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("3c57c725-c3df-425b-9b04-9e8ab27d017b"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c7ad2d60-0c88-454e-adbd-0bb169961fab"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("2be216d7-886c-496e-ba31-385773a64d96"),
+                            Page = 114,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("252201d7-de76-47f1-9a5b-219f1a8e68d3"),
+                            Page = 249,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("abb4d62b-0f95-4ef7-8e1d-dde096062622"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("cfdfc8cd-8d4a-4d67-bf20-f095666ea579"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("2e46d003-82e0-48d4-993d-f4b1d8e4b779"),
+                            Page = 114,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("c60b4087-35ad-400b-b704-825fce18f256"),
+                            Page = 249,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("b3215583-b79b-4ae2-90ce-0b8ec62fc026"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e8459024-60cd-46ec-b64d-7b1b1adb308f"),
+                            Page = 249,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("2cad9712-fbd7-42aa-85b0-e1d498651b94"),
+                            Page = 114,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("b43cebe4-9433-4a80-94d1-1003b52e41c3"),
+                            Page = 114,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("0899601a-1040-474c-abbc-f669c6b26f33"),
+                            Page = 114,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("1e3d5cf6-e1ce-4c09-b686-ccd09600541a"),
+                            Page = 77,
+                            SourceId = new Guid("9812077c-2f7a-4657-9312-1f44f9a95e3a")
+                        },
+                        new
+                        {
+                            Id = new Guid("2f62d0ad-0edc-4537-97d7-517bae0d0072"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("95650345-46bd-4622-ae7c-f46d33da8dfb"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ec8a4a5d-8854-480c-8a9b-9fc3aa34e318"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d2d2dfe5-b1dc-4be9-8335-fedd3ab8d24f"),
+                            Page = 115,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("df8529d1-4ece-4ebc-9774-9d16b4ff6032"),
+                            Page = 115,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("79c70f5f-b3a1-42b8-b8b7-e043d23344ce"),
+                            Page = 115,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("d8b95427-77bd-4a53-b96a-d3764e7ced7c"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a7a6eabd-b402-4485-8dd2-375761338b21"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("de7474cc-8673-4069-8cf5-439a5f9581db"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a7ed5c0c-f9d3-4672-b084-b24ffea26ce1"),
+                            Page = 66,
+                            SourceId = new Guid("39b6a1dc-2aaa-4446-9988-b1834700598a")
+                        },
+                        new
+                        {
+                            Id = new Guid("6240d00f-37a0-43a5-8b6c-7797e00372a7"),
+                            Page = 66,
+                            SourceId = new Guid("39b6a1dc-2aaa-4446-9988-b1834700598a")
+                        },
+                        new
+                        {
+                            Id = new Guid("2575f21e-b56a-4d81-b428-0994a973632c"),
+                            Page = 66,
+                            SourceId = new Guid("39b6a1dc-2aaa-4446-9988-b1834700598a")
+                        },
+                        new
+                        {
+                            Id = new Guid("9ffa6270-930f-4d44-b4e0-63bc0383d422"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4368f848-ca6e-41d7-aa78-2fce1566d40b"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("48037943-1577-48cb-827e-bce1ab507149"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("34dd929b-535d-4122-8c24-cd098a4575ec"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("efa6156c-e0cd-4cd2-a693-c5391ad8f5d3"),
+                            Page = 68,
+                            SourceId = new Guid("fc93169c-2136-4e9c-9868-c5f0bb79b331")
+                        },
+                        new
+                        {
+                            Id = new Guid("244f6a18-cc4c-46cb-ba34-6c63cca7b02f"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("8cb4bae4-fcb4-49d8-b285-31bf3f49bd1e"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a66ba719-19fd-470b-977a-06d1fceedb5f"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1d8a755d-21da-415f-aadf-a0b8b4a4c185"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3af578c8-cf70-4cce-b145-ecbafd875738"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c7235d4c-5b48-42b5-b353-8c55539c78d4"),
+                            Page = 290,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("9126f19d-85c1-43dd-8864-3bcd862e3b41"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("b1f9d05d-10cc-44f2-a393-2366418530c1"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3f65d7e8-d958-4a23-9ef2-f2b31420c231"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("aa2629ff-fbdc-4153-bb24-e7a5fa321ee6"),
+                            Page = 249,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("dcfdd5ba-a856-40a3-b30f-445aea929b24"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("cccb7c93-4624-4aa9-99bd-62c38a80543b"),
+                            Page = 249,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a56cbac4-f3e2-4329-ba5f-ff0bd483d7f4"),
+                            Page = 110,
+                            SourceId = new Guid("8026612e-b2dc-42d2-8844-bb0bc63c0249")
+                        },
+                        new
+                        {
+                            Id = new Guid("7441bb2d-ec5e-402c-becb-929d7463ca1e"),
+                            Page = 249,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("c0269601-b805-4072-bf5e-47dccbc21d78"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("5ff474cb-42fd-4456-809d-5ea4aac492cf"),
+                            Page = 115,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("e5bc3747-76e5-43c5-a5fe-1fd6c050ec23"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e4d2d39f-3945-47a2-b7c9-ebcd371cdf6f"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("cb548dc0-965a-49a6-9d87-fc756f2c7c68"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c3ccca65-48ad-4c16-bae0-63b720548909"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("8c1fc540-c33c-4e58-b476-af7ad39de628"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d87e786e-de4e-4bc8-8290-886eb7fac321"),
+                            Page = 115,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("a30ac35f-e8b5-4d90-ae44-baa07af61855"),
+                            Page = 34,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("eded4e9c-8827-4b66-ade0-acd2bf1d4a0a"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f8a0a3c7-2a02-49cf-bb00-7600e9c7a1ae"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("687cad0d-7f10-46a5-98a1-39276f204693"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3736672b-59e1-4653-98b1-0cf05adaeb59"),
+                            Page = 115,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("9cf1e622-68e4-421e-a556-683b7a928785"),
+                            Page = 73,
+                            SourceId = new Guid("de4c1dea-3ff2-444e-a7d9-7fab0cf297d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("6cf40523-4844-4ba5-a8d1-e7677c26a64c"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0bfeaa91-39df-41f1-93fd-fa007f9e4617"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("88efa217-6a95-4582-942b-f1af8d98aea8"),
+                            Page = 115,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("ca8e6b9e-ef46-4629-ae1f-76d13afe203b"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("d81d6b43-2329-41d6-980e-8e01c754f7e5"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("b65a32ec-7241-46a9-ad3a-1e8bce4f75bd"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("807943a9-5e22-48b3-b3d9-54a747232a65"),
+                            Page = 34,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("a43f7e62-70e2-42db-9531-46c06eba4447"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("451042d0-831d-4f24-b3a9-85bbb522f7bb"),
+                            Page = 69,
+                            SourceId = new Guid("fc93169c-2136-4e9c-9868-c5f0bb79b331")
+                        },
+                        new
+                        {
+                            Id = new Guid("7c3f6602-bc8e-4e39-ac83-df1a85eb1af8"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7ba180cd-c1cf-44e4-b432-21d24f909d18"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("648ef2b0-24cc-4c7f-b8f8-dd55f0a4c2d8"),
+                            Page = 288,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1acf0154-8631-4223-9194-45fe850cb93f"),
+                            Page = 291,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a91cebff-b88e-490d-85f2-4d01510c877f"),
+                            Page = 292,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("88e2daa7-f121-495c-9159-084ce47aacb9"),
+                            Page = 292,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c79be0a7-c09d-4a03-9bbe-94e6e7a94ed1"),
+                            Page = 30,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("c8e483b7-3a9e-416f-ad2e-bb6e08e4ae4b"),
+                            Page = 115,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("6483fd5b-441a-4aba-8177-6f7dc051a114"),
+                            Page = 292,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("663df493-8f23-493a-a8c4-bbf139fe2de3"),
+                            Page = 115,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("b09ae9e9-3fb0-463e-bd24-28529ebfe3fc"),
+                            Page = 292,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1f9ccda3-04d9-40cc-af70-2ac31af93981"),
+                            Page = 26,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
                         new
                         {
                             Id = new Guid("05e99663-a3fb-498d-8cdb-702190ac8f65"),
@@ -40404,6 +42883,1006 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("RollableEffect");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AdventuringGear", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Rarity", "Rarity")
+                        .WithMany()
+                        .HasForeignKey("RarityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("AdventuringGear_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("da790c29-3bb6-4262-a3e8-bc4058fc18bc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("97f361db-58be-487f-a5aa-ced5e1a2197f"),
+                                    Text = "This item is the starter kit for an adventurer, containing the essential items for exploration and survival. The Bulk value is for the entire pack together, but see the descriptions of individual items as necessary.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("01d7deb6-06a4-4e24-88bb-145bf823125b"),
+                                    Order = 1,
+                                    OwnerId = new Guid("97f361db-58be-487f-a5aa-ced5e1a2197f"),
+                                    Text = "The pack contains the following items: backpack (containing the other goods), bedroll, 10 pieces of chalk, flint and steel, 50 feet of rope, 2 weeks' rations, soap, 5 torches, and a waterskin.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a6c0e44b-e2c7-46d4-92ce-cbaccf522278"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8f6a633a-5b05-499b-bcf7-459f0a4710f1"),
+                                    Text = "You need an alchemist's lab to Craft alchemical items during downtime.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bfb8773e-71f4-42ee-bd96-b8dd4ed2630a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9fbc54ea-d3f5-4fd8-8b5d-1b1cd539745e"),
+                                    Text = "This mobile collection of vials and chemicals can be used for simple alchemical tasks. If you wear your alchemist's tools, you can draw and replace them as part of the action that uses them.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cd9831c4-0711-4425-8858-18cc1d989a7a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("29638790-400f-407e-8b44-0b25aff858cd"),
+                                    Text = "These armor-plated skirts, which are also known as armored kilts, are favored by Knights of Lastwall for their versatility and aesthetic appeal. An armored skirt can be donned with 2 Interact actions when it’s worn with light or medium armor, or as part of donning heavy armor.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f0165037-edad-4df1-997e-81daf61a4399"),
+                                    Order = 1,
+                                    OwnerId = new Guid("29638790-400f-407e-8b44-0b25aff858cd"),
+                                    Text = "When worn with a breastplate, chain shirt, chain mail, or scale mail, an armored skirt increases the armor’s item bonus to AC by 1, worsens the armor’s check penalty by 1, reduces the armor’s Dex cap by 1, increases the Strength score required to ignore the check penalty and reduce the Speed penalty by 2, and adds the noisy trait. This also makes the armor one step heavier (from light to medium, or medium to heavy), and you use the proficiency bonus appropriate to this adjusted armor type.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b47ed716-9fe1-4fa9-80be-b68a2c7dcc53"),
+                                    Order = 2,
+                                    OwnerId = new Guid("29638790-400f-407e-8b44-0b25aff858cd"),
+                                    Text = "Alternatively, when wearing an armored skirt to replace appropriate portions of a set of half plate or full plate, reduce the armor’s item bonus to AC by 1, lessen the check penalty by 1, decrease the Strength score required to ignore the check penalty and reduce the Speed penalty by 2, increase the armor’s Dex cap by 1, and add the noisy trait to the armor. An armored skirt grants no benefit when worn by itself or with armors other than those listed here.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("89e2759c-4a2d-41aa-8bdb-d1bfe921a06e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dea91016-311a-4e85-9672-aa9bc2b5da99"),
+                                    Text = "You need these tools to create items from raw materials with the Craft skill. Different sets are needed for different work, as determined by the GM; for example, blacksmith's tools differ from woodworker's tools. If you wear your artisan's tools, you can draw and replace them as part of the action that uses them.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ea5b68fe-35b4-4280-aada-20a4780839e1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fa034d2e-aa2d-4bea-92d8-fde658807406"),
+                                    Text = "Astrolabes can be used for navigation in unfamiliar or featureless locations. To use an astrolabe, the holder must be trained in Survival. By spending 1 minute to measure the height of the stars and planets, a holder who knows the time and date can determine the latitude, and a holder who knows their latitude can determine the date and time. An astrolabe also grants a +1 item bonus on checks to identify celestial bodies. A standard astrolabe only functions on steady ground.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e33ba36b-fe08-4558-80ff-a386ac5904cc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4ca4df89-46d6-41aa-8467-078b97c85852"),
+                                    Text = "A backpack holds up to 4 Bulk of items. and the first 2 Bulk of these items don't count against your Bulk limits. If you're carrying or stowing the pack rather than wearing it on your back, its Bulk is light instead of negligible.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("333536c8-6a6d-4462-a8f7-67a8e5758830"),
+                                    Order = 0,
+                                    OwnerId = new Guid("45716613-931a-42c5-8cb0-ce77190b1cb8"),
+                                    Text = "This book contains formulas for Crafting common items.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d680c63c-d31e-4133-859e-7c464cb0fce9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2e760e65-7138-4baf-8b51-9d7d08d02195"),
+                                    Text = "This consists of two woolen sheets sewn together along the bottom and one side to create a bag for sleeping in. Some have cloth straps along the open side so the bedroll can be tied closed while you are sleeping. It can be rolled and tied into a tight coil for storage or transport. Most people use a blanket with the bedroll to stay warm or provide a ground cushion.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e335ff59-4f92-405d-b0b1-5a6bafb68bc8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6f3dd7dc-f4b6-4425-b6bb-97775aeeabda"),
+                                    Text = "The book is leather-bound and decorated with the symbol of the Lantern Lodge. Red and gold cords wrap around the book and tie to keep it shut. Each volume offers translation for a different language. When working with a book of translation, you can attempt Diplomacy checks to Gather Information or to Make an Impression with creatures that speak the language featured in the book, even if you do not speak the language. Such checks take 10 times longer to complete and you take a –2 circumstance penalty to the check due to your limited communication capabilities.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e1ddcf8f-c273-4e3d-b8ad-976bd53e0fde"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2f13c997-9bf3-4722-8a85-c683c9867756"),
+                                    Text = "A brass ear is a short, flared tube with one end narrow enough to comfortably fit against the ear canal. When using a brass ear to listen through a door, window, thin wall, or similar barrier, if the barrier would normally increase the DC of your Perception check to hear sounds on the other side, the DC increases by only half as much as normal.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c4d3e330-3877-4a08-8352-9b44a3b7091e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("aa28dbfb-0480-494f-afc1-bbe71b70b19b"),
+                                    Text = "This canvas vest has been filled with cork shavings, tightly folded, and sewn shut. Wearing a buoyancy vest allows you to float in water with a lowered risk of sinking. If you end your turn in water while wearing a buoyancy vest and haven't succeeded at a Swim action that turn, attempt a DC 5 flat check. On a success, you do not sink, though you can still get moved by the current, as determined by the GM. The GM can also determine whether the vest is more or less effective in different weather conditions, raising the DC in rough waters or lowering the DC in calm water.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("772aa19a-25d2-438a-a551-ad4f5c0091f6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e6026e0d-1fe6-42c1-964b-767e0748b927"),
+                                    Text = "These four-pronged metal spikes can cause damage to a creature's feet. You can scatter caltrops in an empty square adjacent to you with an Interact action. The first creature that moves into that square must succeed at a DC 14 Acrobatics check or take 1d4 piercing damage and 1 persistent bleed damage. A creature taking persistent bleed damage from caltrops takes a –5-foot penalty to its Speed. Spending an Interact action to pluck the caltrops free reduces the DC to stop the bleeding. Once a creature takes damage from caltrops, enough caltrops are ruined that other creatures moving into the square are safe. Deployed caltrops can be salvaged and reused if no creatures took damage from them.Otherwise, enough caltrops are ruined that they can't be salvaged.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("128ea756-3037-4a98-9f85-e5ef0c7932e2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("bbf20e5e-8af9-46f4-9429-b7582e34eda4"),
+                                    Text = "A lit candle sheds dim light in a 10-foot radius for 8 hours.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ed20f43a-e3cf-4c2b-a5c0-47993f534e0f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9eaa4740-ca64-457f-b20e-94cbada90b59"),
+                                    Text = "Players can gain access to faction-specific gear by taking the corresponding Faction Gear Access Game Reward, available when they reach 20 reputation with the respective faction.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7630b480-2289-4c24-ae0f-ffcb8bb3d30e"),
+                                    Order = 1,
+                                    OwnerId = new Guid("9eaa4740-ca64-457f-b20e-94cbada90b59"),
+                                    Text = "This kit includes a writing set, a compass, a standard astrolabe, a ruler, and a survey map.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1359695a-751d-41a5-a4bc-31f1cd8baa62"),
+                                    Order = 0,
+                                    OwnerId = new Guid("86a1f1d8-b158-4ec2-ab49-dc7795b59b48"),
+                                    Text = "A chain is a serial assembly of connected pieces, called links, typically made of metal, with an overall character similar to that of a rope in that it is flexible and curved in compression but linear, rigid, and load-bearing in tension. A chain may consist of two or more links.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("436c7e69-5810-4a56-902b-d7d7f9b47f2a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("aafa026c-7a02-4479-a20a-ddae6fbcd0b8"),
+                                    Text = "Chalk is a soft, white, porous, sedimentary carbonate rock, a form of limestone composed of the mineral calcite and originally formed deep under the sea by the compression of sub-microscopic plankton which had fallen to the sea floor.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("71f0bd1c-87f2-4c78-8d78-95e05d085bbe"),
+                                    Order = 0,
+                                    OwnerId = new Guid("02af87d2-7224-4e7b-8b77-f10fec77b4e9"),
+                                    Text = "A wooden chest can hold up to 8 Bulk of items.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e81c9277-3a5f-4edf-b66e-a10171abc5ef"),
+                                    Order = 0,
+                                    OwnerId = new Guid("517b246c-ab2a-495b-8702-62e266d2251b"),
+                                    Text = "This satchel includes 50 feet of rope, pulleys, a dozen pitons, a hammer, a grappling hook, and one set of crampons. Climbing kits allow you to attach yourself to the wall you're Climbing, moving half as quickly as usual (minimum 5 feet) but letting you attempt a DC 5 flat check whenever you critically fail to prevent a fall. A single kit has only enough materials for one climber; each climber needs their own kit. If you wear your climbing kit, you can access it as part of a Climb action.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d79d1424-cbbc-4837-8090-7728b9ff80e6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9ed3bf9d-c04e-4e0b-8b24-cdd6ca326dc9"),
+                                    Text = "This small timepiece allows you to accurately track time, useful for coordinating attacks, cooking, and all other sorts of activities, without the steadiness or care necessary to use an hourglass. As always, spell durations are too inexact to be reliably tracked, as they don't last precisely the duration listed. Protected within a brass or steel case, the clockwork mechanism of this device is turned using a small key. Most dials have a maximum duration of 1 hour, with each turn of the key adding 10 minutes to the timer, though some are crafted with longer or shorter durations and intervals. Setting the timer requires one free hand and an Interact action.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("167bcff2-2a0d-4a34-acce-b5597857fc87"),
+                                    Order = 0,
+                                    OwnerId = new Guid("727c9745-f0dd-4c3d-b76f-ae806792d762"),
+                                    Text = "Ordinary clothing is functional with basic tailoring, such as peasant garb, monk’s robes, or work clothes.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f7b95429-bc12-4034-811d-809d37c4a8b9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("085cf660-739c-422e-a019-9d821a31e394"),
+                                    Text = "This portable winch consists of a length of cable or chain, two hooks, and a ratcheting drum with a handle. When used with two sections of rope or chain, it allows you to pull a heavy load along a flat surface.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3ab90d6b-d457-4262-9379-23a8783398b7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5c7c6a0d-bfc6-42b1-a265-9509e0ea7fad"),
+                                    Text = "This simple brass ring is meant to be worn as an ornamentation piece to an outfit, oftentimes as a bangle on the wrist, as the ring closure of a scarf or sash, or as an ornamentation piece of a headdress. While decorative, this serves a cover for the bangle's function as a message bearer. Messages can be coded into the bangle, either through a series of raised dots and dashes or a pattern of notches of different depths and spacings. A bangle is large enough to hold a simple message consisting of a few words like “Danger. Flee.” or “Meeting. Sunset. Fountain.” Coding a message into a bangle requires 1 minute of time. All Pathfinders with access to communication bangles are taught how to code and read most basic messages, but anyone with a bangle can develop their own communication system. A creature inspecting a bangle can discover its true purpose by succeeding at a DC 20 Perception check. Deciphering a message requires a creature to succeed at a Society check against the coder's Deception DC.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3970cbc1-20a2-40c0-a96e-76985d7daec4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("15b26889-6851-4ce7-8387-3728a52158b5"),
+                                    Text = "A compass helps you Sense Direction or navigate, provided you're in a location with uniform magnetic fields. Without a compass, you take a –2 item penalty to these checks (similar to using a shoddy item).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("31ada62d-9058-48e4-bdb6-a90ed71e3026"),
+                                    Order = 0,
+                                    OwnerId = new Guid("63c40f21-1e8c-4273-9bec-79fdbaaaa225"),
+                                    Text = "A lensatic compass gives you a + 1 item bonus to these checks.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("375853c1-8977-445e-ad4c-b5874d6cddb8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ee932950-fb59-4926-beee-dab8ef1c74f4"),
+                                    Text = "Smaller and made of stronger materials than most sets of thieves' tools, the items in this kit are much easier to conceal. You gain a +1 item bonus to Stealth checks to Conceal these tools. They otherwise function as infiltrator thieves' tools.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("426aa14e-ebd0-432b-b404-c2c10af93013"),
+                                    Order = 0,
+                                    OwnerId = new Guid("68bb619b-f10d-4d94-a5a7-0cb71cc4ed69"),
+                                    Text = "This leather sheath is large enough to hold an item of up to light Bulk and is typically used for daggers, wands, thieves' tools, and similar objects. You can affix it to the inside of a boot, under a bracer or sleeve, or in other inconspicuous locations to gain a +1 item bonus to Stealth checks and DCs to hide or conceal the item within.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5a30e3c9-b0ed-4904-8b32-91fba52708b5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e52c7a7c-7032-4cbf-8200-662ccaf96062"),
+                                    Text = "While the rulebooks do not explicitly mention the contents of 'cookware', it seems to be generally accepted that it contains generic items such as some pots and pans, plates, cutlery, a kettle, and perhaps a wooden board.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("12b0241f-8698-49f6-b434-bf1f664da277"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dde8580a-9312-438f-b404-125e1229dc4b"),
+                                    Text = "When Forcing Open an object that doesn't have an easy grip, a crowbar makes it easier to gain the necessary leverage. Without a crowbar, prying something open takes a –2 item penalty to the Athletics check to Force Open (similar to using a shoddy item).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d3a01d58-9cd0-4eb5-b585-042eb605c6a4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4167d470-b6fb-40e1-826f-e3ff02ae8732"),
+                                    Text = "This simple tool consists of a small iron weight attached to a thin rope that is marked at regular intervals (typically every foot). It can be used to measure the depth of a hole or body of water by dropping the weight down into unknown depths and counting the markings on the rope. It can also be used as a plumb bob.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ccb1bc2d-5cf3-495b-b677-19dcfc8b54d8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e4eeffb1-68b5-4846-be37-62118863014e"),
+                                    Text = "This leather satchel contains empty vials, a pair of tweezers, a supply of small linen cloths, a set of brass calipers and a knotted string for measuring distances, several pieces of chalk, a pen, and a blank notebook for keeping notes. Every component of a detective's kit is of exceeding quality, and thus a detective's kit adds a +1 item bonus to checks to investigate a crime scene, a clue, or similar details.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("dff4bfc6-9f41-44aa-9d99-6139c02bfdf8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e428fd54-cd8a-4d30-b6e2-3c48a2490910"),
+                                    Text = "This small wooden box contains cosmetics, false facial hair, spirit gum, and a few simple wigs. You usually need a disguise kit to set up a disguise in order to Impersonate someone using the Deception skill. You can draw and replace a worn disguise kit as part of the action that uses it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("767ec192-efd1-4f95-b869-5754be5142b4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e2e6da71-2f98-46c2-80eb-adb3ba10fcaa"),
+                                    Text = "You can pull a dueling cape you're wearing from your shoulder and wrap it around your arm with an Interact action. While wielding the dueling cape this way, the cape uses that arm and hand, and you can't hold anything else in that hand. While you do so, you can spend an action to hold it in a protective position, giving you a +1 circumstance bonus to AC and to Deception checks to Feint until the start of your next turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("946cabe1-a23c-442f-8bba-767d17af7ec8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7214321a-e14d-4c1b-bcf5-642d0b1bb41c"),
+                                    Text = "Made of waxed cotton or cork, earplugs give you a +1 item bonus to saves against effects with the auditory trait. The earplugs make it difficult to hear, however, imposing a –2 item penalty on Perception checks involving sound. Inserting or removing the earplugs requires an Interact action.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a267c15c-7486-4a13-af92-fc6e9d034e7b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2f83877d-1461-4ea7-b630-72ab935a19de"),
+                                    Text = "These manacles are nearly indistinguishable from real manacles upon inspection, but contain a hidden release that enables a wearer who knows the location of the release to free themselves with a single Interact action. An observer who examines the manacles and succeeds at a DC 20 Perception check notices their false nature. On a critical success, the observer finds the location of the hidden catch as well.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("066484ea-92fd-4672-b69e-12e0cbba8a2d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1e2cf39c-7aa0-47df-93cd-81dae8de27a3"),
+                                    Text = "This armored case is made to protect any Tiny or smaller creature contained within. It includes air holes (which can be plugged with cork stoppers for underwater travel) and two receptacles for food and water. Any creature inside has neither line of sight nor line of effect to the outside world but also cannot be targeted by attacks that require a line of effect while in the satchel. However, an area effect that deals enough damage to break the case also damages the creature inside. The satchel is made of leather (Hardness 4, HP 16, BT 8). A creature can enter or exit the satchel by using a total of 2 actions: an Interact action to open the satchel and a single action with the move trait to enter or exit.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("91545dab-c971-4e6e-a899-b5910fec53a3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ff7fb3c9-3f56-4260-9aa3-77bf06844661"),
+                                    Text = "Rarely found outside of major metropolises, fingerprinting kits are a state-of-the-art, non-magical means of linking suspects to the scene of a crime.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("12967d10-82b4-4f9f-9a23-6f9efd9942cf"),
+                                    Order = 1,
+                                    OwnerId = new Guid("ff7fb3c9-3f56-4260-9aa3-77bf06844661"),
+                                    Text = "The kit consists of two parts. The first, a delicate brush and a jar of extremely fine dust, is used to reveal fingerprints left behind by most humanoid creatures. The dust sticks to the natural oils left behind on smooth surfaces. When you use the kit to determine whether or not creatures left behind a fingerprint at a crime scene, the GM rolls a secret Thievery check against the Thievery DC of every creature capable of leaving prints that has interacted with the scene. On a success, you locate a clear print from that creature and carefully transfer it to a special sheet of sticky paper. (Note that fingerprints can last for days, and prints collected in this manner often include those of victims, witnesses, and unrelated passersby.) At the GM's discretion, the print-leaving creature might get a bonus to its Thievery DC for taking special precautions. In other cases, finding a print might be impossible (such as if the creature was wearing gloves or if the location has been significantly compromised).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("515187c9-f8ee-4fc0-9742-6180ecbad31b"),
+                                    Order = 2,
+                                    OwnerId = new Guid("ff7fb3c9-3f56-4260-9aa3-77bf06844661"),
+                                    Text = "The second part of the kit is a small sheaf of paper and a pad soaked in ink. By forcing a humanoid creature with fingerprints to roll a finger across the pad and then press it to the paper, you can obtain an image of the unique whorls in that creature's fingerprints. These can then be compared to any prints found at a crime scene. Successfully determining whether or not two prints match requires a DC 15 Perception check—the GM should roll this check secretly as well, since a failed check may result in false information.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f46a0e3c-1746-40bc-8f13-fd6c86e3bd18"),
+                                    Order = 0,
+                                    OwnerId = new Guid("48f8e6d1-38dd-4ae7-966b-d85778977991"),
+                                    Text = "This kit include a collapsible fishing pole, fishhooks, line, lures, and a fishing net.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b03dccdb-ca14-4dea-b932-a6c3ec425c7d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e4eb94ea-b8f5-4a36-936f-081fd7c559d4"),
+                                    Text = "Flint and steel are useful in creating a fire if you have the time to catch a spark, though using them is typically too time-consuming to be practical during an encounter. Even in ideal conditions, using flint and steel to light a flame requires using at least 3 actions, and often significantly longer.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0c14c2f1-0917-475e-94bd-362b01cc6b05"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c2ab81a5-73f9-473d-ac8e-7d8f7008d7be"),
+                                    Text = "A formula book holds the formulas necessary to make items other than the common equipment from this chapter; alchemists typically get one for free. Each formula book can hold the formulas for up to 100 different items. Formulas can also appear on parchment sheets, tablets, and almost any other medium; there's no need for you to copy them into a specific book as long as you can keep them on hand to reference them.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2deb8586-5120-45bf-ad34-d01af497b2a8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("783370e3-5de6-4fb7-8bf2-6b1ea444727d"),
+                                    Text = "This small rod has a tiny, sharp cutting wheel made of steel on one end and a thick bulb on the other. You can use the glass cutter's wheel to score ordinary glass and use the bulb to break the piece along your scoring. It typically takes 1 minute of work to cut a hole large enough to fit your hand. If you are attempting to break the glass quietly, you must attempt a Thievery check against the Perception DC of nearby creatures to go unnoticed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2ff0b4c1-8895-462d-a784-386dcd22387c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0bb0ef67-0618-4537-9772-fcb3e22c83af"),
+                                    Text = "This small grappling hook is designed to be tied to a rope and fired from a bow. When fired, it has half the normal range increment for the weapon.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ef46aa6a-f84f-44d8-b248-c1d47c7d237f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("bdec1ae5-66cd-40ab-8761-5ce6ba1eb9f1"),
+                                    Text = "This small grappling hook is designed to be tied to a rope and fired from a crossbow. When fired, it has half the normal range increment for the weapon.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("250c575e-96cb-4a61-abc9-5b431ba51640"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8bc78d1b-a9fb-4d45-8dd5-fe065566e23e"),
+                                    Text = "You can throw a grappling hook with a rope tied to it to make a climb easier. To anchor a grappling hook, make an attack roll with the secret trait against a DC depending on the target, typically at least DC 20. On a success, your hook has a firm hold, but on a critical failure, the hook seems like it will hold but actually falls when you're partway up.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("839bec74-61d4-4ff1-a907-aa13c8795bf4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fc62d9dd-f547-49d9-9606-1cc49bb30621"),
+                                    Text = "A hammer is a tool, most often a hand tool, consisting of a weighted 'head' fixed to a long handle that is swung to deliver an impact to a small area of an object. This can be, for example, to drive nails into wood, to shape metal (as with a forge), or to crush rock. Hammers are used for a wide range of driving, shaping, breaking and non-destructive striking applications. Traditional disciplines include carpentry, blacksmithing, warfare, and percussive musicianship (as with a gong).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ea4b6a3b-df9c-49e3-bce8-533e2c21c4de"),
+                                    Order = 0,
+                                    OwnerId = new Guid("00629e82-1fc3-4f7f-b81e-7750bdd86840"),
+                                    Text = "Handheld instruments include bagpipes, a small set of chimes, small drums, fiddles and viols, flutes and recorders, small harps, lutes, trumpets, and similarly sized instruments. The GM might rule that an especially large handheld instrument (like a tuba) has greater Bulk.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4fd60da6-f092-412a-9481-c5583ba16d35"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0f0bf997-7653-4941-af5f-375d4f5786a3"),
+                                    Text = "This elegant wooden case contains a recessed section to hold a simple or common harrow deck and a harrow mat. The case features a watertight seal to protect its contents from the elements and everyday wear and tear.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("909f1c28-5412-4c02-ab01-e3b604adb323"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0674b7e7-35f2-4d29-96b6-c98ad8f99422"),
+                                    Text = "Used by gamblers and seers alike, this deck of cards comes in several varieties. Simple harrow decks are made from low-quality paper and typically have only an icon and a number to signify the suit and alignment. These simple decks are mostly used for games of chance, as the actual image and significance of the cards are irrelevant for such games.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0a91cfd8-1dbd-44e4-87a5-06ad81444ef7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("37411366-33fe-469f-93bb-02f2fed76911"),
+                                    Text = "This leather mat bears intricate designs and symbols embossed into them to enhance the mystique of a harrow reading. The mat provides a +1 item bonus to Deception, Diplomacy, and relevant Lore checks (such as Fortune-Telling Lore or Harrow Lore) to convince a creature that a harrow reading was accurate.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("89f73e16-1bc9-4b3e-8d80-bc2879ac23ac"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b65586b9-cfee-42b5-ab60-881766c60c2e"),
+                                    Text = "This kit of bandages, herbs, and suturing tools is necessary for Medicine checks to Administer First Aid, Treat Disease, Treat Poison, or Treat Wounds. If you wear your healer's tools, you can draw and replace them as part of the action that uses them.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ca009fd2-28f9-4c72-9f0e-4994134aec58"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c39b02a3-8ad1-4b2a-99c9-a141e174f52f"),
+                                    Text = "Heavy instruments such as large drums, a full set of chimes, and keyboard instruments are less portable and generally need to be stationary while being played.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7b3f776e-63f5-412d-83c0-33b11f2c35c6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ba1e620a-1e7f-49c8-904d-52ed144470f8"),
+                                    Text = "Plants of supernatural significance provide a primal focus for primal spellcasters, such as druids, when using certain abilities and casting some spells. A bundle of holly and mistletoe must be held in one hand to use it. Other primal foci exist for druids focused on other aspects of nature.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("01b9cb99-ab85-49ec-93ee-06f9b75b1c8f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3e2b8309-41fd-4258-a236-ed5bbdcefec0"),
+                                    Text = "An hourglass (or sandglass, sand timer, or sand clock) is a device used to measure the passage of time. It comprises two glass bulbs connected vertically by a narrow neck that allows a regulated flow of a substance (historically sand) from the upper bulb to the lower one. Typically the upper and lower bulbs are symmetric so that the hourglass will measure the same duration regardless of orientation. The specific duration of time a given hourglass measures is determined by factors including the quantity and coarseness of the particulate matter, the bulb size, and the neck width.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f0ddbeaf-7171-4f19-9897-745d636ecd50"),
+                                    Order = 0,
+                                    OwnerId = new Guid("16e8493f-7a41-495c-9cf4-c4ecc788d5f9"),
+                                    Text = "These bioluminescent jellyfish are as bright as candles, come in a variety of colors, and can act as living lanterns. They dry up and die if removed from the water for more than 1 hour, but as long as they’re allowed access to seawater, they can usually survive for up to 1 year by feeding on micronutrients. Rarely, a well-treated jellyfish lamp might live longer and potentially develop stronger light or additional abilities.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bd148448-e5fd-4cf8-aeba-6f6914b94f1e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7769a9fc-e764-47c3-a34a-1eba746e293a"),
+                                    Text = "A piece of equipment consisting of a series of bars or steps between two upright lengths of wood, metal, or rope, used for climbing up or down something.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("74e5c5e5-3303-4bb6-a982-281e89cd6149"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6c60bda0-dcce-4507-980b-370cb919c9ed"),
+                                    Text = "A lantern sheds bright light and requires 1 pint of oil to function for 6 hours.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9b4cdbfb-ef66-4252-8abc-3333ba9be0da"),
+                                    Order = 0,
+                                    OwnerId = new Guid("93f381c5-9d0f-4b47-a652-7ae50f5d5fb5"),
+                                    Text = "A lock can be used to secure chests, rooms, trapdoors, hatches or other kinds of stowing fascilities.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("302c42ec-e59f-4f42-8e90-0073770e9f95"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9417ac00-4b72-460a-a6dc-ad961c03ab14"),
+                                    Text = "This quality handheld lens gives you a +1 item bonus to Perception checks to notice minute details of documents, fabric, and the like.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c3dfc079-a58c-4c0d-a8f5-75cbc07121ab"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2ee4c581-edef-47ed-8654-086ee333d890"),
+                                    Text = "You can manacle someone who is willing or otherwise at your mercy as an exploration activity taking 10-30 seconds depending on the creature's size and how many manacles you apply. A two-legged creature with its legs bound takes a -15-foot circumstance penalty to its Speeds, and a two-handed creature with its wrists bound has to succeed at a DC 5 flat check any time it uses a manipulate action or else that action fails. This DC may be higher depending on how tightly the manacles constrain the hands. A creature bound to a stationary object is immobilized. For creatures with more or fewer limbs, the GM determines what effect manacles have, if any.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4258e9e5-c57e-437c-8591-41ccc400e9b1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f0ee4a34-407e-410b-bae1-e84dfe9bef81"),
+                                    Text = "This pouch contains material components for those spells that require them. Though the components are used up over time, you can refill spent components during your daily preparations.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("92f5b23c-e923-4cf9-ac34-50d89ee149be"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7befcd2d-6e94-4956-af49-2d7206a44d13"),
+                                    Text = "A merchant's scale grants a +2 circumstance bonus on Appraise checks involving items that are valued by weight, including anything made of precious metals.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fc4cf241-1aba-44df-b8d7-a25edc47257f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("25290e17-81bd-4b8d-89b4-fb9228d33d7b"),
+                                    Text = "A mirror is an object that reflects an image. Light that bounces off a mirror will show an image of whatever is in front of it, when focused through the lens of the eye or a camera. Mirrors reverse the direction of the image in an equal yet opposite angle from which the light shines upon it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("839dfc4c-cf39-43c7-9381-aa05b4816143"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2ac8cf6c-028f-4418-96ba-4092b85e5fa5"),
+                                    Text = "A mug is a type of cup typically used for drinking hot drinks, such as coffee, hot chocolate, or tea. Mugs usually have handles and hold a larger amount of fluid than other types of cup.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3911900e-01f1-4550-8aff-1ef5a08e45d1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b9442cf7-650e-4ccc-aff0-26283af75863"),
+                                    Text = "You can use a net either on its own or attached to a rope. When attached to a rope, you can use the net to Grapple a Medium or smaller creature up to 10 feet away (instead of only adjacent creatures). You can continue to Grapple to keep your hold on the target so long as the target remains within 10 feet and you continue to hold the net. The grabbed creature gains a +2 circumstance bonus to Escape unless you are adjacent to them, and it can attempt a DC 16 Athletics check to Force Open the net entirely. Once the target is no longer grabbed, the net is unwieldy until refolded as a Concentrate action that requires two hands; if used without being refolded, Grapple checks made with the net take a –2 penalty.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("23946c49-c1db-4427-a817-c957a609b2d4"),
+                                    Order = 1,
+                                    OwnerId = new Guid("b9442cf7-650e-4ccc-aff0-26283af75863"),
+                                    Text = "When the net is unattached, you can attempt a ranged attack roll against a Medium or smaller creature within 20 feet. On a hit, the target is flat-footed and takes a –10- foot circumstance penalty to its Speeds until it Escapes, and on a critical hit, it's also immobilized until it Escapes. The Escape DC is 16. A creature adjacent to the target can Interact to remove the net.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a31be45d-e190-43d7-84a6-5a45416d25a5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("cc4d4621-bf02-484a-93ad-9b14f6e93b0b"),
+                                    Text = "You can use oil to fuel lanterns, but you can also set a pint of oil aflame and throw it. You must first spend an Interact action preparing the oil, then throw it with another action as a ranged attack. If you hit, it splatters on the creature or in a single 5-foot square you target. You must succeed at a DC 10 flat check for the oil to ignite successfully when it hits. If the oil ignites, the target takes 1d6 fire damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2a189668-ef0a-422a-8ff2-4e2e6ab74228"),
+                                    Order = 0,
+                                    OwnerId = new Guid("901f8786-d591-43a5-b8cd-8cd049434d65"),
+                                    Text = "You can draw this reinforced sheath during the same Interact action you use to draw the weapon it holds, wielding the weapon in one hand and the scabbard in your other. A parrying scabbard can be used for your defense much like a weapon with the parry trait: you can spend an action to position it defensively, gaining a +1 circumstance bonus to AC until the start of your next turn. Parrying scabbards are available for any sword that can be wielded in one hand.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1b9cbcf2-db94-447d-9633-d74ee300ce47"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0f20c6ab-6c7a-4f5c-9237-d83ed9bd3f19"),
+                                    Text = "This item is uncommon, but characters who are members of the Pathfinder Society have access to it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("dd0c0f1c-cabe-41be-bed7-1ea9368d0150"),
+                                    Order = 1,
+                                    OwnerId = new Guid("0f20c6ab-6c7a-4f5c-9237-d83ed9bd3f19"),
+                                    Text = "Numerous volumes and editions of the Pathfinder Chronicles exist, each cataloging different adventures. Pathfinder Chronicles are a type of scholarly journal that specifically devotes topics to Pathfinder discoveries, rather than more theoretical academic topics. Because Pathfinders have better access to these chronicles than other scholarly journals, they are particularly common among Pathfinder agents building a library of reference texts.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("13b0edc2-2f01-41b7-b409-812959ca0a25"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a905c052-59af-4d59-8e6b-3dddbe09675a"),
+                                    Text = "This is a 2-foot-long tube with two angled mirrors, one at each end. When the mirrors are aligned correctly, you can look around obstacles while remaining behind cover. This doesn't provide a sufficient line of effect to target creatures around corners.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f5aac716-bbf7-4b8d-b00c-98c0fc2ad901"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1a6ef531-3bb2-45ea-8946-b6234ff93796"),
+                                    Text = "These small spikes can be used as anchors to make climbing easier. To affix a piton, you must hold it in one hand and use a hammer to drive it in with your other hand. You can attach a rope to the hammered piton so that you don't fall all the way to the ground on a critical failure while Climbing.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9613ef6a-8da8-42bf-82b2-4e37e8accba0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("64de129b-3287-4f24-b01a-b50c5a2123be"),
+                                    Text = "A standard deck of cards consists of 54 cards made from thick paper contained within a paper sleeve. The most common deck used for games and gambling is known as the Old Mage deck and features four suits themed with the four essences of magic, each with 13 cards, as well as two wildcards. The name and appearance of the deck varies from region to region, such as the Magician's Deck in Taldor or the Deck of Masks in the Shackles.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b667fbce-b973-490e-858c-eb442b49fcd5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a11b6ffd-1981-406c-8dc4-e535f00773e1"),
+                                    Text = "Contains a week's worth of food and drink.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("eb2f18d5-6185-4cc9-82c9-8d2b3b9bc3ed"),
+                                    Order = 0,
+                                    OwnerId = new Guid("19f6384c-7ccb-48a7-ba5a-610a8477aeb2"),
+                                    Text = "This piece of wood or silver is emblazoned with an image representing a deity. Some divine spellcasters, such as clerics, can use a religious symbol of their deity as a divine focus to use certain abilities and cast some spells. A religious symbol must be held in one hand to use it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("83c25aee-3ec2-46aa-bdc7-b7c122829968"),
+                                    Order = 0,
+                                    OwnerId = new Guid("81704384-9bf8-495f-8afd-18c68b8074b8"),
+                                    Text = "This manuscript contains scripture of a particular religion. Some divine spellcasters, such as clerics, can use a religious text as a divine focus to use certain abilities and cast some spells. A religious text must be held in one hand to use it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("137fea30-babf-4f5e-be3f-d6fad27923f8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2857c2fb-c0a6-4b9a-99f4-c6fd1c7e8f33"),
+                                    Text = "A repair kit allows you to perform simple repairs while traveling. It contains a portable anvil, tongs, woodworking tools, a whetstone, and oils for conditioning leather and wood. You can use a repair kit to Repair items using the Crafting skill. You can draw and replace a worn repair kit as part of the action that uses it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fb65e32e-5654-4edc-8d8d-15afd05e9378"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6e9cb8a6-3ecb-49c2-b660-e6d9bc70709a"),
+                                    Text = "A rope is a group of yarns, plies, fibers or strands that are twisted or braided together into a larger and stronger form. Ropes have tensile strength and so can be used for dragging and lifting.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("865d7423-d1f3-406b-adf2-1bc81dd9ee39"),
+                                    Order = 0,
+                                    OwnerId = new Guid("929665f3-dc26-4cd4-aa4b-01c2fee66be2"),
+                                    Text = "By using a rubbing set, you can quickly make a copy of carvings or etchings you find during your explorations, making them easier to accurately reproduce. This kit consists of a roll of thin onion-skin paper in a waterproof leather case, several thick wax crayons, and a bar of sealing wax that can be melted and used to temporarily hold the paper in place while you take the rubbing. Using the kit consumes the materials and provides a +1 item bonus on checks to document or reproduce artwork or writing that has been carved, etched, or otherwise physically added to a surface.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("36a20efa-fdb6-4611-a536-4dd539b2bd3f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("be4541a0-3103-4718-b398-cd2a4dfc9295"),
+                                    Text = "A ruler is a straight-edged object used for measuring small distances accurately and drawing straight lines.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bba92ca0-01d2-4111-a6bc-b3ec6103db7f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f2913e46-d954-49e8-82b2-76d1c13e8172"),
+                                    Text = "A sack can hold up to 8 Bulk worth of items. A sack containing 2 Bulk or less can be worn on the body, usually tucked into a belt. You can carry a sack with one hand, but must use two hands to transfer items in and out.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4e1e1d35-9b89-462d-a981-baa50eddd958"),
+                                    Order = 0,
+                                    OwnerId = new Guid("53af75a3-f02a-4a31-8a6c-63c292192228"),
+                                    Text = "Saddlebags come in a pair. Each can hold up to 3 Bulk of items, and the first 1 Bulk of items in each doesn't count against your mount's Bulk limit. The Bulk value given is for saddlebags worn by a mount. If you are carrying or stowing saddlebags, they count as 1 Bulk instead of light Bulk.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9c6fea82-da67-4969-9ada-c5624a22b86c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ca17eabb-a025-4f95-9f26-f5b4a6aeef15"),
+                                    Text = "Scholarly journals are uncommon. Each scholarly journal is a folio on a very specific topic, such as vampires or the history of a single town or neighborhood of a city. If you spend 1 minute referencing an academic journal before attempting a skill check to Recall Knowledge about the subject, you gain a +1 item bonus to the check. The GM determines what scholarly journals are available in any location.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("79fefac6-d163-4598-aa5f-b74521c02b83"),
+                                    Order = 1,
+                                    OwnerId = new Guid("ca17eabb-a025-4f95-9f26-f5b4a6aeef15"),
+                                    Text = "All characters have access to the scholarly journal, scholarly journal compendium, survey map, and survey map atlas.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0ee06297-4994-4219-9e6b-fce7d990f21a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("784f13b8-c6eb-461f-a423-34b56f16204e"),
+                                    Text = "This carefully balanced metal bracket can be attached to the front or top of a shield or tower shield (but not a buckler), allowing you to carry a torch without giving up your shield or holding it in your other hand. While carrying a torch in this way, you must attempt a DC 11 flat check every time you use the Shield Block reaction; on a failure, the torch is extinguished.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d446cfa5-dfb4-4091-a7ca-5e048df92bf8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("4070e631-7074-48fe-8bb7-00372e865dea"),
+                                    Text = "This leather bandolier holds up to three repeating hand crossbow magazines in leather pockets that pop open with the quick flick of a thumb. You reduce the reload time for a repeating hand crossbow magazine from the bandolier by 1, to a total of 2 actions. You can wear only one shootist bandolier at a time.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("364a65b0-7803-4df4-8b77-6850ddbae75f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6f279ee2-bc01-424a-b17e-458c8d58b303"),
+                                    Text = "When sounded, a signal whistle can be heard clearly up to half a mile away across open terrain.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("97e6acf4-927d-48af-bc1f-2771b9f6a96b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9262e9cf-8696-45b1-9612-88a1a91fd7cc"),
+                                    Text = "This kit contains tools and materials for creating snares. A snare kit allows you to Craft snares using the Crafting skill. You can draw and replace a worn snare kit as part of the action to use it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("71593858-9d82-46ff-8893-c1d0f62a6c19"),
+                                    Order = 0,
+                                    OwnerId = new Guid("361e8665-4225-4915-a3fa-f75b9a619b6b"),
+                                    Text = "These specialized pieces of footwear are designed to distribute the wearer's weight over a larger area to prevent them from sinking while walking on snow. They are typically made with a wood frame and rawhide lacings that are tied over the wearer's other footwear. While wearing snowshoes, you ignore the effects of non-magical difficult terrain caused by snow (reducing greater difficult terrain from snow to ordinary difficult terrain). You take a –10-foot item penalty to your Speed if wearing snowshoes while walking on any surface other than snow.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5c282672-4682-48a9-acbc-390174e39d36"),
+                                    Order = 0,
+                                    OwnerId = new Guid("bc8f44fc-727d-4528-a277-bcc88c5f6028"),
+                                    Text = "Soap is a salt of a fatty acid used in a variety of cleansing and lubricating products. In a domestic setting, soaps are surfactants usually used for washing, bathing, and other types of housekeeping. In industrial settings, soaps are used as thickeners, components of some lubricants, and precursors to catalysts.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("78ddb9c5-934d-4a09-90f1-c88dbc1b38f1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b14bf18a-759f-4e77-9d24-b631f31797e5"),
+                                    Text = "A spellbook holds the written knowledge necessary to learn and prepare various spells, a necessity for wizards (who typically get one for free) and a useful luxury for other spellcasters looking to learn additional spells. Each spellbook can hold up to 100 spells. The Price listed is for a blank spellbook.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("08f152c3-8c0e-4c63-a26b-67db03030021"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6afd5c23-72ad-48e0-bb63-6dec160c3e73"),
+                                    Text = "A typical spyglass lets you see eight times farther than normal.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9575701a-4c38-4ee0-bd43-9f6291ca9b2f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a22483eb-0db6-4677-9097-babb09ab0460"),
+                                    Text = "This heavy backpack of alchemically treated cloth layered over a metal mesh protects its contents from water damage and other harmful effects. It holds up to 4 Bulk of items, and the first 2 Bulk contained within the sturdy satchel do not count against your Bulk limits. The bag has Hardness 5 and 20 Hit Points. As long as the bag remains closed and is not broken, water and other liquids can't seep into it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ea003b92-0cfb-48a6-926b-af438b7df2e9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3b87d2b2-c05c-42b1-a7d5-9682e65aff87"),
+                                    Text = "Maps are uncommon. Most maps you can find are simple and functional. A survey map details a single location in excellent detail. One of these maps gives you a +1 item bonus to Survival checks and any skill checks to Recall Knowledge, provided the checks are related to the location detailed on the map.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1c23e4bd-0eb1-49f8-a154-ef25ccb88a61"),
+                                    Order = 1,
+                                    OwnerId = new Guid("3b87d2b2-c05c-42b1-a7d5-9682e65aff87"),
+                                    Text = "The GM determines what maps are available in any location.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4482f6cb-0808-4a4a-b543-a15fe80c1ccf"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0dc8ba27-c35d-430b-ac20-5ae0e659ca86"),
+                                    Text = "These flippers attach to your feet like tight shoes—donning or removing them requires three Interact actions. While worn, you gain a +5-foot item bonus to the distance you move when rolling Athletics to Swim, not when using a swim Speed, and you take a –10-foot item penalty to your Speed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b136ce98-72fc-4270-a6e8-55a8f4fe90e8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ef7d64e3-04b3-4af5-9c92-47885fc41838"),
+                                    Text = "Tack includes all the gear required to outfit a riding animal, including a saddle, bit and bridle, and stirrups if necessary. Especially large or oddly shaped animals might require specialty saddles. These can be more expensive or hard to find, as determined by the GM. The Bulk value given is for tack worn by a creature. If carried, the Bulk increases to 2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4276b9ed-b141-4625-b3db-acdb095eb4b5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8969e927-035e-4927-a554-96ced3b112d0"),
+                                    Text = "When wielding this long pole, you can use Seek to search a square up to 10 feet away. The pole is not sturdy enough to use as a weapon.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a150023c-4541-4e5b-af10-6a40a23928f6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b0ab7469-92c8-40c9-a159-6c677814a54d"),
+                                    Text = "Tents provide comfortable rest during the night, preventing the inhabitants from taking penalties or condition effects.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0415e3bc-5c72-4d38-aaca-4e00ae630b54"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ed04caf1-99ba-4aec-ac16-ca08057f7d22"),
+                                    Text = "You need thieves' tools to Pick Locks or Disable Devices (of some types) using the Thievery skill. If your thieves' tools are broken, you can repair them by replacing the lock picks with replacement picks appropriate to your tools; this doesn't require using the Repair action. If you wear your thieves' tools, you can draw and replace them as part of the action that uses them.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ba51c149-5e99-44be-8fe4-6941b41d481a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("473b09f6-8087-4fda-97df-103983c75d44"),
+                                    Text = "This entry is a catchall for basic hand tools that don’t have a specific adventuring purpose. A hoe, shovel, or sledgehammer is a long tool, and a hand drill, ice hook, or trowel is a short tool. A tool can usually be used as an improvised weapon, dealing 1d4 damage for a short tool or 1d6 for a long tool. The GM determines the damage type that’s appropriate or adjusts the damage if needed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b4b6d8b8-e2aa-41d4-a74a-e8b6c910b5fc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e71752ce-5078-41c3-a4bd-8313073efd3d"),
+                                    Text = "A torch sheds bright light in a 20-foot radius (and dim light to the next 20 feet) for 1 hour. It can be used as an improvised weapon that deals 1d4 bludgeoning damage plus 1 fire damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("95c90f90-5864-4c66-bb03-94a7200c29f5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("008da8ab-fa02-4ad0-9ba2-40dca2c5e0be"),
+                                    Text = "This leather-bound tome is specially treated to protect from water damage and comes with a key and a treated slipcase that bears a simple lock to keep the tome secure. This journal is commonly used by adventuring scholars and ship navigators for recording their journeys.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1523eb79-8ae5-41ea-be4d-6c41c7143134"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0ff1b0d8-a30c-41ed-86b7-e56aec6d93fd"),
+                                    Text = "This small tube of metal and glass has an opening at one end into which water can be poured, leading to a series of interconnected chambers filled with purifying agents contained between various perforated walls. The purifier attempts to counteract poisons and other toxins present in water or any other liquid poured into it. Alchemically-treated replacement filters can be purchased to more effectively filter out more dangerous substances, using the filter's listed level as the counteract level.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9b7aa45e-5267-4c5f-ac3e-571f6d998dd4"),
+                                    Order = 1,
+                                    OwnerId = new Guid("0ff1b0d8-a30c-41ed-86b7-e56aec6d93fd"),
+                                    Text = "If you pour a liquid other than water, such as a potion or beverage, into the purifier, the filtration process negates the liquid's effects and ruins the taste. The center of the tube can be unscrewed from the ends to access and replace the chambers of purifying agents. Each filter can be used to cleanse up to 10 gallons of water at a rate of about 1 gallon every 20 minutes.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6bb4e722-12ee-4eb4-a867-b9f1861876db"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7787539a-8ec2-461f-9c9a-92b7f8e090b2"),
+                                    Text = "When it’s full, a waterskin contains roughly 1 day’s worth of water for a Small or Medium creature.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("37835ad8-2962-40ab-a1c1-20e5199754ae"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0b6cd783-f3bb-43b9-9d2d-fce9d8fa50f6"),
+                                    Text = "This small wooden or metal box is slightly larger than a typical large key and folds open along a hinge, revealing two halves filled with wax. When a key is placed within and the box closed, the wax is displaced by the key, leaving an accurate impression of its shape. Once the key is removed, the impression left behind will remain indefinitely and can later be used to cast a duplicate key. Inserting, impressing, or removing a key each requires an Interact action. The wax inside this blank can be reused, though it must be smoothed over between uses, erasing any previous impression.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3caa046c-fb10-414e-993a-b6f2516f2133"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a4a36408-ce6b-4f60-b6eb-fe4dfb274319"),
+                                    Text = "Using a writing set, you can draft correspondence and scribe scrolls. A set includes stationery, including a variety of paper and parchment, as well as ink, a quill or inkpen, sealing wax, and a simple seal.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f8b9c763-7c67-4231-aefd-64a32cde6ff3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a06f430b-4080-4d4c-bd01-d162e3aacee5"),
+                                    Text = "A typical Pathfinder writ of authenticity confirms the holder's status as a member of the Pathfinder Society and their intended business. Most writs are pieces of fine parchment folded, bound with gold cord, and sealed with three wax seals. The top seal is always the Glyph of the Open Road and the middle one is the Envoy's Alliance open door emblem. The bottom seal uses the preparer's personal sigil. Inside, the text describes a specific instance of a legitimate business activity, with blanks for the Pathfinder to fill in and personalize the writ to the persons and activity desired. Presenting a writ of authenticity grants a +2 item bonus to Make a Request for the associated business, assuming the writ is legitimate and the viewer expects to work with the Pathfinder Society for that activity.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("Details");
+
+                    b.Navigation("Rarity");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AdventuringGearVariant", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.AdventuringGear", "AdventuringGear")
+                        .WithMany("Variants")
+                        .HasForeignKey("AdventuringGearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Rarity", "Rarity")
+                        .WithMany()
+                        .HasForeignKey("RarityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AdventuringGear");
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("Rarity");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Action", "Action")
@@ -50845,6 +54324,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Feats");
 
                     b.Navigation("Spells");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AdventuringGear", b =>
+                {
+                    b.Navigation("Variants");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AlchemicalBomb", b =>

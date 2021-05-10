@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.I
                 ItemLevel = 1,
                 Price = 20,
                 Usage = "Held in 1 hand",
-                BulkId = Bulks.Instances.Bulkless.ID,
+                BulkId = Bulks.Instances.NegligibleBulk.ID,
                 ActionId = Interact.ID,
                 ActionTypeId = ActionTypes.Instances.OneAction.ID
             };

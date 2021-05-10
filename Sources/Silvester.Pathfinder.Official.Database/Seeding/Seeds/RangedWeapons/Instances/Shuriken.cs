@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Ins
                 Price = 1,
                 Damage = "1d4",
                 Hands = "1",
-                BulkId = Bulkless.ID,
+                BulkId = NegligibleBulk.ID,
                 WeaponCategoryId = Martial.ID,
                 WeaponGroupId = WeaponGroups.Instances.Dart.ID,
                 DamageTypeId = Piercing.ID

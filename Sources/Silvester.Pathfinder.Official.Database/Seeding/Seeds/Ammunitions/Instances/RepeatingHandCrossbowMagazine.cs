@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Ammunitions.Insta
                 Description = "A typical repeating hand crossbow magazine holds five bolts.",
                 Price = 90,
                 BatchAmount = 5,
-                BulkId = Bulkless.ID,
+                BulkId = NegligibleBulk.ID,
                 WeaponGroupId = Bow.ID,
             };
         }

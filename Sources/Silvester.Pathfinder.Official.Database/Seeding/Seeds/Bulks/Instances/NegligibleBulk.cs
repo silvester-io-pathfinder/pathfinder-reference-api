@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Bulks.Instances
 {
-    public class Bulkless : AbstractBulkTemplate
+    public class NegligibleBulk : AbstractBulkTemplate
     {
         public static readonly Guid ID = Guid.Parse("b5de3410-d051-4dfe-be54-dde62ee45bc1");
 

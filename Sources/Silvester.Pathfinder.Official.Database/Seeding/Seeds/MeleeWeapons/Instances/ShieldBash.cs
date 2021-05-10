@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Inst
                 Price = 0,
                 Damage = "1d4",
                 Hands = "1",
-                BulkId = Bulkless.ID,
+                BulkId = NegligibleBulk.ID,
                 WeaponCategoryId = Martial.ID,
                 WeaponGroupId = Shield.ID,
                 DamageTypeId = Bludgeoning.ID
