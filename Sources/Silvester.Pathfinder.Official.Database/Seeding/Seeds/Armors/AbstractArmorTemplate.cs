@@ -6,7 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorGroups
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors
 {
     public abstract class AbstractArmorTemplate : EntityTemplate<Armor>
     {
@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorGroups
 
             builder.AddTextBlocks(armor, GetDetails(), e => e.Details);
 
-            foreach (Guid traitId in GetTraits())
+            foreach(Guid traitId in GetTraits())
             {
                 builder.HasJoinData<Armor, Trait>((armor.Id, traitId));
             }

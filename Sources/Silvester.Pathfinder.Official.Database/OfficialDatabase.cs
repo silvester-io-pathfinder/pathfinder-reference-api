@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<AlchemicalTool> AlchemicalTools { get; set; } = default!;
         public DbSet<Alignment> Alignments { get; set; } = default!;
         public DbSet<Ammunition> Ammunitions { get; set; } = default!;
-        public DbSet<ArmorGroup> ArmorGroups { get; set; } = default!;
+        public DbSet<ArmorCategory> ArmorGroups { get; set; } = default!;
         public DbSet<AttackType> AttackTypes { get; set; } = default!;
         public DbSet<BenefitType> BenefitTypes { get; set; } = default!;
         public DbSet<Bulk> Bulks { get; set; } = default!;
