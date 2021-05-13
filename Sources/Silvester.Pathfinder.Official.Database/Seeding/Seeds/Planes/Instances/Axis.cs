@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Planes.Instances
 {
-    public class Axis : AbstractPlaneTemplate
+    public class Axis : Template
     {
         public static readonly Guid ID = Guid.Parse("e57522d4-5e50-44c7-bbcb-1c4d0d81baeb");
 

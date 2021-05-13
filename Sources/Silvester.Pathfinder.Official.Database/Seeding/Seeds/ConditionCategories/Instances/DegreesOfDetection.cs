@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ConditionCategories.Instances
 {
-    public class DegreesOfDetection : AbstractConditionCategoryTemplate
+    public class DegreesOfDetection : Template
     {
         public static readonly Guid ID = Guid.Parse("d104a1f4-fb11-45c3-84b7-14880d673095");
 

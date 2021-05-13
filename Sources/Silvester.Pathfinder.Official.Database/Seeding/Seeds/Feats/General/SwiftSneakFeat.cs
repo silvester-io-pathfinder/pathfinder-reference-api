@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class SwiftSneakFeat : AbstractFeatTemplate
+    public class SwiftSneakFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("3539bdbe-8e7f-45c0-a094-649d85d3adca");
 

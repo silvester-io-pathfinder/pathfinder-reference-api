@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class BlackAdderVenom : AbstractAlchemicalPoisonTemplate
+    public class BlackAdderVenom : Template
     {
         public static readonly Guid ID = Guid.Parse("c65fd194-6210-42c8-80a2-b54ff81b6585");
 

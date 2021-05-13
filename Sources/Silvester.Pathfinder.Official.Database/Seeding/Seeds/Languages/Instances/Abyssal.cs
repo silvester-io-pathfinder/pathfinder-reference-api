@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Languages.Instances
 {
-    public class Abyssal : AbstractLanguageTemplate
+    public class Abyssal : Template
     {
         public static readonly Guid ID = Guid.Parse("7fba9655-f430-4ef1-acd7-996f398f4e60");
 

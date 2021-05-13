@@ -10,7 +10,7 @@ using Curse = Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instan
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Curses.Instances
 {
-    public class SwordOfAnathema : AbstractCurseTemplate
+    public class SwordOfAnathema : Template
     {
         public static readonly Guid ID = Guid.Parse("777ae2c9-85e4-444a-9bce-8ef9af37eee4");
 

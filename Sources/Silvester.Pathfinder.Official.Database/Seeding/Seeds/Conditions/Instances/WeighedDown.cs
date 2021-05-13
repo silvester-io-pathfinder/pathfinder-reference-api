@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
-    public class WeighedDown : AbstractConditionTemplate
+    public class WeighedDown : Template
     {
         public static readonly Guid ID = Guid.Parse("a2d387ce-eec5-439b-9e2e-2ef38f0ff3fb");
 

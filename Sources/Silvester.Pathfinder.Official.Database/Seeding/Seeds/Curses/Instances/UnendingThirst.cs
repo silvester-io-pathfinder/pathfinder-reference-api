@@ -10,7 +10,7 @@ using Curse = Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instan
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Curses.Instances
 {
-    public class UnendingThirst : AbstractCurseTemplate
+    public class UnendingThirst : Template
     {
         public static readonly Guid ID = Guid.Parse("65c44561-e8b0-4f7a-b65c-3a42d458721e");
 

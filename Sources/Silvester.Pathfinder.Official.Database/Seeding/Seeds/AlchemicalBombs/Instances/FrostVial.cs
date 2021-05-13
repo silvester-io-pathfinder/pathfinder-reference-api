@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.Instances
 {
-    public class FrostVial : AbstractAlchemicalBombTemplate
+    public class FrostVial : Template
     {
         public static readonly Guid ID = Guid.Parse("f121fc6c-44bd-4528-9673-709f81627688");
 

@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class OuterGodsAndGreatOldOnes : AbstractDeityCategoryTemplate
+    public class OuterGodsAndGreatOldOnes : Template
     {
         public static readonly Guid ID = Guid.Parse("cb0c42c1-2f21-4c52-b419-09d55a7b8eca");
 

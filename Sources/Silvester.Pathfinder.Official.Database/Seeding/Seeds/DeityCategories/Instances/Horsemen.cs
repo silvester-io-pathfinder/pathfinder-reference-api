@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class Horsemen : AbstractDeityCategoryTemplate
+    public class Horsemen : Template
     {
         public static readonly Guid ID = Guid.Parse("4d699f44-5321-4d9b-ba78-026c638260e9");
 

@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Proficiencies.Instances
 {
-    public class Trained : AbstractProficiencyTemplate
+    public class Trained : Template
     {
         public static readonly Guid ID = Guid.Parse("130841fd-de3b-45e7-bb97-c4ded6ec71e8");
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
-    public class SpearLauncher : AbstractHazardTemplate
+    public class SpearLauncher : Template
     {
         public static readonly Guid ID = Guid.Parse("9acfc457-78d5-4af1-a8b1-a09f9f2d8312");
 

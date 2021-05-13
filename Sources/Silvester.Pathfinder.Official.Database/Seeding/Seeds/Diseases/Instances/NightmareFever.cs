@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
-    public class NightmareFever : AbstractDiseaseTemplate
+    public class NightmareFever : Template
     {
         public static readonly Guid ID = Guid.Parse("944b86e1-373a-4bb8-bf00-2c8a2664cdd2");
 

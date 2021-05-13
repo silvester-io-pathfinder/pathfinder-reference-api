@@ -4,7 +4,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Skills.Instances
 {
-    public class Occultism : AbstractSkillTemplate
+    public class Occultism : Template
     {
         public static readonly Guid ID = Guid.Parse("feb60159-48a5-4164-b2e2-54b1f0a52a26");
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class QuickUnlockFeat : AbstractFeatTemplate
+    public class QuickUnlockFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("f3cdc428-01a4-4687-8d48-8de530cbd154");
 

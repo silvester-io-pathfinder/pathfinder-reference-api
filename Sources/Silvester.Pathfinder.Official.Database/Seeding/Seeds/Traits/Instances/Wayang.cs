@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Wayang : AbstractTraitTemplate
+    public class Wayang : Template
     {
         public static readonly Guid ID = Guid.Parse("b9e4c779-e070-49d0-abba-5268ca479d11");
 

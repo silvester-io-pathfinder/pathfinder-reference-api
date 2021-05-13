@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class BrassEar : AbstractAdventuringGearTemplate
+    public class BrassEar : Template
     {
         public static readonly Guid ID = Guid.Parse("2f13c997-9bf3-4722-8a85-c683c9867756");
 

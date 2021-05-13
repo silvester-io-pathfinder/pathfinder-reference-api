@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class TwoHand : AbstractTraitTemplate
+    public class TwoHand : Template
     {
         public static readonly Guid ID = Guid.Parse("fd2bc373-0742-4272-9d1f-6740d7c5f149");
 

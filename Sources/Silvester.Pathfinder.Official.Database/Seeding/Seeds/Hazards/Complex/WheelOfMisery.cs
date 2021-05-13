@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
-    public class WheelOfMisery : AbstractHazardTemplate
+    public class WheelOfMisery : Template
     {
         public static readonly Guid ID = Guid.Parse("5f206ecc-b2a0-473c-9e09-561e7909787c");
 

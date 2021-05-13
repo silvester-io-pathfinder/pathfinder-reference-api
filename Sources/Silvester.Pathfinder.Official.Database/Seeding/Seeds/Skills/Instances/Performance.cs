@@ -4,7 +4,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Skills.Instances
 {
-    public class Performance : AbstractSkillTemplate
+    public class Performance : Template
     {
         public static readonly Guid ID = Guid.Parse("b41f214e-5d45-46fe-8495-263c3d117a86");
 

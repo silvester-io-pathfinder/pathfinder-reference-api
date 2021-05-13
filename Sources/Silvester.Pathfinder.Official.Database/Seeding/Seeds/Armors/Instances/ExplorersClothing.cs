@@ -1,5 +1,4 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorCategories.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors.Instances
 {
-    public class ExplorersClothing : AbstractArmorTemplate
+    public class ExplorersClothing : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("6fbffdfc-1443-4f6b-980b-a3d17412ac93");
 
         protected override Armor GetArmor()
         {
@@ -33,7 +32,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors.Instances
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Adventurers who don’t wear armor travel in durable clothing. Though it’s not armor and uses your unarmored defense proficiency, it still has a Dex Cap and can grant an item bonus to AC if etched with potency runes." };
+            yield return new TextBlock { Id = Guid.Parse("915c591a-6d4e-4a6c-9ad1-8ee619a7ffd8"), Type = TextBlockType.Text, Text = "Adventurers who don’t wear armor travel in durable clothing. Though it’s not armor and uses your unarmored defense proficiency, it still has a Dex Cap and can grant an item bonus to AC if etched with potency runes." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -45,7 +44,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("6e4472c2-1fce-4c38-a4f0-fbca470146b3"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 275
             };

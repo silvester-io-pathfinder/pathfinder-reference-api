@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
-    public class BansheesSymphony : AbstractHazardTemplate
+    public class BansheesSymphony : Template
     {
         public static readonly Guid ID = Guid.Parse("ff781a33-7aa2-426b-adf2-672bcf0e1681");
 

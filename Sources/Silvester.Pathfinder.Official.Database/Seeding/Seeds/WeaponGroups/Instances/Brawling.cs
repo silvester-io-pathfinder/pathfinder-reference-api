@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Instances
 {
-    public class Brawling : AbstractWeaponGroupTemplate
+    public class Brawling : Template
     {
         public static readonly Guid ID = Guid.Parse("55158194-ce53-4931-818b-5c36289e4dba");
 

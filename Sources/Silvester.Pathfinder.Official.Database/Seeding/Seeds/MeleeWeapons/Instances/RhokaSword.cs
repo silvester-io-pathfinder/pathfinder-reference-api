@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class RhokaSword : AbstractMeleeWeaponTemplate
+    public class RhokaSword : Template
     {
         public static readonly Guid ID = Guid.Parse("c4d0ca3f-2c38-4603-ba33-205882d743a4");
 

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Ammunitions.Instances
 {
-    public class Bolts : AbstractAmmunitionsTemplate
+    public class Bolts : Template
     {
         public static readonly Guid ID = Guid.Parse("c51ef03b-db9b-44ac-92ac-39a0c7834b95");
 

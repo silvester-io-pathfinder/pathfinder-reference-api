@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class GrapplingBolt : AbstractAdventuringGearTemplate
+    public class GrapplingBolt : Template
     {
         public static readonly Guid ID = Guid.Parse("bdec1ae5-66cd-40ab-8761-5ce6ba1eb9f1");
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class DisappearanceSpell : AbstractSpellTemplate
+    public class DisappearanceSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("614267ca-482a-4435-bcea-127594ea342f");
 

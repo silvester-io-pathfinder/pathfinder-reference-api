@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Abjuration : AbstractTraitTemplate
+    public class Abjuration : Template
     {
         public static readonly Guid ID = Guid.Parse("029497fa-5a49-4a89-bfc3-68a2e57f765a");
 

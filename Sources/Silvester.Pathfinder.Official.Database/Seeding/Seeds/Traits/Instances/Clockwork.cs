@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Clockwork : AbstractTraitTemplate
+    public class Clockwork : Template
     {
         public static readonly Guid ID = Guid.Parse("2d5e025a-19de-4f4d-bd58-9bcb29049c93");
 

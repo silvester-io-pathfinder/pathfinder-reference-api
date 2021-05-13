@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class ShamelessRequestFeat : AbstractFeatTemplate
+    public class ShamelessRequestFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("3bb4c8cd-9368-43dd-92b2-99174568570a");
 

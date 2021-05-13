@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
-    public class YellowMold : AbstractHazardTemplate
+    public class YellowMold : Template
     {
         public static readonly Guid ID = Guid.Parse("33cde414-62f3-455d-95a2-f0a63480a006");
 

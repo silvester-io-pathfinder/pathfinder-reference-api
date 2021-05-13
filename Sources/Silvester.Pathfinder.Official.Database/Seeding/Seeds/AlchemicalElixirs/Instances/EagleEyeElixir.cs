@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
-    public class EagleEyeElixir : AbstractAlchemicalElixirTemplate
+    public class EagleEyeElixir : Template
     {
         public static readonly Guid ID = Guid.Parse("e81eb16e-db86-4869-9cc7-1b5dfa3ba787");
 

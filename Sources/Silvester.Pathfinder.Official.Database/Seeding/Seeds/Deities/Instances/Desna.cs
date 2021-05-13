@@ -3,6 +3,7 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Alignments.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.DivineFonts.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Domains.Instances;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Skills.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using System;

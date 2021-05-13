@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class GodsOfTheInnerSea : AbstractDeityCategoryTemplate
+    public class GodsOfTheInnerSea : Template
     {
         public static readonly Guid ID = Guid.Parse("ab7e9ca8-6361-4309-83c6-6e3b1e5064cc");
 

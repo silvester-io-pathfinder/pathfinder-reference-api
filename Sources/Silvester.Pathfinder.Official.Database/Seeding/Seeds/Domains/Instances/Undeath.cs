@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Domains.Instances
 {
-    public class Undeath : AbstractDomainTemplate
+    public class Undeath : Template
     {
         public static readonly Guid ID = Guid.Parse("8e2fe9d1-c723-4754-8cb3-8955bb0094fc");
 

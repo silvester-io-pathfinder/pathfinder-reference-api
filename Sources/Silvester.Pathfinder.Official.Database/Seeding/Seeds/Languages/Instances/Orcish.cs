@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Languages.Instances
 {
-    public class Orcish : AbstractLanguageTemplate
+    public class Orcish : Template
     {
         public static readonly Guid ID = Guid.Parse("ba4a2924-27ab-49a1-b700-310b1cfb0c22");
 

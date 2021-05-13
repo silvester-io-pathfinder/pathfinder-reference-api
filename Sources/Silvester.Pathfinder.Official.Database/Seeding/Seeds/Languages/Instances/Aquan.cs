@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Languages.Instances
 {
-    public class Aquan : AbstractLanguageTemplate
+    public class Aquan : Template
     {
         public static readonly Guid ID = Guid.Parse("fe8f7dca-685b-4595-8d0c-ee72e0239d58");
 

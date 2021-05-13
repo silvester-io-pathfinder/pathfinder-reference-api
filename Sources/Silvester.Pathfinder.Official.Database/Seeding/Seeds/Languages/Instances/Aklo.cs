@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Languages.Instances
 {
-    public class Aklo : AbstractLanguageTemplate
+    public class Aklo : Template
     {
         public static readonly Guid ID = Guid.Parse("6085b848-9283-494b-bf9d-999917f5d9d9");
 

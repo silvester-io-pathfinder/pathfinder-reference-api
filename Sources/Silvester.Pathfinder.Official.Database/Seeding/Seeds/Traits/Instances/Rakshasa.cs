@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Rakshasa : AbstractTraitTemplate
+    public class Rakshasa : Template
     {
         public static readonly Guid ID = Guid.Parse("a5fa9ba3-ef36-4180-a603-4bb410aaa56c");
 

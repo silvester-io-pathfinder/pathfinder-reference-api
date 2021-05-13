@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class AirBubbleSpell : AbstractSpellTemplate
+    public class AirBubbleSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("fbb8d7cc-6793-484c-80a8-4fafb137e01e");
 

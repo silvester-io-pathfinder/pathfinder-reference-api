@@ -1,11 +1,12 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class KipUpFeat : AbstractFeatTemplate
+    public class KipUpFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("4f6b0041-df64-4d81-9ddd-baebcfdd28ed");
 

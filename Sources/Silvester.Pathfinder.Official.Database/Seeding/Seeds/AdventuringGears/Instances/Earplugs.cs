@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class Earplugs : AbstractAdventuringGearTemplate
+    public class Earplugs : Template
     {
         public static readonly Guid ID = Guid.Parse("7214321a-e14d-4c1b-bcf5-642d0b1bb41c");
 

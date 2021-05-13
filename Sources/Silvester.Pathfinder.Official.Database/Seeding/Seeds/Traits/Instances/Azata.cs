@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Azata : AbstractTraitTemplate
+    public class Azata : Template
     {
         public static readonly Guid ID = Guid.Parse("f35d2381-a82a-4ad6-8ac8-19fd84a42dda");
 

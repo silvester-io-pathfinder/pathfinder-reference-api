@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Kukri : AbstractMeleeWeaponTemplate
+    public class Kukri : Template
     {
         public static readonly Guid ID = Guid.Parse("3a7317bb-6d6a-47b0-8c99-6ac442e23675");
 

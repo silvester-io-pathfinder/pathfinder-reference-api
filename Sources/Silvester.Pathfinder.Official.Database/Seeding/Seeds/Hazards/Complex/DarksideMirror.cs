@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
-    public class DarksideMirror : AbstractHazardTemplate
+    public class DarksideMirror : Template
     {
         public static readonly Guid ID = Guid.Parse("e3110eda-b8bf-4599-bfe6-d95ebaf43948");
 

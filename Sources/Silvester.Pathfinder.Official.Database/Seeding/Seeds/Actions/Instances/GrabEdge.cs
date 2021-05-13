@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 {
-    public class GrabEdge : AbstractActionTemplate
+    public class GrabEdge : Template
     {
         public static readonly Guid ID = Guid.Parse("90d27bd9-31ed-46f4-a174-467e165ed1b9");
 

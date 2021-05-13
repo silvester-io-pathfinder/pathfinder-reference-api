@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Planes.Instances
 {
-    public class ShadowPlane : AbstractPlaneTemplate
+    public class ShadowPlane : Template
     {
         public static readonly Guid ID = Guid.Parse("3e4b22a2-a4bd-42cc-b27f-a381758a4c11");
 

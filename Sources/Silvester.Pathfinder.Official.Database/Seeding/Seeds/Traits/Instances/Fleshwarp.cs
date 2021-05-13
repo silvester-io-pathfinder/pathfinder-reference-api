@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Fleshwarp : AbstractTraitTemplate
+    public class Fleshwarp : Template
     {
         public static readonly Guid ID = Guid.Parse("25b12587-6109-4b67-85bc-aa12e0a0f86b");
 

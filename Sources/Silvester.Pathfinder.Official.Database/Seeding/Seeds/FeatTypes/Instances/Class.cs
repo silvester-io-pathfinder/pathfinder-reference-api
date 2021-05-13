@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FeatTypes.Instances
 {
-    public class Class : AbstractFeatTypeTemplate
+    public class Class : Template
     {
         public static readonly Guid ID = Guid.Parse("cc6e0f95-a0f4-4521-9c53-7f3484be3530");
 

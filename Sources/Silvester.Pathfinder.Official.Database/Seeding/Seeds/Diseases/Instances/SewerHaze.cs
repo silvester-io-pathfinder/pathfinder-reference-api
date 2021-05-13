@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
-    public class SewerHaze : AbstractDiseaseTemplate
+    public class SewerHaze : Template
     {
         public static readonly Guid ID = Guid.Parse("9e6fec9d-0ab3-450e-a0fa-a074ca4b4b6c");
 

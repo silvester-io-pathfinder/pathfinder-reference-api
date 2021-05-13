@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Guisarme : AbstractMeleeWeaponTemplate
+    public class Guisarme : Template
     {
         public static readonly Guid ID = Guid.Parse("164fced7-fbaa-4e79-8eb2-5ea61cfa4f5e");
 

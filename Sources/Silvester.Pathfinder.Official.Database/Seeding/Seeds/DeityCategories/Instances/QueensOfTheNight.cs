@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class QueensOfTheNight : AbstractDeityCategoryTemplate
+    public class QueensOfTheNight : Template
     {
         public static readonly Guid ID = Guid.Parse("cb6ebc9d-9a0e-4d7c-9a7d-d5da7ea043bd");
 

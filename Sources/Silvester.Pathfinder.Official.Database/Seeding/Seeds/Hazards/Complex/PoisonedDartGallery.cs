@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
-    public class PoisonedDartGallery : AbstractHazardTemplate
+    public class PoisonedDartGallery : Template
     {
         public static readonly Guid ID = Guid.Parse("d609d826-9840-4418-a0a4-9a9531e09f17");
 

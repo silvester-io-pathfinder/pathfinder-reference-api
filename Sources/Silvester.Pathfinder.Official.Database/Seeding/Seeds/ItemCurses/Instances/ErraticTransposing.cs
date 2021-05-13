@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses.Instances
 {
-    public class ErraticTransposing : AbstractItemCurseTemplate
+    public class ErraticTransposing : Template
     {
         public static readonly Guid ID = Guid.Parse("369897ab-d7b6-4077-ad4e-69580e0b95fa");
 

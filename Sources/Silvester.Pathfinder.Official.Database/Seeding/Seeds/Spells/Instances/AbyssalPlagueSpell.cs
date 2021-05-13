@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class AbyssalPlagueSpell : AbstractSpellTemplate
+    public class AbyssalPlagueSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("328dda55-0bc8-461f-a3d3-686df512438c");
 

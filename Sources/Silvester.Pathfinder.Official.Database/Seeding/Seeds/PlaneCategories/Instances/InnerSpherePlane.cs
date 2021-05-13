@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PlaneCategories.Instances
 {
-    public class InnerSpherePlane : AbstractPlaneCategoryTemplate
+    public class InnerSpherePlane : Template
     {
         public static readonly Guid ID = Guid.Parse("3bbe8661-ea39-4b26-8723-eb04b151062f");
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class TrainAnimalFeat : AbstractFeatTemplate
+    public class TrainAnimalFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("d1d5b37b-2fcd-4699-892f-5c81cc437323");
 

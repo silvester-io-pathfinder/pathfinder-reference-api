@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DamageTypes.Instances
 {
-    public class Negative : AbstractDamageTypeTemplate
+    public class Negative : Template
     {
         public static readonly Guid ID = Guid.Parse("d88d0bfa-b079-4ac3-8978-2c65208981ca");
 

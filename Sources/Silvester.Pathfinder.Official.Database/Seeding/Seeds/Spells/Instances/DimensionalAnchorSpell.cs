@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class DimensionalAnchorSpell : AbstractSpellTemplate
+    public class DimensionalAnchorSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("c1546cbd-ec60-459f-b7f5-e29d51beb5f2");
 

@@ -4,7 +4,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Skills.Instances
 {
-    public class Religion : AbstractSkillTemplate
+    public class Religion : Template
     {
         public static readonly Guid ID = Guid.Parse("6a672190-7918-4fbd-a2d7-2d69f9d2a794");
 

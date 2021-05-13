@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
-    public class ElectricLatchRune : AbstractHazardTemplate
+    public class ElectricLatchRune : Template
     {
         public static readonly Guid ID = Guid.Parse("53829d01-6277-47bd-9b7c-9f002c965664");
 

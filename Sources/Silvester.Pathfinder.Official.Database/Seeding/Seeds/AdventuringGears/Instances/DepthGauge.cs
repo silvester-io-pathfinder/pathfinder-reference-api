@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class DepthGauge : AbstractAdventuringGearTemplate
+    public class DepthGauge : Template
     {
         public static readonly Guid ID = Guid.Parse("4167d470-b6fb-40e1-826f-e3ff02ae8732");
 

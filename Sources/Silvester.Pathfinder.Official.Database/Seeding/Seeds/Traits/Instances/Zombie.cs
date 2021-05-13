@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Zombie : AbstractTraitTemplate
+    public class Zombie : Template
     {
         public static readonly Guid ID = Guid.Parse("605865dd-e4f9-487c-828d-47ee526c8605");
 

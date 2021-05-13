@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Ganzi : AbstractTraitTemplate
+    public class Ganzi : Template
     {
         public static readonly Guid ID = Guid.Parse("22cba2be-7f41-44bc-8727-0d5fe65df3d3");
 

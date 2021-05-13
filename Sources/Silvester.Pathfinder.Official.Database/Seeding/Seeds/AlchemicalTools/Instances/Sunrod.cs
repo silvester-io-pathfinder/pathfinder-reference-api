@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.Instances
 {
-    public class Sunrod : AbstractAlchemicalToolTemplate
+    public class Sunrod : Template
     {
         public static readonly Guid ID = Guid.Parse("cad37b1b-7d1e-4a1a-acb4-23a9814683ab");
 

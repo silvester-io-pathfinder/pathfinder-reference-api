@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Aphorite : AbstractTraitTemplate
+    public class Aphorite : Template
     {
         public static readonly Guid ID = Guid.Parse("2903ddd8-22a3-4dc0-842e-e484d94ee53a");
 

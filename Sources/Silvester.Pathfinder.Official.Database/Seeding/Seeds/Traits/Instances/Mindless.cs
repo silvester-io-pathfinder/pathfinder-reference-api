@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Mindless : AbstractTraitTemplate
+    public class Mindless : Template
     {
         public static readonly Guid ID = Guid.Parse("f28721b4-6e1a-4277-a7a5-8b9e0b086974");
 

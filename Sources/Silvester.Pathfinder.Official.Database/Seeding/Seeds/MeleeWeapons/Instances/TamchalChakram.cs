@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class TamchalChakram : AbstractMeleeWeaponTemplate
+    public class TamchalChakram : Template
     {
         public static readonly Guid ID = Guid.Parse("4ac6f2cd-6fc3-400f-b524-fdaeaaaca2bc");
 

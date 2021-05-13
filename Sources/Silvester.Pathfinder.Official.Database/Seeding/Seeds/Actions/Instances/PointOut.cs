@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 {
-    public class PointOut : AbstractActionTemplate
+    public class PointOut : Template
     {
         public static readonly Guid ID = Guid.Parse("187ebb2b-c829-4d40-81dd-414a48ea766e");
 

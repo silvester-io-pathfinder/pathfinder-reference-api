@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Instances
 {
-    public class Shuriken : AbstractRangedWeaponTemplate
+    public class Shuriken : Template
     {
         public static readonly Guid ID = Guid.Parse("1139c9c1-84b6-4e03-85bd-a7d779716297");
 

@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Languages.Instances
 {
-    public class Varisian : AbstractLanguageTemplate
+    public class Varisian : Template
     {
         public static readonly Guid ID = Guid.Parse("0f1df7b2-68f8-41db-8800-2a72f8b41cad");
 

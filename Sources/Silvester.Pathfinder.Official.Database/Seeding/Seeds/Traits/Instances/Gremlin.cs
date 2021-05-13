@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Gremlin : AbstractTraitTemplate
+    public class Gremlin : Template
     {
         public static readonly Guid ID = Guid.Parse("f0c41bba-1bf6-498a-8aab-549f3555b6d5");
 

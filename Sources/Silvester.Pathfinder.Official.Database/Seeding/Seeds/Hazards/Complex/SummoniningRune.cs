@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
@@ -6,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
-    public class SummoniningRune : AbstractHazardTemplate
+    public class SummoniningRune : Template
     {
         public static readonly Guid ID = Guid.Parse("6f1cd8de-db91-4b60-9ae6-e9328c13cceb");
 

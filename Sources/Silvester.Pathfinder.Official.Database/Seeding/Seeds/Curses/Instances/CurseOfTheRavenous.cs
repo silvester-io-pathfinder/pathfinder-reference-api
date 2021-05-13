@@ -10,7 +10,7 @@ using Curse = Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instan
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Curses.Instances
 {
-    public class CurseOfTheRavenous : AbstractCurseTemplate
+    public class CurseOfTheRavenous : Template
     {
         public static readonly Guid ID = Guid.Parse("8f8119cf-ecf8-412d-ad29-04df287396bc");
 

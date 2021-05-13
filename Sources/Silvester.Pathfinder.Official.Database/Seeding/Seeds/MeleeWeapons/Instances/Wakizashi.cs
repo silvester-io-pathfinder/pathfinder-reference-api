@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Wakizashi : AbstractMeleeWeaponTemplate
+    public class Wakizashi : Template
     {
         public static readonly Guid ID = Guid.Parse("d3109927-04c6-4ae8-9af1-e661cc2a5440");
 

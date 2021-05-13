@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class ReadLipsFeat : AbstractFeatTemplate
+    public class ReadLipsFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("ad4fe73a-0518-46c1-bfee-130d1b2053ab");
 

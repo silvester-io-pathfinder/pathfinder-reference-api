@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.SavingThrowStats.Instances
 {
-    public class Will : AbstractSavingThrowStatTemplate
+    public class Will : Template
     {
         public static readonly Guid ID = Guid.Parse("a71929b0-9dff-492a-9bf9-8f9cadda198c");
 

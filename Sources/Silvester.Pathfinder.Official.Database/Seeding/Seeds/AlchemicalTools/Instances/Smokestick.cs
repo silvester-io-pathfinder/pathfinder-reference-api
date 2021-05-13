@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.Instances
 {
-    public class Smokestick : AbstractAlchemicalToolTemplate
+    public class Smokestick : Template
     {
         public static readonly Guid ID = Guid.Parse("3c31b16b-1804-4e2e-ba66-9bb8faaca03e");
 

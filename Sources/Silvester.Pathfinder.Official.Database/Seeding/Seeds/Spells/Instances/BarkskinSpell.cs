@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class BarkskinSpell : AbstractSpellTemplate
+    public class BarkskinSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("41fcd185-b9ba-41aa-96cf-1a8bcb65a64d");
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses.Instances
 {
-    public class Backbiting : AbstractItemCurseTemplate
+    public class Backbiting : Template
     {
         public static readonly Guid ID = Guid.Parse("11d686ec-2c9a-4c0f-b7da-d8318c38bc64");
 

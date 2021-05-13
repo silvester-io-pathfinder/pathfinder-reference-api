@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Sahkil : AbstractTraitTemplate
+    public class Sahkil : Template
     {
         public static readonly Guid ID = Guid.Parse("27f056b5-b6f7-41fb-92b3-fa235dd593ca");
 

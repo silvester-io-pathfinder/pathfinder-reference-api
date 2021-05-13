@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MagicSchools.Instances
 {
-    public class Evocation : AbstractMagicSchoolTemplate
+    public class Evocation : Template
     {
         public static readonly Guid ID = Guid.Parse("438b96b3-ea22-4131-b938-ce7073c933b4");
 

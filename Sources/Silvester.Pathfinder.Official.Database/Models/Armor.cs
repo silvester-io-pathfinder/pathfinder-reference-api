@@ -31,6 +31,9 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid ArmorCategoryId { get; set; }
         public ArmorCategory ArmorCategory { get; set; } = default!;
 
+        public Guid ArmorGroupId { get; set; }
+        public ArmorGroup ArmorGroup { get; set; } = default!;
+
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
 

@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Stats.Instances
 {
-    public class Charisma : AbstractStatTemplate
+    public class Charisma : Template
     {
         public static readonly Guid ID = Guid.Parse("f4206177-80d3-4c9c-8f79-357a608897fa");
 

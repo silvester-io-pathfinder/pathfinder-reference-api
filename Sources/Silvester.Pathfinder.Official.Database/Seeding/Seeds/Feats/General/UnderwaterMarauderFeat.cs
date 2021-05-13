@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class UnderwaterMarauderFeat : AbstractFeatTemplate
+    public class UnderwaterMarauderFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("dfb5e49e-df3e-443e-bfbf-d41e042306ed");
 

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Mambele : AbstractMeleeWeaponTemplate
+    public class Mambele : Template
     {
         public static readonly Guid ID = Guid.Parse("b40db133-eb32-4046-a667-61c7abcddd57");
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class BuoyancyVest : AbstractAdventuringGearTemplate
+    public class BuoyancyVest : Template
     {
         public static readonly Guid ID = Guid.Parse("aa28dbfb-0480-494f-afc1-bbe71b70b19b");
 

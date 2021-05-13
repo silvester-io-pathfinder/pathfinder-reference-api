@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Azarketi : AbstractTraitTemplate
+    public class Azarketi : Template
     {
         public static readonly Guid ID = Guid.Parse("3e6590db-5cd3-4707-8ca7-3959859f81d4");
 

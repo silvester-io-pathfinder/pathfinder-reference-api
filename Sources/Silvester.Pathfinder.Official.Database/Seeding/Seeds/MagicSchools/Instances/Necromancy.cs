@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MagicSchools.Instances
 {
-    public class Necromancy : AbstractMagicSchoolTemplate
+    public class Necromancy : Template
     {
         public static readonly Guid ID = Guid.Parse("fe316215-5436-422b-bd3f-c499d05b5b99");
 

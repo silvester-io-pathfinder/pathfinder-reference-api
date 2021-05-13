@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Aklys : AbstractMeleeWeaponTemplate
+    public class Aklys : Template
     {
         public static readonly Guid ID = Guid.Parse("24f52641-1737-4761-8576-66710f258aab");
 

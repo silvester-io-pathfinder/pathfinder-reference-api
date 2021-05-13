@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
-    public class BloodthirstyUrge : AbstractHazardTemplate
+    public class BloodthirstyUrge : Template
     {
         public static readonly Guid ID = Guid.Parse("db3fa1f2-4ecb-4bac-96bd-126552730b27");
 

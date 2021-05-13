@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class SturdyStachel : AbstractAdventuringGearTemplate
+    public class SturdyStachel : Template
     {
         public static readonly Guid ID = Guid.Parse("a22483eb-0db6-4677-9097-babb09ab0460");
 

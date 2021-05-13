@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Instances
 {
-    public class Polearm : AbstractWeaponGroupTemplate
+    public class Polearm : Template
     {
         public static readonly Guid ID = Guid.Parse("edfa81fd-1aca-46de-a75b-deb0465712ad");
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class CrisisOfFaithSpell : AbstractSpellTemplate
+    public class CrisisOfFaithSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("b7157338-c1de-4e79-a90c-e0f62abd709c");
 

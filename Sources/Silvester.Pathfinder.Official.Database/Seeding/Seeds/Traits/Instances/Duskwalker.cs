@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Duskwalker : AbstractTraitTemplate
+    public class Duskwalker : Template
     {
         public static readonly Guid ID = Guid.Parse("ce1b5358-fa67-4603-b1ba-4aa7ccd6554e");
 

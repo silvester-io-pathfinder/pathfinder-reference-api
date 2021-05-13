@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Heritages.Instances
 {
-    public class UmbralGnome : AbstractHeritageTemplate
+    public class UmbralGnome : Template
     {
         public static readonly Guid ID = Guid.Parse("1109b6f8-33b0-4868-92f1-49e1ab8135d3");
 

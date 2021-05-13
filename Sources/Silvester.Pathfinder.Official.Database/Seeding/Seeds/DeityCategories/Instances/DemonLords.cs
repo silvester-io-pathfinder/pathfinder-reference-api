@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class DemonLords : AbstractDeityCategoryTemplate
+    public class DemonLords : Template
     {
         public static readonly Guid ID = Guid.Parse("141f20fa-a6a8-4ac7-88b8-edb2badc5b90");
 

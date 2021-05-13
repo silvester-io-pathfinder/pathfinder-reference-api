@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Undine : AbstractTraitTemplate
+    public class Undine : Template
     {
         public static readonly Guid ID = Guid.Parse("22583447-bd14-445d-8e71-fbfae42f8bc0");
 

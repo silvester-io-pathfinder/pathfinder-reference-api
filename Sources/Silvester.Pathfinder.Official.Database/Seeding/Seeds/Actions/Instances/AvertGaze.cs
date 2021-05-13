@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 {
-    public class AvertGaze : AbstractActionTemplate
+    public class AvertGaze : Template
     {
         public static readonly Guid ID = Guid.Parse("4384a058-8cc0-11eb-8dcd-0242ac130003");
 

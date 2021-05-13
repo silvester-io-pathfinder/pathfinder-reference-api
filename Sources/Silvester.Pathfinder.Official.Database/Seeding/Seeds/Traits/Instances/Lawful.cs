@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Lawful : AbstractTraitTemplate
+    public class Lawful : Template
     {
         public static readonly Guid ID = Guid.Parse("7402a95c-09ac-4438-b51e-5277225ae185");
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Leshy : AbstractTraitTemplate
+    public class Leshy : Template
     {
         public static readonly Guid ID = Guid.Parse("aa8a4365-a565-4dbf-8b0d-c3bd8cd7d719");
 

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Instances
 {
-    public class Longbow : AbstractRangedWeaponTemplate
+    public class Longbow : Template
     {
         public static readonly Guid ID = Guid.Parse("59fa141b-7ef8-4ae5-b006-925a1a5e4fc3");
 

@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCategories.Instances
 {
-    public class Runes : AbstractItemCategoryTemplate
+    public class Runes : Template
     {
         public static readonly Guid ID = Guid.Parse("8a494ffa-3f11-4e4e-9373-b376942fc75d");
 

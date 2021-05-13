@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class ColorSpraySpell : AbstractSpellTemplate
+    public class ColorSpraySpell : Template
     {
         public static readonly Guid ID = Guid.Parse("060ba321-f5b9-4ac8-907c-fec7bb740713");
 

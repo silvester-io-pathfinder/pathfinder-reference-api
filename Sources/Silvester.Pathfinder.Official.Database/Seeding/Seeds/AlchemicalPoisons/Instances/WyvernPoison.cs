@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class WyvernPoison : AbstractAlchemicalPoisonTemplate
+    public class WyvernPoison : Template
     {
         public static readonly Guid ID = Guid.Parse("1f8e9d8a-52ba-4b7c-b041-6e797a91e25b");
 

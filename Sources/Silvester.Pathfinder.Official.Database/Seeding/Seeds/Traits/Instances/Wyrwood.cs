@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Wyrwood : AbstractTraitTemplate
+    public class Wyrwood : Template
     {
         public static readonly Guid ID = Guid.Parse("92febdb0-6336-44be-8517-98608257eed6");
 

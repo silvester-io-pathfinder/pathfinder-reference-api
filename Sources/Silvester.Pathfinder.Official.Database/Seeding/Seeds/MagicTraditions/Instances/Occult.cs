@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MagicTraditions.Instances
 {
-    public class Occult : AbstractMagicTraditionTemplate
+    public class Occult : Template
     {
         public static readonly Guid ID = Guid.Parse("8e4b2e84-303a-42eb-a4df-348d1c4fbbf8");
 

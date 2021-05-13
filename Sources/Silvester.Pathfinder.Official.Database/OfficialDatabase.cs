@@ -6,6 +6,7 @@ using Silvester.Pathfinder.Official.Database.Seeding.Seeds;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 
@@ -28,6 +29,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<AlchemicalTool> AlchemicalTools { get; set; } = default!;
         public DbSet<Alignment> Alignments { get; set; } = default!;
         public DbSet<Ammunition> Ammunitions { get; set; } = default!;
+        public DbSet<Armor> Armors { get; set; } = default!;
         public DbSet<ArmorCategory> ArmorGroups { get; set; } = default!;
         public DbSet<AttackType> AttackTypes { get; set; } = default!;
         public DbSet<BenefitType> BenefitTypes { get; set; } = default!;
@@ -62,6 +64,11 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<PlaneCategory> PlaneCategories { get; set; } = default!;
         public DbSet<Plane> Planes { get; set; } = default!;
         public DbSet<Potency> Potencies { get; set; } = default!;
+        public DbSet<PreciousMaterial> PreciousMaterials { get; set; } = default!;
+        public DbSet<PreciousMaterialArmor> PreciousMaterialArmors { get; set; } = default!;
+        public DbSet<PreciousMaterialItemCategory> PreciousMaterialItemCategories { get; set; } = default!;
+        public DbSet<PreciousMaterialShield> PreciousMaterialShields{ get; set; } = default!;
+        public DbSet<PreciousMaterialWeapon> PreciousMaterialWeapons { get; set; } = default!;
         public DbSet<Prerequisite> Prerequisites { get; set; } = default!;
         public DbSet<Proficiency> Proficiencies { get; set; } = default!;
         public DbSet<Race> Races { get; set; } = default!;

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class Periscope : AbstractAdventuringGearTemplate
+    public class Periscope : Template
     {
         public static readonly Guid ID = Guid.Parse("a905c052-59af-4d59-8e6b-3dddbe09675a");
 

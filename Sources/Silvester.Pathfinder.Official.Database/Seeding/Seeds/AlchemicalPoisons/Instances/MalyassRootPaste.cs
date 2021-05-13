@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class MalyassRootPaste : AbstractAlchemicalPoisonTemplate
+    public class MalyassRootPaste : Template
     {
         public static readonly Guid ID = Guid.Parse("aef8461a-019a-4c5e-baeb-949f8ebd6e66");
 

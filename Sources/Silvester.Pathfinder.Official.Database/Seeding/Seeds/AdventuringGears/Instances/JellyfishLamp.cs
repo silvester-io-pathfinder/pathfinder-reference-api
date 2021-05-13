@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class JellyfishLamp : AbstractAdventuringGearTemplate
+    public class JellyfishLamp : Template
     {
         public static readonly Guid ID = Guid.Parse("16e8493f-7a41-495c-9cf4-c4ecc788d5f9");
 

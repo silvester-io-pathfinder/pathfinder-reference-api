@@ -1,17 +1,13 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorCategories.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors.Instances
 {
-    public class LeatherArmor : AbstractArmorTemplate
+    public class LeatherArmor : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ee976251-119d-4b17-b47b-eea1fafb1fdf");
 
         protected override Armor GetArmor()
         {
@@ -25,14 +21,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors.Instances
                 Strength= 10,
                 CheckPenalty = 1,
                 SpeedPenalty = 0,
-                ArmorCategoryId = LightArmor.ID,
+                ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID,
+                ArmorGroupId = ArmorGroups.Instances.Leather.ID,
                 BulkId = Bulks.Instances.OneBulk.ID
             }; 
         }
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility." };
+            yield return new TextBlock { Id = Guid.Parse("f5334a06-4882-4033-8af1-043303b472d9"), Type = TextBlockType.Text, Text = "A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -44,7 +41,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ed63f55c-6a38-4b7f-b904-f07ed0c0f397"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 275
             };

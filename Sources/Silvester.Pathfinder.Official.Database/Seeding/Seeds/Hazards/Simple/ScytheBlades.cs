@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
-    public class ScytheBlades : AbstractHazardTemplate
+    public class ScytheBlades : Template
     {
         public static readonly Guid ID = Guid.Parse("b658c798-2ef4-4040-9980-7828bbeeb523");
 

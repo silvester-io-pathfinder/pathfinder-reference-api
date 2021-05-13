@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class AnimalMessengerSpell : AbstractSpellTemplate
+    public class AnimalMessengerSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("5ca21ccd-2ccc-4900-99fe-40480d6103f2");
 

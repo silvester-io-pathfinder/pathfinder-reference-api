@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Archon : AbstractTraitTemplate
+    public class Archon : Template
     {
         public static readonly Guid ID = Guid.Parse("8bbb6788-c4d1-4749-ad5a-054245744acc");
 

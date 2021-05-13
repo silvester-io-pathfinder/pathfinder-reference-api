@@ -1,11 +1,12 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class SteadyBalanceFeat : AbstractFeatTemplate
+    public class SteadyBalanceFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("7ba0d3ef-7d44-42e4-8e2d-0b8bce8c9d16");
 

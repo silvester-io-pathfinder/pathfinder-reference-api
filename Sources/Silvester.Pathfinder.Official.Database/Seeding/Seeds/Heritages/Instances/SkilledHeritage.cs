@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Heritages.Instances
 {
-    public class SkilledHeritage : AbstractHeritageTemplate
+    public class SkilledHeritage : Template
     {
         public static readonly Guid ID = Guid.Parse("fdf36b32-00b2-457f-9aca-aa9378c0f92e");
 

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Instances
 {
-    public class Daikyu : AbstractRangedWeaponTemplate
+    public class Daikyu : Template
     {
         public static readonly Guid ID = Guid.Parse("97d36556-d936-4a4e-a9cb-3ec41cd816aa");
 

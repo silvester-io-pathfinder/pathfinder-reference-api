@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Instances
 {
-    public class HalflingSlingStaff : AbstractRangedWeaponTemplate
+    public class HalflingSlingStaff : Template
     {
         public static readonly Guid ID = Guid.Parse("957a55d1-dbc4-4060-ac98-aa4523175510");
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Planes.Instances
 {
-    public class DimensionOfTime : AbstractPlaneTemplate
+    public class DimensionOfTime : Template
     {
         public static readonly Guid ID = Guid.Parse("8e6d1e80-b710-4468-89d5-a97d4178fd14");
 

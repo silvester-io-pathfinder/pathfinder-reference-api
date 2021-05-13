@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Races.Instances
 {
-    public class Catfolk : AbstractRaceTemplate
+    public class Catfolk : Template
     {
         public static readonly Guid ID = Guid.Parse("14f3ef0d-aba9-4bed-8419-e9ffb1594cf5");
 

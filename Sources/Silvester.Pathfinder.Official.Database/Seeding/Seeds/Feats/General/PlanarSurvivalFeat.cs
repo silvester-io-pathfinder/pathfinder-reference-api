@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class PlanarSurvivalFeat : AbstractFeatTemplate
+    public class PlanarSurvivalFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("9415b689-43b4-4177-b861-32cab298b5fe");
 

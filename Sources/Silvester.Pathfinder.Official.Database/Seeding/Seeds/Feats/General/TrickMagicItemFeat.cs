@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class TrickMagicItemFeat : AbstractFeatTemplate
+    public class TrickMagicItemFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("219b84b9-cb31-44df-b37e-6bf4916e5dfb");
 

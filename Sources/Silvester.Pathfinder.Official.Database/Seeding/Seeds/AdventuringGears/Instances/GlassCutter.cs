@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class GlassCutter : AbstractAdventuringGearTemplate
+    public class GlassCutter : Template
     {
         public static readonly Guid ID = Guid.Parse("783370e3-5de6-4fb7-8bf2-6b1ea444727d");
 

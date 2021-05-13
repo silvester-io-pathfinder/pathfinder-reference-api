@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class ShauthLash : AbstractMeleeWeaponTemplate
+    public class ShauthLash : Template
     {
         public static readonly Guid ID = Guid.Parse("fdd7f7db-241e-4d1c-bc53-7b280dc679f1");
 

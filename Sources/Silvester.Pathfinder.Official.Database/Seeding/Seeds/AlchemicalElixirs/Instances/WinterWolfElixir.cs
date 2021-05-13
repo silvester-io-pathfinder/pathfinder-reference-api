@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
-    public class WinterWolfElixir : AbstractAlchemicalElixirTemplate
+    public class WinterWolfElixir : Template
     {
         public static readonly Guid ID = Guid.Parse("b28f4309-cc04-4522-8837-b653995b3028");
 

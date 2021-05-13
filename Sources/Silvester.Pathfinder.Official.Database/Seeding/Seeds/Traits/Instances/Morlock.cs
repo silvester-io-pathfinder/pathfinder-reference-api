@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Morlock : AbstractTraitTemplate
+    public class Morlock : Template
     {
         public static readonly Guid ID = Guid.Parse("d88c3ae6-6902-41f4-a7ce-27ffbabd4f87");
 

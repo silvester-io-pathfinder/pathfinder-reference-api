@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class HandheldMusicalInstrument : AbstractAdventuringGearTemplate
+    public class HandheldMusicalInstrument : Template
     {
         public static readonly Guid ID = Guid.Parse("00629e82-1fc3-4f7f-b81e-7750bdd86840");
 

@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ConditionCategories.Instances
 {
-    public class LoweredAbilities : AbstractConditionCategoryTemplate
+    public class LoweredAbilities : Template
     {
         public static readonly Guid ID = Guid.Parse("655ed530-4d75-4816-af14-4cbbdd19531e");
 

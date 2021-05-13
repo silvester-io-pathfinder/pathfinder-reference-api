@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Vanara : AbstractTraitTemplate
+    public class Vanara : Template
     {
         public static readonly Guid ID = Guid.Parse("9ddf2c48-1a7f-4877-8957-deaaec7d485b");
 

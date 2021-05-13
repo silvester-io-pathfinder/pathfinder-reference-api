@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class ScareToDeathFeat : AbstractFeatTemplate
+    public class ScareToDeathFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("045ae2b1-ef9d-44a3-898d-8feb0832b94c");
 

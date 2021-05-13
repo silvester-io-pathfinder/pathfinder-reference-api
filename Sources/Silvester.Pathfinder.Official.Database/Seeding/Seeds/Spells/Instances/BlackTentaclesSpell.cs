@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class BlackTentaclesSpell : AbstractSpellTemplate
+    public class BlackTentaclesSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("436d4b2a-846a-4ff1-ae57-63ecfe80f337");
 

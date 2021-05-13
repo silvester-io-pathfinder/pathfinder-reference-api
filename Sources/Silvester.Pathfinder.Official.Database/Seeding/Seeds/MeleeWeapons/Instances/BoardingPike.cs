@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class BoardingPike : AbstractMeleeWeaponTemplate
+    public class BoardingPike : Template
     {
         public static readonly Guid ID = Guid.Parse("c0c4e1e1-fc1c-4a9e-8797-8f2eabaeec50");
 

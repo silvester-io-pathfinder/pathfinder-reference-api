@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
-    public class LavaFlumeTube : AbstractHazardTemplate
+    public class LavaFlumeTube : Template
     {
         public static readonly Guid ID = Guid.Parse("3a554a92-f873-4560-9a1a-ad10916b7f1a");
 

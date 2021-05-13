@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class ConfabulatorFeat : AbstractFeatTemplate
+    public class ConfabulatorFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("38b0c4f7-2ad6-4c04-928d-dc53f2ff39b7");
 

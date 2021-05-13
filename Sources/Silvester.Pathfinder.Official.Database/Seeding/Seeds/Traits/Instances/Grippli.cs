@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Grippli : AbstractTraitTemplate
+    public class Grippli : Template
     {
         public static readonly Guid ID = Guid.Parse("87603781-d242-4b02-ad1c-53d2748f8878");
 

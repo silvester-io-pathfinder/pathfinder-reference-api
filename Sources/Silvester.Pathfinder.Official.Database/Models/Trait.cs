@@ -42,9 +42,19 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<AlchemicalPoison> AlchemicalPoisons { get; set; } = new List<AlchemicalPoison>();
 
         public ICollection<Plane> Planes { get; set; } = new List<Plane>();
-    
+
+        public ICollection<Armor> Armors { get; set; } = new List<Armor>();
+
         public ICollection<MeleeWeapon> MeleeWeapons { get; set; } = new List<MeleeWeapon>();
-     
+
         public ICollection<RangedWeapon> RangedWeapons { get; set; } = new List<RangedWeapon>();
+        
+        public ICollection<PreciousMaterial> PreciousMaterials { get; set; } = new List<PreciousMaterial>();
+
+        public ICollection<PreciousMaterialArmor> PreciousMaterialArmors { get; set; } = new List<PreciousMaterialArmor>();
+
+        public ICollection<PreciousMaterialShield> PreciousMaterialShields { get; set; } = new List<PreciousMaterialShield>();
+
+        public ICollection<PreciousMaterialWeapon> PreciousMaterialWeapons { get; set; } = new List<PreciousMaterialWeapon>();
     }
 }

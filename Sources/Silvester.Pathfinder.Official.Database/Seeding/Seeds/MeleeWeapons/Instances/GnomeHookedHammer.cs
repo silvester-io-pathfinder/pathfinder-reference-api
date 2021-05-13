@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class GnomeHookedHammer : AbstractMeleeWeaponTemplate
+    public class GnomeHookedHammer : Template
     {
         public static readonly Guid ID = Guid.Parse("f828cf37-ae7a-4534-a5f3-d12558d731eb");
 

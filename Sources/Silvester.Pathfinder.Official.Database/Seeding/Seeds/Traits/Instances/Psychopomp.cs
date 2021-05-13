@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Psychopomp : AbstractTraitTemplate
+    public class Psychopomp : Template
     {
         public static readonly Guid ID = Guid.Parse("9a113e60-55b3-47ae-af56-39d8acb42e34");
 

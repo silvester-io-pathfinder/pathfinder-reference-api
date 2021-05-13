@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Tengu : AbstractTraitTemplate
+    public class Tengu : Template
     {
         public static readonly Guid ID = Guid.Parse("9c1ee79b-60f9-453a-9a8a-bfa60ee51196");
 

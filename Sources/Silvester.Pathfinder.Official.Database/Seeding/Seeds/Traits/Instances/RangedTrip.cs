@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class RangedTrip : AbstractTraitTemplate
+    public class RangedTrip : Template
     {
         public static readonly Guid ID = Guid.Parse("dcd0b784-a7c5-43dd-ae92-a5c4b94041d5");
 

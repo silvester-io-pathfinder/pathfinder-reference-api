@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Instances
 {
-    public class Blowgun : AbstractRangedWeaponTemplate
+    public class Blowgun : Template
     {
         public static readonly Guid ID = Guid.Parse("f7462ef0-62d3-48ad-bc24-e80318b98455");
 

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Katana : AbstractMeleeWeaponTemplate
+    public class Katana : Template
     {
         public static readonly Guid ID = Guid.Parse("b3b26911-43d7-4771-b374-19e3aac3033b");
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Kitsune : AbstractTraitTemplate
+    public class Kitsune : Template
     {
         public static readonly Guid ID = Guid.Parse("4f09be8d-d633-483d-b450-8c10d3cdb126");
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Telepathy : AbstractTraitTemplate
+    public class Telepathy : Template
     {
         public static readonly Guid ID = Guid.Parse("e29b02f2-8555-474a-a501-ecbfa4a3dbdc");
 

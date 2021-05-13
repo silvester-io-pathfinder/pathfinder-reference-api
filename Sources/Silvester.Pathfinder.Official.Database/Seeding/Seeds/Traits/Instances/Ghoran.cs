@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Ghoran : AbstractTraitTemplate
+    public class Ghoran : Template
     {
         public static readonly Guid ID = Guid.Parse("1788ef80-8a1f-4bbb-98a8-b6a67d3e9f23");
 

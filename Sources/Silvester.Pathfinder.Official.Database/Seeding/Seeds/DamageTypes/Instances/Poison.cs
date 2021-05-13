@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DamageTypes.Instances
 {
-    public class Poison : AbstractDamageTypeTemplate
+    public class Poison : Template
     {
         public static readonly Guid ID = Guid.Parse("38834ac6-9f9f-4b44-ad45-c2c932ff4b27");
 

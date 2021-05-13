@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class CompassLensatic : AbstractAdventuringGearTemplate
+    public class CompassLensatic : Template
     {
         public static readonly Guid ID = Guid.Parse("63c40f21-1e8c-4273-9bec-79fdbaaaa225");
 

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Khopesh : AbstractMeleeWeaponTemplate
+    public class Khopesh : Template
     {
         public static readonly Guid ID = Guid.Parse("c86b01ef-ff94-47a5-9f38-158665a053e1");
 

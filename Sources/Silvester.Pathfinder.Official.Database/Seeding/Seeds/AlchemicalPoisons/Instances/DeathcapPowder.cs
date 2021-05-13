@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class DeathcapPowder : AbstractAlchemicalPoisonTemplate
+    public class DeathcapPowder : Template
     {
         public static readonly Guid ID = Guid.Parse("ae0386af-cfaf-40c0-83b4-8dd5a8d80d9a");
 

@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Languages.Instances
 {
-    public class Ysoki : AbstractLanguageTemplate
+    public class Ysoki : Template
     {
         public static readonly Guid ID = Guid.Parse("6a5332d4-f0b7-4e9b-8016-ccb5d03e9d0f");
 

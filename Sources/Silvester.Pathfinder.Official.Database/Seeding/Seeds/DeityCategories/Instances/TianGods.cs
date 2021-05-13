@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class TianGods : AbstractDeityCategoryTemplate
+    public class TianGods : Template
     {
         public static readonly Guid ID = Guid.Parse("60738a86-c7af-4b79-b29c-a0e861a08da4");
 

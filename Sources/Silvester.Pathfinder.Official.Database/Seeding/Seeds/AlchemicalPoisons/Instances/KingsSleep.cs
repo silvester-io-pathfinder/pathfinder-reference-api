@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class KingsSleep : AbstractAlchemicalPoisonTemplate
+    public class KingsSleep : Template
     {
         public static readonly Guid ID = Guid.Parse("7d31dbce-9230-4960-99cc-71de51c18977");
 

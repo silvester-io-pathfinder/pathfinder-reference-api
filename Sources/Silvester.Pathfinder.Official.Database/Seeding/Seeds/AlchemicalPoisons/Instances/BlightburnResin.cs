@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class BlightburnResin : AbstractAlchemicalPoisonTemplate
+    public class BlightburnResin : Template
     {
         public static readonly Guid ID = Guid.Parse("dc73bb29-2a4e-429e-bc99-26d85ae74e1c");
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Heritages.Instances
 {
-    public class Duskwalker : AbstractHeritageTemplate
+    public class Duskwalker : Template
     {
         public static readonly Guid ID = Guid.Parse("d40a90eb-140a-43b1-94f5-fb034f62d977");
 

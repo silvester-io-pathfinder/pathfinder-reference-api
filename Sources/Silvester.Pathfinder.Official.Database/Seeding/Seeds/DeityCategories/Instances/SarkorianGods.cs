@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class SarkorianGods : AbstractDeityCategoryTemplate
+    public class SarkorianGods : Template
     {
         public static readonly Guid ID = Guid.Parse("aa2c5a37-9a30-4bdb-904e-ca1de189edbb");
 

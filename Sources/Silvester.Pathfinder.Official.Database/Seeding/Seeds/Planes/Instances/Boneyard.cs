@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Planes.Instances
 {
-    public class Boneyard : AbstractPlaneTemplate
+    public class Boneyard : Template
     {
         public static readonly Guid ID = Guid.Parse("7c34baea-48a6-4a49-8b15-8781a5c1ab47");
 

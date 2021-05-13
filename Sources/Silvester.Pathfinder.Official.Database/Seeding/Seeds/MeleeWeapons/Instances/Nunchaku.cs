@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Nunchaku : AbstractMeleeWeaponTemplate
+    public class Nunchaku : Template
     {
         public static readonly Guid ID = Guid.Parse("d1ad3308-48ce-4720-8d53-b1152ac0592f");
 

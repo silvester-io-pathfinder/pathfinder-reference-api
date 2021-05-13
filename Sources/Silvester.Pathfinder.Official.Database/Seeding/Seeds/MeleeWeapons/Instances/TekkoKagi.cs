@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class TekkoKagi : AbstractMeleeWeaponTemplate
+    public class TekkoKagi : Template
     {
         public static readonly Guid ID = Guid.Parse("32823fbd-8598-4fc3-a9d9-769043cbce0f");
 

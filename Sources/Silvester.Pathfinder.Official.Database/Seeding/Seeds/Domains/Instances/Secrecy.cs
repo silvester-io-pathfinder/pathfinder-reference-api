@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Domains.Instances
 {
-    public class Secrecy : AbstractDomainTemplate
+    public class Secrecy : Template
     {
         public static readonly Guid ID = Guid.Parse("433f01f4-387d-4cb7-b327-2b63bf21c16c");
 

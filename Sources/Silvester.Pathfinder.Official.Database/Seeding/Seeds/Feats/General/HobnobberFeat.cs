@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class HobnobberFeat : AbstractFeatTemplate
+    public class HobnobberFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("43f75824-0d49-466f-aa58-e40046c4a6d4");
 

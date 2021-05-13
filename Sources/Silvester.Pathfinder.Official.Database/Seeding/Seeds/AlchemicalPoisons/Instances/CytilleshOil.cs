@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class CytilleshOil : AbstractAlchemicalPoisonTemplate
+    public class CytilleshOil : Template
     {
         public static readonly Guid ID = Guid.Parse("0381fe8b-2404-42fb-9abd-74e28f1401d5");
 

@@ -2,7 +2,7 @@
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class ArmorGroup : BaseEntity
+    public class ArmorCategory : BaseEntity
     {
         public string Name { get; set; } = default!;
 

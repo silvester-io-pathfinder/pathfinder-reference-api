@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Alignments.Instances
 {
-    public class ChaoticGood : AbstractAlignmentTemplate
+    public class ChaoticGood : Template
     {
         public static readonly Guid ID = Guid.Parse("add12009-9c8a-4287-b02b-7e5b9459bf44");
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class PickpocketFeat : AbstractFeatTemplate
+    public class PickpocketFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("d1f81e6f-f97f-4bf3-8ddb-7db5ff7c351c");
 

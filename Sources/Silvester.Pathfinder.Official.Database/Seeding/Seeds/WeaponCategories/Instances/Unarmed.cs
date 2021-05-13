@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponCategories.Instances
 {
-    public class Unarmed : AbstractWeaponCategoriesTemplate
+    public class Unarmed : Template
     {
         public static readonly Guid ID = Guid.Parse("9cfcad6d-a7e2-4833-ba41-86d88bee6fc7");
 

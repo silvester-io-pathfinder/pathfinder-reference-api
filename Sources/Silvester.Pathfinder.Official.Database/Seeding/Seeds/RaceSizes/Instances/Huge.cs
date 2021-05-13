@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RaceSizes.Instances
 {
-    public class Huge : AbstractRaceSizeTemplate
+    public class Huge : Template
     {
         public static readonly Guid ID = Guid.Parse("eba80c08-8f5b-4dee-8d43-f1aa5fc30d8b");
         

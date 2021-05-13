@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Instances
 {
-    public class Javelin : AbstractRangedWeaponTemplate
+    public class Javelin : Template
     {
         public static readonly Guid ID = Guid.Parse("e8272282-c02b-4e7b-8505-031e4657e7a9");
 

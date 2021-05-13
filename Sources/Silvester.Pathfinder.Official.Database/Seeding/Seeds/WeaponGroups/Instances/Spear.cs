@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Instances
 {
-    public class Spear : AbstractWeaponGroupTemplate
+    public class Spear : Template
     {
         public static readonly Guid ID = Guid.Parse("2a230c64-c4ef-4f84-ac75-a285f53bf115");
 

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.Instances
 {
-    public class Silversheen : AbstractAlchemicalToolTemplate
+    public class Silversheen : Template
     {
         public static readonly Guid ID = Guid.Parse("3707bdeb-7db4-4473-b963-f9adc2f2c1fa");
 

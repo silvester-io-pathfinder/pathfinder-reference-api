@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
-    public class TelekineticSwarmTrap : AbstractHazardTemplate
+    public class TelekineticSwarmTrap : Template
     {
         public static readonly Guid ID = Guid.Parse("12cbc8b1-311a-4826-bf59-784c2a790e0f");
 

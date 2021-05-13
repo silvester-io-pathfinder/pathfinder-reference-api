@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class WaterPurifier : AbstractAdventuringGearTemplate
+    public class WaterPurifier : Template
     {
         public static readonly Guid ID = Guid.Parse("0ff1b0d8-a30c-41ed-86b7-e56aec6d93fd");
 

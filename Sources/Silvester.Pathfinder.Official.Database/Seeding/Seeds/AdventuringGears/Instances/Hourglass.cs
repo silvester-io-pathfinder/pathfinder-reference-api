@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class Hourglass : AbstractAdventuringGearTemplate
+    public class Hourglass : Template
     {
         public static readonly Guid ID = Guid.Parse("3e2b8309-41fd-4258-a236-ed5bbdcefec0");
 

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Heritages.Instances
 {
-    public class WellspringGnome : AbstractHeritageTemplate
+    public class WellspringGnome : Template
     {
         public static readonly Guid ID = Guid.Parse("f574f17b-2c71-4a9e-adba-a91a5f5f6e22");
 

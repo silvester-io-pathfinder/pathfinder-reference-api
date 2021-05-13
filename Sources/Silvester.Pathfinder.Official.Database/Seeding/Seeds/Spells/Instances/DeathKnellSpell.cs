@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class DeathKnellSpell : AbstractSpellTemplate
+    public class DeathKnellSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("236cd0a3-a07b-4c9f-ba11-e3c113d91634");
 

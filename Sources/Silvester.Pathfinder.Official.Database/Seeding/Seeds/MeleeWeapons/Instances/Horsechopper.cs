@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Horsechopper : AbstractMeleeWeaponTemplate
+    public class Horsechopper : Template
     {
         public static readonly Guid ID = Guid.Parse("c3d2c58d-904d-4fb5-9246-bc292a95ba8e");
 

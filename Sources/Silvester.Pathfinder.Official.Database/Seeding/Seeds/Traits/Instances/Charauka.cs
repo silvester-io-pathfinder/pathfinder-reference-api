@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Charauka : AbstractTraitTemplate
+    public class Charauka : Template
     {
         public static readonly Guid ID = Guid.Parse("e77d5514-3bd5-40a9-ad28-d7ee55136071");
 

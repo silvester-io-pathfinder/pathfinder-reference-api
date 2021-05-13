@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
-    public class QuicksilverMutagen : AbstractAlchemicalElixirTemplate
+    public class QuicksilverMutagen : Template
     {
         public static readonly Guid ID = Guid.Parse("eeca589b-c156-4a4a-8614-d78cc53934c1");
 

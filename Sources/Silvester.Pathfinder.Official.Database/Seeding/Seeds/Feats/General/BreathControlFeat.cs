@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class BreathControlFeat : AbstractFeatTemplate
+    public class BreathControlFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("a3395df1-fc95-4989-833c-c0d7465ecd1c");
 

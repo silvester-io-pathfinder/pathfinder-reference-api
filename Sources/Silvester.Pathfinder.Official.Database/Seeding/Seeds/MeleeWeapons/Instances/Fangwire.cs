@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Fangwire : AbstractMeleeWeaponTemplate
+    public class Fangwire : Template
     {
         public static readonly Guid ID = Guid.Parse("0776b01d-d10c-41fa-8832-a7c718b7ff8e");
 

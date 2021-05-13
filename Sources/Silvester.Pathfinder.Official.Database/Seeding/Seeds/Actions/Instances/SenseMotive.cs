@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 {
-    public class SenseMotive : AbstractActionTemplate
+    public class SenseMotive : Template
     {
         public static readonly Guid ID = Guid.Parse("f715d730-9ad4-4922-b893-cda88fe25ea4");
 

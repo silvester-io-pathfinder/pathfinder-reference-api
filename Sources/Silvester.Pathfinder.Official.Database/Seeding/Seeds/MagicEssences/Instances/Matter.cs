@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MagicEssences.Instances
 {
-    public class Matter : AbstractMagicEssenceTemplate
+    public class Matter : Template
     {
         public static readonly Guid ID = Guid.Parse("c02c29d8-351b-4690-bfd6-85447ee129e1");
 

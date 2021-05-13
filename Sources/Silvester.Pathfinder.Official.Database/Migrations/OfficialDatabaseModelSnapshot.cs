@@ -1811,6 +1811,68 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ArmorTrait", b =>
+                {
+                    b.Property<Guid>("ArmorsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("ArmorsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("ArmorTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            ArmorsId = new Guid("6c357ddd-162b-4fc0-b2a1-23ec6f1bbef4"),
+                            TraitsId = new Guid("42f5364e-7923-4d7e-affc-d71e511e2369")
+                        },
+                        new
+                        {
+                            ArmorsId = new Guid("6c357ddd-162b-4fc0-b2a1-23ec6f1bbef4"),
+                            TraitsId = new Guid("dea9ff31-9ed5-44e2-917d-f4b269e6a974")
+                        },
+                        new
+                        {
+                            ArmorsId = new Guid("9d419b32-9b59-4a20-9909-8485ae52f637"),
+                            TraitsId = new Guid("42f5364e-7923-4d7e-affc-d71e511e2369")
+                        },
+                        new
+                        {
+                            ArmorsId = new Guid("9d419b32-9b59-4a20-9909-8485ae52f637"),
+                            TraitsId = new Guid("dea9ff31-9ed5-44e2-917d-f4b269e6a974")
+                        },
+                        new
+                        {
+                            ArmorsId = new Guid("6fbffdfc-1443-4f6b-980b-a3d17412ac93"),
+                            TraitsId = new Guid("42f8d547-7951-47ed-ad66-7ba48e750e78")
+                        },
+                        new
+                        {
+                            ArmorsId = new Guid("ee6f41ed-1e5b-4ef9-8f4d-a2720aa9e477"),
+                            TraitsId = new Guid("78a8fe42-f559-4386-af44-cc49e8525378")
+                        },
+                        new
+                        {
+                            ArmorsId = new Guid("abee6439-3461-45f5-b234-8e155921fc95"),
+                            TraitsId = new Guid("78a8fe42-f559-4386-af44-cc49e8525378")
+                        },
+                        new
+                        {
+                            ArmorsId = new Guid("abee6439-3461-45f5-b234-8e155921fc95"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            ArmorsId = new Guid("cb7b819d-3ddc-4819-bdb1-a0bafa47ead0"),
+                            TraitsId = new Guid("42f8d547-7951-47ed-ad66-7ba48e750e78")
+                        });
+                });
+
             modelBuilder.Entity("ClassStat", b =>
                 {
                     b.Property<Guid>("KeyAbilitiesId")
@@ -9215,6 +9277,219 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("PreciousMaterialArmorTrait", b =>
+                {
+                    b.Property<Guid>("PreciousMaterialArmorsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("PreciousMaterialArmorsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("PreciousMaterialArmorTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            PreciousMaterialArmorsId = new Guid("9c4884c6-39eb-4ed5-a3fb-d91f19e62f2f"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialArmorsId = new Guid("c6ea2f2a-8c94-4e44-83be-e1a8a728d30c"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialArmorsId = new Guid("afc82eed-f33e-43c6-af78-3c6c6406692f"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialArmorsId = new Guid("1287dbd8-558a-4c7f-bf2a-37dbe34e802c"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        },
+                        new
+                        {
+                            PreciousMaterialArmorsId = new Guid("73db3bdd-bc32-4a6d-9c21-580d3301e6ec"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        });
+                });
+
+            modelBuilder.Entity("PreciousMaterialShieldTrait", b =>
+                {
+                    b.Property<Guid>("PreciousMaterialShieldsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("PreciousMaterialShieldsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("PreciousMaterialShieldTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            PreciousMaterialShieldsId = new Guid("f0d45f1c-537b-4276-a11a-8e164138b552"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialShieldsId = new Guid("dd440152-bdc9-427b-94e0-68874ac11480"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialShieldsId = new Guid("575c98ad-c43d-4424-93a8-f0188f6de11d"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialShieldsId = new Guid("7ef2acfb-7820-4a22-be1a-c97991e63e16"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        });
+                });
+
+            modelBuilder.Entity("PreciousMaterialTrait", b =>
+                {
+                    b.Property<Guid>("PreciousMaterialsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("PreciousMaterialsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("PreciousMaterialTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d"),
+                            TraitsId = new Guid("241dfc1f-e304-4fa0-a086-e87f5b621bdb")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                            TraitsId = new Guid("241dfc1f-e304-4fa0-a086-e87f5b621bdb")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                            TraitsId = new Guid("241dfc1f-e304-4fa0-a086-e87f5b621bdb")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                            TraitsId = new Guid("241dfc1f-e304-4fa0-a086-e87f5b621bdb")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("949a7996-a817-48bf-b947-3646e248a25a"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("949a7996-a817-48bf-b947-3646e248a25a"),
+                            TraitsId = new Guid("241dfc1f-e304-4fa0-a086-e87f5b621bdb")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            TraitsId = new Guid("241dfc1f-e304-4fa0-a086-e87f5b621bdb")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155"),
+                            TraitsId = new Guid("241dfc1f-e304-4fa0-a086-e87f5b621bdb")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("3d6d6740-5c9f-480d-8752-0f5a2a5d432a"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        },
+                        new
+                        {
+                            PreciousMaterialsId = new Guid("3d6d6740-5c9f-480d-8752-0f5a2a5d432a"),
+                            TraitsId = new Guid("241dfc1f-e304-4fa0-a086-e87f5b621bdb")
+                        });
+                });
+
+            modelBuilder.Entity("PreciousMaterialWeaponTrait", b =>
+                {
+                    b.Property<Guid>("PreciousMaterialWeaponsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("PreciousMaterialWeaponsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("PreciousMaterialWeaponTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            PreciousMaterialWeaponsId = new Guid("29b7ba2b-f6ef-46ce-9966-04ca06d282ba"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialWeaponsId = new Guid("5b49c336-f62c-4bf8-9cd5-967e458b6f2c"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialWeaponsId = new Guid("f4155d3a-7603-4d5b-8b61-61f60afe13bf"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            PreciousMaterialWeaponsId = new Guid("e3a80aa5-5187-40bc-8151-130f89fe9775"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        },
+                        new
+                        {
+                            PreciousMaterialWeaponsId = new Guid("e5a64133-97dc-4338-bc22-4de897cc3024"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        },
+                        new
+                        {
+                            PreciousMaterialWeaponsId = new Guid("7bfe9197-17dd-4499-931d-7dd4816a12dd"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        });
+                });
+
             modelBuilder.Entity("RaceTrait", b =>
                 {
                     b.Property<Guid>("RacesId")
@@ -13774,7 +14049,265 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.ToTable("AnimalCompanion");
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorGroup", b =>
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Armor", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ArmorCategoryId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ArmorClassBonus")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("ArmorGroupId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("CheckPenalty")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("DexterityCap")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Level")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("SpeedPenalty")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Strength")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArmorCategoryId");
+
+                    b.HasIndex("ArmorGroupId");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("Armors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("e376e538-e4c3-49b8-bff2-239a76012ec9"),
+                            ArmorCategoryId = new Guid("199f2e7d-5249-45ee-af4d-b3f7cdd257b8"),
+                            ArmorClassBonus = 4,
+                            ArmorGroupId = new Guid("e0daa940-678f-4ce5-8ee0-19bc7859799b"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            CheckPenalty = 2,
+                            DexterityCap = 1,
+                            Name = "Breastplate",
+                            Price = 800,
+                            SourcePageId = new Guid("21de43a5-f03c-4532-b544-ce63ae29b89f"),
+                            SpeedPenalty = 5,
+                            Strength = 16
+                        },
+                        new
+                        {
+                            Id = new Guid("6c357ddd-162b-4fc0-b2a1-23ec6f1bbef4"),
+                            ArmorCategoryId = new Guid("199f2e7d-5249-45ee-af4d-b3f7cdd257b8"),
+                            ArmorClassBonus = 4,
+                            ArmorGroupId = new Guid("abd3005a-9803-4d55-9d51-3ff92bc49ee7"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            CheckPenalty = 2,
+                            DexterityCap = 1,
+                            Name = "Chain Mail",
+                            Price = 600,
+                            SourcePageId = new Guid("cafddd9f-fffa-447f-af6b-759154d33281"),
+                            SpeedPenalty = 5,
+                            Strength = 16
+                        },
+                        new
+                        {
+                            Id = new Guid("9d419b32-9b59-4a20-9909-8485ae52f637"),
+                            ArmorCategoryId = new Guid("28f6b905-0c5e-4cc0-8164-8e623fdfb367"),
+                            ArmorClassBonus = 2,
+                            ArmorGroupId = new Guid("abd3005a-9803-4d55-9d51-3ff92bc49ee7"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CheckPenalty = 1,
+                            DexterityCap = 3,
+                            Name = "Chain Shirt",
+                            Price = 500,
+                            SourcePageId = new Guid("8494e18c-c37a-43ac-bf31-773ffa0195db"),
+                            SpeedPenalty = 0,
+                            Strength = 12
+                        },
+                        new
+                        {
+                            Id = new Guid("6fbffdfc-1443-4f6b-980b-a3d17412ac93"),
+                            ArmorCategoryId = new Guid("3e53fcd2-e07b-4af5-b331-b4372acacf74"),
+                            ArmorClassBonus = 0,
+                            ArmorGroupId = new Guid("80a75f79-058a-4d69-a75a-1591d7e53a2e"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CheckPenalty = 0,
+                            DexterityCap = 5,
+                            Name = "Explorer's Clothing",
+                            Price = 10,
+                            SourcePageId = new Guid("6e4472c2-1fce-4c38-a4f0-fbca470146b3"),
+                            SpeedPenalty = 0,
+                            Strength = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("ee6f41ed-1e5b-4ef9-8f4d-a2720aa9e477"),
+                            ArmorCategoryId = new Guid("f3d2b25b-e222-4af2-9287-a6036e6bb0b7"),
+                            ArmorClassBonus = 6,
+                            ArmorGroupId = new Guid("e0daa940-678f-4ce5-8ee0-19bc7859799b"),
+                            BulkId = new Guid("61e784de-dd93-4d53-acda-61dff663e2a3"),
+                            CheckPenalty = 3,
+                            DexterityCap = 0,
+                            Name = "Full Plate",
+                            Price = 3000,
+                            SourcePageId = new Guid("77921583-9403-4b05-887c-affeaea861ad"),
+                            SpeedPenalty = 10,
+                            Strength = 18
+                        },
+                        new
+                        {
+                            Id = new Guid("b19fb537-a420-4506-a444-fc9f58db5c11"),
+                            ArmorCategoryId = new Guid("f3d2b25b-e222-4af2-9287-a6036e6bb0b7"),
+                            ArmorClassBonus = 5,
+                            ArmorGroupId = new Guid("e0daa940-678f-4ce5-8ee0-19bc7859799b"),
+                            BulkId = new Guid("d09af7fc-06b3-41c5-89f7-7cbb3fb6f93b"),
+                            CheckPenalty = 3,
+                            DexterityCap = 1,
+                            Name = "Half Plate",
+                            Price = 1800,
+                            SourcePageId = new Guid("bf73b11a-17bd-4abb-a6c6-70fdec059cdc"),
+                            SpeedPenalty = 10,
+                            Strength = 16
+                        },
+                        new
+                        {
+                            Id = new Guid("abee6439-3461-45f5-b234-8e155921fc95"),
+                            ArmorCategoryId = new Guid("f3d2b25b-e222-4af2-9287-a6036e6bb0b7"),
+                            ArmorClassBonus = 6,
+                            ArmorGroupId = new Guid("e0daa940-678f-4ce5-8ee0-19bc7859799b"),
+                            BulkId = new Guid("61e784de-dd93-4d53-acda-61dff663e2a3"),
+                            CheckPenalty = 3,
+                            DexterityCap = 0,
+                            Name = "Hellknight Plate",
+                            Price = 3500,
+                            SourcePageId = new Guid("4923a3b1-b93c-4cbb-b4ae-5b420f03c641"),
+                            SpeedPenalty = 10,
+                            Strength = 18
+                        },
+                        new
+                        {
+                            Id = new Guid("36116598-e497-42fa-a206-f7971f09acc3"),
+                            ArmorCategoryId = new Guid("199f2e7d-5249-45ee-af4d-b3f7cdd257b8"),
+                            ArmorClassBonus = 3,
+                            ArmorGroupId = new Guid("a26e650d-f853-4bc6-829d-b65fae361b40"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            CheckPenalty = 2,
+                            DexterityCap = 2,
+                            Name = "Hide Armor",
+                            Price = 200,
+                            SourcePageId = new Guid("ce0ba8f1-670f-41eb-9a0b-6a398f2c9db0"),
+                            SpeedPenalty = 5,
+                            Strength = 14
+                        },
+                        new
+                        {
+                            Id = new Guid("ee976251-119d-4b17-b47b-eea1fafb1fdf"),
+                            ArmorCategoryId = new Guid("28f6b905-0c5e-4cc0-8164-8e623fdfb367"),
+                            ArmorClassBonus = 1,
+                            ArmorGroupId = new Guid("a26e650d-f853-4bc6-829d-b65fae361b40"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CheckPenalty = 1,
+                            DexterityCap = 4,
+                            Name = "Leather Armor",
+                            Price = 200,
+                            SourcePageId = new Guid("ed63f55c-6a38-4b7f-b904-f07ed0c0f397"),
+                            SpeedPenalty = 0,
+                            Strength = 10
+                        },
+                        new
+                        {
+                            Id = new Guid("cb7b819d-3ddc-4819-bdb1-a0bafa47ead0"),
+                            ArmorCategoryId = new Guid("28f6b905-0c5e-4cc0-8164-8e623fdfb367"),
+                            ArmorClassBonus = 1,
+                            ArmorGroupId = new Guid("80a75f79-058a-4d69-a75a-1591d7e53a2e"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CheckPenalty = 0,
+                            DexterityCap = 3,
+                            Name = "Padded Armor",
+                            Price = 20,
+                            SourcePageId = new Guid("9b419b75-918b-4d39-a7b3-baf2c19c68d8"),
+                            SpeedPenalty = 0,
+                            Strength = 10
+                        },
+                        new
+                        {
+                            Id = new Guid("e238440f-34b9-4583-b0df-467bf3a19319"),
+                            ArmorCategoryId = new Guid("199f2e7d-5249-45ee-af4d-b3f7cdd257b8"),
+                            ArmorClassBonus = 3,
+                            ArmorGroupId = new Guid("6417c12e-62cb-4e61-97d9-c08b8229da30"),
+                            BulkId = new Guid("28310eb8-9bee-46f0-9b93-e0965207169a"),
+                            CheckPenalty = 2,
+                            DexterityCap = 2,
+                            Name = "Scale Mail",
+                            Price = 400,
+                            SourcePageId = new Guid("0efead34-422d-4891-ac8d-e471b868aaed"),
+                            SpeedPenalty = 5,
+                            Strength = 14
+                        },
+                        new
+                        {
+                            Id = new Guid("e95aa60c-9410-40f5-9c26-7d33be653193"),
+                            ArmorCategoryId = new Guid("f3d2b25b-e222-4af2-9287-a6036e6bb0b7"),
+                            ArmorClassBonus = 5,
+                            ArmorGroupId = new Guid("6417c12e-62cb-4e61-97d9-c08b8229da30"),
+                            BulkId = new Guid("d09af7fc-06b3-41c5-89f7-7cbb3fb6f93b"),
+                            CheckPenalty = 3,
+                            DexterityCap = 1,
+                            Name = "Splint Mail",
+                            Price = 1300,
+                            SourcePageId = new Guid("30b58156-4b70-4443-b4e3-af6fe97baf0e"),
+                            SpeedPenalty = 10,
+                            Strength = 16
+                        },
+                        new
+                        {
+                            Id = new Guid("653970e9-fa6d-492a-a58e-36d505a38657"),
+                            ArmorCategoryId = new Guid("28f6b905-0c5e-4cc0-8164-8e623fdfb367"),
+                            ArmorClassBonus = 2,
+                            ArmorGroupId = new Guid("a26e650d-f853-4bc6-829d-b65fae361b40"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CheckPenalty = 1,
+                            DexterityCap = 3,
+                            Name = "Studded Leather Armor",
+                            Price = 300,
+                            SourcePageId = new Guid("7f6e3d5f-97c1-474c-9ad6-dc71d6bfc8f3"),
+                            SpeedPenalty = 0,
+                            Strength = 12
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorCategory", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -13808,6 +14341,67 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             Id = new Guid("3e53fcd2-e07b-4af5-b331-b4372acacf74"),
                             Name = "Unarmored"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorGroup", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("ArmorSpecializationEffect")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.ToTable("ArmorGroup");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("abd3005a-9803-4d55-9d51-3ff92bc49ee7"),
+                            ArmorSpecializationEffect = "The armor is so flexible it can bend with a critical hit and absorb some of the blow. Reduce the damage from critical hits by either 4 + the value of the armor’s potency rune for medium armor, or 6 + the value of the armor’s potency rune for heavy armor. This can’t reduce the damage to less than the damage rolled for the hit before doubling for a critical hit.",
+                            Name = "Chain",
+                            SourcePageId = new Guid("84067774-efc8-4ba0-b924-ffcda0592a6f")
+                        },
+                        new
+                        {
+                            Id = new Guid("80a75f79-058a-4d69-a75a-1591d7e53a2e"),
+                            ArmorSpecializationEffect = "There is no medium or heavy cloth armor, so there is no armor specialization effect for the cloth armor group.",
+                            Name = "Cloth",
+                            SourcePageId = new Guid("3df55bb0-de89-4344-8b24-c33bea54416d")
+                        },
+                        new
+                        {
+                            Id = new Guid("6417c12e-62cb-4e61-97d9-c08b8229da30"),
+                            ArmorSpecializationEffect = "The numerous overlapping pieces of this armor protect you from piercing attacks. You gain resistance to piercing damage equal to 1 + the value of the armor’s potency rune for medium armor, or 2 + the value of the armor’s potency rune for heavy armor.",
+                            Name = "Composite",
+                            SourcePageId = new Guid("0bf2f951-74c8-4f9f-90fb-068ab619242d")
+                        },
+                        new
+                        {
+                            Id = new Guid("a26e650d-f853-4bc6-829d-b65fae361b40"),
+                            ArmorSpecializationEffect = "The thick second skin of the armor disperses blunt force to reduce bludgeoning damage. You gain resistance to bludgeoning damage equal to 1 + the value of the armor’s potency rune for medium armor, or 2 + the value of the armor’s potency rune for heavy armor.",
+                            Name = "Leather",
+                            SourcePageId = new Guid("22a8f7c5-d630-4e21-8065-e7688bec76aa")
+                        },
+                        new
+                        {
+                            Id = new Guid("e0daa940-678f-4ce5-8ee0-19bc7859799b"),
+                            ArmorSpecializationEffect = "The sturdy plate provides no purchase for a cutting edge. You gain resistance to slashing damage equal to 1 + the value of the armor’s potency rune for medium armor, or 2 + the value of the armor’s potency rune for heavy armor.",
+                            Name = "Plate",
+                            SourcePageId = new Guid("49778592-4637-4573-ae09-f433586c87d3")
                         });
                 });
 
@@ -21097,6 +21691,38 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ItemGrade", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ItemGrade");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Name = "High Grade"
+                        },
+                        new
+                        {
+                            Id = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Name = "Low Grade"
+                        },
+                        new
+                        {
+                            Id = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Name = "Standard Grade"
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Language", b =>
                 {
                     b.Property<Guid>("Id")
@@ -23801,6 +24427,2008 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterial", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("PreciousMaterials");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d"),
+                            Name = "Adamantine",
+                            SourcePageId = new Guid("07295f4a-ccb0-499c-adda-4b71482502e0")
+                        },
+                        new
+                        {
+                            Id = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                            Name = "Cold Iron",
+                            SourcePageId = new Guid("67cad0db-991b-4993-8626-32aa04f77541")
+                        },
+                        new
+                        {
+                            Id = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                            Name = "Darkwood",
+                            SourcePageId = new Guid("0048bf82-fbd4-4b14-90f9-ffdd136008e1")
+                        },
+                        new
+                        {
+                            Id = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                            Name = "Mithral",
+                            SourcePageId = new Guid("a6378f71-150f-453b-baf7-f16e080995df")
+                        },
+                        new
+                        {
+                            Id = new Guid("949a7996-a817-48bf-b947-3646e248a25a"),
+                            Name = "Orichalcum",
+                            SourcePageId = new Guid("ca4df887-a752-4ced-a3b8-979e8c224943")
+                        },
+                        new
+                        {
+                            Id = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Silver",
+                            SourcePageId = new Guid("980570d9-f844-4cac-b672-26532d63741f")
+                        },
+                        new
+                        {
+                            Id = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155"),
+                            Name = "Sovereign Steel",
+                            SourcePageId = new Guid("0d3dd22f-8299-4fe8-a03e-b9d130117699")
+                        },
+                        new
+                        {
+                            Id = new Guid("3d6d6740-5c9f-480d-8752-0f5a2a5d432a"),
+                            Name = "Warpglass",
+                            SourcePageId = new Guid("c9ccb242-0b6d-424c-acbe-e51662a7064f")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialArmor", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("MaterialId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaterialId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("PreciousMaterialArmors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("9c4884c6-39eb-4ed5-a3fb-d91f19e62f2f"),
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d"),
+                            Name = "Adamantine Armor",
+                            SourcePageId = new Guid("a6a1b803-8f1b-4a66-87fe-b13b79b2c308")
+                        },
+                        new
+                        {
+                            Id = new Guid("fb952584-d9f7-405e-bab1-d518f3c63519"),
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                            Name = "Cold Iron Armor",
+                            SourcePageId = new Guid("550f5d33-ba62-4b4f-94fb-46254acac5fe")
+                        },
+                        new
+                        {
+                            Id = new Guid("c6ea2f2a-8c94-4e44-83be-e1a8a728d30c"),
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                            Name = "Darkwood Armor",
+                            SourcePageId = new Guid("39df8e05-0fca-4d3d-bc79-6551ce51f68c")
+                        },
+                        new
+                        {
+                            Id = new Guid("afc82eed-f33e-43c6-af78-3c6c6406692f"),
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                            Name = "Mithral Armor",
+                            SourcePageId = new Guid("27d62751-2930-449f-a6db-630947375bd1")
+                        },
+                        new
+                        {
+                            Id = new Guid("1287dbd8-558a-4c7f-bf2a-37dbe34e802c"),
+                            MaterialId = new Guid("949a7996-a817-48bf-b947-3646e248a25a"),
+                            Name = "Orichalcum Armor",
+                            SourcePageId = new Guid("4c376c2d-62ef-4156-8e8f-0c98c1218d3d")
+                        },
+                        new
+                        {
+                            Id = new Guid("485becdc-d5e9-4ff1-a879-4419d9de8189"),
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Silver Armor",
+                            SourcePageId = new Guid("67529de1-a69e-4945-8d06-98f42ef270fa")
+                        },
+                        new
+                        {
+                            Id = new Guid("73db3bdd-bc32-4a6d-9c21-580d3301e6ec"),
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155"),
+                            Name = "Sovereign Steel Armor",
+                            SourcePageId = new Guid("1966ddf8-0583-453a-85cc-08c79a70ca75")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialArmorVariant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("AdditionalPricePerBulk")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("ArmorId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CraftRequirements")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("GradeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArmorId");
+
+                    b.HasIndex("GradeId");
+
+                    b.ToTable("PreciousMaterialArmorVariant");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("9232f055-2f5a-49cc-af1e-038d1f51aeb3"),
+                            AdditionalPricePerBulk = 16000,
+                            ArmorId = new Guid("9c4884c6-39eb-4ed5-a3fb-d91f19e62f2f"),
+                            CraftRequirements = "The initial raw materials must include adamantine worth at least 200 gp + 20 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 12,
+                            Price = 160000
+                        },
+                        new
+                        {
+                            Id = new Guid("f2bf12b3-b976-4453-a60c-56c38e29cf0c"),
+                            AdditionalPricePerBulk = 320000,
+                            ArmorId = new Guid("9c4884c6-39eb-4ed5-a3fb-d91f19e62f2f"),
+                            CraftRequirements = "The initial raw materials must include adamantine worth at least 16,000 gp + 1,600 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 19,
+                            Price = 3200000
+                        },
+                        new
+                        {
+                            Id = new Guid("af3bf504-b5d3-4533-90da-bd08858e132e"),
+                            AdditionalPricePerBulk = 1400,
+                            ArmorId = new Guid("fb952584-d9f7-405e-bab1-d518f3c63519"),
+                            CraftRequirements = "The initial raw materials must include cold iron worth at least 70 sp + 7 sp per Bulk.",
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            ItemLevel = 5,
+                            Price = 14000
+                        },
+                        new
+                        {
+                            Id = new Guid("e65f967e-3a5d-449e-93df-c99125a15c4e"),
+                            AdditionalPricePerBulk = 12000,
+                            ArmorId = new Guid("fb952584-d9f7-405e-bab1-d518f3c63519"),
+                            CraftRequirements = "The initial raw materials must include at least 150 gp of cold iron + 15 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 11,
+                            Price = 120000
+                        },
+                        new
+                        {
+                            Id = new Guid("d73585c8-1e21-437d-9df9-bde28de2b3b3"),
+                            AdditionalPricePerBulk = 200000,
+                            ArmorId = new Guid("fb952584-d9f7-405e-bab1-d518f3c63519"),
+                            CraftRequirements = "The initial raw materials must include cold iron worth at least 10,000 gp + 1,000 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 18,
+                            Price = 2000000
+                        },
+                        new
+                        {
+                            Id = new Guid("255d5bed-1162-4cc8-ac66-7f535fa284ae"),
+                            AdditionalPricePerBulk = 16000,
+                            ArmorId = new Guid("c6ea2f2a-8c94-4e44-83be-e1a8a728d30c"),
+                            CraftRequirements = "The initial raw materials must include darkwood worth at least 200 gp + 20 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 12,
+                            Price = 160000
+                        },
+                        new
+                        {
+                            Id = new Guid("36dfd451-492a-496e-84db-facc0329f357"),
+                            AdditionalPricePerBulk = 320000,
+                            ArmorId = new Guid("c6ea2f2a-8c94-4e44-83be-e1a8a728d30c"),
+                            CraftRequirements = "The initial raw materials must include darkwood worth at least 16,000 gp + 1,600 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 19,
+                            Price = 3200000
+                        },
+                        new
+                        {
+                            Id = new Guid("4db5a4e3-0150-4114-b34e-39086d892991"),
+                            AdditionalPricePerBulk = 16000,
+                            ArmorId = new Guid("afc82eed-f33e-43c6-af78-3c6c6406692f"),
+                            CraftRequirements = "The initial raw materials must include mithral worth at least 200 gp + 20 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 12,
+                            Price = 160000
+                        },
+                        new
+                        {
+                            Id = new Guid("8d74d222-4bd5-4c2b-919a-a89afa9c95f9"),
+                            AdditionalPricePerBulk = 320000,
+                            ArmorId = new Guid("afc82eed-f33e-43c6-af78-3c6c6406692f"),
+                            CraftRequirements = "The initial raw materials must include mithral worth at least 16,000 gp + 1,600 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 19,
+                            Price = 3200000
+                        },
+                        new
+                        {
+                            Id = new Guid("e6c574cf-01f8-4455-ad33-7bf05fa1a52a"),
+                            AdditionalPricePerBulk = 550000,
+                            ArmorId = new Guid("1287dbd8-558a-4c7f-bf2a-37dbe34e802c"),
+                            CraftRequirements = "The initial raw materials must include orichalcum worth at least 27,500 gp + 2,750 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 20,
+                            Price = 5500000
+                        },
+                        new
+                        {
+                            Id = new Guid("6e876c53-e7ed-450b-b145-ff18dcbfcc4a"),
+                            AdditionalPricePerBulk = 1400,
+                            ArmorId = new Guid("485becdc-d5e9-4ff1-a879-4419d9de8189"),
+                            CraftRequirements = "Silver worth at least 70 sp + 7 sp per Bulk.",
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            ItemLevel = 5,
+                            Price = 14000
+                        },
+                        new
+                        {
+                            Id = new Guid("68712a71-5b2f-4a27-a28d-a56048a6c728"),
+                            AdditionalPricePerBulk = 12000,
+                            ArmorId = new Guid("485becdc-d5e9-4ff1-a879-4419d9de8189"),
+                            CraftRequirements = "The initial raw materials must include silver worth at least 150 gp + 15 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 11,
+                            Price = 120000
+                        },
+                        new
+                        {
+                            Id = new Guid("5700798e-d3c0-49a3-b490-7baf1d37e2ea"),
+                            AdditionalPricePerBulk = 200000,
+                            ArmorId = new Guid("485becdc-d5e9-4ff1-a879-4419d9de8189"),
+                            CraftRequirements = "The initial raw materials must include silver worth at least 10,000 gp + 1,000 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 18,
+                            Price = 2000000
+                        },
+                        new
+                        {
+                            Id = new Guid("d680bbcb-0187-45ca-a608-5baffd20aa18"),
+                            AdditionalPricePerBulk = 24000,
+                            ArmorId = new Guid("73db3bdd-bc32-4a6d-9c21-580d3301e6ec"),
+                            CraftRequirements = "At least 150 gp of cold iron + 15 gp per Bulk plus at least 150 gp of noqual + 15 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 13,
+                            Price = 240000
+                        },
+                        new
+                        {
+                            Id = new Guid("eee06ecd-eefe-4dbf-84c1-2ef32026a7e6"),
+                            AdditionalPricePerBulk = 500000,
+                            ArmorId = new Guid("73db3bdd-bc32-4a6d-9c21-580d3301e6ec"),
+                            CraftRequirements = "At least 12,500 gp of cold iron + 1,250 gp per Bulk plus at least 12,500 gp of noqual + 1,250 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 20,
+                            Price = 5000000
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("BrokenThreshold")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("GradeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Hardness")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("HitPoints")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("MaterialId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("GradeId");
+
+                    b.HasIndex("MaterialId");
+
+                    b.ToTable("PreciousMaterialItem");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("9a730144-b4e2-4b07-94d6-26a2d6920698"),
+                            BrokenThreshold = 20,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 10,
+                            HitPoints = 40,
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d")
+                        },
+                        new
+                        {
+                            Id = new Guid("cfea7a2d-672b-47fd-b63d-0d194a58ed2d"),
+                            BrokenThreshold = 26,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 13,
+                            HitPoints = 52,
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d")
+                        },
+                        new
+                        {
+                            Id = new Guid("5ee54336-e4a5-4588-983d-faad48b02586"),
+                            BrokenThreshold = 28,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 14,
+                            HitPoints = 56,
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d")
+                        },
+                        new
+                        {
+                            Id = new Guid("a625902c-a091-42e3-b827-c9a26c94332e"),
+                            BrokenThreshold = 34,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 17,
+                            HitPoints = 68,
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d")
+                        },
+                        new
+                        {
+                            Id = new Guid("9634872e-6b8a-4663-b679-d7eec6f7d140"),
+                            BrokenThreshold = 56,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 28,
+                            HitPoints = 112,
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d")
+                        },
+                        new
+                        {
+                            Id = new Guid("a3614a92-71cb-42f9-8152-ad4d62df3684"),
+                            BrokenThreshold = 68,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 34,
+                            HitPoints = 136,
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d")
+                        },
+                        new
+                        {
+                            Id = new Guid("8436793a-4432-4fff-a22a-b2bd5ae08a3c"),
+                            BrokenThreshold = 10,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789")
+                        },
+                        new
+                        {
+                            Id = new Guid("fe98ffaf-d428-4c1e-86d8-12ae67e3ae92"),
+                            BrokenThreshold = 14,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 7,
+                            HitPoints = 28,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789")
+                        },
+                        new
+                        {
+                            Id = new Guid("cd2b3bad-6c5f-4409-b168-247d8febd689"),
+                            BrokenThreshold = 20,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 10,
+                            HitPoints = 40,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789")
+                        },
+                        new
+                        {
+                            Id = new Guid("975f3392-c268-4c31-a57a-1d8d8cb9959b"),
+                            BrokenThreshold = 18,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Hardness = 9,
+                            HitPoints = 36,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789")
+                        },
+                        new
+                        {
+                            Id = new Guid("ac16b926-709c-4667-aa4f-af06b500fe45"),
+                            BrokenThreshold = 22,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 11,
+                            HitPoints = 44,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789")
+                        },
+                        new
+                        {
+                            Id = new Guid("3ea1cd80-b505-4bf9-86ad-0b46312e7c73"),
+                            BrokenThreshold = 28,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 14,
+                            HitPoints = 56,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789")
+                        },
+                        new
+                        {
+                            Id = new Guid("f03d243c-3584-4cb9-bf18-608df11981e7"),
+                            BrokenThreshold = 36,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Hardness = 18,
+                            HitPoints = 72,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789")
+                        },
+                        new
+                        {
+                            Id = new Guid("ca861616-94e4-4228-b7e1-4603605fc311"),
+                            BrokenThreshold = 44,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 22,
+                            HitPoints = 88,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789")
+                        },
+                        new
+                        {
+                            Id = new Guid("5c670b37-8d52-4564-a320-c6247af28045"),
+                            BrokenThreshold = 56,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 28,
+                            HitPoints = 112,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789")
+                        },
+                        new
+                        {
+                            Id = new Guid("9ed0f9d7-2a8c-480d-885f-19ad636c3b37"),
+                            BrokenThreshold = 10,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099")
+                        },
+                        new
+                        {
+                            Id = new Guid("35968707-549c-4279-91a4-55d7db6a65d1"),
+                            BrokenThreshold = 16,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 8,
+                            HitPoints = 32,
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099")
+                        },
+                        new
+                        {
+                            Id = new Guid("3e02e038-df2c-4a60-aaba-7f344735e659"),
+                            BrokenThreshold = 14,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 7,
+                            HitPoints = 28,
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099")
+                        },
+                        new
+                        {
+                            Id = new Guid("7b25775d-f4c0-44c8-96f4-6fe80de6ed70"),
+                            BrokenThreshold = 20,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 10,
+                            HitPoints = 40,
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099")
+                        },
+                        new
+                        {
+                            Id = new Guid("f5251c9f-97b3-4850-a2a4-e413da6eb3a3"),
+                            BrokenThreshold = 28,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 14,
+                            HitPoints = 56,
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099")
+                        },
+                        new
+                        {
+                            Id = new Guid("6bf886e7-6386-477a-a1e6-8f1872f149bb"),
+                            BrokenThreshold = 40,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 20,
+                            HitPoints = 80,
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099")
+                        },
+                        new
+                        {
+                            Id = new Guid("103a7222-f1db-4ca5-a393-13fb5ffbf400"),
+                            BrokenThreshold = 10,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a")
+                        },
+                        new
+                        {
+                            Id = new Guid("65c4c13e-cda8-422e-a70f-c0e6cd0c68be"),
+                            BrokenThreshold = 16,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 8,
+                            HitPoints = 32,
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a")
+                        },
+                        new
+                        {
+                            Id = new Guid("5527b3e0-a18e-4490-9392-b9121e488002"),
+                            BrokenThreshold = 18,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 9,
+                            HitPoints = 36,
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a")
+                        },
+                        new
+                        {
+                            Id = new Guid("ed08361f-14bd-4263-b256-5dc832adb913"),
+                            BrokenThreshold = 24,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 12,
+                            HitPoints = 48,
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a")
+                        },
+                        new
+                        {
+                            Id = new Guid("0c676437-e33c-4f8c-a37c-fe8e0a2f3f0f"),
+                            BrokenThreshold = 36,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 18,
+                            HitPoints = 72,
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a")
+                        },
+                        new
+                        {
+                            Id = new Guid("ac718a64-fa4e-4ee3-8129-5f50c5a75bfd"),
+                            BrokenThreshold = 48,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 24,
+                            HitPoints = 96,
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a")
+                        },
+                        new
+                        {
+                            Id = new Guid("1aa57de0-59fb-4126-ace0-f4dc969c1da7"),
+                            BrokenThreshold = 32,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 16,
+                            HitPoints = 64,
+                            MaterialId = new Guid("949a7996-a817-48bf-b947-3646e248a25a")
+                        },
+                        new
+                        {
+                            Id = new Guid("cf4aeb8d-0188-409b-83cc-6555205461d7"),
+                            BrokenThreshold = 36,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 18,
+                            HitPoints = 72,
+                            MaterialId = new Guid("949a7996-a817-48bf-b947-3646e248a25a")
+                        },
+                        new
+                        {
+                            Id = new Guid("f93d7557-ce24-4342-bc5d-cfcd2924f585"),
+                            BrokenThreshold = 70,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 35,
+                            HitPoints = 140,
+                            MaterialId = new Guid("949a7996-a817-48bf-b947-3646e248a25a")
+                        },
+                        new
+                        {
+                            Id = new Guid("5e24639d-9559-442b-9bc1-7ea2d85e5aaf"),
+                            BrokenThreshold = 6,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Hardness = 3,
+                            HitPoints = 12,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215")
+                        },
+                        new
+                        {
+                            Id = new Guid("80084152-8810-4a72-9335-6590313e8921"),
+                            BrokenThreshold = 10,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215")
+                        },
+                        new
+                        {
+                            Id = new Guid("4a94d446-0b2b-4184-a004-f0d72d2e7183"),
+                            BrokenThreshold = 16,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 8,
+                            HitPoints = 32,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215")
+                        },
+                        new
+                        {
+                            Id = new Guid("257c8f2c-6820-4df9-a0f7-b12929211b8e"),
+                            BrokenThreshold = 10,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215")
+                        },
+                        new
+                        {
+                            Id = new Guid("078e92a4-c699-4666-8e7d-bca2ef0c3656"),
+                            BrokenThreshold = 14,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 7,
+                            HitPoints = 28,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215")
+                        },
+                        new
+                        {
+                            Id = new Guid("0f92acd1-9274-4c0b-926a-ef1b5e6915ef"),
+                            BrokenThreshold = 20,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 10,
+                            HitPoints = 40,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215")
+                        },
+                        new
+                        {
+                            Id = new Guid("668c936b-536f-47de-93d0-8ab157b5dd93"),
+                            BrokenThreshold = 20,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Hardness = 10,
+                            HitPoints = 40,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215")
+                        },
+                        new
+                        {
+                            Id = new Guid("98b8e396-3342-422e-bee8-ea26de4041e2"),
+                            BrokenThreshold = 28,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 14,
+                            HitPoints = 56,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215")
+                        },
+                        new
+                        {
+                            Id = new Guid("c5f081b1-c300-4da3-83f5-cb2b40024434"),
+                            BrokenThreshold = 40,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 20,
+                            HitPoints = 80,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215")
+                        },
+                        new
+                        {
+                            Id = new Guid("a5beb3d5-8cba-4766-94ab-ceb2a3653394"),
+                            BrokenThreshold = 14,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 7,
+                            HitPoints = 28,
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155")
+                        },
+                        new
+                        {
+                            Id = new Guid("52a40eef-6687-449c-bf27-9506b071ec83"),
+                            BrokenThreshold = 20,
+                            CategoryId = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 10,
+                            HitPoints = 40,
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155")
+                        },
+                        new
+                        {
+                            Id = new Guid("40e7c28a-84bf-4785-a720-ed10505fde11"),
+                            BrokenThreshold = 22,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 11,
+                            HitPoints = 44,
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155")
+                        },
+                        new
+                        {
+                            Id = new Guid("e93ab034-c640-40d6-96f8-ea8f1f083feb"),
+                            BrokenThreshold = 28,
+                            CategoryId = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 14,
+                            HitPoints = 56,
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155")
+                        },
+                        new
+                        {
+                            Id = new Guid("6ca82cc1-ae59-466e-b3c2-0a2d6635e7ec"),
+                            BrokenThreshold = 44,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 22,
+                            HitPoints = 88,
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155")
+                        },
+                        new
+                        {
+                            Id = new Guid("3e745203-bc40-431a-a1dd-a47df30d371b"),
+                            BrokenThreshold = 56,
+                            CategoryId = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 28,
+                            HitPoints = 112,
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialItemCategory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PreciousMaterialItemCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("ddd6cc28-1827-4e8c-afa6-c60b004b6056"),
+                            Name = "Items"
+                        },
+                        new
+                        {
+                            Id = new Guid("5fd28296-37aa-4b5a-ab4c-806dddfce3ba"),
+                            Name = "Structures"
+                        },
+                        new
+                        {
+                            Id = new Guid("2b41e291-636f-408d-9b2f-308f703f5931"),
+                            Name = "Thin Items"
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialShield", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("MaterialId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaterialId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("PreciousMaterialShields");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("f0d45f1c-537b-4276-a11a-8e164138b552"),
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Adamantine",
+                            SourcePageId = new Guid("36f21c1e-a1d8-4181-831b-3a477bb1c7e0")
+                        },
+                        new
+                        {
+                            Id = new Guid("dd42fda1-c0cb-42f5-969c-8c5db167fcfe"),
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                            Name = "Cold Iron",
+                            SourcePageId = new Guid("3e7cf8a2-f703-4da3-8eea-9546fd59d20b")
+                        },
+                        new
+                        {
+                            Id = new Guid("dd440152-bdc9-427b-94e0-68874ac11480"),
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                            Name = "Darkwood",
+                            SourcePageId = new Guid("33e7a14c-b7a3-422e-b125-6189c7c3641e")
+                        },
+                        new
+                        {
+                            Id = new Guid("575c98ad-c43d-4424-93a8-f0188f6de11d"),
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                            Name = "Mithral",
+                            SourcePageId = new Guid("fdc93057-203a-4dc9-a836-c3d9832dce6f")
+                        },
+                        new
+                        {
+                            Id = new Guid("7ef2acfb-7820-4a22-be1a-c97991e63e16"),
+                            MaterialId = new Guid("949a7996-a817-48bf-b947-3646e248a25a"),
+                            Name = "Orichalcum",
+                            SourcePageId = new Guid("2253c996-e021-4a04-a7a7-fc3d4f798fbd")
+                        },
+                        new
+                        {
+                            Id = new Guid("0c4d2501-e887-4cde-9714-e25c9c96a5fe"),
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Silver",
+                            SourcePageId = new Guid("f940b550-061f-40d9-8d7b-eb18aa5f56b3")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialShieldVariant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("BrokenThreshold")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CraftRequirements")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("GradeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Hardness")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("HitPoints")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("ShieldId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("GradeId");
+
+                    b.HasIndex("ShieldId");
+
+                    b.ToTable("PreciousMaterialShieldVariant");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("2eac1802-85b2-4f84-a33b-eb371785a8be"),
+                            BrokenThreshold = 16,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Adamantine worth at least 50 gp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 8,
+                            HitPoints = 32,
+                            ItemLevel = 8,
+                            Name = "Buckler",
+                            Price = 40000,
+                            ShieldId = new Guid("f0d45f1c-537b-4276-a11a-8e164138b552")
+                        },
+                        new
+                        {
+                            Id = new Guid("75f5b530-9d51-4cc6-a37a-b2633e004e30"),
+                            BrokenThreshold = 20,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CraftRequirements = "Adamantine worth at least 55 gp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 10,
+                            HitPoints = 40,
+                            ItemLevel = 8,
+                            Name = "Shield",
+                            Price = 44000,
+                            ShieldId = new Guid("f0d45f1c-537b-4276-a11a-8e164138b552")
+                        },
+                        new
+                        {
+                            Id = new Guid("b36c8b2f-fd4a-4505-927a-f5c4b3f8d1ce"),
+                            BrokenThreshold = 22,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Adamantine worth at least 4,000 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 11,
+                            HitPoints = 44,
+                            ItemLevel = 16,
+                            Name = "Buckler",
+                            Price = 800000,
+                            ShieldId = new Guid("f0d45f1c-537b-4276-a11a-8e164138b552")
+                        },
+                        new
+                        {
+                            Id = new Guid("0ca03eca-0c4c-47a6-952c-e44bac483f9d"),
+                            BrokenThreshold = 26,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CraftRequirements = "Adamantine worth at least 4,400 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 13,
+                            HitPoints = 52,
+                            ItemLevel = 16,
+                            Name = "Shield",
+                            Price = 880000,
+                            ShieldId = new Guid("f0d45f1c-537b-4276-a11a-8e164138b552")
+                        },
+                        new
+                        {
+                            Id = new Guid("d0f9d1bb-28f4-44e9-b5ad-5690bc974879"),
+                            BrokenThreshold = 6,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Cold iron worth at least 15 sp.",
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Hardness = 3,
+                            HitPoints = 12,
+                            ItemLevel = 2,
+                            Name = "Buckler",
+                            Price = 3000,
+                            ShieldId = new Guid("dd42fda1-c0cb-42f5-969c-8c5db167fcfe")
+                        },
+                        new
+                        {
+                            Id = new Guid("4731ed9d-9917-4878-9c30-b1d60e84f59f"),
+                            BrokenThreshold = 10,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CraftRequirements = "Cold iron worth at least 17 sp.",
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            ItemLevel = 2,
+                            Name = "Shield",
+                            Price = 3400,
+                            ShieldId = new Guid("dd42fda1-c0cb-42f5-969c-8c5db167fcfe")
+                        },
+                        new
+                        {
+                            Id = new Guid("f9ea9ab1-a08a-463d-9f18-961d4371ad4b"),
+                            BrokenThreshold = 10,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Cold iron worth at least 375 sp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            ItemLevel = 7,
+                            Name = "Buckler",
+                            Price = 30000,
+                            ShieldId = new Guid("dd42fda1-c0cb-42f5-969c-8c5db167fcfe")
+                        },
+                        new
+                        {
+                            Id = new Guid("5a1c2a9f-5614-4165-ad3e-d95ce704e33a"),
+                            BrokenThreshold = 14,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CraftRequirements = "Cold iron worth at least 425 sp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 7,
+                            HitPoints = 28,
+                            ItemLevel = 7,
+                            Name = "Shield",
+                            Price = 34000,
+                            ShieldId = new Guid("dd42fda1-c0cb-42f5-969c-8c5db167fcfe")
+                        },
+                        new
+                        {
+                            Id = new Guid("be3c54a6-f030-45c7-b715-b18d92761990"),
+                            BrokenThreshold = 16,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Cold iron worth at least 2,500 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 8,
+                            HitPoints = 32,
+                            ItemLevel = 15,
+                            Name = "Buckler",
+                            Price = 500000,
+                            ShieldId = new Guid("dd42fda1-c0cb-42f5-969c-8c5db167fcfe")
+                        },
+                        new
+                        {
+                            Id = new Guid("40627466-f3ab-47a3-b4e2-97348dd0f449"),
+                            BrokenThreshold = 20,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CraftRequirements = "Cold iron worth at least 2,750 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 10,
+                            HitPoints = 40,
+                            ItemLevel = 15,
+                            Name = "Shield",
+                            Price = 550000,
+                            ShieldId = new Guid("dd42fda1-c0cb-42f5-969c-8c5db167fcfe")
+                        },
+                        new
+                        {
+                            Id = new Guid("e1b024fa-ad60-4b8f-a0a2-f97c551446c6"),
+                            BrokenThreshold = 6,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Darkwood worth at least 50 gp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 3,
+                            HitPoints = 12,
+                            ItemLevel = 8,
+                            Name = "Buckler",
+                            Price = 40000,
+                            ShieldId = new Guid("dd440152-bdc9-427b-94e0-68874ac11480")
+                        },
+                        new
+                        {
+                            Id = new Guid("08c5ad8c-46c6-4d0d-b817-04b74d055ad8"),
+                            BrokenThreshold = 10,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Darkwood worth at least 55 gp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            ItemLevel = 8,
+                            Name = "Shield",
+                            Price = 44000,
+                            ShieldId = new Guid("dd440152-bdc9-427b-94e0-68874ac11480")
+                        },
+                        new
+                        {
+                            Id = new Guid("3bb7e425-a668-46cd-bf35-9ebaaa7506f5"),
+                            BrokenThreshold = 10,
+                            BulkId = new Guid("d09af7fc-06b3-41c5-89f7-7cbb3fb6f93b"),
+                            CraftRequirements = "Darkwood worth at least 70 gp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            ItemLevel = 8,
+                            Name = "Tower Shield",
+                            Price = 56000,
+                            ShieldId = new Guid("dd440152-bdc9-427b-94e0-68874ac11480")
+                        },
+                        new
+                        {
+                            Id = new Guid("494eeb57-5372-48c0-b722-3b59cabfed66"),
+                            BrokenThreshold = 12,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Darkwood worth at least 4,000 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 6,
+                            HitPoints = 24,
+                            ItemLevel = 16,
+                            Name = "Buckler",
+                            Price = 800000,
+                            ShieldId = new Guid("dd440152-bdc9-427b-94e0-68874ac11480")
+                        },
+                        new
+                        {
+                            Id = new Guid("df79c6b1-ccfe-4b1e-b61d-27b0212049c9"),
+                            BrokenThreshold = 16,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Darkwood worth at least 4,400 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 8,
+                            HitPoints = 32,
+                            ItemLevel = 16,
+                            Name = "Shield",
+                            Price = 880000,
+                            ShieldId = new Guid("dd440152-bdc9-427b-94e0-68874ac11480")
+                        },
+                        new
+                        {
+                            Id = new Guid("54da542d-c71c-4c11-bbf3-051af9d5c737"),
+                            BrokenThreshold = 16,
+                            BulkId = new Guid("d09af7fc-06b3-41c5-89f7-7cbb3fb6f93b"),
+                            CraftRequirements = "Darkwood worth at least 5,600 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 8,
+                            HitPoints = 32,
+                            ItemLevel = 16,
+                            Name = "Tower Shield",
+                            Price = 1120000,
+                            ShieldId = new Guid("dd440152-bdc9-427b-94e0-68874ac11480")
+                        },
+                        new
+                        {
+                            Id = new Guid("f0e5ad9d-ed3f-4209-80cc-e45616f5786a"),
+                            BrokenThreshold = 6,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Mithral worth at least 50 gp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 3,
+                            HitPoints = 12,
+                            ItemLevel = 8,
+                            Name = "Buckler",
+                            Price = 40000,
+                            ShieldId = new Guid("575c98ad-c43d-4424-93a8-f0188f6de11d")
+                        },
+                        new
+                        {
+                            Id = new Guid("2f781f07-94e6-4570-9807-187a5172eb04"),
+                            BrokenThreshold = 10,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Mithral worth at least 55 gp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            ItemLevel = 8,
+                            Name = "Shield",
+                            Price = 44000,
+                            ShieldId = new Guid("575c98ad-c43d-4424-93a8-f0188f6de11d")
+                        },
+                        new
+                        {
+                            Id = new Guid("79cee0e5-fc99-4bb9-86e4-065c5d481d07"),
+                            BrokenThreshold = 12,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Mithral worth at least 4,000 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 6,
+                            HitPoints = 24,
+                            ItemLevel = 16,
+                            Name = "Buckler",
+                            Price = 800000,
+                            ShieldId = new Guid("575c98ad-c43d-4424-93a8-f0188f6de11d")
+                        },
+                        new
+                        {
+                            Id = new Guid("ca4285c6-0ea8-497d-9415-da4fd6658166"),
+                            BrokenThreshold = 16,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "At least 4,400 gp of mithral.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 8,
+                            HitPoints = 32,
+                            ItemLevel = 16,
+                            Name = "Shield",
+                            Price = 880000,
+                            ShieldId = new Guid("575c98ad-c43d-4424-93a8-f0188f6de11d")
+                        },
+                        new
+                        {
+                            Id = new Guid("58f844e5-dd63-4e7a-8ef1-2db6798063df"),
+                            BrokenThreshold = 28,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Orichalcum worth at least 6,000 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 14,
+                            HitPoints = 56,
+                            ItemLevel = 17,
+                            Name = "Buckler",
+                            Price = 1200000,
+                            ShieldId = new Guid("7ef2acfb-7820-4a22-be1a-c97991e63e16")
+                        },
+                        new
+                        {
+                            Id = new Guid("746abb2e-2de4-4e71-8e29-9f0e7720a1f5"),
+                            BrokenThreshold = 32,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CraftRequirements = "Orichalcum worth at least 6,600 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 16,
+                            HitPoints = 64,
+                            ItemLevel = 17,
+                            Name = "Shield",
+                            Price = 1320000,
+                            ShieldId = new Guid("7ef2acfb-7820-4a22-be1a-c97991e63e16")
+                        },
+                        new
+                        {
+                            Id = new Guid("f72cdc4a-f4d0-4c72-a404-27cd5b89d9dc"),
+                            BrokenThreshold = 2,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Silver worth at least 15 sp.",
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Hardness = 1,
+                            HitPoints = 4,
+                            ItemLevel = 2,
+                            Name = "Buckler",
+                            Price = 3000,
+                            ShieldId = new Guid("0c4d2501-e887-4cde-9714-e25c9c96a5fe")
+                        },
+                        new
+                        {
+                            Id = new Guid("201e65ea-cd25-482e-8ea1-cf28d863207b"),
+                            BrokenThreshold = 6,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CraftRequirements = "Silver worth at least 17 sp.",
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            Hardness = 3,
+                            HitPoints = 12,
+                            ItemLevel = 2,
+                            Name = "Shield",
+                            Price = 3400,
+                            ShieldId = new Guid("0c4d2501-e887-4cde-9714-e25c9c96a5fe")
+                        },
+                        new
+                        {
+                            Id = new Guid("f0c20290-6840-416e-b616-39aaf8c44187"),
+                            BrokenThreshold = 6,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Silver worth at least 375 sp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 3,
+                            HitPoints = 12,
+                            ItemLevel = 7,
+                            Name = "Buckler",
+                            Price = 30000,
+                            ShieldId = new Guid("0c4d2501-e887-4cde-9714-e25c9c96a5fe")
+                        },
+                        new
+                        {
+                            Id = new Guid("fa0d5199-2dc2-4201-82d9-c4234ae42eb1"),
+                            BrokenThreshold = 10,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CraftRequirements = "Silver worth at least 3425 sp.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            ItemLevel = 7,
+                            Name = "Shield",
+                            Price = 34000,
+                            ShieldId = new Guid("0c4d2501-e887-4cde-9714-e25c9c96a5fe")
+                        },
+                        new
+                        {
+                            Id = new Guid("580d5115-b9d8-4afe-862f-be6f3766cec7"),
+                            BrokenThreshold = 12,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            CraftRequirements = "Silver worth at least 2,500 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 6,
+                            HitPoints = 24,
+                            ItemLevel = 15,
+                            Name = "Buckler",
+                            Price = 500000,
+                            ShieldId = new Guid("0c4d2501-e887-4cde-9714-e25c9c96a5fe")
+                        },
+                        new
+                        {
+                            Id = new Guid("77d654fd-90b4-4a5e-9f01-737af7625485"),
+                            BrokenThreshold = 16,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            CraftRequirements = "Silver worth at least 2,750 gp.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            Hardness = 8,
+                            HitPoints = 32,
+                            ItemLevel = 15,
+                            Name = "Shield",
+                            Price = 5500,
+                            ShieldId = new Guid("0c4d2501-e887-4cde-9714-e25c9c96a5fe")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialVariant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("MaterialId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("NameAddendum")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("MaterialId");
+
+                    b.ToTable("PreciousMaterialVariant");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("d0ffa114-5af2-4660-8ac6-b3702242993c"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d"),
+                            Name = "Adamantine Chunk",
+                            Price = 50000
+                        },
+                        new
+                        {
+                            Id = new Guid("1d32e18c-edf0-4e27-b0e4-c788b28c70c4"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d"),
+                            Name = "Adamantine Ingot",
+                            Price = 500000
+                        },
+                        new
+                        {
+                            Id = new Guid("2d238ecb-edb4-40e3-b109-fb649d767c89"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 8,
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d"),
+                            Name = "Adamantine Object",
+                            NameAddendum = "Standard Grade",
+                            Price = 35000
+                        },
+                        new
+                        {
+                            Id = new Guid("4f99400d-c32f-4806-85ba-2f8282f30c27"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 16,
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d"),
+                            Name = "Adamantine Object",
+                            NameAddendum = "High Grade",
+                            Price = 600000
+                        },
+                        new
+                        {
+                            Id = new Guid("2f5b2bf5-6e4d-400b-8f77-092e0775a3da"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                            Name = "Cold Iron Chunk",
+                            Price = 1000
+                        },
+                        new
+                        {
+                            Id = new Guid("8540fd11-2d77-4ef0-84b4-bec2f4c303dd"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                            Name = "Cold Iron Ingot",
+                            Price = 10000
+                        },
+                        new
+                        {
+                            Id = new Guid("9fe9bdba-ddb4-4881-9c36-b82fba29a653"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 2,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                            Name = "Cold Iron Object",
+                            NameAddendum = "Low Grade",
+                            Price = 2000
+                        },
+                        new
+                        {
+                            Id = new Guid("6f3fd4f0-6d38-4efe-8b97-84a56719a293"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 7,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                            Name = "Cold Iron Object",
+                            NameAddendum = "Standard Grade",
+                            Price = 25000
+                        },
+                        new
+                        {
+                            Id = new Guid("fa7999f5-fb3c-40d2-8f6f-6cbd01068502"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 15,
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                            Name = "Cold Iron Object",
+                            NameAddendum = "High Grade",
+                            Price = 450000
+                        },
+                        new
+                        {
+                            Id = new Guid("81aaa9dc-86cb-47ef-a4fa-30f8287b03ee"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                            Name = "Darkwood Branch",
+                            Price = 50000
+                        },
+                        new
+                        {
+                            Id = new Guid("563092d5-6ee1-4d5a-b5d2-3edd781d4f71"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                            Name = "Darkwood Lumber",
+                            Price = 500000
+                        },
+                        new
+                        {
+                            Id = new Guid("78a7e5c4-afc2-4523-97f3-05703e296466"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 8,
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                            Name = "Darkwood Object",
+                            NameAddendum = "Standard Grade",
+                            Price = 35000
+                        },
+                        new
+                        {
+                            Id = new Guid("5e3d48a5-7c71-4aea-92bb-6c08099fe5eb"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 16,
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                            Name = "Darkwood Object",
+                            NameAddendum = "High Grade",
+                            Price = 600000
+                        },
+                        new
+                        {
+                            Id = new Guid("4fee8850-4578-4b9a-be3d-0f8e12921850"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                            Name = "Mithral Chunk",
+                            Price = 50000
+                        },
+                        new
+                        {
+                            Id = new Guid("9e69ae02-bf52-4fab-98a7-8b8f893cd952"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                            Name = "Mithral Ingot",
+                            Price = 500000
+                        },
+                        new
+                        {
+                            Id = new Guid("f885fd24-e9e4-4407-a591-453d41141b49"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 8,
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                            Name = "Mithral Object",
+                            NameAddendum = "Standard Grade",
+                            Price = 35000
+                        },
+                        new
+                        {
+                            Id = new Guid("e6d5ad1a-364a-4816-94f1-05e651963fce"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 16,
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                            Name = "Mithral Object",
+                            NameAddendum = "High Grade",
+                            Price = 600000
+                        },
+                        new
+                        {
+                            Id = new Guid("31d18aeb-79bd-4991-99f8-dfc09ab52345"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("949a7996-a817-48bf-b947-3646e248a25a"),
+                            Name = "Orichalcum Chunk",
+                            Price = 100000
+                        },
+                        new
+                        {
+                            Id = new Guid("fa9262de-46c8-44f1-981e-f8cb520f804d"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("949a7996-a817-48bf-b947-3646e248a25a"),
+                            Name = "Orichalcum Ingot",
+                            Price = 1000000
+                        },
+                        new
+                        {
+                            Id = new Guid("a9b6b5b7-7f44-4ad2-98b2-3da3f2b7e9cd"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 17,
+                            MaterialId = new Guid("949a7996-a817-48bf-b947-3646e248a25a"),
+                            Name = "Orichalcum Object",
+                            NameAddendum = "High Grade",
+                            Price = 1000000
+                        },
+                        new
+                        {
+                            Id = new Guid("079a76d3-94c6-46e3-93bc-29d25b3971b3"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Silver Chunk",
+                            Price = 1000
+                        },
+                        new
+                        {
+                            Id = new Guid("f7080cb1-ec21-4a60-8785-07857e1a9270"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Silver Ingot",
+                            Price = 10000
+                        },
+                        new
+                        {
+                            Id = new Guid("9b739708-594c-4fb3-b639-bf3b8e477e90"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 2,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Silver Object",
+                            NameAddendum = "Low Grade",
+                            Price = 2000
+                        },
+                        new
+                        {
+                            Id = new Guid("358a0280-dc0a-4143-a680-01a0b9337c2c"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 7,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Silver Object",
+                            NameAddendum = "Standard Grade",
+                            Price = 25000
+                        },
+                        new
+                        {
+                            Id = new Guid("cc03a811-7974-4769-ba35-3493317be256"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 15,
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Silver Object",
+                            NameAddendum = "High Grade",
+                            Price = 450000
+                        },
+                        new
+                        {
+                            Id = new Guid("6ec03653-f64d-4b18-8cc4-c83bcdbdebda"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155"),
+                            Name = "Sovereign Steel Chunk",
+                            Price = 70000
+                        },
+                        new
+                        {
+                            Id = new Guid("a2888ed2-ec5c-4bfc-a606-85eaec351e8f"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155"),
+                            Name = "Sovereign Steel Ingot",
+                            Price = 700000
+                        },
+                        new
+                        {
+                            Id = new Guid("81db1090-4b6a-46f0-b66e-ee03a8713344"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 9,
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155"),
+                            Name = "Sovereign Steel Object",
+                            NameAddendum = "Standard Grade",
+                            Price = 50000
+                        },
+                        new
+                        {
+                            Id = new Guid("050d3b7e-0c23-4976-a84d-629a8ff4f9f9"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 17,
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155"),
+                            Name = "Sovereign Steel Object",
+                            NameAddendum = "High Grade",
+                            Price = 800000
+                        },
+                        new
+                        {
+                            Id = new Guid("2fd8e026-1782-443a-aa53-11140c5800a4"),
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("3d6d6740-5c9f-480d-8752-0f5a2a5d432a"),
+                            Name = "Warpglass Chunk",
+                            Price = 80000
+                        },
+                        new
+                        {
+                            Id = new Guid("b3b2cd33-e50c-4e7d-9eaf-34cf7f26cd71"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 0,
+                            MaterialId = new Guid("3d6d6740-5c9f-480d-8752-0f5a2a5d432a"),
+                            Name = "Warpglass Ingot",
+                            Price = 800000
+                        },
+                        new
+                        {
+                            Id = new Guid("6e4e845c-594a-4e34-8bab-73b7996dfcb5"),
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            ItemLevel = 17,
+                            MaterialId = new Guid("3d6d6740-5c9f-480d-8752-0f5a2a5d432a"),
+                            Name = "Warpglass Item",
+                            NameAddendum = "High Grade",
+                            Price = 800000
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialWeapon", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("MaterialId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaterialId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("PreciousMaterialWeapons");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("29b7ba2b-f6ef-46ce-9966-04ca06d282ba"),
+                            MaterialId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d"),
+                            Name = "Adamantine Weapon",
+                            SourcePageId = new Guid("123c6656-26b5-469f-a00e-1e6553608a14")
+                        },
+                        new
+                        {
+                            Id = new Guid("b1e2cd72-1948-40c6-ba4a-96060224d4a3"),
+                            MaterialId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                            Name = "Cold Iron Weapon",
+                            SourcePageId = new Guid("87977622-b958-4f66-9193-3ffa5d1d16fd")
+                        },
+                        new
+                        {
+                            Id = new Guid("5b49c336-f62c-4bf8-9cd5-967e458b6f2c"),
+                            MaterialId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                            Name = "Darkwood Weapon",
+                            SourcePageId = new Guid("be3850ec-9860-48d7-acee-e49ea7f797df")
+                        },
+                        new
+                        {
+                            Id = new Guid("f4155d3a-7603-4d5b-8b61-61f60afe13bf"),
+                            MaterialId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                            Name = "Mithral Weapon",
+                            SourcePageId = new Guid("dc7d6228-ec1a-4a09-95ed-2b4ec127aa98")
+                        },
+                        new
+                        {
+                            Id = new Guid("e3a80aa5-5187-40bc-8151-130f89fe9775"),
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Orichalcum Weapon",
+                            SourcePageId = new Guid("a92f7153-e526-41ee-b880-e74f492a2e03")
+                        },
+                        new
+                        {
+                            Id = new Guid("37c439ab-d41a-4777-8fe2-d0efe5bcc22b"),
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Silver Weapon",
+                            SourcePageId = new Guid("3143014e-e836-4c36-a856-e89ef93f9213")
+                        },
+                        new
+                        {
+                            Id = new Guid("e5a64133-97dc-4338-bc22-4de897cc3024"),
+                            MaterialId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155"),
+                            Name = "Sovereign Steel Weapon",
+                            SourcePageId = new Guid("6a9f462d-ae97-4cec-ae95-706e9e93e082")
+                        },
+                        new
+                        {
+                            Id = new Guid("7bfe9197-17dd-4499-931d-7dd4816a12dd"),
+                            MaterialId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                            Name = "Warpglass Weapon",
+                            SourcePageId = new Guid("1e1d574e-635e-4497-ad1e-847880b208f1")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialWeaponVariant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("AdditionalPricePerBulk")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("CraftRequirements")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("GradeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("WeaponId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GradeId");
+
+                    b.HasIndex("WeaponId");
+
+                    b.ToTable("PreciousMaterialWeaponVariant");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("91eeee71-c3d8-4879-a23a-d3cd9d962177"),
+                            AdditionalPricePerBulk = 14000,
+                            CraftRequirements = "At least 175 gp of adamantine + 17.5 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 11,
+                            Price = 140000,
+                            WeaponId = new Guid("29b7ba2b-f6ef-46ce-9966-04ca06d282ba")
+                        },
+                        new
+                        {
+                            Id = new Guid("84fdb447-59be-49c5-b295-be6aad91157c"),
+                            AdditionalPricePerBulk = 135000,
+                            CraftRequirements = "At least 6,750 gp of adamantine + 675 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 17,
+                            Price = 1350000,
+                            WeaponId = new Guid("29b7ba2b-f6ef-46ce-9966-04ca06d282ba")
+                        },
+                        new
+                        {
+                            Id = new Guid("86e3879c-a37c-4890-9fd8-340827eacfae"),
+                            AdditionalPricePerBulk = 400,
+                            CraftRequirements = "At least 20 sp of cold iron + 2 sp per Bulk.",
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            ItemLevel = 2,
+                            Price = 4000,
+                            WeaponId = new Guid("b1e2cd72-1948-40c6-ba4a-96060224d4a3")
+                        },
+                        new
+                        {
+                            Id = new Guid("9da14b27-6a67-4b0a-8cc5-81e620a8690c"),
+                            AdditionalPricePerBulk = 8800,
+                            CraftRequirements = "At least 110 gp of cold iron + 11 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 10,
+                            Price = 88000,
+                            WeaponId = new Guid("b1e2cd72-1948-40c6-ba4a-96060224d4a3")
+                        },
+                        new
+                        {
+                            Id = new Guid("26b5785b-9af0-4a3d-b58f-49d6a80d53f1"),
+                            AdditionalPricePerBulk = 90000,
+                            CraftRequirements = "At least 4,500 gp of cold iron + 450 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 16,
+                            Price = 900000,
+                            WeaponId = new Guid("b1e2cd72-1948-40c6-ba4a-96060224d4a3")
+                        },
+                        new
+                        {
+                            Id = new Guid("47ec103e-d378-4b88-ad9d-e159646aa369"),
+                            AdditionalPricePerBulk = 14000,
+                            CraftRequirements = "At least 175 gp of darkwood + 17.5 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 11,
+                            Price = 140000,
+                            WeaponId = new Guid("5b49c336-f62c-4bf8-9cd5-967e458b6f2c")
+                        },
+                        new
+                        {
+                            Id = new Guid("b58f65f7-cbbb-4433-8d0c-08bc36032e96"),
+                            AdditionalPricePerBulk = 135000,
+                            CraftRequirements = "At least 6,750 gp of darkwood + 675 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 17,
+                            Price = 1350000,
+                            WeaponId = new Guid("5b49c336-f62c-4bf8-9cd5-967e458b6f2c")
+                        },
+                        new
+                        {
+                            Id = new Guid("5fa15879-a7a5-4a25-8a14-7b1b89148131"),
+                            AdditionalPricePerBulk = 14000,
+                            CraftRequirements = "At least 175 gp of mithral + 17.5 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 11,
+                            Price = 140000,
+                            WeaponId = new Guid("f4155d3a-7603-4d5b-8b61-61f60afe13bf")
+                        },
+                        new
+                        {
+                            Id = new Guid("a21d6bbf-8729-4636-9e66-26ce10c9abec"),
+                            AdditionalPricePerBulk = 135000,
+                            CraftRequirements = "At least 6,750 gp of mithral + 675 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 17,
+                            Price = 1350000,
+                            WeaponId = new Guid("f4155d3a-7603-4d5b-8b61-61f60afe13bf")
+                        },
+                        new
+                        {
+                            Id = new Guid("418acf83-a6b5-406a-876b-01c5c43ce8c0"),
+                            AdditionalPricePerBulk = 225000,
+                            CraftRequirements = "At least 11,250 gp of orichalcum + 1,125 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 18,
+                            Price = 2250000,
+                            WeaponId = new Guid("e3a80aa5-5187-40bc-8151-130f89fe9775")
+                        },
+                        new
+                        {
+                            Id = new Guid("26a12d43-3d55-4020-a754-61aafe80646b"),
+                            AdditionalPricePerBulk = 400,
+                            CraftRequirements = "At least 20 sp of silver + 2 sp per Bulk.",
+                            GradeId = new Guid("496e2717-f62b-4212-a206-39ac5ccf9c96"),
+                            ItemLevel = 2,
+                            Price = 4000,
+                            WeaponId = new Guid("37c439ab-d41a-4777-8fe2-d0efe5bcc22b")
+                        },
+                        new
+                        {
+                            Id = new Guid("b105eb6c-39d8-486e-8c2a-48f7f2048f40"),
+                            AdditionalPricePerBulk = 8800,
+                            CraftRequirements = "At least 110 gp of silver + 11 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 10,
+                            Price = 88000,
+                            WeaponId = new Guid("37c439ab-d41a-4777-8fe2-d0efe5bcc22b")
+                        },
+                        new
+                        {
+                            Id = new Guid("37bdb433-1283-40e8-a2ff-12598db42f49"),
+                            AdditionalPricePerBulk = 90000,
+                            CraftRequirements = "At least 4,500 gp of silver + 450 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 16,
+                            Price = 900000,
+                            WeaponId = new Guid("37c439ab-d41a-4777-8fe2-d0efe5bcc22b")
+                        },
+                        new
+                        {
+                            Id = new Guid("dc249dda-c1e8-43b1-9208-cf9fde3b2650"),
+                            AdditionalPricePerBulk = 16000,
+                            CraftRequirements = "At least 100 gp of cold iron + 10 gp per Bulk plus at least 100 gp of noqual + 10 gp per Bulk.",
+                            GradeId = new Guid("c025717b-a893-46cf-8843-7c541339127e"),
+                            ItemLevel = 12,
+                            Price = 160000,
+                            WeaponId = new Guid("e5a64133-97dc-4338-bc22-4de897cc3024")
+                        },
+                        new
+                        {
+                            Id = new Guid("aae7431c-8dcc-42b5-9045-b92705e6b450"),
+                            AdditionalPricePerBulk = 320000,
+                            CraftRequirements = "At least 8,000 gp of cold iron + 800 gp per Bulk plus at least 8,000 gp of noqual + 800 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 19,
+                            Price = 3200000,
+                            WeaponId = new Guid("e5a64133-97dc-4338-bc22-4de897cc3024")
+                        },
+                        new
+                        {
+                            Id = new Guid("471986fa-9494-4389-a613-b912762f7fd9"),
+                            AdditionalPricePerBulk = 140000,
+                            CraftRequirements = "At least 7,000 gp of warpglass + 700 gp per Bulk.",
+                            GradeId = new Guid("02030f72-6fdd-43e9-aef8-98d53c47a6c8"),
+                            ItemLevel = 17,
+                            Price = 1400000,
+                            WeaponId = new Guid("7bfe9197-17dd-4499-931d-7dd4816a12dd")
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Prerequisite", b =>
                 {
                     b.Property<Guid>("Id")
@@ -26269,6 +28897,114 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("21de43a5-f03c-4532-b544-ce63ae29b89f"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("cafddd9f-fffa-447f-af6b-759154d33281"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("8494e18c-c37a-43ac-bf31-773ffa0195db"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6e4472c2-1fce-4c38-a4f0-fbca470146b3"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("77921583-9403-4b05-887c-affeaea861ad"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("bf73b11a-17bd-4abb-a6c6-70fdec059cdc"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4923a3b1-b93c-4cbb-b4ae-5b420f03c641"),
+                            Page = 80,
+                            SourceId = new Guid("8026612e-b2dc-42d2-8844-bb0bc63c0249")
+                        },
+                        new
+                        {
+                            Id = new Guid("ce0ba8f1-670f-41eb-9a0b-6a398f2c9db0"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ed63f55c-6a38-4b7f-b904-f07ed0c0f397"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("9b419b75-918b-4d39-a7b3-baf2c19c68d8"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0efead34-422d-4891-ac8d-e471b868aaed"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("30b58156-4b70-4443-b4e3-af6fe97baf0e"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("7f6e3d5f-97c1-474c-9ad6-dc71d6bfc8f3"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("84067774-efc8-4ba0-b924-ffcda0592a6f"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3df55bb0-de89-4344-8b24-c33bea54416d"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0bf2f951-74c8-4f9f-90fb-068ab619242d"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("22a8f7c5-d630-4e21-8065-e7688bec76aa"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("49778592-4637-4573-ae09-f433586c87d3"),
+                            Page = 275,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
                             Id = new Guid("f743a373-99c3-4e37-973a-cd274745c865"),
                             Page = 618,
                             SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
@@ -27856,6 +30592,180 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("b1b09e15-ee47-4679-9b16-bb1a07a98e8b"),
                             Page = 138,
                             SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("07295f4a-ccb0-499c-adda-4b71482502e0"),
+                            Page = 578,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("67cad0db-991b-4993-8626-32aa04f77541"),
+                            Page = 578,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0048bf82-fbd4-4b14-90f9-ffdd136008e1"),
+                            Page = 578,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a6378f71-150f-453b-baf7-f16e080995df"),
+                            Page = 579,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ca4df887-a752-4ced-a3b8-979e8c224943"),
+                            Page = 579,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("980570d9-f844-4cac-b672-26532d63741f"),
+                            Page = 579,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0d3dd22f-8299-4fe8-a03e-b9d130117699"),
+                            Page = 77,
+                            SourceId = new Guid("49679f90-24ee-40a1-9410-071dfd49e29a")
+                        },
+                        new
+                        {
+                            Id = new Guid("c9ccb242-0b6d-424c-acbe-e51662a7064f"),
+                            Page = 74,
+                            SourceId = new Guid("bc39a699-fa13-4adb-a424-4fef5ae79b40")
+                        },
+                        new
+                        {
+                            Id = new Guid("a6a1b803-8f1b-4a66-87fe-b13b79b2c308"),
+                            Page = 555,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("550f5d33-ba62-4b4f-94fb-46254acac5fe"),
+                            Page = 555,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("39df8e05-0fca-4d3d-bc79-6551ce51f68c"),
+                            Page = 555,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("27d62751-2930-449f-a6db-630947375bd1"),
+                            Page = 556,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4c376c2d-62ef-4156-8e8f-0c98c1218d3d"),
+                            Page = 556,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("67529de1-a69e-4945-8d06-98f42ef270fa"),
+                            Page = 556,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1966ddf8-0583-453a-85cc-08c79a70ca75"),
+                            Page = 77,
+                            SourceId = new Guid("49679f90-24ee-40a1-9410-071dfd49e29a")
+                        },
+                        new
+                        {
+                            Id = new Guid("36f21c1e-a1d8-4181-831b-3a477bb1c7e0"),
+                            Page = 586,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3e7cf8a2-f703-4da3-8eea-9546fd59d20b"),
+                            Page = 586,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("33e7a14c-b7a3-422e-b125-6189c7c3641e"),
+                            Page = 586,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("fdc93057-203a-4dc9-a836-c3d9832dce6f"),
+                            Page = 587,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("2253c996-e021-4a04-a7a7-fc3d4f798fbd"),
+                            Page = 587,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f940b550-061f-40d9-8d7b-eb18aa5f56b3"),
+                            Page = 587,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("123c6656-26b5-469f-a00e-1e6553608a14"),
+                            Page = 599,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("87977622-b958-4f66-9193-3ffa5d1d16fd"),
+                            Page = 599,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("be3850ec-9860-48d7-acee-e49ea7f797df"),
+                            Page = 599,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("dc7d6228-ec1a-4a09-95ed-2b4ec127aa98"),
+                            Page = 599,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a92f7153-e526-41ee-b880-e74f492a2e03"),
+                            Page = 599,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("3143014e-e836-4c36-a856-e89ef93f9213"),
+                            Page = 599,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6a9f462d-ae97-4cec-ae95-706e9e93e082"),
+                            Page = 77,
+                            SourceId = new Guid("49679f90-24ee-40a1-9410-071dfd49e29a")
+                        },
+                        new
+                        {
+                            Id = new Guid("1e1d574e-635e-4497-ad1e-847880b208f1"),
+                            Page = 75,
+                            SourceId = new Guid("bc39a699-fa13-4adb-a424-4fef5ae79b40")
                         },
                         new
                         {
@@ -33094,6 +36004,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("AmmunitionId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("ArmorsId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid?>("CursesId")
                         .HasColumnType("uuid");
 
@@ -33125,6 +36038,18 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("PlanesId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("PreciousMaterialArmorsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("PreciousMaterialShieldsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("PreciousMaterialWeaponsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("PreciousMaterialsId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid?>("RacesId")
                         .HasColumnType("uuid");
 
@@ -33151,6 +36076,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("AmmunitionId");
 
+                    b.HasIndex("ArmorsId");
+
                     b.HasIndex("CursesId");
 
                     b.HasIndex("DiseasesId");
@@ -33168,6 +36095,14 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasIndex("MeleeWeaponsId");
 
                     b.HasIndex("PlanesId");
+
+                    b.HasIndex("PreciousMaterialArmorsId");
+
+                    b.HasIndex("PreciousMaterialShieldsId");
+
+                    b.HasIndex("PreciousMaterialWeaponsId");
+
+                    b.HasIndex("PreciousMaterialsId");
 
                     b.HasIndex("RacesId");
 
@@ -42287,6 +45222,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ArmorTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Armor", null)
+                        .WithMany()
+                        .HasForeignKey("ArmorsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("ClassStat", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Stat", null)
@@ -42532,6 +45482,66 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Plane", null)
                         .WithMany()
                         .HasForeignKey("PlanesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PreciousMaterialArmorTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialArmor", null)
+                        .WithMany()
+                        .HasForeignKey("PreciousMaterialArmorsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PreciousMaterialShieldTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialShield", null)
+                        .WithMany()
+                        .HasForeignKey("PreciousMaterialShieldsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PreciousMaterialTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterial", null)
+                        .WithMany()
+                        .HasForeignKey("PreciousMaterialsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PreciousMaterialWeaponTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialWeapon", null)
+                        .WithMany()
+                        .HasForeignKey("PreciousMaterialWeaponsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -44851,6 +47861,202 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("SourcePage");
 
                     b.Navigation("WeaponGroup");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Armor", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ArmorCategory", "ArmorCategory")
+                        .WithMany("Armors")
+                        .HasForeignKey("ArmorCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ArmorGroup", "ArmorGroup")
+                        .WithMany("Armors")
+                        .HasForeignKey("ArmorGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("Armors_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("4332249c-d32b-4dfe-9025-2a1f4bbb6f88"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e376e538-e4c3-49b8-bff2-239a76012ec9"),
+                                    Text = "Though referred to as a breastplate, this type of armor consists of several pieces of plate or half-plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8513e4e9-1ea1-4da2-ad65-74830ab74d2e"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6c357ddd-162b-4fc0-b2a1-23ec6f1bbef4"),
+                                    Text = "A suit of chain mail consists of several pieces of armor composed of small metal rings linked together in a protective mesh. It typically includes a chain shirt, leggings, a pair of arms, and a coif, collectively protecting most of the body.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c85e39dd-a871-4c16-8448-790b3d7c822c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9d419b32-9b59-4a20-9909-8485ae52f637"),
+                                    Text = "Sometimes called a hauberk, this is a long shirt constructed of the same metal rings as chainmail. However, it is much lighter than chainmail and protects only the torso, upper arms, and upper legs of its wearer.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("915c591a-6d4e-4a6c-9ad1-8ee619a7ffd8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("6fbffdfc-1443-4f6b-980b-a3d17412ac93"),
+                                    Text = "Adventurers who don’t wear armor travel in durable clothing. Though it’s not armor and uses your unarmored defense proficiency, it still has a Dex Cap and can grant an item bonus to AC if etched with potency runes.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("87d33432-9b15-4be9-a08f-33059cc6b7d2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ee6f41ed-1e5b-4ef9-8f4d-a2720aa9e477"),
+                                    Text = "Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fac46981-86cf-43fb-8baa-f2eb63dd18fb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b19fb537-a420-4506-a444-fc9f58db5c11"),
+                                    Text = "Half plate consists of most of the upper body plates used in full plate, with lighter or sparser steel plate protection for the arms and legs. This provides some of the protection of full plate with greater flexibility and speed. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6c2f2ed3-13f6-4efe-be8c-70b921cd99e6"),
+                                    Order = 0,
+                                    OwnerId = new Guid("abee6439-3461-45f5-b234-8e155921fc95"),
+                                    Text = "A character who is a member of the Hellknights has access to this uncommon armor.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a86ab0c4-63d1-4ec2-891b-f308291731a5"),
+                                    Order = 1,
+                                    OwnerId = new Guid("abee6439-3461-45f5-b234-8e155921fc95"),
+                                    Text = "Few armors in the Inner Sea region are as memorable as the iconic Hellknight plate. While each order has its own flourishes, Hellknight plate is instantly recognizable to any who know of the Hellknights. Hellknights go to extreme measures to punish non-Hellknights who get their hands on Hellknight plate, and the reward is not usually worth the risk, since for non-Hellknights, the armor is functionally similar to full plate.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ee0c4c90-254a-4a19-9443-664d45d21730"),
+                                    Order = 0,
+                                    OwnerId = new Guid("36116598-e497-42fa-a206-f7971f09acc3"),
+                                    Text = "A mix of furs, sturdy hide, and sometimes molded boiled leather, this armor provides protection due to its layers of leather, though its bulkiness slows the wearer down and decreases mobility.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f5334a06-4882-4033-8af1-043303b472d9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ee976251-119d-4b17-b47b-eea1fafb1fdf"),
+                                    Text = "A mix of flexible and molded boiled leather, a suit of this type of armor provides some protection with maximum flexibility.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d8d5ca54-b095-4db0-a98b-a7eb2be10d34"),
+                                    Order = 0,
+                                    OwnerId = new Guid("cb7b819d-3ddc-4819-bdb1-a0bafa47ead0"),
+                                    Text = "This armor is simply a layer of heavy, quilted cloth, but it is sometimes used because it’s so inexpensive. Padded armor is easier to damage and destroy than other types of armor. Heavy armor comes with a padded armor undercoat included in its Price, though it loses the comfort trait when worn under heavy armor. You can wear just that padded armor undercoat to sleep in, if your heavy armor is destroyed, or when otherwise not wearing the full heavy armor. This allows you to keep the armor invested and benefit from the power of any runes on the associated heavy armor, but no one else can wear your heavy armor without the padded undercoat.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("247c9d0a-b5a0-41a7-a93d-5d31230b68fc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e238440f-34b9-4583-b0df-467bf3a19319"),
+                                    Text = "Scale mail consists of many metal scales sewn onto a reinforced leather backing, often in the form of a long shirt that protects the torso, arms, and legs.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8d94c1d8-41d5-416d-b928-40bc00950de3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e95aa60c-9410-40f5-9c26-7d33be653193"),
+                                    Text = "This type of armor is chain mail reinforced with flexible, interlocking metal plates, typically located on the wearer’s torso, upper arms, and legs. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7f9f4ce5-04a8-4c1f-84e4-9dac5e1fb616"),
+                                    Order = 0,
+                                    OwnerId = new Guid("653970e9-fa6d-492a-a58e-36d505a38657"),
+                                    Text = "This leather armor is reinforced with metal studs and sometimes small metal plates, providing most of the flexibility of leather armor with more robust protection.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("ArmorCategory");
+
+                    b.Navigation("ArmorGroup");
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("Details");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorGroup", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("SourcePage");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
@@ -48350,6 +51556,577 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Details");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterial", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("PreciousMaterials_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("5829ae74-0fca-4b15-937c-a6ef2dc17a5c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2696e0dc-47a6-487c-9433-7d5dff4b4c0d"),
+                                    Text = "Mined from rocks that fell from the heavens, adamantine is one of the hardest metals known. It has a shiny, black appearance, and it is prized for its amazing resiliency and ability to hold an incredibly sharp edge.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2fa636c4-57a8-450e-9a25-3cce978f3c61"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ac517d80-af61-4e0a-a5b0-af7a9fc85789"),
+                                    Text = "Weapons made from cold iron are deadly to demons and fey alike. Cold iron looks like normal iron but is mined from particularly pure sources and shaped with little or no heat. This process is extremely difficult, especially for high-grade cold iron items.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f4e2ec82-b861-440f-a478-7cd743c3d640"),
+                                    Order = 0,
+                                    OwnerId = new Guid("46176cae-7909-40a1-964a-2a4959dbc099"),
+                                    Text = "Darkwood is a very lightweight wood found primarily in old-growth forests in south-central Avistan; it is dark as ebony but has a slight purple tint. A darkwood item’s Bulk is reduced by 1 (or to light Bulk if its normal Bulk is 1, with no effect on an item that normally has light Bulk). The Price of an item made of darkwood is based on the item’s normal Bulk, not its reduced Bulk for being made of darkwood, but reduce the Bulk before making any further Bulk adjustments for the size of the item.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f2112b91-2fe0-4160-80af-bd9cfa4f77a5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ec5767b8-cf91-447c-be08-9edc359c310a"),
+                                    Text = "Mithral is renowned for its lightness, durability, and effectiveness against a range of creatures including devils and lycanthropes. It has the same sheen as silver but a slightly lighter hue. Mithral weapons and armor are treated as if they were silver for the purpose of damaging creatures with weakness to silver. A metal item made of mithral is lighter than one made of iron or steel: the item’s Bulk is reduced by 1 (reduced to light Bulk if its normal Bulk is 1, with no effect on an item that normally has light Bulk). The Price of an item made of this material is based on the item’s normal Bulk, not its reduced Bulk for being made of mithral, but reduce the Bulk before making any further Bulk adjustments for the size of the item.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("335d178d-d113-456c-a618-f8dd8c50fe7f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("949a7996-a817-48bf-b947-3646e248a25a"),
+                                    Text = "The most rare and valuable skymetal, orichalcum is coveted for its incredible time-related magical properties. This dull, coppery metal isn’t as physically sturdy as adamantine, but orichalcum’s time-bending properties protect it, granting it greater Hardness and Hit Points. If an orichalcum item takes damage but isn’t destroyed, it repairs itself completely 24 hours later.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("736cd527-7274-4ed9-8c7e-767fe2c1a4e7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e0b4477f-abea-49ac-9bf0-2da2291a7215"),
+                                    Text = "Silver weapons are a bane to creatures ranging from devils to werewolves. Silver items are less durable than steel items, and low-grade silver items are usually merely silver-plated.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("b43177bf-d305-434a-bbcb-0ef6fc2e5bf8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("026b29b3-636f-4d3c-b8fb-7168090f3155"),
+                                    Text = "Created by Black Sovereign Kevoth-Kul, this unique alloy of cold iron and the skymetal noqual can provide protection from magical assault. The process of cold-forging the two materials together is quite complicated and precise. Characters in search of sovereign steel weapons and armor will almost assuredly have to travel to Starfall to procure gear made from this rare alloy. While some believe it possible to craft shields of sovereign steel as well, in one of his fits, Kevoth-Kul yelled that he had no use for them and banned anyone from making such a thing. So far, his smiths have been too afraid to confirm whether or not it was a joke. All sovereign steel items (including weapon and armor below) have a +4 circumstance bonus on saves against magic that the item makes, and grant their bonus to saves the owner makes specifically to protect the item from magic (such as against the rusting grasp spell).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1abd5780-c3f7-4feb-b8c1-968033cf66d3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("3d6d6740-5c9f-480d-8752-0f5a2a5d432a"),
+                                    Text = "This bizarre substance is fashioned from the raw, chaotic quintessence of the Maelstrom. It can be fashioned into weapons and items, but is too unstable to make into useful armor or shields.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("dd297220-6c3a-4f32-808f-1db97da763fb"),
+                                    Order = 1,
+                                    OwnerId = new Guid("3d6d6740-5c9f-480d-8752-0f5a2a5d432a"),
+                                    Text = "Raw warpglass is an opalescent glassy material with surprising strength. When worked, it changes its appearance—though not its properties—to appear as random striations of other metals and types of stone.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Details");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialArmor", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterial", "Material")
+                        .WithMany("Armors")
+                        .HasForeignKey("MaterialId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("PreciousMaterialArmors_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("13483736-e390-494f-93ce-aa42d61ff128"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9c4884c6-39eb-4ed5-a3fb-d91f19e62f2f"),
+                                    Text = "Adamantine armor has a shiny, black appearance and is amazingly durable.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5288c524-3508-48a0-86df-73addb0eb5b1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fb952584-d9f7-405e-bab1-d518f3c63519"),
+                                    Text = "Cold iron armor sickens certain creatures that touch it. A creature with weakness to cold iron (such as most demons and fey) that critically fails an unarmed attack against a creature in cold iron armor becomes sickened 1. A creature with weakness to cold iron is sickened 1 as long as it wears cold iron armor.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f8ebd9fd-8cf4-4ba7-ae41-d9e9e79abdd9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c6ea2f2a-8c94-4e44-83be-e1a8a728d30c"),
+                                    Text = "Darkwood armor is 1 Bulk lighter than normal (or light Bulk if its normal Bulk is 1, with no effect on armor that normally has light Bulk). It’s easier to wear than normal wood armor, reducing the Strength score necessary to ignore its check penalty by 2 and reducing its Speed penalty by 5 feet. (There are no types of wood armor in this book).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("29117c5a-d2ee-4f7c-b39e-2fab654a03b5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("afc82eed-f33e-43c6-af78-3c6c6406692f"),
+                                    Text = "Mithral armor is 1 Bulk lighter than normal (or light Bulk if its normal Bulk is 1, with no effect on armor that normally has light Bulk). It’s easier to wear than normal metal armor, reducing the Strength score necessary to ignore its check penalty by 2 and reducing its Speed penalty by 5 feet.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("213a69bc-1e87-4418-99b0-3a994f95de5c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1287dbd8-558a-4c7f-bf2a-37dbe34e802c"),
+                                    Text = "Orichalcum armor can be etched with four magic property runes instead of three due to the magical empowerment of orichalcum. If you are wearing armor made of orichalcum, the armor grants you insights into the future, granting you a +1 circumstance bonus to initiative rolls.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e04ac5f2-e46c-4765-9ea3-62c9aabe95bd"),
+                                    Order = 0,
+                                    OwnerId = new Guid("485becdc-d5e9-4ff1-a879-4419d9de8189"),
+                                    Text = "Silver armor sickens certain creatures that touch it. A creature with weakness to silver that critically fails an unarmed attack against a creature in silver armor becomes sickened 1. A creature with weakness to silver is sickened 1 as long as it wears silver armor.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bf939410-b553-4edc-a4e5-44e7cc82002f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("73db3bdd-bc32-4a6d-9c21-580d3301e6ec"),
+                                    Text = "Sovereign steel armor sickens certain creatures that touch it. A creature with weakness to cold iron that critically fails an unarmed attack against a creature in sovereign steel armor becomes sickened 1, and such a creature is sickened 1 as long as it wears sovereign steel armor. The noqual in sovereign steel armor provides protection against magic, granting you a +1 circumstance bonus to AC against spell attack rolls. If you Cast a Spell while wearing sovereign steel armor, you must succeed at a DC 5 flat check or the spell fails.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Details");
+
+                    b.Navigation("Material");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialArmorVariant", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialArmor", "Armor")
+                        .WithMany("Variants")
+                        .HasForeignKey("ArmorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ItemGrade", "Grade")
+                        .WithMany("ArmorVariants")
+                        .HasForeignKey("GradeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Armor");
+
+                    b.Navigation("Grade");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialItem", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialItemCategory", "Category")
+                        .WithMany("Items")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ItemGrade", "Grade")
+                        .WithMany()
+                        .HasForeignKey("GradeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterial", "Material")
+                        .WithMany("Items")
+                        .HasForeignKey("MaterialId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Grade");
+
+                    b.Navigation("Material");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialShield", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterial", "Material")
+                        .WithMany("Shields")
+                        .HasForeignKey("MaterialId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("PreciousMaterialShields_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("b52e923f-ac3d-4bfa-87d8-a79f863e2046"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f0d45f1c-537b-4276-a11a-8e164138b552"),
+                                    Text = "",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("861a437f-5dda-4173-8143-0986ab0ef867"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dd42fda1-c0cb-42f5-969c-8c5db167fcfe"),
+                                    Text = "Cold iron shields don’t typically have an additional effect, though when used for a shield bash, they are cold iron weapons.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1453647c-b04b-487c-b8ca-7b2e2f8b1dde"),
+                                    Order = 0,
+                                    OwnerId = new Guid("dd440152-bdc9-427b-94e0-68874ac11480"),
+                                    Text = "Darkwood shields are 1 Bulk lighter than normal (or light Bulk if their normal Bulk is 1, with no effect on a shield that normally has light Bulk).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bf2db0e2-09ed-4a47-942e-45675b9d42e2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("575c98ad-c43d-4424-93a8-f0188f6de11d"),
+                                    Text = "Mithral shields are 1 Bulk lighter than normal (or light Bulk if their normal Bulk is 1, with no effect on a shield that normally has light Bulk). When used for a shield bash, they are treated as silver weapons.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a2250e00-31de-49f9-8b72-36fcac2b1148"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7ef2acfb-7820-4a22-be1a-c97991e63e16"),
+                                    Text = "Orichalcum shields’ time-bending properties are particularly useful for keeping them intact. The first time each day an orichalcum shield would be destroyed, it is instead left with 1 Hit Point and the broken condition.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0e6b4e48-e741-45da-85e4-823a172ea0c4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0c4d2501-e887-4cde-9714-e25c9c96a5fe"),
+                                    Text = "Silver shields don’t typically have an additional effect, though when used for a shield bash, they are silver weapons.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Details");
+
+                    b.Navigation("Material");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialShieldVariant", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ItemGrade", "Grade")
+                        .WithMany()
+                        .HasForeignKey("GradeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialShield", "Shield")
+                        .WithMany("Variants")
+                        .HasForeignKey("ShieldId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("Grade");
+
+                    b.Navigation("Shield");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialVariant", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterial", "Material")
+                        .WithMany("Variants")
+                        .HasForeignKey("MaterialId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("Material");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialWeapon", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterial", "Material")
+                        .WithMany("Weapons")
+                        .HasForeignKey("MaterialId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("PreciousMaterialWeapons_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("2bfa2361-2c6b-481e-9cd1-097f7cd30880"),
+                                    Order = 0,
+                                    OwnerId = new Guid("29b7ba2b-f6ef-46ce-9966-04ca06d282ba"),
+                                    Text = "Adamantine weapons have a shiny black appearance and cut through lesser items with ease. They treat any object they hit as if it had half as much Hardness as usual, unless the object’s Hardness is greater than that of the adamantine weapon.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1ce24771-3637-4721-8913-b39f92cb1e27"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b1e2cd72-1948-40c6-ba4a-96060224d4a3"),
+                                    Text = "Cold iron weapons deal additional damage to creatures with weakness to cold iron, like demons and fey.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2caacf7f-f509-44ff-be28-b7a8c10d5d87"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5b49c336-f62c-4bf8-9cd5-967e458b6f2c"),
+                                    Text = "Darkwood weapons are as dark as ebony, with a slight purple tint. A darkwood weapon’s Bulk is reduced by 1 (or to light Bulk if its normal Bulk is 1, with no effect on a weapon that normally has light Bulk).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("29effed3-cdb7-480f-aff8-43d764b92fe3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f4155d3a-7603-4d5b-8b61-61f60afe13bf"),
+                                    Text = "Mithral weapons are slightly lighter than silver. A mithral weapon is 1 Bulk lighter than normal (or light Bulk if its normal Bulk is 1, with no effect on a weapon that normally has light Bulk).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e402cfb3-cb73-48ca-8086-f5ca51035314"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e3a80aa5-5187-40bc-8151-130f89fe9775"),
+                                    Text = "Orichalcum weapons can have four magic property runes instead of three. Due to orichalcum’s temporal properties, etching the speed weapon property rune onto an orichalcum weapon costs half the normal Price (though transferring the rune to a weapon made of another material requires you to first pay the remaining Price and then pay the cost to transfer).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d4a9f3fe-2981-4de5-b1fd-3a8b9f99130a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("37c439ab-d41a-4777-8fe2-d0efe5bcc22b"),
+                                    Text = "Silver weapons deal additional damage to creatures with weakness to silver, like werewolves, and ignore the resistances of some other creatures, like devils.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ce831f70-5ed3-476c-87c7-ff10f44742db"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e5a64133-97dc-4338-bc22-4de897cc3024"),
+                                    Text = "Sovereign steel weapons are treated as cold iron against creatures with a weakness to cold iron, like demons and fey. In addition, the noqual in sovereign steel weapons disrupts spellcasters' concentration, causing them to become stupefied 1 for 1 round on a critical hit.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3452368c-3873-475d-b0a3-58953448b478"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7bfe9197-17dd-4499-931d-7dd4816a12dd"),
+                                    Text = "If you critically hit a creature with a Strike with a warpglass weapon, the target is affected by a warpwave and automatically fails its saving throw.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Details");
+
+                    b.Navigation("Material");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialWeaponVariant", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ItemGrade", "Grade")
+                        .WithMany()
+                        .HasForeignKey("GradeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialWeapon", "Weapon")
+                        .WithMany("Variants")
+                        .HasForeignKey("WeaponId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Grade");
+
+                    b.Navigation("Weapon");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Prerequisite", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Prerequisite+BasePrerequisiteBinding", "Binding")
@@ -51008,6 +54785,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany("Traits")
                         .HasForeignKey("AmmunitionId");
 
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Armor", null)
+                        .WithMany()
+                        .HasForeignKey("ArmorsId");
+
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Curse", null)
                         .WithMany()
                         .HasForeignKey("CursesId");
@@ -51043,6 +54824,22 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Plane", null)
                         .WithMany()
                         .HasForeignKey("PlanesId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialArmor", null)
+                        .WithMany()
+                        .HasForeignKey("PreciousMaterialArmorsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialShield", null)
+                        .WithMany()
+                        .HasForeignKey("PreciousMaterialShieldsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialWeapon", null)
+                        .WithMany()
+                        .HasForeignKey("PreciousMaterialWeaponsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.PreciousMaterial", null)
+                        .WithMany()
+                        .HasForeignKey("PreciousMaterialsId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Race", null)
                         .WithMany()
@@ -54360,6 +58157,16 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Traits");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorCategory", b =>
+                {
+                    b.Navigation("Armors");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorGroup", b =>
+                {
+                    b.Navigation("Armors");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
                 {
                     b.Navigation("Characteristics");
@@ -54427,6 +58234,11 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Hazards");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ItemGrade", b =>
+                {
+                    b.Navigation("ArmorVariants");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.LanguageType", b =>
                 {
                     b.Navigation("Languages");
@@ -54447,6 +58259,39 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("AlchemicalBombs");
 
                     b.Navigation("AlchemicalTools");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterial", b =>
+                {
+                    b.Navigation("Armors");
+
+                    b.Navigation("Items");
+
+                    b.Navigation("Shields");
+
+                    b.Navigation("Variants");
+
+                    b.Navigation("Weapons");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialArmor", b =>
+                {
+                    b.Navigation("Variants");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialItemCategory", b =>
+                {
+                    b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialShield", b =>
+                {
+                    b.Navigation("Variants");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.PreciousMaterialWeapon", b =>
+                {
+                    b.Navigation("Variants");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.RaceSize", b =>

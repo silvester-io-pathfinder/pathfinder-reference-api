@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Locathah : AbstractTraitTemplate
+    public class Locathah : Template
     {
         public static readonly Guid ID = Guid.Parse("e3fa3f52-ba3d-419c-905b-f8f7e7945017");
 

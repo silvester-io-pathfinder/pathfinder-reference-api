@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Fetchling : AbstractTraitTemplate
+    public class Fetchling : Template
     {
         public static readonly Guid ID = Guid.Parse("4ace0949-9874-4a57-afca-539a202106e2");
 

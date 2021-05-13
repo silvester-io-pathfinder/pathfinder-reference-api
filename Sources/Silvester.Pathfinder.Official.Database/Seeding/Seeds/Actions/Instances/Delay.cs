@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 {
-    public class Delay : AbstractActionTemplate
+    public class Delay : Template
     {
         public static readonly Guid ID = Guid.Parse("4163f1f7-245b-4989-b4a9-8638d75f2cdc");
 

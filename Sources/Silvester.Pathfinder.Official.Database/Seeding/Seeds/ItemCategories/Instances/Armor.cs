@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCategories.Instances
 {
-    public class Armor : AbstractItemCategoryTemplate
+    public class Armor : Template
     {
         public static readonly Guid ID = Guid.Parse("5d8aa60d-58e9-425a-9c92-0cac9eb5202d");
 

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class ClanDagger : AbstractMeleeWeaponTemplate
+    public class ClanDagger : Template
     {
         public static readonly Guid ID = Guid.Parse("2ef4b9ed-c528-44ec-9123-6b92234662c1");
 

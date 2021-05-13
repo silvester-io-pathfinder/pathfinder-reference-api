@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class Torch : AbstractAdventuringGearTemplate
+    public class Torch : Template
     {
         public static readonly Guid ID = Guid.Parse("e71752ce-5078-41c3-a4bd-8313073efd3d");
 

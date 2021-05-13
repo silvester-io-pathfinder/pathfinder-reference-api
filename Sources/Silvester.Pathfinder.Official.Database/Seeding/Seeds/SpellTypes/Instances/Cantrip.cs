@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.SpellTypes.Instances
 {
-    public class Cantrip : AbstractSpellTypeTemplate
+    public class Cantrip : Template
     {
         public static readonly Guid ID = Guid.Parse("fbd536e4-6468-4ca5-84de-aa2e5a33776f");
 

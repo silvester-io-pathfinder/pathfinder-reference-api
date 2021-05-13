@@ -1,11 +1,12 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class QuickSqueezeFeat : AbstractFeatTemplate
+    public class QuickSqueezeFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("8a71ca0e-0c73-4fdd-bde7-431f3237bca6");
 

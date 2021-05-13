@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
-    public class HammerOfForbiddance : AbstractHazardTemplate
+    public class HammerOfForbiddance : Template
     {
         public static readonly Guid ID = Guid.Parse("d88ecdc0-c9bd-4a42-8409-a215f4a5c034");
 

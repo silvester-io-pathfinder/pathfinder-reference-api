@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class DwarvenWarAxe : AbstractMeleeWeaponTemplate
+    public class DwarvenWarAxe : Template
     {
         public static readonly Guid ID = Guid.Parse("d0b1390b-25b4-4302-91e0-4c80963125ce");
 

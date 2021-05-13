@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.Instances
 {
-    public class TanglefootBag : AbstractAlchemicalBombTemplate
+    public class TanglefootBag : Template
     {
         public static readonly Guid ID = Guid.Parse("e7825926-436e-4914-940a-09de6052cab1");
 

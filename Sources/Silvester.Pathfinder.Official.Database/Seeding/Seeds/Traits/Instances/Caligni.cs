@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Caligni : AbstractTraitTemplate
+    public class Caligni : Template
     {
         public static readonly Guid ID = Guid.Parse("d7ffb83a-2507-4d2c-ba39-9faa6c59565e");
 

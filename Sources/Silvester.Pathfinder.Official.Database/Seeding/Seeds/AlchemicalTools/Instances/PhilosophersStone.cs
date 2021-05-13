@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.Instances
 {
-    public class PhilosophersStone : AbstractAlchemicalToolTemplate
+    public class PhilosophersStone : Template
     {
         public static readonly Guid ID = Guid.Parse("b6393c4f-dc42-4218-b0cd-71c78d2af105");
 

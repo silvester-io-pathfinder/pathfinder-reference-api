@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
-    public class PharaohsWard : AbstractHazardTemplate
+    public class PharaohsWard : Template
     {
         public static readonly Guid ID = Guid.Parse("58875d5f-9989-4476-bafe-451b2746e393");
 

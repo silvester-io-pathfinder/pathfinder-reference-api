@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
-    public class CocytanFilth : AbstractDiseaseTemplate
+    public class CocytanFilth : Template
     {
         public static readonly Guid ID = Guid.Parse("131aef55-4306-47c2-a9d6-3200c8146154");
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
-    public class PolymorphTrap : AbstractHazardTemplate
+    public class PolymorphTrap : Template
     {
         public static readonly Guid ID = Guid.Parse("0b60cd6f-d1e8-4373-83f8-a14907af7e10");
 

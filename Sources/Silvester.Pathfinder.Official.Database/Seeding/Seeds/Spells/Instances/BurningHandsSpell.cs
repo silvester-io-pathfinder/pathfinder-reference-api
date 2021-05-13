@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class BurningHandsSpell : AbstractSpellTemplate
+    public class BurningHandsSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("ea3e3b79-80ab-4ef4-9dc7-6fb38561a935");
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 {
-    public class Alchemist : AbstractClassTemplate
+    public class Alchemist : Template
     {
         public static readonly Guid ID = Guid.Parse("df6b0137-7082-470f-939f-5d241ef7d651");
 

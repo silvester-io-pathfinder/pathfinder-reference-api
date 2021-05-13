@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Summoned : AbstractTraitTemplate
+    public class Summoned : Template
     {
         public static readonly Guid ID = Guid.Parse("7fe537ca-5287-4bc8-8cca-5273dd45504b");
 

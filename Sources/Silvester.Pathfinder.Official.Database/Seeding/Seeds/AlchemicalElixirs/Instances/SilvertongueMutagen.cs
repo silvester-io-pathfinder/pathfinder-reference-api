@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
-    public class SilvertongueMutagen : AbstractAlchemicalElixirTemplate
+    public class SilvertongueMutagen : Template
     {
         public static readonly Guid ID = Guid.Parse("a4700423-ee77-4ed2-ac68-682da90db27b");
 

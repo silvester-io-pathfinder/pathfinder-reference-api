@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Instances
 {
-    public class TawLauncher : AbstractRangedWeaponTemplate
+    public class TawLauncher : Template
     {
         public static readonly Guid ID = Guid.Parse("7f5df152-e9a8-4918-a561-2aae39f0938b");
 

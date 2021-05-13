@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.HazardImmunities.Instances
 {
-    public class PrecisionDamage : AbstractHazardImmunityTemplate
+    public class PrecisionDamage : Template
     {
         public static readonly Guid ID = Guid.Parse("d9423d3e-cf11-4bd0-9789-89dd60fe61b0");
 

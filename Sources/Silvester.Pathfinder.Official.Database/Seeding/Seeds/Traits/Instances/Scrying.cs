@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Scrying : AbstractTraitTemplate
+    public class Scrying : Template
     {
         public static readonly Guid ID = Guid.Parse("a8667405-868d-4adb-a5b4-8542cda35792");
 

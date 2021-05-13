@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Heritages.Instances
 {
-    public class ForgeDwarf : AbstractHeritageTemplate
+    public class ForgeDwarf : Template
     {
         public static readonly Guid ID = Guid.Parse("541986ae-7349-44fd-8004-c2e606e4f140");
 

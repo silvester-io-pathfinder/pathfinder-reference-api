@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class SlumberWine : AbstractAlchemicalPoisonTemplate
+    public class SlumberWine : Template
     {
         public static readonly Guid ID = Guid.Parse("1a0af776-3dc1-48f7-bc0a-17c676e4f044");
 

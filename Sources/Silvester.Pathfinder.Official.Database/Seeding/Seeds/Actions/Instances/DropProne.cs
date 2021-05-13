@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
 {
-    public class DropProne : AbstractActionTemplate
+    public class DropProne : Template
     {
         public static readonly Guid ID = Guid.Parse("e5d48006-5153-4ebf-a71e-401cc0bc3d4a");
 

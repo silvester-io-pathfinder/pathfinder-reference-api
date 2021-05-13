@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Hobgoblin : AbstractTraitTemplate
+    public class Hobgoblin : Template
     {
         public static readonly Guid ID = Guid.Parse("4d39fd41-7d6f-4032-95e6-13c346e3b55a");
 

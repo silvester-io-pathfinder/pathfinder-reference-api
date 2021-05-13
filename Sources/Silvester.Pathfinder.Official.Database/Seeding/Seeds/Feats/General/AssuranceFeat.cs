@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class AssuranceFeat : AbstractFeatTemplate
+    public class AssuranceFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("e4c0f632-f086-40f7-81c4-2d54f1bcb5b9");
 

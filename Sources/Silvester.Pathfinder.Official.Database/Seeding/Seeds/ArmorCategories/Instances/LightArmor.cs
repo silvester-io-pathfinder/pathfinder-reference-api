@@ -4,7 +4,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorCategories.Instances
 {
-    public class LightArmor : AbstractArmorGroupTemplate
+    public class LightArmor : Template
     {
         public static readonly Guid ID = Guid.Parse("28f6b905-0c5e-4cc0-8164-8e623fdfb367");
 

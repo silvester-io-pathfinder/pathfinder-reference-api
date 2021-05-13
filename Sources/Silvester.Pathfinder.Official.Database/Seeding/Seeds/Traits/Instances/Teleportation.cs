@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Teleportation : AbstractTraitTemplate
+    public class Teleportation : Template
     {
         public static readonly Guid ID = Guid.Parse("693f3b70-37e7-4da0-8da7-4d865c82add2");
 

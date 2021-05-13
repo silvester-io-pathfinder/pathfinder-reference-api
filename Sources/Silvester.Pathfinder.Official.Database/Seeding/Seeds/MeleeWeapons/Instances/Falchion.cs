@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class Falchion : AbstractMeleeWeaponTemplate
+    public class Falchion : Template
     {
         public static readonly Guid ID = Guid.Parse("ea69a9bc-a39b-4a43-90fc-c27ee0f776fd");
 

@@ -1,11 +1,12 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class CatFallFeat : AbstractFeatTemplate
+    public class CatFallFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("9c848549-edaa-49b9-aa64-fcea1ccbc966");
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Races.Instances
 {
-    public class Kobold : AbstractRaceTemplate
+    public class Kobold : Template
     {
         public static readonly Guid ID = Guid.Parse("a6f1c39a-feb8-4f62-95ce-1b5ffabbbbbf");
 

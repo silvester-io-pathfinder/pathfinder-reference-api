@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
-    public class ScarletLeprosy : AbstractDiseaseTemplate
+    public class ScarletLeprosy : Template
     {
         public static readonly Guid ID = Guid.Parse("e2848bfd-24f3-4512-b106-d7112316b282");
 

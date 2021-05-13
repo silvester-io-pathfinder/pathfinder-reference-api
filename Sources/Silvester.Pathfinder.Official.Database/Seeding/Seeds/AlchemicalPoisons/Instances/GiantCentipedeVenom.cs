@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class GiantCentipedeVenom : AbstractAlchemicalPoisonTemplate
+    public class GiantCentipedeVenom : Template
     {
         public static readonly Guid ID = Guid.Parse("acc877c9-ea44-4977-b0da-6bf6ec70922a");
 

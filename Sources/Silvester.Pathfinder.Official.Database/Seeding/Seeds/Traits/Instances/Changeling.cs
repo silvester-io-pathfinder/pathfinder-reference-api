@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Changeling : AbstractTraitTemplate
+    public class Changeling : Template
     {
         public static readonly Guid ID = Guid.Parse("ea2796f7-7b9f-4bb4-b756-e35d25ef18ec");
 

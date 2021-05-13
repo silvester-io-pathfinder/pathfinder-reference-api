@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class HollyAndMistletoe : AbstractAdventuringGearTemplate
+    public class HollyAndMistletoe : Template
     {
         public static readonly Guid ID = Guid.Parse("ba1e620a-1e7f-49c8-904d-52ed144470f8");
 

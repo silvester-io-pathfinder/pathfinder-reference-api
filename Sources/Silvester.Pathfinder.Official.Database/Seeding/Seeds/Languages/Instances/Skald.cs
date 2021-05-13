@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Languages.Instances
 {
-    public class Skald : AbstractLanguageTemplate
+    public class Skald : Template
     {
         public static readonly Guid ID = Guid.Parse("47f3cc11-d37c-4d58-908e-7d7f71d190ca");
 

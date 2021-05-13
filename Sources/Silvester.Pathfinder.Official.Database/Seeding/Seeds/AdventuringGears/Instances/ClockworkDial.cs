@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class ClockworkDial : AbstractAdventuringGearTemplate
+    public class ClockworkDial : Template
     {
         public static readonly Guid ID = Guid.Parse("9ed3bf9d-c04e-4e0b-8b24-cdd6ca326dc9");
 

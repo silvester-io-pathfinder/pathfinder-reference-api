@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
-    public class DarkvisionElixir : AbstractAlchemicalElixirTemplate
+    public class DarkvisionElixir : Template
     {
         public static readonly Guid ID = Guid.Parse("82b662fa-09dc-4cc6-a7e1-13085af44f63");
 

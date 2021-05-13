@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class AldoriDuelingSword : AbstractMeleeWeaponTemplate
+    public class AldoriDuelingSword : Template
     {
         public static readonly Guid ID = Guid.Parse("412f2018-c2f7-493f-b213-8fe8ca14b7ff");
 

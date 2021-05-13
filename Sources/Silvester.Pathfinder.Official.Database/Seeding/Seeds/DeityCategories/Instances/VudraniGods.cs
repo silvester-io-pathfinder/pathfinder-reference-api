@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class VudraniGods : AbstractDeityCategoryTemplate
+    public class VudraniGods : Template
     {
         public static readonly Guid ID = Guid.Parse("9071aac4-ebdd-45a5-ba88-e4af3c56d111");
 

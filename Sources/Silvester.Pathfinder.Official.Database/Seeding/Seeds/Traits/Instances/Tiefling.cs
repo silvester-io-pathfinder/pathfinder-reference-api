@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Tiefling : AbstractTraitTemplate
+    public class Tiefling : Template
     {
         public static readonly Guid ID = Guid.Parse("0d84cd27-92f4-4b56-90d6-b83aadb1b688");
 

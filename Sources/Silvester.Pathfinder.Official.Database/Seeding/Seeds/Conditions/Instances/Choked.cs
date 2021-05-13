@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
-    public class Choked : AbstractConditionTemplate
+    public class Choked : Template
     {
         public static readonly Guid ID = Guid.Parse("9c93e839-3ea9-4baa-aada-951d8fbf9807");
 

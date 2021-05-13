@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class Archdevils : AbstractDeityCategoryTemplate
+    public class Archdevils : Template
     {
         public static readonly Guid ID = Guid.Parse("dd52c19b-ce83-4e46-ae17-6560d42c8c1a");
 

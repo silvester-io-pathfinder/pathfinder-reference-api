@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.Instances
 {
-    public class Tindertwig : AbstractAlchemicalToolTemplate
+    public class Tindertwig : Template
     {
         public static readonly Guid ID = Guid.Parse("37fff04c-1d07-49d9-ae10-02fb910e782b");
 

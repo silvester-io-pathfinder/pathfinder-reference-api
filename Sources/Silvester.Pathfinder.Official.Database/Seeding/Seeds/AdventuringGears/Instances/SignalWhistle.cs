@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class SignalWhistle : AbstractAdventuringGearTemplate
+    public class SignalWhistle : Template
     {
         public static readonly Guid ID = Guid.Parse("6f279ee2-bc01-424a-b17e-458c8d58b303");
 

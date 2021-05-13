@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 {
-    public class SpinningBladePillar : AbstractHazardTemplate
+    public class SpinningBladePillar : Template
     {
         public static readonly Guid ID = Guid.Parse("e417fa19-f7e3-4372-988e-8e2ce524e804");
 

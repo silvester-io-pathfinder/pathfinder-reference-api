@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DivineFonts.Instances
 {
-    public class Heal : AbstractDivineFontTemplate
+    public class Heal : Template
     {
         public static readonly Guid ID = Guid.Parse("90698ae0-eb7f-49f2-b485-d7a1f9baf653");
 

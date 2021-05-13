@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs.Instances
 {
-    public class AcidFlask : AbstractAlchemicalBombTemplate
+    public class AcidFlask : Template
     {
         public static readonly Guid ID = Guid.Parse("05e7fbc0-da5c-4194-bd5a-daa6b05ba421");
 

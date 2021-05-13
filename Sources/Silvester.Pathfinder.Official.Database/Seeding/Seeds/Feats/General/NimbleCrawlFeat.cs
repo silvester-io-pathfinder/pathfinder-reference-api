@@ -1,11 +1,12 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class NimbleCrawlFeat : AbstractFeatTemplate
+    public class NimbleCrawlFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("df3e0135-e1de-4b1f-a580-19f521c5f328");
 

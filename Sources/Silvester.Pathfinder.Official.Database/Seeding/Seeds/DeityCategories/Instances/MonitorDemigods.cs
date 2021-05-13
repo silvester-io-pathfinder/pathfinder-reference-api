@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class MonitorDemigods : AbstractDeityCategoryTemplate
+    public class MonitorDemigods : Template
     {
         public static readonly Guid ID = Guid.Parse("45bda584-ba71-45c5-a91d-a3e9e07ee0a3");
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
-    public class FlyPox : AbstractDiseaseTemplate
+    public class FlyPox : Template
     {
         public static readonly Guid ID = Guid.Parse("13952f0f-9ded-47eb-880c-415028b67700");
 

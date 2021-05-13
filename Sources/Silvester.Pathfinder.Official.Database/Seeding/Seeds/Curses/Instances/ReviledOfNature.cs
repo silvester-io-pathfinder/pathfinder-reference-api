@@ -10,7 +10,7 @@ using Curse = Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instan
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Curses.Instances
 {
-    public class ReviledOfNature : AbstractCurseTemplate
+    public class ReviledOfNature : Template
     {
         public static readonly Guid ID = Guid.Parse("7df1d5bf-f713-4416-a429-aaf001da62c9");
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.Instances
 {
-    public class HarrowCarryingCase : AbstractAdventuringGearTemplate
+    public class HarrowCarryingCase : Template
     {
         public static readonly Guid ID = Guid.Parse("0f0bf997-7653-4941-af5f-375d4f5786a3");
 

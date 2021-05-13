@@ -4,7 +4,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Potencies.Instances
 {
-    public class Moderate : AbstractPotencyTemplate
+    public class Moderate : Template
     {
         public static readonly Guid ID = Guid.Parse("de779bc7-3125-409a-82bb-49e68820101a");
 

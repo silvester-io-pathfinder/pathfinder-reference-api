@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
-    public class BravosBrew : AbstractAlchemicalElixirTemplate
+    public class BravosBrew : Template
     {
         public static readonly Guid ID = Guid.Parse("8d0d85f9-d1bf-49c2-ab32-d6caa627de83");
 

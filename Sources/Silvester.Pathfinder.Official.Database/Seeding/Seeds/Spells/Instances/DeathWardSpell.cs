@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class DeathWardSpell : AbstractSpellTemplate
+    public class DeathWardSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("3c902d87-38ff-4aad-acb3-266811986252");
 

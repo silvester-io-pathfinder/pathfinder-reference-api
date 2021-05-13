@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
-    public class HallucinationPowderTrap : AbstractHazardTemplate
+    public class HallucinationPowderTrap : Template
     {
         public static readonly Guid ID = Guid.Parse("cb9ff968-3115-412d-8f69-86b73d9a20c9");
 

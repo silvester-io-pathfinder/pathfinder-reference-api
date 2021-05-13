@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Languages.Instances
 {
-    public class Tien : AbstractLanguageTemplate
+    public class Tien : Template
     {
         public static readonly Guid ID = Guid.Parse("a025c8bf-03d7-44cf-8571-444a80799ab6");
 

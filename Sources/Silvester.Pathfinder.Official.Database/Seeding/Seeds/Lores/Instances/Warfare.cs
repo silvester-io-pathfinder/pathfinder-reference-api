@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Lores.Instances
 {
-    public class Warfare : AbstractLoreTemplate
+    public class Warfare : Lores.Template
     {
         public static readonly Guid ID = Guid.Parse("2b728d17-8d3c-42fc-aa53-08e5d73debd9");
 

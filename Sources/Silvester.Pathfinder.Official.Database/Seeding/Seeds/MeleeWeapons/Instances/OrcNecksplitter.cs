@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Instances
 {
-    public class OrcNecksplitter : AbstractMeleeWeaponTemplate
+    public class OrcNecksplitter : Template
     {
         public static readonly Guid ID = Guid.Parse("bb3d9d98-06cc-4e04-aedc-bcff42e9389b");
 

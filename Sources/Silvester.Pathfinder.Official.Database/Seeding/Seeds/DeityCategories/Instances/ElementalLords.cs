@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances
 {
-    public class ElementalLords : AbstractDeityCategoryTemplate
+    public class ElementalLords : Template
     {
         public static readonly Guid ID = Guid.Parse("88b9adbd-19a6-43ae-8086-01688c9c84b2");
 

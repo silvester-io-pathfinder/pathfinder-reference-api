@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Timeless : AbstractTraitTemplate
+    public class Timeless : Template
     {
         public static readonly Guid ID = Guid.Parse("0a3a3730-eb95-4601-ac6e-c76caca8909d");
 

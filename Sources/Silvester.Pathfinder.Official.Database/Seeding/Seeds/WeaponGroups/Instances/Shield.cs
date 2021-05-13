@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Instances
 {
-    public class Shield : AbstractWeaponGroupTemplate
+    public class Shield : Template
     {
         public static readonly Guid ID = Guid.Parse("01553c8f-e4df-449c-8be8-cb8b30e1569d");
 

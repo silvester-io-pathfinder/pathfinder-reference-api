@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Halfling : AbstractTraitTemplate
+    public class Halfling : Template
     {
         public static readonly Guid ID = Guid.Parse("1927b1c3-5e97-426b-91e3-9618c916dfdf");
 

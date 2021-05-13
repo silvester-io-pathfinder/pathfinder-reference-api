@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
-    public class Spasming : AbstractConditionTemplate
+    public class Spasming : Template
     {
         public static readonly Guid ID = Guid.Parse("d9b38c43-deee-4d47-a5a8-ee48ab4daa2d");
 

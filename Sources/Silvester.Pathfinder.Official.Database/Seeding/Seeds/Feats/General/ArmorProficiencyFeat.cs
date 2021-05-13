@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class ArmorProficiencyFeat : AbstractFeatTemplate
+    public class ArmorProficiencyFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("384659b6-1c1c-4612-9727-2d8406c2a328");
 

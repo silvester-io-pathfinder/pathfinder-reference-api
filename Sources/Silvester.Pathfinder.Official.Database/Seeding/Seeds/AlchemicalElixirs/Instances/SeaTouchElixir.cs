@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs.Instances
 {
-    public class SeaTouchElixir : AbstractAlchemicalElixirTemplate
+    public class SeaTouchElixir : Template
     {
         public static readonly Guid ID = Guid.Parse("ceaaac90-8340-4e2a-aa97-effc5848f12d");
 

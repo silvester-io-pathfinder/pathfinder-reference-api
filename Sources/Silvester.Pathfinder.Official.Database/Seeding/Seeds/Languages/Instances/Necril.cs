@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Languages.Instances
 {
-    public class Necril : AbstractLanguageTemplate
+    public class Necril : Template
     {
         public static readonly Guid ID = Guid.Parse("3b5d9eb0-04e7-48a0-a611-32475680a811");
 

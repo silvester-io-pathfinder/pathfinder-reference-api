@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class ConfusionSpell : AbstractSpellTemplate
+    public class ConfusionSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("068fc3bd-e1ac-4069-8a29-13bd1a0b92f2");
 

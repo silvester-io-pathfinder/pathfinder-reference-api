@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class Hemlock : AbstractAlchemicalPoisonTemplate
+    public class Hemlock : Template
     {
         public static readonly Guid ID = Guid.Parse("7c923c5c-7005-4f1b-9005-5c79b289b056");
 

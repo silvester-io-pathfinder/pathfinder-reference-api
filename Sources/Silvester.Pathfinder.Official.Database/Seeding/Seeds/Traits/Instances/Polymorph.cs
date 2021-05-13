@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Polymorph : AbstractTraitTemplate
+    public class Polymorph : Template
     {
         public static readonly Guid ID = Guid.Parse("0d5ac0f8-6c22-45b2-81e6-5eb6bfcbb9e2");
 

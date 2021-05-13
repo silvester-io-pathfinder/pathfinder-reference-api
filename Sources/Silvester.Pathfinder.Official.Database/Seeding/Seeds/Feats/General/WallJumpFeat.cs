@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class WallJumpFeat : AbstractFeatTemplate
+    public class WallJumpFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("76a68ae1-d7e0-4b2a-af54-4978b06db5cb");
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases.Instances
 {
-    public class ChokingDeath : AbstractDiseaseTemplate
+    public class ChokingDeath : Template
     {
         public static readonly Guid ID = Guid.Parse("aae01797-c896-4665-9681-4caae8d37800");
 

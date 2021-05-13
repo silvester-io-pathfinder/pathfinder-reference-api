@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances
 {
-    public class Pathfinder165 : AbstractSourceTemplate
+    public class Pathfinder165 : Template
     {
         public static readonly Guid ID = Guid.Parse("de4c1dea-3ff2-444e-a7d9-7fab0cf297d8");
 

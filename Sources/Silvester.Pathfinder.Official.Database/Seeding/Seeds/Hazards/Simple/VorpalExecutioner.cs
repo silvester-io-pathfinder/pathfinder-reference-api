@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
 {
-    public class VorpalExecutioner : AbstractHazardTemplate
+    public class VorpalExecutioner : Template
     {
         public static readonly Guid ID = Guid.Parse("3594dc7a-7749-4a92-8b2c-0dbe0ece4ce0");
 

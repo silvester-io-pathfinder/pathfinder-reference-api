@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons.Instances
 {
-    public class Dart : AbstractRangedWeaponTemplate
+    public class Dart : Template
     {
         public static readonly Guid ID = Guid.Parse("97e3f8ff-014b-4f9f-9a6a-a33a0584f7b8");
 

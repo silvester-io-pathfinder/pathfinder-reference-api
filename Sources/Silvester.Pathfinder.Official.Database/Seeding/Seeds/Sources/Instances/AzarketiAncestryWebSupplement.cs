@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances
 {
-    public class AzarketiAncestryWebSupplement : AbstractSourceTemplate
+    public class AzarketiAncestryWebSupplement : Template
     {
         public static readonly Guid ID = Guid.Parse("aa26c82c-86d4-49f3-9fc9-53022c6c9ca8");
 

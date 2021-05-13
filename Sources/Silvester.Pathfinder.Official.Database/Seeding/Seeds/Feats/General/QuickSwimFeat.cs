@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class QuickSwimFeat : AbstractFeatTemplate
+    public class QuickSwimFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("eda136b0-c9e5-4b60-abd3-cc534c043a00");
 

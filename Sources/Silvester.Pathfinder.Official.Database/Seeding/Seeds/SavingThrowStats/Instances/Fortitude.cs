@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.SavingThrowStats.Instances
 {
-    public class Fortitude : AbstractSavingThrowStatTemplate
+    public class Fortitude : Template
     {
         public static readonly Guid ID = Guid.Parse("83f532a1-dad3-4dc8-b13d-77e69959444a");
 

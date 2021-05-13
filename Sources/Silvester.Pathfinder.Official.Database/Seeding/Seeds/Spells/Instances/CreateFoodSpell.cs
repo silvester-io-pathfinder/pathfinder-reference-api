@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
-    public class CreateFoodSpell : AbstractSpellTemplate
+    public class CreateFoodSpell : Template
     {
         public static readonly Guid ID = Guid.Parse("2d0fa5a4-eab0-4eca-85cb-23241e5ef814");
 

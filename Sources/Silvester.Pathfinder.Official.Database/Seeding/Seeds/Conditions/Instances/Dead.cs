@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions.Instances
 {
-    public class Dead : AbstractConditionTemplate
+    public class Dead : Template
     {
         public static readonly Guid ID = Guid.Parse("3c3ce9f5-aceb-4db8-810a-1291035cf709");
 

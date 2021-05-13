@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
 {
-    public class PowerfulLeapFeat : AbstractFeatTemplate
+    public class PowerfulLeapFeat : Template
     {
         public static readonly Guid ID = Guid.Parse("24bfd707-04bb-4464-a3ad-e1dd040c0377");
 

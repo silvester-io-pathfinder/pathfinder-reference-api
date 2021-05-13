@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons.Instances
 {
-    public class NettleweedResidue : AbstractAlchemicalPoisonTemplate
+    public class NettleweedResidue : Template
     {
         public static readonly Guid ID = Guid.Parse("427af463-394a-423e-be07-d4788fc27ec7");
 

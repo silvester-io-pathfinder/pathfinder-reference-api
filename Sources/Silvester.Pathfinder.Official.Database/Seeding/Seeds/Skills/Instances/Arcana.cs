@@ -4,7 +4,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Skills.Instances
 {
-    public class Arcana : AbstractSkillTemplate
+    public class Arcana : Template
     {
         public static readonly Guid ID = Guid.Parse("6f23369f-e91f-4472-a254-648ba3ed1850");
 

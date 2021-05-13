@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class HalfOrc : AbstractTraitTemplate
+    public class HalfOrc : Template
     {
         public static readonly Guid ID = Guid.Parse("de6ac5ab-22d1-4f10-b94d-07ea9ce22778");
 

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Olfactory : AbstractTraitTemplate
+    public class Olfactory : Template
     {
         public static readonly Guid ID = Guid.Parse("39bf6574-c7a0-4edb-b668-df36969d6b8c");
 

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools.Instances
 {
-    public class SnakeOil : AbstractAlchemicalToolTemplate
+    public class SnakeOil : Template
     {
         public static readonly Guid ID = Guid.Parse("fe623283-bc94-42a6-9a63-05fe74c06ab5");
 
