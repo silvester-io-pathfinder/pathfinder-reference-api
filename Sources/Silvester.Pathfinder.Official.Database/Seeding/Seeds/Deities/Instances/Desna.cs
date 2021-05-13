@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Desna : AbstractDeityTemplate
+    public class Desna : Template
     {
         public static readonly Guid ID = Guid.Parse("8c8ec43f-d34f-4f82-806f-8c5c2db099c4");
 

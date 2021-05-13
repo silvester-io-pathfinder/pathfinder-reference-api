@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Urgathoa : AbstractDeityTemplate
+    public class Urgathoa : Template
     {
         public static readonly Guid ID = Guid.Parse("00121d0e-af82-4326-9bfb-90436a71b5b8");
 

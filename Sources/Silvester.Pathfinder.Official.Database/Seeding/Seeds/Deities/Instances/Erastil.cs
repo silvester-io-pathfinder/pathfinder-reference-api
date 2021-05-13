@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Erastil : AbstractDeityTemplate
+    public class Erastil : Template
     {
         public static readonly Guid ID = Guid.Parse("fb7a9b85-7e2f-4c85-84e2-1b5fd70f9e63");
 

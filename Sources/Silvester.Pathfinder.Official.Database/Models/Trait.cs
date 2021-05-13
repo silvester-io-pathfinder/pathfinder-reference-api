@@ -56,5 +56,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<PreciousMaterialShield> PreciousMaterialShields { get; set; } = new List<PreciousMaterialShield>();
 
         public ICollection<PreciousMaterialWeapon> PreciousMaterialWeapons { get; set; } = new List<PreciousMaterialWeapon>();
+
+        public ICollection<ArmorPropertyRune> ArmorPropertyRunes { get; set; } = new List<ArmorPropertyRune>();
     }
 }

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Sarenrae : AbstractDeityTemplate
+    public class Sarenrae : Template
     {
         public static readonly Guid ID = Guid.Parse("6e4564c3-6765-47d3-bf6a-e707d41388c2");
 

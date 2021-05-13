@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Gorum : AbstractDeityTemplate
+    public class Gorum : Template
     {
         public static readonly Guid ID = Guid.Parse("d274f8e2-3806-434d-99d1-6f3002baf280");
 

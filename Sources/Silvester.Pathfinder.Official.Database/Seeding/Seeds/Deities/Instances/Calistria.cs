@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Calistria : AbstractDeityTemplate
+    public class Calistria : Template
     {
         public static readonly Guid ID = Guid.Parse("39e8ec90-6039-446c-969e-0957dc64cc6e");
 

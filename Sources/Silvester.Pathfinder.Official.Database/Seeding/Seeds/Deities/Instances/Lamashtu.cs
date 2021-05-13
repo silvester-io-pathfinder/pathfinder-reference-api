@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Lamashtu : AbstractDeityTemplate
+    public class Lamashtu : Template
     {
         public static readonly Guid ID = Guid.Parse("26824bcf-2fcd-46d3-8c59-9c48233f7780");
 

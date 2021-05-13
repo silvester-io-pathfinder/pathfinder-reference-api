@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Asmodeus : AbstractDeityTemplate
+    public class Asmodeus : Template
     {
         public static readonly Guid ID = Guid.Parse("f2906fe1-abeb-4b90-ac82-5578c5d87b6b");
 

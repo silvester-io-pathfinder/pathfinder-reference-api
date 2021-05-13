@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Shelyn : AbstractDeityTemplate
+    public class Shelyn : Template
     {
         public static readonly Guid ID = Guid.Parse("b4a8671f-6c2a-4e02-911d-f9152132ef83");
 

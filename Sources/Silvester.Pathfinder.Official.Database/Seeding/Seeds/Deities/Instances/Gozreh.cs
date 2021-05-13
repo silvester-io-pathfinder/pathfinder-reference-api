@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Gozreh : AbstractDeityTemplate
+    public class Gozreh : Template
     {
         public static readonly Guid ID = Guid.Parse("170aa0d1-a909-4a4c-af5e-7177bb1ce6bb");
 

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class CaidenCailean : AbstractDeityTemplate
+    public class CaidenCailean : Template
     {
         public static readonly Guid ID = Guid.Parse("aa1df0bf-575b-45c3-b9fb-70caa7eb9d1e");
 

@@ -1,28 +1,49 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities
 {
-    public class Template : EntityConfigurator<Deity>
+    public abstract class Template : EntityTemplate<Deity>
     {
-        public override void Configure(ModelBuilder builder)
+        protected override Deity GetEntity(ModelBuilder builder)
         {
-            base.Configure(builder);
+            Deity deity = GetDeity();
 
-            builder
-                .Entity<Deity>()
-                .HasOne(e => e.Alignment)
-                .WithMany(e => e.Deities);
+            foreach(Guid followerAlignmentId in GetFollowerAlignments())
+            {
+                builder.HasJoinData<Alignment, Deity>((followerAlignmentId, deity.Id));
+            }
 
-            builder
-                .Entity<Deity>()
-                .HasMany(e => e.FollowerAlignments)
-                .WithMany(e => e.DeityFollowerAlignments);
+            foreach (Guid divineFontId in GetDivineFonts())
+            {
+                builder.HasJoinData<DivineFont, Deity>((divineFontId, deity.Id));
+            }
+
+            foreach (Guid domainId in GetDomains())
+            {
+                builder.HasJoinData<Domain, Deity>((domainId, deity.Id));
+            }
+
+            foreach (Guid skillId in GetDivineSkills())
+            {
+                builder.HasJoinData<Skill, Deity>((skillId, deity.Id));
+            }
+
+            SourcePage sourcePage = GetSourcePage();
+            deity.SourcePageId = sourcePage.Id;
+            builder.AddData(sourcePage);
+
+            return deity;
         }
+
+        protected abstract Deity GetDeity();
+        protected abstract SourcePage GetSourcePage();
+        protected abstract IEnumerable<Guid> GetFollowerAlignments();
+        protected abstract IEnumerable<Guid> GetDivineFonts();
+        protected abstract IEnumerable<Guid> GetDivineSkills();
+        protected abstract IEnumerable<Guid> GetDomains();
     }
 }

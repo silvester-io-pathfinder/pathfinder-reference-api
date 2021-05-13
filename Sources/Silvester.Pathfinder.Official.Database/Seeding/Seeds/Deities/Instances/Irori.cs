@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Irori : AbstractDeityTemplate
+    public class Irori : Template
     {
         public static readonly Guid ID = Guid.Parse("0415c874-8745-4a38-8e17-41b1e5c8d663");
 

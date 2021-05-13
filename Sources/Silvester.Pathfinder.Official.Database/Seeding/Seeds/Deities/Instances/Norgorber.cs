@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Norgorber : AbstractDeityTemplate
+    public class Norgorber : Template
     {
         public static readonly Guid ID = Guid.Parse("08d4de0c-6e87-43a9-ac23-abeab99e73e4");
 

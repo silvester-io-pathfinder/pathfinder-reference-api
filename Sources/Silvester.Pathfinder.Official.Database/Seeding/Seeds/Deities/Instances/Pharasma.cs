@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Pharasma : AbstractDeityTemplate
+    public class Pharasma : Template
     {
         public static readonly Guid ID = Guid.Parse("999199bf-2d79-498b-a631-03de699011d4");
 

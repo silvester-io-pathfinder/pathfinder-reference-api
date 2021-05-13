@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Nethys : AbstractDeityTemplate
+    public class Nethys : Template
     {
         public static readonly Guid ID = Guid.Parse("133e4a71-2a14-4f2e-bd41-d6ee0bb7b598");
 

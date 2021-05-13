@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class ZonKuthon : AbstractDeityTemplate
+    public class ZonKuthon : Template
     {
         public static readonly Guid ID = Guid.Parse("67d15e7b-a6b4-4907-8ce0-9253a8cf3c2e");
 

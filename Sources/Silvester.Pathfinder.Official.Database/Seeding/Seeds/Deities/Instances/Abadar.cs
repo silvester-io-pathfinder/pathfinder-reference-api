@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Abadar : AbstractDeityTemplate
+    public class Abadar : Template
     {
         public static readonly Guid ID = Guid.Parse("2af1788b-3dd5-404b-a3d6-16530295425a");
 

@@ -1811,6 +1811,183 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("ArmorPropertyRuneTrait", b =>
+                {
+                    b.Property<Guid>("ArmorPropertyRunesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("ArmorPropertyRunesId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("ArmorPropertyRuneTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("aaaa1bfc-1a6f-4a5a-b2e7-3b9c779aa014"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("aaaa1bfc-1a6f-4a5a-b2e7-3b9c779aa014"),
+                            TraitsId = new Guid("ae31ec44-8633-4a5c-94f3-1f5d2ed553dd")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("aaaa1bfc-1a6f-4a5a-b2e7-3b9c779aa014"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("d21ec6e1-b491-49e8-ba45-64abfdce9da8"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("d21ec6e1-b491-49e8-ba45-64abfdce9da8"),
+                            TraitsId = new Guid("029497fa-5a49-4a89-bfc3-68a2e57f765a")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("76e3db46-6f8a-4a56-9459-58d0b14e2059"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("76e3db46-6f8a-4a56-9459-58d0b14e2059"),
+                            TraitsId = new Guid("ae31ec44-8633-4a5c-94f3-1f5d2ed553dd")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("010de771-6941-4a89-a142-c369c9fbdbd2"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("010de771-6941-4a89-a142-c369c9fbdbd2"),
+                            TraitsId = new Guid("029497fa-5a49-4a89-bfc3-68a2e57f765a")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("0b5a1049-2565-40ac-8364-1a040cc62375"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("0b5a1049-2565-40ac-8364-1a040cc62375"),
+                            TraitsId = new Guid("4ec8b734-6099-4b0e-97cc-2bf987a8bcbe")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("a33f6f32-1aa6-4d14-a352-4ef60956d7d0"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("a33f6f32-1aa6-4d14-a352-4ef60956d7d0"),
+                            TraitsId = new Guid("4ec8b734-6099-4b0e-97cc-2bf987a8bcbe")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("2dcf90ee-e52e-4e69-a809-6790cf49a622"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("2dcf90ee-e52e-4e69-a809-6790cf49a622"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("1add97fa-232b-4aed-a710-d41d42352ae1"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("1add97fa-232b-4aed-a710-d41d42352ae1"),
+                            TraitsId = new Guid("029497fa-5a49-4a89-bfc3-68a2e57f765a")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("1add97fa-232b-4aed-a710-d41d42352ae1"),
+                            TraitsId = new Guid("3ecd4d1e-ccc1-4620-b223-63aa9031fe5a")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("1add97fa-232b-4aed-a710-d41d42352ae1"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("1add97fa-232b-4aed-a710-d41d42352ae1"),
+                            TraitsId = new Guid("2ada1501-9857-49e8-ac4f-d97750797df4")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("5bbaaa06-0e1b-4418-acd3-8b16548ac945"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("5bbaaa06-0e1b-4418-acd3-8b16548ac945"),
+                            TraitsId = new Guid("ae31ec44-8633-4a5c-94f3-1f5d2ed553dd")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("a134a0b4-5255-41c8-8a0d-179e943a4ef4"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("a134a0b4-5255-41c8-8a0d-179e943a4ef4"),
+                            TraitsId = new Guid("4ec8b734-6099-4b0e-97cc-2bf987a8bcbe")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("a134a0b4-5255-41c8-8a0d-179e943a4ef4"),
+                            TraitsId = new Guid("029497fa-5a49-4a89-bfc3-68a2e57f765a")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("a134a0b4-5255-41c8-8a0d-179e943a4ef4"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("42cd3663-a683-4549-90f5-8d5d24195060"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("42cd3663-a683-4549-90f5-8d5d24195060"),
+                            TraitsId = new Guid("ae31ec44-8633-4a5c-94f3-1f5d2ed553dd")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("a3e92834-573a-417f-9ffa-710c6ac73bff"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("a3e92834-573a-417f-9ffa-710c6ac73bff"),
+                            TraitsId = new Guid("029497fa-5a49-4a89-bfc3-68a2e57f765a")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("8adaa470-41e9-4308-bd26-d8d3188d02f4"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            ArmorPropertyRunesId = new Guid("8adaa470-41e9-4308-bd26-d8d3188d02f4"),
+                            TraitsId = new Guid("ae31ec44-8633-4a5c-94f3-1f5d2ed553dd")
+                        });
+                });
+
             modelBuilder.Entity("ArmorTrait", b =>
                 {
                     b.Property<Guid>("ArmorsId")
@@ -14403,6 +14580,276 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Name = "Plate",
                             SourcePageId = new Guid("49778592-4637-4573-ae09-f433586c87d3")
                         });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRune", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CraftingRequirements")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("RarityId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RarityId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("ArmorPropertyRunes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("aaaa1bfc-1a6f-4a5a-b2e7-3b9c779aa014"),
+                            ActionId = new Guid("750c0b06-8779-4b81-a4f2-0c00e93afe0e"),
+                            CraftingRequirements = "Supply one casting of dispel magic.",
+                            Name = "Antimagic",
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("336109a6-8dc4-47ec-921a-188bb51582e3")
+                        },
+                        new
+                        {
+                            Id = new Guid("d21ec6e1-b491-49e8-ba45-64abfdce9da8"),
+                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Energy-Resistant",
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("bff406f0-ce06-4661-b2a1-df203edd2f19")
+                        },
+                        new
+                        {
+                            Id = new Guid("76e3db46-6f8a-4a56-9459-58d0b14e2059"),
+                            ActionId = new Guid("13ef1f89-bd03-400e-960f-2cf2ffc951d5"),
+                            CraftingRequirements = "Supply a casting of 9th-level ethereal jaunt.",
+                            Name = "Ethereal",
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("c1422800-1f08-4c43-99cd-c5819ade517c")
+                        },
+                        new
+                        {
+                            Id = new Guid("010de771-6941-4a89-a142-c369c9fbdbd2"),
+                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Fortification",
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("42a06e50-9396-42ee-a2b1-85ab6a2b25e1")
+                        },
+                        new
+                        {
+                            Id = new Guid("0b5a1049-2565-40ac-8364-1a040cc62375"),
+                            ActionId = new Guid("8fa28249-b9cf-45b0-a5c9-fc721aa278df"),
+                            Name = "Glamered",
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("5f506995-19fe-46d7-94ef-5ca38f03972c")
+                        },
+                        new
+                        {
+                            Id = new Guid("a33f6f32-1aa6-4d14-a352-4ef60956d7d0"),
+                            ActionId = new Guid("d8bf69be-6855-44de-b527-917446bee16a"),
+                            Name = "Invisibility",
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("aa3b80f7-0a69-4b1d-ab02-ab4cfc0a04e9")
+                        },
+                        new
+                        {
+                            Id = new Guid("2dcf90ee-e52e-4e69-a809-6790cf49a622"),
+                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Ready",
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("08f3aeac-81ce-4aa5-a0cb-47b5535a7619")
+                        },
+                        new
+                        {
+                            Id = new Guid("1add97fa-232b-4aed-a710-d41d42352ae1"),
+                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Rock-Braced",
+                            RarityId = new Guid("863d10bd-583b-41e9-ae52-2d94cf0a2bff"),
+                            SourcePageId = new Guid("3541d89b-6928-49a6-902e-f05be310dcb3")
+                        },
+                        new
+                        {
+                            Id = new Guid("5bbaaa06-0e1b-4418-acd3-8b16548ac945"),
+                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Shadow",
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("4d3bb1bb-092d-4e4e-8ef7-3bcb435cff87")
+                        },
+                        new
+                        {
+                            Id = new Guid("a134a0b4-5255-41c8-8a0d-179e943a4ef4"),
+                            ActionId = new Guid("f5538309-abd0-4e0d-9464-4ef93a0de3ff"),
+                            Name = "Sinister Knight",
+                            RarityId = new Guid("5bf3f422-ef4f-4b99-a129-4875ffdfcbd0"),
+                            SourcePageId = new Guid("1f972be2-cbf4-4985-ac07-f0f487c4d984")
+                        },
+                        new
+                        {
+                            Id = new Guid("42cd3663-a683-4549-90f5-8d5d24195060"),
+                            ActionId = new Guid("7f1657f4-a464-4c34-b89e-bcec1dd2fe1f"),
+                            Name = "Slick",
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("29dc57f2-7c63-4b53-ad42-4fe7abced5c9")
+                        },
+                        new
+                        {
+                            Id = new Guid("a3e92834-573a-417f-9ffa-710c6ac73bff"),
+                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Soaring",
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("4dc7607b-00e0-400d-bf86-5acb21368509")
+                        },
+                        new
+                        {
+                            Id = new Guid("8adaa470-41e9-4308-bd26-d8d3188d02f4"),
+                            ActionId = new Guid("c3acb77d-f7f9-4724-ba3a-1a595c620e50"),
+                            Name = "Winged",
+                            RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
+                            SourcePageId = new Guid("8883e2af-50af-44ad-b20e-261a8acc0f34")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRuneAction", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionTypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Effect")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Frequency")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("RuneId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Trigger")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActionTypeId");
+
+                    b.HasIndex("RuneId")
+                        .IsUnique();
+
+                    b.ToTable("ArmorPropertyRuneAction");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("750c0b06-8779-4b81-a4f2-0c00e93afe0e"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            Effect = "The armor attempts to counteract the triggering spell with the effect of a 7th-level dispel magic spell and a counteract modifier of +26.",
+                            Frequency = "Once per day.",
+                            Name = "Command",
+                            RuneId = new Guid("aaaa1bfc-1a6f-4a5a-b2e7-3b9c779aa014"),
+                            Trigger = "A spell targets you or includes you in its area."
+                        },
+                        new
+                        {
+                            Id = new Guid("13ef1f89-bd03-400e-960f-2cf2ffc951d5"),
+                            ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
+                            Effect = "You gain the effects of an ethereal jaunt spell. This doesn’t require concentration and lasts for 10 minutes or until you choose to return to material form as a free action.",
+                            Frequency = "Once per day.",
+                            Name = "Command",
+                            RuneId = new Guid("76e3db46-6f8a-4a56-9459-58d0b14e2059")
+                        },
+                        new
+                        {
+                            Id = new Guid("8fa28249-b9cf-45b0-a5c9-fc721aa278df"),
+                            ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
+                            Effect = "You change the shape and appearance of this armor to appear as ordinary or fine clothes of your imagining. The armor’s statistics do not change. Only a creature that is benefiting from true seeing or a similar effect can attempt to disbelieve this illusion, with a DC of 25.",
+                            Name = "Envision",
+                            RuneId = new Guid("0b5a1049-2565-40ac-8364-1a040cc62375")
+                        },
+                        new
+                        {
+                            Id = new Guid("d8bf69be-6855-44de-b527-917446bee16a"),
+                            ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
+                            Effect = "Whispering the command word, you become invisible for 1 minute, gaining the effects of a 2nd-level invisibility spell.",
+                            Frequency = "Depends on rune potency.",
+                            Name = "Command",
+                            RuneId = new Guid("a33f6f32-1aa6-4d14-a352-4ef60956d7d0")
+                        },
+                        new
+                        {
+                            Id = new Guid("f5538309-abd0-4e0d-9464-4ef93a0de3ff"),
+                            ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
+                            Effect = "With a thought, the wearer activates a disguise. While the sinister knight armor’s disguise is active, any identifying insignia or aesthetic of the armor is replaced by generic malevolent aesthetics such as spikes or demonic faces. While in the disguise, the wearer is always considered to be taking precautions against lifesense, and even a creature that successfully notices the wearer with its lifesense mistakes the wearer for an undead unless it critically succeeds at its Perception check or the wearer critically fails a Deception or Stealth check. Finally, while in the disguise, the rune attempts to counteract any effects that would reveal your alignment; on a successful counteract check, rather than negate the effect, the rune causes the effect to perceive your alignment as evil (maintaining any lawful or chaotic component of your alignment).",
+                            Name = "Envision",
+                            RuneId = new Guid("a134a0b4-5255-41c8-8a0d-179e943a4ef4")
+                        },
+                        new
+                        {
+                            Id = new Guid("7f1657f4-a464-4c34-b89e-bcec1dd2fe1f"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            Effect = "You cast feather fall on the triggering creature.",
+                            Name = "Command",
+                            RuneId = new Guid("42cd3663-a683-4549-90f5-8d5d24195060"),
+                            Trigger = "You or a creature within 60 feet of you is falling."
+                        },
+                        new
+                        {
+                            Id = new Guid("c3acb77d-f7f9-4724-ba3a-1a595c620e50"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            Effect = "You trace the rune on the front of the breastplate and the armor's ephemeral wings grow tangible, granting you a fly Speed of 25 feet or your land Speed, whichever is slower.",
+                            Frequency = "Once per hour.",
+                            Name = "Command and Interact",
+                            RuneId = new Guid("8adaa470-41e9-4308-bd26-d8d3188d02f4")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRunePotencyBinding", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Benefits")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("PotencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PotencyId");
+
+                    b.ToTable("ArmorPropertyRunePotencyBinding");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.AttackType", b =>
@@ -29005,6 +29452,84 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("336109a6-8dc4-47ec-921a-188bb51582e3"),
+                            Page = 582,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("bff406f0-ce06-4661-b2a1-df203edd2f19"),
+                            Page = 582,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c1422800-1f08-4c43-99cd-c5819ade517c"),
+                            Page = 583,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("42a06e50-9396-42ee-a2b1-85ab6a2b25e1"),
+                            Page = 582,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("5f506995-19fe-46d7-94ef-5ca38f03972c"),
+                            Page = 583,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("aa3b80f7-0a69-4b1d-ab02-ab4cfc0a04e9"),
+                            Page = 583,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("08f3aeac-81ce-4aa5-a0cb-47b5535a7619"),
+                            Page = 262,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("3541d89b-6928-49a6-902e-f05be310dcb3"),
+                            Page = 75,
+                            SourceId = new Guid("8d75e2ed-fc45-457b-aa51-53c42e02312a")
+                        },
+                        new
+                        {
+                            Id = new Guid("4d3bb1bb-092d-4e4e-8ef7-3bcb435cff87"),
+                            Page = 583,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1f972be2-cbf4-4985-ac07-f0f487c4d984"),
+                            Page = 92,
+                            SourceId = new Guid("8026612e-b2dc-42d2-8844-bb0bc63c0249")
+                        },
+                        new
+                        {
+                            Id = new Guid("29dc57f2-7c63-4b53-ad42-4fe7abced5c9"),
+                            Page = 583,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("4dc7607b-00e0-400d-bf86-5acb21368509"),
+                            Page = 139,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("8883e2af-50af-44ad-b20e-261a8acc0f34"),
+                            Page = 265,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
                             Id = new Guid("f743a373-99c3-4e37-973a-cd274745c865"),
                             Page = 618,
                             SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
@@ -36004,6 +36529,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("AmmunitionId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("ArmorPropertyRunesId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid?>("ArmorsId")
                         .HasColumnType("uuid");
 
@@ -36075,6 +36603,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasIndex("AlchemicalToolsId");
 
                     b.HasIndex("AmmunitionId");
+
+                    b.HasIndex("ArmorPropertyRunesId");
 
                     b.HasIndex("ArmorsId");
 
@@ -45222,6 +45752,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ArmorPropertyRuneTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRune", null)
+                        .WithMany()
+                        .HasForeignKey("ArmorPropertyRunesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("ArmorTrait", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Armor", null)
@@ -48057,6 +48602,205 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
 
                     b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRune", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Rarity", "Rarity")
+                        .WithMany()
+                        .HasForeignKey("RarityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("ArmorPropertyRunes_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("8f63efb2-6386-411c-999e-d0344722aae9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("aaaa1bfc-1a6f-4a5a-b2e7-3b9c779aa014"),
+                                    Text = "This intricate rune displaces spell energy.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("575329d6-6e3b-4bf0-af7c-a2f4f2598a35"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d21ec6e1-b491-49e8-ba45-64abfdce9da8"),
+                                    Text = "These symbols convey protective forces from the Elemental Planes. You gain resistance 5 to acid, cold, electricity, or fire. The crafter chooses the damage type when creating the rune. Multiple energy-resistant runes can be etched onto a suit of armor; rather than using only the highest-level effect, each must provide resistance to a different damage type. For instance, a +2 acid-resistant greater fire-resistant breastplate would give you acid resistance 5 and fire resistance 10.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("aa6891cb-39ce-4647-b7f9-c7252ab598a1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("76e3db46-6f8a-4a56-9459-58d0b14e2059"),
+                                    Text = "An ethereal rune replicates armor on the Ethereal Plane.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0e0f934f-3816-48c9-8ece-1e2da97d197a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("010de771-6941-4a89-a142-c369c9fbdbd2"),
+                                    Text = "A fortification rune wards against the most deadly attacks.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bfa5187b-92f9-4342-b5cd-9a3f4e0f6fd0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0b5a1049-2565-40ac-8364-1a040cc62375"),
+                                    Text = "This armor can be disguised with a mere thought.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bc6af7f1-4d9c-4333-948b-c1fbf8fef334"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a33f6f32-1aa6-4d14-a352-4ef60956d7d0"),
+                                    Text = "Light seems to partially penetrate this armor.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9b5141e5-b893-4888-9173-33d15860de6c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2dcf90ee-e52e-4e69-a809-6790cf49a622"),
+                                    Text = "A ready rune draws component pieces of a suit of armor toward one another, making it easier and faster to get into.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d27ca5bd-e42f-4d6b-8432-838373be0fa3"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1add97fa-232b-4aed-a710-d41d42352ae1"),
+                                    Text = "Rock-braced armor makes you as hard to move as a boulder. ",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f9c96673-ed3c-491c-96e1-52de805aefdc"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5bbaaa06-0e1b-4418-acd3-8b16548ac945"),
+                                    Text = "Armor with this rune becomes hazy black.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("778a70f9-da88-4674-aa15-250c3d5da5c2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a134a0b4-5255-41c8-8a0d-179e943a4ef4"),
+                                    Text = "Sinister knight armor shrouds the wearer’s identity in secrecy, allowing Crimson Reclaimers to pass among foes without being immediately unmasked.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("429f0b0a-7865-4ed3-8236-0ad1c5e4f673"),
+                                    Order = 1,
+                                    OwnerId = new Guid("a134a0b4-5255-41c8-8a0d-179e943a4ef4"),
+                                    Text = "The wearer can Dismiss the disguise, and if the wearer’s armor is removed, the disguise deactivates automatically.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("425f1a21-6e3b-4422-8ba5-a4011936a40f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("42cd3663-a683-4549-90f5-8d5d24195060"),
+                                    Text = "This property makes armor slippery, as though it were coated with a thin film of oil.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("cdcf5422-2d5d-4724-a17b-f09f6094bc65"),
+                                    Order = 0,
+                                    OwnerId = new Guid("a3e92834-573a-417f-9ffa-710c6ac73bff"),
+                                    Text = "A set of soaring armor helps you fly faster and protects you and nearby allies from falling.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6036a2f4-03fd-44a3-9a76-ece5df9fe42a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8adaa470-41e9-4308-bd26-d8d3188d02f4"),
+                                    Text = "This rune is a swirling glyph on the front of the armor. A large pair of transparent, ephemeral wings floats out from the back of the armor.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Details");
+
+                    b.Navigation("Rarity");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRuneAction", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ActionType", "ActionType")
+                        .WithMany()
+                        .HasForeignKey("ActionTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRune", "Rune")
+                        .WithOne("Action")
+                        .HasForeignKey("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRuneAction", "RuneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ActionType");
+
+                    b.Navigation("Rune");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRunePotencyBinding", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Potency", "Potency")
+                        .WithMany()
+                        .HasForeignKey("PotencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Potency");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
@@ -54785,6 +55529,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany("Traits")
                         .HasForeignKey("AmmunitionId");
 
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRune", null)
+                        .WithMany()
+                        .HasForeignKey("ArmorPropertyRunesId");
+
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Armor", null)
                         .WithMany()
                         .HasForeignKey("ArmorsId");
@@ -58165,6 +58913,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorGroup", b =>
                 {
                     b.Navigation("Armors");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRune", b =>
+                {
+                    b.Navigation("Action")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>

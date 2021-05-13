@@ -30,6 +30,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<Alignment> Alignments { get; set; } = default!;
         public DbSet<Ammunition> Ammunitions { get; set; } = default!;
         public DbSet<Armor> Armors { get; set; } = default!;
+        public DbSet<ArmorPropertyRune> ArmorPropertyRunes { get; set; } = default!;
         public DbSet<ArmorCategory> ArmorGroups { get; set; } = default!;
         public DbSet<AttackType> AttackTypes { get; set; } = default!;
         public DbSet<BenefitType> BenefitTypes { get; set; } = default!;

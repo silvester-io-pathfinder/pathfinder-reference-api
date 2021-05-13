@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities.Instances
 {
-    public class Torag : AbstractDeityTemplate
+    public class Torag : Template
     {
         public static readonly Guid ID = Guid.Parse("c5e961a7-75ec-42cd-8cce-b455b7a75736");
 
