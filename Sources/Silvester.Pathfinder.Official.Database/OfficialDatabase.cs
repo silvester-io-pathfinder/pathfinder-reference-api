@@ -47,6 +47,8 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<Domain> Domains { get; set; } = default!;
         public DbSet<Feat> Feats { get; set; } = default!;
         public DbSet<FeatType> FeatTypes { get; set; } = default!;
+        public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
+        public DbSet<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = default!;
         public DbSet<Frequency> Frequencies { get; set; } = default!;
         public DbSet<HazardComplexity> HazardComplexities { get; set; } = default!;
         public DbSet<HazardImmunity> HazardImmunities { get; set; } = default!;
@@ -85,6 +87,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<Stat> Stats { get; set; } = default!;
         public DbSet<Trait> Traits { get; set; } = default!;
         public DbSet<MeleeWeapon> MeleeWeapons { get; set; } = default!;
+        public DbSet<WeaponPropertyRune> WeaponPropertyRunes { get; set; } = default!;
         public DbSet<WeaponGroup> WeaponGroups { get; set; } = default!;
         public DbSet<WeaponCategory> WeaponCategories { get; set; } = default!;
 

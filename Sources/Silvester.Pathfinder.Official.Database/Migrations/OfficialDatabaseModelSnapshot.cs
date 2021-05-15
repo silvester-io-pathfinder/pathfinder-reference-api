@@ -4546,6 +4546,43 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("FundamentalWeaponRuneTrait", b =>
+                {
+                    b.Property<Guid>("FundamentalWeaponPropertyRunesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("FundamentalWeaponPropertyRunesId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("FundamentalWeaponRuneTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            FundamentalWeaponPropertyRunesId = new Guid("907264a7-e146-493c-a8ae-33c406a25b33"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            FundamentalWeaponPropertyRunesId = new Guid("907264a7-e146-493c-a8ae-33c406a25b33"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            FundamentalWeaponPropertyRunesId = new Guid("2f974d18-6a4a-4f02-8a73-8365376152e3"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            FundamentalWeaponPropertyRunesId = new Guid("2f974d18-6a4a-4f02-8a73-8365376152e3"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        });
+                });
+
             modelBuilder.Entity("HazardActionEffectTrait", b =>
                 {
                     b.Property<Guid>("TraitsId")
@@ -19897,7 +19934,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("TraitsId");
 
-                    b.ToTable("FundamentalArmorRune");
+                    b.ToTable("FundamentalArmorRunes");
 
                     b.HasData(
                         new
@@ -20000,6 +20037,134 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Name = "Major",
                             Price = 4944000,
                             RuneId = new Guid("412582f8-84db-4344-a9cf-5d8e1208f72e")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalWeaponRune", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("FundamentalWeaponRunes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("907264a7-e146-493c-a8ae-33c406a25b33"),
+                            Name = "Weapon Potency Rune",
+                            SourcePageId = new Guid("d22db014-7b95-449a-b459-ac8db99a9ba5")
+                        },
+                        new
+                        {
+                            Id = new Guid("2f974d18-6a4a-4f02-8a73-8365376152e3"),
+                            Name = "Weapon Striking Rune",
+                            SourcePageId = new Guid("0b528556-e5c5-46e6-bfcf-8b755ab5947e")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalWeaponRuneVariant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Benefits")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("CraftingRequirements")
+                        .HasColumnType("text");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("RuneId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RuneId");
+
+                    b.ToTable("FundamentalWeaponRuneVariant");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("0e4a6126-fd04-4e86-93b4-997032016396"),
+                            Benefits = "Attack rolls with this weapon gain a +1 item bonus, and the weapon can be etched with one property rune.",
+                            ItemLevel = 2,
+                            Name = "+1",
+                            Price = 3500,
+                            RuneId = new Guid("907264a7-e146-493c-a8ae-33c406a25b33")
+                        },
+                        new
+                        {
+                            Id = new Guid("2e93ab6a-46e0-479e-a8b9-4b3a8d9e5bbf"),
+                            Benefits = "The item bonus to attack rolls is +2, and the weapon can be etched with two property runes.",
+                            ItemLevel = 10,
+                            Name = "+2",
+                            Price = 93500,
+                            RuneId = new Guid("907264a7-e146-493c-a8ae-33c406a25b33")
+                        },
+                        new
+                        {
+                            Id = new Guid("16a06450-88dd-4537-abb2-d216d13e288b"),
+                            Benefits = "The item bonus to attack rolls is +3, and the weapon can be etched with three property runes.",
+                            ItemLevel = 16,
+                            Name = "+3",
+                            Price = 893500,
+                            RuneId = new Guid("907264a7-e146-493c-a8ae-33c406a25b33")
+                        },
+                        new
+                        {
+                            Id = new Guid("9314e2b0-f97d-4b66-a1fb-2a595da495ce"),
+                            Benefits = "A striking rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to two instead of one. For instance, a +1 striking dagger would deal 2d4 damage instead of 1d4 damage.",
+                            ItemLevel = 4,
+                            Name = "Standard",
+                            Price = 6500,
+                            RuneId = new Guid("2f974d18-6a4a-4f02-8a73-8365376152e3")
+                        },
+                        new
+                        {
+                            Id = new Guid("bfb41563-5fb7-465e-9f76-b92fe512a730"),
+                            Benefits = "The weapon deals three weapon damage dice.",
+                            ItemLevel = 12,
+                            Name = "Greater",
+                            Price = 106500,
+                            RuneId = new Guid("2f974d18-6a4a-4f02-8a73-8365376152e3")
+                        },
+                        new
+                        {
+                            Id = new Guid("b610dc2b-6ce1-48b7-9c9d-23e1f2f7a4ae"),
+                            Benefits = "The weapon deals four weapon damage dice.",
+                            ItemLevel = 19,
+                            Name = "Major",
+                            Price = 3106500,
+                            RuneId = new Guid("2f974d18-6a4a-4f02-8a73-8365376152e3")
                         });
                 });
 
@@ -30319,6 +30484,18 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("d22db014-7b95-449a-b459-ac8db99a9ba5"),
+                            Page = 581,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("0b528556-e5c5-46e6-bfcf-8b755ab5947e"),
+                            Page = 581,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
                             Id = new Guid("0e1b3b3d-aa2d-4963-8bb4-3485e14be099"),
                             Page = 526,
                             SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
@@ -36904,6 +37081,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("FundamentalArmorPropertyRunesId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("FundamentalWeaponPropertyRunesId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid?>("HazardActionEffectsId")
                         .HasColumnType("uuid");
 
@@ -36984,6 +37164,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasIndex("FeatsId");
 
                     b.HasIndex("FundamentalArmorPropertyRunesId");
+
+                    b.HasIndex("FundamentalWeaponPropertyRunesId");
 
                     b.HasIndex("HazardActionEffectsId");
 
@@ -39366,7 +39548,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("TraitsId");
 
-                    b.ToTable("WeaponPropertyRune");
+                    b.ToTable("WeaponPropertyRunes");
 
                     b.HasData(
                         new
@@ -47468,6 +47650,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("FundamentalWeaponRuneTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalWeaponRune", null)
+                        .WithMany()
+                        .HasForeignKey("FundamentalWeaponPropertyRunesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("HazardActionEffectTrait", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardActionEffect", null)
@@ -52639,7 +52836,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                             b1.HasIndex("OwnerId");
 
-                            b1.ToTable("FundamentalArmorRune_Details");
+                            b1.ToTable("FundamentalArmorRunes_Details");
 
                             b1.WithOwner()
                                 .HasForeignKey("OwnerId");
@@ -52687,6 +52884,90 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorRuneVariant", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorRune", "Rune")
+                        .WithMany()
+                        .HasForeignKey("RuneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Rune");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalWeaponRune", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("FundamentalWeaponRunes_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("02e64508-1a08-461d-b94b-4ecb7a4ddbac"),
+                                    Order = 0,
+                                    OwnerId = new Guid("907264a7-e146-493c-a8ae-33c406a25b33"),
+                                    Text = "Magical enhancements make this weapon strike true.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4940b654-9d55-4d56-86b5-fca5c9f1b9ef"),
+                                    Order = 1,
+                                    OwnerId = new Guid("907264a7-e146-493c-a8ae-33c406a25b33"),
+                                    Text = "You can upgrade the weapon potency rune already etched on a weapon to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes’ Prices.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1e34371c-5e72-4bb0-ae4e-eb3ff196ff19"),
+                                    Order = 0,
+                                    OwnerId = new Guid("2f974d18-6a4a-4f02-8a73-8365376152e3"),
+                                    Text = "You can upgrade the striking rune already etched on a weapon to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes’ Prices.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Details");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalWeaponRuneVariant", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalWeaponRune", "Rune")
                         .WithMany()
                         .HasForeignKey("RuneId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -57237,6 +57518,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorRune", null)
                         .WithMany()
                         .HasForeignKey("FundamentalArmorPropertyRunesId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalWeaponRune", null)
+                        .WithMany()
+                        .HasForeignKey("FundamentalWeaponPropertyRunesId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardActionEffect", null)
                         .WithMany()
