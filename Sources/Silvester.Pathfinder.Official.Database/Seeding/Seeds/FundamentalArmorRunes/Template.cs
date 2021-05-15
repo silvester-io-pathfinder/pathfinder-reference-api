@@ -5,13 +5,13 @@ using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
-namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalArmorPropertyRunes
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalArmorRunes
 {
-    public abstract class Template : EntityTemplate<FundamentalArmorPropertyRune>
+    public abstract class Template : EntityTemplate<FundamentalArmorRune>
     {
-        protected override FundamentalArmorPropertyRune GetEntity(ModelBuilder builder)
+        protected override FundamentalArmorRune GetEntity(ModelBuilder builder)
         {
-            FundamentalArmorPropertyRune rune = GetRune();
+            FundamentalArmorRune rune = GetRune();
 
             SourcePage sourcePage = GetSourcePage();
             rune.SourcePageId = sourcePage.Id;
@@ -21,10 +21,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalArmorP
 
             foreach(Guid traitId in GetTraits())
             {
-                builder.HasJoinData<FundamentalArmorPropertyRune, Trait>((rune.Id, traitId));
+                builder.HasJoinData<FundamentalArmorRune, Trait>((rune.Id, traitId));
             }
 
-            foreach(FundamentalArmorPropertyRuneVariant level in GetLevels())
+            foreach(FundamentalArmorRuneVariant level in GetLevels())
             {
                 level.RuneId = rune.Id;
                 builder.AddData(level);
@@ -33,10 +33,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalArmorP
             return rune;
         }
 
-        protected abstract IEnumerable<FundamentalArmorPropertyRuneVariant> GetLevels();
+        protected abstract IEnumerable<FundamentalArmorRuneVariant> GetLevels();
         protected abstract IEnumerable<Guid> GetTraits();
         protected abstract IEnumerable<TextBlock> GetDetails();
         protected abstract SourcePage GetSourcePage();
-        protected abstract FundamentalArmorPropertyRune GetRune();
+        protected abstract FundamentalArmorRune GetRune();
     }
 }

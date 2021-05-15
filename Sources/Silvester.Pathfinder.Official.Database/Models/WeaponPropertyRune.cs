@@ -7,26 +7,27 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class ArmorPropertyRune : BaseEntity
+    public class WeaponPropertyRune : BaseEntity
     {
         public string Name { get; set; } = default!;
 
         public string? CraftingRequirements { get; set; }
 
-        public Guid RarityId { get; set; }
-        public Rarity Rarity { get; set; } = default!;
+        public string? AccessRequirements { get; set; }
+
+        public string Usage { get; set; } = default!;
 
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
 
-        public Guid? ActionId { get; set; }
-        public ArmorPropertyRuneAction? Action { get; set; } 
+        public ICollection<ArmorPropertyRuneAction> Actions { get; set; } = default!;
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
-        public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
+        
+        public ICollection<WeaponPropertyRunePotencyBinding> Potencies { get; set; } = new List<WeaponPropertyRunePotencyBinding>();
     }
 
-    public class ArmorPropertyRuneAction : BaseEntity
+    public class WeaponPropertyRuneAction : BaseEntity
     {
         public string Name { get; set; } = default!;
 
@@ -34,27 +35,36 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public string? Frequency { get; set; }
 
+        public string? Requirements { get; set; }
+
         public string? Trigger{ get; set; }
 
         public Guid ActionTypeId { get; set; }
         public ActionType ActionType { get; set; } = default!;
 
         public Guid RuneId { get; set; }
-        public ArmorPropertyRune Rune { get; set; } = default!;
+        public WeaponPropertyRune Rune { get; set; } = default!;
+
+        public ICollection<Trait> Traits { get; set; } = new List<Trait>();
     }
 
-    public class ArmorPropertyRunePotencyBinding : BaseEntity
+    public class WeaponPropertyRunePotencyBinding : BaseEntity
     {
         public int Price { get; set; }
         
         public int ItemLevel { get; set; }
 
-        public string Benefits { get; set; } = default!;
-
         public Guid RuneId { get; set; }
-        public ArmorPropertyRune Rune { get; set; } = default!;
+        public WeaponPropertyRune Rune { get; set; } = default!;
+
+        public Guid? RollableEffectId { get; set; }
+        public RollableEffect? RollableEffect { get; set; }
 
         public Guid PotencyId { get; set; }
         public Potency Potency { get; set; } = default!;
+        
+        public ICollection<TextBlock> Benefits { get; set; } = default!;
+
+        public ICollection<Trait> Traits { get; set; } = new List<Trait>();
     }
 }

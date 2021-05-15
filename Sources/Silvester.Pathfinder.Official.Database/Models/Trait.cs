@@ -59,6 +59,12 @@ namespace Silvester.Pathfinder.Official.Database.Models
         
         public ICollection<ArmorPropertyRune> ArmorPropertyRunes { get; set; } = new List<ArmorPropertyRune>();
 
-        public ICollection<FundamentalArmorPropertyRune> FundamentalArmorPropertyRunes { get; set; } = new List<FundamentalArmorPropertyRune>();
+        public ICollection<FundamentalArmorRune> FundamentalArmorPropertyRunes { get; set; } = new List<FundamentalArmorRune>();
+
+        public ICollection<WeaponPropertyRunePotencyBinding> WeaponPropertyRunePotencies { get; set; } = new List<WeaponPropertyRunePotencyBinding>();
+     
+        public ICollection<WeaponPropertyRune> WeaponPropertyRunes { get; set; } = new List<WeaponPropertyRune>();
+
+        public ICollection<WeaponPropertyRuneAction> WeaponPropertyRuneActions { get; set; } = new List<WeaponPropertyRuneAction>();
     }
 }

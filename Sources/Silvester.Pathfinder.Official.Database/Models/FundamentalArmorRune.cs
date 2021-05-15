@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class FundamentalArmorPropertyRune : BaseEntity
+    public class FundamentalArmorRune : BaseEntity
     {
         public string Name { get; set; } = default!;
 
@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
     }
 
-    public class FundamentalArmorPropertyRuneVariant : BaseEntity
+    public class FundamentalArmorRuneVariant : BaseEntity
     {
         public string Name { get; set; } = default!;
         
@@ -28,6 +28,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public string? CraftingRequirements { get; set; }
 
         public Guid RuneId { get; set; }
-        public FundamentalArmorPropertyRune Rune { get; set; } = default!;
+        public FundamentalArmorRune Rune { get; set; } = default!;
     }
 }

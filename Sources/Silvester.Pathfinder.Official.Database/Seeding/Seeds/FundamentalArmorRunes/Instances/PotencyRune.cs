@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalArmorPropertyRunes.Instances
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalArmorRunes.Instances
 {
     public class PotencyRune : Template
     {
         public static readonly Guid ID = Guid.Parse("aa56af92-069d-4cfd-81e6-ab2af589f662");
 
-        protected override FundamentalArmorPropertyRune GetRune()
+        protected override FundamentalArmorRune GetRune()
         {
-            return new FundamentalArmorPropertyRune
+            return new FundamentalArmorRune
             {
                 Id = ID,
                 Name = "Armor Potency Rune"
@@ -27,9 +27,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalArmorP
             yield return new TextBlock { Id = Guid.Parse("3aa7b1ef-a9fe-4fe4-9943-ee40d8cbc528"), Type = TextBlockType.Text, Text = "You can upgrade the armor potency rune already etched on a suit of armor to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes’ Prices." };
         }
 
-        protected override IEnumerable<FundamentalArmorPropertyRuneVariant> GetLevels()
+        protected override IEnumerable<FundamentalArmorRuneVariant> GetLevels()
         {
-            yield return new FundamentalArmorPropertyRuneVariant
+            yield return new FundamentalArmorRuneVariant
             {
                 Id = Guid.Parse("47f5b617-be1e-47f8-b165-bf6b5cc705cd"),
                 Benefits = "Increase the armor’s item bonus to AC by 1. The armor can be etched with one property rune.",
@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalArmorP
                 Price = 16000
             };
 
-            yield return new FundamentalArmorPropertyRuneVariant
+            yield return new FundamentalArmorRuneVariant
             {
                 Id = Guid.Parse("238aa717-ede1-4cae-87c2-fe17a69860bd"),
                 Benefits = "Increase the armor’s item bonus to AC by 2, and the armor can be etched with two property runes.",
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalArmorP
                 Price = 106000
             };
 
-            yield return new FundamentalArmorPropertyRuneVariant
+            yield return new FundamentalArmorRuneVariant
             {
                 Id = Guid.Parse("b5330c4e-a43b-4367-a69a-cfb63fe01d06"),
                 Benefits = "Increase the armor’s item bonus to AC by 3, and the armor can be etched with three property runes.",

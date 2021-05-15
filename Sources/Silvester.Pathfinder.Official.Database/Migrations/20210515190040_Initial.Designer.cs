@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Official.Database;
 namespace Silvester.Pathfinder.Official.Database.Migrations
 {
     [DbContext(typeof(OfficialDatabase))]
-    [Migration("20210515111642_Initial")]
+    [Migration("20210515190040_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -4511,7 +4511,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
-            modelBuilder.Entity("FundamentalArmorPropertyRuneTrait", b =>
+            modelBuilder.Entity("FundamentalArmorRuneTrait", b =>
                 {
                     b.Property<Guid>("FundamentalArmorPropertyRunesId")
                         .HasColumnType("uuid");
@@ -4523,7 +4523,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("TraitsId");
 
-                    b.ToTable("FundamentalArmorPropertyRuneTrait");
+                    b.ToTable("FundamentalArmorRuneTrait");
 
                     b.HasData(
                         new
@@ -14627,7 +14627,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("ActionId")
+                    b.Property<Guid?>("ActionId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("CraftingRequirements")
@@ -14669,7 +14669,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("d21ec6e1-b491-49e8-ba45-64abfdce9da8"),
-                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             Name = "Energy-Resistant",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SourcePageId = new Guid("bff406f0-ce06-4661-b2a1-df203edd2f19")
@@ -14686,7 +14685,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("010de771-6941-4a89-a142-c369c9fbdbd2"),
-                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             Name = "Fortification",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SourcePageId = new Guid("42a06e50-9396-42ee-a2b1-85ab6a2b25e1")
@@ -14710,7 +14708,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("2dcf90ee-e52e-4e69-a809-6790cf49a622"),
-                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             Name = "Ready",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SourcePageId = new Guid("08f3aeac-81ce-4aa5-a0cb-47b5535a7619")
@@ -14718,7 +14715,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("1add97fa-232b-4aed-a710-d41d42352ae1"),
-                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             Name = "Rock-Braced",
                             RarityId = new Guid("863d10bd-583b-41e9-ae52-2d94cf0a2bff"),
                             SourcePageId = new Guid("3541d89b-6928-49a6-902e-f05be310dcb3")
@@ -14726,7 +14722,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("5bbaaa06-0e1b-4418-acd3-8b16548ac945"),
-                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             Name = "Shadow",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SourcePageId = new Guid("4d3bb1bb-092d-4e4e-8ef7-3bcb435cff87")
@@ -14750,7 +14745,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         new
                         {
                             Id = new Guid("a3e92834-573a-417f-9ffa-710c6ac73bff"),
-                            ActionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             Name = "Soaring",
                             RarityId = new Guid("52091c82-7a39-4a66-919e-ac268375b792"),
                             SourcePageId = new Guid("4dc7607b-00e0-400d-bf86-5acb21368509")
@@ -14791,12 +14785,17 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<string>("Trigger")
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("WeaponPropertyRuneId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ActionTypeId");
 
                     b.HasIndex("RuneId")
                         .IsUnique();
+
+                    b.HasIndex("WeaponPropertyRuneId");
 
                     b.ToTable("ArmorPropertyRuneAction");
 
@@ -14884,9 +14883,14 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("integer");
 
+                    b.Property<Guid>("RuneId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
                     b.HasIndex("PotencyId");
+
+                    b.HasIndex("RuneId");
 
                     b.ToTable("ArmorPropertyRunePotencyBinding");
                 });
@@ -19873,7 +19877,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.ToTable("Frequencies");
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRune", b =>
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorRune", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -19895,7 +19899,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("TraitsId");
 
-                    b.ToTable("FundamentalArmorPropertyRune");
+                    b.ToTable("FundamentalArmorRune");
 
                     b.HasData(
                         new
@@ -19912,7 +19916,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRuneVariant", b =>
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorRuneVariant", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -19942,7 +19946,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("RuneId");
 
-                    b.ToTable("FundamentalArmorPropertyRuneVariant");
+                    b.ToTable("FundamentalArmorRuneVariant");
 
                     b.HasData(
                         new
@@ -28039,6 +28043,14 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             CriticalSuccess = "The creature is unaffected.",
                             Failure = "The creature takes full damage and is enfeebled 2 for 1 minute.",
                             Success = "The creature takes half damage."
+                        },
+                        new
+                        {
+                            Id = new Guid("ad329a6e-7b83-49d8-8df6-2f29902844aa"),
+                            CriticalFailure = "It’s destroyed.",
+                            CriticalSuccess = "It’s enfeebled 1 until the end of your next turn.",
+                            Failure = "It’s enfeebled 3 until the end of your next turn.",
+                            Success = "It’s enfeebled 2 until the end of your next turn."
                         });
                 });
 
@@ -33816,6 +33828,174 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("f18bfafa-141d-4bc9-b8f4-6113b12080f8"),
                             Page = 284,
                             SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("a0b8eb1f-9079-4686-9aca-5b2047cd28fd"),
+                            Page = 583,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("eb181177-dc37-4a68-b72a-8210b8fb34ef"),
+                            Page = 75,
+                            SourceId = new Guid("8d75e2ed-fc45-457b-aa51-53c42e02312a")
+                        },
+                        new
+                        {
+                            Id = new Guid("8faf47e4-fe13-4b28-9717-1fb83543e2db"),
+                            Page = 583,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("1bfa28f4-acd9-4830-a73c-2269824febb8"),
+                            Page = 75,
+                            SourceId = new Guid("8d75e2ed-fc45-457b-aa51-53c42e02312a")
+                        },
+                        new
+                        {
+                            Id = new Guid("86667daa-a9b2-40bf-9716-504bb98f8e8a"),
+                            Page = 139,
+                            SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("f05c6e85-4bec-4f0b-ade0-8f0e7e85e5f9"),
+                            Page = 583,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("fd320d9a-e42e-4185-87b5-d32e6de99bee"),
+                            Page = 123,
+                            SourceId = new Guid("b28880b6-eeab-4222-a54c-1a2a5e3f27d8")
+                        },
+                        new
+                        {
+                            Id = new Guid("c58f4345-9639-427b-a0fd-81b28876eab5"),
+                            Page = 583,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f46eeebe-1fa9-444b-8878-db7ed8c47bde"),
+                            Page = 584,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("5f7cd5a7-5142-4f35-a103-b8146f1739a0"),
+                            Page = 260,
+                            SourceId = new Guid("979e79d5-05ab-4c2f-b8eb-872f89367ddc")
+                        },
+                        new
+                        {
+                            Id = new Guid("f008cc0e-bd01-44ab-a73e-95aa6e09ac04"),
+                            Page = 584,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("cb151d6c-36e8-4369-a797-3feab8022e4e"),
+                            Page = 584,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("415b4896-96d5-4f3a-930c-5951809fa3ca"),
+                            Page = 584,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("af7e74e0-3c19-431e-a8d0-0efe38ac55cb"),
+                            Page = 584,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e2f90062-1822-4d66-b634-4704a77549e2"),
+                            Page = 584,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("6f0b6a4c-4daa-48ff-b82e-8e061658825b"),
+                            Page = 584,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("ef747e30-00e0-404b-8792-ce8c9370eb31"),
+                            Page = 75,
+                            SourceId = new Guid("8d75e2ed-fc45-457b-aa51-53c42e02312a")
+                        },
+                        new
+                        {
+                            Id = new Guid("1c7b9705-81b3-48e4-8f80-67dd8f724ee6"),
+                            Page = 78,
+                            SourceId = new Guid("9812077c-2f7a-4657-9312-1f44f9a95e3a")
+                        },
+                        new
+                        {
+                            Id = new Guid("c3da8b5c-3de7-416a-aea4-91db6e328f7a"),
+                            Page = 584,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("311a7111-a152-4e74-9cfc-c157b64ec06b"),
+                            Page = 93,
+                            SourceId = new Guid("8026612e-b2dc-42d2-8844-bb0bc63c0249")
+                        },
+                        new
+                        {
+                            Id = new Guid("45fce989-96d3-4b4d-8f52-5bc1fb8731ee"),
+                            Page = 584,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e389d823-6701-403e-9022-d1da6883b266"),
+                            Page = 585,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("72f42e77-a941-43c6-9136-eaec11b7e6f5"),
+                            Page = 585,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e7769d72-1dce-4fb6-a0b6-c4c77949a356"),
+                            Page = 585,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("cd84a129-2cd1-4780-b420-e9d7b9bcab0d"),
+                            Page = 585,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("c3c98b15-fdac-4f6c-982a-c904d7964247"),
+                            Page = 585,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f5bd23f4-a281-4761-a73d-28f6ec9a8d42"),
+                            Page = 585,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("35747fc8-b2c2-48f4-92b0-9ed7d31417e8"),
+                            Page = 585,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         });
                 });
 
@@ -36772,6 +36952,15 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("SpellsId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("WeaponPropertyRuneActionsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("WeaponPropertyRunePotenciesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("WeaponPropertyRunesId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ActionsId");
@@ -36825,6 +37014,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasIndex("SourcePageId");
 
                     b.HasIndex("SpellsId");
+
+                    b.HasIndex("WeaponPropertyRuneActionsId");
+
+                    b.HasIndex("WeaponPropertyRunePotenciesId");
+
+                    b.HasIndex("WeaponPropertyRunesId");
 
                     b.ToTable("Traits");
 
@@ -39141,6 +39336,704 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRune", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("AccessRequirements")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CraftingRequirements")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("WeaponPropertyRune");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("74492dda-e75d-4927-9e82-4fe95e9ca396"),
+                            CraftingRequirements = "You are chaotic.",
+                            Name = "Anarchic",
+                            SourcePageId = new Guid("a0b8eb1f-9079-4686-9aca-5b2047cd28fd"),
+                            Usage = "Etched onto a weapon without an axiomatic rune."
+                        },
+                        new
+                        {
+                            Id = new Guid("694dff71-27b6-4641-8067-858ddb50f978"),
+                            Name = "Ancestral Echoing",
+                            SourcePageId = new Guid("eb181177-dc37-4a68-b72a-8210b8fb34ef"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("6e45f674-8263-4aad-9d32-75f663ef8453"),
+                            CraftingRequirements = "You are lawful.",
+                            Name = "Axiomatic",
+                            SourcePageId = new Guid("8faf47e4-fe13-4b28-9717-1fb83543e2db"),
+                            Usage = "Etched onto a weapon without an anarchic rune."
+                        },
+                        new
+                        {
+                            Id = new Guid("5bef5cb1-6cc2-4540-9224-6200bb40d217"),
+                            Name = "Bloodbane",
+                            SourcePageId = new Guid("1bfa28f4-acd9-4830-a73c-2269824febb8"),
+                            Usage = "etched onto a clan dagger"
+                        },
+                        new
+                        {
+                            Id = new Guid("bf9f7ffc-b647-48f0-b818-557d23de1511"),
+                            Name = "Conducting",
+                            SourcePageId = new Guid("86667daa-a9b2-40bf-9716-504bb98f8e8a"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("83bb5d56-43f3-42c8-bd77-d8f5e7209d22"),
+                            Name = "Corrosive",
+                            SourcePageId = new Guid("f05c6e85-4bec-4f0b-ade0-8f0e7e85e5f9"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("bab86729-ac81-4292-bf39-e86a51c24fcf"),
+                            Name = "Cunning",
+                            SourcePageId = new Guid("fd320d9a-e42e-4185-87b5-d32e6de99bee"),
+                            Usage = "Etched on a slashing or piercing weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("db537aa1-ebec-4919-8e71-8a2172b1197a"),
+                            Name = "Dancing",
+                            SourcePageId = new Guid("c58f4345-9639-427b-a0fd-81b28876eab5"),
+                            Usage = "Etched onto a melee weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("28896ad6-948f-4a6d-943d-40daa0d11b80"),
+                            Name = "Disrupting",
+                            SourcePageId = new Guid("f46eeebe-1fa9-444b-8878-db7ed8c47bde"),
+                            Usage = "Etched onto a melee weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("0cf9a028-72a8-44ad-82c6-72f6bd9351a3"),
+                            Name = "Fearsome",
+                            SourcePageId = new Guid("5f7cd5a7-5142-4f35-a103-b8146f1739a0"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("aa35dfd4-adc6-4890-a6aa-f9aa6b9a481c"),
+                            Name = "Flaming",
+                            SourcePageId = new Guid("f008cc0e-bd01-44ab-a73e-95aa6e09ac04"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("fb4d332f-a643-4f63-8c5f-b99383dbef4a"),
+                            Name = "Frost",
+                            SourcePageId = new Guid("cb151d6c-36e8-4369-a797-3feab8022e4e"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("1080858f-20b5-4b69-a1d0-138f7230aba8"),
+                            Name = "Ghost Touch",
+                            SourcePageId = new Guid("415b4896-96d5-4f3a-930c-5951809fa3ca"),
+                            Usage = "Etched onto a melee weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("01abc739-588b-4c41-9eda-660b0d4bf3cd"),
+                            Name = "Grievous",
+                            SourcePageId = new Guid("af7e74e0-3c19-431e-a8d0-0efe38ac55cb"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("0347c95e-2227-4c7c-92f2-d37d77e78e7d"),
+                            Name = "Holy",
+                            SourcePageId = new Guid("e2f90062-1822-4d66-b634-4704a77549e2"),
+                            Usage = "Etched onto a weapon without an unholy rune."
+                        },
+                        new
+                        {
+                            Id = new Guid("06c3e60c-a8fd-4ded-9b23-23f224927ac2"),
+                            Name = "Keen",
+                            SourcePageId = new Guid("6f0b6a4c-4daa-48ff-b82e-8e061658825b"),
+                            Usage = "Etched onto a piercing or slashing melee weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("086a6b79-6f3d-4c16-8699-fc22f8157eaa"),
+                            Name = "Kin-Warding",
+                            SourcePageId = new Guid("ef747e30-00e0-404b-8792-ce8c9370eb31"),
+                            Usage = "Etched onto a clan dagger."
+                        },
+                        new
+                        {
+                            Id = new Guid("89a71607-0a02-4f55-87d3-48f6bdff84e5"),
+                            Name = "Pacifying",
+                            SourcePageId = new Guid("1c7b9705-81b3-48e4-8f80-67dd8f724ee6"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("89332a34-0067-4b4f-b5a8-ce00c41c6935"),
+                            Name = "Returning",
+                            SourcePageId = new Guid("c3da8b5c-3de7-416a-aea4-91db6e328f7a"),
+                            Usage = "Etched on a thrown weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("9f59dddb-5e3b-4809-b14c-b2d31e002f50"),
+                            AccessRequirements = "A character who is a member of the Knights of Lastwall has access to this option.",
+                            Name = "Serrating",
+                            SourcePageId = new Guid("311a7111-a152-4e74-9cfc-c157b64ec06b"),
+                            Usage = "Etched onto a slashing melee weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("327ed57b-80ae-431c-8611-310c9e4667f1"),
+                            Name = "Shifting",
+                            SourcePageId = new Guid("45fce989-96d3-4b4d-8f52-5bc1fb8731ee"),
+                            Usage = "Etched onto a melee weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("6d938515-a83b-4723-8d18-8ea81102e987"),
+                            Name = "Shock",
+                            SourcePageId = new Guid("e389d823-6701-403e-9022-d1da6883b266"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("3ce6bdb7-e2a1-4224-bb8c-d3613973cfbe"),
+                            Name = "Speed",
+                            SourcePageId = new Guid("72f42e77-a941-43c6-9136-eaec11b7e6f5"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("294a6238-beb1-4b09-97c6-dc08d2f98185"),
+                            Name = "Spell-Storing",
+                            SourcePageId = new Guid("e7769d72-1dce-4fb6-a0b6-c4c77949a356"),
+                            Usage = "Etched onto a melee weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("796898b3-9662-411f-ac5e-7a40a8008976"),
+                            Name = "Thundering",
+                            SourcePageId = new Guid("cd84a129-2cd1-4780-b420-e9d7b9bcab0d"),
+                            Usage = "Etched onto a weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("97c626c9-64b6-4b0b-ac3b-c362d7d661c3"),
+                            Name = "Unholy",
+                            SourcePageId = new Guid("c3c98b15-fdac-4f6c-982a-c904d7964247"),
+                            Usage = "Etched onto a weapon without a holy rune."
+                        },
+                        new
+                        {
+                            Id = new Guid("7f7dc195-f152-4e36-a6d3-db63888e3c58"),
+                            Name = "Vorpal",
+                            SourcePageId = new Guid("f5bd23f4-a281-4761-a73d-28f6ec9a8d42"),
+                            Usage = "Etched onto a slashing melee weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("819a6e90-6506-4cc3-8938-f0ffbffc01b2"),
+                            Name = "Wounding",
+                            SourcePageId = new Guid("35747fc8-b2c2-48f4-92b0-9ed7d31417e8"),
+                            Usage = "Etched onto a piercing or slashing melee weapon."
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRuneAction", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ActionTypeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Effect")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Frequency")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Requirements")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("RuneId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Trigger")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ActionTypeId");
+
+                    b.HasIndex("RuneId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("WeaponPropertyRuneAction");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("752ce6e0-d83f-47f5-b05a-29ed9a6bff51"),
+                            ActionTypeId = new Guid("4716abe4-50c3-447d-bb27-2b268667b3c2"),
+                            Effect = "You learn the secrets the weapon gleaned from the creature's blood. Attempt to Recall Knowledge about the target of the required attack, gaining an item bonus to the Recall Knowledge skill check equal to the weapon's item bonus to attack rolls from its potency rune. If the required attack was a critical hit, you also gain a +2 circumstance bonus to this check.",
+                            Frequency = "Once per minute.",
+                            Name = "Envision",
+                            Requirements = "On your previous action this turn, you used this weapon to hit and damage a creature that has blood or other vital fluids.",
+                            RuneId = new Guid("bab86729-ac81-4292-bf39-e86a51c24fcf")
+                        },
+                        new
+                        {
+                            Id = new Guid("f0ade3f8-bc90-41eb-aeef-24b11607bcc3"),
+                            ActionTypeId = new Guid("fe122850-b449-482d-8350-ac21e8985594"),
+                            Effect = "You Release the weapon and it dances through the air, fighting on its own against the last enemy you attacked, or the nearest enemy to it if your target has been defeated. At the end of your turn each round, the weapon can Fly up to its fly Speed of 40 feet, and then can either Fly again or Strike one creature within its reach.",
+                            Name = "Command, Interact",
+                            RuneId = new Guid("db537aa1-ebec-4919-8e71-8a2172b1197a")
+                        },
+                        new
+                        {
+                            Id = new Guid("d2975b34-2c3a-4eb1-9dbe-8cc0fa325187"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            Effect = "You regain HP equal to double the evil creature’s level. This is a good, positive, healing effect.",
+                            Frequency = "One per day.",
+                            Name = "Command",
+                            RuneId = new Guid("0347c95e-2227-4c7c-92f2-d37d77e78e7d"),
+                            Trigger = "You critically succeed at an attack roll against an evil creature with the weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("be587d25-d395-4c0c-9601-6b81507b8bfa"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            Effect = "The damaged creature must succeed at a DC 20 Will save or be pacified. A pacified creature takes a –2 penalty to attack rolls on any attacks that aren't nonlethal for 1 minute, and the creature also experiences a clear psychic warning that they should stop dealing lethal damage.",
+                            Name = "Command",
+                            RuneId = new Guid("89a71607-0a02-4f55-87d3-48f6bdff84e5"),
+                            Trigger = "You damage a creature with a pacifying weapon"
+                        },
+                        new
+                        {
+                            Id = new Guid("237e2cf1-65b5-4fa2-9e60-175747d76c1f"),
+                            ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
+                            Effect = "You brandish the weapon and focus its power, causing the serrated shards to buzz as they spin at a dizzying speed. On your next hit with the weapon this turn that deals slashing damage, the serrating rune adds an additional 1d12 damage instead of the additional 1d4 damage, and then the shards return to their usual speed.",
+                            Name = "Interact",
+                            RuneId = new Guid("9f59dddb-5e3b-4809-b14c-b2d31e002f50")
+                        },
+                        new
+                        {
+                            Id = new Guid("5be2c09b-99e6-4d4a-ab43-90c92dce906b"),
+                            ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
+                            Effect = "The weapon takes the shape of another melee weapon that requires the same number of hands to wield. The weapon’s runes and any precious material it’s made of apply to the weapon’s new shape. Any property runes that can’t apply to the new form are suppressed until the item takes a shape to which they can apply.",
+                            Name = "Interact",
+                            RuneId = new Guid("327ed57b-80ae-431c-8611-310c9e4667f1")
+                        },
+                        new
+                        {
+                            Id = new Guid("2d5e8f15-61cd-49f5-a621-0b6d2b32b5dc"),
+                            ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
+                            Effect = "You unleash the stored spell, which uses the target of the triggering attack as the target of the spell. This empties the spell from the weapon and allows a spell to be cast into it again. If the spell requires a spell attack roll, the result of your attack roll with the weapon determines the degree of success of the spell, and if the spell requires a saving throw, the DC is 30.",
+                            Name = "Command",
+                            Requirements = "On your previous action this turn, you hit and damaged a creature with this weapon.",
+                            RuneId = new Guid("294a6238-beb1-4b09-97c6-dc08d2f98185")
+                        },
+                        new
+                        {
+                            Id = new Guid("f2c2edc5-c720-4d5c-8376-eccdb3ee6ba0"),
+                            ActionTypeId = new Guid("26ab8b82-ea91-4247-934b-618c724aca8b"),
+                            Effect = "Harmlessly expend the stored spell. This frees the weapon to have a new spell cast into it.",
+                            Name = "Command",
+                            RuneId = new Guid("294a6238-beb1-4b09-97c6-dc08d2f98185")
+                        },
+                        new
+                        {
+                            Id = new Guid("06e47d8f-a1bd-4f8e-997d-08e750dd6d8b"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            Effect = "The target takes persistent bleed damage equal to 1d8 per weapon damage die of the etched weapon.",
+                            Frequency = "Once per day.",
+                            Name = "Command",
+                            RuneId = new Guid("97c626c9-64b6-4b0b-ac3b-c362d7d661c3"),
+                            Trigger = "You critically succeed at an attack roll against a good creature with the weapon."
+                        },
+                        new
+                        {
+                            Id = new Guid("60123526-a8c9-4fbb-a825-2f56b712a385"),
+                            ActionTypeId = new Guid("668ed964-cf7f-43df-b4b3-6a89c28551aa"),
+                            Effect = "The target must succeed at a DC 37 Fortitude save or be decapitated. This kills any creature except ones that don’t require a head to live. For creatures with multiple heads, this usually kills the creature only if you sever its last head.",
+                            Name = "Envision",
+                            RuneId = new Guid("7f7dc195-f152-4e36-a6d3-db63888e3c58"),
+                            Trigger = "You roll a natural 20 on a Strike with the weapon, critically succeed, and deal slashing damage. The target must have a head."
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRunePotencyBinding", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("PotencyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid?>("RollableEffectId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("RuneId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PotencyId");
+
+                    b.HasIndex("RollableEffectId");
+
+                    b.HasIndex("RuneId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("WeaponPropertyRunePotencyBinding");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("f860a640-0e15-4a5c-afab-6d6db3a08f79"),
+                            ItemLevel = 11,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 140000,
+                            RuneId = new Guid("74492dda-e75d-4927-9e82-4fe95e9ca396")
+                        },
+                        new
+                        {
+                            Id = new Guid("8faff1df-7d66-4cbc-9528-2cf973fedf10"),
+                            ItemLevel = 15,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 950000,
+                            RuneId = new Guid("694dff71-27b6-4641-8067-858ddb50f978")
+                        },
+                        new
+                        {
+                            Id = new Guid("fd86cf2b-0c9f-4e6d-bb9b-16df35fad858"),
+                            ItemLevel = 11,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 140000,
+                            RuneId = new Guid("6e45f674-8263-4aad-9d32-75f663ef8453")
+                        },
+                        new
+                        {
+                            Id = new Guid("5841519c-7f2e-4954-aa13-47b6fc1e7a62"),
+                            ItemLevel = 8,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 47500,
+                            RuneId = new Guid("5bef5cb1-6cc2-4540-9224-6200bb40d217")
+                        },
+                        new
+                        {
+                            Id = new Guid("58601e5f-f93a-46fe-9e6e-2f4d63ed7f9f"),
+                            ItemLevel = 13,
+                            PotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 280000,
+                            RuneId = new Guid("5bef5cb1-6cc2-4540-9224-6200bb40d217")
+                        },
+                        new
+                        {
+                            Id = new Guid("ece62494-d652-4ea8-96d9-3a1cb7348265"),
+                            ItemLevel = 7,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 30000,
+                            RuneId = new Guid("bf9f7ffc-b647-48f0-b818-557d23de1511")
+                        },
+                        new
+                        {
+                            Id = new Guid("70aebf9d-a280-4f70-9822-ea951a9c0023"),
+                            ItemLevel = 8,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 50000,
+                            RuneId = new Guid("83bb5d56-43f3-42c8-bd77-d8f5e7209d22")
+                        },
+                        new
+                        {
+                            Id = new Guid("7e9d4453-15b3-4ce9-b9b7-305949c66255"),
+                            ItemLevel = 15,
+                            PotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 650000,
+                            RuneId = new Guid("83bb5d56-43f3-42c8-bd77-d8f5e7209d22")
+                        },
+                        new
+                        {
+                            Id = new Guid("1e2e2357-47c3-4f71-9491-5aab77b26b6a"),
+                            ItemLevel = 5,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 14000,
+                            RuneId = new Guid("bab86729-ac81-4292-bf39-e86a51c24fcf")
+                        },
+                        new
+                        {
+                            Id = new Guid("5befb651-cdaf-4afc-b893-6da19235a866"),
+                            ItemLevel = 13,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 270000,
+                            RuneId = new Guid("db537aa1-ebec-4919-8e71-8a2172b1197a")
+                        },
+                        new
+                        {
+                            Id = new Guid("aec8ff2c-14fc-4cc8-81af-3cd75de33eb4"),
+                            ItemLevel = 5,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 15000,
+                            RuneId = new Guid("28896ad6-948f-4a6d-943d-40daa0d11b80")
+                        },
+                        new
+                        {
+                            Id = new Guid("76aadc75-c6fe-4a63-9fce-78bc73f54dd2"),
+                            ItemLevel = 14,
+                            PotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 430000,
+                            RollableEffectId = new Guid("ad329a6e-7b83-49d8-8df6-2f29902844aa"),
+                            RuneId = new Guid("28896ad6-948f-4a6d-943d-40daa0d11b80")
+                        },
+                        new
+                        {
+                            Id = new Guid("f40bf60b-e57d-4021-b7b9-4b98c8eb62c6"),
+                            ItemLevel = 5,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 16000,
+                            RuneId = new Guid("0cf9a028-72a8-44ad-82c6-72f6bd9351a3")
+                        },
+                        new
+                        {
+                            Id = new Guid("e2c40d60-9c36-4dfa-a877-2c240993a9e2"),
+                            ItemLevel = 12,
+                            PotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 200000,
+                            RuneId = new Guid("0cf9a028-72a8-44ad-82c6-72f6bd9351a3")
+                        },
+                        new
+                        {
+                            Id = new Guid("b58e2a96-37d4-4fba-88d3-6e0b7c5f343f"),
+                            ItemLevel = 8,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 50000,
+                            RuneId = new Guid("aa35dfd4-adc6-4890-a6aa-f9aa6b9a481c")
+                        },
+                        new
+                        {
+                            Id = new Guid("77655a2a-e1e7-4374-89e2-c54b011d95bd"),
+                            ItemLevel = 15,
+                            PotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 650000,
+                            RuneId = new Guid("aa35dfd4-adc6-4890-a6aa-f9aa6b9a481c")
+                        },
+                        new
+                        {
+                            Id = new Guid("1b57fea8-cdc8-4899-8cdb-f84700bfe741"),
+                            ItemLevel = 8,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 50000,
+                            RuneId = new Guid("fb4d332f-a643-4f63-8c5f-b99383dbef4a")
+                        },
+                        new
+                        {
+                            Id = new Guid("86cccc3e-defb-448b-82a7-48b14c021cb5"),
+                            ItemLevel = 15,
+                            PotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 650000,
+                            RuneId = new Guid("fb4d332f-a643-4f63-8c5f-b99383dbef4a")
+                        },
+                        new
+                        {
+                            Id = new Guid("f7b83dda-01b3-4baf-b4df-ec8e2ea0bdc0"),
+                            ItemLevel = 4,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 7500,
+                            RuneId = new Guid("1080858f-20b5-4b69-a1d0-138f7230aba8")
+                        },
+                        new
+                        {
+                            Id = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                            ItemLevel = 9,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 70000,
+                            RuneId = new Guid("01abc739-588b-4c41-9eda-660b0d4bf3cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("86c792b6-6ee5-46a1-9688-3799a701c313"),
+                            ItemLevel = 11,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 140000,
+                            RuneId = new Guid("0347c95e-2227-4c7c-92f2-d37d77e78e7d")
+                        },
+                        new
+                        {
+                            Id = new Guid("660df2ec-e557-4f8b-b764-68de9070e59f"),
+                            ItemLevel = 13,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 300000,
+                            RuneId = new Guid("06c3e60c-a8fd-4ded-9b23-23f224927ac2")
+                        },
+                        new
+                        {
+                            Id = new Guid("540c6e2d-b323-4467-978f-6b975fc1bfd6"),
+                            ItemLevel = 3,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 5200,
+                            RuneId = new Guid("086a6b79-6f3d-4c16-8699-fc22f8157eaa")
+                        },
+                        new
+                        {
+                            Id = new Guid("da8995d1-7845-4efd-916a-37ac99058ed2"),
+                            ItemLevel = 5,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 15000,
+                            RuneId = new Guid("89a71607-0a02-4f55-87d3-48f6bdff84e5")
+                        },
+                        new
+                        {
+                            Id = new Guid("75f92632-1173-4d98-8546-7d8e023ce6e0"),
+                            ItemLevel = 3,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 5500,
+                            RuneId = new Guid("89332a34-0067-4b4f-b5a8-ce00c41c6935")
+                        },
+                        new
+                        {
+                            Id = new Guid("8b4e3b95-e474-4a3c-bad9-62f53d7371be"),
+                            ItemLevel = 10,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 100000,
+                            RuneId = new Guid("9f59dddb-5e3b-4809-b14c-b2d31e002f50")
+                        },
+                        new
+                        {
+                            Id = new Guid("b0fddee5-3b99-44a0-b38b-603c6b91442a"),
+                            ItemLevel = 6,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 22500,
+                            RuneId = new Guid("327ed57b-80ae-431c-8611-310c9e4667f1")
+                        },
+                        new
+                        {
+                            Id = new Guid("581d1b62-a5c2-4063-9780-28b6e357a7d7"),
+                            ItemLevel = 8,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 50000,
+                            RuneId = new Guid("6d938515-a83b-4723-8d18-8ea81102e987")
+                        },
+                        new
+                        {
+                            Id = new Guid("bd875c19-2d25-4ba7-9ec4-45511a22aa17"),
+                            ItemLevel = 15,
+                            PotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 650000,
+                            RuneId = new Guid("6d938515-a83b-4723-8d18-8ea81102e987")
+                        },
+                        new
+                        {
+                            Id = new Guid("c7825ff9-b173-4c02-9d7b-f0f53efc3601"),
+                            ItemLevel = 16,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 1000000,
+                            RuneId = new Guid("3ce6bdb7-e2a1-4224-bb8c-d3613973cfbe")
+                        },
+                        new
+                        {
+                            Id = new Guid("9968c8a7-4e09-4887-b62d-2e4ae3591aec"),
+                            ItemLevel = 13,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 270000,
+                            RuneId = new Guid("294a6238-beb1-4b09-97c6-dc08d2f98185")
+                        },
+                        new
+                        {
+                            Id = new Guid("f5847e4b-aea8-4e00-911f-f010b728daed"),
+                            ItemLevel = 8,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 50000,
+                            RuneId = new Guid("796898b3-9662-411f-ac5e-7a40a8008976")
+                        },
+                        new
+                        {
+                            Id = new Guid("72606c00-caaf-4ac6-9fed-e8cc51c39593"),
+                            ItemLevel = 15,
+                            PotencyId = new Guid("8f7a4620-e8d8-432c-a0ec-5323b3cc738d"),
+                            Price = 650000,
+                            RuneId = new Guid("796898b3-9662-411f-ac5e-7a40a8008976")
+                        },
+                        new
+                        {
+                            Id = new Guid("d86da8fd-78d2-420d-a04e-304c93154c7b"),
+                            ItemLevel = 11,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 140000,
+                            RuneId = new Guid("97c626c9-64b6-4b0b-ac3b-c362d7d661c3")
+                        },
+                        new
+                        {
+                            Id = new Guid("fc4fd64f-3b91-43be-bc8a-f4d8c2c1f172"),
+                            ItemLevel = 17,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 1500000,
+                            RuneId = new Guid("7f7dc195-f152-4e36-a6d3-db63888e3c58")
+                        },
+                        new
+                        {
+                            Id = new Guid("f4de6228-1e02-4a73-a6ed-a7f328a26eac"),
+                            ItemLevel = 7,
+                            PotencyId = new Guid("5e2f27d1-6b8b-41a0-8f58-095a4bb926d3"),
+                            Price = 34000,
+                            RuneId = new Guid("819a6e90-6506-4cc3-8938-f0ffbffc01b2")
+                        });
+                });
+
             modelBuilder.Entity("SpellSpellComponent", b =>
                 {
                     b.Property<Guid>("ComponentsId")
@@ -41047,6 +41940,497 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             TraitsId = new Guid("ae31ec44-8633-4a5c-94f3-1f5d2ed553dd"),
                             SpellsId = new Guid("6e689573-2fdb-409f-abd2-a27135775498")
+                        });
+                });
+
+            modelBuilder.Entity("TraitWeaponPropertyRune", b =>
+                {
+                    b.Property<Guid>("WeaponPropertyRunesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("WeaponPropertyRunesId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("TraitWeaponPropertyRune");
+
+                    b.HasData(
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("74492dda-e75d-4927-9e82-4fe95e9ca396"),
+                            TraitsId = new Guid("cef41071-5af2-47d7-8e60-b191bfc11d11")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("74492dda-e75d-4927-9e82-4fe95e9ca396"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("74492dda-e75d-4927-9e82-4fe95e9ca396"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("694dff71-27b6-4641-8067-858ddb50f978"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("694dff71-27b6-4641-8067-858ddb50f978"),
+                            TraitsId = new Guid("3ecd4d1e-ccc1-4620-b223-63aa9031fe5a")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("694dff71-27b6-4641-8067-858ddb50f978"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("694dff71-27b6-4641-8067-858ddb50f978"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("694dff71-27b6-4641-8067-858ddb50f978"),
+                            TraitsId = new Guid("2ada1501-9857-49e8-ac4f-d97750797df4")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("6e45f674-8263-4aad-9d32-75f663ef8453"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("6e45f674-8263-4aad-9d32-75f663ef8453"),
+                            TraitsId = new Guid("7402a95c-09ac-4438-b51e-5277225ae185")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("6e45f674-8263-4aad-9d32-75f663ef8453"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("5bef5cb1-6cc2-4540-9224-6200bb40d217"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("5bef5cb1-6cc2-4540-9224-6200bb40d217"),
+                            TraitsId = new Guid("3ecd4d1e-ccc1-4620-b223-63aa9031fe5a")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("5bef5cb1-6cc2-4540-9224-6200bb40d217"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("5bef5cb1-6cc2-4540-9224-6200bb40d217"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("bf9f7ffc-b647-48f0-b818-557d23de1511"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("bf9f7ffc-b647-48f0-b818-557d23de1511"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("83bb5d56-43f3-42c8-bd77-d8f5e7209d22"),
+                            TraitsId = new Guid("ef7d80ee-a7a0-417f-ba66-748ba26ec489")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("83bb5d56-43f3-42c8-bd77-d8f5e7209d22"),
+                            TraitsId = new Guid("556b46f3-1953-4bd8-9ae2-ad4718ff829e")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("83bb5d56-43f3-42c8-bd77-d8f5e7209d22"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("bab86729-ac81-4292-bf39-e86a51c24fcf"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("bab86729-ac81-4292-bf39-e86a51c24fcf"),
+                            TraitsId = new Guid("ce610077-804d-463e-abc8-9e6c07c05029")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("bab86729-ac81-4292-bf39-e86a51c24fcf"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("db537aa1-ebec-4919-8e71-8a2172b1197a"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("db537aa1-ebec-4919-8e71-8a2172b1197a"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("db537aa1-ebec-4919-8e71-8a2172b1197a"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("28896ad6-948f-4a6d-943d-40daa0d11b80"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("28896ad6-948f-4a6d-943d-40daa0d11b80"),
+                            TraitsId = new Guid("d47884e5-93b9-4fe7-8647-7a07ef5d6a18")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("28896ad6-948f-4a6d-943d-40daa0d11b80"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("0cf9a028-72a8-44ad-82c6-72f6bd9351a3"),
+                            TraitsId = new Guid("df5af144-0177-4922-a7e8-37c9e0c99708")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("0cf9a028-72a8-44ad-82c6-72f6bd9351a3"),
+                            TraitsId = new Guid("e96a77cb-4271-4f08-bf95-de459742767a")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("0cf9a028-72a8-44ad-82c6-72f6bd9351a3"),
+                            TraitsId = new Guid("74e59198-7926-491e-a7f6-62e21d4b8e69")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("0cf9a028-72a8-44ad-82c6-72f6bd9351a3"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("0cf9a028-72a8-44ad-82c6-72f6bd9351a3"),
+                            TraitsId = new Guid("d80c4c8b-646b-420c-a00d-cb15996520e2")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("aa35dfd4-adc6-4890-a6aa-f9aa6b9a481c"),
+                            TraitsId = new Guid("556b46f3-1953-4bd8-9ae2-ad4718ff829e")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("aa35dfd4-adc6-4890-a6aa-f9aa6b9a481c"),
+                            TraitsId = new Guid("ad8d0e67-98c5-418e-82e5-03791fdee791")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("aa35dfd4-adc6-4890-a6aa-f9aa6b9a481c"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("fb4d332f-a643-4f63-8c5f-b99383dbef4a"),
+                            TraitsId = new Guid("6cceaf73-43d9-4249-824c-c9a03c8854bd")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("fb4d332f-a643-4f63-8c5f-b99383dbef4a"),
+                            TraitsId = new Guid("556b46f3-1953-4bd8-9ae2-ad4718ff829e")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("fb4d332f-a643-4f63-8c5f-b99383dbef4a"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("1080858f-20b5-4b69-a1d0-138f7230aba8"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("1080858f-20b5-4b69-a1d0-138f7230aba8"),
+                            TraitsId = new Guid("ae31ec44-8633-4a5c-94f3-1f5d2ed553dd")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("01abc739-588b-4c41-9eda-660b0d4bf3cd"),
+                            TraitsId = new Guid("e96a77cb-4271-4f08-bf95-de459742767a")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("01abc739-588b-4c41-9eda-660b0d4bf3cd"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("0347c95e-2227-4c7c-92f2-d37d77e78e7d"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("0347c95e-2227-4c7c-92f2-d37d77e78e7d"),
+                            TraitsId = new Guid("b3fff128-4e31-483e-be2a-6b9d769ced22")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("0347c95e-2227-4c7c-92f2-d37d77e78e7d"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("06c3e60c-a8fd-4ded-9b23-23f224927ac2"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("06c3e60c-a8fd-4ded-9b23-23f224927ac2"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("06c3e60c-a8fd-4ded-9b23-23f224927ac2"),
+                            TraitsId = new Guid("ae31ec44-8633-4a5c-94f3-1f5d2ed553dd")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("086a6b79-6f3d-4c16-8699-fc22f8157eaa"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("086a6b79-6f3d-4c16-8699-fc22f8157eaa"),
+                            TraitsId = new Guid("029497fa-5a49-4a89-bfc3-68a2e57f765a")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("086a6b79-6f3d-4c16-8699-fc22f8157eaa"),
+                            TraitsId = new Guid("3ecd4d1e-ccc1-4620-b223-63aa9031fe5a")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("086a6b79-6f3d-4c16-8699-fc22f8157eaa"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("89a71607-0a02-4f55-87d3-48f6bdff84e5"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("89a71607-0a02-4f55-87d3-48f6bdff84e5"),
+                            TraitsId = new Guid("e96a77cb-4271-4f08-bf95-de459742767a")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("89a71607-0a02-4f55-87d3-48f6bdff84e5"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("89332a34-0067-4b4f-b5a8-ce00c41c6935"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("89332a34-0067-4b4f-b5a8-ce00c41c6935"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("9f59dddb-5e3b-4809-b14c-b2d31e002f50"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("9f59dddb-5e3b-4809-b14c-b2d31e002f50"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("9f59dddb-5e3b-4809-b14c-b2d31e002f50"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("327ed57b-80ae-431c-8611-310c9e4667f1"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("327ed57b-80ae-431c-8611-310c9e4667f1"),
+                            TraitsId = new Guid("ae31ec44-8633-4a5c-94f3-1f5d2ed553dd")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("6d938515-a83b-4723-8d18-8ea81102e987"),
+                            TraitsId = new Guid("d7e3c058-c73c-4608-a370-6835483931f8")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("6d938515-a83b-4723-8d18-8ea81102e987"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("6d938515-a83b-4723-8d18-8ea81102e987"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("3ce6bdb7-e2a1-4224-bb8c-d3613973cfbe"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("3ce6bdb7-e2a1-4224-bb8c-d3613973cfbe"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("3ce6bdb7-e2a1-4224-bb8c-d3613973cfbe"),
+                            TraitsId = new Guid("ae31ec44-8633-4a5c-94f3-1f5d2ed553dd")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("294a6238-beb1-4b09-97c6-dc08d2f98185"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("294a6238-beb1-4b09-97c6-dc08d2f98185"),
+                            TraitsId = new Guid("029497fa-5a49-4a89-bfc3-68a2e57f765a")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("294a6238-beb1-4b09-97c6-dc08d2f98185"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("796898b3-9662-411f-ac5e-7a40a8008976"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("796898b3-9662-411f-ac5e-7a40a8008976"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("796898b3-9662-411f-ac5e-7a40a8008976"),
+                            TraitsId = new Guid("0dddb0a4-0037-47c7-b2bc-6479caa43694")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("97c626c9-64b6-4b0b-ac3b-c362d7d661c3"),
+                            TraitsId = new Guid("cee766b5-0cb1-4320-ad4e-3e625bd6e7ef")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("97c626c9-64b6-4b0b-ac3b-c362d7d661c3"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("97c626c9-64b6-4b0b-ac3b-c362d7d661c3"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("7f7dc195-f152-4e36-a6d3-db63888e3c58"),
+                            TraitsId = new Guid("80770c53-f4d9-4895-a150-a57010382d13")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("7f7dc195-f152-4e36-a6d3-db63888e3c58"),
+                            TraitsId = new Guid("16d2758a-935b-4552-b8ae-7eb36d6bf3d1")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("7f7dc195-f152-4e36-a6d3-db63888e3c58"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("819a6e90-6506-4cc3-8938-f0ffbffc01b2"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            WeaponPropertyRunesId = new Guid("819a6e90-6506-4cc3-8938-f0ffbffc01b2"),
+                            TraitsId = new Guid("d47884e5-93b9-4fe7-8647-7a07ef5d6a18")
+                        });
+                });
+
+            modelBuilder.Entity("TraitWeaponPropertyRuneAction", b =>
+                {
+                    b.Property<Guid>("WeaponPropertyRuneActionsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("WeaponPropertyRuneActionsId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("TraitWeaponPropertyRuneAction");
+
+                    b.HasData(
+                        new
+                        {
+                            WeaponPropertyRuneActionsId = new Guid("be587d25-d395-4c0c-9601-6b81507b8bfa"),
+                            TraitsId = new Guid("d80c4c8b-646b-420c-a00d-cb15996520e2")
+                        },
+                        new
+                        {
+                            WeaponPropertyRuneActionsId = new Guid("60123526-a8c9-4fbb-a825-2f56b712a385"),
+                            TraitsId = new Guid("2d273e11-bba7-4024-8d54-5449e202428b")
+                        },
+                        new
+                        {
+                            WeaponPropertyRuneActionsId = new Guid("60123526-a8c9-4fbb-a825-2f56b712a385"),
+                            TraitsId = new Guid("e3085a07-4bd0-42c7-80c3-75a714c596e8")
+                        });
+                });
+
+            modelBuilder.Entity("TraitWeaponPropertyRunePotencyBinding", b =>
+                {
+                    b.Property<Guid>("WeaponPropertyRunePotenciesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("WeaponPropertyRunePotenciesId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("TraitWeaponPropertyRunePotencyBinding");
+
+                    b.HasData(
+                        new
+                        {
+                            WeaponPropertyRunePotenciesId = new Guid("76aadc75-c6fe-4a63-9fce-78bc73f54dd2"),
+                            TraitsId = new Guid("77669ac3-df67-42f2-ad32-984b9dfa66d0")
                         });
                 });
 
@@ -46071,9 +47455,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("FundamentalArmorPropertyRuneTrait", b =>
+            modelBuilder.Entity("FundamentalArmorRuneTrait", b =>
                 {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRune", null)
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorRune", null)
                         .WithMany()
                         .HasForeignKey("FundamentalArmorPropertyRunesId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -48986,6 +50370,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRune", null)
+                        .WithMany("Actions")
+                        .HasForeignKey("WeaponPropertyRuneId");
+
                     b.Navigation("ActionType");
 
                     b.Navigation("Rune");
@@ -48999,7 +50387,15 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRune", "Rune")
+                        .WithMany()
+                        .HasForeignKey("RuneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Potency");
+
+                    b.Navigation("Rune");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
@@ -51209,7 +52605,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Feat");
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRune", b =>
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorRune", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
                         .WithMany()
@@ -51245,7 +52641,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                             b1.HasIndex("OwnerId");
 
-                            b1.ToTable("FundamentalArmorPropertyRune_Details");
+                            b1.ToTable("FundamentalArmorRune_Details");
 
                             b1.WithOwner()
                                 .HasForeignKey("OwnerId");
@@ -51290,9 +52686,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("SourcePage");
                 });
 
-            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRuneVariant", b =>
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorRuneVariant", b =>
                 {
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRune", "Rune")
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorRune", "Rune")
                         .WithMany()
                         .HasForeignKey("RuneId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -55840,7 +57236,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .WithMany()
                         .HasForeignKey("FeatsId");
 
-                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRune", null)
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorRune", null)
                         .WithMany()
                         .HasForeignKey("FundamentalArmorPropertyRunesId");
 
@@ -55901,6 +57297,18 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Spell", null)
                         .WithMany()
                         .HasForeignKey("SpellsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRuneAction", null)
+                        .WithMany()
+                        .HasForeignKey("WeaponPropertyRuneActionsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRunePotencyBinding", null)
+                        .WithMany()
+                        .HasForeignKey("WeaponPropertyRunePotenciesId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRune", null)
+                        .WithMany()
+                        .HasForeignKey("WeaponPropertyRunesId");
 
                     b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
                         {
@@ -58910,6 +60318,563 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("SourcePage");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRune", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRuneAction", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.ActionType", "ActionType")
+                        .WithMany()
+                        .HasForeignKey("ActionTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRune", "Rune")
+                        .WithMany()
+                        .HasForeignKey("RuneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.Navigation("ActionType");
+
+                    b.Navigation("Rune");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRunePotencyBinding", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Potency", "Potency")
+                        .WithMany()
+                        .HasForeignKey("PotencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.RollableEffect", "RollableEffect")
+                        .WithMany()
+                        .HasForeignKey("RollableEffectId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRune", "Rune")
+                        .WithMany("Potencies")
+                        .HasForeignKey("RuneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Benefits", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("WeaponPropertyRunePotencyBinding_Benefits");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("8f72b0cc-7525-4564-9df2-b6a023da280a"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f860a640-0e15-4a5c-afab-6d6db3a08f79"),
+                                    Text = "An anarchic rune is jagged and asymmetrical, channeling chaotic energy. A weapon with this rune deals an additional 1d6 chaotic damage against lawful targets. If you are lawful, you are enfeebled 2 while carrying or wielding this weapon.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("eb05e944-f51c-4cc7-89c0-5f832b21620b"),
+                                    Order = 1,
+                                    OwnerId = new Guid("f860a640-0e15-4a5c-afab-6d6db3a08f79"),
+                                    Text = "When you critically succeed at a Strike with this weapon against a lawful creature, roll 1d6. On a 1 or 2, you deal double minimum damage; on a 3 or 4, double your damage normally; on a 5 or 6, you deal double maximum damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e337a626-4b09-4e8c-9bb1-28cc5f89335b"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8faff1df-7d66-4cbc-9528-2cf973fedf10"),
+                                    Text = "The wisdom of this weapon’s past owners flows into your mind, amplifying your own abilities with the weapon. Your proficiency rank with this weapon is one step higher than normal, to a maximum of the highest proficiency rank you have in any weapon. For instance, if you had master proficieny with martial weapons and expert proficiency with advanced weapons, you would have master proficiency with advanced weapon that had this rune.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("bc8e78cc-7535-4e8e-9e8a-59da36aa6076"),
+                                    Order = 1,
+                                    OwnerId = new Guid("8faff1df-7d66-4cbc-9528-2cf973fedf10"),
+                                    Text = "In addition, while wielding the ancestral echoing weapon, you have expert proficiency in one Lore skill relevant to one or more of the weapon’s previous owners. This is typically Dwarven Lore but is ultimately determined by the GM depending on the weapon’s history.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1527ad18-d41f-4eda-b9df-293ddfe5b247"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fd86cf2b-0c9f-4e6d-bb9b-16df35fad858"),
+                                    Text = "Complex and symmetrical, an axiomatic rune imbues a weapon with lawful energy. A weapon with this rune deals an additional 1d6 lawful damage against chaotic targets. If you are chaotic, you are enfeebled 2 while carrying or wielding this weapon.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("89f4c857-4818-4bd6-a2dd-7c98a3a9bb42"),
+                                    Order = 1,
+                                    OwnerId = new Guid("fd86cf2b-0c9f-4e6d-bb9b-16df35fad858"),
+                                    Text = "When you critically succeed at an attack roll with this weapon against a chaotic creature, instead of rolling, count each weapon damage die as average damage rounded up (3 for d4, 4 for d6, 5 for d8, 6 for d10, 7 for d12).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0c77fc3d-b181-4975-ba10-cafbbfbadd37"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5841519c-7f2e-4954-aa13-47b6fc1e7a62"),
+                                    Text = "A bloodbane clan dagger is especially vicious against the ancestral enemies of the clan. When you damage an appropriate type of creature with the weapon, that creature takes 1 persistent bleed damage. The type of creature depends on the clan that made the dagger, but is typically drow, duergar, giant, or orc.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("77e3597b-6ea4-4733-8920-04c4cebbd31a"),
+                                    Order = 1,
+                                    OwnerId = new Guid("5841519c-7f2e-4954-aa13-47b6fc1e7a62"),
+                                    Text = "In addition, whenever you inflict persistent bleed damage with a bloodbane weapon (whether from its innate ability or in some other way), the weapon leaves ragged wounds. The bleeding creature must succeed at a DC 25 Fortitude save or become sickened 1. The creature is then temporarily immune for 1 hour.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("318feeb1-4c1a-4ee7-a9d9-0735d4a43c13"),
+                                    Order = 0,
+                                    OwnerId = new Guid("58601e5f-f93a-46fe-9e6e-2f4d63ed7f9f"),
+                                    Text = "The weapon deals 1d4 bleed damage to creatures designated as the clan’s enemy, and the DC of the Fortitude save to avoid becoming sickened is 30.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("dbed857f-4af5-4a1c-8a71-d1bde6b1f7d1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ece62494-d652-4ea8-96d9-3a1cb7348265"),
+                                    Text = "A conducting weapon can channel energy through it. The weapon gains the resonant weapon trait, except that when you Conduct Energy, the weapon deals an additional 1d8 damage of the selected type instead of 1 additional damage per die; if the weapon already had the resonant weapon trait, it deals 1d8 damage plus 1 damage per die instead. On a critical hit, the weapon deals 1d8 persistent damage of the same type.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1cb19254-c8f0-4214-8e82-4070dd4a805c"),
+                                    Order = 0,
+                                    OwnerId = new Guid("70aebf9d-a280-4f70-9822-ea951a9c0023"),
+                                    Text = "Acid sizzles across the surface of the weapon. When you hit with the weapon, add 1d6 acid damage to the damage dealt. In addition, on a critical hit, the target’s armor (if any) takes 3d6 acid damage (before applying Hardness); if the target has a shield raised, the shield takes this damage instead.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("df27e8fb-9b52-4d80-8f87-fff9fbbbdda1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("7e9d4453-15b3-4ce9-b9b7-305949c66255"),
+                                    Text = "The acid damage dealt by this weapon ignores the target’s acid resistance. Increase the acid damage dealt to armor or a shield on a critical hit to 6d6.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("fe507108-08ea-4fa8-9696-d9bbcde9f30d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1e2e2357-47c3-4f71-9491-5aab77b26b6a"),
+                                    Text = "The weapon performs divination magic on the blood of your foes, granting you insight into their abilities and weaknesses.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("67b40e55-6393-4b43-8be4-9d8a6a2cdf5d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("5befb651-cdaf-4afc-b893-6da19235a866"),
+                                    Text = "A dancing weapon flies autonomously and strikes your foes.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("6cf96412-3272-43cb-83f2-41320ad6b139"),
+                                    Order = 1,
+                                    OwnerId = new Guid("5befb651-cdaf-4afc-b893-6da19235a866"),
+                                    Text = "The weapon has a space of 5 feet, but it doesn’t block or impede enemies attempting to move though that space, nor does it benefit from or provide flanking. The weapon can’t move through an enemy’s space. The weapon can’t use reactions, and its Fly actions don’t trigger reactions.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("27422f01-d52a-46bf-825b-1e4683594ac0"),
+                                    Order = 2,
+                                    OwnerId = new Guid("5befb651-cdaf-4afc-b893-6da19235a866"),
+                                    Text = "While it’s activated, a dancing weapon makes Strikes with an attack modifier of +24 plus its item bonus to attack rolls. It uses the weapon’s normal damage but has a +0 Strength modifier. The weapon’s abilities that automatically trigger on a hit or critical hit still function, but the weapon can’t be activated or benefit from any of your abilities while dancing.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("e16b5907-0caa-483c-84c1-5d1643ee91d9"),
+                                    Order = 3,
+                                    OwnerId = new Guid("5befb651-cdaf-4afc-b893-6da19235a866"),
+                                    Text = "Each round, when the weapon is finished using its actions, attempt a DC 6 flat check. On a failure, the activation ends and the weapon falls to the ground. You can’t activate the item again for 10 minutes.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("a85cc247-1c72-4c15-9e45-a5216ca4c938"),
+                                    Order = 0,
+                                    OwnerId = new Guid("aec8ff2c-14fc-4cc8-81af-3cd75de33eb4"),
+                                    Text = "A disrupting weapon pulses with positive energy.The weapon deals an extra 1d6 positive damage to undead. On a critical hit, the undead is also enfeebled 1 until the end of your next turn.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d153920f-4c9c-4a88-a3a8-6a1a3c54ecf4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("76aadc75-c6fe-4a63-9fce-78bc73f54dd2"),
+                                    Text = "Increase the extra damage to 2d6. On a critical hit, instead of being enfeebled 1, the undead creature must attempt a DC 34 Fortitude save with the following effects. This is an incapacitation effect.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("db638e68-2428-4c0c-a41d-1bf5043b1264"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f40bf60b-e57d-4021-b7b9-4b98c8eb62c6"),
+                                    Text = "When you critically hit with this weapon, the target becomes frightened 1.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ddbe3dfd-fdd0-498c-a580-58bf270bb7fe"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e2c40d60-9c36-4dfa-a877-2c240993a9e2"),
+                                    Text = "When you critically hit with this weapon, the target becomes frightened 2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0d37b169-ac4c-45c4-989b-5bfa75d0123d"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b58e2a96-37d4-4fba-88d3-6e0b7c5f343f"),
+                                    Text = "This weapon is empowered by flickering flame. The weapon deals an additional 1d6 fire damage on a successful Strike, plus 1d10 persistent fire damage on a critical hit.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("0f90f3f7-66ed-43ac-bc3d-c28968b5fbec"),
+                                    Order = 0,
+                                    OwnerId = new Guid("77655a2a-e1e7-4374-89e2-c54b011d95bd"),
+                                    Text = "Increase the persistent damage on a critical hit to 2d10. Fire damage dealt by this weapon (including the persistent fire damage) ignores the target’s fire resistance.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c027d501-04ab-4699-b417-55d66cbf3da9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1b57fea8-cdc8-4899-8cdb-f84700bfe741"),
+                                    Text = "This weapon is empowered with freezing ice. It deals an additional 1d6 cold damage on a successful Strike. On a critical hit, the target is also slowed 1 until the end of your next turn unless it succeeds at a DC 24 Fortitude save.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("741897ff-c80f-4e5d-ac1e-72c809c9fef5"),
+                                    Order = 0,
+                                    OwnerId = new Guid("86cccc3e-defb-448b-82a7-48b14c021cb5"),
+                                    Text = "The save DC is 34. Cold damage dealt by this weapon ignores the target’s cold resistance.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d34d732c-49ed-4cbb-be44-d340acfb9302"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f7b83dda-01b3-4baf-b4df-ec8e2ea0bdc0"),
+                                    Text = "The weapon can harm creatures without physical form. A ghost touch weapon is particularly effective against incorporeal creatures, which almost always have a specific vulnerability to ghost touch weapons. Incorporeal creatures can touch, hold, and wield ghost touch weapons (unlike most physical objects).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ff45ace5-d7f4-42bd-8dcd-298dd0e81bd0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "When your attack roll with this weapon is a critical hit and gains the critical specialization effect, you gain an additional benefit depending on the weapon group.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f1840b68-7c69-4daa-8967-ff8b464a8aca"),
+                                    Order = 1,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Axe - You can damage a third creature, with the same restrictions.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("a01f1855-ee53-4a05-a8df-6815537cd982"),
+                                    Order = 2,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Bow - The Athletics check to pull the missile free is DC 20.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("cd67c2b3-dfb9-436f-bfb2-4d2b9ffa99cb"),
+                                    Order = 3,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Brawling - The target takes a –4 circumstance penalty to its save.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("599a9463-1762-4b29-ac06-e33170e67683"),
+                                    Order = 4,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Club - You can knock the target up to 15 feet away.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("856c5687-33ec-487e-a7eb-7d4652b566b4"),
+                                    Order = 5,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Dart - The base persistent bleed damage increases to 2d6.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("9b9297c4-3560-437f-abb6-b8956fc1c407"),
+                                    Order = 6,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Flail - You move the target 5 feet. You can't move it away from you, but you can move it in another direction of your choice.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("1a5bff82-c11a-44b9-98cc-3bf9f40fab75"),
+                                    Order = 7,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Hammer - You can also knock the target 5 feet away from you.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("6477c63d-db7e-46d2-bf72-909ce094dd99"),
+                                    Order = 8,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Knife - The target takes a –5-foot status penalty to its Speed while it has the persistent bleed damage.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("673bb822-d06d-4a2e-a554-e2dd5498a7df"),
+                                    Order = 9,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Pick - The extra damage from the critical specialization effect increases to 4 per weapon damage die.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("b4ebc733-fb21-472f-981b-8cf1cba27f9e"),
+                                    Order = 10,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Polearm - You can move the target up to 10 feet.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("1373aa1b-fa84-4f3c-95d9-be6f309a3dd1"),
+                                    Order = 11,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Shield - You can knock the target up to 10 feet away.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("0e4f1eda-1a64-41b0-b0fc-6d0745cd2e28"),
+                                    Order = 12,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Sling - The target also takes a –10-foot status penalty to its Speed for 1 round if it fails the save.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("7854668c-239b-48d7-8fde-665c616dc95c"),
+                                    Order = 13,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Spear - The clumsy condition lasts for 2 rounds.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("d612d63e-e996-4b72-8832-f2ae5fc4fa7f"),
+                                    Order = 14,
+                                    OwnerId = new Guid("d0409cb7-277d-4700-90b1-344123d3b827"),
+                                    Text = "Sword - The target is flat-footed until the end of your next turn.",
+                                    Type = 2
+                                },
+                                new
+                                {
+                                    Id = new Guid("af94facc-6c5b-47fe-a33e-cb9711835db1"),
+                                    Order = 0,
+                                    OwnerId = new Guid("86c792b6-6ee5-46a1-9688-3799a701c313"),
+                                    Text = "Holy weapons command powerful celestial energy. A weapon with this rune deals an extra 1d6 good damage against evil targets. If you are evil, you are enfeebled 2 while carrying or wielding this weapon.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("2437c2d7-9210-4723-8ecd-2b926c969c00"),
+                                    Order = 0,
+                                    OwnerId = new Guid("660df2ec-e557-4f8b-b764-68de9070e59f"),
+                                    Text = "The edges of a keen weapon are preternaturally sharp. Attacks with this weapon are a critical hit on a 19 on the die as long as that result is a success. This property has no effect on a 19 if the result would be a failure.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("7b26edf9-7025-4308-8b24-08abfe562ef7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("540c6e2d-b323-4467-978f-6b975fc1bfd6"),
+                                    Text = "A kin-warding clan dagger can deflect attacks aimed at your allies. When you use the weapon’s parry trait, you can point the clan dagger at an adjacent ally instead of defending yourself, creating a shield of runes around them. The runic barrier grants your ally the weapon’s circumstance bonus to AC, but you do not gain the bonus yourself.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("f32a3334-8cc1-4dd6-89dd-c89cc34f7d43"),
+                                    Order = 0,
+                                    OwnerId = new Guid("da8995d1-7845-4efd-916a-37ac99058ed2"),
+                                    Text = "This rune turns weapons into instruments of peacemaking.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("14bb656e-55be-4111-aa46-a37ddf6df5db"),
+                                    Order = 0,
+                                    OwnerId = new Guid("75f92632-1173-4d98-8546-7d8e023ce6e0"),
+                                    Text = "When you make a thrown Strike with this weapon, it flies back to your hand after the Strike is complete. If your hands are full when the weapon returns, it falls to the ground in your space.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3d0b5a29-2e4e-4e8e-b16a-123d6c947bb9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("8b4e3b95-e474-4a3c-bad9-62f53d7371be"),
+                                    Text = "A serrating weapon’s bladed edge separates into jagged, swirling shards that spin along the blade. When dealing slashing damage, the weapon deals an additional 1d4 damage.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("35aab7a3-912e-47aa-912d-5bdaaac06309"),
+                                    Order = 0,
+                                    OwnerId = new Guid("b0fddee5-3b99-44a0-b38b-603c6b91442a"),
+                                    Text = "With a moment of manipulation, you can shift this weapon into a different weapon with a similar form.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c68ada15-1087-430e-86e6-3e1f681d5323"),
+                                    Order = 0,
+                                    OwnerId = new Guid("581d1b62-a5c2-4063-9780-28b6e357a7d7"),
+                                    Text = "Electric arcs crisscross this weapon, dealing an extra 1d6 electricity damage on a hit. On a critical hit, electricity arcs out to deal an equal amount of electricity damage to up to two other creatures of your choice within 10 feet of the target.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1d296e50-3de8-49d9-9338-172e371c75bb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("bd875c19-2d25-4ba7-9ec4-45511a22aa17"),
+                                    Text = "Electricity damage dealt by this weapon ignores the target’s electricity resistance (and the other creatures’ on a critical hit).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("4cbc3872-d879-462c-aa7a-a0afee19dd37"),
+                                    Order = 0,
+                                    OwnerId = new Guid("c7825ff9-b173-4c02-9d7b-f0f53efc3601"),
+                                    Text = "Attacks with a speed weapon are supernaturally swift. While wielding a speed weapon, you gain the quickened condition, but you can use the additional action granted only to make a Strike with the etched weapon.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("ba1bd5b1-7d85-499c-9c30-9f4bb7e6a8e4"),
+                                    Order = 0,
+                                    OwnerId = new Guid("9968c8a7-4e09-4887-b62d-2e4ae3591aec"),
+                                    Text = "A spell-storing rune creates a reservoir of eldritch energy within the etched weapon. A spellcaster can spend 1 minute to cast a spell of 3rd level or lower into the weapon. The spell must have a casting of 2 actions or fewer and must be able to target a creature other than the caster. The spell has no immediate effect—it is instead stored for later. When you wield a spell-storing weapon, you immediately know the name and level of the stored spell. A spell-storing weapon found as treasure has a 50% chance of having a spell of the GM’s choice stored in it.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("5d42cd08-c0ce-4e2d-9853-af20869429f2"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f5847e4b-aea8-4e00-911f-f010b728daed"),
+                                    Text = "This weapon lets out a peal of thunder when it hits, dealing an extra 1d6 sonic damage on a successful Strike. On a critical hit, the target has to succeed at a DC 24 Fortitude save or be deafened for 1 minute (or 1 hour on a critical failure).",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("43a36fa8-f7a4-4c49-8cf7-0bd08378d2f9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("72606c00-caaf-4ac6-9fed-e8cc51c39593"),
+                                    Text = "The save DC is 34, and the deafness is permanent. Sonic damage dealt by this weapon ignores the target’s sonic resistance.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("957ce6ff-ee9e-43b2-bd73-0d65204bf7d8"),
+                                    Order = 0,
+                                    OwnerId = new Guid("d86da8fd-78d2-420d-a04e-304c93154c7b"),
+                                    Text = "An unholy rune instills fiendish power into the etched weapon. A weapon with this rune deals an additional 1d6 evil damage when it hits a good target. If you are good, you are enfeebled 2 while carrying or wielding this weapon.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("dbba7b53-ed42-4314-8b51-eb91c19ac5c0"),
+                                    Order = 0,
+                                    OwnerId = new Guid("fc4fd64f-3b91-43be-bc8a-f4d8c2c1f172"),
+                                    Text = "Originally created as a means of slaying the legendary jabberwock, vorpal weapons prove equally effective against nearly any foe with a head.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8b173bbe-1116-4a16-a533-5d3a6b6ad049"),
+                                    Order = 0,
+                                    OwnerId = new Guid("f4de6228-1e02-4a73-a6ed-a7f328a26eac"),
+                                    Text = "Weapons with wounding runes are said to thirst for blood. When you hit a creature with a wounding weapon, you deal an extra 1d6 persistent bleed damage. On a critical hit, it instead deals 1d12 persistent bleed damage.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Benefits");
+
+                    b.Navigation("Potency");
+
+                    b.Navigation("RollableEffect");
+
+                    b.Navigation("Rune");
+                });
+
             modelBuilder.Entity("SpellSpellComponent", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.SpellComponent", null)
@@ -58936,6 +60901,51 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
                         .WithMany()
                         .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TraitWeaponPropertyRune", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRune", null)
+                        .WithMany()
+                        .HasForeignKey("WeaponPropertyRunesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TraitWeaponPropertyRuneAction", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRuneAction", null)
+                        .WithMany()
+                        .HasForeignKey("WeaponPropertyRuneActionsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TraitWeaponPropertyRunePotencyBinding", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRunePotencyBinding", null)
+                        .WithMany()
+                        .HasForeignKey("WeaponPropertyRunePotenciesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -59212,8 +61222,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.ArmorPropertyRune", b =>
                 {
-                    b.Navigation("Action")
-                        .IsRequired();
+                    b.Navigation("Action");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Class", b =>
@@ -59390,6 +61399,13 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponGroup", b =>
                 {
                     b.Navigation("MeleeWeapons");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.WeaponPropertyRune", b =>
+                {
+                    b.Navigation("Actions");
+
+                    b.Navigation("Potencies");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.OrPrerequisite", b =>
