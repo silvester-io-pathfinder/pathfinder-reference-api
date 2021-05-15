@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Official.Database;
 namespace Silvester.Pathfinder.Official.Database.Migrations
 {
     [DbContext(typeof(OfficialDatabase))]
-    [Migration("20210513205923_Initial")]
+    [Migration("20210515111642_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -4508,6 +4508,43 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         {
                             TraitsId = new Guid("a5bb022d-6274-4469-bae7-cb2ebc126b90"),
                             FeatsId = new Guid("8b9edbcc-05ce-4df7-bc51-910ff6be643d")
+                        });
+                });
+
+            modelBuilder.Entity("FundamentalArmorPropertyRuneTrait", b =>
+                {
+                    b.Property<Guid>("FundamentalArmorPropertyRunesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("FundamentalArmorPropertyRunesId", "TraitsId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("FundamentalArmorPropertyRuneTrait");
+
+                    b.HasData(
+                        new
+                        {
+                            FundamentalArmorPropertyRunesId = new Guid("aa56af92-069d-4cfd-81e6-ab2af589f662"),
+                            TraitsId = new Guid("029497fa-5a49-4a89-bfc3-68a2e57f765a")
+                        },
+                        new
+                        {
+                            FundamentalArmorPropertyRunesId = new Guid("aa56af92-069d-4cfd-81e6-ab2af589f662"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
+                        },
+                        new
+                        {
+                            FundamentalArmorPropertyRunesId = new Guid("412582f8-84db-4344-a9cf-5d8e1208f72e"),
+                            TraitsId = new Guid("029497fa-5a49-4a89-bfc3-68a2e57f765a")
+                        },
+                        new
+                        {
+                            FundamentalArmorPropertyRunesId = new Guid("412582f8-84db-4344-a9cf-5d8e1208f72e"),
+                            TraitsId = new Guid("4ab621bd-943d-46f8-bc1b-b087444eec87")
                         });
                 });
 
@@ -19836,6 +19873,134 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.ToTable("Frequencies");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRune", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("TraitsId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitsId");
+
+                    b.ToTable("FundamentalArmorPropertyRune");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("aa56af92-069d-4cfd-81e6-ab2af589f662"),
+                            Name = "Armor Potency Rune",
+                            SourcePageId = new Guid("c9b00728-bb97-4e1a-9346-b85b2d4ebf5e")
+                        },
+                        new
+                        {
+                            Id = new Guid("412582f8-84db-4344-a9cf-5d8e1208f72e"),
+                            Name = "Armor Resillient Rune",
+                            SourcePageId = new Guid("03bc38ca-cc39-4179-b938-cd39502e445b")
+                        });
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRuneVariant", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Benefits")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("CraftingRequirements")
+                        .HasColumnType("text");
+
+                    b.Property<int>("ItemLevel")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("RuneId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RuneId");
+
+                    b.ToTable("FundamentalArmorPropertyRuneVariant");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("47f5b617-be1e-47f8-b165-bf6b5cc705cd"),
+                            Benefits = "Increase the armor’s item bonus to AC by 1. The armor can be etched with one property rune.",
+                            ItemLevel = 5,
+                            Name = "+1",
+                            Price = 16000,
+                            RuneId = new Guid("aa56af92-069d-4cfd-81e6-ab2af589f662")
+                        },
+                        new
+                        {
+                            Id = new Guid("238aa717-ede1-4cae-87c2-fe17a69860bd"),
+                            Benefits = "Increase the armor’s item bonus to AC by 2, and the armor can be etched with two property runes.",
+                            ItemLevel = 11,
+                            Name = "+2",
+                            Price = 106000,
+                            RuneId = new Guid("aa56af92-069d-4cfd-81e6-ab2af589f662")
+                        },
+                        new
+                        {
+                            Id = new Guid("b5330c4e-a43b-4367-a69a-cfb63fe01d06"),
+                            Benefits = "Increase the armor’s item bonus to AC by 3, and the armor can be etched with three property runes.",
+                            ItemLevel = 18,
+                            Name = "+3",
+                            Price = 2056000,
+                            RuneId = new Guid("aa56af92-069d-4cfd-81e6-ab2af589f662")
+                        },
+                        new
+                        {
+                            Id = new Guid("6683a69a-90e0-4cfc-915f-a1e044a8c3e1"),
+                            Benefits = "The armor grants a +1 item bonus to saving throws.",
+                            ItemLevel = 8,
+                            Name = "Standard",
+                            Price = 34000,
+                            RuneId = new Guid("412582f8-84db-4344-a9cf-5d8e1208f72e")
+                        },
+                        new
+                        {
+                            Id = new Guid("44794e5c-af23-47d9-90fe-25384c7b8bf9"),
+                            Benefits = "The armor grants a +2 item bonus to saving throws.",
+                            ItemLevel = 14,
+                            Name = "Greater",
+                            Price = 344000,
+                            RuneId = new Guid("412582f8-84db-4344-a9cf-5d8e1208f72e")
+                        },
+                        new
+                        {
+                            Id = new Guid("13e71b88-5fa6-4da7-bf26-90c0d9044983"),
+                            Benefits = "The armor grants a +3 item bonus to saving throws.",
+                            ItemLevel = 20,
+                            Name = "Major",
+                            Price = 4944000,
+                            RuneId = new Guid("412582f8-84db-4344-a9cf-5d8e1208f72e")
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Hazard", b =>
                 {
                     b.Property<Guid>("Id")
@@ -30132,6 +30297,18 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         },
                         new
                         {
+                            Id = new Guid("c9b00728-bb97-4e1a-9346-b85b2d4ebf5e"),
+                            Page = 581,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("03bc38ca-cc39-4179-b938-cd39502e445b"),
+                            Page = 581,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
                             Id = new Guid("0e1b3b3d-aa2d-4963-8bb4-3485e14be099"),
                             Page = 526,
                             SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
@@ -36546,6 +36723,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Property<Guid?>("FeatsId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("FundamentalArmorPropertyRunesId")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid?>("HazardActionEffectsId")
                         .HasColumnType("uuid");
 
@@ -36615,6 +36795,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasIndex("DiseasesId");
 
                     b.HasIndex("FeatsId");
+
+                    b.HasIndex("FundamentalArmorPropertyRunesId");
 
                     b.HasIndex("HazardActionEffectsId");
 
@@ -45889,6 +46071,21 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("FundamentalArmorPropertyRuneTrait", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRune", null)
+                        .WithMany()
+                        .HasForeignKey("FundamentalArmorPropertyRunesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("HazardActionEffectTrait", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardActionEffect", null)
@@ -51012,6 +51209,98 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.Navigation("Feat");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRune", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Trait", null)
+                        .WithMany()
+                        .HasForeignKey("TraitsId");
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("FundamentalArmorPropertyRune_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("a7f4f82a-f5e4-485c-a38c-c115f33df11f"),
+                                    Order = 0,
+                                    OwnerId = new Guid("aa56af92-069d-4cfd-81e6-ab2af589f662"),
+                                    Text = "Magic wards deflect attacks.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("3aa7b1ef-a9fe-4fe4-9943-ee40d8cbc528"),
+                                    Order = 1,
+                                    OwnerId = new Guid("aa56af92-069d-4cfd-81e6-ab2af589f662"),
+                                    Text = "You can upgrade the armor potency rune already etched on a suit of armor to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes’ Prices.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("1aa8fb59-3d43-49d3-b5e0-e85a02b66419"),
+                                    Order = 0,
+                                    OwnerId = new Guid("412582f8-84db-4344-a9cf-5d8e1208f72e"),
+                                    Text = "Resilient runes imbue armor with additional protective magic.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("81c79bd9-a634-4de6-98e8-5e7c621becb2"),
+                                    Order = 1,
+                                    OwnerId = new Guid("412582f8-84db-4344-a9cf-5d8e1208f72e"),
+                                    Text = "You can upgrade the resilient rune already etched on a suit of armor to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes’ Prices.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Details");
+
+                    b.Navigation("SourcePage");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRuneVariant", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRune", "Rune")
+                        .WithMany()
+                        .HasForeignKey("RuneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Rune");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Hazard", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardComplexity", "Complexity")
@@ -55550,6 +55839,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.Feat", null)
                         .WithMany()
                         .HasForeignKey("FeatsId");
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.FundamentalArmorPropertyRune", null)
+                        .WithMany()
+                        .HasForeignKey("FundamentalArmorPropertyRunesId");
 
                     b.HasOne("Silvester.Pathfinder.Official.Database.Models.HazardActionEffect", null)
                         .WithMany()
