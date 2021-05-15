@@ -68,5 +68,12 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<WeaponPropertyRune> WeaponPropertyRunes { get; set; } = new List<WeaponPropertyRune>();
 
         public ICollection<WeaponPropertyRuneAction> WeaponPropertyRuneActions { get; set; } = new List<WeaponPropertyRuneAction>();
+     
+        public ICollection<Artifact> Artifacts { get; set; } = new List<Artifact>();
+
+        public ICollection<ArtifactAction> ArtifactActions { get; set; } = new List<ArtifactAction>();
+
+        public ICollection<ArtifactDestructionEffect> ArtifactDestructionEffects { get; set; } = new List<ArtifactDestructionEffect>();
     }
 }
+

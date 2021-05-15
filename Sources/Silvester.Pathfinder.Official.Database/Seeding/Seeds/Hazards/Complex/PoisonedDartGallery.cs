@@ -140,7 +140,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Id = Guid.Parse("edea22d4-1f12-48a8-b1f1-b6ee4de1b4f7"),
                 Name = "Continuous Barage",
                 Trigger = "A creature within the active gallery finishes an action",
-                ActionTypeId = ActionTypes.Instances.Free.ID,
+                ActionTypeId = ActionTypes.Instances.FreeAction.ID,
                 Details =
                 {
                     new TextBlock { Id = Guid.Parse("f79173f5-49dc-4322-8be4-c4591b89d643"), Text = "The trap makes a poisoned dart Strike against the triggering creature." },

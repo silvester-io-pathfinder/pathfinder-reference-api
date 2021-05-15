@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
                 Name = "Kip Up",
                 Level = 7,
                 FeatTypeId = FeatTypes.Instances.General.ID,
-                ActionTypeId = ActionTypes.Instances.Free.ID
+                ActionTypeId = ActionTypes.Instances.FreeAction.ID
             };
         }
 

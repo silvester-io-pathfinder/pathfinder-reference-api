@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
             {
                 Id = ID,
                 Name = "Release",
-                ActionTypeId = Free.ID,
+                ActionTypeId = FreeAction.ID,
             };
         }
 

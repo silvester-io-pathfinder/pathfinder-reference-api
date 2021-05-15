@@ -55,7 +55,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
                 Id = Guid.Parse("d1adf885-1c78-4d30-b759-12798dc37a4a"),
                 Name = "Submerge",
                 Trigger = "A Huge or smaller creature walks onto the quicksand",
-                ActionTypeId = ActionTypes.Instances.Free.ID,
+                ActionTypeId = ActionTypes.Instances.FreeAction.ID,
                 Details =
                 {
                     new TextBlock { Id = Guid.Parse("a9f37fc2-82d6-466c-adc8-552f4b20da56"), Type = Utilities.Text.TextBlockType.Text,  Text = "The triggering creature sinks into the quicksand up to its waist. The quicksand rolls initiative if it hasn’t already." },

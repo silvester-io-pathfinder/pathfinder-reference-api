@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponPropertyRun
             yield return new WeaponPropertyRuneAction
             {
                 Id = Guid.Parse("752ce6e0-d83f-47f5-b05a-29ed9a6bff51"),
-                ActionTypeId = ActionTypes.Instances.Free.ID,
+                ActionTypeId = ActionTypes.Instances.FreeAction.ID,
                 Name = "Envision",
                 Frequency = "Once per minute.",
                 Requirements = "On your previous action this turn, you used this weapon to hit and damage a creature that has blood or other vital fluids.",

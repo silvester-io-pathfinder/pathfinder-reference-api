@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions.Instances
                 Id = ID,
                 Name = "Delay",
                 Trigger = "Your turn begins.",
-                ActionTypeId = Free.ID,
+                ActionTypeId = FreeAction.ID,
             };
         }
 
