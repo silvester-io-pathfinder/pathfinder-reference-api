@@ -3588,7 +3588,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Artifact",
+                name: "Artifacts",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -3602,67 +3602,25 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Artifact", x => x.Id);
+                    table.PrimaryKey("PK_Artifacts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Artifact_Bulks_BulkId",
+                        name: "FK_Artifacts_Bulks_BulkId",
                         column: x => x.BulkId,
                         principalTable: "Bulks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Artifact_SourcePage_SourcePageId",
+                        name: "FK_Artifacts_SourcePage_SourcePageId",
                         column: x => x.SourcePageId,
                         principalTable: "SourcePage",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Artifact_Traits_TraitsId",
+                        name: "FK_Artifacts_Traits_TraitsId",
                         column: x => x.TraitsId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Artifact_DestructionDetails",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Text = table.Column<string>(type: "text", nullable: false),
-                    Order = table.Column<int>(type: "integer", nullable: false),
-                    Type = table.Column<int>(type: "integer", nullable: false),
-                    OwnerId = table.Column<Guid>(type: "uuid", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Artifact_DestructionDetails", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Artifact_DestructionDetails_Artifact_OwnerId",
-                        column: x => x.OwnerId,
-                        principalTable: "Artifact",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Artifact_Details",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Text = table.Column<string>(type: "text", nullable: false),
-                    Order = table.Column<int>(type: "integer", nullable: false),
-                    Type = table.Column<int>(type: "integer", nullable: false),
-                    OwnerId = table.Column<Guid>(type: "uuid", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Artifact_Details", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Artifact_Details_Artifact_OwnerId",
-                        column: x => x.OwnerId,
-                        principalTable: "Artifact",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -3680,9 +3638,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 {
                     table.PrimaryKey("PK_ArtifactDestructionEffect", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ArtifactDestructionEffect_Artifact_ArtifactId",
+                        name: "FK_ArtifactDestructionEffect_Artifacts_ArtifactId",
                         column: x => x.ArtifactId,
-                        principalTable: "Artifact",
+                        principalTable: "Artifacts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -3700,6 +3658,48 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Artifacts_DestructionDetails",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Text = table.Column<string>(type: "text", nullable: false),
+                    Order = table.Column<int>(type: "integer", nullable: false),
+                    Type = table.Column<int>(type: "integer", nullable: false),
+                    OwnerId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Artifacts_DestructionDetails", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Artifacts_DestructionDetails_Artifacts_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "Artifacts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Artifacts_Details",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Text = table.Column<string>(type: "text", nullable: false),
+                    Order = table.Column<int>(type: "integer", nullable: false),
+                    Type = table.Column<int>(type: "integer", nullable: false),
+                    OwnerId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Artifacts_Details", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Artifacts_Details_Artifacts_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "Artifacts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ArtifactTrait",
                 columns: table => new
                 {
@@ -3710,9 +3710,9 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 {
                     table.PrimaryKey("PK_ArtifactTrait", x => new { x.ArtifactsId, x.TraitsId });
                     table.ForeignKey(
-                        name: "FK_ArtifactTrait_Artifact_ArtifactsId",
+                        name: "FK_ArtifactTrait_Artifacts_ArtifactsId",
                         column: x => x.ArtifactsId,
-                        principalTable: "Artifact",
+                        principalTable: "Artifacts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -7055,7 +7055,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Artifact",
+                table: "Artifacts",
                 columns: new[] { "Id", "AlignmentId", "BulkId", "ItemLevel", "Name", "SourcePageId", "TraitsId", "Usage" },
                 values: new object[,]
                 {
@@ -10173,7 +10173,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Artifact_DestructionDetails",
+                table: "Artifacts_DestructionDetails",
                 columns: new[] { "Id", "Order", "OwnerId", "Text", "Type" },
                 values: new object[,]
                 {
@@ -10204,7 +10204,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Artifact_Details",
+                table: "Artifacts_Details",
                 columns: new[] { "Id", "Order", "OwnerId", "Text", "Type" },
                 values: new object[,]
                 {
@@ -10277,7 +10277,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Artifact_Details",
+                table: "Artifacts_Details",
                 columns: new[] { "Id", "Order", "OwnerId", "Text", "Type" },
                 values: new object[,]
                 {
@@ -15101,36 +15101,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 column: "TraitsId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Artifact_AlignmentId",
-                table: "Artifact",
-                column: "AlignmentId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Artifact_BulkId",
-                table: "Artifact",
-                column: "BulkId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Artifact_SourcePageId",
-                table: "Artifact",
-                column: "SourcePageId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Artifact_TraitsId",
-                table: "Artifact",
-                column: "TraitsId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Artifact_DestructionDetails_OwnerId",
-                table: "Artifact_DestructionDetails",
-                column: "OwnerId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Artifact_Details_OwnerId",
-                table: "Artifact_Details",
-                column: "OwnerId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_ArtifactAction_ActionTypeId",
                 table: "ArtifactAction",
                 column: "ActionTypeId");
@@ -15179,6 +15149,36 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 name: "IX_ArtifactDestructionEffectTrait_TraitsId",
                 table: "ArtifactDestructionEffectTrait",
                 column: "TraitsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Artifacts_AlignmentId",
+                table: "Artifacts",
+                column: "AlignmentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Artifacts_BulkId",
+                table: "Artifacts",
+                column: "BulkId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Artifacts_SourcePageId",
+                table: "Artifacts",
+                column: "SourcePageId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Artifacts_TraitsId",
+                table: "Artifacts",
+                column: "TraitsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Artifacts_DestructionDetails_OwnerId",
+                table: "Artifacts_DestructionDetails",
+                column: "OwnerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Artifacts_Details_OwnerId",
+                table: "Artifacts_Details",
+                column: "OwnerId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ArtifactTrait_TraitsId",
@@ -16588,18 +16588,18 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Traits_Artifact_ArtifactsId",
-                table: "Traits",
-                column: "ArtifactsId",
-                principalTable: "Artifact",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
-
-            migrationBuilder.AddForeignKey(
                 name: "FK_Traits_ArtifactDestructionEffect_ArtifactDestructionEffects~",
                 table: "Traits",
                 column: "ArtifactDestructionEffectsId",
                 principalTable: "ArtifactDestructionEffect",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Traits_Artifacts_ArtifactsId",
+                table: "Traits",
+                column: "ArtifactsId",
+                principalTable: "Artifacts",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
 
@@ -16772,10 +16772,10 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_ArtifactAction_Artifact_ArtifactId",
+                name: "FK_ArtifactAction_Artifacts_ArtifactId",
                 table: "ArtifactAction",
                 column: "ArtifactId",
-                principalTable: "Artifact",
+                principalTable: "Artifacts",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
 
@@ -16820,8 +16820,8 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Artifact_Alignments_AlignmentId",
-                table: "Artifact",
+                name: "FK_Artifacts_Alignments_AlignmentId",
+                table: "Artifacts",
                 column: "AlignmentId",
                 principalTable: "Alignments",
                 principalColumn: "Id",
@@ -17067,12 +17067,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 table: "Armors");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Artifact_Traits_TraitsId",
-                table: "Artifact");
-
-            migrationBuilder.DropForeignKey(
                 name: "FK_ArtifactDestructionEffect_Traits_TraitsId",
                 table: "ArtifactDestructionEffect");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Artifacts_Traits_TraitsId",
+                table: "Artifacts");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_Curses_Traits_TraitsId",
@@ -17311,12 +17311,6 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 name: "ArmorTrait");
 
             migrationBuilder.DropTable(
-                name: "Artifact_DestructionDetails");
-
-            migrationBuilder.DropTable(
-                name: "Artifact_Details");
-
-            migrationBuilder.DropTable(
                 name: "ArtifactAction_Effects");
 
             migrationBuilder.DropTable(
@@ -17327,6 +17321,12 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "ArtifactDestructionEffectTrait");
+
+            migrationBuilder.DropTable(
+                name: "Artifacts_DestructionDetails");
+
+            migrationBuilder.DropTable(
+                name: "Artifacts_Details");
 
             migrationBuilder.DropTable(
                 name: "ArtifactTrait");
@@ -17665,7 +17665,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                 name: "ArmorGroups");
 
             migrationBuilder.DropTable(
-                name: "Artifact");
+                name: "Artifacts");
 
             migrationBuilder.DropTable(
                 name: "AttackTypes");

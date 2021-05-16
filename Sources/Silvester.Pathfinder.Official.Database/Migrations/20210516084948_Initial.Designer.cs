@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Official.Database;
 namespace Silvester.Pathfinder.Official.Database.Migrations
 {
     [DbContext(typeof(OfficialDatabase))]
-    [Migration("20210515212010_Initial")]
+    [Migration("20210516084948_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -15599,7 +15599,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("TraitsId");
 
-                    b.ToTable("Artifact");
+                    b.ToTable("Artifacts");
 
                     b.HasData(
                         new
@@ -52271,7 +52271,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                             b1.HasIndex("OwnerId");
 
-                            b1.ToTable("Artifact_DestructionDetails");
+                            b1.ToTable("Artifacts_DestructionDetails");
 
                             b1.WithOwner()
                                 .HasForeignKey("OwnerId");
@@ -52495,7 +52495,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                             b1.HasIndex("OwnerId");
 
-                            b1.ToTable("Artifact_Details");
+                            b1.ToTable("Artifacts_Details");
 
                             b1.WithOwner()
                                 .HasForeignKey("OwnerId");

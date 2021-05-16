@@ -15597,7 +15597,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                     b.HasIndex("TraitsId");
 
-                    b.ToTable("Artifact");
+                    b.ToTable("Artifacts");
 
                     b.HasData(
                         new
@@ -52269,7 +52269,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                             b1.HasIndex("OwnerId");
 
-                            b1.ToTable("Artifact_DestructionDetails");
+                            b1.ToTable("Artifacts_DestructionDetails");
 
                             b1.WithOwner()
                                 .HasForeignKey("OwnerId");
@@ -52493,7 +52493,7 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
 
                             b1.HasIndex("OwnerId");
 
-                            b1.ToTable("Artifact_Details");
+                            b1.ToTable("Artifacts_Details");
 
                             b1.WithOwner()
                                 .HasForeignKey("OwnerId");
