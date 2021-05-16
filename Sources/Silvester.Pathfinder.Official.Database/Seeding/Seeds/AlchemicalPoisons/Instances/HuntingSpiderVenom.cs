@@ -60,8 +60,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("a78408c4-2205-480a-8609-2cd28a755fe1"), Damage = "1d10", DamageTypeId = DamageTypes.Instances.Poison.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("58936569-a213-4c32-bad0-8dd632e8c143"),  ConditionId = FlatFooted.ID}
+                    new DamageEffect { Id = Guid.Parse("a78408c4-2205-480a-8609-2cd28a755fe1"), Damage = "1d10", DamageTypeId = DamageTypes.Instances.Poison.ID},
+                    new ConditionEffect { Id = Guid.Parse("58936569-a213-4c32-bad0-8dd632e8c143"),  ConditionId = FlatFooted.ID}
                 }
             };
 
@@ -71,9 +71,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("0727811c-bfd4-4a38-9166-c94d17fd239f"), Damage = "1d12", DamageTypeId = DamageTypes.Instances.Poison.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("a4706319-051d-4c98-af73-398cdccec687"),  ConditionId = Clumsy.ID, Severity = 1},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("eb2dce7e-db4d-4bac-a61c-b3e9aea525ed"),  ConditionId = FlatFooted.ID}
+                    new DamageEffect { Id = Guid.Parse("0727811c-bfd4-4a38-9166-c94d17fd239f"), Damage = "1d12", DamageTypeId = DamageTypes.Instances.Poison.ID},
+                    new ConditionEffect { Id = Guid.Parse("a4706319-051d-4c98-af73-398cdccec687"),  ConditionId = Clumsy.ID, Severity = 1},
+                    new ConditionEffect { Id = Guid.Parse("eb2dce7e-db4d-4bac-a61c-b3e9aea525ed"),  ConditionId = FlatFooted.ID}
                 }
             };
 
@@ -83,9 +83,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("de183ff8-e257-433d-8768-043895f2ade5"), Damage = "2d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("eeb7db98-674f-4052-b325-60e52efca32d"),  ConditionId = Clumsy.ID, Severity = 2},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("e2fcf7f8-043e-44c8-a54b-c30295bd1fff"),  ConditionId = FlatFooted.ID}
+                    new DamageEffect { Id = Guid.Parse("de183ff8-e257-433d-8768-043895f2ade5"), Damage = "2d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
+                    new ConditionEffect { Id = Guid.Parse("eeb7db98-674f-4052-b325-60e52efca32d"),  ConditionId = Clumsy.ID, Severity = 2},
+                    new ConditionEffect { Id = Guid.Parse("e2fcf7f8-043e-44c8-a54b-c30295bd1fff"),  ConditionId = FlatFooted.ID}
                 }
             };
         }

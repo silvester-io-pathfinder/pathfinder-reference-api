@@ -60,8 +60,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Minute",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("65f8e81b-a1a5-4e2e-8438-3a916d6db650"),  ConditionId = Clumsy.ID, Severity = 1},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("88e24d10-6b18-47b2-88fb-767470c877b4"),  ConditionId = WeighedDown.ID, Severity = 10},
+                    new ConditionEffect { Id = Guid.Parse("65f8e81b-a1a5-4e2e-8438-3a916d6db650"),  ConditionId = Clumsy.ID, Severity = 1},
+                    new ConditionEffect { Id = Guid.Parse("88e24d10-6b18-47b2-88fb-767470c877b4"),  ConditionId = WeighedDown.ID, Severity = 10},
                 }
             };
 
@@ -71,8 +71,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Minute",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("9b240dfe-79d6-4bc6-a125-6c270dab633b"),  ConditionId = Clumsy.ID, Severity = 2},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("9ef1187a-3825-4bd4-a0b6-b3bf8ebcd19d"),  ConditionId = WeighedDown.ID, Severity = 20},
+                    new ConditionEffect { Id = Guid.Parse("9b240dfe-79d6-4bc6-a125-6c270dab633b"),  ConditionId = Clumsy.ID, Severity = 2},
+                    new ConditionEffect { Id = Guid.Parse("9ef1187a-3825-4bd4-a0b6-b3bf8ebcd19d"),  ConditionId = WeighedDown.ID, Severity = 20},
                 }
             };
 
@@ -82,9 +82,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "4 Minute",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("a7046f36-0812-481c-8e53-45d094d2608a"),  ConditionId = Clumsy.ID, Severity = 3},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("1f198a30-8ab5-4d93-8750-cca7e6c55141"),  ConditionId = FlatFooted.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("cf5f02ee-0a44-4991-a7b6-454880d2d97a"),  ConditionId = WeighedDown.ID, Severity = 30},
+                    new ConditionEffect { Id = Guid.Parse("a7046f36-0812-481c-8e53-45d094d2608a"),  ConditionId = Clumsy.ID, Severity = 3},
+                    new ConditionEffect { Id = Guid.Parse("1f198a30-8ab5-4d93-8750-cca7e6c55141"),  ConditionId = FlatFooted.ID},
+                    new ConditionEffect { Id = Guid.Parse("cf5f02ee-0a44-4991-a7b6-454880d2d97a"),  ConditionId = WeighedDown.ID, Severity = 30},
                 }
             };
         }

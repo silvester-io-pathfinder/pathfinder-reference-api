@@ -59,7 +59,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("1a85f9c6-5743-433a-a7b3-687ab32981cb"), Damage = "8d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
+                    new DamageEffect { Id = Guid.Parse("1a85f9c6-5743-433a-a7b3-687ab32981cb"), Damage = "8d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
                 }
             };
 
@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("4fd42652-15b6-4286-aa70-b81e34ec90a7"), Damage = "10d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
+                    new DamageEffect { Id = Guid.Parse("4fd42652-15b6-4286-aa70-b81e34ec90a7"), Damage = "10d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
                 }
             };
 
@@ -79,7 +79,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("d09dd3cd-e867-463c-b911-106662f84b44"), Damage = "15d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
+                    new DamageEffect { Id = Guid.Parse("d09dd3cd-e867-463c-b911-106662f84b44"), Damage = "15d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
                 }
             };
         }

@@ -8,9 +8,13 @@ namespace Silvester.Pathfinder.Official.Database.Models
     {
         public string Name { get; set; } = default!;
 
-        public int? Range { get; set; }
+        public string? Addendum { get; set; }
 
-        public TimeSpan? CastTime { get; set; }
+        public string? Range { get; set; }
+
+        public string? Cost { get; set; }
+
+        public string? CastTime { get; set; }
 
         public int Level { get; set; }
 
@@ -18,9 +22,9 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public bool IsDismissable { get; set; } 
 
-        public string? Area { get; set; }
+        public string? Duration { get; set; }
 
-        public string? Duration { get; set; } 
+        public string? Area { get; set; }
 
         public Guid? ActionTypeId { get; set; }
         public ActionType? ActionType { get; set; }
@@ -28,14 +32,19 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid SpellTypeId { get; set; }
         public SpellType SpellType { get; set; } = default!;
 
+        public bool? IsSavingThrowBasic { get; set; }
+
         public Guid? SavingThrowStatId { get; set; }
         public SavingThrowStat? SavingThrowStat { get; set; }
 
-        public RollableEffect? RollableEffect { get; set; }
         public Guid? RollableEffectId { get; set; }
+        public RollableEffect? RollableEffect { get; set; }
 
-        public MagicSchool MagicSchool { get; set; } = default!;
         public Guid MagicSchoolId { get; set; }
+        public MagicSchool MagicSchool { get; set; } = default!;
+
+        public Guid SourcePageId { get; set; }
+        public SourcePage SourcePage { get; set; } = default!;
 
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
 
@@ -50,5 +59,9 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<SpellTrigger> Triggers { get; set; } = new List<SpellTrigger>();
 
         public ICollection<SpellRequirement> Requirements { get; set; } = new List<SpellRequirement>();
+        
+        public ICollection<ActionEffect> ActionEffects { get; set; } = new List<ActionEffect>();
+
+        public ICollection<StaggeredEffect> StaggeredEffects { get; set; } = new List<StaggeredEffect>();
     }
 }

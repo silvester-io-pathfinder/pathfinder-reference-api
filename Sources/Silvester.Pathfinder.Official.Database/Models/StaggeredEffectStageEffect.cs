@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public StaggeredEffectStage StaggeredEffectStage { get; set; } = default!;
     }
 
-    public class ConditionPoisonStageEffect : StaggeredEffectStageEffect
+    public class ConditionEffect : StaggeredEffectStageEffect
     {
         public Guid ConditionId { get; set; }
         public Condition Condition { get; set; } = default!;
@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public int? Severity { get; set; }
     }
 
-    public class DamagePoisonStageEffect : StaggeredEffectStageEffect
+    public class DamageEffect : StaggeredEffectStageEffect
     {
         public string Damage { get; set; } = default!;
 
@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public DamageType DamageType { get; set; } = default!;
     }
 
-    public class OtherPoisonStageEffect : StaggeredEffectStageEffect
+    public class OtherEffect : StaggeredEffectStageEffect
     {
         public string Effect { get; set; } = default!;
     }

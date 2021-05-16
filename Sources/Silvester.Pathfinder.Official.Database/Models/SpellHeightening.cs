@@ -6,7 +6,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 {
     public class SpellHeightening : BaseEntity
     {
-        public int Level { get; set; }
+        public string Level { get; set; }
 
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
 

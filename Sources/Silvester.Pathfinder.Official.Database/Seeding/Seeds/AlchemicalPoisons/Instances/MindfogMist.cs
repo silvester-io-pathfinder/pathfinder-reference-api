@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("bddebbfc-cc35-4a5e-b652-c0f9a83c3f49"),  ConditionId = Stupefied.ID, Severity = 2}
+                    new ConditionEffect { Id = Guid.Parse("bddebbfc-cc35-4a5e-b652-c0f9a83c3f49"),  ConditionId = Stupefied.ID, Severity = 2}
                 }
             };
 
@@ -70,8 +70,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("69312c8d-fa78-4abc-8090-11990a49fbbc"),  ConditionId = Confused.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("d6ffe1a6-0373-4e2d-bc65-256555bbdf30"),  ConditionId = Stupefied.ID, Severity = 3}
+                    new ConditionEffect { Id = Guid.Parse("69312c8d-fa78-4abc-8090-11990a49fbbc"),  ConditionId = Confused.ID},
+                    new ConditionEffect { Id = Guid.Parse("d6ffe1a6-0373-4e2d-bc65-256555bbdf30"),  ConditionId = Stupefied.ID, Severity = 3}
                 }
             };
 
@@ -81,8 +81,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("07c4bb2b-a1b8-4497-bcaf-edd83a10e826"),  ConditionId = Confused.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("af7c7592-da0a-4afa-9a97-4a9fbe98f219"),  ConditionId = Stupefied.ID, Severity = 4}
+                    new ConditionEffect { Id = Guid.Parse("07c4bb2b-a1b8-4497-bcaf-edd83a10e826"),  ConditionId = Confused.ID},
+                    new ConditionEffect { Id = Guid.Parse("af7c7592-da0a-4afa-9a97-4a9fbe98f219"),  ConditionId = Stupefied.ID, Severity = 4}
                 }
             };
         }

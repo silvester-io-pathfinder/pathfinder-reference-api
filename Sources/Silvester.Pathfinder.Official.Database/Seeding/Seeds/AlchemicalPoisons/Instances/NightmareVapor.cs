@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("2fb6cbeb-862a-47d6-8a14-beba496fa865"),  ConditionId = Confused.ID}
+                    new ConditionEffect { Id = Guid.Parse("2fb6cbeb-862a-47d6-8a14-beba496fa865"),  ConditionId = Confused.ID}
                 }
             };
 
@@ -70,8 +70,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {                    
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("e901e773-4ddd-45b3-b08a-dfcfa2df5bf7"),  ConditionId = Confused.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("040091a6-d7c9-4d09-892d-8b47780ad8ba"),  ConditionId = FlatFooted.ID}
+                    new ConditionEffect { Id = Guid.Parse("e901e773-4ddd-45b3-b08a-dfcfa2df5bf7"),  ConditionId = Confused.ID},
+                    new ConditionEffect { Id = Guid.Parse("040091a6-d7c9-4d09-892d-8b47780ad8ba"),  ConditionId = FlatFooted.ID}
                 }
             };
 
@@ -81,9 +81,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("a3fe5d9e-596c-4a4c-9bba-15c06efd2771"),  ConditionId = Confused.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("597f934c-9fdc-4b2f-a1e8-22e3b4727bf6"),  ConditionId = FlatFooted.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("4e11fe72-86a4-462a-8e76-fe7a1a29af16"),  ConditionId = Stupefied.ID, Severity = 2}
+                    new ConditionEffect { Id = Guid.Parse("a3fe5d9e-596c-4a4c-9bba-15c06efd2771"),  ConditionId = Confused.ID},
+                    new ConditionEffect { Id = Guid.Parse("597f934c-9fdc-4b2f-a1e8-22e3b4727bf6"),  ConditionId = FlatFooted.ID},
+                    new ConditionEffect { Id = Guid.Parse("4e11fe72-86a4-462a-8e76-fe7a1a29af16"),  ConditionId = Stupefied.ID, Severity = 2}
                 }
             };
         }

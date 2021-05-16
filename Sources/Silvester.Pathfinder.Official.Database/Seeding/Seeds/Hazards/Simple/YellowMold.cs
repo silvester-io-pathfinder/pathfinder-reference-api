@@ -85,8 +85,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                                     Duration = "1 Round",
                                     Effects =
                                     {
-                                        new DamagePoisonStageEffect {Id = Guid.Parse("451e7a2f-0cea-4e95-b3a2-570fdbd2b452"), Damage = "1d8", DamageTypeId = DamageTypes.Instances.Poison.ID },
-                                        new ConditionPoisonStageEffect { Id = Guid.Parse("5f0eaf21-7e87-400a-9e5c-76ac71e25323"), ConditionId = Drained.ID, Severity = 1}
+                                        new DamageEffect {Id = Guid.Parse("451e7a2f-0cea-4e95-b3a2-570fdbd2b452"), Damage = "1d8", DamageTypeId = DamageTypes.Instances.Poison.ID },
+                                        new ConditionEffect { Id = Guid.Parse("5f0eaf21-7e87-400a-9e5c-76ac71e25323"), ConditionId = Drained.ID, Severity = 1}
                                     }
                                 },
                                 new StaggeredEffectStage
@@ -95,8 +95,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                                     Duration = "1 Round",
                                     Effects =
                                     {
-                                        new DamagePoisonStageEffect {Id = Guid.Parse("3ea75142-a736-483f-b353-110621dae868"), Damage = "2d8", DamageTypeId = DamageTypes.Instances.Poison.ID },
-                                        new ConditionPoisonStageEffect { Id = Guid.Parse("20779b36-4f8e-4e0f-908f-1c8763dd0381"), ConditionId = Drained.ID, Severity = 2}
+                                        new DamageEffect {Id = Guid.Parse("3ea75142-a736-483f-b353-110621dae868"), Damage = "2d8", DamageTypeId = DamageTypes.Instances.Poison.ID },
+                                        new ConditionEffect { Id = Guid.Parse("20779b36-4f8e-4e0f-908f-1c8763dd0381"), ConditionId = Drained.ID, Severity = 2}
                                     }
                                 },
                                 new StaggeredEffectStage
@@ -105,8 +105,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Simple
                                     Duration = "1 Round",
                                     Effects =
                                     {
-                                        new DamagePoisonStageEffect {Id = Guid.Parse("20e13453-ee1d-462b-b088-0fce0b39d925"), Damage = "3d8", DamageTypeId = DamageTypes.Instances.Poison.ID },
-                                        new ConditionPoisonStageEffect { Id = Guid.Parse("ffb723ae-f741-4d89-bae2-50b62fdf5405"), ConditionId = Drained.ID, Severity = 3}
+                                        new DamageEffect {Id = Guid.Parse("20e13453-ee1d-462b-b088-0fce0b39d925"), Damage = "3d8", DamageTypeId = DamageTypes.Instances.Poison.ID },
+                                        new ConditionEffect { Id = Guid.Parse("ffb723ae-f741-4d89-bae2-50b62fdf5405"), ConditionId = Drained.ID, Severity = 3}
                                     }
                                 },
                             }

@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("d465d853-ec47-4dae-8127-12eb28f7772e"),  ConditionId = Slowed.ID, Severity = 1}
+                    new ConditionEffect { Id = Guid.Parse("d465d853-ec47-4dae-8127-12eb28f7772e"),  ConditionId = Slowed.ID, Severity = 1}
                 }
             };
 
@@ -73,7 +73,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Minute",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("d879fa2d-c94f-4800-bea2-dae5fbae818e"),  ConditionId = Slowed.ID, Severity = 1}
+                    new ConditionEffect { Id = Guid.Parse("d879fa2d-c94f-4800-bea2-dae5fbae818e"),  ConditionId = Slowed.ID, Severity = 1}
                 }
             };
 
@@ -83,8 +83,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("f07abe26-4519-452c-9ede-9e1324f0af60"),  ConditionId = Unconscious.ID},
-                    new OtherPoisonStageEffect { Id = Guid.Parse("c6063c4e-4644-4972-baa0-fab5ae0eb0b0"),  Effect = "You cannot Perception check to wake up from unconsciousness."}
+                    new ConditionEffect { Id = Guid.Parse("f07abe26-4519-452c-9ede-9e1324f0af60"),  ConditionId = Unconscious.ID},
+                    new OtherEffect { Id = Guid.Parse("c6063c4e-4644-4972-baa0-fab5ae0eb0b0"),  Effect = "You cannot Perception check to wake up from unconsciousness."}
                 }
             };
 
@@ -94,8 +94,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1d4 Hours",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("33a4cee8-887e-4b38-b519-1d31ff816a33"),  ConditionId = Unconscious.ID},
-                    new OtherPoisonStageEffect { Id = Guid.Parse("a4bc689a-bae6-4049-9da8-b5c4eb8a75b6"),  Effect = "You cannot Perception check to wake up from unconsciousness."}
+                    new ConditionEffect { Id = Guid.Parse("33a4cee8-887e-4b38-b519-1d31ff816a33"),  ConditionId = Unconscious.ID},
+                    new OtherEffect { Id = Guid.Parse("a4bc689a-bae6-4049-9da8-b5c4eb8a75b6"),  Effect = "You cannot Perception check to wake up from unconsciousness."}
                 }
             };
         }

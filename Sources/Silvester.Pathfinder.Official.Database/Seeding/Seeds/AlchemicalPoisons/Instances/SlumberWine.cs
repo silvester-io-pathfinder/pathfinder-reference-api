@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Day",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("caf16477-a14f-4430-aeb3-098cba159e84"),  ConditionId = Unconscious.ID}
+                    new ConditionEffect { Id = Guid.Parse("caf16477-a14f-4430-aeb3-098cba159e84"),  ConditionId = Unconscious.ID}
                 }
             };
 
@@ -71,7 +71,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "2 Days",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("3b935c66-65ea-48c8-95bf-06adb04e8b49"),  ConditionId = Unconscious.ID}
+                    new ConditionEffect { Id = Guid.Parse("3b935c66-65ea-48c8-95bf-06adb04e8b49"),  ConditionId = Unconscious.ID}
                 }
             };
 
@@ -81,7 +81,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "3 Days",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("f8114adf-1e3e-4056-9fac-50e6972e782c"),  ConditionId = Unconscious.ID}
+                    new ConditionEffect { Id = Guid.Parse("f8114adf-1e3e-4056-9fac-50e6972e782c"),  ConditionId = Unconscious.ID}
                 }
             };
         }

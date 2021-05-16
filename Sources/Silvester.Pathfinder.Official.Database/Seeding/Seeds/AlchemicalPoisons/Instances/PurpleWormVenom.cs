@@ -60,8 +60,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("05efa5dc-5e14-418c-be89-4d9f4a3500fe"), Damage = "5d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("2ba264b5-6806-41e9-9525-7b7245538a19"),  ConditionId = Enfeebled.ID, Severity = 2}
+                    new DamageEffect { Id = Guid.Parse("05efa5dc-5e14-418c-be89-4d9f4a3500fe"), Damage = "5d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
+                    new ConditionEffect { Id = Guid.Parse("2ba264b5-6806-41e9-9525-7b7245538a19"),  ConditionId = Enfeebled.ID, Severity = 2}
                 }
             };
 
@@ -71,8 +71,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("e550f252-a0e1-4e50-92ce-fbb0a02a5066"), Damage = "6d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("a4ea2ad9-1e02-4f91-bec6-15ab460cdea4"),  ConditionId = Enfeebled.ID, Severity = 2}
+                    new DamageEffect { Id = Guid.Parse("e550f252-a0e1-4e50-92ce-fbb0a02a5066"), Damage = "6d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
+                    new ConditionEffect { Id = Guid.Parse("a4ea2ad9-1e02-4f91-bec6-15ab460cdea4"),  ConditionId = Enfeebled.ID, Severity = 2}
                 }
             };
 
@@ -82,8 +82,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
                 Duration = "1 Round",
                 Effects = new StaggeredEffectStageEffect[]
                 {
-                    new DamagePoisonStageEffect { Id = Guid.Parse("2c234f6c-3c55-4948-acc5-6575b4dedc72"), Damage = "8d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
-                    new ConditionPoisonStageEffect { Id = Guid.Parse("29139073-3fe6-46f0-a36a-210bd33b952d"),  ConditionId = Enfeebled.ID, Severity = 2}
+                    new DamageEffect { Id = Guid.Parse("2c234f6c-3c55-4948-acc5-6575b4dedc72"), Damage = "8d6", DamageTypeId = DamageTypes.Instances.Poison.ID},
+                    new ConditionEffect { Id = Guid.Parse("29139073-3fe6-46f0-a36a-210bd33b952d"),  ConditionId = Enfeebled.ID, Severity = 2}
                 }
             };
         }

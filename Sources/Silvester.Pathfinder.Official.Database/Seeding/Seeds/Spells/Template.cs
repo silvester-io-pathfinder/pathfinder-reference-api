@@ -13,12 +13,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
         {
             Spell spell = GetSpell();
             
-            RollableEffect? effect = GetRollableEffect();
-            if(effect != null)
+            RollableEffect? rollableEffect = GetRollableEffect();
+            if(rollableEffect != null)
             {
-                builder.AddData(effect); 
-                spell.RollableEffectId = effect.Id;
+                builder.AddData(rollableEffect); 
+                spell.RollableEffectId = rollableEffect.Id;
             }
+
+            SourcePage sourcePage = GetSourcePage();
+            spell.SourcePageId = sourcePage.Id;
+            builder.AddData(sourcePage);
 
             builder.AddTextBlocks(spell, GetSpellDetailBlocks(), e => e.Details);
 
@@ -46,6 +50,30 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
                 builder.AddData(heightening);
             }
 
+            foreach (StaggeredEffect effect in GetStaggeredEffects())
+            {
+                foreach(StaggeredEffectStage stage in effect.Stages)
+                {
+                    stage.StaggeredEffectId = effect.Id;
+                    foreach(StaggeredEffectStageEffect stageEffect in stage.Effects)
+                    {
+                        stageEffect.StaggeredEffectStageId = stage.Id;
+                        builder.AddData(stageEffect);
+                    }
+                
+                    stage.Effects = new StaggeredEffectStageEffect[0];
+                    builder.AddData(stage);
+                }
+                
+                effect.Stages = new StaggeredEffectStage[0];
+                builder.AddData(effect);
+            }
+
+            foreach(ActionEffect effect in GetActionEffects())
+            {
+                builder.AddOwnedData<Spell, ActionEffect>(e => e.ActionEffects, effect);
+            }
+
             foreach (SpellTrigger trigger in GetTriggers())
             {
                 builder.AddData(trigger);
@@ -61,11 +89,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
             return spell;
         }
 
+        protected abstract IEnumerable<ActionEffect> GetActionEffects();
+        protected abstract SourcePage GetSourcePage();
         public abstract Spell GetSpell();
         public abstract IEnumerable<TextBlock> GetSpellDetailBlocks();
         public abstract IEnumerable<Guid> GetSpellComponents();
         public abstract IEnumerable<Guid> GetTraits();
         public abstract IEnumerable<Guid> GetMagicTraditions();
+        
+        protected virtual IEnumerable<StaggeredEffect> GetStaggeredEffects()
+        {
+            //Override in concrete subclass to add staggered effects.
+            yield break;
+        }
 
         public virtual RollableEffect? GetRollableEffect()
         {
