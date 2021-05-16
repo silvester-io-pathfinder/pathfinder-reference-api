@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Inst
                 Hands = "1",
                 BulkId = NegligibleBulk.ID,
                 WeaponCategoryId = Martial.ID,
-                WeaponGroupId = Shield.ID,
+                WeaponGroupId = WeaponGroups.Instances.Shield.ID,
                 DamageTypeId = Bludgeoning.ID
             };
         }

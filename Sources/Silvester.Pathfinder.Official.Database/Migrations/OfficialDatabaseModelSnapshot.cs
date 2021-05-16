@@ -29670,6 +29670,103 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Shield", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ArmorClassBonus")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("BrokenThreshold")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("BulkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Hardness")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("HitPoints")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("SourcePageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("SpeedPenalty")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BulkId");
+
+                    b.HasIndex("SourcePageId");
+
+                    b.ToTable("Shields");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("1baaf531-78b3-4cde-ad0c-225dae0e7891"),
+                            ArmorClassBonus = 1,
+                            BrokenThreshold = 3,
+                            BulkId = new Guid("978d32f8-10b7-4150-bd9f-b8f037220542"),
+                            Hardness = 3,
+                            HitPoints = 6,
+                            Name = "Buckler",
+                            Price = 100,
+                            SourcePageId = new Guid("5a8df412-a2ab-4426-9aad-904ff92ac3c8"),
+                            SpeedPenalty = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("ea71685d-64f3-4374-815d-2710b6a1579b"),
+                            ArmorClassBonus = 2,
+                            BrokenThreshold = 10,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            Name = "Steel Shield",
+                            Price = 200,
+                            SourcePageId = new Guid("f5fde09c-367c-454f-ad51-7e09058d0a8a"),
+                            SpeedPenalty = 0
+                        },
+                        new
+                        {
+                            Id = new Guid("e1e2e623-f1b9-4ca4-b5d3-c5841769cde3"),
+                            ArmorClassBonus = 2,
+                            BrokenThreshold = 10,
+                            BulkId = new Guid("61e784de-dd93-4d53-acda-61dff663e2a3"),
+                            Hardness = 5,
+                            HitPoints = 20,
+                            Name = "Tower Shield",
+                            Price = 1000,
+                            SourcePageId = new Guid("f51f3206-0e03-406f-b31b-9056baffed0a"),
+                            SpeedPenalty = 5
+                        },
+                        new
+                        {
+                            Id = new Guid("0d0453b0-fa8a-4bd5-abf2-a141e9f98514"),
+                            ArmorClassBonus = 2,
+                            BrokenThreshold = 6,
+                            BulkId = new Guid("8ad6f1e7-1ac2-47fd-b374-bb4f077a2545"),
+                            Hardness = 3,
+                            HitPoints = 12,
+                            Name = "Wooden Shield",
+                            Price = 100,
+                            SourcePageId = new Guid("e657277d-8963-4063-904b-5b051d69229f"),
+                            SpeedPenalty = 0
+                        });
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Skill", b =>
                 {
                     b.Property<Guid>("Id")
@@ -33348,6 +33445,30 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                             Id = new Guid("d2523e56-dad3-4c5c-8787-4b13ab0c823a"),
                             Page = 138,
                             SourceId = new Guid("e11f405f-c6bf-4b1f-881e-2a69418ef4cd")
+                        },
+                        new
+                        {
+                            Id = new Guid("5a8df412-a2ab-4426-9aad-904ff92ac3c8"),
+                            Page = 277,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f5fde09c-367c-454f-ad51-7e09058d0a8a"),
+                            Page = 277,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("f51f3206-0e03-406f-b31b-9056baffed0a"),
+                            Page = 277,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
+                        },
+                        new
+                        {
+                            Id = new Guid("e657277d-8963-4063-904b-5b051d69229f"),
+                            Page = 277,
+                            SourceId = new Guid("4e85ec44-4a72-4bea-a3e5-5e6d88882d75")
                         },
                         new
                         {
@@ -58220,6 +58341,99 @@ namespace Silvester.Pathfinder.Official.Database.Migrations
                         });
 
                     b.Navigation("Details");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Shield", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.Bulk", "Bulk")
+                        .WithMany()
+                        .HasForeignKey("BulkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Official.Database.Models.SourcePage", "SourcePage")
+                        .WithMany()
+                        .HasForeignKey("SourcePageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.OwnsMany("Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock", "Details", b1 =>
+                        {
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<int>("Order")
+                                .HasColumnType("integer");
+
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Text")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<int>("Type")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OwnerId");
+
+                            b1.ToTable("Shields_Details");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    Id = new Guid("067483c4-7d31-43f1-8faa-d57b1c9d42f9"),
+                                    Order = 0,
+                                    OwnerId = new Guid("1baaf531-78b3-4cde-ad0c-225dae0e7891"),
+                                    Text = "This very small shield is a favorite of duelists and quick, lightly armored warriors. It’s typically made of steel and strapped to your forearm. You can Raise a Shield with your buckler as long as you have that hand free or are holding a light object that’s not a weapon in that hand.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("d6cd8f12-9dea-414e-9391-153c6bf81aeb"),
+                                    Order = 0,
+                                    OwnerId = new Guid("ea71685d-64f3-4374-815d-2710b6a1579b"),
+                                    Text = "Like wooden shields, steel shields come in a variety of shapes and sizes. Though more expensive than wooden shields, they are much more durable.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("8fe16bba-3ac9-44cc-bf48-ba9406064f63"),
+                                    Order = 0,
+                                    OwnerId = new Guid("e1e2e623-f1b9-4ca4-b5d3-c5841769cde3"),
+                                    Text = "These massive shields can be used to provide cover to nearly the entire body. Due to their size, they are typically made of wood reinforced with metal.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("9b600ffc-3d7d-43d1-8261-ea21bf96144f"),
+                                    Order = 1,
+                                    OwnerId = new Guid("e1e2e623-f1b9-4ca4-b5d3-c5841769cde3"),
+                                    Text = "When using the Take Cover action while the shield is raised, the armor class bonus becomes +4 instead of +2.",
+                                    Type = 0
+                                },
+                                new
+                                {
+                                    Id = new Guid("c4a8e664-b25a-4c2e-8365-4e1eb47723d7"),
+                                    Order = 0,
+                                    OwnerId = new Guid("0d0453b0-fa8a-4bd5-abf2-a141e9f98514"),
+                                    Text = "Though they come in a variety of shapes and sizes, the protection offered by wooden shields comes from the stoutness of their materials. While wooden shields are less expensive than steel shields, they break more easily.",
+                                    Type = 0
+                                });
+                        });
+
+                    b.Navigation("Bulk");
+
+                    b.Navigation("Details");
+
+                    b.Navigation("SourcePage");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Official.Database.Models.Skill", b =>

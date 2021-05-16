@@ -80,6 +80,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<MeleeWeapon> RangedWeapons { get; set; } = default!;
         public DbSet<Rarity> Rarities { get; set; } = default!;
         public DbSet<SavingThrowStat> SavingThrowStats { get; set; } = default!;
+        public DbSet<Shield> Shields { get; set; } = default!;
         public DbSet<Skill> Skills { get; set; } = default!;
         public DbSet<Source> Sources { get; set; } = default!;
         public DbSet<SpellComponent> SpellComponents { get; set; } = default!;
