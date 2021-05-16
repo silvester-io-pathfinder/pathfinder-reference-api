@@ -1,15 +1,16 @@
 name: ci
 
 on:
+  workflow_dispatch:
   push:
-    branches: master
+    branches: [master]
 
 jobs:
   main:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
         
       - name: Read properties.proj
         id: read-properties
