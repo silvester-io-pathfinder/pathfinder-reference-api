@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Area = "10-foot emanation.",
                 Targets = "Allies in the area.",
                 Duration = "Sustained up to 1 minute.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Abjuration.ID
             };

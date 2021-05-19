@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Name = "Read Omens",
                 Level = 4,
                 CastTime = "10 minutes.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.LongAction.ID,
                 MagicSchoolId = MagicSchools.Instances.Divination.ID
             };

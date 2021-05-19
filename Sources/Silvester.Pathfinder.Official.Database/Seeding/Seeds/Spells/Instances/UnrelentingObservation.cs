@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Area = "20-foot burst.",
                 Duration = "Varies",
                 Targets = "1 creature or object tracked and up to 5 other willing creatures.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Divination.ID
             };

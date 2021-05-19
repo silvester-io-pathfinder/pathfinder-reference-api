@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Level = 5,
                 Range = "60 feet.",
                 Targets = "The triggering creature.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 MagicSchoolId = MagicSchools.Instances.Necromancy.ID,
             };

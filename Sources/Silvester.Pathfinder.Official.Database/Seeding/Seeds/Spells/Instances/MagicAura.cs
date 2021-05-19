@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Range = "Touch.",
                 Duration = "Until the next time you make your daily preparations.",
                 Targets = "1 object of 3 bulk or less.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.LongAction.ID,
                 MagicSchoolId = MagicSchools.Instances.Illusion.ID
             };

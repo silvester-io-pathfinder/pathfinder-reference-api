@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 CastTime = "1 minute.",
                 IsDismissable = true,
                 Duration = "Sustained.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.LongAction.ID,
                 MagicSchoolId = MagicSchools.Instances.Divination.ID
             };

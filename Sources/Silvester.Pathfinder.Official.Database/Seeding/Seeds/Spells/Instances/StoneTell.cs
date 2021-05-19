@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Name = "Stone Tell",
                 Level = 6,
                 Duration = "10 minutes.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Evocation.ID
             };

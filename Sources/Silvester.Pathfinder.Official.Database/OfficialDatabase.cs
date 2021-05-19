@@ -21,6 +21,7 @@ namespace Silvester.Pathfinder.Official.Database
 
         }
 
+        public DbSet<Ability> Abilities { get; set; } = default!;
         public DbSet<Models.Action> Actions { get; set; } = default!;
         public DbSet<ActionType> ActionTypes { get; set; } = default!;
         public DbSet<AlchemicalBomb> AlchemicalBombs { get; set; } = default!;
@@ -48,11 +49,12 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<Domain> Domains { get; set; } = default!;
         public DbSet<Feat> Feats { get; set; } = default!;
         public DbSet<FeatType> FeatTypes { get; set; } = default!;
+        public DbSet<FocusType> FocusTypes { get; set; } = default!;
         public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
         public DbSet<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = default!;
         public DbSet<Frequency> Frequencies { get; set; } = default!;
         public DbSet<HazardComplexity> HazardComplexities { get; set; } = default!;
-        public DbSet<HazardImmunity> HazardImmunities { get; set; } = default!;
+        public DbSet<Immunity> HazardImmunities { get; set; } = default!;
         public DbSet<Hazard> Hazards { get; set; } = default!;
         public DbSet<HazardType> HazardTypes { get; set; } = default!;
         public DbSet<Heritage> Heritages { get; set; } = default!;

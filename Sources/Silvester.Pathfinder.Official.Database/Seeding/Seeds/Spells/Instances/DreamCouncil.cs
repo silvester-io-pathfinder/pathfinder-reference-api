@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 IsDismissable = true,
                 Duration = "1 hour.",
                 Targets = "Up to 12 creature you know by name and have met in person.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.LongAction.ID,
                 MagicSchoolId = MagicSchools.Instances.Illusion.ID
             };

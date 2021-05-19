@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Id = ID,
                 Name = "Miracle",
                 Level = 10,
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.ThreeActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Divination.ID
             };

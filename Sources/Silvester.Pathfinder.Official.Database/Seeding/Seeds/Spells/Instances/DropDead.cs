@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Range = "120 feet.",
                 Duration = "Sustained up to 1 minute.",
                 Targets = "1 creature.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 MagicSchoolId = MagicSchools.Instances.Illusion.ID
             };

@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 IsDismissable = true,
                 Duration = "Sustained up to 1 minute.",
                 Targets = "1 unattended object of up to 80 Bulk with no dimension longer than 20 feet.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Evocation.ID
             };

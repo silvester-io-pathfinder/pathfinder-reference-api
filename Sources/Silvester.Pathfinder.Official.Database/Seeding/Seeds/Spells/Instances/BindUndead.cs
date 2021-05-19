@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Range = "30 feet.",
                 Duration = "1 day.",
                 Targets = "1 mindless undead creature with a level no greater than bind undead's spell level.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Necromancy.ID,
             };

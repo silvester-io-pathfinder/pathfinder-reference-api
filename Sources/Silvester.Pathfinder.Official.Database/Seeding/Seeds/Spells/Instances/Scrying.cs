@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Targets = "1 creature.",
                 IsSavingThrowBasic = false,
                 SavingThrowStatId = SavingThrowStats.Instances.Will.ID,
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.LongAction.ID,
                 MagicSchoolId = MagicSchools.Instances.Divination.ID
             };

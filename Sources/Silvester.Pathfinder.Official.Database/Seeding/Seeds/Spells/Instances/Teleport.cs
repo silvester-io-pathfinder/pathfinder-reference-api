@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 CastTime = "10 minutes.",
                 Range = "100 miles.",
                 Targets = "You and up to 4 targets touched, either willing creatures or objects roughly the size of a creature.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.LongAction.ID,
                 MagicSchoolId = MagicSchools.Instances.Conjuration.ID
             };

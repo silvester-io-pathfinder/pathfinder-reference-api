@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Level = 8,
                 Area = "10-foot emanation, which affects you.",
                 Duration = "1 minute.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.ThreeActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Abjuration.ID,
             };

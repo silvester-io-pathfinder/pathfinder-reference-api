@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Targets = "1 corporeal creature.",
                 IsSavingThrowBasic = true,
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Evocation.ID
             };

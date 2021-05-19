@@ -1,4 +1,5 @@
 ﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Tables;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Targets = "Up to 5 creatures.",
                 IsSavingThrowBasic = false,
                 SavingThrowStatId = SavingThrowStats.Instances.Will.ID,
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Enchantment.ID
             };
@@ -32,11 +33,40 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Fleeting notes of a strange and unnatural song fill the air, overtaking the mind. Each target must attempt a Will save when you cast the spell, and again the first time you Sustain the Spell each round. A creature needs to attempt only one save against the song each round, and you have to keep the same targets when you Sustain the Spell." };
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "If a target creature fails or critically fails their saving throw, the table below can be referenced for the result of the 1d4 roll." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "1 - The target is frightened 2." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "2 - The target is confused for 1 round." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "3 - The target is stupefied 4 for 1 round." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "4 - The target is blinded for 1 round." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "5 - The target is stunned fro 1 round and stupefied 1 for an unlimited duration." };
+        }
+
+        protected override Table? GetTable(TableBuilder builder)
+        {
+            builder
+                .AddColumn("2792cdda-3eb4-4bd3-b9d6-d81ea492587d", "Result")
+                .AddColumn("3d4b05ba-6fa1-425e-8a32-f72757cd9df7", "Effect")
+                .AddRow("d21314e9-e1df-4368-81ff-81397f602489", row =>
+                {
+                    row.AddCell("8bc2c85f-a0e9-43ed-a684-441e4dabe1f1", "1");
+                    row.AddCell("e0b13351-856c-4769-a24b-68aec7a802db", "The target is frightened 2.");
+                })
+                .AddRow("81324bdf-1fd9-4cd8-abf5-97ea41a80e81", row =>
+                {
+                    row.AddCell("ff6ec7bf-6641-4994-9244-b0d18f10008f", "2");
+                    row.AddCell("1b7b0f66-5aef-4a03-b5ae-f908f6fe64a7", "The target is confused for 1 round.");
+                })
+                .AddRow("741c39a8-e338-4c7b-8f9d-4aca84862679", row =>
+                {
+                    row.AddCell("9011d053-b0f6-4183-a9ee-3668646bc7bb", "3"); 
+                    row.AddCell("bad7459a-c2a6-48c1-b6d8-e776507d88c2", "The target is stupefied 4 for 1 round.");
+                })
+                .AddRow("1aa818a0-793e-41d3-9aba-86f5f93efa8c", row =>
+                {
+                    row.AddCell("549c84f9-a3f4-498f-a361-7d0d4f4d9000", "4"); 
+                    row.AddCell("1dc82c7f-9268-414e-bcef-8d65547a5659", "The target is blinded for 1 round.");
+                })
+                .AddRow("07585243-10f2-4903-bac5-bf75e3482bb2", row =>
+                {
+                    row.AddCell("5b9d0d2e-8dc0-48c9-95e6-8fbbd0109a47", "5"); 
+                    row.AddCell("b96d7dd3-615d-4b1b-ab03-dbce5c17da00", "The target is stunned for 1 round and stupefied 1 for an unlimited duration.");
+                });
+
+            return builder.Build("");
         }
 
         public override RollableEffect? GetRollableEffect()

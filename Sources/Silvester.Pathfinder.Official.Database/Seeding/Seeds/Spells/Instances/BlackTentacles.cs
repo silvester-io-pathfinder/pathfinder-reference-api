@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Range = "120 feet.",
                 Duration = "1 minute.",
                 Targets = "20-foot burst adjecent to a flat surface.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.ThreeActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Conjuration.ID,
             };

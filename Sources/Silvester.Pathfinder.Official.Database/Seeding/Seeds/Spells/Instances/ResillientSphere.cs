@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Range = "30 feet.",
                 Duration = "1 minute.",
                 Targets = "1 Large or smaller creature.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 IsSavingThrowBasic = false,
                 SavingThrowStatId = SavingThrowStats.Instances.Will.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,

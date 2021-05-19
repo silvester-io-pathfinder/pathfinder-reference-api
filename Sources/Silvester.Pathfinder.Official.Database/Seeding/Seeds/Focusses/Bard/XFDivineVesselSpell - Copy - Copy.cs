@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Targets = "",
                 IsSavingThrowBasic = false,
                 SavingThrowStatId = SavingThrowStats.Instances..ID,
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Transmutation.ID
             };
@@ -130,7 +130,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse(""),
                 SourceId = Sources.Instances.CoreRulebook.ID,
-                Page = 380
+                Page = 385
             };
         }
     }

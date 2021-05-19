@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Area = "4 contiguous 5-foot squares or 1 object of 1 Bulk or less.",
                 Duration = "1 minute.",
                 Targets = "1 object of 1 Bulk or less.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Conjuration.ID
             };

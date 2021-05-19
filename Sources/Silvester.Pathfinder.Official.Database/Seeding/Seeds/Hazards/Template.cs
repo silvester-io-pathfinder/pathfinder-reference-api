@@ -71,7 +71,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
 
             foreach (Guid immunityId in GetImmunities())
             {
-                builder.HasJoinData<HazardImmunity, Hazard>((immunityId, hazard.Id));
+                builder.HasJoinData<Immunity, Hazard>((immunityId, hazard.Id));
             }
 
             return hazard;

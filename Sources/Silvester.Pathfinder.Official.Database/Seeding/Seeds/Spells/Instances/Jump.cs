@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Id = ID,
                 Name = "Jump",
                 Level = 1,
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 MagicSchoolId = MagicSchools.Instances.Transmutation.ID
             };

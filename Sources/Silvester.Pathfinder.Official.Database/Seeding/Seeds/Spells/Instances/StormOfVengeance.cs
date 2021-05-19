@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Area = "360-foot burst.",
                 IsDismissable = true,
                 Duration = "Sustained up to 1 minute.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.ThreeActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Evocation.ID
             };

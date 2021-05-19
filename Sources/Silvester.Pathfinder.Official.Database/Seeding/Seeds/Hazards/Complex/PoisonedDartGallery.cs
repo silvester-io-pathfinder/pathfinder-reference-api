@@ -44,9 +44,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards.Complex
 
         protected override IEnumerable<Guid> GetImmunities()
         {
-            yield return HazardImmunities.Instances.CriticalHits.ID;
-            yield return HazardImmunities.Instances.ObjectImmunities.ID;
-            yield return HazardImmunities.Instances.PrecisionDamage.ID;
+            yield return Immunities.Instances.CriticalHits.ID;
+            yield return Immunities.Instances.ObjectImmunities.ID;
+            yield return Immunities.Instances.PrecisionDamage.ID;
         }
 
         protected override IEnumerable<Guid> GetTraits()

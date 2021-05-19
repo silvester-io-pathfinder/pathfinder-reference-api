@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<HazardComponent> HazardComponents { get; set; } = new List<HazardComponent>();
 
-        public ICollection<HazardImmunity> Immunities { get; set; } = new List<HazardImmunity>();
+        public ICollection<Immunity> Immunities { get; set; } = new List<Immunity>();
 
         public ICollection<HazardDisableRequirement> DisableRequirements { get; set; } = new List<HazardDisableRequirement>();
      

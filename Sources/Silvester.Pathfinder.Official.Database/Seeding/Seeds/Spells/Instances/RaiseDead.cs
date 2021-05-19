@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Cost = "Diamonds worth a total value of the target's level (minimum 1) x 200 gp.",
                 Range = "10 feet.",
                 Targets = "1 dead creature of 13th level or lower.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.LongAction.ID,
                 MagicSchoolId = MagicSchools.Instances.Necromancy.ID
             };

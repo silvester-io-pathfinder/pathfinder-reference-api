@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Tables;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
             {
                 builder.AddData(rollableEffect); 
                 spell.RollableEffectId = rollableEffect.Id;
+            }
+
+            Table? table = GetTable(new TableBuilder());
+            if(table != null)
+            {
+                spell.TableId = table.Id;
+                builder.AddTable(table);
             }
 
             SourcePage sourcePage = GetSourcePage();
@@ -39,6 +47,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
             foreach (Guid traitId in GetTraits())
             {
                 builder.HasJoinData<Trait, Spell>((traitId, spell.Id));
+            }
+
+            foreach (Guid creatureId in GetSummonedCreatures())
+            {
+                builder.HasJoinData<Creature, Spell>((creatureId, spell.Id));
             }
 
             foreach (SpellHeightening heightening in GetHeightenings())
@@ -89,17 +102,32 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
             return spell;
         }
 
-        protected abstract IEnumerable<ActionEffect> GetActionEffects();
         protected abstract SourcePage GetSourcePage();
         public abstract Spell GetSpell();
         public abstract IEnumerable<TextBlock> GetSpellDetailBlocks();
         public abstract IEnumerable<Guid> GetSpellComponents();
         public abstract IEnumerable<Guid> GetTraits();
         public abstract IEnumerable<Guid> GetMagicTraditions();
-        
+
+        protected virtual Table? GetTable(TableBuilder builder)
+        {
+            return null;
+        }
+
+        protected virtual IEnumerable<ActionEffect> GetActionEffects()
+        {
+            //Override in concrete subclass to add action effects.
+            yield break;
+        }
+
         protected virtual IEnumerable<StaggeredEffect> GetStaggeredEffects()
         {
-            //Override in concrete subclass to add staggered effects.
+            yield break;
+        }
+
+        protected virtual IEnumerable<Guid> GetSummonedCreatures()
+        {
+            //Override in concrete subclass to add summoned creatures to the effect of the spell.
             yield break;
         }
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Silvester.Pathfinder.Official.Database.Utilities.Tables;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -157,6 +158,33 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             where T : class
         {
             return builder.Entity<T>().AddData(entities);
+        }
+
+        public static void AddTable(this ModelBuilder builder, Table table)
+        {
+            foreach (Column column in table.Columns)
+            {
+                column.TableId = table.Id;
+                builder.AddData(column);
+            }
+
+            foreach (Row row in table.Rows)
+            {
+                row.TableId = table.Id;
+
+                foreach (Cell cell in row.Cells)
+                {
+                    cell.RowId = row.Id;
+                    builder.AddData(cell);
+                }
+                row.Cells = new Cell[0];
+                builder.AddData(row);
+            }
+
+            table.Rows = new Row[0];
+            table.Columns = new Column[0];
+
+            builder.AddData(table);
         }
 
         public static void AddTextBlocks<TOwner>(this ModelBuilder builder, TOwner owner, IEnumerable<TextBlock> textBlocks, Expression<Func<TOwner, IEnumerable<TextBlock>>> collectionSelector)

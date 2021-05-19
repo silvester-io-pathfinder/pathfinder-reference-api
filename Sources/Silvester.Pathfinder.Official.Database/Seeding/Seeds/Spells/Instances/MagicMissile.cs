@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Level = 1,
                 Range = "120 feet.",
                 Targets = "1 creature.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.OneToThreeActions.ID,
                 MagicSchoolId = MagicSchools.Instances.Evocation.ID
             };

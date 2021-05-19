@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Duration = "1 minute.",
                 Range = "60 feet.",
                 Level = 4,
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 MagicSchoolId = MagicSchools.Instances.Conjuration.ID,
             };

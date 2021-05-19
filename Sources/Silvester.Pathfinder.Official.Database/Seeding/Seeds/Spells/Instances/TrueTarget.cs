@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Range = "60 feet.",
                 Duration = "Until the start of your next turn.",
                 Targets = "4 creatures.",
-                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 MagicSchoolId = MagicSchools.Instances.Divination.ID
             };

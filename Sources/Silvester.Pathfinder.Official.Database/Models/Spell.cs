@@ -46,6 +46,9 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
 
+        public Guid? TableId { get; set; }
+        public Table? Table { get; set; }
+
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
 
         public ICollection<MagicTradition> Traditions { get; set; } = new List<MagicTradition>();
@@ -63,5 +66,18 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<ActionEffect> ActionEffects { get; set; } = new List<ActionEffect>();
 
         public ICollection<StaggeredEffect> StaggeredEffects { get; set; } = new List<StaggeredEffect>();
+     
+        public ICollection<Creature> CreatureEffects { get; set; } = new List<Creature>();
     }
+
+    public class SpellHeightening : BaseEntity
+    {
+        public string Level { get; set; } = default!;
+
+        public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
+
+        public Guid SpellId { get; set; }
+        public Spell Spell { get; set; } = default!;
+    }
+
 }
