@@ -14,12 +14,22 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public int Level { get; set; }
 
         public string? Range { get; set; }
+        
+        public string? Area { get; set; }
 
         public string? Targets { get; set; }
+
+        public string? CastTime { get; set; }
+
+        public string? Trigger { get; set; }
+
+        public string? Requirements { get; set; }
 
         public string? Duration { get; set; }
 
         public bool? IsSavingThrowBasic { get; set; }
+        
+        public bool IsDismissable { get; set; }
 
         public Guid? SavingThrowStatId { get; set; }
         public SavingThrowStat? SavingThrowStat { get; set; }
@@ -27,20 +37,20 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid? DomainId { get; set; }
         public Domain? Domain { get; set; }
 
+        public Guid MagicSchoolId { get; set; }
+        public MagicSchool MagicSchool { get; set; } = default!;
+
         public Guid FocusTypeId { get; set; }
         public FocusType FocusType { get; set; } = default!;
+
+        public Guid ActionTypeId { get; set; }
+        public ActionType ActionType { get; set; } = default!;
 
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
 
         public Guid ClassId { get; set; }
         public Class Class { get; set; } = default!;
-
-        public Guid TypeId { get; set; }
-        public FocusType Type { get; set; } = default!;
-
-        public Guid ActionTypeId { get; set; }
-        public ActionType ActionType { get; set; } = default!;
 
         public Guid? TableId  { get; set; }
         public ActionType? Table { get; set; } = default!;

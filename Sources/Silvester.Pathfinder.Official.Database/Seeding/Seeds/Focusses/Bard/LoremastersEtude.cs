@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Instances
 {
-    public class Allegro : Template
+    public class LoremastersEtude : Template
     {
         public static readonly Guid ID = Guid.Parse("");
 
@@ -14,37 +14,34 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
             return new Focus
             {
                 Id = ID,
-                Name = "Allegro",
-                Level = 7,
+                Name = "Loremaster's Etude",
+                Level = 1,
                 Range = "30 feet.",
-                Duration = "1 round.",
-                Targets = "1 ally.",
-                ActionTypeId = ActionTypes.Instances.OneAction.ID,
+                Trigger = "You or an ally within range attempts a skill check to Recall Knowledge.",
+                Targets = "You or the triggering ally.",
+                ActionTypeId = ActionTypes.Instances.FreeAction.ID,
                 ClassId = Classes.Instances.Bard.ID,
-                FocusTypeId = FocusTypes.Instances.Cantrip.ID,
-                MagicSchoolId = MagicSchools.Instances.Enchantment.ID
+                FocusTypeId = FocusTypes.Instances.Focus.ID,
+                MagicSchoolId = MagicSchools.Instances.Divination.ID
             };
         }
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You perform rapidly, speeding up your ally. The ally becomes quickened and can use the additional action to Strike, Stride, or Step." };
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You call upon your muse’s deep mysteries, granting the target a greater ability to think and recall information. Roll the triggering Recall Knowledge skill check twice and use the better result." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return SpellComponents.Instances.Verbal.ID;
+            yield return SpellComponents.Instances.Somatic.ID;
         }
 
         public override IEnumerable<Guid> GetTraits()
         {
             yield return Traits.Instances.Uncommon.ID;
             yield return Traits.Instances.Bard.ID;
-            yield return Traits.Instances.Cantrip.ID;
-            yield return Traits.Instances.Composition.ID;
-            yield return Traits.Instances.Emotion.ID;
-            yield return Traits.Instances.Enchantment.ID;
-            yield return Traits.Instances.Mental.ID;
+            yield return Traits.Instances.Divination.ID;
+            yield return Traits.Instances.Fortune.ID;
         }
 
         protected override SourcePage GetSourcePage()
@@ -53,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
             {
                 Id = Guid.Parse(""),
                 SourceId = Sources.Instances.CoreRulebook.ID,
-                Page = 386
+                Page = 387
             };
         }
     }

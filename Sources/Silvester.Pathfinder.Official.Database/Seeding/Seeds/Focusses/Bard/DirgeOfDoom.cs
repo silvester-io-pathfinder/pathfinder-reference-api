@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Instances
 {
-    public class Allegro : Template
+    public class DirgeOfDoom : Template
     {
         public static readonly Guid ID = Guid.Parse("");
 
@@ -14,11 +14,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
             return new Focus
             {
                 Id = ID,
-                Name = "Allegro",
-                Level = 7,
-                Range = "30 feet.",
+                Name = "Dirge of Doom",
+                Level = 3,
+                Area = "30-foot emenation.",
                 Duration = "1 round.",
-                Targets = "1 ally.",
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 ClassId = Classes.Instances.Bard.ID,
                 FocusTypeId = FocusTypes.Instances.Cantrip.ID,
@@ -28,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You perform rapidly, speeding up your ally. The ally becomes quickened and can use the additional action to Strike, Stride, or Step." };
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Foes within the area are frightened 1. They can’t reduce their frightened value below 1 while they remain in the area." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -44,6 +43,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
             yield return Traits.Instances.Composition.ID;
             yield return Traits.Instances.Emotion.ID;
             yield return Traits.Instances.Enchantment.ID;
+            yield return Traits.Instances.Fear.ID;
             yield return Traits.Instances.Mental.ID;
         }
 

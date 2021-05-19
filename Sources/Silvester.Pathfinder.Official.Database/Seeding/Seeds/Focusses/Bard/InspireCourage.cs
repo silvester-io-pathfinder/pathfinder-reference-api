@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Instances
 {
-    public class Allegro : Template
+    public class InspireCourage : Template
     {
         public static readonly Guid ID = Guid.Parse("");
 
@@ -14,11 +14,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
             return new Focus
             {
                 Id = ID,
-                Name = "Allegro",
-                Level = 7,
-                Range = "30 feet.",
+                Name = "Inspire Courage",
+                Level = 1,
+                Area = "60-foot emenation.",
                 Duration = "1 round.",
-                Targets = "1 ally.",
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 ClassId = Classes.Instances.Bard.ID,
                 FocusTypeId = FocusTypes.Instances.Cantrip.ID,
@@ -28,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You perform rapidly, speeding up your ally. The ally becomes quickened and can use the additional action to Strike, Stride, or Step." };
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You inspire yourself and your allies with words or tunes of encouragement. You and all allies in the area gain a +1 status bonus to attack rolls, damage rolls, and saves against fear effects." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

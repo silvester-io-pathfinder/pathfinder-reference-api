@@ -3,9 +3,9 @@ using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
-namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Instances
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Cleric.Instances
 {
-    public class Allegro : Template
+    public class CommandingLash : Template
     {
         public static readonly Guid ID = Guid.Parse("");
 
@@ -14,21 +14,25 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
             return new Focus
             {
                 Id = ID,
-                Name = "Allegro",
-                Level = 7,
-                Range = "30 feet.",
-                Duration = "1 round.",
-                Targets = "1 ally.",
+                Name = "Commanding Lash",
+                Level = 4,
+                Requirements = "Your most recent action dealt damage to a target.",
+                Range = "100 feet.",
+                Duration = "Until the end of the target's next turn.",
+                Targets = "A creature you dealt damage to on your most recent action.",
+                IsSavingThrowBasic = false,
+                SavingThrowStatId = SavingThrowStats.Instances.Will.ID,
+                DomainId = Domains.Instances.Tyranny.ID,
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
-                ClassId = Classes.Instances.Bard.ID,
-                FocusTypeId = FocusTypes.Instances.Cantrip.ID,
+                ClassId = Classes.Instances.Cleric.ID,
+                FocusTypeId = FocusTypes.Instances.Focus.ID,
                 MagicSchoolId = MagicSchools.Instances.Enchantment.ID
             };
         }
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You perform rapidly, speeding up your ally. The ally becomes quickened and can use the additional action to Strike, Stride, or Step." };
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "With the threat of more pain, you compel a creature you’ve recently harmed. You issue a command to the target, with the effects of the spell command." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -39,11 +43,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
         public override IEnumerable<Guid> GetTraits()
         {
             yield return Traits.Instances.Uncommon.ID;
-            yield return Traits.Instances.Bard.ID;
-            yield return Traits.Instances.Cantrip.ID;
-            yield return Traits.Instances.Composition.ID;
-            yield return Traits.Instances.Emotion.ID;
+            yield return Traits.Instances.Cleric.ID;
             yield return Traits.Instances.Enchantment.ID;
+            yield return Traits.Instances.Incapacitation.ID;
             yield return Traits.Instances.Mental.ID;
         }
 
@@ -53,7 +55,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
             {
                 Id = Guid.Parse(""),
                 SourceId = Sources.Instances.CoreRulebook.ID,
-                Page = 386
+                Page = 390
             };
         }
     }

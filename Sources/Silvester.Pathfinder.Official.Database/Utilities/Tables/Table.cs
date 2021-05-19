@@ -25,6 +25,8 @@ namespace Silvester.Pathfinder.Official.Database.Utilities.Tables
 
     public class Row : BaseEntity
     {
+        public int Index { get; set; }
+
         public Guid TableId { get; set; }
         public Table Table { get; set; } = default!;
 
@@ -61,7 +63,9 @@ namespace Silvester.Pathfinder.Official.Database.Utilities.Tables
         {
             RowBuilder builder = new RowBuilder();
             buildAction(builder);
-            Rows.Add(builder.Build(id));
+            Row row = builder.Build(id);
+            row.Index = Rows.Count;
+            Rows.Add(row);
             return this;
         }
 
@@ -88,7 +92,7 @@ namespace Silvester.Pathfinder.Official.Database.Utilities.Tables
 
         public RowBuilder AddCell(string id, string value)
         {
-            Cells.Add(new Cell { Id = Guid.Parse(id), Value = value });
+            Cells.Add(new Cell { Id = Guid.Parse(id), Value = value, Order = Cells.Count });
             return this;
         }
 

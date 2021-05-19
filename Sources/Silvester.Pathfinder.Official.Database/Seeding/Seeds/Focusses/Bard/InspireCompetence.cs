@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Instances
 {
-    public class Allegro : Template
+    public class InspireCompetence : Template
     {
         public static readonly Guid ID = Guid.Parse("");
 
@@ -14,9 +14,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
             return new Focus
             {
                 Id = ID,
-                Name = "Allegro",
-                Level = 7,
-                Range = "30 feet.",
+                Name = "Inspire Competence",
+                Level = 1,
+                Range = "60 feet.",
                 Duration = "1 round.",
                 Targets = "1 ally.",
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
@@ -28,7 +28,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You perform rapidly, speeding up your ally. The ally becomes quickened and can use the additional action to Strike, Stride, or Step." };
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your encouragement inspires your ally to succeed at a task. This counts as having taken sufficient preparatory actions to Aid your ally on a skill check of your choice, regardless of the circumstances. When you later use the Aid reaction, you can roll Performance instead of the normal skill check, and if you roll a failure, you get a success instead. If you are legendary in Performance, you automatically critically succeed." };
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The GM might rule that you can’t use this ability if the act of encouraging your ally would interfere with the skill check (such as a check to Sneak quietly or maintain a disguise)." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

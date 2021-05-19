@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Instances
 {
-    public class Allegro : Template
+    public class HouseOfImaginaryWalls : Template
     {
         public static readonly Guid ID = Guid.Parse("");
 
@@ -14,26 +14,25 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
             return new Focus
             {
                 Id = ID,
-                Name = "Allegro",
-                Level = 7,
-                Range = "30 feet.",
+                Name = "House of Imaginary Walls",
+                Level = 5,
+                Range = "Touch.",
                 Duration = "1 round.",
-                Targets = "1 ally.",
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 ClassId = Classes.Instances.Bard.ID,
                 FocusTypeId = FocusTypes.Instances.Cantrip.ID,
-                MagicSchoolId = MagicSchools.Instances.Enchantment.ID
+                MagicSchoolId = MagicSchools.Instances.Illusion.ID
             };
         }
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You perform rapidly, speeding up your ally. The ally becomes quickened and can use the additional action to Strike, Stride, or Step." };
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You mime an invisible 10-foot-by-10-foot wall adjacent to you and within your reach. The wall is solid to those creatures that don’t disbelieve it, even incorporeal creatures. You and your allies can voluntarily believe the wall exists to continue to treat it as solid, for instance to climb onto it. A creature that disbelieves the illusion is temporarily immune to your house of imaginary walls for 1 minute. The wall doesn’t block creatures that didn’t see your visual performance, nor does it block objects. The wall has AC 10, Hardness equal to double the spell’s level, and HP equal to quadruple the spell’s level." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
         {
-            yield return SpellComponents.Instances.Verbal.ID;
+            yield return SpellComponents.Instances.Somatic.ID;
         }
 
         public override IEnumerable<Guid> GetTraits()
@@ -42,9 +41,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Focusses.Bard.Ins
             yield return Traits.Instances.Bard.ID;
             yield return Traits.Instances.Cantrip.ID;
             yield return Traits.Instances.Composition.ID;
-            yield return Traits.Instances.Emotion.ID;
-            yield return Traits.Instances.Enchantment.ID;
-            yield return Traits.Instances.Mental.ID;
+            yield return Traits.Instances.Illusion.ID;
+            yield return Traits.Instances.Visual.ID;
         }
 
         protected override SourcePage GetSourcePage()
