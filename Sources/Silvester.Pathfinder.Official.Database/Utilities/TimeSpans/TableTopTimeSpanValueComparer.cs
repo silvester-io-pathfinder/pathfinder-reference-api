@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Silvester.Pathfinder.Official.Database.Utilities.TimeSpans
 {

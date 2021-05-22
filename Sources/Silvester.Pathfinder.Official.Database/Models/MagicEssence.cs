@@ -1,4 +1,4 @@
-﻿namespace Silvester.Pathfinder.Official.Database.Models
+namespace Silvester.Pathfinder.Official.Database.Models
 {
     public class MagicEssence : BaseEntity
     {

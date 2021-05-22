@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SpiritualWeapon : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("9e8794da-ccaa-4084-9c5f-a8c662f42ea7");
 
         public override Spell GetSpell()
         {
@@ -26,21 +26,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A weapon made of pure magical force materializes and attacks foes you designate within range. This weapon has a ghostly appearance and manifests as a club, a dagger, or your deity’s favored weapon." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "When you cast the spell, the weapon appears next to a foe you choose within range and makes a Strike against it. Each time you Sustain the Spell, you can move the weapon to a new target within range (if needed) and Strike with it. The spiritual weapon uses and contributes to your multiple attack penalty." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The weapon’s Strikes are melee spell attacks. Regardlessof its appearance, the weapon deals force damage equal to 1d8 plus your spellcasting ability modifier. You can deal damage of the type normally dealt by the weapon instead of force damage (or any of the available damage types for a versatile weapon). No other statistics or traits of the weapon apply, and even a ranged weapon attacks adjacent creatures only. Despite making a spell attack, the spiritual weapon is a weapon for purposes of triggers, resistances, and so forth." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The weapon doesn’t take up space, grant flanking, or have any other attributes a creature would. The weapon can’t make any attack other than its Strike, and feats or spells that affect weapons do not apply to it." };
+            yield return new TextBlock { Id = Guid.Parse("9e8794da-ccaa-4084-9c5f-a8c662f42ea7"), Type = TextBlockType.Text, Text = "A weapon made of pure magical force materializes and attacks foes you designate within range. This weapon has a ghostly appearance and manifests as a club, a dagger, or your deity’s favored weapon." };
+            yield return new TextBlock { Id = Guid.Parse("9e8794da-ccaa-4084-9c5f-a8c662f42ea7"), Type = TextBlockType.Text, Text = "When you cast the spell, the weapon appears next to a foe you choose within range and makes a Strike against it. Each time you Sustain the Spell, you can move the weapon to a new target within range (if needed) and Strike with it. The spiritual weapon uses and contributes to your multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("9e8794da-ccaa-4084-9c5f-a8c662f42ea7"), Type = TextBlockType.Text, Text = "The weapon’s Strikes are melee spell attacks. Regardlessof its appearance, the weapon deals force damage equal to 1d8 plus your spellcasting ability modifier. You can deal damage of the type normally dealt by the weapon instead of force damage (or any of the available damage types for a versatile weapon). No other statistics or traits of the weapon apply, and even a ranged weapon attacks adjacent creatures only. Despite making a spell attack, the spiritual weapon is a weapon for purposes of triggers, resistances, and so forth." };
+            yield return new TextBlock { Id = Guid.Parse("9e8794da-ccaa-4084-9c5f-a8c662f42ea7"), Type = TextBlockType.Text, Text = "The weapon doesn’t take up space, grant flanking, or have any other attributes a creature would. The weapon can’t make any attack other than its Strike, and feats or spells that affect weapons do not apply to it." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("9e8794da-ccaa-4084-9c5f-a8c662f42ea7"), 
                 Level = "+2",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The weapon’s damage increases by 1d8." }
+                    new TextBlock { Id = Guid.Parse("9e8794da-ccaa-4084-9c5f-a8c662f42ea7"), Type = TextBlockType.Text, Text = "The weapon’s damage increases by 1d8." }
                 }
             };
         }
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("9e8794da-ccaa-4084-9c5f-a8c662f42ea7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 373
             };

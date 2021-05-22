@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures.Instanc
     /*
     public class UnseenServant : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7");
 
         protected override Creature GetCreature()
         {
@@ -48,11 +48,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures.Instanc
         {
             yield return new CreatureFlavor
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 Name = "",
                 Details = new TextBlock[]
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "" }
+                    new TextBlock { Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"), Type = TextBlockType.Text, Text = "" }
                 }
             };
         }
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures.Instanc
         {
             yield return new CreatureAbility
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 Variant = "",
                 Addendum = "",
                 AbilityId = Abilities.Instances.Darkvision.ID
@@ -75,7 +75,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures.Instanc
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType, Text = "" };
+            yield return new TextBlock { Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"), Type = TextBlockType, Text = "" };
         }
 
         protected override IEnumerable<Guid> GetImmunities()
@@ -92,7 +92,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures.Instanc
         {
             return new CreatureRecallKnowledge
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 DifficultyCheck = ,
                 SkillId = Skills.Instances.Arcana.ID
             };
@@ -102,7 +102,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures.Instanc
         {
             yield return new CreatureSkill
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 Modifier = ,
                 SkillId = Skills.Instances.Acrobatics.ID
             };
@@ -112,42 +112,42 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures.Instanc
         {
             yield return new CreatureStat
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 Modifier = ,
                 StatId = Stats.Instances.Strength.ID
             };
 
             yield return new CreatureStat
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 Modifier = ,
                 StatId = Stats.Instances.Dexterity.ID
             };
 
             yield return new CreatureStat
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 Modifier = ,
                 StatId = Stats.Instances.Constitution.ID
             };
 
             yield return new CreatureStat
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 Modifier = ,
                 StatId = Stats.Instances.Intelligence.ID
             };
 
             yield return new CreatureStat
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 Modifier = ,
                 StatId = Stats.Instances.Wisdom.ID
             };
 
             yield return new CreatureStat
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 Modifier = ,
                 StatId = Stats.Instances.Charisma.ID
             };
@@ -157,7 +157,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures.Instanc
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d448f2eb-ce1b-47bf-b6b7-44a5a54476f7"),
                 SourceId = Sources.Instances.Bestiary2.ID,
                 Page =
             };

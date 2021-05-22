@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ClingingIce : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("c1b38c8b-9893-4320-b511-2e2171b12f8c");
 
         public override Spell GetSpell()
         {
@@ -31,18 +31,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Freezing sleet and heavy snowfall collect on the target’s feet and legs, dealing 1d4 cold damage and other effects depending on its Reflex save. Once this spell ends, the target becomes temporarily immune for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("c1b38c8b-9893-4320-b511-2e2171b12f8c"), Type = TextBlockType.Text, Text = "Freezing sleet and heavy snowfall collect on the target’s feet and legs, dealing 1d4 cold damage and other effects depending on its Reflex save. Once this spell ends, the target becomes temporarily immune for 1 minute." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c1b38c8b-9893-4320-b511-2e2171b12f8c"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 1d4." }
+                    new TextBlock { Id = Guid.Parse("c1b38c8b-9893-4320-b511-2e2171b12f8c"), Type = TextBlockType.Text, Text = "The damage increases by 1d4." }
                 }
             };
         }
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c1b38c8b-9893-4320-b511-2e2171b12f8c"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes half damage.",
                 Failure = "The target takes full damage, and takes a –5-foot circumstance penalty to its Speeds until the spell ends.",
@@ -78,7 +78,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c1b38c8b-9893-4320-b511-2e2171b12f8c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 237
             };

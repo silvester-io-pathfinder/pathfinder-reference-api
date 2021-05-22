@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorGroups.Instances

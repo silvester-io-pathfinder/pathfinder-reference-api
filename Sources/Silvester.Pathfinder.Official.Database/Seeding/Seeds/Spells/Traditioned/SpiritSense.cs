@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SpiritSense : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("6eef1da8-1880-43d6-80a9-23f98c6f334b");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You open your mind to the metaphysical, enabling you to sense nearby spirits. Even if you aren’t Searching, you get a check to find haunts and spirits in the area. You gain a +1 status bonus to the following checks regarding haunts or spirits: Perception checks to Seek, attempts to Recall Knowledge, skill checks to determine the reason for their existence, and skill checks to disable a haunt. You also gain a +1 status bonus to AC and saving throws against haunts and spirits." };
+             yield return new TextBlock { Id = Guid.Parse("6eef1da8-1880-43d6-80a9-23f98c6f334b"), Type = TextBlockType.Text, Text = "You open your mind to the metaphysical, enabling you to sense nearby spirits. Even if you aren’t Searching, you get a check to find haunts and spirits in the area. You gain a +1 status bonus to the following checks regarding haunts or spirits: Perception checks to Seek, attempts to Recall Knowledge, skill checks to determine the reason for their existence, and skill checks to disable a haunt. You also gain a +1 status bonus to AC and saving throws against haunts and spirits." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("6eef1da8-1880-43d6-80a9-23f98c6f334b"), 
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The spell’s duration lasts until the next time you make your daily preparations." }
+                    new TextBlock { Id = Guid.Parse("6eef1da8-1880-43d6-80a9-23f98c6f334b"), Type = TextBlockType.Text, Text = "The spell’s duration lasts until the next time you make your daily preparations." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("6eef1da8-1880-43d6-80a9-23f98c6f334b"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 225
             };

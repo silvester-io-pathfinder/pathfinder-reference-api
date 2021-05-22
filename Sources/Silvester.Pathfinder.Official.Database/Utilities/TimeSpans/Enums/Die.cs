@@ -1,4 +1,4 @@
-﻿namespace Silvester.Pathfinder.Official.Database.Utilities.TimeSpans.Enums
+namespace Silvester.Pathfinder.Official.Database.Utilities.TimeSpans.Enums
 {
     public enum Die
     {

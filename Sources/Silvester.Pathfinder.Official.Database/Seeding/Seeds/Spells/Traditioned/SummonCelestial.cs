@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SummonCelestial : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e");
 
         public override Spell GetSpell()
         {
@@ -26,98 +26,98 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You conjure a celestial to fight for you. You summon a common creature that has the celestial trait and whose level is 5 or lower, such as those found in Pathfinder Bestiary volumes. Heightening the spell increases the maximum level of creature you can summon." };
+            yield return new TextBlock { Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"), Type = TextBlockType.Text, Text = "You conjure a celestial to fight for you. You summon a common creature that has the celestial trait and whose level is 5 or lower, such as those found in Pathfinder Bestiary volumes. Heightening the spell increases the maximum level of creature you can summon." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"),
                 Level = "2nd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The summoned creature's level is 1." }
+                    new TextBlock { Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"), Type = TextBlockType.Text, Text = "The summoned creature's level is 1." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"),
                 Level = "3rd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The summoned creature's level is 2." }
+                    new TextBlock { Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"), Type = TextBlockType.Text, Text = "The summoned creature's level is 2." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"),
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The summoned creature's level is 3." }
+                    new TextBlock { Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"), Type = TextBlockType.Text, Text = "The summoned creature's level is 3." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"),
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The summoned creature's level is 5." }
+                    new TextBlock { Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"), Type = TextBlockType.Text, Text = "The summoned creature's level is 5." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"),
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The summoned creature's level is 7." }
+                    new TextBlock { Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"), Type = TextBlockType.Text, Text = "The summoned creature's level is 7." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"),
                 Level = "7th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The summoned creature's level is 9." }
+                    new TextBlock { Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"), Type = TextBlockType.Text, Text = "The summoned creature's level is 9." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"),
                 Level = "8th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The summoned creature's level is 11." }
+                    new TextBlock { Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"), Type = TextBlockType.Text, Text = "The summoned creature's level is 11." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"),
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The summoned creature's level is 13." }
+                    new TextBlock { Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"), Type = TextBlockType.Text, Text = "The summoned creature's level is 13." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"),
                 Level = "10th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The summoned creature's level is 15." }
+                    new TextBlock { Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"), Type = TextBlockType.Text, Text = "The summoned creature's level is 15." }
                 }
             };
         }
@@ -144,7 +144,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0f50c2dc-9322-41dc-b1dd-0e2020ac695e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 375
             };

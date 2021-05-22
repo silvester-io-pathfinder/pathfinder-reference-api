@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DimensionalSteps : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("222fa636-bb8c-45ca-b2eb-3eb932e09e7d");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You teleport to a location up to 20 feet away within your line of sight." };
+            yield return new TextBlock { Id = Guid.Parse("222fa636-bb8c-45ca-b2eb-3eb932e09e7d"), Type = TextBlockType.Text, Text = "You teleport to a location up to 20 feet away within your line of sight." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("222fa636-bb8c-45ca-b2eb-3eb932e09e7d"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The distance you can teleport increases by 5 feet." }
+                    new TextBlock { Id = Guid.Parse("222fa636-bb8c-45ca-b2eb-3eb932e09e7d"), Type = TextBlockType.Text, Text = "The distance you can teleport increases by 5 feet." }
                 }
             };
         }
@@ -59,7 +59,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("222fa636-bb8c-45ca-b2eb-3eb932e09e7d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 406
             };

@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TelepathicBond : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("46eccad7-b1d9-4a97-9e13-5365442eb17d");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The targets can communicate telepathically with any or all of the other targets from any point on the same planet." };
+            yield return new TextBlock { Id = Guid.Parse("46eccad7-b1d9-4a97-9e13-5365442eb17d"), Type = TextBlockType.Text, Text = "The targets can communicate telepathically with any or all of the other targets from any point on the same planet." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -55,7 +55,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("46eccad7-b1d9-4a97-9e13-5365442eb17d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 377
             };

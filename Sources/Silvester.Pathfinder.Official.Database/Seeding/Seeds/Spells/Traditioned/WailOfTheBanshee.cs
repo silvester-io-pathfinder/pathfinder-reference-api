@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class WailOfTheBanshee : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("2dd3d341-6701-4d9f-8a38-86c5c9ef13ac");
 
         public override Spell GetSpell()
         {
@@ -27,14 +27,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your scream chills the souls of enemies that hear it. Each living enemy in the area takes 8d10 negative damage and must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("2dd3d341-6701-4d9f-8a38-86c5c9ef13ac"), Type = TextBlockType.Text, Text = "Your scream chills the souls of enemies that hear it. Each living enemy in the area takes 8d10 negative damage and must attempt a Fortitude save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("2dd3d341-6701-4d9f-8a38-86c5c9ef13ac"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes full damage.",
                 Failure = "The creature takes full damage and is drained 1d4.",
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("2dd3d341-6701-4d9f-8a38-86c5c9ef13ac"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 382
             };

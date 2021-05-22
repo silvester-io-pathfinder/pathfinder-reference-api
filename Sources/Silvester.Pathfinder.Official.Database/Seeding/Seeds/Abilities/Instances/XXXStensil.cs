@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Abilities.Instanc
 {
     /*public class Darkvision : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("8e83ed42-ea7f-49a1-9d7d-325cd3c768f9");
 
         public override Ability GetAbility()
         {
@@ -23,14 +23,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Abilities.Instanc
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "" };
+            yield return new TextBlock { Id = Guid.Parse("8e83ed42-ea7f-49a1-9d7d-325cd3c768f9"), Type = TextBlockType.Text, Text = "" };
         }
 
         public override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8e83ed42-ea7f-49a1-9d7d-325cd3c768f9"),
                 SourceId = Sources.Instances.Bestiary.ID,
                 Page =
             };

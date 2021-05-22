@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Ammunitions.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Bulks.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.DamageTypes.Instances;

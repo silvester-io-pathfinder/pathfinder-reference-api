@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class StinkingCloud : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("7c76c877-443d-4dae-9de8-af65e2da98a0");
 
         public override Spell GetSpell()
         {
@@ -27,14 +27,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create a cloud of putrid mist in the area. The cloud functions as obscuring mist (page 355) except it sickens creatures that end their turns within the cloud. (The concealed condition is not a poison effect.)" };
+            yield return new TextBlock { Id = Guid.Parse("7c76c877-443d-4dae-9de8-af65e2da98a0"), Type = TextBlockType.Text, Text = "You create a cloud of putrid mist in the area. The cloud functions as obscuring mist (page 355) except it sickens creatures that end their turns within the cloud. (The concealed condition is not a poison effect.)" };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("7c76c877-443d-4dae-9de8-af65e2da98a0"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature is sickened 1.",
                 Failure = "The creature is sickened 1 and slowed 1 while in the cloud.",
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("7c76c877-443d-4dae-9de8-af65e2da98a0"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 373
             };

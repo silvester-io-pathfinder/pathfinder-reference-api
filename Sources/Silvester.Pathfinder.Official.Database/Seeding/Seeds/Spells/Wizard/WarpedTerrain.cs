@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class WarpedTerrain : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("a23ef392-9c52-493d-a808-bdedcf7b552f");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create illusory hazards that cover all surfaces in the area (typically the ground). Any creature moving through the illusion treats the squares as difficult terrain. A creature can attempt to disbelieve the effect as normal after using a Seek action or otherwise spending actions interacting with the illusion. If it successfully disbelieves, it ignores the effect for the remaining duration. For each additional action you use casting the spell, the burst’s radius increases by 5 feet, to a maximum of 10 extra feet for 3 actions." };
+            yield return new TextBlock { Id = Guid.Parse("a23ef392-9c52-493d-a808-bdedcf7b552f"), Type = TextBlockType.Text, Text = "You create illusory hazards that cover all surfaces in the area (typically the ground). Any creature moving through the illusion treats the squares as difficult terrain. A creature can attempt to disbelieve the effect as normal after using a Seek action or otherwise spending actions interacting with the illusion. If it successfully disbelieves, it ignores the effect for the remaining duration. For each additional action you use casting the spell, the burst’s radius increases by 5 feet, to a maximum of 10 extra feet for 3 actions." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("a23ef392-9c52-493d-a808-bdedcf7b552f"),
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can make the illusion appear in the air rather than on a surface, causing it to function as difficult terrain for flying creatures." }
+                    new TextBlock { Id = Guid.Parse("a23ef392-9c52-493d-a808-bdedcf7b552f"), Type = TextBlockType.Text, Text = "You can make the illusion appear in the air rather than on a surface, causing it to function as difficult terrain for flying creatures." }
                 }
             };
         }
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("a23ef392-9c52-493d-a808-bdedcf7b552f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 407
             };

@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Silvester.Pathfinder.Official.Database.Utilities.TimeSpans.Enums;
 using System;
 using System.Linq;

@@ -1,11 +1,11 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.SpellTypes.Instances
 {
     public class Focus : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("c81b4b1a-e500-48b7-a37f-c686defe4d15");
 
         public override SpellType GetSpellType()
         {

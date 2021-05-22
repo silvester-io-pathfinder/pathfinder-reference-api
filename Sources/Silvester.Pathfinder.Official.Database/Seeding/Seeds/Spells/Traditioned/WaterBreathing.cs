@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class WaterBreathing : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("8d8fb2fa-e736-43fa-8f55-39b7f7b5ebc5");
 
         public override Spell GetSpell()
         {
@@ -28,28 +28,28 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The targets can breathe underwater." };
+            yield return new TextBlock { Id = Guid.Parse("8d8fb2fa-e736-43fa-8f55-39b7f7b5ebc5"), Type = TextBlockType.Text, Text = "The targets can breathe underwater." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8d8fb2fa-e736-43fa-8f55-39b7f7b5ebc5"),
                 Level = "3rd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The duration increases to 8 hours." }
+                    new TextBlock { Id = Guid.Parse("8d8fb2fa-e736-43fa-8f55-39b7f7b5ebc5"), Type = TextBlockType.Text, Text = "The duration increases to 8 hours." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8d8fb2fa-e736-43fa-8f55-39b7f7b5ebc5"),
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The duration increases to until your next daily preparations." }
+                    new TextBlock { Id = Guid.Parse("8d8fb2fa-e736-43fa-8f55-39b7f7b5ebc5"), Type = TextBlockType.Text, Text = "The duration increases to until your next daily preparations." }
                 }
             };
         }
@@ -76,7 +76,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8d8fb2fa-e736-43fa-8f55-39b7f7b5ebc5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 384
             };

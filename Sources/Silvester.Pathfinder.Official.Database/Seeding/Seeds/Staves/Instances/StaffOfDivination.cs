@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
 {
     public class StaffOfDivination : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082");
 
         protected override Stave GetStave()
         {
@@ -26,19 +26,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Semiprecious gemstones emerge, seemingly at random, from the surface of this gnarled wooden staff. While wielding it, you gain a +2 circumstance bonus to checks to identify divination magic." };
+            yield return new TextBlock { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Type = TextBlockType.Text, Text = "Semiprecious gemstones emerge, seemingly at random, from the surface of this gnarled wooden staff. While wielding it, you gain a +2 circumstance bonus to checks to identify divination magic." };
         }
 
         protected override IEnumerable<ActionEffect> GetActionEffects()
         {
             yield return new ActionEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"),
                 Name = "Cast a Spell",
                 ActionTypeId = ActionTypes.Instances.OneToThreeActions.ID,
                 Effects = new TextBlock[]
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You expend a number of charges from the staff to cast a spell from its list." }
+                    new TextBlock { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Type = TextBlockType.Text, Text = "You expend a number of charges from the staff to cast a spell from its list." }
                 }
             };
         }
@@ -47,51 +47,51 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
         {
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"),
                 Price = 23000,
                 ItemLevel = 6,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Unclassified.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), SpellId = Spells.Instances.DetectMagic.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 1, SpellId = Spells.Instances.TrueStrike.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.ComprehendLanguage.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.Darkvision.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.SeeInvisibility.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), SpellId = Spells.Instances.DetectMagic.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 1, SpellId = Spells.Instances.TrueStrike.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 2, SpellId = Spells.Instances.ComprehendLanguage.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 2, SpellId = Spells.Instances.Darkvision.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 2, SpellId = Spells.Instances.SeeInvisibility.ID},
                 },
             };
 
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"),
                 Price = 90000,
                 ItemLevel = 10,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Greater.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.Clairaudience.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.Darkvision.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.Clairvoyance.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.ComprehendLanguage.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.Telepathy.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 3, SpellId = Spells.Instances.Clairaudience.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 3, SpellId = Spells.Instances.Darkvision.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 4, SpellId = Spells.Instances.Clairvoyance.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 4, SpellId = Spells.Instances.ComprehendLanguage.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 4, SpellId = Spells.Instances.Telepathy.ID},
                 },
             };
 
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"),
                 Price = 400000,
                 ItemLevel = 14,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Major.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), Level = 5, SpellId = Spells.Instances.PryingEye.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 5, SpellId = Spells.Instances.Sending.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 6, SpellId = Spells.Instances.Telepathy.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 6, SpellId = Spells.Instances.TrueSeeing.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 5, SpellId = Spells.Instances.PryingEye.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 5, SpellId = Spells.Instances.Sending.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 6, SpellId = Spells.Instances.Telepathy.ID},
+                    new StaveSpell { Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"), Level = 6, SpellId = Spells.Instances.TrueSeeing.ID},
                 },
             };
         }
@@ -107,7 +107,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("eb4a1b1e-d1e0-495f-aeab-6605377a6082"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 594
             };

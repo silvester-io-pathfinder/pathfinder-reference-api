@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Stabilize : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("337cf578-1ad7-417d-a15c-d11475e5fadb");
 
         public override Spell GetSpell()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Positive energy shuts death’s door. The target loses the dying condition, though it remains unconscious at 0 Hit Points." };
+            yield return new TextBlock { Id = Guid.Parse("337cf578-1ad7-417d-a15c-d11475e5fadb"), Type = TextBlockType.Text, Text = "Positive energy shuts death’s door. The target loses the dying condition, though it remains unconscious at 0 Hit Points." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("337cf578-1ad7-417d-a15c-d11475e5fadb"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 373
             };

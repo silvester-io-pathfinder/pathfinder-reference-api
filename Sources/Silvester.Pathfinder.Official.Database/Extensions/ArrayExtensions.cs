@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Extensions

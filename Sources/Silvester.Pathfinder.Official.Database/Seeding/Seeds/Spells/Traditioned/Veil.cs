@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Veil : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("cb02e768-e210-45b0-9ebe-fa905d605c16");
 
         public override Spell GetSpell()
         {
@@ -28,29 +28,29 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You disguise the targets as other creatures of the same body shape and roughly similar height (within 6 inches) and weight (within 50 pounds). The disguise can hide the targets’ identities or let them appear to be of another ancestry, but it’s not precise enough to impersonate specific individuals. The spell doesn’t change voice, scent, or mannerisms. You choose the disguise for each target; for example, you could make one target appear to be a dwarf and another an elf." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Casting veil counts as setting up a disguise for the purpose of the Impersonate action. It allows the target to ignore any circumstance penalties they might take for being disguised as dissimilar creatures, and it gives the targets a +4 status bonus to Deception checks to prevent others from seeing through their disguises, and add their level even if untrained. You can Dismiss any or all of these disguises." };
+            yield return new TextBlock { Id = Guid.Parse("cb02e768-e210-45b0-9ebe-fa905d605c16"), Type = TextBlockType.Text, Text = "You disguise the targets as other creatures of the same body shape and roughly similar height (within 6 inches) and weight (within 50 pounds). The disguise can hide the targets’ identities or let them appear to be of another ancestry, but it’s not precise enough to impersonate specific individuals. The spell doesn’t change voice, scent, or mannerisms. You choose the disguise for each target; for example, you could make one target appear to be a dwarf and another an elf." };
+            yield return new TextBlock { Id = Guid.Parse("cb02e768-e210-45b0-9ebe-fa905d605c16"), Type = TextBlockType.Text, Text = "Casting veil counts as setting up a disguise for the purpose of the Impersonate action. It allows the target to ignore any circumstance penalties they might take for being disguised as dissimilar creatures, and it gives the targets a +4 status bonus to Deception checks to prevent others from seeing through their disguises, and add their level even if untrained. You can Dismiss any or all of these disguises." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cb02e768-e210-45b0-9ebe-fa905d605c16"),
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The spell also disguises the targets’ voices and scents; it gains the auditory and olfactory traits." }
+                    new TextBlock { Id = Guid.Parse("cb02e768-e210-45b0-9ebe-fa905d605c16"), Type = TextBlockType.Text, Text = "The spell also disguises the targets’ voices and scents; it gains the auditory and olfactory traits." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cb02e768-e210-45b0-9ebe-fa905d605c16"),
                 Level = "7th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The targets can appear as any creature of the same size, even specific individuals. You must have seen an individual to reproduce their appearance. The spell also disguises the targets’ voices and scents; it gains the auditory and olfactory traits." }
+                    new TextBlock { Id = Guid.Parse("cb02e768-e210-45b0-9ebe-fa905d605c16"), Type = TextBlockType.Text, Text = "The targets can appear as any creature of the same size, even specific individuals. You must have seen an individual to reproduce their appearance. The spell also disguises the targets’ voices and scents; it gains the auditory and olfactory traits." }
                 }
             };
         }
@@ -77,7 +77,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cb02e768-e210-45b0-9ebe-fa905d605c16"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 380
             };

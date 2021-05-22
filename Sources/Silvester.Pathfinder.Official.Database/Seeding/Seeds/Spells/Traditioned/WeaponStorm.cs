@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class WeaponStorm : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("189a7043-ad03-4b88-a62f-c1fedf24cf6b");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You swing a weapon you’re holding, and the weapon magically multiplies into duplicates that swipe at all creatures in either a cone or an emanation. This flurry deals four dice of damage to creatures in the area. This damage has the same type as the weapon and uses the same die size. Determine the die size as if you were attacking with the weapon; for instance, if you were wielding a two-hand weapon in both hands, you’d use its two-hand damage die." };
+            yield return new TextBlock { Id = Guid.Parse("189a7043-ad03-4b88-a62f-c1fedf24cf6b"), Type = TextBlockType.Text, Text = "You swing a weapon you’re holding, and the weapon magically multiplies into duplicates that swipe at all creatures in either a cone or an emanation. This flurry deals four dice of damage to creatures in the area. This damage has the same type as the weapon and uses the same die size. Determine the die size as if you were attacking with the weapon; for instance, if you were wielding a two-hand weapon in both hands, you’d use its two-hand damage die." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("189a7043-ad03-4b88-a62f-c1fedf24cf6b"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Add another damage die." }
+                    new TextBlock { Id = Guid.Parse("189a7043-ad03-4b88-a62f-c1fedf24cf6b"), Type = TextBlockType.Text, Text = "Add another damage die." }
                 }
             };
         }
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("189a7043-ad03-4b88-a62f-c1fedf24cf6b"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The target takes half damage.",
                 Failure = "The target takes full damage.",
@@ -76,7 +76,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("189a7043-ad03-4b88-a62f-c1fedf24cf6b"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 384
             };

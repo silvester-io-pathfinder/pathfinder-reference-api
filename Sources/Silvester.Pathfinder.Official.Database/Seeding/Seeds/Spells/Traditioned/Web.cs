@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Web : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("1e11180d-1cb9-4b5e-bc6c-0ab9cc2b46d7");
 
         public override Spell GetSpell()
         {
@@ -27,19 +27,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create a sticky web in the area that impedes creatures’ movement each time they try to move through it. Squares filled with the web are difficult terrain. Each square can be cleared of the web by a single attack or effect that deals at least 5 slashing damage or 1 fire damage. A square has AC 5, and it automatically fails its saving throws." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Each time a creature in the web begins to use a move action or enters the web during a move action, it must attempt an Athletics check or Reflex save against your spell DC to avoid taking a circumstance penalty to its Speeds or becoming immobilized. A creature that gets out of the web ceases to take a circumstance penalty to its Speed from the web." };
+            yield return new TextBlock { Id = Guid.Parse("1e11180d-1cb9-4b5e-bc6c-0ab9cc2b46d7"), Type = TextBlockType.Text, Text = "You create a sticky web in the area that impedes creatures’ movement each time they try to move through it. Squares filled with the web are difficult terrain. Each square can be cleared of the web by a single attack or effect that deals at least 5 slashing damage or 1 fire damage. A square has AC 5, and it automatically fails its saving throws." };
+            yield return new TextBlock { Id = Guid.Parse("1e11180d-1cb9-4b5e-bc6c-0ab9cc2b46d7"), Type = TextBlockType.Text, Text = "Each time a creature in the web begins to use a move action or enters the web during a move action, it must attempt an Athletics check or Reflex save against your spell DC to avoid taking a circumstance penalty to its Speeds or becoming immobilized. A creature that gets out of the web ceases to take a circumstance penalty to its Speed from the web." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("1e11180d-1cb9-4b5e-bc6c-0ab9cc2b46d7"), 
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The spell’s area increases to a 20-foot burst, and its range increases to 60 feet." }
+                    new TextBlock { Id = Guid.Parse("1e11180d-1cb9-4b5e-bc6c-0ab9cc2b46d7"), Type = TextBlockType.Text, Text = "The spell’s area increases to a 20-foot burst, and its range increases to 60 feet." }
                 }
             };
         }
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1e11180d-1cb9-4b5e-bc6c-0ab9cc2b46d7"),
                 CriticalSuccess = "The creature is unaffected, and it doesn’t need to attempt further Athletics checks or saving throws against the web this turn. If it used an Athletics check, it clears the web from every square it leaves after leaving the square.",
                 Success = "The creature is unaffected during its action. If it used an Athletics check, it clears the web from every square it leaves after leaving the square.",
                 Failure = "The creature takes a –10-foot circumstance penalty to its Speeds until the start of its next turn.",
@@ -78,7 +78,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1e11180d-1cb9-4b5e-bc6c-0ab9cc2b46d7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 384
             };

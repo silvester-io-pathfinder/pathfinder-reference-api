@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SynapticPulse : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ff101b9d-f27f-437b-8eac-c5b18850d47c");
 
         public override Spell GetSpell()
         {
@@ -29,14 +29,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You emit a pulsating mental blast that penetrates the minds of all enemies in the area. Each creature in the area must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("ff101b9d-f27f-437b-8eac-c5b18850d47c"), Type = TextBlockType.Text, Text = "You emit a pulsating mental blast that penetrates the minds of all enemies in the area. Each creature in the area must attempt a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ff101b9d-f27f-437b-8eac-c5b18850d47c"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature is stunned 1.",
                 Failure = "The creature is stunned 2.",
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ff101b9d-f27f-437b-8eac-c5b18850d47c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 376
             };

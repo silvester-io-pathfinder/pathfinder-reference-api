@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class WallOfWind : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ae3066c5-a1d6-413e-ac21-3bcbe98a6462");
 
         public override Spell GetSpell()
         {
@@ -26,17 +26,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create a barrier of gusting winds that hinders anything moving through it. The wall of swirling winds is 5 feet thick, 60 feet long, and 30 feet high. The wall stands vertically, but you can shape its path. Though the wall of wind distorts the air, it does not hamper sight. The wall has the following effects." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "Ammunition from physical ranged attacks—such as arrows, bolts, sling bullets, and other objects of similar size—can’t pass through the wall. Attacks with bigger ranged weapons, such as javelins, take a –2 circumstance penalty to their attack rolls if their paths pass through the wall. Massive ranged weapons and spell effects that don’t create physical objects pass through the wall with no penalty." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "The wall is difficult terrain to creatures attempting to move overland through it. Gases, including creatures in gaseous form, can’t pass through the wall." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "A creature that attempts to fly through the wall using a move action must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("ae3066c5-a1d6-413e-ac21-3bcbe98a6462"), Type = TextBlockType.Text, Text = "You create a barrier of gusting winds that hinders anything moving through it. The wall of swirling winds is 5 feet thick, 60 feet long, and 30 feet high. The wall stands vertically, but you can shape its path. Though the wall of wind distorts the air, it does not hamper sight. The wall has the following effects." };
+            yield return new TextBlock { Id = Guid.Parse("ae3066c5-a1d6-413e-ac21-3bcbe98a6462"), Type = TextBlockType.Enumeration, Text = "Ammunition from physical ranged attacks—such as arrows, bolts, sling bullets, and other objects of similar size—can’t pass through the wall. Attacks with bigger ranged weapons, such as javelins, take a –2 circumstance penalty to their attack rolls if their paths pass through the wall. Massive ranged weapons and spell effects that don’t create physical objects pass through the wall with no penalty." };
+            yield return new TextBlock { Id = Guid.Parse("ae3066c5-a1d6-413e-ac21-3bcbe98a6462"), Type = TextBlockType.Enumeration, Text = "The wall is difficult terrain to creatures attempting to move overland through it. Gases, including creatures in gaseous form, can’t pass through the wall." };
+            yield return new TextBlock { Id = Guid.Parse("ae3066c5-a1d6-413e-ac21-3bcbe98a6462"), Type = TextBlockType.Enumeration, Text = "A creature that attempts to fly through the wall using a move action must attempt a Fortitude save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ae3066c5-a1d6-413e-ac21-3bcbe98a6462"),
                 CriticalSuccess = "The creature can move through the wall normally this turn.",
                 Success = "The flying creature can move through the wall this turn, but the wall is difficult terrain.",
                 Failure = "The wall stops the movement of the flying creature, and any remaining movement from its current action is wasted.",
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ae3066c5-a1d6-413e-ac21-3bcbe98a6462"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 383
             };

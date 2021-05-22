@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Weird : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("e6df0cbc-a1af-4584-b496-2202c86efc87");
 
         public override Spell GetSpell()
         {
@@ -28,14 +28,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You fill the targets’ minds with terrifying images of fearsome creatures, each drawn from the targets’ worst fears. Only the targets can see their assailants. Each target takes 16d6 mental damage and must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("e6df0cbc-a1af-4584-b496-2202c86efc87"), Type = TextBlockType.Text, Text = "You fill the targets’ minds with terrifying images of fearsome creatures, each drawn from the targets’ worst fears. Only the targets can see their assailants. Each target takes 16d6 mental damage and must attempt a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e6df0cbc-a1af-4584-b496-2202c86efc87"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes half damage and is frightened 1.",
                 Failure = "The target takes full damage and is frightened 2.",
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e6df0cbc-a1af-4584-b496-2202c86efc87"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 385
             };

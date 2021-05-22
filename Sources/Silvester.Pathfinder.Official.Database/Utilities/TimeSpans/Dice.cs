@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Utilities.TimeSpans.Enums;
+using Silvester.Pathfinder.Official.Database.Utilities.TimeSpans.Enums;
 
 namespace Silvester.Pathfinder.Official.Database.Utilities.TimeSpans
 {

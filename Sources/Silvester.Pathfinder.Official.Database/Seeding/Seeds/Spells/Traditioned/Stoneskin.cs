@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Stoneskin : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("97ba6da3-b266-4e6f-aea5-03d952a97fdd");
 
         public override Spell GetSpell()
         {
@@ -27,38 +27,38 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The target’s skin hardens like stone. It gains resistance 5 to physical damage, except adamantine. Each time the target is hit by a bludgeoning, piercing, or slashing attack, stoneskin’s duration decreases by 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("97ba6da3-b266-4e6f-aea5-03d952a97fdd"), Type = TextBlockType.Text, Text = "The target’s skin hardens like stone. It gains resistance 5 to physical damage, except adamantine. Each time the target is hit by a bludgeoning, piercing, or slashing attack, stoneskin’s duration decreases by 1 minute." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("97ba6da3-b266-4e6f-aea5-03d952a97fdd"),
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The resistance increases to 10." }
+                    new TextBlock { Id = Guid.Parse("97ba6da3-b266-4e6f-aea5-03d952a97fdd"), Type = TextBlockType.Text, Text = "The resistance increases to 10." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("97ba6da3-b266-4e6f-aea5-03d952a97fdd"),
                 Level = "8th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The resistance increases to 15." }
+                    new TextBlock { Id = Guid.Parse("97ba6da3-b266-4e6f-aea5-03d952a97fdd"), Type = TextBlockType.Text, Text = "The resistance increases to 15." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("97ba6da3-b266-4e6f-aea5-03d952a97fdd"),
                 Level = "10th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The resistance increases to 20." }
+                    new TextBlock { Id = Guid.Parse("97ba6da3-b266-4e6f-aea5-03d952a97fdd"), Type = TextBlockType.Text, Text = "The resistance increases to 20." }
                 }
             };
         }
@@ -85,7 +85,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("97ba6da3-b266-4e6f-aea5-03d952a97fdd"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 374
             };

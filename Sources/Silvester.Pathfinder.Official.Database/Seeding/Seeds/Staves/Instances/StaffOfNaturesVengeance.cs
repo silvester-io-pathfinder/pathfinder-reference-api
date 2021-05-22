@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
 {
     public class StaffOfNaturesVengeance : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8");
 
         protected override Stave GetStave()
         {
@@ -26,19 +26,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "This stout staff is made from gnarled hawthorn. When used as a weapon, a staff of nature's vengeance permanently has the effects of shillelagh. " };
+            yield return new TextBlock { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Type = TextBlockType.Text, Text = "This stout staff is made from gnarled hawthorn. When used as a weapon, a staff of nature's vengeance permanently has the effects of shillelagh. " };
         }
 
         protected override IEnumerable<ActionEffect> GetActionEffects()
         {
             yield return new ActionEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"),
                 Name = "Cast a Spell",
                 ActionTypeId = ActionTypes.Instances.OneToThreeActions.ID,
                 Effects = new TextBlock[]
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You expend a number of charges from the staff to cast a spell from its list." }
+                    new TextBlock { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Type = TextBlockType.Text, Text = "You expend a number of charges from the staff to cast a spell from its list." }
                 }
             };
         }
@@ -47,54 +47,54 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
         {
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"),
                 Price = 90000,
                 ItemLevel = 10,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Unclassified.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), SpellId = Spells.Instances.Tanglefoot.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 1, SpellId = Spells.Instances.ShockingGrasp.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 1, SpellId = Spells.Instances.SpiderSting.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.FlamingSphere.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.VomitSwarm.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.Earthbind.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.WallOfThorns.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.BestialCurse.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.SpikeStones.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), SpellId = Spells.Instances.Tanglefoot.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 1, SpellId = Spells.Instances.ShockingGrasp.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 1, SpellId = Spells.Instances.SpiderSting.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 2, SpellId = Spells.Instances.FlamingSphere.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 2, SpellId = Spells.Instances.VomitSwarm.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 3, SpellId = Spells.Instances.Earthbind.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 3, SpellId = Spells.Instances.WallOfThorns.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 4, SpellId = Spells.Instances.BestialCurse.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 4, SpellId = Spells.Instances.SpikeStones.ID},
                 },
             };
 
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"),
                 Price = 400000,
                 ItemLevel = 14,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Greater.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), Level = 5, SpellId = Spells.Instances.Cloudkill.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 5, SpellId = Spells.Instances.ControlWater.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 6, SpellId = Spells.Instances.PurpleWormSting.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 6, SpellId = Spells.Instances.TanglingCreepers.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 5, SpellId = Spells.Instances.Cloudkill.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 5, SpellId = Spells.Instances.ControlWater.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 6, SpellId = Spells.Instances.PurpleWormSting.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 6, SpellId = Spells.Instances.TanglingCreepers.ID},
                 }
             };
 
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"),
                 Price = 2400000,
                 ItemLevel = 18,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Major.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), Level = 7, SpellId = Spells.Instances.Sunburst.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 7, SpellId = Spells.Instances.VolcanicEruption.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 8, SpellId = Spells.Instances.Earthquake.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 8, SpellId = Spells.Instances.PunishingWinds.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 7, SpellId = Spells.Instances.Sunburst.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 7, SpellId = Spells.Instances.VolcanicEruption.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 8, SpellId = Spells.Instances.Earthquake.ID},
+                    new StaveSpell { Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"), Level = 8, SpellId = Spells.Instances.PunishingWinds.ID},
                 },
             };
         }
@@ -110,7 +110,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("86e463ee-ace5-4ef3-bdf6-71d6dc74d5c8"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 263
             };

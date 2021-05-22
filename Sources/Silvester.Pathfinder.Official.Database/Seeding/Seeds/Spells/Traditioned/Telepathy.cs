@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Telepathy : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("56ea9a26-05f1-4102-9cdb-b2b5775d5e71");
 
         public override Spell GetSpell()
         {
@@ -25,18 +25,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can communicate telepathically with creatures within 30 feet. Once you establish a connection by communicating with a creature, the communication is two-way. You can communicate only with creatures that share a language with you." };
+            yield return new TextBlock { Id = Guid.Parse("56ea9a26-05f1-4102-9cdb-b2b5775d5e71"), Type = TextBlockType.Text, Text = "You can communicate telepathically with creatures within 30 feet. Once you establish a connection by communicating with a creature, the communication is two-way. You can communicate only with creatures that share a language with you." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("56ea9a26-05f1-4102-9cdb-b2b5775d5e71"), 
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Telepathy loses the linguistic trait. You can communicate telepathically with creatures using shared mental imagery even if you don’t share a language." }
+                    new TextBlock { Id = Guid.Parse("56ea9a26-05f1-4102-9cdb-b2b5775d5e71"), Type = TextBlockType.Text, Text = "Telepathy loses the linguistic trait. You can communicate telepathically with creatures using shared mental imagery even if you don’t share a language." }
                 }
             };
         }
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("56ea9a26-05f1-4102-9cdb-b2b5775d5e71"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 377
             };

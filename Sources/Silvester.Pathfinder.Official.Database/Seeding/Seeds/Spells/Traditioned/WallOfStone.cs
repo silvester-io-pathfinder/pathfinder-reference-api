@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class WallOfStone : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("91af2629-6313-4975-a27a-91c0865b394a");
 
         public override Spell GetSpell()
         {
@@ -25,19 +25,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You shape a wall of solid stone. You create a 1-inch-thick wall of stone up to 120 feet long, and 20 feet high. You can shape the wall’s path, placing each 5 feet of the wall on the border between squares. The wall doesn’t need to stand vertically, so you can use it to form a bridge or set of stairs, for example. You must conjure the wall in an unbroken open space so its edges don’t pass through any creatures or objects, or the spell is lost." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Each 5-foot-by-5-foot section of the wall has AC 10, Hardness 14, and 50 Hit Points, and it’s immune to critical hits and precision damage. A destroyed section of the wall can be moved through, but the rubble created from it is difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("91af2629-6313-4975-a27a-91c0865b394a"), Type = TextBlockType.Text, Text = "You shape a wall of solid stone. You create a 1-inch-thick wall of stone up to 120 feet long, and 20 feet high. You can shape the wall’s path, placing each 5 feet of the wall on the border between squares. The wall doesn’t need to stand vertically, so you can use it to form a bridge or set of stairs, for example. You must conjure the wall in an unbroken open space so its edges don’t pass through any creatures or objects, or the spell is lost." };
+            yield return new TextBlock { Id = Guid.Parse("91af2629-6313-4975-a27a-91c0865b394a"), Type = TextBlockType.Text, Text = "Each 5-foot-by-5-foot section of the wall has AC 10, Hardness 14, and 50 Hit Points, and it’s immune to critical hits and precision damage. A destroyed section of the wall can be moved through, but the rubble created from it is difficult terrain." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("91af2629-6313-4975-a27a-91c0865b394a"), 
                 Level = "+2",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The Hit Points of each section of the wall increase by 15." }
+                    new TextBlock { Id = Guid.Parse("91af2629-6313-4975-a27a-91c0865b394a"), Type = TextBlockType.Text, Text = "The Hit Points of each section of the wall increase by 15." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("91af2629-6313-4975-a27a-91c0865b394a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 383
             };

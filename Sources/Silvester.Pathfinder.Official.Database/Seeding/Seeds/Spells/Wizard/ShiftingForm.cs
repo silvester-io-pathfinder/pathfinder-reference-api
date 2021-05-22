@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ShiftingForm : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("1022b511-cf49-45c0-af1a-dcc28cf2561e");
 
         public override Spell GetSpell()
         {
@@ -27,12 +27,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You gain one of the following abilities of your choice. You can Dismiss this spell." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "You gain a 20-foot status bonus to your Speed." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "You gain a climb or swim Speed equal to half your Speed." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "You gain darkvision." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "You gain a pair of claws. These are agile finesse unarmed attacks that deal 1d8 slashing damage." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "You gain scent 60 feet (imprecise)." };
+            yield return new TextBlock { Id = Guid.Parse("1022b511-cf49-45c0-af1a-dcc28cf2561e"), Type = TextBlockType.Text, Text = "You gain one of the following abilities of your choice. You can Dismiss this spell." };
+            yield return new TextBlock { Id = Guid.Parse("1022b511-cf49-45c0-af1a-dcc28cf2561e"), Type = TextBlockType.Enumeration, Text = "You gain a 20-foot status bonus to your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("1022b511-cf49-45c0-af1a-dcc28cf2561e"), Type = TextBlockType.Enumeration, Text = "You gain a climb or swim Speed equal to half your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("1022b511-cf49-45c0-af1a-dcc28cf2561e"), Type = TextBlockType.Enumeration, Text = "You gain darkvision." };
+            yield return new TextBlock { Id = Guid.Parse("1022b511-cf49-45c0-af1a-dcc28cf2561e"), Type = TextBlockType.Enumeration, Text = "You gain a pair of claws. These are agile finesse unarmed attacks that deal 1d8 slashing damage." };
+            yield return new TextBlock { Id = Guid.Parse("1022b511-cf49-45c0-af1a-dcc28cf2561e"), Type = TextBlockType.Enumeration, Text = "You gain scent 60 feet (imprecise)." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1022b511-cf49-45c0-af1a-dcc28cf2561e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 407
             };

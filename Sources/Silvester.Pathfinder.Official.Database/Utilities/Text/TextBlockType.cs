@@ -1,4 +1,4 @@
-﻿namespace Silvester.Pathfinder.Official.Database.Utilities.Text
+namespace Silvester.Pathfinder.Official.Database.Utilities.Text
 {
     public enum TextBlockType 
     {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Silvester.Pathfinder.Official.Database
 {

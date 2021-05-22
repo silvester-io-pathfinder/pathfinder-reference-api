@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SwarmingWaspStings : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad");
 
         public override Spell GetSpell()
         {
@@ -26,14 +26,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You manifest a swarm of disembodied wasp stingers that stab creatures in the area, possibly poisoning them. Creatures in the affected area take 1d6 piercing damage. Each creature that takes piercing damage must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad"), Type = TextBlockType.Text, Text = "You manifest a swarm of disembodied wasp stingers that stab creatures in the area, possibly poisoning them. Creatures in the affected area take 1d6 piercing damage. Each creature that takes piercing damage must attempt a Fortitude save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes 2d6 poison damage.",
                 Failure = "The target is afflicted with swarming wasp venom at stage 1.",
@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad"),
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 Addendum = "Swarming Wasp Venom",
                 MaximumDuration = "6 rounds.",
@@ -55,12 +55,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 {
                     new StaggeredEffectStage
                     {
-                        Id = Guid.Parse(""),
+                        Id = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad"),
                         Duration = "1 round",
                         Effects =
                         {
-                            new DamageEffect {Id = Guid.Parse(""), Damage = "2d6", DamageTypeId = DamageTypes.Instances.Poison.ID },
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Clumsy.ID, Severity = 1}
+                            new DamageEffect {Id = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad"), Damage = "2d6", DamageTypeId = DamageTypes.Instances.Poison.ID },
+                            new ConditionEffect { Id = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad"), ConditionId = Conditions.Instances.Clumsy.ID, Severity = 1}
                         }
                     },
                     new StaggeredEffectStage
@@ -69,8 +69,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                         Duration = "1 round",
                         Effects =
                         {
-                            new DamageEffect {Id = Guid.Parse(""), Damage = "3d6", DamageTypeId = DamageTypes.Instances.Poison.ID },
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Clumsy.ID, Severity = 2}
+                            new DamageEffect {Id = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad"), Damage = "3d6", DamageTypeId = DamageTypes.Instances.Poison.ID },
+                            new ConditionEffect { Id = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad"), ConditionId = Conditions.Instances.Clumsy.ID, Severity = 2}
                         }
                     }
                 }
@@ -100,7 +100,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad"),
                 SourceId = Sources.Instances.Pathfinder160.ID,
                 Page = 81
             };

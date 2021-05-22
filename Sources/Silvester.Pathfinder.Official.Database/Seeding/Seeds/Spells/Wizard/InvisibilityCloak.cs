@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class InvisibilityCloak : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("fce27717-be6f-433a-aef8-cafb6261eff1");
 
         public override Spell GetSpell()
         {
@@ -26,28 +26,28 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You become invisible, with the same restrictions as the 2nd-level invisibility spell." };
+            yield return new TextBlock { Id = Guid.Parse("fce27717-be6f-433a-aef8-cafb6261eff1"), Type = TextBlockType.Text, Text = "You become invisible, with the same restrictions as the 2nd-level invisibility spell." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("fce27717-be6f-433a-aef8-cafb6261eff1"),
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The duration increases to 10 minutes." }
+                    new TextBlock { Id = Guid.Parse("fce27717-be6f-433a-aef8-cafb6261eff1"), Type = TextBlockType.Text, Text = "The duration increases to 10 minutes." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("fce27717-be6f-433a-aef8-cafb6261eff1"),
                 Level = "8th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The duration increases to 1 hour." }
+                    new TextBlock { Id = Guid.Parse("fce27717-be6f-433a-aef8-cafb6261eff1"), Type = TextBlockType.Text, Text = "The duration increases to 1 hour." }
                 }
             };
         }
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("fce27717-be6f-433a-aef8-cafb6261eff1"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 407
             };

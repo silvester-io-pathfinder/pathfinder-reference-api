@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Tanglefoot : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("26592caf-e545-42b7-9603-96f38012c5dd");
 
         public override Spell GetSpell()
         {
@@ -26,28 +26,28 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A vine covered in sticky sap appears from thin air, flicking from your hand and lashing itself to the target. Attempt a spell attack against the target." };
+            yield return new TextBlock { Id = Guid.Parse("26592caf-e545-42b7-9603-96f38012c5dd"), Type = TextBlockType.Text, Text = "A vine covered in sticky sap appears from thin air, flicking from your hand and lashing itself to the target. Attempt a spell attack against the target." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("26592caf-e545-42b7-9603-96f38012c5dd"),
                 Level = "2nd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The effects last for 2 rounds." }
+                    new TextBlock { Id = Guid.Parse("26592caf-e545-42b7-9603-96f38012c5dd"), Type = TextBlockType.Text, Text = "The effects last for 2 rounds." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("26592caf-e545-42b7-9603-96f38012c5dd"),
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The effects last for 1 minute." }
+                    new TextBlock { Id = Guid.Parse("26592caf-e545-42b7-9603-96f38012c5dd"), Type = TextBlockType.Text, Text = "The effects last for 1 minute." }
                 }
             };
         }
@@ -56,7 +56,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("26592caf-e545-42b7-9603-96f38012c5dd"),
                 CriticalSuccess = "The target gains the immobilized condition and takes a –10-foot circumstance penalty to its Speeds for 1 round. It can attempt to Escape against your spell DC to remove the penalty and the immobilized condition.",
                 Success = "The target takes a –10-foot circumstance penalty to its Speeds for 1 round. It can attempt to Escape against your spell DC to remove the penalty.",
                 Failure = "The target is unaffected."
@@ -87,7 +87,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("26592caf-e545-42b7-9603-96f38012c5dd"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 377
             };

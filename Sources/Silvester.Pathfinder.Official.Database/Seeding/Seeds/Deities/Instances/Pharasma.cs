@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Alignments.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.DeityCategories.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.DivineFonts.Instances;

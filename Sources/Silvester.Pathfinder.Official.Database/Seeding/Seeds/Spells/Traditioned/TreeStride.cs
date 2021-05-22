@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TreeStride : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("5a90745c-c4c6-4d9e-82cb-c72336bb1631");
 
         public override Spell GetSpell()
         {
@@ -25,36 +25,36 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You step into a living tree with a trunk big enough for you to fit inside it and instantly teleport to any tree of the same species within 5 miles that also has a sufficiently large trunk. Once you enter the first tree, you instantly know the rough locations of other sufficiently large trees of the same species within range and can exit from the original tree, if you prefer. You can’t carry extradimensional spaces with you; if you attempt to do so, the spell fails." };
+            yield return new TextBlock { Id = Guid.Parse("5a90745c-c4c6-4d9e-82cb-c72336bb1631"), Type = TextBlockType.Text, Text = "You step into a living tree with a trunk big enough for you to fit inside it and instantly teleport to any tree of the same species within 5 miles that also has a sufficiently large trunk. Once you enter the first tree, you instantly know the rough locations of other sufficiently large trees of the same species within range and can exit from the original tree, if you prefer. You can’t carry extradimensional spaces with you; if you attempt to do so, the spell fails." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("5a90745c-c4c6-4d9e-82cb-c72336bb1631"),
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The tree you exit can be up to 50 miles away." }
+                    new TextBlock { Id = Guid.Parse("5a90745c-c4c6-4d9e-82cb-c72336bb1631"), Type = TextBlockType.Text, Text = "The tree you exit can be up to 50 miles away." }
                 }
             };
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("5a90745c-c4c6-4d9e-82cb-c72336bb1631"),
                 Level = "8th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The tree you exit can be up to 500 miles away." }
+                    new TextBlock { Id = Guid.Parse("5a90745c-c4c6-4d9e-82cb-c72336bb1631"), Type = TextBlockType.Text, Text = "The tree you exit can be up to 500 miles away." }
                 }
             };
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("5a90745c-c4c6-4d9e-82cb-c72336bb1631"),
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The tree you exit can be anywhere on the same planet." }
+                    new TextBlock { Id = Guid.Parse("5a90745c-c4c6-4d9e-82cb-c72336bb1631"), Type = TextBlockType.Text, Text = "The tree you exit can be anywhere on the same planet." }
                 }
             };
         }
@@ -83,7 +83,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("5a90745c-c4c6-4d9e-82cb-c72336bb1631"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 378
             };

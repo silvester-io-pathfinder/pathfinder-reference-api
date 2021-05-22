@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SpiderSting : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766");
 
         public override Spell GetSpell()
         {
@@ -28,14 +28,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You magically duplicate a spider’s venomous sting. You deal 1d4 piercing damage to the touched creature and afflict it with spider venom. The target must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766"), Type = TextBlockType.Text, Text = "You magically duplicate a spider’s venomous sting. You deal 1d4 piercing damage to the touched creature and afflict it with spider venom. The target must attempt a Fortitude save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes 1d4 poison damage.",
                 Failure = "The target is afflicted with spider venom at stage 1.",
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766"),
                 Addendum = "Spider Venom",
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 MaximumDuration = "4 rounds.",
@@ -57,22 +57,22 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 {
                     new StaggeredEffectStage
                     {
-                        Id = Guid.Parse(""),
+                        Id = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766"),
                         Duration = "1 round.",
                         Effects =
                         {
-                            new DamageEffect {Id = Guid.Parse(""), Damage = "1d4", DamageTypeId = DamageTypes.Instances.Poison.ID },
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Enfeebled.ID, Severity = 1}
+                            new DamageEffect {Id = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766"), Damage = "1d4", DamageTypeId = DamageTypes.Instances.Poison.ID },
+                            new ConditionEffect { Id = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766"), ConditionId = Conditions.Instances.Enfeebled.ID, Severity = 1}
                         }
                     },
                     new StaggeredEffectStage
                     {
-                        Id = Guid.Parse(""),
+                        Id = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766"),
                         Duration = "1 round.",
                         Effects =
                         {
-                            new DamageEffect {Id = Guid.Parse(""), Damage = "1d4", DamageTypeId = DamageTypes.Instances.Poison.ID },
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Enfeebled.ID, Severity = 2}
+                            new DamageEffect {Id = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766"), Damage = "1d4", DamageTypeId = DamageTypes.Instances.Poison.ID },
+                            new ConditionEffect { Id = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766"), ConditionId = Conditions.Instances.Enfeebled.ID, Severity = 2}
                         }
                     }
                 }
@@ -101,7 +101,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("04f72455-2575-49a9-b1c0-43d0281a2766"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 371
             };

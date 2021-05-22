@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
 {
     public class VerdantStaff : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72");
 
         protected override Stave GetStave()
         {
@@ -26,19 +26,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "This oak branch grows leaves in spring that change color in autumn and shed in winter. While wielding it, you gain a +2 circumstance bonus to Nature checks to identify plants." };
+            yield return new TextBlock { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Type = TextBlockType.Text, Text = "This oak branch grows leaves in spring that change color in autumn and shed in winter. While wielding it, you gain a +2 circumstance bonus to Nature checks to identify plants." };
         }
 
         protected override IEnumerable<ActionEffect> GetActionEffects()
         {
             yield return new ActionEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"),
                 Name = "Cast a Spell",
                 ActionTypeId = ActionTypes.Instances.OneToThreeActions.ID,
                 Effects = new TextBlock[]
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You expend a number of charges from the staff to cast a spell from its list." }
+                    new TextBlock { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Type = TextBlockType.Text, Text = "You expend a number of charges from the staff to cast a spell from its list." }
                 }
             };
         }
@@ -47,36 +47,36 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
         {
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"),
                 Price = 22500,
                 ItemLevel = 6,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Unclassified.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), SpellId = Spells.Instances.Tanglefoot.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 1, SpellId = Spells.Instances.Shillelagh.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.Barkskin.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.Entangle.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.ShapeWood.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.TreeShape.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), SpellId = Spells.Instances.Tanglefoot.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Level = 1, SpellId = Spells.Instances.Shillelagh.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Level = 2, SpellId = Spells.Instances.Barkskin.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Level = 2, SpellId = Spells.Instances.Entangle.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Level = 2, SpellId = Spells.Instances.ShapeWood.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Level = 2, SpellId = Spells.Instances.TreeShape.ID},
                 },
             };
 
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"),
                 Price = 175000,
                 ItemLevel = 12,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Greater.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.WallOfThorns.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.Barkskin.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.SpeakWithPlants.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 5, SpellId = Spells.Instances.PlantForm.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 5, SpellId = Spells.Instances.WallOfThorns.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Level = 3, SpellId = Spells.Instances.WallOfThorns.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Level = 4, SpellId = Spells.Instances.Barkskin.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Level = 4, SpellId = Spells.Instances.SpeakWithPlants.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Level = 5, SpellId = Spells.Instances.PlantForm.ID},
+                    new StaveSpell { Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"), Level = 5, SpellId = Spells.Instances.WallOfThorns.ID},
                 },
             };
         }
@@ -92,7 +92,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ab68487a-b1c6-4250-af23-e05680052d72"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 595
             };

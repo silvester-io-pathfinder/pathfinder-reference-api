@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class VibrantPattern : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("9ce13794-a46b-4c06-846e-480db29b900c");
 
         public override Spell GetSpell()
         {
@@ -30,15 +30,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create a pattern of lights that pulses with intensity. Creatures are dazzled while inside the pattern." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "In addition, a creature must attempt a Will saving throw if it’s inside the pattern when you cast it, enters the pattern, ends its turn within the pattern, or uses a Seek or Interact action on the pattern. A creature currently blinded by the pattern doesn’t need to attempt new saving throws." };
+            yield return new TextBlock { Id = Guid.Parse("9ce13794-a46b-4c06-846e-480db29b900c"), Type = TextBlockType.Text, Text = "You create a pattern of lights that pulses with intensity. Creatures are dazzled while inside the pattern." };
+            yield return new TextBlock { Id = Guid.Parse("9ce13794-a46b-4c06-846e-480db29b900c"), Type = TextBlockType.Text, Text = "In addition, a creature must attempt a Will saving throw if it’s inside the pattern when you cast it, enters the pattern, ends its turn within the pattern, or uses a Seek or Interact action on the pattern. A creature currently blinded by the pattern doesn’t need to attempt new saving throws." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("9ce13794-a46b-4c06-846e-480db29b900c"),
                 CriticalSuccess = "",
                 Success = "The creature is unaffected.",
                 Failure = "The creature is blinded by the pattern. If it exits the pattern, it can attempt a new save to recover from the blinded condition at the end of each of its turns, to a maximum duration of 1 minute.",
@@ -70,7 +70,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("9ce13794-a46b-4c06-846e-480db29b900c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 381
             };

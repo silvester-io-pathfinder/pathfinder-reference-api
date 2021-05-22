@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class LifeSiphon : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("19569f1e-b3a5-49a2-bedb-287871249637");
 
         public override Spell GetSpell()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You use some of the spell’s magic to heal yourself, regaining 1d8 Hit Points per level of the spell." };
+            yield return new TextBlock { Id = Guid.Parse("19569f1e-b3a5-49a2-bedb-287871249637"), Type = TextBlockType.Text, Text = "You use some of the spell’s magic to heal yourself, regaining 1d8 Hit Points per level of the spell." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("19569f1e-b3a5-49a2-bedb-287871249637"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 407
             };

@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;

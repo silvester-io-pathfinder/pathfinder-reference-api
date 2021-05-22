@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Teleport : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f");
 
         public override Spell GetSpell()
         {
@@ -27,48 +27,48 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You and the targets are instantly transported to any location within range, as long as you can identify the location precisely both by its position relative to your starting position and by its appearance (or other identifying features). Incorrect knowledge of the location’s appearance usually causes the spell to fail, but it could instead lead to teleporting to an unwanted location or some other unusual mishap determined by the GM. Teleport is not precise over great distances. The targets appear at a distance from the intended destination equal to roughly 1 percent of the total distance traveled, in a direction determined by the GM. For short journeys, this lack of precision is irrelevant, but for long distances this could be up to 1 mile." };
+            yield return new TextBlock { Id = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f"), Type = TextBlockType.Text, Text = "You and the targets are instantly transported to any location within range, as long as you can identify the location precisely both by its position relative to your starting position and by its appearance (or other identifying features). Incorrect knowledge of the location’s appearance usually causes the spell to fail, but it could instead lead to teleporting to an unwanted location or some other unusual mishap determined by the GM. Teleport is not precise over great distances. The targets appear at a distance from the intended destination equal to roughly 1 percent of the total distance traveled, in a direction determined by the GM. For short journeys, this lack of precision is irrelevant, but for long distances this could be up to 1 mile." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f"),
                 Level = "7th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You and the other targets can travel to any location within 1,000 miles." }
+                    new TextBlock { Id = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f"), Type = TextBlockType.Text, Text = "You and the other targets can travel to any location within 1,000 miles." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f"),
                 Level = "8th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You and the other targets can travel to any location on the same planet. If you travel more than 1,000 miles, you arrive only 10 miles off target." }
+                    new TextBlock { Id = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f"), Type = TextBlockType.Text, Text = "You and the other targets can travel to any location on the same planet. If you travel more than 1,000 miles, you arrive only 10 miles off target." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f"),
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You and the other targets can travel to any location on another planet within the same solar system. Assuming you have accurate knowledge of the location’s position and appearance, you arrive on the new planet 100 miles off target." }
+                    new TextBlock { Id = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f"), Type = TextBlockType.Text, Text = "You and the other targets can travel to any location on another planet within the same solar system. Assuming you have accurate knowledge of the location’s position and appearance, you arrive on the new planet 100 miles off target." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f"),
                 Level = "10th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "As the 9th-level version, but you and the other targets can travel to any planet within the same galaxy." }
+                    new TextBlock { Id = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f"), Type = TextBlockType.Text, Text = "As the 9th-level version, but you and the other targets can travel to any planet within the same galaxy." }
                 }
             };
 
@@ -98,7 +98,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e0c9a523-c14c-434e-b59c-2e00ac21f92f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 378
             };

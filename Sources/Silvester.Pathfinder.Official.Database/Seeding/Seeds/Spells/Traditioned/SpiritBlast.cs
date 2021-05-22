@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SpiritBlast : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("973b26e7-a109-44a9-bdcb-04e117df803a");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You concentrate ethereal energy and attack a creature’s spirit, dealing 16d6 force damage. Because spirit blast affects the creature’s spirit, it can damage a target projecting its consciousness (such as via project image) or possessing another creature even if the target’s body is elsewhere. The possessed creature isn’t harmed by the blast. The blast doesn’t harm creatures that have no spirit, such as constructs." };
+            yield return new TextBlock { Id = Guid.Parse("973b26e7-a109-44a9-bdcb-04e117df803a"), Type = TextBlockType.Text, Text = "You concentrate ethereal energy and attack a creature’s spirit, dealing 16d6 force damage. Because spirit blast affects the creature’s spirit, it can damage a target projecting its consciousness (such as via project image) or possessing another creature even if the target’s body is elsewhere. The possessed creature isn’t harmed by the blast. The blast doesn’t harm creatures that have no spirit, such as constructs." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("973b26e7-a109-44a9-bdcb-04e117df803a"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
+                    new TextBlock { Id = Guid.Parse("973b26e7-a109-44a9-bdcb-04e117df803a"), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
                 }
             };
         }
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("973b26e7-a109-44a9-bdcb-04e117df803a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 371
             };

@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SubconsciousSuggestion : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("e1918b44-5ab0-4f71-8484-dc75b60ff92e");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You implant a subconscious suggestion deep within the target’s mind for them to follow when a trigger you specify occurs (as described on page 305). You suggest a course of action to the target. Your directive must be phrased in such a way as to seem like a logical course of action to the target, and it can’t be selfdestructive or obviously against the target’s self-interest. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("e1918b44-5ab0-4f71-8484-dc75b60ff92e"), Type = TextBlockType.Text, Text = "You implant a subconscious suggestion deep within the target’s mind for them to follow when a trigger you specify occurs (as described on page 305). You suggest a course of action to the target. Your directive must be phrased in such a way as to seem like a logical course of action to the target, and it can’t be selfdestructive or obviously against the target’s self-interest. The target must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("e1918b44-5ab0-4f71-8484-dc75b60ff92e"), 
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can target up to 10 creatures." }
+                    new TextBlock { Id = Guid.Parse("e1918b44-5ab0-4f71-8484-dc75b60ff92e"), Type = TextBlockType.Text, Text = "You can target up to 10 creatures." }
                 }
             };
         }
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e1918b44-5ab0-4f71-8484-dc75b60ff92e"),
                 CriticalSuccess = "The target is unaffected and knows you tried to control it.",
                 Success = "The target is unaffected and thinks you were talking to them normally, not casting a spell on them.",
                 Failure = "The suggestion remains in the target’s subconscious until the next time you prepare. If the trigger occurs before then, the target immediately follows your suggestion. The effect has a duration of 1 minute, or until the target has completed a finite suggestion or the suggestion becomes self-destructive or has other obvious negative effects.",
@@ -81,7 +81,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e1918b44-5ab0-4f71-8484-dc75b60ff92e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 374
             };

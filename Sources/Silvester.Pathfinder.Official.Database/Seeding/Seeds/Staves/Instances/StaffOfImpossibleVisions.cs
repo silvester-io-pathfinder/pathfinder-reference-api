@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
 {
     public class StaffOfImpossibleVisions : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575");
 
         protected override Stave GetStave()
         {
@@ -26,19 +26,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "This bizarre staff is made from oak, capped with a cluster of eye-shaped gemstones that seem to move and undulate at the corner of your vision. While wielding the staff, you can peer through the eyes, using your normal visual senses (including any benefits of spells affecting your vision, like see invisibility). You can maneuver the staff to see things around corners, at higher elevations, or in places where the staff can fit but your head can't. This doesn't provide sufficient line of effect to target creatures around corners. The eyes are as vulnerable as your eyes and can be affected by anything that alters your vision, such as a blinding flash of light." };
+            yield return new TextBlock { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Type = TextBlockType.Text, Text = "This bizarre staff is made from oak, capped with a cluster of eye-shaped gemstones that seem to move and undulate at the corner of your vision. While wielding the staff, you can peer through the eyes, using your normal visual senses (including any benefits of spells affecting your vision, like see invisibility). You can maneuver the staff to see things around corners, at higher elevations, or in places where the staff can fit but your head can't. This doesn't provide sufficient line of effect to target creatures around corners. The eyes are as vulnerable as your eyes and can be affected by anything that alters your vision, such as a blinding flash of light." };
         }
 
         protected override IEnumerable<ActionEffect> GetActionEffects()
         {
             yield return new ActionEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"),
                 Name = "Cast a Spell",
                 ActionTypeId = ActionTypes.Instances.OneToThreeActions.ID,
                 Effects = new TextBlock[]
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You expend a number of charges from the staff to cast a spell from its list." }
+                    new TextBlock { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Type = TextBlockType.Text, Text = "You expend a number of charges from the staff to cast a spell from its list." }
                 }
             };
         }
@@ -47,67 +47,67 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
         {
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"),
                 Price = 23000,
                 ItemLevel = 6,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Unclassified.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), SpellId = Spells.Instances.Daze.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 1, SpellId = Spells.Instances.Fear.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 1, SpellId = Spells.Instances.PhantomPain.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.Augury.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.Paranoia.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), SpellId = Spells.Instances.Daze.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 1, SpellId = Spells.Instances.Fear.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 1, SpellId = Spells.Instances.PhantomPain.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 2, SpellId = Spells.Instances.Augury.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 2, SpellId = Spells.Instances.Paranoia.ID},
                 },
             };
 
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"),
                 Price = 180000,
                 ItemLevel = 12,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Greater.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.HypnoticPattern.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.Paralyze.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.CountlessEyes.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.PhantasmalKiller.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 5, SpellId = Spells.Instances.StrangeGeometry.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 3, SpellId = Spells.Instances.HypnoticPattern.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 3, SpellId = Spells.Instances.Paralyze.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 4, SpellId = Spells.Instances.CountlessEyes.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 4, SpellId = Spells.Instances.PhantasmalKiller.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 5, SpellId = Spells.Instances.StrangeGeometry.ID},
                 },
             };
 
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"),
                 Price = 1000000,
                 ItemLevel = 16,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.Major.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), Level = 6, SpellId = Spells.Instances.BlindingFury.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 6, SpellId = Spells.Instances.PhantasmalCalamity.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 7, SpellId = Spells.Instances.VisionsOfDanger.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 7, SpellId = Spells.Instances.WarpMind.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 6, SpellId = Spells.Instances.BlindingFury.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 6, SpellId = Spells.Instances.PhantasmalCalamity.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 7, SpellId = Spells.Instances.VisionsOfDanger.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 7, SpellId = Spells.Instances.WarpMind.ID},
                 },
             };
 
             yield return new StavePotencyBinding
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"),
                 Price = 7000000,
                 ItemLevel = 20,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 PotencyId = Potencies.Instances.True.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), Level = 8, SpellId = Spells.Instances.SpiritSong.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 8, SpellId = Spells.Instances.UncontrollableDance.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 9, SpellId = Spells.Instances.UnfathomableSong.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 9, SpellId = Spells.Instances.Weird.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 8, SpellId = Spells.Instances.SpiritSong.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 8, SpellId = Spells.Instances.UncontrollableDance.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 9, SpellId = Spells.Instances.UnfathomableSong.ID},
+                    new StaveSpell { Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"), Level = 9, SpellId = Spells.Instances.Weird.ID},
                 },
             };
         }
@@ -124,7 +124,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4cfb10f6-dd47-4c3e-8291-4e1ed1801575"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 263
             };

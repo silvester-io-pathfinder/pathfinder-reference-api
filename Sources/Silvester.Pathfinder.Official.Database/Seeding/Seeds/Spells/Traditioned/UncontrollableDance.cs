@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class UncontrollableDance : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("3657f192-4ce8-4d93-841e-1bacba2f6c36");
 
         public override Spell GetSpell()
         {
@@ -29,14 +29,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The target is overcome with an all-consuming urge to dance. For the duration of the spell, the target is flat-footed and can’t use reactions. While affected, the creature can’t use actions with the move trait except to dance, using the Stride action to move up to half its Speed." };
+            yield return new TextBlock { Id = Guid.Parse("3657f192-4ce8-4d93-841e-1bacba2f6c36"), Type = TextBlockType.Text, Text = "The target is overcome with an all-consuming urge to dance. For the duration of the spell, the target is flat-footed and can’t use reactions. While affected, the creature can’t use actions with the move trait except to dance, using the Stride action to move up to half its Speed." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("3657f192-4ce8-4d93-841e-1bacba2f6c36"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The spell’s duration is 3 rounds, and the target must spend at least 1 action each turn dancing.",
                 Failure = "The spell’s duration is 1 minute, and the target must spend at least 2 actions each turn dancing.",
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("3657f192-4ce8-4d93-841e-1bacba2f6c36"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 379
             };

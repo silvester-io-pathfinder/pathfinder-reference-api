@@ -1,4 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Status : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("e89da18a-f0ff-4581-a863-6525e36e944f");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "As long as you and the target are on the same plane ofexistence and both alive, you remain aware of its present state. You know the target’s direction from you, distance from you, and any conditions affecting it." };
+             yield return new TextBlock { Id = Guid.Parse("e89da18a-f0ff-4581-a863-6525e36e944f"), Type = TextBlockType.Text, Text = "As long as you and the target are on the same plane ofexistence and both alive, you remain aware of its present state. You know the target’s direction from you, distance from you, and any conditions affecting it." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("e89da18a-f0ff-4581-a863-6525e36e944f"), 
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, and you can target up to 10 creatures." }
+                    new TextBlock { Id = Guid.Parse("e89da18a-f0ff-4581-a863-6525e36e944f"), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, and you can target up to 10 creatures." }
                 }
             };
         }
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e89da18a-f0ff-4581-a863-6525e36e944f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 373
             };
