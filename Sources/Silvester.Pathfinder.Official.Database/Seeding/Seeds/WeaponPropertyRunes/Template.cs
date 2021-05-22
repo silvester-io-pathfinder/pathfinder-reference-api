@@ -13,16 +13,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponPropertyRun
         {
             WeaponPropertyRune rune = GetRune();
 
-            SourcePage sourcePage = GetSourcePage();
-            rune.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
+            builder.AddSourcePage(rune, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(rune, GetTraits());
 
-            foreach(Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<WeaponPropertyRune, Trait>((rune.Id, traitId));
-            }
-
-            foreach(WeaponPropertyRuneAction action in GetActions())
+            foreach (WeaponPropertyRuneAction action in GetActions())
             {
                 action.RuneId = rune.Id;
                 builder.AddData(action);
@@ -44,11 +38,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponPropertyRun
                     potency.RollableEffect = null;
                 }
 
-                foreach(Guid traitId in GetPotencyTraits(potency))
-                {
-                    builder.HasJoinData<WeaponPropertyRunePotencyBinding, Trait>((potency.Id, traitId));
-                }
-
+                builder.AddTraits(potency, GetPotencyTraits(potency));
                 builder.AddTextBlocks(potency, potency.Benefits, e => e.Benefits);
                 potency.Benefits = new TextBlock[0];
 

@@ -13,16 +13,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalWeapon
         {
             FundamentalWeaponRune rune = GetRune();
 
-            SourcePage sourcePage = GetSourcePage();
-            rune.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
-
+            builder.AddSourcePage(rune, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(rune, GetTraits());
             builder.AddTextBlocks(rune, GetDetails(), e => e.Details);
-
-            foreach(Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<FundamentalWeaponRune, Trait>((rune.Id, traitId));
-            }
 
             foreach(FundamentalWeaponRuneVariant level in GetLevels())
             {

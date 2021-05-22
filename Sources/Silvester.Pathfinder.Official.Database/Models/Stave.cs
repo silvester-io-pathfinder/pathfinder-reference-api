@@ -14,20 +14,21 @@ namespace Silvester.Pathfinder.Official.Database.Models
         
         public string Activate { get; set; } = default!;
 
-        public string Effect { get; set; } = default!;
-
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
 
         public ICollection<StavePotencyBinding> Potencies { get; set; }  = new List<StavePotencyBinding>();
         public ICollection<Trait> Traits { get; set; }  = new List<Trait>();
         public ICollection<TextBlock> Details { get; set; }  = new List<TextBlock>();
+        public ICollection<ActionEffect> Effects { get; set; }  = new List<ActionEffect>();
     }
 
     public class StavePotencyBinding : BaseEntity
     {
         public int Price { get; set; }
         
+        public string? Addendum { get; set; }
+
         public int ItemLevel { get; set; }
 
         public Guid StaveId { get; set; }
@@ -45,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
     public class StaveSpell : BaseEntity
     {
-        public int Level { get; set; }
+        public int? Level { get; set; }
 
         public Guid PotencyBindingId { get; set; }
         public StavePotencyBinding PotencyBinding { get; set; } = default!;

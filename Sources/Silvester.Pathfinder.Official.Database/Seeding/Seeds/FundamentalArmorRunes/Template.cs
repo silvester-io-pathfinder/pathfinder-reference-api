@@ -13,17 +13,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalArmorR
         {
             FundamentalArmorRune rune = GetRune();
 
-            SourcePage sourcePage = GetSourcePage();
-            rune.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
-
+            builder.AddSourcePage(rune, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(rune, GetTraits());
             builder.AddTextBlocks(rune, GetDetails(), e => e.Details);
-
-            foreach(Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<FundamentalArmorRune, Trait>((rune.Id, traitId));
-            }
-
+          
             foreach(FundamentalArmorRuneVariant level in GetLevels())
             {
                 level.RuneId = rune.Id;

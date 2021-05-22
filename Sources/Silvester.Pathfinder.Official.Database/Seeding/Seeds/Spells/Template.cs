@@ -14,45 +14,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
         {
             Spell spell = GetSpell();
             
-            RollableEffect? rollableEffect = GetRollableEffect();
-            if(rollableEffect != null)
-            {
-                builder.AddData(rollableEffect); 
-                spell.RollableEffectId = rollableEffect.Id;
-            }
-
             Table? table = GetTable(new TableBuilder());
             if(table != null)
             {
                 spell.TableId = table.Id;
-                builder.AddTable(table);
+                builder.AddTable(spell, table);
             }
 
-            SourcePage sourcePage = GetSourcePage();
-            spell.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
-
+            builder.AddSourcePage(spell, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(spell, GetTraits());
             builder.AddTextBlocks(spell, GetSpellDetailBlocks(), e => e.Details);
-
-            foreach (Guid traditionId in GetMagicTraditions())
-            {
-                builder.HasJoinData<MagicTradition, Spell>((traditionId, spell.Id));
-            }
-            
-            foreach (Guid spellComponentId in GetSpellComponents())
-            {
-                builder.HasJoinData<SpellComponent, Spell>((spellComponentId, spell.Id));
-            }
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, Spell>((traitId, spell.Id));
-            }
-
-            foreach (Guid creatureId in GetSummonedCreatures())
-            {
-                builder.HasJoinData<Creature, Spell>((creatureId, spell.Id));
-            }
+            builder.AddRollableEffects(spell, GetRollableEffects(), e => e.RollableEffects);
+            builder.AddActionEffects(spell, GetActionEffects(), e => e.ActionEffects);
+            builder.AddStaggeredEffects(spell, GetStaggeredEffects(), e => e.StaggeredEffects);
+            builder.HasJoinData<Spell, SpellComponent>(spell, GetSpellComponents());
+            builder.HasJoinData<Spell, Creature>(spell, GetSummonedCreatures());
 
             foreach (SpellHeightening heightening in GetHeightenings())
             {
@@ -63,42 +39,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
                 builder.AddData(heightening);
             }
 
-            foreach (StaggeredEffect effect in GetStaggeredEffects())
-            {
-                foreach(StaggeredEffectStage stage in effect.Stages)
-                {
-                    stage.StaggeredEffectId = effect.Id;
-                    foreach(StaggeredEffectStageEffect stageEffect in stage.Effects)
-                    {
-                        stageEffect.StaggeredEffectStageId = stage.Id;
-                        builder.AddData(stageEffect);
-                    }
-                
-                    stage.Effects = new StaggeredEffectStageEffect[0];
-                    builder.AddData(stage);
-                }
-                
-                effect.Stages = new StaggeredEffectStage[0];
-                builder.AddData(effect);
-            }
-
-            foreach(ActionEffect effect in GetActionEffects())
-            {
-                builder.AddOwnedData<Spell, ActionEffect>(e => e.ActionEffects, effect);
-            }
-
-            foreach (SpellTrigger trigger in GetTriggers())
-            {
-                builder.AddData(trigger);
-                trigger.SpellId = spell.Id;
-            }
-
-            foreach (SpellRequirement requirement in GetRequirements())
-            {
-                builder.AddData(requirement);
-                requirement.SpellId = spell.Id;
-            }
-
             return spell;
         }
 
@@ -107,7 +47,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
         public abstract IEnumerable<TextBlock> GetSpellDetailBlocks();
         public abstract IEnumerable<Guid> GetSpellComponents();
         public abstract IEnumerable<Guid> GetTraits();
-        public abstract IEnumerable<Guid> GetMagicTraditions();
+
+        public virtual IEnumerable<Guid> GetMagicTraditions()
+        {
+            //Override in concrete subclass to add Magic Traditions.
+            yield break;
+        }
 
         protected virtual Table? GetTable(TableBuilder builder)
         {
@@ -131,28 +76,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
             yield break;
         }
 
-        public virtual RollableEffect? GetRollableEffect()
+        public virtual IEnumerable<RollableEffect> GetRollableEffects()
         {
             //Override in concrete subclass to add a rollable effect.
-            return null;
+            yield break;
         }
-
 
         public virtual IEnumerable<SpellHeightening> GetHeightenings()
         {
             //Override in concrete subclass to add heightened spell effects.
-            yield break;
-        }
-
-        public virtual IEnumerable<SpellTrigger> GetTriggers()
-        {
-            //Override in concrete subclass to add trigger conditions.
-            yield break;
-        }
-
-        public virtual IEnumerable<SpellRequirement> GetRequirements()
-        {
-            //Override in concrete subclass to add requirement prerequisites.
             yield break;
         }
     }

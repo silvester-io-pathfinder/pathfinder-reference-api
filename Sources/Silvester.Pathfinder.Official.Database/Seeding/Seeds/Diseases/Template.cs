@@ -13,12 +13,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases
         {
             Disease disease = GetDisease();
 
-            SourcePage? sourcePage = GetSourcePage();
-            if(sourcePage != null)
-            {
-                builder.AddData(sourcePage);
-                disease.SourcePageId = sourcePage.Id;
-            }
+            builder.AddSourcePage(disease, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(disease, GetTraits());
 
             DiseaseStage[] stages = GetDiseaseStages().ToArray();
             Guid currentGuid = disease.Id;
@@ -44,11 +40,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases
                 stage.Effects = new DiseaseStageEffect[] { };
 
                 builder.AddData(stage);
-            }
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, Disease>((traitId, disease.Id));
             }
 
             return disease;

@@ -13,16 +13,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Abilities
         {
             Ability ability = GetAbility();
 
-            SourcePage sourcePage = GetSourcePage();
-            builder.AddData(sourcePage);
-            ability.SourcePageId = sourcePage.Id;
-
+            builder.AddSourcePage(ability, GetSourcePage(), e => e.SourcePage);
             builder.AddTextBlocks(ability, GetDetailBlocks(), (c) => c.Details);
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Ability, Trait>((ability.Id, traitId));
-            }
+            builder.AddTraits(ability, GetTraits());
 
             return ability;
         }

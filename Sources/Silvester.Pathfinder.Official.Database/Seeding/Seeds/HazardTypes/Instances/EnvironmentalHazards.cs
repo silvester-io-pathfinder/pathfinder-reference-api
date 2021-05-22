@@ -4,7 +4,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.HazardTypes.Instances
 {
-    public class EnvironmentalHazards : AbstractHazardTypeTemplate
+    public class EnvironmentalHazards : Template
     {
         public static readonly Guid ID = Guid.Parse("6b56b0d2-5b30-4ccf-b72c-532c244d9b73");
 

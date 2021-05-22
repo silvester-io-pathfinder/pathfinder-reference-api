@@ -14,18 +14,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions
             Models.Action action = GetAction();
 
             builder.AddTextBlocks(action, GetDetails(), (a) => a.Details);
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, Models.Action>((traitId, action.Id));
-            }
-
-            RollableEffect? rollableEffect = GetRollableEffect();
-            if (rollableEffect != null)
-            {
-                action.RollableEffectId = rollableEffect.Id;
-                builder.AddData(rollableEffect);
-            }
+            builder.AddRollableEffect(action, GetRollableEffect(), e => e.RollableEffect);
+            builder.AddTraits(action, GetTraits());
 
             return action;
         }

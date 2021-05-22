@@ -13,14 +13,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.RangedWeapons
         {
             RangedWeapon weapon = GetRangedWeapon();
 
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, RangedWeapon>((traitId, weapon.Id));
-            }
-
-            SourcePage sourcePage = GetSourcePage();
-            weapon.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
+            builder.AddSourcePage(weapon, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(weapon, GetTraits());
 
             return weapon;
         }

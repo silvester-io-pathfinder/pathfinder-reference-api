@@ -9,6 +9,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
 {
     public class ActionEffect : BaseEntity
     {
+        public Guid OwnerId { get; set; }
+        
         public string Name { get; set; } = default!;
 
         public string? Trigger { get; set; }

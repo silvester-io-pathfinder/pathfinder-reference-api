@@ -13,16 +13,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears
         {
             AdventuringGear gear = GetAdventuringGear();
 
-            SourcePage sourcePage = GetSourcePage();
-            gear.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
-
             foreach(AdventuringGearVariant variant in GetVariants())
             {
                 variant.AdventuringGearId = gear.Id;
                 builder.AddData(variant);
             }
 
+            builder.AddSourcePage(gear, GetSourcePage(), e => e.SourcePage);
             builder.AddTextBlocks(gear, GetDetails(), e => e.Details);
 
             return gear;

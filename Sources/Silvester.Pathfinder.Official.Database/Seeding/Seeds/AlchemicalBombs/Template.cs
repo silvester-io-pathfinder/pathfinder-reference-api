@@ -14,26 +14,16 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs
         {
             AlchemicalBomb bomb = GetAlchemicalBomb();
 
-            SourcePage? sourcePage = GetSourcePage();
-            if (sourcePage != null)
-            {
-                builder.AddData(sourcePage);
-                bomb.SourcePageId = sourcePage.Id;
-            }
-
+            builder.AddSourcePage(bomb, GetSourcePage(), e => e.SourcePage);
             builder.AddTextBlocks(bomb, GetDetailBlocks(), e => e.Details);
+            builder.AddTraits(bomb, GetTraits());
 
             foreach (AlchemicalBombPotencyBinding potency in GetPotencies())
             {
                 potency.AlchemicalBombId = bomb.Id;
                 builder.AddData(potency);
             }
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, AlchemicalBomb>((traitId, bomb.Id));
-            }
-
+            
             return bomb;
         }
 

@@ -14,14 +14,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
         {
             AlchemicalElixir elixir = GetAlchemicalElixir();
 
-            SourcePage? sourcePage = GetSourcePage();
-            if (sourcePage != null)
-            {
-                builder.AddData(sourcePage);
-                elixir.SourcePageId = sourcePage.Id;
-            }
-
             builder.AddTextBlocks(elixir, GetDetailBlocks(), e => e.Details);
+            builder.AddSourcePage(elixir, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(elixir, GetTraits());
 
             foreach (AlchemicalElixirPotencyBinding binding in GetPotencies())
             {
@@ -29,12 +24,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
                 builder.AddData(binding);
             }
 
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, AlchemicalElixir>((traitId, elixir.Id));
-            }
-
-            foreach(AlchemicalElixirCraftingRequirement requirement in GetCraftingRequirements())
+            foreach (AlchemicalElixirCraftingRequirement requirement in GetCraftingRequirements())
             {
                 requirement.AlchemicalElixirId = elixir.Id;
                 builder.AddData(requirement);

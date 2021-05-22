@@ -14,17 +14,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
         {
             Feat feat = GetFeat();
 
-            RollableEffect? rollableEffect = GetRollableEffect();
-            if (rollableEffect != null)
-            {
-                builder.AddData(rollableEffect);
-                feat.RollableEffectId = rollableEffect.Id;
-            }
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, Feat>((traitId, feat.Id));
-            }
+            builder.AddRollableEffect(feat, GetRollableEffect(), e => e.RollableEffect);
+            builder.AddTraits(feat, GetTraits());
+            builder.AddTextBlocks(feat, GetDetailBlocks(), e => e.Details);
 
             foreach (Prerequisite prerequisite in GetPrerequisites())
             {
@@ -74,7 +66,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
                 builder.Entity(featEffect.GetType()).HasData(featEffect);
             }
 
-            builder.AddTextBlocks(feat, GetDetailBlocks(), e => e.Details);
 
             return feat;
         }

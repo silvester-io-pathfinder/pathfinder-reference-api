@@ -12,9 +12,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Ammunitions
         {
             Ammunition ammunition = GetAmmunition();
 
-            SourcePage sourcePage = GetSourcePage();
-            ammunition.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
+            builder.AddSourcePage(ammunition, GetSourcePage(), e => e.SourcePage);
 
             return ammunition;
         }

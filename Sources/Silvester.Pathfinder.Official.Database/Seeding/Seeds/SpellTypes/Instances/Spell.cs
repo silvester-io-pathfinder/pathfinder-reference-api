@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.SpellTypes.Instances
 {
-    public class Focus : Template
+    public class Spell : Template
     {
         public static readonly Guid ID = Guid.Parse("daeadc1d-bf76-442b-9b4c-8276fa9effac");
 

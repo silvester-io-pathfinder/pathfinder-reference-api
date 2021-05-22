@@ -13,16 +13,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves
         {
             Stave stave = GetStave();
 
-            SourcePage sourcePage = GetSourcePage();
-            stave.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
-
+            builder.AddSourcePage(stave, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(stave, GetTraits());
             builder.AddTextBlocks(stave, GetDetails(), e => e.Details);
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Stave, Trait>((stave.Id, traitId));
-            }
+            builder.AddActionEffects(stave, GetActionEffects(), e => e.Effects);
 
             foreach (StavePotencyBinding potency in GetPotencies())
             {
@@ -47,6 +41,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves
 
         protected abstract IEnumerable<StavePotencyBinding> GetPotencies();
         protected abstract IEnumerable<TextBlock> GetDetails();
+        protected abstract IEnumerable<ActionEffect> GetActionEffects();
         protected abstract IEnumerable<Guid> GetTraits();
         protected abstract SourcePage GetSourcePage();
         protected abstract Stave GetStave();

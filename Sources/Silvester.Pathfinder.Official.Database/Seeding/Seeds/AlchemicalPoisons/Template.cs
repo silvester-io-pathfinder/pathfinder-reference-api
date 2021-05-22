@@ -14,18 +14,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
         {
             AlchemicalPoison poison = GetAlchemicalPoison();
 
-            SourcePage? sourcePage = GetSourcePage();
-            if (sourcePage != null)
-            {
-                builder.AddData(sourcePage);
-                poison.SourcePageId = sourcePage.Id;
-            }
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, AlchemicalPoison>((traitId, poison.Id));
-            }
-
+            builder.AddSourcePage(poison, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(poison, GetTraits());
             builder.AddTextBlocks(poison, GetDetailBlocks(), e => e.Details);
 
             SeedPoisonEffect(builder, poison);

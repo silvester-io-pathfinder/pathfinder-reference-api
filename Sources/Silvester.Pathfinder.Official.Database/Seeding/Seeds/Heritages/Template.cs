@@ -12,11 +12,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Heritages
         {
             Heritage heritage = GetHeritage();
 
-            foreach(Guid raceId in GetRaces())
-            {
-                builder.HasJoinData<Race, Heritage>((raceId, heritage.Id));
-            }
-
+            builder.HasJoinData<Heritage, Race>(heritage, GetRaces());
+            
             return heritage;
         }
 

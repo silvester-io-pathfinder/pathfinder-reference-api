@@ -13,14 +13,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits
             Trait trait = GetTrait();
 
             builder.AddTextBlocks(trait, GetDetailBlocks(), e => e.Details);
-
-            SourcePage sourcePage = GetSourcePage();
-            if (sourcePage != null)
-            {
-                builder.AddData(sourcePage);
-                trait.SourcePageId = sourcePage.Id;
-            }
-
+            builder.AddSourcePage(trait, GetSourcePage(), e => e.SourcePage);
+            
             return trait;
         }
 

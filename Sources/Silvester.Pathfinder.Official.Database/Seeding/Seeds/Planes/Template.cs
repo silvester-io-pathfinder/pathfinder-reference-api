@@ -13,11 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Planes
         {
             Plane plane = GetPlane();
 
-            foreach(Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, Plane>((traitId, plane.Id));
-            }
-
+            builder.AddTraits(plane, GetTraits());
             builder.AddTextBlocks(plane, GetDetails(), (e) => e.Details);
 
             return plane;

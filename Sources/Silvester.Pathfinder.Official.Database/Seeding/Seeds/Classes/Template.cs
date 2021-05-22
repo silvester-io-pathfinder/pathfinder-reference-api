@@ -29,12 +29,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes
                 builder.AddData(characteristic);
             }
 
-            /*foreach (ClassFeature feature in GetFeatures(seeder))
-            {
-                feature.ClassId = @class.Id;
-                builder.AddData(feature);
-            }*/
-
             return @class;
         }
 
@@ -43,6 +37,5 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes
 
         protected abstract IEnumerable<ClassMannerism> GetMannerisms();
         protected abstract IEnumerable<ClassCharacteristic> GetCharacteristics();
-        //protected abstract IEnumerable<ClassFeature> GetFeatures(ClassSeeder seeder);
     }
 }

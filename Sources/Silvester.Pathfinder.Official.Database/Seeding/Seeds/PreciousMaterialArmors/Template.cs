@@ -13,16 +13,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialA
         {
             PreciousMaterialArmor armor = GetArmor();
 
-            foreach(Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<PreciousMaterialArmor, Trait>((armor.Id, traitId));
-            }
-
+            builder.AddSourcePage(armor, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(armor, GetTraits());
             builder.AddTextBlocks(armor, GetDetails(), e => e.Details);
-
-            SourcePage sourcePage = GetSourcePage();
-            armor.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
 
             foreach(PreciousMaterialArmorVariant variant in GetVariants())
             {

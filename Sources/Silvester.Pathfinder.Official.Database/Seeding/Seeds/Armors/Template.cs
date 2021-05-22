@@ -14,16 +14,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors
         {
             Armor armor = GetArmor();
 
-            SourcePage sourcePage = GetSourcePage();
-            armor.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
-
+            builder.AddSourcePage(armor, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(armor, GetTraits());
             builder.AddTextBlocks(armor, GetDetails(), e => e.Details);
-
-            foreach(Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Armor, Trait>((armor.Id, traitId));
-            }
 
             return armor;
         }

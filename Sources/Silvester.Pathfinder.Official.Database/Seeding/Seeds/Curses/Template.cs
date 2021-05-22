@@ -13,16 +13,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Curses
         {
             Curse curse = GetCurse();
 
-            SourcePage sourcePage = GetSourcePage();
-            builder.AddData(sourcePage);
-            curse.SourcePageId = sourcePage.Id;
-
+            builder.AddSourcePage(curse, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(curse, GetTraits());
             builder.AddTextBlocks(curse, GetDetailBlocks(), (c) => c.Details);
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Curse, Trait>((curse.Id, traitId));
-            }
 
             return curse;
         }

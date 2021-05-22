@@ -1,4 +1,6 @@
-﻿namespace Silvester.Pathfinder.Official.Database.Models
+﻿using System;
+
+namespace Silvester.Pathfinder.Official.Database.Models
 {
     public interface IRollableEffect
     {
@@ -13,6 +15,10 @@
 
     public class RollableEffect : BaseEntity, IRollableEffect
     {
+        public Guid OwnerId { get; set; }
+       
+        public string? Name { get; set; }
+
         public string? CriticalSuccess { get; set; }
 
         public string? Success { get; set; } 

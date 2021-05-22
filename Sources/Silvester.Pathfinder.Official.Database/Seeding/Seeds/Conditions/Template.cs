@@ -12,14 +12,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions
         protected override Condition GetEntity(ModelBuilder builder)
         {
             Condition condition = GetCondition();
-            
-            SourcePage? sourcePage = GetSourcePage();
-            if(sourcePage != null)
-            {
-                builder.AddData(sourcePage);
-                condition.SourcePageId = sourcePage.Id;
-            }
 
+            builder.AddSourcePage(condition, GetSourcePage(), e => e.SourcePage);
             builder.AddTextBlocks(condition, GetConditionDetailBlocks(), e => e.Details);
 
             return condition;

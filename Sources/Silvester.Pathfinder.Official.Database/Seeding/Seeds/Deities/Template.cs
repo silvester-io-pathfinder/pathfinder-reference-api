@@ -12,30 +12,12 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities
         {
             Deity deity = GetDeity();
 
-            foreach(Guid followerAlignmentId in GetFollowerAlignments())
-            {
-                builder.HasJoinData<Alignment, Deity>((followerAlignmentId, deity.Id));
-            }
-
-            foreach (Guid divineFontId in GetDivineFonts())
-            {
-                builder.HasJoinData<DivineFont, Deity>((divineFontId, deity.Id));
-            }
-
-            foreach (Guid domainId in GetDomains())
-            {
-                builder.HasJoinData<Domain, Deity>((domainId, deity.Id));
-            }
-
-            foreach (Guid skillId in GetDivineSkills())
-            {
-                builder.HasJoinData<Skill, Deity>((skillId, deity.Id));
-            }
-
-            SourcePage sourcePage = GetSourcePage();
-            deity.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
-
+            builder.AddSourcePage(deity, GetSourcePage(), e => e.SourcePage);
+            builder.HasJoinData<Deity, Alignment>(deity, GetFollowerAlignments());
+            builder.HasJoinData<Deity, DivineFont>(deity, GetDivineFonts());
+            builder.HasJoinData<Deity, Domain>(deity, GetDomains());
+            builder.HasJoinData<Deity, Skill>(deity, GetDivineSkills());
+            
             return deity;
         }
 

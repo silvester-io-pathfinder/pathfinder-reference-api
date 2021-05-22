@@ -12,15 +12,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Races
         {
             Race race = GetRace();
 
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Race, Trait>((race.Id, traitId));
-            }
-
-            foreach (Guid languageId in GetLanguages())
-            {
-                builder.HasJoinData<Race, Language>((race.Id, languageId));
-            }
+            builder.AddTraits(race, GetTraits());
+            builder.HasJoinData<Race, Language>(race, GetLanguages());
 
             return race;
         }

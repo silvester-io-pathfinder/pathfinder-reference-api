@@ -14,9 +14,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorPropertyRune
         {
             ArmorPropertyRune rune = GetRune();
 
-            SourcePage sourcePage = GetSourcePage();
-            rune.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
+            builder.AddSourcePage(rune, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(rune, GetTraits());
+            builder.AddTextBlocks(rune, GetDetails(), e => e.Details);
 
             ArmorPropertyRuneAction? action = GetAction();
             if(action != null)
@@ -25,13 +25,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorPropertyRune
                 rune.ActionId = action.Id;
                 builder.AddData(action);
             }
-
-            foreach(Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<ArmorPropertyRune, Trait>((rune.Id, traitId));
-            }
-
-            builder.AddTextBlocks(rune, GetDetails(), e => e.Details);
 
             return rune;
         }

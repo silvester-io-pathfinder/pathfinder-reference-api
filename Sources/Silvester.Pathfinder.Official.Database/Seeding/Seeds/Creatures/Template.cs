@@ -4,6 +4,7 @@ using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures
 {
@@ -13,9 +14,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures
         {
             Creature creature = GetCreature();
 
-            SourcePage sourcePage = GetSourcePage();
-            creature.SourcePageId = sourcePage.Id;
-            builder.AddData(sourcePage);
+            builder.AddSourcePage(creature, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(creature, GetTraits());
+            builder.AddTextBlocks(creature, GetDetails(), e => e.Details);
 
             CreatureRecallKnowledge? recallKnowledge = GetRecallKnowledge();
             if(recallKnowledge != null)
@@ -24,24 +25,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures
                 builder.AddData(recallKnowledge);
             }
 
-            builder.AddTextBlocks(creature, GetDetails(), e => e.Details);
+            builder.HasJoinData<Creature, Language>(creature, GetLanguages());
+            builder.HasJoinData<Creature, Language>(creature, GetImmunities());
 
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Creature, Trait>((creature.Id, traitId));
-            }
-
-            foreach (Guid languageId in GetLanguages())
-            {
-                builder.HasJoinData<Creature, Language>((creature.Id, languageId));
-            }
-
-            foreach (Guid immunityId in GetImmunities())
-            {
-                builder.HasJoinData<Creature, Immunity>((creature.Id, immunityId));
-            }
-
-            foreach(CreatureFlavor flavor in GetFlavors())
+            foreach (CreatureFlavor flavor in GetFlavors())
             {
                 flavor.CreatureId = creature.Id;
                 builder.AddTextBlocks(flavor, flavor.Details, e => e.Details);

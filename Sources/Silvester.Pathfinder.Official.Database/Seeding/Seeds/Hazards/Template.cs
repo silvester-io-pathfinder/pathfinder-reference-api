@@ -17,12 +17,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
         {
             Hazard hazard = GetHazard();
 
-            SourcePage source = GetSourcePage();
-            hazard.SourcePageId = source.Id;
-            builder.AddData(source);
-
+            builder.AddSourcePage(hazard, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(hazard, GetTraits());
             builder.AddTextBlocks(hazard, GetRoutineDetails(), e => e.RoutineDetails);
-            
+            builder.HasJoinData<Hazard, Immunity>(hazard, GetImmunities());
+
             foreach (HazardComponent component in GetComponents())
             {
                 component.HazardId = hazard.Id;
@@ -62,16 +61,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
             {
                 requirement.HazardId = hazard.Id;
                 builder.AddData(requirement);
-            }
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, Hazard>((traitId, hazard.Id));
-            }
-
-            foreach (Guid immunityId in GetImmunities())
-            {
-                builder.HasJoinData<Immunity, Hazard>((immunityId, hazard.Id));
             }
 
             return hazard;

@@ -14,24 +14,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools
         {
             AlchemicalTool tool = GetAlchemicalTool();
 
-            SourcePage? sourcePage = GetSourcePage();
-            if (sourcePage != null)
-            {
-                builder.AddData(sourcePage);
-                tool.SourcePageId = sourcePage.Id;
-            }
-
+            builder.AddSourcePage(tool, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(tool, GetTraits());
             builder.AddTextBlocks(tool, GetDetailBlocks(), e => e.Details);
 
             foreach (AlchemicalToolPotencyBinding binding in GetPotencies())
             {
                 binding.ToolId = tool.Id;
                 builder.AddData(binding);
-            }
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, AlchemicalTool>((traitId, tool.Id));
             }
 
             return tool;

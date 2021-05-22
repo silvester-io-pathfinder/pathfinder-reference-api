@@ -1,0 +1,86 @@
+﻿using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using System;
+using System.Collections.Generic;
+
+namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
+{
+    public class HeartsDesire : Template
+    {
+        public static readonly Guid ID = Guid.Parse("");
+
+        public override Spell GetSpell()
+        {
+            return new Spell
+            {
+                Id = ID,
+                Name = "Heart's Desire",
+                Level = 3,
+                Range = "60 feet.",
+                Targets = "1 creature.",
+                Duration = "Varies.",
+                IsSavingThrowBasic = false,
+                SavingThrowStatId = SavingThrowStats.Instances.Will.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                ClassId = Classes.Instances.Sorcerer.ID,
+                SpellTypeId = SpellTypes.Instances.Focus.ID,
+                MagicSchoolId = MagicSchools.Instances.Illusion.ID,
+            };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You surround your target with wondrous illusions of their greatest desires, which distract them from reality. The target must attempt a Will save." };
+        }
+
+        public override IEnumerable<SpellHeightening> GetHeightenings()
+        {
+            yield return new SpellHeightening
+            {
+                Id = Guid.Parse(""),
+                Level = "+2",
+                Details =
+                {
+                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can target one additional creature." }
+                }
+            };
+        }
+
+        public override IEnumerable<RollableEffect> GetRollableEffects()
+        {
+            yield return new RollableEffect
+            {
+                Id = Guid.Parse(""),
+                CriticalSuccess = "The target disbelieves the illusion and is unaffected.",
+                Success = "For 1 round, the target is stupefied 2 and takes a –2 status penalty to any checks it makes to determine the effects of reactions.",
+                Failure = "For 1 minute, the target is stupefied 2 and can’t use reactions.",
+                CriticalFailure = "As failure, and all spaces are difficult terrain for the target."
+            };
+        }
+
+        public override IEnumerable<Guid> GetSpellComponents()
+        {
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
+        }
+
+        public override IEnumerable<Guid> GetTraits()
+        {
+            yield return Traits.Instances.Uncommon.ID;
+            yield return Traits.Instances.Emotion.ID;
+            yield return Traits.Instances.Illusion.ID;
+            yield return Traits.Instances.Mental.ID;
+            yield return Traits.Instances.Sorcerer.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse(""),
+                SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
+                Page = 236
+            };
+        }
+    }
+}

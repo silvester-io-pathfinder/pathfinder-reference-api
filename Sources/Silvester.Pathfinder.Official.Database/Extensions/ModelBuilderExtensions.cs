@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Tables;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
@@ -13,6 +14,21 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 {
     public static class ModelBuilderExtensions
     {
+        public static ModelBuilder HasJoinData(this ModelBuilder modelBuilder, Type firstType, Type secondType, params (Guid First, Guid Second)[] data)
+        {
+            MethodInfo method = typeof(ModelBuilderExtensions).GetMethod(nameof(HasJoinData), 2, new Type[] { typeof(ModelBuilder), typeof(IEnumerable<(Guid, Guid)>)})!;
+            method.MakeGenericMethod(firstType, secondType).Invoke(null, new object[] { modelBuilder, data.AsEnumerable() });
+
+            return modelBuilder;
+        }
+
+        public static ModelBuilder HasJoinData<TFirst, TSecond>(this ModelBuilder modelBuilder, TFirst first, IEnumerable<Guid> seconds)
+           where TFirst : BaseEntity
+           where TSecond : BaseEntity
+        {
+            return modelBuilder.HasJoinData<TFirst, TSecond>(seconds.Select(id => (first.Id, id)));
+        }
+
         public static ModelBuilder HasJoinData<TFirst, TSecond>(this ModelBuilder modelBuilder, params (Guid First, Guid Second)[] data)
             where TFirst : class where TSecond : class
         {
@@ -160,46 +176,6 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             return builder.Entity<T>().AddData(entities);
         }
 
-        public static void AddTable(this ModelBuilder builder, Table table)
-        {
-            foreach (Column column in table.Columns)
-            {
-                column.TableId = table.Id;
-                builder.AddData(column);
-            }
-
-            foreach (Row row in table.Rows)
-            {
-                row.TableId = table.Id;
-
-                foreach (Cell cell in row.Cells)
-                {
-                    cell.RowId = row.Id;
-                    builder.AddData(cell);
-                }
-                row.Cells = new Cell[0];
-                builder.AddData(row);
-            }
-
-            table.Rows = new Row[0];
-            table.Columns = new Column[0];
-
-            builder.AddData(table);
-        }
-
-        public static void AddTextBlocks<TOwner>(this ModelBuilder builder, TOwner owner, IEnumerable<TextBlock> textBlocks, Expression<Func<TOwner, IEnumerable<TextBlock>>> collectionSelector)
-           where TOwner : BaseEntity
-        {
-            TextBlock[] details = textBlocks.ToArray();
-            for (int i = 0; i<details.Length; i++)
-            {
-                TextBlock detail = details[i];
-                detail.Order = i;
-                detail.OwnerId = owner.Id;
-                builder.AddOwnedData(collectionSelector, detail);
-            }
-        }
-
         public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, Expression<Func<TOwner, IEnumerable<TOwned>>> collectionSelector, TOwned ownedEntity)
             where TOwned : BaseEntity
             where TOwner : BaseEntity
@@ -225,6 +201,30 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
                     });
             } 
             catch(InvalidOperationException exception)
+            {
+                Console.WriteLine(exception.Message);
+                throw;
+            }
+        }
+
+        public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, Expression<Func<TOwner, TOwned?>> selector, TOwned ownedEntity)
+           where TOwned : BaseEntity
+           where TOwner : BaseEntity
+        {
+            try
+            {
+                return builder
+                    .Entity<TOwner>()
+                    .OwnsOne(selector, a =>
+                    {
+                        a.HasKey(e => e!.Id);
+                        a.Property(e => e!.Id).ValueGeneratedOnAdd();
+                        a.Property<Guid>("OwnerId").ValueGeneratedOnAdd();
+                        a.WithOwner().HasForeignKey("OwnerId");
+                        a.HasData(ownedEntity);
+                    });
+            }
+            catch (InvalidOperationException exception)
             {
                 Console.WriteLine(exception.Message);
                 throw;

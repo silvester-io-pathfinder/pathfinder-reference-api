@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<Domain> Domains { get; set; } = default!;
         public DbSet<Feat> Feats { get; set; } = default!;
         public DbSet<FeatType> FeatTypes { get; set; } = default!;
-        public DbSet<FocusType> FocusTypes { get; set; } = default!;
+        public DbSet<SpellType> FocusTypes { get; set; } = default!;
         public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
         public DbSet<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = default!;
         public DbSet<Frequency> Frequencies { get; set; } = default!;
@@ -67,6 +67,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<MagicEssence> MagicEssences { get; set; } = default!;
         public DbSet<MagicSchool> MagicSchools { get; set; } = default!;
         public DbSet<MagicTradition> MagicTraditions { get; set; } = default!;
+        public DbSet<Mystery> Mysteries { get; set; } = default!;
         public DbSet<PlaneCategory> PlaneCategories { get; set; } = default!;
         public DbSet<Plane> Planes { get; set; } = default!;
         public DbSet<Potency> Potencies { get; set; } = default!;

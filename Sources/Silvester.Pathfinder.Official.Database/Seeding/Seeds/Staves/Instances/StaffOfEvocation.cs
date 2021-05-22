@@ -20,8 +20,21 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
                 Name = "Staff of Evocation",
                 Usage = "Held in 1 hand",
                 Activate = "Cast a Spell.",
-                Effect = "You expend a number of charges from the staff to cast a spell from its list.",
                 CraftingRequirements = "Supply one casting of all listed levels of all listed spells.",
+            };
+        }
+
+        protected override IEnumerable<ActionEffect> GetActionEffects()
+        {
+            yield return new ActionEffect
+            {
+                Id = Guid.Parse(""),
+                Name = "Cast a Spell",
+                ActionTypeId = ActionTypes.Instances.OneToThreeActions.ID,
+                Effects = new TextBlock[]
+                {
+                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You expend a number of charges from the staff to cast a spell from its list." }
+                }
             };
         }
 
@@ -41,11 +54,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
                 PotencyId = Potencies.Instances.Unclassified.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), Level = 0, SpellId = Spells.Instances.RayOfFrostSpell.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 1, SpellId = Spells.Instances.MagicMissileSpell.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 1, SpellId = Spells.Instances.ShockingGraspSpell.ID},
+                    new StaveSpell { Id = Guid.Parse(""), Level = 0, SpellId = Spells.Instances.RayOfFrost.ID},
+                    new StaveSpell { Id = Guid.Parse(""), Level = 1, SpellId = Spells.Instances.MagicMissile.ID},
+                    new StaveSpell { Id = Guid.Parse(""), Level = 1, SpellId = Spells.Instances.ShockingGrasp.ID},
                     new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.AcidArrow.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.GlitterdustSpell.ID},
+                    new StaveSpell { Id = Guid.Parse(""), Level = 2, SpellId = Spells.Instances.Glitterdust.ID},
                 },
             };
 
@@ -58,10 +71,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
                 PotencyId = Potencies.Instances.Greater.ID,
                 Spells = new StaveSpell[]
                 {
-                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.LightningBoltSpell.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.MagicMissileSpell.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.FireballSpell.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.WeaponStormSpell.ID},
+                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.LightningBolt.ID},
+                    new StaveSpell { Id = Guid.Parse(""), Level = 3, SpellId = Spells.Instances.MagicMissile.ID},
+                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.Fireball.ID},
+                    new StaveSpell { Id = Guid.Parse(""), Level = 4, SpellId = Spells.Instances.WeaponStorm.ID},
                 },
             };
 
@@ -75,9 +88,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
                 Spells = new StaveSpell[]
                 {
                     new StaveSpell { Id = Guid.Parse(""), Level = 5, SpellId = Spells.Instances.ConeOfCold.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 5, SpellId = Spells.Instances.MagicMissileSpell.ID},
+                    new StaveSpell { Id = Guid.Parse(""), Level = 5, SpellId = Spells.Instances.MagicMissile.ID},
                     new StaveSpell { Id = Guid.Parse(""), Level = 6, SpellId = Spells.Instances.ChainLightning.ID},
-                    new StaveSpell { Id = Guid.Parse(""), Level = 6, SpellId = Spells.Instances.WallOfForceSpell.ID},
+                    new StaveSpell { Id = Guid.Parse(""), Level = 6, SpellId = Spells.Instances.WallOfForce.ID},
                 },
             };
         }

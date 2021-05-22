@@ -14,19 +14,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses
         {
             ItemCurse itemCurse = GetItemCurse();
 
-            SourcePage? sourcePage = GetSourcePage();
-            if (sourcePage != null)
-            {
-                builder.AddData(sourcePage);
-                itemCurse.SourcePageId = sourcePage.Id;
-            }
-
-            foreach (Guid traitId in GetTraits())
-            {
-                builder.HasJoinData<Trait, ItemCurse>((traitId, itemCurse.Id));
-            }
-
+            builder.AddSourcePage(itemCurse, GetSourcePage(), e => e.SourcePage);
+            builder.AddTraits(itemCurse, GetTraits());
             builder.AddTextBlocks(itemCurse, GetDetailBlocks(), e => e.Details);
+            
             return itemCurse;
         }
 
