@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class BlanketOfStars : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("757e9c07-44df-4da9-8f1a-746fb2f7b296");
 
         public override Spell GetSpell()
         {
@@ -27,15 +27,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A flowing cloak of utter darkness drapes over you, filled with pinpricks of light like distant stars. It imparts the stillness of the cosmos to you, granting you a +2 status bonus to Stealth checks to Hide and Sneak. While outside under a starry night sky, you’re also invisible as long as you remain still. When moving under a starry night sky, you are concealed instead." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Gazing too closely into the stars is disorienting. Any creature that ends its turn adjacent to you must attempt a Will save; this is a mental, visual effect." };
+            yield return new TextBlock { Id = Guid.Parse("86b509bb-c558-4256-b23e-614ba304fc12"), Type = TextBlockType.Text, Text = "A flowing cloak of utter darkness drapes over you, filled with pinpricks of light like distant stars. It imparts the stillness of the cosmos to you, granting you a +2 status bonus to Stealth checks to Hide and Sneak. While outside under a starry night sky, you’re also invisible as long as you remain still. When moving under a starry night sky, you are concealed instead." };
+            yield return new TextBlock { Id = Guid.Parse("c004523f-bccb-4814-ac16-0e8a8eaead8f"), Type = TextBlockType.Text, Text = "Gazing too closely into the stars is disorienting. Any creature that ends its turn adjacent to you must attempt a Will save; this is a mental, visual effect." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("5cee3e8b-6f4f-4578-b8f7-64e4296ef481"),
                 Success = "The creature is unaffected.",
                 Failure = "The creature is dazzled until the end of its next turn.",
                 CriticalFailure = "The creature is confused and dazzled until the end of its next turn."
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("9bb9a39f-c40d-40af-9eb3-03b65497961f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 215
             };

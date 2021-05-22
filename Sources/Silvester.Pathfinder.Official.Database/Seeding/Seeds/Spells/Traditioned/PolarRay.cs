@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class PolarRay : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d38967b5-1db4-4d11-b804-196bf9dcc574");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You fire a blue-white ray of freezing air and sleet that deals 10d8 cold damage. Make a spell attack roll against the target." };
+            yield return new TextBlock { Id = Guid.Parse("20efbc1e-0d19-46ab-929f-546f2985bc77"), Type = TextBlockType.Text, Text = "You fire a blue-white ray of freezing air and sleet that deals 10d8 cold damage. Make a spell attack roll against the target." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("742ffe55-d82f-4de0-a580-f31766ad96ac"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 2d8." }
+                    new TextBlock { Id = Guid.Parse("ba6b85c9-f153-4209-b274-9234dc5fb102"), Type = TextBlockType.Text, Text = "The damage increases by 2d8." }
                 }
             };
         }
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e4d0b50f-ef5c-4f0c-9447-aead23e6bd42"),
                 CriticalSuccess = "The target takes double damage and is drained 2.",
                 Success = "The target takes full damage and is drained 2.",
             };
@@ -75,7 +75,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("60d95821-fc71-421a-96a7-80529ab75711"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 358
             };

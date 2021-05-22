@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class IllOmen : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("6e6315c3-5c27-44a5-9127-fad940826632");
 
         public override Spell GetSpell()
         {
@@ -29,14 +29,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The target is struck with misfortune, which throws it off balance. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("63daedcb-712b-4430-b5f6-e7a3dc399bfb"), Type = TextBlockType.Text, Text = "The target is struck with misfortune, which throws it off balance. The target must attempt a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d4c1badc-b7e8-45d8-beb4-c63d1386406f"),
                 Success = "The target is unaffected.",
                 Failure = "The first time during the duration that the target attempts an attack roll or skill check, it must roll twice and use the worse result.",
                 CriticalFailure = "Every time during the duration that the target attempts an attack roll or skill check, it must roll twice and use the worse result."
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d08762ff-1682-45e5-bb6d-e62861b1d55f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 221
             };

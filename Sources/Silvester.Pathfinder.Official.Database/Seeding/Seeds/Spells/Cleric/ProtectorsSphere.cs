@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ProtectorsSphere : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("bd0e4e43-3d47-4e47-8d4a-d60607fef58e");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A protective aura emanates out from you, safeguarding you and your allies. You gain resistance 3 to all damage. Your allies also gain this resistance while they are within the area." };
+            yield return new TextBlock { Id = Guid.Parse("68dd6f78-7681-41af-905f-a2388286f3f1"), Type = TextBlockType.Text, Text = "A protective aura emanates out from you, safeguarding you and your allies. You gain resistance 3 to all damage. Your allies also gain this resistance while they are within the area." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("06953c68-6081-4ade-9b42-7082c5899e8f"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The resistance increases by 1." }
+                    new TextBlock { Id = Guid.Parse("98489dc7-815e-4014-afcf-62062c4f0c93"), Type = TextBlockType.Text, Text = "The resistance increases by 1." }
                 }
             };
         }
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cdfa3f66-1f6e-42e1-887e-750ed6121745"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 395
             };

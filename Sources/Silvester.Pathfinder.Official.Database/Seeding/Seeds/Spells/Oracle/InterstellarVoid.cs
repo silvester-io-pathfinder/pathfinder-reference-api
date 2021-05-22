@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class InterstellarVoid : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("4e39b70b-f8b5-49b8-a73f-6b8c5e06a64b");
 
         public override Spell GetSpell()
         {
@@ -32,18 +32,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You call upon the frigid depths of outer space to bring a terrible chill to your enemy. The target is cloaked in the freezing void, which deals 3d6 cold damage immediately and when you Sustain the Spell on future turns, with a basic Fortitude save. The target is fatigued for as long as the effect persists." };
+            yield return new TextBlock { Id = Guid.Parse("d43ae96b-8e79-428f-ab6c-8748347092d1"), Type = TextBlockType.Text, Text = "You call upon the frigid depths of outer space to bring a terrible chill to your enemy. The target is cloaked in the freezing void, which deals 3d6 cold damage immediately and when you Sustain the Spell on future turns, with a basic Fortitude save. The target is fatigued for as long as the effect persists." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("07846b9d-3c58-4785-bde2-532b07c398f5"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The cold damage increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("17791204-050f-44d2-9827-dc643957d0b7"), Type = TextBlockType.Text, Text = "The cold damage increases by 1d6." }
                 }
             };
         }
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("a69f67c2-76ea-4c24-a5bf-679d8278bbc5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 232
             };

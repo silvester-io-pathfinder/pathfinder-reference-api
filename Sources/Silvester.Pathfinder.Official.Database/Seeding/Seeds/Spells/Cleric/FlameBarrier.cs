@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class FlameBarrier : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d841d8d6-8dbe-42a4-bd92-d4533302ce1a");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You swiftly deflect incoming flames. The target gains fire resistance 15 against the triggering effect." };
+            yield return new TextBlock { Id = Guid.Parse("c4cfeee0-9d24-4ab7-8a34-a6971c265f40"), Type = TextBlockType.Text, Text = "You swiftly deflect incoming flames. The target gains fire resistance 15 against the triggering effect." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("812a3087-5e95-455c-84ce-eccf694adf54"),
                 Level = "+2",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The resistance increases by 5." }
+                    new TextBlock { Id = Guid.Parse("882ec9ea-e90f-4683-b241-615c71b0934d"), Type = TextBlockType.Text, Text = "The resistance increases by 5." }
                 }
             };
         }
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4cf8bb1a-1953-4dd1-b741-802584223fa2"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 392
             };

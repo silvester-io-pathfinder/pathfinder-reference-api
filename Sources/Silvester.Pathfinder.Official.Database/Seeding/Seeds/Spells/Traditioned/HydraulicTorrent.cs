@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class HydraulicTorrent : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("0808337e-3acb-4275-ab1c-50ded0240984");
 
         public override Spell GetSpell()
         {
@@ -25,18 +25,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A swirling torrent of water manifests along a straight line, battering creatures and unattended objects in its path and possibly pushing them away from you. The torrent deals 8d6 bludgeoning damage. Each creature in the area must attempt a basic Fortitude save; unattended objects automatically fail. Creatures and objects that fail the save are also knocked back 5 feet (10 feet on a critical failure)." };
+            yield return new TextBlock { Id = Guid.Parse("004690f2-010d-4c71-98e1-aedf82b45e2f"), Type = TextBlockType.Text, Text = "A swirling torrent of water manifests along a straight line, battering creatures and unattended objects in its path and possibly pushing them away from you. The torrent deals 8d6 bludgeoning damage. Each creature in the area must attempt a basic Fortitude save; unattended objects automatically fail. Creatures and objects that fail the save are also knocked back 5 feet (10 feet on a critical failure)." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("9f6a9758-fe0e-4f9d-b24d-15ba72528465"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
+                    new TextBlock { Id = Guid.Parse("708106df-fd45-4701-bb9e-52bbdbf51501"), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
                 }
             };
         }
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("544b3305-7b58-4d71-b9cc-fd2c976fbd64"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 344
             };

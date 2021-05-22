@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SeeInvisibility : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("42c5b56f-3497-474d-9902-80f2eda13778");
 
         public override Spell GetSpell()
         {
@@ -25,18 +25,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can see invisible creatures and objects. They appear to you as translucent shapes, and they are concealed to you." };
+            yield return new TextBlock { Id = Guid.Parse("ba79ea8e-2611-429b-83c7-d53cd49d6e76"), Type = TextBlockType.Text, Text = "You can see invisible creatures and objects. They appear to you as translucent shapes, and they are concealed to you." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("48f5ad1e-0e55-49fb-9da8-047648f1dd7c"), 
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The spell has a duration of 8 hours." }
+                    new TextBlock { Id = Guid.Parse("ae4a5e0d-a862-401c-ade5-932f7c72c7d8"), Type = TextBlockType.Text, Text = "The spell has a duration of 8 hours." }
                 }
             };
         }
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("bbc0ef38-8945-40f1-b72e-aa21a2c9231c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 367
             };

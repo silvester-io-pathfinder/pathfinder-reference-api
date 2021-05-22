@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class GhostSound : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("9a93f513-7f09-48b1-b645-a650564aba41");
 
         public override Spell GetSpell()
         {
@@ -27,28 +27,28 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create an auditory illusion of simple sounds that has a maximum volume equal to four normal humans shouting. The sounds emanate from a square you designate within range. You can’t create intelligible words or other intricate sounds (such as music)." };
+            yield return new TextBlock { Id = Guid.Parse("476eacdf-a8f5-4fd7-bbfd-e59f0cbafcfd"), Type = TextBlockType.Text, Text = "You create an auditory illusion of simple sounds that has a maximum volume equal to four normal humans shouting. The sounds emanate from a square you designate within range. You can’t create intelligible words or other intricate sounds (such as music)." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("48ec7c86-b917-42fc-9e80-744168a0c5bb"),
                 Level = "3rd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The range increases to 60 feet." }
+                    new TextBlock { Id = Guid.Parse("a9155358-7b0b-4ed6-8091-e29c1b058f8f"), Type = TextBlockType.Text, Text = "The range increases to 60 feet." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("2e2b0ed1-9385-47ff-aae5-d799294878fd"),
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The range increases to 120 feet." }
+                    new TextBlock { Id = Guid.Parse("47c20f48-5343-4822-a115-86cdc4ffdc97"), Type = TextBlockType.Text, Text = "The range increases to 120 feet." }
                 }
             };
         }
@@ -76,7 +76,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c1dd904f-af1f-4cb9-99ac-22727274d4cf"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 340
             };

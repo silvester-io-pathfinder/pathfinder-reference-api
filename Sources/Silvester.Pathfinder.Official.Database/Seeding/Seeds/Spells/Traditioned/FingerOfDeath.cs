@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class FingerOfDeath : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("cdc2f5a9-7700-4eb0-9666-2db04f3cdbdf");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You point your finger toward the target and speak a word of slaying. You deal 70 negative damage to the target. If the damage from finger of death reduces the target to 0 Hit Points, the target dies instantly." };
+            yield return new TextBlock { Id = Guid.Parse("d79044a2-4629-4714-8548-42eccb8dd5b6"), Type = TextBlockType.Text, Text = "You point your finger toward the target and speak a word of slaying. You deal 70 negative damage to the target. If the damage from finger of death reduces the target to 0 Hit Points, the target dies instantly." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("cf89a994-5789-4383-bf9c-edd238600c63"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 10." }
+                    new TextBlock { Id = Guid.Parse("b62b3618-5959-4b00-8ebd-18347b6fd095"), Type = TextBlockType.Text, Text = "The damage increases by 10." }
                 }
             };
         }
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8cf34df8-6934-4ead-a505-eb68db31f1d4"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 338
             };

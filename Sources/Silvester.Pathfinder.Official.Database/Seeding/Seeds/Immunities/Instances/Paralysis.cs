@@ -5,7 +5,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Immunities.Instan
 {
     public class Paralysis : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("7a5d6b5a-c49e-4686-8104-e2d846670cef");
 
         protected override Immunity GetHazardImmunity()
         {

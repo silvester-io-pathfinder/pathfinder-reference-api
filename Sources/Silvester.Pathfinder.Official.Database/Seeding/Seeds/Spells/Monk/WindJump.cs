@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class WindJump : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("4fce97c0-4714-4c52-a6a3-8e044af502c4");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-           yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You gain a fly Speed equal to your Speed. You must end your turn on solid ground, or you fall." };
+           yield return new TextBlock { Id = Guid.Parse("0f014427-4fe8-49c6-b0d8-fd0829f9ade2"), Type = TextBlockType.Text, Text = "You gain a fly Speed equal to your Speed. You must end your turn on solid ground, or you fall." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("7ad6e589-73fd-47e8-b3a3-dd048a2c5374"),
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "At the end of your turn, you can attempt a DC 30 Acrobatics check to find purchase in midair. If you succeed, you don’t fall." }
+                    new TextBlock { Id = Guid.Parse("0e2d5fc4-bc4c-4965-861b-afeeb609d66b"), Type = TextBlockType.Text, Text = "At the end of your turn, you can attempt a DC 30 Acrobatics check to find purchase in midair. If you succeed, you don’t fall." }
                 }
             };
         }
@@ -59,7 +59,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("2d61a473-016a-4008-b652-e22b74eec9a6"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 402
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DreamingPotential : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("299bd621-5766-49ce-bc04-2a55df46db48");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You draw the target into a lucid dream where it can explore the endless possibilities of its own potential within the everchanging backdrop of its dreamscape. If it sleeps the full 8 hours uninterrupted, when it wakes, it counts as having spent a day of downtime retraining, though it can’t use dreaming potential for any retraining that would require either an instructor or specialized knowledge it can’t access within the dream." };
+            yield return new TextBlock { Id = Guid.Parse("5bbdbace-de72-4cfe-8512-185541e45a36"), Type = TextBlockType.Text, Text = "You draw the target into a lucid dream where it can explore the endless possibilities of its own potential within the everchanging backdrop of its dreamscape. If it sleeps the full 8 hours uninterrupted, when it wakes, it counts as having spent a day of downtime retraining, though it can’t use dreaming potential for any retraining that would require either an instructor or specialized knowledge it can’t access within the dream." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b20732a5-a41e-4c95-89ed-f14dea0c1f29"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 333
             };

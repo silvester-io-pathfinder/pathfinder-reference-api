@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class HideousLaughter : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("3f5aac9a-03cd-4c4b-8504-d6d3597e95a8");
 
         public override Spell GetSpell()
         {
@@ -30,14 +30,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The target is overtaken with uncontrollable laughter. It must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("ca66e456-57da-4b4c-8401-5e89ebb5fa85"), Type = TextBlockType.Text, Text = "The target is overtaken with uncontrollable laughter. It must attempt a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("12dbb027-58d4-4b3f-84aa-b1bd660434e9"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is plagued with uncontrollable laugher. It can’t use reactions.",
                 Failure = "The target is slowed 1 and can’t use reactions.",
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("be7333ff-dfd6-46dd-a224-c71c7492b0fc"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 343
             };

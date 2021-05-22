@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class LocalizedQuake : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("192b652f-92d5-4fd6-83b8-9001e2d7ae3e");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You shake the earth, toppling nearby creatures. Choose whether the spell’s area is a 15-foot emanation or a 15-foot cone when you cast it. Each creature in the area standing on solid ground may take 4d6 bludgeoning damage and must attempt a Reflex saving throw." };
+            yield return new TextBlock { Id = Guid.Parse("96942c90-ad6d-474f-93bf-faaecaafae58"), Type = TextBlockType.Text, Text = "You shake the earth, toppling nearby creatures. Choose whether the spell’s area is a 15-foot emanation or a 15-foot cone when you cast it. Each creature in the area standing on solid ground may take 4d6 bludgeoning damage and must attempt a Reflex saving throw." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1a8db538-a225-43b8-8a8a-6dd5aa4961d1"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Increase the damage by 2d6." }
+                    new TextBlock { Id = Guid.Parse("00d2c847-e14f-48ef-adc5-688933db2f67"), Type = TextBlockType.Text, Text = "Increase the damage by 2d6." }
                 }
             };
         }
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d6384f91-0c99-4f4a-bd51-f4148c410baf"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes half damage.",
                 Failure = "The creature takes full damage and falls prone.",
@@ -75,7 +75,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("3c60f8e9-c4c4-458a-9985-6674b28ba5c0"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 393
             };

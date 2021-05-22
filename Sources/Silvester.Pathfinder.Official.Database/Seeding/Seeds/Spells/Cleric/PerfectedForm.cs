@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class PerfectedForm : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("97fde3d9-4ac8-4ad7-9813-fdc8cd1b149b");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Reroll the saving throw and use the better result." };
+            yield return new TextBlock { Id = Guid.Parse("97f6203f-83db-4301-98db-0abe72b0b346"), Type = TextBlockType.Text, Text = "Reroll the saving throw and use the better result." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0537f609-24ef-4916-8043-b25aec0266d5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 394
             };

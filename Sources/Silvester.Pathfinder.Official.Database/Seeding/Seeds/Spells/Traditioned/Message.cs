@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Message : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d1e5c7ca-1ebb-4168-ba75-4a8f1951a63b");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You mouth words quietly, but instead of coming out of your mouth, they’re transferred directly to the ears of the target. While others can’t hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you. The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly to your ear, just like the original message." };
+            yield return new TextBlock { Id = Guid.Parse("e8e6ca9e-564b-4320-bb83-8cfa32076ffb"), Type = TextBlockType.Text, Text = "You mouth words quietly, but instead of coming out of your mouth, they’re transferred directly to the ears of the target. While others can’t hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you. The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly to your ear, just like the original message." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("bf5af306-92a2-4732-bb41-0978ab3a5542"), 
                 Level = "3rd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The spell’s range increases to 500 feet." }
+                    new TextBlock { Id = Guid.Parse("afe59c36-1ec9-49e9-ae0d-ee1d533991d6"), Type = TextBlockType.Text, Text = "The spell’s range increases to 500 feet." }
                 }
             };
         }
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("99a2b237-1ea4-4cf9-b973-57f2d80ff29b"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 351
             };

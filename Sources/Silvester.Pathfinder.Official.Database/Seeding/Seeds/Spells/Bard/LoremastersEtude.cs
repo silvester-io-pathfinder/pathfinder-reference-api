@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class LoremastersEtude : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("96a33e5e-8662-4342-86f3-c3bebd52b541");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You call upon your muse’s deep mysteries, granting the target a greater ability to think and recall information. Roll the triggering Recall Knowledge skill check twice and use the better result." };
+            yield return new TextBlock { Id = Guid.Parse("437f0fc5-4c7f-4f18-88de-4c76a9cdecd2"), Type = TextBlockType.Text, Text = "You call upon your muse’s deep mysteries, granting the target a greater ability to think and recall information. Roll the triggering Recall Knowledge skill check twice and use the better result." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ba9b72ff-6cd6-4583-9842-a11a44d2ba6e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 387
             };

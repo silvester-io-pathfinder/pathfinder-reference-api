@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Pyrotechnics : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("2d9fa0b3-c9ba-4e4f-8c95-79a6366fdb61");
 
         public override Spell GetSpell()
         {
@@ -30,14 +30,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You turn a fire into either a burst of blinding fireworks or a thick cloud of choking smoke, chosen when you Cast the Spell. The spell targets one fire source, which is immediately extinguished if it is a non-magical fire the size of a campfire or smaller. If the fire source is a creature, the creature takes 1d6 points of cold damage and is not extinguished." };
+            yield return new TextBlock { Id = Guid.Parse("49294284-5355-43ed-a062-92d144b75623"), Type = TextBlockType.Text, Text = "You turn a fire into either a burst of blinding fireworks or a thick cloud of choking smoke, chosen when you Cast the Spell. The spell targets one fire source, which is immediately extinguished if it is a non-magical fire the size of a campfire or smaller. If the fire source is a creature, the creature takes 1d6 points of cold damage and is not extinguished." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("3ffbe429-d204-46b8-bc69-565db6989569"),
                 Name = "Fireworks",
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature is dazzled until the end of its next turn.",
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8a41f419-f41a-4550-92e7-717874aad150"),
                 Name = "Smoke Cloud",
                 Success = " The creature is unaffected.",
                 Failure = "The creature is sickened 1.",
@@ -78,7 +78,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b9716ba2-4260-4449-b05c-85aeab7e8cf0"),
                 SourceId = Sources.Instances.Pathfinder152.ID,
                 Page = 77
             };

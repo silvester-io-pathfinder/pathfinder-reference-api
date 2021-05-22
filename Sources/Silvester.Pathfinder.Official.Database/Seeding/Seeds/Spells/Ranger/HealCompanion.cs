@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class HealCompanion : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("8fddb4d4-0f53-465e-8995-00671c2e9806");
 
         public override Spell GetSpell()
         {
@@ -27,20 +27,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You harness positive energy to heal your animal companion’s wounds. You restore 1d10 Hit Points to your animal companion. The number of actions you spend Casting this Spell determines range and other parameters." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "[one-action] Somatic - The spell has a range of touch." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "[two-actions] Verbal - The spell has a range of 30 feet and restores an additional 8 Hit Points to the target." };
+            yield return new TextBlock { Id = Guid.Parse("062e69ff-671b-4c15-9f6b-d11232cc2990"), Type = TextBlockType.Text, Text = "You harness positive energy to heal your animal companion’s wounds. You restore 1d10 Hit Points to your animal companion. The number of actions you spend Casting this Spell determines range and other parameters." };
+            yield return new TextBlock { Id = Guid.Parse("34002694-962c-4aa6-a3e0-565b6f3ffad8"), Type = TextBlockType.Enumeration, Text = "[one-action] Somatic - The spell has a range of touch." };
+            yield return new TextBlock { Id = Guid.Parse("2bc41f04-e8e2-4212-afef-4f1fb3e47645"), Type = TextBlockType.Enumeration, Text = "[two-actions] Verbal - The spell has a range of 30 feet and restores an additional 8 Hit Points to the target." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("06e70b25-ae9e-4968-8520-2cb5e6ceaae9"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The amount of healing increases by 1d10, and the additional healing for the 2-action version increases by 8." }
+                    new TextBlock { Id = Guid.Parse("7b5c32be-32b7-418a-b1ec-23254894adea"), Type = TextBlockType.Text, Text = "The amount of healing increases by 1d10, and the additional healing for the 2-action version increases by 8." }
                 }
             };
         }
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cf26af3c-54c2-48e6-b9bd-9b2b475dfe75"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 234
             };

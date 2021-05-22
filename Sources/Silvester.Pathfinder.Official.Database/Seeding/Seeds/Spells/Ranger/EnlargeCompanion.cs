@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class EnlargeCompanion : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = 8ab5854e-77ab-4fd1-a64e-096bcff92f07);
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your animal companion grows much larger, towering over its foes in battle. Your animal companion becomes Huge, gaining the effects of a 4th-level enlarge spell." };
+            yield return new TextBlock { Id = Guid.Parse("d46d2901-16b4-4808-a625-4caa8629b738"), Type = TextBlockType.Text, Text = "Your animal companion grows much larger, towering over its foes in battle. Your animal companion becomes Huge, gaining the effects of a 4th-level enlarge spell." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("3ffa76e0-e6a2-4880-adf2-603352d6d20b"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 234
             };

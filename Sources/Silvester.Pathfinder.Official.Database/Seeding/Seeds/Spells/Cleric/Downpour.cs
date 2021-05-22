@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Downpour : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("8c2d28f7-2b1d-4dbd-8f5b-481038cb7f5c");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You call forth a torrential downpour, which extinguishes nonmagical flames. Creatures in the area are concealed and gain fire resistance 10. Creatures outside the area are concealed to those inside the area. Creatures with weakness to water that end their turns in the area take damage equal to their weakness." };
+            yield return new TextBlock { Id = Guid.Parse("5ae5bd16-ee7d-46ba-853c-5f8b9a535629"), Type = TextBlockType.Text, Text = "You call forth a torrential downpour, which extinguishes nonmagical flames. Creatures in the area are concealed and gain fire resistance 10. Creatures outside the area are concealed to those inside the area. Creatures with weakness to water that end their turns in the area take damage equal to their weakness." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("96de559c-6581-402e-a094-0ce6373b3cca"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The fire resistance increases by 2." }
+                    new TextBlock { Id = Guid.Parse("d22cb870-532a-42e7-9b9e-87d98f68823c"), Type = TextBlockType.Text, Text = "The fire resistance increases by 2." }
                 }
             };
         }
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("347edafe-4dad-4aba-89a5-468acefbc199"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 391
             };

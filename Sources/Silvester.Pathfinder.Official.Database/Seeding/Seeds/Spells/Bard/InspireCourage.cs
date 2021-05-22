@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class InspireCourage : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("7bdedbc0-e87c-4649-979b-1f9be7fc80ff");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You inspire yourself and your allies with words or tunes of encouragement. You and all allies in the area gain a +1 status bonus to attack rolls, damage rolls, and saves against fear effects." };
+            yield return new TextBlock { Id = Guid.Parse("05c4e965-ff79-4e53-ae15-c61335228100"), Type = TextBlockType.Text, Text = "You inspire yourself and your allies with words or tunes of encouragement. You and all allies in the area gain a +1 status bonus to attack rolls, damage rolls, and saves against fear effects." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ca86b271-50a6-4095-833a-dd5bac5e4c4e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 386
             };

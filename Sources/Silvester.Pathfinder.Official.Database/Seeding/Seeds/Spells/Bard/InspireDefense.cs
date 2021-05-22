@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class InspireDefense : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("41cc7828-aa79-42a3-a7de-5a64f77cc30f");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You inspire yourself and your allies to protect themselves more effectively. You and all allies in the area gain a +1 status bonus to AC and saving throws, as well as resistance equal to half the spell’s level to physical damage." };
+            yield return new TextBlock { Id = Guid.Parse("ffe6a820-2c09-47f6-8479-e2d9d9bc6ba7"), Type = TextBlockType.Text, Text = "You inspire yourself and your allies to protect themselves more effectively. You and all allies in the area gain a +1 status bonus to AC and saving throws, as well as resistance equal to half the spell’s level to physical damage." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("6bfc56e6-4736-4f30-8e06-7926da79ac45"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 386
             };

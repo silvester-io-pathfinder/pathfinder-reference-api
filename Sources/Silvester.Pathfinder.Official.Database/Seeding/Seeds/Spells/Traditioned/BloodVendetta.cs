@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class BloodVendetta : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("4857d481-64c1-48ab-a938-c879775e6904");
 
         public override Spell GetSpell()
         {
@@ -31,18 +31,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You curse the target, punishing it for having the audacity to spill your blood. The target takes 2d6 persistent bleed damage and must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("9f40c16e-b4f5-4664-bd96-5d7ec3479bae"), Type = TextBlockType.Text, Text = "You curse the target, punishing it for having the audacity to spill your blood. The target takes 2d6 persistent bleed damage and must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("c123b77c-4b46-4a94-bee3-9b0c552d8411"), 
                 Level = "+2",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The persistent bleed damage increases by 2d6." }
+                    new TextBlock { Id = Guid.Parse("6472c6af-759e-4b26-84fb-aa4418ec2a19"), Type = TextBlockType.Text, Text = "The persistent bleed damage increases by 2d6." }
                 }
             };
         }
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("63369615-2e19-41d2-9129-df4eb043120c"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes half the persistent bleed damage.",
                 Failure = "The target takes the full persistent bleed damage. Until the bleeding stops, the target has weakness 1 to piercing and slashing damage.",
@@ -81,7 +81,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e9a13606-6982-4445-b51b-18a851d744c9"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 216
             };

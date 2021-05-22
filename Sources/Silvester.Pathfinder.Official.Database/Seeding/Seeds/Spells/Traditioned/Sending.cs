@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Sending : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("2f7a2088-4d0e-40d1-aa35-bd9105582fa1");
 
         public override Spell GetSpell()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You send the creature a mental message of 25 words or fewer, and it can respond immediately with its own message of 25 words or fewer." };
+            yield return new TextBlock { Id = Guid.Parse("cff51bed-0e6e-4fc7-aa2f-99f7ac5e3205"), Type = TextBlockType.Text, Text = "You send the creature a mental message of 25 words or fewer, and it can respond immediately with its own message of 25 words or fewer." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("9e9bf8eb-b62d-4294-bbff-ba320baccc81"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 367
             };

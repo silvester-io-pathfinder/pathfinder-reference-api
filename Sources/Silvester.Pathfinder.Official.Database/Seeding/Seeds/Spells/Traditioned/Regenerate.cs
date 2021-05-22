@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Regenerate : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("becd7da8-c65e-479a-92c2-788a9c863662");
 
         public override Spell GetSpell()
         {
@@ -27,19 +27,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "An infusion of positive energy grants a creature continuous healing. The target temporarily gains regeneration 15, which restores 15 Hit Points to it at the start of each of its turns. While it has regeneration, the target can’t die from damage and its dying condition can’t increase to a value that would kill it (this stops most creatures from going beyond dying 3), though if its wounded value becomes 4 or higher, it stays unconscious until its wounds are treated. If the target takes acid or fire damage, its regeneration deactivates until after the end of its next turn." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Each time the creature regains Hit Points from regeneration, it also regrows one damaged or ruined organ (if any). During the spell’s duration, the creature can also reattach severed body parts by spending an Interact action to hold the body part to the area it was severed from." };
+            yield return new TextBlock { Id = Guid.Parse("f1393166-031e-4f6a-8254-1b23b118228a"), Type = TextBlockType.Text, Text = "An infusion of positive energy grants a creature continuous healing. The target temporarily gains regeneration 15, which restores 15 Hit Points to it at the start of each of its turns. While it has regeneration, the target can’t die from damage and its dying condition can’t increase to a value that would kill it (this stops most creatures from going beyond dying 3), though if its wounded value becomes 4 or higher, it stays unconscious until its wounds are treated. If the target takes acid or fire damage, its regeneration deactivates until after the end of its next turn." };
+            yield return new TextBlock { Id = Guid.Parse("f7d901be-ad0b-4d23-be85-e72e431d96eb"), Type = TextBlockType.Text, Text = "Each time the creature regains Hit Points from regeneration, it also regrows one damaged or ruined organ (if any). During the spell’s duration, the creature can also reattach severed body parts by spending an Interact action to hold the body part to the area it was severed from." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("b5e567f4-b9e7-4c09-8aa5-4d3d5cd8a01a"), 
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The regeneration increases to 20." }
+                    new TextBlock { Id = Guid.Parse("202cd1ae-eec2-449d-901f-8b49966cf6c2"), Type = TextBlockType.Text, Text = "The regeneration increases to 20." }
                 }
             };
         }
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d593c706-1092-4a0e-b8ee-bf44fcf9beda"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 363
             };

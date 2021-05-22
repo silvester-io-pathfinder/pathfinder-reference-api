@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Sanctuary : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("86dabd01-ccd5-45e6-adac-c7677bb0000c");
 
         public override Spell GetSpell()
         {
@@ -27,14 +27,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You ward a creature with protective energy that deters enemy attacks. Creatures attempting to attack the target must attempt a Will save each time. If the target uses a hostile action, the spell ends." };
+            yield return new TextBlock { Id = Guid.Parse("c756c99c-e162-459f-9f7e-e1a66f407620"), Type = TextBlockType.Text, Text = "You ward a creature with protective energy that deters enemy attacks. Creatures attempting to attack the target must attempt a Will save each time. If the target uses a hostile action, the spell ends." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c607b915-9901-4fc2-8538-786b7f1a015b"),
                 CriticalSuccess = "Sanctuary ends.",
                 Success = "The creature can attempt its attack and any other attacks against the target this turn.",
                 Failure = "The creature can’t attack the target and wastes the action. It can’t attempt further attacks against the target this turn.",
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c9bab50c-2f68-4221-bd84-42fb0a3ad321"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 366
             };

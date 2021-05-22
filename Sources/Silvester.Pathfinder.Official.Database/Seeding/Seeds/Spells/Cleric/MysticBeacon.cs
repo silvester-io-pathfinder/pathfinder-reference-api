@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class MysticBeacon : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("60c7b403-9464-4305-921f-0fd8445f1fe0");
 
         public override Spell GetSpell()
         {
@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The next damaging or healing spell the target casts before the start of your next turn deals damage or restores Hit Points as if the spell were heightened 1 level higher than its actual level. The spell otherwise functions at its actual level. Once the target casts the spell, mystic beacon ends." };
+            yield return new TextBlock { Id = Guid.Parse("8dbc8a0b-889d-45cc-9166-8160d5b4fa89"), Type = TextBlockType.Text, Text = "The next damaging or healing spell the target casts before the start of your next turn deals damage or restores Hit Points as if the spell were heightened 1 level higher than its actual level. The spell otherwise functions at its actual level. Once the target casts the spell, mystic beacon ends." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("944c1de6-ac9a-4ea3-bf19-6cbcca05627d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 394
             };

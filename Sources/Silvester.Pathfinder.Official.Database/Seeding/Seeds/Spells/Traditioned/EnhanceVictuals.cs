@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class EnhanceVictuals : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("969a5d86-e921-4432-a6b4-996a0e7ef07c");
 
         public override Spell GetSpell()
         {
@@ -28,19 +28,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You transform the target into delicious fare, changing water into wine or another fine beverage or enhancing the food’s taste and ingredients to make it a gourmet treat." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Prior to the transformation, the spell attempts to counteract any poisons in the food or water. The food turns back to normal if not consumed before the duration expires, though any poisons that were counteracted are still gone." };
+            yield return new TextBlock { Id = Guid.Parse("e2b92456-bacd-4cd6-be7e-dc83cf12d700"), Type = TextBlockType.Text, Text = "You transform the target into delicious fare, changing water into wine or another fine beverage or enhancing the food’s taste and ingredients to make it a gourmet treat." };
+            yield return new TextBlock { Id = Guid.Parse("da3c267d-086c-477d-b09d-93c9f656beb4"), Type = TextBlockType.Text, Text = "Prior to the transformation, the spell attempts to counteract any poisons in the food or water. The food turns back to normal if not consumed before the duration expires, though any poisons that were counteracted are still gone." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("73b0cf81-d7f5-425d-b86b-f2e60d13ffad"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The number of gallons of water you can target increases by 1, or the number of pounds of food you can target increases by 5." }
+                    new TextBlock { Id = Guid.Parse("ff9ebbb1-9e19-4236-8942-d19395f511dc"), Type = TextBlockType.Text, Text = "The number of gallons of water you can target increases by 1, or the number of pounds of food you can target increases by 5." }
                 }
             };
         }
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("5ec1b26e-cce6-4832-bbf6-820f1e17ebc3"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 335
             };

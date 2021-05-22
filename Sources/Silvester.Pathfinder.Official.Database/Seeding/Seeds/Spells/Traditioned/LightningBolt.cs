@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class LightningBolt : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("c6a647e0-e06b-4a5d-a91a-5efb18b9e159");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A bolt of lightning strikes outward from your hand, dealing 4d12 electricity damage." };
+            yield return new TextBlock { Id = Guid.Parse("44293f2b-0eb5-4909-83a9-f6e92a950803"), Type = TextBlockType.Text, Text = "A bolt of lightning strikes outward from your hand, dealing 4d12 electricity damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("2385abb6-3bd4-4622-8df6-e8357d96ebfd"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 1d12." }
+                    new TextBlock { Id = Guid.Parse("ecf5488a-4483-4541-941c-7bb5e3c80645"), Type = TextBlockType.Text, Text = "The damage increases by 1d12." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b504ad02-e277-4327-b0b5-1679cf70149a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 348
             };

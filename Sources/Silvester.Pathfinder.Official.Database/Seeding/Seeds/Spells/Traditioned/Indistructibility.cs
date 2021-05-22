@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Indistructibility : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ee670296-650a-47c6-bcab-801782182e05");
 
         public override Spell GetSpell()
         {
@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can’t be affected by anything unless you choose to be. For the duration of the spell, you are immune to any effect or damage that would harm you, excluding effects caused by artifacts, deific power, and similarly powerful sources. You can still be affected by anything you’re willing to have affect you." };
+            yield return new TextBlock { Id = Guid.Parse("03babf6a-179f-45a8-b511-7f2cae0b3e76"), Type = TextBlockType.Text, Text = "You can’t be affected by anything unless you choose to be. For the duration of the spell, you are immune to any effect or damage that would harm you, excluding effects caused by artifacts, deific power, and similarly powerful sources. You can still be affected by anything you’re willing to have affect you." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("7062c39b-a219-46d2-8391-b98153d0d94d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 221
             };

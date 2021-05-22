@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ForbiddingWard : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("4ccee2aa-e572-4c5c-b117-870c1870b06d");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You ward an ally against the attacks and hostile spells from the target enemy. The target ally gains a +1 status bonus to Armor Class and saving throws against the target enemy’s attacks, spells, and other effects." };
+            yield return new TextBlock { Id = Guid.Parse("ea9ab626-e12b-4189-a847-b4ddebcdc28c"), Type = TextBlockType.Text, Text = "You ward an ally against the attacks and hostile spells from the target enemy. The target ally gains a +1 status bonus to Armor Class and saving throws against the target enemy’s attacks, spells, and other effects." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("466e1b93-8fff-433f-a16b-f9fc29fbc608"), 
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The status bonus increases to +2." }
+                    new TextBlock { Id = Guid.Parse("a7927bb4-5bf4-43a5-ab30-5eb2d3931ec3"), Type = TextBlockType.Text, Text = "The status bonus increases to +2." }
                 }
             };
         }
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e1ef050d-d396-4e14-a62a-7409609e46db"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 339
             };

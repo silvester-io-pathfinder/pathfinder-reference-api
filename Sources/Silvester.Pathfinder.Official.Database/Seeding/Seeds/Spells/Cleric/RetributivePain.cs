@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class RetributivePain : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("26c6bd1b-0b78-4b6a-9fbf-ea95af5776fe");
 
         public override Spell GetSpell()
         {
@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You vengefully reflect your pain upon your tormentor. The target takes mental damage equal to half the amount it dealt to you when it triggered the spell." };
+            yield return new TextBlock { Id = Guid.Parse("444b3e59-ca86-4ebc-a2b0-8f9493fc3173"), Type = TextBlockType.Text, Text = "You vengefully reflect your pain upon your tormentor. The target takes mental damage equal to half the amount it dealt to you when it triggered the spell." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("fa4395c9-f4de-4d1e-897a-db519ca6a38e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 396
             };

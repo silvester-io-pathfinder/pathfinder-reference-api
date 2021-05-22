@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SafeguardSecret : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("95ee850b-bf3d-47ec-8228-94467052a6df");
 
         public override Spell GetSpell()
         {
@@ -30,8 +30,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You ensure a secret remains safe from prying spies. Choose one piece of information that at least some of the targets know; you can target a creature only if it remains within range for the full minute during which you Cast the Spell. The spell grants those who know the piece of knowledge you have chosen a +4 status bonus to skill checks (typically Deception checks) to conceal this knowledge and to saving throws against spells that specifically attempt to obtain this knowledge from them and effects that would force them to reveal it." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "If you Cast this Spell again, any previous safeguard secret you had cast ends." };
+            yield return new TextBlock { Id = Guid.Parse("f6d5f3a6-ce11-40dd-8e1c-c3f59aadf640"), Type = TextBlockType.Text, Text = "You ensure a secret remains safe from prying spies. Choose one piece of information that at least some of the targets know; you can target a creature only if it remains within range for the full minute during which you Cast the Spell. The spell grants those who know the piece of knowledge you have chosen a +4 status bonus to skill checks (typically Deception checks) to conceal this knowledge and to saving throws against spells that specifically attempt to obtain this knowledge from them and effects that would force them to reveal it." };
+            yield return new TextBlock { Id = Guid.Parse("bf1d8655-86f5-40ab-a083-9c5ee2f10210"), Type = TextBlockType.Text, Text = "If you Cast this Spell again, any previous safeguard secret you had cast ends." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0e022650-a3f7-49f1-b1d3-0216bbbe5d5c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 396
             };

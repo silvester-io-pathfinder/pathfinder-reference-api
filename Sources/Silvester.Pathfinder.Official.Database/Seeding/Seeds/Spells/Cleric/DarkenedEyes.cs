@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DarkenedEyes : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("b84325e2-a86f-4202-b268-ab755204d7e1");
 
         public override Spell GetSpell()
         {
@@ -31,14 +31,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You infuse a creature’s vision with darkness. After attempting its save, the target becomes temporarily immune for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("0d4fe2f8-c5aa-448c-beae-61e60d910bd1"), Type = TextBlockType.Text, Text = "You infuse a creature’s vision with darkness. After attempting its save, the target becomes temporarily immune for 24 hours." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("324ced5a-220f-4874-b0d2-7b829b0ee113"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target’s darkvision or low-light vision is suppressed for 1 round.",
                 Failure = "As success, but the duration is 1 minute.",
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("47acb694-8c11-43c7-80a0-7d58b2baffd7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 390
             };

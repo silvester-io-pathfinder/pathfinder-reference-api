@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SpeakWithPlants : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("f1ab3438-9952-4921-ab1c-07faebeda112");
 
         public override Spell GetSpell()
         {
@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can ask questions of and receive answers from plants, but the spell doesn’t make them more friendly or intelligent than normal. Most normal plants have a distinctive view of the world around them, so they don’t recognize details about creatures or know anything about the world beyond their immediate vicinity. Cunning plant monsters are likely to be terse and evasive, while less intelligent ones often make inane comments." };
+            yield return new TextBlock { Id = Guid.Parse("7fd2d6fe-b453-460e-93ef-926ec445be5d"), Type = TextBlockType.Text, Text = "You can ask questions of and receive answers from plants, but the spell doesn’t make them more friendly or intelligent than normal. Most normal plants have a distinctive view of the world around them, so they don’t recognize details about creatures or know anything about the world beyond their immediate vicinity. Cunning plant monsters are likely to be terse and evasive, while less intelligent ones often make inane comments." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("102a21cb-c7bc-4287-a980-a250670db2fe"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 370
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 {
     public class DragonClaws : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("979b1764-d560-4ff0-945a-2f2f26e9acbc");
 
         public override Spell GetSpell()
         {
@@ -26,28 +26,28 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Vicious claws grow from your fingers. They are finesse unarmed attacks that deal 1d4 slashing damage and 1d6 extra damage of a type determined by the dragon in your bloodline (see the table in dragon breath). Your scales from blood magic glow with faint energy, giving you resistance 5 to the same damage type." };
+            yield return new TextBlock { Id = Guid.Parse("56d382eb-341d-44e6-aaf1-0a5665eb538c"), Type = TextBlockType.Text, Text = "Vicious claws grow from your fingers. They are finesse unarmed attacks that deal 1d4 slashing damage and 1d6 extra damage of a type determined by the dragon in your bloodline (see the table in dragon breath). Your scales from blood magic glow with faint energy, giving you resistance 5 to the same damage type." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d323d3f6-b8c9-4657-a9d0-3d803bb04b19"),
                 Level = "+5th",
                 Details =
                 {
-                   new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The extra damage increases to 2d6, and the resistance increases to 10." }
+                   new TextBlock { Id = Guid.Parse("c2714387-db34-4de4-b101-d26a083e7447"), Type = TextBlockType.Text, Text = "The extra damage increases to 2d6, and the resistance increases to 10." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("565977e9-f022-4134-bf53-960a17221252"),
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The extra damage increases to 3d6, and the resistance increases to 15." }
+                    new TextBlock { Id = Guid.Parse("26fb7e49-93e5-410d-a3da-d0de5656c4ab"), Type = TextBlockType.Text, Text = "The extra damage increases to 3d6, and the resistance increases to 15." }
                 }
             };
         }
@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("7dad1414-47f3-41f1-ac2f-12eead578725"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 403
             };

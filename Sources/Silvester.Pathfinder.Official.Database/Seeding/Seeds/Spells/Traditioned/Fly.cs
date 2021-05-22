@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Fly : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("6f7a283d-9e82-4c37-b0f5-adef6633636c");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The target can soar through the air, gaining a fly Speed equal to its Speed or 20 feet, whichever is greater." };
+            yield return new TextBlock { Id = Guid.Parse("3959e792-180e-4911-b739-408651fb1c8d"), Type = TextBlockType.Text, Text = "The target can soar through the air, gaining a fly Speed equal to its Speed or 20 feet, whichever is greater." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("d2ba1365-b169-405b-9120-6725445f6428"), 
                 Level = "7th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The duration increases to 1 hour." }
+                    new TextBlock { Id = Guid.Parse("5de30fd5-357a-4889-86cc-7d249b25cc72"), Type = TextBlockType.Text, Text = "The duration increases to 1 hour." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8ffa0196-dea0-4a98-ab93-53e590bcf4a0"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 339
             };

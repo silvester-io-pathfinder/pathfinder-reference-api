@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("3fce780e-5267-451a-b417-61821045d9a7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 317
             };

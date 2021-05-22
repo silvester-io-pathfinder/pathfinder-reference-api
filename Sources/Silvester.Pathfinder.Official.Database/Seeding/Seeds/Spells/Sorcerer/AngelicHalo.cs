@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 {
     public class AngelicHalo : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d7ab83e4-1413-4bbb-bfdc-17eeba1b8108");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You gain an angelic halo with an aura that increases allies’ healing from the heal spell. Allies in your halo’s emanation who are healed by a heal spell gain a status bonus to Hit Points regained equal to double the heal spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("81ff5de4-fb8d-4da8-8ca5-247d18a1d951"), Type = TextBlockType.Text, Text = "You gain an angelic halo with an aura that increases allies’ healing from the heal spell. Allies in your halo’s emanation who are healed by a heal spell gain a status bonus to Hit Points regained equal to double the heal spell’s level." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("58947416-e0ec-400d-bc8b-38e44ba8f3bf"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 402
             };

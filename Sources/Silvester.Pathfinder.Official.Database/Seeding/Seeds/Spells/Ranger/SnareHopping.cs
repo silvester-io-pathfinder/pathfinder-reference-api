@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SnareHopping : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d18284dc-9d89-44a0-9910-57fb647d50b0");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You may not have placed your snare in the right place, but you can magically move it there. You teleport the target snare to another unoccupied location in range." };
+            yield return new TextBlock { Id = Guid.Parse("98a390ff-738d-47a8-9075-9215dca4ed30"), Type = TextBlockType.Text, Text = "You may not have placed your snare in the right place, but you can magically move it there. You teleport the target snare to another unoccupied location in range." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d5cb143b-b529-44f4-bd77-3ed5d681c76c"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The range of the spell increases by 10 feet." }
+                    new TextBlock { Id = Guid.Parse("0b822f94-01fc-44ce-9beb-01941330b34f"), Type = TextBlockType.Text, Text = "The range of the spell increases by 10 feet." }
                 }
             };
         }
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c9cf59ab-d6d5-43d4-8e32-48beeedd8b99"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 235
             };

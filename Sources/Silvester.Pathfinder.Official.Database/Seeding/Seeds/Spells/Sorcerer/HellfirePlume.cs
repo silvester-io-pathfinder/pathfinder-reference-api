@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 {
     public class HellfirePlume : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ce60a626-8eca-4893-9329-6518d60f1bea");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You call forth a plume of hellfire that erupts from below, dealing 4d6 fire damage and 4d6 evil damage." };
+            yield return new TextBlock { Id = Guid.Parse("1a3db4e2-76e4-4f72-a7ec-052b4d96e1c5"), Type = TextBlockType.Text, Text = "You call forth a plume of hellfire that erupts from below, dealing 4d6 fire damage and 4d6 evil damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("2585dd26-a87f-4848-9a1d-e6ca3e5b0ad8"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The fire damage increases by 1d6, and the evil damage increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("14caa690-f241-41a7-a5ff-3bd979292615"), Type = TextBlockType.Text, Text = "The fire damage increases by 1d6, and the evil damage increases by 1d6." }
                 }
             };
         }
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c4282d9c-792d-41b7-bf6f-c65e9bd6ce4c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 405
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class HuntersLuck : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("1a4d0c2e-af2c-4f4e-b974-16beb3fe7955");
 
         public override Spell GetSpell()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You have a preternatural ability to remember details about your foes. Roll the triggering check twice and use the better result." };
+            yield return new TextBlock { Id = Guid.Parse("fa2448d1-5f33-4249-bd0a-a8c4f3ff3132"), Type = TextBlockType.Text, Text = "You have a preternatural ability to remember details about your foes. Roll the triggering check twice and use the better result." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cd770c05-f37d-42ce-8321-df34601aa71b"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 235
             };

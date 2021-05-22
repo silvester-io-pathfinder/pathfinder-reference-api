@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class LitanyOfSelfInterest : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("3000a92d-b7e9-477e-8d60-06bec208fbe2");
 
         public override Spell GetSpell()
         {
@@ -30,18 +30,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You give a speech that fills your target with a drive to improve themself to the exclusion of assisting others. A creature that wants to gain the benefit of this spell and doesn’t care about its limitations can voluntarily fail the save. The target then becomes temporarily immune to all your litanies for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("cde541e4-870e-4d6b-a046-f5a6096a7aab"), Type = TextBlockType.Text, Text = "You give a speech that fills your target with a drive to improve themself to the exclusion of assisting others. A creature that wants to gain the benefit of this spell and doesn’t care about its limitations can voluntarily fail the save. The target then becomes temporarily immune to all your litanies for 1 minute." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("2e5a361c-a469-4bad-99d3-75ef81fb3538"),
                 Level = "8th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The status bonus increases to +3." }
+                    new TextBlock { Id = Guid.Parse("9e81627e-6efa-4548-ae29-ae407bde0dfb"), Type = TextBlockType.Text, Text = "The status bonus increases to +3." }
                 }
             };
         }
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cd7a460f-3985-4ab9-a876-7da31b5f83e6"),
                 Success = "The target is unaffected.",
                 Failure = "The target gains a +2 status bonus to attack rolls, Perception checks, saving throws, and skill checks. The target can’t Aid other creatures, consider any creature an ally, or use spells or abilities that directly benefit another creature (as determined by the GM), even if they also benefit the target. Other creatures allied with the spell’s target can still consider the target an ally and affect it accordingly.",
             };
@@ -75,7 +75,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("08cae253-31fd-45b7-9c85-3db508b27842"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 229
             };

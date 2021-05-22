@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class CommandingLash : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("181e6ff7-3975-474a-afc8-0134b64eb336");
 
         public override Spell GetSpell()
         {
@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "With the threat of more pain, you compel a creature you’ve recently harmed. You issue a command to the target, with the effects of the spell command." };
+            yield return new TextBlock { Id = Guid.Parse("91d21191-eee1-4700-b812-b716e84c5126"), Type = TextBlockType.Text, Text = "With the threat of more pain, you compel a creature you’ve recently harmed. You issue a command to the target, with the effects of the spell command." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("54a55670-1944-44dc-b003-b7a4b52eb082"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 390
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SealFate : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("c7f662a7-c1ae-42dd-b213-909077f87f5d");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You utter a curse that a creature will meet a certain end—a death by freezing, stabbing, or another means you devise. Choose one type of damage from the following list: acid, bludgeoning, cold, electricity, fire, negative, piercing, slashing, or sonic. The effect is based on the target’s Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("b8c87372-0ec1-4724-9863-c697a6376a34"), Type = TextBlockType.Text, Text = "You utter a curse that a creature will meet a certain end—a death by freezing, stabbing, or another means you devise. Choose one type of damage from the following list: acid, bludgeoning, cold, electricity, fire, negative, piercing, slashing, or sonic. The effect is based on the target’s Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("76bd1f11-f815-4853-852b-6bcee67f538d"), 
                 Level = "+2",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The weakness increases by 1, and the maximum level of creature that can be automatically killed increases by 4." }
+                    new TextBlock { Id = Guid.Parse("bc6c9a6c-8143-4955-9ca0-567551974c61"), Type = TextBlockType.Text, Text = "The weakness increases by 1, and the maximum level of creature that can be automatically killed increases by 4." }
                 }
             };
         }
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("fc94608c-6b9b-4ea8-9bf4-8cc5e6e0014a"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target gains weakness 2 to the chosen damage type until the end of your next turn.",
                 Failure = "As success, but the duration is 1 minute. If the creature is reduced to 0 HP by the chosen damage and its level is 7 or less, it dies.",
@@ -80,7 +80,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("51a8d792-b41b-49f0-97fa-a968032c30b7"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 224
             };

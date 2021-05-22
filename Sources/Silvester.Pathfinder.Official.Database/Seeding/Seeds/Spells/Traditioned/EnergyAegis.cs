@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class EnergyAegis : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("a6f78806-31f1-4032-9ae8-0489b239cb9e");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You protect the target with a powerful, long-lasting energy barrier. The target gains resistance 5 to acid, cold, electricity, fire, force, negative, positive, and sonic damage." };
+            yield return new TextBlock { Id = Guid.Parse("04dc88e4-e9e5-449b-931c-19731fddf1c2"), Type = TextBlockType.Text, Text = "You protect the target with a powerful, long-lasting energy barrier. The target gains resistance 5 to acid, cold, electricity, fire, force, negative, positive, and sonic damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("ae8f40a7-ebb0-4cc1-8b01-96e6ee5f12ff"), 
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The resistances increase to 10." }
+                    new TextBlock { Id = Guid.Parse("71801735-65fb-4811-8125-96ebc2fb8079"), Type = TextBlockType.Text, Text = "The resistances increase to 10." }
                 }
             };
         }
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("bfffa6c5-5c33-4146-9801-ae6eca8807a8"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 335
             };

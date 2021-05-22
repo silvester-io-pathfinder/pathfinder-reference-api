@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ChillingSpray : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("99025d40-d031-4e17-8f6e-4c1f95732557");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A cone of icy shards bursts from your spread hands and coats the targets in a layer of frost. You deal 2d4 cold damage to creatures in the area; they must each attempt a Reflex save." };
+            yield return new TextBlock { Id = Guid.Parse("59825ba9-8c1e-4a46-ab99-8f8eddb25c75"), Type = TextBlockType.Text, Text = "A cone of icy shards bursts from your spread hands and coats the targets in a layer of frost. You deal 2d4 cold damage to creatures in the area; they must each attempt a Reflex save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("f707eb02-267f-4b61-9e65-81d4ff250bed"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 2d4." }
+                    new TextBlock { Id = Guid.Parse("c5a2e54b-47a6-4204-9c54-19c0155cb8bb"), Type = TextBlockType.Text, Text = "The damage increases by 2d4." }
                 }
             };
         }
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d2565fe3-8343-45fe-bd54-acdd4449f4ad"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes half damage.",
                 Failure = "The creature takes full damage and takes a –5-foot status penalty to its Speeds for 2 rounds.",
@@ -77,7 +77,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ec753b6b-49ce-414c-bf0c-a8bc767a7225"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 217
             };

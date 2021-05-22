@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class FungalInfestation : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("4d55fa92-d467-461b-9788-2b0d9e803677");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Toxic spores swarm over creatures in the area, causing them to erupt in grotesque fungal growths. These noxious growths deal 2d6 persistent poison damage, and each creature must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("3e3181cf-329d-4065-a054-76523c9db66f"), Type = TextBlockType.Text, Text = "Toxic spores swarm over creatures in the area, causing them to erupt in grotesque fungal growths. These noxious growths deal 2d6 persistent poison damage, and each creature must attempt a Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("d83e9607-4345-4e31-9dd1-b1373db3f8f1"), 
                 Level = "+2",
                 Details =
                 {
-                   new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The persistent damage increases by 2d6, and the weakness increases by 1, or by 2 on a critical failure." }
+                   new TextBlock { Id = Guid.Parse("9cfd60aa-760f-4b75-b727-7c261160dd19"), Type = TextBlockType.Text, Text = "The persistent damage increases by 2d6, and the weakness increases by 1, or by 2 on a critical failure." }
                 }
             };
         }
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1e7d9528-0419-4cb9-8b8f-3035fa188cd6"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The target takes half the persistent poison damage.",
                 Failure = "The target takes the full persistent poison damage. While it is taking this persistent poison damage, it has weakness 1 to fire and weakness 1 to slashing.",
@@ -76,7 +76,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("aa2e3115-9633-4859-89b6-9e14954ab4f5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 220
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class GlyphOfWarding : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("dd917eeb-693d-4b5c-95b8-15d653318eb5");
 
         public override Spell GetSpell()
         {
@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You craft a trap by binding a hostile spell into a symbol. While Casting this Spell, you also Cast a Spell of a lower spell level to store in the glyph. The stored spell must take 3 actions or fewer to cast, have a hostile effect, and target one creature or have an area. You can set a password, a trigger, or both for the glyph. Any creature that moves, opens, or touches the target container or enters the target area that doesn’t speak the password or that matches the trigger activates the glyph, releasing the harmful spell within." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Once a spell is stored in the glyph, the glyph gains all thetraits of that spell. If the stored spell targets one or more creatures, it targets the creature that set off the glyph. If it has an area, that area is centered on the creature that set off the glyph. Glyph of warding’s duration ends when the glyph is triggered. The glyph counts as a magical trap, using your spell DC for both the Perception check to notice it and the Thievery check to disable it; both checks require the creature attempting them to be trained in order to succeed." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can Dismiss glyph of warding. The maximum number of glyphs of warding you can have active at a time is equal to your spellcasting ability modifier." };
+            yield return new TextBlock { Id = Guid.Parse("8da739e3-7e84-4501-8678-fc6ce384da1b"), Type = TextBlockType.Text, Text = "You craft a trap by binding a hostile spell into a symbol. While Casting this Spell, you also Cast a Spell of a lower spell level to store in the glyph. The stored spell must take 3 actions or fewer to cast, have a hostile effect, and target one creature or have an area. You can set a password, a trigger, or both for the glyph. Any creature that moves, opens, or touches the target container or enters the target area that doesn’t speak the password or that matches the trigger activates the glyph, releasing the harmful spell within." };
+            yield return new TextBlock { Id = Guid.Parse("8d18abf7-e3eb-4827-aac3-695a98063233"), Type = TextBlockType.Text, Text = "Once a spell is stored in the glyph, the glyph gains all thetraits of that spell. If the stored spell targets one or more creatures, it targets the creature that set off the glyph. If it has an area, that area is centered on the creature that set off the glyph. Glyph of warding’s duration ends when the glyph is triggered. The glyph counts as a magical trap, using your spell DC for both the Perception check to notice it and the Thievery check to disable it; both checks require the creature attempting them to be trained in order to succeed." };
+            yield return new TextBlock { Id = Guid.Parse("6fae1a53-67c2-4ce0-b994-4103e9766305"), Type = TextBlockType.Text, Text = "You can Dismiss glyph of warding. The maximum number of glyphs of warding you can have active at a time is equal to your spellcasting ability modifier." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -58,7 +58,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("95a6e964-45be-4788-bf1b-3e75b203329d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 341
             };

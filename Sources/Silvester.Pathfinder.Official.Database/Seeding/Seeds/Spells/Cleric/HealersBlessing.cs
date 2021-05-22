@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class HealersBlessing : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("9f884f0c-0795-42e8-8389-5993e0fcea4c");
 
         public override Spell GetSpell()
         {
@@ -29,19 +29,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your words bless a creature with an enhanced connection to positive energy. When the target regains Hit Points from a healing spell, it regains 2 additional Hit Points." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The target regains additional Hit Points from healer’s blessing only the first time it regains HP from a given healing spell, so a spell that heals the creature repeatedly over a duration would restore additional Hit Points only once." };
+            yield return new TextBlock { Id = Guid.Parse("ac356683-d3cc-48b4-944e-6cd7d7a9744f"), Type = TextBlockType.Text, Text = "Your words bless a creature with an enhanced connection to positive energy. When the target regains Hit Points from a healing spell, it regains 2 additional Hit Points." };
+            yield return new TextBlock { Id = Guid.Parse("2e9dda41-cda9-49df-b53d-fef01907e0a3"), Type = TextBlockType.Text, Text = "The target regains additional Hit Points from healer’s blessing only the first time it regains HP from a given healing spell, so a spell that heals the creature repeatedly over a duration would restore additional Hit Points only once." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("f4bed96b-ab91-406f-ab54-917a1b261f2b"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The additional healing increases by 2 HP." }
+                    new TextBlock { Id = Guid.Parse("ee0a591d-ff34-4e94-a531-c36f95406c08"), Type = TextBlockType.Text, Text = "The additional healing increases by 2 HP." }
                 }
             };
         }
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("fec1b7c6-e25d-438d-885e-139c57e294b4"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 393
             };

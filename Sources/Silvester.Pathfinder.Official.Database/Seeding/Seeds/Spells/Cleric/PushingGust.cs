@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class PushingGust : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("8ba9e8e6-7902-49c0-8d3a-aff76bcd8a9b");
 
         public override Spell GetSpell()
         {
@@ -30,14 +30,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Giving the air a push, you buffet the target with a powerful gust of wind; it must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("61a44a33-b2ed-4021-ab9e-d29ed24fe47f"), Type = TextBlockType.Text, Text = "Giving the air a push, you buffet the target with a powerful gust of wind; it must attempt a Fortitude save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("7448f1d4-f500-4a12-9f94-66cca30061bd"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is pushed 5 feet away from you.",
                 Failure = "The target is pushed 10 feet away from you.",
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0b6bc5ba-2e21-4727-8bf9-9bcd01970f6f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 395
             };

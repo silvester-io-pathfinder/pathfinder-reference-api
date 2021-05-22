@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Enervation : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d63d0e3a-03d7-4cd1-9aea-b47a2b61ad77");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Extending a finger, you fire a beam of negative energy that weakens the life force of any creature it touches. Each living creature in the line must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("3f0732b8-53f2-4a7e-96ac-a327e42d8026"), Type = TextBlockType.Text, Text = "Extending a finger, you fire a beam of negative energy that weakens the life force of any creature it touches. Each living creature in the line must attempt a Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("718c48c4-fbaa-43ab-8613-1b4fb2dbfdf1"), 
                 Level = "+2",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The persistent negative damage increases by 1d8 on a success, or by 2d8 on a failure or critical failure." }
+                    new TextBlock { Id = Guid.Parse("09293ea8-6fe8-4a43-bb7e-f2e335c59405"), Type = TextBlockType.Text, Text = "The persistent negative damage increases by 1d8 on a success, or by 2d8 on a failure or critical failure." }
                 }
             };
         }
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("29119fe4-5510-438e-892b-e0a354fbbb03"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes 2d8 persistent negative damage.",
                 Failure = "The creature takes 4d8 persistent negative damage and becomes drained 1.",
@@ -78,7 +78,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4bd8e532-9cdd-4082-ac01-d9e51ff498b2"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 218
             };

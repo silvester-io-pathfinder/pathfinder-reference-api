@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class FleshToStone : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("03533db6-d74d-43cc-84e0-ec5f1c0177b8");
 
         public override Spell GetSpell()
         {
@@ -29,14 +29,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You try to turn the target’s flesh into stone. The target must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("f0e52ed1-3a6a-4c03-aa5b-691b1b1db4e8"), Type = TextBlockType.Text, Text = "You try to turn the target’s flesh into stone. The target must attempt a Fortitude save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("775df469-be19-45a1-91c1-dfa8b0b1d576"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is slowed 1 for 1 round.",
                 Failure = "The target is slowed 1 and must attempt a Fortitude save at the end of each of its turns; this ongoing save has the incapacitation trait. On a failed save, the slowed condition increases by 1 (or 2 on a critical failure). A successful save reduces the slowed condition by 1. When a creature is unable to act due to the slowed condition from flesh to stone, the creature is permanently non-magically petrified. The spell ends if the creature is petrified or the slowed condition is removed.",
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("30c34533-abc3-4ff5-8a2d-10eac23b46db"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 339
             };

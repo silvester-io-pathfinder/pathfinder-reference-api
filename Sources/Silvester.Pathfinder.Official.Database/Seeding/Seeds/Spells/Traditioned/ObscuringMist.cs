@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ObscuringMist : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("9844abe7-e51e-4b8c-877d-1dbdb41801f3");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You call forth a cloud of mist. All creatures within the mist become concealed, and all creatures outside the mist become concealed to creatures within it. You can Dismiss the cloud." };
+            yield return new TextBlock { Id = Guid.Parse("5ae2b71d-f9da-443b-9429-8a00403f5ab9"), Type = TextBlockType.Text, Text = "You call forth a cloud of mist. All creatures within the mist become concealed, and all creatures outside the mist become concealed to creatures within it. You can Dismiss the cloud." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e8050d67-5f1d-4541-90e4-65f05c8c7679"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 355
             };

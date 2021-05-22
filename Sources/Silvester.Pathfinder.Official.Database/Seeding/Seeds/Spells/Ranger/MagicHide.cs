@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class MagicHide : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("baa6d8fe-d863-41f1-8087-9d9725bb4a81");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your animal companion grows a thicker hide, matted fur, or a harder shell, granting it a +1 status bonus to AC." };
+            yield return new TextBlock { Id = Guid.Parse("1c8298db-ca49-4a61-b2fa-0e3896de1f1c"), Type = TextBlockType.Text, Text = "Your animal companion grows a thicker hide, matted fur, or a harder shell, granting it a +1 status bonus to AC." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b14d678a-adf3-453f-9e35-17364a0848cf"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 235
             };

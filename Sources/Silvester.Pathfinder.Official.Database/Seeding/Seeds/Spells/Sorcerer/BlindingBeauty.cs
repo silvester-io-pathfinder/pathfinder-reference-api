@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class BlindingBeauty : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("23bf8fed-66e0-4e3b-b0bc-629ddf8dddfc");
 
         public override Spell GetSpell()
         {
@@ -28,14 +28,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You channel the allure of your nymph bloodline into a terribly beautiful glance. Each enemy in the area must attempt a Will saving throw." };
+            yield return new TextBlock { Id = Guid.Parse("3a2d3a72-630c-4423-9c65-3778ff433cff"), Type = TextBlockType.Text, Text = "You channel the allure of your nymph bloodline into a terribly beautiful glance. Each enemy in the area must attempt a Will saving throw." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("452a348a-c5c8-44eb-8ebd-9febeee168ac"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature is dazzled until the start of its next turn.",
                 Failure = "The creature is blinded until the start of its next turn.",
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("7a56976d-f03f-4d00-a9c8-e9b9d7a2e5ea"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 235
             };

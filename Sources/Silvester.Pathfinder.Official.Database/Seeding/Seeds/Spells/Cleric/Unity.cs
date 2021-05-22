@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Unity : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("891c75f8-0588-453f-a807-e0f1dde5a995");
 
         public override Spell GetSpell()
         {
@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You put up a united defense. Each ally can use your saving throw modifier instead of its own against the triggering spell. Each ally decides individually which modifier to use." };
+            yield return new TextBlock { Id = Guid.Parse("1b81a409-7126-4d71-9341-c55d52603d16"), Type = TextBlockType.Text, Text = "You put up a united defense. Each ally can use your saving throw modifier instead of its own against the triggering spell. Each ally decides individually which modifier to use." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e818b941-e875-4e81-8f76-907c69c8d765"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 398
             };

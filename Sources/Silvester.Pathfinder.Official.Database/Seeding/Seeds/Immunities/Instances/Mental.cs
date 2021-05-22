@@ -5,7 +5,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Immunities.Instan
 {
     public class Mental : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("6db6971f-5d71-46e0-8f4f-414f8fd618de");
 
         protected override Immunity GetHazardImmunity()
         {

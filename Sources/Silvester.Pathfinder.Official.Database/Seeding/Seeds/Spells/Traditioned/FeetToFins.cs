@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class FeetToFins : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("dbcc2afe-172f-4a67-bfb1-1db59d4c94f7");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The target’s feet transform into fins, improving mobility in the water but reducing it on land. The target gains a swim Speed equal to its normal land Speed, but its land Speed becomes 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("bd2e07d5-5c99-4934-9033-c4208643cc14"), Type = TextBlockType.Text, Text = "The target’s feet transform into fins, improving mobility in the water but reducing it on land. The target gains a swim Speed equal to its normal land Speed, but its land Speed becomes 5 feet." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("13e070af-bc40-4d7b-8482-a710a703587d"), 
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The spell lasts until the next time you make your daily preparations." }
+                    new TextBlock { Id = Guid.Parse("54597a67-332f-4ebc-8ef7-5f0814267582"), Type = TextBlockType.Text, Text = "The spell lasts until the next time you make your daily preparations." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("38671e75-eb26-4d19-9f64-cdfafa51ad49"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 337
             };

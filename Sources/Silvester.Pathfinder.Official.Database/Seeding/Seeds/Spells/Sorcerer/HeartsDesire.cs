@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class HeartsDesire : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("12b35d4a-e05c-476d-a7d6-57a7beddeb28");
 
         public override Spell GetSpell()
         {
@@ -30,18 +30,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You surround your target with wondrous illusions of their greatest desires, which distract them from reality. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("f76739b4-a175-4edf-b50f-e4a286ad8f2e"), Type = TextBlockType.Text, Text = "You surround your target with wondrous illusions of their greatest desires, which distract them from reality. The target must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("156d291f-e675-41bb-a723-54d2c1e3358c"),
                 Level = "+2",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can target one additional creature." }
+                    new TextBlock { Id = Guid.Parse("157d9b76-19ae-4fa7-bd73-4e167347bbf9"), Type = TextBlockType.Text, Text = "You can target one additional creature." }
                 }
             };
         }
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("81ea4c1f-1fa0-446f-9154-8f58665f5e10"),
                 CriticalSuccess = "The target disbelieves the illusion and is unaffected.",
                 Success = "For 1 round, the target is stupefied 2 and takes a –2 status penalty to any checks it makes to determine the effects of reactions.",
                 Failure = "For 1 minute, the target is stupefied 2 and can’t use reactions.",
@@ -77,7 +77,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c324cc91-4b28-4087-955e-ab88ff554f42"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 236
             };

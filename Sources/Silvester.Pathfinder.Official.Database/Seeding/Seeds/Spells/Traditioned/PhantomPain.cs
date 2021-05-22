@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class PhantomPain : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ece946f0-28b2-4b5c-a886-0bfd5d2e00b8");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Illusory pain wracks the target, dealing 2d4 mental damage and 1d4 persistent mental damage. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("ccd49ccb-de97-4605-a376-8af98bf20d5d"), Type = TextBlockType.Text, Text = "Illusory pain wracks the target, dealing 2d4 mental damage and 1d4 persistent mental damage. The target must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("2a8cc1d9-47e8-45e7-9943-ba8837f0f8cb"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 2d4 and the persistent damage by 1d4." }
+                    new TextBlock { Id = Guid.Parse("4dc338ab-c027-44fd-89cf-12ecf19b55f3"), Type = TextBlockType.Text, Text = "The damage increases by 2d4 and the persistent damage by 1d4." }
                 }
             };
         }
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4849d02a-26d0-41f3-8828-2c33f84e4a05"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes full initial damage but no persistent damage, and the spell ends immediately.",
                 Failure = "The target takes full initial and persistent damage, and the target is sickened 1. If the target recovers from being sickened, the persistent damage ends and the spell ends.",
@@ -80,7 +80,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("fc00c922-5f42-4b9d-a233-71330536d8a3"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 357
             };

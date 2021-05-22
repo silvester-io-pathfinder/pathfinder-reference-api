@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DirgeOfDoom : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ad3f682d-cc88-4e3d-9de7-c25acecb7a9d");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Foes within the area are frightened 1. They can’t reduce their frightened value below 1 while they remain in the area." };
+            yield return new TextBlock { Id = Guid.Parse("1e23b600-2f70-4950-a46a-68dfc418c0c1"), Type = TextBlockType.Text, Text = "Foes within the area are frightened 1. They can’t reduce their frightened value below 1 while they remain in the area." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("bb2d7eaa-da10-4669-81bb-2eb54b631c9d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 386
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 {
     public class HorrificVisage : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("4f04b1d5-321d-4271-a93d-6049c64883c8");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You briefly transform your features into the horrific visage of a hag, striking fear into your enemies. Foes in the area must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("32ef1adb-9aa8-474c-a48d-40c9cf607fac"), Type = TextBlockType.Text, Text = "You briefly transform your features into the horrific visage of a hag, striking fear into your enemies. Foes in the area must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("34f7cced-ce0f-42a2-b44b-719fc9eed9a4"),
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Foes in the area are frightened 1 on a success, frightened 2 on a failure, and frightened 3 and fleeing for 1 round on a critical failure. They are still unaffected on a critical success." }
+                    new TextBlock { Id = Guid.Parse("4337663f-1f76-4a28-8b97-d1c3b755b877"), Type = TextBlockType.Text, Text = "Foes in the area are frightened 1 on a success, frightened 2 on a failure, and frightened 3 and fleeing for 1 round on a critical failure. They are still unaffected on a critical success." }
                 }
             };
         }
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("f012fe31-9755-45e7-b53b-3700880cd2b6"),
                 Success = "The foe is unaffected.",
                 Failure = "The foe is frightened 1.",
                 CriticalFailure = "The foe is frightened 2."
@@ -76,7 +76,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("15900ded-9d8f-4508-ab65-ddb7178bc12a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 405
             };

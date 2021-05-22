@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Moonbeam : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("cfbc43c2-20e0-4693-bb22-6cea19de9663");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You shine a ray of moonlight. Make a spell attack roll. The beam of light deals 1d6 fire damage. Moonbeam deals silver damage for the purposes of weaknesses, resistances, and the like." };
+            yield return new TextBlock { Id = Guid.Parse("9511d280-6294-4066-a476-5c96b395c7ec"), Type = TextBlockType.Text, Text = "You shine a ray of moonlight. Make a spell attack roll. The beam of light deals 1d6 fire damage. Moonbeam deals silver damage for the purposes of weaknesses, resistances, and the like." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e9b9de5b-84f6-4438-84c0-a25e670a7643"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The ray’s damage increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("66aec60a-6b67-4ac2-b7ef-60f1a39c31fe"), Type = TextBlockType.Text, Text = "The ray’s damage increases by 1d6." }
                 }
             };
         }
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c67881ff-350a-41d8-b0c6-a3ab5078c1b4"),
                 CriticalSuccess = "The beam deals double damage, and the target is dazzled for 1 minute.",
                 Success = "The beam deals full damage, and the target is dazzled for 1 round.",
             };
@@ -74,7 +74,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("28c2b79b-e162-464b-ba5d-897d2eadcb9a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 394
             };

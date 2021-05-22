@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Feeblemind : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("20718a32-54fb-47d6-a948-6d4c006633ec");
 
         public override Spell GetSpell()
         {
@@ -29,14 +29,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You drastically reduce the target’s mental faculties. The target must attempt a Will save. The effects of this curse can be removed only through remove curse or another effect that targets curses." };
+            yield return new TextBlock { Id = Guid.Parse("5b9f96c1-8c20-403c-9d9d-4244ebc4c92a"), Type = TextBlockType.Text, Text = "You drastically reduce the target’s mental faculties. The target must attempt a Will save. The effects of this curse can be removed only through remove curse or another effect that targets curses." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c7e8c8ee-cc60-4a75-ba5e-f5d4f4a4dee1"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is stupefied 2 for 1 round.",
                 Failure = "The target is stupefied 4 with an unlimited duration.",
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("7ca649cc-47bd-4bbd-a43b-233a7b200af4"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 337
             };

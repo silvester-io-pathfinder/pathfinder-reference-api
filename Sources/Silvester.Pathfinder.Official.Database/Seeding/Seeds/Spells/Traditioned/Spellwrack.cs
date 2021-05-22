@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Spellwrack : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("174f6b71-7b37-4563-8912-b13434bf930b");
 
         public override Spell GetSpell()
         {
@@ -28,14 +28,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You cause any spells cast on the target to spill out their energy in harmful surges. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("4b24bcfe-ecbb-40c1-acb0-91d4e3aaf5b0"), Type = TextBlockType.Text, Text = "You cause any spells cast on the target to spill out their energy in harmful surges. The target must attempt a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("01e10e04-f894-47fd-9d79-be3f58279db0"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "Whenever the target becomes affected by a spell with a duration, the target takes 2d12 persistent force damage. Each time it takes persistent force damage from spellwrack, it reduces the remaining duration of spells affecting it by 1 round. Only a successful Arcana check against your spell DC can help the target recover from the persistent damage; the curse and the persistent damage end after 1 minute.",
                 Failure = "As success, but the curse and persistent damage do not end on their own.",
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("a960c420-68e0-44f1-8527-7024bf0f6f8f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 371
             };

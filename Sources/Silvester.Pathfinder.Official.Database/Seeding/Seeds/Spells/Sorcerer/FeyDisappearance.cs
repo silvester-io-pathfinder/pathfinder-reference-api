@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 {
     public class FeyDisappearance : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("fb03cb86-9c97-4223-9f5b-ece6db58f301");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You become invisible and ignore natural difficult terrain (such as underbrush). Any hostile action you use ends this invisibility, but you still ignore natural difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("be79b667-af55-4eca-8557-c74e1175381e"), Type = TextBlockType.Text, Text = "You become invisible and ignore natural difficult terrain (such as underbrush). Any hostile action you use ends this invisibility, but you still ignore natural difficult terrain." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("f7a57f22-f916-48e6-a49d-9f53fc92cd80"),
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "If you use a hostile action, the invisibility doesn’t end." }
+                    new TextBlock { Id = Guid.Parse("156b41ca-397e-444a-afaf-c114b321c2d6"), Type = TextBlockType.Text, Text = "If you use a hostile action, the invisibility doesn’t end." }
                 }
             };
         }
@@ -58,7 +58,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e631e19c-d007-4e3f-8125-667854638a97"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 404
             };

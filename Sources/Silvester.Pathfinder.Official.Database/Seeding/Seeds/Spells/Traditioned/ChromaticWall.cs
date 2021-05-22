@@ -43,10 +43,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Details =
                 {
                     new TextBlock { Id = Guid.Parse("10b435c4-4477-4d2c-87fd-cbaf49922875"), Type = Utilities.Text.TextBlockType.Text, Text = "The spell’s duration increases to 1 hour. Roll 1d8 to determine the wall’s color; the results for 5–8 are below.A red, orange, yellow, or green wall deals an extra 10 damage." },
-                    new TextBlock { Id = Guid.Parse(""), Type = Utilities.Text.TextBlockType.Enumeration, Text = "5 - Blue: The wall stops auditory, petrification, and visual effects from passing through, and creatures passing through are subject to the effects of flesh to stone. Magic missile can counteract a blue chromatic wall." },
-                    new TextBlock { Id = Guid.Parse(""), Type = Utilities.Text.TextBlockType.Enumeration, Text = "6 - Indigo: The wall stops divination and mental effects from passing through, and those passing through are subject to the effects of warp mind. Searing light can counteract an indigo chromatic wall." },
-                    new TextBlock { Id = Guid.Parse(""), Type = Utilities.Text.TextBlockType.Enumeration, Text = "7 - Violet: The wall prevents spells from targeting the other side (area effects still cross as normal). Creatures passing through must succeed at a Will save or they are slowed 1 for 1 minute; on a critical failure, the creature is instead sent to another plane, with the effect of plane shift. Dispel magic can counteract a violet chromatic wall." },
-                    new TextBlock { Id = Guid.Parse(""), Type = Utilities.Text.TextBlockType.Enumeration, Text = "8 - Reroll, and creatures that pass through the wall take a –2 circumstance penalty to their saves." }
+                    new TextBlock { Id = Guid.Parse("452116b2-0f16-4406-bad2-f58af1c80800"), Type = Utilities.Text.TextBlockType.Enumeration, Text = "5 - Blue: The wall stops auditory, petrification, and visual effects from passing through, and creatures passing through are subject to the effects of flesh to stone. Magic missile can counteract a blue chromatic wall." },
+                    new TextBlock { Id = Guid.Parse("84a5c2bc-0363-4a18-8b1e-db9d15ec5bd2"), Type = Utilities.Text.TextBlockType.Enumeration, Text = "6 - Indigo: The wall stops divination and mental effects from passing through, and those passing through are subject to the effects of warp mind. Searing light can counteract an indigo chromatic wall." },
+                    new TextBlock { Id = Guid.Parse("f9b3866a-ab6c-4138-880c-b1922c5a29fc"), Type = Utilities.Text.TextBlockType.Enumeration, Text = "7 - Violet: The wall prevents spells from targeting the other side (area effects still cross as normal). Creatures passing through must succeed at a Will save or they are slowed 1 for 1 minute; on a critical failure, the creature is instead sent to another plane, with the effect of plane shift. Dispel magic can counteract a violet chromatic wall." },
+                    new TextBlock { Id = Guid.Parse("64fd4ed4-03f0-43e9-9b80-e5bc8a5d28a4"), Type = Utilities.Text.TextBlockType.Enumeration, Text = "8 - Reroll, and creatures that pass through the wall take a –2 circumstance penalty to their saves." }
                 }
             };
         }
@@ -73,7 +73,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d0013706-83d6-4211-b771-594d2c128e1a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 323
             };

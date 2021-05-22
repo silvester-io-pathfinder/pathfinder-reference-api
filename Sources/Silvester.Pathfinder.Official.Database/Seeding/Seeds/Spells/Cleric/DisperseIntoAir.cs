@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DisperseIntoAir : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("461798c1-5e2c-4cfd-83bd-397308a6539b");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "After taking the triggering damage, you transform into air. Until the end of the current turn, you can’t be attacked or targeted, you don’t take up space, you can’t act, and any auras or emanations you have are suppressed. At the end of the turn, you re-form in any space you can occupy within 15 feet of where you were when you dispersed. Any auras or emanations you had are restored as long as their duration didn’t run out while you were dispersed." };
+            yield return new TextBlock { Id = Guid.Parse("09073233-3689-4b8b-87c4-2b1bb66319d6"), Type = TextBlockType.Text, Text = "After taking the triggering damage, you transform into air. Until the end of the current turn, you can’t be attacked or targeted, you don’t take up space, you can’t act, and any auras or emanations you have are suppressed. At the end of the turn, you re-form in any space you can occupy within 15 feet of where you were when you dispersed. Any auras or emanations you had are restored as long as their duration didn’t run out while you were dispersed." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d53f61c3-b3d6-4a38-915d-baa999c1bea6"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 391
             };

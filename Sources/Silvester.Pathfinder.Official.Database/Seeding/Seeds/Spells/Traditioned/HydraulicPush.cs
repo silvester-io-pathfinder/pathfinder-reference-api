@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class HydraulicPush : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("39319090-baf5-4ecf-89e9-151a26522d3d");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You call forth a powerful blast of pressurized water that bludgeons the target and knocks it back. Make a ranged spell attack roll." };
+            yield return new TextBlock { Id = Guid.Parse("036694bd-3506-4731-b174-163d514a3044"), Type = TextBlockType.Text, Text = "You call forth a powerful blast of pressurized water that bludgeons the target and knocks it back. Make a ranged spell attack roll." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("b15f5c5b-fe78-45e4-a5ed-a2b780376218"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
+                    new TextBlock { Id = Guid.Parse("0e17b926-9d50-4132-a1da-f2fc7ad4eea4"), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
                 }
             };
         }
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8a8af738-6de8-475e-b0eb-f18bf5191629"),
                 CriticalSuccess = "The target takes 6d6 bludgeoning damage and is knocked back 10 feet.",
                 Success = "The target takes 3d6 bludgeoning damage and is knocked back 5 feet.",
             };
@@ -75,7 +75,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("3438ffd5-bd89-4128-8ff4-9015f6899ac6"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 344
             };

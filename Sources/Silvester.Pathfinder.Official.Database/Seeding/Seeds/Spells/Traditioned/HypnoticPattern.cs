@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class HypnoticPattern : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("b8e5314c-6a86-4dba-88ec-26ca65b8edb3");
 
         public override Spell GetSpell()
         {
@@ -30,14 +30,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create a pattern of shifting colors that hovers in the air in a geometric cloud. Creatures are dazzled while inside the pattern. In addition, a creature must attempt a Will saving throw if it is inside the pattern when you cast it, when it enters the pattern, when it ends its turn within the pattern, or if it uses a Seek or Interact action on the pattern. A creature currently fascinated by the pattern doesn’t attempt new saves." };
+            yield return new TextBlock { Id = Guid.Parse("07339e45-5280-4aad-b960-d15d5d01ac75"), Type = TextBlockType.Text, Text = "You create a pattern of shifting colors that hovers in the air in a geometric cloud. Creatures are dazzled while inside the pattern. In addition, a creature must attempt a Will saving throw if it is inside the pattern when you cast it, when it enters the pattern, when it ends its turn within the pattern, or if it uses a Seek or Interact action on the pattern. A creature currently fascinated by the pattern doesn’t attempt new saves." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("2890e308-e217-42f9-8bdc-f4d51602e67a"),
                 Success = "The target is unaffected.",
                 Failure = "The target is fascinated by the pattern.",
                 CriticalFailure = "The target is fascinated by the pattern. While it remains fascinated, it can’t use reactions."
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("abaee6ea-b7e7-4c14-9dba-feda78ba7a52"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 344
             };

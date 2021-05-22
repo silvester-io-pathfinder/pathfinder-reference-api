@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class OdeToOurobos : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("41923abd-01b6-44e1-9591-e76f9ccd65e4");
 
         public override Spell GetSpell()
         {
@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your ode temporarily staves off death. The target’s dying condition remains 1 below the value at which it dies. This doesn’t help prevent death from effects that kill the target without increasing its dying condition, such as disintegrate and death effects." };
+            yield return new TextBlock { Id = Guid.Parse("4d141a0f-93d6-48ef-a607-01554a481807"), Type = TextBlockType.Text, Text = "Your ode temporarily staves off death. The target’s dying condition remains 1 below the value at which it dies. This doesn’t help prevent death from effects that kill the target without increasing its dying condition, such as disintegrate and death effects." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("195dc1c8-5a37-47d2-b128-5724d70eb21a"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 228
             };

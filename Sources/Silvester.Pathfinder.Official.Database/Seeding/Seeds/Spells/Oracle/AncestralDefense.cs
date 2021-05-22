@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AncestralDefense : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("f9448ab0-82fe-4cd1-a2d7-91ae71b6ed5a");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your ancestor protects you against those who would bend your will. You roll the triggering save twice and use the better result. If you’re in an encounter when you cast this spell, you immediately roll to change your predominant ancestor." };
+            yield return new TextBlock { Id = Guid.Parse("8180da6b-0c6f-4da5-a819-d11356e95cf4"), Type = TextBlockType.Text, Text = "Your ancestor protects you against those who would bend your will. You roll the triggering save twice and use the better result. If you’re in an encounter when you cast this spell, you immediately roll to change your predominant ancestor." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b2d4d134-394b-4321-8b4e-fe11daab605a"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 230
             };

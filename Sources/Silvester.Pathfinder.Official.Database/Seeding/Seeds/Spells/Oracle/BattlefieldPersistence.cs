@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class BattlefieldPersistence : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ce8baedc-c775-4830-82b0-f22d82de0666");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You’re difficult to remove from battle. You gain a +2 status bonus to the triggering save, and if the triggering save is against an incapacitation effect, it treats you as if you were 2 levels higher." };
+            yield return new TextBlock { Id = Guid.Parse("e235e8e0-1909-4c19-83bb-42345cc9b8a6"), Type = TextBlockType.Text, Text = "You’re difficult to remove from battle. You gain a +2 status bonus to the triggering save, and if the triggering save is against an incapacitation effect, it treats you as if you were 2 levels higher." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cf9b20dd-a0de-4181-abb6-7a749467d121"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 230
             };

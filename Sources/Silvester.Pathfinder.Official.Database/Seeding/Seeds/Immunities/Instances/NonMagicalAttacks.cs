@@ -5,7 +5,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Immunities.Instan
 {
     public class NonMagicalAttacks : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("429b5ae3-b904-4903-8573-ca0f9694ee41");
 
         protected override Immunity GetHazardImmunity()
         {

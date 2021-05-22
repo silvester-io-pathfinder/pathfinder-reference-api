@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Earthbind : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("e5258901-d960-4efd-ba40-638b73841ccb");
 
         public override Spell GetSpell()
         {
@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Using the weight of earth, you hamper a target’s flight, with effects based on its Fortitude save. If the creature reaches the ground safely, it doesn’t take falling damage." };
+            yield return new TextBlock { Id = Guid.Parse("97fee1b6-f6d5-46f7-bc67-d44b4556468c"), Type = TextBlockType.Text, Text = "Using the weight of earth, you hamper a target’s flight, with effects based on its Fortitude save. If the creature reaches the ground safely, it doesn’t take falling damage." };
         }
 
 
@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("651afaa5-1173-4e8f-94a3-aec89cbfcada"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target falls safely up to 120 feet.",
                 Failure = "The target falls safely up to 120 feet. If it hits the ground, it can’t Fly, levitate, or otherwise leave the ground for 1 round.",
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("40b565a7-4c20-4c73-8631-648e0b700f37"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 334
             };

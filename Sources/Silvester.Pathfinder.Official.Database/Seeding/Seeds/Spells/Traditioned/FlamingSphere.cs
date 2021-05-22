@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class FlamingSphere : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("9af2e49e-f7ff-4df5-9218-d68b57a7bd70");
 
         public override Spell GetSpell()
         {
@@ -30,19 +30,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create a sphere of flame in a square within range. The sphere must be supported by a solid surface, such as a stone floor. The sphere deals 3d6 fire damage to each creature in the square where it first appears; each creature must attempt a basic Reflex save. On subsequent rounds, the first time you Sustain this Spell each round, you can leave the sphere in its square or roll it to another square within range. It deals 3d6 fire damage (basic Reflex save) to each creature in that square." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Creatures that succeed at their save take no damage (instead of half)." };
+            yield return new TextBlock { Id = Guid.Parse("2b1fea4a-cb84-4261-ae81-a27a01bf5c07"), Type = TextBlockType.Text, Text = "You create a sphere of flame in a square within range. The sphere must be supported by a solid surface, such as a stone floor. The sphere deals 3d6 fire damage to each creature in the square where it first appears; each creature must attempt a basic Reflex save. On subsequent rounds, the first time you Sustain this Spell each round, you can leave the sphere in its square or roll it to another square within range. It deals 3d6 fire damage (basic Reflex save) to each creature in that square." };
+            yield return new TextBlock { Id = Guid.Parse("91932a40-ad2c-48ee-93f3-9990a45df282"), Type = TextBlockType.Text, Text = "Creatures that succeed at their save take no damage (instead of half)." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("3578b116-0633-432a-a48a-a61ff31ff36b"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("c2ab995a-952d-4812-9102-da5febafeea3"), Type = TextBlockType.Text, Text = "The damage increases by 1d6." }
                 }
             };
         }
@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("134f8826-e3e1-49fb-8760-b557f6bd0495"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 338
             };

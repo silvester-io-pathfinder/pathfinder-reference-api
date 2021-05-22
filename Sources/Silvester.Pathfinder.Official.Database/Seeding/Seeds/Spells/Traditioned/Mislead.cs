@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Mislead : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("356ae5e4-90ea-4484-9aee-489a161afebf");
 
         public override Spell GetSpell()
         {
@@ -26,8 +26,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You turn yourself invisible and create an illusory duplicate of yourself. When you Sustain the Spell, you can mentally dictate a course of action for your duplicate to follow that round. Your duplicate acts as though it had your full number of actions, though it can’t actually affect anything in the environment. Both the duplicate and your invisibility persist for the spell’s duration. Performing a hostile action doesn’t end mislead’s invisibility, just like a 4th-level invisibility spell. A creature that determines the duplicate is an illusion doesn’t necessarily know you’re invisible, and one that can see your invisible form doesn’t necessarily know your duplicate is an illusion." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "If you Cast a Spell, attack, or otherwise interact with another creature, as a part of that action you can attempt a Deception check against observers’ Perception DCs to convince them your duplicate used that action. This doesn’t fool anyone who’s aware your duplicate is an illusion, nor does it work if the attack obviously couldn’t have come from the duplicate. For instance, if you fired a ray, you could make it look like it came from the duplicate as long as the duplicate was positioned appropriately, but if you attacked with a sword and your duplicate was across the room from the target, your Deception check would automatically fail." };
+            yield return new TextBlock { Id = Guid.Parse("8cf0b7e2-eaf5-432e-bc51-ffcaba6142af"), Type = TextBlockType.Text, Text = "You turn yourself invisible and create an illusory duplicate of yourself. When you Sustain the Spell, you can mentally dictate a course of action for your duplicate to follow that round. Your duplicate acts as though it had your full number of actions, though it can’t actually affect anything in the environment. Both the duplicate and your invisibility persist for the spell’s duration. Performing a hostile action doesn’t end mislead’s invisibility, just like a 4th-level invisibility spell. A creature that determines the duplicate is an illusion doesn’t necessarily know you’re invisible, and one that can see your invisible form doesn’t necessarily know your duplicate is an illusion." };
+            yield return new TextBlock { Id = Guid.Parse("d4168f66-4fe4-44b2-9586-2e369f1fceb8"), Type = TextBlockType.Text, Text = "If you Cast a Spell, attack, or otherwise interact with another creature, as a part of that action you can attempt a Deception check against observers’ Perception DCs to convince them your duplicate used that action. This doesn’t fool anyone who’s aware your duplicate is an illusion, nor does it work if the attack obviously couldn’t have come from the duplicate. For instance, if you fired a ray, you could make it look like it came from the duplicate as long as the duplicate was positioned appropriately, but if you attacked with a sword and your duplicate was across the room from the target, your Deception check would automatically fail." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("97c62ec5-9ead-4dbb-8037-7da180b7c180"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 352
             };

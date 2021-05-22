@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 {
     public class FaerieDust : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("f7bb400c-ad59-4d72-8623-0de050005121");
 
         public override Spell GetSpell()
         {
@@ -30,18 +30,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You sprinkle magical dust in the spell’s area, making those within easier to trick. Each creature in the area must attempt a Will save. For each additional action you use Casting the Spell, the burst’s radius increases by 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("eeaf4af4-f117-41b9-b492-a48951c8508a"), Type = TextBlockType.Text, Text = "You sprinkle magical dust in the spell’s area, making those within easier to trick. Each creature in the area must attempt a Will save. For each additional action you use Casting the Spell, the burst’s radius increases by 5 feet." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("286de267-2f52-4d2e-8987-a2c88bef5364"),
                 Level = "+3",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The initial radius increases by 5 feet." }
+                    new TextBlock { Id = Guid.Parse("8af39bcf-961f-47c2-b055-71b6c64291f8"), Type = TextBlockType.Text, Text = "The initial radius increases by 5 feet." }
                 }
             };
         }
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e891f741-047b-440d-a5eb-78887054d97b"),
                 Success = "The creature is unaffected.",
                 Failure = "The creature can’t use reactions and takes a –2 status penalty to Perception checks and Will saves.",
                 CriticalFailure = "As failure, and the creature also takes a –1 status penalty to Perception checks and Will saves for 1 minute."
@@ -75,7 +75,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("a841ceca-b4a5-4b26-9a82-84e54637893c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 404
             };

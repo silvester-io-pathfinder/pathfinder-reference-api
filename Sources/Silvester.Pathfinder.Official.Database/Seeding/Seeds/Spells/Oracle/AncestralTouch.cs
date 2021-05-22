@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AncestralTouch : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("161689fc-881b-4888-b108-46f0bab8373c");
 
         public override Spell GetSpell()
         {
@@ -30,18 +30,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You touch a creature and force them to see and feel the ancestors surrounding you. The target takes 1d4 mental damage, with results depending on a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("0d5303bc-ad15-435b-b98c-5bce486020d6"), Type = TextBlockType.Text, Text = "You touch a creature and force them to see and feel the ancestors surrounding you. The target takes 1d4 mental damage, with results depending on a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("408fcdf8-87bd-434d-8c72-970c9d264546"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The mental damage increases by 1d4." }
+                    new TextBlock { Id = Guid.Parse("6c623cf0-2b1c-4676-b6a6-7a38e8554b1b"), Type = TextBlockType.Text, Text = "The mental damage increases by 1d4." }
                 }
             };
         }
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("27601d94-91eb-4324-bfec-4edd01ab326f"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes half damage.",
                 Failure = "The target is frightened 1 and takes full damage.",
@@ -78,7 +78,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("62915d5d-0c43-44fd-bb65-a5c93c51588f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 230
             };

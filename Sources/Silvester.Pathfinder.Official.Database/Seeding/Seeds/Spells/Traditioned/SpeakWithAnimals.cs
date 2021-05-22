@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SpeakWithAnimals : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("f773ca02-3d69-4845-be81-624f445fca91");
 
         public override Spell GetSpell()
         {
@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can ask questions of, receive answers from, and use the Diplomacy skill with animals. The spell doesn’t make them more friendly than normal. Cunning animals are likely to be terse and evasive, while less intelligent ones often make inane comments." };
+            yield return new TextBlock { Id = Guid.Parse("f7b97001-bfed-4ae5-b038-a2bc48b8a688"), Type = TextBlockType.Text, Text = "You can ask questions of, receive answers from, and use the Diplomacy skill with animals. The spell doesn’t make them more friendly than normal. Cunning animals are likely to be terse and evasive, while less intelligent ones often make inane comments." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("a3b7f394-ef3b-4173-bd93-b22c02900559"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 370
             };

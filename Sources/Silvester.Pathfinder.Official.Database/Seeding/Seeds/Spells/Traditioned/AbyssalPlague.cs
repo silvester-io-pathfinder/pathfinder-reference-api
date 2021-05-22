@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("dade5dbe-d8ad-424c-b4c9-5beb8bc3fcb6"),
                 DifficultyCheck = 25,
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 MaximumDuration = "2 days.",
@@ -56,20 +56,20 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 {
                     new StaggeredEffectStage
                     {
-                        Id = Guid.Parse(""),
+                        Id = Guid.Parse("2c4bcd91-243b-4230-a5ef-5b7cc3e3b044"),
                         Duration = "1 day",
                         Effects =
                         {
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Drained.ID, Severity = 1}
+                            new ConditionEffect { Id = Guid.Parse("1d17119e-9947-4bdf-98b4-99f005f96317"), ConditionId = Conditions.Instances.Drained.ID, Severity = 1}
                         }
                     },
                     new StaggeredEffectStage
                     {
-                        Id = Guid.Parse(""),
+                        Id = Guid.Parse("6b2623cf-3edc-4929-9db8-ebad4323e2f1"),
                         Duration = "1 day",
                         Effects =
                         {
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Drained.ID, Severity = 3}
+                            new ConditionEffect { Id = Guid.Parse("d61bc2a1-2b5f-4c5a-b295-43d1213dc57d"), ConditionId = Conditions.Instances.Drained.ID, Severity = 3}
                         }
                     }
                 }
@@ -101,7 +101,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4681143a-4b28-4d09-9755-c72a4f6e5a53"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 316
             };

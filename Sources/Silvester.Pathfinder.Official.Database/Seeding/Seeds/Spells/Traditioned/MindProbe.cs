@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class MindProbe : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("50520c01-24e6-4434-a687-b324bcd0fe85");
 
         public override Spell GetSpell()
         {
@@ -31,14 +31,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You cast your thoughts through a creature’s mind, sifting for information. You access the target’s memories and knowledge unless it fends you off with a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("a29583ec-df58-41df-89c6-504f078012e3"), Type = TextBlockType.Text, Text = "You cast your thoughts through a creature’s mind, sifting for information. You access the target’s memories and knowledge unless it fends you off with a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8fee38a9-d7b7-4ee7-8a84-975c797b5fc7"),
                 Success = "The target is unaffected.",
                 Failure = "Each round of the spell’s duration, you can Sustain the Spell to ask a different question and attempt to uncover the answer. For each question, the target can attempt a Deception check against your spell DC; if the target succeeds, you don’t learn the answer, and on a critical success, the target gives you a false answer that you believe is truthful Once you’ve asked the target a given question, asking it again, even with a separate casting of mind probe, produces the same result.",
                 CriticalFailure = "As failure, and the target takes a –4 circumstance penalty to Deception checks against your questions."
@@ -70,7 +70,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cb7ca411-066e-4fa7-b1e6-356938da4f6d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 351
             };

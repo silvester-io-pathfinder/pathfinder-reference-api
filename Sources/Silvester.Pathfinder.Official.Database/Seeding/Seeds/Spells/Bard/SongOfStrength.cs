@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SongOfStrength : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("22696413-6532-4ce7-8654-0eaf8016fe09");
 
         public override Spell GetSpell()
         {
@@ -27,8 +27,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You bolster your allies’ physical strength with a hearty exhortation. You and your allies gain a +1 status bonus to Athletics checks and to their DCs against Athletics skill actions such as Disarm, Shove, and Trip." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "Special - If you have the inspire heroics composition spell, you can use that composition to improve the bonus granted by song of strength in the same way as inspire courage or inspire defense." };
+            yield return new TextBlock { Id = Guid.Parse("1dcf5217-ebc4-49e2-be67-5ef904508085"), Type = TextBlockType.Text, Text = "You bolster your allies’ physical strength with a hearty exhortation. You and your allies gain a +1 status bonus to Athletics checks and to their DCs against Athletics skill actions such as Disarm, Shove, and Trip." };
+            yield return new TextBlock { Id = Guid.Parse("56ebfff1-2351-4788-b92f-6bb07371a737"), Type = TextBlockType.Enumeration, Text = "Special - If you have the inspire heroics composition spell, you can use that composition to improve the bonus granted by song of strength in the same way as inspire courage or inspire defense." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("95f73e75-468a-4175-af80-793e8bf89d40"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 228
             };

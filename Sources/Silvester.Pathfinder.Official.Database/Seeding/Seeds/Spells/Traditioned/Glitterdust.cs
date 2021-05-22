@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Glitterdust : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("58aae6ec-5f9a-4e70-bc80-c1e40d093d62");
 
         public override Spell GetSpell()
         {
@@ -28,14 +28,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Creatures in the area are outlined by glittering dust. Each creature must attempt a Reflex save. If a creature has its invisibility negated by this spell, it is concealed instead of invisible. This applies both if the creature was already invisible and if it benefits from new invisibility effects before the end of the invisibility negation effect from this spell." };
+            yield return new TextBlock { Id = Guid.Parse("aa8d4562-e838-4b9a-b604-86757bbb7f58"), Type = TextBlockType.Text, Text = "Creatures in the area are outlined by glittering dust. Each creature must attempt a Reflex save. If a creature has its invisibility negated by this spell, it is concealed instead of invisible. This applies both if the creature was already invisible and if it benefits from new invisibility effects before the end of the invisibility negation effect from this spell." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("77be37d5-c650-4476-a511-d3bacf4798c5"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target’s invisibility is negated for 2 rounds.",
                 Failure = "The target is dazzled for 1 minute and its invisibility is negated for 1 minute.",
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4b2de86d-be54-4a22-a358-8f577cf595ff"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 341
             };

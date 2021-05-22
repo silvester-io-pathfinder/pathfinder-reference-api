@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class MaskOfTerror : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("3710ee0e-bee7-42fa-8469-cce73389e447");
 
         public override Spell GetSpell()
         {
@@ -27,19 +27,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The target appears to be a gruesome and terrifying creature. The effect is unique to each observer, so a human viewing the target might see a demon with bloody fangs, but a demon observing the target might see a glowing angelic visage." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "When any creature attempts a hostile action against the target, the creature must attempt a Will save. It is then temporarily immune until the end of its next turn." };
+            yield return new TextBlock { Id = Guid.Parse("f6ec0bfa-286f-44ef-9a59-00282f4d5657"), Type = TextBlockType.Text, Text = "The target appears to be a gruesome and terrifying creature. The effect is unique to each observer, so a human viewing the target might see a demon with bloody fangs, but a demon observing the target might see a glowing angelic visage." };
+            yield return new TextBlock { Id = Guid.Parse("c591c946-6270-43dd-863d-818cebc532cf"), Type = TextBlockType.Text, Text = "When any creature attempts a hostile action against the target, the creature must attempt a Will save. It is then temporarily immune until the end of its next turn." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("baeb5ffd-1f4e-4fe2-86c2-3c3e2fec4274"), 
                 Level = "8th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can target up to 5 creatures. If a creature uses a hostile action or reaction that affects multiple targets simultaneously, it needs to attempt only one save against mask of terror." }
+                    new TextBlock { Id = Guid.Parse("8f93f0b7-6aba-4a14-b278-afddfc8d51e1"), Type = TextBlockType.Text, Text = "You can target up to 5 creatures. If a creature uses a hostile action or reaction that affects multiple targets simultaneously, it needs to attempt only one save against mask of terror." }
                 }
             };
         }
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("789c5dfe-3724-43a4-8b0d-d8dd68dadf10"),
                 Success = "The creature is unaffected.",
                 Failure = "The creature becomes frightened 2 before using its action.",
                 CriticalFailure = "The creature becomes frightened 2, and its action fails and is wasted."
@@ -81,7 +81,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("3accc6ea-c273-43bc-8b92-233c4742f202"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 350
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class NeutralizePoison : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("8813eb2e-1128-4dfb-b926-5b0ee4b4f910");
 
         public override Spell GetSpell()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You pour healing magic through the target in an attempt to cure one poison afflicting it. Attempt a counteract check against the poison." };
+            yield return new TextBlock { Id = Guid.Parse("73442b3d-3937-494f-8777-d4fdf8af4d27"), Type = TextBlockType.Text, Text = "You pour healing magic through the target in an attempt to cure one poison afflicting it. Attempt a counteract check against the poison." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("facf9a07-05d7-4e8a-a18a-1afc74561d14"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 354
             };

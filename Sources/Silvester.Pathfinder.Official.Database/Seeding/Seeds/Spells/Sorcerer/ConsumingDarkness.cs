@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ConsumingDarkness : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("7012c0eb-05c1-453e-8b87-411bcde2ec1a");
 
         public override Spell GetSpell()
         {
@@ -31,18 +31,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your shadow wriggles before spreading out from you, forming a gateway of clinging, consuming shadow through which the horrors of another plane can barely be seen. The first time each turn you Sustain the Spell, the radius increases by 5 feet. Each enemy that enters the area or begins its turn in the area takes 2d6 negative damage and must attempt a Reflex save." };
+            yield return new TextBlock { Id = Guid.Parse("f16f25e0-bf73-4cab-b018-7af2daba561c"), Type = TextBlockType.Text, Text = "Your shadow wriggles before spreading out from you, forming a gateway of clinging, consuming shadow through which the horrors of another plane can barely be seen. The first time each turn you Sustain the Spell, the radius increases by 5 feet. Each enemy that enters the area or begins its turn in the area takes 2d6 negative damage and must attempt a Reflex save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("eca2494c-cf01-472a-b520-a1470b81d379"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("f7f0d439-c692-4eb7-b7b7-14937c0c44c2"), Type = TextBlockType.Text, Text = "The damage increases by 1d6." }
                 }
             };
         }
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d8588315-b375-4717-b515-40bbf1ef0132"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature sinks partially into the shadow, taking half damage and a –5-foot circumstance penalty to its Speeds for as long it remains in the area.",
                 Failure = "As success, but the creature takes full damage and a –10-foot circumstance penalty.",
@@ -77,7 +77,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("40444660-a940-47c2-90b9-b49f640e3146"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 235
             };

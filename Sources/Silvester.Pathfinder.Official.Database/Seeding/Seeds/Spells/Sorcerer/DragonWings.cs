@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 {
     public class DragonWings : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("f170eec2-9c80-4ac2-a25e-bf347b06c095");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Leathery wings sprout from your back, giving you a fly Speed of 60 feet or your Speed, whichever is faster. When this spell’s duration would end, if you’re still flying, you float to the ground, as feather fall. You can increase the Focus Point cost by 1 to gain the effects of dragon claws as long as the wings last." };
+            yield return new TextBlock { Id = Guid.Parse("161d3313-a15e-4985-aab9-b6f4d582d4e7"), Type = TextBlockType.Text, Text = "Leathery wings sprout from your back, giving you a fly Speed of 60 feet or your Speed, whichever is faster. When this spell’s duration would end, if you’re still flying, you float to the ground, as feather fall. You can increase the Focus Point cost by 1 to gain the effects of dragon claws as long as the wings last." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("bd8ebfd6-761a-470b-8531-f30695da5c80"),
                 Level = "8th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The duration increases to 10 minutes." }
+                    new TextBlock { Id = Guid.Parse("dccdcdfd-3586-4b96-9f28-468776f04c8e"), Type = TextBlockType.Text, Text = "The duration increases to 10 minutes." }
                 }
             };
         }
@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4377ae8b-6005-4d7d-8cad-e667831e314d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 403
             };

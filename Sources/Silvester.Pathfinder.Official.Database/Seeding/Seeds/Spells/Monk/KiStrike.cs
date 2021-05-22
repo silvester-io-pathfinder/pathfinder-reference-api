@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class KiStrike : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ca078fe4-0c34-4343-9cd2-6d61eabb0a9b");
 
         public override Spell GetSpell()
         {
@@ -25,18 +25,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You focus your ki into magical attacks. Make an unarmed Strike or Flurry of Blows (this doesn’t change the limit on using only one flourish per turn). You gain a +1 status bonus to your attack rolls with the Strikes, and the Strikes deal 1d6 extra damage. This damage can be any of the following types of your choice, chosen each time you Strike: force, lawful (only if you’re lawful), negative, or positive." };
+            yield return new TextBlock { Id = Guid.Parse("aa193a73-1625-432c-a26a-201458cd89a1"), Type = TextBlockType.Text, Text = "You focus your ki into magical attacks. Make an unarmed Strike or Flurry of Blows (this doesn’t change the limit on using only one flourish per turn). You gain a +1 status bonus to your attack rolls with the Strikes, and the Strikes deal 1d6 extra damage. This damage can be any of the following types of your choice, chosen each time you Strike: force, lawful (only if you’re lawful), negative, or positive." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b1bd15c2-46d2-436a-acc8-cece1b824bb0"),
                 Level = "+4",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The extra damage increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("8f2cb8b4-6ef1-4dc1-9ae4-31519cb32fb1"), Type = TextBlockType.Text, Text = "The extra damage increases by 1d6." }
                 }
             };
         }
@@ -57,7 +57,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b749753d-d5bb-4d7b-97d4-3019a932fc53"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 401
             };

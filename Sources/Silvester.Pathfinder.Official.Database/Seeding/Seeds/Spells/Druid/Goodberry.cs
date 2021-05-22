@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Goodberry : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("71c4ee4f-6eff-4d2c-91d8-ce47bee76a11");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You imbue the target berry with the bounty of nature. A creature can eat the berry with an Interact action to regain 1d6+4 HP. A berry not consumed during the duration withers away. Every six goodberries consumed gives as much nourishment as one square meal for a typical human." };
+            yield return new TextBlock { Id = Guid.Parse("65942fcb-79db-47ef-81c0-655bda22575b"), Type = TextBlockType.Text, Text = "You imbue the target berry with the bounty of nature. A creature can eat the berry with an Interact action to regain 1d6+4 HP. A berry not consumed during the duration withers away. Every six goodberries consumed gives as much nourishment as one square meal for a typical human." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("2679239e-d161-4b79-8bdf-97346a0b575f"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can target an additional berry. A creature can consume any number of goodberries from the same casting with a single Interact action." }
+                    new TextBlock { Id = Guid.Parse("e30cf59d-35fc-4ad9-b398-88782b4b5e35"), Type = TextBlockType.Text, Text = "You can target an additional berry. A creature can consume any number of goodberries from the same casting with a single Interact action." }
                 }
             };
         }
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c854bc66-9582-4bbf-9743-4c638fa9e4a9"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 399
             };

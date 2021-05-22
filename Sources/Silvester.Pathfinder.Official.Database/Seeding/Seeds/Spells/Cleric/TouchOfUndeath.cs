@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TouchOfUndeath : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("7cdc2806-fe9a-4f0d-98ba-d4f8a1a406d0");
 
         public override Spell GetSpell()
         {
@@ -30,18 +30,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You attack the target’s life force with undeath, dealing 1d6 negative damage. The target must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("0440bd0b-82e8-4929-8665-4ebb7199cbf7"), Type = TextBlockType.Text, Text = "You attack the target’s life force with undeath, dealing 1d6 negative damage. The target must attempt a Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("9442ada7-e2f1-49ca-9fe2-428b0aa41d9c"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("4a150969-efc1-4147-a83f-de2ac33e549b"), Type = TextBlockType.Text, Text = "The damage increases by 1d6." }
                 }
             };
         }
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("07a1805d-508c-48de-953a-4767d7587532"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes half damage.",
                 Failure = "The target takes full damage, and positive effects heal it only half as much as normal for 1 round.",
@@ -75,7 +75,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0eb76b34-05c8-452a-b7b1-449846c40366"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 398
             };

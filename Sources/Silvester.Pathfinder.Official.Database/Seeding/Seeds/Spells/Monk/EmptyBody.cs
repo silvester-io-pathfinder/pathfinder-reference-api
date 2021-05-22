@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class EmptyBody : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("2848c34e-d587-452e-a123-c10dae2674d7");
 
         public override Spell GetSpell()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You turn ethereal, with the effects of ethereal jaunt, but you don’t need to concentrate." };
+            yield return new TextBlock { Id = Guid.Parse("065d97d9-9db4-4b7a-9c06-34704fe09c8c"), Type = TextBlockType.Text, Text = "You turn ethereal, with the effects of ethereal jaunt, but you don’t need to concentrate." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("62cece88-7c54-41b1-9035-8a111ec9ec85"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 401
             };

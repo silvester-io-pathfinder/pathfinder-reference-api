@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DejaVu : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("22d38c1e-6536-4f90-8fb0-3cd0f651062b");
 
         public override Spell GetSpell()
         {
@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You loop a thought process in the target’s mind, forcing it to repeat the same actions over again. The target must attempt a Will save. If the target fails, whatever actions the target uses on its next turn, it must repeat on its following turn. The actions must be repeated in the same order and as close to the same specifics as possible. For example, if the target makes an attack, it must repeat the attack against the same creature, if possible, and if the target moves, it must move the same distance and direction, if possible, on its next turn." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "If the target can’t repeat an action, such as Casting a Spell that has been exhausted or needing to target a creature that has died, it can act as it chooses for that action but becomes stupefied 1 until the end of its turn." };
+            yield return new TextBlock { Id = Guid.Parse("621917f5-860c-4113-aec2-9604b113e9db"), Type = TextBlockType.Text, Text = "You loop a thought process in the target’s mind, forcing it to repeat the same actions over again. The target must attempt a Will save. If the target fails, whatever actions the target uses on its next turn, it must repeat on its following turn. The actions must be repeated in the same order and as close to the same specifics as possible. For example, if the target makes an attack, it must repeat the attack against the same creature, if possible, and if the target moves, it must move the same distance and direction, if possible, on its next turn." };
+            yield return new TextBlock { Id = Guid.Parse("1ac2096a-6156-4919-a395-7c0ca8fcf045"), Type = TextBlockType.Text, Text = "If the target can’t repeat an action, such as Casting a Spell that has been exhausted or needing to target a creature that has died, it can act as it chooses for that action but becomes stupefied 1 until the end of its turn." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -56,7 +56,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("7ca9b6fa-b905-41b7-ac79-a2d38a94cf38"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 218
             };

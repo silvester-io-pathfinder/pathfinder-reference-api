@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class PurifyFoodAndDrink : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("c4e90b06-cae9-4c8e-9dcb-69aa89084597");
 
         public override Spell GetSpell()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You remove toxins and contaminations from food and drink, making them safe to consume. This spell doesn’t prevent future contamination, natural decay, or spoilage. One cubic foot of liquid is roughly 8 gallons." };
+            yield return new TextBlock { Id = Guid.Parse("4fdd948c-9083-4ba2-a1f4-bb7d3137b9ca"), Type = TextBlockType.Text, Text = "You remove toxins and contaminations from food and drink, making them safe to consume. This spell doesn’t prevent future contamination, natural decay, or spoilage. One cubic foot of liquid is roughly 8 gallons." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d50c8c55-905f-4d59-9c80-181fed987230"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 362
             };

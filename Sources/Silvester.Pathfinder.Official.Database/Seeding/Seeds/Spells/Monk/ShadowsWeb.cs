@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ShadowsWeb : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("0a2a8d57-780a-4221-9135-44163b82d0a3");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Grasping darkness surges from you, dealing 14d4 negative damage. Each creature in the area must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("59d58dcc-9da2-4c18-b825-6c8ea481298d"), Type = TextBlockType.Text, Text = "Grasping darkness surges from you, dealing 14d4 negative damage. Each creature in the area must attempt a Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("44a8a6b2-6bd7-43f3-8252-a58e68a843d2"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The negative damage increases by 2d4." }
+                    new TextBlock { Id = Guid.Parse("b7545368-2e77-437c-ab5c-0d97249c945a"), Type = TextBlockType.Text, Text = "The negative damage increases by 2d4." }
                 }
             };
         }
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("35de6101-4e70-4304-ac09-f031d17edb34"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes half damage and is enfeebled 1 for 1 round.",
                 Failure = "The creature takes full damage and is enfeebled 2 for 1 round.",
@@ -73,7 +73,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("79c1552e-6fef-4274-b59d-2d12b6fedad6"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 229
             };

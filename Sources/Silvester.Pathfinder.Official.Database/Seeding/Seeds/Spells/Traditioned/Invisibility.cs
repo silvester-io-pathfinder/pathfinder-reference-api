@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Invisibility : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("c70083c6-9775-40f9-81f9-dd222d99236c");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Cloaked in illusion, the target becomes invisible. This makes it undetected to all creatures, though the creatures can attempt to find the target, making it hidden to them instead (page 466). If the target uses a hostile action, the spell ends after that hostile action is completed." };
+            yield return new TextBlock { Id = Guid.Parse("6d318dcd-196c-4f8f-b038-0f2bfca4fd78"), Type = TextBlockType.Text, Text = "Cloaked in illusion, the target becomes invisible. This makes it undetected to all creatures, though the creatures can attempt to find the target, making it hidden to them instead (page 466). If the target uses a hostile action, the spell ends after that hostile action is completed." };
         }
 
      
@@ -35,11 +35,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("27d38403-310a-4748-af34-743e7a6705ee"), 
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The spell lasts 1 minute, but it doesn’t end if the target uses a hostile action." }
+                    new TextBlock { Id = Guid.Parse("7e74161d-9220-468e-82bc-c57ea0f8147c"), Type = TextBlockType.Text, Text = "The spell lasts 1 minute, but it doesn’t end if the target uses a hostile action." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("36e0d8e4-1515-4cb7-816c-b5890d0d4209"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 347
             };

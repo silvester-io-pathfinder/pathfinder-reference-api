@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class KiRush : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d090e3ba-5f24-4495-9367-3042410b8ff2");
 
         public override Spell GetSpell()
         {
@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Accelerated by your ki, you move with such speed you become a blur. Move two times: two Strides, two Steps, or one Stride and one Step (in either order). You gain the concealed condition during this movement and until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("8f83dfd9-bbdc-4bcc-b37f-2a8c89bf7bab"), Type = TextBlockType.Text, Text = "Accelerated by your ki, you move with such speed you become a blur. Move two times: two Strides, two Steps, or one Stride and one Step (in either order). You gain the concealed condition during this movement and until the start of your next turn." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e4c331e6-e586-45b6-bd2c-4d1d5f3aeacb"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 401
             };

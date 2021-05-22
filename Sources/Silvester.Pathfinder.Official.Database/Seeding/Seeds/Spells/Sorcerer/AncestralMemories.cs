@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 {
     public class AncestralMemories : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ecb524f1-68fc-418e-9239-19d7fddc7284");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The memories of long-dead spellcasters grant you knowledge in a specific skill. Choose any non-Lore skill, or a Lore skill related to the ancient empire from which your bloodline sprang. You temporarily become trained in that skill and might gain other memories associated with an ancestor who was trained in that skill. If you attempt a task or activity that lasts beyond this spell’s duration, use the lower proficiency modifier." };
+            yield return new TextBlock { Id = Guid.Parse("4dc0ac21-cf43-4744-9247-b4fffabf54ba"), Type = TextBlockType.Text, Text = "The memories of long-dead spellcasters grant you knowledge in a specific skill. Choose any non-Lore skill, or a Lore skill related to the ancient empire from which your bloodline sprang. You temporarily become trained in that skill and might gain other memories associated with an ancestor who was trained in that skill. If you attempt a task or activity that lasts beyond this spell’s duration, use the lower proficiency modifier." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("a9298b36-cd16-4461-8463-913330268370"),
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You temporarily become an expert in the skill you choose." }
+                    new TextBlock { Id = Guid.Parse("bbac3a60-db6e-41d2-ac4c-eeac9f649dd8"), Type = TextBlockType.Text, Text = "You temporarily become an expert in the skill you choose." }
                 }
             };
         }
@@ -58,7 +58,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("741fa497-f76b-43f1-9209-ebce2f96d787"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 402
             };

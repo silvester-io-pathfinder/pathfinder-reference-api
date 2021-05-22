@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class LuckyBreak : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("f000b642-63af-4e5a-b206-ad0e96936b43");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Reroll the saving throw and use the better result. You then become temporarily immune for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("9c839c7d-2805-46f2-9c9a-6ab1b843a27e"), Type = TextBlockType.Text, Text = "Reroll the saving throw and use the better result. You then become temporarily immune for 10 minutes." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b79047ff-26e0-4cb5-9cb4-14720fc795c6"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 393
             };

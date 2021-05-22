@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Hypercognition : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d0d30141-0e90-4703-bbdc-4ceb661e6689");
 
         public override Spell GetSpell()
         {
@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You rapidly catalog and collate information relevant to your current situation. You can instantly use up to 6 Recall Knowledge actions as part of Casting this Spell. For these actions, you can’t use any special abilities, reactions, or free actions that trigger when you Recall Knowledge." };
+            yield return new TextBlock { Id = Guid.Parse("3d027236-8796-4bc2-aef2-d251d4076bbc"), Type = TextBlockType.Text, Text = "You rapidly catalog and collate information relevant to your current situation. You can instantly use up to 6 Recall Knowledge actions as part of Casting this Spell. For these actions, you can’t use any special abilities, reactions, or free actions that trigger when you Recall Knowledge." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("19463e2e-a84b-4334-b102-78d38c30f9af"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 344
             };

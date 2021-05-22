@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class RebukeDeath : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("37d8a761-64d0-45fc-8861-ec08368cd27c");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You snatch creatures from the jaws of death. You can spend 1 to 3 actions Casting this Spell, and you can target a number of creatures equal to the actions spent. Each target regains 3d6 Hit Points. If the target had the dying condition, coming back from dying due to this healing doesn’t increase its wounded condition." };
+            yield return new TextBlock { Id = Guid.Parse("190ae005-1b51-41ba-93a6-054a4e92fd75"), Type = TextBlockType.Text, Text = "You snatch creatures from the jaws of death. You can spend 1 to 3 actions Casting this Spell, and you can target a number of creatures equal to the actions spent. Each target regains 3d6 Hit Points. If the target had the dying condition, coming back from dying due to this healing doesn’t increase its wounded condition." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("f9f7efd6-0856-424a-95b8-34e715dd4654"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Increase the healing by 1d6." }
+                    new TextBlock { Id = Guid.Parse("2b094d3b-fcb3-4d10-9d19-69732defc16d"), Type = TextBlockType.Text, Text = "Increase the healing by 1d6." }
                 }
             };
         }
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("92a77076-6f2a-47c5-8ff1-39f7dd1e425f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 396
             };

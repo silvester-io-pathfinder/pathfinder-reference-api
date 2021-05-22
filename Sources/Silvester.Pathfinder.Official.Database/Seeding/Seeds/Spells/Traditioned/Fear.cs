@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Fear : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("eee187bd-5654-4215-b042-56e537a49410");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You plant fear in the target; it must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("31029dc9-cb07-4824-acf9-861da965e686"), Type = TextBlockType.Text, Text = "You plant fear in the target; it must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("ab0fa2d7-a13a-42ff-b1e2-ea4448e5b713"), 
                 Level = "3rd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can target up to five creatures." }
+                    new TextBlock { Id = Guid.Parse("44d15387-bd49-4fbb-8b5e-1b93a8223ec6"), Type = TextBlockType.Text, Text = "You can target up to five creatures." }
                 }
             };
         }
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("197e6d0c-3dfe-49bb-8dd2-a570a3bf405b"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is frightened 1.",
                 Failure = "The target is frightened 2.",
@@ -83,7 +83,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("75551e45-fad3-43fd-b8f2-c913a75c163e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 337
             };

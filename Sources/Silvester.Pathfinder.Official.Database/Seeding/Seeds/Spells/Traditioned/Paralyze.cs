@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Paralyze : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("a99f55f3-63c7-4db8-8b0f-9f452a58e240");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You block the target’s motor impulses before they can leave its mind, threatening to freeze the target in place. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("15c15918-675a-401b-a53a-0c568fa818ab"), Type = TextBlockType.Text, Text = "You block the target’s motor impulses before they can leave its mind, threatening to freeze the target in place. The target must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("d0af80a8-498a-4f0f-b659-a08eb347a5fb"), 
                 Level = "7th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can target up to 10 creatures." }
+                    new TextBlock { Id = Guid.Parse("8d281635-7f52-47b2-bed6-b0ed6ea0db19"), Type = TextBlockType.Text, Text = "You can target up to 10 creatures." }
                 }
             };
         }
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("877d6e02-66b4-49ec-aab0-5b3e83727095"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is stunned 1.",
                 Failure = "The target is paralyzed for 1 round.",
@@ -80,7 +80,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b6a9a62e-1792-4f76-93f9-ef02c5f4b4f2"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 356
             };

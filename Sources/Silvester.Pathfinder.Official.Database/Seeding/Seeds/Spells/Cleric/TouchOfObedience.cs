@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TouchOfObedience : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("f8843f30-1ace-4783-8eab-1cd5c4ab752e");
 
         public override Spell GetSpell()
         {
@@ -31,14 +31,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your imperious touch erodes the target’s willpower, making it easier to control. The target attempts a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("390eafe6-30d1-4930-8481-c17d06fa5f89"), Type = TextBlockType.Text, Text = "Your imperious touch erodes the target’s willpower, making it easier to control. The target attempts a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e8883cb7-9d0f-48e3-a7d8-9223974c55eb"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is stupefied 1 until the end of your current turn.",
                 Failure = "The target is stupefied 1 until the end of your next turn.",
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("207910d5-b461-46d7-889c-3e7542454192"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 398
             };

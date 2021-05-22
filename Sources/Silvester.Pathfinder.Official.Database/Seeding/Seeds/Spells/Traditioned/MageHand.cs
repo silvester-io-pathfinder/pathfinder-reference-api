@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class MageHand : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("e7fd46a8-8455-4324-8bde-4fef118e207d");
 
         public override Spell GetSpell()
         {
@@ -28,36 +28,36 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create a single magical hand, either invisible or ghostlike, that grasps the target object and moves it slowly up to 20 feet. Because you’re levitating the object, you can move it in any direction. When you Sustain the Spell, you can move the object an additional 20 feet. If the object is in the air when the spell ends, the object falls." };
+            yield return new TextBlock { Id = Guid.Parse("0cb91f4b-39b3-4eff-bbca-bf304ea89a20"), Type = TextBlockType.Text, Text = "You create a single magical hand, either invisible or ghostlike, that grasps the target object and moves it slowly up to 20 feet. Because you’re levitating the object, you can move it in any direction. When you Sustain the Spell, you can move the object an additional 20 feet. If the object is in the air when the spell ends, the object falls." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("af79a569-6faf-4f9f-9da1-777f925f2606"),
                 Level = "3rd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can target an unattended object with a Bulk of 1 or less." }
+                    new TextBlock { Id = Guid.Parse("687ab638-b9f5-425e-b7ae-aa35f84df3d4"), Type = TextBlockType.Text, Text = "You can target an unattended object with a Bulk of 1 or less." }
                 }
             };
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("de3d9f91-479b-43aa-9c54-cbfa769f2637"),
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The range increases to 60 feet, and you can target an unattended object with a Bulk of 1 or less." }
+                    new TextBlock { Id = Guid.Parse("433e8dc6-5751-4c29-9dd7-bf665d933d5f"), Type = TextBlockType.Text, Text = "The range increases to 60 feet, and you can target an unattended object with a Bulk of 1 or less." }
                 }
             };
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("0e2adec7-e195-43ac-85e2-0bba5f1c2285"),
                 Level = "7th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The range increases to 60 feet, and you can target an unattended object with a Bulk of 2 or less." }
+                    new TextBlock { Id = Guid.Parse("e1698bb2-a36f-4dc1-b1c8-0a452eff6891"), Type = TextBlockType.Text, Text = "The range increases to 60 feet, and you can target an unattended object with a Bulk of 2 or less." }
                 }
             };
         }
@@ -84,7 +84,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c7bd9073-2d80-4717-8823-1c7afad37cdf"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 349
             };

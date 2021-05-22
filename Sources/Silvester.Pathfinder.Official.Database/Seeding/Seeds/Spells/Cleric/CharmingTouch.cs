@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class CharmingTouch : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("0441689e-2d5a-48fc-ae13-2ce811e11a1a");
 
         public override Spell GetSpell()
         {
@@ -31,15 +31,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You infuse your target with attraction, causing it to act friendlier toward you. The target attempts a Will save. It gains a +4 circumstance bonus to this save if you or your allies recently threatened or were hostile to it." };
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You can Dismiss the spell. If you use hostile actions against the target, the spell ends. After the spell ends, the target doesn’t necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, which could potentially allow you to convince the target to continue being your friend via mundane means." };
+            yield return new TextBlock { Id = Guid.Parse("8f42e1a0-c76a-46a4-8e54-fef92a9447d6"), Type = TextBlockType.Text, Text = "You infuse your target with attraction, causing it to act friendlier toward you. The target attempts a Will save. It gains a +4 circumstance bonus to this save if you or your allies recently threatened or were hostile to it." };
+            yield return new TextBlock { Id = Guid.Parse("847dd537-df9a-474e-ac76-3c29384ae53e"), Type = TextBlockType.Text, Text = "You can Dismiss the spell. If you use hostile actions against the target, the spell ends. After the spell ends, the target doesn’t necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, which could potentially allow you to convince the target to continue being your friend via mundane means." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("33a7490e-7b63-4dde-8b90-c6ab5ba62326"),
                 CriticalSuccess = "The target is unaffected and aware you tried to charm it.",
                 Success = "The target is unaffected but thinks your spell was something harmless instead of charming touch, unless it identifies the spell (see Identifying Spells on page 305).",
                 Failure = "The target’s attitude becomes friendly toward you. If it was friendly, it becomes helpful. It can’t use hostile actions against you.",
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("024914a7-d258-449e-8e37-6cabc333a200"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 390
             };

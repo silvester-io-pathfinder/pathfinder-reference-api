@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class PrivateSanctum : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ba66525f-674c-4658-a4f2-295e2ee6c12f");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "From outside, the area looks like a bank of impenetrable black fog. Sensory stimuli (such as sounds, smells, and light) don’t pass from inside the area to outside the area. Scrying spells can’t perceive any stimuli from the area, and mind-reading effects don’t work in the area." };
+            yield return new TextBlock { Id = Guid.Parse("7a46fed6-33e9-4369-85ba-8e334e33f548"), Type = TextBlockType.Text, Text = "From outside, the area looks like a bank of impenetrable black fog. Sensory stimuli (such as sounds, smells, and light) don’t pass from inside the area to outside the area. Scrying spells can’t perceive any stimuli from the area, and mind-reading effects don’t work in the area." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e9941117-53e8-44df-9708-69ef2b30e122"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 360
             };

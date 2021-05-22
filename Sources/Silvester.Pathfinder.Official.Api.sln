@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", 
 		Properties.proj = Properties.proj
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silvester.Pathfinder.Official.Database.Guids", "Silvester.Pathfinder.Official.Database.Guids\Silvester.Pathfinder.Official.Database.Guids.csproj", "{30F60EC6-A548-4183-9223-DCE1AC8F47EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D37CA9AC-1BEF-4354-A3D6-4708B8CC0248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D37CA9AC-1BEF-4354-A3D6-4708B8CC0248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D37CA9AC-1BEF-4354-A3D6-4708B8CC0248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F60EC6-A548-4183-9223-DCE1AC8F47EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F60EC6-A548-4183-9223-DCE1AC8F47EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F60EC6-A548-4183-9223-DCE1AC8F47EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F60EC6-A548-4183-9223-DCE1AC8F47EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

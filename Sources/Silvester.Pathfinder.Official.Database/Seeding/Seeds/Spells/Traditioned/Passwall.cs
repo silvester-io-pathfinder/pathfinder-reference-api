@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Passwall : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d52d7b40-155d-479a-810e-8fcacba938dd");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create a visible tunnel through the wall in the chosen area, replacing the area with empty space. If the wall is thicker than 10 feet, the tunnel ends 10 feet in. Even a small layer of metal in the wall prevents this spell from functioning. This spell doesn’t reduce the integrity of the structure. When the spell ends, anyone inside the tunnel is shunted to the nearest exit." };
+            yield return new TextBlock { Id = Guid.Parse("2e877aaf-95a1-4bb0-9091-6c0425dfb4d6"), Type = TextBlockType.Text, Text = "You create a visible tunnel through the wall in the chosen area, replacing the area with empty space. If the wall is thicker than 10 feet, the tunnel ends 10 feet in. Even a small layer of metal in the wall prevents this spell from functioning. This spell doesn’t reduce the integrity of the structure. When the spell ends, anyone inside the tunnel is shunted to the nearest exit." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("370ff96a-6ae8-4b7b-9693-5b2b2c3a8dde"), 
                 Level = "7th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The tunnel can be up to 20 feet deep. The areas of the wall that contain your tunnel’s entrance appear completely normal (unless viewed with true seeing or a similar effect), despite the tunnel’s existence. The tunnel’s entrance functions as a solid wall, but you can specify a password or a trigger (page 305), allowing creatures to enter the tunnel freely." }
+                    new TextBlock { Id = Guid.Parse("63ea6003-fe0b-47ac-8ff8-77e43f430d01"), Type = TextBlockType.Text, Text = "The tunnel can be up to 20 feet deep. The areas of the wall that contain your tunnel’s entrance appear completely normal (unless viewed with true seeing or a similar effect), despite the tunnel’s existence. The tunnel’s entrance functions as a solid wall, but you can specify a password or a trigger (page 305), allowing creatures to enter the tunnel freely." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("f9f1cc80-5dac-4a58-b28b-12d221bb9a0e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 356
             };

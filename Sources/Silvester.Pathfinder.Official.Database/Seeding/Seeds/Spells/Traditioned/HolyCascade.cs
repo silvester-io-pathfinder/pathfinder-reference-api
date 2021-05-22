@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class HolyCascade : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("9ced7a87-4222-49e4-8501-a2007b107199");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You call upon sacred energy to amplify a vial of holy water, tossing it an incredible distance. It explodes in an enormous burst that deals 3d6 bludgeoning damage to creatures in the area from the cascade of water. The water deals an additional 6d6 positive damage to undead and 6d6 good damage to fiends." };
+            yield return new TextBlock { Id = Guid.Parse("0a84479a-eedb-4129-bb27-a62406e9fa9f"), Type = TextBlockType.Text, Text = "You call upon sacred energy to amplify a vial of holy water, tossing it an incredible distance. It explodes in an enormous burst that deals 3d6 bludgeoning damage to creatures in the area from the cascade of water. The water deals an additional 6d6 positive damage to undead and 6d6 good damage to fiends." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("0df6e647-ec71-4e03-9023-992c826c4152"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The bludgeoning damage increases by 1d6, and the additional positive and good damage each increase by 2d6." }
+                    new TextBlock { Id = Guid.Parse("a3a53f28-12f5-42bf-87be-385135544457"), Type = TextBlockType.Text, Text = "The bludgeoning damage increases by 1d6, and the additional positive and good damage each increase by 2d6." }
                 }
             };
         }
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("76cef4ad-c9ee-4015-97ba-c7a46ba504c1"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 344
             };

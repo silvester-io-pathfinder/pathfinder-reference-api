@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TripleTime : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("e3bf6e5b-5f56-460a-a75d-0f66f784aad1");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You dance at a lively tempo, speeding your allies’ movement. You and all allies in the area gain a +10-foot status bonus to all Speeds for 1 round." };
+            yield return new TextBlock { Id = Guid.Parse(03d8285b-7c02-495a-b95f-f3134ed1fecf"), Type = TextBlockType.Text, Text = "You dance at a lively tempo, speeding your allies’ movement. You and all allies in the area gain a +10-foot status bonus to all Speeds for 1 round." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("195c9066-3861-4d7d-9b70-d8c85b0a6e82"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 387
             };

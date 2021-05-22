@@ -8,7 +8,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 {
     public class AbyssalWrath : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("dd002216-32c2-4d4b-800c-9236c39feebd");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You evoke the energy of an Abyssal realm. The damage types of the spell (one energy and one physical) are based on the result of rolling on the table below." };
+            yield return new TextBlock { Id = Guid.Parse("f11673ac-a819-461d-b764-f857b8054c44"), Type = TextBlockType.Text, Text = "You evoke the energy of an Abyssal realm. The damage types of the spell (one energy and one physical) are based on the result of rolling on the table below." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("2a9b0b5a-7cea-4271-b09e-8485a071e774"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage for each type increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("cf0cadf1-442b-40f2-8c38-3c3e38cfde0d"), Type = TextBlockType.Text, Text = "The damage for each type increases by 1d6." }
                 }
             };
         }
@@ -105,7 +105,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Sorcerer.I
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("cc040d01-16b4-480c-aba9-3dd866e822d9"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 402
             };

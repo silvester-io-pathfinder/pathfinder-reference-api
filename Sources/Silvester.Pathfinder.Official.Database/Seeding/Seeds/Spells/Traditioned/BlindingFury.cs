@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class BlindingFury : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("3cf65deb-73f3-4696-b6ef-f117c2c84297");
 
         public override Spell GetSpell()
         {
@@ -30,14 +30,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You curse the target with your outrage at being attacked. The effect is determined by the target’s Will save." };
+            yield return new TextBlock { Id = Guid.Parse("6d528992-e963-42bf-bed9-a09903b64d67"), Type = TextBlockType.Text, Text = "You curse the target with your outrage at being attacked. The effect is determined by the target’s Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("5bacd27a-8198-40b0-bc38-b183a2e7c0f4"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target can’t observe you until the end of its turn, and if you’re currently observed by it, you become hidden to it.",
                 Failure = "As success, and for 1 minute, every time the target damages you, it can’t observe you until the end of its turn.",
@@ -70,7 +70,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("28580c4e-14be-44c3-905a-3c20ef82e16d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 216
             };

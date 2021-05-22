@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class PiedPiping : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("64ec1a63-ef3c-4461-bab0-7a3ea3f6a598");
 
         public override Spell GetSpell()
         {
@@ -29,14 +29,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your performance enraptures those who hear it, compelling them to follow you about in admiration. Each creature within the emanation must attempt a Will save when you Cast the Spell or the first time they enter the area, after which they become temporarily immune for 1 day. Once per turn, you can spend a single action, which has the concentrate trait, to increase the emanation’s radius by 5 feet. You can Dismiss the spell." };
+            yield return new TextBlock { Id = Guid.Parse("30d1976d-17a2-48a9-a820-5af8b70f906e"), Type = TextBlockType.Text, Text = "Your performance enraptures those who hear it, compelling them to follow you about in admiration. Each creature within the emanation must attempt a Will save when you Cast the Spell or the first time they enter the area, after which they become temporarily immune for 1 day. Once per turn, you can spend a single action, which has the concentrate trait, to increase the emanation’s radius by 5 feet. You can Dismiss the spell." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("fa6ffabd-4c44-4885-a596-641a0fcbbd2c"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature is fascinated with you.",
                 Failure = "The creature uses all its actions to move toward you and compliment your performance. This effect ends if a hostile action is used against the affected creature.",
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("161a35c1-2249-40aa-9f86-ffe6f75c8cd4"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 228
             };

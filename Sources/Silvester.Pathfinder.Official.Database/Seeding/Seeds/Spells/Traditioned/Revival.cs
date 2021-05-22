@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Revival : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("44f0f796-c02f-467c-973a-e328f284bfe1");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A burst of healing energy soothes living creatures and temporarily rouses those recently slain. All living targets regain 10d8+40 Hit Points. In addition, you return any number of dead targets to life temporarily, with the same effects and limitations as raise dead (page 362). The raised creatures have a number of temporary Hit Points equal to the Hit Points you gave living creatures, but no normal Hit Points. The raised creatures can’t regain Hit Points or gain temporary Hit Points in other ways, and once revival’s duration ends, they lose all temporary Hit Points and die. Revival can’t resurrect creatures killed by disintegrate or a death effect. It has no effect on undead." };
+            yield return new TextBlock { Id = Guid.Parse("0fc930bf-d764-4996-96d0-e378ae188cf3"), Type = TextBlockType.Text, Text = "A burst of healing energy soothes living creatures and temporarily rouses those recently slain. All living targets regain 10d8+40 Hit Points. In addition, you return any number of dead targets to life temporarily, with the same effects and limitations as raise dead (page 362). The raised creatures have a number of temporary Hit Points equal to the Hit Points you gave living creatures, but no normal Hit Points. The raised creatures can’t regain Hit Points or gain temporary Hit Points in other ways, and once revival’s duration ends, they lose all temporary Hit Points and die. Revival can’t resurrect creatures killed by disintegrate or a death effect. It has no effect on undead." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1f4f282c-b59f-4224-8fda-80c891043965"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 366
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AbundantStep : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("86700caa-5237-4fc5-a256-a1bd919676ff");
 
         public override Spell GetSpell()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You move so fast you blur across planar boundaries. You teleport up to a distance equal to your Speed within your line of sight." };
+            yield return new TextBlock { Id = Guid.Parse("855f00b1-aad9-4bbc-b465-5776b396b113"), Type = TextBlockType.Text, Text = "You move so fast you blur across planar boundaries. You teleport up to a distance equal to your Speed within your line of sight." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d969216b-730f-40fd-b729-562d87c64d4e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 401
             };

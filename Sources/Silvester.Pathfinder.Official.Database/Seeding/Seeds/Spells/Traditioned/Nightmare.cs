@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Nightmare : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("083d1186-7e18-46d7-81c1-baceb222ef4b");
 
         public override Spell GetSpell()
         {
@@ -30,14 +30,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You send disturbing nightmares to your target. The next time the target falls asleep, it must attempt a Will save. If you know the target only by name and have never met them, the target gets a +4 circumstance bonus to the Will save." };
+            yield return new TextBlock { Id = Guid.Parse("03e05465-b49e-4c91-a757-94d1dc286716"), Type = TextBlockType.Text, Text = "You send disturbing nightmares to your target. The next time the target falls asleep, it must attempt a Will save. If you know the target only by name and have never met them, the target gets a +4 circumstance bonus to the Will save." };
         }
         
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("55a57c6f-b102-46fd-a986-cd5ce3e32a7c"),
                 CriticalSuccess = "The target suffers no adverse effects and is temporarily immune for 1 week.",
                 Success = "The target experiences the nightmares but suffers no adverse effects other than unpleasant memories.",
                 Failure = "The target experiences the nightmares and awakens fatigued.",
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("950ed4f2-8f5b-43a4-b391-c82ce1fda5a3"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 354
             };

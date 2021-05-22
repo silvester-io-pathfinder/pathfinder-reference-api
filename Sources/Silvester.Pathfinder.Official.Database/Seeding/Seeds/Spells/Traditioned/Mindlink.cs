@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Mindlink : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("106437f4-e6d0-49cc-b271-f057e2c13f68");
 
         public override Spell GetSpell()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You link your mind to the target’s mind and mentally impart to that target an amount of information in an instant that could otherwise be communicated in 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("d6be0dc9-468f-4cc2-8186-94777e2d1232"), Type = TextBlockType.Text, Text = "You link your mind to the target’s mind and mentally impart to that target an amount of information in an instant that could otherwise be communicated in 10 minutes." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1cdbaee5-1c49-433d-ab94-eeb70be62636"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 352
             };

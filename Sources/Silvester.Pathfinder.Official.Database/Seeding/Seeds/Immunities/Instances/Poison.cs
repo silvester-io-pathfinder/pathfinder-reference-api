@@ -5,7 +5,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Immunities.Instan
 {
     public class Poison : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("d5f00b95-27bb-4f90-9bc2-74a0ec609638");
 
         protected override Immunity GetHazardImmunity()
         {

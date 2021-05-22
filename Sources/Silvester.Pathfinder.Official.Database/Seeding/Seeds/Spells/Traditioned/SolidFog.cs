@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SolidFog : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("8b91ccee-e2ad-45dc-9865-ea17b1623142");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You conjure a bank of fog so thick it impedes movement as well as sight. This functions as obscuring mist (page 355), except that the area is also difficult terrain. You can Dismiss the spell." };
+            yield return new TextBlock { Id = Guid.Parse("35c406a7-7da2-45e4-84d9-64ee6c9c9278"), Type = TextBlockType.Text, Text = "You conjure a bank of fog so thick it impedes movement as well as sight. This functions as obscuring mist (page 355), except that the area is also difficult terrain. You can Dismiss the spell." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("f4dacf13-c66a-4358-a45c-034628887014"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 370
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class LightningStorm : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("85044b94-8c53-4d9f-8be4-64fdb38c9ac1");
 
         public override Spell GetSpell()
         {
@@ -30,18 +30,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You create a black, rumbling storm cloud and call down one lightning bolt. The bolt is a vertical line from the storm cloud to the ground below, dealing 4d12 electricity damage to creatures in the spell’s area (basic Reflex save). The first time you Sustain the Spell each round, you can call another lightning bolt within the area. If you Cast this Spell outdoors, you can create two non-overlapping clouds instead of one, though you can still call down only one bolt per turn." };
+            yield return new TextBlock { Id = Guid.Parse("41794c01-bc1b-480f-9b54-6b852bdf60d1"), Type = TextBlockType.Text, Text = "You create a black, rumbling storm cloud and call down one lightning bolt. The bolt is a vertical line from the storm cloud to the ground below, dealing 4d12 electricity damage to creatures in the spell’s area (basic Reflex save). The first time you Sustain the Spell each round, you can call another lightning bolt within the area. If you Cast this Spell outdoors, you can create two non-overlapping clouds instead of one, though you can still call down only one bolt per turn." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("6ea8c400-38f4-43e2-b223-a64bf7d5445e"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The damage of each bolt increases by 1d12." }
+                    new TextBlock { Id = Guid.Parse("aa0799c1-0a3b-48bb-9136-a02016ddab46"), Type = TextBlockType.Text, Text = "The damage of each bolt increases by 1d12." }
                 }
             };
         }
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("029601a5-2f71-4770-82a9-9279c6fc8518"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 221
             };

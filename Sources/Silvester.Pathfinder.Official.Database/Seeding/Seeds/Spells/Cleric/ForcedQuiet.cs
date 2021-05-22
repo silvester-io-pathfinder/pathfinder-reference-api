@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ForcedQuiet : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("0c342b5d-8f99-466b-8f45-dc92f0c539cd");
 
         public override Spell GetSpell()
         {
@@ -31,14 +31,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You quiet the target’s voice, preventing it from giving away valuable secrets. This doesn’t prevent the target from talking or providing verbal spell components, but no creature more than 10 feet away can hear its whispers without succeeding at a Perception check against your spell DC, which might interfere with auditory or linguistic effects as well as communication. The spell’s duration depends on the target’s Fortitude save. After attempting its save, the target becomes temporarily immune for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("2e12497d-6af4-4ff1-8c63-41d67b86579d"), Type = TextBlockType.Text, Text = "You quiet the target’s voice, preventing it from giving away valuable secrets. This doesn’t prevent the target from talking or providing verbal spell components, but no creature more than 10 feet away can hear its whispers without succeeding at a Perception check against your spell DC, which might interfere with auditory or linguistic effects as well as communication. The spell’s duration depends on the target’s Fortitude save. After attempting its save, the target becomes temporarily immune for 24 hours." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("3065599c-d572-4c62-9730-7c46227fd207"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The duration is 1 round.",
                 Failure = "The duration is 1 minute.",
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("09baa449-7e54-406d-87bd-917f9c4835f6"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 393
             };

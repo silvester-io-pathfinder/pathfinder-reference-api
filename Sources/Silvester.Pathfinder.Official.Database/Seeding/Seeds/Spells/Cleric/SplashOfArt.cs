@@ -8,7 +8,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SplashOfArt : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("ff4b0053-15f7-4b25-8795-43dbc59e15de");
 
         public override Spell GetSpell()
         {
@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A deluge of colorful illusory paint, tools, or other symbols of art and artisanship drift down in the area. Roll 1d4 to determine the color of the illusion. Each creature in the area must attempt a Will save. A creature is unaffected on a success. On a failure or critical failure, the creature takes the results listed on the table relevant to the color." };
+            yield return new TextBlock { Id = Guid.Parse("3c18f999-1631-4ec7-bb23-9b48a1d7b66c"), Type = TextBlockType.Text, Text = "A deluge of colorful illusory paint, tools, or other symbols of art and artisanship drift down in the area. Roll 1d4 to determine the color of the illusion. Each creature in the area must attempt a Will save. A creature is unaffected on a success. On a failure or critical failure, the creature takes the results listed on the table relevant to the color." };
         }
 
         protected override Table? GetTable(TableBuilder builder)
@@ -96,7 +96,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("546fcab2-c5ad-4c9d-af5d-9ea4db1013f8"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 397
             };

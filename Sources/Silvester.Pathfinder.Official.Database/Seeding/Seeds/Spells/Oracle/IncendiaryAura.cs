@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class IncendiaryAura : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("9dee4209-a50f-45fe-afb7-50a6119f1a1e");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You surround yourself with a combustible aura. Each time a creature within the emanation takes fire damage, it catches on fire, taking 2d4 persistent fire damage." };
+            yield return new TextBlock { Id = Guid.Parse("01ccffb6-31fc-412a-b895-be3d609c976d"), Type = TextBlockType.Text, Text = "You surround yourself with a combustible aura. Each time a creature within the emanation takes fire damage, it catches on fire, taking 2d4 persistent fire damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("d4b49b51-2eea-4198-9cfd-6634e951bd7b"),
                 Level = "+2",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Increase the persistent damage by 1d4 and the radius of the emanation by 5 feet." }
+                    new TextBlock { Id = Guid.Parse("02389678-ac08-4df0-ba6b-7014c3ff21d1"), Type = TextBlockType.Text, Text = "Increase the persistent damage by 1d4 and the radius of the emanation by 5 feet." }
                 }
             };
         }
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("21613c6a-b90b-48c5-a5b6-fb7707f68232"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 232
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class GoblinPox : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("4e7cb1a5-efac-4f03-96a4-525c1892dff2");
 
         public override Spell GetSpell()
         {
@@ -28,14 +28,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your touch afflicts the target with goblin pox, an irritating allergenic rash.The target must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("8f1607c0-81e6-460c-ae69-ca8ee9b8a3f8"), Type = TextBlockType.Text, Text = "Your touch afflicts the target with goblin pox, an irritating allergenic rash.The target must attempt a Fortitude save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("e80e0812-b7f4-464c-886b-a82c835c842e"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is sickened 1.",
                 Failure = "The target is afflicted with goblin pox at stage 1.",
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new StaggeredEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("f779f7b6-18c3-44d4-ab7e-bc23f0fccc06"),
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 MaximumDuration = "1 day.",
                 Onset = "Immediate",
@@ -57,31 +57,31 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 {
                     new StaggeredEffectStage
                     {
-                        Id = Guid.Parse(""),
+                        Id = Guid.Parse("99b74ba3-caf2-4395-bfef-fb7bff6ca246"),
                         Duration = "1 round.",
                         Effects =
                         {
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Sickened.ID, Severity = 1}
+                            new ConditionEffect { Id = Guid.Parse("718458c7-7439-409d-b70c-d65217b2a116"), ConditionId = Conditions.Instances.Sickened.ID, Severity = 1}
                         }
                     },
                     new StaggeredEffectStage
                     {
-                        Id = Guid.Parse(""),
+                        Id = Guid.Parse("acd2773c-52e1-4603-970c-5a347b933e86"),
                         Duration = "",
                         Effects =
                         {
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Sickened.ID, Severity = 1},
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Slowed.ID, Severity = 1}
+                            new ConditionEffect { Id = Guid.Parse("fbc2ac52-cc98-4f69-a968-41fb60649668"), ConditionId = Conditions.Instances.Sickened.ID, Severity = 1},
+                            new ConditionEffect { Id = Guid.Parse("2558fe55-adc6-4b09-a3b7-9bb20292e2d2"), ConditionId = Conditions.Instances.Slowed.ID, Severity = 1}
                         }
                     },
                     new StaggeredEffectStage
                     {
-                        Id = Guid.Parse(""),
+                        Id = Guid.Parse("1ddcba26-1d78-4e3b-8a2b-3124a21062e4"),
                         Duration = "",
                         Effects =
                         {
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Sickened.ID, Severity = 1},
-                            new OtherEffect { Id = Guid.Parse(""), Effect = "The creature can't reduce its sickened value below 1."},
+                            new ConditionEffect { Id = Guid.Parse("7ec94670-2c71-475e-aa3f-a3a31cb7d0df"), ConditionId = Conditions.Instances.Sickened.ID, Severity = 1},
+                            new OtherEffect { Id = Guid.Parse("b6374983-4546-4838-9afe-0e2579961111"), Effect = "The creature can't reduce its sickened value below 1."},
                         }
                     }
                 }
@@ -110,7 +110,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("9ffe95d2-875c-4626-b6ac-423b26e47fe7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 341
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SuddenShift : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("bbc7ea5b-753a-45b4-86fa-be2a891a8b69");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You swiftly move from a dangerous spot and veil yourself. You Step and become concealed." };
+            yield return new TextBlock { Id = Guid.Parse("9053f612-071b-4d9e-97eb-3afac193e029"), Type = TextBlockType.Text, Text = "You swiftly move from a dangerous spot and veil yourself. You Step and become concealed." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("35048ea3-a00a-4a14-b76f-9ef845d617d5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 397
             };

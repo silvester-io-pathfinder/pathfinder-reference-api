@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AgonizingDespair : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("28398964-187e-44ff-89e7-8d58042832c7");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your target’s mind tumbles down a deep well of dread, dwelling so intently on deep-seated fears that it’s painful. The target takes 4d6 mental damage with a Will saving throw." };
+            yield return new TextBlock { Id = Guid.Parse("3c6182fb-7575-4228-9ea3-e320836380f4"), Type = TextBlockType.Text, Text = "Your target’s mind tumbles down a deep well of dread, dwelling so intently on deep-seated fears that it’s painful. The target takes 4d6 mental damage with a Will saving throw." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""), 
+                Id = Guid.Parse("61539ddc-49b2-4fa4-a3b2-fb110f14983f"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Increase the damage by 2d6." }
+                    new TextBlock { Id = Guid.Parse("6d6b8bb7-96f9-40c5-a06e-3ce7d351f6f2"), Type = TextBlockType.Text, Text = "Increase the damage by 2d6." }
                 }
             };
         }
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("6b99906a-3610-4acc-8352-a9220d0ca336"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes half damage and becomes frightened 1.",
                 Failure = "The target takes full damage and becomes frightened 2.",
@@ -81,7 +81,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("b26f5368-2e19-407a-8dcc-3d6b5e1e3dab"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 214
             };
