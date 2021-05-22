@@ -11,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Mysteries.Instanc
 {
     public class Ancestors : Template
     {
-        public static readonly Guid ID = 27eab9f4-e610-4eaa-8288-2b531cb6bcee);
+        public static readonly Guid ID = Guid.Parse("27eab9f4-e610-4eaa-8288-2b531cb6bcee");
 
         protected override Mystery GetMystery()
         {

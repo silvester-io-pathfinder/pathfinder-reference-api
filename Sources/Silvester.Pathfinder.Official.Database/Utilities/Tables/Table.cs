@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Utilities.Tables
 {
-    public class Table : BaseEntity
+    public class Table : BaseEntity, IOwnedEntity
     {
         public Guid OwnerId { get; set; }
 

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class LingeringComposition : Template
     {
-        public static readonly Guid ID = 0e4908a4-698a-4010-8598-333efc7d6acd);
+        public static readonly Guid ID = Guid.Parse("0e4908a4-698a-4010-8598-333efc7d6acd");
 
         public override Spell GetSpell()
         {

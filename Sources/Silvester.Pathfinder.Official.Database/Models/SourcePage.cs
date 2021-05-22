@@ -2,7 +2,7 @@ using System;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class SourcePage : BaseEntity
+    public class SourcePage : BaseEntity, IOwnedEntity
     {
         public Guid OwnerId { get; set; }
 

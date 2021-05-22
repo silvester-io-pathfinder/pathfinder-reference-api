@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class PulseOfTheCity : Template
     {
-        public static readonly Guid ID = e2f1fa09-874f-44d3-9ad8-bb11f469bae4);
+        public static readonly Guid ID = Guid.Parse("e2f1fa09-874f-44d3-9ad8-bb11f469bae4");
 
         public override Spell GetSpell()
         {

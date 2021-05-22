@@ -62,6 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
         public ICollection<CreatureAbility> Abilities { get; set; } = new List<CreatureAbility>();
         public ICollection<CreatureSkill> Skills { get; set; } = new List<CreatureSkill>();
+        public ICollection<Spell> SummonedBy { get; set; } = new List<Spell>();
     }
 
     public class CreatureFlavor : BaseEntity

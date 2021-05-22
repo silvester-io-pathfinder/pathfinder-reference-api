@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class EnlargeCompanion : Template
     {
-        public static readonly Guid ID = 8ab5854e-77ab-4fd1-a64e-096bcff92f07);
+        public static readonly Guid ID = Guid.Parse("8ab5854e-77ab-4fd1-a64e-096bcff92f07");
 
         public override Spell GetSpell()
         {

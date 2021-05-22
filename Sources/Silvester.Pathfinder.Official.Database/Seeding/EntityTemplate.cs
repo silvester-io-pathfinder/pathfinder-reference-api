@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding
                 Guid? sourcePageId = (Guid?) sourcePageIdProperty.GetValue(entity);
                 if (sourcePageId == new Guid())
                 {
-                    Console.WriteLine("Should not happen.");
+                    //Console.WriteLine("Should not happen.");
                 }
             }
         }

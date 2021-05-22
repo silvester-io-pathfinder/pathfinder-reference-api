@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class NymphsToken : Template
     {
-        public static readonly Guid ID = 3001e7d6-960a-4118-9d3b-a971b83c51cb);
+        public static readonly Guid ID = Guid.Parse("3001e7d6-960a-4118-9d3b-a971b83c51cb");
 
         public override Spell GetSpell()
         {

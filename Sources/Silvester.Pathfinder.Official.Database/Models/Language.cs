@@ -12,5 +12,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public LanguageType Type { get; set; } = default!;
 
         public ICollection<Race> Races { get; set; } = new List<Race>();
+
+        public ICollection<Creature> Creatures { get; set; } = new List<Creature>();
     }
 }

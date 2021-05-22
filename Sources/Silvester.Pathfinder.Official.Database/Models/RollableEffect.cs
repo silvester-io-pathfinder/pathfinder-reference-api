@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public string? CriticalFailure { get; set; }
     }
 
-    public class RollableEffect : BaseEntity, IRollableEffect
+    public class RollableEffect : BaseEntity, IRollableEffect, IOwnedEntity
     {
         public Guid OwnerId { get; set; }
        

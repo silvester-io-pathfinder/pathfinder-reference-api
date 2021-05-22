@@ -28,8 +28,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Mysteries
         private void SeedCurse(ModelBuilder builder, Mystery mystery)
         {
             MysteryCurse curse = GetCurse();
-            curse.SourcePageId = curse.SourcePage!.Id;
-            builder.AddData(curse.SourcePage);
+
+            builder.AddSourcePage(curse, curse.SourcePage, e => e.SourcePage);
             curse.SourcePage = null!;
 
             if (curse.Table != null)
