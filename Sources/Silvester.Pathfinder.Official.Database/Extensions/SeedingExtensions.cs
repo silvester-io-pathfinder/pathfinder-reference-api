@@ -14,24 +14,30 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 {
     public static class SeedingExtensions
     {
-        public static void AddTable<TOwner>(this ModelBuilder builder, TOwner owner, Table table)
+        public static void AddTable<TOwner>(this ModelBuilder builder, TOwner owner, Table? table)
             where TOwner : BaseEntity
+        {
+            if (table == null)
+            {
+                return;
+            }
+
+            AddTableComponents(builder, owner, table);
+        }
+
+        private static void AddTableComponents<TOwner>(ModelBuilder builder, TOwner owner, Table table) where TOwner : BaseEntity
         {
             table.OwnerId = owner.Id;
 
             foreach (Column column in table.Columns)
             {
-                column.TableId = table.Id;
                 builder.AddData(column);
             }
 
             foreach (Row row in table.Rows)
             {
-                row.TableId = table.Id;
-
                 foreach (Cell cell in row.Cells)
                 {
-                    cell.RowId = row.Id;
                     builder.AddData(cell);
                 }
                 row.Cells = new Cell[0];
@@ -40,12 +46,13 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 
             table.Rows = new Row[0];
             table.Columns = new Column[0];
-
+            
             builder.AddData(table);
         }
 
+
         public static void AddSourcePage<TOwner>(this ModelBuilder builder, TOwner owner, SourcePage? sourcePage, Expression<Func<TOwner, SourcePage?>> selector)
-          where TOwner : BaseEntity
+            where TOwner : BaseEntity
         {
             if(sourcePage != null)
             {
@@ -60,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             if (effect != null)
             {
                 effect.OwnerId = owner.Id;
-                builder.AddOwnedData(selector, effect);
+                builder.AddData(effect);
             }
         }
 
@@ -72,48 +79,52 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             {
                 RollableEffect effect = effectsArray[i];
                 effect.OwnerId = owner.Id;
-                builder.AddOwnedData(collectionSelector, effect);
+                builder.AddData(effect);
             }
         }
-
            
         public static void AddActionEffects<TOwner>(this ModelBuilder builder, TOwner owner, IEnumerable<ActionEffect> effects, Expression<Func<TOwner, IEnumerable<ActionEffect>>> collectionSelector)
-          where TOwner : BaseEntity
-        {
-            ActionEffect[] effectsArray = effects.ToArray();
-            for (int i = 0; i < effectsArray.Length; i++)
-            {
-                ActionEffect effect = effectsArray[i];
-                effect.OwnerId = owner.Id;
-                builder.AddOwnedData(collectionSelector, effect);
-            }
-        }
-           
-        public static void AddStaggeredEffects<TOwner>(this ModelBuilder builder, TOwner owner, IEnumerable<StaggeredEffect> effects, Expression<Func<TOwner, IEnumerable<StaggeredEffect>>> collectionSelector)
             where TOwner : BaseEntity
         {
-            StaggeredEffect[] effectsArray = effects.ToArray();
-            for (int i = 0; i < effectsArray.Length; i++)
-            {
-                StaggeredEffect effect = effectsArray[i];
+            foreach(ActionEffect effect in effects)
+            { 
+                builder.AddTextBlocks(effect, effect.Effects, e => e.Effects);
+                
                 effect.OwnerId = owner.Id;
+                effect.Effects = new TextBlock[0];
 
-                foreach (StaggeredEffectStage stage in effect.Stages)
-                {
-                    stage.StaggeredEffectId = effect.Id;
-                    foreach (StaggeredEffectStageEffect stageEffect in stage.Effects)
-                    {
-                        stageEffect.StaggeredEffectStageId = stage.Id;
-                        builder.AddData(stageEffect);
-                    }
-
-                    stage.Effects = new StaggeredEffectStageEffect[0];
-                    builder.AddData(stage);
-                }
-
-                effect.Stages = new StaggeredEffectStage[0];
-                builder.AddOwnedData(collectionSelector, effect);
+                builder.AddData(effect);
             }
+        }
+
+        public static void AddStaggeredEffect<TOwner>(this ModelBuilder builder, TOwner owner, StaggeredEffect? effect, Expression<Func<TOwner, Guid?>> keySelector)
+            where TOwner : BaseEntity
+        {
+            if(effect == null)
+            {
+                return;
+            }
+
+            keySelector.SetProperty(owner, effect.Id);
+
+            StaggeredEffectStage[] stages = effect.Stages.ToArray();
+            for (int i = 0; i < stages.Length; i++)
+            {
+                StaggeredEffectStage stage = stages[i];
+                stage.StaggeredEffectId = effect.Id;
+                stage.Stage = i + 1;
+
+                foreach (StaggeredEffectStageEffect stageEffect in stage.Effects)
+                {
+                    stageEffect.StaggeredEffectStageId = stage.Id;
+                    builder.AddData(stageEffect.GetType(), stageEffect);
+                }
+                  
+                stage.Effects = new StaggeredEffectStageEffect[] { };
+                builder.AddData(stage);
+            }
+         
+            effect.Stages = new StaggeredEffectStage[0];
         }
 
         public static void AddTextBlocks<TOwner>(this ModelBuilder builder, TOwner owner, IEnumerable<TextBlock> textBlocks, Expression<Func<TOwner, IEnumerable<TextBlock>>> collectionSelector)

@@ -42,9 +42,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        protected override IEnumerable<StaggeredEffect> GetStaggeredEffects()
+        protected override StaggeredEffect GetStaggeredEffect()
         {
-            yield return new StaggeredEffect
+            return new StaggeredEffect
             {
                 Id = Guid.Parse("dade5dbe-d8ad-424c-b4c9-5beb8bc3fcb6"),
                 DifficultyCheck = 25,

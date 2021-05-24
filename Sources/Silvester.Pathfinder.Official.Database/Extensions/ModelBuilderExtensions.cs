@@ -109,6 +109,18 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
                 };
             });
 
+
+            if (typeof(TFirst) == typeof(ActionEffect))
+            {
+                Console.WriteLine("");
+            }
+
+
+            if (typeof(TSecond) == typeof(ActionEffect))
+            {
+                Console.WriteLine("");
+            }
+
             modelBuilder
                 .Entity(typeof(TFirst))
                 .HasOne(typeof(TSecond))
@@ -161,19 +173,40 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 
         public static object AddData(this ModelBuilder builder, Type type, object entity)
         {
+            if (type == typeof(ActionEffect))
+            {
+                Console.WriteLine("");
+            }
             return builder.Entity(type).AddData(entity);
         }
 
         public static T AddData<T>(this ModelBuilder builder, T entity)
             where T : class
         {
+            if (typeof(T) == typeof(ActionEffect))
+            {
+                Console.WriteLine("");
+            }
             return builder.Entity<T>().AddData(entity);
         }
 
         public static T[] AddData<T>(this ModelBuilder builder, IEnumerable<T> entities)
             where T : class
         {
+            if(typeof(T) ==  typeof(ActionEffect))
+            {
+                Console.WriteLine("");
+            }
             return builder.Entity<T>().AddData(entities);
+        }
+
+
+        public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, TOwner owner, TOwned owned, Expression<Func<TOwner, IEnumerable<TOwned>>> collectionSelector)
+            where TOwned : BaseEntity, IOwnedEntity
+            where TOwner : BaseEntity
+        {
+            owned.OwnerId = owner.Id;
+            return builder.AddOwnedData(collectionSelector, new TOwned[] { owned});
         }
 
         public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, Expression<Func<TOwner, IEnumerable<TOwned>>> collectionSelector, TOwned ownedEntity)
@@ -219,6 +252,50 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
                     {
                         a.HasKey(e => e!.Id);
                         a.Property(e => e!.Id).ValueGeneratedOnAdd();
+                        a.Property<Guid>("OwnerId").ValueGeneratedOnAdd();
+                        a.WithOwner().HasForeignKey("OwnerId");
+                        a.HasData(ownedEntity);
+                    });
+            }
+            catch (InvalidOperationException exception)
+            {
+                Console.WriteLine(exception.Message);
+                throw;
+            }
+        }
+
+        public static EntityTypeBuilder AddOwnedData(this ModelBuilder builder, Type ownerType, Type ownedType, string propertyName, IEnumerable<object> ownedEntities)
+        {
+            try
+            {
+                return builder
+                    .Entity(ownerType)
+                    .OwnsMany(ownedType, propertyName, a =>
+                    {
+                        a.HasKey(nameof(BaseEntity.Id));
+                        a.Property(nameof(BaseEntity.Id)).ValueGeneratedOnAdd();
+                        a.Property<Guid>("OwnerId").ValueGeneratedOnAdd();
+                        a.WithOwner().HasForeignKey("OwnerId");
+                        a.HasData(ownedEntities);
+                    });
+            }
+            catch (InvalidOperationException exception)
+            {
+                Console.WriteLine(exception.Message);
+                throw;
+            }
+        }
+
+        public static EntityTypeBuilder AddOwnedData(this ModelBuilder builder, Type ownerType, Type ownedType, string propertyName, object ownedEntity)
+        {
+            try
+            {
+                return builder
+                    .Entity(ownerType)
+                    .OwnsOne(ownedType, propertyName, a =>
+                    {
+                        a.HasKey(nameof(BaseEntity.Id));
+                        a.Property(nameof(BaseEntity.Id)).ValueGeneratedOnAdd();
                         a.Property<Guid>("OwnerId").ValueGeneratedOnAdd();
                         a.WithOwner().HasForeignKey("OwnerId");
                         a.HasData(ownedEntity);

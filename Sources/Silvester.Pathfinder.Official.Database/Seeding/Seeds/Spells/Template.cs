@@ -3,6 +3,7 @@ using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Tables;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
+using System.Linq;
 using System;
 using System.Collections.Generic;
 
@@ -12,30 +13,37 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
     {
         protected override Spell GetEntity(ModelBuilder builder)
         {
-            Spell spell = GetSpell();
-            
-            Table? table = GetTable(new TableBuilder());
-            if(table != null)
-            {
-                spell.TableId = table.Id;
-                builder.AddTable(spell, table);
-            }
+            /*
 
+            var owned = builder.Model.GetEntityTypes().Where(e => e.IsOwned()).ToArray();
+            var unowned = builder.Model.GetEntityTypes().Where(e => e.IsOwned() == false).ToArray();
+
+            var actionType = builder.Model.GetEntityTypes().Where(e => e.Name == "Silvester.Pathfinder.Official.Database.Models.ActionEffect").FirstOrDefault();
+            var textBlock = builder.Model.GetEntityTypes().Where(e => e.Name == "Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock").FirstOrDefault();
+
+            Console.WriteLine($"Action Effect: {actionType?.IsOwned()}");
+            Console.WriteLine($"Text Block : {textBlock?.IsOwned()}");
+            */
+
+            Spell spell = GetSpell();
+
+            builder.AddTable(spell, GetTable(new TableBuilder()));
             builder.AddSourcePage(spell, GetSourcePage(), e => e.SourcePage);
             builder.AddTraits(spell, GetTraits());
             builder.AddTextBlocks(spell, GetSpellDetailBlocks(), e => e.Details);
             builder.AddRollableEffects(spell, GetRollableEffects(), e => e.RollableEffects);
             builder.AddActionEffects(spell, GetActionEffects(), e => e.ActionEffects);
-            builder.AddStaggeredEffects(spell, GetStaggeredEffects(), e => e.StaggeredEffects);
+            builder.AddStaggeredEffect(spell, GetStaggeredEffect(), e => e.StaggeredEffectId);
             builder.HasJoinData<Spell, SpellComponent>(spell, GetSpellComponents());
             builder.HasJoinData<Spell, Creature>(spell, GetSummonedCreatures());
 
             foreach (SpellHeightening heightening in GetHeightenings())
             {
                 builder.AddTextBlocks(heightening, heightening.Details, e => e.Details);
-                heightening.Details.Clear();
-
+                
+                heightening.Details = new TextBlock[0];
                 heightening.SpellId = spell.Id;
+                
                 builder.AddData(heightening);
             }
 
@@ -65,9 +73,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
             yield break;
         }
 
-        protected virtual IEnumerable<StaggeredEffect> GetStaggeredEffects()
+        protected virtual StaggeredEffect? GetStaggeredEffect()
         {
-            yield break;
+            return null;
         }
 
         protected virtual IEnumerable<Guid> GetSummonedCreatures()

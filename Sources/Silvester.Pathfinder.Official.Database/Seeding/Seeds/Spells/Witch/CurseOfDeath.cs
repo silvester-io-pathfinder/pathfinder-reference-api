@@ -59,9 +59,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        protected override IEnumerable<StaggeredEffect> GetStaggeredEffects()
+        protected override StaggeredEffect GetStaggeredEffect()
         {
-            yield return new StaggeredEffect
+            return new StaggeredEffect
             {
                 Id = Guid.Parse("b6204036-a8af-47e8-a70a-224cbe9f4420"),
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,

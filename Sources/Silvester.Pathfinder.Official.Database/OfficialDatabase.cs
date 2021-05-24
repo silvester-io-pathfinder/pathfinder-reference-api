@@ -3,6 +3,7 @@ using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Seeding;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds;
+using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -98,9 +99,7 @@ namespace Silvester.Pathfinder.Official.Database
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
-
-            //Debugger.Launch();
+            Debugger.Launch();
 
             ConfigureEntities(builder);
             SeedEntities(builder);
@@ -108,7 +107,7 @@ namespace Silvester.Pathfinder.Official.Database
 
         private void ConfigureEntities(ModelBuilder builder)
         {
-            foreach (Type entityType in GetType().Assembly.GetTypes().Where(e => e.BaseType != null && e.BaseType == (typeof(BaseEntity)) && e.GetInterfaces().Contains(typeof(IOwnedEntity)) == false))
+            foreach (Type entityType in GetType().Assembly.GetTypes().Where(e => e.BaseType != null && e.BaseType == (typeof(BaseEntity))))
             {
                 Console.WriteLine($"Preprocessing: '{entityType.Name}'.");
 

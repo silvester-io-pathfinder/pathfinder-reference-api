@@ -10,7 +10,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding
     {
         public virtual void Configure(ModelBuilder builder)
         {
-            builder.Entity<TEntity>().HasBaseEntityKey();
+            if (typeof(TEntity).GetInterfaces().Contains(typeof(IOwnedEntity)))
+            {
+                builder.Owned<TEntity>();
+            }
+            else
+            {
+                builder.Entity<TEntity>().HasBaseEntityKey();
+            }
         }
     }
 }

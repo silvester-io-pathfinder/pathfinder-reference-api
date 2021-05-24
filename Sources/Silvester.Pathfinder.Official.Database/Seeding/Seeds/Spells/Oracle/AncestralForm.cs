@@ -22,7 +22,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 ClassId = Classes.Instances.Oracle.ID,
                 SpellTypeId = SpellTypes.Instances.Focus.ID,
                 MagicSchoolId = MagicSchools.Instances.Transmutation.ID,
-                MysteryId = Mysteries.Instances.Ancestors.ID,
             };
         }
 

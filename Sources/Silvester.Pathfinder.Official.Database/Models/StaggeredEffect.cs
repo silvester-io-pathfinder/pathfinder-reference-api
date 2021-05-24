@@ -5,8 +5,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
 {
     public class StaggeredEffect : BaseEntity
     {
-        public Guid OwnerId { get; set; }
-      
         public string? Addendum{ get; set; }
 
         public int? Level { get; set; }

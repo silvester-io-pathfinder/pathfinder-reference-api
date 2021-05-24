@@ -9,6 +9,6 @@ namespace Silvester.Pathfinder.Official.Database
     
     public interface IOwnedEntity
     {
-        //Marker pattern.
+        Guid OwnerId { get; set; }
     }
 }

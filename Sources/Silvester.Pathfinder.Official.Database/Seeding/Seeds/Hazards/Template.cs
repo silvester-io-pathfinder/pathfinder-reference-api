@@ -78,22 +78,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
 
             if (effect is PoisonHazardActionEffect poisonHazardActionEffect)
             {
-                poisonHazardActionEffect.PoisonEffectId = poisonHazardActionEffect.PoisonEffect.Id;
-                foreach (StaggeredEffectStage stage in poisonHazardActionEffect.PoisonEffect.Stages)
-                {
-                    foreach (StaggeredEffectStageEffect stageEffect in stage.Effects)
-                    {
-                        stageEffect.StaggeredEffectStageId = stage.Id;
-                        builder.AddData(stageEffect.GetType(), stageEffect);
-                    }
-                    stage.Effects = Array.Empty<StaggeredEffectStageEffect>();
-
-                    stage.StaggeredEffectId = poisonHazardActionEffect.PoisonEffectId;
-                    builder.AddData(stage);
-                }
-                poisonHazardActionEffect.PoisonEffect.Stages = Array.Empty<StaggeredEffectStage>();
-                builder.AddData(poisonHazardActionEffect.PoisonEffect);
-
+                builder.AddStaggeredEffect(poisonHazardActionEffect, poisonHazardActionEffect.PoisonEffect, e => e.PoisonEffectId);
                 poisonHazardActionEffect.PoisonEffect = null!;
             }
 

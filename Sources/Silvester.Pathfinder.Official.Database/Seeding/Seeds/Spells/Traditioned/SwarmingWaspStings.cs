@@ -41,9 +41,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        protected override IEnumerable<StaggeredEffect> GetStaggeredEffects()
+        protected override StaggeredEffect GetStaggeredEffect()
         {
-            yield return new StaggeredEffect
+            return new StaggeredEffect
             {
                 Id = Guid.Parse("b12473dd-dcf5-4b64-88e3-0fe0715bdcad"),
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                     },
                     new StaggeredEffectStage
                     {
-                        Id = Guid.Parse("1 round"),
+                        Id = Guid.Parse("d51b52ac-6d29-4f8f-85a1-bb650a5831e1"),
                         Duration = "1 round",
                         Effects =
                         {

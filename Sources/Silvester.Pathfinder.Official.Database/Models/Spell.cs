@@ -54,11 +54,23 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid? ClassId { get; set; }
         public Class? Class { get; set; }
 
-        public Guid? MysteryId { get; set; }
-        public Mystery? Mystery { get; set; }
+        public Guid? InitialRevelationOfId { get; set; }
+        public Mystery? InitialRevelationOf { get; set; }
+
+        public Guid? AdvancedRevelationOfId { get; set; }
+        public Mystery? AdvancedRevelationOf { get; set; }
+
+        public Guid? GreaterRevelationOfId { get; set; }
+        public Mystery? GreaterRevelationOf { get; set; }
+
+        public Guid? GrantedById{ get; set; }
+        public Mystery? GrantedBy { get; set; }
 
         public Guid? DomainId { get; set; }
         public Domain? Domain { get; set; }
+
+        public Guid? StaggeredEffectId { get; set; }
+        public StaggeredEffect? StaggeredEffect { get; set; } = default!;
 
         public ICollection<RollableEffect> RollableEffects { get; set; } = new List<RollableEffect>();
         
@@ -72,8 +84,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<ActionEffect> ActionEffects { get; set; } = new List<ActionEffect>();
 
-        public ICollection<StaggeredEffect> StaggeredEffects { get; set; } = new List<StaggeredEffect>();
-     
         public ICollection<Creature> CreatureEffects { get; set; } = new List<Creature>();
 
         public ICollection<MagicTradition> Traditions { get; set; } = new List<MagicTradition>();

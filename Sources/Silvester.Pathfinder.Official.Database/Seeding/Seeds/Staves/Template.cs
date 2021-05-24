@@ -22,17 +22,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves
             {
                 potency.StaveId = stave.Id;
 
-                foreach(Guid traitId in GetPotencyTraits(potency))
-                {
-                    builder.HasJoinData<StavePotencyBinding, Trait>((potency.Id, traitId));
-                }
-
                 foreach(StaveSpell spell in potency.Spells)
                 {
                     spell.PotencyBindingId = potency.Id;
                     builder.AddData(spell);
                 }
-
+                
+                builder.AddTraits(potency, GetPotencyTraits(potency));
                 builder.AddData(potency);
             }
 

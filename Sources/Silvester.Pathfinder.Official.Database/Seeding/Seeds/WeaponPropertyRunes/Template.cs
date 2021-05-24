@@ -20,26 +20,17 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponPropertyRun
             {
                 action.RuneId = rune.Id;
                 builder.AddData(action);
-
-                foreach (Guid traitId in GetActionTraits(action))
-                {
-                    builder.HasJoinData<WeaponPropertyRuneAction, Trait>((action.Id, traitId));
-                }
+                builder.AddTraits(action, GetActionTraits(action));
             }
 
             foreach(WeaponPropertyRunePotencyBinding potency in GetPotencies())
             {
-                potency.RuneId = rune.Id;
-
-                if(potency.RollableEffect != null)
-                {
-                    builder.AddData(potency.RollableEffect);
-                    potency.RollableEffectId = potency.RollableEffect.Id;
-                    potency.RollableEffect = null;
-                }
-
                 builder.AddTraits(potency, GetPotencyTraits(potency));
                 builder.AddTextBlocks(potency, potency.Benefits, e => e.Benefits);
+                builder.AddRollableEffect(potency, potency.RollableEffect, e => e.RollableEffect);
+
+                potency.RuneId = rune.Id;
+                potency.RollableEffect = null;
                 potency.Benefits = new TextBlock[0];
 
                 builder.AddData(potency);

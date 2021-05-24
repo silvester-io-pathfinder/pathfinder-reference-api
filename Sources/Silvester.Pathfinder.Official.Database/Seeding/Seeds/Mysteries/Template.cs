@@ -29,30 +29,26 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Mysteries
         {
             MysteryCurse curse = GetCurse();
 
+            builder.AddTextBlocks(curse, curse.Details, (e) => e.Details);
             builder.AddSourcePage(curse, curse.SourcePage, e => e.SourcePage);
-            curse.SourcePage = null!;
-
-            if (curse.Table != null)
-            {
-                builder.AddTable(curse, curse.Table);
-            }
-            curse.Table = null;
-
-            curse.MysteryId = mystery.Id;
+            builder.AddTable(curse, curse.Table);
+            
             foreach (MysteryCursePotency potency in curse.Potencies)
             {
-                potency.MysteryCurseId = curse.Id;
                 builder.AddTextBlocks(potency, potency.Details, (e) => e.Details);
+                
                 potency.Details = new TextBlock[0];
-
+                potency.MysteryCurseId = curse.Id;
 
                 builder.AddData(potency);
             }
-
-            builder.AddTextBlocks(curse, curse.Details, (e) => e.Details);
+            
             curse.Details = new TextBlock[0];
-
             curse.Potencies = new MysteryCursePotency[0];
+            curse.SourcePage = null!;
+            curse.Table = null;
+            curse.MysteryId = mystery.Id;
+
             builder.AddData(curse);
         }
 

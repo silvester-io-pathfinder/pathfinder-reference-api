@@ -14,48 +14,15 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
         {
             AlchemicalPoison poison = GetAlchemicalPoison();
 
+            StaggeredEffect effect = GetPoisonEffect();
+            effect.Stages = GetAlchemicalPoisonStages().ToArray();
+
+            builder.AddStaggeredEffect(poison, effect, e => e.EffectId);
             builder.AddSourcePage(poison, GetSourcePage(), e => e.SourcePage);
             builder.AddTraits(poison, GetTraits());
             builder.AddTextBlocks(poison, GetDetailBlocks(), e => e.Details);
 
-            SeedPoisonEffect(builder, poison);
-
             return poison;
-        }
-
-        private void SeedPoisonEffect(ModelBuilder builder, AlchemicalPoison poison)
-        {
-            StaggeredEffect poisonEffect = GetPoisonEffect();
-            builder.AddData(poisonEffect);
-
-            poison.EffectId = poisonEffect.Id;
-
-            StaggeredEffectStage[] stages = GetAlchemicalPoisonStages().ToArray();
-            for (int i = 0; i < stages.Length; i++)
-            {
-                StaggeredEffectStage poisonEffectStage = stages[i];
-                SeedPoisonEffectStage(builder, poisonEffect.Id, i + 1, poisonEffectStage);
-            }
-        }
-
-        private static void SeedPoisonEffectStage(ModelBuilder builder, Guid poisonEffectId, int stageNumber, StaggeredEffectStage poisonEffectStage)
-        {
-            poisonEffectStage.StaggeredEffectId = poisonEffectId;
-            poisonEffectStage.Stage = stageNumber;
-
-            foreach (StaggeredEffectStageEffect stageEffect in poisonEffectStage.Effects)
-            {
-                SeedPoisonEffectStageEffect(builder, poisonEffectStage, stageEffect);
-            }
-            poisonEffectStage.Effects = new StaggeredEffectStageEffect[] { };
-            
-            builder.AddData(poisonEffectStage);
-        }
-
-        private static void SeedPoisonEffectStageEffect(ModelBuilder builder, StaggeredEffectStage poisonEffectStage, StaggeredEffectStageEffect stageEffect)
-        {
-            stageEffect.StaggeredEffectStageId = poisonEffectStage.Id;
-            builder.AddData(stageEffect.GetType(), stageEffect);
         }
 
         protected abstract AlchemicalPoison GetAlchemicalPoison();
