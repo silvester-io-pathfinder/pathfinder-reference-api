@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class VolcanicEruption : Template
     {
-        public static readonly Guid ID = Guid.Parse("94dc91b0-4bda-4a4e-aee4-9745143ed515");
+        public static readonly Guid ID = Guid.Parse("120f7798-342f-42f8-a213-8053fbc4f6bf");
 
         public override Spell GetSpell()
         {
@@ -28,19 +28,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("94dc91b0-4bda-4a4e-aee4-9745143ed515"), Type = TextBlockType.Text, Text = "The ground opens up, spraying a column of lava high into the air in a vertical cylinder, dealing 14d6 fire damage to creatures in the area. The lava rapidly cools and encases creatures in the area. A creature encased in rock is clumsy 1 and takes a –10-foot status penalty to its Speeds. All normal terrain is difficult terrain to a flying creature, and such creatures immediately descend 20 feet the moment they’re encased, but they don’t take damage from this fall. A creature encased in rock can attempt to Escape against your spell DC to end the effect. Otherwise, the creature remains encased until it takes a total of 50 damage, freeing it from the rock." };
-            yield return new TextBlock { Id = Guid.Parse("94dc91b0-4bda-4a4e-aee4-9745143ed515"), Type = TextBlockType.Text, Text = "Additionally, creatures in the area and those within 5 feet of the lava column automatically take 3d6 fire damage from the intense heat, regardless of the results of their saving throws." };
+            yield return new TextBlock { Id = Guid.Parse("3bd83d19-4071-43d5-a369-9e0970685e7b"), Type = TextBlockType.Text, Text = "The ground opens up, spraying a column of lava high into the air in a vertical cylinder, dealing 14d6 fire damage to creatures in the area. The lava rapidly cools and encases creatures in the area. A creature encased in rock is clumsy 1 and takes a –10-foot status penalty to its Speeds. All normal terrain is difficult terrain to a flying creature, and such creatures immediately descend 20 feet the moment they’re encased, but they don’t take damage from this fall. A creature encased in rock can attempt to Escape against your spell DC to end the effect. Otherwise, the creature remains encased until it takes a total of 50 damage, freeing it from the rock." };
+            yield return new TextBlock { Id = Guid.Parse("308a052a-de86-425c-84ab-8972fe579ae6"), Type = TextBlockType.Text, Text = "Additionally, creatures in the area and those within 5 feet of the lava column automatically take 3d6 fire damage from the intense heat, regardless of the results of their saving throws." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("94dc91b0-4bda-4a4e-aee4-9745143ed515"), 
+                Id = Guid.Parse("b0dd0ba5-cf48-43ae-9ccc-059047c9ee4b"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("94dc91b0-4bda-4a4e-aee4-9745143ed515"), Type = TextBlockType.Text, Text = "The damage in the area increases by 2d6, and the damage from the intense heat increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("2099bdf1-de40-4870-b493-53852d8a3b56"), Type = TextBlockType.Text, Text = "The damage in the area increases by 2d6, and the damage from the intense heat increases by 1d6." }
                 }
             };
         }
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("94dc91b0-4bda-4a4e-aee4-9745143ed515"),
+                Id = Guid.Parse("344ce0bd-a1f3-4082-8199-7213834d216e"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes half damage.",
                 Failure = "The creature takes full damage and is encased.",
@@ -78,7 +78,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("94dc91b0-4bda-4a4e-aee4-9745143ed515"),
+                Id = Guid.Parse("e01b3c21-3177-4d8c-a88a-d466914c9eb3"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 382
             };

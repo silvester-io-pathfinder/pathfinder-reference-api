@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SpiderClimb : Template
     {
-        public static readonly Guid ID = Guid.Parse("418a14ef-ecab-4e64-bd1c-bebeb397f3c5");
+        public static readonly Guid ID = Guid.Parse("378e003f-daf7-4083-aff0-fa89ce625e8d");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("418a14ef-ecab-4e64-bd1c-bebeb397f3c5"), Type = TextBlockType.Text, Text = "Tiny clinging hairs sprout across the creature’s hands and feet, offering purchase on nearly any surface. The target gains a climb Speed equal to its Speed." };
+            yield return new TextBlock { Id = Guid.Parse("a4674f5b-95ac-4a64-b387-bdb201883e97"), Type = TextBlockType.Text, Text = "Tiny clinging hairs sprout across the creature’s hands and feet, offering purchase on nearly any surface. The target gains a climb Speed equal to its Speed." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("418a14ef-ecab-4e64-bd1c-bebeb397f3c5"), 
+                Id = Guid.Parse("53eac60c-84c3-4cfe-a8ab-c39c4e50d39c"), 
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("418a14ef-ecab-4e64-bd1c-bebeb397f3c5"), Type = TextBlockType.Text, Text = "The duration increases to 1 hour." }
+                    new TextBlock { Id = Guid.Parse("05d5ebe3-cd25-4267-9e8c-316317a0788e"), Type = TextBlockType.Text, Text = "The duration increases to 1 hour." }
                 }
             };
         }
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("418a14ef-ecab-4e64-bd1c-bebeb397f3c5"),
+                Id = Guid.Parse("ae95cefb-c589-40a2-bc5c-150ebe59bba7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 371
             };

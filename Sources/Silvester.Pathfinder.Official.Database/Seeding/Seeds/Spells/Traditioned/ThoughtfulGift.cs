@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ThoughtfulGift : Template
     {
-        public static readonly Guid ID = Guid.Parse("cba8fe55-fed9-4e95-bee4-aef0ed3ce663");
+        public static readonly Guid ID = Guid.Parse("acf134b9-edf8-49e8-bb1a-b57668cb8504");
 
         public override Spell GetSpell()
         {
@@ -26,28 +26,28 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cba8fe55-fed9-4e95-bee4-aef0ed3ce663"), Type = TextBlockType.Text, Text = "You teleport one object of light or negligible Bulk held in your hand to the target. The object appears instantly in the target’s hand, if they have a free hand, or at their feet if they don’t. The target knows what object you are attempting to send them. If the target is unconscious or refuses to accept your gift, or if the spell would teleport a creature (even if the creature is inside an extradimensional container), the spell fails." };
+            yield return new TextBlock { Id = Guid.Parse("13e49035-8698-43ed-a8a2-d73e6193048e"), Type = TextBlockType.Text, Text = "You teleport one object of light or negligible Bulk held in your hand to the target. The object appears instantly in the target’s hand, if they have a free hand, or at their feet if they don’t. The target knows what object you are attempting to send them. If the target is unconscious or refuses to accept your gift, or if the spell would teleport a creature (even if the creature is inside an extradimensional container), the spell fails." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("cba8fe55-fed9-4e95-bee4-aef0ed3ce663"),
+                Id = Guid.Parse("a8686ce8-055b-403c-947e-83c8fc071342"),
                 Level = "3rd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("cba8fe55-fed9-4e95-bee4-aef0ed3ce663"), Type = TextBlockType.Text, Text = "The spell’s range increases to 500 feet." }
+                    new TextBlock { Id = Guid.Parse("7c79a7d6-8900-4390-8e26-a2f2f81c335d"), Type = TextBlockType.Text, Text = "The spell’s range increases to 500 feet." }
                 }
             };
 
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("cba8fe55-fed9-4e95-bee4-aef0ed3ce663"),
+                Id = Guid.Parse("8c1d108b-66d2-4078-b00d-c828d6036ebe"),
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("cba8fe55-fed9-4e95-bee4-aef0ed3ce663"), Type = TextBlockType.Text, Text = "As 3rd level, and the object’s maximum Bulk increases to 1. You can Cast the Spell with 3 actions instead of 1; doing so increases the range to 1 mile and you don’t need line of sight to the target, but you must be extremely familiar with the target." }
+                    new TextBlock { Id = Guid.Parse("af6b1420-7885-462e-a50f-76c41f6067a5"), Type = TextBlockType.Text, Text = "As 3rd level, and the object’s maximum Bulk increases to 1. You can Cast the Spell with 3 actions instead of 1; doing so increases the range to 1 mile and you don’t need line of sight to the target, but you must be extremely familiar with the target." }
                 }
             };
         }
@@ -74,7 +74,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cba8fe55-fed9-4e95-bee4-aef0ed3ce663"),
+                Id = Guid.Parse("d5867339-c24a-468f-9ee3-cf15c7489e6a"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 226
             };

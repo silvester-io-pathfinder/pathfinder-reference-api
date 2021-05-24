@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class NeedleOfVengeance : Template
     {
-        public static readonly Guid ID = Guid.Parse("cb8f4863-75a1-4e04-a567-502a643c49fd");
+        public static readonly Guid ID = Guid.Parse("ad99267f-97a8-411d-8f85-898742a2975d");
 
         public override Spell GetSpell()
         {
@@ -31,18 +31,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cb8f4863-75a1-4e04-a567-502a643c49fd"), Type = TextBlockType.Text, Text = "A long, jagged needle jabs into the target foe’s psyche whenever it tries to attack a specifically forbidden creature. Name yourself or one of your allies. The target takes 2 mental damage any time it uses a hostile action against the named creature." };
+            yield return new TextBlock { Id = Guid.Parse("8d7d06a2-8a79-4602-b894-1b919af6cb1a"), Type = TextBlockType.Text, Text = "A long, jagged needle jabs into the target foe’s psyche whenever it tries to attack a specifically forbidden creature. Name yourself or one of your allies. The target takes 2 mental damage any time it uses a hostile action against the named creature." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("cb8f4863-75a1-4e04-a567-502a643c49fd"),
+                Id = Guid.Parse("c38541d2-d2fc-4e2f-a223-37a614a2d01a"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("cb8f4863-75a1-4e04-a567-502a643c49fd"), Type = TextBlockType.Text, Text = "Increase the damage by 2." }
+                    new TextBlock { Id = Guid.Parse("1cb8700d-7625-4ce1-92c2-7729809bbb10"), Type = TextBlockType.Text, Text = "Increase the damage by 2." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cb8f4863-75a1-4e04-a567-502a643c49fd"),
+                Id = Guid.Parse("3b0450e7-8bb6-43f5-b6bd-1127cc426db2"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 238
             };

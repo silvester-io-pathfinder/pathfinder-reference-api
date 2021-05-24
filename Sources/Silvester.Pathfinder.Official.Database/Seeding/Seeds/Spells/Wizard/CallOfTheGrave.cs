@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class CallOfTheGrave : Template
     {
-        public static readonly Guid ID = Guid.Parse("2386265e-8204-4fe2-b54c-f13c8c5c9c1f");
+        public static readonly Guid ID = Guid.Parse("2fed231b-fe88-4fdb-92b9-ab355e578dcc");
 
         public override Spell GetSpell()
         {
@@ -27,14 +27,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2386265e-8204-4fe2-b54c-f13c8c5c9c1f"), Type = TextBlockType.Text, Text = "You fire a ray of sickening energy. Make a spell attack roll." };
+            yield return new TextBlock { Id = Guid.Parse("a3f4fd4b-027d-48ac-b19c-407c1842dfad"), Type = TextBlockType.Text, Text = "You fire a ray of sickening energy. Make a spell attack roll." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("2386265e-8204-4fe2-b54c-f13c8c5c9c1f"),
+                Id = Guid.Parse("1e1da503-72b1-4262-bd9f-5e0875a6180e"),
                 CriticalSuccess = "The target becomes sickened 2 and slowed 1 as long as it’s sickened.",
                 Success = "The target becomes sickened 1.",
                 Failure = "The target is unaffected.",
@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2386265e-8204-4fe2-b54c-f13c8c5c9c1f"),
+                Id = Guid.Parse("5e7c25d4-3d53-414b-90f6-9ffa21b1b82d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 406
             };

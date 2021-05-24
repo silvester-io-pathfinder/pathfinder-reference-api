@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ProtectiveWard : Template
     {
-        public static readonly Guid ID = Guid.Parse("f18c1738-cfaf-4a73-a308-30a991b18abe");
+        public static readonly Guid ID = Guid.Parse("12be19ae-8cac-40b8-834e-8ac1a582024b");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f18c1738-cfaf-4a73-a308-30a991b18abe"), Type = TextBlockType.Text, Text = "You emanate a shimmering aura of protective magic. You and any allies in the area gain a +1 status bonus to AC. Each time you Sustain the Spell, the emanation’s radius increases by 5 feet, to a maximum of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("8d05189a-7002-49b1-bfea-fddf7cd1e7c3"), Type = TextBlockType.Text, Text = "You emanate a shimmering aura of protective magic. You and any allies in the area gain a +1 status bonus to AC. Each time you Sustain the Spell, the emanation’s radius increases by 5 feet, to a maximum of 30 feet." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f18c1738-cfaf-4a73-a308-30a991b18abe"),
+                Id = Guid.Parse("f445a4d4-1e5b-4cd6-803d-b9f53d4eec49"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 407
             };

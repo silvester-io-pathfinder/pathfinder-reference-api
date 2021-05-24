@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TelekineticProjectile : Template
     {
-        public static readonly Guid ID = Guid.Parse("2f0bb8f2-3169-464c-8ae7-d166be2921a2");
+        public static readonly Guid ID = Guid.Parse("ab61bcac-bdca-4fb7-825d-c0529831b049");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2f0bb8f2-3169-464c-8ae7-d166be2921a2"), Type = TextBlockType.Text, Text = "You hurl a loose, unattended object that is within range and that has 1 Bulk or less at the target. Make a spell attack roll against the target. If you hit, you deal bludgeoning, piercing, or slashing damage—as appropriate for the object you hurled—equal to 1d6 plus your spellcasting ability modifier. No specific traits or magic properties of the hurled item affect the attack or the damage." };
+            yield return new TextBlock { Id = Guid.Parse("47f11264-dd44-4415-a93e-a32aa23b2eac"), Type = TextBlockType.Text, Text = "You hurl a loose, unattended object that is within range and that has 1 Bulk or less at the target. Make a spell attack roll against the target. If you hit, you deal bludgeoning, piercing, or slashing damage—as appropriate for the object you hurled—equal to 1d6 plus your spellcasting ability modifier. No specific traits or magic properties of the hurled item affect the attack or the damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("2f0bb8f2-3169-464c-8ae7-d166be2921a2"), 
+                Id = Guid.Parse("b16db135-86f0-4a79-ba0e-947aa560bc48"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("2f0bb8f2-3169-464c-8ae7-d166be2921a2"), Type = TextBlockType.Text, Text = "The damage increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("5660c6f5-96ee-482b-9a9e-912522704e00"), Type = TextBlockType.Text, Text = "The damage increases by 1d6." }
                 }
             };
         }
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("2f0bb8f2-3169-464c-8ae7-d166be2921a2"),
+                Id = Guid.Parse("7b44239f-8610-4de4-848b-2f372fd45c21"),
                 CriticalSuccess = "You deal double damage.",
                 Success = "You deal full damage."
             };
@@ -75,7 +75,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2f0bb8f2-3169-464c-8ae7-d166be2921a2"),
+                Id = Guid.Parse("3a271dbb-998f-430e-91e2-dcb926af694f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 377
             };

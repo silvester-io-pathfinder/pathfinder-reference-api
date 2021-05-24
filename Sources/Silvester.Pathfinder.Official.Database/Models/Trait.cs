@@ -76,7 +76,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<ArtifactDestructionEffect> ArtifactDestructionEffects { get; set; } = new List<ArtifactDestructionEffect>();
 
         public ICollection<Creature> Creatures { get; set; } = new List<Creature>();
-     
+
         public ICollection<Stave> Staves { get; set; } = new List<Stave>();
     }
 }

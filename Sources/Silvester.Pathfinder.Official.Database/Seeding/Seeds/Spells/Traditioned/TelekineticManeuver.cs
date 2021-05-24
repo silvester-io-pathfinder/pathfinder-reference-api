@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TelekineticManeuver : Template
     {
-        public static readonly Guid ID = Guid.Parse("c78b2997-c959-4211-a929-16bb5c6e54aa");
+        public static readonly Guid ID = Guid.Parse("e469dd5e-ca1a-4149-8c10-5fe8ea042da6");
 
         public override Spell GetSpell()
         {
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c78b2997-c959-4211-a929-16bb5c6e54aa"), Type = TextBlockType.Text, Text = "With a rush of telekinetic power, you move a foe or something they carry. You can attempt to Disarm, Shove, or Trip the target using a spell attack roll instead of an Athletics check." };
+            yield return new TextBlock { Id = Guid.Parse("d5870d50-d831-4937-921e-8c299d84f5e8"), Type = TextBlockType.Text, Text = "With a rush of telekinetic power, you move a foe or something they carry. You can attempt to Disarm, Shove, or Trip the target using a spell attack roll instead of an Athletics check." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c78b2997-c959-4211-a929-16bb5c6e54aa"),
+                Id = Guid.Parse("74750ad3-a4f0-4699-8847-d254655945dd"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 377
             };

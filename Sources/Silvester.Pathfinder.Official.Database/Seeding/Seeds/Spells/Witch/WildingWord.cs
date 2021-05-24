@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class WildingWord : Template
     {
-        public static readonly Guid ID = Guid.Parse("39d0f9dd-d062-4b8d-a3e6-a4382d430b5d");
+        public static readonly Guid ID = Guid.Parse("629c7f74-0650-4646-8ff9-71e6fb5d4ec2");
 
         public override Spell GetSpell()
         {
@@ -31,14 +31,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("39d0f9dd-d062-4b8d-a3e6-a4382d430b5d"), Type = TextBlockType.Text, Text = "With a few words, you convince a wild creature you are a kindred spirit, making it reluctant to harm you. The target must attempt a Will save. Regardless of the outcome, the target is then temporarily immune for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("dd28266f-ac02-48fa-b74c-ca3aa65efc48"), Type = TextBlockType.Text, Text = "With a few words, you convince a wild creature you are a kindred spirit, making it reluctant to harm you. The target must attempt a Will save. Regardless of the outcome, the target is then temporarily immune for 1 minute." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("39d0f9dd-d062-4b8d-a3e6-a4382d430b5d"),
+                Id = Guid.Parse("5bd3b44a-1c0d-47ac-9254-56f9c3434c8b"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "When the target attempts an attack roll or skill check that would harm you, it takes a –2 status penalty to its roll.",
                 Failure = "As success, but the target also becomes sickened 1 each time it damages you.",
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("39d0f9dd-d062-4b8d-a3e6-a4382d430b5d"),
+                Id = Guid.Parse("992385e4-8234-41a3-84c1-df0e1a2fe34c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 239
             };

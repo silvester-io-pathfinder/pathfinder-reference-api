@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class VeilOfDreams : Template
     {
-        public static readonly Guid ID = Guid.Parse("f329b0cc-16dd-4820-a5cc-4bcac9b94ba1");
+        public static readonly Guid ID = Guid.Parse("4563a251-40f7-4063-8615-9ad2f3fa79b9");
 
         public override Spell GetSpell()
         {
@@ -31,14 +31,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f329b0cc-16dd-4820-a5cc-4bcac9b94ba1"), Type = TextBlockType.Text, Text = "You draw the target into a drowsy state, causing daydreams and sluggishness. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("460a27e2-c4e7-4ebc-8e65-0907c279f9f7"), Type = TextBlockType.Text, Text = "You draw the target into a drowsy state, causing daydreams and sluggishness. The target must attempt a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("f329b0cc-16dd-4820-a5cc-4bcac9b94ba1"),
+                Id = Guid.Parse("89c97ffd-580b-42c2-8bba-7d76162dc651"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes a –1 status penalty to Perception, attack rolls, and Will saves. This penalty increases to –2 for Will saves against sleep effects.",
                 Failure = "As success, and any time the target uses a concentrate action, it must succeed at a DC 5 flat check or the action is disrupted.",
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f329b0cc-16dd-4820-a5cc-4bcac9b94ba1"),
+                Id = Guid.Parse("0719eb4e-772c-4479-b06f-9ddc4cb564dc"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 239
             };

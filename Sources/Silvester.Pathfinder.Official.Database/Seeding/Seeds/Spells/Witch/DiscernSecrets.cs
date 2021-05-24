@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DiscernSecrets : Template
     {
-        public static readonly Guid ID = Guid.Parse("df24da04-b69b-47e2-a4c1-e582b4aada12");
+        public static readonly Guid ID = Guid.Parse("21210ee4-3b48-4550-ac21-e3ba8f3408a9");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("df24da04-b69b-47e2-a4c1-e582b4aada12"), Type = TextBlockType.Text, Text = "You call upon your patron’s power to better uncover secrets. When you Cast the Spell, the target can Recall Knowledge, Seek, or Sense Motive. The target gains a +1 status bonus to the skill or Perception used for the roll, and this bonus remains as long as you Sustain the Spell. The target is temporarily immune to discern secrets for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("40b0aa62-eaab-42f7-8931-6feaa486d522"), Type = TextBlockType.Text, Text = "You call upon your patron’s power to better uncover secrets. When you Cast the Spell, the target can Recall Knowledge, Seek, or Sense Motive. The target gains a +1 status bonus to the skill or Perception used for the roll, and this bonus remains as long as you Sustain the Spell. The target is temporarily immune to discern secrets for 1 minute." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("df24da04-b69b-47e2-a4c1-e582b4aada12"),
+                Id = Guid.Parse("d9516077-60f0-4c23-b08a-8d35f2d23c63"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("df24da04-b69b-47e2-a4c1-e582b4aada12"), Type = TextBlockType.Text, Text = "You can target two creatures instead of one." }
+                    new TextBlock { Id = Guid.Parse("e04de109-bd2a-4c0f-afd1-44c8e57ad144"), Type = TextBlockType.Text, Text = "You can target two creatures instead of one." }
                 }
             };
         }
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("df24da04-b69b-47e2-a4c1-e582b4aada12"),
+                Id = Guid.Parse("d875e1f6-e5fa-49a4-a090-ef850460e32e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 238
             };

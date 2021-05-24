@@ -13,16 +13,16 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
         public static void SetProperty<TOwner, TValue>(this Expression<Func<TOwner, TValue>> selector, TOwner owner, TValue value)
         {
             MemberExpression memberExpression;
-            if(selector.Body is UnaryExpression unaryExpression)
+            if (selector.Body is UnaryExpression unaryExpression)
             {
-                memberExpression = (MemberExpression) unaryExpression.Operand;
+                memberExpression = (MemberExpression)unaryExpression.Operand;
             }
             else
             {
-                memberExpression = (MemberExpression) selector.Body;
+                memberExpression = (MemberExpression)selector.Body;
             }
 
-            PropertyInfo property = (PropertyInfo) memberExpression.Member;
+            PropertyInfo property = (PropertyInfo)memberExpression.Member;
             property.SetValue(owner, value);
         }
     }

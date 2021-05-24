@@ -5,7 +5,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.SpellTypes.Instan
 {
     public class Focus : Template
     {
-        public static readonly Guid ID = Guid.Parse("c81b4b1a-e500-48b7-a37f-c686defe4d15");
+        public static readonly Guid ID = Guid.Parse("5d666234-7158-4fc5-934d-8d0f4b2ef786");
 
         public override SpellType GetSpellType()
         {

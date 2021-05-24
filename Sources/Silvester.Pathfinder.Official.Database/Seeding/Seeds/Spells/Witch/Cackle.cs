@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Cackle : Template
     {
-        public static readonly Guid ID = Guid.Parse("a1744d61-cbc0-4313-8b84-01bd2b79bc71");
+        public static readonly Guid ID = Guid.Parse("21c06ba3-1e8b-4b82-a6d7-da1251d311af");
 
         public override Spell GetSpell()
         {
@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a1744d61-cbc0-4313-8b84-01bd2b79bc71"), Type = TextBlockType.Text, Text = "With a quick burst of laughter, you prolong a magical effect you created. You Sustain a Spell." };
+            yield return new TextBlock { Id = Guid.Parse("458b21d7-e634-4698-bee9-d61c834d4218"), Type = TextBlockType.Text, Text = "With a quick burst of laughter, you prolong a magical effect you created. You Sustain a Spell." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a1744d61-cbc0-4313-8b84-01bd2b79bc71"),
+                Id = Guid.Parse("d3b6b0aa-a26f-488c-a8ea-5fa57a68296d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 237
             };

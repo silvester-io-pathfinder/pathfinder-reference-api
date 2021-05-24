@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TrueSeeing : Template
     {
-        public static readonly Guid ID = Guid.Parse("d127329a-3e95-4ac7-9218-8b9755682f98");
+        public static readonly Guid ID = Guid.Parse("52f71378-b21c-4efb-a0d7-64981b5618e5");
 
         public override Spell GetSpell()
         {
@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d127329a-3e95-4ac7-9218-8b9755682f98"), Type = TextBlockType.Text, Text = "You see things within 60 feet as they actually are. The GM rolls a secret counteract check against any illusion or transmutation in the area, but only for the purpose of determining whether you see through it (for instance, if the check succeeds against a polymorph spell, you can see the creature’s true form, but you don’t end the polymorph spell)." };
+            yield return new TextBlock { Id = Guid.Parse("43810ed1-6b68-4256-ae7a-f15e6a2ba52c"), Type = TextBlockType.Text, Text = "You see things within 60 feet as they actually are. The GM rolls a secret counteract check against any illusion or transmutation in the area, but only for the purpose of determining whether you see through it (for instance, if the check succeeds against a polymorph spell, you can see the creature’s true form, but you don’t end the polymorph spell)." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d127329a-3e95-4ac7-9218-8b9755682f98"),
+                Id = Guid.Parse("0fa46152-770d-4122-ac96-17c94e086a01"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 378
             };

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SpikeStones : Template
     {
-        public static readonly Guid ID = Guid.Parse("97c974ff-c493-4103-841a-0a6b65c4de7c");
+        public static readonly Guid ID = Guid.Parse("64a51156-d351-467a-b4ea-64b6474f40e8");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("97c974ff-c493-4103-841a-0a6b65c4de7c"), Type = TextBlockType.Text, Text = "Long, sharp spikes of solid rock thrust up from the ground in the area. The area becomes difficult terrain and hazardous terrain. A creature that moves on the ground through the area takes 3 piercing damage for every square of that area it moves into." };
+            yield return new TextBlock { Id = Guid.Parse("bacd66e0-4624-4fdf-a5f4-4ef7c5639f37"), Type = TextBlockType.Text, Text = "Long, sharp spikes of solid rock thrust up from the ground in the area. The area becomes difficult terrain and hazardous terrain. A creature that moves on the ground through the area takes 3 piercing damage for every square of that area it moves into." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("97c974ff-c493-4103-841a-0a6b65c4de7c"), 
+                Id = Guid.Parse("e57e0a53-bc3f-4714-aa46-665a3feea8d1"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("97c974ff-c493-4103-841a-0a6b65c4de7c"), Type = TextBlockType.Text, Text = "Increase the damage by 1." }
+                    new TextBlock { Id = Guid.Parse("506195f4-0b46-4d1d-a6a5-83d22b6bcef7"), Type = TextBlockType.Text, Text = "Increase the damage by 1." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("97c974ff-c493-4103-841a-0a6b65c4de7c"),
+                Id = Guid.Parse("1bad75e7-9729-4211-9362-0555aa2801b6"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 225
             };

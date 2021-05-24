@@ -27,6 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves
                     spell.PotencyBindingId = potency.Id;
                     builder.AddData(spell);
                 }
+                potency.Spells = new StaveSpell[0];
                 
                 builder.AddTraits(potency, GetPotencyTraits(potency));
                 builder.AddData(potency);

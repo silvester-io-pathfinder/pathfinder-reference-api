@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Tongues : Template
     {
-        public static readonly Guid ID = Guid.Parse("c5920a6e-099f-4494-8218-46042b4d25ba");
+        public static readonly Guid ID = Guid.Parse("f0583901-0af4-4771-9a6e-a033f62b9cdc");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c5920a6e-099f-4494-8218-46042b4d25ba"), Type = TextBlockType.Text, Text = "The target can understand all words regardless of language and also speak the languages of other creatures. When in a mixed group of creatures, each time the target speaks, it can choose a creature and speak in a language that creature understands, even if the target doesn’t know what language that is." };
+            yield return new TextBlock { Id = Guid.Parse("17965ba8-55ed-468e-aaa1-04f793753449"), Type = TextBlockType.Text, Text = "The target can understand all words regardless of language and also speak the languages of other creatures. When in a mixed group of creatures, each time the target speaks, it can choose a creature and speak in a language that creature understands, even if the target doesn’t know what language that is." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("c5920a6e-099f-4494-8218-46042b4d25ba"), 
+                Id = Guid.Parse("6bb72eb1-90ed-46e6-8110-f74f997b034f"), 
                 Level = "7th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("c5920a6e-099f-4494-8218-46042b4d25ba"), Type = TextBlockType.Text, Text = "The duration is 8 hours." }
+                    new TextBlock { Id = Guid.Parse("eb12abd4-1401-4448-a1f1-0ad8918ea15f"), Type = TextBlockType.Text, Text = "The duration is 8 hours." }
                 }
             };
         }
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c5920a6e-099f-4494-8218-46042b4d25ba"),
+                Id = Guid.Parse("2502bff9-cd59-4dca-9942-a1f030a6aa5a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 378
             };

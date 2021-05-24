@@ -8,7 +8,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class UnfathomableSong : Template
     {
-        public static readonly Guid ID = Guid.Parse("be5d71c5-9926-4648-b35b-4cf2c68a7706");
+        public static readonly Guid ID = Guid.Parse("71731631-7fb9-4bea-8b7e-d2c4ddcd655c");
 
         public override Spell GetSpell()
         {
@@ -31,8 +31,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("be5d71c5-9926-4648-b35b-4cf2c68a7706"), Type = TextBlockType.Text, Text = "Fleeting notes of a strange and unnatural song fill the air, overtaking the mind. Each target must attempt a Will save when you cast the spell, and again the first time you Sustain the Spell each round. A creature needs to attempt only one save against the song each round, and you have to keep the same targets when you Sustain the Spell." };
-            yield return new TextBlock { Id = Guid.Parse("be5d71c5-9926-4648-b35b-4cf2c68a7706"), Type = TextBlockType.Text, Text = "If a target creature fails or critically fails their saving throw, the table below can be referenced for the result of the 1d4 roll." };
+            yield return new TextBlock { Id = Guid.Parse("6c64ff08-0d8e-4714-baf0-5bb7dab9ffce"), Type = TextBlockType.Text, Text = "Fleeting notes of a strange and unnatural song fill the air, overtaking the mind. Each target must attempt a Will save when you cast the spell, and again the first time you Sustain the Spell each round. A creature needs to attempt only one save against the song each round, and you have to keep the same targets when you Sustain the Spell." };
+            yield return new TextBlock { Id = Guid.Parse("8bbc1694-0ec7-4ac8-ab8a-31af421579ce"), Type = TextBlockType.Text, Text = "If a target creature fails or critically fails their saving throw, the table below can be referenced for the result of the 1d4 roll." };
         }
 
         protected override Table? GetTable(TableBuilder builder)
@@ -73,7 +73,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("be5d71c5-9926-4648-b35b-4cf2c68a7706"),
+                Id = Guid.Parse("8c7748ec-96f1-4ab0-b4a9-efb4a39e8e90"),
                 CriticalSuccess = "The target is unaffected, can’t be affected on subsequent rounds, and is temporarily immune for 1 minute.",
                 Success = "The target is unaffected this round, but it can be affected on subsequent rounds.",
                 Failure = "Roll 1d4 on the table above.",
@@ -106,7 +106,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("be5d71c5-9926-4648-b35b-4cf2c68a7706"),
+                Id = Guid.Parse("6c233263-a22f-4453-9cc9-bc37a80732f5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 379
             };

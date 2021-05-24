@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Status : Template
     {
-        public static readonly Guid ID = Guid.Parse("e89da18a-f0ff-4581-a863-6525e36e944f");
+        public static readonly Guid ID = Guid.Parse("f66871da-39f0-4faf-9d75-04cbddbe301e");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-             yield return new TextBlock { Id = Guid.Parse("e89da18a-f0ff-4581-a863-6525e36e944f"), Type = TextBlockType.Text, Text = "As long as you and the target are on the same plane ofexistence and both alive, you remain aware of its present state. You know the target’s direction from you, distance from you, and any conditions affecting it." };
+             yield return new TextBlock { Id = Guid.Parse("7d2779d2-610e-4afc-888a-14d72eb1bbcb"), Type = TextBlockType.Text, Text = "As long as you and the target are on the same plane ofexistence and both alive, you remain aware of its present state. You know the target’s direction from you, distance from you, and any conditions affecting it." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("e89da18a-f0ff-4581-a863-6525e36e944f"), 
+                Id = Guid.Parse("e5484736-47fe-4689-ae21-40e5aa293950"), 
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("e89da18a-f0ff-4581-a863-6525e36e944f"), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, and you can target up to 10 creatures." }
+                    new TextBlock { Id = Guid.Parse("6d0b88df-9b5d-4d5e-a9ab-999f66afc708"), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, and you can target up to 10 creatures." }
                 }
             };
         }
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e89da18a-f0ff-4581-a863-6525e36e944f"),
+                Id = Guid.Parse("6d1d637b-68e4-4502-98e1-c98bdd4aae58"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 373
             };

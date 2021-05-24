@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class WaterWalk : Template
     {
-        public static readonly Guid ID = Guid.Parse("ec524b4b-4ed2-4799-8134-5c83fbaef014");
+        public static readonly Guid ID = Guid.Parse("51ebdb5b-77c4-4039-94b3-1ff8f22cf63f");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec524b4b-4ed2-4799-8134-5c83fbaef014"), Type = TextBlockType.Text, Text = "The target can walk on the surface of water and other liquids without falling through. It can go underwater if it wishes, but in that case it must Swim normally. This spell doesn’t grant the ability to breathe underwater." };
+            yield return new TextBlock { Id = Guid.Parse("832f8f39-2be7-4702-8dd9-68b9375b4e2e"), Type = TextBlockType.Text, Text = "The target can walk on the surface of water and other liquids without falling through. It can go underwater if it wishes, but in that case it must Swim normally. This spell doesn’t grant the ability to breathe underwater." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("ec524b4b-4ed2-4799-8134-5c83fbaef014"), 
+                Id = Guid.Parse("c7ff1d88-1574-45d3-a73e-3e0ae9fd21ca"), 
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("ec524b4b-4ed2-4799-8134-5c83fbaef014"), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, the duration increases to 1 hour, and you can target up to 10 creatures." }
+                    new TextBlock { Id = Guid.Parse("9fed9ca9-7989-4dc5-a8ad-abae1965ffa9"), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, the duration increases to 1 hour, and you can target up to 10 creatures." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ec524b4b-4ed2-4799-8134-5c83fbaef014"),
+                Id = Guid.Parse("2c05ff53-67d2-4448-9013-d7fce6355ff4"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 384
             };

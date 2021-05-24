@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class AugmentSummoning : Template
     {
-        public static readonly Guid ID = Guid.Parse("a48716c7-ea50-42b4-876b-978704e4f1e7");
+        public static readonly Guid ID = Guid.Parse("c985c9f7-e3ab-4c52-95ed-7bf788633852");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a48716c7-ea50-42b4-876b-978704e4f1e7"), Type = TextBlockType.Text, Text = "You augment the abilities of a summoned creature. The target gains a +1 status bonus to all checks (this also applies to the creature’s DCs, including its AC) for the duration of its summoning, up to 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("5c6f929a-4740-4a62-9c54-bf0f9dbcca4b"), Type = TextBlockType.Text, Text = "You augment the abilities of a summoned creature. The target gains a +1 status bonus to all checks (this also applies to the creature’s DCs, including its AC) for the duration of its summoning, up to 1 minute." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a48716c7-ea50-42b4-876b-978704e4f1e7"),
+                Id = Guid.Parse("d723066a-cdd2-4a08-b98c-666f9f993d27"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 406
             };

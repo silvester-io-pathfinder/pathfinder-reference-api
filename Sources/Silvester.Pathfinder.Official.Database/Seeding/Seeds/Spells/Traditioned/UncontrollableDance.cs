@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class UncontrollableDance : Template
     {
-        public static readonly Guid ID = Guid.Parse("3657f192-4ce8-4d93-841e-1bacba2f6c36");
+        public static readonly Guid ID = Guid.Parse("4ee5fbc3-1c55-45fb-be27-97de76109c27");
 
         public override Spell GetSpell()
         {
@@ -29,14 +29,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3657f192-4ce8-4d93-841e-1bacba2f6c36"), Type = TextBlockType.Text, Text = "The target is overcome with an all-consuming urge to dance. For the duration of the spell, the target is flat-footed and can’t use reactions. While affected, the creature can’t use actions with the move trait except to dance, using the Stride action to move up to half its Speed." };
+            yield return new TextBlock { Id = Guid.Parse("7dce0a95-c087-454b-a52a-3d6ffba0fe0e"), Type = TextBlockType.Text, Text = "The target is overcome with an all-consuming urge to dance. For the duration of the spell, the target is flat-footed and can’t use reactions. While affected, the creature can’t use actions with the move trait except to dance, using the Stride action to move up to half its Speed." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("3657f192-4ce8-4d93-841e-1bacba2f6c36"),
+                Id = Guid.Parse("0a3edc60-9bad-48fd-9541-0be947aec7d6"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The spell’s duration is 3 rounds, and the target must spend at least 1 action each turn dancing.",
                 Failure = "The spell’s duration is 1 minute, and the target must spend at least 2 actions each turn dancing.",
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3657f192-4ce8-4d93-841e-1bacba2f6c36"),
+                Id = Guid.Parse("c89cb6d7-7035-4fec-a01f-a728d3c3bea2"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 379
             };

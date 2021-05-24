@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class RestorativeMoment : Template
     {
-        public static readonly Guid ID = Guid.Parse("9fdfdd49-8e96-4109-85de-9e0ac59bd241");
+        public static readonly Guid ID = Guid.Parse("e687d3d1-2a13-43ff-9e32-43dff9664ee8");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9fdfdd49-8e96-4109-85de-9e0ac59bd241"), Type = TextBlockType.Text, Text = "You manipulate the threads of time around the target, giving them some of the benefits of a day’s passage. The target decreases the values of any doomed and drained conditions it has by 1 and can immediately attempt one saving throw against each affliction it has with a stage length of 1 day or less. The target is then temporarily immune for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("bea0f3bf-906f-4444-89ef-513355776af4"), Type = TextBlockType.Text, Text = "You manipulate the threads of time around the target, giving them some of the benefits of a day’s passage. The target decreases the values of any doomed and drained conditions it has by 1 and can immediately attempt one saving throw against each affliction it has with a stage length of 1 day or less. The target is then temporarily immune for 1 day." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9fdfdd49-8e96-4109-85de-9e0ac59bd241"),
+                Id = Guid.Parse("29612dae-5610-4cc9-a2ff-016e88ebea2c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 239
             };

@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;

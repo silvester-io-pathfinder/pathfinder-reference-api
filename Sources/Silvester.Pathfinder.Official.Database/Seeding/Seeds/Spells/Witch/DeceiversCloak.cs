@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DeceiversCloak : Template
     {
-        public static readonly Guid ID = Guid.Parse("ceb2a6f9-e34a-4de8-9d90-eaee6b17ff98");
+        public static readonly Guid ID = Guid.Parse("09588bf2-d5cc-40d1-ae56-868479d5f64a");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ceb2a6f9-e34a-4de8-9d90-eaee6b17ff98"), Type = TextBlockType.Text, Text = "You wrap yourself in a cloak of illusion, appearing as another creature of the same body shape with roughly similar height and weight as yourself. This has the effects of a 3rd-level illusory disguise." };
+            yield return new TextBlock { Id = Guid.Parse("dafce631-7753-4a98-ad17-af73f22969f7"), Type = TextBlockType.Text, Text = "You wrap yourself in a cloak of illusion, appearing as another creature of the same body shape with roughly similar height and weight as yourself. This has the effects of a 3rd-level illusory disguise." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("ceb2a6f9-e34a-4de8-9d90-eaee6b17ff98"),
+                Id = Guid.Parse("01bc942c-8749-4a7f-b7e9-d7f96056b6c8"),
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("ceb2a6f9-e34a-4de8-9d90-eaee6b17ff98"), Type = TextBlockType.Text, Text = "You can appear as any creature of the same size, even with a completely different body shape." }
+                    new TextBlock { Id = Guid.Parse("f5418938-855c-41e5-a7aa-2a29b50edbb1"), Type = TextBlockType.Text, Text = "You can appear as any creature of the same size, even with a completely different body shape." }
                 }
             };
         }
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ceb2a6f9-e34a-4de8-9d90-eaee6b17ff98"),
+                Id = Guid.Parse("d9a2516a-b8e8-43d5-a9c9-8a693c605b62"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 238
             };

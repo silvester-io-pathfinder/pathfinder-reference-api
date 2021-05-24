@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class PhaseFamiliar : Template
     {
-        public static readonly Guid ID = Guid.Parse("efbfd1a9-1d9a-405b-83dc-bc85064a99c2");
+        public static readonly Guid ID = Guid.Parse("1fe7d56b-da4a-4c42-9de0-cfbd82fff361");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("efbfd1a9-1d9a-405b-83dc-bc85064a99c2"), Type = TextBlockType.Text, Text = "You draw upon your patron’s power to momentarily shift your familiar from its solid, physical form into an ephemeral version of itself shaped of mist. Your familiar gains resistance 5 to all damage and is immune to precision damage. These apply only against the triggering damage." };
+            yield return new TextBlock { Id = Guid.Parse("bd018b03-581e-4f86-a7c6-3170cb9ee1b6"), Type = TextBlockType.Text, Text = "You draw upon your patron’s power to momentarily shift your familiar from its solid, physical form into an ephemeral version of itself shaped of mist. Your familiar gains resistance 5 to all damage and is immune to precision damage. These apply only against the triggering damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("efbfd1a9-1d9a-405b-83dc-bc85064a99c2"),
+                Id = Guid.Parse("7e6383b5-a678-4333-a26d-09c5716eea42"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("efbfd1a9-1d9a-405b-83dc-bc85064a99c2"), Type = TextBlockType.Text, Text = "Increase the resistance by 2." }
+                    new TextBlock { Id = Guid.Parse("63a70032-3093-4ff8-a4ee-323ed604bdc5"), Type = TextBlockType.Text, Text = "Increase the resistance by 2." }
                 }
             };
         }
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("efbfd1a9-1d9a-405b-83dc-bc85064a99c2"),
+                Id = Guid.Parse("fa666a9b-6a13-4d09-80b3-38c39dea07c4"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 239
             };

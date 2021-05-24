@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TrueTarget : Template
     {
-        public static readonly Guid ID = Guid.Parse("25d0474c-a43f-43cb-8b73-31263c862aa9");
+        public static readonly Guid ID = Guid.Parse("014fc787-f0a9-41ec-a59e-835b07ee0245");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("25d0474c-a43f-43cb-8b73-31263c862aa9"), Type = TextBlockType.Text, Text = "You delve into the possible futures of the next few seconds to understand all the ways your foe might avoid harm, then cast out a vision of that future to those around you. Designate a creature. The first time each target makes an attack roll against that creature during true target’s duration, the attacker rolls twice and uses the better result. The attacker also ignores circumstance penalties to the attack roll and any flat check required due to the designated creature being concealed or hidden." };
+            yield return new TextBlock { Id = Guid.Parse("d3ce3d44-56b2-4c5a-963c-1a3918442c81"), Type = TextBlockType.Text, Text = "You delve into the possible futures of the next few seconds to understand all the ways your foe might avoid harm, then cast out a vision of that future to those around you. Designate a creature. The first time each target makes an attack roll against that creature during true target’s duration, the attacker rolls twice and uses the better result. The attacker also ignores circumstance penalties to the attack roll and any flat check required due to the designated creature being concealed or hidden." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("25d0474c-a43f-43cb-8b73-31263c862aa9"),
+                Id = Guid.Parse("69acf376-2d7d-4ac6-8f99-0eeeee9f9a25"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 379
             };

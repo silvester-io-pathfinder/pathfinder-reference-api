@@ -43,7 +43,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        protected override StaggeredEffect GetStaggeredEffect()
+        protected override StaggeredEffect? GetStaggeredEffect()
         {
             return new StaggeredEffect
             {

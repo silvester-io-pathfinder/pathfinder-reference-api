@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SpiritSong : Template
     {
-        public static readonly Guid ID = Guid.Parse("cac7b34a-b95d-4c0e-bd98-1591d2398969");
+        public static readonly Guid ID = Guid.Parse("cd8243b1-6bea-41a0-b8d9-b7bdc4dc7004");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cac7b34a-b95d-4c0e-bd98-1591d2398969"), Type = TextBlockType.Text, Text = "Your eldritch song sends pulsing waves of ethereal energy to attack creatures’ spirits in the area, dealing 18d6 force damage. Because spirit song affects creatures’ spirits, it can damage a target projecting its consciousness (such as via project image) or possessing another creature even if the target’s body is elsewhere. The vibrating waves of spiritual song penetrate into, but not through, solid barriers, damaging incorporeal creatures hiding in solid objects in the area but not passing onward to damage creatures in other rooms. Possessed creatures aren’t harmed by the song. The song doesn’t harm creatures that have no spirit, such as constructs." };
+            yield return new TextBlock { Id = Guid.Parse("0a58c5cc-1e3f-46ee-a1e9-cf1445e45fb4"), Type = TextBlockType.Text, Text = "Your eldritch song sends pulsing waves of ethereal energy to attack creatures’ spirits in the area, dealing 18d6 force damage. Because spirit song affects creatures’ spirits, it can damage a target projecting its consciousness (such as via project image) or possessing another creature even if the target’s body is elsewhere. The vibrating waves of spiritual song penetrate into, but not through, solid barriers, damaging incorporeal creatures hiding in solid objects in the area but not passing onward to damage creatures in other rooms. Possessed creatures aren’t harmed by the song. The song doesn’t harm creatures that have no spirit, such as constructs." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("cac7b34a-b95d-4c0e-bd98-1591d2398969"), 
+                Id = Guid.Parse("241261b0-11f8-4a79-a841-f58f90f2e96c"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("cac7b34a-b95d-4c0e-bd98-1591d2398969"), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
+                    new TextBlock { Id = Guid.Parse("6b4f842b-0f56-4fb9-a05d-8295d94bf47c"), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
                 }
             };
         }
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cac7b34a-b95d-4c0e-bd98-1591d2398969"),
+                Id = Guid.Parse("69138ab3-03ff-4ad8-b447-11e03bf498d6"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 372
             };

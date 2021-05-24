@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid? GreaterRevelationOfId { get; set; }
         public Mystery? GreaterRevelationOf { get; set; }
 
-        public Guid? GrantedById{ get; set; }
+        public Guid? GrantedById { get; set; }
         public Mystery? GrantedBy { get; set; }
 
         public Guid? DomainId { get; set; }
@@ -83,7 +83,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<SpellHeightening> Heightenings { get; set; } = new List<SpellHeightening>();
 
         public ICollection<ActionEffect> ActionEffects { get; set; } = new List<ActionEffect>();
-
+     
         public ICollection<Creature> CreatureEffects { get; set; } = new List<Creature>();
 
         public ICollection<MagicTradition> Traditions { get; set; } = new List<MagicTradition>();

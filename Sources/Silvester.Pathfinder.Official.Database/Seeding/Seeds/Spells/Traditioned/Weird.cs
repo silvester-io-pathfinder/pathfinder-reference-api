@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Weird : Template
     {
-        public static readonly Guid ID = Guid.Parse("e6df0cbc-a1af-4584-b496-2202c86efc87");
+        public static readonly Guid ID = Guid.Parse("695c1bb5-5c88-4344-902a-d02e6ab7ce45");
 
         public override Spell GetSpell()
         {
@@ -28,14 +28,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e6df0cbc-a1af-4584-b496-2202c86efc87"), Type = TextBlockType.Text, Text = "You fill the targets’ minds with terrifying images of fearsome creatures, each drawn from the targets’ worst fears. Only the targets can see their assailants. Each target takes 16d6 mental damage and must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("7993003e-e01e-4096-bcf6-3578035b2971"), Type = TextBlockType.Text, Text = "You fill the targets’ minds with terrifying images of fearsome creatures, each drawn from the targets’ worst fears. Only the targets can see their assailants. Each target takes 16d6 mental damage and must attempt a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("e6df0cbc-a1af-4584-b496-2202c86efc87"),
+                Id = Guid.Parse("95e2034a-500d-4ca5-8eb2-447b2b6a8292"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes half damage and is frightened 1.",
                 Failure = "The target takes full damage and is frightened 2.",
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e6df0cbc-a1af-4584-b496-2202c86efc87"),
+                Id = Guid.Parse("cb7e9483-056d-4424-9da7-af40c07a630e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 385
             };

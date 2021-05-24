@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TelepathicDemand : Template
     {
-        public static readonly Guid ID = Guid.Parse("19cdf15f-b136-4a90-91ae-4eb4619f7b30");
+        public static readonly Guid ID = Guid.Parse("e3d0c355-6a89-4b7a-91c5-5aba4d45ff64");
 
         public override Spell GetSpell()
         {
@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("19cdf15f-b136-4a90-91ae-4eb4619f7b30"), Type = TextBlockType.Text, Text = "You send the target a message of 25 words or fewer, and it can respond immediately with its own message of 25 words or fewer. Your message is insidious and has the effect of suggestion (page 374), with the message substituting for the spoken suggestion. On a successful save, the target is temporarily immune for 1 day, and on a critical success, the target is temporarily immune for 1 month. You can target a creature only if you have previously been in telepathic contact with it before, such as via the telepathy spell." };
+            yield return new TextBlock { Id = Guid.Parse("72766628-c338-4240-8429-5b9f4fdd5d13"), Type = TextBlockType.Text, Text = "You send the target a message of 25 words or fewer, and it can respond immediately with its own message of 25 words or fewer. Your message is insidious and has the effect of suggestion (page 374), with the message substituting for the spoken suggestion. On a successful save, the target is temporarily immune for 1 day, and on a critical success, the target is temporarily immune for 1 month. You can target a creature only if you have previously been in telepathic contact with it before, such as via the telepathy spell." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -58,7 +58,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("19cdf15f-b136-4a90-91ae-4eb4619f7b30"),
+                Id = Guid.Parse("25e51f0b-ea54-49ea-9206-ecc3c1dd279b"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 377
             };

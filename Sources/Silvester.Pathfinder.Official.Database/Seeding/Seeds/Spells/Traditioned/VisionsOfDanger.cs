@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class VisionsOfDanger : Template
     {
-        public static readonly Guid ID = Guid.Parse("565e5a6f-8c1a-46a6-8c34-5210399ceb08");
+        public static readonly Guid ID = Guid.Parse("6473f72f-e3e2-4376-ae87-a05bead11615");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("565e5a6f-8c1a-46a6-8c34-5210399ceb08"), Type = TextBlockType.Text, Text = "An illusion of horrific creatures fills the spell’s area. The creatures look like Tiny swarming monsters with a specific appearance of your choice, such as Hellish flies or animated saw blades. The burst deals 8d8 mental damage (basic Will save) to each creature that’s inside the burst when it’s created, enters the burst, or starts its turn inside the burst. A creature that critically succeeds at its Will save can immediately attempt to disbelieve the illusion. A creature that tries to Interact with the monsters or observes one with a Seek action can attempt to disbelieve the illusion. Creatures that disbelieve the illusion take no damage from the illusion thereafter." };
+            yield return new TextBlock { Id = Guid.Parse("9da8b2d7-d553-4123-b778-de348cda1f26"), Type = TextBlockType.Text, Text = "An illusion of horrific creatures fills the spell’s area. The creatures look like Tiny swarming monsters with a specific appearance of your choice, such as Hellish flies or animated saw blades. The burst deals 8d8 mental damage (basic Will save) to each creature that’s inside the burst when it’s created, enters the burst, or starts its turn inside the burst. A creature that critically succeeds at its Will save can immediately attempt to disbelieve the illusion. A creature that tries to Interact with the monsters or observes one with a Seek action can attempt to disbelieve the illusion. Creatures that disbelieve the illusion take no damage from the illusion thereafter." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("565e5a6f-8c1a-46a6-8c34-5210399ceb08"), 
+                Id = Guid.Parse("4f567def-934f-4808-8d2f-957906b4f967"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("565e5a6f-8c1a-46a6-8c34-5210399ceb08"), Type = TextBlockType.Text, Text = "The mental damage increases by 1d8." }
+                    new TextBlock { Id = Guid.Parse("c36825df-a768-454e-a4a2-665110e26e29"), Type = TextBlockType.Text, Text = "The mental damage increases by 1d8." }
                 }
             };
         }
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("565e5a6f-8c1a-46a6-8c34-5210399ceb08"),
+                Id = Guid.Parse("2a922dba-ea56-43af-898b-dcf8809785f6"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 381
             };

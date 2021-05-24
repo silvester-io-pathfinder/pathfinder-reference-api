@@ -9,12 +9,29 @@ namespace Silvester.Pathfinder.Official.Database.Guids
         {
             foreach (string filePath in Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "Silvester.Pathfinder.Official.Database"), "*.cs", SearchOption.AllDirectories))
             {
-                Console.WriteLine("Processing: " + filePath);
-                Guid id = Guid.NewGuid();
                 string text = File.ReadAllText(filePath);
-                text = text.Replace("Guid.Parse(\"\")", $"Guid.Parse(\"{id}\")");
+
+                Console.WriteLine("Processing " + filePath);
+                bool wasFound = false;
+                do
+                {
+                    Guid id = Guid.NewGuid();
+                    text = ReplaceFirstOccurrence(text, "Guid.Parse(\"\")", $"Guid.Parse(\"{id}\")", out wasFound);
+                }
+                while (wasFound);
+
                 File.WriteAllText(filePath, text);
             }
+        }
+
+        public static string ReplaceFirstOccurrence(string source, string find, string replace, out bool found)
+        {
+            int place = source.IndexOf(find);
+            found = place >= 0;
+
+            return found
+                ? source.Remove(place, find.Length).Insert(place, replace)
+                : source;
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TouchOfIdiocy : Template
     {
-        public static readonly Guid ID = Guid.Parse("36a1727f-a1d7-4fc1-bddb-4cf5dd60ad47");
+        public static readonly Guid ID = Guid.Parse("9374514e-bdad-4483-9123-7267445ba464");
 
         public override Spell GetSpell()
         {
@@ -29,14 +29,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("36a1727f-a1d7-4fc1-bddb-4cf5dd60ad47"), Type = TextBlockType.Text, Text = "You dull the target’s mind; the target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("5cdbf67b-48c5-4758-9a31-57a7ca0e485b"), Type = TextBlockType.Text, Text = "You dull the target’s mind; the target must attempt a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("36a1727f-a1d7-4fc1-bddb-4cf5dd60ad47"),
+                Id = Guid.Parse("9488d8e8-b090-4ceb-8453-83f832e73374"),
                 Success = "The target is unaffected.",
                 Failure = "The target is stupefied 2.",
                 CriticalFailure = "The target is stupefied 4."
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("36a1727f-a1d7-4fc1-bddb-4cf5dd60ad47"),
+                Id = Guid.Parse("a25e7d09-e889-4cef-8831-7974b568f81f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 378
             };

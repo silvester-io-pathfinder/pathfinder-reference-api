@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SuddenBlight : Template
     {
-        public static readonly Guid ID = Guid.Parse("7b7aa4b2-acc2-4426-b0a7-6e958ff1009d");
+        public static readonly Guid ID = Guid.Parse("ca24f0d7-be39-45e0-9595-bdb1ac2ca7c4");
 
         public override Spell GetSpell()
         {
@@ -28,19 +28,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7b7aa4b2-acc2-4426-b0a7-6e958ff1009d"), Type = TextBlockType.Text, Text = "You accelerate the processes of decay in the area. Each living creature in the area takes 2d10 negative damage (basic Fortitude save). A creature afflicted by a disease takes a –2 circumstance penalty to this save." };
-            yield return new TextBlock { Id = Guid.Parse("7b7aa4b2-acc2-4426-b0a7-6e958ff1009d"), Type = TextBlockType.Text, Text = "You can also direct the blight to rot all Small and Tiny non-creature plants in the area, eliminating non-magical undergrowth and any resulting difficult terrain, cover, and concealment. Sudden blight attempts to counteract any magical effect on the plants before withering them." };
+            yield return new TextBlock { Id = Guid.Parse("085c198d-f819-4a2a-a7c8-351cbf0a488b"), Type = TextBlockType.Text, Text = "You accelerate the processes of decay in the area. Each living creature in the area takes 2d10 negative damage (basic Fortitude save). A creature afflicted by a disease takes a –2 circumstance penalty to this save." };
+            yield return new TextBlock { Id = Guid.Parse("de9a51ed-b319-4fd8-9ec6-cc4c594b57b8"), Type = TextBlockType.Text, Text = "You can also direct the blight to rot all Small and Tiny non-creature plants in the area, eliminating non-magical undergrowth and any resulting difficult terrain, cover, and concealment. Sudden blight attempts to counteract any magical effect on the plants before withering them." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("7b7aa4b2-acc2-4426-b0a7-6e958ff1009d"), 
+                Id = Guid.Parse("ed20a0c2-40da-4161-b1bd-be652af823d8"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("7b7aa4b2-acc2-4426-b0a7-6e958ff1009d"), Type = TextBlockType.Text, Text = "The damage increases by 1d10." }
+                    new TextBlock { Id = Guid.Parse("83a75abe-c811-46e3-a42e-383655a5503b"), Type = TextBlockType.Text, Text = "The damage increases by 1d10." }
                 }
             };
         }
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7b7aa4b2-acc2-4426-b0a7-6e958ff1009d"),
+                Id = Guid.Parse("ea69128d-9ecd-4028-9f58-944fa9a93201"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 226
             };

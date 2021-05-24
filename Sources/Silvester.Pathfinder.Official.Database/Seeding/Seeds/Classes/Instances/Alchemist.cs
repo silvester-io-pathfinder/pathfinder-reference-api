@@ -59,37 +59,37 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Classes.Instances
 
         /*protected override IEnumerable<ClassFeature> GetFeatures(ClassSeeder seeder)
         {
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "Ancestry and Background", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "Initial Proficiencies", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "Alchemy", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
-            yield return new ClassFeature { Id = Guid.Parse("4b3f077a-0894-42d0-9e9d-0225d2be513f"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("9f7d861b-755b-4a61-b174-a7ba4f905eee"), Level = 1, Name = "Ancestry and Background", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("b392ab1a-07dd-4896-895f-ea04cd3b9c20"), Level = 1, Name = "Initial Proficiencies", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("0f0742fc-512e-4ede-9877-95327d5584f4"), Level = 1, Name = "Alchemy", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("7f6c2af7-232e-4104-b28d-7cebaf3c7b70"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("6bda7326-3061-4288-8fee-edb77baee8c0"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("8453a4b0-a70f-4fff-a623-c56a7f50fec4"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("5af547e3-3092-4e56-8acf-1811930bde06"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("6a9731e9-dfd2-45fc-b1b8-d1994d8a7f28"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("8670b7a0-d187-4a1b-80aa-1158de4fabae"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("54fe1739-45df-4623-a6fe-a1898b9c0f96"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("010dfd99-3005-49a0-a0d2-2cf7c6b0a958"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("cb6796c0-4981-4662-a81c-b9ce03be5a2f"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("7b2de405-4c8e-48c5-aabd-446c9d2f26ef"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("82ea2ebc-fb02-429e-bb96-3363dd8d13cf"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("c179942c-a49a-4093-af8d-43aa837862ce"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("b5956902-75fc-4112-ba0c-6203352be6c0"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("7a3f82f7-b232-4f8e-b17e-f7082e7a0150"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("50456aa5-4de2-40dd-8f9c-73bb7a574079"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("c4c427a4-7299-4bd3-937e-9b26c6af75e1"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("048855ea-d74f-468f-b74f-6edf9d2072b9"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("b7493a64-df56-4f89-9fc5-3aef3b69985e"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("a9624c43-5ebe-4775-8698-604f0173c807"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("cbb1a3e2-b99e-4a62-b726-646259eddaaa"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("1b95efcc-2ad8-46d3-9e21-ffe2112c9139"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("3b3fc71f-9e8a-4237-b570-a66ddff5c818"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("03c76370-1467-4137-b8a2-a3c148e823ff"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("f5db1c1b-4c07-43ad-b3b6-252009d9070d"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("ee7f419d-ed19-4975-8929-16a290f87975"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("0c06c07f-7867-4796-98ba-d4dc356c0379"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("793f4a99-8999-434e-ac23-9009253b60c8"), Level = 1, Name = "", Description = "" };
+            yield return new ClassFeature { Id = Guid.Parse("111361f2-447a-404b-8c9b-05eb32bd3c95"), Level = 1, Name = "", Description = "" };
         }*/
     }
 }

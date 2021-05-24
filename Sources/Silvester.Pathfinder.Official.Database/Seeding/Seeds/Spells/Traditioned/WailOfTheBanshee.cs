@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class WailOfTheBanshee : Template
     {
-        public static readonly Guid ID = Guid.Parse("2dd3d341-6701-4d9f-8a38-86c5c9ef13ac");
+        public static readonly Guid ID = Guid.Parse("26e26a2a-c825-4d3c-91d4-abf053a5a19c");
 
         public override Spell GetSpell()
         {
@@ -27,14 +27,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2dd3d341-6701-4d9f-8a38-86c5c9ef13ac"), Type = TextBlockType.Text, Text = "Your scream chills the souls of enemies that hear it. Each living enemy in the area takes 8d10 negative damage and must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("a7da0299-b2d8-4a99-9fbb-942841ee95d6"), Type = TextBlockType.Text, Text = "Your scream chills the souls of enemies that hear it. Each living enemy in the area takes 8d10 negative damage and must attempt a Fortitude save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("2dd3d341-6701-4d9f-8a38-86c5c9ef13ac"),
+                Id = Guid.Parse("4bc5c356-6e60-462d-823c-facc3daf52a2"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes full damage.",
                 Failure = "The creature takes full damage and is drained 1d4.",
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2dd3d341-6701-4d9f-8a38-86c5c9ef13ac"),
+                Id = Guid.Parse("08b23df1-4de0-42c0-b6ec-97c7bb4f216d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 382
             };

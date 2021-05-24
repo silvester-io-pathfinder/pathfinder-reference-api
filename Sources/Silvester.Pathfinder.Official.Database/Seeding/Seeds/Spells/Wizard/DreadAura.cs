@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class DreadAura : Template
     {
-        public static readonly Guid ID = Guid.Parse("4858f60e-9239-44b6-ac28-6b8856fc9679");
+        public static readonly Guid ID = Guid.Parse("c8d6fe54-f66e-4bc6-8d5c-9441e04ab7db");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4858f60e-9239-44b6-ac28-6b8856fc9679"), Type = TextBlockType.Text, Text = "You emit an aura of terror. Foes in the area are frightened 1 and unable to reduce the condition." };
+            yield return new TextBlock { Id = Guid.Parse("ad138776-3ae1-47fe-949c-ba130167bd0e"), Type = TextBlockType.Text, Text = "You emit an aura of terror. Foes in the area are frightened 1 and unable to reduce the condition." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4858f60e-9239-44b6-ac28-6b8856fc9679"),
+                Id = Guid.Parse("561188b4-ad68-46c1-bc13-77484e0524a9"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 406
             };

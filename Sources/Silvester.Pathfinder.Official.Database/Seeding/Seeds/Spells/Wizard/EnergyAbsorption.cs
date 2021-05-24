@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class EnergyAbsorption : Template
     {
-        public static readonly Guid ID = Guid.Parse("a3f7cab4-d2e1-4a4b-9220-0194e0dc7d3c");
+        public static readonly Guid ID = Guid.Parse("c7149a09-fabf-4ceb-a035-df6dab1f5c92");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a3f7cab4-d2e1-4a4b-9220-0194e0dc7d3c"), Type = TextBlockType.Text, Text = "You gain resistance 15 to acid, cold, electricity, or fire damage from the triggering effect (one type of your choice). The resistance applies only to the triggering effect’s initial damage." };
+            yield return new TextBlock { Id = Guid.Parse("7814c7cb-d635-4d14-87aa-c6a958c29337"), Type = TextBlockType.Text, Text = "You gain resistance 15 to acid, cold, electricity, or fire damage from the triggering effect (one type of your choice). The resistance applies only to the triggering effect’s initial damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("a3f7cab4-d2e1-4a4b-9220-0194e0dc7d3c"),
+                Id = Guid.Parse("ec282049-9dc0-459a-80b1-eb9551b643d5"),
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("a3f7cab4-d2e1-4a4b-9220-0194e0dc7d3c"), Type = TextBlockType.Text, Text = "The resistance increases by 5." }
+                    new TextBlock { Id = Guid.Parse("6157bc10-bcae-4ecb-96c4-2536cb34a564"), Type = TextBlockType.Text, Text = "The resistance increases by 5." }
                 }
             };
         }
@@ -58,7 +58,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a3f7cab4-d2e1-4a4b-9220-0194e0dc7d3c"),
+                Id = Guid.Parse("b51d812f-1073-4adb-834c-07946b87204a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 407
             };

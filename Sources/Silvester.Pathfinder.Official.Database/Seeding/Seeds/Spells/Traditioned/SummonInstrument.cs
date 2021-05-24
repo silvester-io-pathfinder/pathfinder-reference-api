@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class SummonInstrument : Template
     {
-        public static readonly Guid ID = Guid.Parse("96d4f746-57f2-42dc-b5ae-6537e19ebc91");
+        public static readonly Guid ID = Guid.Parse("4804b806-7a8f-42aa-9ba7-81e2aa62ac4f");
 
         public override Spell GetSpell()
         {
@@ -25,18 +25,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("96d4f746-57f2-42dc-b5ae-6537e19ebc91"), Type = TextBlockType.Text, Text = "You materialize a handheld musical instrument in your grasp. The instrument is typical for its type, but it plays only for you. The instrument vanishes when the spell ends. If you cast summon instrument again, any instrument you previously summoned disappears." };
+            yield return new TextBlock { Id = Guid.Parse("3c9cea57-71af-4d7c-a642-b3fa8bcce08a"), Type = TextBlockType.Text, Text = "You materialize a handheld musical instrument in your grasp. The instrument is typical for its type, but it plays only for you. The instrument vanishes when the spell ends. If you cast summon instrument again, any instrument you previously summoned disappears." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("96d4f746-57f2-42dc-b5ae-6537e19ebc91"), 
+                Id = Guid.Parse("f33a66b6-0b0e-4c84-9045-32aa37ece3d6"), 
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("96d4f746-57f2-42dc-b5ae-6537e19ebc91"), Type = TextBlockType.Text, Text = "The instrument is instead a virtuoso handheld instrument." }
+                    new TextBlock { Id = Guid.Parse("61fb54b9-76ab-4d02-9ed3-9bb9e0d23146"), Type = TextBlockType.Text, Text = "The instrument is instead a virtuoso handheld instrument." }
                 }
             };
         }
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("96d4f746-57f2-42dc-b5ae-6537e19ebc91"),
+                Id = Guid.Parse("4433af5c-0297-46ac-927f-af86730000fc"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 226
             };

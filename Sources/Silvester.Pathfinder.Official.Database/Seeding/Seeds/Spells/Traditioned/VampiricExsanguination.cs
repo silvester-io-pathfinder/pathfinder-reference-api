@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class VampiricExsanguination : Template
     {
-        public static readonly Guid ID = Guid.Parse("9c1666f8-d7f5-43e5-a792-be4a19d9ade8");
+        public static readonly Guid ID = Guid.Parse("2464670c-7c98-4fc8-9489-b1aeaf23ba8f");
 
         public override Spell GetSpell()
         {
@@ -27,19 +27,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c1666f8-d7f5-43e5-a792-be4a19d9ade8"), Type = TextBlockType.Text, Text = "You draw in the blood and life force of other creatures through your outstretched arms. You deal 12d6 negative damage to living creatures in the area." };
-            yield return new TextBlock { Id = Guid.Parse("9c1666f8-d7f5-43e5-a792-be4a19d9ade8"), Type = TextBlockType.Text, Text = "You gain temporary Hit Points equal to half the damage a single creature takes from this spell; calculate these temporary Hit Points using the creature that took the most damage. You lose any remaining temporary Hit Points after 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("c94c47e7-9583-478a-99c3-b338ca02df20"), Type = TextBlockType.Text, Text = "You draw in the blood and life force of other creatures through your outstretched arms. You deal 12d6 negative damage to living creatures in the area." };
+            yield return new TextBlock { Id = Guid.Parse("72a6ea55-0958-44e4-9f97-ac092f7072bb"), Type = TextBlockType.Text, Text = "You gain temporary Hit Points equal to half the damage a single creature takes from this spell; calculate these temporary Hit Points using the creature that took the most damage. You lose any remaining temporary Hit Points after 1 minute." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("9c1666f8-d7f5-43e5-a792-be4a19d9ade8"), 
+                Id = Guid.Parse("0b4bfbe3-d036-4bac-b5be-20ea069c2087"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("9c1666f8-d7f5-43e5-a792-be4a19d9ade8"), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
+                    new TextBlock { Id = Guid.Parse("284b9bff-b03a-4dd2-9277-8a733dd4c58f"), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
                 }
             };
         }
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9c1666f8-d7f5-43e5-a792-be4a19d9ade8"),
+                Id = Guid.Parse("b1c20e82-c00a-49c5-b9a5-a19f2667012b"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 380
             };

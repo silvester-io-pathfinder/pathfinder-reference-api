@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class VampiricTouch : Template
     {
-        public static readonly Guid ID = Guid.Parse("936734e8-1e4e-45f5-a62a-72f6e81cfd74");
+        public static readonly Guid ID = Guid.Parse("64be4389-bc36-4e72-a569-0eaf700fb16d");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("936734e8-1e4e-45f5-a62a-72f6e81cfd74"), Type = TextBlockType.Text, Text = "Your touch leeches the lifeblood out of a target to empower yourself. You deal 6d6 negative damage to the target. You gain temporary Hit Points equal to half the negative damage the target takes (after applying resistances and the like). You lose any remaining temporary Hit Points after 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("e1a0c52b-5ec6-422a-a7e4-65efb924c388"), Type = TextBlockType.Text, Text = "Your touch leeches the lifeblood out of a target to empower yourself. You deal 6d6 negative damage to the target. You gain temporary Hit Points equal to half the negative damage the target takes (after applying resistances and the like). You lose any remaining temporary Hit Points after 1 minute." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("936734e8-1e4e-45f5-a62a-72f6e81cfd74"), 
+                Id = Guid.Parse("ab8812c5-e6a4-4040-95ce-6bcb7d817c72"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("936734e8-1e4e-45f5-a62a-72f6e81cfd74"), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
+                    new TextBlock { Id = Guid.Parse("79364fb6-2341-4cfe-bfe3-f22471929d5f"), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
                 }
             };
         }
@@ -68,7 +68,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("936734e8-1e4e-45f5-a62a-72f6e81cfd74"),
+                Id = Guid.Parse("0f009efd-28d5-40d7-b786-8ff46591437f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 380
             };

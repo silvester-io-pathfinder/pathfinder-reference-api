@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class VomitSwarm : Template
     {
-        public static readonly Guid ID = Guid.Parse("f96e403a-b654-4cac-a1fe-cef36dac28f5");
+        public static readonly Guid ID = Guid.Parse("7b5a076e-72a8-46e6-9263-83ff5a861433");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f96e403a-b654-4cac-a1fe-cef36dac28f5"), Type = TextBlockType.Text, Text = "You belch forth a swarm of magical vermin. You evoke and shape the creatures from your own imagination, allowing you to change the appearance of the creatures (typically a mix of centipedes, roaches, wasps, and worms), but this doesn’t change the effect of the spell. The vermin swarm over anyone in the area, their bites and stings dealing 2d8 piercing damage (basic Reflex save). A creature that fails its saving throw also becomes sickened 1. Once the spell ends, the swarm disappears." };
+            yield return new TextBlock { Id = Guid.Parse("ea50d52f-0149-43b9-a551-d495594b9097"), Type = TextBlockType.Text, Text = "You belch forth a swarm of magical vermin. You evoke and shape the creatures from your own imagination, allowing you to change the appearance of the creatures (typically a mix of centipedes, roaches, wasps, and worms), but this doesn’t change the effect of the spell. The vermin swarm over anyone in the area, their bites and stings dealing 2d8 piercing damage (basic Reflex save). A creature that fails its saving throw also becomes sickened 1. Once the spell ends, the swarm disappears." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("f96e403a-b654-4cac-a1fe-cef36dac28f5"), 
+                Id = Guid.Parse("fb269ad8-1f4f-4490-995f-cdd0344617a3"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("f96e403a-b654-4cac-a1fe-cef36dac28f5"), Type = TextBlockType.Text, Text = "Increase the damage by 1d8." }
+                    new TextBlock { Id = Guid.Parse("e2a4238b-911e-4afa-9449-70c62e230ad2"), Type = TextBlockType.Text, Text = "Increase the damage by 1d8." }
                 }
             };
         }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f96e403a-b654-4cac-a1fe-cef36dac28f5"),
+                Id = Guid.Parse("26b951e3-b2a9-4e7b-93af-c1cba0dc0139"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 227
             };

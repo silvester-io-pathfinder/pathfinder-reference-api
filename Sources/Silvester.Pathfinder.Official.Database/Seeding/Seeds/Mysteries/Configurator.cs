@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Mysteries
                 .HasOne(e => e.GrantedCantrip)
                 .WithOne(e => e.GrantedBy!)
                 .HasForeignKey<Mystery>(e => e.GrantedCantripId);
-            
+
             builder
                 .Entity<Mystery>()
                 .HasOne(e => e.InitialRevelation)

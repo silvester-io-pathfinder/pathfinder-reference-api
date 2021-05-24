@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class UnfetteredPack : Template
     {
-        public static readonly Guid ID = Guid.Parse("b5ab8638-f6c4-454e-9c77-2ae94bd1898b");
+        public static readonly Guid ID = Guid.Parse("828aa492-5c0a-4c77-8a3c-8bdb17a8f611");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b5ab8638-f6c4-454e-9c77-2ae94bd1898b"), Type = TextBlockType.Text, Text = "You free those who travel alongside you from environmental hindrances. Targets don’t take circumstance penalties to Speed from vegetation, rubble, winds, or other properties of the environment, whether or not the environment is magical, and they ignore difficult terrain from such environmental properties." };
+            yield return new TextBlock { Id = Guid.Parse("8b675cff-cc03-4767-8ae8-0dd74c96c97f"), Type = TextBlockType.Text, Text = "You free those who travel alongside you from environmental hindrances. Targets don’t take circumstance penalties to Speed from vegetation, rubble, winds, or other properties of the environment, whether or not the environment is magical, and they ignore difficult terrain from such environmental properties." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("b5ab8638-f6c4-454e-9c77-2ae94bd1898b"), 
+                Id = Guid.Parse("2187fa27-57bb-45b1-97df-d0d54081817e"), 
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("b5ab8638-f6c4-454e-9c77-2ae94bd1898b"), Type = TextBlockType.Text, Text = "The targets also ignore greater difficult terrain from environmental properties." }
+                    new TextBlock { Id = Guid.Parse("feb9f27f-89ef-4c4e-aa50-980104b5f3ff"), Type = TextBlockType.Text, Text = "The targets also ignore greater difficult terrain from environmental properties." }
                 }
             };
         }
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b5ab8638-f6c4-454e-9c77-2ae94bd1898b"),
+                Id = Guid.Parse("93fdf887-e312-4985-806d-ab1518b1d8f9"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 379
             };

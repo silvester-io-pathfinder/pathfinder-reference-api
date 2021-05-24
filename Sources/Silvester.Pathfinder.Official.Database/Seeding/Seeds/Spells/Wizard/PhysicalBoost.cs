@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class PhysicalBoost : Template
     {
-        public static readonly Guid ID = Guid.Parse("16f2b4f9-5288-4d65-9ce9-3e99b9ad1d47");
+        public static readonly Guid ID = Guid.Parse("681a87e9-9b6d-4188-b3b2-35e7f5dd69b5");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("16f2b4f9-5288-4d65-9ce9-3e99b9ad1d47"), Type = TextBlockType.Text, Text = "You temporarily improve the target’s physique. The target gains a +2 status bonus to the next Acrobatics check, Athletics check, Fortitude save, or Reflex save it attempts." };
+            yield return new TextBlock { Id = Guid.Parse("b0bd2e8d-0ad8-4dc5-aaf1-00a7385314af"), Type = TextBlockType.Text, Text = "You temporarily improve the target’s physique. The target gains a +2 status bonus to the next Acrobatics check, Athletics check, Fortitude save, or Reflex save it attempts." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("16f2b4f9-5288-4d65-9ce9-3e99b9ad1d47"),
+                Id = Guid.Parse("6636d9f7-2e0e-419b-b879-571c66f64078"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 407
             };

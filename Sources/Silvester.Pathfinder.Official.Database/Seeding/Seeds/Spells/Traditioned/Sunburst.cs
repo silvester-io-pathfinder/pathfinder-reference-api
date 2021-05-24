@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class Sunburst : Template
     {
-        public static readonly Guid ID = Guid.Parse("3129a1ff-7b15-4d50-b0d0-4ed4e293b439");
+        public static readonly Guid ID = Guid.Parse("4c4f275c-b1e8-448b-a1aa-66bb2af4fe08");
 
         public override Spell GetSpell()
         {
@@ -28,19 +28,19 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3129a1ff-7b15-4d50-b0d0-4ed4e293b439"), Type = TextBlockType.Text, Text = "A powerful globe of searing sunlight explodes in the area, dealing 8d10 fire damage to all creatures in the area, plus 8d10 additional positive damage to undead creatures. Each creature in the area must attempt a Reflex save." };
-            yield return new TextBlock { Id = Guid.Parse("3129a1ff-7b15-4d50-b0d0-4ed4e293b439"), Type = TextBlockType.Text, Text = "If the globe overlaps with an area of magical darkness, sunburst attempts to counteract the darkness effect." };
+            yield return new TextBlock { Id = Guid.Parse("3ce8a6b8-8691-4f26-ae41-70bd27381706"), Type = TextBlockType.Text, Text = "A powerful globe of searing sunlight explodes in the area, dealing 8d10 fire damage to all creatures in the area, plus 8d10 additional positive damage to undead creatures. Each creature in the area must attempt a Reflex save." };
+            yield return new TextBlock { Id = Guid.Parse("30e0e59a-4535-44dc-8937-a7396ec7d822"), Type = TextBlockType.Text, Text = "If the globe overlaps with an area of magical darkness, sunburst attempts to counteract the darkness effect." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("3129a1ff-7b15-4d50-b0d0-4ed4e293b439"), 
+                Id = Guid.Parse("dada4fcb-2fbd-4a14-ae8b-6382c37c9eda"), 
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("3129a1ff-7b15-4d50-b0d0-4ed4e293b439"), Type = TextBlockType.Text, Text = "The fire damage increases by 1d10, and the positive damage against undead increases by 1d10." }
+                    new TextBlock { Id = Guid.Parse("b4d4faef-d1d7-48f8-a7f2-6f75e00a9c71"), Type = TextBlockType.Text, Text = "The fire damage increases by 1d10, and the positive damage against undead increases by 1d10." }
                 }
             };
         }
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("3129a1ff-7b15-4d50-b0d0-4ed4e293b439"),
+                Id = Guid.Parse("ed1eb2e5-9344-45c9-83b5-a79f13af9869"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes half damage.",
                 Failure = "The creature takes full damage.",
@@ -81,7 +81,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3129a1ff-7b15-4d50-b0d0-4ed4e293b439"),
+                Id = Guid.Parse("653ac453-5164-40a0-aaad-a0910a7e10a8"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 376
             };

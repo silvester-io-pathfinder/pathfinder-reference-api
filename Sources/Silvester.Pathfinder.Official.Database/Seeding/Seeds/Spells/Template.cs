@@ -40,10 +40,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
             foreach (SpellHeightening heightening in GetHeightenings())
             {
                 builder.AddTextBlocks(heightening, heightening.Details, e => e.Details);
-                
+             
                 heightening.Details = new TextBlock[0];
                 heightening.SpellId = spell.Id;
-                
+              
                 builder.AddData(heightening);
             }
 

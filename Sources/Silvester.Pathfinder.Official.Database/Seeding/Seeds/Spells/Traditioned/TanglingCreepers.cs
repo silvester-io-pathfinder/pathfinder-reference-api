@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class TanglingCreepers : Template
     {
-        public static readonly Guid ID = Guid.Parse("5cf923b1-884e-4e15-92ba-f090288fb357");
+        public static readonly Guid ID = Guid.Parse("a6a3e6b3-df80-4fa9-8875-a7c960e61b39");
 
         public override Spell GetSpell()
         {
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5cf923b1-884e-4e15-92ba-f090288fb357"), Type = TextBlockType.Text, Text = "Dense, twitching creepers sprout from every surface and fill any bodies of water in the area. Any creature moving on the land, or Climbing or Swimming within the creepers, takes a –10-foot circumstance penalty to its Speeds while in the area. Once per round, you can make a vine lash out from any square within the expanse of creepers by using a single action, which has the concentrate trait. This vine has a 15-foot reach. Make a melee spell attack roll against the target; on a success, the vine pulls the target into the creepers and makes it immobilized for 1 round or until the creature Escapes (against your spell DC), whichever comes first." };
+            yield return new TextBlock { Id = Guid.Parse("59b2ea93-6ebb-4fdb-bcbf-ccedf43f774e"), Type = TextBlockType.Text, Text = "Dense, twitching creepers sprout from every surface and fill any bodies of water in the area. Any creature moving on the land, or Climbing or Swimming within the creepers, takes a –10-foot circumstance penalty to its Speeds while in the area. Once per round, you can make a vine lash out from any square within the expanse of creepers by using a single action, which has the concentrate trait. This vine has a 15-foot reach. Make a melee spell attack roll against the target; on a success, the vine pulls the target into the creepers and makes it immobilized for 1 round or until the creature Escapes (against your spell DC), whichever comes first." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5cf923b1-884e-4e15-92ba-f090288fb357"),
+                Id = Guid.Parse("39caced3-1afe-4561-b926-a5715bd391ab"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 377
             };

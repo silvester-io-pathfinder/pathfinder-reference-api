@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class UndetectableAlignment : Template
     {
-        public static readonly Guid ID = Guid.Parse("2939b6ae-7c45-46a1-9904-efb55e7c7da9");
+        public static readonly Guid ID = Guid.Parse("c81cc083-9d1c-4e09-8777-ae07e067b3bd");
 
         public override Spell GetSpell()
         {
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2939b6ae-7c45-46a1-9904-efb55e7c7da9"), Type = TextBlockType.Text, Text = "You shroud a creature or object in wards that hide its alignment. The target appears to be neutral to all effects that would detect its alignment." };
+            yield return new TextBlock { Id = Guid.Parse("4ee4a1e5-a47c-49b2-a793-9e6a0044a8fa"), Type = TextBlockType.Text, Text = "You shroud a creature or object in wards that hide its alignment. The target appears to be neutral to all effects that would detect its alignment." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2939b6ae-7c45-46a1-9904-efb55e7c7da9"),
+                Id = Guid.Parse("996ca873-ff17-47fd-a59c-f592baa5ac1c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 379
             };

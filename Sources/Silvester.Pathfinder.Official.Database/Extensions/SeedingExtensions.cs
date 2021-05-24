@@ -17,16 +17,11 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
         public static void AddTable<TOwner>(this ModelBuilder builder, TOwner owner, Table? table)
             where TOwner : BaseEntity
         {
-            if (table == null)
+            if(table == null)
             {
                 return;
             }
 
-            AddTableComponents(builder, owner, table);
-        }
-
-        private static void AddTableComponents<TOwner>(ModelBuilder builder, TOwner owner, Table table) where TOwner : BaseEntity
-        {
             table.OwnerId = owner.Id;
 
             foreach (Column column in table.Columns)
@@ -50,6 +45,34 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             builder.AddData(table);
         }
 
+        public static void AddStaggeredEffect<TOwner>(this ModelBuilder builder, TOwner owner, StaggeredEffect? effect, Expression<Func<TOwner, Guid?>> keySelector)
+            where TOwner : BaseEntity
+        {
+            if (effect == null)
+            {
+                return;
+            }
+
+            keySelector.SetProperty(owner, effect.Id);
+            StaggeredEffectStage[] stages = effect.Stages.ToArray();
+            for (int i = 0; i < stages.Length; i++)
+            {
+                StaggeredEffectStage stage = stages[i];
+                stage.StaggeredEffectId = effect.Id;
+                stage.Stage = i + 1;
+
+                foreach (StaggeredEffectStageEffect stageEffect in stage.Effects)
+                {
+                    stageEffect.StaggeredEffectStageId = stage.Id;
+                    builder.AddData(stageEffect.GetType(), stageEffect);
+                }
+
+                stage.Effects = new StaggeredEffectStageEffect[] { };
+                builder.AddData(stage);
+            }
+
+            effect.Stages = new StaggeredEffectStage[0];
+        }
 
         public static void AddSourcePage<TOwner>(this ModelBuilder builder, TOwner owner, SourcePage? sourcePage, Expression<Func<TOwner, SourcePage?>> selector)
             where TOwner : BaseEntity
@@ -57,7 +80,7 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             if(sourcePage != null)
             {
                 sourcePage.OwnerId = owner.Id;
-                builder.AddOwnedData(selector, sourcePage);
+                builder.AddData(sourcePage);
             }
         }
 
@@ -82,17 +105,19 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
                 builder.AddData(effect);
             }
         }
-           
+
         public static void AddActionEffects<TOwner>(this ModelBuilder builder, TOwner owner, IEnumerable<ActionEffect> effects, Expression<Func<TOwner, IEnumerable<ActionEffect>>> collectionSelector)
             where TOwner : BaseEntity
         {
-            foreach(ActionEffect effect in effects)
-            { 
+            ActionEffect[] effectsArray = effects.ToArray();
+            for (int i = 0; i < effectsArray.Length; i++)
+            {
+                ActionEffect effect = effectsArray[i];
                 builder.AddTextBlocks(effect, effect.Effects, e => e.Effects);
-                
-                effect.OwnerId = owner.Id;
-                effect.Effects = new TextBlock[0];
 
+                effect.Effects = new TextBlock[0];
+                effect.OwnerId = owner.Id;
+                
                 builder.AddData(effect);
             }
         }

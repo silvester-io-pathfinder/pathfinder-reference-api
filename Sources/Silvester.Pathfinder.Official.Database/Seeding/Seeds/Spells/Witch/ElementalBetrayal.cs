@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 {
     public class ElementalBetrayal : Template
     {
-        public static readonly Guid ID = Guid.Parse("eade8417-aa1e-43cd-8c17-99c05f3f1a69");
+        public static readonly Guid ID = Guid.Parse("a8e86e86-6313-4f24-b0ca-97b3992a3965");
 
         public override Spell GetSpell()
         {
@@ -29,18 +29,18 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eade8417-aa1e-43cd-8c17-99c05f3f1a69"), Type = TextBlockType.Text, Text = "You call upon the elements to undermine your foe. When you Cast this Spell, choose air, earth, fire, or water. Each time the target takes damage from a spell or effect with the chosen trait, it takes an additional 2 damage of one damage type dealt by the spell or effect. If you chose fire or water, the target also takes this additional damage when taking fire or cold damage, respectively, from effects or spells without the chosen trait." };
+            yield return new TextBlock { Id = Guid.Parse("362fb7fc-fd58-4fdb-8e7f-e61a7e9a715d"), Type = TextBlockType.Text, Text = "You call upon the elements to undermine your foe. When you Cast this Spell, choose air, earth, fire, or water. Each time the target takes damage from a spell or effect with the chosen trait, it takes an additional 2 damage of one damage type dealt by the spell or effect. If you chose fire or water, the target also takes this additional damage when taking fire or cold damage, respectively, from effects or spells without the chosen trait." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("eade8417-aa1e-43cd-8c17-99c05f3f1a69"),
+                Id = Guid.Parse("3770c43a-edc5-4da3-b2a8-d21ac728729a"),
                 Level = "+2",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("eade8417-aa1e-43cd-8c17-99c05f3f1a69"), Type = TextBlockType.Text, Text = "Increase the additional damage by 1." }
+                    new TextBlock { Id = Guid.Parse("e64c40be-8bb8-4ca0-a08a-0106cec7ca78"), Type = TextBlockType.Text, Text = "Increase the additional damage by 1." }
                 }
             };
         }
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("eade8417-aa1e-43cd-8c17-99c05f3f1a69"),
+                Id = Guid.Parse("b0fc48f3-e63d-498e-8592-b5a9c33a3e49"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = 238
             };
