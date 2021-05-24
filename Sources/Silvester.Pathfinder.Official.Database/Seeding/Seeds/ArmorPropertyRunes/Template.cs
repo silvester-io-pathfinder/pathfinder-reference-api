@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorPropertyRune
         {
             ArmorPropertyRune rune = GetRune();
 
-            builder.AddSourcePage(rune, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(rune, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(rune, GetTraits());
             builder.AddTextBlocks(rune, GetDetails(), e => e.Details);
 

@@ -1,3 +1,4 @@
+using Silvester.Pathfinder.Official.Database.Models;
 using System;
 
 namespace Silvester.Pathfinder.Official.Database
@@ -6,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database
     {
         public Guid Id { get; set; }
     }
-    
+
     public interface IOwnedEntity
     {
         Guid OwnerId { get; set; }

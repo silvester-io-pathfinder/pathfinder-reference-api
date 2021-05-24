@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Traits
             Trait trait = GetTrait();
 
             builder.AddTextBlocks(trait, GetDetailBlocks(), e => e.Details);
-            builder.AddSourcePage(trait, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(trait, GetSourcePage(), e => e.SourcePageId);
             
             return trait;
         }

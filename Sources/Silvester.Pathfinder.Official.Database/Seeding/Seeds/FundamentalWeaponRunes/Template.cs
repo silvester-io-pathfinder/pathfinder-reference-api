@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.FundamentalWeapon
         {
             FundamentalWeaponRune rune = GetRune();
 
-            builder.AddSourcePage(rune, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(rune, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(rune, GetTraits());
             builder.AddTextBlocks(rune, GetDetails(), e => e.Details);
 

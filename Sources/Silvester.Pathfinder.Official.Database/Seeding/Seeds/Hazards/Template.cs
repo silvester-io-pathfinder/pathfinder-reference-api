@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Hazards
         {
             Hazard hazard = GetHazard();
 
-            builder.AddSourcePage(hazard, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(hazard, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(hazard, GetTraits());
             builder.AddTextBlocks(hazard, GetRoutineDetails(), e => e.RoutineDetails);
             builder.HasJoinData<Hazard, Immunity>(hazard, GetImmunities());

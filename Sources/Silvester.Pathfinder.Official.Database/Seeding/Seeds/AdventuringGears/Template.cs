@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears
                 builder.AddData(variant);
             }
 
-            builder.AddSourcePage(gear, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(gear, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(gear, GetDetails(), e => e.Details);
 
             return gear;

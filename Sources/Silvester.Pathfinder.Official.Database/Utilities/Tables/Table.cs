@@ -19,14 +19,16 @@ namespace Silvester.Pathfinder.Official.Database.Utilities.Tables
 
     public class Column : BaseEntity
     {
-        public Guid OwnerId { get; set; }
+        public Guid TableId { get; set; }
+        public Table Table { get; set; } = default!;
 
         public string Name { get; set; } = default!;
     }
 
     public class Row : BaseEntity
     {
-        public Guid OwnerId { get; set; }
+        public Guid TableId { get; set; }
+        public Table Table { get; set; } = default!;
 
         public int Index { get; set; }
 
@@ -35,7 +37,8 @@ namespace Silvester.Pathfinder.Official.Database.Utilities.Tables
 
     public class Cell : BaseEntity
     {
-        public Guid OwnerId { get; set; }
+        public Guid RowId { get; set; }
+        public Row Row { get; set; } = default!;
 
         public string Value { get; set; } = default!;
         public int Order { get; set; }

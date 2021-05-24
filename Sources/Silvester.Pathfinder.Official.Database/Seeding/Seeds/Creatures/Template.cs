@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures
         {
             Creature creature = GetCreature();
 
-            builder.AddSourcePage(creature, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(creature, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(creature, GetTraits());
             builder.AddTextBlocks(creature, GetDetails(), e => e.Details);
 
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Creatures
             }
 
             builder.HasJoinData<Creature, Language>(creature, GetLanguages());
-            builder.HasJoinData<Creature, Language>(creature, GetImmunities());
+            builder.HasJoinData<Creature, Immunity>(creature, GetImmunities());
 
             foreach (CreatureFlavor flavor in GetFlavors())
             {

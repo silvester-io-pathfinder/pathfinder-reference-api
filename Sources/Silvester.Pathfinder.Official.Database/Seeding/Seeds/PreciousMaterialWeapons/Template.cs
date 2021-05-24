@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialW
         {
             PreciousMaterialWeapon weapon = GetWeapon();
 
-            builder.AddSourcePage(weapon, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(weapon, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(weapon, GetTraits());
             builder.AddTextBlocks(weapon, GetDetails(), e => e.Details);
 

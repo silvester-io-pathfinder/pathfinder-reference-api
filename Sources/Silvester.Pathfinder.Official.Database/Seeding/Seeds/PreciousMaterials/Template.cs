@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials
         {
             PreciousMaterial material = GetMaterial();
 
-            builder.AddSourcePage(material, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(material, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(material, GetTraits());
             builder.AddTextBlocks(material, GetDetails(), e => e.Details);
 

@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Conditions
         {
             Condition condition = GetCondition();
 
-            builder.AddSourcePage(condition, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(condition, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(condition, GetConditionDetailBlocks(), e => e.Details);
 
             return condition;

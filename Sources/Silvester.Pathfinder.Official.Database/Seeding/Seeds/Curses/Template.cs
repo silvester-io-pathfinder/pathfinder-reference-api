@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Curses
         {
             Curse curse = GetCurse();
 
-            builder.AddSourcePage(curse, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(curse, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(curse, GetTraits());
             builder.AddTextBlocks(curse, GetDetailBlocks(), (c) => c.Details);
 

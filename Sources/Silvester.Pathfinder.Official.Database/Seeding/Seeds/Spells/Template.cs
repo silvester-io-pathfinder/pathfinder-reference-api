@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
             Spell spell = GetSpell();
 
             builder.AddTable(spell, GetTable(new TableBuilder()));
-            builder.AddSourcePage(spell, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(spell, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(spell, GetTraits());
             builder.AddTextBlocks(spell, GetSpellDetailBlocks(), e => e.Details);
             builder.AddRollableEffects(spell, GetRollableEffects(), e => e.RollableEffects);

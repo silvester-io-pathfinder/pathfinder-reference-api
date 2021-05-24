@@ -109,18 +109,6 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
                 };
             });
 
-
-            if (typeof(TFirst) == typeof(ActionEffect))
-            {
-                Console.WriteLine("");
-            }
-
-
-            if (typeof(TSecond) == typeof(ActionEffect))
-            {
-                Console.WriteLine("");
-            }
-
             modelBuilder
                 .Entity(typeof(TFirst))
                 .HasOne(typeof(TSecond))
@@ -173,30 +161,18 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 
         public static object AddData(this ModelBuilder builder, Type type, object entity)
         {
-            if (type == typeof(ActionEffect))
-            {
-                Console.WriteLine("");
-            }
             return builder.Entity(type).AddData(entity);
         }
 
         public static T AddData<T>(this ModelBuilder builder, T entity)
             where T : class
         {
-            if (typeof(T) == typeof(ActionEffect))
-            {
-                Console.WriteLine("");
-            }
             return builder.Entity<T>().AddData(entity);
         }
 
         public static T[] AddData<T>(this ModelBuilder builder, IEnumerable<T> entities)
             where T : class
         {
-            if(typeof(T) ==  typeof(ActionEffect))
-            {
-                Console.WriteLine("");
-            }
             return builder.Entity<T>().AddData(entities);
         }
 

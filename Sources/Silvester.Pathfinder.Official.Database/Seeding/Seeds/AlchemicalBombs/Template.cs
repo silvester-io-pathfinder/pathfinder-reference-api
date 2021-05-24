@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalBombs
         {
             AlchemicalBomb bomb = GetAlchemicalBomb();
 
-            builder.AddSourcePage(bomb, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(bomb, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(bomb, GetDetailBlocks(), e => e.Details);
             builder.AddTraits(bomb, GetTraits());
 

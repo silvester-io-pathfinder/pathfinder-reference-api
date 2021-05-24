@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalPoisons
             effect.Stages = GetAlchemicalPoisonStages().ToArray();
 
             builder.AddStaggeredEffect(poison, effect, e => e.EffectId);
-            builder.AddSourcePage(poison, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(poison, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(poison, GetTraits());
             builder.AddTextBlocks(poison, GetDetailBlocks(), e => e.Details);
 

@@ -99,7 +99,7 @@ namespace Silvester.Pathfinder.Official.Database
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            Debugger.Launch();
+            //Debugger.Launch();
 
             ConfigureEntities(builder);
             SeedEntities(builder);

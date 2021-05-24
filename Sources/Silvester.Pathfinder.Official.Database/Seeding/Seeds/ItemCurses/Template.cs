@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemCurses
         {
             ItemCurse itemCurse = GetItemCurse();
 
-            builder.AddSourcePage(itemCurse, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(itemCurse, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(itemCurse, GetTraits());
             builder.AddTextBlocks(itemCurse, GetDetailBlocks(), e => e.Details);
             

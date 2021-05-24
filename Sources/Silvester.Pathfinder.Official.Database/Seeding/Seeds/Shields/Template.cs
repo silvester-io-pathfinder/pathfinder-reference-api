@@ -12,7 +12,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Shields
         {
             Shield shield = GetShield();
 
-            builder.AddSourcePage(shield, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(shield, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(shield, GetDetails(), e => e.Details);
 
             return shield;

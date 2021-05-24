@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Abilities
         {
             Ability ability = GetAbility();
 
-            builder.AddSourcePage(ability, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(ability, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(ability, GetDetailBlocks(), (c) => c.Details);
             builder.AddTraits(ability, GetTraits());
 

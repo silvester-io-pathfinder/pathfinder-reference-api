@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorGroups
         {
             ArmorGroup group = GetArmorGroup();
 
-            builder.AddSourcePage(group, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(group, GetSourcePage(), e => e.SourcePageId);
 
             return group;
         }

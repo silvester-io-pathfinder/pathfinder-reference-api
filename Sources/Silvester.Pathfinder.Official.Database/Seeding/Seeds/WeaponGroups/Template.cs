@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups
         {
             WeaponGroup group = GetWeaponGroup();
 
-            builder.AddSourcePage(group, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(group, GetSourcePage(), e => e.SourcePageId);
 
             return group;
         }

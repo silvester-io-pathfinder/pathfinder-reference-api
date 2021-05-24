@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.HazardTypes
         {
             HazardType type = GetHazardType();
 
-            builder.AddSourcePage(type, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(type, GetSourcePage(), e => e.SourcePageId);
 
             return type;
         }

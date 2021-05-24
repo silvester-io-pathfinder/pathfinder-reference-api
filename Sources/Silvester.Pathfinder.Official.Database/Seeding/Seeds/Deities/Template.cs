@@ -12,7 +12,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Deities
         {
             Deity deity = GetDeity();
 
-            builder.AddSourcePage(deity, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(deity, GetSourcePage(), e => e.SourcePageId);
             builder.HasJoinData<Deity, Alignment>(deity, GetFollowerAlignments());
             builder.HasJoinData<Deity, DivineFont>(deity, GetDivineFonts());
             builder.HasJoinData<Deity, Domain>(deity, GetDomains());

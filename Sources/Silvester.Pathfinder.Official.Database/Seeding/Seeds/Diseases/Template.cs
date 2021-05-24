@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Diseases
         {
             Disease disease = GetDisease();
 
-            builder.AddSourcePage(disease, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(disease, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(disease, GetTraits());
 
             DiseaseStage[] stages = GetDiseaseStages().ToArray();

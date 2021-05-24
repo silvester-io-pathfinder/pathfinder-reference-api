@@ -15,10 +15,11 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Mysteries
         {
             Mystery mystery = GetMystery();
 
-            builder.AddSourcePage(mystery, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(mystery, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(mystery, GetDetailBlocks(), (c) => c.Details);
             builder.AddTextBlocks(mystery, GetBenefitBlocks(), (e) => e.MysteryBenefits);
             builder.HasJoinData<Mystery, Domain>(mystery, GetDomains());
+
 
             SeedCurse(builder, mystery);
 
@@ -29,7 +30,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Mysteries
         {
             MysteryCurse curse = GetCurse();
             builder.AddTextBlocks(curse, curse.Details, (e) => e.Details); 
-            builder.AddSourcePage(curse, curse.SourcePage, e => e.SourcePage);
+            builder.AddSourcePage(curse, curse.SourcePage, e => e.SourcePageId);
             builder.AddTable(curse, curse.Table);
 
             foreach (MysteryCursePotency potency in curse.Potencies)
@@ -47,6 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Mysteries
             curse.SourcePage = null!;
             curse.Table = null;
             curse.MysteryId = mystery.Id;
+            mystery.MysteryCurseId = curse.Id;
 
             builder.AddData(curse);
         }

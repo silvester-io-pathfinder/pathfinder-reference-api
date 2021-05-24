@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves
         {
             Stave stave = GetStave();
 
-            builder.AddSourcePage(stave, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(stave, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(stave, GetTraits());
             builder.AddTextBlocks(stave, GetDetails(), e => e.Details);
             builder.AddActionEffects(stave, GetActionEffects(), e => e.Effects);

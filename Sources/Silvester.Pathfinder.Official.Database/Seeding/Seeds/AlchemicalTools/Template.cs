@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalTools
         {
             AlchemicalTool tool = GetAlchemicalTool();
 
-            builder.AddSourcePage(tool, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(tool, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(tool, GetTraits());
             builder.AddTextBlocks(tool, GetDetailBlocks(), e => e.Details);
 

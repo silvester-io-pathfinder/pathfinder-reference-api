@@ -26,6 +26,7 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 
             foreach (Column column in table.Columns)
             {
+                column.TableId = table.Id;
                 builder.AddData(column);
             }
 
@@ -33,9 +34,11 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             {
                 foreach (Cell cell in row.Cells)
                 {
+                    cell.RowId = row.Id;
                     builder.AddData(cell);
                 }
                 row.Cells = new Cell[0];
+                row.TableId = table.Id;
                 builder.AddData(row);
             }
 
@@ -72,14 +75,16 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             }
 
             effect.Stages = new StaggeredEffectStage[0];
+            builder.AddData(effect);
         }
 
-        public static void AddSourcePage<TOwner>(this ModelBuilder builder, TOwner owner, SourcePage? sourcePage, Expression<Func<TOwner, SourcePage?>> selector)
+        public static void AddSourcePage<TOwner>(this ModelBuilder builder, TOwner owner, SourcePage? sourcePage, Expression<Func<TOwner, Guid?>> keySelector)
             where TOwner : BaseEntity
         {
             if(sourcePage != null)
             {
                 sourcePage.OwnerId = owner.Id;
+                keySelector.SetProperty(owner, sourcePage.Id);
                 builder.AddData(sourcePage);
             }
         }
@@ -120,36 +125,6 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
                 
                 builder.AddData(effect);
             }
-        }
-
-        public static void AddStaggeredEffect<TOwner>(this ModelBuilder builder, TOwner owner, StaggeredEffect? effect, Expression<Func<TOwner, Guid?>> keySelector)
-            where TOwner : BaseEntity
-        {
-            if(effect == null)
-            {
-                return;
-            }
-
-            keySelector.SetProperty(owner, effect.Id);
-
-            StaggeredEffectStage[] stages = effect.Stages.ToArray();
-            for (int i = 0; i < stages.Length; i++)
-            {
-                StaggeredEffectStage stage = stages[i];
-                stage.StaggeredEffectId = effect.Id;
-                stage.Stage = i + 1;
-
-                foreach (StaggeredEffectStageEffect stageEffect in stage.Effects)
-                {
-                    stageEffect.StaggeredEffectStageId = stage.Id;
-                    builder.AddData(stageEffect.GetType(), stageEffect);
-                }
-                  
-                stage.Effects = new StaggeredEffectStageEffect[] { };
-                builder.AddData(stage);
-            }
-         
-            effect.Stages = new StaggeredEffectStage[0];
         }
 
         public static void AddTextBlocks<TOwner>(this ModelBuilder builder, TOwner owner, IEnumerable<TextBlock> textBlocks, Expression<Func<TOwner, IEnumerable<TextBlock>>> collectionSelector)

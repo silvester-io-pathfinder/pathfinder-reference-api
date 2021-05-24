@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AlchemicalElixirs
             AlchemicalElixir elixir = GetAlchemicalElixir();
 
             builder.AddTextBlocks(elixir, GetDetailBlocks(), e => e.Details);
-            builder.AddSourcePage(elixir, GetSourcePage(), e => e.SourcePage);
+            builder.AddSourcePage(elixir, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(elixir, GetTraits());
 
             foreach (AlchemicalElixirPotencyBinding binding in GetPotencies())
