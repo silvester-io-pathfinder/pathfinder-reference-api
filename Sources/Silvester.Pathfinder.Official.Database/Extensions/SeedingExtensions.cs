@@ -24,21 +24,30 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 
             table.OwnerId = owner.Id;
 
-            foreach (Column column in table.Columns)
+            for(int iColumn = 0; iColumn < table.Columns.Count(); iColumn ++)
             {
+                Column column = table.Columns.ElementAt(iColumn);
+                column.Order = iColumn;
                 column.TableId = table.Id;
                 builder.AddData(column);
             }
 
-            foreach (Row row in table.Rows)
+            for(int iRow = 0; iRow < table.Rows.Count(); iRow ++)
             {
-                foreach (Cell cell in row.Cells)
+                Row row = table.Rows.ElementAt(iRow);
+
+                for(int iCell = 0; iCell < row.Cells.Count(); iCell ++)
                 {
+                    Cell cell = row.Cells.ElementAt(iCell);
                     cell.RowId = row.Id;
+                    cell.Order = iCell;
                     builder.AddData(cell);
                 }
-                row.Cells = new Cell[0];
+                
                 row.TableId = table.Id;
+                row.Order = iRow;
+                row.Cells = new Cell[0];
+                
                 builder.AddData(row);
             }
 

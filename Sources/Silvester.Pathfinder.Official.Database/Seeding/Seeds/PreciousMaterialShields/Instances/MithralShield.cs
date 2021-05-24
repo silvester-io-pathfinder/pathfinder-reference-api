@@ -89,7 +89,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialS
         protected override IEnumerable<Guid> GetTraits()
         {
             yield return Traits.Instances.Uncommon.ID;
-            yield break;
         }
 
         protected override SourcePage GetSourcePage()

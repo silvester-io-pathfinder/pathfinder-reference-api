@@ -18,13 +18,13 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialS
             {
                 Id = ID,
                 Name = "Adamantine",
-                MaterialId = PreciousMaterials.Instances.Silver.ID
+                MaterialId = PreciousMaterials.Instances.Adamantine.ID
             };
         }
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("b52e923f-ac3d-4bfa-87d8-a79f863e2046"), Type = TextBlockType.Text, Text = "" };
+            yield return new TextBlock { Id = Guid.Parse("b52e923f-ac3d-4bfa-87d8-a79f863e2046"), Type = TextBlockType.Text, Text = "Adamantine shields are particularly sturdy, and when used for a shield bash, they are adamantine weapons." };
         }
 
         protected override IEnumerable<PreciousMaterialShieldVariant> GetVariants()

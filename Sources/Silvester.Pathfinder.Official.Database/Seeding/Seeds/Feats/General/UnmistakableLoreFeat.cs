@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats.General
             return new Feat
             {
                 Id = ID,
-                Name = "Unmistabable Lore",
+                Name = "Unmistakable Lore",
                 Level = 2,
                 FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
