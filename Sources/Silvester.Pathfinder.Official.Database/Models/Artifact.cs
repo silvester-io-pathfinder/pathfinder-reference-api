@@ -31,6 +31,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<TextBlock> DestructionDetails { get; set; } = new List<TextBlock>();
 
         public ICollection<ArtifactDestructionEffect> DestructionEffects { get; set; } = new List<ArtifactDestructionEffect>();
+
+        public ICollection<ArtifactAction> Actions { get; set; } = new List<ArtifactAction>();
     }
 
     public class ArtifactAction : BaseEntity
