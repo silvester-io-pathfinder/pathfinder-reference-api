@@ -19,11 +19,14 @@ namespace Silvester.Pathfinder.Official.Database.Models
      
         public ICollection<PreciousMaterialItem> Items { get; set; } = new List<PreciousMaterialItem>();
 
-        public ICollection<PreciousMaterialWeapon> Weapons { get; set; } = new List<PreciousMaterialWeapon>();
+        public Guid WeaponId { get; set; }
+        public PreciousMaterialWeapon? Weapon { get; set; } 
 
-        public ICollection<PreciousMaterialArmor> Armors {get; set; } = new List<PreciousMaterialArmor>();
+        public Guid ArmorId { get; set; }
+        public PreciousMaterialArmor? Armor { get; set; } 
 
-        public ICollection<PreciousMaterialShield> Shields { get; set; } = new List<PreciousMaterialShield>();
+        public Guid ShieldId { get; set; }
+        public PreciousMaterialShield? Shield { get; set; }
     }
 
     public class PreciousMaterialVariant : BaseEntity
