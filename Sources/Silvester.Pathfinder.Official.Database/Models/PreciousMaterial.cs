@@ -19,13 +19,13 @@ namespace Silvester.Pathfinder.Official.Database.Models
      
         public ICollection<PreciousMaterialItem> Items { get; set; } = new List<PreciousMaterialItem>();
 
-        public Guid WeaponId { get; set; }
+        public Guid? WeaponId { get; set; }
         public PreciousMaterialWeapon? Weapon { get; set; } 
 
-        public Guid ArmorId { get; set; }
+        public Guid? ArmorId { get; set; }
         public PreciousMaterialArmor? Armor { get; set; } 
 
-        public Guid ShieldId { get; set; }
+        public Guid? ShieldId { get; set; }
         public PreciousMaterialShield? Shield { get; set; }
     }
 
