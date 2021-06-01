@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialA
 {
     public class OrichalcumArmor : Template
     {
-        public readonly Guid ID = Guid.Parse("1287dbd8-558a-4c7f-bf2a-37dbe34e802c");
+        public static readonly Guid ID = Guid.Parse("1287dbd8-558a-4c7f-bf2a-37dbe34e802c");
 
         protected override PreciousMaterialArmor GetArmor()
         {

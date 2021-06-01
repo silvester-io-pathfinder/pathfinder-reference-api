@@ -16,7 +16,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials
             return new PreciousMaterial
             {
                 Id = ID,
-                Name = "Orichalcum"
+                Name = "Orichalcum",
+                ShieldId = PreciousMaterialShields.Instances.OrichalcumShield.ID,
+                WeaponId = PreciousMaterialWeapons.Instances.OrichalcumWeapon.ID,
+                ArmorId = PreciousMaterialArmors.Instances.OrichalcumArmor.ID
             };
         }
 

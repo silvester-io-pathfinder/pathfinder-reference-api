@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialS
 {
     public class ColdIronShield : Template
     {
-        public readonly Guid ID = Guid.Parse("dd42fda1-c0cb-42f5-969c-8c5db167fcfe");
+        public static readonly Guid ID = Guid.Parse("dd42fda1-c0cb-42f5-969c-8c5db167fcfe");
 
         protected override PreciousMaterialShield GetShield()
         {

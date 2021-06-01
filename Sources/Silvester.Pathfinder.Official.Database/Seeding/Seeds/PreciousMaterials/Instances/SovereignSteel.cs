@@ -16,7 +16,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials
             return new PreciousMaterial
             {
                 Id = ID,
-                Name = "Sovereign Steel"
+                Name = "Sovereign Steel",
+                WeaponId = PreciousMaterialWeapons.Instances.SovereignSteelWeapon.ID,
+                ArmorId = PreciousMaterialArmors.Instances.SovereignSteelArmor.ID
             };
         }
 

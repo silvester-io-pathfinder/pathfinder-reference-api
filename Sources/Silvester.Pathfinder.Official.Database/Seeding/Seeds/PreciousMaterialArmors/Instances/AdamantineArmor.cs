@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialA
 {
     public class AdamantineArmor : Template
     {
-        public readonly Guid ID = Guid.Parse("9c4884c6-39eb-4ed5-a3fb-d91f19e62f2f");
+        public static readonly Guid ID = Guid.Parse("9c4884c6-39eb-4ed5-a3fb-d91f19e62f2f");
 
         protected override PreciousMaterialArmor GetArmor()
         {
@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialA
             {
                 Id = ID,
                 Name = "Adamantine Armor",
-                MaterialId = PreciousMaterials.Instances.Adamantine.ID
+                MaterialId = PreciousMaterials.Instances.Adamantine.ID,
             };
         }
 

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialW
 {
     public class WarpglassWeapon : Template
     {
-        public readonly Guid ID = Guid.Parse("7bfe9197-17dd-4499-931d-7dd4816a12dd");
+        public static readonly Guid ID = Guid.Parse("7bfe9197-17dd-4499-931d-7dd4816a12dd");
 
         protected override PreciousMaterialWeapon GetWeapon()
         {

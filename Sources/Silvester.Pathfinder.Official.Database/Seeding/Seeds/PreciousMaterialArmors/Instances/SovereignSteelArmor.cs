@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialA
 {
     public class SovereignSteelArmor : Template
     {
-        public readonly Guid ID = Guid.Parse("73db3bdd-bc32-4a6d-9c21-580d3301e6ec");
+        public static readonly Guid ID = Guid.Parse("73db3bdd-bc32-4a6d-9c21-580d3301e6ec");
 
         protected override PreciousMaterialArmor GetArmor()
         {

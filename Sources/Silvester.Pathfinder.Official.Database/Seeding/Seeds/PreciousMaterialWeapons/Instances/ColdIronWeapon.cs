@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialW
 {
     public class ColdIronWeapon : Template
     {
-        public readonly Guid ID = Guid.Parse("b1e2cd72-1948-40c6-ba4a-96060224d4a3");
+        public static readonly Guid ID = Guid.Parse("b1e2cd72-1948-40c6-ba4a-96060224d4a3");
 
         protected override PreciousMaterialWeapon GetWeapon()
         {

@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialW
 {
     public class MithralWeapon : Template
     {
-        public readonly Guid ID = Guid.Parse("f4155d3a-7603-4d5b-8b61-61f60afe13bf");
+        public static readonly Guid ID = Guid.Parse("f4155d3a-7603-4d5b-8b61-61f60afe13bf");
 
         protected override PreciousMaterialWeapon GetWeapon()
         {

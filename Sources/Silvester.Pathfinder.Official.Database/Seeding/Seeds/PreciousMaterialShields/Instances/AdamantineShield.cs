@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialS
 {
     public class AdamantineShield : Template
     {
-        public readonly Guid ID = Guid.Parse("f0d45f1c-537b-4276-a11a-8e164138b552");
+        public static readonly Guid ID = Guid.Parse("f0d45f1c-537b-4276-a11a-8e164138b552");
 
         protected override PreciousMaterialShield GetShield()
         {

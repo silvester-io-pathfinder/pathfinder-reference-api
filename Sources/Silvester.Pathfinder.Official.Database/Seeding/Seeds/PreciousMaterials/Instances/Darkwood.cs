@@ -16,7 +16,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials
             return new PreciousMaterial
             {
                 Id = ID,
-                Name = "Darkwood"
+                Name = "Darkwood",
+                ShieldId = PreciousMaterialShields.Instances.DarkwoodShield.ID,
+                WeaponId = PreciousMaterialWeapons.Instances.DarkwoodWeapon.ID,
+                ArmorId = PreciousMaterialArmors.Instances.DarkwoodArmor.ID
             };
         }
 

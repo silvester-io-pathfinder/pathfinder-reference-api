@@ -16,7 +16,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials
             return new PreciousMaterial
             {
                 Id = ID,
-                Name = "Silver"
+                Name = "Silver",
+                ShieldId = PreciousMaterialShields.Instances.SilverShield.ID,
+                WeaponId = PreciousMaterialWeapons.Instances.SilverWeapon.ID,
+                ArmorId = PreciousMaterialArmors.Instances.SilverArmor.ID
             };
         }
 

@@ -16,7 +16,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials
             return new PreciousMaterial
             {
                 Id = ID,
-                Name = "Mithral"
+                Name = "Mithral",
+                ShieldId = PreciousMaterialShields.Instances.MithralShield.ID,
+                WeaponId = PreciousMaterialWeapons.Instances.MithralWeapon.ID,
+                ArmorId = PreciousMaterialArmors.Instances.MithralArmor.ID
             };
         }
 

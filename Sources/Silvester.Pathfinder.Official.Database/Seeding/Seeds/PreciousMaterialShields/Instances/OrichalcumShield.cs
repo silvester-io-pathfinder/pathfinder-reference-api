@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialS
 {
     public class OrichalcumShield : Template
     {
-        public readonly Guid ID = Guid.Parse("7ef2acfb-7820-4a22-be1a-c97991e63e16");
+        public static readonly Guid ID = Guid.Parse("7ef2acfb-7820-4a22-be1a-c97991e63e16");
 
         protected override PreciousMaterialShield GetShield()
         {

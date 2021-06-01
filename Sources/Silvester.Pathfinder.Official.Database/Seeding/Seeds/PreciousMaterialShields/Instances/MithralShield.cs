@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialS
 {
     public class MithralShield : Template
     {
-        public readonly Guid ID = Guid.Parse("575c98ad-c43d-4424-93a8-f0188f6de11d");
+        public static readonly Guid ID = Guid.Parse("575c98ad-c43d-4424-93a8-f0188f6de11d");
 
         protected override PreciousMaterialShield GetShield()
         {

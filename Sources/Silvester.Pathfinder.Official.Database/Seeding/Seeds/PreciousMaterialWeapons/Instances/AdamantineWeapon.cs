@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialW
 {
     public class AdamantineWeapon : Template
     {
-        public readonly Guid ID = Guid.Parse("29b7ba2b-f6ef-46ce-9966-04ca06d282ba");
+        public static readonly Guid ID = Guid.Parse("29b7ba2b-f6ef-46ce-9966-04ca06d282ba");
 
         protected override PreciousMaterialWeapon GetWeapon()
         {

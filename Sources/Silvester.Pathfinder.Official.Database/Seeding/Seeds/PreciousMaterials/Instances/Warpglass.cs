@@ -16,7 +16,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials
             return new PreciousMaterial
             {
                 Id = ID,
-                Name = "Warpglass"
+                Name = "Warpglass",
+                WeaponId = PreciousMaterialWeapons.Instances.WarpglassWeapon.ID,
             };
         }
 

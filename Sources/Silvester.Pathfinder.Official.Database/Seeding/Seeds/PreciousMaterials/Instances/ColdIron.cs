@@ -16,7 +16,10 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials
             return new PreciousMaterial
             {
                 Id = ID,
-                Name = "Cold Iron"
+                Name = "Cold Iron",
+                ShieldId = PreciousMaterialShields.Instances.ColdIronShield.ID,
+                WeaponId = PreciousMaterialWeapons.Instances.ColdIronWeapon.ID,
+                ArmorId = PreciousMaterialArmors.Instances.ColdIronArmor.ID
             };
         }
 
