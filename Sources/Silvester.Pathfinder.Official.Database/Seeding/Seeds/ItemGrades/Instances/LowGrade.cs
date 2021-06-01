@@ -17,7 +17,8 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ItemGrades.Instan
             return new ItemGrade
             {
                 Id = ID,
-                Name = "Low Grade"
+                Name = "Low Grade",
+                Order = 0
             };
         }
     }
