@@ -104,7 +104,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterialS
                 Id = Guid.Parse("77d654fd-90b4-4a5e-9f01-737af7625485"),
                 Name = "Shield",
                 CraftRequirements = "Silver worth at least 2,750 gp.",
-                Price = 5500,
+                Price = 550000,
                 Hardness = 8,
                 HitPoints = 32,
                 BrokenThreshold = 16,

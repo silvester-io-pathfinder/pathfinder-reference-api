@@ -17,6 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors.Instances
             return new Armor
             {
                 Id = ID,
+                Level = 2,
                 Name = "Hellknight Plate",
                 ArmorClassBonus = 6,
                 Price = 3500,

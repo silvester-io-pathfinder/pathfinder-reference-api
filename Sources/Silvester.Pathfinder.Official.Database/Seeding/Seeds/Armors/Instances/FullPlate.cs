@@ -17,6 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors.Instances
             return new Armor
             {
                 Id = ID,
+                Level = 2,
                 Name = "Full Plate",
                 ArmorClassBonus = 6,
                 Price = 3000,

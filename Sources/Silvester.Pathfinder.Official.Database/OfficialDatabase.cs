@@ -81,7 +81,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<Proficiency> Proficiencies { get; set; } = default!;
         public DbSet<Race> Races { get; set; } = default!;
         public DbSet<RaceSize> RaceSizes { get; set; } = default!;
-        public DbSet<MeleeWeapon> RangedWeapons { get; set; } = default!;
+        public DbSet<RangedWeapon> RangedWeapons { get; set; } = default!;
         public DbSet<Rarity> Rarities { get; set; } = default!;
         public DbSet<SavingThrowStat> SavingThrowStats { get; set; } = default!;
         public DbSet<Shield> Shields { get; set; } = default!;

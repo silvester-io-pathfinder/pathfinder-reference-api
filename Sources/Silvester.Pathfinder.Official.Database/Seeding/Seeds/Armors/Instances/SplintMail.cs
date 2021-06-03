@@ -17,6 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Armors.Instances
             return new Armor
             {
                 Id = ID,
+                Level = 1,
                 Name = "Splint Mail",
                 ArmorClassBonus = 5,
                 Price = 1300,
