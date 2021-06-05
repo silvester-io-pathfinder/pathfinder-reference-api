@@ -10,6 +10,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
     public class Artifact : BaseEntity
     {
         public string Name { get; set; } = default!;
+        
+        public string? Destruction { get; set; }
 
         public string? Usage { get; set; }
 
@@ -27,8 +29,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
         
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
-
-        public ICollection<TextBlock> DestructionDetails { get; set; } = new List<TextBlock>();
 
         public ICollection<ArtifactDestructionEffect> DestructionEffects { get; set; } = new List<ArtifactDestructionEffect>();
 
