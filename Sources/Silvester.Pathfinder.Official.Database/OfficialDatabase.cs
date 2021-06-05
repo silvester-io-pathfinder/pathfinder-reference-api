@@ -34,7 +34,8 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<Armor> Armors { get; set; } = default!;
         public DbSet<Artifact> Artifacts { get; set; } = default!;
         public DbSet<ArmorPropertyRune> ArmorPropertyRunes { get; set; } = default!;
-        public DbSet<ArmorCategory> ArmorGroups { get; set; } = default!;
+        public DbSet<ArmorCategory> ArmorCategories { get; set; } = default!;
+        public DbSet<ArmorGroup> ArmorGroups { get; set; } = default!;
         public DbSet<AttackType> AttackTypes { get; set; } = default!;
         public DbSet<BenefitType> BenefitTypes { get; set; } = default!;
         public DbSet<Bulk> Bulks { get; set; } = default!;
