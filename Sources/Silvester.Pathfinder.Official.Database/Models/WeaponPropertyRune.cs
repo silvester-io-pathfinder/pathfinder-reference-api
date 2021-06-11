@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
 
-        public ICollection<ArmorPropertyRuneAction> Actions { get; set; } = default!;
+        public ICollection<WeaponPropertyRuneAction> Actions { get; set; } = default!;
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
         
