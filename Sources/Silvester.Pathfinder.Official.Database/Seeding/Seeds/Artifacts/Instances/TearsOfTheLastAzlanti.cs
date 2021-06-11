@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Artifacts.Instanc
             yield return new TextBlock { Id = Guid.Parse("9276c353-5fab-46da-b1bd-4aba3d42b668"), Type = TextBlockType.Text, Text = "Active Power: Cast hypercognition at will." };
             yield return new TextBlock { Id = Guid.Parse("19d49425-1575-403b-9b66-ac0c216116bd"), Type = TextBlockType.Heading, Text = "3 - Resillience - Clear Spindle" };
             yield return new TextBlock { Id = Guid.Parse("e527d499-a44d-4525-a3fe-05fa34d5b4bb"), Type = TextBlockType.Text, Text = "Active Power: Worn armor gains the antimagic property rune." };
-            yield return new TextBlock { Id = Guid.Parse("ef1730fe-0a53-45fc-b05e-1fd58b322ebd"), Type = TextBlockType.Heading, Text = "4 - Tenactiy - Pink Rhomboid" };
+            yield return new TextBlock { Id = Guid.Parse("ef1730fe-0a53-45fc-b05e-1fd58b322ebd"), Type = TextBlockType.Heading, Text = "4 - Tenacity - Pink Rhomboid" };
             yield return new TextBlock { Id = Guid.Parse("b9c581cf-1675-4e79-9462-9124a9411acd"), Type = TextBlockType.Text, Text = "Active Power: Wielded weapons gain the vorpal property rune." };
             yield return new TextBlock { Id = Guid.Parse("b9a020ed-856c-4dfa-ac67-63fe48b2fa20"), Type = TextBlockType.Heading, Text = "5 - Wisdom - Orange Prism" };
             yield return new TextBlock { Id = Guid.Parse("9d6f43f2-8b54-4098-9a2f-c5710fcffbd2"), Type = TextBlockType.Text, Text = "Active Power: SKill checks for downtime activities or to Recall Knowledge are one degree of success higher." };

@@ -25,6 +25,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<Ability> Abilities { get; set; } = default!;
         public DbSet<Models.Action> Actions { get; set; } = default!;
         public DbSet<ActionType> ActionTypes { get; set; } = default!;
+        public DbSet<AdventuringGear> AdventuringGears { get; set; } = default!;
         public DbSet<AlchemicalBomb> AlchemicalBombs { get; set; } = default!;
         public DbSet<AlchemicalElixir> AlchemicalElixirs { get; set; } = default!;
         public DbSet<AlchemicalPoison> AlchemicalPoisons { get; set; } = default!;
@@ -92,6 +93,7 @@ namespace Silvester.Pathfinder.Official.Database
         public DbSet<Spell> Spells { get; set; } = default!;
         public DbSet<SpellType> SpellTypes { get; set; } = default!;
         public DbSet<Stat> Stats { get; set; } = default!;
+        public DbSet<Stave> Staves { get; set; } = default!;
         public DbSet<Trait> Traits { get; set; } = default!;
         public DbSet<MeleeWeapon> MeleeWeapons { get; set; } = default!;
         public DbSet<WeaponPropertyRune> WeaponPropertyRunes { get; set; } = default!;
