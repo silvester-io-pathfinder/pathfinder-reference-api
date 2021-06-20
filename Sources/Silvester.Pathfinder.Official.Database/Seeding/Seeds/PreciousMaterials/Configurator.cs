@@ -3,6 +3,7 @@ using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,6 +32,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.PreciousMaterials
                 .HasOne(e => e.Shield)
                 .WithOne(e => e.Material)
                 .HasForeignKey<PreciousMaterial>(e => e.ShieldId);
+        }
+    }
+
+    public class SearchConfigurator : SearchableEntityConfigurator<PreciousMaterial>
+    {
+        public override Expression<Func<PreciousMaterial, object?>> GetSearchProperties()
+        {
+            return (e) => new { e.Name };
         }
     }
 }

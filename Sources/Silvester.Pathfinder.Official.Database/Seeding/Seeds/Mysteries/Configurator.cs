@@ -3,6 +3,7 @@ using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -44,6 +45,14 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Mysteries
                 .WithOne(e => e.Mystery)
                 .HasForeignKey<Mystery>(e => e.MysteryCurseId);
 
+        }
+    }
+
+    public class SearchConfigurator : SearchableEntityConfigurator<Mystery>
+    {
+        public override Expression<Func<Mystery, object?>> GetSearchProperties()
+        {
+            return (e) => new { e.Name, e.TrainedSkillAddendum };
         }
     }
 }

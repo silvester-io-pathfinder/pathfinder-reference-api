@@ -1,10 +1,11 @@
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class PreciousMaterial : BaseEntity
+    public class PreciousMaterial : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -27,6 +28,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public Guid? ShieldId { get; set; }
         public PreciousMaterialShield? Shield { get; set; }
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
     public class PreciousMaterialVariant : BaseEntity
@@ -61,11 +64,13 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public PreciousMaterial Material { get; set; } = default!;
     }
 
-    public class PreciousMaterialItemCategory : BaseEntity
+    public class PreciousMaterialItemCategory : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
         public ICollection<PreciousMaterialItem> Items { get; set; } = new List<PreciousMaterialItem>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }
  

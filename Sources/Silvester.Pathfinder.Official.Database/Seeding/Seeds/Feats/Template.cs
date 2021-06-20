@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Feats
 {
-    public abstract class Template :EntityTemplate<Feat>
+    public abstract class Template : EntityTemplate<Feat>
     {
         protected override Feat GetEntity(ModelBuilder builder)
         {

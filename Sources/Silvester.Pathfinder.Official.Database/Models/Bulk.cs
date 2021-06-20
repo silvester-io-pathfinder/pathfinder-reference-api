@@ -1,3 +1,5 @@
+using NpgsqlTypes;
+
 namespace Silvester.Pathfinder.Official.Database.Models
 {
     public class Bulk : BaseEntity

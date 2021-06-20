@@ -1,9 +1,10 @@
+using NpgsqlTypes;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Heritage : BaseEntity
+    public class Heritage : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -13,5 +14,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Rarity Rarity { get; set; } = default!;
 
         public ICollection<Race> Races { get; set; } = new List<Race>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

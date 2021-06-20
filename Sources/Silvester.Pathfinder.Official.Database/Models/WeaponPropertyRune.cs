@@ -1,3 +1,4 @@
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class WeaponPropertyRune : BaseEntity
+    public class WeaponPropertyRune : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -25,6 +26,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
         
         public ICollection<WeaponPropertyRunePotencyBinding> Potencies { get; set; } = new List<WeaponPropertyRunePotencyBinding>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
     public class WeaponPropertyRuneAction : BaseEntity

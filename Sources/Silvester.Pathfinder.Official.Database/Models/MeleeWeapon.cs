@@ -1,3 +1,4 @@
+using NpgsqlTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class MeleeWeapon : BaseEntity
+    public class MeleeWeapon : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -36,5 +37,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public SourcePage SourcePage { get; set; } = default!;
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

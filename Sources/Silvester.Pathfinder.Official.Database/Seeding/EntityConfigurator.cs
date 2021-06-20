@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding
                 if(typeof(TEntity).GetInterfaces().Contains(typeof(ISearchableEntity)))
                 {
                     //After checking at run time whether the TEntity is searchable, it will comply with all of the generic type parameter constraints.
-                    MethodInfo method = GetType().GetMethod(nameof(ConfigureSearch), BindingFlags.Static | BindingFlags.NonPublic)!;
+                    MethodInfo method = typeof(EntityConfigurator<TEntity>).GetMethod(nameof(ConfigureSearch), BindingFlags.Static | BindingFlags.NonPublic)!;
                     method.MakeGenericMethod(typeof(TEntity)).Invoke(null, new object[] { entity} );
                 }
             }
@@ -78,6 +78,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding
                 .HasMethod("GIN");
         }
 
-        public abstract Expression<Func<TEntity, object>> GetSearchProperties();
+        public abstract Expression<Func<TEntity, object?>> GetSearchProperties();
     }
 }

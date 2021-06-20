@@ -104,7 +104,7 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             if (effect != null)
             {
                 effect.OwnerId = owner.Id;
-                builder.AddData(effect);
+                builder.AddOwned(effect);
             }
         }
 

@@ -1,3 +1,4 @@
+using NpgsqlTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Ammunition : BaseEntity
+    public class Ammunition : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -26,5 +27,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public WeaponGroup WeaponGroup { get; set; } = default!;
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

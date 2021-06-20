@@ -1,9 +1,10 @@
+using NpgsqlTypes;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Disease : BaseEntity
+    public class Disease : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -23,5 +24,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
         public ICollection<DiseaseStage> Stages { get; set; } = new List<DiseaseStage>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

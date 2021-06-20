@@ -1,9 +1,10 @@
+using NpgsqlTypes;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Class : BaseEntity
+    public class Class : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -71,5 +72,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<ClassCharacteristic> Characteristics { get; set; } = new List<ClassCharacteristic>();
 
         public ICollection<ClassFeature> Features { get; set; } = new List<ClassFeature>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

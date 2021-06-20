@@ -1,3 +1,4 @@
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Utilities.Tables;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
@@ -5,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Spell : BaseEntity
+    public class Spell : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -87,6 +88,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<Creature> CreatureEffects { get; set; } = new List<Creature>();
 
         public ICollection<MagicTradition> Traditions { get; set; } = new List<MagicTradition>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
     public class SpellHeightening : BaseEntity

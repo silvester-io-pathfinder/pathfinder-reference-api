@@ -11,7 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Abilities
 {
     public class Configurator : SearchableEntityConfigurator<Ability>
     {
-        public override Expression<Func<Ability, object>> GetSearchProperties()
+        public override Expression<Func<Ability, object?>> GetSearchProperties()
         {
             return (e) => new { e.Name };
         }

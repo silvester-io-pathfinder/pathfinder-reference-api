@@ -1,13 +1,16 @@
+using NpgsqlTypes;
 using System;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Lore : BaseEntity
+    public class Lore : BaseEntity, ISearchableEntity, INamedEntity
     {
         public virtual string Name { get; set; } = default!;
 
         public Guid StatModifierId { get; set; }
         public Stat StatModifier { get; set; } = default!;
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
     public class DeityLore : Lore

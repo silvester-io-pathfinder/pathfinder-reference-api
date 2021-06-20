@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Ability : BaseEntity, ISearchableEntity
+    public class Ability : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 

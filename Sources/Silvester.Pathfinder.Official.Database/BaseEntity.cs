@@ -17,7 +17,11 @@ namespace Silvester.Pathfinder.Official.Database
 
     public interface ISearchableEntity
     {
-
         NpgsqlTsVector SearchVector { get; set; }
+    }
+
+    public interface INamedEntity
+    {
+        string Name { get; set; }
     }
 }

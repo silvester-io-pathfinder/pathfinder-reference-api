@@ -1,3 +1,4 @@
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Artifact : BaseEntity
+    public class Artifact : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
         
@@ -33,6 +34,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<ArtifactDestructionEffect> DestructionEffects { get; set; } = new List<ArtifactDestructionEffect>();
 
         public ICollection<ArtifactAction> Actions { get; set; } = new List<ArtifactAction>();
+        
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
     public class ArtifactAction : BaseEntity

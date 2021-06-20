@@ -1,8 +1,9 @@
+using NpgsqlTypes;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Potency : BaseEntity
+    public class Potency : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -10,5 +11,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<AlchemicalBombPotencyBinding> AlchemicalBombs { get; set; } = new List<AlchemicalBombPotencyBinding>();
         public ICollection<AlchemicalToolPotencyBinding> AlchemicalTools { get; set; } = new List<AlchemicalToolPotencyBinding>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

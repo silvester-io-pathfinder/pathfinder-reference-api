@@ -1,10 +1,11 @@
+using NpgsqlTypes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Skill : BaseEntity
+    public class Skill : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
         public string Description { get; set; } = default!;
@@ -16,5 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public Stat StatModifier { get; set; } = default!;
 
         public ICollection<Deity> Deities { get; set; } = new List<Deity>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

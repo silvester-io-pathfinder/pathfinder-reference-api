@@ -1,3 +1,4 @@
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Utilities.Tables;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Mystery : BaseEntity
+    public class Mystery : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
         
@@ -40,6 +41,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
         
         public ICollection<TextBlock> MysteryBenefits { get; set; } = new List<TextBlock>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
     public class MysteryCurse : BaseEntity

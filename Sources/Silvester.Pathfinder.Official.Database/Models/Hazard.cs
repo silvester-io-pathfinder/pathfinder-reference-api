@@ -1,10 +1,11 @@
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Hazard : BaseEntity
+    public class Hazard : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -48,5 +49,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<HazardAction> Actions{ get; set; } = new List<HazardAction>();
      
         public ICollection<TextBlock> RoutineDetails { get; set; } = new List<TextBlock>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

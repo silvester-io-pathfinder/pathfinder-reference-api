@@ -3,20 +3,17 @@ using Silvester.Pathfinder.Official.Database.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ActionTypes
 {
-    public class Configurator : EntityConfigurator<ActionType>
+    public class Configurator : SearchableEntityConfigurator<ActionType>
     {
-        public override void Configure(ModelBuilder builder)
+        public override Expression<Func<ActionType, object?>> GetSearchProperties()
         {
-            base.Configure(builder);
-
-            /*builder
-                .Entity<ActionType>()
-                .OwnsMany(e => e.Effects, oe => oe.WithOwner().HasForeignKey(nameof(IOwnedEntity.OwnerId)));*/
+            return (e) => new { e.Name };
         }
     }
 }

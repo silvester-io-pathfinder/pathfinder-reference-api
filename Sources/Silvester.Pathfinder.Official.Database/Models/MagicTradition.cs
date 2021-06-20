@@ -1,8 +1,9 @@
+using NpgsqlTypes;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class MagicTradition : BaseEntity
+    public class MagicTradition : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -10,5 +11,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<Spell> Spells { get; set; } = new List<Spell>();
 
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

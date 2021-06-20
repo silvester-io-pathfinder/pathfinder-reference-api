@@ -1,10 +1,11 @@
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Feat : BaseEntity
+    public class Feat : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -36,6 +37,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
 
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
+        
         //GainProficiencyEffect(FarmingLore, Proficiency.Trained)
         //TriggerAtLevelEffect(3, GainProficiencyEffect(FarmingLore, Proficiency.Expert))
         //TriggerAtLevelEffect(7, GainProficiencyEffect(FarmingLore, Proficiency.Master))
@@ -45,7 +48,6 @@ namespace Silvester.Pathfinder.Official.Database.Models
         //GainSpell("Detect Magic", Level 1)
         //GainNextArmorProficiency(Proficiency.Trained)
         //GainAssurance()
-
 
         //public ICollection<FeatEffect> Effects { get; set; } = new List<Prerequisite>();
     }

@@ -1,10 +1,11 @@
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class AlchemicalElixir : BaseEntity
+    public class AlchemicalElixir : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
@@ -32,6 +33,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<AlchemicalElixirPotencyBinding> Potencies { get; set; } = new List<AlchemicalElixirPotencyBinding>();
 
         public ICollection<AlchemicalElixirCraftingRequirement> CraftingRequirements { get; set; } = new List<AlchemicalElixirCraftingRequirement>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
     public class AlchemicalElixirCraftingRequirement : BaseEntity

@@ -1,3 +1,4 @@
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Creature : BaseEntity
+    public class Creature : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
         public int Level { get; set; }
@@ -63,6 +64,8 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<CreatureAbility> Abilities { get; set; } = new List<CreatureAbility>();
         public ICollection<CreatureSkill> Skills { get; set; } = new List<CreatureSkill>();
         public ICollection<Spell> SummonedBy { get; set; } = new List<Spell>();
+     
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
     public class CreatureFlavor : BaseEntity
