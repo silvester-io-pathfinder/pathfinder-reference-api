@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Clockwork Dial",
                 Hands = "1",
-                ItemLevel = "0",
                 Price = 2000,
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,

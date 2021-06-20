@@ -25,5 +25,12 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
             PropertyInfo property = (PropertyInfo)memberExpression.Member;
             property.SetValue(owner, value);
         }
+
+        public static string GetSimpleMemberName(this MemberInfo member)
+        {
+            string name = member.Name;
+            int index = name.LastIndexOf('.');
+            return index >= 0 ? name.Substring(index + 1) : name;
+        }
     }
 }

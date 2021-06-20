@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Concealed Sheath",
                 Hands = "0",
-                ItemLevel = "3",
                 Price = 2500,
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,

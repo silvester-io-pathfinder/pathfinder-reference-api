@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Concealable Thieves' Tools",
                 Hands = "2",
-                ItemLevel = "4",
                 Price = 8000,
                 BulkId = Bulks.Instances.LightBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,

@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Harrow Carrying Case",
                 Hands = "1",
-                ItemLevel = "0",
                 Price = 100,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,

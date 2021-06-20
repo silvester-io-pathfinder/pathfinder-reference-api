@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Torch",
                 Hands = "1",
-                ItemLevel = "0",
                 Price = 1,
                 BulkId = Bulks.Instances.LightBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,

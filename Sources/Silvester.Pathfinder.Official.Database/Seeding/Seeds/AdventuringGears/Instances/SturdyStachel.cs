@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Sturdy Stachel",
                 Hands = "0",
-                ItemLevel = "2",
                 Price = 3000,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,

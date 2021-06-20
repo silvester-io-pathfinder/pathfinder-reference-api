@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Fingerprinting Kit",
                 Hands = "2",
-                ItemLevel = "3",
                 Price = 3000,
                 BulkId = Bulks.Instances.LightBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,

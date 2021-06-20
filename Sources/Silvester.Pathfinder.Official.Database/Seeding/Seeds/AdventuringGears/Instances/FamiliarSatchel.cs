@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Familiar Satchel",
                 Hands = "0",
-                ItemLevel = "0",
                 Price = 500,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,

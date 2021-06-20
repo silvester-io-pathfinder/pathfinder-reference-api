@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Models;
+using Silvester.Pathfinder.Official.Database.Seeding;
 using Silvester.Pathfinder.Official.Database.Utilities.Tables;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
@@ -178,7 +181,7 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
 
 
         public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, TOwner owner, TOwned owned, Expression<Func<TOwner, IEnumerable<TOwned>>> collectionSelector)
-            where TOwned : BaseEntity, IOwnedEntity
+            where TOwned : BaseEntity, IOwnedEntity, new()
             where TOwner : BaseEntity
         {
             owned.OwnerId = owner.Id;
@@ -186,27 +189,34 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
         }
 
         public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, Expression<Func<TOwner, IEnumerable<TOwned>>> collectionSelector, TOwned ownedEntity)
-            where TOwned : BaseEntity
+            where TOwned : BaseEntity, IOwnedEntity, new()
             where TOwner : BaseEntity
         {
             return builder.AddOwnedData(collectionSelector, new TOwned[] { ownedEntity });
         }
 
         public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, Expression<Func<TOwner, IEnumerable<TOwned>>> collectionSelector, IEnumerable<TOwned> ownedEntities)
-           where TOwned : BaseEntity
+           where TOwned : BaseEntity, IOwnedEntity
            where TOwner : BaseEntity
         {
             try
             {
                 return builder
                     .Entity<TOwner>()
-                    .OwnsMany(collectionSelector, a =>
+                    .OwnsMany(collectionSelector, accessor =>
                     {
-                        a.HasKey(e => e.Id);
-                        a.Property(e => e.Id).ValueGeneratedOnAdd();
-                        a.Property<Guid>("OwnerId").ValueGeneratedOnAdd();
-                        a.WithOwner().HasForeignKey("OwnerId");
-                        a.HasData(ownedEntities);
+                        accessor.HasKey(e => e.Id);
+                        accessor.Property(e => e.Id).ValueGeneratedOnAdd();
+                        accessor.Property<Guid>("OwnerId").ValueGeneratedOnAdd();
+                        accessor.WithOwner().HasForeignKey("OwnerId");
+                        accessor.HasData(ownedEntities);
+
+                        if(typeof(TOwned).GetInterfaces().Contains(typeof(ISearchableEntity)))
+                        {
+                            //After checking at run time whether the TEntity is searchable, it will comply with all of the generic type parameter constraints.
+                            MethodInfo method = typeof(ModelBuilderExtensions).GetMethod(nameof(ConfigureSearch), BindingFlags.Static | BindingFlags.NonPublic)!;
+                            method.MakeGenericMethod(typeof(TOwner), typeof(TOwned)).Invoke(null, new object[] { accessor });
+                        }
                     });
             } 
             catch(InvalidOperationException exception)
@@ -214,6 +224,14 @@ namespace Silvester.Pathfinder.Official.Database.Extensions
                 Console.WriteLine(exception.Message);
                 throw;
             }
+        }
+
+        private static void ConfigureSearch<TOwner, TOwned>(OwnedNavigationBuilder<TOwner, TOwned> accessor)
+            where TOwner : BaseEntity
+            where TOwned : BaseEntity, IOwnedEntity, ISearchableEntity
+        {
+            SearchableEntityConfigurator<TOwned> configurator = SearchableEntityConfigurator<TOwned>.ForEntity();
+            configurator.ConfigureSearch(accessor);
         }
 
         public static EntityTypeBuilder<TOwner> AddOwnedData<TOwner, TOwned>(this ModelBuilder builder, Expression<Func<TOwner, TOwned?>> selector, TOwned ownedEntity)

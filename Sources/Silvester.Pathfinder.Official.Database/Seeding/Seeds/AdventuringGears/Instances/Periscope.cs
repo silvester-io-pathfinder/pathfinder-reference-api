@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Periscope",
                 Hands = "2",
-                ItemLevel = "2",
                 Price = 2500,
                 BulkId = Bulks.Instances.LightBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,

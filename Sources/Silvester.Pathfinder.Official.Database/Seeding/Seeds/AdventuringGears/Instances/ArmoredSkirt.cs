@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Armored Skirt",
                 Hands = "0",
-                ItemLevel = "0",
                 Price = 200,
                 BulkId = Bulks.Instances.OneBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,

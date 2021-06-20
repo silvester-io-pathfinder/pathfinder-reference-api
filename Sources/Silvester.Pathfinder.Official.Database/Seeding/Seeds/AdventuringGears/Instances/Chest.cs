@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Chest",
                 Hands = "2",
-                ItemLevel = "0",
                 Price = 60,
                 BulkId = Bulks.Instances.TwoBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,

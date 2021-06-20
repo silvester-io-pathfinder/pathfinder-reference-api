@@ -1,10 +1,12 @@
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace Silvester.Pathfinder.Official.Database.Models
 {
-    public class Ability : BaseEntity
+    public class Ability : BaseEntity, ISearchableEntity
     {
         public string Name { get; set; } = default!;
 
@@ -14,5 +16,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         public ICollection<CreatureAbility> CreatureBindings { get; set; } = new List<CreatureAbility>();
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
+
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

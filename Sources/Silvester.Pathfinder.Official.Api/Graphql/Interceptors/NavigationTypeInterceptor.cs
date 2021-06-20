@@ -2,6 +2,7 @@
 using HotChocolate.Types;
 using HotChocolate.Types.Descriptors;
 using HotChocolate.Types.Descriptors.Definitions;
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace Silvester.Pathfinder.Official.Api.Graphql.Interceptors
             {
                 foreach(PropertyInfo property in definition.RuntimeType.GetProperties())
                 {
-                    if (property.PropertyType != typeof(string) && typeof(IEnumerable).IsAssignableFrom(property.PropertyType))
+                    if (property.PropertyType != typeof(string) && typeof(IEnumerable).IsAssignableFrom(property.PropertyType) && property.PropertyType != typeof(NpgsqlTsVector))
                     {
                         ObjectFieldDefinition fieldDefinition = definition.Fields.First(e => e.Name == context.DescriptorContext.Naming.GetMemberName(property, MemberKind.ObjectField));
                         ObjectFieldDescriptor fieldDescriptor = ObjectFieldDescriptor.From(context.DescriptorContext, fieldDefinition);

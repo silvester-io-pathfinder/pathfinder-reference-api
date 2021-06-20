@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Alchemist's Lab",
                 Hands = "2",
-                ItemLevel = "0",
                 Price = 500,
                 BulkId = Bulks.Instances.SixBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,

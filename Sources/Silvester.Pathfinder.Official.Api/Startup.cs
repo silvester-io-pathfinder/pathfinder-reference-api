@@ -18,6 +18,7 @@ using Silvester.Pathfinder.Official.Api.Probes.Readiness;
 using Silvester.Pathfinder.Official.Api.Services;
 using Silvester.Pathfinder.Official.Database;
 using System;
+using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -39,6 +40,8 @@ namespace Silvester.Pathfinder.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+            //Debugger.Launch();
+
             services.AddCors(options =>
             {
                 options.AddPolicy(name: LOCALHOST_CORS_POLICY_NAME, builder =>
@@ -90,7 +93,8 @@ namespace Silvester.Pathfinder.Api
                 .AddProjections()
                 .AddType<QueryType>()
                 .SetPagingOptions(new PagingOptions { MaxPageSize = 100, DefaultPageSize = 25, IncludeTotalCount = true })
-                .TryAddTypeInterceptor<NavigationTypeInterceptor>();
+                .TryAddTypeInterceptor<NavigationTypeInterceptor>()
+                .TryAddTypeInterceptor<TextSearchVectorInterceptor>();
 
             services
                 .Configure<ForwardedHeadersOptions>(options =>

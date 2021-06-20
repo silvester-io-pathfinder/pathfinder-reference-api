@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Thieves' Tools",
                 Hands = "2",
-                ItemLevel = "0",
                 Price = 300,
                 BulkId = Bulks.Instances.LightBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,
@@ -48,7 +47,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
             yield return new AdventuringGearVariant
             {
                 Id = Guid.Parse("4efe5c56-7224-49d0-8418-e85a9d5bd414"),
-                NameAddendum = "Infiltrator",
+                NameAddendum = "Infiltrator Picks",
                 DescriptionAddendum = "Infiltrator thieves' tools add a +1 item bonus to checks to Pick Locks and Disable Devices.",
                 ItemLevel = 0,
                 Price = 5000,

@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Snare Kit",
                 Hands = "2",
-                ItemLevel = "0",
                 Price = 500,
                 BulkId = Bulks.Instances.TwoBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,

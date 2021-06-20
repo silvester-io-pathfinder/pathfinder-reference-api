@@ -20,7 +20,6 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.AdventuringGears.
                 Id = ID,
                 Name = "Artisan's Tools",
                 Hands = "0",
-                ItemLevel = "0",
                 Price = 400,
                 BulkId = Bulks.Instances.TwoBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,

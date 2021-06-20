@@ -2,6 +2,7 @@
 using HotChocolate.Data.Sorting;
 using HotChocolate.Execution.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database;
 using System;
 using System.Collections;
@@ -42,7 +43,7 @@ namespace Silvester.Pathfinder.Official.Api.Graphql.Extensions
         {
             foreach (PropertyInfo nestedProperty in parentType.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty))
             {
-                if(nestedProperty.PropertyType != typeof(string) && typeof(IEnumerable).IsAssignableFrom(nestedProperty.PropertyType))
+                if(nestedProperty.PropertyType != typeof(string) && typeof(IEnumerable).IsAssignableFrom(nestedProperty.PropertyType) && nestedProperty.PropertyType != typeof(NpgsqlTsVector))
                 {
                     Visit(graphql, visitor, nestedProperty.PropertyType.GetGenericArguments().First());
                 }

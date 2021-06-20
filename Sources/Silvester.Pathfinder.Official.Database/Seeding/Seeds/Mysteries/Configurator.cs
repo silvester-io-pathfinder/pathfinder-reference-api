@@ -43,6 +43,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Mysteries
                 .HasOne(e => e.MysteryCurse)
                 .WithOne(e => e.Mystery)
                 .HasForeignKey<Mystery>(e => e.MysteryCurseId);
+
         }
     }
 }

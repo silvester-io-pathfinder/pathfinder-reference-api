@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Official.Database.Models
         
         public string Hands { get; set; } = default!;
 
-        public string ItemLevel { get; set; } = default!;
+        public int ItemLevel { get; set; } = default!;
 
         public int Price { get; set; }
 

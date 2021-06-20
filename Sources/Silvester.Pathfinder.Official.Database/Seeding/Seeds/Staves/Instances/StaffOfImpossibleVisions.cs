@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Staves.Instances
             return new Stave
             {
                 Id = ID,
-                Name = "StaffOof Impossible Visions",
+                Name = "Staff of Impossible Visions",
                 Usage = "Held in 1 hand",
                 Activate = "Cast a Spell.",
                 CraftingRequirements = "Supply one casting of all listed levels of all listed spells.",
