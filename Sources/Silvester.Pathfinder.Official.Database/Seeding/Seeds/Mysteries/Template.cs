@@ -46,6 +46,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Mysteries
             curse.Details = new TextBlock[0];
             curse.Potencies = new MysteryCursePotency[0];
             curse.SourcePage = null!;
+            curse.TableId = curse.Table?.Id;
             curse.Table = null;
             curse.MysteryId = mystery.Id;
             mystery.MysteryCurseId = curse.Id;

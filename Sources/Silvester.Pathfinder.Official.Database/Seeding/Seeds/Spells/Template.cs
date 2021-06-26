@@ -26,8 +26,9 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
             */
 
             Spell spell = GetSpell();
+            Table? table = GetTable(new TableBuilder());
 
-            builder.AddTable(spell, GetTable(new TableBuilder()));
+            builder.AddTable(spell, table);
             builder.AddSourcePage(spell, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(spell, GetTraits());
             builder.AddTextBlocks(spell, GetSpellDetailBlocks(), e => e.Details);
@@ -47,6 +48,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells
                 builder.AddData(heightening);
             }
 
+            spell.TableId = table?.Id;
             return spell;
         }
 
