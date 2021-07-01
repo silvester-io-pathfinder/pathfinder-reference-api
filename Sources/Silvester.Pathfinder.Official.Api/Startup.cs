@@ -9,16 +9,21 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Primitives;
+using Microsoft.OpenApi.Models;
 using Silvester.Pathfinder.Official.Api.Graphql;
 using Silvester.Pathfinder.Official.Api.Graphql.Extensions;
 using Silvester.Pathfinder.Official.Api.Graphql.Handlers.Queryable.String.CaseInsensitive;
 using Silvester.Pathfinder.Official.Api.Graphql.Interceptors;
+using Silvester.Pathfinder.Official.Api.Middlewares;
 using Silvester.Pathfinder.Official.Api.Probes.Readiness;
 using Silvester.Pathfinder.Official.Api.Services;
 using Silvester.Pathfinder.Official.Database;
 using Silvester.Pathfinder.Official.Probes.Liveness;
 using Silvester.Pathfinder.Official.Probes.Readiness;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -41,6 +46,14 @@ namespace Silvester.Pathfinder.Api
         public void ConfigureServices(IServiceCollection services)
         {
             //Debugger.Launch();
+
+            services
+                .AddOptions<ForwardedPathBaseHeaderMiddleware.Options>()
+                .Configure(options =>
+                {
+                    options.ForwardedPathHeaderName = "x-forwarded-path";
+                })
+                .ValidateDataAnnotations();
 
             services.AddCors(options =>
             {
@@ -106,11 +119,17 @@ namespace Silvester.Pathfinder.Api
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseForwardedHeaders();
-
+            app.UseMiddleware<ForwardedPathBaseHeaderMiddleware>();
             app.UseLivenessProbe();
             app.UseReadinessProbe();
 
-            app.UseSwagger();
+            app.UseSwagger(c => 
+            {
+                c.PreSerializeFilters.Add((swaggerDoc, httpReq) =>
+                {
+                    swaggerDoc.Servers = new List<OpenApiServer> { new OpenApiServer { Url = $"{httpReq.Scheme}://{httpReq.Host.Value}{httpReq.PathBase}" } };
+                });
+            });
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
