@@ -1,7 +1,6 @@
 using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database.Seeding;
 using System;
-using System.ComponentModel.DataAnnotations;
 using System.Linq.Expressions;
 
 namespace Silvester.Pathfinder.Official.Database.Utilities.Text

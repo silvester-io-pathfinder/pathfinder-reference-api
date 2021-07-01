@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silvester.Pathfinder.Offici
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Official.Documents", "Silvester.Pathfinder.Official.Documents\Silvester.Pathfinder.Official.Documents.csproj", "{E98932A5-A617-4A86-AC4A-380D6AFC84F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silvester.Pathfinder.Official.ModelBinding", "Silvester.Pathfinder.Official.ModelBinding\Silvester.Pathfinder.Official.ModelBinding.csproj", "{B64389C3-3039-485D-8449-7DC7CDED71FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silvester.Pathfinder.Official.Extensions", "Silvester.Pathfinder.Official.Extensions\Silvester.Pathfinder.Official.Extensions.csproj", "{E691B724-8BE6-43F6-89FF-C45202D22FF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{E98932A5-A617-4A86-AC4A-380D6AFC84F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E98932A5-A617-4A86-AC4A-380D6AFC84F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E98932A5-A617-4A86-AC4A-380D6AFC84F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64389C3-3039-485D-8449-7DC7CDED71FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64389C3-3039-485D-8449-7DC7CDED71FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64389C3-3039-485D-8449-7DC7CDED71FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64389C3-3039-485D-8449-7DC7CDED71FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E691B724-8BE6-43F6-89FF-C45202D22FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E691B724-8BE6-43F6-89FF-C45202D22FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E691B724-8BE6-43F6-89FF-C45202D22FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E691B724-8BE6-43F6-89FF-C45202D22FF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

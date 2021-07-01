@@ -19,7 +19,6 @@ using Silvester.Pathfinder.Official.Database;
 using Silvester.Pathfinder.Official.Probes.Liveness;
 using Silvester.Pathfinder.Official.Probes.Readiness;
 using System;
-using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 

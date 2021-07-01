@@ -2,17 +2,12 @@
 using HotChocolate.Data;
 using HotChocolate.Types;
 using Microsoft.EntityFrameworkCore;
-using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Api.Graphql.Searching;
 using Silvester.Pathfinder.Official.Api.Graphql.Searching.Models;
-using Silvester.Pathfinder.Official.Api.Utilities;
 using Silvester.Pathfinder.Official.Database;
-using Silvester.Pathfinder.Official.Database.Models;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Reflection;
 
 namespace Silvester.Pathfinder.Official.Api.Graphql

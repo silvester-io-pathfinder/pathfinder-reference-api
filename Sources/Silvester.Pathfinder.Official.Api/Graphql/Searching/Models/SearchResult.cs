@@ -1,8 +1,4 @@
-﻿using Silvester.Pathfinder.Official.Database;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace Silvester.Pathfinder.Official.Api.Graphql.Searching.Models
 {

@@ -1,8 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
-using System.Collections.Generic;
-using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Ammunitions
 {

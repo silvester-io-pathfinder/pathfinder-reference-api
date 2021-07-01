@@ -1,6 +1,4 @@
 using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Skills;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Stats.Instances;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;

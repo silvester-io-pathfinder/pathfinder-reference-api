@@ -1,8 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Silvester.Pathfinder.Official.Database.Extensions;
-using Silvester.Pathfinder.Official.Database.Models;
 using System;
-using System.Linq;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding
 {

@@ -18,11 +18,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Silvester.Pathfinder.Official.Database\Silvester.Pathfinder.Official.Database.csproj" />
+    <ProjectReference Include="..\Silvester.Pathfinder.Official.Documents\Silvester.Pathfinder.Official.Documents.csproj" />
+    <ProjectReference Include="..\Silvester.Pathfinder.Official.Extensions\Silvester.Pathfinder.Official.Extensions.csproj" />
+    <ProjectReference Include="..\Silvester.Pathfinder.Official.ModelBinding\Silvester.Pathfinder.Official.ModelBinding.csproj" />
     <ProjectReference Include="..\Silvester.Pathfinder.Official.Probes\Silvester.Pathfinder.Official.Probes.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Documents\" />
   </ItemGroup>
 
 </Project>

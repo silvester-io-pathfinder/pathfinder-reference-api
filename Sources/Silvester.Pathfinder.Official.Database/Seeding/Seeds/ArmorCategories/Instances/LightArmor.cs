@@ -1,5 +1,4 @@
 using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorCategories;
 using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.ArmorCategories.Instances

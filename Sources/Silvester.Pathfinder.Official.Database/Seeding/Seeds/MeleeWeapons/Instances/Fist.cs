@@ -1,8 +1,6 @@
 using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Bulks.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.DamageTypes.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Sources.Instances;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponCategories.Instances;
 using Silvester.Pathfinder.Official.Database.Seeding.Seeds.WeaponGroups.Instances;
 using System;
 using System.Collections.Generic;

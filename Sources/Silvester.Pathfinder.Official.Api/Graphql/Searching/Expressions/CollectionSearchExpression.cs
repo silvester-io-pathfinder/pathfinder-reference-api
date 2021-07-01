@@ -2,11 +2,9 @@
 using NpgsqlTypes;
 using Silvester.Pathfinder.Official.Database;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Official.Api.Graphql.Searching.Expressions
 {

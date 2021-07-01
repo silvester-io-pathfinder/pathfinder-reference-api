@@ -1,5 +1,4 @@
 using Silvester.Pathfinder.Official.Database.Models;
-using Silvester.Pathfinder.Official.Database.Seeding.Seeds.Potencies;
 using System;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Potencies.Instances

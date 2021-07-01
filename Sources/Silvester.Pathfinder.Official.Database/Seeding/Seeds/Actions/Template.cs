@@ -3,7 +3,6 @@ using Silvester.Pathfinder.Official.Database.Extensions;
 using Silvester.Pathfinder.Official.Database.Models;
 using Silvester.Pathfinder.Official.Database.Utilities.Text;
 using System;
-using System.Linq;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Actions
