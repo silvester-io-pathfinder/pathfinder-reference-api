@@ -1,8 +1,8 @@
-﻿using Silvester.Pathfinder.Official.Api.Documents.Models;
+﻿using Silvester.Pathfinder.Official.Api.Rest.Documents.Models;
 using Silvester.Pathfinder.Official.Documents.Models;
 using System;
 
-namespace Silvester.Pathfinder.Official.Api.Documents.Instances.PrivacyPolicies
+namespace Silvester.Pathfinder.Official.Api.Rest.Documents.Instances.PrivacyPolicies
 {
     public class Version1 : IDocumentProvider
     {

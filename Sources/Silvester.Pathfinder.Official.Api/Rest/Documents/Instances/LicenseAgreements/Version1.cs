@@ -1,9 +1,8 @@
-﻿using Silvester.Pathfinder.Official.Api.Documents.Instances.PrivacyPolicies;
-using Silvester.Pathfinder.Official.Api.Documents.Models;
+﻿using Silvester.Pathfinder.Official.Api.Rest.Documents.Models;
 using Silvester.Pathfinder.Official.Documents.Models;
 using System;
 
-namespace Silvester.Pathfinder.Official.Api.Documents.Instances.LicenseAgreements
+namespace Silvester.Pathfinder.Official.Api.Rest.Documents.Instances.LicenseAgreements
 {
     public class Version1 : IDocumentProvider
     {
@@ -19,17 +18,17 @@ namespace Silvester.Pathfinder.Official.Api.Documents.Instances.LicenseAgreement
                     sub.AddParagraph("2.    If you wish to use the software commercially for one year, you may download and use them (with the appropriate levied fees) under the Software License Agreement below.");
                 });
             })
-            .AddSection("tl;dr", section => 
+            .AddSection("tl;dr", section =>
             {
-                section.AddSubSection(null, sub => 
+                section.AddSubSection(null, sub =>
                 {
                     sub.AddParagraph("If you want to use the pf2e.io software or resources in a non-commercial setting (e.g. for a passion project), you are free to do so under the PolyForm NC license. This is a so called source-available license, and allows you to see, browse and contribute to the source code of the pf2e.io software.");
                     sub.AddParagraph("As soon as you start making any sort of money from the goods or services you produce using the pf2e.io software or resources, you are forced to enter into negotiations with us to come to a custom Software License Agreement such as the one listed below, in which we’ll find an appropriate model for your specific use-case. This is in part to ensure fair competition, as well as the make sure that any derivative work is in accordance with Paizo's agreements.");
                 });
             })
-            .AddSection("Software License Agreement", section => 
+            .AddSection("Software License Agreement", section =>
             {
-                section.AddSubSection(null, sub => 
+                section.AddSubSection(null, sub =>
                 {
                     sub.AddParagraph("This Software License Agreement (“Agreement”) is a legal agreement between you (either as an individual or a single entity (“You”)) and Silvester Consultancy B.V. (“Licensor”) for the source code, libraries, online or electronic documentation, and other materials provided to You in the applicable download, and any upgrades, modified versions, bug fixes, additions and improvements thereof that Licensor may make available during the term of the Agreement (the “Software”).");
                     sub.AddParagraph("References to “You” herein shall refer to you, and/or the entity on whose behalf you are using the Software, and all individual developer-users of the Software on behalf of such entity. ");

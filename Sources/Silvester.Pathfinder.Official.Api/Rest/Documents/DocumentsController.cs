@@ -1,20 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Silvester.Pathfinder.Official.Api.Documents.Instances.PrivacyPolicies;
-using Silvester.Pathfinder.Official.Api.Documents.Models;
 using Silvester.Pathfinder.Official.Api.Models;
+using Silvester.Pathfinder.Official.Api.Rest.Documents.Instances;
+using Silvester.Pathfinder.Official.Api.Rest.Documents.Models;
 using Silvester.Pathfinder.Official.Extensions;
 using Silvester.Pathfinder.Official.ModelBinding.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Silvester.Pathfinder.Official.Api.Documents
+namespace Silvester.Pathfinder.Official.Api.Rest.Documents
 {
     public class DocumentsController : ControllerBase
     {
         [HttpGet]
         [Route("documents/{documentType}/versions/{version}")]
-        public IActionResult GetDocumentByVersion([FromRoute] [FromEnumValue] DocumentType documentType , [FromRoute] int version)
+        public IActionResult GetDocumentByVersion([FromRoute][FromEnumValue] DocumentType documentType, [FromRoute] int version)
         {
             IDocumentProvider? provider = GetDocumentProvider(documentType, version);
             return provider == null
@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Official.Api.Documents
 
         [HttpGet]
         [Route("documents/{documentType}/versions/latest")]
-        public IActionResult GetLatestDocument([FromRoute] [FromEnumValue] DocumentType documentType)
+        public IActionResult GetLatestDocument([FromRoute][FromEnumValue] DocumentType documentType)
         {
             IDocumentProvider? provider = GetLatestDocumentProvider(documentType);
             return provider == null
