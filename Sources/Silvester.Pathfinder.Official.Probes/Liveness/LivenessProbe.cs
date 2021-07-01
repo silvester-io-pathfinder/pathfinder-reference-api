@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Silvester.Pathfinder.Official.Api.Probes.Liveness
+namespace Silvester.Pathfinder.Official.Probes.Liveness
 {
     public interface ILivenessProbe
     {

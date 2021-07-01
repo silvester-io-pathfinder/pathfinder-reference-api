@@ -4,9 +4,9 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace Silvester.Pathfinder.Official.Api.Probes.Liveness
+namespace Silvester.Pathfinder.Official.Probes.Liveness
 {
-    public class LivenessProbeMiddleware 
+    public class LivenessProbeMiddleware
     {
         private RequestDelegate Next { get; }
 
@@ -17,15 +17,15 @@ namespace Silvester.Pathfinder.Official.Api.Probes.Liveness
 
         public async Task Invoke(HttpContext httpContext, IServiceProvider services)
         {
-            if(httpContext.Request.Path.StartsWithSegments("/probes/liveness"))
+            if (httpContext.Request.Path.StartsWithSegments("/probes/liveness"))
             {
                 ILivenessProbe probe = GetLivenessProbe(services);
-                if(await probe.ShouldRestartAsync())
+                if (await probe.ShouldRestartAsync())
                 {
                     httpContext.Response.StatusCode = (int)HttpStatusCode.ServiceUnavailable;
                 }
                 else
-                { 
+                {
                     httpContext.Response.StatusCode = (int)HttpStatusCode.OK;
                 }
             }

@@ -4,7 +4,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace Silvester.Pathfinder.Official.Api.Probes.Readiness
+namespace Silvester.Pathfinder.Official.Probes.Readiness
 {
     public class ReadinessProbeMiddleware
     {

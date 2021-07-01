@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace Silvester.Pathfinder.Official.Api.Probes.Readiness
+namespace Silvester.Pathfinder.Official.Probes.Readiness
 {
     public static class ReadinessProbeMiddlewareInjection
     {

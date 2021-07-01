@@ -13,10 +13,11 @@ using Silvester.Pathfinder.Official.Api.Graphql;
 using Silvester.Pathfinder.Official.Api.Graphql.Extensions;
 using Silvester.Pathfinder.Official.Api.Graphql.Handlers.Queryable.String.CaseInsensitive;
 using Silvester.Pathfinder.Official.Api.Graphql.Interceptors;
-using Silvester.Pathfinder.Official.Api.Probes.Liveness;
 using Silvester.Pathfinder.Official.Api.Probes.Readiness;
 using Silvester.Pathfinder.Official.Api.Services;
 using Silvester.Pathfinder.Official.Database;
+using Silvester.Pathfinder.Official.Probes.Liveness;
+using Silvester.Pathfinder.Official.Probes.Readiness;
 using System;
 using System.Diagnostics;
 using System.Text.Json;
@@ -106,11 +107,6 @@ namespace Silvester.Pathfinder.Api
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseForwardedHeaders();
-
-            if (env.IsDevelopment())
-            {
-                //app.UseDeveloperExceptionPage();
-            }
 
             app.UseLivenessProbe();
             app.UseReadinessProbe();
