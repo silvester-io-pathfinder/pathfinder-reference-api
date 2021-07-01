@@ -5,13 +5,6 @@
   </PropertyGroup>
   
   <Import Project="../Properties.proj" />
-  
-  <ItemGroup>
-    <Compile Remove="Documents\**" />
-    <Content Remove="Documents\**" />
-    <EmbeddedResource Remove="Documents\**" />
-    <None Remove="Documents\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="HotChocolate.AspNetCore" Version="11.3.0" />
@@ -26,6 +19,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Silvester.Pathfinder.Official.Database\Silvester.Pathfinder.Official.Database.csproj" />
     <ProjectReference Include="..\Silvester.Pathfinder.Official.Probes\Silvester.Pathfinder.Official.Probes.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Documents\" />
   </ItemGroup>
 
 </Project>
