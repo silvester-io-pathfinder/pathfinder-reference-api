@@ -132,7 +132,7 @@ namespace Silvester.Pathfinder.Api
             });
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
+                c.SwaggerEndpoint("v1/swagger.json", "V1");
             });
 
             app.UseRouting();
