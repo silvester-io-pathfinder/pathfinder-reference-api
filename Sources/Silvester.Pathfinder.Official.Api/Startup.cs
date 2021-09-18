@@ -132,6 +132,7 @@ namespace Silvester.Pathfinder.Api
             });
             app.UseSwaggerUI(c =>
             {
+                c.DocumentTitle = "PF2E - REST API";
                 c.SwaggerEndpoint("v1/swagger.json", "V1");
             });
 
