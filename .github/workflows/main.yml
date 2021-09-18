@@ -25,11 +25,16 @@ jobs:
           text: ${{ steps.read-properties.outputs.content }}
           regex: '<Version>(.*?)</Version>'  
         
+      - name: NUGET - Package
+        run: |
+          ls ./project -l
+          dotnet pack ./Sources/Silvester.Pathfinder.Official.Documents.csproj -c Release -o ../build 
+
       - name: NUGET - Source
         run: nuget sources Add -Name Artifactory -Source https://silvester.jfrog.io/artifactory/api/nuget/silvester-nuget/silvester-pathfinder/Silvester.Pathfinder.Official.Documents -username ${{ secrets.ARTIFACTORY_USERNAME }} -password ${{ secrets.ARTIFACTORY_PASSWORD }}
         
       - name: NUGET - Push
-        if: ${{ steps.set-tag.outputs.tag != 'master'}}
+        if: ${{ steps.get-semantic-version.outputs.group1 != 'master'}}
         run: nuget push ../build/Silvester.Pathfinder.Official.Documents.${{ steps.get-semantic-version.outputs.group1 }}.nupkg -Source Artifactory
         
       - name: DOCKER - Login
