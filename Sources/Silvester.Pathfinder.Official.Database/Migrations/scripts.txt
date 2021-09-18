@@ -1,2 +1,6 @@
 ﻿dotnet ef migrations add Initial --startup-project Silvester.Pathfinder.Official.Api --project Silvester.Pathfinder.Official.Database
 dotnet ef database update --startup-project Silvester.Pathfinder.Official.Api --project Silvester.Pathfinder.Official.Database
+
+DROP DATABASE database_pathfinder_official;
+CREATE DATABASE database_pathfinder_official;
+GRANT ALL PRIVILEGES ON DATABASE database_pathfinder_official TO user_pathfinder_official;
