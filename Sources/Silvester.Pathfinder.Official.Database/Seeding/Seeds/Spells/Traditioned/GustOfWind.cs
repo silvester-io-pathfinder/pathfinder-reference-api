@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8cb0a97e-b278-4a4e-bd77-039a29c97718"), Type = TextBlockType.Text, Text = "A violent wind issues forth from your palm, blowing from the point where you are when you cast the spell to the line’s opposite end. The wind extinguishes small non-magical fires, disperses fog and mist, blows objects of light Bulk or less around, and pushes larger objects. Large or smaller creatures in the area must attempt a Fortitude save. Large or smaller creatures tha" };
+            yield return new TextBlock { Id = Guid.Parse("8cb0a97e-b278-4a4e-bd77-039a29c97718"), Type = TextBlockType.Text, Text = "A violent wind issues forth from your palm, blowing from the point where you are when you cast the spell to the line’s opposite end. The wind extinguishes small non-magical fires, disperses fog and mist, blows objects of light Bulk or less around, and pushes larger objects. Large or smaller creatures in the area must attempt a Fortitude save. Large or smaller creatures that later move into the gust must attempt the save on entering." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.Spells.Instances
                 Level = 1,
                 Range = "30 feet.",
                 Targets = "1 undead creature.",
-                IsSavingThrowBasic = false,
+                IsSavingThrowBasic = true,
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 SpellTypeId = SpellTypes.Instances.Cantrip.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,

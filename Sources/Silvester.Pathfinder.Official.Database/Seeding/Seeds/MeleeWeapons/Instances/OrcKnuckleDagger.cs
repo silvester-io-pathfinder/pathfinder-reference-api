@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Official.Database.Seeding.Seeds.MeleeWeapons.Inst
             return new MeleeWeapon
             {
                 Id = ID,
-                Name = "Orc Knuckl eDagger",
+                Name = "Orc Knuckle Dagger",
                 Description = "This stout, metal blade of orc design has a horizontal basket hilt with blades jutting from each end, or sometimes one blade like that of a katar.",
                 Price = 70,
                 Damage = "1d6",

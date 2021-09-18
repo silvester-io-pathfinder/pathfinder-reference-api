@@ -15,13 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Official.Database.Guids", "Silvester.Pathfinder.Official.Database.Guids\Silvester.Pathfinder.Official.Database.Guids.csproj", "{30F60EC6-A548-4183-9223-DCE1AC8F47EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silvester.Pathfinder.Official.Probes", "Silvester.Pathfinder.Official.Probes\Silvester.Pathfinder.Official.Probes.csproj", "{17AEF9BB-CBC4-4433-9503-3ED48FDE1813}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Official.Probes", "Silvester.Pathfinder.Official.Probes\Silvester.Pathfinder.Official.Probes.csproj", "{17AEF9BB-CBC4-4433-9503-3ED48FDE1813}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Official.Documents", "Silvester.Pathfinder.Official.Documents\Silvester.Pathfinder.Official.Documents.csproj", "{E98932A5-A617-4A86-AC4A-380D6AFC84F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silvester.Pathfinder.Official.ModelBinding", "Silvester.Pathfinder.Official.ModelBinding\Silvester.Pathfinder.Official.ModelBinding.csproj", "{B64389C3-3039-485D-8449-7DC7CDED71FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Official.ModelBinding", "Silvester.Pathfinder.Official.ModelBinding\Silvester.Pathfinder.Official.ModelBinding.csproj", "{B64389C3-3039-485D-8449-7DC7CDED71FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silvester.Pathfinder.Official.Extensions", "Silvester.Pathfinder.Official.Extensions\Silvester.Pathfinder.Official.Extensions.csproj", "{E691B724-8BE6-43F6-89FF-C45202D22FF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Official.Extensions", "Silvester.Pathfinder.Official.Extensions\Silvester.Pathfinder.Official.Extensions.csproj", "{E691B724-8BE6-43F6-89FF-C45202D22FF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
