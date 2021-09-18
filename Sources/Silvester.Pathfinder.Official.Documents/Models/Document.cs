@@ -9,21 +9,15 @@ namespace Silvester.Pathfinder.Official.Documents.Models
     {
         public DateTime CreationDate { get; }
         public DateTime LastModificationDate { get; }
-        public int Version { get; init; }
+        public int Version { get; }
         public IReadOnlyList<Section> Sections { get; }
 
-        public Document(DateTime creationDate, DateTime lastModificationDate, int version, IReadOnlyList<Section>? sections = null)
+        public Document(DateTime creationDate, DateTime lastModificationDate, int version, IReadOnlyList<Section> sections)
         {
             CreationDate = creationDate;
             LastModificationDate = lastModificationDate;
             Version = version;
-            Sections = sections ?? new List<Section>();
-        }
-
-        [JsonConstructor]
-        public Document()
-        {
-
+            Sections = sections;
         }
 
         public class Builder

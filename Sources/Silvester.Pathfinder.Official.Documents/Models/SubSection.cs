@@ -7,10 +7,10 @@ namespace Silvester.Pathfinder.Official.Documents.Models
         public string? Title { get; }
         public IReadOnlyList<string> Paragraphs { get; }
 
-        public SubSection(string? title = null, IReadOnlyList<string>? paragraphs = null)
+        public SubSection(string? title, IReadOnlyList<string> paragraphs)
         {
             Title = title;
-            Paragraphs = paragraphs ?? new List<string>();
+            Paragraphs = paragraphs;
         }
 
         public class Builder
