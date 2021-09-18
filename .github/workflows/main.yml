@@ -28,7 +28,7 @@ jobs:
       - name: NUGET - Package
         run: |
           ls ./Sources -l
-          dotnet pack ./Silvester.Pathfinder.Official.Documents/Silvester.Pathfinder.Official.Documents.csproj -c Release -o ../build 
+          dotnet pack ./Sources/Silvester.Pathfinder.Official.Documents/Silvester.Pathfinder.Official.Documents.csproj -c Release -o ../build 
 
       - name: NUGET - Source
         run: nuget sources Add -Name Artifactory -Source https://silvester.jfrog.io/artifactory/api/nuget/silvester-nuget/silvester-pathfinder/Silvester.Pathfinder.Official.Documents -username ${{ secrets.ARTIFACTORY_USERNAME }} -password ${{ secrets.ARTIFACTORY_PASSWORD }}
