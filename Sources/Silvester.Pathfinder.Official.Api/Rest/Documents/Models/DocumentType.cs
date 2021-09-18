@@ -9,6 +9,8 @@ namespace Silvester.Pathfinder.Official.Api.Rest.Documents.Models
         [EnumMember(Value = "privacy-policies")]
         PrivacyPolicies,
         [EnumMember(Value = "license-agreements")]
-        LicenseAgreements
+        LicenseAgreements,
+        [EnumMember(Value = "frequently-asked-questions")]
+        FrequentlyAskedQuestions
     }
 }
