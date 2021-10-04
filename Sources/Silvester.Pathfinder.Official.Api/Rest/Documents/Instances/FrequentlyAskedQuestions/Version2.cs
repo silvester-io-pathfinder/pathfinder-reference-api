@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Official.Api.Rest.Documents.Instances.FrequentlyA
     public class Version2 : IDocumentProvider
     {
         public DocumentType Type => DocumentType.FrequentlyAskedQuestions;
-        public int Version => 1;
+        public int Version => 2;
         public Document Document => new Document.Builder(DateTime.Parse("2021-09-18"), DateTime.Parse("2021-10-04"), 1)
             .AddSection("Why build yet another rules explorer?", section =>
             {
