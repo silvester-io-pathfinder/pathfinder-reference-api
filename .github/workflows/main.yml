@@ -28,14 +28,14 @@ jobs:
       - name: NUGET - Package
         run: |
           ls ./Sources -l
-          dotnet pack ./Sources/Silvester.Pathfinder.Official.Documents/Silvester.Pathfinder.Official.Documents.csproj -c Release -o ../build 
+          dotnet pack ./Sources/Silvester.Pathfinder.Reference.Documents/Silvester.Pathfinder.Reference.Documents.csproj -c Release -o ../build 
 
       - name: NUGET - Source
-        run: nuget sources Add -Name Artifactory -Source https://silvester.jfrog.io/artifactory/api/nuget/silvester-nuget/silvester-pathfinder/Silvester.Pathfinder.Official.Documents -username ${{ secrets.ARTIFACTORY_USERNAME }} -password ${{ secrets.ARTIFACTORY_PASSWORD }}
+        run: nuget sources Add -Name Artifactory -Source https://silvester.jfrog.io/artifactory/api/nuget/silvester-nuget/silvester-pathfinder/Silvester.Pathfinder.Reference.Documents -username ${{ secrets.ARTIFACTORY_USERNAME }} -password ${{ secrets.ARTIFACTORY_PASSWORD }}
         
       - name: NUGET - Push
         if: ${{ steps.get-semantic-version.outputs.group1 != 'master'}}
-        run: nuget push ../build/Silvester.Pathfinder.Official.Documents.${{ steps.get-semantic-version.outputs.group1 }}.nupkg -Source Artifactory
+        run: nuget push ../build/Silvester.Pathfinder.Reference.Documents.${{ steps.get-semantic-version.outputs.group1 }}.nupkg -Source Artifactory
         
       - name: DOCKER - Login
         uses: docker/login-action@v1
@@ -60,5 +60,5 @@ jobs:
             artifactoryUsername=${{ secrets.ARTIFACTORY_USERNAME }}
             artifactoryPassword=${{ secrets.ARTIFACTORY_PASSWORD }}
           tags: |
-            silvester.jfrog.io/silvester-docker/pathfinder-official-api:${{ steps.get-semantic-version.outputs.group1 }}
-            silvester.jfrog.io/silvester-docker/pathfinder-official-api:latest
+            silvester.jfrog.io/silvester-docker/pathfinder-reference-api:${{ steps.get-semantic-version.outputs.group1 }}
+            silvester.jfrog.io/silvester-docker/pathfinder-reference-api:latest
