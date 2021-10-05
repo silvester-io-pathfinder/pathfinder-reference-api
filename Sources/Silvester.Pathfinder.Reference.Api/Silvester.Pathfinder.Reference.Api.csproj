@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+   <Description>GraphQL API exposing Pathfinder 2e entities that are officially included in the published handbooks.</Description>
+  </PropertyGroup>
+  
+  <Import Project="../Properties.proj" />
+
+  <ItemGroup>
+    <PackageReference Include="HotChocolate.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="11.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.AzureAppServices.HostingStartup" Version="5.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.AzureAppServicesIntegration" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Silvester.Pathfinder.Reference.Icons" Version="2.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Silvester.Pathfinder.Reference.Database\Silvester.Pathfinder.Reference.Database.csproj" />
+    <ProjectReference Include="..\Silvester.Pathfinder.Reference.Documents\Silvester.Pathfinder.Reference.Documents.csproj" />
+    <ProjectReference Include="..\Silvester.Pathfinder.Reference.Extensions\Silvester.Pathfinder.Reference.Extensions.csproj" />
+    <ProjectReference Include="..\Silvester.Pathfinder.Reference.ModelBinding\Silvester.Pathfinder.Reference.ModelBinding.csproj" />
+    <ProjectReference Include="..\Silvester.Pathfinder.Reference.Probes\Silvester.Pathfinder.Reference.Probes.csproj" />
+  </ItemGroup>
+
+</Project>
