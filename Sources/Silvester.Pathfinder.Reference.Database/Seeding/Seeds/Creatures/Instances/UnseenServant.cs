@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Creatures.Instan
                 HitPoints = 4,
                 Resistances = "All damage 5 (except force or ghost touch).",
                 FlyingSpeed = "30 feet.",
-                SizeId = RaceSizes.Instances.Medium.ID,
+                SizeId = AncestrySizes.Instances.Medium.ID,
                 RarityId = Rarities.Instances.Common.ID
             };
         }

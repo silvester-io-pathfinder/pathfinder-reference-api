@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rarities.Instanc
     {
         public static readonly Guid ID = Guid.Parse("cd8cbe89-8d6d-4dee-aee3-7c2d2b8980dc");
 
-        protected override Rarity GetRaceRarity()
+        protected override Rarity GetAncestryRarity()
         {
             return new Rarity
             {

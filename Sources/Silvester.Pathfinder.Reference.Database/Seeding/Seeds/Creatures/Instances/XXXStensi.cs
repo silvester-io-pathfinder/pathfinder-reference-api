@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Creatures.Instan
                 WalkingSpeed = "",
                 FlyingSpeed = "",
                 BurrowingSpeed = "",
-                RaceId = Races.Instances.Orc.ID,
-                SizeId = RaceSizes.Instances.Medium.ID,
+                AncestryId = Ancestries.Instances.Orc.ID,
+                SizeId = AncestrySizes.Instances.Medium.ID,
                 RarityId = Rarities.Instances.Common.ID,
                 AlignmentId = Alignments.Instances.LawfulGood.ID,
             };

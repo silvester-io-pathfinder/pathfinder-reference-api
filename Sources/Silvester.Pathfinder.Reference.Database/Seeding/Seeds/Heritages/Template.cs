@@ -12,12 +12,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages
         {
             Heritage heritage = GetHeritage();
 
-            builder.HasJoinData<Heritage, Race>(heritage, GetRaces());
+            builder.HasJoinData<Heritage, Ancestry>(heritage, GetAncestries());
             
             return heritage;
         }
 
         protected abstract Heritage GetHeritage();
-        protected abstract IEnumerable<Guid> GetRaces();
+        protected abstract IEnumerable<Guid> GetAncestries();
     }
 }

@@ -76,10 +76,10 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public Proficiency RequiredProficiency { get; set; } = default!;
     }
 
-    public class RacePrerequisite : Prerequisite
+    public class AncestryPrerequisite : Prerequisite
     {
-        public Guid RequiredRaceId { get; set; }
-        public Race RequiredRace { get; set; } = default!;
+        public Guid RequiredAncestryId { get; set; }
+        public Ancestry RequiredAncestry { get; set; } = default!;
     }
 
     public class OrPrerequisite : Prerequisite

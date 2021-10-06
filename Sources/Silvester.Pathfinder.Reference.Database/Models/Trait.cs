@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
 
         public ICollection<Action> Actions { get; set; } = new List<Action>();
         
-        public ICollection<Race> Races { get; set; } = new List<Race>();
+        public ICollection<Ancestry> Ancestries { get; set; } = new List<Ancestry>();
 
         public ICollection<Hazard> Hazards { get; set; } = new List<Hazard>();
 

@@ -75,8 +75,8 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<PreciousMaterialWeapon> PreciousMaterialWeapons { get; set; } = default!;
         public DbSet<Prerequisite> Prerequisites { get; set; } = default!;
         public DbSet<Proficiency> Proficiencies { get; set; } = default!;
-        public DbSet<Race> Races { get; set; } = default!;
-        public DbSet<RaceSize> RaceSizes { get; set; } = default!;
+        public DbSet<Ancestry> Ancestries { get; set; } = default!;
+        public DbSet<AncestrySize> AncestriesSizes { get; set; } = default!;
         public DbSet<RangedWeapon> RangedWeapons { get; set; } = default!;
         public DbSet<Rarity> Rarities { get; set; } = default!;
         public DbSet<SavingThrowStat> SavingThrowStats { get; set; } = default!;

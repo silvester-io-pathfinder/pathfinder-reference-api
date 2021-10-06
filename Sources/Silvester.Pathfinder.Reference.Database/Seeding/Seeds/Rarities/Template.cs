@@ -7,10 +7,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rarities
     {
         protected override Rarity GetEntity(ModelBuilder builder)
         {
-            Rarity rarity = GetRaceRarity();
+            Rarity rarity = GetAncestryRarity();
             return rarity;
         }
 
-        protected abstract Rarity GetRaceRarity();
+        protected abstract Rarity GetAncestryRarity();
     }
 }

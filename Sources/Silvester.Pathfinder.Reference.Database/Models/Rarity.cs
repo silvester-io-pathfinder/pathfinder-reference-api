@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
     {
         public string Name { get; set; } = default!;
 
-        public ICollection<Race> Races { get; set; } = new List<Race>();
+        public ICollection<Ancestry> Ancestries { get; set; } = new List<Ancestry>();
      
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }

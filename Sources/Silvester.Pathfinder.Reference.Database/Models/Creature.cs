@@ -46,10 +46,10 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public Rarity Rarity { get; set; } = default!;
 
         public Guid SizeId { get; set; }
-        public RaceSize Size { get; set; } = default!;
+        public AncestrySize Size { get; set; } = default!;
 
-        public Guid? RaceId { get; set;}
-        public Race? Race { get; set; } 
+        public Guid? AncestryId { get; set;}
+        public Ancestry? Ancestry { get; set; } 
 
         public Guid? RecallKnowledgeId { get; set; }
         public CreatureRecallKnowledge? RecallKnowledge { get; set; } 

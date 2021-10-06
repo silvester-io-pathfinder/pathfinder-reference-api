@@ -1,5 +1,5 @@
 using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Races.Instances;
+using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Instances;
 using System;
 using System.Collections.Generic;
 
@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
             };
         }
 
-        protected override IEnumerable<Guid> GetRaces()
+        protected override IEnumerable<Guid> GetAncestries()
         {
             yield return Gnome.ID;
         }
