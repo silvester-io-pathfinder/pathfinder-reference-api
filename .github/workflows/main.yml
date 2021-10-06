@@ -35,7 +35,7 @@ jobs:
         
       - name: NUGET - Push
         if: ${{ steps.get-semantic-version.outputs.group1 != 'master'}}
-        run: nuget push ../build/Silvester.Pathfinder.Reference.Documents.${{ steps.get-semantic-version.outputs.group1 }}.nupkg -Source Artifactory
+        run: nuget push ../build/Silvester.Pathfinder.Reference.Documents.${{ steps.get-semantic-version.outputs.group1 }}.nupkg -Source Artifactory -username ${{ secrets.ARTIFACTORY_USERNAME }} -password ${{ secrets.ARTIFACTORY_PASSWORD }}
         
       - name: DOCKER - Login
         uses: docker/login-action@v1
