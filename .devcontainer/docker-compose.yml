@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  pathfinder_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    volumes:
+      - ..:/workspace:cached
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+  db:
+    image: postgres:latest
+    container_name: pathfinder-ref-postgress
+    restart: unless-stopped
+    volumes:
+      - ./postgress:/var/lib/postgresql/data
+    user: "1000:1000"
+    environment:
+      POSTGRES_USER: user_pathfinder_reference
+      POSTGRES_DB: database_pathfinder_reference
+      POSTGRES_PASSWORD: passwordPlaceholder
