@@ -33,6 +33,9 @@ jobs:
       - name: NUGET - Source
         run: nuget sources Add -Name Artifactory -Source https://silvester.jfrog.io/artifactory/api/nuget/silvester-nuget/silvester-pathfinder/Silvester.Pathfinder.Reference.Documents -username ${{ secrets.ARTIFACTORY_USERNAME }} -password ${{ secrets.ARTIFACTORY_PASSWORD }}
         
+      - name: NUGET - Credentials
+        run: nuget setapikey ${{ secrets.ARTIFACTORY_USERNAME }}:${{ secrets.ARTIFACTORY_PASSWORD }} -Source Artifactory
+        
       - name: NUGET - Push
         if: ${{ steps.get-semantic-version.outputs.group1 != 'master'}}
         run: nuget push ../build/Silvester.Pathfinder.Reference.Documents.${{ steps.get-semantic-version.outputs.group1 }}.nupkg -Source Artifactory
