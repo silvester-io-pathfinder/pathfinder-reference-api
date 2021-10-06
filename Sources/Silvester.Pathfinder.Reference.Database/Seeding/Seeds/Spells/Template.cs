@@ -12,18 +12,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells
     {
         protected override Spell GetEntity(ModelBuilder builder)
         {
-            /*
-
-            var owned = builder.Model.GetEntityTypes().Where(e => e.IsOwned()).ToArray();
-            var unowned = builder.Model.GetEntityTypes().Where(e => e.IsOwned() == false).ToArray();
-
-            var actionType = builder.Model.GetEntityTypes().Where(e => e.Name == "Silvester.Pathfinder.Official.Database.Models.ActionEffect").FirstOrDefault();
-            var textBlock = builder.Model.GetEntityTypes().Where(e => e.Name == "Silvester.Pathfinder.Official.Database.Utilities.Text.TextBlock").FirstOrDefault();
-
-            Console.WriteLine($"Action Effect: {actionType?.IsOwned()}");
-            Console.WriteLine($"Text Block : {textBlock?.IsOwned()}");
-            */
-
             Spell spell = GetSpell();
             Table? table = GetTable(new TableBuilder());
 
