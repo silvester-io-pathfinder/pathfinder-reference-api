@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding
 {
-    public class ConfiguratorProvider<TEntity>
+    public class EntityConfiguratorProvider<TEntity>
        where TEntity : BaseEntity
     {
         public EntityConfigurator<TEntity> GetConfigurator()

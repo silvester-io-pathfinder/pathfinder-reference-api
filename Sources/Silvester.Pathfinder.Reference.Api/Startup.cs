@@ -27,7 +27,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Silvester.Pathfinder.Api
+namespace Silvester.Pathfinder.Reference.Api
 {
     public class Startup
     {
@@ -45,8 +45,6 @@ namespace Silvester.Pathfinder.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //Debugger.Launch();
-
             services
                 .AddOptions<ForwardedPathBaseHeaderMiddleware.Options>()
                 .Configure(options =>
@@ -55,16 +53,17 @@ namespace Silvester.Pathfinder.Api
                 })
                 .ValidateDataAnnotations();
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy(name: LOCALHOST_CORS_POLICY_NAME, builder =>
+            services
+                .AddCors(options =>
                 {
-                    builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost");
-                    builder.AllowAnyHeader();
-                    builder.AllowAnyMethod();
-                    builder.AllowCredentials();
+                    options.AddPolicy(name: LOCALHOST_CORS_POLICY_NAME, builder =>
+                    {
+                        builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost");
+                        builder.AllowAnyHeader();
+                        builder.AllowAnyMethod();
+                        builder.AllowCredentials();
+                    });
                 });
-            });
 
             services
                 .AddControllers()
@@ -116,7 +115,7 @@ namespace Silvester.Pathfinder.Api
                 });
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
             app.UseForwardedHeaders();
             app.UseMiddleware<ForwardedPathBaseHeaderMiddleware>();

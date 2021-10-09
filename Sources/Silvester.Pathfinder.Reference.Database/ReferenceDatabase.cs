@@ -7,7 +7,6 @@ using System.Reflection;
 
 namespace Silvester.Pathfinder.Reference.Database
 {
-
     public class ReferenceDatabase : DbContext
     {
         public ReferenceDatabase(DbContextOptions<ReferenceDatabase> options)
@@ -131,7 +130,7 @@ namespace Silvester.Pathfinder.Reference.Database
         private static void ConfigureEntity<TEntity>(ModelBuilder builder)
             where TEntity : BaseEntity
         {
-            new ConfiguratorProvider<TEntity>()
+            new EntityConfiguratorProvider<TEntity>()
                 .GetConfigurator()
                 .Configure(builder);
         }

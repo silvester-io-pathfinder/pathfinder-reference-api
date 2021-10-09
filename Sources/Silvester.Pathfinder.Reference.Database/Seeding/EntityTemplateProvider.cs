@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding
 {
-    public class TemplateProvider<TEntity>
+    public class EntityTemplateProvider<TEntity>
        where TEntity : BaseEntity
     {
         public IEnumerable<Type> GetTypes()

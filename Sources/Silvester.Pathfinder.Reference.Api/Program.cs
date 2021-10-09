@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Silvester.Pathfinder.Api
+namespace Silvester.Pathfinder.Reference.Api
 {
     public class Program
     {

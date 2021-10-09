@@ -59,7 +59,7 @@ namespace Silvester.Pathfinder.Reference.Api.Services
                     Logger.LogInformation("Socket exception on database connection. Interpreting as 'database not ready'.");
 
                     //Retry next loop. 
-                    //Because we run on preemptible nodes, this can happen after it's been running successfully for hours, so we do have to potentially reset the state to Unready.
+                    //Because we run on pre-emptible nodes, this can happen after it's been running successfully for hours, so we do have to potentially reset the state to Unready.
 
                     DatabaseState = DatabaseState.Unready;
                     Logger.LogInformation("Database state set to unready.");

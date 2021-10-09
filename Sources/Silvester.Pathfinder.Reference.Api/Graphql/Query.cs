@@ -45,7 +45,8 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql
                     .Type(genericType)
                     .UseDbContext<ReferenceDatabase>()
                     .UseOffsetPaging(typeof(ObjectType<>).MakeGenericType(genericType));
-                
+
+                //UseProjection lacks a non-generic overload. Until https://github.com/ChilliCream/hotchocolate/issues/3019 is fixed, we need to call it using reflection.
                 InvokeUseProjectionMethod(genericType, field);
                 
                 field

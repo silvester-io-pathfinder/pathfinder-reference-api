@@ -16,6 +16,9 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql.Handlers.Queryable.String.C
 
             if (parsedValue is string fieldValue)
             {
+                //Compiles to:
+                //property.ToLower().StartsWith(input.ToLower());
+
                 return Expression.Call(Expression.Call(property, Expressions.ToLower), Expressions.StartsWith, Expression.Constant(fieldValue.ToLower()));
             }
 

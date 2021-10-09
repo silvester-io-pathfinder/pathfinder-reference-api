@@ -17,25 +17,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
         public TEntity Seed(ModelBuilder builder)
         {
             TEntity entity = GetEntity(builder);
-
-            VerifySourcePageId(entity);
-
             builder.AddData(entity);
             return entity;
-        }
-
-        private static void VerifySourcePageId(TEntity entity)
-        {
-            PropertyInfo? sourcePageIdProperty = typeof(TEntity).GetProperty("SourcePageId");
-
-            if (sourcePageIdProperty != null)
-            {
-                Guid? sourcePageId = (Guid?) sourcePageIdProperty.GetValue(entity);
-                if (sourcePageId == new Guid())
-                {
-                    //Console.WriteLine("Should not happen.");
-                }
-            }
         }
 
         protected abstract TEntity GetEntity(ModelBuilder builder);

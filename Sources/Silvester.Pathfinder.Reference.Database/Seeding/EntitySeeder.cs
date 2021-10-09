@@ -8,7 +8,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
     {
         public void Seed(ModelBuilder builder)
         {
-            foreach (EntityTemplate<TEntity> template in CreateInstance<TemplateProvider<TEntity>>().GetTemplates()) 
+            foreach (EntityTemplate<TEntity> template in CreateInstance<EntityTemplateProvider<TEntity>>().GetTemplates()) 
             {
                 template.Seed(builder);
             }
