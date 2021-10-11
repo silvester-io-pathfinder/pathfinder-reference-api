@@ -3,7 +3,7 @@ using System;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Lores.Instances
 {
-    public class Sailing : Lores.Template
+    public class Sailing : Template
     {
         public static readonly Guid ID = Guid.Parse("efa5a63f-a6df-4e20-8834-eef62de65127");
 

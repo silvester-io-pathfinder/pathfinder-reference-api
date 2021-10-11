@@ -14,6 +14,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public string? Special {get;set;} = default!;
 
         public string? Trigger { get; set; } = default!;
+        
+        public string? Frequency { get; set; }
 
         public int Level { get; set; }
 
@@ -22,9 +24,6 @@ namespace Silvester.Pathfinder.Reference.Database.Models
 
         public Guid FeatTypeId { get; set; }
         public FeatType FeatType { get; set; } = default!;
-
-        public Guid? FrequencyId { get; set; } = null;
-        public Frequency? Frequency { get; set; }
 
         public RollableEffect? RollableEffect { get; set; }
         public Guid? RollableEffectId { get; set; }

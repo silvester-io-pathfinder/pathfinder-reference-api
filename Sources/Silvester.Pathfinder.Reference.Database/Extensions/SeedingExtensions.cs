@@ -146,6 +146,64 @@ namespace Silvester.Pathfinder.Reference.Database.Extensions
             }
         }
 
+        public static void AddEffects(this ModelBuilder builder, IEnumerable<Effect> effects, Func<Effect, BaseEffectBinding> createBinding)
+        {
+            foreach (Effect effect in effects)
+            {
+                BaseEffectBinding binding = createBinding.Invoke(effect);
+                binding.Id = effect.Id;
+
+                builder.AddEffect(effect, binding);
+            }
+        }
+
+        public static void AddEffect(this ModelBuilder builder, Effect effect, BaseEffectBinding binding)
+        {
+            binding.EffectId = effect.Id;
+            effect.BindingId = binding.Id;
+
+            builder.AddData(binding.GetType(), binding);
+
+            switch (effect)
+            {
+                case RestrictedAbilityBoostEffect boost:
+                    foreach (StatEffectBinding statBinding in boost.RequiredStats)
+                    {
+                        statBinding.EffectId = effect.Id;
+                        builder.AddData(statBinding);
+                    }
+                    boost.RequiredStats = Array.Empty<StatEffectBinding>();
+                    break;
+
+                case ChoiceEffect choiceEffect:
+                    foreach (Effect choice in choiceEffect.Choices)
+                    {
+                        builder.AddEffect(choice, new ChoiceEffectBinding { Id = choice.Id, ChoiceId = choiceEffect.Id });
+                    }
+
+                    choiceEffect.Choices = Array.Empty<Effect>();
+                    break;
+
+                case CombinedEffect combinedEffect:
+                    foreach (Effect entry in combinedEffect.Entries)
+                    {
+                        builder.AddEffect(entry, new CombinedEffectBinding { Id = entry.Id, CombinedId = combinedEffect.Id });
+                    }
+
+                    combinedEffect.Entries = Array.Empty<Effect>();
+                    break;
+            }
+
+            foreach(EffectIncrement increment in effect.Increments)
+            {
+                increment.EffectId = effect.Id;
+                builder.AddData(increment.GetType(), increment);
+            }
+            effect.Increments = Array.Empty<EffectIncrement>();
+
+            builder.Entity(effect.GetType()).HasData(effect);
+        }
+
         public static void AddTraits<TOwner>(this ModelBuilder builder, TOwner owner, IEnumerable<Guid> traitIds)
            where TOwner : BaseEntity
         {

@@ -39,12 +39,34 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
             yield return Traits.Instances.Skill.ID;
         }
 
-        protected override IEnumerable<FeatEffect> GetEffects()
+        protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new GainLoreEffect { Id = Guid.Parse("43501d01-6d1e-497d-9cf8-81c0a0266232"), ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainLoreEffect { Id = Guid.Parse("aab01fbb-7034-4f04-b135-dcaecd6e765a"), TriggeredAtLevel = 3, ProficiencyId = Proficiencies.Instances.Expert.ID };
-            yield return new GainLoreEffect { Id = Guid.Parse("6634aaf1-a340-4b96-a815-8227dcffa9e5"), TriggeredAtLevel = 7, ProficiencyId = Proficiencies.Instances.Master.ID };
-            yield return new GainLoreEffect { Id = Guid.Parse("a7158664-5a5e-4ca9-af4d-fd6d5e183da5"), TriggeredAtLevel = 15, ProficiencyId = Proficiencies.Instances.Legendary.ID };
+            yield return new FreeLoreEffect
+            {
+                Id = Guid.Parse("be5190ad-11c7-47a4-9f3a-9044729143fe"),
+                ProficiencyId = Proficiencies.Instances.Trained.ID,
+                Increments = new EffectIncrement[] 
+                {
+                    new IncreaseProficiencyIncrement
+                    {
+                        Id = Guid.Parse("e76f8a33-4d6c-49da-9c80-0a46157be5f0"),
+                        Level = 3,
+                        ProficiencyId = Proficiencies.Instances.Expert.ID
+                    },
+                    new IncreaseProficiencyIncrement
+                    {
+                        Id = Guid.Parse("9efbc7ae-8dc8-40a2-9a0f-8624266a3b31"),
+                        Level = 7,
+                        ProficiencyId = Proficiencies.Instances.Master.ID
+                    },
+                    new IncreaseProficiencyIncrement
+                    {
+                        Id = Guid.Parse("38e517de-c374-43f4-ae48-2b93b356f946"),
+                        Level = 15,
+                        ProficiencyId = Proficiencies.Instances.Legendary.ID
+                    }
+                }
+            };
         }
     }
 }

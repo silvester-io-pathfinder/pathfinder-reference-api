@@ -59,7 +59,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Creatures.Instan
             };
         }
 
-        protected override IEnumerable<CreatureAbility> GetAbilities()
+        protected override IEnumerable<CreatureSense> GetAbilities()
         {
             yield break;
         }

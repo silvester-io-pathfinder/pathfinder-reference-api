@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Utilities.Text
 
     public class TextBlockConfigurator : SearchableEntityConfigurator<TextBlock>
     {
-        public override Expression<Func<TextBlock, object>> GetSearchProperties()
+        public override Expression<Func<TextBlock, object?>> GetSearchProperties()
         {
             return e => new { e.Text };
         }

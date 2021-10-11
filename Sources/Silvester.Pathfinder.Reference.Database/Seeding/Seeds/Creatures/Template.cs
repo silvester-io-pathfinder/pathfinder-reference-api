@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Creatures
                 builder.AddData(skill);
             }
 
-            foreach (CreatureAbility ability in GetAbilities())
+            foreach (CreatureSense ability in GetAbilities())
             {
                 ability.CreatureId = creature.Id;
                 builder.AddData(ability);
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Creatures
         }
 
         protected abstract IEnumerable<CreatureFlavor> GetFlavors();
-        protected abstract IEnumerable<CreatureAbility> GetAbilities();
+        protected abstract IEnumerable<CreatureSense> GetAbilities();
         protected abstract IEnumerable<CreatureSkill> GetSkills();
         protected abstract IEnumerable<Guid> GetImmunities();
         protected abstract IEnumerable<Guid> GetLanguages();

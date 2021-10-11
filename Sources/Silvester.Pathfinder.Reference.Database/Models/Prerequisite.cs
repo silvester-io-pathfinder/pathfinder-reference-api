@@ -14,6 +14,12 @@ namespace Silvester.Pathfinder.Reference.Database.Models
 
         }
 
+        public class BackgroundPrerequisiteBinding : BasePrerequisiteBinding
+        {
+            public Guid BackgroundId { get; set; }
+            public Background Background { get; set; } = default!;
+        }
+
         public class FeatPrerequisiteBinding : BasePrerequisiteBinding
         {
             public Guid FeatId { get; set; }
@@ -74,6 +80,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models
     {
         public Guid RequiredProficiencyId { get; set; }
         public Proficiency RequiredProficiency { get; set; } = default!;
+
+        public Guid? RequiredLoreId { get; set; }
+        public Lore? RequiredLore { get; set; } 
     }
 
     public class AncestryPrerequisite : Prerequisite

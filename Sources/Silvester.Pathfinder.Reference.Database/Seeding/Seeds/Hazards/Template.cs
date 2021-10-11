@@ -85,7 +85,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards
 
         protected static Trait[] FilterTraits(params string [] names)
         {
-            return new TemplateProvider<Trait>()
+            return new EntityTemplateProvider<Trait>()
                 .GetTemplates()
                 .Select(e => (Trait) e.GetType().GetMethod("GetTrait", BindingFlags.NonPublic | BindingFlags.Instance)!.Invoke(e, null)!)
                 .Where(e => names.Contains(e.Name))

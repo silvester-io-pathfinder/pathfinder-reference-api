@@ -18,6 +18,10 @@ namespace Silvester.Pathfinder.Reference.Database.Models
 
         public ICollection<Feat> Feats { get; set; } = new List<Feat>();
 
+        public ICollection<Ability> Abilities { get; set; } = new List<Ability>();
+
+        public ICollection<Background> Backgrounds { get; set; } = new List<Background>();
+
         public ICollection<Curse> Curses { get; set; } = new List<Curse>();
 
         public ICollection<ItemCurse> ItemCurses { get; set; } = new List<ItemCurse>();

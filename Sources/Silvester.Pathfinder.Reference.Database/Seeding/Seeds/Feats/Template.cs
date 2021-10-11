@@ -16,6 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
             builder.AddRollableEffect(feat, GetRollableEffect(), e => e.RollableEffect);
             builder.AddTraits(feat, GetTraits());
             builder.AddTextBlocks(feat, GetDetailBlocks(), e => e.Details);
+            builder.AddEffects(GetEffects(), (effect) => new FeatEffectBinding { FeatId = feat.Id });
 
             foreach (Prerequisite prerequisite in GetPrerequisites())
             {
@@ -32,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
                         builder.Entity(innerPrerequisite.GetType()).HasData(innerPrerequisite);
                     }
 
-                    or.Choices.Clear();
+                    or.Choices = Array.Empty<Prerequisite>();
                 }
 
                 builder.Entity(prerequisite.GetType()).HasData(prerequisite);
@@ -44,28 +45,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
                 requirement.FeatId = feat.Id;
             }
 
-            foreach (FeatEffect featEffect in GetEffects())
-            {
-                FeatEffect.FeatEffectBinding binding = builder.AddData(new FeatEffect.FeatEffectBinding { Id = featEffect.Id, FeatId = feat.Id });
-                featEffect.BindingId = binding.Id;
-
-                if(featEffect is OrFeatEffect or)
-                {
-                    foreach(FeatEffect innerEffect in or.Choices)
-                    {
-                        FeatEffect.OrEffectBinding innerBinding = builder.AddData(new FeatEffect.OrEffectBinding { Id = innerEffect.Id, OrFeatEffectId = featEffect.Id });
-                        innerEffect.BindingId = innerBinding.Id;
-
-                        builder.Entity(innerEffect.GetType()).HasData(innerEffect);
-                    }
-
-                    or.Choices.Clear();
-                }
-              
-                builder.Entity(featEffect.GetType()).HasData(featEffect);
-            }
-
-
             return feat;
         }
 
@@ -73,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
         protected abstract IEnumerable<Guid> GetTraits();
         protected abstract IEnumerable<TextBlock> GetDetailBlocks();
 
-        protected virtual IEnumerable<FeatEffect> GetEffects()
+        protected virtual IEnumerable<Effect> GetEffects()
         {
             //Override in concrete subclass to add feat effects.
             yield break;

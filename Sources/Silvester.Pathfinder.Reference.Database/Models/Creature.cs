@@ -58,7 +58,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public ICollection<Immunity> Immunities { get; set; } = new List<Immunity>();
         public ICollection<Language> Languages { get; set; } = new List<Language>();
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
-        public ICollection<CreatureAbility> Abilities { get; set; } = new List<CreatureAbility>();
+        public ICollection<CreatureSense> Abilities { get; set; } = new List<CreatureSense>();
         public ICollection<CreatureSkill> Skills { get; set; } = new List<CreatureSkill>();
         public ICollection<Spell> SummonedBy { get; set; } = new List<Spell>();
      
@@ -86,7 +86,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public Skill Skill { get; set; } = default!;
     }
 
-    public class CreatureAbility : BaseEntity
+    public class CreatureSense : BaseEntity
     {
         public string? Addendum { get; set; }
         public string? Variant { get; set; }
@@ -94,8 +94,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public Guid CreatureId { get; set; }
         public Creature Creature { get; set; } = default!;
 
-        public Guid AbilityId { get; set; }
-        public Ability Ability { get; set; } = default!;
+        public Guid SenseId { get; set; }
+        public Sense Sense  { get; set; } = default!;
     }
 
     public class CreatureSkill : BaseEntity

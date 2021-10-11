@@ -6,7 +6,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
     {
         public Guid OwnerId { get; set; }
 
-        public int Page { get; set; }
+        public int? Page { get; set; }
 
         public Guid SourceId { get; set; }
         public Source Source { get; set; } = default!;

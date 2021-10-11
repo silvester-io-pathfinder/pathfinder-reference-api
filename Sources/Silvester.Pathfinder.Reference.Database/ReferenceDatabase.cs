@@ -31,6 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<ArmorCategory> ArmorCategories { get; set; } = default!;
         public DbSet<ArmorGroup> ArmorGroups { get; set; } = default!;
         public DbSet<AttackType> AttackTypes { get; set; } = default!;
+        public DbSet<Background> Backgrounds { get; set; } = default!;
         public DbSet<BenefitType> BenefitTypes { get; set; } = default!;
         public DbSet<Bulk> Bulks { get; set; } = default!;
         public DbSet<Class> Classes { get; set; } = default!;
@@ -48,7 +49,9 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<SpellType> FocusTypes { get; set; } = default!;
         public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
         public DbSet<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = default!;
-        public DbSet<Frequency> Frequencies { get; set; } = default!;
+        public DbSet<HarrowCard> HarrowCards { get; set; } = default!;
+        public DbSet<HarrowCategory> HarrowCategories { get; set; } = default!;
+        public DbSet<HarrowMode> HarrowModes { get; set; } = default!;
         public DbSet<HazardComplexity> HazardComplexities { get; set; } = default!;
         public DbSet<Immunity> HazardImmunities { get; set; } = default!;
         public DbSet<Hazard> Hazards { get; set; } = default!;
@@ -60,6 +63,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Language> Languages { get; set; } = default!;
         public DbSet<LanguageType> LanguageTypes { get; set; } = default!;
         public DbSet<Lore> Lores { get; set; } = default!;
+        public DbSet<LoreCategory> LoreCategories { get; set; } = default!;
         public DbSet<MagicEssence> MagicEssences { get; set; } = default!;
         public DbSet<MagicSchool> MagicSchools { get; set; } = default!;
         public DbSet<MagicTradition> MagicTraditions { get; set; } = default!;
@@ -81,6 +85,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<SavingThrowStat> SavingThrowStats { get; set; } = default!;
         public DbSet<Shield> Shields { get; set; } = default!;
         public DbSet<Skill> Skills { get; set; } = default!;
+        public DbSet<Sense> Senses { get; set; } = default!;
         public DbSet<Source> Sources { get; set; } = default!;
         public DbSet<SpellComponent> SpellComponents { get; set; } = default!;
         public DbSet<Spell> Spells { get; set; } = default!;
