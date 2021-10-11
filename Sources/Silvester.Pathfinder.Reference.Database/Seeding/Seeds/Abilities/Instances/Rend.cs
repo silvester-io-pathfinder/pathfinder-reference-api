@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
 
         protected override IEnumerable<TextBlock> GetEffects()
         {
-            yield return new TextBlock { Id = Guid.Parse("781f5d52-19ba-41b3-a954-96b877579e52"), Text = "The monster automatically deals that Strike�s damage again to the enemy." };
+            yield return new TextBlock { Id = Guid.Parse("781f5d52-19ba-41b3-a954-96b877579e52"), Text = "The monster automatically deals that Strike's damage again to the enemy." };
         }
 
         protected override SourcePage GetSourcePage()

@@ -4,12 +4,12 @@ using System.Collections.Generic;
 namespace Silvester.Pathfinder.Reference.Database.Models
 {
     //Parent Types
-    public abstract class Prerequisite : BaseEntity
+    public class Prerequisite : BaseEntity
     {
         public Guid BindingId { get; set; }
         public BasePrerequisiteBinding Binding { get; set; } = default!;
 
-        public abstract class BasePrerequisiteBinding : BaseEntity
+        public class BasePrerequisiteBinding : BaseEntity
         {
 
         }

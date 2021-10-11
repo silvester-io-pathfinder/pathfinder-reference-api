@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("f1067b4a-f067-417e-a26a-2514df0b039d"), Type = TextBlockType.Text, Text = "You heard the call of the sea from a young age. Perhaps you signed onto a merchant�s vessel, joined the navy, or even fell in with a crew of pirates and scalawags." };
+            yield return new TextBlock { Id = Guid.Parse("f1067b4a-f067-417e-a26a-2514df0b039d"), Type = TextBlockType.Text, Text = "You heard the call of the sea from a young age. Perhaps you signed onto a merchant's vessel, joined the navy, or even fell in with a crew of pirates and scalawags." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

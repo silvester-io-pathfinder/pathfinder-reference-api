@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("b22e9381-d3c6-4405-9508-b84c683d9e8a"), Type = TextBlockType.Text, Text = "When you were young, you became the ward of another house�boarded, fed, and educated, but never quite a part of the family. Perhaps you had to tend to their needs in return for feeding and raising you, or perhaps you were provided for but disregarded. Now, adventuring is your chance to grow and roam free." };
+            yield return new TextBlock { Id = Guid.Parse("b22e9381-d3c6-4405-9508-b84c683d9e8a"), Type = TextBlockType.Text, Text = "When you were young, you became the ward of another house'boarded, fed, and educated, but never quite a part of the family. Perhaps you had to tend to their needs in return for feeding and raising you, or perhaps you were provided for but disregarded. Now, adventuring is your chance to grow and roam free." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("a4c2b312-60d0-461e-911d-9118d0deba87"), Type = TextBlockType.Text, Text = "As a formally trained apothecary or a rural practitioner of folk medicine, you learned the healing properties of various herbs. You�re adept at collecting the right natural cures in all sorts of environments and preparing them properly." };
+            yield return new TextBlock { Id = Guid.Parse("a4c2b312-60d0-461e-911d-9118d0deba87"), Type = TextBlockType.Text, Text = "As a formally trained apothecary or a rural practitioner of folk medicine, you learned the healing properties of various herbs. You're adept at collecting the right natural cures in all sorts of environments and preparing them properly." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

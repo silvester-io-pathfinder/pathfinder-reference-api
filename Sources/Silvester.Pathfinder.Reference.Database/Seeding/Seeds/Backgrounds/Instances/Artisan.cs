@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("5d1aa430-6fba-4dd8-9390-5eb2b1d3730b"), Type = TextBlockType.Text, Text = "As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith�s apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships." };
+            yield return new TextBlock { Id = Guid.Parse("5d1aa430-6fba-4dd8-9390-5eb2b1d3730b"), Type = TextBlockType.Text, Text = "As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith's apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("44786491-c52b-4b82-8ed1-19ca5cb681c6"), Type = TextBlockType.Text, Text = "You were (or still are) a member of a cult whose rites may involve sacred dances to ensure a strong harvest or dire rituals that call upon dark powers. You might have taken up adventuring to further your cult�s aims, to initiate yourself into the world�s grander mysteries, or to flee unsavory practices or strictures." };
+            yield return new TextBlock { Id = Guid.Parse("44786491-c52b-4b82-8ed1-19ca5cb681c6"), Type = TextBlockType.Text, Text = "You were (or still are) a member of a cult whose rites may involve sacred dances to ensure a strong harvest or dire rituals that call upon dark powers. You might have taken up adventuring to further your cult's aims, to initiate yourself into the world's grander mysteries, or to flee unsavory practices or strictures." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

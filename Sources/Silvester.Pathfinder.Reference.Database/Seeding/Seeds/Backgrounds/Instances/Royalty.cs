@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc5f8ebb-49af-4b48-ac03-ba0f13de9413"), Type = TextBlockType.Text, Text = "You are a prominent member of a royal family. You have taken up the life of an adventurer�perhaps you're a deposed queen hoping to regain her throne, a prince seeking a more exciting life, or a princess on a secret mission." };
+            yield return new TextBlock { Id = Guid.Parse("fc5f8ebb-49af-4b48-ac03-ba0f13de9413"), Type = TextBlockType.Text, Text = "You are a prominent member of a royal family. You have taken up the life of an adventurer'perhaps you're a deposed queen hoping to regain her throne, a prince seeking a more exciting life, or a princess on a secret mission." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

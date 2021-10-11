@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
             {
                 Id = ID,
                 Name = "Push",
-                Requirements = "The monster�s last action was a success with a Strike that lists Push in its damage entry",
+                Requirements = "The monster's last action was a success with a Strike that lists Push in its damage entry",
                 ActionTypeId = ActionTypes.Instances.OneAction.ID
             };
         }

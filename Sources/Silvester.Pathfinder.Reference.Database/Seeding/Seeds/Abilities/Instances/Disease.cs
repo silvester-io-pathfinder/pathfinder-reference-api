@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
 
         protected override IEnumerable<TextBlock> GetEffects()
         {
-            yield return new TextBlock { Id = Guid.Parse("5b5c7728-320d-4397-b4cd-32e65d648b11"), Text = "When a creature is exposed to a monster�s disease, it attempts a Fortitude save or succumbs to the disease. The level of a disease is the level of the monster inflicting the disease. The disease follows the rules for afflictions." };
+            yield return new TextBlock { Id = Guid.Parse("5b5c7728-320d-4397-b4cd-32e65d648b11"), Text = "When a creature is exposed to a monster's disease, it attempts a Fortitude save or succumbs to the disease. The level of a disease is the level of the monster inflicting the disease. The disease follows the rules for afflictions." };
         }
 
         protected override SourcePage GetSourcePage()

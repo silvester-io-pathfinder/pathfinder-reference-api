@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("b005e333-5c6b-4ad2-bfd1-9500704e2181"), Type = TextBlockType.Text, Text = "To the common folk, the life of a noble seems one of idyllic luxury, but growing up as a noble or member of the aspiring gentry, you know the reality: a noble�s lot is obligation and intrigue. Whether you seek to escape your duties by adventuring or to better your station, you have traded silks and pageantry for an adventurer�s life." };
+            yield return new TextBlock { Id = Guid.Parse("b005e333-5c6b-4ad2-bfd1-9500704e2181"), Type = TextBlockType.Text, Text = "To the common folk, the life of a noble seems one of idyllic luxury, but growing up as a noble or member of the aspiring gentry, you know the reality: a noble's lot is obligation and intrigue. Whether you seek to escape your duties by adventuring or to better your station, you have traded silks and pageantry for an adventurer's life." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

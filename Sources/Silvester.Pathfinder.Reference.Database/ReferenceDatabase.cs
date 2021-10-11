@@ -45,7 +45,6 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<DivineFont> DivineFonts { get; set; } = default!;
         public DbSet<Domain> Domains { get; set; } = default!;
         public DbSet<Feat> Feats { get; set; } = default!;
-        public DbSet<FeatType> FeatTypes { get; set; } = default!;
         public DbSet<SpellType> FocusTypes { get; set; } = default!;
         public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
         public DbSet<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = default!;

@@ -1,6 +1,7 @@
 ﻿using HotChocolate.Data.Filters;
 using HotChocolate.Data.Filters.Expressions;
 using HotChocolate.Language;
+using HotChocolate.Types;
 using System;
 using System.Linq.Expressions;
 
@@ -10,7 +11,13 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql.Handlers.Queryable.String.C
     {
         protected override int Operation => DefaultFilterOperations.NotStartsWith;
 
-        public override Expression HandleOperation(QueryableFilterContext context, IFilterOperationField field, IValueNode value, object parsedValue)
+        public NotStartsWithHandler(InputParser inputParser) 
+            : base(inputParser)
+        {
+
+        }
+
+        public override Expression HandleOperation(QueryableFilterContext context, IFilterOperationField field, IValueNode value, object? parsedValue)
         {
             Expression property = context.GetInstance();
 

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("cf67a157-8336-44d8-aa3a-00ef528851e9"), Type = TextBlockType.Text, Text = "You are incredibly knowledgeable, skilled, and perhaps even trained to teach children and adults about the world and its wonders. From books to classes, you�re committed to imparting knowledge to all. Not everything can be taught or learned from a book, though, so you�ve become an adventurer to learn subjects more directly and bring that wisdom back to your students." };
+            yield return new TextBlock { Id = Guid.Parse("cf67a157-8336-44d8-aa3a-00ef528851e9"), Type = TextBlockType.Text, Text = "You are incredibly knowledgeable, skilled, and perhaps even trained to teach children and adults about the world and its wonders. From books to classes, you're committed to imparting knowledge to all. Not everything can be taught or learned from a book, though, so you've become an adventurer to learn subjects more directly and bring that wisdom back to your students." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("b383ea03-141a-4c90-ad77-f1f40b48ea8b"), Type = TextBlockType.Text, Text = "You held a role of servitude, waiting on nobles and engendering their trust as one of the confidantes of the household. You might have walked away on good terms, or perhaps you know dangerous secrets about your former masters. Regardless, you�re adventuring for a change and finding that in this new role, the skills you�ve learned now serve you." };
+            yield return new TextBlock { Id = Guid.Parse("b383ea03-141a-4c90-ad77-f1f40b48ea8b"), Type = TextBlockType.Text, Text = "You held a role of servitude, waiting on nobles and engendering their trust as one of the confidantes of the household. You might have walked away on good terms, or perhaps you know dangerous secrets about your former masters. Regardless, you're adventuring for a change and finding that in this new role, the skills you've learned now serve you." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
 
         protected override IEnumerable<TextBlock> GetEffects()
         {
-            yield return new TextBlock { Id = Guid.Parse("b0e50640-3105-4ef4-94a2-1efb398d63e4"), Text = "A monster with telepathy can communicate mentally with any creatures within the listed radius, as long as they share a language. This doesn�t give any special access to their thoughts, and communicates no more information than normal speech would." };
+            yield return new TextBlock { Id = Guid.Parse("b0e50640-3105-4ef4-94a2-1efb398d63e4"), Text = "A monster with telepathy can communicate mentally with any creatures within the listed radius, as long as they share a language. This doesn't give any special access to their thoughts, and communicates no more information than normal speech would." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

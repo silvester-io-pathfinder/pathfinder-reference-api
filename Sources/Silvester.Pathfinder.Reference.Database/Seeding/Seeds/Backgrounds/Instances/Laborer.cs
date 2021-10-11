@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b058dfd-f5e0-45c1-aaf7-5dd51f8394d6"), Type = TextBlockType.Text, Text = "You�ve spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else�s command." };
+            yield return new TextBlock { Id = Guid.Parse("0b058dfd-f5e0-45c1-aaf7-5dd51f8394d6"), Type = TextBlockType.Text, Text = "You've spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else's command." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

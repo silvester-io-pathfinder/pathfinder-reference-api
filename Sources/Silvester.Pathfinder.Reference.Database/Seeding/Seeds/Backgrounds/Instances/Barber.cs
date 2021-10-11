@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("58eb06b3-8656-43a3-ac7a-c28d30b6734a"), Type = TextBlockType.Text, Text = "Haircuts, dentistry, bloodletting, and surgery�if it takes a steady hand and a razor, you do it. You may have taken to the road to expand your skills, or to test yourself against a world that leaves your patients so battered and bruised." };
+            yield return new TextBlock { Id = Guid.Parse("58eb06b3-8656-43a3-ac7a-c28d30b6734a"), Type = TextBlockType.Text, Text = "Haircuts, dentistry, bloodletting, and surgery'if it takes a steady hand and a razor, you do it. You may have taken to the road to expand your skills, or to test yourself against a world that leaves your patients so battered and bruised." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

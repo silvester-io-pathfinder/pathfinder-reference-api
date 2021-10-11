@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6ae0f59-79d8-4a49-a088-add1850849fa"), Type = TextBlockType.Text, Text = "You spent your early days in a religious monastery or cloister. You may have traveled out into the world to spread the message of your religion or because you cast away the teachings of your faith, but deep down you�ll always carry within you the lessons you learned." };
+            yield return new TextBlock { Id = Guid.Parse("a6ae0f59-79d8-4a49-a088-add1850849fa"), Type = TextBlockType.Text, Text = "You spent your early days in a religious monastery or cloister. You may have traveled out into the world to spread the message of your religion or because you cast away the teachings of your faith, but deep down you'll always carry within you the lessons you learned." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

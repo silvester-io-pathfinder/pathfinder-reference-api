@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
 
         protected override IEnumerable<TextBlock> GetEffects()
         {
-            yield return new TextBlock { Id = Guid.Parse("da05bfbc-d279-4389-8199-3677815e35a1"), Text = "This monster can see in all directions simultaneously, and therefore can�t be flanked." };
+            yield return new TextBlock { Id = Guid.Parse("da05bfbc-d279-4389-8199-3677815e35a1"), Text = "This monster can see in all directions simultaneously, and therefore can't be flanked." };
         }
 
         protected override SourcePage GetSourcePage()

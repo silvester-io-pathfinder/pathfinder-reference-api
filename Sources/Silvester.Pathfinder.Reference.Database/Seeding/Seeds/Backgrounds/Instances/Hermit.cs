@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("536b8e63-6330-4103-a2c8-14d4c774bf61"), Type = TextBlockType.Text, Text = "In an isolated place�like a cave, remote oasis, or secluded mansion�you lived a life of solitude. Adventuring might represent your first foray out among other people in some time. This might be a welcome reprieve from solitude or an unwanted change, but in either case, you�re likely still rough around the edges." };
+            yield return new TextBlock { Id = Guid.Parse("536b8e63-6330-4103-a2c8-14d4c774bf61"), Type = TextBlockType.Text, Text = "In an isolated place'like a cave, remote oasis, or secluded mansion'you lived a life of solitude. Adventuring might represent your first foray out among other people in some time. This might be a welcome reprieve from solitude or an unwanted change, but in either case, you're likely still rough around the edges." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

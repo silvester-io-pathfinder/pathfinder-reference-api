@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Senses.Instances
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f5d558f1-8685-415e-9650-c6931cd5c10a"), Type = TextBlockType.Text, Text = "This sense allows a monster to feel vibrations caused by movement through a liquid. It�s an imprecise sense with a limited range (listed in the ability). Wavesense functions only if monster and the subject are in the same body of liquid, and only if the subject is moving through the liquid." };
+            yield return new TextBlock { Id = Guid.Parse("f5d558f1-8685-415e-9650-c6931cd5c10a"), Type = TextBlockType.Text, Text = "This sense allows a monster to feel vibrations caused by movement through a liquid. It's an imprecise sense with a limited range (listed in the ability). Wavesense functions only if monster and the subject are in the same body of liquid, and only if the subject is moving through the liquid." };
         }
 
         public override SourcePage GetSourcePage()

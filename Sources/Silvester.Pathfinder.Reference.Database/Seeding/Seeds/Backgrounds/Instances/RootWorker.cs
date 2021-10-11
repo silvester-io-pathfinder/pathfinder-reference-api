@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("d8d13c87-5eb3-45b8-8903-98f0921c4d15"), Type = TextBlockType.Text, Text = "Some ailments can�t be cured by herbs alone. You learned ritual remedies as well, calling on nature spirits to soothe aches and ward off the evil eye. Taking up with adventurers has given you company on the road, as well as protection from those who would brand you a fake�or worse." };
+            yield return new TextBlock { Id = Guid.Parse("d8d13c87-5eb3-45b8-8903-98f0921c4d15"), Type = TextBlockType.Text, Text = "Some ailments can't be cured by herbs alone. You learned ritual remedies as well, calling on nature spirits to soothe aches and ward off the evil eye. Taking up with adventurers has given you company on the road, as well as protection from those who would brand you a fake'or worse." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

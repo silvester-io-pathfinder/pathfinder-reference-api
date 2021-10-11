@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
 
         protected override IEnumerable<TextBlock> GetEffects()
         {
-            yield return new TextBlock { Id = Guid.Parse("13febb4a-4192-409a-9c36-1ad6808fed0b"), Text = "A creature that first enters the area must attempt a Will save. Regardless of the result of the saving throw, the creature is temporarily immune to this monster�s Frightful Presence for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("13febb4a-4192-409a-9c36-1ad6808fed0b"), Text = "A creature that first enters the area must attempt a Will save. Regardless of the result of the saving throw, the creature is temporarily immune to this monster's Frightful Presence for 1 minute." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

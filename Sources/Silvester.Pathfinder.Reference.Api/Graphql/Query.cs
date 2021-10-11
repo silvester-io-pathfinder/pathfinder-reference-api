@@ -44,12 +44,8 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql
                     .Field(fieldName)
                     .Type(genericType)
                     .UseDbContext<ReferenceDatabase>()
-                    .UseOffsetPaging(typeof(ObjectType<>).MakeGenericType(genericType));
-
-                //UseProjection lacks a non-generic overload. Until https://github.com/ChilliCream/hotchocolate/issues/3019 is fixed, we need to call it using reflection.
-                InvokeUseProjectionMethod(genericType, field);
-                
-                field
+                    .UseOffsetPaging(typeof(ObjectType<>).MakeGenericType(genericType))
+                    .UseProjection(genericType)
                     .UseFiltering(genericType)
                     .UseSorting(genericType)
                     .Resolve((context) =>
@@ -58,15 +54,6 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql
                         return property.GetValue(database);
                     });
             }
-        }
-
-        private static void InvokeUseProjectionMethod(Type genericType, IObjectFieldDescriptor field)
-        {
-            MethodInfo? method = typeof(ProjectionObjectFieldDescriptorExtensions).GetMethod("UseProjection", 1, new[] { typeof(IObjectFieldDescriptor), typeof(string) });
-
-            method!
-                .MakeGenericMethod(genericType)
-                .Invoke(null, new object?[] { field, null });
         }
     }
 }

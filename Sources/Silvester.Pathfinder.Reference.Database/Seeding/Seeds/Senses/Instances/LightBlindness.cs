@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Senses.Instances
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8edd4b24-a44f-4fd1-bd31-725965eb5670"), Type = TextBlockType.Text, Text = "When first exposed to bright light, the monster is blinded until the end of its next turn. After this exposure, light doesn�t blind the monster again until after it spends 1 hour in darkness. However, as long as the monster is in an area of bright light, it�s dazzled." };
+            yield return new TextBlock { Id = Guid.Parse("8edd4b24-a44f-4fd1-bd31-725965eb5670"), Type = TextBlockType.Text, Text = "When first exposed to bright light, the monster is blinded until the end of its next turn. After this exposure, light doesn't blind the monster again until after it spends 1 hour in darkness. However, as long as the monster is in an area of bright light, it's dazzled." };
         }
 
         public override SourcePage GetSourcePage()

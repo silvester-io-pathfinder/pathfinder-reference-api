@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("8c5eed0a-95e8-43e2-bbbd-a36634652b80"), Type = TextBlockType.Text, Text = "Piles of legal manuals, stern teachers, and experience in the courtroom have instructed you in legal matters. You�re capable of mounting a prosecution or defense in court, and you tend to keep abreast of local laws, as you never can tell when you might need to know them on short notice." };
+            yield return new TextBlock { Id = Guid.Parse("8c5eed0a-95e8-43e2-bbbd-a36634652b80"), Type = TextBlockType.Text, Text = "Piles of legal manuals, stern teachers, and experience in the courtroom have instructed you in legal matters. You're capable of mounting a prosecution or defense in court, and you tend to keep abreast of local laws, as you never can tell when you might need to know them on short notice." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

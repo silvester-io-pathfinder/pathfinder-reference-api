@@ -15,14 +15,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
             {
                 Id = ID,
                 Name = "Retributive Strike",
-                Trigger = "An enemy damages the monster�s ally, and both are within 15 feet of the monster.",
+                Trigger = "An enemy damages the monster's ally, and both are within 15 feet of the monster.",
                 ActionTypeId = ActionTypes.Instances.Reaction.ID
             };
         }
 
         protected override IEnumerable<TextBlock> GetEffects()
         {
-            yield return new TextBlock { Id = Guid.Parse("bdf7b0b1-a3a6-4492-8ba9-ea908148b417"), Text = " The ally gains resistance to all damage against the triggering damage equal to 2 + the monster�s level. If the foe is within reach, the monster makes a melee Strike against it." };
+            yield return new TextBlock { Id = Guid.Parse("bdf7b0b1-a3a6-4492-8ba9-ea908148b417"), Text = " The ally gains resistance to all damage against the triggering damage equal to 2 + the monster's level. If the foe is within reach, the monster makes a melee Strike against it." };
         }
 
         protected override SourcePage GetSourcePage()

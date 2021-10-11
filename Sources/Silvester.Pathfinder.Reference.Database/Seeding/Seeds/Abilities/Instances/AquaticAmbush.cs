@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
             {
                 Id = ID,
                 Name = "Aquatic Ambush",
-                Requirements = "The monster is hiding in water and a creature that hasn�t detected it is within the listed number of feet.",
+                Requirements = "The monster is hiding in water and a creature that hasn't detected it is within the listed number of feet.",
                 ActionTypeId = ActionTypes.Instances.OneAction.ID
             };
         }

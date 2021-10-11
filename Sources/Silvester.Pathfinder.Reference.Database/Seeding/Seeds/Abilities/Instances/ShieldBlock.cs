@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
 
         protected override IEnumerable<TextBlock> GetEffects()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad66e97c-6d09-4c8f-98d0-b8597812184a"), Text = " The monster snaps its shield into place to deflect a blow. The shield prevents the monster from taking an amount of damage up to the shield�s Hardness. The monster and the shield each take any remaining damage, possibly breaking or destroying the shield." };
+            yield return new TextBlock { Id = Guid.Parse("ad66e97c-6d09-4c8f-98d0-b8597812184a"), Text = " The monster snaps its shield into place to deflect a blow. The shield prevents the monster from taking an amount of damage up to the shield's Hardness. The monster and the shield each take any remaining damage, possibly breaking or destroying the shield." };
         }
 
         protected override SourcePage GetSourcePage()

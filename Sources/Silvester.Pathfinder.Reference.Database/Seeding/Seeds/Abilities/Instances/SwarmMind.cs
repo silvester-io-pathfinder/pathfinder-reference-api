@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
 
         protected override IEnumerable<TextBlock> GetEffects()
         {
-            yield return new TextBlock { Id = Guid.Parse("18ca9f0e-04ff-43c7-b084-0b113df9acef"), Text = "This monster doesn�t have a single mind (typically because it�s a swarm of smaller creatures), and is immune to mental effects that target only a specific number of creatures. It is still subject to mental effects that affect all creatures in an area." };
+            yield return new TextBlock { Id = Guid.Parse("18ca9f0e-04ff-43c7-b084-0b113df9acef"), Text = "This monster doesn't have a single mind (typically because it's a swarm of smaller creatures), and is immune to mental effects that target only a specific number of creatures. It is still subject to mental effects that affect all creatures in an area." };
         }
 
         protected override SourcePage GetSourcePage()

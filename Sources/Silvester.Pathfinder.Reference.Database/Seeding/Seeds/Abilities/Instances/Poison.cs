@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
 
         protected override IEnumerable<TextBlock> GetEffects()
         {
-            yield return new TextBlock { Id = Guid.Parse("db099ebe-0dfa-4648-a6fe-6475398628fe"), Text = "When a creature is exposed to a monster�s poison, it attempts a Fortitude save to avoid becoming poisoned. The level of a poison is the level of the monster inflicting the poison. The poison follows the rules for afflictions." };
+            yield return new TextBlock { Id = Guid.Parse("db099ebe-0dfa-4648-a6fe-6475398628fe"), Text = "When a creature is exposed to a monster's poison, it attempts a Fortitude save to avoid becoming poisoned. The level of a poison is the level of the monster inflicting the poison. The poison follows the rules for afflictions." };
         }
 
         protected override SourcePage GetSourcePage()

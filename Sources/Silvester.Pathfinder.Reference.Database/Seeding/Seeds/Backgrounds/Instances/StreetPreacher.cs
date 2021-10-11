@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("04da2593-bfee-4548-8dfe-d563f4f52860"), Type = TextBlockType.Text, Text = "Forget the church orthodoxy and the stuffy cloisters� spreading the word of your god to the people is your calling. You've preached on the street corners and in public houses, to wanderers on the road and to captives in the stocks. Adventuring can take you across the world. What vocation could better serve to take your holy words to fresh ears?" };
+            yield return new TextBlock { Id = Guid.Parse("04da2593-bfee-4548-8dfe-d563f4f52860"), Type = TextBlockType.Text, Text = "Forget the church orthodoxy and the stuffy cloisters' spreading the word of your god to the people is your calling. You've preached on the street corners and in public houses, to wanderers on the road and to captives in the stocks. Adventuring can take you across the world. What vocation could better serve to take your holy words to fresh ears?" };
         }
 
         protected override IEnumerable<Effect> GetEffects()

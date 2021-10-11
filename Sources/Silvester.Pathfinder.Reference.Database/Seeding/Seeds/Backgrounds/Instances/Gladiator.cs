@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("521dd03c-9677-4876-ba0c-f1d2c288012f"), Type = TextBlockType.Text, Text = "The bloody games of the arena taught you the art of combat. Before you attained true fame, you departed�or escaped�the arena to explore the world. Your skill at drawing both blood and a crowd�s attention pay off in a new adventuring life." };
+            yield return new TextBlock { Id = Guid.Parse("521dd03c-9677-4876-ba0c-f1d2c288012f"), Type = TextBlockType.Text, Text = "The bloody games of the arena taught you the art of combat. Before you attained true fame, you departed'or escaped'the arena to explore the world. Your skill at drawing both blood and a crowd's attention pay off in a new adventuring life." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("998ff677-3d4a-4033-90ae-2bc109c2990c"), Type = TextBlockType.Text, Text = "You spent your early days in the aftermath of one of the great ravenings. You survived thanks to your resourcefulness and perhaps your patron�s favor and were blessed with skills and drive thereafter, but you must always hold to his standards, lest the hunger from the depths seek you out once again." };
+            yield return new TextBlock { Id = Guid.Parse("998ff677-3d4a-4033-90ae-2bc109c2990c"), Type = TextBlockType.Text, Text = "You spent your early days in the aftermath of one of the great ravenings. You survived thanks to your resourcefulness and perhaps your patron's favor and were blessed with skills and drive thereafter, but you must always hold to his standards, lest the hunger from the depths seek you out once again." };
         }
 
         protected override IEnumerable<Effect> GetEffects()

@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
             {
                 Id = ID,
                 Name = "Catch Rock",
-                Requirements = "The monster must have a free hand but can Release anything it�s holding as part of this reaction.",
+                Requirements = "The monster must have a free hand but can Release anything it's holding as part of this reaction.",
                 Trigger = "The monster is targeted with a thrown rock Strike or a rock would fall on the monster.",
                 ActionTypeId = ActionTypes.Instances.Reaction.ID
             };
