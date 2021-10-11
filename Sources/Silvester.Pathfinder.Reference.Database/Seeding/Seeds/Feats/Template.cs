@@ -1,6 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Reference.Database.Extensions;
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -17,27 +22,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
             builder.AddTraits(feat, GetTraits());
             builder.AddTextBlocks(feat, GetDetailBlocks(), e => e.Details);
             builder.AddEffects(GetEffects(), (effect) => new FeatEffectBinding { FeatId = feat.Id });
-
-            foreach (Prerequisite prerequisite in GetPrerequisites())
-            {
-                Prerequisite.FeatPrerequisiteBinding binding = builder.AddData(new Prerequisite.FeatPrerequisiteBinding { Id = prerequisite.Id, FeatId = feat.Id});
-                prerequisite.BindingId = binding.Id;
-
-                if(prerequisite is OrPrerequisite or)
-                {
-                    foreach(Prerequisite innerPrerequisite in or.Choices)
-                    {
-                        Prerequisite.OrBinding innerBinding = builder.AddData(new Prerequisite.OrBinding { Id = innerPrerequisite.Id, PrerequisiteId = prerequisite.Id });
-                        innerPrerequisite.BindingId = innerBinding.Id;
-
-                        builder.Entity(innerPrerequisite.GetType()).HasData(innerPrerequisite);
-                    }
-
-                    or.Choices = Array.Empty<Prerequisite>();
-                }
-
-                builder.Entity(prerequisite.GetType()).HasData(prerequisite);
-            }
+            builder.AddPrerequisites(GetPrerequisites(), () => new FeatPrerequisiteBinding { FeatId = feat.Id });
+            builder.AddSourcePage(feat, GetSourcePage(), e => e.SourcePageId);
+            
 
             foreach (FeatRequirement requirement in GetRequirements())
             {
@@ -51,6 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
         protected abstract Feat GetFeat();
         protected abstract IEnumerable<Guid> GetTraits();
         protected abstract IEnumerable<TextBlock> GetDetailBlocks();
+        protected abstract SourcePage GetSourcePage();
 
         protected virtual IEnumerable<Effect> GetEffects()
         {

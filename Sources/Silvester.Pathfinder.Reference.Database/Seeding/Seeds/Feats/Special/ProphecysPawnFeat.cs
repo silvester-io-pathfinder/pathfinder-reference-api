@@ -17,7 +17,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
                 Name = "Prophecy's Pawn",
                 Level = 1,
                 Trigger = "You fail a saving throw, attack roll, or skill check.",
-                FeatTypeId = FeatTypes.Instances.Background.ID,
                 ActionTypeId = ActionTypes.Instances.FreeAction.ID
             };
         }
@@ -33,6 +32,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
             yield return Traits.Instances.Abjuration.ID;
             yield return Traits.Instances.Divine.ID;
             yield return Traits.Instances.Fortune.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("5324ae47-aed5-4463-9e32-c4b9eb356e72"),
+                SourceId = Sources.Instances.SecretsOfMagic.ID,
+                Page = 30
+            };
         }
     }
 }

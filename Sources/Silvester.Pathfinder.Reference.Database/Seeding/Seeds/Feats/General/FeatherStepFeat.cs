@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Feather Step",
                 Level = 1,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -34,6 +35,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         protected override IEnumerable<Guid> GetTraits()
         {
             yield return Traits.Instances.General.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("7b756fe7-4108-42cc-a62c-73ab80e7f353"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 261
+            };
         }
     }
 }

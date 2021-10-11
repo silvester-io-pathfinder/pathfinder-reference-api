@@ -18,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
                 Level = 1,
                 Frequency = "Once per minute.", 
                 Trigger = "You attempt a saving throw against a magical effect, but you haven't rolled yet.",
-                FeatTypeId = FeatTypes.Instances.Background.ID,
                 ActionTypeId = ActionTypes.Instances.Reaction.ID
             };
         }
@@ -31,6 +30,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
         protected override IEnumerable<Guid> GetTraits()
         {
             yield return Traits.Instances.Concentrate.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("aae9424b-07cc-4e9d-94c5-cbe3b08bef30"),
+                SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
+                Page = 50
+            };
         }
     }
 }

@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Connections",
                 Level = 2,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -30,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
             yield return new SkillPrerequisite { Id = Guid.Parse("c7af13d6-533f-4d31-b058-a16371e5f7fc"), RequiredSkillId = Skills.Instances.Society.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID };
-            yield return new FeatPrerequisite { Id = Guid.Parse("ee3c490c-28f3-410a-bce3-c7de7c756ff8"), RequiredFeatId = Guid.Parse("5c26de36-847d-4a16-8871-0a2016fdfacc") };
+            yield return new FeatPrerequisite { Id = Guid.Parse("ee3c490c-28f3-410a-bce3-c7de7c756ff8"), RequiredFeatId = CourtlyGracesFeat.ID };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -38,6 +39,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
             yield return Traits.Instances.Uncommon.ID;
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("132f911a-abce-4499-bd2a-04adfcb5f88c"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 260
+            };
         }
     }
 }

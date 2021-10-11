@@ -1,4 +1,11 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements;
+using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Triggers.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,7 +23,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Arcane Sense",
                 Level = 1,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -35,6 +41,52 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         {
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override IEnumerable<Effect> GetEffects()
+        {
+            yield return new InnateSpellEffect 
+            {
+                Id = Guid.Parse("d9c87bf6-f028-41db-a4ee-5c7c44808937"), 
+                SpellId = Spells.Instances.DetectMagic.ID, 
+                MagicTraditionId = MagicTraditions.Instances.Arcane.ID,
+                Level = 1,
+                Increments = new EffectIncrement[]
+                {
+                    new IncreaseLevelIncrement
+                    {
+                        Id = Guid.Parse("23b955d0-d4a9-45ff-a360-9e19de8eb6c4"),
+                        Level = 3,
+                        Trigger = new SkillProficiencyTrigger
+                        {
+                            Id = Guid.Parse("51ace397-c583-4391-a7de-37ae5bfa3052"),
+                            ProficiencyId = Proficiencies.Instances.Master.ID,
+                            SkillId = Skills.Instances.Arcana.ID
+                        }
+                    },
+                    new IncreaseLevelIncrement
+                    {
+                        Id = Guid.Parse("ab4b3a9e-5b97-47e0-a149-ef3af614be3e"),
+                        Level = 4,
+                        Trigger = new SkillProficiencyTrigger
+                        {
+                            Id = Guid.Parse("5b70f909-4e9e-4c18-92e5-0b1a1de8e518"),
+                            ProficiencyId = Proficiencies.Instances.Legendary.ID,
+                            SkillId = Skills.Instances.Arcana.ID
+                        }
+                    },
+                }
+            };
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("c4c7a663-d0eb-4d57-ae19-a76812543a31"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 258
+            };
         }
     }
 }

@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Quick Swim",
                 Level = 7,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -35,6 +36,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         {
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("b1b613e7-7bb4-4c62-a4f0-04d732cceecf"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 265
+            };
         }
     }
 }

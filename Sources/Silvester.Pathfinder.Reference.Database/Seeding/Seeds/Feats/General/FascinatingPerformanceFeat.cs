@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Fascinating Performance",
                 Level = 1,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -36,6 +37,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         {
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("6d272232-a5dd-4ab3-b62b-80064a0737d2"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 261
+            };
         }
     }
 }

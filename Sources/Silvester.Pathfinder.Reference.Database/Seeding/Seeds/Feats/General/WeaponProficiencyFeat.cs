@@ -18,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Level = 1,
                 CanBeLearnedMoreThanOnce = true,
                 Special = "You can select this feat more than once. Each time you do, you become trained in additional weapons as appropriate, following the above progression.",
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -31,6 +30,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         protected override IEnumerable<Guid> GetTraits()
         {
             yield return Traits.Instances.General.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("00720f4b-275a-4782-80d4-1eaf500d60fc"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 269
+            };
         }
     }
 }

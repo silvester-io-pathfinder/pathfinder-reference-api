@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Magical Crafting",
                 Level = 2,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -35,6 +36,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         {
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("d26a51a3-e471-4474-8824-f5aff630d246"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 263
+            };
         }
     }
 }

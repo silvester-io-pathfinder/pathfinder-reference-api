@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Armor Assist",
                 Level = 1,
-                FeatTypeId = FeatTypes.Instances.Skill.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new OrPrerequisite
+            yield return new ChoicePrerequisite
             {
                 Id = Guid.Parse("63eb26b6-ac20-4182-ab56-481642358fd3"),
                 Choices = new Prerequisite[]
@@ -43,6 +44,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         {
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("ff39f4b0-8915-446e-98b5-072b6a0cef8f"),
+                SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
+                Page = 203
+            };
         }
     }
 }

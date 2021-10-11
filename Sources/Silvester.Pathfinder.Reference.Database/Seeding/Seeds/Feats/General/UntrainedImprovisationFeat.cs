@@ -16,7 +16,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Untrained Improvisation",
                 Level = 3,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -29,6 +28,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         protected override IEnumerable<Guid> GetTraits()
         {
             yield return Traits.Instances.General.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("fd051960-1cd8-41c8-98aa-cd72fd0671ee"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 268
+            };
         }
     }
 }

@@ -16,7 +16,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Diehard",
                 Level = 1,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -29,6 +28,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         protected override IEnumerable<Guid> GetTraits()
         {
             yield return Traits.Instances.General.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("5ebab1dd-5185-4a90-9275-7810f6a577eb"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 260
+            };
         }
     }
 }

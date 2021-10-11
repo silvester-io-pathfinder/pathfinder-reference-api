@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Scare to Death",
                 Level = 15,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.OneAction.ID
             };
         }
@@ -51,6 +52,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Incapacitation.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("25a83905-8b22-4f96-80cb-75bb44f12726"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 266
+            };
         }
     }
 }

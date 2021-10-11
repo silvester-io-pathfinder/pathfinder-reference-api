@@ -18,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
                 Level = 1,
                 Frequency = "Once per day.", 
                 Trigger = "Your turn begins.",
-                FeatTypeId = FeatTypes.Instances.Background.ID,
                 ActionTypeId = ActionTypes.Instances.FreeAction.ID
             };
         }
@@ -32,6 +31,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
         {
             yield return Traits.Instances.Occult.ID;
             yield return Traits.Instances.Transmutation.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("54d69bba-b42b-4212-a6c3-5ef87dd4ab50"),
+                SourceId = Sources.Instances.SecretsOfMagic.ID,
+                Page = 31
+            };
         }
     }
 }

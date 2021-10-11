@@ -16,7 +16,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Ride",
                 Level = 1,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -29,6 +28,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         protected override IEnumerable<Guid> GetTraits()
         {
             yield return Traits.Instances.General.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("cd5651ec-8c06-48dc-8a44-9396f4c38de6"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 266
+            };
         }
     }
 }

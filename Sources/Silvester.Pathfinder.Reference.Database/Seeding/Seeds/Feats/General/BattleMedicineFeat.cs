@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Battle Medicine",
                 Level = 1,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.OneAction.ID
             };
         }
@@ -42,6 +43,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
             yield return Traits.Instances.Healing.ID;
             yield return Traits.Instances.Manipulate.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("12d1a863-5ce8-4e92-954a-3bc7ee91faf1"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 258
+            };
         }
     }
 }

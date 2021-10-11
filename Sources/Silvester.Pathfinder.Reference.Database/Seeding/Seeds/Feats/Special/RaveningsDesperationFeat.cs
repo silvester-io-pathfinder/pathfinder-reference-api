@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
                 Id = ID,
                 Name = "Ravening's Desperation",
                 Level = 1,
-                FeatTypeId = FeatTypes.Instances.Background.ID,
                 ActionTypeId = ActionTypes.Instances.Reaction.ID
             };
         }
@@ -36,6 +37,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
             yield return Traits.Instances.Uncommon.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("a6d0c16d-811d-46a8-8e9d-ae4afddeb615"),
+                SourceId = Sources.Instances.Pathfinder153.ID,
+                Page = 67
+            };
         }
     }
 }

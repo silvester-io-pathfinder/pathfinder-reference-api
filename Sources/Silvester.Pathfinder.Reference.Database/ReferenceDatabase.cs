@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 using System;
 using System.Linq;

@@ -3,4 +3,4 @@ dotnet ef database update --startup-project Silvester.Pathfinder.Reference.Api -
 
 DROP DATABASE database_pathfinder_reference;
 CREATE DATABASE database_pathfinder_reference;
-GRANT ALL PRIVILEGES ON DATABASE database_pathfinder_reference TO user_pathfinder_reference;
+GRANT ALL PRIVILEGES ON DATABASE database_pathfinder_reference TO user_pathfinder_reference;	

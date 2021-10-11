@@ -18,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
                 Level = 1,
                 Frequency = "Once per day.", 
                 Trigger = "You attempt a skill check and haven't rolled yet.",
-                FeatTypeId = FeatTypes.Instances.Background.ID,
                 ActionTypeId = ActionTypes.Instances.FreeAction.ID
             };
         }
@@ -32,6 +31,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
         {
             yield return Traits.Instances.Concentrate.ID;
             yield return Traits.Instances.Fortune.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("79dd5c10-b1bd-44ea-b130-ea64076910e2"),
+                SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
+                Page = 50
+            };
         }
     }
 }

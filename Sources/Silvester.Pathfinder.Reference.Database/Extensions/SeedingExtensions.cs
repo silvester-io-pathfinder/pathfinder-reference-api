@@ -1,5 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -146,6 +155,47 @@ namespace Silvester.Pathfinder.Reference.Database.Extensions
             }
         }
 
+        public static void AddPrerequisites(this ModelBuilder builder, IEnumerable<Prerequisite> prerequisites, Func<BasePrerequisiteBinding> createBinding)
+        {
+            foreach(Prerequisite prerequisite in prerequisites)
+            {
+                BasePrerequisiteBinding binding = createBinding.Invoke();
+                binding.Id = prerequisite.Id;
+
+                builder.AddPrerequisite(prerequisite, binding);
+            }
+        }
+
+        public static void AddPrerequisite(this ModelBuilder builder, Prerequisite prerequisite, BasePrerequisiteBinding binding)
+        {
+            binding.PrerequisiteId = prerequisite.Id;
+            prerequisite.BindingId = binding.Id;
+
+            builder.AddData(binding.GetType(), binding);
+
+            switch(prerequisite)
+            {
+                case ChoicePrerequisite choicePrerequisite:
+                    foreach (Prerequisite innerPrerequisite in choicePrerequisite.Choices)
+                    {
+                        builder.AddPrerequisite(innerPrerequisite, new ChoicePrerequisiteBinding { Id = innerPrerequisite.Id, PrerequisiteId = prerequisite.Id });
+                    }
+
+                    choicePrerequisite.Choices = Array.Empty<Prerequisite>();
+                    break;
+
+                case CombinedPrerequisite combinedPrerequisite:
+                    foreach(Prerequisite innerPrerequisite in combinedPrerequisite.Entries)
+                    {
+                        builder.AddPrerequisite(innerPrerequisite, new CombinedPrerequisiteBinding { Id = innerPrerequisite.Id, PrerequisiteId = prerequisite.Id });
+                    }
+                    combinedPrerequisite.Entries = Array.Empty<Prerequisite>();
+                    break;
+            }
+           
+            builder.Entity(prerequisite.GetType()).HasData(prerequisite);
+        }
+
         public static void AddEffects(this ModelBuilder builder, IEnumerable<Effect> effects, Func<Effect, BaseEffectBinding> createBinding)
         {
             foreach (Effect effect in effects)
@@ -194,9 +244,24 @@ namespace Silvester.Pathfinder.Reference.Database.Extensions
                     break;
             }
 
+            foreach (EffectPrerequisiteBinding prerequisiteEffectBinding in effect.Prerequisites)
+            {
+                Prerequisite prerequisite = prerequisiteEffectBinding.Prerequisite;
+                prerequisiteEffectBinding.Prerequisite = null!;
+                prerequisiteEffectBinding.EffectId = effect.Id;
+
+                builder.AddPrerequisite(prerequisite, prerequisiteEffectBinding);
+            }
+            effect.Prerequisites = Array.Empty<EffectPrerequisiteBinding>();
+
             foreach(EffectIncrement increment in effect.Increments)
             {
                 increment.EffectId = effect.Id;
+                increment.TriggerId = increment.Trigger.Id;
+                
+                builder.AddData(increment.Trigger.GetType(), increment.Trigger);
+                increment.Trigger = null!;
+
                 builder.AddData(increment.GetType(), increment);
             }
             effect.Increments = Array.Empty<EffectIncrement>();

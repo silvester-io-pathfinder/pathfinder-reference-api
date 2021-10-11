@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Adopted Ancestry",
                 Level = 1,
-                FeatTypeId = FeatTypes.Instances.General.ID,
                 ActionTypeId = ActionTypes.Instances.NoAction.ID
             };
         }
@@ -34,6 +35,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         protected override IEnumerable<Effect> GetEffects()
         {
             yield return new HeritageRarityEffect { Id = Guid.Parse("967c98bc-088c-4fb7-9d44-ff7a6f90f506"), RarityId = Rarities.Instances.Common.ID };
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("14a9d5c1-762a-4c04-895a-63b32463e9ff"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 258
+            };
         }
     }
 }

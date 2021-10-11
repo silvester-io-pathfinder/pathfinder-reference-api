@@ -18,7 +18,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
                 Level = 1,
                 Frequency = "Once per day.",
                 Trigger = "You are about to roll an attack roll, saving throw, or skill check.",
-                FeatTypeId = FeatTypes.Instances.Background.ID,
                 ActionTypeId = ActionTypes.Instances.FreeAction.ID
             };
         }
@@ -34,6 +33,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Special
             yield return Traits.Instances.Auditory.ID;
             yield return Traits.Instances.Divination.ID;
             yield return Traits.Instances.Fortune.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("ca3b196c-91f2-4137-8ed3-91a1b0270da7"),
+                SourceId = Sources.Instances.SecretsOfMagic.ID,
+                Page = 30
+            };
         }
     }
 }

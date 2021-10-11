@@ -16,7 +16,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = ID,
                 Name = "Eye for Numbers",
                 Level = 1,
-                FeatTypeId = FeatTypes.Instances.Skill.ID,
                 ActionTypeId = ActionTypes.Instances.OneAction.ID
             };
         }
@@ -31,6 +30,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         {
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("e44d7030-85ee-4376-9008-a1f8e78eaea8"),
+                SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
+                Page = 206
+            };
         }
     }
 }
