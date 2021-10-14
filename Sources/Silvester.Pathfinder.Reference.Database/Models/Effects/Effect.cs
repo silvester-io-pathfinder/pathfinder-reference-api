@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Effects
 {
-    public class Effect : BaseEntity
+    public abstract class Effect : BaseEntity
     {
         public bool IsOptional { get; set; }
 
@@ -21,5 +21,13 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Effects
 
         public ICollection<EffectIncrement> Increments { get; set; } = new List<EffectIncrement>();
         public ICollection<EffectPrerequisiteBinding> Prerequisites { get; set; } = new List<EffectPrerequisiteBinding>();
+    }
+
+    public enum ModifierType
+    {
+        Subtract,
+        Add,
+        Multiply,
+        Divide
     }
 }

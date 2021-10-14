@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
             yield return Traits.Instances.Skill.ID;
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override IEnumerable<Effect> GetCharacterEffects()
         {
             yield return new FreeLoreEffect
             {

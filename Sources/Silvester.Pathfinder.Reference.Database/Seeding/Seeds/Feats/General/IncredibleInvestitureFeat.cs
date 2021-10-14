@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new StatPrerequisite { Id = Guid.Parse("11098127-44c6-4d82-9977-981fc20e637b"), RequiredStatValue = 16,  RequiredStatId = Stats.Instances.Charisma.ID };
+            yield return new StatPrerequisite { Id = Guid.Parse("11098127-44c6-4d82-9977-981fc20e637b"), RequiredStatValue = 16, RequiredStatId = Stats.Instances.Charisma.ID };
         }
 
         protected override IEnumerable<Guid> GetTraits()

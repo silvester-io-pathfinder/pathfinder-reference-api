@@ -20,6 +20,27 @@ namespace Silvester.Pathfinder.Reference.Database.Guids
                 }
                 while (wasFound);
 
+                do
+                {
+                    Guid id = Guid.NewGuid();
+                    text = ReplaceFirstOccurrence(text, ".AddColumn(\"\", \"", $".AddColumn(\"{id}\", \"", out wasFound);
+                }
+                while (wasFound);
+
+                do
+                {
+                    Guid id = Guid.NewGuid();
+                    text = ReplaceFirstOccurrence(text, ".AddRow(\"\", row =>", $".AddRow(\"{id}\", row =>", out wasFound);
+                }
+                while (wasFound);
+
+                do
+                {
+                    Guid id = Guid.NewGuid();
+                    text = ReplaceFirstOccurrence(text, ".AddCell(\"\", \"", $".AddCell(\"{id}\", \"", out wasFound);
+                }
+                while (wasFound);
+
                 File.WriteAllText(filePath, text);
             }
         }

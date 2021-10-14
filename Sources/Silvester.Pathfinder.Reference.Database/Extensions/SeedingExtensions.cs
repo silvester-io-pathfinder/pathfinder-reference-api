@@ -178,7 +178,7 @@ namespace Silvester.Pathfinder.Reference.Database.Extensions
                 case ChoicePrerequisite choicePrerequisite:
                     foreach (Prerequisite innerPrerequisite in choicePrerequisite.Choices)
                     {
-                        builder.AddPrerequisite(innerPrerequisite, new ChoicePrerequisiteBinding { Id = innerPrerequisite.Id, PrerequisiteId = prerequisite.Id });
+                        builder.AddPrerequisite(innerPrerequisite, new ChoicePrerequisiteBinding { Id = innerPrerequisite.Id, ChoiceId = choicePrerequisite.Id });
                     }
 
                     choicePrerequisite.Choices = Array.Empty<Prerequisite>();
@@ -187,7 +187,7 @@ namespace Silvester.Pathfinder.Reference.Database.Extensions
                 case CombinedPrerequisite combinedPrerequisite:
                     foreach(Prerequisite innerPrerequisite in combinedPrerequisite.Entries)
                     {
-                        builder.AddPrerequisite(innerPrerequisite, new CombinedPrerequisiteBinding { Id = innerPrerequisite.Id, PrerequisiteId = prerequisite.Id });
+                        builder.AddPrerequisite(innerPrerequisite, new CombinedPrerequisiteBinding { Id = innerPrerequisite.Id, CombinationId = combinedPrerequisite.Id });
                     }
                     combinedPrerequisite.Entries = Array.Empty<Prerequisite>();
                     break;

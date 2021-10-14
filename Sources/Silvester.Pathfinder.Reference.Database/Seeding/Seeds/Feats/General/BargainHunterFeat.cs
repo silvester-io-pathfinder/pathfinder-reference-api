@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
@@ -24,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("46646590-2516-4adb-9ae5-7c050520e480"), Type = Utilities.Text.TextBlockType.Text, Text = "You can Earn Income (page 236) using Diplomacy, spending your days hunting for bargains and reselling at a profit. You can also spend time specifically sniffing out a great bargain on an item; this works as if you were using Earn Income with Diplomacy, except instead of gaining money, you purchase the item at a discount equal to the money you would have gained, gaining the item for free if your earned income equals or exceeds its cost. Finally, if you select Bargain Hunter during character creation at 1st level, you start play with an additional 2 gp." };
+            yield return new TextBlock { Id = Guid.Parse("46646590-2516-4adb-9ae5-7c050520e480"), Type = TextBlockType.Text, Text = "You can Earn Income (page 236) using Diplomacy, spending your days hunting for bargains and reselling at a profit. You can also spend time specifically sniffing out a great bargain on an item; this works as if you were using Earn Income with Diplomacy, except instead of gaining money, you purchase the item at a discount equal to the money you would have gained, gaining the item for free if your earned income equals or exceeds its cost. Finally, if you select Bargain Hunter during character creation at 1st level, you start play with an additional 2 gp." };
         }
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
@@ -36,6 +38,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         {
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override IEnumerable<Effect> GetCharacterEffects()
+        {
+            yield return new SkillActionSkillEffect
+            {
+                Id = Guid.Parse("dd4a951e-0e34-4b1e-b0f1-cf2fa03f623f"),
+                SkillId = Skills.Instances.Diplomacy.ID,
+                SkillActionId = SkillActions.Instances.EarnIncome.ID
+            };
         }
 
         protected override SourcePage GetSourcePage()

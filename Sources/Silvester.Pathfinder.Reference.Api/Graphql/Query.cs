@@ -1,10 +1,15 @@
 ﻿using HotChocolate;
 using HotChocolate.Data;
+using HotChocolate.Data.Filters.Expressions;
+using HotChocolate.Data.Projections.Expressions;
+using HotChocolate.Data.Sorting.Expressions;
+using HotChocolate.Resolvers;
 using HotChocolate.Types;
 using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Reference.Api.Graphql.Searching;
 using Silvester.Pathfinder.Reference.Api.Graphql.Searching.Models;
 using Silvester.Pathfinder.Reference.Database;
+using Silvester.Pathfinder.Reference.Database.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +24,23 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql
         {
             return new SearchService(database).Search(searchTerm);
         }
+
+        [UseDbContext(typeof(ReferenceDatabase))]
+        [UseOffsetPaging(typeof(ObjectType<Background>))]
+        [UseProjection]
+        [UseFiltering]
+        [UseSorting]
+        public IQueryable<Background> Backgrounds([ScopedService] ReferenceDatabase database, IResolverContext context)
+        {
+            IQueryable<Background> query = database.Backgrounds;
+
+            var applied = query
+                .Filter(context)
+                .Sort(context)
+                .Project(context);
+
+            return applied;
+        }
     }
 
     public class QueryType : ObjectType<Query>
@@ -26,7 +48,12 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql
         protected override void Configure(IObjectTypeDescriptor<Query> descriptor)
         {
             foreach (PropertyInfo property in typeof(ReferenceDatabase).GetProperties(BindingFlags.Public | BindingFlags.Instance))
-            {
+            { 
+                if(property.Name == nameof(ReferenceDatabase.Backgrounds))
+                {
+                    continue;
+                }
+
                 if (property.PropertyType.IsAssignableTo(typeof(DbSet<>)) || property.PropertyType.IsGenericType == false)
                 {
                     continue;
@@ -40,19 +67,22 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql
 
                 //TODO: Try and get a hold of the injected naming convention here.
                 string fieldName = char.ToLowerInvariant(property.Name[0]) + property.Name.Substring(1);
+
+                Console.WriteLine("Root: " + fieldName);
+
                 IObjectFieldDescriptor field = descriptor
-                    .Field(fieldName)
-                    .Type(genericType)
-                    .UseDbContext<ReferenceDatabase>()
-                    .UseOffsetPaging(typeof(ObjectType<>).MakeGenericType(genericType))
-                    .UseProjection(genericType)
-                    .UseFiltering(genericType)
-                    .UseSorting(genericType)
-                    .Resolve((context) =>
-                    {
-                        ReferenceDatabase database = context.Resolver<ReferenceDatabase>();
-                        return property.GetValue(database);
-                    });
+                   .Field(fieldName)
+                   .Type(genericType)
+                   .UseDbContext<ReferenceDatabase>()
+                   .UseOffsetPaging(typeof(ObjectType<>).MakeGenericType(genericType))
+                   .UseProjection(genericType)
+                   .UseFiltering(genericType)
+                   .UseSorting(genericType)
+                   .Resolve((context) =>
+                   {
+                       ReferenceDatabase database = context.Resolver<ReferenceDatabase>();
+                       return property.GetValue(database);
+                   });
             }
         }
     }

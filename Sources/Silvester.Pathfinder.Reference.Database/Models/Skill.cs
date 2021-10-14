@@ -16,7 +16,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public Stat StatModifier { get; set; } = default!;
 
         public ICollection<Deity> Deities { get; set; } = new List<Deity>();
-     
+
+        public ICollection<SkillAction> SkillActions { get; set; } = new List<SkillAction>();
+
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

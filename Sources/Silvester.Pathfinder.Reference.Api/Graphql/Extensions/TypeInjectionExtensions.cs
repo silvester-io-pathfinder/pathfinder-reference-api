@@ -1,9 +1,11 @@
 ﻿using HotChocolate.Data.Filters;
 using HotChocolate.Data.Sorting;
 using HotChocolate.Execution.Configuration;
+using HotChocolate.Types;
 using Microsoft.Extensions.DependencyInjection;
 using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,15 +19,37 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql.Extensions
         public static IRequestExecutorBuilder AddEntityTypes(this IRequestExecutorBuilder graphql)
         {
             IDictionary<Type, bool> visitor = new Dictionary<Type, bool>();
-            foreach (Type baseEntityType in typeof(BaseEntity).Assembly.GetTypes().Where(e => e.IsAssignableTo(typeof(BaseEntity))))
+
+            IEnumerable<Type> allBaseEntities = typeof(BaseEntity).Assembly.GetTypes().Where(e => e.IsAssignableTo(typeof(BaseEntity)));
+            foreach (Type interfaceType in allBaseEntities.Where(e => e.IsAbstract))
             {
-                Visit(graphql, visitor, baseEntityType);
+                VisitInterface(graphql, visitor, interfaceType);
+            }
+
+            foreach (Type objectType in allBaseEntities.Where(e => e.IsAbstract == false))
+            {
+                VisitObject(graphql, visitor, objectType);
             }
 
             return graphql;
         }
 
-        private static void Visit(IRequestExecutorBuilder graphql, IDictionary<Type, bool> visitor, Type type)
+        private static void VisitInterface(IRequestExecutorBuilder graphql, IDictionary<Type, bool> visitor, Type interfaceType)
+        {
+            if (visitor.ContainsKey(interfaceType) == false)
+            {
+                visitor.Add(interfaceType, true);
+
+                typeof(SchemaRequestExecutorBuilderExtensions)
+                    .GetMethod(nameof(SchemaRequestExecutorBuilderExtensions.AddInterfaceType), 1, BindingFlags.Static | BindingFlags.Public, null, new Type[] { typeof(IRequestExecutorBuilder) }, null)!
+                    .MakeGenericMethod(interfaceType)
+                    .Invoke(null, new object[] { graphql });
+                
+                Console.WriteLine("Injected: InterfaceType<" + interfaceType.Name + ">");
+            }
+        }
+
+        private static void VisitObject(IRequestExecutorBuilder graphql, IDictionary<Type, bool> visitor, Type type)
         {
             if (visitor.ContainsKey(type) == false)
             {
@@ -45,11 +69,11 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql.Extensions
             {
                 if(nestedProperty.PropertyType != typeof(string) && typeof(IEnumerable).IsAssignableFrom(nestedProperty.PropertyType) && nestedProperty.PropertyType != typeof(NpgsqlTsVector))
                 {
-                    Visit(graphql, visitor, nestedProperty.PropertyType.GetGenericArguments().First());
+                    VisitObject(graphql, visitor, nestedProperty.PropertyType.GetGenericArguments().First());
                 }
                 else if(nestedProperty.PropertyType.IsAssignableTo(typeof(BaseEntity)))
                 {
-                    Visit(graphql, visitor, nestedProperty.PropertyType);
+                    VisitObject(graphql, visitor, nestedProperty.PropertyType);
                 }
             }
         }

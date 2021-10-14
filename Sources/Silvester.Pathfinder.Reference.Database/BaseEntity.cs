@@ -1,9 +1,10 @@
 using NpgsqlTypes;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Silvester.Pathfinder.Reference.Database
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
         public Guid Id { get; set; }
     }

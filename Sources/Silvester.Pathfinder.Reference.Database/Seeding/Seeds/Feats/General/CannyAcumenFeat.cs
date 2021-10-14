@@ -1,4 +1,9 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements;
+using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Triggers.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -30,6 +35,80 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
             yield return Traits.Instances.Downtime.ID;
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override IEnumerable<Effect> GetCharacterEffects()
+        {
+            yield return new ChoiceEffect
+            {
+                Id = Guid.Parse("090d45ed-e6da-46af-9f9a-373b44365539"),
+                Choices = new Effect[]
+                {
+                    new SavingThrowProficiencyEffect
+                    {
+                        Id = Guid.Parse("f5663e90-eacd-4ce5-8c1f-572d4cccb072"),
+                        ProficiencyId = Proficiencies.Instances.Expert.ID,
+                        SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
+                        Increments = new EffectIncrement[]
+                        {
+                            new IncreaseProficiencyIncrement
+                            {
+                                Id = Guid.Parse("13d37daf-671d-4183-876e-688b969daa03"),
+                                ProficiencyId = Proficiencies.Instances.Master.ID,
+                                Trigger = new LevelTrigger { Id = Guid.Parse("add0fccb-558a-40b9-9c49-2bd20291ad30"), Level = 17 }
+                            }
+                        }
+                    },
+
+                    new SavingThrowProficiencyEffect
+                    {
+                        Id = Guid.Parse("157f2b08-4137-4d77-82e5-086bc5ccf646"),
+                        ProficiencyId = Proficiencies.Instances.Expert.ID,
+                        SavingThrowStatId = SavingThrowStats.Instances.Reflex.ID,
+                        Increments = new EffectIncrement[]
+                        {
+                            new IncreaseProficiencyIncrement
+                            {
+                                Id = Guid.Parse("78b9458b-87f1-44ae-aa27-b77f68e36d03"),
+                                ProficiencyId = Proficiencies.Instances.Master.ID,
+                                Trigger = new LevelTrigger { Id = Guid.Parse("02498166-ccdc-4117-8007-1c11215855d9"), Level = 17 }
+                            }
+                        }
+                    },
+
+                    new SavingThrowProficiencyEffect
+                    {
+                        Id = Guid.Parse("5e459097-cc7c-4107-8924-0367f5f9b631"),
+                        ProficiencyId = Proficiencies.Instances.Expert.ID,
+                        SavingThrowStatId = SavingThrowStats.Instances.Will.ID,
+                        Increments = new EffectIncrement[]
+                        {
+                            new IncreaseProficiencyIncrement
+                            {
+                                Id = Guid.Parse("fcf6bc7b-583b-450d-bc25-3e8bdcc7a38e"),
+                                ProficiencyId = Proficiencies.Instances.Master.ID,
+                                Trigger = new LevelTrigger { Id = Guid.Parse("a8fba440-e3f4-47b1-98f0-320e9d13b75d"), Level = 17 }
+                            }
+                        }
+                    },
+
+                    new SkillProficiencyEffect
+                    {
+                        Id = Guid.Parse("bdc2f2ab-304c-4ede-af1a-d9e5bcaca3a6"),
+                        ProficiencyId = Proficiencies.Instances.Expert.ID,
+                        SkillId = Skills.Instances.Perception.ID,
+                        Increments = new EffectIncrement[]
+                        {
+                            new IncreaseProficiencyIncrement
+                            {
+                                Id = Guid.Parse("1150371f-439d-40e2-bc03-082d67891033"),
+                                ProficiencyId = Proficiencies.Instances.Master.ID,
+                                Trigger = new LevelTrigger { Id = Guid.Parse("aabe8312-3da2-4e19-8cff-cdb74d7819c8"), Level = 17 }
+                            }
+                        }
+                    }
+                }
+            };
         }
 
         protected override SourcePage GetSourcePage()

@@ -106,7 +106,8 @@ namespace Silvester.Pathfinder.Reference.Api
                 .AddType<QueryType>()
                 .SetPagingOptions(new PagingOptions { MaxPageSize = 100, DefaultPageSize = 25, IncludeTotalCount = true })
                 .TryAddTypeInterceptor<NavigationTypeInterceptor>()
-                .TryAddTypeInterceptor<TextSearchVectorInterceptor>();
+                .TryAddTypeInterceptor<TextSearchVectorInterceptor>()
+                .TryAddTypeInterceptor<AbstractTypeInterceptor>();
 
             services
                 .Configure<ForwardedHeadersOptions>(options =>

@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
             yield return Traits.Instances.Skill.ID;
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override IEnumerable<Effect> GetCharacterEffects()
         {
             yield return new FormulaEffect { Id = Guid.Parse("5e5a10bd-a6b9-4f46-974d-06b280716ef8"), Level = 1 };
             yield return new FormulaEffect { Id = Guid.Parse("9f2ab8ce-da8f-4123-a698-f854ac8f688a"), Level = 1 };

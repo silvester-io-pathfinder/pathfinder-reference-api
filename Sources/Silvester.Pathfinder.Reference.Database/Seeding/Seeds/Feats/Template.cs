@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
             builder.AddRollableEffect(feat, GetRollableEffect(), e => e.RollableEffect);
             builder.AddTraits(feat, GetTraits());
             builder.AddTextBlocks(feat, GetDetailBlocks(), e => e.Details);
-            builder.AddEffects(GetEffects(), (effect) => new FeatEffectBinding { FeatId = feat.Id });
+            builder.AddEffects(GetCharacterEffects(), (effect) => new FeatEffectBinding { FeatId = feat.Id });
             builder.AddPrerequisites(GetPrerequisites(), () => new FeatPrerequisiteBinding { FeatId = feat.Id });
             builder.AddSourcePage(feat, GetSourcePage(), e => e.SourcePageId);
             
@@ -40,9 +40,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
         protected abstract IEnumerable<TextBlock> GetDetailBlocks();
         protected abstract SourcePage GetSourcePage();
 
-        protected virtual IEnumerable<Effect> GetEffects()
+        protected virtual IEnumerable<Effect> GetCharacterEffects()
         {
-            //Override in concrete subclass to add feat effects.
+            //Override in concrete subclass to add feat effects to the character that picks them.
             yield break;
         }
 

@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
             yield return Traits.Instances.General.ID;
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override IEnumerable<Effect> GetCharacterEffects()
         {
             yield return new HeritageRarityEffect { Id = Guid.Parse("967c98bc-088c-4fb7-9d44-ff7a6f90f506"), RarityId = Rarities.Instances.Common.ID };
         }

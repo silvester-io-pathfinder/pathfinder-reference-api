@@ -1,4 +1,5 @@
 using NpgsqlTypes;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -30,6 +31,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public SourcePage SourcePage { get; set; } = default!;
 
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
+
+        public ICollection<FeatEffectBinding> CharacterEffects { get; set; } = new List<FeatEffectBinding>();
 
         public ICollection<FeatPrerequisiteBinding> Prerequisites { get; set; } = new List<FeatPrerequisiteBinding>();
 

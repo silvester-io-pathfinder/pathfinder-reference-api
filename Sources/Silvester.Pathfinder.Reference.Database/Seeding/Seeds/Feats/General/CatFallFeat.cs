@@ -1,5 +1,8 @@
 using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -36,6 +39,61 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
         {
             yield return Traits.Instances.General.ID;
             yield return Traits.Instances.Skill.ID;
+        }
+
+        protected override IEnumerable<Effect> GetCharacterEffects()
+        {
+            yield return new FallDistanceModifierEffect
+            {
+                Id = Guid.Parse("87b0f995-bec7-4a15-bd85-223f566000c2"),
+                Modifier = 10,
+                ModifierType = ModifierType.Subtract
+            };
+
+            yield return new FallDistanceModifierEffect
+            {
+                Id = Guid.Parse("0c13f22a-cf01-4500-be1b-adbd4bc365c2"),
+                Modifier = 15,
+                ModifierType = ModifierType.Subtract,
+                Prerequisites = new EffectPrerequisiteBinding[]
+                {
+                    new EffectPrerequisiteBinding
+                    {
+                        Id = Guid.Parse("0a2157a6-d121-4386-9151-528f064e8a49"),
+                        Prerequisite = new SkillPrerequisite { Id = Guid.Parse("69f484b7-b54a-4a6d-90f5-b38b69ab8094"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID }
+                    }
+                }
+            };
+
+            yield return new FallDistanceModifierEffect
+            {
+                Id = Guid.Parse("c4f8d6de-ac3e-49f8-984b-dc60baa3bf25"),
+                Modifier = 25,
+                ModifierType = ModifierType.Subtract,
+                Prerequisites = new EffectPrerequisiteBinding[]
+                {
+                    new EffectPrerequisiteBinding
+                    {
+                        Id = Guid.Parse("a6a4b9a7-c3eb-4e2b-a594-a0385a7c46d4"),
+                        Prerequisite = new SkillPrerequisite { Id = Guid.Parse("69dad3ff-d075-48c4-a2ce-baee6ae1e3d1"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Master.ID }
+                    }
+                }
+            };
+
+            yield return new FallDistanceModifierEffect
+            {
+                Id = Guid.Parse("a0c78d88-b75b-48e0-b272-c9775c1527f0"),
+                Modifier = 0,
+                ModifierType = ModifierType.Multiply,
+                Prerequisites = new EffectPrerequisiteBinding[]
+                {
+                    new EffectPrerequisiteBinding
+                    {
+                        Id = Guid.Parse("ac16c9bd-fd66-4f72-a389-86eabd0d5199"),
+                        Prerequisite = new SkillPrerequisite { Id = Guid.Parse("e4b3ffdb-86e2-4ddd-9107-ae3851b653c0"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Legendary.ID }
+                    }
+                }
+            };
         }
 
         protected override SourcePage GetSourcePage()

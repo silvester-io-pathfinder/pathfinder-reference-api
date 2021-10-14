@@ -46,7 +46,6 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<DivineFont> DivineFonts { get; set; } = default!;
         public DbSet<Domain> Domains { get; set; } = default!;
         public DbSet<Feat> Feats { get; set; } = default!;
-        public DbSet<SpellType> FocusTypes { get; set; } = default!;
         public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
         public DbSet<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = default!;
         public DbSet<HarrowCard> HarrowCards { get; set; } = default!;
@@ -70,6 +69,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Mystery> Mysteries { get; set; } = default!;
         public DbSet<PlaneCategory> PlaneCategories { get; set; } = default!;
         public DbSet<Plane> Planes { get; set; } = default!;
+        public DbSet<PlayMode> PlayModes { get; set; } = default!;
         public DbSet<Potency> Potencies { get; set; } = default!;
         public DbSet<PreciousMaterial> PreciousMaterials { get; set; } = default!;
         public DbSet<PreciousMaterialArmor> PreciousMaterialArmors { get; set; } = default!;
@@ -85,6 +85,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<SavingThrowStat> SavingThrowStats { get; set; } = default!;
         public DbSet<Shield> Shields { get; set; } = default!;
         public DbSet<Skill> Skills { get; set; } = default!;
+        public DbSet<SkillAction> SkillActions { get; set; } = default!;
         public DbSet<Sense> Senses { get; set; } = default!;
         public DbSet<Source> Sources { get; set; } = default!;
         public DbSet<SpellComponent> SpellComponents { get; set; } = default!;

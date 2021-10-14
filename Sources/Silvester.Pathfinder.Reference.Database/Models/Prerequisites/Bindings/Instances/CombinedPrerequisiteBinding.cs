@@ -6,7 +6,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.
 {
     public class CombinedPrerequisiteBinding : BasePrerequisiteBinding
     {
-        public Guid PrerequisiteId { get; set; }
-        public CombinedPrerequisite Prerequisite { get; set; } = default!;
+        public Guid CombinationId { get; set; }
+        public CombinedPrerequisite Combination { get; set; } = default!;
     }
 }
