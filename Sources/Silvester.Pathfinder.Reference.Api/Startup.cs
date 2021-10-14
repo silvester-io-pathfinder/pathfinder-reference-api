@@ -97,7 +97,7 @@ namespace Silvester.Pathfinder.Reference.Api
 
             IRequestExecutorBuilder graphql = services
                 .AddGraphQLServer()
-                .AddType(new UuidType('D'))
+                .AddType(new UuidType("Uuid", defaultFormat: 'D'))
                 .AddQueryType<Query>()
                 .AddEntityTypes()
                 .AddCaseInsensitiveFilterConvention()
