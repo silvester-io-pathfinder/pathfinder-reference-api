@@ -35,7 +35,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Effect> GetCharacterEffects()
         {
-            yield return new AncestryFeatEffect { Id = Guid.Parse("49d0032a-5c63-4167-9ce8-313fc52a4868"), Level = 1 };
+            yield return new GainAnyAncestryFeatEffect { Id = Guid.Parse("49d0032a-5c63-4167-9ce8-313fc52a4868"), Level = 1 };
         }
 
         protected override SourcePage GetSourcePage()

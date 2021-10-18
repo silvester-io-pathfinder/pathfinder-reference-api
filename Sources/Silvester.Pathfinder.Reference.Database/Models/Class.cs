@@ -67,6 +67,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models
 
         public ICollection<Stat> KeyAbilities { get; set; } = new List<Stat>();
 
+        public ICollection<Instinct> Instincts { get; set; } = new List<Instinct>();
+
         public ICollection<ClassMannerism> Mannerisms { get; set; } = new List<ClassMannerism>();
 
         public ICollection<ClassCharacteristic> Characteristics { get; set; } = new List<ClassCharacteristic>();

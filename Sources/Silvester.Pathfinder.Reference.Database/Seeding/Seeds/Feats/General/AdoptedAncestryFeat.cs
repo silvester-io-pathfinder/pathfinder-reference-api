@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Effect> GetCharacterEffects()
         {
-            yield return new HeritageRarityEffect { Id = Guid.Parse("967c98bc-088c-4fb7-9d44-ff7a6f90f506"), RarityId = Rarities.Instances.Common.ID };
+            yield return new GainSpecificRarityHeritageEffect { Id = Guid.Parse("967c98bc-088c-4fb7-9d44-ff7a6f90f506"), RarityId = Rarities.Instances.Common.ID };
         }
 
         protected override SourcePage GetSourcePage()

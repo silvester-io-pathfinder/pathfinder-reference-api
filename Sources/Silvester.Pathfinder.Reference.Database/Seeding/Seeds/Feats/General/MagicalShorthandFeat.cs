@@ -34,10 +34,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = Guid.Parse("7478eed3-36c1-4a1d-a247-21badb079eec"),
                 Choices =
                 {
-                    new SkillPrerequisite { Id = Guid.Parse("cc86f706-7eea-4352-9723-9b001c44eecd"), RequiredSkillId = Skills.Instances.Arcana.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID },
-                    new SkillPrerequisite { Id = Guid.Parse("06f72855-bcf2-4a8d-914b-19e9c62594b0"), RequiredSkillId = Skills.Instances.Nature.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID },
-                    new SkillPrerequisite { Id = Guid.Parse("623b68a6-9405-4fc1-90ed-12f9ece5c28a"), RequiredSkillId = Skills.Instances.Occultism.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID },
-                    new SkillPrerequisite { Id = Guid.Parse("d8f78cae-3e75-4217-a860-6ba2a3560403"), RequiredSkillId = Skills.Instances.Religion.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID },
+                    new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("cc86f706-7eea-4352-9723-9b001c44eecd"), RequiredSkillId = Skills.Instances.Arcana.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID },
+                    new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("06f72855-bcf2-4a8d-914b-19e9c62594b0"), RequiredSkillId = Skills.Instances.Nature.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID },
+                    new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("623b68a6-9405-4fc1-90ed-12f9ece5c28a"), RequiredSkillId = Skills.Instances.Occultism.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID },
+                    new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("d8f78cae-3e75-4217-a860-6ba2a3560403"), RequiredSkillId = Skills.Instances.Religion.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID },
                 }
             };
         }

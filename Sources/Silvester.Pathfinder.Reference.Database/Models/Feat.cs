@@ -19,6 +19,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models
 
         public string? Frequency { get; set; }
 
+        public string? Requirements { get; set; }
+
         public int Level { get; set; }
 
         public Guid ActionTypeId { get; set; }
@@ -35,8 +37,6 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public ICollection<FeatEffectBinding> CharacterEffects { get; set; } = new List<FeatEffectBinding>();
 
         public ICollection<FeatPrerequisiteBinding> Prerequisites { get; set; } = new List<FeatPrerequisiteBinding>();
-
-        public ICollection<FeatRequirement> Requirements { get; set; } = new List<FeatRequirement>();
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
 

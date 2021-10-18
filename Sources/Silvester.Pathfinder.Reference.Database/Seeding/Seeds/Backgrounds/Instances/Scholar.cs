@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("13fa87ba-1ce3-483b-a738-97af17057cbb"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("25f07743-2d4a-450b-a0db-54285531f6d9")
             };
@@ -54,8 +54,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                     {
                         Id = Guid.Parse("b1067069-0950-4e07-9736-bee597249980"),
                         Entries = new Effect[] {
-                            new RestrictedSkillEffect { Id = Guid.Parse("8cc75237-bb1d-4c94-9734-1f8d10e97d92"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Arcana.ID },
-                            new FeatEffect { Id = Guid.Parse("faa677bf-583c-4edb-a040-c0a8d4dd7997"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Arcana skill." }
+                            new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("8cc75237-bb1d-4c94-9734-1f8d10e97d92"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Arcana.ID },
+                            new GainSpecificFeatEffect { Id = Guid.Parse("faa677bf-583c-4edb-a040-c0a8d4dd7997"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Arcana skill." }
                         }
                     },
 
@@ -63,8 +63,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                     {
                         Id = Guid.Parse("67d0ae8f-05fd-407f-92ea-00712b975e37"),
                         Entries = new Effect[] {
-                            new RestrictedSkillEffect { Id = Guid.Parse("ba5a4b8f-48b2-4561-9872-cffa1ba9a19a"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Nature.ID },
-                            new FeatEffect { Id = Guid.Parse("49e49212-8901-45a2-acd9-6edcb6f4044a"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Nature skill." }
+                            new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("ba5a4b8f-48b2-4561-9872-cffa1ba9a19a"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Nature.ID },
+                            new GainSpecificFeatEffect { Id = Guid.Parse("49e49212-8901-45a2-acd9-6edcb6f4044a"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Nature skill." }
                         }
                     },
 
@@ -72,8 +72,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                     {
                         Id = Guid.Parse("80ac3a10-4475-4044-85e4-5e02155155fc"),
                         Entries = new Effect[] {
-                            new RestrictedSkillEffect { Id = Guid.Parse("f1a287b0-3c9d-4271-ad53-1228b8a52624"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Occultism.ID },
-                            new FeatEffect { Id = Guid.Parse("1cf20334-1d7c-4609-b453-387ab11ea814"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Occultism skill." }
+                            new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("f1a287b0-3c9d-4271-ad53-1228b8a52624"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Occultism.ID },
+                            new GainSpecificFeatEffect { Id = Guid.Parse("1cf20334-1d7c-4609-b453-387ab11ea814"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Occultism skill." }
                         }
                     },
 
@@ -81,8 +81,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                     {
                         Id = Guid.Parse("d548fa59-3625-488d-89e7-0130cd2e2160"),
                         Entries = new Effect[] {
-                            new RestrictedSkillEffect { Id = Guid.Parse("4db4bafb-1adc-43eb-9ec5-e532e2f42baa"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Religion.ID },
-                            new FeatEffect { Id = Guid.Parse("c5200f87-a16f-4bad-a017-ddd60053997a"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Religion skill." }
+                            new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("4db4bafb-1adc-43eb-9ec5-e532e2f42baa"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Religion.ID },
+                            new GainSpecificFeatEffect { Id = Guid.Parse("c5200f87-a16f-4bad-a017-ddd60053997a"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Religion skill." }
                         }
                     }
                 }

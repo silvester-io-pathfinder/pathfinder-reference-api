@@ -34,8 +34,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = Guid.Parse("63eb26b6-ac20-4182-ab56-481642358fd3"),
                 Choices = new Prerequisite[]
                 {
-                    new SkillPrerequisite { Id = Guid.Parse("b8160242-4cea-4e4d-9839-9281916c9c1e"), RequiredSkillId = Skills.Instances.Athletics.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID },
-                    new LorePrerequisite { Id = Guid.Parse("474ecdc2-6ceb-47f9-b199-314951818369"), RequiredProficiencyId = Proficiencies.Instances.Trained.ID, RequiredLoreId = Lores.Instances.Warfare.ID }
+                    new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("b8160242-4cea-4e4d-9839-9281916c9c1e"), RequiredSkillId = Skills.Instances.Athletics.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID },
+                    new HaveSpecificLoreProficiencyPrerequisite { Id = Guid.Parse("474ecdc2-6ceb-47f9-b199-314951818369"), RequiredProficiencyId = Proficiencies.Instances.Trained.ID, RequiredLoreId = Lores.Instances.Warfare.ID }
                 }
             };
         }

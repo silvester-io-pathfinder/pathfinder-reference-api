@@ -1,3 +1,4 @@
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Instances
@@ -6,7 +7,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Instances
     {
         public string? Restrictions { get; set; }
 
-        public ICollection<Effect> Choices { get; set; } = new List<Effect>();
+        public ICollection<ChoiceEffectBinding> Choices { get; set; } = new List<ChoiceEffectBinding>();
 
         public ChoiceEffect()
         {

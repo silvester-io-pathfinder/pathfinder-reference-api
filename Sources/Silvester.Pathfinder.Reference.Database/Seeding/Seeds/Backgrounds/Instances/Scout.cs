@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("1e8701a0-e8e3-4c94-9a34-75d028a96d19"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,19 +40,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("7656c4b8-e63b-483e-9fa6-641fedf5ae4b")
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("6d041e53-7541-45e0-bb8e-71fd17d00d72"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 SkillId = Skills.Instances.Survival.ID
             };
 
-            yield return new LoreCategoryEffect
+            yield return new GainSpecificLoreCategoryProficiencyEffect
             {
                 Id = Guid.Parse("fea108a8-ce19-4f91-9c0e-7a43e50775d4"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Restrictions = "The chosen Lore skill must relate to a terrain you scouted in (such as Forest Lore or Cavern Lore)."
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("5f8e9380-042e-4b93-ab4f-5b832ac6394c"),
                 FeatId = Feats.General.ForagerFeat.ID

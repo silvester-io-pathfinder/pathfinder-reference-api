@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Effect> GetCharacterEffects()
         {
-            yield return new ArmorCategoryProficiencyEffect
+            yield return new GainSpecificArmorCategoryProficiencyEffect
             {
                 Id = Guid.Parse("931a9468-ac95-405a-810f-9813ac5c123d"),
                 ArmorCategoryId = ArmorCategories.Instances.HeavyArmor.ID,
@@ -50,17 +50,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                     new EffectPrerequisiteBinding
                     {
                         Id = Guid.Parse("163ece44-a390-4579-a65e-296a25227765"),
-                        Prerequisite = new ArmorCategoryProficiencyPrerequisite { Id = Guid.Parse("85eb341b-a611-4423-ac11-dfbfc1cbff33"), ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID, ProficiencyId = Proficiencies.Instances.Trained.ID }
+                        Prerequisite = new HaveSpecificArmorCategoryProficiencyPrerequisite { Id = Guid.Parse("85eb341b-a611-4423-ac11-dfbfc1cbff33"), ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID }
                     },
                     new EffectPrerequisiteBinding
                     {
                         Id = Guid.Parse("818a8853-fe96-46e1-a42e-db29bf6cbc3b"),
-                        Prerequisite = new ArmorCategoryProficiencyPrerequisite { Id = Guid.Parse("8c56d7b9-93cb-4de4-b570-b891bbffa1e6"), ArmorCategoryId = ArmorCategories.Instances.MediumArmor.ID, ProficiencyId = Proficiencies.Instances.Trained.ID }
+                        Prerequisite = new HaveSpecificArmorCategoryProficiencyPrerequisite { Id = Guid.Parse("8c56d7b9-93cb-4de4-b570-b891bbffa1e6"), ArmorCategoryId = ArmorCategories.Instances.MediumArmor.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID }
                     }
                 }
             };
 
-            yield return new ArmorCategoryProficiencyEffect
+            yield return new GainSpecificArmorCategoryProficiencyEffect
             {
                 Id = Guid.Parse("7d269b63-6957-4e29-9d58-ebda9e00af75"),
                 ArmorCategoryId = ArmorCategories.Instances.MediumArmor.ID,
@@ -70,12 +70,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                     new EffectPrerequisiteBinding
                     {
                         Id = Guid.Parse("62532bc2-8df8-4aad-a92a-ee8225bff309"),
-                        Prerequisite = new ArmorCategoryProficiencyPrerequisite { Id = Guid.Parse("11372bcc-0741-48f5-b391-f7203265fd84"), ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID, ProficiencyId = Proficiencies.Instances.Trained.ID }
+                        Prerequisite = new HaveSpecificArmorCategoryProficiencyPrerequisite { Id = Guid.Parse("11372bcc-0741-48f5-b391-f7203265fd84"), ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID }
                     },
                 }
             };
 
-            yield return new ArmorCategoryProficiencyEffect
+            yield return new GainSpecificArmorCategoryProficiencyEffect
             {
                 Id = Guid.Parse("50a29859-082e-4389-ac3b-0dd5535caa8a"),
                 ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID,

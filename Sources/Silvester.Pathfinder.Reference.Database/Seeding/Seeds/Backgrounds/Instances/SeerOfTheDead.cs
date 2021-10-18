@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("669f0194-59a6-4707-95cd-7cc25892ef47"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,21 +40,21 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("63dbb789-5088-498f-95e9-2d43d4d33c1c"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 SkillId = Skills.Instances.Religion.ID
             };
 
-            yield return new LoreEffect
+            yield return new GainSpecificLoreProficiencyEffect
             {
                 Id = Guid.Parse("65eb89ca-d2f3-4cc8-964e-17a68957a547"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 LoreId = Lores.Instances.Undead.ID
             };
 
-            yield return new SenseEffect
+            yield return new GainSpecificSenseEffect
             {
                 Id = Guid.Parse("33342e64-b1dd-4cb6-9732-a15f6b78a6be"),
                 SenseId = Senses.Instances.SpiritSense.ID

@@ -33,12 +33,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new HarrowEffect
+            yield return new GainAnyHarrowEffect
             {
                 Id = Guid.Parse("15cfd57b-e027-456c-9a4f-3bf7d905aa80"),
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("8b273ad8-f564-4048-9811-daba227c566a")
             };
@@ -48,20 +48,20 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Id = Guid.Parse("1c2a23a6-a2ee-4d83-a75a-b2f61a1b8a62"),
                 Choices = new Effect[]
                 {
-                    new RestrictedSkillEffect { Id = Guid.Parse("e2cd6901-17f7-4f6d-b960-9e090f43c865"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Occultism.ID },
-                    new RestrictedSkillEffect { Id = Guid.Parse("92944cf8-0a7d-4f3c-be0d-5b38ea0ac8d5"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Performance.ID },
-                    new RestrictedSkillEffect { Id = Guid.Parse("c45efea0-28c2-4943-9b87-273d7b8b62f2"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Society.ID }
+                    new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("e2cd6901-17f7-4f6d-b960-9e090f43c865"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Occultism.ID },
+                    new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("92944cf8-0a7d-4f3c-be0d-5b38ea0ac8d5"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Performance.ID },
+                    new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("c45efea0-28c2-4943-9b87-273d7b8b62f2"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Society.ID }
                 }
             };
 
-            yield return new LoreEffect
+            yield return new GainSpecificLoreProficiencyEffect
             {
                 Id = Guid.Parse("63618d77-da6a-46b1-9d4d-697cec31ec23"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 LoreId = Lores.Instances.Harrow.ID
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("46cdb645-5894-4f66-bd3b-9f976b496696"),
                 FeatId = Feats.General.DubiousKnowledgeFeat.ID

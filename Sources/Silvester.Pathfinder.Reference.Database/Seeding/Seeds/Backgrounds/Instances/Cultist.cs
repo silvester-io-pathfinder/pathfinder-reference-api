@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("df7cba8c-73c0-4519-9c04-093cab1cf39c"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,19 +40,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("8aea94a2-0296-4427-bf3b-ab4c327457e3")
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("adb054bc-6939-41d4-8a0e-b20db38dfe9f"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 SkillId = Skills.Instances.Occultism.ID
             };
 
-            yield return new LoreCategoryEffect
+            yield return new GainSpecificLoreCategoryProficiencyEffect
             {
                 Id = Guid.Parse("f3486047-537f-4565-bebc-1f78f07a0692"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Restrictions = "The chosen Lore skill must be related to your deity or cult."
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("51a8c4ef-42a0-45d8-9e49-f3b5e834ebd5"),
                 FeatId = Feats.General.SchooledInSecretsFeat.ID

@@ -34,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Id = Guid.Parse("82b561b2-92f2-417f-b457-6143c95c4bac"),
                 Choices =
                 {
-                    new LorePrerequisite { Id = Guid.Parse("66575d15-d251-45a8-9f0a-40959a05a627"), RequiredLoreId = Lores.Instances.Alcohol.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID },
-                    new LorePrerequisite { Id = Guid.Parse("eea54f9c-5d65-4488-8b78-e727e2088b0a"), RequiredLoreId = Lores.Instances.Cooking.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID },
-                    new SkillPrerequisite { Id = Guid.Parse("d59f0f25-213e-4cdc-b549-c52c6191f28d"), RequiredSkillId = Skills.Instances.Crafting.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID }
+                    new HaveSpecificLoreProficiencyPrerequisite { Id = Guid.Parse("66575d15-d251-45a8-9f0a-40959a05a627"), RequiredLoreId = Lores.Instances.Alcohol.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID },
+                    new HaveSpecificLoreProficiencyPrerequisite { Id = Guid.Parse("eea54f9c-5d65-4488-8b78-e727e2088b0a"), RequiredLoreId = Lores.Instances.Cooking.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID },
+                    new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("d59f0f25-213e-4cdc-b549-c52c6191f28d"), RequiredSkillId = Skills.Instances.Crafting.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID }
                 }
             };
         }

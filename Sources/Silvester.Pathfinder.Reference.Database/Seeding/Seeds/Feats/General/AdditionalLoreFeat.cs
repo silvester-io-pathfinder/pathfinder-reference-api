@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new LorePrerequisite { Id = Guid.Parse("abe5405c-a349-4fb2-8a49-ac761cfe23da"), RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
+            yield return new HaveAnyLoreProficiencyPrerequisite { Id = Guid.Parse("abe5405c-a349-4fb2-8a49-ac761cfe23da"), RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,25 +47,25 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Effect> GetCharacterEffects()
         {
-            yield return new FreeLoreEffect
+            yield return new GainAnyLoreProficiencyEffect
             {
                 Id = Guid.Parse("be5190ad-11c7-47a4-9f3a-9044729143fe"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 Increments = new EffectIncrement[] 
                 {
-                    new IncreaseProficiencyIncrement
+                    new IncreaseProficiencyToIncrement
                     {
                         Id = Guid.Parse("e76f8a33-4d6c-49da-9c80-0a46157be5f0"),
                         Trigger = new LevelTrigger { Id = Guid.Parse("f2df4e04-4fe0-4e15-af06-657180c88e5f"), Level = 3},
                         ProficiencyId = Proficiencies.Instances.Expert.ID
                     },
-                    new IncreaseProficiencyIncrement
+                    new IncreaseProficiencyToIncrement
                     {
                         Id = Guid.Parse("9efbc7ae-8dc8-40a2-9a0f-8624266a3b31"),
                         Trigger = new LevelTrigger { Id = Guid.Parse("078dacf0-7c82-4053-a6d2-1fd46ea4c5e0"), Level = 7},
                         ProficiencyId = Proficiencies.Instances.Master.ID
                     },
-                    new IncreaseProficiencyIncrement
+                    new IncreaseProficiencyToIncrement
                     {
                         Id = Guid.Parse("38e517de-c374-43f4-ae48-2b93b356f946"),
                         Trigger = new LevelTrigger { Id = Guid.Parse("5d66aa19-b87f-457a-a478-a9e3c11e750d"), Level = 15},

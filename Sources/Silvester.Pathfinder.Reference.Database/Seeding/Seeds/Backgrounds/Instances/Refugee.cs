@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("d96b21cc-d447-484f-a69d-88758c3d6559"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,19 +40,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("fbda09dc-c34e-432f-9784-4b033d85d9ff")
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("f3d9f1ce-365f-4872-bbfe-875d4ebb1ec5"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 SkillId = Skills.Instances.Society.ID
             };
 
-            yield return new LoreCategoryEffect
+            yield return new GainSpecificLoreCategoryProficiencyEffect
             {
                 Id = Guid.Parse("4615864f-239c-4cea-b835-e8b3e77574ec"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Restrictions = "The chosen Lore skill must be related to the settlement you came from."
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("681e0960-1933-49c0-bdcc-b7161abee5eb"),
                 FeatId = Feats.General.StreetwiseFeat.ID

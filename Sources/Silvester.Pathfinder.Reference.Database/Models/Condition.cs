@@ -8,7 +8,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
     public class Condition : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
-     
+
         public Guid? SourcePageId { get; set; }
         public SourcePage? SourcePage { get; set; } = default!;
 
@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public Condition? OverridesCondition { get; set; }
 
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
-     
+
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

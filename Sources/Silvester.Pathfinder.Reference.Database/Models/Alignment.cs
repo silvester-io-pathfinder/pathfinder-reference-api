@@ -13,7 +13,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public ICollection<Deity> DeityFollowerAlignments { get; set; } = new List<Deity>();
         public ICollection<Plane> Planes { get; set; } = new List<Plane>();
         public ICollection<Artifact> Artifacts { get; set; } = new List<Artifact>();
-     
+        public ICollection<Cause> Causes { get; set; } = new List<Cause>();
+
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

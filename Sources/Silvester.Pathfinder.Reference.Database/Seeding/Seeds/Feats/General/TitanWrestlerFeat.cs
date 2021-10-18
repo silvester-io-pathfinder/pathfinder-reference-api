@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("063735a0-a7f9-4165-aa97-74c04557ae1f"), RequiredSkillId = Skills.Instances.Athletics.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID};
+            yield return new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("063735a0-a7f9-4165-aa97-74c04557ae1f"), RequiredSkillId = Skills.Instances.Athletics.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID};
         }
 
         protected override IEnumerable<Guid> GetTraits()

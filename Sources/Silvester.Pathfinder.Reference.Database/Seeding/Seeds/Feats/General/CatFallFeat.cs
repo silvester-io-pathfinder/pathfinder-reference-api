@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("9e791723-1f8e-480d-844f-0e0fe4aae005"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
+            yield return new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("9e791723-1f8e-480d-844f-0e0fe4aae005"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -43,14 +43,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Effect> GetCharacterEffects()
         {
-            yield return new FallDistanceModifierEffect
+            yield return new ModifyFallDistanceEffect
             {
                 Id = Guid.Parse("87b0f995-bec7-4a15-bd85-223f566000c2"),
                 Modifier = 10,
                 ModifierType = ModifierType.Subtract
             };
 
-            yield return new FallDistanceModifierEffect
+            yield return new ModifyFallDistanceEffect
             {
                 Id = Guid.Parse("0c13f22a-cf01-4500-be1b-adbd4bc365c2"),
                 Modifier = 15,
@@ -60,12 +60,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                     new EffectPrerequisiteBinding
                     {
                         Id = Guid.Parse("0a2157a6-d121-4386-9151-528f064e8a49"),
-                        Prerequisite = new SkillPrerequisite { Id = Guid.Parse("69f484b7-b54a-4a6d-90f5-b38b69ab8094"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID }
+                        Prerequisite = new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("69f484b7-b54a-4a6d-90f5-b38b69ab8094"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Expert.ID }
                     }
                 }
             };
 
-            yield return new FallDistanceModifierEffect
+            yield return new ModifyFallDistanceEffect
             {
                 Id = Guid.Parse("c4f8d6de-ac3e-49f8-984b-dc60baa3bf25"),
                 Modifier = 25,
@@ -75,12 +75,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                     new EffectPrerequisiteBinding
                     {
                         Id = Guid.Parse("a6a4b9a7-c3eb-4e2b-a594-a0385a7c46d4"),
-                        Prerequisite = new SkillPrerequisite { Id = Guid.Parse("69dad3ff-d075-48c4-a2ce-baee6ae1e3d1"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Master.ID }
+                        Prerequisite = new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("69dad3ff-d075-48c4-a2ce-baee6ae1e3d1"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Master.ID }
                     }
                 }
             };
 
-            yield return new FallDistanceModifierEffect
+            yield return new ModifyFallDistanceEffect
             {
                 Id = Guid.Parse("a0c78d88-b75b-48e0-b272-c9775c1527f0"),
                 Modifier = 0,
@@ -90,7 +90,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                     new EffectPrerequisiteBinding
                     {
                         Id = Guid.Parse("ac16c9bd-fd66-4f72-a389-86eabd0d5199"),
-                        Prerequisite = new SkillPrerequisite { Id = Guid.Parse("e4b3ffdb-86e2-4ddd-9107-ae3851b653c0"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Legendary.ID }
+                        Prerequisite = new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("e4b3ffdb-86e2-4ddd-9107-ae3851b653c0"), RequiredSkillId = Skills.Instances.Acrobatics.ID, RequiredProficiencyId = Proficiencies.Instances.Legendary.ID }
                     }
                 }
             };

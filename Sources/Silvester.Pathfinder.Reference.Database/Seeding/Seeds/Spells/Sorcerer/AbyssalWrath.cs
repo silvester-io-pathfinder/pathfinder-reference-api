@@ -4,7 +4,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
-namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Sorcerer.Instances
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
     public class AbyssalWrath : Template
     {

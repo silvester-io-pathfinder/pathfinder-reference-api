@@ -27,6 +27,8 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Alignment> Alignments { get; set; } = default!;
         public DbSet<Ammunition> Ammunitions { get; set; } = default!;
         public DbSet<Armor> Armors { get; set; } = default!;
+        public DbSet<Ancestry> Ancestries { get; set; } = default!;
+        public DbSet<Archetype> Archetypes{ get; set; } = default!;
         public DbSet<Artifact> Artifacts { get; set; } = default!;
         public DbSet<ArmorPropertyRune> ArmorPropertyRunes { get; set; } = default!;
         public DbSet<ArmorCategory> ArmorCategories { get; set; } = default!;
@@ -35,6 +37,8 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Background> Backgrounds { get; set; } = default!;
         public DbSet<BenefitType> BenefitTypes { get; set; } = default!;
         public DbSet<Bulk> Bulks { get; set; } = default!;
+        public DbSet<Bloodline> Bloodlines { get; set; } = default!;
+        public DbSet<Cause> Causes { get; set; } = default!;
         public DbSet<Class> Classes { get; set; } = default!;
         public DbSet<ConditionCategory> ConditionCategories { get; set; } = default!;
         public DbSet<Condition> Conditions { get; set; } = default!;
@@ -43,8 +47,10 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Deity> Deities { get; set; } = default!;
         public DbSet<DeityCategory> DeityCategories { get; set; } = default!;
         public DbSet<Disease> Diseases { get; set; } = default!;
+        public DbSet<DivineAlly> DivineAllies { get; set; } = default!;
         public DbSet<DivineFont> DivineFonts { get; set; } = default!;
         public DbSet<Domain> Domains { get; set; } = default!;
+        public DbSet<FamiliarAbility> FamiliarAbilities { get; set; } = default!;
         public DbSet<Feat> Feats { get; set; } = default!;
         public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
         public DbSet<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = default!;
@@ -56,6 +62,8 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Hazard> Hazards { get; set; } = default!;
         public DbSet<HazardType> HazardTypes { get; set; } = default!;
         public DbSet<Heritage> Heritages { get; set; } = default!;
+        public DbSet<Instinct> Instincts { get; set; } = default!;
+        public DbSet<InstinctAbility> InstinctAbilities { get; set; } = default!;
         public DbSet<Item> Items { get; set; } = default!;
         public DbSet<ItemCategory> ItemCategories { get; set; } = default!;
         public DbSet<ItemCurse> ItemCurses { get; set; } = default!;
@@ -63,9 +71,11 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<LanguageType> LanguageTypes { get; set; } = default!;
         public DbSet<Lore> Lores { get; set; } = default!;
         public DbSet<LoreCategory> LoreCategories { get; set; } = default!;
+        public DbSet<MasterAbility> MasterAbilities{ get; set; } = default!;
         public DbSet<MagicEssence> MagicEssences { get; set; } = default!;
         public DbSet<MagicSchool> MagicSchools { get; set; } = default!;
         public DbSet<MagicTradition> MagicTraditions { get; set; } = default!;
+        public DbSet<Muse> Muses { get; set; } = default!;
         public DbSet<Mystery> Mysteries { get; set; } = default!;
         public DbSet<PlaneCategory> PlaneCategories { get; set; } = default!;
         public DbSet<Plane> Planes { get; set; } = default!;
@@ -78,10 +88,11 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<PreciousMaterialWeapon> PreciousMaterialWeapons { get; set; } = default!;
         public DbSet<Prerequisite> Prerequisites { get; set; } = default!;
         public DbSet<Proficiency> Proficiencies { get; set; } = default!;
-        public DbSet<Ancestry> Ancestries { get; set; } = default!;
         public DbSet<AncestrySize> AncestrySizes { get; set; } = default!;
         public DbSet<RangedWeapon> RangedWeapons { get; set; } = default!;
+        public DbSet<Racket> Rackets { get; set; } = default!;
         public DbSet<Rarity> Rarities { get; set; } = default!;
+        public DbSet<ResearchField> ResearchFields { get; set; } = default!;
         public DbSet<SavingThrowStat> SavingThrowStats { get; set; } = default!;
         public DbSet<Shield> Shields { get; set; } = default!;
         public DbSet<Skill> Skills { get; set; } = default!;
@@ -93,6 +104,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<SpellType> SpellTypes { get; set; } = default!;
         public DbSet<Stat> Stats { get; set; } = default!;
         public DbSet<Stave> Staves { get; set; } = default!;
+        public DbSet<Tenet> Tenets { get; set; } = default!;
         public DbSet<Trait> Traits { get; set; } = default!;
         public DbSet<MeleeWeapon> MeleeWeapons { get; set; } = default!;
         public DbSet<WeaponPropertyRune> WeaponPropertyRunes { get; set; } = default!;
@@ -102,6 +114,8 @@ namespace Silvester.Pathfinder.Reference.Database
         protected override void OnModelCreating(ModelBuilder builder)
         {
             //Debugger.Launch();
+
+            builder.Entity<WeaponGroup>().HasJoinData()
 
             ConfigureEntities(builder);
             SeedEntities(builder);

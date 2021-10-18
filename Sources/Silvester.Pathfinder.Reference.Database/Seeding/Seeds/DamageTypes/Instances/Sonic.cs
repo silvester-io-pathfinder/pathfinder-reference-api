@@ -13,6 +13,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DamageTypes.Inst
            {
                Id = ID,
                Name = "Sonic"
+               Description = "You resist Sonic damage."
            };
         }
     }

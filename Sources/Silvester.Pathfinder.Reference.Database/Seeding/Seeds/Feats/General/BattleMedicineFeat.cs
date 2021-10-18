@@ -17,6 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
             {
                 Id = ID,
                 Name = "Battle Medicine",
+                Requirements = "You’re holding or wearing healer’s tools (page 209).",
                 Level = 1,
                 ActionTypeId = ActionTypes.Instances.OneAction.ID
             };
@@ -29,12 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("83a915d1-a69b-4a0e-b48f-ce0167b389f9"), RequiredSkillId = Skills.Instances.Medicine.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
-        }
-
-        protected override IEnumerable<FeatRequirement> GetRequirements()
-        {
-            yield return new FeatRequirement { Id = Guid.Parse("1713b28d-8d45-4cfd-a71c-56e903c7eb68"), Text = "You’re holding or wearing healer’s tools (page 209)." };
+            yield return new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("83a915d1-a69b-4a0e-b48f-ce0167b389f9"), RequiredSkillId = Skills.Instances.Medicine.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
         }
 
         protected override IEnumerable<Guid> GetTraits()

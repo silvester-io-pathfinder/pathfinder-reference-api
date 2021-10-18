@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("15bb098c-0823-40cf-b1d6-c52ebc7d0c51"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,19 +40,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("96fb59fc-5f60-46ca-b548-2866a69fdda4")
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("2909f61e-5ad8-48c5-8f7c-74dd938ece41"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 SkillId = Skills.Instances.Intimidation.ID
             };
 
-            yield return new LoreCategoryEffect
+            yield return new GainSpecificLoreCategoryProficiencyEffect
             {
                 Id = Guid.Parse("cb36cae4-d147-485b-8688-c50695c423e1"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Restrictions = "The chosen lore skill must be related to a terrain you've worked in (such as Deser Lore or Plains Lore)."
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("1e45a705-cf03-4967-8baa-5081c5bd65b7"),
                 FeatId = Feats.General.GroupCoercionFeat.ID

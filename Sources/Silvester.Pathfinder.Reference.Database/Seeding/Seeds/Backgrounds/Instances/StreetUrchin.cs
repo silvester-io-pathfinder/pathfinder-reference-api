@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("a4f88770-ec28-48a7-a91e-dae8d455dfa8"),
                 RequiredStats = new StatEffectBinding[]
@@ -39,19 +39,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("ae787cec-902c-4486-8178-64d8eca0871c")
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("6fca3ba7-ee80-4349-bf96-14c5292b31f3"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 SkillId = Skills.Instances.Thievery.ID
             };
 
-            yield return new LoreCategoryEffect
+            yield return new GainSpecificLoreCategoryProficiencyEffect
             {
                 Id = Guid.Parse("b0d4dc5b-4ff3-49af-b788-cae40c0d4306"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -59,7 +59,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Restrictions = "The chosen Lore skill must be related to the settlement you lived in as a street urchin (such as Absalom Lore or Magnimar Lore)."
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("27d19126-b0a0-4204-a5a7-c76f1c06ed4b"),
                 FeatId = Feats.General.PickpocketFeat.ID

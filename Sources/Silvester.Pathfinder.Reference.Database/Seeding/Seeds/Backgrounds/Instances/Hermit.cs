@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("f1bf58c5-e7f8-4b72-bdbb-e130395e0a23"),
                 RequiredStats = new StatEffectBinding[]
@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("a69be068-752a-4a01-bd7b-af9e269c7332")
             };
@@ -49,12 +49,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Id = Guid.Parse("605bbd0e-84bd-476e-b3b0-8996e5357d26"),
                 Choices = new Effect[] 
                 {
-                    new RestrictedSkillEffect { Id = Guid.Parse("3817a1ff-2093-4d25-af68-2d08226a8278"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Nature.ID },
-                    new RestrictedSkillEffect { Id = Guid.Parse("4f131ffd-e298-43fd-81c6-c2682b3f3af3"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Occultism.ID },
+                    new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("3817a1ff-2093-4d25-af68-2d08226a8278"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Nature.ID },
+                    new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("4f131ffd-e298-43fd-81c6-c2682b3f3af3"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Occultism.ID },
                 }
             };
 
-            yield return new LoreCategoryEffect
+            yield return new GainSpecificLoreCategoryProficiencyEffect
             {
                 Id = Guid.Parse("0492ebf1-9625-4eaa-8ebc-4cff713b958e"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Restrictions = "The chosen Lore skill must be related to the terrain you lived in as a hermit (such as Cave Lore or Deser Lore)."
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("b53daf8b-42a4-414a-b2b8-1722fc9844c4"),
                 FeatId = Feats.General.DubiousKnowledgeFeat.ID

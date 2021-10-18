@@ -1,3 +1,4 @@
+using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;

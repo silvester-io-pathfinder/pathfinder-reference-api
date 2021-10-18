@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("f3d69cf7-0c06-4248-ae59-dfc788ef5dd1"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,19 +40,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("7a702d21-a1fa-48ed-9d70-2b8ed579fccb")
             };
 
-            yield return new FreeLoreEffect
+            yield return new GainAnyLoreProficiencyEffect
             {
                 Id = Guid.Parse("6c217be8-d462-423e-9e5d-454d8b473b8d"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 Restrictions = "The Lore skill you choose can't be about a magical subject (as determined by the GM if it's unclear)."
             };
 
-            yield return new TraitEffect
+            yield return new GainSpecificTraitEffect
             {
                 Id = Guid.Parse("ec478f01-29d8-4cf4-bd6c-022ca39cb741"),
                 TraitId = Traits.Instances.AntiMagical.ID

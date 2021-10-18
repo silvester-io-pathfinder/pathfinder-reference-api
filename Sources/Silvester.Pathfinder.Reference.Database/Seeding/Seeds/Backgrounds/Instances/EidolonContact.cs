@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("58531d3f-282d-47c6-8bb6-e3cac93c080e"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("4ced98cf-1359-4c92-acf5-9c1b5e626d73")
             };
@@ -50,21 +50,21 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Id = Guid.Parse("9ee2d51a-e6bf-4cef-b217-01117961a911"),
                 Choices = new Effect[]
                 {
-                    new RestrictedSkillEffect {Id = Guid.Parse("72d33829-d5c0-465d-97a3-99636ce58724"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Arcana.ID},
-                    new RestrictedSkillEffect {Id = Guid.Parse("b8d9a4b2-d555-43e5-92ed-b683bdd6908b"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Nature.ID},
-                    new RestrictedSkillEffect {Id = Guid.Parse("33291867-122e-4f22-9e76-c8dd60755a93"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Occultism.ID},
-                    new RestrictedSkillEffect {Id = Guid.Parse("9acc156b-8d57-46c5-87da-d8b93b635e72"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Religion.ID},
+                    new GainSpecificSkillProficiencyEffect {Id = Guid.Parse("72d33829-d5c0-465d-97a3-99636ce58724"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Arcana.ID},
+                    new GainSpecificSkillProficiencyEffect {Id = Guid.Parse("b8d9a4b2-d555-43e5-92ed-b683bdd6908b"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Nature.ID},
+                    new GainSpecificSkillProficiencyEffect {Id = Guid.Parse("33291867-122e-4f22-9e76-c8dd60755a93"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Occultism.ID},
+                    new GainSpecificSkillProficiencyEffect {Id = Guid.Parse("9acc156b-8d57-46c5-87da-d8b93b635e72"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Religion.ID},
                 }
             };
 
-            yield return new LoreEffect
+            yield return new GainSpecificLoreProficiencyEffect
             {
                 Id = Guid.Parse("73a0002b-9b5e-476e-83cb-31a1e2f7a961"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 LoreId = Lores.Instances.Academia.ID
             };
 
-            yield return new LoreCategoryEffect
+            yield return new GainSpecificLoreCategoryProficiencyEffect
             {
                 Id = Guid.Parse("e2c995f7-2a70-4e13-893e-4118b19d47b2"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -72,7 +72,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Restrictions = "The chosen Lore skill must be associated with your contacted eidolon (such as Angel Lore or Dragon Lore)."
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("d5b1afad-8910-448a-9390-39ce099e60d0"),
                 FeatId = Feats.General.DubiousKnowledgeFeat.ID

@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("d117552a-f149-48fd-8ff1-425893fb7b00"), RequiredProficiencyId = Proficiencies.Instances.Trained.ID, RequiredSkillId = Skills.Instances.Arcana.ID };
+            yield return new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("d117552a-f149-48fd-8ff1-425893fb7b00"), RequiredProficiencyId = Proficiencies.Instances.Trained.ID, RequiredSkillId = Skills.Instances.Arcana.ID };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Effect> GetCharacterEffects()
         {
-            yield return new InnateSpellEffect 
+            yield return new GainSpecificInnateSpellEffect 
             {
                 Id = Guid.Parse("d9c87bf6-f028-41db-a4ee-5c7c44808937"), 
                 SpellId = Spells.Instances.DetectMagic.ID, 
@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                 Level = 1,
                 Increments = new EffectIncrement[]
                 {
-                    new IncreaseLevelIncrement
+                    new IncreaseLevelToIncrement
                     {
                         Id = Guid.Parse("23b955d0-d4a9-45ff-a360-9e19de8eb6c4"),
                         Level = 3,
@@ -64,7 +64,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
                             SkillId = Skills.Instances.Arcana.ID
                         }
                     },
-                    new IncreaseLevelIncrement
+                    new IncreaseLevelToIncrement
                     {
                         Id = Guid.Parse("ab4b3a9e-5b97-47e0-a149-ef3af614be3e"),
                         Level = 4,

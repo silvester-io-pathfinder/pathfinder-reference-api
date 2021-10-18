@@ -9,6 +9,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
 {
@@ -22,15 +23,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
             builder.AddTraits(feat, GetTraits());
             builder.AddTextBlocks(feat, GetDetailBlocks(), e => e.Details);
             builder.AddEffects(GetCharacterEffects(), (effect) => new FeatEffectBinding { FeatId = feat.Id });
-            builder.AddPrerequisites(GetPrerequisites(), () => new FeatPrerequisiteBinding { FeatId = feat.Id });
+            builder.AddPrerequisites(GetPrerequisites().Concat(new[] { new HaveSpecificLevelPrerequisite { Id = feat.Id, Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = feat.Level } }), () => new FeatPrerequisiteBinding { FeatId = feat.Id });
             builder.AddSourcePage(feat, GetSourcePage(), e => e.SourcePageId);
-            
-
-            foreach (FeatRequirement requirement in GetRequirements())
-            {
-                builder.AddData(requirement);
-                requirement.FeatId = feat.Id;
-            }
 
             return feat;
         }
@@ -49,12 +43,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
         protected virtual IEnumerable<Prerequisite> GetPrerequisites()
         {
             //Override in concrete subclass to add prerequisites.
-            yield break;
-        }
-
-        protected virtual IEnumerable<FeatRequirement> GetRequirements()
-        {
-            //Override in concrete subclass to add requirement prerequisites.
             yield break;
         }
 

@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("31c0f048-a5aa-42a4-aa82-a258c5293e13"),
                 RequiredStats = new StatEffectBinding[]
@@ -41,19 +41,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("f000fad2-0242-4dfa-badc-ef581c7b12cf")
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("471406ee-a170-47d1-9b5a-ca64277c1860"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 SkillId = Skills.Instances.Diplomacy.ID
             };
 
-            yield return new LoreCategoryEffect
+            yield return new GainSpecificLoreCategoryProficiencyEffect
             {
                 Id = Guid.Parse("9915364f-9277-4108-93ad-f38272d4fb99"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Restrictions = "The chosen Lore skill must be related to one city you've visited often."
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("545ad6af-73a3-4ea2-8ffb-40cc1eee2ab7"),
                 FeatId = Feats.General.GroupImpressionFeat.ID

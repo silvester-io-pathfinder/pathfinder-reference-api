@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("6453a6e3-f7a5-4d1a-ae14-a5a8b476e4e8"),
                 RequiredStats = new StatEffectBinding[]
@@ -41,21 +41,21 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("edde3455-8385-42c3-9cd5-a3dea71f2907"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 SkillId = Skills.Instances.Athletics.ID
             };
 
-            yield return new LoreEffect
+            yield return new GainSpecificLoreProficiencyEffect
             {
                 Id = Guid.Parse("f9a2e4a5-8745-4e69-b931-653fca73018b"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 LoreId = Lores.Instances.Ocean.ID
             };
 
-            yield return new AbilityEffect 
+            yield return new GainSpecificAbilityEffect 
             {
                 Id = Guid.Parse("8fd1949f-d1de-40b2-a9f8-13a14258af83"),
                 AbilityId = Abilities.Instances.Waterbreathing.ID 
@@ -67,8 +67,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 IsOptional = true,
                 Choices = new Effect[]
                 {
-                    new LoseAirBreathingEffect { Id = Guid.Parse("32db8722-b192-466a-9c2e-769574494189") },
-                    new FreeAbilityBoostEffect { Id = Guid.Parse("e8b99513-9e2e-459e-8af0-9381960b4a79") }
+                    new DisableAirBreathingEffect { Id = Guid.Parse("32db8722-b192-466a-9c2e-769574494189") },
+                    new GainAnyAbilityBoostEffect { Id = Guid.Parse("e8b99513-9e2e-459e-8af0-9381960b4a79") }
                 }
             };
         }

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("96524d7d-ef57-4846-baff-ada17dec8b12"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,24 +40,24 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("fa2d99b9-bf24-4b28-9421-84e14c7a7fa2")
             };
 
-            yield return new ProphecyEffect
+            yield return new GainAnyProphecyEffect
             {
                 Id = Guid.Parse("9575b734-c7dc-4510-bce9-1446ea760bca")
             };
 
-            yield return new FreeSkillEffect
+            yield return new GainAnySkillProficiencyEffect
             {
                 Id = Guid.Parse("17fe6968-c7bb-4ca0-897b-6e7888f2a658"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 Restrictions = "The chosen skill must be related to the prophecy."
             };
 
-            yield return new LoreEffect
+            yield return new GainSpecificLoreProficiencyEffect
             {
                 Id = Guid.Parse("fc479416-d676-4e34-8bc7-e819d5812d26"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,

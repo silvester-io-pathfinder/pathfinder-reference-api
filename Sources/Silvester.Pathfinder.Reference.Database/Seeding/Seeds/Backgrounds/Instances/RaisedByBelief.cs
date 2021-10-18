@@ -28,13 +28,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("704494b4-aa5d-4c15-9406-39801ca64f00"),
                 Restrictions = "The chosen ability must be listed in the Divine Ability entry for your deity."
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("810f5daf-86f8-4e1a-80e7-a397cb5a090c")
             };
@@ -44,12 +44,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Id = Guid.Parse("cc625d22-aeaa-4334-9fcc-935d2ea79d44"),
                 Entries = new Effect[]
                 {
-                    new FreeSkillEffect { Id = Guid.Parse("3230757c-67bd-4faa-b434-cbde7c7360db"), ProficiencyId = Proficiencies.Instances.Trained.ID, Restrictions = "The chosen skill must be your deity's associated skill."},
-                    new FeatEffect { Id = Guid.Parse("f29c4b71-3631-4391-942c-64d8e9a70937"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The Assurance skill feat should relate to your deity's associated skill."}
+                    new GainAnySkillProficiencyEffect { Id = Guid.Parse("3230757c-67bd-4faa-b434-cbde7c7360db"), ProficiencyId = Proficiencies.Instances.Trained.ID, Restrictions = "The chosen skill must be your deity's associated skill."},
+                    new GainSpecificFeatEffect { Id = Guid.Parse("f29c4b71-3631-4391-942c-64d8e9a70937"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The Assurance skill feat should relate to your deity's associated skill."}
                 }
             };
 
-            yield return new LoreCategoryEffect
+            yield return new GainSpecificLoreCategoryProficiencyEffect
             {
                 Id = Guid.Parse("fb0accfe-d198-4cce-af67-d83b22142765"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,

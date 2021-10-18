@@ -20,6 +20,7 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql.Interceptors
                 return;
             }
 
+            //TODO: Add support for navigation properties on 
             if (definition.RuntimeType.IsSubclassOf(typeof(BaseEntity)))
             {
                 foreach(PropertyInfo property in definition.RuntimeType.GetProperties())

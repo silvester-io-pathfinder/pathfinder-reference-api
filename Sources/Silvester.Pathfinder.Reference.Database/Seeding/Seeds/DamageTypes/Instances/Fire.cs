@@ -12,7 +12,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DamageTypes.Inst
            return new DamageType 
            { 
                Id = ID, 
-               Name = "Fire" 
+               Name = "Fire"
+               Description = "You resist Fire damage."
            };
         }
     }

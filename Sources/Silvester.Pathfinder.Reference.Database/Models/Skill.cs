@@ -19,6 +19,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models
 
         public ICollection<SkillAction> SkillActions { get; set; } = new List<SkillAction>();
 
+        public ICollection<Bloodline> Bloodlines { get; set; } = new List<Bloodline>();
+
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

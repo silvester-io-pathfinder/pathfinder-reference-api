@@ -9,7 +9,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
     {
         public string Name { get; set; } = default!;
 
-        public string? Trigger { get; set; } 
+        public string? Trigger { get; set; }
 
         public string? Requirements { get; set; }
 

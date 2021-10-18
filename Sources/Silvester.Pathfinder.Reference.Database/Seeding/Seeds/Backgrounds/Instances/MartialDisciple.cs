@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("d9b0c8d7-18cc-4a0e-b494-3e42565d724f"),
                 RequiredStats = new StatEffectBinding[]
@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("a4c9ffdb-b4b1-4e7a-b42d-a74adb7072df")
             };
@@ -54,8 +54,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                         Id = Guid.Parse("ce2e1ca2-df03-4653-8e80-f8ddb9e0debd"),
                         Entries = new Effect[]
                         {
-                            new RestrictedSkillEffect { Id = Guid.Parse("70b0a523-8215-4fb4-83ce-5fe2be0828af"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Acrobatics.ID },
-                            new FeatEffect { Id = Guid.Parse("6169ffde-b95e-4750-8881-d4151a5dadee"), FeatId = Feats.General.CatFallFeat.ID }
+                            new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("70b0a523-8215-4fb4-83ce-5fe2be0828af"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Acrobatics.ID },
+                            new GainSpecificFeatEffect { Id = Guid.Parse("6169ffde-b95e-4750-8881-d4151a5dadee"), FeatId = Feats.General.CatFallFeat.ID }
                         }
                     },
                     new CombinedEffect
@@ -63,8 +63,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                         Id = Guid.Parse("ac1fc23c-87f3-45e2-a488-aa17b1e68cc7"),
                         Entries = new Effect[]
                         {
-                            new RestrictedSkillEffect { Id = Guid.Parse("b23fbbb8-ed60-4587-96fb-2ba4d6c6e316"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Athletics.ID },
-                            new FeatEffect { Id = Guid.Parse("15047104-9e98-43da-b5be-4912b3f7bbef"), FeatId = Feats.General.QuickJumpFeat.ID }
+                            new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("b23fbbb8-ed60-4587-96fb-2ba4d6c6e316"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Athletics.ID },
+                            new GainSpecificFeatEffect { Id = Guid.Parse("15047104-9e98-43da-b5be-4912b3f7bbef"), FeatId = Feats.General.QuickJumpFeat.ID }
                         }
                     }
                 }

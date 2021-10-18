@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("e69a5ee2-2e59-4a3d-bd6b-cdcd7f9e7cdf"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("d48ad6ae-2f31-4724-8521-863ab8dcb550")
             };
@@ -50,19 +50,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Id = Guid.Parse("3bd4cef7-6ef1-4d21-9322-6191078185ac"),
                 Choices = new Effect[]
                 {
-                    new RestrictedSkillEffect { Id = Guid.Parse("bce7b4dd-5cb4-49cb-b133-15fd7ab87c2d"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Performance.ID },
-                    new RestrictedSkillEffect { Id = Guid.Parse("e1b962ae-0e08-4876-bc30-e7138ae7620f"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Society.ID },
+                    new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("bce7b4dd-5cb4-49cb-b133-15fd7ab87c2d"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Performance.ID },
+                    new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("e1b962ae-0e08-4876-bc30-e7138ae7620f"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Society.ID },
                 }
             };
 
-            yield return new LoreEffect
+            yield return new GainSpecificLoreProficiencyEffect
             {
                 Id = Guid.Parse("dca0d141-fe14-4746-be40-0f9dc37c95c5"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 LoreId = Lores.Instances.Academia.ID
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("9770f525-7806-4bc5-9fb2-246c361a0f64"),
                 FeatId = Feats.General.ExperiencedProfessionalFeat.ID

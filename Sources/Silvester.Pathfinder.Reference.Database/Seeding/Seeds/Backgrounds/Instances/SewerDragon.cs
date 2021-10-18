@@ -31,12 +31,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new AncestryPrerequisite { Id = Guid.Parse("6609913f-2257-4510-8e71-51f08bcdfa09"), RequiredAncestryId = Ancestries.Instances.Kobold.ID };
+            yield return new HaveSpecificAncestryPrerequisite { Id = Guid.Parse("6609913f-2257-4510-8e71-51f08bcdfa09"), RequiredAncestryId = Ancestries.Instances.Kobold.ID };
         }
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("e77b5be8-e496-4f34-96b1-343adbda251e"),
                 RequiredStats = new StatEffectBinding[]
@@ -46,26 +46,26 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("10d2519e-56f4-41f2-96b8-0a4b2ec2f066")
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("f0a96cc2-ee62-4703-b912-a820b9b038e2"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 SkillId = Skills.Instances.Crafting.ID
             };
 
-            yield return new LoreEffect
+            yield return new GainSpecificLoreProficiencyEffect
             {
                 Id = Guid.Parse("7fa127ac-d288-4362-b06b-5fa0b629fb97"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 LoreId = Lores.Instances.Kobold.ID
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("bc836cac-09ac-4af4-a701-f1525f171a54"),
                 FeatId = Feats.General.SnareCraftingFeat.ID

@@ -207,8 +207,14 @@ namespace Silvester.Pathfinder.Reference.Database.Extensions
             }
         }
 
-        public static void AddEffect(this ModelBuilder builder, Effect effect, BaseEffectBinding binding)
+        public static void AddEffect(this ModelBuilder builder, Effect? effect, BaseEffectBinding binding)
         {
+            if(effect == null)
+            {
+                return;
+            }
+            
+            binding.Id = effect.Id;
             binding.EffectId = effect.Id;
             effect.BindingId = binding.Id;
 
@@ -216,7 +222,7 @@ namespace Silvester.Pathfinder.Reference.Database.Extensions
 
             switch (effect)
             {
-                case RestrictedAbilityBoostEffect boost:
+                case GainSpecificAbilityBoostEffect boost:
                     foreach (StatEffectBinding statBinding in boost.RequiredStats)
                     {
                         statBinding.EffectId = effect.Id;

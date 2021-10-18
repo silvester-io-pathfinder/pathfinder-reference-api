@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("ef8874a9-100f-4c2c-8bf0-7ad1bffea87d"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,14 +40,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("6e075fc6-bffe-4072-b61d-4204cce69a61"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 SkillId = Skills.Instances.Nature.ID
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("cf8f6b9b-8bf1-412f-85ab-498c0916601c"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -60,19 +60,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Restrictions = "The darkvision effect can only be chosen if you already have low-light vision.",
                 Choices = new Effect[]
                 {
-                    new SenseEffect { Id = Guid.Parse("421b9e67-02c7-48c0-abb2-e84b626251f2"), SenseId = Senses.Instances.LowLightVision.ID, },
-                    new SenseEffect { Id = Guid.Parse("09a56e27-0420-42ed-9722-0aad7d098f72"), SenseId = Senses.Instances.Darkvision.ID}
+                    new GainSpecificSenseEffect { Id = Guid.Parse("421b9e67-02c7-48c0-abb2-e84b626251f2"), SenseId = Senses.Instances.LowLightVision.ID, },
+                    new GainSpecificSenseEffect { Id = Guid.Parse("09a56e27-0420-42ed-9722-0aad7d098f72"), SenseId = Senses.Instances.Darkvision.ID}
                 }
             };
 
-            yield return new SenseEffect
+            yield return new GainSpecificSenseEffect
             {
                 Id = Guid.Parse("5c467b81-6ea5-436f-bf4d-5090821798d7"),
                 SenseId = Senses.Instances.Scent.ID,
                 Range = "30 feet."
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("b31ace99-be35-45d8-a1dc-ef298dbffc4f"),
                 FeatId = Feats.General.ForagerFeat.ID

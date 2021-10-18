@@ -9,7 +9,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public string Description { get; set; } = default!;
 
         public int PageNumber { get; set; }
-     
+
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

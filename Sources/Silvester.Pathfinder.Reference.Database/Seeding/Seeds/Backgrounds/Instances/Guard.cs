@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("5bd2df60-8081-448d-9d37-f5b9e9474424"),
                 RequiredStats = new StatEffectBinding[]
@@ -40,12 +40,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("dac82bd1-9b85-47d7-b037-7f32622ba14c")
             };
 
-            yield return new RestrictedSkillEffect
+            yield return new GainSpecificSkillProficiencyEffect
             {
                 Id = Guid.Parse("07c94b59-74bd-4868-b072-0df8f5d4a4ea"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -57,12 +57,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 Id = Guid.Parse("1291e39e-a84d-46ef-a0dc-e32db9a3e0da"),
                 Choices = new Effect[]
                 {
-                    new LoreEffect { Id = Guid.Parse("9a2d4f34-351f-42ca-8167-363b7e793804"), ProficiencyId = Proficiencies.Instances.Trained.ID, LoreId = Lores.Instances.Legal.ID },
-                    new LoreEffect { Id = Guid.Parse("174f5acf-d298-4263-b538-cdb7a3a21fed"), ProficiencyId = Proficiencies.Instances.Trained.ID, LoreId = Lores.Instances.Warfare.ID },
+                    new GainSpecificLoreProficiencyEffect { Id = Guid.Parse("9a2d4f34-351f-42ca-8167-363b7e793804"), ProficiencyId = Proficiencies.Instances.Trained.ID, LoreId = Lores.Instances.Legal.ID },
+                    new GainSpecificLoreProficiencyEffect { Id = Guid.Parse("174f5acf-d298-4263-b538-cdb7a3a21fed"), ProficiencyId = Proficiencies.Instances.Trained.ID, LoreId = Lores.Instances.Warfare.ID },
                 }
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("edf6528a-49bd-4de7-b3d8-f3a0b6c69b66"),
                 FeatId = Feats.General.QuickCoercionFeat.ID

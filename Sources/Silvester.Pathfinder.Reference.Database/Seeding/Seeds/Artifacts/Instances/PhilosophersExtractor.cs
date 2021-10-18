@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Artifacts.Instan
                 Name = "Philosopher's Extractor",
                 Destruction = "Simultaneously feeding the philosopher’s extractor sizable portions of an aeon, angel, archon, azata, daemon, demon, devil, protean, and psychopomp, each of at least 14th level, along with a philosopher’s stone causes the device to jam, overheat, and explode. Creatures within 60 feet of the explosion must succeed at a DC 55 Reflex save or become covered in an alchemical slurry that transforms them into a horrifying amalgam of at least two of the creatures used to destroy the machine.",
                 ItemLevel = 28,
-                BulkId = Bulks.Instances.EightBulk.ID
+                BulkId = Bulks.Instances.GiantInstinct.ID
             };
         }
 

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
         protected override IEnumerable<Effect> GetEffects()
         {
-            yield return new RestrictedAbilityBoostEffect
+            yield return new GainSpecificAbilityBoostEffect
             {
                 Id = Guid.Parse("0b0d61d0-0041-40ca-94b8-b81effeeec7d"),
                 RequiredStats = new StatEffectBinding[]
@@ -39,33 +39,33 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 }
             };
 
-            yield return new FreeAbilityBoostEffect
+            yield return new GainAnyAbilityBoostEffect
             {
                 Id = Guid.Parse("9f828174-220e-4bec-9a4b-ac2f91cacd64")
             };
 
-            yield return new FreeLoreEffect
+            yield return new GainAnyLoreProficiencyEffect
             {
                 Id = Guid.Parse("e21133fe-5a63-4a90-8b61-fd077508066e"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 Restrictions = "The chosen Lore skill must be related to your own time."
             };
 
-            yield return new FreeLoreEffect
+            yield return new GainAnyLoreProficiencyEffect
             {
                 Id = Guid.Parse("93a0e512-a50c-4f95-bec1-0bfe359779d5"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 Restrictions = "The chosen Lore skill must be related to your own time."
             };
 
-            yield return new FreeLoreEffect
+            yield return new GainAnyLoreProficiencyEffect
             {
                 Id = Guid.Parse("f4a899fd-6d52-4f4d-993e-30b1de69329b"),
                 ProficiencyId = Proficiencies.Instances.Trained.ID,
                 Restrictions = "The chosen Lore skill must be related to your own time."
             };
 
-            yield return new FeatEffect
+            yield return new GainSpecificFeatEffect
             {
                 Id = Guid.Parse("91fbfaa0-06c9-4cb8-873e-f05fca096488"),
                 FeatId = Feats.Special.BendTimeFeat.ID

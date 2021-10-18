@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Effect> GetCharacterEffects()
         {
-            yield return new SpeedModifierEffect
+            yield return new ModifySpeedEffect
             {
                 Id = Guid.Parse("19a4dd9a-5c5d-4237-80be-6384cf33ae2b"),
                 Modifier = 5,

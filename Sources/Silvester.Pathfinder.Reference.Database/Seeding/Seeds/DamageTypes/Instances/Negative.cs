@@ -13,6 +13,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DamageTypes.Inst
            {
                Id = ID,
                Name = "Negative"
+               Description = "You resist Negative damage."
            };
         }
     }

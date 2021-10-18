@@ -1,4 +1,5 @@
 using NpgsqlTypes;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -32,5 +33,18 @@ namespace Silvester.Pathfinder.Reference.Database.Models
 
         public Guid RuneId { get; set; }
         public FundamentalArmorRune Rune { get; set; } = default!;
+    }
+
+    public class Muse : BaseEntity, ISearchableEntity, INamedEntity
+    {
+        public string Name { get; set; } = default!;
+        public string Description { get; set; } = default!;
+
+        public Guid SourcePageId { get; set; }
+        public SourcePage SourcePage { get; set; } = default!;
+
+        public ICollection<MuseEffectBinding> Effects { get; set; } = new List<MuseEffectBinding>();
+
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

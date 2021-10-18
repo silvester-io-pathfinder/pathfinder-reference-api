@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("05b93357-0b9d-4e08-9a66-a2ede8b4181c"), RequiredProficiencyId = Proficiencies.Instances.Trained.ID, RequiredSkillId = Skills.Instances.Crafting.ID };
+            yield return new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("05b93357-0b9d-4e08-9a66-a2ede8b4181c"), RequiredProficiencyId = Proficiencies.Instances.Trained.ID, RequiredSkillId = Skills.Instances.Crafting.ID };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,10 +42,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Effect> GetCharacterEffects()
         {
-            yield return new FormulaEffect { Id = Guid.Parse("5e5a10bd-a6b9-4f46-974d-06b280716ef8"), Level = 1 };
-            yield return new FormulaEffect { Id = Guid.Parse("9f2ab8ce-da8f-4123-a698-f854ac8f688a"), Level = 1 };
-            yield return new FormulaEffect { Id = Guid.Parse("3c1fd8e9-0bee-4a65-b728-54fe8d8b5804"), Level = 1 };
-            yield return new FormulaEffect { Id = Guid.Parse("b01ea950-f6e7-4240-a50d-d8df5d07098b"), Level = 1 };
+            yield return new GainAnyFormulaEffect { Id = Guid.Parse("5e5a10bd-a6b9-4f46-974d-06b280716ef8"), Level = 1 };
+            yield return new GainAnyFormulaEffect { Id = Guid.Parse("9f2ab8ce-da8f-4123-a698-f854ac8f688a"), Level = 1 };
+            yield return new GainAnyFormulaEffect { Id = Guid.Parse("3c1fd8e9-0bee-4a65-b728-54fe8d8b5804"), Level = 1 };
+            yield return new GainAnyFormulaEffect { Id = Guid.Parse("b01ea950-f6e7-4240-a50d-d8df5d07098b"), Level = 1 };
         }
 
         protected override SourcePage GetSourcePage()

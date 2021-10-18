@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Prerequisite> GetPrerequisites()
         {
-            yield return new SkillPrerequisite { Id = Guid.Parse("076dadf7-1f3a-450a-9a4b-360c571f6070"), RequiredSkillId = Skills.Instances.Diplomacy.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
+            yield return new HaveSpecificSkillProficiencyPrerequisite { Id = Guid.Parse("076dadf7-1f3a-450a-9a4b-360c571f6070"), RequiredSkillId = Skills.Instances.Diplomacy.ID, RequiredProficiencyId = Proficiencies.Instances.Trained.ID };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
 
         protected override IEnumerable<Effect> GetCharacterEffects()
         {
-            yield return new SkillActionSkillEffect
+            yield return new EnableSkillActionEffect
             {
                 Id = Guid.Parse("dd4a951e-0e34-4b1e-b0f1-cf2fa03f623f"),
                 SkillId = Skills.Instances.Diplomacy.ID,
