@@ -8,7 +8,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
     public class PreciousMaterialWeapon : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
-        
+
         public Guid MaterialId { get; set; }
         public PreciousMaterial Material { get; set; } = default!;
 
@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
 
         public ICollection<PreciousMaterialWeaponVariant> Variants { get; set; } = new List<PreciousMaterialWeaponVariant>();
-     
+
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 

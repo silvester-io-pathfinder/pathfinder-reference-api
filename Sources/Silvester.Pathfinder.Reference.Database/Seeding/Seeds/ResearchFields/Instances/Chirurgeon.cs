@@ -33,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ResearchFields.I
             yield return new ChoiceEffect
             {
                 Id = Guid.Parse(""),
-                Choices = new[]
+                Entries = new[]
                 {
                     new GainSpecificElixirFormulaEffect
                     {

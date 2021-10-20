@@ -9,5 +9,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Instances
 
         public Guid WeaponGroupId { get; set; }
         public WeaponGroup WeaponGroup { get; set; } = default!;
+
+        public Guid WeaponCategoryId{ get; set; }
+        public WeaponCategory WeaponCategory { get; set; } = default!;
     }
 }

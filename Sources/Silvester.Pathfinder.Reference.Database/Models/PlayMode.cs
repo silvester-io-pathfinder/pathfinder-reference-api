@@ -1,4 +1,3 @@
-using NpgsqlTypes;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Models

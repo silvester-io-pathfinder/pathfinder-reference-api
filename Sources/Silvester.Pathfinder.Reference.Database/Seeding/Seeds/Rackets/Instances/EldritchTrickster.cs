@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rackets.Instance
             yield return new ChoiceEffect
             {
                 Id = Guid.Parse(""),
-                Choices = new Effect[]
+                Entries = new Effect[]
                 {
                     new CombinedEffect
                     {

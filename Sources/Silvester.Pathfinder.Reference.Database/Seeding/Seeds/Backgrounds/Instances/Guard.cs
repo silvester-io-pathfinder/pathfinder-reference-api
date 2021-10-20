@@ -55,7 +55,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new ChoiceEffect
             {
                 Id = Guid.Parse("1291e39e-a84d-46ef-a0dc-e32db9a3e0da"),
-                Choices = new Effect[]
+                Entries = new Effect[]
                 {
                     new GainSpecificLoreProficiencyEffect { Id = Guid.Parse("9a2d4f34-351f-42ca-8167-363b7e793804"), ProficiencyId = Proficiencies.Instances.Trained.ID, LoreId = Lores.Instances.Legal.ID },
                     new GainSpecificLoreProficiencyEffect { Id = Guid.Parse("174f5acf-d298-4263-b538-cdb7a3a21fed"), ProficiencyId = Proficiencies.Instances.Trained.ID, LoreId = Lores.Instances.Warfare.ID },

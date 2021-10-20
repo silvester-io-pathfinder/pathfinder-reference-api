@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             {
                 Id = Guid.Parse("7531962a-ecbd-4b96-97b9-8e422d315d05"),
                 Restrictions = "You gain one special ability as a result of the magical experimentation. Work with the GM to select an appropriate ability from the following list or to come up with another special ability.",
-                Choices = new Effect[]
+                Entries = new Effect[]
                 {
                     //Enhanced Senses
                     new CombinedEffect
@@ -73,7 +73,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                             {
                                 Id = Guid.Parse("467ea219-09c1-4584-95cc-6e1077e7073e"),
                                 Restrictions = "The darkvision effect can only be chosen if you already have low-light vision.",
-                                Choices = new Effect[]
+                                Entries = new Effect[]
                                 {
                                     new GainSpecificSenseEffect { Id = Guid.Parse("2cdbc71d-2830-4693-8cf7-46c2e8d5335b"), SenseId = Senses.Instances.LowLightVision.ID, },
                                     new GainSpecificSenseEffect { Id = Guid.Parse("5f52e7e7-e947-4315-a07f-ed5409d01863"), SenseId = Senses.Instances.Darkvision.ID}
@@ -92,7 +92,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                             new ChoiceEffect
                             {
                                 Id = Guid.Parse("c98881d6-e7d2-45e6-8850-7b75c6611024"),
-                                Choices = new Effect[]
+                                Entries = new Effect[]
                                 {
                                     new GainSpecificDamageResistanceEffect {Id = Guid.Parse("bba7f018-45d4-497a-b169-c2f572ba09b8"), DamageTypeId = DamageTypes.Instances.Acid.ID},
                                     new GainSpecificDamageResistanceEffect {Id = Guid.Parse("13883b39-6a68-4b8c-b0c0-8a2cd652a8d6"), DamageTypeId = DamageTypes.Instances.Cold.ID},
@@ -105,7 +105,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                             {
                                 Id = Guid.Parse("94e76d79-473d-4cfa-87cd-6cb5ef315514"),
                                 Restrictions = "Is chosen by the GM, and should differ from the resistance type chosen by the player.",
-                                Choices = new Effect[]
+                                Entries = new Effect[]
                                 {
                                     new GainSpecificDamageResistanceEffect {Id = Guid.Parse("4b5b9f9d-f0de-4429-82bb-ecd2d084707d"), DamageTypeId = DamageTypes.Instances.Acid.ID},
                                     new GainSpecificDamageResistanceEffect {Id = Guid.Parse("9d807728-796b-4700-a926-991613e16616"), DamageTypeId = DamageTypes.Instances.Cold.ID},

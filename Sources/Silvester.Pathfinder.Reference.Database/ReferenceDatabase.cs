@@ -49,11 +49,14 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Disease> Diseases { get; set; } = default!;
         public DbSet<DivineAlly> DivineAllies { get; set; } = default!;
         public DbSet<DivineFont> DivineFonts { get; set; } = default!;
+        public DbSet<Doctrine> Doctrines { get; set; } = default!;
         public DbSet<Domain> Domains { get; set; } = default!;
+        public DbSet<DruidicOrder> DruidicOrders { get; set; } = default!;
         public DbSet<FamiliarAbility> FamiliarAbilities { get; set; } = default!;
         public DbSet<Feat> Feats { get; set; } = default!;
         public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
         public DbSet<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = default!;
+        public DbSet<GunslingersWay> GunslingersWays { get; set; } = default!;
         public DbSet<HarrowCard> HarrowCards { get; set; } = default!;
         public DbSet<HarrowCategory> HarrowCategories { get; set; } = default!;
         public DbSet<HarrowMode> HarrowModes { get; set; } = default!;
@@ -62,7 +65,11 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Hazard> Hazards { get; set; } = default!;
         public DbSet<HazardType> HazardTypes { get; set; } = default!;
         public DbSet<Heritage> Heritages { get; set; } = default!;
+        public DbSet<HybridStudy> HybridStudies { get; set; } = default!;
         public DbSet<Instinct> Instincts { get; set; } = default!;
+        public DbSet<Innovation> Innovations { get; set; } = default!;
+        public DbSet<InnovationModification> InnovationModifications { get; set; } = default!;
+        public DbSet<InnovationModificationType> InnovationModificationTypes { get; set; } = default!;
         public DbSet<InstinctAbility> InstinctAbilities { get; set; } = default!;
         public DbSet<Item> Items { get; set; } = default!;
         public DbSet<ItemCategory> ItemCategories { get; set; } = default!;
@@ -75,6 +82,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<MagicEssence> MagicEssences { get; set; } = default!;
         public DbSet<MagicSchool> MagicSchools { get; set; } = default!;
         public DbSet<MagicTradition> MagicTraditions { get; set; } = default!;
+        public DbSet<Methodology> Methodologies { get; set; } = default!;
         public DbSet<Muse> Muses { get; set; } = default!;
         public DbSet<Mystery> Mysteries { get; set; } = default!;
         public DbSet<PlaneCategory> PlaneCategories { get; set; } = default!;
@@ -114,8 +122,6 @@ namespace Silvester.Pathfinder.Reference.Database
         protected override void OnModelCreating(ModelBuilder builder)
         {
             //Debugger.Launch();
-
-            builder.Entity<WeaponGroup>().HasJoinData()
 
             ConfigureEntities(builder);
             SeedEntities(builder);

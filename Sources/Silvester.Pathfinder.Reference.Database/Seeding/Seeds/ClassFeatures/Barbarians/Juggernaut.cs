@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
                         {
                             Id = Guid.Parse(""),
                             Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 11
+                            RequiredLevel = 7
                         }
                     }
                 }
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
                         {
                             Id = Guid.Parse(""),
                             Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 11
+                            RequiredLevel = 7
                         }
                     }
                 }

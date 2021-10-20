@@ -31,6 +31,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ch
 
         protected override IEnumerable<Effect> GetEffects()
         {
+            yield return new GainSpecificSpellCastingEffect
+            {
+                Id = Guid.Parse(""),
+                MagicTraditionId = MagicTraditions.Instances.Divine.ID
+            };
+
             yield return new GainFocusPoolPointEffect { Id = Guid.Parse("") };
 
             yield return new GainSpecificSpellAttackProficiencyEffect

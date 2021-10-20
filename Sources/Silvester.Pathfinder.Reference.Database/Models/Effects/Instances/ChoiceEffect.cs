@@ -3,15 +3,10 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Instances
 {
-    public class ChoiceEffect : Effect
+    public class ChoiceEffect : Effect, IEffectCollection<ChoiceEffectBinding>
     {
         public string? Restrictions { get; set; }
 
-        public ICollection<ChoiceEffectBinding> Choices { get; set; } = new List<ChoiceEffectBinding>();
-
-        public ChoiceEffect()
-        {
-
-        }
+        public ICollection<ChoiceEffectBinding> Entries { get; set; } = new List<ChoiceEffectBinding>();
     }
 }

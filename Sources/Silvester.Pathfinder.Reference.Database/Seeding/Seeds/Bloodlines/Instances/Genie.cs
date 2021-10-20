@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             yield return new ChoiceEffect
             {
                 Id = Guid.Parse(""),
-                Choices = new Effect[]
+                Entries = new Effect[]
                 {
                     new CombinedEffect
                     {

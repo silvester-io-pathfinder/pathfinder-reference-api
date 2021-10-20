@@ -232,12 +232,12 @@ namespace Silvester.Pathfinder.Reference.Database.Extensions
                     break;
 
                 case ChoiceEffect choiceEffect:
-                    foreach (Effect choice in choiceEffect.Choices)
+                    foreach (Effect choice in choiceEffect.Entries)
                     {
                         builder.AddEffect(choice, new ChoiceEffectBinding { Id = choice.Id, ChoiceId = choiceEffect.Id });
                     }
 
-                    choiceEffect.Choices = Array.Empty<Effect>();
+                    choiceEffect.Entries = Array.Empty<Effect>();
                     break;
 
                 case CombinedEffect combinedEffect:

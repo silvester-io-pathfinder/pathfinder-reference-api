@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
             yield return new ChoiceEffect
             {
                 Id = Guid.Parse(""),
-                Choices = new Effect[]
+                Entries = new Effect[]
                 {
                     new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Cold.ID },
                     new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Electricity.ID },

@@ -36,7 +36,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Al
                 FormulaAmount = 2,
                 AddFormulasPerLevel = 2
             };
-
         }
 
         protected override SourcePage GetSourcePage()

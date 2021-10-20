@@ -33,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
             yield return new ChoiceEffect
             {
                 Id = Guid.Parse(""),
-                Choices = new []
+                Entries = new []
                 {
                     new ChoiceEffectBinding
                     {

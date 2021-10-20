@@ -58,7 +58,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             {
                 Id = Guid.Parse("f56fdf9b-790e-4639-bc5b-048f333fa03b"),
                 Restrictions = "The darkvision effect can only be chosen if you already have low-light vision.",
-                Choices = new Effect[]
+                Entries = new Effect[]
                 {
                     new GainSpecificSenseEffect { Id = Guid.Parse("421b9e67-02c7-48c0-abb2-e84b626251f2"), SenseId = Senses.Instances.LowLightVision.ID, },
                     new GainSpecificSenseEffect { Id = Guid.Parse("09a56e27-0420-42ed-9722-0aad7d098f72"), SenseId = Senses.Instances.Darkvision.ID}

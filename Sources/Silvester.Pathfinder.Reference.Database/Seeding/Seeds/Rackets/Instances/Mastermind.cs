@@ -35,7 +35,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rackets.Instance
             yield return new ChoiceEffect
             {
                 Id = Guid.Parse(""),
-                Choices = new Effect[]
+                Entries = new Effect[]
                 {
                     new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Arcana.ID, ProficiencyId = Proficiencies.Instances.Trained.ID},
                     new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Nature.ID, ProficiencyId = Proficiencies.Instances.Trained.ID},

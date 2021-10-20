@@ -43,7 +43,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 Id = Guid.Parse("d9b2338d-412f-431c-a4fd-ef355c66d054"),
                 CriticalSuccess = "You grant the creature a +4 circumstance bonus to its next saving throw against the poison.",
                 Success = "You grant the creature a +2 circumstance bonus to its next saving throw against the poison.",
-                Failure = "",
                 CriticalFailure = "Your efforts cause the creature to take a �2 circumstance penalty to its next save against the poison."
             };
         }

@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             {
                 Id = Guid.Parse("ccb8937d-cccb-466e-bac5-8a55d39270a0"),
                 IsOptional = true,
-                Choices = new Effect[]
+                Entries = new Effect[]
                 {
                     new DisableAirBreathingEffect { Id = Guid.Parse("32db8722-b192-466a-9c2e-769574494189") },
                     new GainAnyAbilityBoostEffect { Id = Guid.Parse("e8b99513-9e2e-459e-8af0-9381960b4a79") }

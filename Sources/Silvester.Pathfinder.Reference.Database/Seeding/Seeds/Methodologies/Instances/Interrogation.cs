@@ -1,0 +1,54 @@
+using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
+using System;
+using System.Collections.Generic;
+
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Methodologies.Instances
+{
+    public class Interrogation : Template
+    {
+        public static readonly Guid ID = Guid.Parse("");
+        
+        protected override Methodology GetMethodology()
+        {
+            return new Methodology
+            {
+                Id = ID, 
+                Name = "Interrogation",
+            };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetails()
+        {
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "People can’t help but trust you, whether through your inherent likableness or your firm insistence on sticking to the truth. You have a way about you that gets others talking, and you’ve developed interrogative techniques to help you get to the truth of your investigations." };
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You are trained in Diplomacy. You gain the No Cause for Alarm skill feat (page 208). You can also Pursue a Lead over the course of a conversation rather than spending dedicated time looking into the lead, provided the conversation lasts 1 minute or longer. For example, while trying to Make an Impression, you could pursue the creature you’re conversing with as a lead, and you could Pursue a Lead about an object while someone is telling you information about that object. You also gain the Pointed Question action." };
+        }
+
+        protected override IEnumerable<Effect> GetEffects()
+        {
+            yield return new GainSpecificSkillProficiencyEffect
+            {
+                Id = Guid.Parse(""),
+                SkillId = Skills.Instances.Diplomacy.ID,
+                ProficiencyId = Proficiencies.Instances.Trained.ID
+            };
+
+            yield return new GainSpecificFeatEffect { Id = Guid.Parse(""), FeatId = Feats.Instances.NoCauseForAlarm.ID };
+            
+            //TODO: Add the Pursue a Lead modification effect.
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse(""),
+                SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
+                Page = 58
+            };
+        }
+    }
+}

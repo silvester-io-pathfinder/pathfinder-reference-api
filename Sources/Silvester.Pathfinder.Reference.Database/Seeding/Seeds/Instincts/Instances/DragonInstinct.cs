@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
             {
                 Id = Guid.Parse(""),
                 Restrictions = "The chosen resistance effect should correlate with your Dragon's Breath weapon damage type.",
-                Choices = new Effect[]
+                Entries = new Effect[]
                 {
                     new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Acid.ID },
                     new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Electricity.ID },

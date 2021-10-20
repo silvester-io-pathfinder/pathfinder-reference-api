@@ -35,6 +35,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
 
         protected override IEnumerable<Effect> GetEffects()
         {
+            yield return new GainSpecificSpellCastingEffect
+            {
+                Id = Guid.Parse(""),
+                MagicTraditionId = MagicTraditions.Instances.Occult.ID
+            };
+
             yield return new GainSpecificSpellSlotEffect
             {
                 Id = Guid.Parse(""),

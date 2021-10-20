@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.General
             yield return new ChoiceEffect
             {
                 Id = Guid.Parse("090d45ed-e6da-46af-9f9a-373b44365539"),
-                Choices = new Effect[]
+                Entries = new Effect[]
                 {
                     new GainSpecificSavingThrowProficiencyEffect
                     {

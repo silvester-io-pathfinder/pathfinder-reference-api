@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 
-namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Instances
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Alchemists
 {
     public class Evasion : Template
     {

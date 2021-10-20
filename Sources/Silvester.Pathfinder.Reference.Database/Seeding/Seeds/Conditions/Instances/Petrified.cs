@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Conditions.Instances
 {
-    public class BliPetrifiednded2 : Template
+    public class Petrified : Template
     {
         public static readonly Guid ID = Guid.Parse("8d531baa-8a75-4090-83d0-fd8721b76ae7");
 

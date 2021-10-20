@@ -11,7 +11,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models
 
         public int? Level { get; set; }
 
-        public int Price { get; set; }
+        public int? Price { get; set; }
 
         public int ArmorClassBonus { get; set; }
 
