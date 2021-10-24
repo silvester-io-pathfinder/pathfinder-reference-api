@@ -1,11 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Champions
 {
@@ -29,9 +31,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ch
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "If you stray from your alignment or violate your code of conduct, you lose your focus pool and divine ally until you demonstrate your repentance by conducting an atone ritual, but you keep any other champion abilities that don’t require those class features. If your alignment shifts but is still one allowed by your deity, your GM might let you retrain your cause while still following the same deity." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainAnyTenetEffect { Id = Guid.Parse("") };
+            builder.GainAnyTenet(Guid.Parse(""));
         }
 
         protected override SourcePage GetSourcePage()

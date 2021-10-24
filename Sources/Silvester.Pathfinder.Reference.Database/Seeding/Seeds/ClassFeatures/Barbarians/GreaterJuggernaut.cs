@@ -1,11 +1,14 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Barbarians
 {
@@ -28,49 +31,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You have a stalwart physiology. Your proficiency rank for Fortitude saves increases to legendary. When you roll a critical failure on a Fortitude save, you get a failure instead. When you roll a failure on a Fortitude save against an effect that deals damage, you halve the damage you take." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSavingThrowProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Legendary.ID,
-                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 13
-                        }
-                    }
-                }
-            };
-
-            yield return new ModifySpecificSavingThrowEffect
-            {
-                Id = Guid.Parse(""),
-                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
-                InitialResult = RollResult.CriticalFailure,
-                Becomes = RollResult.Failure,
-                Prerequisites = new[]
-               {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 13
-                        }
-                    }
-                }
-            };
-
+            builder.GainSpecificSavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Legendary.ID, SavingThrowStats.Instances.Fortitude.ID);
+            builder.ModifySpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Fortitude.ID, RollResult.CriticalFailure, becomes: RollResult.Failure);
             //TODO: Add halving effect.
         }
 

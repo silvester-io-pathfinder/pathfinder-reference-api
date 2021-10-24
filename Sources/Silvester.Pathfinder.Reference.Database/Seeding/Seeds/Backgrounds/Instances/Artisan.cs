@@ -1,10 +1,12 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -27,42 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("5d1aa430-6fba-4dd8-9390-5eb2b1d3730b"), Type = TextBlockType.Text, Text = "As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith's apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("bc6deaf8-97ad-45ec-b21c-5189da55f820"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("69855b6c-93a3-4cc8-9e1c-c43ecd6f6775"), StatId = Stats.Instances.Strength.ID },
-                    new StatEffectBinding{Id = Guid.Parse("bb5237b1-192f-4a01-9333-d3b3f9c8cb76"), StatId = Stats.Instances.Intelligence.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Strength.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("efb7ffc6-86df-4a1e-b2d4-5ad0a180605d")
-            };
-
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse("4957d873-58c2-4539-a4ad-e765e47714d0"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Crafting.ID
-            };
-
-            yield return new GainSpecificLoreProficiencyEffect
-            {
-                Id = Guid.Parse("6bda3a9e-2395-4435-9c13-cc0057ba8c7a"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreId = Lores.Instances.Guild.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("ddfb482e-8294-4adb-8ff9-256c99d97ccf"),
-                FeatId = Feats.General.SpecialtyCraftingFeat.ID
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+            builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Guild.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.SpecialtyCrafting.ID);
         }
 
         protected override SourcePage GetSourcePage()

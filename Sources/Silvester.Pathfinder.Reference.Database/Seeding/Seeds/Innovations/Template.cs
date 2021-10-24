@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Extensions;
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Innovations
             builder.AddSourcePage(innovation, GetSourcePage(), (e) => e.SourcePageId);
             builder.AddTable(innovation, GetTable());
             builder.AddTextBlocks(innovation, GetDetails(), e => e.Details);
-            builder.AddEffects(GetEffects(), (e) => new InnovationEffectBinding { InnovationId = innovation.Id });
+            builder.AddEffect(innovation, GetEffects, (innovation) => innovation.EffectId);
 
             return innovation;
         }
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Innovations
         protected abstract Innovation GetInnovation();
         protected abstract SourcePage GetSourcePage();
         protected abstract IEnumerable<TextBlock> GetDetails();
-        protected abstract IEnumerable<Effect> GetEffects();
+        protected abstract void GetEffects(BooleanEffectBuilder builder);
 
         protected virtual Table? GetTable()
         {

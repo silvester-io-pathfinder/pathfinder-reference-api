@@ -1,12 +1,15 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -29,47 +32,23 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("9dec7a2d-b445-4e22-a960-9b46f3ff52ed"), Type = TextBlockType.Text, Text = "You are one of the Sewer Dragons, born in Absalom's sewers, strengthened by a life defending your territory." };
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites()
+        protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         {
-            yield return new HaveSpecificAncestryPrerequisite { Id = Guid.Parse("6609913f-2257-4510-8e71-51f08bcdfa09"), RequiredAncestryId = Ancestries.Instances.Kobold.ID };
+            builder.HaveSpecificAncestry(Guid.Parse(""), Ancestries.Instances.Kobold.ID);
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("e77b5be8-e496-4f34-96b1-343adbda251e"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("f9cc934a-0dbd-495b-988a-8888f20986e5"), StatId = Stats.Instances.Dexterity.ID },
-                    new StatEffectBinding{Id = Guid.Parse("da3974d9-f8aa-40d0-8776-7f117a1b1447"), StatId = Stats.Instances.Intelligence.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Dexterity.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("10d2519e-56f4-41f2-96b8-0a4b2ec2f066")
-            };
-
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse("f0a96cc2-ee62-4703-b912-a820b9b038e2"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Crafting.ID
-            };
-
-            yield return new GainSpecificLoreProficiencyEffect
-            {
-                Id = Guid.Parse("7fa127ac-d288-4362-b06b-5fa0b629fb97"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreId = Lores.Instances.Kobold.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("bc836cac-09ac-4af4-a701-f1525f171a54"),
-                FeatId = Feats.General.SnareCraftingFeat.ID
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+            builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Kobold.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.SnareCrafting.ID);
         }
 
         protected override SourcePage GetSourcePage()

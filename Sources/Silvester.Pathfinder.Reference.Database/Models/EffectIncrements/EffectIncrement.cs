@@ -14,6 +14,6 @@ namespace Silvester.Pathfinder.Reference.Database.Models.EffectIncrements
         public EffectIncrementTrigger Trigger { get; set; } = default!;
 
         public Guid EffectId { get; set; }
-        public Effect Effect { get; set; } = default!;
+        public BaseEffect Effect { get; set; } = default!;
     }
 }

@@ -1,12 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
+
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Alchemists
 {
@@ -29,9 +30,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Al
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your research field adds a number of formulas to your formula book; these are your signature items. When using a batch of infused reagents to create your signature items using advanced alchemy, you create three items instead of two. Each time you gain a level, you can swap one of your signature items with another formula in your formula book. This new signature item must be on your research field's list of possible signature items." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainAnyResearchFieldEffect { Id = Guid.Parse("") };
+            builder.GainAnyResearchField(Guid.Parse(""));
         }
 
         protected override SourcePage GetSourcePage()

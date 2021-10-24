@@ -1,12 +1,14 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PlayModes.Instances;
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -29,30 +31,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("76ffd282-8a5e-48d6-885e-e4ba05c51917"), Type = TextBlockType.Text, Text = "You have been blessed by a divinity. For an unknown reason, and irrespective of your actual beliefs, a deity has granted you a boon to use for good or ill. Your blessing grants wisdom and insight to aid you in your struggles. You may or may not even know the identity of the being who blessed you, and the blessing might come with a cost you discover later on." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("4194d513-b772-4b72-9e7c-1be7713908f2"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("260c2b06-d8f7-49c7-a30d-64dfa0a1f120"), StatId = Stats.Instances.Wisdom.ID },
-                    new StatEffectBinding{Id = Guid.Parse("099e7683-71b6-4cbd-b3ca-f2addb49e7a2"), StatId = Stats.Instances.Charisma.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Wisdom.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Charisma.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("98ed4ed6-c8b8-403d-81da-40a42b35812b")
-            };
-
-            yield return new GainSpecificLoreCategoryProficiencyEffect
-            {
-                Id = Guid.Parse("a54d9147-b543-4eae-96cd-948d5521cc29"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreCategoryId = LoreCategories.Instances.Deities.ID,
-                Restrictions = "The chosen Lore skill must be associated with the deity who blessed you (such as Shelyn Lore) if you know their identity, or else in a Lore skill of the GM's choise if you don't. Either you can cast guidance as a divine innate spell at will, or you gain a similar blessing determined by the GM."
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificLoreCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, LoreCategories.Instances.Deities.ID, "The chosen Lore skill must be associated with the deity who blessed you (such as Shelyn Lore) if you know their identity, or else in a Lore skill of the GM's choise if you don't. Either you can cast guidance as a divine innate spell at will, or you gain a similar blessing determined by the GM.");
         }
 
         protected override SourcePage GetSourcePage()

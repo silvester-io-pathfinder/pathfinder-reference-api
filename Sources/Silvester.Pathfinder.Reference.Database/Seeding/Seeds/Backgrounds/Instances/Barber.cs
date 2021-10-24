@@ -1,11 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PlayModes.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -28,42 +30,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("58eb06b3-8656-43a3-ac7a-c28d30b6734a"), Type = TextBlockType.Text, Text = "Haircuts, dentistry, bloodletting, and surgery'if it takes a steady hand and a razor, you do it. You may have taken to the road to expand your skills, or to test yourself against a world that leaves your patients so battered and bruised." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("a6ee3746-78d5-47b1-ba9e-3c1a41e85bf2"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("54d18dd0-c4bb-4e44-ba9e-25fda2e1dde2"), StatId = Stats.Instances.Dexterity.ID },
-                    new StatEffectBinding{Id = Guid.Parse("a98ee55e-891b-495c-9809-f938577e0ddd"), StatId = Stats.Instances.Wisdom.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Dexterity.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Wisdom.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("ebd351d8-083e-4931-a74a-d0a8ba9905db")
-            };
-
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse("2b3d4105-9f3a-4abf-8e67-362469a91848"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Medicine.ID
-            };
-
-            yield return new GainSpecificLoreProficiencyEffect
-            {
-                Id = Guid.Parse("9edc2d98-48cb-4054-91b5-de901affd205"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreId = Lores.Instances.Surgery.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("84186d73-6d9a-4c3a-a6ea-0559bf997cc8"),
-                FeatId = Feats.General.RiskySurgeryFeat.ID
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Medicine.ID);
+            builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Surgery.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.RiskySurgery.ID);
         }
 
         protected override SourcePage GetSourcePage()

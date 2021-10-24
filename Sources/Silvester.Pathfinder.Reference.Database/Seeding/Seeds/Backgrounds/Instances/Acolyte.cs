@@ -1,11 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PlayModes.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -28,42 +30,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("a6ae0f59-79d8-4a49-a088-add1850849fa"), Type = TextBlockType.Text, Text = "You spent your early days in a religious monastery or cloister. You may have traveled out into the world to spread the message of your religion or because you cast away the teachings of your faith, but deep down you'll always carry within you the lessons you learned." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("7802836b-e9d5-4efd-a225-13c0bd3488da"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("ba7c44f0-e48f-49fb-8674-30ca1ea72c35"), StatId = Stats.Instances.Intelligence.ID },
-                    new StatEffectBinding{Id = Guid.Parse("2f7b0c40-8e0b-4c1a-8356-1abe5f586fce"), StatId = Stats.Instances.Wisdom.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Wisdom.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("3f501e4e-9820-4dc9-a384-25b387255ab5")
-            };
-
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse("535a8019-7d2e-44d0-b18d-cf72f1491ead"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Religion.ID
-            };
-
-            yield return new GainSpecificLoreProficiencyEffect
-            {
-                Id = Guid.Parse("3dbfa60e-6513-4331-ad5c-3e85ef0bf015"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreId = Lores.Instances.Scribing.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("36fd4704-d6ee-41b2-9f11-279a09f81d4a"),
-                FeatId = Feats.General.StudentOfTheCanonFeat.ID
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Religion.ID);
+            builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Scribing.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.StudentOfTheCanonFeat.ID);
         }
 
         protected override SourcePage GetSourcePage()

@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Extensions;
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -20,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines
             builder.AddTextBlocks(bloodline, GetDetails(), (e) => e.Details);
             builder.AddTextBlocks(bloodline, GetTypeChoiceDetails(), (e) => e.TypeChoiceDetails);
             builder.AddSourcePage(bloodline, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffects(GetEffects(), (e) => new BloodlineEffectBinding { BloodlineId = bloodline.Id });
+            builder.AddEffect(bloodline, builder => GetEffects(builder), bloodline => bloodline.EffectId);
 
             foreach(Guid skillId in GetSkills())
             {
@@ -32,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines
 
         protected abstract Bloodline GetBloodline();
         protected abstract SourcePage GetSourcePage();
-        protected abstract IEnumerable<Effect> GetEffects();
+        protected abstract void GetEffects(BooleanEffectBuilder builder);
         protected abstract IEnumerable<TextBlock> GetDetails();
         protected abstract IEnumerable<Guid> GetSkills();
         

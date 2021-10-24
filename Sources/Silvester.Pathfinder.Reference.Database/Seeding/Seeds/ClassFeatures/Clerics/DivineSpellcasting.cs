@@ -1,13 +1,16 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Triggers.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Clerics
 {
@@ -35,55 +38,45 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Cl
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A cantrip is a special type of spell that doesn't use spell slots. You can cast a cantrip at will, any number of times per day. A cantrip is always automatically heightened to half your level rounded up—this is usually equal to the highest level of cleric spell slot you have. For example, as a 1st-level cleric, your cantrips are 1st-level spells, and as a 5th-level cleric, your cantrips are 3rd-level spells." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSpellCastingEffect
-            {
-                Id = Guid.Parse(""),
-                MagicTraditionId = MagicTraditions.Instances.Divine.ID
-            };
+            builder.GainSpecificSpellCasting(Guid.Parse(""), MagicTraditions.Instances.Divine.ID);
 
             //Cantrips.
-            yield return new GainSpecificSpellSlotEffect
-            {
-                Id = Guid.Parse(""),
-                Amount = 5,
-                Level = 0,
-                IsSpendingPreventable = true
-            };
+            builder.GainSpecificSpellSlot(Guid.Parse(""), amount: 5, spellSlotLevel: 0, isSpendingPreventable: true);
 
             //Regular spell slots.
-            yield return CreateSpellSlotEffect(requiredLevel: 1,  spellSlotLevel: 1, amount: 2, increaseTo: 3, atLevel: 2,  ids: new [] { Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(requiredLevel: 3,  spellSlotLevel: 2, amount: 2, increaseTo: 3, atLevel: 4,  ids: new [] { Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(requiredLevel: 5,  spellSlotLevel: 3, amount: 2, increaseTo: 3, atLevel: 6,  ids: new [] { Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(requiredLevel: 7,  spellSlotLevel: 4, amount: 2, increaseTo: 3, atLevel: 8,  ids: new [] { Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(requiredLevel: 9,  spellSlotLevel: 5, amount: 2, increaseTo: 3, atLevel: 10, ids: new [] { Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(requiredLevel: 11, spellSlotLevel: 6, amount: 2, increaseTo: 3, atLevel: 12, ids: new [] { Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(requiredLevel: 13, spellSlotLevel: 7, amount: 2, increaseTo: 3, atLevel: 14, ids: new [] { Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(requiredLevel: 15, spellSlotLevel: 8, amount: 2, increaseTo: 3, atLevel: 16, ids: new [] { Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(requiredLevel: 17, spellSlotLevel: 9, amount: 2, increaseTo: 3, atLevel: 18, ids: new [] { Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 1,  spellSlotLevel: 1, amount: 2, increaseTo: 3, atLevel: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 3,  spellSlotLevel: 2, amount: 2, increaseTo: 3, atLevel: 4);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 5,  spellSlotLevel: 3, amount: 2, increaseTo: 3, atLevel: 6);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 7,  spellSlotLevel: 4, amount: 2, increaseTo: 3, atLevel: 8);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 9,  spellSlotLevel: 5, amount: 2, increaseTo: 3, atLevel: 10);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 11, spellSlotLevel: 6, amount: 2, increaseTo: 3, atLevel: 12);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 13, spellSlotLevel: 7, amount: 2, increaseTo: 3, atLevel: 14);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 15, spellSlotLevel: 8, amount: 2, increaseTo: 3, atLevel: 16);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 17, spellSlotLevel: 9, amount: 2, increaseTo: 3, atLevel: 18);
 
             //Divine font spell slots. These are prerequisited to be active only at their specific levels.
-            yield return CreateDivineFontSpellSlots(requiredLevel: 1,  spellSlotLevel: 1,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 2,  spellSlotLevel: 1,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 3,  spellSlotLevel: 2,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 4,  spellSlotLevel: 2,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 5,  spellSlotLevel: 3,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 6,  spellSlotLevel: 3,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 7,  spellSlotLevel: 4,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 8,  spellSlotLevel: 4,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 9,  spellSlotLevel: 5,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 10, spellSlotLevel: 5,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 11, spellSlotLevel: 6,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 12, spellSlotLevel: 6,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 13, spellSlotLevel: 7,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 14, spellSlotLevel: 7,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 15, spellSlotLevel: 8,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 16, spellSlotLevel: 8,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 17, spellSlotLevel: 9,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 18, spellSlotLevel: 9,  new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 19, spellSlotLevel: 10, new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateDivineFontSpellSlots(requiredLevel: 20, spellSlotLevel: 10, new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 1,  spellSlotLevel: 1);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 2,  spellSlotLevel: 1);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 3,  spellSlotLevel: 2);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 4,  spellSlotLevel: 2);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 5,  spellSlotLevel: 3);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 6,  spellSlotLevel: 3);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 7,  spellSlotLevel: 4);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 8,  spellSlotLevel: 4);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 9,  spellSlotLevel: 5);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 10, spellSlotLevel: 5);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 11, spellSlotLevel: 6);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 12, spellSlotLevel: 6);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 13, spellSlotLevel: 7);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 14, spellSlotLevel: 7);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 15, spellSlotLevel: 8);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 16, spellSlotLevel: 8);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 17, spellSlotLevel: 9);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 18, spellSlotLevel: 9);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 19, spellSlotLevel: 10);
+            builder.GainDivineFontSpellSlot(Guid.Parse(""), Guid.Parse(""), exactRequiredLevel: 20, spellSlotLevel: 10);
         }
 
         protected override SourcePage GetSourcePage()
@@ -93,38 +86,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Cl
                 Id = Guid.Parse(""),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 118
-            };
-        }
-
-        private Effect CreateSpellSlotEffect(int requiredLevel, int spellSlotLevel, int amount, int increaseTo, int atLevel, Guid[] ids)
-        {
-            return new GainSpecificSpellSlotEffect
-            {
-                Id = ids[0],
-                Amount = amount,
-                Level = spellSlotLevel,
-                IsSpendingPreventable = true,
-                Prerequisites = new EffectPrerequisiteBinding[]
-                {
-                    new EffectPrerequisiteBinding { Id = ids[1], Prerequisite = new HaveSpecificLevelPrerequisite { Id = ids[2], Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = requiredLevel} }
-                },
-                Increments = new[]
-                {
-                    new IncreaseAmountToIncrement { Id = ids[3], Amount = increaseTo, Trigger = new LevelTrigger { Id = ids[4], Level = atLevel }}
-                }
-            };
-        }
-
-        private Effect CreateDivineFontSpellSlots(int requiredLevel, int spellSlotLevel, Guid[] ids)
-        {
-            return new GainDivineFontSpellSlotEffect
-            {
-                Id = ids[0],
-                Level = spellSlotLevel,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding { Id = ids[1], Prerequisite = new HaveSpecificLevelPrerequisite { Id = ids[2], Comparator = Comparator.EqualTo, RequiredLevel = requiredLevel} }
-                }
             };
         }
     }

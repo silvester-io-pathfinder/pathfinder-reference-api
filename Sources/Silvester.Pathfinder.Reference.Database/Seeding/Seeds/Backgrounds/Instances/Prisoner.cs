@@ -1,10 +1,12 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -27,42 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("a19b57a1-69a5-4d66-99de-1adf93eac862"), Type = TextBlockType.Text, Text = "You might have been imprisoned for crimes (whether you were guilty or not), or enslaved for some part of your upbringing. In your adventuring life, you take full advantage of your newfound freedom." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("746b0b2f-7550-47e5-a1cb-00069d1bfc7e"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("c5d00b85-be1a-4d67-8622-54397ccfca97"), StatId = Stats.Instances.Strength.ID },
-                    new StatEffectBinding{Id = Guid.Parse("3f3ea920-5acf-4b00-a230-0bbbf3736c9f"), StatId = Stats.Instances.Constitution.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Strength.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Constitution.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("3fa809a3-0141-4039-9f81-4950e8b6af50")
-            };
-
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse("2dee64e4-421c-47dd-bebf-6562c7dde66b"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Stealth.ID
-            };
-
-            yield return new GainSpecificLoreProficiencyEffect
-            {
-                Id = Guid.Parse("5aed41c7-a40e-4b1c-aafc-e025dea53158"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreId = Lores.Instances.Underworld.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("68761e25-33bf-41f6-8b6d-f1650216a5dd"),
-                FeatId = Feats.General.ExperiencedSmugglerFeat.ID
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Stealth.ID);
+            builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Underworld.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.ExperiencedSmuggler.ID);
         }
 
         protected override SourcePage GetSourcePage()

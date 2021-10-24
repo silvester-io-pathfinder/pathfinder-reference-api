@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -32,19 +33,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "You must respect the lawful authority of legitimate leadership wherever you go, and follow its laws." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
-        {
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.RetributiveStrike.ID
-            };
 
-            yield return new GainSpecificSpellEffect
-            {
-                Id = Guid.Parse(""),
-                SpellId = Spells.Instances.LayOnHands.ID
-            };
+        protected override void GetEffects(BooleanEffectBuilder builder)
+        {
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.RetributiveStrike.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.LayOnHands.ID);
         }
 
         protected override SourcePage GetSourcePage()

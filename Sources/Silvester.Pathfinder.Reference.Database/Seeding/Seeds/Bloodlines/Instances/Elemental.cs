@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -37,21 +38,22 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Choose the type of elemental that influenced your bloodline: air, earth, fire, or water. If your element is air, you buffet your foes with powerful winds; if it's earth, you toss huge chunks of rock; if it's fire, you incinerate your foes with flame; and if it's water, you inundate your foes with torrents of water. For fire, all marked spells deal fire damage. For other elements, they deal bludgeoning damage. You replace any existing elemental traits with the trait of the element you chose." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Intimidation.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Nature.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ElementalToss.ID};
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ProduceFlame.ID }; 
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.BurningHands.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ResistEnergy.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Fireball.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.FreedomOfMovement.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ElementalForm.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Repulsion.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.EnergyAegis.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.PrismaticWall.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.StormOfVengeance.ID };
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
+
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ElementalToss.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ProduceFlame.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.BurningHands.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ResistEnergy.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Fireball.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.FreedomOfMovement.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ElementalForm.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Repulsion.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.EnergyAegis.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.PrismaticWall.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.StormOfVengeance.ID);
         }
 
         protected override IEnumerable<Guid> GetSkills()

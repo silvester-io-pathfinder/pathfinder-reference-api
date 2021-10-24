@@ -5,7 +5,7 @@ using HotChocolate.Types;
 using Microsoft.Extensions.DependencyInjection;
 using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;

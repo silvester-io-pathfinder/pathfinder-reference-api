@@ -1,4 +1,8 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -37,6 +41,44 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries.Instan
         {
             yield return Domains.Instances.Fire.ID;
             yield return Domains.Instances.Sun.ID;
+        }
+
+        protected override void GetEffects(BooleanEffectBuilder builder)
+        {
+            //Mystery Benefits
+            builder.GainSpecificSavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, SavingThrowStats.Instances.Reflex.ID);
+            builder.AddAnd(Guid.Parse(""), and =>
+            {
+                and.AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 13);
+                });
+                and.GainSpecificSavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID, SavingThrowStats.Instances.Reflex.ID);
+                and.ModifySpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Reflex.ID, RollResult.Success, becomes: RollResult.CriticalSuccess);
+            });
+
+            //Trained Skill
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Acrobatics.ID);
+
+            //Granted Cantrip
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ProduceFlame.ID);
+
+            //Initial Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.IncendiaryAura.ID);
+
+            //Advanced Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.WhirlingFlames.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificFeat(Guid.Parse(""), Feats.Instances.AdvancedRevelation.ID);
+                });
+
+            //Greater Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.FlamingFusillade.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificFeat(Guid.Parse(""), Feats.Instances.GreaterRevelation.ID);
+                });
         }
 
         protected override MysteryCurse GetCurse()

@@ -1,9 +1,14 @@
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificArmorCategoryProficiencyPrerequisite : Prerequisite
+    public class HaveSpecificArmorCategoryProficiencyPrerequisite : BasePrerequisite
     {
         public Guid ArmorCategoryId { get; set; }
         public ArmorCategory ArmorCategory { get; set; } = default!;
@@ -14,9 +19,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveSpecificArmorCategoryProficiency(this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid armorCategoryId, Guid requiredProficiencyId)
+        public static PrerequisiteBuilder HaveSpecificArmorCategoryProficiency(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredProficiencyId, Guid armorCategoryId)
         {
-            return builder.Add(bindingId, new HaveSpecificArmorCategoryProficiencyPrerequisite { Id = id, ArmorCategoryId = armorCategoryId, RequiredProficiencyId = requiredProficiencyId});
+            return builder.Add(new HaveSpecificArmorCategoryProficiencyPrerequisite { Id = id, RequiredProficiencyId = requiredProficiencyId, ArmorCategoryId = armorCategoryId});
         }
     }
 }

@@ -1,10 +1,12 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -27,35 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("058cc227-1a31-4500-825d-dcdb2079b171"), Type = TextBlockType.Text, Text = "You grew up in the church of the Dark Smith, where you learned the value of hard work and achieving vocational mastery." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("742eca96-5ccf-4b58-ab45-9585c9f34408"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("e3f98617-fa16-46e1-b179-4eeea2a2c95b"), StatId = Stats.Instances.Constitution.ID },
-                    new StatEffectBinding{Id = Guid.Parse("3166830e-5f89-449b-ae35-a9428dc13cdc"), StatId = Stats.Instances.Intelligence.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Constitution.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("2653def8-1c50-4ad2-8734-b2cca68e137b")
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("3c3982f9-d3ba-4c58-b707-df67416096ec"),
-                FeatId = Feats.General.SkillTrainingFeat.ID
-            };
-
-            yield return new GainSpecificLoreProficiencyEffect
-            {
-                Id = Guid.Parse("8006903f-d56d-44a7-aecf-e5efa6a3fdd1"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreId = Lores.Instances.Droskar.ID
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.SkillTraining.ID);
+            builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Droskar.ID);
         }
 
         protected override SourcePage GetSourcePage()

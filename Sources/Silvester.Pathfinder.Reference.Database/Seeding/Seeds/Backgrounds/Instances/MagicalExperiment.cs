@@ -1,10 +1,15 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -32,100 +37,57 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return Traits.Instances.Aasimar.ID;
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Constitution.ID);
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+            builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Academia.ID);
+            
+            builder.AddOr(Guid.Parse(""), or => 
             {
-                Id = Guid.Parse("7dc06df4-e53b-4f7e-8cd8-5072493354fa"),
-                RequiredStats = new StatEffectBinding[]
+                or.Addendum("You gain one special ability as a result of the magical experimentation. Work with the GM to select an appropriate ability from the following list or to come up with another special ability.");
+                
+                //Enhanced Senses
+                or.AddAnd(Guid.Parse(""), and => 
                 {
-                    new StatEffectBinding{Id = Guid.Parse("653750e2-b1cc-48f3-b46a-cf6384a69a71"), StatId = Stats.Instances.Constitution.ID }
-                }
-            };
+                    and.GainAnySense(Guid.Parse(""), "30 feet.");
+                    and.AddOr(Guid.Parse(""), or => 
+                    {
+                        or.GainSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID);
+                        or.GainSpecificSense(Guid.Parse(""), Senses.Instances.Darkvision.ID)
+                            .AddPrerequisites(Guid.Parse(""), prerequisites => 
+                            {
+                                prerequisites.HaveSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID);
+                            });
+                    });
+                });
 
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse("443234c6-b18e-4daa-ad55-326a87a7de46"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Occultism.ID
-            };
-
-            yield return new GainSpecificLoreProficiencyEffect
-            {
-                Id = Guid.Parse("2387b662-c8e2-4d50-bf58-b2d28988d4f3"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreId = Lores.Instances.Academia.ID
-            };
-
-            yield return new ChoiceEffect
-            {
-                Id = Guid.Parse("7531962a-ecbd-4b96-97b9-8e422d315d05"),
-                Restrictions = "You gain one special ability as a result of the magical experimentation. Work with the GM to select an appropriate ability from the following list or to come up with another special ability.",
-                Entries = new Effect[]
+                //Resistant Skin
+                or.AddAnd(Guid.Parse(""), and => 
                 {
-                    //Enhanced Senses
-                    new CombinedEffect
+                    and.AddOr(Guid.Parse(""), or => 
                     {
-                        Id = Guid.Parse("4049ce2d-4eee-4a4b-953b-308b41f46a3f"),
-                        Entries = new Effect[] 
-                        {
-                            new ChoiceEffect
-                            {
-                                Id = Guid.Parse("467ea219-09c1-4584-95cc-6e1077e7073e"),
-                                Restrictions = "The darkvision effect can only be chosen if you already have low-light vision.",
-                                Entries = new Effect[]
-                                {
-                                    new GainSpecificSenseEffect { Id = Guid.Parse("2cdbc71d-2830-4693-8cf7-46c2e8d5335b"), SenseId = Senses.Instances.LowLightVision.ID, },
-                                    new GainSpecificSenseEffect { Id = Guid.Parse("5f52e7e7-e947-4315-a07f-ed5409d01863"), SenseId = Senses.Instances.Darkvision.ID}
-                                }
-                            },
-                            new GainAnySenseEffect { Id = Guid.Parse("5ddcf11b-c2e0-4d76-a715-337ada98f40d"), Range = "30 feet." }
-                        }
-                    },
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Acid.ID);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Sonic.ID);
+                    });
 
-                    //Resistant Skin
-                    new CombinedEffect
+                    and.AddOr(Guid.Parse(""), or =>
                     {
-                        Id = Guid.Parse("0b2c1ecf-cc39-479e-867a-0a7eb3c67407"),
-                        Entries = new Effect[]
-                        {
-                            new ChoiceEffect
-                            {
-                                Id = Guid.Parse("c98881d6-e7d2-45e6-8850-7b75c6611024"),
-                                Entries = new Effect[]
-                                {
-                                    new GainSpecificDamageResistanceEffect {Id = Guid.Parse("bba7f018-45d4-497a-b169-c2f572ba09b8"), DamageTypeId = DamageTypes.Instances.Acid.ID},
-                                    new GainSpecificDamageResistanceEffect {Id = Guid.Parse("13883b39-6a68-4b8c-b0c0-8a2cd652a8d6"), DamageTypeId = DamageTypes.Instances.Cold.ID},
-                                    new GainSpecificDamageResistanceEffect {Id = Guid.Parse("1fc38d95-4715-42a7-af28-1c8083af090b"), DamageTypeId = DamageTypes.Instances.Electricity.ID},
-                                    new GainSpecificDamageResistanceEffect {Id = Guid.Parse("02d61601-6ffc-4f6f-bc39-232910bf21fb"), DamageTypeId = DamageTypes.Instances.Fire.ID},
-                                    new GainSpecificDamageResistanceEffect {Id = Guid.Parse("b7feaa22-0d67-429d-a375-28a3516730ff"), DamageTypeId = DamageTypes.Instances.Sonic.ID},
-                                }
-                            },
-                            new ChoiceEffect
-                            {
-                                Id = Guid.Parse("94e76d79-473d-4cfa-87cd-6cb5ef315514"),
-                                Restrictions = "Is chosen by the GM, and should differ from the resistance type chosen by the player.",
-                                Entries = new Effect[]
-                                {
-                                    new GainSpecificDamageResistanceEffect {Id = Guid.Parse("4b5b9f9d-f0de-4429-82bb-ecd2d084707d"), DamageTypeId = DamageTypes.Instances.Acid.ID},
-                                    new GainSpecificDamageResistanceEffect {Id = Guid.Parse("9d807728-796b-4700-a926-991613e16616"), DamageTypeId = DamageTypes.Instances.Cold.ID},
-                                    new GainSpecificDamageResistanceEffect {Id = Guid.Parse("46d5ce22-2726-40fd-99e1-b9d2051ddd0a"), DamageTypeId = DamageTypes.Instances.Electricity.ID},
-                                    new GainSpecificDamageResistanceEffect {Id = Guid.Parse("3480ce6f-a368-4d1c-b64a-2d4cdd5e02e2"), DamageTypeId = DamageTypes.Instances.Fire.ID},
-                                    new GainSpecificDamageResistanceEffect {Id = Guid.Parse("12c56afd-f949-4c80-84dd-9a7146e608a8"), DamageTypeId = DamageTypes.Instances.Sonic.ID},
-                                }
-                            }
-                        }
-                    },
+                        or.Addendum("Is chosen by the GM, and should differ from the resistance type chosen by the player.");
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Acid.ID);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Sonic.ID);
+                    });
+                });
 
-                    //Touch Telepathy
-                    new GainSpecificAbilityEffect
-                    {
-                        Id = Guid.Parse("86be3232-1360-4a64-8db2-0a7c133f9814"),
-                        AbilityId = Abilities.Instances.Telepathy.ID,
-                        Range = "Touch."
-                    }
-                }
-            };
+                //Touch Telepathy
+                builder.GainSpecificAbility(Guid.Parse(""), Abilities.Instances.Telepathy.ID, "Touch.");
+            });
         }
 
         protected override SourcePage GetSourcePage()

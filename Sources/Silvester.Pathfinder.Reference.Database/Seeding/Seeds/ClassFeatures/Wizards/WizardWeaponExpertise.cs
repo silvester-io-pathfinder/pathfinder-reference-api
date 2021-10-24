@@ -1,11 +1,14 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wizards
 {
@@ -28,127 +31,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Through a combination of magic and training, you’ve learned how to wield wizard weapons more effectively. You gain expert proficiency in the club, crossbow, dagger, heavy crossbow, staff, and unarmed attacks." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificMeleeWeaponProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                MeleeWeaponId = MeleeWeapons.Instances.Club.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 11
-                        }
-                    }
-                }
-            };
-
-            yield return new GainSpecificRangedWeaponProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                RangedWeaponId = RangedWeapons.Instances.Crossbow.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 11
-                        }
-                    }
-                }
-            };
-
-            yield return new GainSpecificMeleeWeaponProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                MeleeWeaponId = MeleeWeapons.Instances.Dagger.ID,
-                Prerequisites = new[]
-               {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 11
-                        }
-                    }
-                }
-            };
-
-            yield return new GainSpecificRangedWeaponProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                RangedWeaponId = RangedWeapons.Instances.HeavyCrossbow.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 11
-                        }
-                    }
-                }
-            };
-
-            yield return new GainSpecificMeleeWeaponProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                MeleeWeaponId = MeleeWeapons.Instances.Staff.ID,
-                Prerequisites = new[]
-               {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 11
-                        }
-                    }
-                }
-            };
-            
-            yield return new GainSpecificWeaponCategoryProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                WeaponCategoryId = WeaponCategories.Instances.Unarmed.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 11
-                        }
-                    }
-                }
-            };
+            builder.GainSpecificMeleeWeaponProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, MeleeWeapons.Instances.Club.ID);
+            builder.GainSpecificMeleeWeaponProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, MeleeWeapons.Instances.Dagger.ID);
+            builder.GainSpecificMeleeWeaponProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, MeleeWeapons.Instances.Staff.ID);
+            builder.GainSpecificRangedWeaponProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, RangedWeapons.Instances.Crossbow.ID);
+            builder.GainSpecificRangedWeaponProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, RangedWeapons.Instances.HeavyCrossbow.ID);
+            builder.GainSpecificWeaponCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, WeaponCategories.Instances.Unarmed.ID);
         }
 
         protected override SourcePage GetSourcePage()

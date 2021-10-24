@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Extensions;
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -19,14 +19,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rackets
 
             builder.AddTextBlocks(racket, GetDetails(), (e) => e.Details);
             builder.AddSourcePage(racket, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffects(GetEffects(), (effect) => new RacketEffectBinding { RacketId = racket.Id });
+            builder.AddEffect(racket, GetEffects, (racket) => racket.EffectId);
 
             return racket;
         }
 
         protected abstract Racket GetRacket();
         protected abstract SourcePage GetSourcePage();
-        protected abstract IEnumerable<Effect> GetEffects();
+        protected abstract void GetEffects(BooleanEffectBuilder builder);
         protected abstract IEnumerable<TextBlock> GetDetails();
     }
 }

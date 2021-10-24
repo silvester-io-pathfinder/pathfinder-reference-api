@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -28,29 +29,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Methodologies.In
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "During your daily preparations, you can create a number of versatile vials—alchemical concoctions that can quickly be turned into elixirs and tools— equal to your Intelligence modifier. You can use the Quick Tincture action to turn one of these vials into an elixir or alchemical tool for which you know the formula." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                SkillId = Skills.Instances.Crafting.ID,
-                ProficiencyId = Proficiencies.Instances.Trained.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.AlchemicalCrafting.ID
-            };
-
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.AlchemicalCrafting.ID);
             //TODO: This needs more restrictions somehow.
-            yield return new GainFormulaBookEffect
-            {
-                Id = Guid.Parse(""),
-                FormulaAmount = 2,
-                AddFormulasPerLevel = 2
-            };
-
+            builder.GainFormulaBook(Guid.Parse(""), formulaAmount: 2, addFormulasPerLevel: 2);
             //TODO: Add daily preparation effects.
         }
 

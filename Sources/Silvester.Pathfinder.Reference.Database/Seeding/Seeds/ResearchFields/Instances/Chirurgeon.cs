@@ -1,7 +1,9 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -28,33 +30,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ResearchFields.I
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "As long as your proficiency rank in Medicine is trained or better, you can attempt a Crafting check instead of a Medicine check for any of Medicine's untrained and trained uses." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new ChoiceEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse(""),
-                Entries = new[]
-                {
-                    new GainSpecificElixirFormulaEffect
-                    {
-                        Id = Guid.Parse(""),
-                        AlchemicalElixirId = AlchemicalElixirs.Instances.Antidote.ID,
-                        PotencyId = Potencies.Instances.Lesser.ID
-                    },
-                    new GainSpecificElixirFormulaEffect
-                    {
-                        Id = Guid.Parse(""),
-                        AlchemicalElixirId = AlchemicalElixirs.Instances.Antiplague.ID,
-                        PotencyId = Potencies.Instances.Lesser.ID
-                    },
-                    new GainSpecificElixirFormulaEffect
-                    {
-                        Id = Guid.Parse(""),
-                        AlchemicalElixirId = AlchemicalElixirs.Instances.ElixirOfLife.ID,
-                        PotencyId = Potencies.Instances.Minor.ID
-                    }
-                }
-            };
+                or.GainSpecificElixirFormula(Guid.Parse(""), AlchemicalElixirs.Instances.Antidote.ID, Potencies.Instances.Lesser.ID);
+                or.GainSpecificElixirFormula(Guid.Parse(""), AlchemicalElixirs.Instances.Antiplague.ID, Potencies.Instances.Lesser.ID);
+                or.GainSpecificElixirFormula(Guid.Parse(""), AlchemicalElixirs.Instances.ElixirOfLife.ID, Potencies.Instances.Minor.ID);
+            });
 
             //TODO: Add Medicine -> Crafting check effect.
         }

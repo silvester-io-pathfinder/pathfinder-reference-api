@@ -1,6 +1,9 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -42,107 +45,85 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "Shaitan 2nd: glitterdust; 5th: wall of stone; 8th: earthquake" };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Arcana.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Deception.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new ChoiceEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse(""),
-                Entries = new Effect[]
+                or.AddAnd(Guid.Parse(""), and => 
                 {
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.GeniesVeil.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DetectMagic.ID},
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.IllusoryDisguise.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.CreateFood.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Enthrall.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Creation.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Banishment.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.TrueSeeing.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.EnergyAegis.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ScintillatingPattern.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ResplendentMansion.ID }
-                        }
-                    },
-                       new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.GeniesVeil.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DetectMagic.ID},
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.IllusoryDisguise.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Invisibility.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Enthrall.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Creation.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.IllusoryScene.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.TrueSeeing.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.EnergyAegis.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.PunishingWinds.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ResplendentMansion.ID }
-                        }
-                    },
-                          new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.GeniesVeil.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DetectMagic.ID},
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.IllusoryDisguise.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Enlarge.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Enthrall.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Creation.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ElementalForm.ID, Restrictions = "Only the Fire elemental form can be used." },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.TrueSeeing.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.EnergyAegis.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Maze.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ResplendentMansion.ID }
-                        }
-                    },
-                             new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.GeniesVeil.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DetectMagic.ID},
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.IllusoryDisguise.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.WaterWalk.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Enthrall.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Creation.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ControlWater.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.TrueSeeing.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.EnergyAegis.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.HorridWilting.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ResplendentMansion.ID }
-                        }
-                    },
-                                new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.GeniesVeil.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DetectMagic.ID},
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.IllusoryDisguise.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Glitterdust.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Enthrall.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Creation.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.WallOfStone.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.TrueSeeing.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.EnergyAegis.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Earthquake.ID },
-                            new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ResplendentMansion.ID }
-                        }
-                    }
-                }
-            };
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.GeniesVeil.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DetectMagic.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.IllusoryDisguise.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.CreateFood.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enthrall.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Creation.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Banishment.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TrueSeeing.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.EnergyAegis.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ScintillatingPattern.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ResplendentMansion.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.GeniesVeil.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DetectMagic.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.IllusoryDisguise.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Invisibility.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enthrall.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Creation.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.IllusoryScene.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TrueSeeing.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.EnergyAegis.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.PunishingWinds.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ResplendentMansion.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.GeniesVeil.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DetectMagic.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.IllusoryDisguise.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enlarge.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enthrall.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Creation.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ElementalForm.ID, "Only the Fire elemental form can be used.");
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TrueSeeing.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.EnergyAegis.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Maze.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ResplendentMansion.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.GeniesVeil.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DetectMagic.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.IllusoryDisguise.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.WaterWalk.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enthrall.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Creation.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ControlWater.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TrueSeeing.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.EnergyAegis.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.HorridWilting.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ResplendentMansion.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.GeniesVeil.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DetectMagic.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.IllusoryDisguise.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Glitterdust.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enthrall.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Creation.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.WallOfStone.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TrueSeeing.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.EnergyAegis.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Earthquake.ID);
+                    and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ResplendentMansion.ID);
+                });
+            });
         }
 
         protected override IEnumerable<Guid> GetSkills()

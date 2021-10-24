@@ -1,6 +1,9 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using System;
 using System.Collections.Generic;
@@ -23,33 +26,25 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
             };
         }
 
-        protected override Effect GetInstinctAbilityEffect()
+        protected override void GetInstinctAbilityEffects(BooleanEffectBuilder builder)
         {
-            return new GainSpecificInstinctAbilityEffect { Id = Guid.Parse(""), InstinctAbilityId = InstinctAbilities.Instances.DraconicRage.ID };
+            builder.GainSpecificInstinctAbility(Guid.Parse(""), InstinctAbilities.Instances.DraconicRage.ID);
         }
 
-        protected override IEnumerable<Effect> GetRagingEffects()
+        protected override void GetRagingEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificDamageResistanceEffect
-            {
-                Id = Guid.Parse(""),
-                DamageTypeId = DamageTypes.Instances.Piercing.ID
-            };
+            builder.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Piercing.ID);
 
-            yield return new ChoiceEffect
+            builder.AddOr(Guid.Parse(""), or => 
             {
-                Id = Guid.Parse(""),
-                Restrictions = "The chosen resistance effect should correlate with your Dragon's Breath weapon damage type.",
-                Entries = new Effect[]
-                {
-                    new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Acid.ID },
-                    new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Electricity.ID },
-                    new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Poison.ID },
-                    new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Fire.ID },
-                    new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Cold.ID },
-                    new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Poison.ID }
-                }
-            };
+                or.Addendum("The chosen resistance effect should correlate with your Dragon's Breath weapon damage type.");
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Acid.ID);
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID);
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Poison.ID);
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID);
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID);
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Poison.ID);
+            });
         }
 
         protected override Table? GetTable()

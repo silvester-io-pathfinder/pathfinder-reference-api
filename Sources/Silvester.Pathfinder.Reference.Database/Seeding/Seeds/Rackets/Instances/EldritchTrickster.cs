@@ -1,6 +1,10 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -27,97 +31,68 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rackets.Instance
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Choose a multiclass archetype that has a basic, expert, and master spellcasting feat. You gain that archetype's dedication feat as a bonus feat even though you don't meet its level prerequisite, though you must meet its other prerequisites. For you, the Magical Trickster rogue feat has a prerequisite of 2nd level instead of 4th level. You can choose the spellcasting ability score for the multiclass archetype you chose as your key ability score." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new ChoiceEffect
+            builder.AddOr(Guid.Parse(""), or => 
             {
-                Id = Guid.Parse(""),
-                Entries = new Effect[]
+                or.AddAnd(Guid.Parse(""), and =>
                 {
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificFeatEffect{ Id = Guid.Parse(""), FeatId = Feats.Instances.BardDedication.ID },
-                            new ModifyFeatLevelPrerequisiteEffect {Id = Guid.Parse(""), FeatId = Feats.Instances.BardDedication.ID, ModifierType = ModifierType.Multiply, Modifier = 0},
-                            new GainSpecificKeyAbilityOptionEffect { Id = Guid.Parse(""), StatId = Stats.Instances.Charisma.ID }
-                        }
-                    },
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificFeatEffect{ Id = Guid.Parse(""), FeatId = Feats.Instances.ClericDedication.ID },
-                            new ModifyFeatLevelPrerequisiteEffect {Id = Guid.Parse(""), FeatId = Feats.Instances.ClericDedication.ID, ModifierType = ModifierType.Multiply, Modifier = 0},
-                            new GainSpecificKeyAbilityOptionEffect { Id = Guid.Parse(""), StatId = Stats.Instances.Wisdom.ID }
-                        }
-                    },
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificFeatEffect{ Id = Guid.Parse(""), FeatId = Feats.Instances.DruidDedication.ID },
-                            new ModifyFeatLevelPrerequisiteEffect {Id = Guid.Parse(""), FeatId = Feats.Instances.DruidDedication.ID, ModifierType = ModifierType.Multiply, Modifier = 0},
-                            new GainSpecificKeyAbilityOptionEffect { Id = Guid.Parse(""), StatId = Stats.Instances.Wisdom.ID }
-                        }
-                    },
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificFeatEffect{ Id = Guid.Parse(""), FeatId = Feats.Instances.MagusDedication.ID },
-                            new ModifyFeatLevelPrerequisiteEffect {Id = Guid.Parse(""), FeatId = Feats.Instances.MagusDedication.ID, ModifierType = ModifierType.Multiply, Modifier = 0},
-                            new GainSpecificKeyAbilityOptionEffect { Id = Guid.Parse(""), StatId = Stats.Instances.Intelligence.ID }
-                        }
-                    },
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificFeatEffect{ Id = Guid.Parse(""), FeatId = Feats.Instances.OracleDedication.ID },
-                            new ModifyFeatLevelPrerequisiteEffect {Id = Guid.Parse(""), FeatId = Feats.Instances.OracleDedication.ID, ModifierType = ModifierType.Multiply, Modifier = 0},
-                            new GainSpecificKeyAbilityOptionEffect { Id = Guid.Parse(""), StatId = Stats.Instances.Charisma.ID }
-                        }
-                    },
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificFeatEffect{ Id = Guid.Parse(""), FeatId = Feats.Instances.SorcererDedication.ID },
-                            new ModifyFeatLevelPrerequisiteEffect {Id = Guid.Parse(""), FeatId = Feats.Instances.SorcererDedication.ID, ModifierType = ModifierType.Multiply, Modifier = 0},
-                            new GainSpecificKeyAbilityOptionEffect { Id = Guid.Parse(""), StatId = Stats.Instances.Charisma.ID  }
-                        }
-                    },
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificFeatEffect{ Id = Guid.Parse(""), FeatId = Feats.Instances.WitchDedication.ID },
-                            new ModifyFeatLevelPrerequisiteEffect {Id = Guid.Parse(""), FeatId = Feats.Instances.WitchDedication.ID, ModifierType = ModifierType.Multiply, Modifier = 0},
-                            new GainSpecificKeyAbilityOptionEffect { Id = Guid.Parse(""), StatId = Stats.Instances.Intelligence.ID  }
-                        }
-                    },
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificFeatEffect{ Id = Guid.Parse(""), FeatId = Feats.Instances.WizardDedication.ID },
-                            new ModifyFeatLevelPrerequisiteEffect {Id = Guid.Parse(""), FeatId = Feats.Instances.WizardDedication.ID, ModifierType = ModifierType.Multiply, Modifier = 0},
-                            new GainSpecificKeyAbilityOptionEffect { Id = Guid.Parse(""), StatId = Stats.Instances.Intelligence.ID }
-                        }
-                    },
-                }
-            };
+                    and.ModifyFeatLevelPrerequisite(Guid.Parse(""), Feats.Instances.BardDedication.ID, ModifierType.Multiply, modifier: 0);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.BardDedication.ID);
+                    and.GainSpecificKeyAbilityOption(Guid.Parse(""), Stats.Instances.Charisma.ID);
+                });
 
-            yield return new ModifyFeatLevelPrerequisiteEffect { Id = Guid.Parse(""), FeatId = Feats.Instances.MagicalTrickster.ID, ModifierType = ModifierType.Subtract, Modifier = 2 };
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.ModifyFeatLevelPrerequisite(Guid.Parse(""), Feats.Instances.ClericDedication.ID, ModifierType.Multiply, modifier: 0);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.ClericDedication.ID);
+                    and.GainSpecificKeyAbilityOption(Guid.Parse(""), Stats.Instances.Wisdom.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.ModifyFeatLevelPrerequisite(Guid.Parse(""), Feats.Instances.DruidDedication.ID, ModifierType.Multiply, modifier: 0);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.DruidDedication.ID);
+                    and.GainSpecificKeyAbilityOption(Guid.Parse(""), Stats.Instances.Wisdom.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.ModifyFeatLevelPrerequisite(Guid.Parse(""), Feats.Instances.MagusDedication.ID, ModifierType.Multiply, modifier: 0);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.MagusDedication.ID);
+                    and.GainSpecificKeyAbilityOption(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.ModifyFeatLevelPrerequisite(Guid.Parse(""), Feats.Instances.OracleDedication.ID, ModifierType.Multiply, modifier: 0);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.OracleDedication.ID);
+                    and.GainSpecificKeyAbilityOption(Guid.Parse(""), Stats.Instances.Charisma.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.ModifyFeatLevelPrerequisite(Guid.Parse(""), Feats.Instances.SorcererDedication.ID, ModifierType.Multiply, modifier: 0);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.SorcererDedication.ID);
+                    and.GainSpecificKeyAbilityOption(Guid.Parse(""), Stats.Instances.Charisma.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.ModifyFeatLevelPrerequisite(Guid.Parse(""), Feats.Instances.WitchDedication.ID, ModifierType.Multiply, modifier: 0);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.WitchDedication.ID);
+                    and.GainSpecificKeyAbilityOption(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.ModifyFeatLevelPrerequisite(Guid.Parse(""), Feats.Instances.WizardDedication.ID, ModifierType.Multiply, modifier: 0);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.WizardDedication.ID);
+                    and.GainSpecificKeyAbilityOption(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+                });
+            });
+         
+            builder.ModifyFeatLevelPrerequisite(Guid.Parse(""), Feats.Instances.MagicalTrickster.ID, ModifierType.Subtract, modifier: 2);
         }
 
         protected override SourcePage GetSourcePage()

@@ -1,8 +1,12 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
+
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
@@ -39,85 +43,27 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays.
             yield return Skills.Instances.Intimidation.ID;
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.RaconteursReload.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.TenPaces.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.PistolersRetort.ID,
-                Prerequisites = new[]
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.RaconteursReload.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.TenPaces.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.PostolersRetort.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 9
-                        }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 9);
+                });
 
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.GrimSwagger.ID,
-                Prerequisites = new[]
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.GrimSwagger.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 15
-                        }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 15);
+                });
 
-            yield return new ChoiceEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse(""),
-                Entries = new []
-                {
-                    new ChoiceEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSkillProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            SkillId = Skills.Instances.Deception.ID,
-                            ProficiencyId = Proficiencies.Instances.Trained.ID
-                        }
-                    },
-                    new ChoiceEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSkillProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            SkillId = Skills.Instances.Intimidation.ID,
-                            ProficiencyId = Proficiencies.Instances.Trained.ID
-                        }
-                    },
-                }
-            };
+                or.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Deception.ID);
+                or.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+            });
         }
 
         protected override SourcePage GetSourcePage()

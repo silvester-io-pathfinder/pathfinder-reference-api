@@ -1,9 +1,13 @@
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificCausePrerequisite : Prerequisite
+    public class HaveSpecificCausePrerequisite : BasePrerequisite
     {
         public Guid RequiredCauseId { get; set; }
         public Cause RequiredCause { get; set; } = default!;
@@ -11,9 +15,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveSpecificCause (this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid requiredCauseId)
+        public static PrerequisiteBuilder HaveSpecificCause (this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredCauseId)
         {
-            return builder.Add(bindingId, new HaveSpecificCausePrerequisite { Id = id, RequiredCauseId = requiredCauseId });
+            return builder.Add(new HaveSpecificCausePrerequisite { Id = id, RequiredCauseId = requiredCauseId });
         }
     }
 }

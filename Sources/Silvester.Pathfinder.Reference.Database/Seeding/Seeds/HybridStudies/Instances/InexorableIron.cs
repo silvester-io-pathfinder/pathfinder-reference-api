@@ -1,8 +1,11 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
@@ -34,139 +37,59 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.HybridStudies.In
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "When you enter Arcane Cascade stance and at the start of each of your turns while you're in that stance, if you're wielding a melee weapon in two hands, you gain temporary Hit Points equal to half your level (minimum 1 temporary HP)." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
             //Add the conflux spell.
-            yield return new GainSpecificSpellEffect
-            {
-                Id = Guid.Parse(""),
-                SpellId = Spells.Instances.ThunderousStrike.ID
-            };
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ThunderousStrike.ID);
 
             //Add studious spell slots from level 7 up to and excluding to 11.
-            yield return new GainSpecificSpellSlotEffect
-            {
-                Id = Guid.Parse(""),
-                Amount = 2,
-                Level = 2,
-                IsSpendingPreventable = true,
-                Prerequisites = new[]
+            builder.GainSpecificSpellSlot(Guid.Parse(""), amount: 2, spellSlotLevel: 2, isSpendingPreventable: true)
+                .AddPrerequisites(Guid.Parse(""), prerequisites => 
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 7 }
-                    },
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.LessThan, RequiredLevel = 11 }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 7);
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.LessThan, requiredLevel: 11);
+                });
 
             //Add studious spell slots from level 11 up to and excluding to 13.
-            yield return new GainSpecificSpellSlotEffect
-            {
-                Id = Guid.Parse(""),
-                Amount = 2,
-                Level = 3,
-                IsSpendingPreventable = true,
-                Prerequisites = new[]
+            builder.GainSpecificSpellSlot(Guid.Parse(""), amount: 2, spellSlotLevel: 3, isSpendingPreventable: true)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11 }
-                    },
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.LessThan, RequiredLevel = 13 }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 11);
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.LessThan, requiredLevel: 13);
+                });
 
             //Add studious spell slots from level 13 and beyond.
-            yield return new GainSpecificSpellSlotEffect
-            {
-                Id = Guid.Parse(""),
-                Amount = 2,
-                Level = 4,
-                IsSpendingPreventable = true,
-                Prerequisites = new[]
+            builder.GainSpecificSpellSlot(Guid.Parse(""), amount: 2, spellSlotLevel: 4, isSpendingPreventable: true)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 13 }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 13);
+                });
 
-            yield return new CombinedEffect
+            builder.AddAnd(Guid.Parse(""), and => 
             {
-                Id = Guid.Parse(""),
-                Prerequisites = new[]
+                and.AddPrerequisites(Guid.Parse(""), prerequisites => 
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 7 }
-                    }
-                },
-                Entries = new []
-                {
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.SpiderClimb.ID}
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.TrueStrike.ID}
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.WaterBreathing.ID}
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Enlarge.ID}
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 7);
+                }); 
+                and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.SpiderClimb.ID);
+                and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TrueStrike.ID);
+                and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.WaterBreathing.ID);
+                and.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enlarge.ID);
+            });
 
-            yield return new GainSpecificSpellEffect
-            {
-                Id = Guid.Parse(""),
-                SpellId = Spells.Instances.Earthbind.ID,
-                Prerequisites = new[]
+            builder
+                .GainSpecificSpell(Guid.Parse(""), Spells.Instances.Earthbind.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11 }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 11);
+                });
 
-            yield return new GainSpecificSpellEffect
-            {
-                Id = Guid.Parse(""),
-                SpellId = Spells.Instances.DimensionalAnchor.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 13 }
-                    }
-                }
-            };
+            builder
+               .GainSpecificSpell(Guid.Parse(""), Spells.Instances.DimensionalAnchor.ID)
+               .AddPrerequisites(Guid.Parse(""), prerequisites =>
+               {
+                   prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 13);
+               });
 
             //TODO: Add the Arcane Cascade modification effects.
         }

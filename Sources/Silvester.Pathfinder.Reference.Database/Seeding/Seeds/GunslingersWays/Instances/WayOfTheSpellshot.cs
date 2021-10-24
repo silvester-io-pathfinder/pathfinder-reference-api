@@ -1,13 +1,16 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays.Instances
 {
@@ -36,13 +39,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays.
             //TODO: Encapsulate the forced 2nd-level class feat pick somehow.
         }
 
-        protected override IEnumerable<Prerequisite> GetPrerequisites()
+        protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         {
-            yield return new HaveSpecificClassPrerequisite
-            {
-                Id = Guid.Parse(""),
-                RequiredClassId = Classes.Instances.Gunslinger.ID
-            };
+            builder.HaveSpecificClass(Guid.Parse(""), Classes.Instances.Gunslinger.ID);
         }
 
         protected override IEnumerable<Guid> GetWaySkills()
@@ -50,64 +49,23 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays.
             yield return Skills.Instances.Arcana.ID;
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.ThoughtfulReload.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.EnergyShot.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.RecallAmmunition.ID,
-                Prerequisites = new[]
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.ThoughtfulReload.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.EnergyShot.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.RecallAmmunition.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 9
-                        }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 9);
+                });
 
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.DispellingBullet.ID,
-                Prerequisites = new[]
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.DispellingBullet.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 15
-                        }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 15);
+                });
 
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                SkillId = Skills.Instances.Arcana.ID,
-                ProficiencyId = Proficiencies.Instances.Trained.ID
-            };
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Arcana.ID);
         }
 
         protected override SourcePage GetSourcePage()

@@ -1,11 +1,14 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Fighters
 {
@@ -28,97 +31,25 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Fi
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Your damage from weapon specialization increases to 4 with weapons and unarmed attacks in which you’re an expert, 6 if you’re a master, and 8 if you’re legendary." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new ModifyWeaponDamageEffect
-            {
-                Id = Guid.Parse(""),
-                Modifier = 2,
-                ModifierType = ModifierType.Add,
-                Prerequisites = new[]
+            builder.ModifyWeaponDamage(Guid.Parse(""), ModifierType.Add, modifier: 2)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 15
-                        }
-                    },
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveCurrentWeaponProficiencyPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.EqualTo,
-                            RequiredProficiencyId = Proficiencies.Instances.Expert.ID,
-                        }
-                    }
-                }
-            };
+                    prerequisites.HaveCurrentWeaponProficiency(Guid.Parse(""), Comparator.EqualTo, Proficiencies.Instances.Expert.ID);
+                });
 
-            yield return new ModifyWeaponDamageEffect
-            {
-                Id = Guid.Parse(""),
-                Modifier = 3,
-                ModifierType = ModifierType.Add,
-                Prerequisites = new[]
+            builder.ModifyWeaponDamage(Guid.Parse(""), ModifierType.Add, modifier: 3)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 15
-                        }
-                    },
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveCurrentWeaponProficiencyPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.EqualTo,
-                            RequiredProficiencyId = Proficiencies.Instances.Master.ID,
-                        }
-                    }
-                }
-            };
+                    prerequisites.HaveCurrentWeaponProficiency(Guid.Parse(""), Comparator.EqualTo, Proficiencies.Instances.Master.ID);
+                });
 
-            yield return new ModifyWeaponDamageEffect
-            {
-                Id = Guid.Parse(""),
-                Modifier = 4,
-                ModifierType = ModifierType.Add,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 15
-                        }
-                    },
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveCurrentWeaponProficiencyPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.EqualTo,
-                            RequiredProficiencyId = Proficiencies.Instances.Legendary.ID,
-                        }
-                    }
-                }
-            };
+            builder.ModifyWeaponDamage(Guid.Parse(""), ModifierType.Add, modifier: 4)
+               .AddPrerequisites(Guid.Parse(""), prerequisites =>
+               {
+                   prerequisites.HaveCurrentWeaponProficiency(Guid.Parse(""), Comparator.EqualTo, Proficiencies.Instances.Legendary.ID);
+               });
         }
 
         protected override SourcePage GetSourcePage()

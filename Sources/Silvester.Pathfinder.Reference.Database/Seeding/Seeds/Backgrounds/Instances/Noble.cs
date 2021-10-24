@@ -1,11 +1,15 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
+
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -28,45 +32,24 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("b005e333-5c6b-4ad2-bfd1-9500704e2181"), Type = TextBlockType.Text, Text = "To the common folk, the life of a noble seems one of idyllic luxury, but growing up as a noble or member of the aspiring gentry, you know the reality: a noble's lot is obligation and intrigue. Whether you seek to escape your duties by adventuring or to better your station, you have traded silks and pageantry for an adventurer's life." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("8e42ec44-ad9a-4f61-b6a3-8e27298cb356"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("6eb1c79a-b394-471e-8b1b-8bd7dfb74a95"), StatId = Stats.Instances.Intelligence.ID },
-                    new StatEffectBinding{Id = Guid.Parse("0911d390-eb2b-41f5-b9b9-0f4c21b0e4a7"), StatId = Stats.Instances.Charisma.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Charisma.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("2d1caf79-1621-4440-aee7-86e81f8ea792")
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
 
-            yield return new GainSpecificSkillProficiencyEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("ef2aa6d9-ebf0-4b99-92af-2b8bd6dd5b6f"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Society.ID
-            };
+                or.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Genealogy.ID);
+                or.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Heraldry.ID);
+            });
 
-            yield return new ChoiceEffect
-            {
-                Id = Guid.Parse("c5ce8084-6ad2-4815-a332-b96c1ce6ef3a"),
-                Entries = new Effect[]
-                {
-                    new GainSpecificLoreProficiencyEffect { Id = Guid.Parse("2f35182c-db6d-48a4-bf4c-4ccd500af216"), ProficiencyId = Proficiencies.Instances.Trained.ID, LoreId = Lores.Instances.Genealogy.ID },
-                    new GainSpecificLoreProficiencyEffect { Id = Guid.Parse("51d93ed0-0730-43fb-90ad-6310c087668d"), ProficiencyId = Proficiencies.Instances.Trained.ID, LoreId = Lores.Instances.Heraldry.ID }
-                }
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("5b7bcfdc-fcc8-45ad-8ead-1591a138beef"),
-                FeatId = Feats.General.CourtlyGracesFeat.ID
-            };
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.CourtlyGraces.ID);
         }
 
         protected override SourcePage GetSourcePage()

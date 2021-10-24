@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -32,21 +33,22 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Fey whimsy or a tryst in a moonlit grove put the bewitching magic of the First World into your family’s bloodline." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Deception.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Nature.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.FaerieDust.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.GhostSound.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Charm.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.HideousLaughter.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Enthrall.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Suggestion.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.CloakOfColors.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Mislead.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.VisionsOfDanger.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.UncontrollableDance.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.ResplendentMansion.ID };
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Deception.ID);
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
+
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.FaerieDust.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.GhostSound.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Charm.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.HideousLaughter.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enthrall.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Suggestion.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.CloakOfColors.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Mislead.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.VisionsOfDanger.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.UncontrollableDance.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ResplendentMansion.ID);
         }
 
         protected override IEnumerable<Guid> GetSkills()

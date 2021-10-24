@@ -1,9 +1,12 @@
 ﻿using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using System;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveCurrentArmorCategoryPrerequisite : Prerequisite
+    public class HaveCurrentArmorCategoryPrerequisite : BasePrerequisite
     {
         public Guid ArmorCategoryId { get; set; }
         public ArmorCategory ArmorCategory { get; set; } = default!;
@@ -11,9 +14,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveCurrentArmorCategory(this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid armorCategoryId )
+        public static PrerequisiteBuilder HaveCurrentArmorCategory(this BooleanPrerequisiteBuilder builder, Guid id, Guid armorCategoryId )
         {
-            return builder.Add(bindingId, new HaveCurrentArmorCategoryPrerequisite { Id = id, ArmorCategoryId = armorCategoryId });
+            return builder.Add(new HaveCurrentArmorCategoryPrerequisite { Id = id, ArmorCategoryId = armorCategoryId });
         }
     }
 }

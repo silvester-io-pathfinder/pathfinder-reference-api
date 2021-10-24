@@ -1,6 +1,8 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -28,19 +30,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Innovations.Inst
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Choose one initial construct modification to apply to your innovation, either from the following or from other initial construct modifications to which you have access. These modifications alter the construct's abilities or form." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainAnyPrototypeConstructCompanion()
-            {
-                Id = Guid.Parse(""),
-            };
-
-            yield return new GainAnyInnovationModificationEffect
-            {
-                Id = Guid.Parse(""),
-                InnovationModificationTypeId = InnovationModificationTypes.Instances.Initial.ID
-            };
-
+            builder.GainAnyPrototypeConstructCompanion(Guid.Parse(""));
+            builder.GainAnyInnovationModification(Guid.Parse(""), InnovationModificationTypes.Instances.Initial.ID);
             //TODO: Add enhanced Command feat effect.
         }
 

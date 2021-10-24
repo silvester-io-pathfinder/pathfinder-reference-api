@@ -1,7 +1,8 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -28,20 +29,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ResearchFields.I
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "When throwing an alchemical bomb with the splash trait, you can deal splash damage to only your primary target instead of the usual splash area." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainAnyAlchemicalBombFormulaEffect
-            {
-                Id = Guid.Parse(""),
-                Level = 1
-            }; 
-            
-            yield return new GainAnyAlchemicalBombFormulaEffect
-            {
-                Id = Guid.Parse(""),
-                Level = 1
-            };
-
+            builder.GainAnyAlchemicalBombFormula(Guid.Parse(""), level: 1);
+            builder.GainAnyAlchemicalBombFormula(Guid.Parse(""), level: 1);
             //TODO: Add splash trait modification effect.
         }
 

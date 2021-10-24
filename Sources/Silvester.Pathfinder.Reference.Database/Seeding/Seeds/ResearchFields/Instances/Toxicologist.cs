@@ -1,7 +1,8 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -27,20 +28,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ResearchFields.I
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You specialize in toxins and venoms of all types. You start with the formulas for two common 1st-level alchemical poisons in your formula book, in addition to your other formulas. You can apply an injury poison you're holding to a weapon you're wielding as a single action, rather than as a 2-action activity, and you can change the DCs of your infused poisons to your class DC if it's higher." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainAnyMutagenFormulaEffect
-            {
-                Id = Guid.Parse(""),
-                Level = 1
-            };
-
-            yield return new GainAnyMutagenFormulaEffect
-            {
-                Id = Guid.Parse(""),
-                Level = 1
-            };
-
+            builder.GainAnyMutagenFormula(Guid.Parse(""), level: 1);
+            builder.GainAnyMutagenFormula(Guid.Parse(""), level: 1);
             //TODO: Add injury poison effect.
             //TODO: Add change DC effect.
         }

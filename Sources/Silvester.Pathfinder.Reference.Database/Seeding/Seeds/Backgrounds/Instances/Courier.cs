@@ -1,10 +1,12 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -27,43 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("4f97926d-0e42-45ce-a547-a827f0a283ff"), Type = TextBlockType.Text, Text = "In your youth, you earned coin running messages for persons of wealth and influence, darting through crowded cobblestone streets. Your dogged commitment to deliver your message was good training for the life of an adventurer." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("f138baa5-28bd-41ff-94a9-7853df6745ef"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("a3523fb5-f203-409a-a14f-0f36e37773f8"), StatId = Stats.Instances.Dexterity.ID },
-                    new StatEffectBinding{Id = Guid.Parse("17db942b-46fb-4f26-872c-082dd460e83a"), StatId = Stats.Instances.Intelligence.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Dexterity.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("8dc64c22-97d6-4a6d-a467-4f7ee15a321f")
-            };
-
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse("e8cd4d28-1490-45fc-9254-13f5bdbcf388"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Society.ID
-            };
-
-            yield return new GainSpecificLoreCategoryProficiencyEffect
-            {
-                Id = Guid.Parse("3ea9799c-ac87-419b-b41f-a1f16efb35be"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreCategoryId = LoreCategories.Instances.Settlements.ID,
-                Restrictions = "The chosen Lore skill must be for the city in which you were raised."
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("d5ae01d2-a0dd-4c8f-a2c7-7c51f44ca3fa"),
-                FeatId = Feats.General.GleanContentsFeat.ID
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
+            builder.GainSpecificLoreCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, LoreCategories.Instances.Settlements.ID, "The chosen Lore skill must be for the city in which you were raised.");
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.GleanContents.ID);
         }
 
         protected override SourcePage GetSourcePage()

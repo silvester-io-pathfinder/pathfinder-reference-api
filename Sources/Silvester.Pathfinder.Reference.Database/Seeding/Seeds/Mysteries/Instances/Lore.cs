@@ -1,4 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -38,6 +41,45 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries.Instan
         {
             yield return Domains.Instances.Knowledge.ID;
             yield return Domains.Instances.Truth.ID;
+        }
+
+        protected override void GetEffects(BooleanEffectBuilder builder)
+        {
+            //Mystery Benefits
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 1, spellSlotLevel: 1, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 3, spellSlotLevel: 2, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 5, spellSlotLevel: 3, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 7, spellSlotLevel: 4, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 9, spellSlotLevel: 5, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 11, spellSlotLevel: 6, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 13, spellSlotLevel: 7, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 15, spellSlotLevel: 8, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 17, spellSlotLevel: 9, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Guid.Parse(""), requiredLevel: 19, spellSlotLevel: 10, amount: 1, isSpendingPreventable: false);
+
+            //Trained Skill
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+            builder.GainAnyLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID);
+
+            //Granted Cantrip
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ReadAura.ID);
+
+            //Initial Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.BrainDrain.ID);
+
+            //Advanced Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.AccessLore.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificFeat(Guid.Parse(""), Feats.Instances.AdvancedRevelation.ID);
+                });
+
+            //Greater Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DreadSecret.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificFeat(Guid.Parse(""), Feats.Instances.GreaterRevelation.ID);
+                });
         }
 
         protected override MysteryCurse GetCurse()

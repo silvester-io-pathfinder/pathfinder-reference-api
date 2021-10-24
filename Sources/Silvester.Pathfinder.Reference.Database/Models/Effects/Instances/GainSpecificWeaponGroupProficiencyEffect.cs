@@ -1,8 +1,12 @@
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
 
-namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Instances
+namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 {
-    public class GainSpecificWeaponGroupProficiencyEffect : Effect
+    public class GainSpecificWeaponGroupProficiencyEffect : BaseEffect
     {
         public Guid ProficiencyId { get; set; }
         public Proficiency Proficiency { get; set; } = default!;
@@ -12,5 +16,13 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Instances
 
         public Guid WeaponCategoryId{ get; set; }
         public WeaponCategory WeaponCategory { get; set; } = default!;
+    }
+
+    public static partial class BooleanEffectBuilderExtensions
+    {
+        public static EffectBuilder GainSpecificWeaponGroupProficiency(this BooleanEffectBuilder builder, Guid id, Guid proficiencyId, Guid weaponGroupId, Guid weaponCategoryId)
+        {
+            return builder.Add(new GainSpecificWeaponGroupProficiencyEffect { Id = id, ProficiencyId = proficiencyId, WeaponGroupId = weaponGroupId, WeaponCategoryId = weaponCategoryId});
+        }
     }
 }

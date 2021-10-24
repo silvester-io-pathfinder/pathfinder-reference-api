@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -26,10 +27,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ArcaneTheses.Ins
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You gain one 1st-level metamagic wizard feat of your choice. Starting at 4th level, during your daily preparations, you can gain a metamagic wizard feat of your choice that has a level requirement of no more than half your level, which you can use until your next daily preparations." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificTraitSpellEffect { Id = Guid.Parse(""), TraitId = Traits.Instances.Metamagic.ID };
-            //TODO: Temporary metamagic wizard feat effect.
+            //TODO: Add effects.
         }
 
         protected override SourcePage GetSourcePage()

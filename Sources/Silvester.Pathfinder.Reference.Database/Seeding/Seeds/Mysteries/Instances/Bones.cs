@@ -1,4 +1,6 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -31,6 +33,35 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries.Instan
         protected override IEnumerable<TextBlock> GetBenefitBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("692d688c-38e6-4e87-b5cc-2bc78c17ec3f"), Type = TextBlockType.Text, Text = "You can cleverly leverage the subtleties of life and death to your benefit. Each day during your preparations, you can choose to align yourself in the confluence of positive and negative energy so as to gain negative healing, which means you are harmed by positive damage and healed by negative effects as if you were undead. If you already have negative healing, instead the DC of your recovery checks is equal to 9 + your current dying value." };
+        }
+
+        protected override void GetEffects(BooleanEffectBuilder builder)
+        {
+            //Mystery Benefits
+            //TODO: Add effect.
+
+            //Trained Skill
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Medicine.ID);
+
+            //Granted Cantrip
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ChillTouch.ID);
+
+            //Initial Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.SoulSiphon.ID);
+
+            //Advanced Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ArmorOfBones.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificFeat(Guid.Parse(""), Feats.Instances.AdvancedRevelation.ID);
+                });
+
+            //Greater Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ClaimUndead.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificFeat(Guid.Parse(""), Feats.Instances.GreaterRevelation.ID);
+                });
         }
 
         protected override IEnumerable<Guid> GetDomains()

@@ -1,11 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PlayModes.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -28,43 +30,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("7ea32318-8408-4144-95fd-8b852ad3d83b"), Type = TextBlockType.Text, Text = "You called the wilderness home as you found trails and guided travelers. Your wanderlust could have called you to the adventuring life, or perhaps you served as a scout for soldiers and found you liked battle." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("1e8701a0-e8e3-4c94-9a34-75d028a96d19"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("bafca9a5-3002-4891-b3ef-11ae8ce39607"), StatId = Stats.Instances.Dexterity.ID },
-                    new StatEffectBinding{Id = Guid.Parse("ee2706b1-7ad8-4f44-892f-1a25823709dd"), StatId = Stats.Instances.Wisdom.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Dexterity.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Wisdom.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("7656c4b8-e63b-483e-9fa6-641fedf5ae4b")
-            };
-
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse("6d041e53-7541-45e0-bb8e-71fd17d00d72"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Survival.ID
-            };
-
-            yield return new GainSpecificLoreCategoryProficiencyEffect
-            {
-                Id = Guid.Parse("fea108a8-ce19-4f91-9c0e-7a43e50775d4"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreCategoryId = LoreCategories.Instances.Terrains.ID,
-                Restrictions = "The chosen Lore skill must relate to a terrain you scouted in (such as Forest Lore or Cavern Lore)."
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("5f8e9380-042e-4b93-ab4f-5b832ac6394c"),
-                FeatId = Feats.General.ForagerFeat.ID
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
+            builder.GainSpecificLoreCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, LoreCategories.Instances.Terrains.ID, "The chosen Lore skill must relate to a terrain you scouted in (such as Forest Lore or Cavern Lore).");
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.Forager.ID);
         }
 
         protected override SourcePage GetSourcePage()

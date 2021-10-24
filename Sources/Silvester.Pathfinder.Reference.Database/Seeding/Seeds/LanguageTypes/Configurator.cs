@@ -1,4 +1,4 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
 using System.Linq.Expressions;
 

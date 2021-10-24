@@ -1,11 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Inventors
 {
@@ -28,10 +30,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.In
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You are constantly inventing, and your skill at crafting is unimpeachable. You gain the Inventor skill feat, even if you don't meet its prerequisites." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new DisableFeatPrerequisitesEffect { Id = Guid.Parse(""), FeatId = Feats.Instance.Inventor.ID };
-            yield return new GainSpecificFeatEffect { Id = Guid.Parse(""), FeatId = Feats.Instances.Inventor.ID };
+            builder.DisableFeatPrerequisites(Guid.Parse(""), Feats.Instances.Inventor.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.Inventor.ID);
         }
 
         protected override SourcePage GetSourcePage()

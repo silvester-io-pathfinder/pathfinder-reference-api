@@ -1,11 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -28,43 +30,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("81bb57fe-73db-4670-ba25-3f949b054c91"), Type = TextBlockType.Text, Text = "Reviled but required, you were sent when taxes were due. Performing your job might have required travel and persuasion, or perhaps you were responsible for collecting taxes on trade. Either way, it sometimes meant dirty hands, and adventuring seemed the next logical step to you." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("68806108-03c6-4051-a59f-b6904d2a7081"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("e498c531-4421-4ff5-9b27-36b75b712647"), StatId = Stats.Instances.Strength.ID },
-                    new StatEffectBinding{Id = Guid.Parse("ab689995-90ee-47cf-ba46-efe7811c5c69"), StatId = Stats.Instances.Charisma.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Strength.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Charisma.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("85e38e34-9fdb-430f-84ae-86da75bed1ac")
-            };
-
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse("af8aeb23-519a-4f37-9003-e475ed10ef9f"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Intimidation.ID
-            };
-
-            yield return new GainSpecificLoreCategoryProficiencyEffect
-            {
-                Id = Guid.Parse("c2dfe62a-bb09-44eb-bd0d-9fd53380419b"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreCategoryId = LoreCategories.Instances.Settlements.ID,
-                Restrictions = "The chosen Lore skill must be related to the settlement that employed you."
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("3987bda8-ce56-4a59-8365-20713f269846"),
-                FeatId = Feats.General.QuickCoercionFeat.ID
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+            builder.GainSpecificLoreCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, LoreCategories.Instances.Settlements.ID, "The chosen Lore skill must be related to the settlement that employed you.");
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.QuickCoercion.ID);
         }
 
         protected override SourcePage GetSourcePage()

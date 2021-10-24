@@ -1,8 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Extensions;
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System.Collections.Generic;
 
@@ -14,16 +17,28 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures
         {
             ClassFeature classFeature = GetClassFeature();
 
-            builder.AddEffects(GetEffects(), (e) => new ClassFeatureEffectBinding { ClauseFeatureId = classFeature.Id });
+            builder.AddEffect(classFeature, builder => GetEffectsInternal(builder, classFeature), (e) => e.EffectId); 
             builder.AddSourcePage(classFeature, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(classFeature, GetDetails(), e => e.Details);
 
             return classFeature;
         }
 
+        private void GetEffectsInternal(BooleanEffectBuilder builder, ClassFeature classFeature)
+        {
+            //Always adds the class feature's level as a prerequisite to the entire effect.
+            builder
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificLevel(classFeature.Id, Comparator.GreaterThanOrEqualTo, classFeature.Level);
+                });
+
+            GetEffects(builder);
+        }
+
         protected abstract SourcePage GetSourcePage();
         protected abstract ClassFeature GetClassFeature();
         protected abstract IEnumerable<TextBlock> GetDetails();
-        protected abstract IEnumerable<Effect> GetEffects();
+        protected abstract void GetEffects(BooleanEffectBuilder builder);
     }
 }

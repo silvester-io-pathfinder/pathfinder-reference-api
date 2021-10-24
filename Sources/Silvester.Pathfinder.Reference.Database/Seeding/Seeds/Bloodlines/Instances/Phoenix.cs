@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -33,21 +34,22 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Grant this new sorcerer bloodline to players who finish the Fists of the Ruby Phoenix Adventure Path. Players can then choose this bloodline for any new sorcerer characters they create for future campaigns." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Diplomacy.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Nature.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.RejuvenatingFlames.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DetectMagic.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.BurningHands.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.SeeInvisibility.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Fireball.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.RemoveCurse.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.BreathOfLife.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Disintegrate.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Contingency.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.MomentOfRenewal.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.MeteorSwarm.ID };
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
+
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.RejuvenatingFlames.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DetectMagic.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.BurningHands.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.SeeInvisibility.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Fireball.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.RemoveCurse.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.BreathOfLife.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Disintegrate.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Contingency.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.MomentOfRenewal.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.MeteorSwarm.ID);
         }
 
         protected override IEnumerable<Guid> GetSkills()

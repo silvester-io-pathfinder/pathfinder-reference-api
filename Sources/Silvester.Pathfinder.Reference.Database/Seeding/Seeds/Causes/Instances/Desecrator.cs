@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -31,19 +32,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "Subvert or corrupt everything in your path that is pure and good, and sow doubt among those upholding such ideals." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
-        {
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.SelfishShield.ID
-            };
 
-            yield return new GainSpecificSpellEffect
-            {
-                Id = Guid.Parse(""),
-                SpellId = Spells.Instances.TouchOfCorruption.ID
-            };
+        protected override void GetEffects(BooleanEffectBuilder builder)
+        {
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.SelfishShield.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TouchOfCorruption.ID);
         }
 
         protected override SourcePage GetSourcePage()

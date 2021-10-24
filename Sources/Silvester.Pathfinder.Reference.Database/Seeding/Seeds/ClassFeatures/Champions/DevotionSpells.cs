@@ -1,11 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Champions
 {
@@ -29,33 +31,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ch
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Focus spells are automatically heightened to half your level rounded up. Certain feats can give you more focus spells and increase the size of your focus pool, though your focus pool can never hold more than 3 Focus Points. The full rules are on page 300. You gain a devotion spell depending on your cause, and you are trained in divine spell attack rolls and spell DCs. Your spellcasting ability is Charisma." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSpellCastingEffect
-            {
-                Id = Guid.Parse(""),
-                MagicTraditionId = MagicTraditions.Instances.Divine.ID
-            };
-
-            yield return new GainFocusPoolPointEffect { Id = Guid.Parse("") };
-
-            yield return new GainSpecificSpellAttackProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Trained.ID
-            }; 
-            
-            yield return new GainSpecificSpellDcProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Trained.ID
-            };
-
-            yield return new GainSpellcastingAbilityEffect
-            {
-                Id = Guid.Parse(""),
-                StatId = Stats.Instances.Charisma.ID
-            };
+            builder.GainSpecificSpellCasting(Guid.Parse(""), MagicTraditions.Instances.Divine.ID);
+            builder.GainFocusPoolPoint(Guid.Parse(""));
+            builder.GainSpecificSpellAttackProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID);
+            builder.GainSpecificSpellDcProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID);
+            builder.GainSpellcastingAbility(Guid.Parse(""), Stats.Instances.Charisma.ID);
         }
 
         protected override SourcePage GetSourcePage()

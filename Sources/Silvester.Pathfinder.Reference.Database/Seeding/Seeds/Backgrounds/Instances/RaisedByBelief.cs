@@ -1,9 +1,12 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -26,36 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("ba1b2d41-e796-4c9c-8a95-5cbe8a1802cc"), Type = TextBlockType.Text, Text = "Whether in a monastery, a religious household, or just as part of your everyday life, your upbringing was steeped in the traditions of a faith or philosophy. You might remain committed or you may have turned from your childhood creed, but your skills are still founded in your devotion." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("704494b4-aa5d-4c15-9406-39801ca64f00"),
-                Restrictions = "The chosen ability must be listed in the Divine Ability entry for your deity."
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""), restrictions: "The chosen ability must be listed in the Divine Ability entry for your deity.");
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("810f5daf-86f8-4e1a-80e7-a397cb5a090c")
-            };
 
-            yield return new CombinedEffect
-            {
-                Id = Guid.Parse("cc625d22-aeaa-4334-9fcc-935d2ea79d44"),
-                Entries = new Effect[]
-                {
-                    new GainAnySkillProficiencyEffect { Id = Guid.Parse("3230757c-67bd-4faa-b434-cbde7c7360db"), ProficiencyId = Proficiencies.Instances.Trained.ID, Restrictions = "The chosen skill must be your deity's associated skill."},
-                    new GainSpecificFeatEffect { Id = Guid.Parse("f29c4b71-3631-4391-942c-64d8e9a70937"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The Assurance skill feat should relate to your deity's associated skill."}
-                }
-            };
-
-            yield return new GainSpecificLoreCategoryProficiencyEffect
-            {
-                Id = Guid.Parse("fb0accfe-d198-4cce-af67-d83b22142765"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreCategoryId = LoreCategories.Instances.Deities.ID,
-                Restrictions = "The chosen Lore skill must be associated with your deity (Abadar Lore, for instance)."
-            };
+            builder.GainAnySkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, "The chosen skill must be your deity's associated skill.");
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.Assurance.ID, "The Assurance skill feat should relate to your deity's associated skill.");
+            builder.GainSpecificLoreCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, LoreCategories.Instances.Deities.ID, "The chosen Lore skill must be associated with your deity (Abadar Lore, for instance).");
         }
 
         protected override SourcePage GetSourcePage()

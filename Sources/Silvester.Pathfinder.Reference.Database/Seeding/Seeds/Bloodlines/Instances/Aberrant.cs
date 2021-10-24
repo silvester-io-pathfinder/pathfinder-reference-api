@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -32,21 +33,22 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Something speaks to you from beyond the stars or below the earth. Ancient and unknowable, this alien influence presses against your mind." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Intimidation.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Occultism.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.TentacularLimbs.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Daze.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.SpiderSting.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.TouchOfIdiocy.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.VampiricTouch.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Confusion.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.BlackTentacles.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Feeblemind.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.WarpMind.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.UncontrollableDance.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.UnfathomableSong.ID };
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TentacularLimbs.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Daze.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.SpiderSting.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TouchOfIdiocy.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.VampiricTouch.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Confusion.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.BlackTentacles.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Feeblemind.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.WarpMind.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.UncontrollableDance.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.UnfathomableSong.ID);
         }
 
         protected override IEnumerable<Guid> GetSkills()

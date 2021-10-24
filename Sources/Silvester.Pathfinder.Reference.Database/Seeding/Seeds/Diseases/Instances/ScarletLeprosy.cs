@@ -1,4 +1,4 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Sources.Instances;
 using System;
 using System.Collections.Generic;

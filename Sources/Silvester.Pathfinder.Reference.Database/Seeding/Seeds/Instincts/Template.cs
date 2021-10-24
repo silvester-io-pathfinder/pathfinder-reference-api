@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Extensions;
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using System;
 using System.Collections.Generic;
@@ -17,8 +17,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts
             Instinct instinct = GetInstinct();
 
             builder.AddSourcePage(instinct, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffect(GetInstinctAbilityEffect(), new InstinctEffectBinding { InstinctId = instinct.Id });
-            builder.AddEffects(GetRagingEffects(), (effect) => new InstinctEffectBinding { InstinctId = instinct.Id });
+            builder.AddEffect(instinct, GetInstinctAbilityEffects, (instinct) => instinct.InstinctAbilityEffectId);
+            builder.AddEffect(instinct, GetRagingEffects, (instinct) => instinct.RagingEffectId);
             builder.AddTable(instinct, GetTable());
 
             return instinct;
@@ -26,8 +26,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts
 
         protected abstract Instinct GetInstinct();
         protected abstract SourcePage GetSourcePage();
-        protected abstract IEnumerable<Effect> GetRagingEffects();
-        protected abstract Effect GetInstinctAbilityEffect();
+        protected abstract void GetRagingEffects(BooleanEffectBuilder builder);
+        protected abstract void GetInstinctAbilityEffects(BooleanEffectBuilder builder);
 
         protected virtual Table? GetTable()
         {

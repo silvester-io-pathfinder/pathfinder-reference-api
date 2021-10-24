@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -32,21 +33,22 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Demons debase all they touch. One of your ancestors fell victim to their corruption, and you are burdened by that sin." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Intimidation.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Religion.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.GluttonsJaw.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.AcidSplash.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Fear.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Enlarge.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Slow.ID }; 
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DivineWrath.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.AbyssalPlague.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Disintegrate.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DivineDecree.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DivineAura.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Implosion.ID };
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Religion.ID);
+
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.GluttonsJaw.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.AcidSplash.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Fear.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enlarge.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Slow.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DivineWrath.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.AbyssalPlague.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Disintegrate.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DivineDecree.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DivineAura.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Implosion.ID);
         }
 
         protected override IEnumerable<Guid> GetSkills()

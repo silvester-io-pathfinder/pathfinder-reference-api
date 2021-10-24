@@ -1,9 +1,12 @@
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificFeatPrerequisite : Prerequisite
+    public class HaveSpecificFeatPrerequisite : BasePrerequisite
     {
         public Guid RequiredFeatId { get; set; }
         public Feat RequiredFeat { get; set; } = default!;
@@ -11,9 +14,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveSpecificFeat(this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid requiredFeatId)
+        public static PrerequisiteBuilder HaveSpecificFeat(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredFeatId)
         {
-            return builder.Add(bindingId, new HaveSpecificFeatPrerequisite { Id = id, RequiredFeatId = requiredFeatId });
+            return builder.Add(new HaveSpecificFeatPrerequisite { Id = id, RequiredFeatId = requiredFeatId });
         }
     }
 }

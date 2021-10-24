@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -32,21 +33,22 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "One of your ancestors was a mortal who mastered magic. Such magical blood can remain latent for generations, but in you it manifested in full." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Arcana.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Society.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.AncestralMemories.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DetectMagic.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.MagicMissile.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DispelMagic.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Haste.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DimensionDoor.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.PryingEye.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Disintegrate.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.PrismaticSpray.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Maze.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.PrismaticSphere.ID };
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Arcana.ID);
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
+
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.AncestralMemories.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DetectMagic.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.MagicMissile.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DispelMagic.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Haste.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DimensionDoor.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.PryingEye.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Disintegrate.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.PrismaticSpray.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Maze.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.PrismaticSphere.ID);
         }
 
         protected override IEnumerable<Guid> GetSkills()

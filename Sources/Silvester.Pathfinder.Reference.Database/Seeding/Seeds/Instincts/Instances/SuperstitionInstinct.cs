@@ -1,6 +1,8 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using System;
 using System.Collections.Generic;
 
@@ -23,56 +25,41 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
             };
         }
 
-        protected override Effect GetInstinctAbilityEffect()
+        protected override void GetInstinctAbilityEffects(BooleanEffectBuilder builder)
         {
-            return new GainSpecificInstinctAbilityEffect { Id = Guid.Parse(""), InstinctAbilityId = InstinctAbilities.Instances.SuperstitiousResilience.ID };
+            builder.GainSpecificInstinctAbility(Guid.Parse(""), InstinctAbilities.Instances.SuperstitiousResilience.ID);
         }
 
-        protected override IEnumerable<Effect> GetRagingEffects()
+        protected override void GetRagingEffects(BooleanEffectBuilder builder)
         {
-            yield return new ChoiceEffect
+            builder.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Bludgeoning.ID);
+
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse(""),
-                Entries = new Effect[]
+                or.AddAnd(Guid.Parse(""), and =>
                 {
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.ArcaneTradition.ID },
-                            new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.OccultTradition.ID },
-                        }
-                    },
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.ArcaneTradition.ID },
-                            new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.PrimalTradition.ID },
-                        }
-                    },
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.DivineTradition.ID },
-                            new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.OccultTradition.ID },
-                        }
-                    },
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse(""),
-                        Entries = new Effect[]
-                        {
-                            new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.DivineTradition.ID },
-                            new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.PrimalTradition.ID },
-                        }
-                    }
-                }
-            };
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.ArcaneTradition.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.OccultTradition.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.ArcaneTradition.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.PrimalTradition.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.DivineTradition.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.OccultTradition.ID);
+                });
+
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.DivineTradition.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.PrimalTradition.ID);
+                });
+            });
         }
 
         protected override SourcePage GetSourcePage()

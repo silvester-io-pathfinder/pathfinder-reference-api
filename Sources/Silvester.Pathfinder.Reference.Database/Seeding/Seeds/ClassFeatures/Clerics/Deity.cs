@@ -1,11 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Clerics
 {
@@ -33,12 +35,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Cl
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "If you perform enough acts that are anathema to your deity, or if your alignment changes to one not allowed by your deity, you lose the magical abilities that come from your connection to your deity. The class features that you lose are determined by the GM, but they likely include your divine font and all divine spellcasting. These abilities can be regained only if you demonstrate your repentance by conducting an atone ritual." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainAnyDeityEffect { Id = Guid.Parse("") };
-            yield return new GainDeityDivineSkillEffect { Id = Guid.Parse("") };
-            yield return new GainDeityFavoredWeaponProficiencyEffect { Id = Guid.Parse(""), ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainDeitySpells { Id = Guid.Parse("") };
+            //TODO: //TODO: Make this a ChoiceEffect instead.
+            builder.GainAnyDeity(Guid.Parse(""));
+            builder.GainDeityDivineSkill(Guid.Parse(""));
+            builder.GainDeityFavoredWeaponProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID);
+            builder.GainDeitySpells(Guid.Parse(""));
         }
 
 

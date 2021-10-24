@@ -1,11 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PlayModes.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -28,35 +30,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("4b9ac3e5-925d-4060-bd4d-a5f673c3e41e"), Type = TextBlockType.Text, Text = "You died and miraculously returned with knowledge of the realms beyond death and a stronger link to life. Some dead and undead souls might feel a strange, instinctual kinship with you." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("9a39495a-85cb-4df3-9de0-364a25f02723"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("cbe0a379-6ab8-4fb6-b095-b29406a00ab1"), StatId = Stats.Instances.Constitution.ID },
-                    new StatEffectBinding{Id = Guid.Parse("f8a720aa-69f1-42ba-9e6f-cc19960f29dc"), StatId = Stats.Instances.Wisdom.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Constitution.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Wisdom.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("fe050428-cbf5-43f1-a32c-a18cd1806269")
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("4a9b5c67-f478-4fb2-a93d-7d88e8b03348"),
-                FeatId = Feats.General.DiehardFeat.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("05b86921-f0ed-4301-82e8-1c67b2e298af"),
-                FeatId = Feats.General.AdditionalLoreFeat.ID,
-                Restrictions = "Must relate to Boneyard Lore."
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.Diehard.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.AdditionalLore.ID, "Must relate to Boneyard Lore.");
         }
 
         protected override SourcePage GetSourcePage()

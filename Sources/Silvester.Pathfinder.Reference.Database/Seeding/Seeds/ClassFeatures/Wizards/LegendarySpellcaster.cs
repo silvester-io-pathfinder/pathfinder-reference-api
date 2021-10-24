@@ -1,11 +1,14 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wizards
 {
@@ -28,45 +31,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You are a consummate spellcaster, with a comprehensive understanding of both arcane theory and practical spellcraft. Your proficiency ranks for arcane spell attack rolls and spell DCs increase to legendary." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSpellAttackProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Legendary.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 19
-                        }
-                    }
-                }
-            };
-
-            yield return new GainSpecificSpellDcProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Legendary.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 19
-                        }
-                    }
-                }
-            };
+            builder.GainSpecificSpellAttackProficiency(Guid.Parse(""), Proficiencies.Instances.Legendary.ID);
+            builder.GainSpecificSpellDcProficiency(Guid.Parse(""), Proficiencies.Instances.Legendary.ID);
         }
 
         protected override SourcePage GetSourcePage()

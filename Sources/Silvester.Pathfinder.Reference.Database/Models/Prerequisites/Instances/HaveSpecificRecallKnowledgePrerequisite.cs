@@ -1,9 +1,14 @@
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificRecallKnowledgePrerequisite : Prerequisite
+    public class HaveSpecificRecallKnowledgePrerequisite : BasePrerequisite
     {
         public Guid RequiredProficiencyId { get; set; }
         public Proficiency RequiredProficiency { get; set; } = default!;
@@ -13,9 +18,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveSpecificRecallKnowledge(this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid requiredProficiencyId, bool requiresAssurance)
+        public static PrerequisiteBuilder HaveSpecificRecallKnowledge(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredProficiencyId, bool requiresAssurance)
         {
-            return builder.Add(bindingId, new HaveSpecificRecallKnowledgePrerequisite { Id = id, RequiredProficiencyId = requiredProficiencyId, RequiresAssurance = requiresAssurance });
+            return builder.Add(new HaveSpecificRecallKnowledgePrerequisite { Id = id, RequiredProficiencyId = requiredProficiencyId, RequiresAssurance = requiresAssurance });
         }
     }
 }

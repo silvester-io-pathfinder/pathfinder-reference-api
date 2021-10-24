@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Extensions;
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -19,14 +19,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Methodologies
 
             builder.AddTextBlocks(methodology, GetDetails(), (e) => e.Details);
             builder.AddSourcePage(methodology, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffects(GetEffects(), (effect) => new MethodologyEffectBinding { MethodologyId = methodology.Id });
+            builder.AddEffect(methodology, GetEffects, methodology => methodology.EffectId);
 
             return methodology;
         }
 
         protected abstract Methodology GetMethodology();
         protected abstract SourcePage GetSourcePage();
-        protected abstract IEnumerable<Effect> GetEffects();
+        protected abstract void GetEffects(BooleanEffectBuilder builder);
         protected abstract IEnumerable<TextBlock> GetDetails();
     }
 }

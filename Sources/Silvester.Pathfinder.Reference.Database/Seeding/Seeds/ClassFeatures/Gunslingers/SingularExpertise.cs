@@ -1,12 +1,16 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
+
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Gunslingers
 {
@@ -30,134 +34,43 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Gu
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "This intense focus on firearms and crossbows prevents you from reaching the same heights with other weapons. Your proficiency with unarmed attacks and with weapons other than firearms and crossbows can't be higher than trained, even if you gain an ability that would increase your proficiency in one or more other weapons to match your highest weapon proficiency (such as the weapon expertise feats many ancestries have). If you have gunslinger weapon mastery, the limit is expert, and if you have gunslinging legend, the limit is master." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificWeaponGroupCircumstanceBonusEffect
-            {
-                Id = Guid.Parse(""),
-                WeaponGroupId = WeaponGroups.Instances.Firearm.ID,
-                RollType = RollType.Attack,
-                Bonus = 1
-            };
+            builder.GainSpecificWeaponGroupCircumstanceBonus(Guid.Parse(""), WeaponGroups.Instances.Firearm.ID, bonus: 1, RollType.Attack);
+            builder.GainSpecificWeaponGroupCircumstanceBonus(Guid.Parse(""), WeaponGroups.Instances.Crossbow.ID, bonus: 1, RollType.Attack);
 
-            yield return new GainSpecificWeaponGroupCircumstanceBonusEffect
-            {
-                Id = Guid.Parse(""),
-                WeaponGroupId = WeaponGroups.Instances.Crossbow.ID,
-                RollType = RollType.Attack,
-                Bonus = 1
-            };
-
-            yield return new CombinedEffect
-            {
-                Id = Guid.Parse(""),
-                Prerequisites = new[]
+            builder
+                .AddAnd(Guid.Parse(""), and =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.LessThan, RequiredLevel = 5 }
-                    }
-                },
-                Entries = new []
+                    and.GainSingularExpertise(Guid.Parse(""), WeaponGroups.Instances.Firearm.ID, Proficiencies.Instances.Trained.ID);
+                    and.GainSingularExpertise(Guid.Parse(""), WeaponGroups.Instances.Crossbow.ID, Proficiencies.Instances.Trained.ID);
+                })
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSingularExpertiseEffect
-                        {
-                            Id = Guid.Parse(""),
-                            WeaponGroupId = WeaponGroups.Instances.Crossbow.ID,
-                            HighestProficiencyId = Proficiencies.Instances.Trained.ID,
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.LessThan, requiredLevel: 5);
+                });
 
-                        }
-                    }, 
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSingularExpertiseEffect
-                        {
-                            Id = Guid.Parse(""),
-                            WeaponGroupId = WeaponGroups.Instances.Firearm.ID,
-                            HighestProficiencyId = Proficiencies.Instances.Trained.ID,
-                        }
-                    },
-                }
-            };
-
-            yield return new CombinedEffect
-            {
-                Id = Guid.Parse(""),
-                Prerequisites = new[]
+            builder
+                .AddAnd(Guid.Parse(""), and =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.LessThan, RequiredLevel = 13 }
-                    }
-                },
-                Entries = new[]
+                    and.GainSingularExpertise(Guid.Parse(""), WeaponGroups.Instances.Firearm.ID, Proficiencies.Instances.Expert.ID);
+                    and.GainSingularExpertise(Guid.Parse(""), WeaponGroups.Instances.Crossbow.ID, Proficiencies.Instances.Expert.ID);
+                })
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSingularExpertiseEffect
-                        {
-                            Id = Guid.Parse(""),
-                            WeaponGroupId = WeaponGroups.Instances.Crossbow.ID,
-                            HighestProficiencyId = Proficiencies.Instances.Expert.ID,
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.LessThan, requiredLevel: 13);
+                });
 
-                        }
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSingularExpertiseEffect
-                        {
-                            Id = Guid.Parse(""),
-                            WeaponGroupId = WeaponGroups.Instances.Firearm.ID,
-                            HighestProficiencyId = Proficiencies.Instances.Expert.ID,
-                        }
-                    },
-                }
-            };
-
-            yield return new CombinedEffect
-            {
-                Id = Guid.Parse(""),
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 13 }
-                    }
-                },
-                Entries = new[]
-                {
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSingularExpertiseEffect
-                        {
-                            Id = Guid.Parse(""),
-                            WeaponGroupId = WeaponGroups.Instances.Crossbow.ID,
-                            HighestProficiencyId = Proficiencies.Instances.Master.ID,
-
-                        }
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSingularExpertiseEffect
-                        {
-                            Id = Guid.Parse(""),
-                            WeaponGroupId = WeaponGroups.Instances.Firearm.ID,
-                            HighestProficiencyId = Proficiencies.Instances.Master.ID,
-                        }
-                    },
-                }
-            };
+            builder
+              .AddAnd(Guid.Parse(""), and =>
+              {
+                  and.GainSingularExpertise(Guid.Parse(""), WeaponGroups.Instances.Firearm.ID, Proficiencies.Instances.Master.ID);
+                  and.GainSingularExpertise(Guid.Parse(""), WeaponGroups.Instances.Crossbow.ID, Proficiencies.Instances.Master.ID);
+              })
+              .AddPrerequisites(Guid.Parse(""), prerequisites =>
+              {
+                  prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 13);
+              });
         }
 
         protected override SourcePage GetSourcePage()

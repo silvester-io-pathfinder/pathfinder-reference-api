@@ -1,6 +1,8 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using System;
 using System.Collections.Generic;
 
@@ -23,29 +25,21 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
             };
         }
 
-        protected override Effect GetInstinctAbilityEffect()
+        protected override void GetInstinctAbilityEffects(BooleanEffectBuilder builder)
         {
-            return new GainSpecificInstinctAbilityEffect { Id = Guid.Parse(""), InstinctAbilityId = InstinctAbilities.Instances.TitanMauler.ID };
+            builder.GainSpecificInstinctAbility(Guid.Parse(""), InstinctAbilities.Instances.TitanMauler.ID);
         }
-        
-        protected override IEnumerable<Effect> GetRagingEffects()
-        {
-            yield return new GainSpecificDamageResistanceEffect 
-            { 
-                Id = Guid.Parse(""),
-                DamageTypeId = DamageTypes.Instances.Bludgeoning.ID 
-            };
 
-            yield return new ChoiceEffect
+        protected override void GetRagingEffects(BooleanEffectBuilder builder)
+        {
+            builder.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Bludgeoning.ID);
+
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse(""),
-                Entries = new Effect[]
-                {
-                    new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Cold.ID },
-                    new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Electricity.ID },
-                    new GainSpecificDamageResistanceEffect { Id = Guid.Parse(""), DamageTypeId = DamageTypes.Instances.Fire.ID },
-                }
-            };
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID);
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID);
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID);
+            });
         }
 
         protected override SourcePage GetSourcePage()

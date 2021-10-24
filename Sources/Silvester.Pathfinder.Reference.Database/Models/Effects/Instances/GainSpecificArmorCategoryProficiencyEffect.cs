@@ -1,9 +1,12 @@
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
 
-namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Instances
+namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 {
-    public class GainSpecificArmorCategoryProficiencyEffect : Effect
+    public class GainSpecificArmorCategoryProficiencyEffect : BaseEffect
     {
         public Guid ArmorCategoryId { get; set; }
         public ArmorCategory ArmorCategory { get; set; } = default!;
@@ -12,13 +15,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Instances
         public Proficiency Proficiency { get; set; } = default!;
     }
 
-    public static partial class EffectCollectionBuilderExtensions
+    public static partial class BooleanEffectBuilderExtensions
     {
-        public static EffectCollectionBuilder<TConcrete, TBinding> GainSpecificArmorCategoryProficiency<TConcrete, TBinding>(this EffectCollectionBuilder<TConcrete, TBinding> builder, Guid bindingId, Guid id, Guid armorCategoryId, Guid proficiencyId, Action<EffectBuilder>? configureAction = null)
-            where TConcrete : Effect, IEffectCollection<TBinding>
-            where TBinding : BaseEffectBinding, new()
+        public static EffectBuilder GainSpecificArmorCategoryProficiency(this BooleanEffectBuilder builder, Guid id, Guid proficiencyId, Guid armorCategoryId )
         {
-            return builder.Add(bindingId, new GainSpecificArmorCategoryProficiencyEffect { Id = id, ArmorCategoryId = armorCategoryId, ProficiencyId = proficiencyId }, configureAction);
+            return builder.Add(new GainSpecificArmorCategoryProficiencyEffect { Id = id, ProficiencyId = proficiencyId, ArmorCategoryId = armorCategoryId });
         }
     }
 }

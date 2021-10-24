@@ -1,9 +1,13 @@
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificBloodlineTraditionPrerequisite : Prerequisite
+    public class HaveSpecificBloodlineTraditionPrerequisite : BasePrerequisite
     {
         public Guid RequiredBloodlineMagicTraditionId { get; set; }
         public MagicTradition RequiredBloodlineMagicTradition { get; set; } = default!;
@@ -11,9 +15,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveSpecificBloodlineTradition(this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid requiredBloodlineMagicTraditionId)
+        public static PrerequisiteBuilder HaveSpecificBloodlineTradition(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredBloodlineMagicTraditionId)
         {
-            return builder.Add(bindingId, new HaveSpecificBloodlineTraditionPrerequisite { Id = id, RequiredBloodlineMagicTraditionId = requiredBloodlineMagicTraditionId });
+            return builder.Add(new HaveSpecificBloodlineTraditionPrerequisite { Id = id, RequiredBloodlineMagicTraditionId = requiredBloodlineMagicTraditionId });
         }
     }
 }

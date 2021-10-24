@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Extensions;
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -18,13 +18,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DruidicOrders
             DruidicOrder order = GetDruidicOrder();
 
             builder.AddSourcePage(order, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffects(GetEffects(), (effect) => new DruidicOrderEffectBinding { DruidicOrderId = order.Id });
+            builder.AddEffect(order, GetEffects, (order) => order.EffectId);
 
             return order;
         }
 
         protected abstract DruidicOrder GetDruidicOrder();
         protected abstract SourcePage GetSourcePage();
-        protected abstract IEnumerable<Effect> GetEffects();
+        protected abstract void GetEffects(BooleanEffectBuilder builder);
     }
 }

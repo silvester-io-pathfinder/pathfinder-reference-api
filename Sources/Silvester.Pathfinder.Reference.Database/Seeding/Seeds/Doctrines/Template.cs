@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Extensions;
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -16,13 +17,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Doctrines
             Doctrine doctrine = GetDoctrine();
 
             builder.AddSourcePage(doctrine, GetSourcePage(), e => e.SourcePageId);
-            builder.AddEffects(GetEffects(), (e) => new DoctrineEffectBinding { DoctrineId = doctrine.Id });
+            builder.AddEffect(doctrine, GetEffects, doctrine => doctrine.EffectId);
 
             return doctrine;
         }
 
         public abstract Doctrine GetDoctrine();
         public abstract SourcePage GetSourcePage();
-        public abstract IEnumerable<Effect> GetEffects();
+        public abstract void GetEffects(BooleanEffectBuilder builder);
     }
 }

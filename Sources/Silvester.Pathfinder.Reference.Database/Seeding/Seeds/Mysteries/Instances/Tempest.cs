@@ -1,4 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -38,6 +41,35 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries.Instan
         {
             yield return Domains.Instances.Air.ID;
             yield return Domains.Instances.Water.ID;
+        }
+
+        protected override void GetEffects(BooleanEffectBuilder builder)
+        {
+            //Mystery Benefits
+            //TODO: Add effects.
+
+            //Trained Skill
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
+
+            //Granted Cantrip
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.ElectricArc.ID);
+
+            //Initial Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TempestTouch.ID);
+
+            //Advanced Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Thunderburst.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificFeat(Guid.Parse(""), Feats.Instances.AdvancedRevelation.ID);
+                });
+
+            //Greater Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TempestForm.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificFeat(Guid.Parse(""), Feats.Instances.GreaterRevelation.ID);
+                });
         }
 
         protected override MysteryCurse GetCurse()

@@ -1,9 +1,13 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -31,41 +35,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return Traits.Instances.Aasimar.ID;
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainAnyHarrowEffect
+            builder.GainAnyHarrow(Guid.Parse(""));
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("15cfd57b-e027-456c-9a4f-3bf7d905aa80"),
-            };
+                or.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+                or.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Performance.ID);
+                or.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("8b273ad8-f564-4048-9811-daba227c566a")
-            };
-
-            yield return new ChoiceEffect
-            {
-                Id = Guid.Parse("1c2a23a6-a2ee-4d83-a75a-b2f61a1b8a62"),
-                Entries = new Effect[]
-                {
-                    new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("e2cd6901-17f7-4f6d-b960-9e090f43c865"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Occultism.ID },
-                    new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("92944cf8-0a7d-4f3c-be0d-5b38ea0ac8d5"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Performance.ID },
-                    new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("c45efea0-28c2-4943-9b87-273d7b8b62f2"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Society.ID }
-                }
-            };
-
-            yield return new GainSpecificLoreProficiencyEffect
-            {
-                Id = Guid.Parse("63618d77-da6a-46b1-9d4d-697cec31ec23"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreId = Lores.Instances.Harrow.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("46cdb645-5894-4f66-bd3b-9f976b496696"),
-                FeatId = Feats.General.DubiousKnowledgeFeat.ID
-            };
+            builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Harrow.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.DubiousKnowledge.ID);
         }
 
         protected override SourcePage GetSourcePage()

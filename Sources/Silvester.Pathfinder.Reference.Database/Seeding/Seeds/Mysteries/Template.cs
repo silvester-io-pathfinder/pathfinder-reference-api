@@ -1,6 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Extensions;
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -17,13 +20,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries
             builder.AddSourcePage(mystery, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(mystery, GetDetailBlocks(), (c) => c.Details);
             builder.AddTextBlocks(mystery, GetBenefitBlocks(), (e) => e.MysteryBenefits);
+            builder.AddEffect(mystery, GetEffects, mystery => mystery.EffectId);
             builder.HasJoinData<Mystery, Domain>(mystery, GetDomains());
-
 
             SeedCurse(builder, mystery);
 
             return mystery;
         }
+
 
         private void SeedCurse(ModelBuilder builder, Mystery mystery)
         {
@@ -53,11 +57,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries
             builder.AddData(curse);
         }
 
-        protected abstract IEnumerable<TextBlock> GetBenefitBlocks();
-        protected abstract IEnumerable<Guid> GetDomains();
-        protected abstract MysteryCurse GetCurse();
         protected abstract Mystery GetMystery();
+        protected abstract MysteryCurse GetCurse();
         protected abstract SourcePage GetSourcePage();
+        protected abstract IEnumerable<TextBlock> GetBenefitBlocks();
         protected abstract IEnumerable<TextBlock> GetDetailBlocks();
+        protected abstract IEnumerable<Guid> GetDomains();
+        protected abstract void GetEffects(BooleanEffectBuilder builder);
     }
 }

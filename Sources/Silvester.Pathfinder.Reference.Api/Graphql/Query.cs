@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Reference.Api.Graphql.Searching;
 using Silvester.Pathfinder.Reference.Api.Graphql.Searching.Models;
 using Silvester.Pathfinder.Reference.Database;
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

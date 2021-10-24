@@ -1,10 +1,12 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -27,49 +29,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("e579f108-7e23-447a-b127-6b5bf9c00b7b"), Type = TextBlockType.Text, Text = "You come from a different time. Whether by your own doing or a terrible accident, powerful magic has resulted in you coming to this time from the future or from the past, but you are unable to return. You might be from New Thassilon, an entire nation of time travelers." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("0b0d61d0-0041-40ca-94b8-b81effeeec7d"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("6012c804-55b2-4503-86c3-b1b61a0b222f"), StatId = Stats.Instances.Dexterity.ID },
-                    new StatEffectBinding{Id = Guid.Parse("7659ed91-70a4-47c6-a584-661b7a2ad0db"), StatId = Stats.Instances.Intelligence.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Dexterity.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+            });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("9f828174-220e-4bec-9a4b-ac2f91cacd64")
-            };
-
-            yield return new GainAnyLoreProficiencyEffect
-            {
-                Id = Guid.Parse("e21133fe-5a63-4a90-8b61-fd077508066e"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                Restrictions = "The chosen Lore skill must be related to your own time."
-            };
-
-            yield return new GainAnyLoreProficiencyEffect
-            {
-                Id = Guid.Parse("93a0e512-a50c-4f95-bec1-0bfe359779d5"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                Restrictions = "The chosen Lore skill must be related to your own time."
-            };
-
-            yield return new GainAnyLoreProficiencyEffect
-            {
-                Id = Guid.Parse("f4a899fd-6d52-4f4d-993e-30b1de69329b"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                Restrictions = "The chosen Lore skill must be related to your own time."
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("91fbfaa0-06c9-4cb8-873e-f05fca096488"),
-                FeatId = Feats.Special.BendTimeFeat.ID
-            };
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+            builder.GainAnyLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, "The chosen Lore skill must be related to your own time.");
+            builder.GainAnyLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, "The chosen Lore skill must be related to your own time.");
+            builder.GainAnyLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, "The chosen Lore skill must be related to your own time.");
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.BendTime.ID);
         }
 
         protected override SourcePage GetSourcePage()

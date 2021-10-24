@@ -1,4 +1,4 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SpellTypes.Instances

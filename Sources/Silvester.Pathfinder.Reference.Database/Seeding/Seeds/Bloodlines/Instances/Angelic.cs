@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -31,22 +32,23 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
         {
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "One of your forebears hailed from a celestial realm, or your ancestors’ devotion led to their lineage being blessed." };
         }
-
-        protected override IEnumerable<Effect> GetEffects()
+        
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Diplomacy.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Religion.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.AngelicHalo.ID }; 
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Light.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Heal.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.SpiritualWeapon.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.SearingLight.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DivineWrath.ID}; 
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.FlameStrike.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.BladeBarrier.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DivineDecree.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.DivineAura.ID };
-            yield return new GainSpecificSpellEffect {Id = Guid.Parse(""), SpellId = Spells.Instances.Foresight.ID };
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Religion.ID);
+
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.AngelicHalo.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Light.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Heal.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.SpiritualWeapon.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.SearingLight.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DivineWrath.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.FlameStrike.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.BladeBarrier.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DivineDecree.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DivineAura.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Foresight.ID);
         }
 
         protected override IEnumerable<Guid> GetSkills()

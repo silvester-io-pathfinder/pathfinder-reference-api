@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 using System;
@@ -65,6 +65,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Hazard> Hazards { get; set; } = default!;
         public DbSet<HazardType> HazardTypes { get; set; } = default!;
         public DbSet<Heritage> Heritages { get; set; } = default!;
+        public DbSet<HuntersEdge> HuntersEdges { get; set; } = default!;
         public DbSet<HybridStudy> HybridStudies { get; set; } = default!;
         public DbSet<Instinct> Instincts { get; set; } = default!;
         public DbSet<Innovation> Innovations { get; set; } = default!;
@@ -94,7 +95,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<PreciousMaterialItemCategory> PreciousMaterialItemCategories { get; set; } = default!;
         public DbSet<PreciousMaterialShield> PreciousMaterialShields{ get; set; } = default!;
         public DbSet<PreciousMaterialWeapon> PreciousMaterialWeapons { get; set; } = default!;
-        public DbSet<Prerequisite> Prerequisites { get; set; } = default!;
+        public DbSet<BasePrerequisite> Prerequisites { get; set; } = default!;
         public DbSet<Proficiency> Proficiencies { get; set; } = default!;
         public DbSet<AncestrySize> AncestrySizes { get; set; } = default!;
         public DbSet<RangedWeapon> RangedWeapons { get; set; } = default!;

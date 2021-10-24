@@ -1,9 +1,14 @@
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificDeityPrerequisite : Prerequisite
+    public class HaveSpecificDeityPrerequisite : BasePrerequisite
     {
         public Guid RequiredDeityId { get; set; }
         public Deity RequiredDeity { get; set; } = default!;
@@ -11,9 +16,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveSpecificDeity(this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid requiredDeityId)
+        public static PrerequisiteBuilder HaveSpecificDeity(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredDeityId)
         {
-            return builder.Add(bindingId, new HaveSpecificDeityPrerequisite { Id = id, RequiredDeityId = requiredDeityId });
+            return builder.Add(new HaveSpecificDeityPrerequisite { Id = id, RequiredDeityId = requiredDeityId });
         }
     }
 }

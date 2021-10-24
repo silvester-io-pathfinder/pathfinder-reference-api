@@ -1,9 +1,13 @@
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificAncestryPrerequisite : Prerequisite
+    public class HaveSpecificAncestryPrerequisite : BasePrerequisite
     {
         public Guid RequiredAncestryId { get; set; }
         public Ancestry RequiredAncestry { get; set; } = default!;
@@ -11,9 +15,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveSpecificAncestry(this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid requiredAncestryId)
+        public static PrerequisiteBuilder HaveSpecificAncestry(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredAncestryId)
         {
-            return builder.Add(bindingId, new HaveSpecificAncestryPrerequisite { Id = id, RequiredAncestryId = requiredAncestryId });
+            return builder.Add(new HaveSpecificAncestryPrerequisite { Id = id, RequiredAncestryId = requiredAncestryId });
         }
     }
 }

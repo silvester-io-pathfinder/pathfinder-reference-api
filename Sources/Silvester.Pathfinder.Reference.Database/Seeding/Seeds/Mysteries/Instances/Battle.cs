@@ -1,7 +1,22 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.EffectIncrements.Instances;
+using Silvester.Pathfinder.Reference.Database.EffectIncrements.Triggers.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements;
+using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Triggers.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
+
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Choices.Instances;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries.Instances
 {
@@ -38,6 +53,62 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries.Instan
         {
             yield return Domains.Instances.Might.ID;
             yield return Domains.Instances.Zeal.ID;
+        }
+
+        protected override void GetEffects(BooleanEffectBuilder builder)
+        {
+            //Mystery Benefits: Trained in Medium and Heavy armor.
+            builder.AddAnd(Guid.Parse(""), and => 
+            {
+                and.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.MediumArmor.ID)
+                    .AddIncrements(increments =>
+                    {
+                        increments.IncreaseProficiencyTo(Guid.Parse(""), Proficiencies.Instances.Expert.ID, new LevelTrigger { Id = Guid.Parse(""), Level = 13 });
+                    });
+                and.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.HeavyArmor.ID)
+                    .AddIncrements(increments =>
+                    {
+                        increments.IncreaseProficiencyTo(Guid.Parse(""), Proficiencies.Instances.Expert.ID, new LevelTrigger { Id = Guid.Parse(""), Level = 13 });
+                    });
+            });
+
+            builder.ChooseAnyWeaponGroup(Guid.Parse(""), Guid.Parse(""), and => 
+            {
+                and.GainChosenWeaponGroupProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Martial.ID);
+                and.GainChosenWeaponGroupProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, WeaponCategories.Instances.Martial.ID)
+                   .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                   {
+                       prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 11);
+                   }); 
+                and.GainChosenWeaponGroupProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Advanced.ID)
+                    .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                    {
+                        prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 11);
+                    });
+            });
+
+            //Trained Skill
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
+
+            //Granted Cantrip
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Shield.ID);
+
+            //Initial Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.CallToArms.ID);
+
+            //Advanced Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.BattlefieldPersistence.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificFeat(Guid.Parse(""), Feats.Instances.AdvancedRevelation.ID);
+                });
+
+            //Greater Revelation Spell
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.HeroicFeat.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                {
+                    prerequisites.HaveSpecificFeat(Guid.Parse(""), Feats.Instances.GreaterRevelation.ID);
+                });
         }
 
         protected override MysteryCurse GetCurse()

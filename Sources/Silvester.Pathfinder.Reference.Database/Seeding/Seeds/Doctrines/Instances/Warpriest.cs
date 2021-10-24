@@ -1,8 +1,11 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -24,266 +27,83 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Doctrines.Instan
             };
         }
 
-        public override IEnumerable<Effect> GetEffects()
+        public override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new CombinedEffect
+            builder.AddAnd(Guid.Parse(""), and => 
             {
-                Id = Guid.Parse(""),
-                Name = "First Doctrine",
-                Entries = new[]
-                {
-                    new CombinedEffectBinding
+                and.Name("First Doctrine");
+                and.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.LightArmor.ID);
+                and.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.MediumArmor.ID);
+                and.GainSpecificSavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, SavingThrowStats.Instances.Fortitude.ID);
+                and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.ShieldBlock.ID);
+                and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.DeadlySimplicity.ID)
+                    .AddPrerequisites(Guid.Parse(""), prerequisites => 
                     {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificArmorCategoryProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Trained.ID,
-                            ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID
-                        }
-                    },
-                    new CombinedEffectBinding
+                        prerequisites.HaveSpecificDeityWeaponCategory(Guid.Parse(""), WeaponCategories.Instances.Simple.ID);
+                    });
+                and.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.LightArmor.ID)
+                    .AddPrerequisites(Guid.Parse(""), prerequisites =>
                     {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificArmorCategoryProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Trained.ID,
-                            ArmorCategoryId = ArmorCategories.Instances.MediumArmor.ID
-                        }
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSavingThrowProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Expert.ID,
-                            SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID
-                        }
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificFeatEffect
-                        {
-                            Id = Guid.Parse(""),
-                            FeatId = Feats.Instances.ShieldBlock.ID
-                        }
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificFeatEffect
-                        {
-                            Id = Guid.Parse(""),
-                            FeatId = Feats.Instances.DeadlySimplicity.ID,
-                            Prerequisites = new []
-                            {
-                                new EffectPrerequisiteBinding
-                                {
-                                    Id = Guid.Parse(""),
-                                    Prerequisite = new HaveSpecificDeityWeaponCategoryPrerequisite {Id = Guid.Parse(""), WeaponCategoryId = WeaponCategories.Instances.Simple.ID }
-                                }
-                            }
-                        },
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificArmorCategoryProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Expert.ID,
-                            ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID,
-                            Prerequisites = new [] 
-                            {
-                                new EffectPrerequisiteBinding 
-                                {
-                                    Id = Guid.Parse(""), 
-                                    Prerequisite = new HaveSpecificLevelPrerequisite {Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 13 }
-                                }
-                            }
-                        },
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificArmorCategoryProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Expert.ID,
-                            ArmorCategoryId = ArmorCategories.Instances.MediumArmor.ID,
-                            Prerequisites = new []
-                            {
-                                new EffectPrerequisiteBinding
-                                {
-                                    Id = Guid.Parse(""),
-                                    Prerequisite = new HaveSpecificLevelPrerequisite {Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 13 }
-                                }
-                            }
-                        }
-                    },
-                }
-            };
+                        prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 13);
+                    });
+                and.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.MediumArmor.ID)
+                   .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                   {
+                       prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 13);
+                   });
+            });
 
-            yield return new GainSpecificWeaponCategoryProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                Name = "Second Doctrine",
-                WeaponCategoryId = WeaponCategories.Instances.Martial.ID,
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 3 }
-                    }
-                }
-            };
 
-            yield return new CombinedEffect
-            {
-                Id = Guid.Parse(""),
-                Name = "Third Doctrine",
-                Prerequisites = new[]
+            builder.GainSpecificWeaponCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Martial.ID)
+                .Name("Second Doctrine")
+                .AddPrerequisites(Guid.Parse(""), prerequisites => 
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 7 }
-                    }
-                },
-                Entries = new[]
-                {
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainDeityFavoredWeaponProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Expert.ID,
-                        }
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainDeityFavoredWeaponSpecializationEffect
-                        {
-                            Id = Guid.Parse(""),
-                        }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 3);
+                });
 
-            yield return new CombinedEffect
+            builder.AddAnd(Guid.Parse(""), and =>
             {
-                Id = Guid.Parse(""),
-                Name = "Fourth Doctrine",
-                Prerequisites = new[]
+                and.Name("Third Doctrine");
+                and.AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11 }
-                    }
-                },
-                Entries = new[]
-                {
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSpellAttackProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Expert.ID,
-                        }
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSpellDcProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Expert.ID,
-                        }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 7);
+                });
+                and.GainDeityFavoredWeaponProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID);
+                and.GainDeityFavoredWeaponSpecialization(Guid.Parse(""));
+            });
 
-            yield return new CombinedEffect
+            builder.AddAnd(Guid.Parse(""), and =>
             {
-                Id = Guid.Parse(""),
-                Name = "Fifth Doctrine",
-                Prerequisites = new[]
+                and.Name("Fourth Doctrine");
+                and.AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 15 }
-                    }
-                },
-                Entries = new[]
-                {
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSavingThrowProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Master.ID,
-                            SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID
-                        }
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new ModifySpecificSavingThrowEffect
-                        {
-                            Id = Guid.Parse(""),
-                            InitialResult = RollResult.Success,
-                            Becomes = RollResult.CriticalSuccess,
-                            SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID
-                        }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 11);
+                });
+                and.GainSpecificSpellAttackProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID);
+                and.GainSpecificSpellDcProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID);
+            });
 
-            yield return new CombinedEffect
+            builder.AddAnd(Guid.Parse(""), and =>
             {
-                Id = Guid.Parse(""),
-                Name = "Final Doctrine",
-                Prerequisites = new[]
+                and.Name("Fifth Doctrine");
+                and.AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 19 }
-                    }
-                },
-                Entries = new[]
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 15);
+                });
+                and.GainSpecificSavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID, SavingThrowStats.Instances.Fortitude.ID);
+                and.ModifySpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Fortitude.ID, RollResult.Success, becomes: RollResult.CriticalSuccess);
+            });
+
+            builder.AddAnd(Guid.Parse(""), and =>
+            {
+                and.Name("Final Doctrine");
+                and.AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSpellAttackProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Master.ID,
-                        }
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainSpecificSpellDcProficiencyEffect
-                        {
-                            Id = Guid.Parse(""),
-                            ProficiencyId = Proficiencies.Instances.Master.ID,
-                        }
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 19);
+                });
+                and.GainSpecificSpellAttackProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID);
+                and.GainSpecificSpellDcProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID);
+            });
         }
 
         public override SourcePage GetSourcePage()

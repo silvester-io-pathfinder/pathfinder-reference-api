@@ -1,9 +1,14 @@
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificSensePrerequisite : Prerequisite
+    public class HaveSpecificSensePrerequisite : BasePrerequisite
     {
         public Guid RequiredSenseId { get; set; } 
         public Sense RequiredSense { get; set; } = default!;
@@ -11,9 +16,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveSpecificSense(this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid requiredSenseId)
+        public static PrerequisiteBuilder HaveSpecificSense(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredSenseId)
         {
-            return builder.Add(bindingId, new HaveSpecificSensePrerequisite { Id = id, RequiredSenseId = requiredSenseId});
+            return builder.Add(new HaveSpecificSensePrerequisite { Id = id, RequiredSenseId = requiredSenseId});
         }
     }
 }

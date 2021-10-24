@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -32,19 +33,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Enumeration, Text = "You must destroy that which offends you and that which stands in your way, including—and perhaps especially—the forces of good and law that oppose you. This tenet doesn't force you to take action immediately if it could mean your destruction, nor does it require you to destroy something that might be useful if corrupted toward your ends." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse(""),
-                FeatId = Feats.Instances.DestructiveVengeance.ID
-            };
-
-            yield return new GainSpecificSpellEffect
-            {
-                Id = Guid.Parse(""),
-                SpellId = Spells.Instances.TouchOfCorruption.ID
-            };
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.DestructiveVengeance.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TouchOfCorruption.ID);
         }
 
         protected override SourcePage GetSourcePage()

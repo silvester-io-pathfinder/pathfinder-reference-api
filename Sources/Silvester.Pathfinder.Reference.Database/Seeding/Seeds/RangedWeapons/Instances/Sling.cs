@@ -1,4 +1,4 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ammunitions.Instances;
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bulks.Instances;
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DamageTypes.Instances;

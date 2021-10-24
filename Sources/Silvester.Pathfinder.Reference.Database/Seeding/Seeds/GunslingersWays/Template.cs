@@ -1,15 +1,16 @@
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Extensions;
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays
 {
@@ -21,8 +22,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays
 
             builder.AddTextBlocks(way, GetDetails(), (e) => e.Details);
             builder.AddSourcePage(way, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffects(GetEffects(), (effect) => new GunslingersWayEffectBinding { GunslingersWayId = way.Id });
-            builder.AddPrerequisites(GetPrerequisites(), () => new GunslingersWayPrerequisiteBinding { GunslingersWayId = way.Id });
+            builder.AddEffect(way, GetEffects, (way) => way.EffectId);
+            builder.AddPrerequisite(way, GetPrerequisites);
 
             foreach(Guid skillId in GetWaySkills())
             {
@@ -35,12 +36,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays
         protected abstract GunslingersWay GetGunslingersWay();
         protected abstract SourcePage GetSourcePage();
         protected abstract IEnumerable<Guid> GetWaySkills();
-        protected abstract IEnumerable<Effect> GetEffects();
+        protected abstract void GetEffects(BooleanEffectBuilder builder);
         protected abstract IEnumerable<TextBlock> GetDetails();
 
-        protected virtual IEnumerable<Prerequisite> GetPrerequisites()
+        protected virtual void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         {
-            yield break;
+
         }
     }
 }

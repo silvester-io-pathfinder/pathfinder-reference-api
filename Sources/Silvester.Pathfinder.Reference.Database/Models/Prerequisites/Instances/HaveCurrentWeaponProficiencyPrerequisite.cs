@@ -1,9 +1,14 @@
 ﻿using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveCurrentWeaponProficiencyPrerequisite : Prerequisite
+    public class HaveCurrentWeaponProficiencyPrerequisite : BasePrerequisite
     {
         public Guid RequiredProficiencyId { get; set; }
         public Proficiency RequiredProficiency { get; set; } = default!;
@@ -13,9 +18,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveCurrentWeaponProficiency (this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Comparator comparator, Guid requiredProficiencyId)
+        public static PrerequisiteBuilder HaveCurrentWeaponProficiency (this BooleanPrerequisiteBuilder builder, Guid id, Comparator comparator, Guid requiredProficiencyId)
         {
-            return builder.Add(bindingId, new HaveCurrentWeaponProficiencyPrerequisite { Id = id, Comparator = comparator, RequiredProficiencyId = requiredProficiencyId });
+            return builder.Add(new HaveCurrentWeaponProficiencyPrerequisite { Id = id, Comparator = comparator, RequiredProficiencyId = requiredProficiencyId });
         }
     }
 }

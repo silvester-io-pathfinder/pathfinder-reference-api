@@ -1,11 +1,14 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Fighters
 {
@@ -28,95 +31,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Fi
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You have spent so much time in armor that you know how to make the most of its protection. Your proficiency ranks for light, medium, and heavy armor, as well as for unarmored defense, increase to expert. You gain the armor specialization effects of medium and heavy armor." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificArmorCategoryProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite {Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11}
-                    }
-                }
-            };
+            builder.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.LightArmor.ID);
+            builder.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.MediumArmor.ID);
+            builder.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.HeavyArmor.ID);
+            builder.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.Unarmored.ID);
 
-            yield return new GainSpecificArmorCategoryProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                ArmorCategoryId = ArmorCategories.Instances.MediumArmor.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite {Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11}
-                    }
-                }
-            };
-
-            yield return new GainSpecificArmorCategoryProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                ArmorCategoryId = ArmorCategories.Instances.HeavyArmor.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite {Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11}
-                    }
-                }
-            };
-
-            yield return new GainSpecificArmorCategoryProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                ArmorCategoryId = ArmorCategories.Instances.Unarmored.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite {Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11}
-                    }
-                }
-            };
-
-            yield return new GainSpecificArmorCategorySpecializationEffect
-            {
-                Id = Guid.Parse(""),
-                ArmorCategoryId = ArmorCategories.Instances.MediumArmor.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite {Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11}
-                    }
-                }
-            };
-
-            yield return new GainSpecificArmorCategorySpecializationEffect
-            {
-                Id = Guid.Parse(""),
-                ArmorCategoryId = ArmorCategories.Instances.HeavyArmor.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite {Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11}
-                    }
-                }
-            };
+            builder.GainSpecificArmorCategorySpecialization(Guid.Parse(""), ArmorCategories.Instances.MediumArmor.ID);
+            builder.GainSpecificArmorCategorySpecialization(Guid.Parse(""), ArmorCategories.Instances.HeavyArmor.ID);
         }
 
         protected override SourcePage GetSourcePage()

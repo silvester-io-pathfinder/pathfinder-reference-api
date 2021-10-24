@@ -1,9 +1,13 @@
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificBloodlinePrerequisite : Prerequisite
+    public class HaveSpecificBloodlinePrerequisite : BasePrerequisite
     {
         public Guid RequiredBloodlineId { get; set; }
         public Bloodline RequiredBloodline { get; set; } = default!;
@@ -11,9 +15,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveSpecificBloodline(this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid requiredBloodlineId)
+        public static PrerequisiteBuilder HaveSpecificBloodline(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredBloodlineId)
         {
-            return builder.Add.Prerequisites(bindingId, new HaveSpecificBloodlinePrerequisite { Id = id, RequiredBloodlineId = requiredBloodlineId });
+            return builder.Add(new HaveSpecificBloodlinePrerequisite { Id = id, RequiredBloodlineId = requiredBloodlineId });
         }
     }
 }

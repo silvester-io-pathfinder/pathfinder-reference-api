@@ -1,7 +1,8 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -27,20 +28,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ResearchFields.I
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You focus on bizarre mutagenic transformations that sacrifice one aspect of a creature's physical or psychological being in order to strengthen another. You start with the formulas for two 1st-level mutagens in your formula book, in addition to your other formulas." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificFeatEffect { Id = Guid.Parse(""), FeatId = Feats.Instances.MutagenicFlashback.ID };
-            yield return new GainAnyMutagenFormulaEffect
-            {
-                Id = Guid.Parse(""),
-                Level = 1
-            };
-
-            yield return new GainAnyMutagenFormulaEffect
-            {
-                Id = Guid.Parse(""),
-                Level = 1
-            };
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.MutagenicFlashback.ID);
+            builder.GainAnyMutagenFormula(Guid.Parse(""), level: 1);
+            builder.GainAnyMutagenFormula(Guid.Parse(""), level: 1);
         }
 
         protected override SourcePage GetSourcePage()

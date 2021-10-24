@@ -1,13 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
@@ -155,116 +153,57 @@ namespace Silvester.Pathfinder.Reference.Database.Extensions
             }
         }
 
-        public static void AddPrerequisites(this ModelBuilder builder, IEnumerable<Prerequisite> prerequisites, Func<BasePrerequisiteBinding> createBinding)
+        public static void AddPrerequisite(this ModelBuilder builder, BasePrerequisite prerequisite)
         {
-            foreach(Prerequisite prerequisite in prerequisites)
-            {
-                BasePrerequisiteBinding binding = createBinding.Invoke();
-                binding.Id = prerequisite.Id;
-
-                builder.AddPrerequisite(prerequisite, binding);
-            }
-        }
-
-        public static void AddPrerequisite(this ModelBuilder builder, Prerequisite prerequisite, BasePrerequisiteBinding binding)
-        {
-            binding.PrerequisiteId = prerequisite.Id;
-            prerequisite.BindingId = binding.Id;
-
-            builder.AddData(binding.GetType(), binding);
-
             switch(prerequisite)
             {
-                case ChoicePrerequisite choicePrerequisite:
-                    foreach (Prerequisite innerPrerequisite in choicePrerequisite.Choices)
+                case BooleanPrerequisite booleanPrerequisite:
+                    foreach (BooleanPrerequisiteBinding entry in booleanPrerequisite.Entries)
                     {
-                        builder.AddPrerequisite(innerPrerequisite, new ChoicePrerequisiteBinding { Id = innerPrerequisite.Id, ChoiceId = choicePrerequisite.Id });
+                        entry.Id = booleanPrerequisite.Id;
+                        builder.AddData(entry.GetType(), entry);
+                        builder.AddPrerequisite(booleanPrerequisite);
                     }
 
-                    choicePrerequisite.Choices = Array.Empty<Prerequisite>();
-                    break;
-
-                case CombinedPrerequisite combinedPrerequisite:
-                    foreach(Prerequisite innerPrerequisite in combinedPrerequisite.Entries)
-                    {
-                        builder.AddPrerequisite(innerPrerequisite, new CombinedPrerequisiteBinding { Id = innerPrerequisite.Id, CombinationId = combinedPrerequisite.Id });
-                    }
-                    combinedPrerequisite.Entries = Array.Empty<Prerequisite>();
+                    booleanPrerequisite.Entries = Array.Empty<BooleanPrerequisiteBinding>();
                     break;
             }
            
             builder.Entity(prerequisite.GetType()).HasData(prerequisite);
         }
 
-        public static void AddEffects(this ModelBuilder builder, IEnumerable<Effect> effects, Func<Effect, BaseEffectBinding> createBinding)
+        public static void AddEffect(this ModelBuilder builder, BaseEffect? effect)
         {
-            foreach (Effect effect in effects)
-            {
-                BaseEffectBinding binding = createBinding.Invoke(effect);
-                binding.Id = effect.Id;
-
-                builder.AddEffect(effect, binding);
-            }
-        }
-
-        public static void AddEffect(this ModelBuilder builder, Effect? effect, BaseEffectBinding binding)
-        {
-            if(effect == null)
+            if (effect == null)
             {
                 return;
             }
-            
-            binding.Id = effect.Id;
-            binding.EffectId = effect.Id;
-            effect.BindingId = binding.Id;
-
-            builder.AddData(binding.GetType(), binding);
 
             switch (effect)
             {
-                case GainSpecificAbilityBoostEffect boost:
-                    foreach (StatEffectBinding statBinding in boost.RequiredStats)
+                case BooleanEffect booleanEffect:
+                    foreach (BooleanEffectBinding binding in booleanEffect.Entries)
                     {
-                        statBinding.EffectId = effect.Id;
-                        builder.AddData(statBinding);
-                    }
-                    boost.RequiredStats = Array.Empty<StatEffectBinding>();
-                    break;
-
-                case ChoiceEffect choiceEffect:
-                    foreach (Effect choice in choiceEffect.Entries)
-                    {
-                        builder.AddEffect(choice, new ChoiceEffectBinding { Id = choice.Id, ChoiceId = choiceEffect.Id });
+                        binding.Id = booleanEffect.Id;
+                        builder.AddData(binding.GetType(), binding);
+                        builder.AddEffect(booleanEffect);
                     }
 
-                    choiceEffect.Entries = Array.Empty<Effect>();
-                    break;
-
-                case CombinedEffect combinedEffect:
-                    foreach (Effect entry in combinedEffect.Entries)
-                    {
-                        builder.AddEffect(entry, new CombinedEffectBinding { Id = entry.Id, CombinedId = combinedEffect.Id });
-                    }
-
-                    combinedEffect.Entries = Array.Empty<Effect>();
+                    booleanEffect.Entries = Array.Empty<BooleanEffectBinding>();
                     break;
             }
 
-            foreach (EffectPrerequisiteBinding prerequisiteEffectBinding in effect.Prerequisites)
+            if(effect.Prerequisite != null)
             {
-                Prerequisite prerequisite = prerequisiteEffectBinding.Prerequisite;
-                prerequisiteEffectBinding.Prerequisite = null!;
-                prerequisiteEffectBinding.EffectId = effect.Id;
-
-                builder.AddPrerequisite(prerequisite, prerequisiteEffectBinding);
+                builder.AddPrerequisite(effect.Prerequisite);
             }
-            effect.Prerequisites = Array.Empty<EffectPrerequisiteBinding>();
+            effect.Prerequisite = null;
 
-            foreach(EffectIncrement increment in effect.Increments)
+            foreach (EffectIncrement increment in effect.Increments)
             {
                 increment.EffectId = effect.Id;
                 increment.TriggerId = increment.Trigger.Id;
-                
+
                 builder.AddData(increment.Trigger.GetType(), increment.Trigger);
                 increment.Trigger = null!;
 

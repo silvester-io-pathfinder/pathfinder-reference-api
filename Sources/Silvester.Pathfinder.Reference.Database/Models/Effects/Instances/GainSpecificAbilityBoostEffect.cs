@@ -1,10 +1,25 @@
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using System;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 
-namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Instances
+
+using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+
+namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 {
-    public class GainSpecificAbilityBoostEffect : Effect
+    public class GainSpecificAbilityBoostEffect : BaseEffect
     {
-        public ICollection<StatEffectBinding> RequiredStats { get; set; } = default!;
+        public Guid StatId { get; set; }
+        public Stat Stat { get; set; } = default!;
+    }
+
+    public static partial class BooleanEffectBuilderExtensions
+    {
+        public static EffectBuilder GainSpecificAbilityBoost(this BooleanEffectBuilder builder, Guid id, Guid statId)
+        {
+            return builder.Add(new GainSpecificAbilityBoostEffect { Id = id, StatId = statId });
+        }
     }
 }

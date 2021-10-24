@@ -1,11 +1,15 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
+
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PlayModes.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -28,65 +32,42 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("5445779f-6c29-458a-9bce-2582ca7e87e2"), Type = TextBlockType.Text, Text = "You have a knack for learning, and sequestered yourself from the outside world to learn all you could. You read about so many wondrous places and things in your books, and always dreamed about one day seeing the real things. Eventually, that curiosity led you to leave your studies and become an adventurer." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("13fa87ba-1ce3-483b-a738-97af17057cbb"),
-                RequiredStats = new StatEffectBinding[]
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Intelligence.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Wisdom.ID);
+            });
+            
+            builder.GainAnyAbilityBoost(Guid.Parse(""));
+
+            builder.AddOr(Guid.Parse(""), or =>
+            {
+                or.AddAnd(Guid.Parse(""), and =>
                 {
-                    new StatEffectBinding{Id = Guid.Parse("fce39680-c6c8-4bd0-bc26-694722fa7853"), StatId = Stats.Instances.Intelligence.ID },
-                    new StatEffectBinding{Id = Guid.Parse("50be44a1-1fbb-44ff-a543-2fafed0f17fc"), StatId = Stats.Instances.Wisdom.ID }
-                }
-            };
+                    and.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Arcana.ID);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.Assurance.ID);
+                });
 
-            yield return new GainAnyAbilityBoostEffect
-            {
-                Id = Guid.Parse("25f07743-2d4a-450b-a0db-54285531f6d9")
-            };
-
-            yield return new ChoiceEffect
-            {
-                Id = Guid.Parse("fb8ffa2d-5602-406e-a95f-543b8b9097ed"),
-                Entries = new Effect[]
+                or.AddAnd(Guid.Parse(""), and =>
                 {
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse("b1067069-0950-4e07-9736-bee597249980"),
-                        Entries = new Effect[] {
-                            new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("8cc75237-bb1d-4c94-9734-1f8d10e97d92"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Arcana.ID },
-                            new GainSpecificFeatEffect { Id = Guid.Parse("faa677bf-583c-4edb-a040-c0a8d4dd7997"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Arcana skill." }
-                        }
-                    },
+                    and.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.Assurance.ID);
+                });
 
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse("67d0ae8f-05fd-407f-92ea-00712b975e37"),
-                        Entries = new Effect[] {
-                            new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("ba5a4b8f-48b2-4561-9872-cffa1ba9a19a"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Nature.ID },
-                            new GainSpecificFeatEffect { Id = Guid.Parse("49e49212-8901-45a2-acd9-6edcb6f4044a"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Nature skill." }
-                        }
-                    },
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.Assurance.ID);
+                });
 
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse("80ac3a10-4475-4044-85e4-5e02155155fc"),
-                        Entries = new Effect[] {
-                            new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("f1a287b0-3c9d-4271-ad53-1228b8a52624"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Occultism.ID },
-                            new GainSpecificFeatEffect { Id = Guid.Parse("1cf20334-1d7c-4609-b453-387ab11ea814"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Occultism skill." }
-                        }
-                    },
-
-                    new CombinedEffect
-                    {
-                        Id = Guid.Parse("d548fa59-3625-488d-89e7-0130cd2e2160"),
-                        Entries = new Effect[] {
-                            new GainSpecificSkillProficiencyEffect { Id = Guid.Parse("4db4bafb-1adc-43eb-9ec5-e532e2f42baa"), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Religion.ID },
-                            new GainSpecificFeatEffect { Id = Guid.Parse("c5200f87-a16f-4bad-a017-ddd60053997a"), FeatId = Feats.General.AssuranceFeat.ID, Restrictions = "The assurance skill feat should relate to the Religion skill." }
-                        }
-                    }
-                }
-            };
+                or.AddAnd(Guid.Parse(""), and =>
+                {
+                    and.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Religion.ID);
+                    and.GainSpecificFeat(Guid.Parse(""), Feats.Instances.Assurance.ID);
+                });
+            });
         }
 
         protected override SourcePage GetSourcePage()

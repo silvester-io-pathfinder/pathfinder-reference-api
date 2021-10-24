@@ -1,13 +1,16 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Triggers.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Magusi
 {
@@ -43,63 +46,47 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ma
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "If you have a spellbook from multiple sources (such as being a magus with the Wizard Dedication feat), you can use the same spellbook for all your spells." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSpellCastingEffect
-            {
-                Id = Guid.Parse(""),
-                MagicTraditionId = MagicTraditions.Instances.Arcane.ID
-            };
-
-            yield return new GainSpellBookEffect
-            {
-                Id = Guid.Parse(""),
-                CantripAmount = 8,
-                SpellAmount = 4,
-                AddSpellsPerLevel = 2
-            };
+            builder.GainSpecificSpellCasting(Guid.Parse(""), MagicTraditions.Instances.Arcane.ID);
+            builder.GainSpellBook(Guid.Parse(""), cantripAmount: 8, spellAmount: 4, addSpellsPerLevel: 2);
 
             //Cantrips
-            yield return new GainSpecificSpellSlotEffect
-            {
-                Id = Guid.Parse(""),
-                Amount = 5,
-                Level = 0,
-                IsSpendingPreventable = true
-            };
+            builder.GainSpecificSpellSlot(Guid.Parse(""), amount: 5, spellSlotLevel: 0, isSpendingPreventable: true);
 
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 1, amount: 1, slotLevel: 1, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 2, amount: 2, slotLevel: 1, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 3, amount: 2, slotLevel: 1, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 3, amount: 1, slotLevel: 2, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 4, amount: 2, slotLevel: 1, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 4, amount: 2, slotLevel: 2, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 5, amount: 2, slotLevel: 2, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 5, amount: 2, slotLevel: 3, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 6, amount: 2, slotLevel: 2, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 6, amount: 2, slotLevel: 3, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 7, amount: 2, slotLevel: 3, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 7, amount: 2, slotLevel: 4, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 8, amount: 2, slotLevel: 3, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 8, amount: 2, slotLevel: 4, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 9, amount: 2, slotLevel: 4, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 9, amount: 2, slotLevel: 5, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 10, amount: 2, slotLevel: 4, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 10, amount: 2, slotLevel: 5, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 11, amount: 2, slotLevel: 5, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 11, amount: 2, slotLevel: 6, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 12, amount: 2, slotLevel: 5, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 12, amount: 2, slotLevel: 6, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 13, amount: 2, slotLevel: 6, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 13, amount: 2, slotLevel: 7, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 14, amount: 2, slotLevel: 6, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 14, amount: 2, slotLevel: 7, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 15, amount: 2, slotLevel: 7, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 15, amount: 2, slotLevel: 8, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 16, amount: 2, slotLevel: 7, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.EqualTo, atLevel: 16, amount: 2, slotLevel: 8, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.GreaterThanOrEqualTo, atLevel: 17, amount: 2, slotLevel: 8, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
-            yield return CreateSpellSlotEffect(comparator: Comparator.GreaterThanOrEqualTo, atLevel: 17, amount: 2, slotLevel: 9, ids: new[] { Guid.Parse(""), Guid.Parse(""), Guid.Parse("") });
+            //Spell slots
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 1, amount: 1, spellSlotLevel: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 2, amount: 2, spellSlotLevel: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 3, amount: 2, spellSlotLevel: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 3, amount: 1, spellSlotLevel: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 4, amount: 2, spellSlotLevel: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 4, amount: 2, spellSlotLevel: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 5, amount: 2, spellSlotLevel: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 5, amount: 2, spellSlotLevel: 3);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 6, amount: 2, spellSlotLevel: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 6, amount: 2, spellSlotLevel: 3);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 7, amount: 2, spellSlotLevel: 3);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 7, amount: 2, spellSlotLevel: 4);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 8, amount: 2, spellSlotLevel: 3);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 8, amount: 2, spellSlotLevel: 4);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 9, amount: 2, spellSlotLevel: 4);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 9, amount: 2, spellSlotLevel: 5);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 10, amount: 2, spellSlotLevel: 4);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 10, amount: 2, spellSlotLevel: 5);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 11, amount: 2, spellSlotLevel: 5);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 11, amount: 2, spellSlotLevel: 6);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 12, amount: 2, spellSlotLevel: 5);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 12, amount: 2, spellSlotLevel: 6);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 13, amount: 2, spellSlotLevel: 6);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 13, amount: 2, spellSlotLevel: 7);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 14, amount: 2, spellSlotLevel: 6);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 14, amount: 2, spellSlotLevel: 7);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 15, amount: 2, spellSlotLevel: 7);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 15, amount: 2, spellSlotLevel: 8);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 16, amount: 2, spellSlotLevel: 7);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 16, amount: 2, spellSlotLevel: 8);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, atLevel: 17, amount: 2, spellSlotLevel: 8);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, atLevel: 17, amount: 2, spellSlotLevel: 9);
         }
 
         protected override SourcePage GetSourcePage()
@@ -111,20 +98,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ma
                 Page = 36
             };
         }
+    }
 
-        private Effect CreateSpellSlotEffect(Comparator comparator, int atLevel, int amount, int slotLevel, Guid[] ids)
+    public static partial class BooleanEffectBuilderExtensions
+    {
+        public static void GainSpecificSpellSlot(this BooleanEffectBuilder builder, Guid id, Comparator comparator, int atLevel, int amount, int spellSlotLevel)
         {
-            return new GainSpecificSpellSlotEffect
-            {
-                Id = ids[0],
-                Amount = amount,
-                Level = slotLevel,
-                IsSpendingPreventable = true,
-                Prerequisites = new EffectPrerequisiteBinding[]
+            builder.GainSpecificSpellSlot(id, amount, spellSlotLevel, isSpendingPreventable: true)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding { Id = ids[1], Prerequisite = new HaveSpecificLevelPrerequisite { Id = ids[2], Comparator = comparator, RequiredLevel = atLevel} }
-                }
-            };
+                    prerequisites.HaveSpecificLevel(id, comparator, atLevel);
+                });
         }
     }
 }

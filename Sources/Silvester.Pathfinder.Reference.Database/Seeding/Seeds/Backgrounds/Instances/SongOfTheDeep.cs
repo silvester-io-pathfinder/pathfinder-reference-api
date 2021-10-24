@@ -1,11 +1,15 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
+
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -28,49 +32,24 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("1991a7be-b1ea-4061-b6bb-f8ffd3856e9d"), Type = TextBlockType.Text, Text = "During a sea voyage, you washed overboard, ingested sea water, and drowned. Merfolk, kelpies, sea serpents, or another magical denizen of the sea pulled your unconscious body from the briny depths. Having spent so much time underwater, your lungs were filled with salt water. To restore your ability to breathe, they exhaled into your lungs and shared the ability to breathe underwater in the process. You came back with the ability to breathe water, as well as a newfound knowledge of your time beneath the waves." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("6453a6e3-f7a5-4d1a-ae14-a5a8b476e4e8"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("79b092c2-3a88-449a-a7cd-9ab7f9a11a3c"), StatId = Stats.Instances.Strength.ID },
-                    new StatEffectBinding{Id = Guid.Parse("e5386ae0-16dd-4685-9b38-07a98c3c7e65"), StatId = Stats.Instances.Constitution.ID },
-                    new StatEffectBinding{Id = Guid.Parse("49d34e1b-fafd-4a48-901b-73261ded3ab3"), StatId = Stats.Instances.Charisma.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Strength.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Constitution.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Charisma.ID);
+            });
 
-            yield return new GainSpecificSkillProficiencyEffect
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
+            builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Ocean.ID);
+            builder.GainSpecificAbility(Guid.Parse(""), Abilities.Instances.Waterbreathing.ID);
+            builder.AddAnd(Guid.Parse(""), and =>
             {
-                Id = Guid.Parse("edde3455-8385-42c3-9cd5-a3dea71f2907"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Athletics.ID
-            };
-
-            yield return new GainSpecificLoreProficiencyEffect
-            {
-                Id = Guid.Parse("f9a2e4a5-8745-4e69-b931-653fca73018b"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreId = Lores.Instances.Ocean.ID
-            };
-
-            yield return new GainSpecificAbilityEffect 
-            {
-                Id = Guid.Parse("8fd1949f-d1de-40b2-a9f8-13a14258af83"),
-                AbilityId = Abilities.Instances.Waterbreathing.ID 
-            };
-
-            yield return new ChoiceEffect
-            {
-                Id = Guid.Parse("ccb8937d-cccb-466e-bac5-8a55d39270a0"),
-                IsOptional = true,
-                Entries = new Effect[]
-                {
-                    new DisableAirBreathingEffect { Id = Guid.Parse("32db8722-b192-466a-9c2e-769574494189") },
-                    new GainAnyAbilityBoostEffect { Id = Guid.Parse("e8b99513-9e2e-459e-8af0-9381960b4a79") }
-                }
-            };
+                and.IsOptional(true);
+                and.DisableAirBreathing(Guid.Parse(""));
+                and.GainAnyAbilityBoost(Guid.Parse(""));
+            });
         }
 
         protected override SourcePage GetSourcePage()

@@ -1,6 +1,7 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using System;
 using System.Collections.Generic;
 
@@ -23,20 +24,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
             };
         }
 
-        protected override Effect GetInstinctAbilityEffect()
+        protected override void GetInstinctAbilityEffects(BooleanEffectBuilder builder)
         {
-            return new GainAnyClassFeatEffect { Id = Guid.Parse(""), ClassId = Classes.Instances.Barbarian.ID, Level = 1 };
+            builder.GainAnyClassFeat(Guid.Parse(""), Classes.Instances.Barbarian.ID, level: 1);
         }
 
-        protected override IEnumerable<Effect> GetRagingEffects()
+        protected override void GetRagingEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificDamageResistanceEffect
-            {
-                Id = Guid.Parse(""),
-                DamageTypeId = DamageTypes.Instances.PhysicalWeapon.ID
-            };
+            builder.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.PhysicalWeapon.ID);
         }
-
+      
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage

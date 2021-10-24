@@ -1,12 +1,16 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
+
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Monks
 {
@@ -29,38 +33,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Mo
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You have progressed along your own path to enlightenment. Choose your Fortitude, Reflex, or Will saving throw. Your proficiency rank for the chosen saving throw increases to master. When you roll a success on the chosen saving throw, you get a critical success instead." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new CombinedEffect
-            {
-                Id = Guid.Parse(""),
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificLevelPrerequisite
-                        {
-                            Id = Guid.Parse(""),
-                            Comparator = Comparator.GreaterThanOrEqualTo,
-                            RequiredLevel = 7
-                        }
-                    }
-                },
-                Entries = new[]
-                {
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new GainAnySavingThrowProficiencyEffect { Id = Guid.Parse(""), ProficiencyId = Proficiencies.Instances.Expert.ID }
-                    },
-                    new CombinedEffectBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Effect = new ModifyAnySavingThrowEffect { Id = Guid.Parse(""), InitialResult = RollResult.Success, Becomes = RollResult.CriticalSuccess }
-                    }
-                }
-            };
+            builder.GainAnySavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID);
+            builder.ModifyAnySavingThrow(Guid.Parse(""), RollResult.Success, becomes: RollResult.CriticalSuccess);
         }
 
         protected override SourcePage GetSourcePage()

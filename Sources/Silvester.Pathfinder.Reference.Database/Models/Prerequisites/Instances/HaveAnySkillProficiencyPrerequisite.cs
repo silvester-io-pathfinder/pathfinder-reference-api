@@ -1,9 +1,12 @@
 ﻿using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveAnySkillProficiencyPrerequisite : Prerequisite
+    public class HaveAnySkillProficiencyPrerequisite : BasePrerequisite
     {
         public Guid RequiredProficiencyId { get; set; }
         public Proficiency RequiredProficiency { get; set; } = default!;
@@ -11,9 +14,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static EffectBuilder.Prerequisites HaveAnySkillProficiency(this EffectBuilder.Prerequisites builder, Guid id, Guid bindingId, Guid requiredProficiencyId)
+        public static PrerequisiteBuilder HaveAnySkillProficiency(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredProficiencyId)
         {
-            return builder.Add(bindingId, new HaveAnySkillProficiencyPrerequisite { Id = id, RequiredProficiencyId = requiredProficiencyId });
+            return builder.Add(new HaveAnySkillProficiencyPrerequisite { Id = id, RequiredProficiencyId = requiredProficiencyId });
         }
     }
 }

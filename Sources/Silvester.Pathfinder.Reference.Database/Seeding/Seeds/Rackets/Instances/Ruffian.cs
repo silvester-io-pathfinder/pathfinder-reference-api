@@ -1,7 +1,8 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
@@ -30,39 +31,23 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rackets.Instance
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You're trained in Intimidation and medium armor. You can choose Strength as your key ability score. When you gain light armor expertise, you also gain expert proficiency in medium armor, and when you gain light armor mastery, you also gain master proficiency in medium armor." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), ProficiencyId = Proficiencies.Instances.Trained.ID, SkillId = Skills.Instances.Intimidation.ID };
-            yield return new GainSpecificArmorCategoryProficiencyEffect { Id = Guid.Parse(""), ProficiencyId = Proficiencies.Instances.Trained.ID, ArmorCategoryId = ArmorCategories.Instances.MediumArmor.ID};
-            yield return new GainSpecificKeyAbilityOptionEffect { Id = Guid.Parse(""), StatId = Stats.Instances.Strength.ID };
-            yield return new GainSpecificArmorCategoryProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Expert.ID,
-                ArmorCategoryId = ArmorCategories.Instances.MediumArmor.ID,
-                Prerequisites = new[]
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+            builder.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.MediumArmor.ID);
+            builder.GainSpecificKeyAbilityOption(Guid.Parse(""), Stats.Instances.Strength.ID);
+           
+            builder.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.MediumArmor.ID)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificArmorCategoryProficiencyPrerequisite { Id = Guid.Parse(""), RequiredProficiencyId = Proficiencies.Instances.Expert.ID, ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID}
-                    }
-                }
-            }; 
-            yield return new GainSpecificArmorCategoryProficiencyEffect
-            {
-                Id = Guid.Parse(""),
-                ProficiencyId = Proficiencies.Instances.Master.ID,
-                ArmorCategoryId = ArmorCategories.Instances.MediumArmor.ID,
-                Prerequisites = new[]
-                {
-                    new EffectPrerequisiteBinding
-                    {
-                        Id = Guid.Parse(""),
-                        Prerequisite = new HaveSpecificArmorCategoryProficiencyPrerequisite { Id = Guid.Parse(""), RequiredProficiencyId = Proficiencies.Instances.Master.ID, ArmorCategoryId = ArmorCategories.Instances.LightArmor.ID}
-                    }
-                }
-            };
+                    prerequisites.HaveSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.LightArmor.ID);
+                });
+           
+            builder.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID, ArmorCategories.Instances.MediumArmor.ID)
+                            .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                            {
+                                prerequisites.HaveSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID, ArmorCategories.Instances.LightArmor.ID);
+                            });
         }
 
         protected override SourcePage GetSourcePage()

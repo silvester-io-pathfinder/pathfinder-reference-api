@@ -1,13 +1,16 @@
-using Silvester.Pathfinder.Reference.Database.Models;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
+
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Effects;
+
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Bards
 {
@@ -32,43 +35,43 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Though you gain them at the same rate, your spell slots and the spells in your spell repertoire are separate. If a feat or other ability adds a spell to your spell repertoire, it wouldn't give you another spell slot, and vice versa." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 1, MagicTraditionId = MagicTraditions.Instances.Occult.ID };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 1, MagicTraditionId = MagicTraditions.Instances.Occult.ID };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 1, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 2 } } } };
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 1);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 1);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 1, requiredLevel: 2);
 
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 2, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 3 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 2, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 3 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 2, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 4 } } } };
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 2, requiredLevel: 3);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 2, requiredLevel: 3);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 2, requiredLevel: 4);
 
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 3, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 5 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 3, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 5 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 3, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 6 } } } };
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 3, requiredLevel: 5);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 3, requiredLevel: 5);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 3, requiredLevel: 6);
 
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 4, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 7 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 4, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 7 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 4, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 8 } } } };
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 4, requiredLevel: 7);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 4, requiredLevel: 7);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 4, requiredLevel: 8);
 
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 5, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 9 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 5, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 9 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 5, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 10 } } } };
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 5, requiredLevel: 9);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 5, requiredLevel: 9);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 5, requiredLevel: 10);
 
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 6, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 6, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 11 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 6, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 12 } } } };
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 6, requiredLevel: 11);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 6, requiredLevel: 11);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 6, requiredLevel: 12);
 
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 7, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 13 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 7, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 13 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 7, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 14 } } } };
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 7, requiredLevel: 13);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 7, requiredLevel: 13);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 7, requiredLevel: 14);
 
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 8, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 15 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 8, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 15 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 8, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 16 } } } };
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 8, requiredLevel: 15);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 8, requiredLevel: 15);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 8, requiredLevel: 16);
 
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 9, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 17 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 9, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 17 } } } };
-            yield return new GainAnySpellEffect { Id = Guid.Parse(""), Level = 9, MagicTraditionId = MagicTraditions.Instances.Occult.ID, Prerequisites = new[] { new EffectPrerequisiteBinding { Id = Guid.Parse(""), Prerequisite = new HaveSpecificLevelPrerequisite { Id = Guid.Parse(""), Comparator = Comparator.GreaterThanOrEqualTo, RequiredLevel = 18 } } } };
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 9, requiredLevel: 17);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 9, requiredLevel: 17);
+            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 9, requiredLevel: 18);
         }
 
         protected override SourcePage GetSourcePage()

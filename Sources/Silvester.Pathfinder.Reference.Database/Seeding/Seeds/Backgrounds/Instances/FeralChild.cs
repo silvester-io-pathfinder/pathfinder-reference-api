@@ -1,10 +1,14 @@
-using Silvester.Pathfinder.Reference.Database.Models;
+using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Bindings.Instances;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Instances;
+
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Instances
 {
@@ -27,56 +31,33 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             yield return new TextBlock { Id = Guid.Parse("7fdea2eb-b54c-46d5-9b6e-988ce4090a4e"), Type = TextBlockType.Text, Text = "You spent your youth in the wilderness, living close to or perhaps raised by animals. You have a close, mystical connection with these animals and gained certain abilities from them, though this limited your well-roundedness in mental pursuits." };
         }
 
-        protected override IEnumerable<Effect> GetEffects()
+        protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificAbilityBoostEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("ef8874a9-100f-4c2c-8bf0-7ad1bffea87d"),
-                RequiredStats = new StatEffectBinding[]
-                {
-                    new StatEffectBinding{Id = Guid.Parse("6de13a10-6c40-430a-94d8-278a66d83e70"), StatId = Stats.Instances.Strength.ID },
-                    new StatEffectBinding{Id = Guid.Parse("da35b177-fa98-4d7f-99a4-ecb89581dee5"), StatId = Stats.Instances.Dexterity.ID },
-                    new StatEffectBinding{Id = Guid.Parse("b6cdf69f-6092-47dd-ae7b-b3311e743f17"), StatId = Stats.Instances.Constitution.ID }
-                }
-            };
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Strength.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Dexterity.ID);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Constitution.ID);
+            });
 
-            yield return new GainSpecificSkillProficiencyEffect
+            builder.AddAnd(Guid.Parse(""), and => 
             {
-                Id = Guid.Parse("6e075fc6-bffe-4072-b61d-4204cce69a61"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Nature.ID
-            };
+                and.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
+                and.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
+            });
 
-            yield return new GainSpecificSkillProficiencyEffect
+            builder.AddOr(Guid.Parse(""), or =>
             {
-                Id = Guid.Parse("cf8f6b9b-8bf1-412f-85ab-498c0916601c"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Survival.ID
-            };
+                or.GainSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID);
+                or.GainSpecificSense(Guid.Parse(""), Senses.Instances.Darkvision.ID)
+                    .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                    {
+                        prerequisites.HaveSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID);
+                    });
+            });
 
-            yield return new ChoiceEffect
-            {
-                Id = Guid.Parse("f56fdf9b-790e-4639-bc5b-048f333fa03b"),
-                Restrictions = "The darkvision effect can only be chosen if you already have low-light vision.",
-                Entries = new Effect[]
-                {
-                    new GainSpecificSenseEffect { Id = Guid.Parse("421b9e67-02c7-48c0-abb2-e84b626251f2"), SenseId = Senses.Instances.LowLightVision.ID, },
-                    new GainSpecificSenseEffect { Id = Guid.Parse("09a56e27-0420-42ed-9722-0aad7d098f72"), SenseId = Senses.Instances.Darkvision.ID}
-                }
-            };
-
-            yield return new GainSpecificSenseEffect
-            {
-                Id = Guid.Parse("5c467b81-6ea5-436f-bf4d-5090821798d7"),
-                SenseId = Senses.Instances.Scent.ID,
-                Range = "30 feet."
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("b31ace99-be35-45d8-a1dc-ef298dbffc4f"),
-                FeatId = Feats.General.ForagerFeat.ID
-            };
+            builder.GainSpecificSense(Guid.Parse(""), Senses.Instances.Scent.ID, "30 feet.");
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.General.ForagerFeat.ID);
         }
 
         protected override SourcePage GetSourcePage()
