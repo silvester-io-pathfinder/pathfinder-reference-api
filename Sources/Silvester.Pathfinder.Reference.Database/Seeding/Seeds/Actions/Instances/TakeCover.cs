@@ -9,9 +9,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Actions.Instance
     {
         public static readonly Guid ID = Guid.Parse("55bca308-af52-4da5-a1e4-a6c1059c5321");
 
-        protected override Models.Action GetAction()
+        protected override Models.Entities.Action GetAction()
         {
-            return new Models.Action
+            return new Models.Entities.Action
             {
                 Id = ID,
                 Name = "Take Cover",

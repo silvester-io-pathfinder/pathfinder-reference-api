@@ -63,5 +63,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("3844b3a3-6ece-44f4-aa24-3da8c2a50ce1"), Text = "Consider you less dedicated than studious wizards, devoted clerics, and other practitioners of magic, since power comes to you naturally." };
             yield return new ClassCharacteristic { Id = Guid.Parse("417aafb9-414d-44cd-834f-a41bd953f331"), Text = "Assume you’re as unpredictable as the magic you bring forth, even if your personality proves otherwise." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Sorcerers.AbilityBoosts);
+        }
     }
 }

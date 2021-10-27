@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ResearchFields
         {
             ResearchField field = GetResearchField();
 
-            builder.AddEffect(field, GetEffects, (field) => field.EffectId);
+            builder.AddEffect(field, GetEffects);
             builder.AddSourcePage(field, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(field, GetDetails(), e => e.Details);
 

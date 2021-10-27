@@ -28,4 +28,5 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
+
 }

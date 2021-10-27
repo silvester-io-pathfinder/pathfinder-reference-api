@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ra
             {
                 Id = ID, 
                 Level = 7,
-                Name = "Weapon Expertise", 
+                Name = "Weapon Specialization", 
             };
         }
 

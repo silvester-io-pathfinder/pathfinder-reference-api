@@ -1,4 +1,5 @@
 ﻿using NpgsqlTypes;
+using System;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {

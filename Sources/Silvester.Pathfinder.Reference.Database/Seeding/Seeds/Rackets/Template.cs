@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rackets
 
             builder.AddTextBlocks(racket, GetDetails(), (e) => e.Details);
             builder.AddSourcePage(racket, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffect(racket, GetEffects, (racket) => racket.EffectId);
+            builder.AddEffect(racket, GetEffects);
 
             return racket;
         }

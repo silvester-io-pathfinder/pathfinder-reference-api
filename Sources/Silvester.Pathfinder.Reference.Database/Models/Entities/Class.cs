@@ -73,8 +73,17 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 
         public ICollection<ClassCharacteristic> Characteristics { get; set; } = new List<ClassCharacteristic>();
 
-        public ICollection<ClassFeature> Features { get; set; } = new List<ClassFeature>();
-     
+        public ICollection<ClassFeatureBinding> Features { get; set; } = new List<ClassFeatureBinding>();
+
         public NpgsqlTsVector SearchVector { get; set; } = default!;
+    }
+
+    public class ClassFeatureBinding : BaseEntity
+    {
+        public Guid ClassId { get; set; }
+        public Class Class { get; set; } = default!;
+
+        public Guid ClassFeatureId { get; set; }
+        public ClassFeature ClassFeature { get; set; } = default!;
     }
 }

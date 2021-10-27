@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines
             builder.AddTextBlocks(bloodline, GetDetails(), (e) => e.Details);
             builder.AddTextBlocks(bloodline, GetTypeChoiceDetails(), (e) => e.TypeChoiceDetails);
             builder.AddSourcePage(bloodline, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffect(bloodline, builder => GetEffects(builder), bloodline => bloodline.EffectId);
+            builder.AddEffect(bloodline, builder => GetEffects(builder));
 
             foreach(Guid skillId in GetSkills())
             {

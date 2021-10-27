@@ -14,7 +14,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public int BreadthReach { get; set; }
 
         public ICollection<Ancestry> Ancestries { get; set; } = new List<Ancestry>();
-     
+
+        public ICollection<Eidolon> Eidolons { get; set; } = new List<Eidolon>();
+
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

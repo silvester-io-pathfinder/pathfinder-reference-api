@@ -20,8 +20,10 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public ICollection<SkillAction> SkillActions { get; set; } = new List<SkillAction>();
 
         public ICollection<Bloodline> Bloodlines { get; set; } = new List<Bloodline>();
-        
+
         public ICollection<GunslingersWay> GunslingersWays { get; set; } = new List<GunslingersWay>();
+
+        public ICollection<Eidolon> Eidolons { get; set; } = new List<Eidolon>();
 
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }

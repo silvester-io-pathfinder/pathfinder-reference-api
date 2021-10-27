@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Muses
             Muse muse = GetMuse();
 
             builder.AddSourcePage(muse, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffect(muse, GetEffects, muse => muse.EffectId);
+            builder.AddEffect(muse, GetEffects);
 
             return muse;
         }

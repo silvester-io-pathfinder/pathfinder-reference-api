@@ -41,26 +41,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
             builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Sailing.ID);
             builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.UnderwaterMarauder.ID);
-
-            yield return new GainSpecificSkillProficiencyEffect
-            {
-                Id = Guid.Parse("0646a7c1-7c66-4358-9f86-3d1bd71175a2"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                SkillId = Skills.Instances.Athletics.ID
-            };
-
-            yield return new GainSpecificLoreProficiencyEffect
-            {
-                Id = Guid.Parse("ca20b481-4ad7-4d97-801e-87fc3c61fac1"),
-                ProficiencyId = Proficiencies.Instances.Trained.ID,
-                LoreId = Lores.Instances.Sailing.ID
-            };
-
-            yield return new GainSpecificFeatEffect
-            {
-                Id = Guid.Parse("93db73b4-b46d-4a20-83f4-c057e80dd0a8"),
-                FeatId = Feats.General.UnderwaterMarauderFeat.ID
-            };
         }
 
         protected override SourcePage GetSourcePage()

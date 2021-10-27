@@ -80,6 +80,17 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders
             BooleanPrerequisiteBuilder builder = BooleanPrerequisiteBuilder.CreateAnd(owner.Id, buildAction);
             BooleanPrerequisite prerequisite = builder.Build();
 
+            modelBuilder.AddPrerequisite(owner, prerequisite);
+        }
+
+        public static void AddPrerequisite<TOwner>(this ModelBuilder modelBuilder, TOwner owner, BooleanPrerequisite? prerequisite)
+            where TOwner : BaseEntity
+        {
+            if(prerequisite == null)
+            {
+                return;
+            }
+
             if (prerequisite.Entries.Count == 0)
             {
                 return;

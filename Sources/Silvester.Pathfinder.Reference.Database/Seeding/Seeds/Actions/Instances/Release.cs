@@ -10,9 +10,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Actions.Instance
     {
         public static readonly Guid ID = Guid.Parse("ed94ef79-c37c-4591-a520-557916925352");
 
-        protected override Models.Action GetAction()
+        protected override Models.Entities.Action GetAction()
         {
-            return new Models.Action
+            return new Models.Entities.Action
             {
                 Id = ID,
                 Name = "Release",

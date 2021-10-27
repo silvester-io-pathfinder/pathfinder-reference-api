@@ -14,9 +14,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Curses.Instances
     {
         public static readonly Guid ID = Guid.Parse("cc8c8901-28c6-49d0-b157-5e360182bd46");
 
-		public override Models.Curse GetCurse()
+		public override Models.Entities.Curse GetCurse()
         {
-            return new Models.Curse
+            return new Models.Entities.Curse
             {
                 Id = ID,
                 Level = 6,

@@ -13,6 +13,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public SourcePage SourcePage { get; set; } = default!;
 
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
+        
+        public ICollection<Eidolon> Eidolons { get; set; } = new List<Eidolon>();
 
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }

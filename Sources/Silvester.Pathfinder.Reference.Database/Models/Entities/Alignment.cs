@@ -14,6 +14,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public ICollection<Plane> Planes { get; set; } = new List<Plane>();
         public ICollection<Artifact> Artifacts { get; set; } = new List<Artifact>();
         public ICollection<Cause> Causes { get; set; } = new List<Cause>();
+        public ICollection<Eidolon> Eidolons { get; set; } = new List<Eidolon>();
 
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }

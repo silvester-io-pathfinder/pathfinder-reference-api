@@ -63,5 +63,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Expect that since you know information about your eidolon, you might know details about other sorts of strange monsters." };
             yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "View you with awe or fear because of the powerful, strange creature that accompanies you." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Summoners.AbilityBoosts);
+        }
     }
 }

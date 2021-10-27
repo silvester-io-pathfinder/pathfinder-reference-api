@@ -1,5 +1,3 @@
-using Silvester.Pathfinder.Reference.Database.EffectIncrements.Instances;
-using Silvester.Pathfinder.Reference.Database.EffectIncrements.Triggers.Instances;
 using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;

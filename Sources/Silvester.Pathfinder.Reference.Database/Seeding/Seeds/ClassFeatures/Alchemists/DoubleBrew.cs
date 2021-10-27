@@ -7,7 +7,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
-namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Instances
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Alchemists
 {
     public class DoubleBrew : Template
     {

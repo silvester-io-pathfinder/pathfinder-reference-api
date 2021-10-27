@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You channel a magical ward through your attack and attempt to plant it on a foe. This ward increases your defenses against that foe, as long as you keep attacking that foe to maintain it. Make a melee Strike with a weapon or unarmed attack against a foe. In addition to the normal effects of the Strike, it has the effects below. Warding aggression ends if the foe you attacked dies or at the end of any turn in which you didn't hit that foe with a melee Strike." };
         }
 
-        public virtual IEnumerable<Guid> GetMagicTraditions()
+        public override IEnumerable<Guid> GetMagicTraditions()
         {
             yield return MagicTraditions.Instances.Arcane.ID;
             yield return MagicTraditions.Instances.Divine.ID;

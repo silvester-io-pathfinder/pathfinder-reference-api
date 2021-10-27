@@ -62,5 +62,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("5a54de41-6cf6-4bb4-a971-06f01270cf9e"), Text = "Come to you when they need someone who is willing to take risks or use questionable methods." };
             yield return new ClassCharacteristic { Id = Guid.Parse("8f67f4eb-f9d6-4c17-915f-950eb88ccccd"), Text = "Suspect you’re motivated primarily by greed." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Rogues.AbilityBoosts);
+        }
     }
 }

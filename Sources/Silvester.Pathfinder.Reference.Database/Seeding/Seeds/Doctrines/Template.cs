@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Doctrines
             Doctrine doctrine = GetDoctrine();
 
             builder.AddSourcePage(doctrine, GetSourcePage(), e => e.SourcePageId);
-            builder.AddEffect(doctrine, GetEffects, doctrine => doctrine.EffectId);
+            builder.AddEffect(doctrine, GetEffects);
 
             return doctrine;
         }

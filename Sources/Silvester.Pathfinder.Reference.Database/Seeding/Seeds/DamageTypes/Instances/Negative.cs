@@ -12,7 +12,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DamageTypes.Inst
            return new DamageType 
            {
                Id = ID,
-               Name = "Negative"
+               Name = "Negative",
                Description = "You resist Negative damage."
            };
         }

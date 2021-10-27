@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ma
             {
                 Id = Guid.Parse(""),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
-                Page = 
+                Page = 37
             };
         }
     }

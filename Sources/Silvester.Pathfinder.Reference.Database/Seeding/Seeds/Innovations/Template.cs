@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Innovations
             builder.AddSourcePage(innovation, GetSourcePage(), (e) => e.SourcePageId);
             builder.AddTable(innovation, GetTable());
             builder.AddTextBlocks(innovation, GetDetails(), e => e.Details);
-            builder.AddEffect(innovation, GetEffects, (innovation) => innovation.EffectId);
+            builder.AddEffect(innovation, GetEffects);
 
             return innovation;
         }

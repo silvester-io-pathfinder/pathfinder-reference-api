@@ -56,5 +56,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("42556a95-e0e0-40b5-8a5d-e031fd221d8d"), Text = "See you as uncivilized or a boorish lout unfit for high society." };
             yield return new ClassCharacteristic { Id = Guid.Parse("91bb3e45-7f52-441d-babc-b05303471515"), Text = "Believe that you are loyal to your friends and allies and will never relent until the fight is done." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Barbarians.AbilityBoosts);
+        }
     }
 }

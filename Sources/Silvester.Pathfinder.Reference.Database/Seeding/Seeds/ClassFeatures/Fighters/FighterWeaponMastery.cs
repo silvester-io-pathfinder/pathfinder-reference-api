@@ -8,7 +8,6 @@ using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 
 using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Effects.Instances;
-using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 

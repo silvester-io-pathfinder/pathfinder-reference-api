@@ -9,7 +9,7 @@ using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 
-namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Instances
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Alchemists
 {
     public class Juggernaut : Template
     {

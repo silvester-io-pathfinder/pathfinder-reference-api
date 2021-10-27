@@ -18,6 +18,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 
         public ICollection<SkillAction> SkillActions{ get; set; } = new List<SkillAction>();
 
+        public ICollection<Eidolon> Eidolons { get; set; } = new List<Eidolon>();
+
         public ICollection<Feat> Feats { get; set; } = new List<Feat>();
 
         public ICollection<Ability> Abilities { get; set; } = new List<Ability>();

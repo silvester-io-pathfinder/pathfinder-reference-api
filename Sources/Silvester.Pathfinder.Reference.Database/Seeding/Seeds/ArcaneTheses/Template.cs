@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ArcaneTheses
         {
             ArcaneThesis thesis = GetArcaneThesis();
 
-            builder.AddEffect(thesis, GetEffects, (thesis) => thesis.EffectId);
+            builder.AddEffect(thesis, GetEffects);
             builder.AddSourcePage(thesis, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(thesis, GetDetails(), e => e.Details);
 

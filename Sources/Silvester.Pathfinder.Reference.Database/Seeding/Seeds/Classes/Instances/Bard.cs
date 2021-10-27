@@ -60,5 +60,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("25bef97c-829a-416b-acb8-f35b60bc986f"), Text = "Underestimate you compared to other spellcasters, believing you are little more than a foppish minstrel and overlooking the subtle power of your magic." };
             yield return new ClassCharacteristic { Id = Guid.Parse("77e73740-36fc-4df3-8840-cfad8baae88e"), Text = "Respond favorably to your social charm and abilities, but remain suspicious of your beguiling magic." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Bards.AbilityBoosts);
+        }
     }
 }

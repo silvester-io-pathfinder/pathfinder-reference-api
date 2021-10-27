@@ -12,7 +12,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DamageTypes.Inst
            return new DamageType 
            { 
                Id = ID,
-               Name = "Electricity"
+               Name = "Electricity",
                Description = "You resist Electricity damage."
            };
         }

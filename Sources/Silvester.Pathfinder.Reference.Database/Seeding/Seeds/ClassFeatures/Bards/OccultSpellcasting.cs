@@ -10,8 +10,6 @@ using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Triggers.Instances;
 using Silvester.Pathfinder.Reference.Database.Effects;
 
-using Silvester.Pathfinder.Reference.Database.EffectIncrements.Instances;
-using Silvester.Pathfinder.Reference.Database.EffectIncrements.Triggers.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Bards

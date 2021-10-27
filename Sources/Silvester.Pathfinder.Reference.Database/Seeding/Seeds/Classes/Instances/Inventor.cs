@@ -60,5 +60,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Believe that you're a genius whose work is beyond understanding." };
             yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Worry that your inventions might backfire or explode." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Inventors.AbilityBoosts);
+        }
     }
 }

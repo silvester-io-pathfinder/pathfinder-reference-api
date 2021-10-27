@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.HuntersEdges
             HuntersEdge edge = GetHuntersEdge();
 
             builder.AddSourcePage(edge, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffect(edge, GetEffects, (cause) => cause.EffectId);
+            builder.AddEffect(edge, GetEffects);
 
             return edge;
         }

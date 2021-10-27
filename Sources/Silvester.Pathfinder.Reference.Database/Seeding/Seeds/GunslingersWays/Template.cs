@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays
 
             builder.AddTextBlocks(way, GetDetails(), (e) => e.Details);
             builder.AddSourcePage(way, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffect(way, GetEffects, (way) => way.EffectId);
+            builder.AddEffect(way, GetEffects);
             builder.AddPrerequisite(way, GetPrerequisites);
 
             foreach(Guid skillId in GetWaySkills())

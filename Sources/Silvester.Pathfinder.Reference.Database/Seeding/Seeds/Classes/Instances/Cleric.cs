@@ -64,5 +64,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("a2e4b7a8-09ed-47f3-8f09-3d87b28c56d4"), Text = "Expect you to heal their wounds." };
             yield return new ClassCharacteristic { Id = Guid.Parse("747f91ce-3349-4317-bc31-2ad6be7fa6c6"), Text = "Rely on you to interact with other religious figures." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Clerics.AbilityBoosts);
+        }
     }
 }

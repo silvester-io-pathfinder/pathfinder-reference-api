@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class InnovationModification : BaseEntity
+    public class InnovationModification : BaseEntity, ISearchableEntity
     {
         public string Name { get; set; } = default!;
 
@@ -53,11 +53,13 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class InnovationModificationType : BaseEntity
+    public class InnovationModificationType : BaseEntity, ISearchableEntity
     {
         public string Name { get; set; } = default!;
         
         public ICollection<InnovationModification> Modifications { get; set; } = new List<InnovationModification>();
+
+        public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }
  

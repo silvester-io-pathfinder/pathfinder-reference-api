@@ -64,5 +64,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("2e58f436-410b-44a4-b763-ff3b5a0b87df"), Text = "Assume you performed some terrible transgression to become cursed by the gods." };
             yield return new ClassCharacteristic { Id = Guid.Parse("7a73ed7d-74c3-432b-89f1-a73282c8bead"), Text = "Admire your determination and the sacrifices you make to perform wondrous acts." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Oracles.AbilityBoosts);
+        }
     }
 }

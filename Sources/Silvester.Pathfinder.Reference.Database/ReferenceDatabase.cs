@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database
         }
 
         public DbSet<Ability> Abilities { get; set; } = default!;
-        public DbSet<Models.Action> Actions { get; set; } = default!;
+        public DbSet<Models.Entities.Action> Actions { get; set; } = default!;
         public DbSet<ActionType> ActionTypes { get; set; } = default!;
         public DbSet<AdventuringGear> AdventuringGears { get; set; } = default!;
         public DbSet<AlchemicalBomb> AlchemicalBombs { get; set; } = default!;
@@ -52,6 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Doctrine> Doctrines { get; set; } = default!;
         public DbSet<Domain> Domains { get; set; } = default!;
         public DbSet<DruidicOrder> DruidicOrders { get; set; } = default!;
+        public DbSet<Eidolon> Eidolons { get; set; } = default!;
         public DbSet<FamiliarAbility> FamiliarAbilities { get; set; } = default!;
         public DbSet<Feat> Feats { get; set; } = default!;
         public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
@@ -86,6 +87,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Methodology> Methodologies { get; set; } = default!;
         public DbSet<Muse> Muses { get; set; } = default!;
         public DbSet<Mystery> Mysteries { get; set; } = default!;
+        public DbSet<PatronTheme> PatronThemes { get; set; } = default!;
         public DbSet<PlaneCategory> PlaneCategories { get; set; } = default!;
         public DbSet<Plane> Planes { get; set; } = default!;
         public DbSet<PlayMode> PlayModes { get; set; } = default!;

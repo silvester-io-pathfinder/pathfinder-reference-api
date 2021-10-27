@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
             InnovationModification modification = GetInnovationModification();
 
             builder.AddSourcePage(modification, GetSourcePage(), (e) => e.SourcePageId);
-            builder.AddEffect(modification, GetEffects, modification => modification.EffectId);
+            builder.AddEffect(modification, GetEffects);
             builder.AddPrerequisite(modification, builder => GetPrerequisites(builder, modification));
             
             return modification;

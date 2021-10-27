@@ -1,5 +1,5 @@
 ﻿using NpgsqlTypes;
-
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;

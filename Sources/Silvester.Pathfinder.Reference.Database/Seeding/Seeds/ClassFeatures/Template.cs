@@ -8,6 +8,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System.Collections.Generic;
+using System;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures
 {
@@ -17,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures
         {
             ClassFeature classFeature = GetClassFeature();
 
-            builder.AddEffect(classFeature, builder => GetEffectsInternal(builder, classFeature), (e) => e.EffectId); 
+            builder.AddEffect(classFeature, builder => GetEffectsInternal(builder, classFeature)); 
             builder.AddSourcePage(classFeature, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(classFeature, GetDetails(), e => e.Details);
 
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures
         {
             //Always adds the class feature's level as a prerequisite to the entire effect.
             builder
-                .AddPrerequisites(Guid.Parse(""), prerequisites =>
+                .AddPrerequisites(classFeature.Id, prerequisites =>
                 {
                     prerequisites.HaveSpecificLevel(classFeature.Id, Comparator.GreaterThanOrEqualTo, classFeature.Level);
                 });

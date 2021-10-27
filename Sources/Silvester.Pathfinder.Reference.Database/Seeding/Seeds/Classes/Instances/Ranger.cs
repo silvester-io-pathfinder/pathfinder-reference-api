@@ -60,5 +60,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("4979afa1-38b9-45c1-a9a8-c64fd66912a9"), Text = "Expect you to be a quiet or taciturn loner." };
             yield return new ClassCharacteristic { Id = Guid.Parse("56e1268b-2f13-47e6-95ca-5755e37ca9e7"), Text = "Think there is something dangerous and wild about you." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Rangers.AbilityBoosts);
+        }
     }
 }

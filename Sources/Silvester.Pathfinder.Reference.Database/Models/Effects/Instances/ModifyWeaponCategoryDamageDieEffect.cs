@@ -3,7 +3,6 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using System;
-using Silvester.Pathfinder.Reference.Database.Models.Entities;
 
 namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 {

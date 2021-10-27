@@ -5,6 +5,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
 {

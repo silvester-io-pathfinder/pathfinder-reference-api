@@ -19,7 +19,6 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public BooleanEffect? Effect { get; set; }
 
         public ICollection<TextBlock> Details = new List<TextBlock>();
-        public ICollection<Class> Classes { get; set; } = new List<Class>();
         
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }

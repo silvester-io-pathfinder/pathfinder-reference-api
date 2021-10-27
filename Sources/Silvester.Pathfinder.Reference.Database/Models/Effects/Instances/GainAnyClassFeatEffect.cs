@@ -1,6 +1,5 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
-using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
@@ -8,6 +7,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects;
 
 namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 {
+
     public class GainAnyClassFeatEffect : BaseEffect
     {
         public int Level { get; set; }

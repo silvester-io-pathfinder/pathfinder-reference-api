@@ -10,7 +10,7 @@ using Silvester.Pathfinder.Reference.Database.Effects;
 
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
-namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Instances
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Alchemists
 {
     public class LightArmorExpertise : Template
     {

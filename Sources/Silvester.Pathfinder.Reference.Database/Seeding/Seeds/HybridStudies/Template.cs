@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.HybridStudies
 
             builder.AddTextBlocks(study, GetDetails(), (e) => e.Details);
             builder.AddSourcePage(study, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffect(study, GetEffects, study => study.EffectId);
+            builder.AddEffect(study, GetEffects);
 
             return study;
         }

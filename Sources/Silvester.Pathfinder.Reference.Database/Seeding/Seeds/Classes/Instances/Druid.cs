@@ -64,5 +64,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("62e621eb-b0ee-4622-914f-a70b8e84dbfc"), Text = "Assume you’re a recluse who avoids society and cities and prefers to live in the wild." };
             yield return new ClassCharacteristic { Id = Guid.Parse("82532d8e-b943-4aed-b14e-e3a302ade578"), Text = "Consider you a mystic, similar to a priest, but answering only to the forces of nature." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Druids.AbilityBoosts);
+        }
     }
 }

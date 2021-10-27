@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds
             builder.AddSourcePage(background, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraits(background, GetTraits());
             builder.AddTextBlocks(background, GetDetails(), e => e.Details);
-            builder.AddEffect(background, GetEffects, (background) => background.EffectId);
+            builder.AddEffect(background, GetEffects);
             builder.AddPrerequisite(background, GetPrerequisites);
 
             return background;

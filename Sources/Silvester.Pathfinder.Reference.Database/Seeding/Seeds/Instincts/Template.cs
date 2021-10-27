@@ -17,8 +17,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts
             Instinct instinct = GetInstinct();
 
             builder.AddSourcePage(instinct, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffect(instinct, GetInstinctAbilityEffects, (instinct) => instinct.InstinctAbilityEffectId);
-            builder.AddEffect(instinct, GetRagingEffects, (instinct) => instinct.RagingEffectId);
+            builder.AddEffect(instinct, GetInstinctAbilityEffects);
+            builder.AddEffect(instinct, GetRagingEffects);
             builder.AddTable(instinct, GetTable());
 
             return instinct;

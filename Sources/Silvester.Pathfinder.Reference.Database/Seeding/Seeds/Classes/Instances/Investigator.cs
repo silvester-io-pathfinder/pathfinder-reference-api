@@ -59,5 +59,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("f4ce7778-674f-4ac4-9c81-69956c1872af"), Text = "Get a bit annoyed that you’re such a know-it-all." };
             yield return new ClassCharacteristic { Id = Guid.Parse("ed7d4d66-8b4b-48a5-ab82-417677f36b9d"), Text = "Rely on you to solve mysteries, puzzles, or other challenges requiring intellectual curiosity and reasoning." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Investigators.AbilityBoosts);
+        }
     }
 }

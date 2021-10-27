@@ -88,7 +88,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public ICollection<Creature> CreatureEffects { get; set; } = new List<Creature>();
 
         public ICollection<MagicTradition> Traditions { get; set; } = new List<MagicTradition>();
-     
+
+        public ICollection<PatronTheme> Patrons { get; set; } = new List<PatronTheme>();
+
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 

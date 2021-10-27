@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.FamiliarAbilitie
             {
                 Id = Guid.Parse(""),
                 SourceId = Sources.Instances.CoreRulebook.ID,
-                Page = 
+                Page = 218
             };
         }
     }

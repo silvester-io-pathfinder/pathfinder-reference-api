@@ -59,5 +59,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("0b8205e3-3820-4e28-b3e1-e4ead143b5ce"), Text = "Find you arrogant unless they know you well enough to appreciate your style." };
             yield return new ClassCharacteristic { Id = Guid.Parse("29f951f9-21c2-4063-bbaf-4c2b227cf204"), Text = "Underestimate how much of a threat you pose until they face the end of your deadly blade." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Swashbucklers.AbilityBoosts);
+        }
     }
 }

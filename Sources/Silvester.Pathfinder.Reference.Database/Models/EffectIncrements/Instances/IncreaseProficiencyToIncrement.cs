@@ -1,6 +1,5 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Triggers;
-using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Instances

@@ -64,5 +64,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Wonder how you can keep on top of two disparate disciplines at the same time." };
             yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Believe you have a broad enough skill set to take care of yourself in most situations." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Magusi.AbilityBoosts);
+        }
     }
 }

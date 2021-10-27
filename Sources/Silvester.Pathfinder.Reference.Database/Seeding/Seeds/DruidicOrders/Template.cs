@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DruidicOrders
             DruidicOrder order = GetDruidicOrder();
 
             builder.AddSourcePage(order, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffect(order, GetEffects, (order) => order.EffectId);
+            builder.AddEffect(order, GetEffects);
 
             return order;
         }

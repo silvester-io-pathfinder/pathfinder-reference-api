@@ -1,6 +1,4 @@
-﻿using Silvester.Pathfinder.Reference.Database.Models.Entities;
-using System;
-using Silvester.Pathfinder.Reference.Database.Models.Entities;
+﻿using System;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
@@ -10,6 +8,7 @@ using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Triggers.I
 
 namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 {
+
     public class GainSpecificSpellSlotEffect : BaseEffect
     {
         public int Amount { get; set; }
@@ -24,9 +23,9 @@ namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
             return builder.Add(new GainSpecificSpellSlotEffect { Id = id, Amount = amount, Level = spellSlotLevel, IsSpendingPreventable = isSpendingPreventable });
         }
 
-        public static void GainSpecificSpellSlot(this BooleanEffectBuilder builder, Guid id, Guid prerequisiteId, int requiredLevel, int spellSlotLevel, int amount, int increaseTo, int atLevel, bool isSpendingPreventable = true)
+        public static EffectBuilder GainSpecificSpellSlot(this BooleanEffectBuilder builder, Guid id, Guid prerequisiteId, int requiredLevel, int spellSlotLevel, int amount, int increaseTo, int atLevel, bool isSpendingPreventable = true)
         {
-            builder.GainSpecificSpellSlot(id, amount, spellSlotLevel, isSpendingPreventable)
+            return builder.GainSpecificSpellSlot(id, amount, spellSlotLevel, isSpendingPreventable)
                 .AddPrerequisites(prerequisiteId, prerequisites =>
                 {
                     prerequisites.HaveSpecificLevel(id, Comparator.GreaterThanOrEqualTo, requiredLevel);
@@ -37,12 +36,17 @@ namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
                 });
         }
 
-        public static void GainSpecificSpellSlot(this BooleanEffectBuilder builder, Guid id, Guid prerequisiteId, int requiredLevel, int spellSlotLevel, int amount, bool isSpendingPreventable = true)
+        public static EffectBuilder GainSpecificSpellSlot(this BooleanEffectBuilder builder, Guid id, Guid prerequisiteId, int requiredLevel, int spellSlotLevel, int amount, bool isSpendingPreventable = true)
         {
-            builder.GainSpecificSpellSlot(id, amount, spellSlotLevel, isSpendingPreventable)
-                .AddPrerequisites(prerequisiteId, prerequisites =>
+            return builder.GainSpecificSpellSlot(id, Comparator.GreaterThanOrEqualTo, requiredLevel, spellSlotLevel, amount, isSpendingPreventable);
+        }
+
+        public static EffectBuilder GainSpecificSpellSlot(this BooleanEffectBuilder builder, Guid id, Comparator comparator, int requiredLevel, int spellSlotLevel, int amount, bool isSpendingPreventable = true)
+        {
+            return builder.GainSpecificSpellSlot(id, amount, spellSlotLevel, isSpendingPreventable: true)
+                .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    prerequisites.HaveSpecificLevel(id, Comparator.GreaterThanOrEqualTo, requiredLevel);
+                    prerequisites.HaveSpecificLevel(id, comparator, requiredLevel);
                 });
         }
     }

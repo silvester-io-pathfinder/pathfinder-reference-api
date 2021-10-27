@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries
             builder.AddSourcePage(mystery, GetSourcePage(), e => e.SourcePageId);
             builder.AddTextBlocks(mystery, GetDetailBlocks(), (c) => c.Details);
             builder.AddTextBlocks(mystery, GetBenefitBlocks(), (e) => e.MysteryBenefits);
-            builder.AddEffect(mystery, GetEffects, mystery => mystery.EffectId);
+            builder.AddEffect(mystery, GetEffects);
             builder.HasJoinData<Mystery, Domain>(mystery, GetDomains());
 
             SeedCurse(builder, mystery);

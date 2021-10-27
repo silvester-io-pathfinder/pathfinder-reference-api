@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.In
 
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            builder.GainAnyMethodolog(Guid.Parse(""));
+            builder.GainAnyMethodology(Guid.Parse(""));
         }
 
         protected override SourcePage GetSourcePage()

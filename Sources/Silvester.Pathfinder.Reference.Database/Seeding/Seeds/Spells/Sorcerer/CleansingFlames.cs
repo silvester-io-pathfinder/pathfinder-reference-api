@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = ID,
                 Name = "Cleansing Flames",
                 Level = 5,
-                Range = "Touch."
+                Range = "Touch.",
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 ClassId = Classes.Instances.Sorcerer.ID,
                 SpellTypeId = SpellTypes.Instances.Focus.ID,

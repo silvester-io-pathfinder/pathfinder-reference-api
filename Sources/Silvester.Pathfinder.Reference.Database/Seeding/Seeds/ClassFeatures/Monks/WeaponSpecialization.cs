@@ -57,7 +57,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Mo
             return new SourcePage
             {
                 Id = Guid.Parse(""),
-                SourceId = Sources.Instances.157.ID,
+                SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 41
             };
         }

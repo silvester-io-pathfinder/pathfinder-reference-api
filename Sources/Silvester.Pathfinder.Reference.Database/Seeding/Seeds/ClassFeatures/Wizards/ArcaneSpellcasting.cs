@@ -23,6 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
             return new ClassFeature
             {
                 Id = ID, 
+                Level = 1,
                 Name = "Arcane Spellcasting", 
             };
         }

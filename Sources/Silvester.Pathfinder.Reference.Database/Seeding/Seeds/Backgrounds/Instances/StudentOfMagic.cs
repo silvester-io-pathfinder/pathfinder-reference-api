@@ -7,7 +7,6 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PlayModes.Instances;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
-using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using System.Collections.Generic;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 

@@ -7,11 +7,11 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Actions
 {
-    public abstract class Template : EntityTemplate<Models.Action>
+    public abstract class Template : EntityTemplate<Models.Entities.Action>
     {
-        protected override Models.Action GetEntity(ModelBuilder builder)
+        protected override Models.Entities.Action GetEntity(ModelBuilder builder)
         {
-            Models.Action action = GetAction();
+            Models.Entities.Action action = GetAction();
 
             builder.AddTextBlocks(action, GetDetails(), (a) => a.Details);
             builder.AddRollableEffect(action, GetRollableEffect(), e => e.RollableEffect);
@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Actions
             return action;
         }
 
-        protected abstract Models.Action GetAction();
+        protected abstract Models.Entities.Action GetAction();
         protected abstract IEnumerable<TextBlock> GetDetails();
 
         protected virtual RollableEffect? GetRollableEffect()

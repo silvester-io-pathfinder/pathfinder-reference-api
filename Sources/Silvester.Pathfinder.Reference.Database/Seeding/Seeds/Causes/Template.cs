@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes
 
             builder.AddTextBlocks(cause, GetDetails(), (e) => e.Details);
             builder.AddSourcePage(cause, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddEffect(cause, GetEffects, (cause) => cause.EffectId);
+            builder.AddEffect(cause, GetEffects);
 
             return cause;
         }

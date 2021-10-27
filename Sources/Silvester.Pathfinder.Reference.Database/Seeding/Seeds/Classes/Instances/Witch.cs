@@ -63,5 +63,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse("09921c78-f5c8-4fe2-a8bb-7f5ae4d33ec3"), Text = "Fear what your magic can do to their minds, bodies, and souls, and ask that you avoid casting spells in polite company, as few can identify whether one of your spells is harmless or malevolent until it’s too late." };
             yield return new ClassCharacteristic { Id = Guid.Parse("8c20d58a-927d-4ea5-83c9-be47682cb32b"), Text = "Assume you can easily solve all their problems, from dangerous weather to poor crop yields, and ask you for spells that can help them get whatever they desire." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Witches.AbilityBoosts);
+        }
     }
 }

@@ -103,11 +103,22 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Builders
 
     public static class SeedingExtensions
     {
-        public static void AddEffect<TOwner>(this ModelBuilder modelBuilder, TOwner owner, Action<BooleanEffectBuilder> buildAction, Expression<Func<TOwner, Guid?>> effectIdSelector)
+        public static void AddEffect<TOwner>(this ModelBuilder modelBuilder, TOwner owner, Action<BooleanEffectBuilder> buildAction)
             where TOwner : BaseEntity
         {
             BooleanEffectBuilder builder = BooleanEffectBuilder.CreateAnd(owner.Id, buildAction);
             BooleanEffect effect = builder.Build();
+
+            modelBuilder.AddEffect(owner, effect);
+        }
+
+        public static void AddEffect<TOwner>(this ModelBuilder modelBuilder, TOwner owner, BooleanEffect? effect)
+            where TOwner : BaseEntity
+        {
+            if(effect == null)
+            {
+                return;
+            }
 
             if (effect.Entries.Count == 0)
             {

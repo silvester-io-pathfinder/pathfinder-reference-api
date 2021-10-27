@@ -1,6 +1,5 @@
 ﻿using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
-using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
@@ -8,7 +7,6 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects;
 
 namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 {
-
     public class GainAnyMagicTraditionSpellEffect : BaseEffect
     {
         public int Level { get; set; }
@@ -26,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 
         public static EffectBuilder GainAnyMagicTraditionSpell(this BooleanEffectBuilder builder, Guid id, Guid prerequisiteId, Guid magicTraditionId, int spellLevel, int requiredLevel)
         {
-            EffectBuilder effect = builder.GainAnyMagicTraditionSpell(Guid.Parse(""), magicTraditionId, spellLevel);
+            EffectBuilder effect = builder.GainAnyMagicTraditionSpell(id, magicTraditionId, spellLevel);
             effect.AddPrerequisites(prerequisiteId, prerequisites =>
             {
                 prerequisites.HaveSpecificLevel(id, Comparator.GreaterThanOrEqualTo, requiredLevel: 2);

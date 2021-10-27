@@ -60,5 +60,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
             yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Underestimate you at first glance, thinking you rely on your gun because you lack any other skills." };
             yield return new ClassCharacteristic { Id = Guid.Parse(""), Text = "Respect your eternal vigilance, unyielding grit, and excellent aim." };
         }
+
+        protected override Type GetClassFeaturesNamespace()
+        {
+            return typeof(ClassFeatures.Gunslingers.AbilityBoosts);
+        }
     }
 }

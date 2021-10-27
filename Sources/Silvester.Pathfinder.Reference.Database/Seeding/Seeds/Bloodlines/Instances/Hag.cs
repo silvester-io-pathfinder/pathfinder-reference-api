@@ -1,4 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Effects;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
@@ -34,19 +36,22 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
 
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Deception.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSkillProficiencyEffect { Id = Guid.Parse(""), SkillId = Skills.Instances.Occultism.ID, ProficiencyId = Proficiencies.Instances.Trained.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.JealousHex.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Daze.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.IllusoryDisguise.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.TouchOfIdiocy.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.Blindness.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.OutcastsCurse.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.MarinersCurse.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.BalefulPolymorph.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.WarpMind.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.SpiritualEpidemic.ID };
-            yield return new GainSpecificSpellEffect { Id = Guid.Parse(""), SpellId = Spells.Instances.NaturesEnmity.ID };
+            builder.GainSpecificSpellCasting(Guid.Parse(""), MagicTraditions.Instances.Occult.ID);
+
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Deception.ID);
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.JealousHex.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Daze.ID );
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.IllusoryDisguise.ID );
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TouchOfIdiocy.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Blindness.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.OutcastsCurse.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.MarinersCurse.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.BalefulPolymorph.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.WarpMind.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.SpiritualEpidemic.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.NaturesEnmity.ID);
         }
 
         protected override IEnumerable<Guid> GetSkills()

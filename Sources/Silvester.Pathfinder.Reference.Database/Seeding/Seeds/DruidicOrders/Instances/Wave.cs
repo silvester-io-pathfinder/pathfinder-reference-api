@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DruidicOrders.In
 
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.AcroMedicinebatics.ID);
+            builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Medicine.ID);
             builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.ShoreStep.ID);
             builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.RisingSurf.ID);
         }

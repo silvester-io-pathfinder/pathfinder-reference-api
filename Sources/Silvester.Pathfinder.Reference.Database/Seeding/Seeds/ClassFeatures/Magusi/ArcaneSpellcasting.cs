@@ -55,38 +55,38 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ma
             builder.GainSpecificSpellSlot(Guid.Parse(""), amount: 5, spellSlotLevel: 0, isSpendingPreventable: true);
 
             //Spell slots
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 1, amount: 1, spellSlotLevel: 1);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 2, amount: 2, spellSlotLevel: 1);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 3, amount: 2, spellSlotLevel: 1);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 3, amount: 1, spellSlotLevel: 2);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 4, amount: 2, spellSlotLevel: 1);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 4, amount: 2, spellSlotLevel: 2);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 5, amount: 2, spellSlotLevel: 2);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 5, amount: 2, spellSlotLevel: 3);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 6, amount: 2, spellSlotLevel: 2);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 6, amount: 2, spellSlotLevel: 3);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 7, amount: 2, spellSlotLevel: 3);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 7, amount: 2, spellSlotLevel: 4);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 8, amount: 2, spellSlotLevel: 3);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 8, amount: 2, spellSlotLevel: 4);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 9, amount: 2, spellSlotLevel: 4);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 9, amount: 2, spellSlotLevel: 5);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 10, amount: 2, spellSlotLevel: 4);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 10, amount: 2, spellSlotLevel: 5);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 11, amount: 2, spellSlotLevel: 5);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 11, amount: 2, spellSlotLevel: 6);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 12, amount: 2, spellSlotLevel: 5);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 12, amount: 2, spellSlotLevel: 6);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 13, amount: 2, spellSlotLevel: 6);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 13, amount: 2, spellSlotLevel: 7);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 14, amount: 2, spellSlotLevel: 6);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 14, amount: 2, spellSlotLevel: 7);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 15, amount: 2, spellSlotLevel: 7);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 15, amount: 2, spellSlotLevel: 8);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 16, amount: 2, spellSlotLevel: 7);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, atLevel: 16, amount: 2, spellSlotLevel: 8);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, atLevel: 17, amount: 2, spellSlotLevel: 8);
-            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, atLevel: 17, amount: 2, spellSlotLevel: 9);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 1, spellSlotLevel: 1, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 2, spellSlotLevel: 1, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 3, spellSlotLevel: 1, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 3, spellSlotLevel: 2, amount: 1);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 4, spellSlotLevel: 1, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 4, spellSlotLevel: 2, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 5, spellSlotLevel: 2, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 5, spellSlotLevel: 3, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 6, spellSlotLevel: 2, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 6, spellSlotLevel: 3, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 7, spellSlotLevel: 3, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 7, spellSlotLevel: 4, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 8, spellSlotLevel: 3, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 8, spellSlotLevel: 4, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 9, spellSlotLevel: 4, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 9, spellSlotLevel: 5, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 10, spellSlotLevel: 4, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 10, spellSlotLevel: 5, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 11, spellSlotLevel: 5, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 11, spellSlotLevel: 6, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 12, spellSlotLevel: 5, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 12, spellSlotLevel: 6, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 13, spellSlotLevel: 6, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 13, spellSlotLevel: 7, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 14, spellSlotLevel: 6, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 14, spellSlotLevel: 7, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 15, spellSlotLevel: 7, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 15, spellSlotLevel: 8, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 16, spellSlotLevel: 7, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.EqualTo, requiredLevel: 16, spellSlotLevel: 8, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 17, spellSlotLevel: 8, amount: 2);
+            builder.GainSpecificSpellSlot(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 17, spellSlotLevel: 9, amount: 2);
         }
 
         protected override SourcePage GetSourcePage()
@@ -97,18 +97,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ma
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = 36
             };
-        }
-    }
-
-    public static partial class BooleanEffectBuilderExtensions
-    {
-        public static void GainSpecificSpellSlot(this BooleanEffectBuilder builder, Guid id, Comparator comparator, int atLevel, int amount, int spellSlotLevel)
-        {
-            builder.GainSpecificSpellSlot(id, amount, spellSlotLevel, isSpendingPreventable: true)
-                .AddPrerequisites(Guid.Parse(""), prerequisites =>
-                {
-                    prerequisites.HaveSpecificLevel(id, comparator, atLevel);
-                });
         }
     }
 }
