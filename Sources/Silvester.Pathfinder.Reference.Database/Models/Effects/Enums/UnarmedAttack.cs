@@ -3,6 +3,8 @@
     public enum UnarmedAttack
     {
         Fangs,
-        Claws
+        Claws,
+        Tusks,
+        Quill
     }
 }
