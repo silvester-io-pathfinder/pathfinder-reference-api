@@ -49,14 +49,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 //Enhanced Senses
                 or.AddAnd(Guid.Parse(""), and => 
                 {
-                    and.GainAnySense(Guid.Parse(""), "30 feet.");
+                    and.GainAnySense(Guid.Parse(""), SenseAccuracies.Instances.Imprecise.ID, "30 feet.");
                     and.AddOr(Guid.Parse(""), or => 
                     {
-                        or.GainSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID);
-                        or.GainSpecificSense(Guid.Parse(""), Senses.Instances.Darkvision.ID)
+                        or.GainSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
+                        or.HaveSpecificSense(Guid.Parse(""), Senses.Instances.Darkvision.ID, SenseAccuracies.Instances.Precise.ID)
                             .AddPrerequisites(Guid.Parse(""), prerequisites => 
                             {
-                                prerequisites.HaveSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID);
+                                prerequisites.HaveSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
                             });
                     });
                 });

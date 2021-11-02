@@ -40,13 +40,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rackets.Instance
             builder.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.MediumArmor.ID)
                 .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
-                    prerequisites.HaveSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.LightArmor.ID);
+                    prerequisites.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.LightArmor.ID);
                 });
            
             builder.GainSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID, ArmorCategories.Instances.MediumArmor.ID)
                             .AddPrerequisites(Guid.Parse(""), prerequisites =>
                             {
-                                prerequisites.HaveSpecificArmorCategoryProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID, ArmorCategories.Instances.LightArmor.ID);
+                                prerequisites.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID, ArmorCategories.Instances.LightArmor.ID);
                             });
         }
 

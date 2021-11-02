@@ -90,6 +90,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<PatronTheme> PatronThemes { get; set; } = default!;
         public DbSet<PlaneCategory> PlaneCategories { get; set; } = default!;
         public DbSet<Plane> Planes { get; set; } = default!;
+        public DbSet<Philosophy> Philosophies { get; set; } = default!;
         public DbSet<PlayMode> PlayModes { get; set; } = default!;
         public DbSet<Potency> Potencies { get; set; } = default!;
         public DbSet<PreciousMaterial> PreciousMaterials { get; set; } = default!;

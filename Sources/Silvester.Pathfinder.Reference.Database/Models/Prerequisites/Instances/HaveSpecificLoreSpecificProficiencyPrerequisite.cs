@@ -7,7 +7,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificLoreProficiencyPrerequisite : BasePrerequisite
+    public class HaveSpecificLoreSpecificProficiencyPrerequisite : BasePrerequisite
     {
         public Guid RequiredProficiencyId { get; set; }
         public Proficiency RequiredProficiency { get; set; } = default!;
@@ -18,9 +18,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static PrerequisiteBuilder HaveSpecificLoreProficiency(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredProficiencyId, Guid requiredLoreId)
+        public static PrerequisiteBuilder HaveSpecificLoreSpecificProficiency(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredProficiencyId, Guid requiredLoreId)
         {
-            return builder.Add(new HaveSpecificLoreProficiencyPrerequisite { Id = id, RequiredProficiencyId = requiredProficiencyId, RequiredLoreId = requiredLoreId });
+            return builder.Add(new HaveSpecificLoreSpecificProficiencyPrerequisite { Id = id, RequiredProficiencyId = requiredProficiencyId, RequiredLoreId = requiredLoreId });
         }
     }
 }

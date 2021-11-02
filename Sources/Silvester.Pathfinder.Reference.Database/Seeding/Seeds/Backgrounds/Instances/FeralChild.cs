@@ -47,15 +47,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
             builder.AddOr(Guid.Parse(""), or =>
             {
-                or.GainSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID);
-                or.GainSpecificSense(Guid.Parse(""), Senses.Instances.Darkvision.ID)
+                or.GainSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
+                or.GainSpecificSense(Guid.Parse(""), Senses.Instances.Darkvision.ID, SenseAccuracies.Instances.Precise.ID)
                     .AddPrerequisites(Guid.Parse(""), prerequisites =>
                     {
                         prerequisites.HaveSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID);
                     });
             });
 
-            builder.GainSpecificSense(Guid.Parse(""), Senses.Instances.Scent.ID, "30 feet.");
+            builder.GainSpecificSense(Guid.Parse(""), Senses.Instances.Scent.ID, SenseAccuracies.Instances.Imprecise.ID, "30 feet.");
             builder.GainSpecificFeat(Guid.Parse(""), Feats.General.ForagerFeat.ID);
         }
 

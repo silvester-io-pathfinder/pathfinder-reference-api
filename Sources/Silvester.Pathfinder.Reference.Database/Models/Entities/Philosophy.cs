@@ -1,30 +1,24 @@
 ﻿using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {
-    public class Cause : BaseEntity, INamedEntity, ISearchableEntity
+    public class Philosophy : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
-        public string DivineSmite { get; set; } = default!;
-        public string Exalt{ get; set; } = default!;
+        public string? Edicts { get; set; } 
+        public string? Anathema { get; set; } 
+        public string? AreasOfConcern { get; set; } 
 
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
 
-        public Guid ClassId { get; set; }
-        public Class Class { get; set; } = default!;
-
-        public Guid? EffectId { get; set; }
-        public BooleanEffect? Effect { get; set; }
-
-        public Guid AlignmentId { get; set; }
-        public Alignment Alignment { get; set; } = default!;
-
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
+        public ICollection<Alignment> FollowAlignments { get; set; } = new List<Alignment>();
 
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }

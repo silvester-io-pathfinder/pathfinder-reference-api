@@ -8,19 +8,17 @@ using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
-    public class HaveSpecificRecallKnowledgePrerequisite : BasePrerequisite
+    public class HaveSpecificDecipherWritingProficiencyPrerequisite : BasePrerequisite
     {
         public Guid RequiredProficiencyId { get; set; }
         public Proficiency RequiredProficiency { get; set; } = default!;
-
-        public bool RequiresAssurance { get; set; }
     }
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static PrerequisiteBuilder HaveSpecificRecallKnowledge(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredProficiencyId, bool requiresAssurance)
+        public static PrerequisiteBuilder HaveSpecificDecipherWritingProficiency(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredProficiencyId)
         {
-            return builder.Add(new HaveSpecificRecallKnowledgePrerequisite { Id = id, RequiredProficiencyId = requiredProficiencyId, RequiresAssurance = requiresAssurance });
+            return builder.Add(new HaveSpecificDecipherWritingProficiencyPrerequisite { Id = id, RequiredProficiencyId = requiredProficiencyId });
         }
     }
 }
