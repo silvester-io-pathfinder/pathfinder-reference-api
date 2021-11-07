@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BastionDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("23134b7d-2d40-4647-9f72-58710bf86315");
+        public static readonly Guid ID = Guid.Parse("7f512078-9548-4593-a024-83b560acc554");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d1a8921d-c25a-4dd1-b2a1-21bc870285a0"), Type = TextBlockType.Text, Text = "You are particularly skilled at using a shield in combat. You gain the (feat: Reactive Shield) fighter feat. This fulfills any prerequisites requiring (feat: Reactive Shield) as normal." };
+            yield return new TextBlock { Id = Guid.Parse("341ff76a-7593-49c2-8e00-127a54418442"), Type = TextBlockType.Text, Text = "You are particularly skilled at using a shield in combat. You gain the (feat: Reactive Shield) fighter feat. This fulfills any prerequisites requiring (feat: Reactive Shield) as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("19d9bb94-900c-41af-8656-ffcb4ef44747"), Feats.Instances.ShieldBlock.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d616c9b5-b6c9-4ffc-bfe9-d6feba3d526d"), Feats.Instances.ShieldBlock.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3083d405-eb73-471d-b39d-df98fe7bcdb6"),
+                Id = Guid.Parse("3c6948a7-6c7e-4963-b142-c1c8202ea69c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

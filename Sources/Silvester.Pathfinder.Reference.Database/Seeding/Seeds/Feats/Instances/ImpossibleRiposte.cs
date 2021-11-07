@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImpossibleRiposte : Template
     {
-        public static readonly Guid ID = Guid.Parse("73438fcd-f1aa-4fdb-822b-32db51ef1c88");
+        public static readonly Guid ID = Guid.Parse("f5a3c42a-f5bc-4e64-9412-588ea1d31c16");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c40efd1d-4003-4be0-ada5-0d1ea8c890e3"), Type = TextBlockType.Text, Text = "Your ripostes can deflect attacks back at their source. You can use (feat: Opportune Riposte) with a trigger of “A foe outside of your reach critically fails an attack roll against you” in addition to its usual trigger. When you use (feat: Opportune Riposte) with this new trigger against a ranged attack, your (action: Strike) deflects some of the triggering effect back toward its source. Compare the result of your attack roll to the AC of the triggering foe. On a hit, you deal the normal amount of damage for your (action: Strike), but the damage type changes to that of the triggering attack. For instance, if you used (feat: Opportune Riposte) to deflect a (spell: ray of frost), your (action: Strike) would deal cold damage instead of its normal damage type." };
+            yield return new TextBlock { Id = Guid.Parse("08ccd4d6-6f7b-4129-9daf-905a9490db7f"), Type = TextBlockType.Text, Text = "Your ripostes can deflect attacks back at their source. You can use (feat: Opportune Riposte) with a trigger of “A foe outside of your reach critically fails an attack roll against you” in addition to its usual trigger. When you use (feat: Opportune Riposte) with this new trigger against a ranged attack, your (action: Strike) deflects some of the triggering effect back toward its source. Compare the result of your attack roll to the AC of the triggering foe. On a hit, you deal the normal amount of damage for your (action: Strike), but the damage type changes to that of the triggering attack. For instance, if you used (feat: Opportune Riposte) to deflect a (spell: ray of frost), your (action: Strike) would deal cold damage instead of its normal damage type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("6d8d0eae-78f7-4e0e-b521-30649be96b06"), Feats.Instances.OpportuneRiposte.ID);
+            builder.HaveSpecificFeat(Guid.Parse("54cad998-223c-417e-ba31-7a153d279f4c"), Feats.Instances.OpportuneRiposte.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("916ff8ba-a4d2-4411-b009-8783c754af32"),
+                Id = Guid.Parse("b37dda80-8dc5-4f8c-b745-cd6ca538cba5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DistractingFeint : Template
     {
-        public static readonly Guid ID = Guid.Parse("c1ec6718-2f37-478f-8336-ba040ca58ac8");
+        public static readonly Guid ID = Guid.Parse("aa9eb9ff-e8f2-4687-88eb-82c610ea2b71");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5d8d7c6c-b952-4373-9c25-779c50dbec25"), Type = TextBlockType.Text, Text = "Your (action: Feints | Feint) are far more distracting than normal, drawing your foes’ attention and allowing you and your allies to take greater advantage. While a creature is flat-footed by your (action: Feint), it also takes a -2 circumstance penalty to Perception checks and Reflex saves." };
+            yield return new TextBlock { Id = Guid.Parse("5b44e6b0-f772-4c69-a7f3-a8a6c8979404"), Type = TextBlockType.Text, Text = "Your (action: Feints | Feint) are far more distracting than normal, drawing your foes’ attention and allowing you and your allies to take greater advantage. While a creature is flat-footed by your (action: Feint), it also takes a -2 circumstance penalty to Perception checks and Reflex saves." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificRacket(Guid.Parse("de79048a-72c0-491d-b3ae-289f01cc403a"), Rackets.Instances.Scoundrel.ID);
+            builder.HaveSpecificRacket(Guid.Parse("8b1d3215-c48c-4723-a828-fa08f5d65a75"), Rackets.Instances.Scoundrel.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5af1982e-ef43-4555-8778-8e84c8635e8a"),
+                Id = Guid.Parse("7292d98f-66be-4264-981d-f2b0c072976a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

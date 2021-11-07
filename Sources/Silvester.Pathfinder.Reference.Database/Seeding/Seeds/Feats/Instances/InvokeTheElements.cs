@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InvokeTheElements : Template
     {
-        public static readonly Guid ID = Guid.Parse("8b042d60-2cc1-488a-a0a6-3b66bbd75772");
+        public static readonly Guid ID = Guid.Parse("15de3ee3-6046-4011-b881-b18ec1de9bdd");
 
         protected override Feat GetFeat()
         {
@@ -28,18 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c7aacb65-9884-4f61-9552-a3eac15a0231"), Type = TextBlockType.Text, Text = "You summon an aura of shimmering heat, flurrying snow, crashing waves, or swirling wind and lightning. For 1 minute, you gain concealment against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers 1d12 damage (basic Reflex save using your class DC or spell DC, whichever is higher). At 13th and 17th level, this damage increases by 1d12. A veil may changeling deals fire damage, a snow may changeling deals cold damage, a brine may changeling deals bludgeoning damage and the effect gains the (trait: water) trait, and a virga may changeling deals electricity damage." };
+            yield return new TextBlock { Id = Guid.Parse("61e8f779-7d31-4bd3-ac2f-dd2f36c05ade"), Type = TextBlockType.Text, Text = "You summon an aura of shimmering heat, flurrying snow, crashing waves, or swirling wind and lightning. For 1 minute, you gain concealment against creatures more than 5 feet away, and any creature that ends its turn within 5 feet of you suffers 1d12 damage (basic Reflex save using your class DC or spell DC, whichever is higher). At 13th and 17th level, this damage increases by 1d12. A veil may changeling deals fire damage, a snow may changeling deals cold damage, a brine may changeling deals bludgeoning damage and the effect gains the (trait: water) trait, and a virga may changeling deals electricity damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("ef55af66-e068-49ae-92fc-ec12e8661ad4"), or => 
+            builder.AddOr(Guid.Parse("b17a1192-9458-475d-9c34-669219a403e6"), or => 
             {
-                or.HaveSpecificFeat(Guid.Parse("cf2d1859-3570-4e29-9785-1e3c7d9054fa"), Feats.Instances.BrineMay.ID);
-                or.HaveSpecificFeat(Guid.Parse("ede0cc1b-7a16-4352-a11a-f9e8fc4de649"), Feats.Instances.SnowMay.ID);
-                or.HaveSpecificFeat(Guid.Parse("9411e431-6957-4223-a614-6696ca7911e4"), Feats.Instances.VeilMay.ID);
-                or.HaveSpecificFeat(Guid.Parse("ffcf73ad-26b4-4b42-98d5-feeb823cf3bb"), Feats.Instances.VirgaMay.ID);
+                or.HaveSpecificFeat(Guid.Parse("36dbeed2-27f6-4a16-8c14-120aeeea53d5"), Feats.Instances.BrineMay.ID);
+                or.HaveSpecificFeat(Guid.Parse("ab369acb-fce7-4a2f-ae08-9f2f5adc68d4"), Feats.Instances.SnowMay.ID);
+                or.HaveSpecificFeat(Guid.Parse("487f3e76-ca20-4dfd-a76b-85df07e6d2e9"), Feats.Instances.VeilMay.ID);
+                or.HaveSpecificFeat(Guid.Parse("26f01d55-6871-4146-a33b-e7d753b425b0"), Feats.Instances.VirgaMay.ID);
             });
         }
 
@@ -52,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("edaa0dd6-7b84-48f1-902c-2297b1014885"),
+                Id = Guid.Parse("cb5de1f0-3a2f-4fa3-9df6-a2f7df34e331"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

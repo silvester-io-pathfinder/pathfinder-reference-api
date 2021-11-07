@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ScaldingSpit : Template
     {
-        public static readonly Guid ID = Guid.Parse("f684a4e1-9a75-49d7-86a6-ee556e138415");
+        public static readonly Guid ID = Guid.Parse("5a4bb0f2-ff74-4591-9aab-6e805f3d5b5d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ff94fab8-e73d-46c9-a7be-ec2599ee9ddb"), Type = TextBlockType.Text, Text = "Your bodily fluids burn with surprising volatility, as if you ran on oil instead of blood. As long as you are taking persistent fire damage, you gain a boiling spit ranged unarmed attack with a range of 30 feet that deals 1d6 fire damage." };
+            yield return new TextBlock { Id = Guid.Parse("39b27f0a-6801-4413-9868-fa57002f74c0"), Type = TextBlockType.Text, Text = "Your bodily fluids burn with surprising volatility, as if you ran on oil instead of blood. As long as you are taking persistent fire damage, you gain a boiling spit ranged unarmed attack with a range of 30 feet that deals 1d6 fire damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("5f7bf7f8-5a02-4803-a045-6cb9bbb1bab8"), Feats.Instances.TorchGoblin.ID);
+            builder.HaveSpecificFeat(Guid.Parse("9d6e76ed-8e2f-4639-bfe2-5023a45e91be"), Feats.Instances.TorchGoblin.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6269df88-8fa6-4068-a244-7e24ba495b70"),
+                Id = Guid.Parse("297a3a03-97b0-47f9-84fb-bb55c8001535"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

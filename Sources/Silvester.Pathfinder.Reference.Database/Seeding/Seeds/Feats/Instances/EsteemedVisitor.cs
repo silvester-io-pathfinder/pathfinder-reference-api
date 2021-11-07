@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EsteemedVisitor : Template
     {
-        public static readonly Guid ID = Guid.Parse("682db0a0-2eec-4839-8c86-00fe42489201");
+        public static readonly Guid ID = Guid.Parse("42cd2d91-5bde-49c3-8a92-9477d01edc3e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c80e0eca-c289-438f-9d64-111166219dce"), Type = TextBlockType.Text, Text = "Your polite manners and natural ability to comfort others make it easy for you to break down cultural barriers and earn strangers’ trust. While you are in a settlement, when you roll a critical failure on a Diplomacy check to (Action: Gather Information) or (Action: Make an Impression), you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("2416e1d4-895b-4558-aa58-d78ab79dc4cd"), Type = TextBlockType.Text, Text = "Your polite manners and natural ability to comfort others make it easy for you to break down cultural barriers and earn strangers’ trust. While you are in a settlement, when you roll a critical failure on a Diplomacy check to (Action: Gather Information) or (Action: Make an Impression), you get a failure instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("67f8a390-5840-4a0a-901a-7b64d14d78e0"),
+                Id = Guid.Parse("4e4e8709-28cc-4370-b7ad-71a6793487e5"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

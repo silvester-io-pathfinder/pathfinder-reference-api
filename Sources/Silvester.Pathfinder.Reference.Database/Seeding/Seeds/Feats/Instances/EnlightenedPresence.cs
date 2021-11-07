@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EnlightenedPresence : Template
     {
-        public static readonly Guid ID = Guid.Parse("ed7db02a-883e-4ac0-b7dd-1824937b0b6b");
+        public static readonly Guid ID = Guid.Parse("c675a864-778b-4e36-ad74-6485a84329e6");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("88f3267a-83b3-4ca0-b0a7-92d52086732c"), Type = TextBlockType.Text, Text = "You exude an aura of resolve. You and allies within 15 feet of you gain a +2 status bonus to Will saving throws against mental effects." };
+            yield return new TextBlock { Id = Guid.Parse("c689bc44-bd0b-47eb-8327-63cc670ba6b5"), Type = TextBlockType.Text, Text = "You exude an aura of resolve. You and allies within 15 feet of you gain a +2 status bonus to Will saving throws against mental effects." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b7fc5c3c-958c-431b-b5b3-f97d6a3ca4f9"),
+                Id = Guid.Parse("c61ee4ff-fd47-4294-924a-f9113073bfc5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

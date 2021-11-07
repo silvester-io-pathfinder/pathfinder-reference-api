@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LessonOfTheElements : Template
     {
-        public static readonly Guid ID = Guid.Parse("5611b030-9f5a-4a29-87ef-4969f20bc6be");
+        public static readonly Guid ID = Guid.Parse("1f580ba2-dbfa-4c2b-8d1f-494e1dd7e595");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ace73c78-fbf1-4cc9-99a4-efaadc47fab1"), Type = TextBlockType.Text, Text = "~ Lesson Type: Basic" };
-            yield return new TextBlock { Id = Guid.Parse("5c222494-d459-41bb-b380-09e99ae1e808"), Type = TextBlockType.Text, Text = "You gain the (spell: elemental betrayal) hex. Your familiar learns your choice of (spell: burning hands), (spell: air bubble), (spell: hydraulic push), or (spell: pummeling rubble)." };
+            yield return new TextBlock { Id = Guid.Parse("db922418-d8ea-4162-87c0-030c4160de5b"), Type = TextBlockType.Text, Text = "~ Lesson Type: Basic" };
+            yield return new TextBlock { Id = Guid.Parse("4d654a24-2fd1-4858-ba42-0804dec98ccb"), Type = TextBlockType.Text, Text = "You gain the (spell: elemental betrayal) hex. Your familiar learns your choice of (spell: burning hands), (spell: air bubble), (spell: hydraulic push), or (spell: pummeling rubble)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("664a0b30-de0d-463f-9596-f5631607e426"),
+                Id = Guid.Parse("f6591917-97b2-4532-ac03-9fce3605d0ce"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

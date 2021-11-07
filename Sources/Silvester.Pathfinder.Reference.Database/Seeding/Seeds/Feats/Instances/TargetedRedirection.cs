@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TargetedRedirection : Template
     {
-        public static readonly Guid ID = Guid.Parse("ce9f208d-fa5e-45cf-9b11-505ff98d9aec");
+        public static readonly Guid ID = Guid.Parse("e290b464-0fd3-4587-9ec7-ae442cab97dd");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f58b88a2-6c98-4d6e-bc83-0e486fab8275"), Type = TextBlockType.Text, Text = "You aim a shot at your spotter, intending for your spotter to redirect that shot off their own weapon or shield to hit your foe from a better angle, and avoid your foe’s cover. If your next action is to make a ranged (action: Strike), you treat your spotter’s position as your own for the purposes of determining cover and range. Your spotter must be within your weapon’s first range increment and they must use a reaction to redirect your shot." };
+            yield return new TextBlock { Id = Guid.Parse("3f785d9b-2143-4dd9-a747-ebb624591b91"), Type = TextBlockType.Text, Text = "You aim a shot at your spotter, intending for your spotter to redirect that shot off their own weapon or shield to hit your foe from a better angle, and avoid your foe’s cover. If your next action is to make a ranged (action: Strike), you treat your spotter’s position as your own for the purposes of determining cover and range. Your spotter must be within your weapon’s first range increment and they must use a reaction to redirect your shot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("4e18c65d-f47c-4c5a-856d-1aa837b6122b"), Feats.Instances.SnipingDuoDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("72c9740c-fb8b-424e-89f4-44f30b9d2b9d"), Feats.Instances.SnipingDuoDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("80be9652-a19a-431d-bf45-d34794a6fb4e"),
+                Id = Guid.Parse("de70ad8c-665a-4dfc-95d0-6ae08d5b1896"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

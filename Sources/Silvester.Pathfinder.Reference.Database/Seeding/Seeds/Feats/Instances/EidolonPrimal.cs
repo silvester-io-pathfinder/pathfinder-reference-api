@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EidolonPrimal : Template
     {
-        public static readonly Guid ID = Guid.Parse("ffa07020-386b-4670-a59a-d6fa01971028");
+        public static readonly Guid ID = Guid.Parse("f7235736-7429-482a-862e-efd224a38a41");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb2739c2-ae68-4914-8f5d-2119a20cd324"), Type = TextBlockType.Text, Text = "__Your eidolon’s tradition is primal.__" };
+            yield return new TextBlock { Id = Guid.Parse("e110bdcd-c3b1-4b26-8972-d1b1440756b4"), Type = TextBlockType.Text, Text = "__Your eidolon’s tradition is primal.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("12e0f4cd-f4c6-4996-9b61-86380620c469"),
+                Id = Guid.Parse("0c944e17-d474-4d1c-b15c-f3cfe3cebab3"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

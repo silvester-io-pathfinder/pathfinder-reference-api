@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            builder.GainSpecificUnarmedAttack(Guid.Parse(""), UnarmedAttack.Spine, WeaponGroups.Instances.Brawling.ID, DamageTypes.Instances.Piercing.ID, damage: "1d6");
+            builder.GainSpecificUnarmedAttack(Guid.Parse(""), UnarmedWeapons.Instances.Spine.ID, WeaponGroups.Instances.Brawling.ID, DamageTypes.Instances.Piercing.ID, damage: "1d6");
         }
 
         protected override SourcePage GetSourcePage()

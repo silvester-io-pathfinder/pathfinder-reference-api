@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class IntuitiveIllusions : Template
     {
-        public static readonly Guid ID = Guid.Parse("51f774dd-e280-49b0-82ca-eca2a3578b83");
+        public static readonly Guid ID = Guid.Parse("ecbac0e8-40e2-485d-b76b-343c1fee802e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("354aad7a-2fc8-42bb-bef7-55d47e79b55e"), Type = TextBlockType.Text, Text = "Illusion magic comes to you so naturally that you can effortlessly sustain your magical ruses. You immediately gain the effects of a (action: Sustain a Spell) action to extend the duration of one of your active illusion spells." };
+            yield return new TextBlock { Id = Guid.Parse("ec0767e8-342e-4e45-97d8-8f81ad8e1070"), Type = TextBlockType.Text, Text = "Illusion magic comes to you so naturally that you can effortlessly sustain your magical ruses. You immediately gain the effects of a (action: Sustain a Spell) action to extend the duration of one of your active illusion spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("51dbc6f7-8b0f-4414-8610-f736564a0ae4"), Feats.Instances.IllusionSense.ID);
+            builder.HaveSpecificFeat(Guid.Parse("31d98e03-9ee4-4f51-afac-f0b876d53748"), Feats.Instances.IllusionSense.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e8d8e32e-9597-4725-bcd5-bf0a069c8813"),
+                Id = Guid.Parse("58ffd9a8-7614-4d3d-bd0a-36804eb6edb1"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

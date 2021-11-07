@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DragonDiscipleBrassOrGoldOrRed : Template
     {
-        public static readonly Guid ID = Guid.Parse("fa8c3d02-9ad2-4cf8-9d8a-9318ebd1e559");
+        public static readonly Guid ID = Guid.Parse("3da35513-983f-47b9-9be7-68ebb4a313e3");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a8a17139-06fe-4012-947e-980f2d6b9eaa"), Type = TextBlockType.Text, Text = "You gain resistance equal to half your level against fire." };
+            yield return new TextBlock { Id = Guid.Parse("0ee30581-2d8a-4895-86f3-7aee8c564b70"), Type = TextBlockType.Text, Text = "You gain resistance equal to half your level against fire." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("15de73f0-4d25-43a6-8595-f5f04498b354"),
+                Id = Guid.Parse("2eb82312-bcaa-4543-883a-c0a326472335"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

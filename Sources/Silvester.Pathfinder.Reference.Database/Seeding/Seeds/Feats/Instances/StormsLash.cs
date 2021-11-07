@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StormsLash : Template
     {
-        public static readonly Guid ID = Guid.Parse("1cb6f755-df4e-4aa7-b78f-92973fa3570e");
+        public static readonly Guid ID = Guid.Parse("ee597d97-5514-4ff4-a5df-f1b46e351683");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("33995557-844f-493a-861d-96aae48bec88"), Type = TextBlockType.Text, Text = "Wind and lightning have always been close friends to you. You can cast the (spell: electric arc) cantrip as a primal innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("20afaa9a-1989-44fd-af77-b673c9256605"), Type = TextBlockType.Text, Text = "Wind and lightning have always been close friends to you. You can cast the (spell: electric arc) cantrip as a primal innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("26841ebf-ed8d-432b-8b18-174ff008fb4f"),
+                Id = Guid.Parse("8b4fc81c-561b-4d96-9248-aed5fe64f8b0"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MatureTrainedCompanion : Template
     {
-        public static readonly Guid ID = Guid.Parse("b48c20fb-050c-4969-9ddf-252f21fb10db");
+        public static readonly Guid ID = Guid.Parse("483fa3fe-3738-4008-99a4-e331b3834430");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8cab7052-4499-4d7e-9dd9-ff9e1708d57b"), Type = TextBlockType.Text, Text = "Your animal companion grows up, becoming a mature animal companion. Increase its proficiency rank in Performance to expert instead of one of the three skill increases for mature. It gains the (feat: Mesmerizing Performance) advanced maneuver, rather than the normal advanced maneuver for its type." };
+            yield return new TextBlock { Id = Guid.Parse("3d008786-a9ec-4ef2-b64b-28cd08cf0d62"), Type = TextBlockType.Text, Text = "Your animal companion grows up, becoming a mature animal companion. Increase its proficiency rank in Performance to expert instead of one of the three skill increases for mature. It gains the (feat: Mesmerizing Performance) advanced maneuver, rather than the normal advanced maneuver for its type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("703136a9-f249-4498-80b6-b80982e1c5af"), Feats.Instances.AnimalTrainerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("a4c476a1-3f2b-44e1-b470-d90f0231d076"), Feats.Instances.AnimalTrainerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("715fdcd4-8943-42b7-a06f-529e9743b78b"),
+                Id = Guid.Parse("4240530c-f4d8-4b16-ab00-d7d5bcf8646b"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

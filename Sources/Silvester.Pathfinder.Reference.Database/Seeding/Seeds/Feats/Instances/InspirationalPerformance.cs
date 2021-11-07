@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InspirationalPerformance : Template
     {
-        public static readonly Guid ID = Guid.Parse("99aa8c6a-5caa-4762-a2e8-a9aaf755506c");
+        public static readonly Guid ID = Guid.Parse("f36a4a63-ad2a-4ed5-a307-6fa738917548");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f32a574f-0c30-49e9-a4b5-151c3905966f"), Type = TextBlockType.Text, Text = "You gain the (spell: inspire courage) composition cantrip." };
+            yield return new TextBlock { Id = Guid.Parse("bc7b21a1-6c09-4915-865b-04a40c4e1c3a"), Type = TextBlockType.Text, Text = "You gain the (spell: inspire courage) composition cantrip." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("fe029bd1-1006-4980-9185-e6f32e00b9cf"), Feats.Instances.BardDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("b82baac7-0072-49c2-b2cb-40a029942229"), Feats.Instances.BardDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6b24b3f7-b608-4b52-ba9e-b9cb19413ce1"),
+                Id = Guid.Parse("7d9692f0-f34a-4430-bfa0-dbbf003dc2d9"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

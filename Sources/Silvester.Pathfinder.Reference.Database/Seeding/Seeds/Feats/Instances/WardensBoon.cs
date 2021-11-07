@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WardensBoon : Template
     {
-        public static readonly Guid ID = Guid.Parse("786f79bd-2489-446d-9d73-1cb771d7bdbd");
+        public static readonly Guid ID = Guid.Parse("eaee5425-d5c1-457a-b4cf-45837ba457c9");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8718e1e-ab36-455d-aa7d-72b8de65c8b1"), Type = TextBlockType.Text, Text = "By pointing out vulnerabilities, you grant the benefits listed in (feat: Hunt Prey) and your hunter’s edge benefit to an ally until the end of their next turn. Depending on whether you call out or use gestures, this action gains either the (trait: auditory) or (trait: visual) trait." };
+            yield return new TextBlock { Id = Guid.Parse("9dc0c956-3ec5-4f8e-a807-532b0813a89b"), Type = TextBlockType.Text, Text = "By pointing out vulnerabilities, you grant the benefits listed in (feat: Hunt Prey) and your hunter’s edge benefit to an ally until the end of their next turn. Depending on whether you call out or use gestures, this action gains either the (trait: auditory) or (trait: visual) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d9157426-049b-4aac-aac6-89f0e69e47f1"),
+                Id = Guid.Parse("03cc3a8f-3216-41b6-a7b3-bee4f9d14627"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SkillMastery : Template
     {
-        public static readonly Guid ID = Guid.Parse("a3195117-7877-490b-8864-821b0f700ecc");
+        public static readonly Guid ID = Guid.Parse("89d17056-b946-4f1e-b41f-db06b31bf497");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("17b9b75b-4ed1-4e80-8b15-e651b8d18853"), Type = TextBlockType.Text, Text = "Increase your proficiency rank in one of your skills from expert to master and in another of your skills from trained to expert. You gain a skill feat associated with one of the skills you chose." };
+            yield return new TextBlock { Id = Guid.Parse("9f733158-fdef-4c25-87b6-9ecf0244b311"), Type = TextBlockType.Text, Text = "Increase your proficiency rank in one of your skills from expert to master and in another of your skills from trained to expert. You gain a skill feat associated with one of the skills you chose." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("11d14e07-1a8b-4e48-b4e3-388edb729851"), Feats.Instances.InvestigatorDedication.ID);
-            builder.HaveAnySkillSpecificProficiency(Guid.Parse("846d8c67-b8bd-4b6c-8af8-86d2e0e78607"), Proficiencies.Instances.Trained.ID);
-            builder.HaveAnySkillSpecificProficiency(Guid.Parse("2ac94b72-10c9-49b8-8f6f-f8c15651ca36"), Proficiencies.Instances.Expert.ID);
+            builder.HaveSpecificFeat(Guid.Parse("f9098521-29b6-4014-a0f6-c55ad5de6020"), Feats.Instances.InvestigatorDedication.ID);
+            builder.HaveAnySkillSpecificProficiency(Guid.Parse("f70f33a6-4aa8-47c9-9fd6-bd460add0256"), Proficiencies.Instances.Trained.ID);
+            builder.HaveAnySkillSpecificProficiency(Guid.Parse("d4e8d1f0-6e20-4d95-b438-0a54b698ad39"), Proficiencies.Instances.Expert.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ba2f2f87-bf94-42b6-8002-fb9b96b3583d"),
+                Id = Guid.Parse("7cb6eb0f-f0ee-4430-8c3a-6ac2780e764f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

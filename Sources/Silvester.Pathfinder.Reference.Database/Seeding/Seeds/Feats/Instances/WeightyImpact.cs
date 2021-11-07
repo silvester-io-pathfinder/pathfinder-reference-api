@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WeightyImpact : Template
     {
-        public static readonly Guid ID = Guid.Parse("02a9f353-80b0-4542-8547-ba699c866d29");
+        public static readonly Guid ID = Guid.Parse("e27f08cf-1da4-4d9e-b1a2-59f0af66be17");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("62d198b0-0bf6-49bc-8df5-6cecf14a79c3"), Type = TextBlockType.Text, Text = "Your eidolon knocks enemies down. Choose one of the eidolon’s unarmed attacks with the (trait: trip) trait. It gains the Knockdown action (Bestiary pg. 343) for that attack." };
+            yield return new TextBlock { Id = Guid.Parse("a7d02e81-28ce-45f9-a614-77569294df3c"), Type = TextBlockType.Text, Text = "Your eidolon knocks enemies down. Choose one of the eidolon’s unarmed attacks with the (trait: trip) trait. It gains the Knockdown action (Bestiary pg. 343) for that attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("77d42273-60d0-48e6-9644-55fe64b01a7f"),
+                Id = Guid.Parse("07e8735a-b8e0-4ecb-8a46-941daa556d36"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

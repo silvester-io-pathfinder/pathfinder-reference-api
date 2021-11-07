@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AasimarsMercyRemoveCurse : Template
     {
-        public static readonly Guid ID = Guid.Parse("58901189-3c1c-4660-a885-7857c296e29c");
+        public static readonly Guid ID = Guid.Parse("000c7e3d-2b17-449d-aadd-7cdc835fbeca");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("301033da-ccc4-4e53-871a-870d4b87b10b"), Type = TextBlockType.Text, Text = "You can cast (spell: remove curse) as a 4th-level divine innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("501ad6f2-0243-4d61-98e7-5f12fb004d6b"), Type = TextBlockType.Text, Text = "You can cast (spell: remove curse) as a 4th-level divine innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("27de81ad-d11d-46eb-9b30-75e0ebb334a4"),
+                Id = Guid.Parse("75aa2634-427e-47a8-a525-7b0e67deb37a"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

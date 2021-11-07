@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Rimesoul : Template
     {
-        public static readonly Guid ID = Guid.Parse("2d63c3db-eccf-431f-a778-78bf19daa1fb");
+        public static readonly Guid ID = Guid.Parse("f4492002-2317-45d2-a225-62149ecc991d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3be56ca0-9995-42ce-8de1-3574f1668f1b"), Type = TextBlockType.Text, Text = "The water inside you is cold and frozen, like sheets of ice and frigid glaciers. You gain resistance to cold equal to half your level (minimum 1), and you treat environmental cold effects as if they were one step less severe (incredible cold becomes extreme, extreme cold becomes severe, and so on)." };
+            yield return new TextBlock { Id = Guid.Parse("84c4375f-ce13-4205-a4e0-e78dac2cfda7"), Type = TextBlockType.Text, Text = "The water inside you is cold and frozen, like sheets of ice and frigid glaciers. You gain resistance to cold equal to half your level (minimum 1), and you treat environmental cold effects as if they were one step less severe (incredible cold becomes extreme, extreme cold becomes severe, and so on)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("85bf4e96-f69e-44c5-b7cd-1860c8caf614"),
+                Id = Guid.Parse("d33e40dd-b4ae-41f2-8429-84e4514a2f47"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShootersCamouflage : Template
     {
-        public static readonly Guid ID = Guid.Parse("f93a239e-49dc-4221-b6bd-9f798f51c99c");
+        public static readonly Guid ID = Guid.Parse("332cac8e-9d13-46eb-9251-41597be226ef");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("43efcfa2-4efb-4597-b096-108c16cd63a6"), Type = TextBlockType.Text, Text = "You specialize in blending into a particular type of environment, able to disappear after taking your shot. Choose either natural or urban terrain. In the chosen terrain, you can (action: Hide) and (action: Sneak) even without cover or being concealed." };
+            yield return new TextBlock { Id = Guid.Parse("daa568b3-7e51-4dfc-a2a4-07ba0ae30be8"), Type = TextBlockType.Text, Text = "You specialize in blending into a particular type of environment, able to disappear after taking your shot. Choose either natural or urban terrain. In the chosen terrain, you can (action: Hide) and (action: Sneak) even without cover or being concealed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("4221a241-f40c-4fcf-bad0-05d211e51fdf"), Proficiencies.Instances.Master.ID, Skills.Instances.Stealth.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("b81bd081-54ef-4a9d-8575-84357d228156"), Proficiencies.Instances.Master.ID, Skills.Instances.Stealth.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a1eccd94-f4d1-4ec7-807f-de7b34eb08eb"),
+                Id = Guid.Parse("75814c03-c54c-4b3f-a239-19b8384126e4"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

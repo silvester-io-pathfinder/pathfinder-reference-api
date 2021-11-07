@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BizzareMagic : Template
     {
-        public static readonly Guid ID = Guid.Parse("c99fdefe-dbfd-4fcb-bb0e-c2f77440dc5a");
+        public static readonly Guid ID = Guid.Parse("43a703b0-f486-44b2-b571-343805e69a65");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f62b3ad6-bf58-4ded-b87d-00b5adb31dc3"), Type = TextBlockType.Text, Text = "You can draw upon strange variations in your spellcasting, whether or not you can cast occult spells. The DCs to (Feat: Recognize Spells | Recognize Spell) you cast and (Action: Identify Magic) you use increase by 5." };
+            yield return new TextBlock { Id = Guid.Parse("76695af1-b166-4c7f-8d13-9823516f673b"), Type = TextBlockType.Text, Text = "You can draw upon strange variations in your spellcasting, whether or not you can cast occult spells. The DCs to (Feat: Recognize Spells | Recognize Spell) you cast and (Action: Identify Magic) you use increase by 5." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("290360c2-5e7e-43fd-9c32-ac705d280301"), Proficiencies.Instances.Master.ID, Skills.Instances.Occultism.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("fd3a7e57-c964-4c3d-adc1-2fe8dd522426"), Proficiencies.Instances.Master.ID, Skills.Instances.Occultism.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cf2d0ad2-8207-45d7-bf64-c98f7725cda2"),
+                Id = Guid.Parse("d3e99c8e-2c58-4297-85f0-f9c65e564f28"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Stormsoul : Template
     {
-        public static readonly Guid ID = Guid.Parse("1e9ace53-1a1a-4778-9692-2f23e4aa53fb");
+        public static readonly Guid ID = Guid.Parse("f162673f-de50-4e7e-8a19-355a9fbe1da0");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79247506-b88f-421a-b88d-6cc750d37606"), Type = TextBlockType.Text, Text = "Your elemental ancestor’s influence manifests in you as tumultuous, thundering storms, with dark clouds and bolts of lightning. You gain resistance to electricity equal to half your level (minimum 1)." };
+            yield return new TextBlock { Id = Guid.Parse("1bcc99c3-d0f7-4794-9e10-df913e21edcb"), Type = TextBlockType.Text, Text = "Your elemental ancestor’s influence manifests in you as tumultuous, thundering storms, with dark clouds and bolts of lightning. You gain resistance to electricity equal to half your level (minimum 1)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8c2d6fda-ceef-4721-a4ea-7d6bdf0ac8b3"),
+                Id = Guid.Parse("3da838bb-6b48-4fd7-b8b5-77e1ce0d10b5"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class NaturalSkill : Template
     {
-        public static readonly Guid ID = Guid.Parse("46e46c00-7dcd-4ffb-81cf-87c7953e8c90");
+        public static readonly Guid ID = Guid.Parse("678ce433-39f5-4d0b-9d86-b16c3f7f15e0");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("16955cd7-b5e0-4daf-a8df-03b06a7ade7d"), Type = TextBlockType.Text, Text = "Your ingenuity allows you to learn a wide variety of skills. You gain the trained proficiency rank in two skills of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("53fbf1e4-fe8c-4336-bc63-d1cd489555cb"), Type = TextBlockType.Text, Text = "Your ingenuity allows you to learn a wide variety of skills. You gain the trained proficiency rank in two skills of your choice." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b1d17782-52ff-4e39-a0e7-5c528ca66db7"),
+                Id = Guid.Parse("0d35d5ae-84ef-473a-b2ac-37a6c1993d8d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

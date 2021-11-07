@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WaterStep : Template
     {
-        public static readonly Guid ID = Guid.Parse("52fbaf20-2868-4fed-abb3-fa587ea93bc6");
+        public static readonly Guid ID = Guid.Parse("68d0b2df-cfcc-4b16-9c0d-a6c556d91c28");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9b2287e5-7051-43f3-af3b-f8400ffaedc8"), Type = TextBlockType.Text, Text = "You can (action: Stride) across liquid and surfaces that don’t support your weight. This benefit lasts only during your movement. If you end your movement on a surface that can’t support you, you fall in or it collapses as normal." };
+            yield return new TextBlock { Id = Guid.Parse("bcb6353d-a3fd-45f9-9c30-985f16993101"), Type = TextBlockType.Text, Text = "You can (action: Stride) across liquid and surfaces that don’t support your weight. This benefit lasts only during your movement. If you end your movement on a surface that can’t support you, you fall in or it collapses as normal." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7b482d15-ff68-45d0-ac53-8063f506fe43"),
+                Id = Guid.Parse("5f16a665-53df-47f5-b461-900f810e99a3"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

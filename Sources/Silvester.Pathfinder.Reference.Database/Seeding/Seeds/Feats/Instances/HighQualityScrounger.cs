@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HighQualityScrounger : Template
     {
-        public static readonly Guid ID = Guid.Parse("b97f068d-c9e0-47a1-8c5f-ff43d6eff9f0");
+        public static readonly Guid ID = Guid.Parse("56434d77-1645-45fd-a390-71805988093d");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d498e868-6508-4e07-b6f4-e513b5df768e"), Type = TextBlockType.Text, Text = "When you (action: Craft) a temporary item using (feat: Scrounger Dedication), it can be an item of up to 3rd level (though the item must still be a weapon, armor, or a nonconsumable piece of adventuring gear)." };
-            yield return new TextBlock { Id = Guid.Parse("9dda5323-b39b-42c7-b514-7a7be9006fce"), Type = TextBlockType.Text, Text = "You can instead (action: Craft) it for someone else’s use, allowing them to avoid taking the penalty for using a shoddy item when using it, but causing you to take the penalty if you use it." };
+            yield return new TextBlock { Id = Guid.Parse("92bc6cba-d0a3-40e6-8c73-938e46d99fad"), Type = TextBlockType.Text, Text = "When you (action: Craft) a temporary item using (feat: Scrounger Dedication), it can be an item of up to 3rd level (though the item must still be a weapon, armor, or a nonconsumable piece of adventuring gear)." };
+            yield return new TextBlock { Id = Guid.Parse("a1d06b01-bab6-4a89-a09b-349b64541f3c"), Type = TextBlockType.Text, Text = "You can instead (action: Craft) it for someone else’s use, allowing them to avoid taking the penalty for using a shoddy item when using it, but causing you to take the penalty if you use it." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("dc7303e4-08d9-4fd7-be3b-8d162068cdb7"), Feats.Instances.ScroungerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8d5f7ac7-b266-4491-8b96-43de59ecb016"), Feats.Instances.ScroungerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0ae20a39-8536-4238-95ba-6d2dc9457c06"),
+                Id = Guid.Parse("ef46d947-e954-44e5-b28e-018ed9ebfa9e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

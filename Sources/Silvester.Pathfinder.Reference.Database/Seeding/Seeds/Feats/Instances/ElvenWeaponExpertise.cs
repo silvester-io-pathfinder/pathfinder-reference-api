@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ElvenWeaponExpertise : Template
     {
-        public static readonly Guid ID = Guid.Parse("e453f892-8a24-495f-95b1-0322fc53b58a");
+        public static readonly Guid ID = Guid.Parse("d887405d-894a-475b-8056-18c161123ee9");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f34350b4-ef29-4801-91ff-9293bc182f68"), Type = TextBlockType.Text, Text = "Your elven affinity blends with your class training, granting you great skill with elven weapons. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency in longbows, composite longbows, longswords, rapiers, shortbows, composite shortbows, and all elf weapons in which you are trained." };
+            yield return new TextBlock { Id = Guid.Parse("16999db3-7cb7-4538-b0aa-221061f349fc"), Type = TextBlockType.Text, Text = "Your elven affinity blends with your class training, granting you great skill with elven weapons. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency in longbows, composite longbows, longswords, rapiers, shortbows, composite shortbows, and all elf weapons in which you are trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("145e1ce4-e0c7-409f-af2c-26fa3132cbdd"), Feats.Instances.ElvenWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("59b23096-f674-4b8b-b723-a17a064d93a3"), Feats.Instances.ElvenWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a90c4216-0001-4042-875a-6bfd66320c4a"),
+                Id = Guid.Parse("c145b147-9d01-4e7b-9d4b-22a9c686b7d8"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

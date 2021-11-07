@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WaveSpiral : Template
     {
-        public static readonly Guid ID = Guid.Parse("f5a0216d-1fd6-47df-8e2d-10a4de9ee539");
+        public static readonly Guid ID = Guid.Parse("8b758182-a944-45af-9d7a-f59327b812ee");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e4482e6d-e49f-48e1-95f3-0518b3ac4eba"), Type = TextBlockType.Text, Text = "You dip and spin, unleashing a wide whirlpool of water. Make an Athletics check to (action: Trip) each creature standing on the ground in a 10-foot emanation. These attacks all count toward your multiple attack penalty, but the penalty doesn’t increase until after you make all the attacks." };
+            yield return new TextBlock { Id = Guid.Parse("6b5380f2-45d0-40e8-9787-60579a59f107"), Type = TextBlockType.Text, Text = "You dip and spin, unleashing a wide whirlpool of water. Make an Athletics check to (action: Trip) each creature standing on the ground in a 10-foot emanation. These attacks all count toward your multiple attack penalty, but the penalty doesn’t increase until after you make all the attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("6c2b5371-fac9-40a7-a25d-5e24950c1fe4"), Feats.Instances.ReflectiveRippleStance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("7d463583-e56f-424d-bbdf-39a2c4cee495"), Feats.Instances.ReflectiveRippleStance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("679882e2-86e4-4baa-84a8-8e297eeb6753"),
+                Id = Guid.Parse("95015c2e-29f1-46aa-a4ce-428fd6b23baa"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

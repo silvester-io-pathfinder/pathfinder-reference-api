@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Idyllkin : Template
     {
-        public static readonly Guid ID = Guid.Parse("6de214a2-9af1-4af5-a12e-4a6aae5d90a2");
+        public static readonly Guid ID = Guid.Parse("f1783f9b-30b4-4033-aedf-159b05a9340e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("816d3bf0-ddc6-4272-93f3-15be5c7a7d93"), Type = TextBlockType.Text, Text = "Your wild, unique features betray your agathion birthright. Serene celestials from the plane of Nirvana, agathions seek the peaceful path, ensuring a better world for all to coexist. Your halcyon demeanor leads you to search for peaceful resolution to conflict. You gain the trained proficiency rank in Nature. If you would automatically become trained in Nature (from your background or class, for example), you instead become trained in a skill of your choice. You know the (language: Sylvan) language and gain the (feat: Natural Medicine) skill feat." };
+            yield return new TextBlock { Id = Guid.Parse("5e5966ee-74ce-4a12-ba0c-b80c719f8e52"), Type = TextBlockType.Text, Text = "Your wild, unique features betray your agathion birthright. Serene celestials from the plane of Nirvana, agathions seek the peaceful path, ensuring a better world for all to coexist. Your halcyon demeanor leads you to search for peaceful resolution to conflict. You gain the trained proficiency rank in Nature. If you would automatically become trained in Nature (from your background or class, for example), you instead become trained in a skill of your choice. You know the (language: Sylvan) language and gain the (feat: Natural Medicine) skill feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9cd7810f-7831-43e1-b76b-a75f4ac414b2"),
+                Id = Guid.Parse("20920730-b5a8-48ff-9ff8-5d7be7592633"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

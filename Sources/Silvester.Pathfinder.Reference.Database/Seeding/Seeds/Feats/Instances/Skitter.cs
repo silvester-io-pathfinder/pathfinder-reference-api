@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Skitter : Template
     {
-        public static readonly Guid ID = Guid.Parse("6d375a59-3838-4c97-8657-7960586ff6b1");
+        public static readonly Guid ID = Guid.Parse("fa38f86b-ad08-4d0a-a555-5aa37762cbf1");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("378b5a6a-678e-4e7b-ad9c-b96fc784b6ef"), Type = TextBlockType.Text, Text = "You can scoot swiftly across the ground. You can (action: Crawl) up to half your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("4fc4abad-5de1-40e5-bcfe-3e515baf696f"), Type = TextBlockType.Text, Text = "You can scoot swiftly across the ground. You can (action: Crawl) up to half your Speed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificStat(Guid.Parse("c725ffce-abcd-489f-8d80-10143724f117"), requiredStatValue: 16, Stats.Instances.Dexterity.ID);
-            builder.HaveSpecificFeat(Guid.Parse("474f74c1-c3f6-428c-a05b-0281e9db9ef6"), Feats.Instances.Fleet.ID);
+            builder.HaveSpecificStat(Guid.Parse("fe5c8360-01a6-438c-afc9-07836aff3e68"), requiredStatValue: 16, Stats.Instances.Dexterity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8aea2908-f4eb-4c16-81a8-833e240f97b1"), Feats.Instances.Fleet.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1620f9cf-76ec-4575-8e4b-5bb1eb7ab4f7"),
+                Id = Guid.Parse("915465c4-aeec-46a8-85e3-0925bc2fcfb2"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

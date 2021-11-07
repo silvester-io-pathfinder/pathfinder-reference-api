@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ElucidatingMercy : Template
     {
-        public static readonly Guid ID = Guid.Parse("95284fa6-0153-4924-b7d0-ee1837fdc007");
+        public static readonly Guid ID = Guid.Parse("c5a0c7f3-81cc-4094-bb25-38da432920fe");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("95764779-f543-466f-b88a-1e1e04b332da"), Type = TextBlockType.Text, Text = "Your mercy grants clarity to those around you just when they need it most. When you use (feat: Mercy), you can instead attempt a counteract check to remove the confused or stupefied conditions, using the source of that condition to determine the counteract level and DC. If the condition was caused by an ongoing effect and you don’t remove that effect, the condition returns at the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("97fbc425-7a7c-49d4-94cd-6fc35ba5afb8"), Type = TextBlockType.Text, Text = "Your mercy grants clarity to those around you just when they need it most. When you use (feat: Mercy), you can instead attempt a counteract check to remove the confused or stupefied conditions, using the source of that condition to determine the counteract level and DC. If the condition was caused by an ongoing effect and you don’t remove that effect, the condition returns at the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("7ebedc9d-2389-4c06-b649-64b24184f102"), Feats.Instances.mercy.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ba326a3b-a10d-48aa-8e17-c4046e4166d9"), Feats.Instances.Mercy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f26ce71d-34ea-48f2-bec2-3f4f4d4b0aa7"),
+                Id = Guid.Parse("09d116c1-97b4-4269-bbc5-02f500222dd0"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

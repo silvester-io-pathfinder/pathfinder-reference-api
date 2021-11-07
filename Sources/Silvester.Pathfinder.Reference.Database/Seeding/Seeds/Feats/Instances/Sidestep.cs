@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Sidestep : Template
     {
-        public static readonly Guid ID = Guid.Parse("357cdd80-790a-4009-a031-ca501c066466");
+        public static readonly Guid ID = Guid.Parse("039eb783-82a8-41c1-bbde-f3bae617c063");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a33ecee8-81b5-42d1-9540-63852ed3690b"), Type = TextBlockType.Text, Text = "You deftly step out of the way of an attack, letting the blow continue to the creature next to you. You redirect the attack to a creature of your choice that is adjacent to you and within the reach of the triggering attack. The attacker rerolls the (action: Strike’s | Strike) attack roll against the new target." };
+            yield return new TextBlock { Id = Guid.Parse("537cb709-6871-4eb7-b9ec-6e8876cba72b"), Type = TextBlockType.Text, Text = "You deftly step out of the way of an attack, letting the blow continue to the creature next to you. You redirect the attack to a creature of your choice that is adjacent to you and within the reach of the triggering attack. The attacker rerolls the (action: Strike’s | Strike) attack roll against the new target." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6f63f4d2-bbeb-4f9f-bd43-6525fd942de8"),
+                Id = Guid.Parse("f403ac56-4483-41e9-9ecc-30ae7ef5daf7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

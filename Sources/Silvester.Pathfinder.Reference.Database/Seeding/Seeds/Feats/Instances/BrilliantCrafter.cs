@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BrilliantCrafter : Template
     {
-        public static readonly Guid ID = Guid.Parse("2a6023fb-1e16-406e-9da3-ac37d709b7c7");
+        public static readonly Guid ID = Guid.Parse("c171af00-841e-492d-9939-271572f23bac");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("30386fc2-99b5-405d-8262-d7d09426acd7"), Type = TextBlockType.Text, Text = "Your skill at crafting is unparalleled. You become an expert in Crafting. At 7th level you become a master in Crafting, and at 15th level, you become legendary in Crafting and you become an expert in your inventor class DC." };
+            yield return new TextBlock { Id = Guid.Parse("9cc310a2-2e5a-4836-9417-7d8fc77852e9"), Type = TextBlockType.Text, Text = "Your skill at crafting is unparalleled. You become an expert in Crafting. At 7th level you become a master in Crafting, and at 15th level, you become legendary in Crafting and you become an expert in your inventor class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("ec2d0b1f-6d77-4f69-8e37-d07ef659c16d"), Feats.Instances.InventorDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("440af1e4-47ae-4c9d-b46b-c29e3c1e3d7c"), Feats.Instances.InventorDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("589020ae-7b1a-4d9e-8736-b9355cf8aefe"),
+                Id = Guid.Parse("afd95b58-ea50-4317-b986-4278fdefec5a"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

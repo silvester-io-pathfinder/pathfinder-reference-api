@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DesperateFinisher : Template
     {
-        public static readonly Guid ID = Guid.Parse("ba777f76-4b73-46bc-b874-fa7bd2fa53a8");
+        public static readonly Guid ID = Guid.Parse("be6c8bc9-ad69-4920-9c50-7acc80efa9de");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db33a369-e1c9-45b7-9b55-eb71fef4e2ac"), Type = TextBlockType.Text, Text = "You throw everything into one last press. Use a single action that you know with the (trait: press) trait as part of Desperate Finisher. You forgo the ability to use reactions until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("818fc7f8-77b9-4aa0-a42f-5519291b5881"), Type = TextBlockType.Text, Text = "You throw everything into one last press. Use a single action that you know with the (trait: press) trait as part of Desperate Finisher. You forgo the ability to use reactions until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9d37d028-622a-4702-9242-37d15ea7c8d8"),
+                Id = Guid.Parse("ade493cc-c975-4379-a37b-7fe1f162411d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

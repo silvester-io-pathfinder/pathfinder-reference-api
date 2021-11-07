@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EncouragingWords : Template
     {
-        public static readonly Guid ID = Guid.Parse("4ce81696-9ae2-4d4d-8cfa-b46d211db016");
+        public static readonly Guid ID = Guid.Parse("c6a97de8-0a19-4edb-93bc-54c43293fbe3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b5df94d2-ca3e-4e54-9abb-4f0cc8048438"), Type = TextBlockType.Text, Text = "You give an ally within 30 feet a quick pep talk, helping them recover. Attempt a Diplomacy check. The DC is usually 15, though the GM might adjust it based on the circumstances. If you have expert proficiency in Diplomacy, you can instead attempt a DC 20 check to increase the Stamina Points recovered by 5; if you have master proficiency, you can attempt a DC 30 check to increase the Stamina Points by 15; if you have legendary proficiency, you can attempt a DC 40 check to increase the Stamina Points by 25. No matter the result, the ally is temporarily immune to Encouraging Words until they either (action: Take a Breather) or rest for the day." };
+            yield return new TextBlock { Id = Guid.Parse("980b718e-d508-4c2e-8315-520b4dca1511"), Type = TextBlockType.Text, Text = "You give an ally within 30 feet a quick pep talk, helping them recover. Attempt a Diplomacy check. The DC is usually 15, though the GM might adjust it based on the circumstances. If you have expert proficiency in Diplomacy, you can instead attempt a DC 20 check to increase the Stamina Points recovered by 5; if you have master proficiency, you can attempt a DC 30 check to increase the Stamina Points by 15; if you have legendary proficiency, you can attempt a DC 40 check to increase the Stamina Points by 25. No matter the result, the ally is temporarily immune to Encouraging Words until they either (action: Take a Breather) or rest for the day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("10d11898-7a1c-4f7c-b1df-6e48df8af47f"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("0c678c1d-30ec-49b9-b74f-ddeef0c489f8"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("e3576caf-6226-40fb-a9bb-5b144f575874"),
+                Id = Guid.Parse("fcad7fc7-094e-4dd0-aec1-2693a3d3c0f1"),
                 CriticalSuccess = "The ally recovers 2d8 Stamina Points.",
                 Success = "The ally recovers 1d8 Stamina Points.",
                 
@@ -59,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cc4a4798-57e3-4974-b636-e469be58267c"),
+                Id = Guid.Parse("9fe8a1d6-6602-41be-8aa6-e4bb55f04c05"),
                 SourceId = Sources.Instances.VariantRuleForStamina.ID,
                 Page = -1
             };

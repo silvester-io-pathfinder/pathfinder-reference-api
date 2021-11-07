@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BlessedDenial : Template
     {
-        public static readonly Guid ID = Guid.Parse("e4808121-7f19-4420-ba46-981dc05a5626");
+        public static readonly Guid ID = Guid.Parse("e5c2bb70-12ab-4798-a154-3becd2e8c691");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b76d54bd-0e45-46ba-baf8-7f38e7cff957"), Type = TextBlockType.Text, Text = "You exude peace and protection, lessening a harmful condition as it falls upon an ally. Reduce the value of the condition your ally would take by 1 (to a minimum of 0). If the ally takes more than one condition at the same time, choose one to reduce." };
+            yield return new TextBlock { Id = Guid.Parse("e000b6f9-1441-45e4-914d-9b1668224bde"), Type = TextBlockType.Text, Text = "You exude peace and protection, lessening a harmful condition as it falls upon an ally. Reduce the value of the condition your ally would take by 1 (to a minimum of 0). If the ally takes more than one condition at the same time, choose one to reduce." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("74614760-7833-4e6f-b386-c67e80834c20"), Feats.Instances.BlessedOneDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6fac159a-30d7-43a7-823a-2d19a13eede5"), Feats.Instances.BlessedOneDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b2733198-53d8-43ae-8bb4-de7aa7739345"),
+                Id = Guid.Parse("a1b76d07-ea26-496e-8342-f3896e284143"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DoctorsVisitation : Template
     {
-        public static readonly Guid ID = Guid.Parse("d8d47ec5-95a3-4048-9a6d-48aac8bae743");
+        public static readonly Guid ID = Guid.Parse("61d45abd-92b8-4f03-b309-df0af5c66aeb");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3c1aee88-db73-499f-a2a7-880431bee4f8"), Type = TextBlockType.Text, Text = "You move to provide immediate care to those who need it. (action: Stride), then use one of the following: (feat: Battle Medicine) or (action: Treat Poison). You can spend a second action to instead (action: Stride) and then (action: Administer First Aid) or (feat: Treat a Condition | Treat Condition) (if you have it)." };
+            yield return new TextBlock { Id = Guid.Parse("adfa23b7-b5d8-407a-94f7-3d7bd3c53ac5"), Type = TextBlockType.Text, Text = "You move to provide immediate care to those who need it. (action: Stride), then use one of the following: (feat: Battle Medicine) or (action: Treat Poison). You can spend a second action to instead (action: Stride) and then (action: Administer First Aid) or (feat: Treat a Condition | Treat Condition) (if you have it)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("80137594-b6c4-46d7-9c85-915c45e110be"), Feats.Instances.MedicDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("17c134f1-742e-4044-b60a-17700ea98b71"), Feats.Instances.MedicDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("311bf56f-c9f4-44da-b091-ebc45d95eb37"),
+                Id = Guid.Parse("f8a8ba11-b460-4859-ad6c-058e0c8ffdb3"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

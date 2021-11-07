@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FieryRetort : Template
     {
-        public static readonly Guid ID = Guid.Parse("d7f14426-4b59-40c6-933e-11a7cfc7aef3");
+        public static readonly Guid ID = Guid.Parse("e207c9bd-3d54-48d4-8598-86192283236c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1f287e40-6664-4307-8a62-79cb444d0017"), Type = TextBlockType.Text, Text = "Ignoring your pain, you sear your attacker with a wave of flame. The triggering opponent takes fire damage equal to your level." };
+            yield return new TextBlock { Id = Guid.Parse("5a9d2b2f-bfe7-44e7-84d6-0af48deb9101"), Type = TextBlockType.Text, Text = "Ignoring your pain, you sear your attacker with a wave of flame. The triggering opponent takes fire damage equal to your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificDruidicOrder(Guid.Parse("2891f3a7-a6ca-4020-8fa9-b16e21e89e78"), DruidicOrders.Instances.Fire.ID);
+            builder.HaveSpecificDruidicOrder(Guid.Parse("f3adea84-8a72-4ed9-9213-57eb04c24209"), DruidicOrders.Instances.Flame.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0b91f0ed-cd20-48b0-bbc5-b4d34dc9b67f"),
+                Id = Guid.Parse("a79113d9-e375-4519-b1a3-e63e57aa2013"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FuriousGrab : Template
     {
-        public static readonly Guid ID = Guid.Parse("786ccf86-73c7-49a5-8918-de4c5b9f7fee");
+        public static readonly Guid ID = Guid.Parse("ac10d2ed-7e85-4400-af8c-8f2613a16bc7");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a9346bb6-c0cc-4d16-a54d-9e0d7fc9e62e"), Type = TextBlockType.Text, Text = "You grab your foe while it’s distracted by your attack. The foe you hit becomes grabbed, as if you had succeeded at an Athletics check to (action: Grapple) the foe." };
+            yield return new TextBlock { Id = Guid.Parse("19e109ee-c3b1-457a-a936-82c008b0b32d"), Type = TextBlockType.Text, Text = "You grab your foe while it’s distracted by your attack. The foe you hit becomes grabbed, as if you had succeeded at an Athletics check to (action: Grapple) the foe." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e3e7740e-e456-4be1-bc8a-02952e0d003e"),
+                Id = Guid.Parse("073726bc-ad81-4b2f-a989-682dae3ec1b3"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

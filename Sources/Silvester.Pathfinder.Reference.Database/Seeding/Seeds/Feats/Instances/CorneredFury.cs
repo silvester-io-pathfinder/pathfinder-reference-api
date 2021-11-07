@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CorneredFury : Template
     {
-        public static readonly Guid ID = Guid.Parse("4b19d279-5516-4419-abe7-890d615e7d81");
+        public static readonly Guid ID = Guid.Parse("d40c5992-64f4-400f-9d0d-c31f98dd3841");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("62b7a836-c99c-4cbb-b94d-ca53bae53fe1"), Type = TextBlockType.Text, Text = "When physically outmatched, you fight with unexpected ferocity. If a foe of a larger size than you critically hits and damages you, that foe is flat-footed to you for 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("95e4bb62-1e51-46e4-8a5f-968bdced5908"), Type = TextBlockType.Text, Text = "When physically outmatched, you fight with unexpected ferocity. If a foe of a larger size than you critically hits and damages you, that foe is flat-footed to you for 1 round." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("03eebf9b-d9c0-45ba-b795-e77d7fbdf188"),
+                Id = Guid.Parse("95486bab-3aa6-4dd1-80bf-2b809953ea21"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

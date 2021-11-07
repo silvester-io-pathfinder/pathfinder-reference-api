@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EffortlessReach : Template
     {
-        public static readonly Guid ID = Guid.Parse("c62092c1-29d8-4683-8383-37aa48f1c4e9");
+        public static readonly Guid ID = Guid.Parse("572d767f-f628-4c71-bfd5-fdb79d0e499f");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fbcb844d-0b72-44bb-a0ac-593ea76d22cb"), Type = TextBlockType.Text, Text = "Focusing the powers of your ki to augment your blows, you stretch and lengthen your body in ways that defy logic. Your unarmed attacks gain the (trait: reach) trait." };
+            yield return new TextBlock { Id = Guid.Parse("833bca8b-2213-4fcb-979a-ea2d37938bd6"), Type = TextBlockType.Text, Text = "Focusing the powers of your ki to augment your blows, you stretch and lengthen your body in ways that defy logic. Your unarmed attacks gain the (trait: reach) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7f03e944-0d11-4be8-b350-c6bdb2bf9ab0"),
+                Id = Guid.Parse("a8d64728-ebb3-4fa1-b8f7-50cb5e8403ef"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

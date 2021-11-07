@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShieldedStride : Template
     {
-        public static readonly Guid ID = Guid.Parse("142f6ce0-c5db-4950-93ab-2cf1e90db7bc");
+        public static readonly Guid ID = Guid.Parse("cf132ddd-dd07-49c5-b9b9-e157bd6de366");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("93e0602e-589c-4f13-b244-e060a233485e"), Type = TextBlockType.Text, Text = "When your shield is up, your enemies’ blows can’t touch you. When you have your shield raised, you can (action: Stride) to move half your Speed without triggering reactions that are triggered by your movement (such as (feat: Attacks of Opportunity | Attack of Opportunity)). You can use Shielded Stride while (action: Flying | Fly) or (action: Swimming | Swim) instead of (action: Striding | Stride) if you have the corresponding movement type." };
+            yield return new TextBlock { Id = Guid.Parse("96680656-e5e5-42ba-ae5e-d6dfbf6b22da"), Type = TextBlockType.Text, Text = "When your shield is up, your enemies’ blows can’t touch you. When you have your shield raised, you can (action: Stride) to move half your Speed without triggering reactions that are triggered by your movement (such as (feat: Attacks of Opportunity | Attack of Opportunity)). You can use Shielded Stride while (action: Flying | Fly) or (action: Swimming | Swim) instead of (action: Striding | Stride) if you have the corresponding movement type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("9ca99212-d2c8-4347-a070-a34acb8646a8"), Feats.Instances.VikingDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("abb01dad-e5cd-4f5b-847c-fde4660c8e87"), Feats.Instances.VikingDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("432ce9c5-16a2-42a3-b679-ac5a1c486a46"),
+                Id = Guid.Parse("5306c66d-0f91-4412-90ee-4727f609fa5c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

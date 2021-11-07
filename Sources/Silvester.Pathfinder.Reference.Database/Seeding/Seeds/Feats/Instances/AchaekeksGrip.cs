@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AchaekeksGrip : Template
     {
-        public static readonly Guid ID = Guid.Parse("ae56a494-101b-47b5-bacf-561ed93ef68c");
+        public static readonly Guid ID = Guid.Parse("0da2222b-d313-4d97-b3f0-1ce6a7b1a5b3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f3c3f6c5-bbe0-49aa-8f7c-c6f2d6d2d469"), Type = TextBlockType.Text, Text = "You sense if a creature you have slain in the last year has been restored to life, as long as you and that creature are on the same plane. You also gain the (spell: Achaekek’s clutch) focus spell. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by praying to Achaekek or researching your assigned kill." };
+            yield return new TextBlock { Id = Guid.Parse("faaed5f2-d629-4235-b8d5-9309c30d1862"), Type = TextBlockType.Text, Text = "You sense if a creature you have slain in the last year has been restored to life, as long as you and that creature are on the same plane. You also gain the (spell: Achaekek’s clutch) focus spell. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by praying to Achaekek or researching your assigned kill." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("725de647-8346-475c-8daf-f1282d35d99f"), Feats.Instances.BasicRedMantisMagic.ID);
+            builder.HaveSpecificFeat(Guid.Parse("89f81080-fe52-4b58-a406-2802f9858c37"), Feats.Instances.BasicRedMantisMagic.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e4d05328-e068-4fd5-a6b5-1c34bb7f0226"),
+                Id = Guid.Parse("fcf86ace-1da2-4243-8ec6-d3680a63c354"),
                 SourceId = Sources.Instances.LostOmensLegends.ID,
                 Page = -1
             };

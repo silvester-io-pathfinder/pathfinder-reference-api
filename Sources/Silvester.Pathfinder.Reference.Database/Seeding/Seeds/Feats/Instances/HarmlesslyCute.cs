@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HarmlesslyCute : Template
     {
-        public static readonly Guid ID = Guid.Parse("636e694e-4b6e-414f-b34b-4e4642f3195a");
+        public static readonly Guid ID = Guid.Parse("c2729311-b7c1-452c-8826-25124686f3f2");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d20baa5c-3dd2-427f-8ad8-133b14425fbe"), Type = TextBlockType.Text, Text = "Your size and demeanor make it easy for you to convince others that you mean no harm. You gain the (Feat: Shameless Request) skill feat as a bonus feat. Additionally, you gain a +1 circumstance bonus to initiative checks when you roll Deception for initiative." };
+            yield return new TextBlock { Id = Guid.Parse("42514c79-e831-46b7-9a6b-0270396ded6c"), Type = TextBlockType.Text, Text = "Your size and demeanor make it easy for you to convince others that you mean no harm. You gain the (Feat: Shameless Request) skill feat as a bonus feat. Additionally, you gain a +1 circumstance bonus to initiative checks when you roll Deception for initiative." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8823a7e0-c912-4dd2-b21f-623cb25366d7"),
+                Id = Guid.Parse("01f54033-9418-4ba1-9573-f67017adf390"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

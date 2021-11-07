@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdvancedFlair : Template
     {
-        public static readonly Guid ID = Guid.Parse("8fd3d23b-e5e0-4ab4-86ab-4a147904d3cf");
+        public static readonly Guid ID = Guid.Parse("8875370b-deb6-4118-bc24-7bcff195a23b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("01efd736-fa30-46b3-a0a7-e4af365836e7"), Type = TextBlockType.Text, Text = "You gain one swashbuckler feat. For the purpose of meeting its prerequisites, your swashbuckler level is equal to half your character level." };
+            yield return new TextBlock { Id = Guid.Parse("ab0981e5-0428-440b-ab6c-6f270aef0446"), Type = TextBlockType.Text, Text = "You gain one swashbuckler feat. For the purpose of meeting its prerequisites, your swashbuckler level is equal to half your character level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("7eb168c0-7536-4011-8af0-5ff37df9c71c"), Feats.Instances.BasicFlair.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6afb150e-002a-4806-9a63-ca8762d89574"), Feats.Instances.BasicFlair.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("45c8c9ac-4a28-4730-aa13-7a5df37c5012"),
+                Id = Guid.Parse("c31da1c2-2745-4f96-ad0c-59a3876031e4"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

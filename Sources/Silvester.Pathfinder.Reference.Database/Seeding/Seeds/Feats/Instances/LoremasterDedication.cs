@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LoremasterDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("30b00f57-a190-4c7d-b273-f91ce87d377a");
+        public static readonly Guid ID = Guid.Parse("babec88d-cc20-4539-8816-7c7157afae2e");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d131629f-58e7-401f-a5af-aeae2af464c6"), Type = TextBlockType.Text, Text = "You’ve compiled a vast repository of information that touches on nearly every subject. You are trained in Loremaster Lore, a special Lore skill that can be used only to (action: Recall Knowledge), but on any topic. If you have legendary proficiency in a skill used to (action: Decipher Writing), you gain expert proficiency in Loremaster Lore, but you can’t increase your proficiency rank in Loremaster Lore by any other means." };
-            yield return new TextBlock { Id = Guid.Parse("5b3cc5f1-bcb5-4154-98f5-86a4b334fe3b"), Type = TextBlockType.Text, Text = "If you have the (feat: Bardic Lore) class feat, you gain a +1 circumstance bonus to skill checks with Bardic Lore." };
+            yield return new TextBlock { Id = Guid.Parse("9a2dec16-81ec-41bc-846b-5da3f646889e"), Type = TextBlockType.Text, Text = "You’ve compiled a vast repository of information that touches on nearly every subject. You are trained in Loremaster Lore, a special Lore skill that can be used only to (action: Recall Knowledge), but on any topic. If you have legendary proficiency in a skill used to (action: Decipher Writing), you gain expert proficiency in Loremaster Lore, but you can’t increase your proficiency rank in Loremaster Lore by any other means." };
+            yield return new TextBlock { Id = Guid.Parse("8eebe1fe-7897-40a8-9139-53709b9816a8"), Type = TextBlockType.Text, Text = "If you have the (feat: Bardic Lore) class feat, you gain a +1 circumstance bonus to skill checks with Bardic Lore." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c7105c79-34bd-4845-802f-06433337f26c"),
+                Id = Guid.Parse("d9fff14b-5db0-4c67-80af-07669710a387"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AssassinDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("d1582a37-7801-4023-b901-d611e6d2aca8");
+        public static readonly Guid ID = Guid.Parse("ee84f8a2-f2a2-40f6-a213-c930cf3709ce");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1eece488-4108-4bdc-90eb-a80bd2890454"), Type = TextBlockType.Text, Text = "You’ve trained to assassinate your foes, and you do so with tenacity and precision. You gain the (feat: Mark for Death) activity." };
+            yield return new TextBlock { Id = Guid.Parse("02c071ad-2304-456a-a03c-72350c3602c0"), Type = TextBlockType.Text, Text = "You’ve trained to assassinate your foes, and you do so with tenacity and precision. You gain the (feat: Mark for Death) activity." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("57d3f13e-8b1c-495b-9b3c-581a35b1f95d"), Feats.Instances.AlchemicalCrafting.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("03d19754-ee3b-4ee6-bcfa-fb6e8dda9967"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("8dd5c743-63a4-4bc2-bcce-6eb049efa8c9"), Proficiencies.Instances.Trained.ID, Skills.Instances.Deception.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("8f5fb4c8-9813-4b64-851d-4ffc9047598a"), Proficiencies.Instances.Trained.ID, Skills.Instances.Stealth.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ee7d220d-c274-4895-8568-cf59af8962be"), Feats.Instances.AlchemicalCrafting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("645a6e34-4a98-4fbf-ae8c-4884eb96db93"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("5e516bf9-2c77-444c-9c38-65a5a1ef3f3e"), Proficiencies.Instances.Trained.ID, Skills.Instances.Deception.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("57ffca3f-1d1c-4926-8ac4-d9d564f810e1"), Proficiencies.Instances.Trained.ID, Skills.Instances.Stealth.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -49,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8db4a5ca-f908-4b5e-9788-04f27bb8bcef"),
+                Id = Guid.Parse("3434612c-03d3-4949-9142-2b5fd36ee890"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

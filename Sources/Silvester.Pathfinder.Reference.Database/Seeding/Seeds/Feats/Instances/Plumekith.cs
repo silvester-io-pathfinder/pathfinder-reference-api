@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Plumekith : Template
     {
-        public static readonly Guid ID = Guid.Parse("a81a5fe8-17ae-4414-90dc-ec0ba56a412f");
+        public static readonly Guid ID = Guid.Parse("f66a5270-f315-4f58-9f6d-2618df52180e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("67f76f96-0eb0-4265-b9e1-301e8748b4ec"), Type = TextBlockType.Text, Text = "Your blood soars with the power of the magnificent garuda, proud and stoic avian warriors. You only take half the normal damage from falling and gain a +2 circumstance bonus to saving throws against effects with the (trait: air) trait." };
+            yield return new TextBlock { Id = Guid.Parse("c3a01e1b-1868-4edf-9704-ced35b221d7e"), Type = TextBlockType.Text, Text = "Your blood soars with the power of the magnificent garuda, proud and stoic avian warriors. You only take half the normal damage from falling and gain a +2 circumstance bonus to saving throws against effects with the (trait: air) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6369b39f-f949-4faf-8447-0f5838385486"),
+                Id = Guid.Parse("175f9893-04b5-4900-80e2-8229a9dd69de"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

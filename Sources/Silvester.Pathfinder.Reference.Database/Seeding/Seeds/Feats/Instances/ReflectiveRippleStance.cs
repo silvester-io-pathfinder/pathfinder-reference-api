@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReflectiveRippleStance : Template
     {
-        public static readonly Guid ID = Guid.Parse("45def6a5-9594-4b32-9201-3c3371862ed6");
+        public static readonly Guid ID = Guid.Parse("fa48a6d0-d41c-4ca6-9315-5171a4c352bf");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5d79a218-37a9-4698-b7d3-195327602dd9"), Type = TextBlockType.Text, Text = "You enter a stance of fluid grace as small amounts of water flow with your movements and attacks. You can make flowing wave attacks that deal 1d6 bludgeoning damage. They are in the brawling group and have the (trait: agile), (trait: disarm), (trait: finesse), (trait: nonlethal), (trait: trip), (trait: unarmed), and (trait: water) traits." };
-            yield return new TextBlock { Id = Guid.Parse("599ecb01-7ac1-4f74-9ded-e77b9aeae9ac"), Type = TextBlockType.Text, Text = "While in Reflective Ripple Stance, you gain a +1 circumstance bonus to Athletics checks to (action: Disarm), (action: Swim), or (action: Trip), and you gain a +2 circumstance bonus to your Reflex DC to avoid being (action: Disarmed | Disarm) and (action: Tripped | Trip)." };
+            yield return new TextBlock { Id = Guid.Parse("38592b0a-fdf2-470b-b279-d4f87973d411"), Type = TextBlockType.Text, Text = "You enter a stance of fluid grace as small amounts of water flow with your movements and attacks. You can make flowing wave attacks that deal 1d6 bludgeoning damage. They are in the brawling group and have the (trait: agile), (trait: disarm), (trait: finesse), (trait: nonlethal), (trait: trip), (trait: unarmed), and (trait: water) traits." };
+            yield return new TextBlock { Id = Guid.Parse("816d6f42-6ab4-4f19-9990-9dc5a84e2087"), Type = TextBlockType.Text, Text = "While in Reflective Ripple Stance, you gain a +1 circumstance bonus to Athletics checks to (action: Disarm), (action: Swim), or (action: Trip), and you gain a +2 circumstance bonus to your Reflex DC to avoid being (action: Disarmed | Disarm) and (action: Tripped | Trip)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c2f2162c-754a-42ef-b76b-de9180a86b00"),
+                Id = Guid.Parse("f51c972f-f60b-4c9a-aa0a-62fb37dae640"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

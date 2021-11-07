@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArmoredRebuff : Template
     {
-        public static readonly Guid ID = Guid.Parse("6a028058-9366-417f-8134-f58896755349");
+        public static readonly Guid ID = Guid.Parse("5d9183c9-ac17-4358-8b22-69896792410a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("42a31ef9-08c1-490c-9786-30cb51ffaddb"), Type = TextBlockType.Text, Text = "You rebuff puny attacks with your armor, knocking back your foe. Attempt an Athletics check to (action: Shove) the triggering foe, even if you don’t have a hand free. If you succeed, you can’t (action: Stride) to follow the foe, as you’re knocking the foe back with the rebounded attack, not by physically moving towards them." };
+            yield return new TextBlock { Id = Guid.Parse("99896d37-4405-4828-9201-a2e08eeda0ae"), Type = TextBlockType.Text, Text = "You rebuff puny attacks with your armor, knocking back your foe. Attempt an Athletics check to (action: Shove) the triggering foe, even if you don’t have a hand free. If you succeed, you can’t (action: Stride) to follow the foe, as you’re knocking the foe back with the rebounded attack, not by physically moving towards them." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("40934a6b-4c94-412f-8772-ef1f6547d78d"), Feats.Instances.SentinelDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6e5ae50a-c291-410d-8022-fc40f6633138"), Feats.Instances.SentinelDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ba6653a8-69a5-49eb-aaa9-2792dc49f6e6"),
+                Id = Guid.Parse("064fb1af-04b6-454f-abf1-35296c7925d0"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

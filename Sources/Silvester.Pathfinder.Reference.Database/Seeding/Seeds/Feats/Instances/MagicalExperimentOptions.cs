@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MagicalExperimentOptions : Template
     {
-        public static readonly Guid ID = Guid.Parse("3dc4b536-b05e-447f-9bda-d1e91af3da9f");
+        public static readonly Guid ID = Guid.Parse("3b3702af-ede8-4ccb-9e24-82ed15a8d300");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c61b87a0-f2f9-423c-8970-5ca4be1e3db6"), Type = TextBlockType.Text, Text = "Work with the GM to select an appropriate ability from the following list or to come up with another special ability." };
+            yield return new TextBlock { Id = Guid.Parse("db6e575b-e033-44f5-8a55-f1e432274a75"), Type = TextBlockType.Text, Text = "Work with the GM to select an appropriate ability from the following list or to come up with another special ability." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("97c2ea8f-9755-483b-9ac8-d86bff06f093"),
+                Id = Guid.Parse("9b585965-9d9f-4f95-94c1-6c6ae0456e01"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

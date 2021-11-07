@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Seasoned : Template
     {
-        public static readonly Guid ID = Guid.Parse("2ad0b582-dddf-4df6-b99c-adb007ef54ea");
+        public static readonly Guid ID = Guid.Parse("8553d6d7-7561-496c-8913-6943fde72652");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db003d88-6d03-4162-b488-a02939080fec"), Type = TextBlockType.Text, Text = "You’ve mastered the preparation of many types of food and drink. You gain a +1 circumstance bonus to checks to (action: Craft) food and drink, including potions. If you are a master in one of the prerequisite skills, this bonus increases to +2." };
+            yield return new TextBlock { Id = Guid.Parse("c9edd55d-fd39-48a1-b0c4-a41d218e40d5"), Type = TextBlockType.Text, Text = "You’ve mastered the preparation of many types of food and drink. You gain a +1 circumstance bonus to checks to (action: Craft) food and drink, including potions. If you are a master in one of the prerequisite skills, this bonus increases to +2." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("cbbc5a57-5279-4d8e-90af-1093c4e83d74"), or => 
+            builder.AddOr(Guid.Parse("b12f5294-5569-4b0a-9f00-40e37d709512"), or => 
             {
-                or.HaveSpecificLoreSpecificProficiency(Guid.Parse("f743c9b6-863f-4b97-b0a6-9c225bd8ced5"), Proficiencies.Instances.Trained.ID, Lores.Instances.Alcohol.ID);
-                or.HaveSpecificLoreSpecificProficiency(Guid.Parse("8c4dafe0-905c-4908-840d-790958443801"), Proficiencies.Instances.Trained.ID, Lores.Instances.Cooking.ID);
-                or.HaveSpecificSkillProficiency(Guid.Parse("c58917e4-9972-4ffb-9269-2fb3f4d4bb61"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+                or.HaveSpecificLoreSpecificProficiency(Guid.Parse("fd3fb002-403a-4304-8f47-15cd69e70693"), Proficiencies.Instances.Trained.ID, Lores.Instances.Alcohol.ID);
+                or.HaveSpecificLoreSpecificProficiency(Guid.Parse("da591f4f-123f-4250-9fa5-c3f5842e083f"), Proficiencies.Instances.Trained.ID, Lores.Instances.Cooking.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("d0fd1045-0dcf-40a9-b494-4edf8f0565c3"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
             });
         }
 
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("fcf3da0a-e319-4bb5-8d20-f4729e00e554"),
+                Id = Guid.Parse("a6c7362a-8672-4a5a-b0fe-36bdbff3af1e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

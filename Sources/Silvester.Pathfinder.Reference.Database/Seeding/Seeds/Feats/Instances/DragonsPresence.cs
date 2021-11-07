@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DragonsPresence : Template
     {
-        public static readonly Guid ID = Guid.Parse("51e221e0-418d-4592-b4f0-410e26cff7a4");
+        public static readonly Guid ID = Guid.Parse("a1519cc2-0214-4c87-be26-a8afa1f31900");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9b71dd56-64b8-4d8e-bf4e-972bd2f28ebb"), Type = TextBlockType.Text, Text = "As a member of dragonkind, you project unflappable confidence (that collapses catastrophically against the deadliest foes). When you roll a success on a saving throw against a (trait: fear) effect, you get a critical success instead. When you roll a failure against a (trait: fear) effect, you get a critical failure instead." };
-            yield return new TextBlock { Id = Guid.Parse("cf633bbb-0012-4470-8e8a-7b1c61f0d1e9"), Type = TextBlockType.Text, Text = "In addition, when you attempt to (action: Demoralize) a foe of your level or lower, you gain a +1 circumstance bonus to the Intimidation check." };
+            yield return new TextBlock { Id = Guid.Parse("3b60fb22-1007-49de-adc3-3acf5a9c1326"), Type = TextBlockType.Text, Text = "As a member of dragonkind, you project unflappable confidence (that collapses catastrophically against the deadliest foes). When you roll a success on a saving throw against a (trait: fear) effect, you get a critical success instead. When you roll a failure against a (trait: fear) effect, you get a critical failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("1e0adb85-e0ed-4be4-8021-1568a1444a00"), Type = TextBlockType.Text, Text = "In addition, when you attempt to (action: Demoralize) a foe of your level or lower, you gain a +1 circumstance bonus to the Intimidation check." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("68f45148-0f5d-4190-9e0e-3b51dc940932"),
+                Id = Guid.Parse("6756a862-c2a6-4443-94e5-c89062aea04d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ConcealingLegerdemain : Template
     {
-        public static readonly Guid ID = Guid.Parse("d6a00711-1d12-45d8-aaa3-37614b17dfc6");
+        public static readonly Guid ID = Guid.Parse("ae4ff29a-3b4f-481d-b8f4-a4be5b7cebc2");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aa49fdf3-49b4-4a23-8873-e8702faeb1dc"), Type = TextBlockType.Text, Text = "Rather than hide an object somewhere the inspectors won’t search, you’re skilled at keeping the object on the move so it’s never where they look. When you (action: Conceal an Object) of light Bulk or less, you can use Thievery instead of Stealth for your checks and for the DC of an active searcher’s Perception check. You roll the check only once, but you must continue to use actions to (action: Conceal an Object) throughout the process." };
+            yield return new TextBlock { Id = Guid.Parse("a225a8f5-77a7-4e76-8b61-0f9969d258b6"), Type = TextBlockType.Text, Text = "Rather than hide an object somewhere the inspectors won’t search, you’re skilled at keeping the object on the move so it’s never where they look. When you (action: Conceal an Object) of light Bulk or less, you can use Thievery instead of Stealth for your checks and for the DC of an active searcher’s Perception check. You roll the check only once, but you must continue to use actions to (action: Conceal an Object) throughout the process." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("1d269d31-09fc-4564-a4ed-ed15a3d2b862"), Proficiencies.Instances.Trained.ID, Skills.Instances.Thievery.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("aad8ce6c-be71-42a9-b833-dd6c0acd6f97"), Proficiencies.Instances.Trained.ID, Skills.Instances.Thievery.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e9d6c289-58ab-4daf-952b-ad5287aad1c3"),
+                Id = Guid.Parse("c6c82e03-f9fd-4161-9298-1986af4988f6"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FreshIngredients : Template
     {
-        public static readonly Guid ID = Guid.Parse("e93cab3b-cec2-4fe0-9446-f5415664a0d2");
+        public static readonly Guid ID = Guid.Parse("8354101e-39d5-40bd-b542-c0fb9c6d9bdd");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad674676-d9bc-4a56-8f1d-e2abe4fb513b"), Type = TextBlockType.Text, Text = "When using (feat: Natural Medicine) to (action: Treat Wounds), you can spend a batch of herbs to gain the +2 circumstance bonus from having fresh ingredients, even if not in wilderness. If you spend a batch of herbs in wilderness, you gain a +4 circumstance bonus instead." };
+            yield return new TextBlock { Id = Guid.Parse("ffa51a39-efd4-41a8-b3ac-04b2db4b79da"), Type = TextBlockType.Text, Text = "When using (feat: Natural Medicine) to (action: Treat Wounds), you can spend a batch of herbs to gain the +2 circumstance bonus from having fresh ingredients, even if not in wilderness. If you spend a batch of herbs in wilderness, you gain a +4 circumstance bonus instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("e21b3cbb-eccc-46f0-97f8-35fd8b6c3036"), Feats.Instances.HerbalistDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("2aeddaff-f7d8-4c47-a87f-56bfb90b025a"), Proficiencies.Instances.Expert.ID, Skills.Instances.Nature.ID);
+            builder.HaveSpecificFeat(Guid.Parse("031acae2-9da7-4e35-97f3-b8e4a347427e"), Feats.Instances.HerbalistDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("3628da5c-2314-4a9b-8da9-db0f576f0b1e"), Proficiencies.Instances.Expert.ID, Skills.Instances.Nature.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("07e56418-5494-496a-bb2d-cbb594532a8d"),
+                Id = Guid.Parse("73f5631b-b7b3-408c-a8eb-ee5b51a3a27d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShatterSpace : Template
     {
-        public static readonly Guid ID = Guid.Parse("d2993e91-66e4-4ad5-acee-1d366c60b6c2");
+        public static readonly Guid ID = Guid.Parse("f91d141d-56a9-46b9-9a8e-3b167e6359ef");
 
         protected override Feat GetFeat()
         {
@@ -28,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("21aa0782-3c6b-4e75-ae1f-1a4bdd5cfdc8"), Type = TextBlockType.Text, Text = "The sheer power of your psychic magic causes fractures in reality. Use this amp in place of the psi cantrip’s normal amp entry." };
-            yield return new TextBlock { Id = Guid.Parse("2164f6ca-6aa9-42e1-a505-61c386854b95"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("845edf0a-3630-492e-88d2-3d02c832724d"), Type = TextBlockType.Text, Text = "~ Amp: You or one target of the spell are surrounded in a spiral of torn space. This is an aura in a 5-foot emanation. A creature that starts its turn in the aura takes 1d6 slashing damage for every 2 levels of the amped psi cantrip, with a basic Reflex save against your spell DC. The aura lasts until the beginning of your next turn. You can choose whether the aura affects the creature emitting it." };
+            yield return new TextBlock { Id = Guid.Parse("f433464a-63cd-4a90-83e0-c89cc75a9fcc"), Type = TextBlockType.Text, Text = "The sheer power of your psychic magic causes fractures in reality. Use this amp in place of the psi cantrip’s normal amp entry." };
+            yield return new TextBlock { Id = Guid.Parse("ce5a8fa0-5b55-4419-95a3-963a01d01942"), Type = TextBlockType.Text, Text = "----" };
+            yield return new TextBlock { Id = Guid.Parse("d654cdb4-2321-4f5a-b51d-e379d29ad9ec"), Type = TextBlockType.Text, Text = "~ Amp: You or one target of the spell are surrounded in a spiral of torn space. This is an aura in a 5-foot emanation. A creature that starts its turn in the aura takes 1d6 slashing damage for every 2 levels of the amped psi cantrip, with a basic Reflex save against your spell DC. The aura lasts until the beginning of your next turn. You can choose whether the aura affects the creature emitting it." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1f2777dc-630a-4baf-8e05-eef7bf7570b0"),
+                Id = Guid.Parse("cfd40763-6d49-454c-a450-0b4dad724426"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

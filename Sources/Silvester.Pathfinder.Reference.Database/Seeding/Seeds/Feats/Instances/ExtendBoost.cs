@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ExtendBoost : Template
     {
-        public static readonly Guid ID = Guid.Parse("10e80087-7233-40e8-8818-521b04dac4e5");
+        public static readonly Guid ID = Guid.Parse("1fb81c22-42d3-4267-9b9e-9d9789af2d52");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e31182b2-8a87-4dd2-83b4-03e0905058bc"), Type = TextBlockType.Text, Text = "You can increase the duration of your eidolon’s boosts. You learn the (spell: extend boost) link spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("c005ffdf-62c8-41a9-8736-4cd40141dded"), Type = TextBlockType.Text, Text = "You can increase the duration of your eidolon’s boosts. You learn the (spell: extend boost) link spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e53c388e-3093-43d3-804c-7adde3eb6cde"),
+                Id = Guid.Parse("0678ed63-cf6b-445a-8457-773c6d37a6ac"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

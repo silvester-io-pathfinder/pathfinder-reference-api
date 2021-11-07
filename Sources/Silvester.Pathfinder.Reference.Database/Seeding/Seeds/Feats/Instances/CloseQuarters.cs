@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CloseQuarters : Template
     {
-        public static readonly Guid ID = Guid.Parse("460014ed-17fc-4e3a-b7b3-4a95d3a70e24");
+        public static readonly Guid ID = Guid.Parse("73367a28-392c-4e18-a810-6b674fab09fe");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("11fcdc87-8f3b-4679-88c3-848f7a6c13f2"), Type = TextBlockType.Text, Text = "You’ve trained to fight with allies in tunnel warrens, dense undergrowth, or similarly cramped terrain. If you are Small or smaller, you can end your movement in the same square as a Small or smaller ally. No more than two creatures can share the same space when using this ability or a similar one." };
+            yield return new TextBlock { Id = Guid.Parse("f4d1e162-c72d-43cc-a20c-177e18f3ca7c"), Type = TextBlockType.Text, Text = "You’ve trained to fight with allies in tunnel warrens, dense undergrowth, or similarly cramped terrain. If you are Small or smaller, you can end your movement in the same square as a Small or smaller ally. No more than two creatures can share the same space when using this ability or a similar one." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("54a04fd0-afdd-4fad-bcef-7eaa35ad3c7e"),
+                Id = Guid.Parse("79099aba-1d96-49bf-8882-cb056d512ecd"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

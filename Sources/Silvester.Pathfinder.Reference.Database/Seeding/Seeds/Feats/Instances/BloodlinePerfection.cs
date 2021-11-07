@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BloodlinePerfection : Template
     {
-        public static readonly Guid ID = Guid.Parse("64368647-9376-47ee-8a12-b4bc112339b6");
+        public static readonly Guid ID = Guid.Parse("a5dcdb6e-b2dd-473d-b2a0-c071f89f51d5");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b70b1630-ec49-4661-9de0-d1c16e049e08"), Type = TextBlockType.Text, Text = "You command the ultimate powers of your bloodline and tradition. You gain an additional 10th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("2b147f40-4d79-4196-b60f-338944d9b55c"), Type = TextBlockType.Text, Text = "You command the ultimate powers of your bloodline and tradition. You gain an additional 10th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("3a645b2e-650b-4b31-abcc-178632368ef0"), ClassFeatures.Sorcerers.BloodlineParagon.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("1ff35f14-b71a-499f-877a-1bb289ed2f0c"), ClassFeatures.Sorcerers.BloodlineParagon.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c5cc5300-fa05-4e1c-b62b-56f0f68848f9"),
+                Id = Guid.Parse("f8720ed3-0587-41d1-a9f5-7aa24003b313"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

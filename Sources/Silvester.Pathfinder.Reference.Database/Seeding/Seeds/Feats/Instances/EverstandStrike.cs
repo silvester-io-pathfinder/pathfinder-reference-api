@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EverstandStrike : Template
     {
-        public static readonly Guid ID = Guid.Parse("da9e9fdf-6c6c-4732-a193-caee576ae31a");
+        public static readonly Guid ID = Guid.Parse("3681f687-55fa-4cc8-95d8-1cdb501c1b40");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b3e5deb0-2368-479c-a4a1-2c667c918aee"), Type = TextBlockType.Text, Text = "~ Access: The following class feat is available to Knights of Lastwall." };
-            yield return new TextBlock { Id = Guid.Parse("95e9abe4-74fc-49f0-87e8-a035071799d8"), Type = TextBlockType.Text, Text = "Your follow-up blow leaves you an opening to set your shield. Make a (action: Strike) with the wielded shield. If the (action: Strike) hits and deals damage, you also (action: Raise your Shield | Raise a Shield)." };
+            yield return new TextBlock { Id = Guid.Parse("7e344755-71ee-47fd-8a29-74c6fbde7690"), Type = TextBlockType.Text, Text = "~ Access: The following class feat is available to Knights of Lastwall." };
+            yield return new TextBlock { Id = Guid.Parse("573bac65-9fad-44ce-a7c8-3c7c58369241"), Type = TextBlockType.Text, Text = "Your follow-up blow leaves you an opening to set your shield. Make a (action: Strike) with the wielded shield. If the (action: Strike) hits and deals damage, you also (action: Raise your Shield | Raise a Shield)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("7a564901-1499-4433-9a63-dfbf735edc63"), Feats.Instances.EverstandStance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("295d75de-2d23-427b-9268-0c2da2fc365a"), Feats.Instances.EverstandStance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a61a4f80-5c5f-46b0-ad13-22a8b3dce7bb"),
+                Id = Guid.Parse("560f20b0-787a-4c55-83dc-6da91da7bfbb"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

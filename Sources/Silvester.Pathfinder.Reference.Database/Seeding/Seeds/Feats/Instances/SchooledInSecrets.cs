@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SchooledInSecrets : Template
     {
-        public static readonly Guid ID = Guid.Parse("7e3043bf-382d-4756-9384-ad9638803812");
+        public static readonly Guid ID = Guid.Parse("4a23ef0a-4d7a-498a-a083-2a461d23b098");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8e17bfe-757e-4c85-b7d1-ddc42d23ef2a"), Type = TextBlockType.Text, Text = "You notice the signs and symbols that members of mystery cults and other secret societies use to declare their affiliation to fellow members. You can use Occultism in place of Diplomacy to (action: Gather Information) about such groups. If you belong to a secret cult, lodge, sect, or similar organization, you automatically recognize members of your group unless they are specifically attempting to conceal their presence from you." };
+            yield return new TextBlock { Id = Guid.Parse("df659085-f5e3-4edd-95b0-87058c30ed16"), Type = TextBlockType.Text, Text = "You notice the signs and symbols that members of mystery cults and other secret societies use to declare their affiliation to fellow members. You can use Occultism in place of Diplomacy to (action: Gather Information) about such groups. If you belong to a secret cult, lodge, sect, or similar organization, you automatically recognize members of your group unless they are specifically attempting to conceal their presence from you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("c23308e4-1a9f-4a4c-b37b-8073a23f7d58"), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("101f6f0d-c22f-4dd8-a82f-3d9c31a2d1c1"), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a9833109-9329-4da1-b5a6-a79ca30a42a3"),
+                Id = Guid.Parse("a406f263-e8a2-4fc6-8c40-b62bdd6e3a30"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

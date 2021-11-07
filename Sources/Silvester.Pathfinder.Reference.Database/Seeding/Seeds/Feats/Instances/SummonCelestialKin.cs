@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SummonCelestialKin : Template
     {
-        public static readonly Guid ID = Guid.Parse("3edaff91-448f-4592-870b-96ead44962a6");
+        public static readonly Guid ID = Guid.Parse("324e1bb2-f58f-41d7-9ed2-37d1e021e436");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1200fff7-34fe-4f6a-b8b8-d4248517bc7f"), Type = TextBlockType.Text, Text = "You have a connection to the celestial realms, allowing you to summon a celestial ally. Once per day, you can cast (spell: summon celestial) as a 5th-level divine innate spell, but the celestial summoned must be from the same category as your own lineage, such as a creature with the angel trait if you are angelkin." };
+            yield return new TextBlock { Id = Guid.Parse("3374b5bf-3914-42b2-8ff5-8129cedaff66"), Type = TextBlockType.Text, Text = "You have a connection to the celestial realms, allowing you to summon a celestial ally. Once per day, you can cast (spell: summon celestial) as a 5th-level divine innate spell, but the celestial summoned must be from the same category as your own lineage, such as a creature with the angel trait if you are angelkin." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificAncestry(Guid.Parse("c7d5437a-529d-418f-8c46-1fe8ae802faa"), Ancestries.Instances.Aasimar.ID);
+            builder.HaveSpecificHeritage(Guid.Parse("4beb9a3b-fa23-408c-ace5-fc7d74285a82"), Heritages.Instances.Aasimar.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("51072464-ea66-44d2-98ee-93b0a185dc4f"),
+                Id = Guid.Parse("13e061b5-b833-42d7-a3e7-bf735fb10917"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

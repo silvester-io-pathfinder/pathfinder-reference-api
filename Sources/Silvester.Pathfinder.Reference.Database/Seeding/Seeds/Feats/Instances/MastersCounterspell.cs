@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MastersCounterspell : Template
     {
-        public static readonly Guid ID = Guid.Parse("92873f56-fa1a-4064-93d8-1316000e0953");
+        public static readonly Guid ID = Guid.Parse("6eee7fb4-f6c9-4f70-a0be-991a29294122");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f3091dfc-d58f-41dd-8e10-08424ed95aae"), Type = TextBlockType.Text, Text = "When a foe (activity: Casts a Spell | Cast a Spell) and you can see its manifestations, you can use your magic to disrupt it. If you&#39;re a prepared caster, you can expend a prepared spell to counter the triggering creature&#39;s casting of a spell. If you&#39;re a spontaneous caster, you can expend a spell slot. The level of the prepared spell or spell slot must be at least as high as the triggering spell&#39;s level. You lose your prepared spell or spell slot as if you had (activity: Cast the Spell | Cast a Spell). You then attempt to counteract the triggering spell, and you take a -2 penalty to your counteract check; for prepared casters, the GM might waive the penalty if the spell you&#39;re expending to counterspell is especially appropriate – such as countering with the same spell, or using a (spell: cone of cold) to counteract a (spell: fireball)." };
+            yield return new TextBlock { Id = Guid.Parse("0fb8fd77-8782-4056-88d1-dbacc46d3397"), Type = TextBlockType.Text, Text = "When a foe (activity: Casts a Spell | Cast a Spell) and you can see its manifestations, you can use your magic to disrupt it. If you&#39;re a prepared caster, you can expend a prepared spell to counter the triggering creature&#39;s casting of a spell. If you&#39;re a spontaneous caster, you can expend a spell slot. The level of the prepared spell or spell slot must be at least as high as the triggering spell&#39;s level. You lose your prepared spell or spell slot as if you had (activity: Cast the Spell | Cast a Spell). You then attempt to counteract the triggering spell, and you take a -2 penalty to your counteract check; for prepared casters, the GM might waive the penalty if the spell you&#39;re expending to counterspell is especially appropriate – such as countering with the same spell, or using a (spell: cone of cold) to counteract a (spell: fireball)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3a4df9cd-0403-44b7-8474-17fc1f0bd184"), Feats.Instances.SpellmasterDedication.ID);
-            builder.HaveSpecificSpellAttackProficiency(Guid.Parse("166a74a9-35a9-42c7-91c2-e9cfedefb140"), Proficiencies.Instances.Master.ID);
-            builder.HaveSpecificSpellDcProficiency(Guid.Parse("8be72e9f-4624-4c0f-a548-53e1fe1b5264"), Proficiencies.Instances.Master.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8f865101-2f0f-488b-b753-89e51d618cd9"), Feats.Instances.SpellmasterDedication.ID);
+            builder.HaveSpecificSpellAttackProficiency(Guid.Parse("e08d9fc6-884f-4acc-8b62-22b9890bbe45"), Proficiencies.Instances.Master.ID);
+            builder.HaveSpecificSpellDcProficiency(Guid.Parse("0d3c0c8e-618a-4781-a89c-a0a9fdee3ea6"), Proficiencies.Instances.Master.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("435ef1a2-91d5-462d-a3bb-775417372fe6"),
+                Id = Guid.Parse("91246934-9644-4889-b353-b1bd1f8e47d8"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

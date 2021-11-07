@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MobileMagicalCombat : Template
     {
-        public static readonly Guid ID = Guid.Parse("1ee006e2-a595-4429-b707-dae9f8f435f9");
+        public static readonly Guid ID = Guid.Parse("96a415c3-2dc7-4fdc-af5a-68d5fba68cea");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("25c3d69b-ebc0-4236-903a-d4d4fcd64283"), Type = TextBlockType.Text, Text = "You dart around the battlefield, casting spells while you carefully make melee attacks with your weapon. (action: Stride) once. If you end your movement within melee reach of at least one enemy, you can make a melee (action: Strike) against that enemy. You can use Mobile Magical Combat while (action: Burrowing | Burrow), (action: Climbing | Climb), (action: Flying | Fly), or (action: Swimming | Swim) instead of (action: Striding | Stride) if you have the corresponding movement type." };
+            yield return new TextBlock { Id = Guid.Parse("9f9bb7fd-1725-4cbe-b7ec-f4bd37cd0533"), Type = TextBlockType.Text, Text = "You dart around the battlefield, casting spells while you carefully make melee attacks with your weapon. (action: Stride) once. If you end your movement within melee reach of at least one enemy, you can make a melee (action: Strike) against that enemy. You can use Mobile Magical Combat while (action: Burrowing | Burrow), (action: Climbing | Climb), (action: Flying | Fly), or (action: Swimming | Swim) instead of (action: Striding | Stride) if you have the corresponding movement type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("7b5a4c10-be04-4b34-b3b6-132ed6cf7d55"), Feats.Instances.SpellmasterDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("fe91661e-eb1f-4911-b306-d1e3b9a747d0"), Feats.Instances.SpellmasterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("df3422e4-2448-45f6-9f4f-250c9bb6ad2d"),
+                Id = Guid.Parse("4f48860a-c9cd-4fe1-8544-4e6d2bdde31f"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

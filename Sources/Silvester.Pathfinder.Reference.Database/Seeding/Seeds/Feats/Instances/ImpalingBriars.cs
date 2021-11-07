@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImpalingBriars : Template
     {
-        public static readonly Guid ID = Guid.Parse("da1bc264-71b0-4c5e-83c4-4e95e00024b8");
+        public static readonly Guid ID = Guid.Parse("fd169980-fb63-48a7-8e62-c8f4a70ae531");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("31310210-34d3-4eda-a37d-71cacff207a4"), Type = TextBlockType.Text, Text = "You can fill an area with devastating briars that impale and impede your foes. You gain the (Spell: impaling briars) order spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("289b5611-6aa2-43b6-a9c8-82503f3a828a"), Type = TextBlockType.Text, Text = "You can fill an area with devastating briars that impale and impede your foes. You gain the (Spell: impaling briars) order spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificDruidicOrder(Guid.Parse("79cf5b20-dabc-4ddd-a998-16e2a40292d0"), DruidicOrders.Instances.Leaf.ID);
+            builder.HaveSpecificDruidicOrder(Guid.Parse("11616ca7-69e8-4009-a630-0fd9e2ac862e"), DruidicOrders.Instances.Leaf.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c6628556-d0d6-4cd0-9cc7-3733ad528979"),
+                Id = Guid.Parse("cf97a493-b6bf-4b10-b2fe-da552124a277"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

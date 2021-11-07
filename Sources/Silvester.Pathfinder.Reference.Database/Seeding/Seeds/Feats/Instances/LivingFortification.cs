@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LivingFortification : Template
     {
-        public static readonly Guid ID = Guid.Parse("37f943d7-352e-403c-adb8-5d125b1ddd05");
+        public static readonly Guid ID = Guid.Parse("002c2e71-c8f6-4e5d-8811-4db895418e7a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b3912278-5970-4d2b-a40b-9c7f629ad2f2"), Type = TextBlockType.Text, Text = "You can posture defensively with firearms or crossbows, acting like a walking tower. (action: Interact) to draw a firearm or crossbow. You then position that weapon defensively, gaining a +1 circumstance bonus to AC until the start of your first turn, or a +2 circumstance bonus if the chosen weapon has the (trait: parry) trait." };
+            yield return new TextBlock { Id = Guid.Parse("be77e4bb-9ff8-4515-8caa-6e247c7a2839"), Type = TextBlockType.Text, Text = "You can posture defensively with firearms or crossbows, acting like a walking tower. (action: Interact) to draw a firearm or crossbow. You then position that weapon defensively, gaining a +1 circumstance bonus to AC until the start of your first turn, or a +2 circumstance bonus if the chosen weapon has the (trait: parry) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8aff4df2-a6d3-4775-9162-8e513e2e8df8"),
+                Id = Guid.Parse("c41d3e2b-7bdd-4f55-8c15-ded8b0b23cf3"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

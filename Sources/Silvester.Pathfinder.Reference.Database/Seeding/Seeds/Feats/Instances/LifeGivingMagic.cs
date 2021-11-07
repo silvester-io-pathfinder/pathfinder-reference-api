@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LifeGivingMagic : Template
     {
-        public static readonly Guid ID = Guid.Parse("34150ea4-cdf1-44f1-800b-eed881130346");
+        public static readonly Guid ID = Guid.Parse("8a8515c3-dfbf-4c1b-ae17-1083c7de1e8e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("95ce50f4-b9bd-4123-983f-e39d4ca71adb"), Type = TextBlockType.Text, Text = "The upwelling of innate magic refreshes your body. You gain a number of temporary Hit Points equal to half your level (minimum 1) that last until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("c1cae62b-1c96-4922-a896-4d2704b14477"), Type = TextBlockType.Text, Text = "The upwelling of innate magic refreshes your body. You gain a number of temporary Hit Points equal to half your level (minimum 1) that last until the end of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4639b786-c1ac-49fd-a0d6-87d9f0565c84"),
+                Id = Guid.Parse("e0a2608e-8d67-427b-a0d1-9b896bcb0448"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

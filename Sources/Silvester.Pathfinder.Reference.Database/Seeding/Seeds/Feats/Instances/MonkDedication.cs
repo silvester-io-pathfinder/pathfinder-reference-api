@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MonkDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("1a03bb06-8495-4c53-acae-dd83c144a4e0");
+        public static readonly Guid ID = Guid.Parse("75742bfc-310e-49a3-8c58-da8902dc5dfb");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f24bc2de-c796-4859-96a5-49d32e931aa4"), Type = TextBlockType.Text, Text = "You become trained in unarmed attacks and gain the powerful fist class feature (page 156). You become trained in your choice of Acrobatics or Athletics; if you are already trained in both of these skills, you become trained in a skill of your choice. You become trained in monk class DC." };
+            yield return new TextBlock { Id = Guid.Parse("9af3d39b-d9b4-4cea-b600-880fbf392db6"), Type = TextBlockType.Text, Text = "You become trained in unarmed attacks and gain the powerful fist class feature (page 156). You become trained in your choice of Acrobatics or Athletics; if you are already trained in both of these skills, you become trained in a skill of your choice. You become trained in monk class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificStat(Guid.Parse("9d5297ad-14cd-422d-856a-9a1ee6303021"), requiredStatValue: 14, Stats.Instances.Strength.ID);
-            builder.HaveSpecificStat(Guid.Parse("3e8167b7-e91f-4faf-97ef-1e4cee750877"), requiredStatValue: 14, Stats.Instances.Dexterity.ID);
+            builder.HaveSpecificStat(Guid.Parse("4ad91a51-bc0b-44a5-9308-6c0481c491f4"), requiredStatValue: 14, Stats.Instances.Strength.ID);
+            builder.HaveSpecificStat(Guid.Parse("6665faf1-7263-4904-9635-707c8a896720"), requiredStatValue: 14, Stats.Instances.Dexterity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ee009573-9e23-4e39-b634-e0c4f51f2455"),
+                Id = Guid.Parse("3caece01-ca67-4cf9-8ec3-fe11e4c63a34"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

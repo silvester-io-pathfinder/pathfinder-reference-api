@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MesmerizingPerformance : Template
     {
-        public static readonly Guid ID = Guid.Parse("8e4dbc4f-e63f-4e08-a78d-a19339ebfaa9");
+        public static readonly Guid ID = Guid.Parse("271dbd98-14a3-4b30-8619-206d2bc573d4");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a106c0a6-06b3-484f-b934-4ab392cf5de2"), Type = TextBlockType.Text, Text = "The companion maintains its performance to captivate a single target within 30 feet that witnessed its successful performance. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("0bde6110-70db-40a9-ab93-992ec1671b62"), Type = TextBlockType.Text, Text = "The companion maintains its performance to captivate a single target within 30 feet that witnessed its successful performance. The target must attempt a Will save." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("86773c15-78b6-45fc-a25a-4d3fcff39492"),
+                Id = Guid.Parse("93944578-6d9f-4800-b212-1a6c232d379d"),
                 
                 Success = "The target is unaffected and is temporarily immune for 1 hour.",
                 Failure = "The target is fascinated by the companion for its next action and then is temporarily immune for 1 hour.",
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5f14143f-1abf-49b5-b07e-cef23523b7db"),
+                Id = Guid.Parse("1615231f-e604-4e69-8e11-ce5b294902a0"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PerfectDive : Template
     {
-        public static readonly Guid ID = Guid.Parse("6de7b6f5-b40f-43f9-9804-83cc5cd9eb67");
+        public static readonly Guid ID = Guid.Parse("44b0af71-ab29-461f-80d5-5b4fcfe2a255");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ba35fb4a-5737-47f9-98fb-c3fadffbd78c"), Type = TextBlockType.Text, Text = "You dive into the water with exceptional skill and connection to the waves, urging the water itself to cushion your fall. You intentionally (action: Leap) or otherwise fall into the water, taking no falling damage regardless of the distance." };
+            yield return new TextBlock { Id = Guid.Parse("c6880dee-17fc-4b77-b42c-85f77217e057"), Type = TextBlockType.Text, Text = "You dive into the water with exceptional skill and connection to the waves, urging the water itself to cushion your fall. You intentionally (action: Leap) or otherwise fall into the water, taking no falling damage regardless of the distance." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("135001d0-6e73-43f1-9465-05c74007d1c4"),
+                Id = Guid.Parse("f5d97ac4-faed-4a18-a6d3-6407ee748fb5"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

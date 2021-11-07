@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OccultBreadth : Template
     {
-        public static readonly Guid ID = Guid.Parse("cb8f6b7c-4fd5-4c23-94c5-0f683395a219");
+        public static readonly Guid ID = Guid.Parse("4a990f2c-e391-4a28-973e-589116fd1484");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("506f78dd-f0d4-4163-ac80-6f48876c8a83"), Type = TextBlockType.Text, Text = "Your repertoire expands, and you can cast more occult spells each day. Increase the number of spells in your repertoire and the number of spell slots you gain from bard archetype feats by 1 for each spell level other than your two highest bard spell slots." };
+            yield return new TextBlock { Id = Guid.Parse("fcbba961-1b14-4823-a8fa-0e504699343b"), Type = TextBlockType.Text, Text = "Your repertoire expands, and you can cast more occult spells each day. Increase the number of spells in your repertoire and the number of spell slots you gain from bard archetype feats by 1 for each spell level other than your two highest bard spell slots." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("c1f2b7ca-e7f5-4c20-8003-ec5b34a2b0a6"), Feats.Instances.BasicBardSpellcasting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("280e1590-d7a6-471b-8701-abbdbb12bed4"), Feats.Instances.BasicBardSpellcasting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3cd58c8f-bd65-4e38-a1bb-91e8c23fe29d"),
+                Id = Guid.Parse("adc9f402-5eaa-47bb-b3a7-250854629d75"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

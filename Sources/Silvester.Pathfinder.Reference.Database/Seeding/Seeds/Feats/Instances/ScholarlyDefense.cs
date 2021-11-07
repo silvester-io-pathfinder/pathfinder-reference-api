@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ScholarlyDefense : Template
     {
-        public static readonly Guid ID = Guid.Parse("2df22052-005f-4871-b2d7-43cb3923a513");
+        public static readonly Guid ID = Guid.Parse("e2bb71b6-0632-4e6e-bf5a-a38b4d3f84f6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8e168928-bf42-4773-b6ab-fc535c5f4dd3"), Type = TextBlockType.Text, Text = "Your knowledge of strange creatures and their bizarre anatomy allows you to anticipate their physical attacks and reduce the damage you take from them. You gain resistance to physical damage from melee attacks made by aberrations and oozes. This resistance is equal to one-third your level." };
+            yield return new TextBlock { Id = Guid.Parse("4c6610f8-840b-418d-8014-4bb946b4b4c8"), Type = TextBlockType.Text, Text = "Your knowledge of strange creatures and their bizarre anatomy allows you to anticipate their physical attacks and reduce the damage you take from them. You gain resistance to physical damage from melee attacks made by aberrations and oozes. This resistance is equal to one-third your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("92deae68-5e4f-4035-8581-f3bd84724882"), Feats.Instances.EldritchResearcherDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e78e7d96-770f-4168-891a-39a142ed784d"), Feats.Instances.EldritchResearcherDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d52e45c2-233a-40d4-8d50-77d340a0ab85"),
+                Id = Guid.Parse("c89fdb81-19cb-4ed3-b659-447cd0dd3bc8"),
                 SourceId = Sources.Instances.AbominationVaults.ID,
                 Page = -1
             };

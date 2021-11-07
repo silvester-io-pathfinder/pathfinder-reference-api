@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class NoCauseForAlarm : Template
     {
-        public static readonly Guid ID = Guid.Parse("d3745e71-b7e7-4e46-9e71-159d33e1bb1e");
+        public static readonly Guid ID = Guid.Parse("027b78fb-6eb2-4273-925a-b85da5767dc3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8638991d-3c92-4c9e-af08-e0951210f45b"), Type = TextBlockType.Text, Text = "You attempt to reduce panic. Attempt a Diplomacy check, comparing it to the Will DC of creatures in a 10-foot emanation around you who are frightened. Each of them is temporarily immune for 1 hour." };
+            yield return new TextBlock { Id = Guid.Parse("d5e5f2ae-88b1-484e-a312-a3333b537f85"), Type = TextBlockType.Text, Text = "You attempt to reduce panic. Attempt a Diplomacy check, comparing it to the Will DC of creatures in a 10-foot emanation around you who are frightened. Each of them is temporarily immune for 1 hour." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("78cc8f98-b431-4905-bd0f-34ba5c2ec8a9"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("820e1632-7a9f-4e16-a232-a02859a91c38"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("3e6288e6-c9e4-4191-925d-7c3e7057a44e"),
+                Id = Guid.Parse("d5fbd5d7-3c21-44af-8d83-6488e176c1be"),
                 CriticalSuccess = "Reduce the creature’s frightened value by 2.",
                 Success = "Reduce the creature’s frightened value by 1.",
                 
@@ -59,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("37f95303-b282-4265-91f8-135a27b3f3c7"),
+                Id = Guid.Parse("9ae442ad-98b3-45be-b6d4-708f95a25003"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FeysFortune : Template
     {
-        public static readonly Guid ID = Guid.Parse("e14bb889-3abb-4d79-8200-00f6c7498ebe");
+        public static readonly Guid ID = Guid.Parse("d5beb9b0-71a3-474e-9c7a-e14830319f08");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b0af095-bf13-4b5d-bf81-cdb71aee0f08"), Type = TextBlockType.Text, Text = "Roll the skill check twice and use the better result." };
+            yield return new TextBlock { Id = Guid.Parse("ee5afd04-9321-4610-b7d3-efaa0bd3e5e8"), Type = TextBlockType.Text, Text = "Roll the skill check twice and use the better result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2ca9fb5b-6861-4fc5-9231-7039879d3c61"),
+                Id = Guid.Parse("2005ff79-ae76-4749-beac-bdb6dd963f78"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

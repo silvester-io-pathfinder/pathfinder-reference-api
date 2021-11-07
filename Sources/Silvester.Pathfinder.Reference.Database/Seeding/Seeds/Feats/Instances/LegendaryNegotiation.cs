@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LegendaryNegotiation : Template
     {
-        public static readonly Guid ID = Guid.Parse("a59daf85-0a42-46e1-af36-7748903b8b5d");
+        public static readonly Guid ID = Guid.Parse("685b1aab-96dc-4112-ba9d-ef874175be5e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2e7c4ce2-1548-4464-98c2-d73fdf8f975e"), Type = TextBlockType.Text, Text = "You can negotiate incredibly quickly in adverse situations. You attempt to (action: Make an Impression) and then (action: Request) your opponent cease their current activity and engage in negotiations. You take a -5 penalty to your Diplomacy check. The GM sets the DC of the Request based on the circumstances – it’s generally at least a very hard DC of the creature’s level. Some creatures might simply refuse, and even those who agree to parley might ultimately find your arguments lacking and return to violence." };
+            yield return new TextBlock { Id = Guid.Parse("5eaabddb-c8a6-4b24-9e77-cb8f14dfc403"), Type = TextBlockType.Text, Text = "You can negotiate incredibly quickly in adverse situations. You attempt to (action: Make an Impression) and then (action: Request) your opponent cease their current activity and engage in negotiations. You take a -5 penalty to your Diplomacy check. The GM sets the DC of the Request based on the circumstances – it’s generally at least a very hard DC of the creature’s level. Some creatures might simply refuse, and even those who agree to parley might ultimately find your arguments lacking and return to violence." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("14e39f61-e305-4b4e-9209-db39940b14b3"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Diplomacy.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("29aa40f3-c5fd-45eb-91e7-ab8f01a7fc64"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Diplomacy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cb85233a-e84c-40a8-8c1c-5674c662bc3a"),
+                Id = Guid.Parse("781a283a-76f8-49e4-9c19-339a66f0755d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

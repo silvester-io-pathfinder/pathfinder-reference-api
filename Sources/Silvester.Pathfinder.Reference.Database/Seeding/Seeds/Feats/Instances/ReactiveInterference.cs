@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReactiveInterference : Template
     {
-        public static readonly Guid ID = Guid.Parse("b6a45159-5823-4a52-b7c5-82cf787babc9");
+        public static readonly Guid ID = Guid.Parse("c134e945-1a27-4939-9202-9444ccde353b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("be5b3492-ec97-4571-97e7-888c1d2eb0c4"), Type = TextBlockType.Text, Text = "Grabbing a sleeve, swiping with your weapon, or creating another obstruction, you reflexively foil an enemy’s response. If the triggering creature’s level is equal to or lower than yours, you disrupt the triggering reaction. If the triggering creature’s level is higher than yours, you must make an attack roll against its AC. On a success, you disrupt the reaction." };
+            yield return new TextBlock { Id = Guid.Parse("9553e4b8-04bd-44b9-a75d-3feac094e053"), Type = TextBlockType.Text, Text = "Grabbing a sleeve, swiping with your weapon, or creating another obstruction, you reflexively foil an enemy’s response. If the triggering creature’s level is equal to or lower than yours, you disrupt the triggering reaction. If the triggering creature’s level is higher than yours, you must make an attack roll against its AC. On a success, you disrupt the reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e158e8a0-212b-4e4a-95b2-17f50f295b15"),
+                Id = Guid.Parse("b457428e-c90c-49a4-a3b8-40e900470ec7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

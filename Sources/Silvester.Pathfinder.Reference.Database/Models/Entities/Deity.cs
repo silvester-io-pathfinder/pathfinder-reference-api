@@ -9,6 +9,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
     public class Deity : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
+        public string? Title { get; set; } 
         public string Edicts { get; set; } = default!;
         public string Anathema { get; set; } = default!;
         public string? AreasOfConcern { get; set; }
@@ -22,12 +23,6 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
 
-        public Guid? FavoredMeleeWeaponId { get; set; }
-        public MeleeWeapon? FavoredMeleeWeapon { get; set; }
-
-        public Guid? FavoredRangedWeaponId { get; set; }
-        public MeleeWeapon? FavoredRangedWeapon { get; set; }
-
         public Guid DevoteeEffectId { get; set; }
         public BooleanEffect DevoteeEffect { get;set;} = default!;
 
@@ -37,6 +32,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public ICollection<Alignment> FollowerAlignments { get; set; } = new List<Alignment>();
         public ICollection<Domain> Domains { get; set; } = new List<Domain>();
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
+        public ICollection<MeleeWeapon> FavoredMeleeWeapons { get; set; } = new List<MeleeWeapon>();
+        public ICollection<RangedWeapon> FavoredRangedWeapon { get; set; } = new List<RangedWeapon>();
 
         public Guid? DivineIntercessionId { get; set; }
         public DivineIntercession? DivineIntercession { get; set; }

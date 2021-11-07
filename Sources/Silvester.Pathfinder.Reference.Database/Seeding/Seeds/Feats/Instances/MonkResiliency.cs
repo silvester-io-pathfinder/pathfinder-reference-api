@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MonkResiliency : Template
     {
-        public static readonly Guid ID = Guid.Parse("5d6a72f8-73e5-43a1-82e4-b1f54ec1ef9c");
+        public static readonly Guid ID = Guid.Parse("7aa85446-a977-4170-bf3f-22be0aba1618");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2a956a5f-0fd4-4a1a-8e52-f0c9707d582b"), Type = TextBlockType.Text, Text = "You gain 3 additional Hit Points for each monk archetype class feat you have. As you continue selecting monk archetype class feats, you continue to gain additional Hit Points in this way." };
+            yield return new TextBlock { Id = Guid.Parse("7837488a-dc04-432f-86a9-79a91ce92007"), Type = TextBlockType.Text, Text = "You gain 3 additional Hit Points for each monk archetype class feat you have. As you continue selecting monk archetype class feats, you continue to gain additional Hit Points in this way." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a87f156e-ad81-4397-aa0b-bf4565bb655e"),
+                Id = Guid.Parse("a2f6a83c-3227-459d-8bb0-7801789a547a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

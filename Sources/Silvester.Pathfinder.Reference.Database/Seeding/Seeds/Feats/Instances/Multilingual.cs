@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Multilingual : Template
     {
-        public static readonly Guid ID = Guid.Parse("19a00eaf-85d8-4d26-9343-cb3da835171b");
+        public static readonly Guid ID = Guid.Parse("dfb557cd-4c21-47d5-a416-7494ebd916a1");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b4850a9d-3ce4-44b9-8145-38aae59eac29"), Type = TextBlockType.Text, Text = "You easily pick up new languages. You learn two new languages, chosen from common languages, uncommon languages, and any others you have access to. You learn an additional language if you are or become a master in Society and again if you are or become legendary." };
+            yield return new TextBlock { Id = Guid.Parse("912e6237-521c-4730-b37c-98e542cbe1d9"), Type = TextBlockType.Text, Text = "You easily pick up new languages. You learn two new languages, chosen from common languages, uncommon languages, and any others you have access to. You learn an additional language if you are or become a master in Society and again if you are or become legendary." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("c61e155a-c90e-4e1c-b475-71da6740305b"), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("8980b8e3-058f-45be-a597-1c10c17b1989"), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("24708121-89f5-4340-8652-08b10a204c6d"),
+                Id = Guid.Parse("168bb4ad-addf-49f1-9efb-a61408029a96"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

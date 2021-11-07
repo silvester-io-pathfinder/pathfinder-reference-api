@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HairTrigger : Template
     {
-        public static readonly Guid ID = Guid.Parse("79478a32-d3bb-4e77-bf38-00b1140308fa");
+        public static readonly Guid ID = Guid.Parse("77ba064f-2a55-4bb9-b488-1922999f6700");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("65f01f12-e42c-4d3f-b8f6-f50c0059358a"), Type = TextBlockType.Text, Text = "No one can react faster than you can pull your trigger. When using your initial deed, instead of (action: Interacting|Interact) to draw a weapon, you can (action: Strike) with a firearm or crossbow you’re already wielding. If this (action: Strike) hits, the target is also flat-footed until the end of your first turn of the encounter." };
+            yield return new TextBlock { Id = Guid.Parse("4d109f99-1173-4800-bb89-2045c311d0be"), Type = TextBlockType.Text, Text = "No one can react faster than you can pull your trigger. When using your initial deed, instead of (action: Interacting|Interact) to draw a weapon, you can (action: Strike) with a firearm or crossbow you’re already wielding. If this (action: Strike) hits, the target is also flat-footed until the end of your first turn of the encounter." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.Manual(Guid.Parse("5ba652e9-d376-453a-8e69-667fe06a6817"), "Initial deed that allows you to Interact to draw a weapon.");
+            builder.Manual(Guid.Parse("8520a920-3ff5-49f3-aaa3-73b42dab29b4"), "Initial deed that allows you to Interact to draw a weapon.");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e63136fb-5fd6-4892-be5d-27700b36df41"),
+                Id = Guid.Parse("cb302461-6d3f-4282-9cad-e9f9ffd05b78"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

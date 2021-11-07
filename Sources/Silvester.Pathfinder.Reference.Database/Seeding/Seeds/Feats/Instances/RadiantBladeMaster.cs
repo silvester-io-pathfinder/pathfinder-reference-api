@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RadiantBladeMaster : Template
     {
-        public static readonly Guid ID = Guid.Parse("914506c3-60a8-46a0-92fd-5685debee4e0");
+        public static readonly Guid ID = Guid.Parse("b7bc46e1-2a8d-45b4-8421-230106bfb050");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("147851d6-15e6-4114-9158-8070610ac5c0"), Type = TextBlockType.Text, Text = "Your divine ally turns your chosen weapon into a paragon of its type. When you choose the weapon for your blade divine ally during your preparations, add the following property runes to the list of effects you can choose from: (item: dancing | Dancing Runestone), (item: greater disrupting | Greater Disrupting Runestone), and (item: keen | Keen Runestone)." };
+            yield return new TextBlock { Id = Guid.Parse("6ca7bce6-6bf2-4a27-95ac-5e890cbf094d"), Type = TextBlockType.Text, Text = "Your divine ally turns your chosen weapon into a paragon of its type. When you choose the weapon for your blade divine ally during your preparations, add the following property runes to the list of effects you can choose from: (item: dancing | Dancing Runestone), (item: greater disrupting | Greater Disrupting Runestone), and (item: keen | Keen Runestone)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificDivineAlly(Guid.Parse("d307f2b7-746c-4268-b574-7a5749a5c9a4"), DivineAllies.Instances.Blade.ID);
-            builder.HaveSpecificFeat(Guid.Parse("590015fb-03b3-4eb6-9953-5fedb17c2d32"), Feats.Instances.RadiantBladeSpirit.ID);
+            builder.HaveSpecificDivineAlly(Guid.Parse("4f27a6a3-e406-4613-956b-2fd26a377928"), DivineAllies.Instances.Blade.ID);
+            builder.HaveSpecificFeat(Guid.Parse("310ded48-ac38-4e3d-b36d-64ec22fb3952"), Feats.Instances.RadiantBladeSpirit.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("48c47e2c-069a-47c0-9316-b8c033b1adb9"),
+                Id = Guid.Parse("00e2389e-3d4c-4781-9e86-d57deaf0f5b2"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

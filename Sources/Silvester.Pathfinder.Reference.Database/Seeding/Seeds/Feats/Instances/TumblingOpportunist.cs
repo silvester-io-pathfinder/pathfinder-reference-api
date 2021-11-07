@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TumblingOpportunist : Template
     {
-        public static readonly Guid ID = Guid.Parse("e6788d72-9283-4b92-8844-8a69c3c5628a");
+        public static readonly Guid ID = Guid.Parse("7e83229c-4c1c-4105-beb9-09064342b93a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8d0eab9-30fd-4f69-bf69-042771483c03"), Type = TextBlockType.Text, Text = "You use a burst of stamina to perform a breathtaking feat of Acrobatics as you speed through a foe’s space, leaving your foe lying flat on their back. You attempt to (action: Trip) the enemy whose space you moved through. You can use Acrobatics instead of Athletics for this check." };
+            yield return new TextBlock { Id = Guid.Parse("0549c5c9-4e08-45af-a100-747147cf0ba2"), Type = TextBlockType.Text, Text = "You use a burst of stamina to perform a breathtaking feat of Acrobatics as you speed through a foe’s space, leaving your foe lying flat on their back. You attempt to (action: Trip) the enemy whose space you moved through. You can use Acrobatics instead of Athletics for this check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f91005b0-f127-4327-a1e5-026d17f5093d"), Feats.Instances.AcrobatDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("305a0e6d-c5f7-4e05-8390-2a00b55bdce4"), Feats.Instances.AcrobatDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c12b8b5c-b1aa-41c9-bda8-dde311731d09"),
+                Id = Guid.Parse("b2636aee-bf94-4c3b-a4c1-9f53f04b5491"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

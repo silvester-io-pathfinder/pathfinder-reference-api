@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class JanatimosLessons : Template
     {
-        public static readonly Guid ID = Guid.Parse("4abcd782-8c6c-49c5-81f0-17f3f351d5ac");
+        public static readonly Guid ID = Guid.Parse("549dfa34-d0f8-42cc-984d-03162ce112c0");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("48481736-e2ae-4f97-bb71-70ec328ba7cb"), Type = TextBlockType.Text, Text = "Thanks to Janatimo’s secret techniques, you can weave your knowledge and words into powerful tools to assist your allies in life-threatening situations. When you use (feat: Uzunjati Recollection) to tell a story and (action: Recall Knowledge) about a creature during a combat encounter, if you succeed at both checks, your story carries deeper meaning. This grants your allies a +1 circumstance bonus to their next attack roll and saving throw against the creature during that encounter, as well as to their AC against that creature’s next attack roll during that encounter. If you critically succeed at both checks, the bonuses also apply to all attack rolls, saves, and AC against that creature for 2 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("999d8c4d-76f0-4c31-a876-702b000d3603"), Type = TextBlockType.Text, Text = "Thanks to Janatimo’s secret techniques, you can weave your knowledge and words into powerful tools to assist your allies in life-threatening situations. When you use (feat: Uzunjati Recollection) to tell a story and (action: Recall Knowledge) about a creature during a combat encounter, if you succeed at both checks, your story carries deeper meaning. This grants your allies a +1 circumstance bonus to their next attack roll and saving throw against the creature during that encounter, as well as to their AC against that creature’s next attack roll during that encounter. If you critically succeed at both checks, the bonuses also apply to all attack rolls, saves, and AC against that creature for 2 rounds." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("4753783d-a8a9-4773-b9ae-a2e83b69a3a9"), Feats.Instances.UzunjatiRecollection.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6e55f2bb-f176-419e-bb99-b11ff80b6f3a"), Feats.Instances.UzunjatiRecollection.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("97aaef4e-9543-4091-8f87-af18bf758bfc"),
+                Id = Guid.Parse("88aae35b-378d-4787-97ca-514a3f7ac556"),
                 SourceId = Sources.Instances.LostOmensLegends.ID,
                 Page = -1
             };

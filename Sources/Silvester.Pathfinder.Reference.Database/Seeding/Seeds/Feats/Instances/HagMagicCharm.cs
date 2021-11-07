@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HagMagicCharm : Template
     {
-        public static readonly Guid ID = Guid.Parse("cf09d02d-d7e1-4c97-91d3-b4c3fe96cf8e");
+        public static readonly Guid ID = Guid.Parse("0430c438-2225-4518-b075-f4e035aeefe9");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("36a6f5ca-fb46-444e-b072-18a738e7c994"), Type = TextBlockType.Text, Text = "You can cast (spell: charm) once per day as a 4th-level occult innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("5c273084-843d-4f2d-ad94-10c8a1544e85"), Type = TextBlockType.Text, Text = "You can cast (spell: charm) once per day as a 4th-level occult innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d3dae37b-42ea-4559-aff7-1fbba4be8278"),
+                Id = Guid.Parse("efc76f33-c4dd-446d-b256-b8dbe31d9ec5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

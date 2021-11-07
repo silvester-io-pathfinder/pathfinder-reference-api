@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WingStep : Template
     {
-        public static readonly Guid ID = Guid.Parse("412efeec-9ad9-4c48-b392-510e27dcf8b0");
+        public static readonly Guid ID = Guid.Parse("f83e83d8-a1dd-45cf-8a20-f6bf94b394a6");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad460225-b9a3-4316-8baf-cb1c662af7f6"), Type = TextBlockType.Text, Text = "With a sharp flap of your wings, you stay light on your feet as you move. You (action: Step) twice." };
+            yield return new TextBlock { Id = Guid.Parse("78604fb0-cef0-4c27-8569-a9ba87398832"), Type = TextBlockType.Text, Text = "With a sharp flap of your wings, you stay light on your feet as you move. You (action: Step) twice." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7f97bd1d-e7e1-4383-b2a3-bd011e5f9a92"),
+                Id = Guid.Parse("52084aeb-d963-4b70-a910-a7542ace6c2b"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

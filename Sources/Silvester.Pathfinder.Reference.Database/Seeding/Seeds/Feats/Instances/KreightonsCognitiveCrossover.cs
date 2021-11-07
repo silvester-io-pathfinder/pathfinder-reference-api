@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class KreightonsCognitiveCrossover : Template
     {
-        public static readonly Guid ID = Guid.Parse("e8e6b2bd-ed02-4a97-ac3a-abd120b24569");
+        public static readonly Guid ID = Guid.Parse("d6643dde-ae83-4d94-a8d5-0134549530b7");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1033aef7-c716-43ba-a2ff-d044df53b519"), Type = TextBlockType.Text, Text = "~ Access: Member of the Pathfinder Society." };
-            yield return new TextBlock { Id = Guid.Parse("065af077-abcc-4077-bf54-fd131616e3f0"), Type = TextBlockType.Text, Text = "Kreighton teaches his students that an agile mind can glean clues leading to the truth, even from the most unlikely of sources. You immediately reattempt the triggering check using the other chosen skill." };
+            yield return new TextBlock { Id = Guid.Parse("16ab30be-7382-4839-915a-dccf069a4d0e"), Type = TextBlockType.Text, Text = "~ Access: Member of the Pathfinder Society." };
+            yield return new TextBlock { Id = Guid.Parse("1e47d992-6c6b-4574-8967-c711fb823645"), Type = TextBlockType.Text, Text = "Kreighton teaches his students that an agile mind can glean clues leading to the truth, even from the most unlikely of sources. You immediately reattempt the triggering check using the other chosen skill." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("00da2ce1-b088-4f56-a1b5-5c6d24ea5340"),
+                Id = Guid.Parse("fb549153-687a-4861-bdcc-5584506c618d"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

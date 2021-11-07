@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RecollectStudies : Template
     {
-        public static readonly Guid ID = Guid.Parse("4cf34637-9010-4554-bf95-890750d44496");
+        public static readonly Guid ID = Guid.Parse("a3a03b60-a072-4326-8fab-9d2f03f98927");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4090f17e-ba13-4a96-8a89-f488bb583656"), Type = TextBlockType.Text, Text = "You paid attention during your studies and remember the right way to attack various creatures. Choose a creature that meets the requirements. You learn the resistances, immunities, or weaknesses of the creature (your choice) without needing to successfully (action: Recall Knowledge)." };
+            yield return new TextBlock { Id = Guid.Parse("752248f7-52f5-4b1b-99e2-75323dcd94d7"), Type = TextBlockType.Text, Text = "You paid attention during your studies and remember the right way to attack various creatures. Choose a creature that meets the requirements. You learn the resistances, immunities, or weaknesses of the creature (your choice) without needing to successfully (action: Recall Knowledge)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("093d2f02-68ba-46fc-b68d-a4225616af8d"), Feats.Instances.SwordmasterDedication.ID);
-            builder.HaveSpecificRecallKnowledgeProficiency(Guid.Parse("b9fd6d3f-590b-493f-a657-e8f0527d6b8a"), Proficiencies.Instances.Expert.ID, requiresAssurance: False);
+            builder.HaveSpecificFeat(Guid.Parse("cd1f4a50-fe83-479e-a8f3-15248f3f6e99"), Feats.Instances.SwordmasterDedication.ID);
+            builder.HaveSpecificRecallKnowledgeProficiency(Guid.Parse("e594bac1-9038-437d-bdba-cab2c61bddc8"), Proficiencies.Instances.Expert.ID, requiresAssurance: false);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6f99df56-38b4-4ecc-ae10-43597af15913"),
+                Id = Guid.Parse("42bc9483-94ce-41ee-97f4-51aa00035fd8"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

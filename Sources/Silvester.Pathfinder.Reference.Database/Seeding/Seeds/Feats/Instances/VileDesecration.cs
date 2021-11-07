@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class VileDesecration : Template
     {
-        public static readonly Guid ID = Guid.Parse("72a3c280-0494-4878-b752-dae092cd3919");
+        public static readonly Guid ID = Guid.Parse("e50bb03d-25dd-45ee-857e-dcaec5e05f65");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("05286b12-37f3-407f-b42e-f7dbda20a6cc"), Type = TextBlockType.Text, Text = "You combine unholy might with negative energy to damage angels, archons, and other self-righteous denizens of the Outer Planes. When you cast a (spell: harm) spell, you can change the damage you deal to celestial creatures to evil damage instead of negative damage." };
+            yield return new TextBlock { Id = Guid.Parse("eca35aff-94f8-452b-8231-5885734bc3bb"), Type = TextBlockType.Text, Text = "You combine unholy might with negative energy to damage angels, archons, and other self-righteous denizens of the Outer Planes. When you cast a (spell: harm) spell, you can change the damage you deal to celestial creatures to evil damage instead of negative damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("88fa2dd5-3fd3-44b9-ba91-10082ea54337"), or => 
+            builder.AddOr(Guid.Parse("e253dca1-e0e2-4e66-9937-2ae1b08b78eb"), or => 
             {
-                or.HaveSpecificAlignment(Guid.Parse("f00aef0f-7391-4f57-aed6-ff632dc6edd9"), Alignments.Instances.LawfulEvil.ID);
-                or.HaveSpecificAlignment(Guid.Parse("a554ba66-6d03-4f56-b0fa-2c8cd813da4a"), Alignments.Instances.NeutralEvil.ID);
-                or.HaveSpecificAlignment(Guid.Parse("e51dded4-f8fc-4070-88b5-02473dbef1e3"), Alignments.Instances.ChaoticEvil.ID);
+                or.HaveSpecificAlignment(Guid.Parse("8ae8b930-5c26-4700-a7e7-2dcafe2305c1"), Alignments.Instances.LawfulEvil.ID);
+                or.HaveSpecificAlignment(Guid.Parse("706d71df-b933-43fa-901a-c073b52249ab"), Alignments.Instances.NeutralEvil.ID);
+                or.HaveSpecificAlignment(Guid.Parse("290fd1c6-f65a-4f78-a534-9a34b5b095c5"), Alignments.Instances.ChaoticEvil.ID);
             });
         }
 
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("acfb2884-9c32-41d6-a42e-8cc65ed98abd"),
+                Id = Guid.Parse("1a677246-75cb-489e-8c52-d702cbde825d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

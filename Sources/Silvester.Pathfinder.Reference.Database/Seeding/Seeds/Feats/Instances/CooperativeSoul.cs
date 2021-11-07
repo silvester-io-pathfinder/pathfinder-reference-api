@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CooperativeSoul : Template
     {
-        public static readonly Guid ID = Guid.Parse("3b3ac86a-258b-4792-bb3b-cdf5c68a4d56");
+        public static readonly Guid ID = Guid.Parse("6bc8e44f-b764-46c7-a781-5ae0d69f827c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e9cf307a-2ec6-4054-aee8-13770e543dbe"), Type = TextBlockType.Text, Text = "You have developed a soul-deep bond with your comrades and maintain an even greater degree of cooperation with them. If you are at least an expert in the skill you are (action: Aiding | Aid), you get a success on any outcome rolled to (action: Aid) other than a critical success." };
+            yield return new TextBlock { Id = Guid.Parse("9d03fce7-9406-4d53-83e2-f5f60005162a"), Type = TextBlockType.Text, Text = "You have developed a soul-deep bond with your comrades and maintain an even greater degree of cooperation with them. If you are at least an expert in the skill you are (action: Aiding | Aid), you get a success on any outcome rolled to (action: Aid) other than a critical success." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f18286ac-992c-4bd3-82cf-2fd6e102483c"), Feats.Instances.CooperativeNature.ID);
+            builder.HaveSpecificFeat(Guid.Parse("146679e8-00b8-41bd-a8d6-0e4c12da090d"), Feats.Instances.CooperativeNature.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1f9107a4-4887-4684-97f7-2f9238ad674d"),
+                Id = Guid.Parse("d1e5fe2c-c6a3-4838-aeaa-61f88d16cb09"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

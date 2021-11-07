@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SlipWithTheBreeze : Template
     {
-        public static readonly Guid ID = Guid.Parse("977f96b2-4388-4f49-bdac-7d65ecb45a2d");
+        public static readonly Guid ID = Guid.Parse("79b164a4-fbbe-42c6-ba91-257c2111fcd6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ef712062-3586-470c-9a79-3db3036582c0"), Type = TextBlockType.Text, Text = "You create gusts of wind when you jump, allowing you to carry yourself across greater distances. You gain the (feat: Quick Jump) and (feat: Powerful Leap) skill feats as bonus feats." };
+            yield return new TextBlock { Id = Guid.Parse("b3626ace-91b3-4bce-82e6-b2cc3a63019d"), Type = TextBlockType.Text, Text = "You create gusts of wind when you jump, allowing you to carry yourself across greater distances. You gain the (feat: Quick Jump) and (feat: Powerful Leap) skill feats as bonus feats." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("162789a1-2fa0-4084-bf95-b0117cf77254"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("570f7ca6-be36-4c99-863d-66f8444e16da"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a9a07a55-1e10-474c-b48f-9ebaa9834093"),
+                Id = Guid.Parse("1995527e-5627-44d3-918c-7a397354c631"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

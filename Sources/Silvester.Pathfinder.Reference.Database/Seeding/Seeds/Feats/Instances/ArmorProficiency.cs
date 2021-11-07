@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArmorProficiency : Template
     {
-        public static readonly Guid ID = Guid.Parse("0d21f99b-6cbe-493b-9658-6b8b113d2a06");
+        public static readonly Guid ID = Guid.Parse("86b70f04-f217-45ba-8327-6d1848c41f13");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81a767f2-18b9-4566-b875-51829a4622aa"), Type = TextBlockType.Text, Text = "You become trained in light armor. If you already were trained in light armor, you gain training in medium armor. If you were trained in both, you become trained in heavy armor." };
+            yield return new TextBlock { Id = Guid.Parse("7bf0a0f5-d56b-4213-b50a-0b582f22243f"), Type = TextBlockType.Text, Text = "You become trained in light armor. If you already were trained in light armor, you gain training in medium armor. If you were trained in both, you become trained in heavy armor." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a6dd9c7c-a084-47c3-850b-1fe5653d74cc"),
+                Id = Guid.Parse("797a2116-9d41-411f-bd8c-6775e65c7be6"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

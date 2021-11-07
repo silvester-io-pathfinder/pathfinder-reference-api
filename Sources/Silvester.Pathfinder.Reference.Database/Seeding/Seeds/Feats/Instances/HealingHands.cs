@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HealingHands : Template
     {
-        public static readonly Guid ID = Guid.Parse("331f27b5-6c1a-48d9-b0d7-377924c4f5a5");
+        public static readonly Guid ID = Guid.Parse("b0b8af28-eba4-4cba-a1c7-983887c4b871");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("21bf5e11-1197-4978-afdd-8eec5394d918"), Type = TextBlockType.Text, Text = "Your positive energy is even more vibrant and restorative. When you cast (spell: heal), you roll d10s instead of d8s." };
+            yield return new TextBlock { Id = Guid.Parse("f1de7211-5905-47b7-91fa-e0dd96684cbc"), Type = TextBlockType.Text, Text = "Your positive energy is even more vibrant and restorative. When you cast (spell: heal), you roll d10s instead of d8s." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificDivineFont(Guid.Parse("f75dc0db-b181-4445-a104-098d57b0dd5f"), DivineFonts.Instances.Heal.ID);
+            builder.HaveSpecificDivineFont(Guid.Parse("f45a311c-d23d-46eb-a1fb-269eeda796f4"), DivineFonts.Instances.Heal.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a9ad29bd-0535-43b4-8e94-db71bb4effa5"),
+                Id = Guid.Parse("bccf0444-19d2-4fad-9433-dc553397c721"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

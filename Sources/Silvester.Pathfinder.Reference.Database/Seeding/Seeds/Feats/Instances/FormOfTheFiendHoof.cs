@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FormOfTheFiendHoof : Template
     {
-        public static readonly Guid ID = Guid.Parse("12a38799-4143-4f73-a41c-6268e9946f3f");
+        public static readonly Guid ID = Guid.Parse("bd7a5378-75d4-4a91-a7fd-2588f08615dd");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("64cd2cfd-789d-42b8-bb56-066c6e4ed96a"), Type = TextBlockType.Text, Text = "Part of your body has an obvious, fiendish appearance. You have hooves instead of feet." };
-            yield return new TextBlock { Id = Guid.Parse("bb2ad618-d2ec-4da2-b39f-7b30a592487c"), Type = TextBlockType.Enumeration, Text = " Hoof: 1d6 bludgeoning ((trait: finesse), (trait: unarmed))" };
+            yield return new TextBlock { Id = Guid.Parse("c6cb9be0-793e-446b-8ec5-17cf4f17b32d"), Type = TextBlockType.Text, Text = "Part of your body has an obvious, fiendish appearance. You have hooves instead of feet." };
+            yield return new TextBlock { Id = Guid.Parse("5f6d41fb-e835-4b7f-8700-4477a3df9450"), Type = TextBlockType.Enumeration, Text = " Hoof: 1d6 bludgeoning ((trait: finesse), (trait: unarmed))" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b93c84ea-52ee-430e-bca9-d93fc5c39658"),
+                Id = Guid.Parse("c5f43f02-05b1-4db4-bdae-397c7bd8cb17"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

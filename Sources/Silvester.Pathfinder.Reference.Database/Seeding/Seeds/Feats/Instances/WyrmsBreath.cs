@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WyrmsBreath : Template
     {
-        public static readonly Guid ID = Guid.Parse("a2ef8a5a-b3bd-4f8e-8b8b-bf7ddb0869a7");
+        public static readonly Guid ID = Guid.Parse("d615b6a2-3387-4445-80ee-a15253268db7");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8fd59c2d-c9fb-4702-9e96-e0aa24f1e73b"), Type = TextBlockType.Text, Text = "Your eidolon gathers the power of the mightiest wyrms to make its magical breath even more spectacular. If your eidolon’s next action is to use (action: Breath Weapon), both the number of damage dice and area of the (action: Breath Weapon) are doubled." };
+            yield return new TextBlock { Id = Guid.Parse("113f3301-03be-4509-aba6-e7e943eea4a0"), Type = TextBlockType.Text, Text = "Your eidolon gathers the power of the mightiest wyrms to make its magical breath even more spectacular. If your eidolon’s next action is to use (action: Breath Weapon), both the number of damage dice and area of the (action: Breath Weapon) are doubled." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ac89e600-2251-4746-8ced-73fce98c3485"),
+                Id = Guid.Parse("9ac88a5a-92f6-447b-81e1-e69cc354c40c"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ExpertWizardSpellcasting : Template
     {
-        public static readonly Guid ID = Guid.Parse("7709a95a-677d-4b60-b98e-db6577a6bbd8");
+        public static readonly Guid ID = Guid.Parse("8f445b1d-cd11-41da-9731-dd6a1a88904b");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5e5dd215-bcf2-43ef-920c-7f64cbd15894"), Type = TextBlockType.Text, Text = "Your proficiency ranks for arcane spell attack rolls and spell DCs increase to expert, and you gain a 4th-level spell slot. At 14th level, you gain a 5th-level spell slot, and at 16th level, you gain a 6th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("86649fa8-5541-4432-a674-1c8f205b6573"), Type = TextBlockType.Text, Text = "Your proficiency ranks for arcane spell attack rolls and spell DCs increase to expert, and you gain a 4th-level spell slot. At 14th level, you gain a 5th-level spell slot, and at 16th level, you gain a 6th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("601d66b2-6567-4de9-bb94-2ac3101f5b94"), Feats.Instances.BasicWizardSpellcasting.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("e323393a-fc5a-40b8-a91f-13dee46e578c"), Proficiencies.Instances.Master.ID, Skills.Instances.Arcana.ID);
+            builder.HaveSpecificFeat(Guid.Parse("c6225166-63fb-4b48-9a0d-9302ee1e6dc8"), Feats.Instances.BasicWizardSpellcasting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("b06161ee-7bd4-4017-8893-2432f017988a"), Proficiencies.Instances.Master.ID, Skills.Instances.Arcana.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("733c1859-b86b-463f-8293-1fd99bfdb009"),
+                Id = Guid.Parse("18f5dba3-b1f7-45f9-ac0f-7ffdd6b1443b"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

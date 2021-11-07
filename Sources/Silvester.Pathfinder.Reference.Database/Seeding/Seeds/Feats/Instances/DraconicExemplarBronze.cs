@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DraconicExemplarBronze : Template
     {
-        public static readonly Guid ID = Guid.Parse("631d14af-ec2f-419a-b952-3e66095e9bc3");
+        public static readonly Guid ID = Guid.Parse("faed8333-40e6-46a1-866f-d9abd557d238");
 
         protected override Feat GetFeat()
         {
@@ -28,10 +29,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8758b98d-2205-4b11-bd67-9dea2d071655"), Type = TextBlockType.Text, Text = "Your scale color and appearance resembles that of a bronze dragon." };
-            yield return new TextBlock { Id = Guid.Parse("78397f7b-8d99-4c2e-b8f5-536764a67c90"), Type = TextBlockType.Text, Text = "~ Breath Weapon Shape: Line" };
-            yield return new TextBlock { Id = Guid.Parse("c4da1c93-97e1-4f45-ac44-6625db05a9b3"), Type = TextBlockType.Text, Text = "~ Damage Type: Electricity" };
-            yield return new TextBlock { Id = Guid.Parse("adb87e6d-cdcf-47d3-8026-4bb67f5cafbc"), Type = TextBlockType.Text, Text = "~ Saving Throw: Reflex" };
+            yield return new TextBlock { Id = Guid.Parse("b7d39123-13ef-4389-8c7c-99039369e3c6"), Type = TextBlockType.Text, Text = "Your scale color and appearance resembles that of a bronze dragon." };
+            yield return new TextBlock { Id = Guid.Parse("92dfa1de-9a3f-496f-907c-da1848f642b0"), Type = TextBlockType.Text, Text = "~ Breath Weapon Shape: Line" };
+            yield return new TextBlock { Id = Guid.Parse("4597a378-f30e-4a18-8c0b-e3e305e5d3eb"), Type = TextBlockType.Text, Text = "~ Damage Type: Electricity" };
+            yield return new TextBlock { Id = Guid.Parse("db567f6b-b956-48e4-9e5c-8d55019116b5"), Type = TextBlockType.Text, Text = "~ Saving Throw: Reflex" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -43,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3a1301ae-cd13-436f-8b96-c18e8d62adcd"),
+                Id = Guid.Parse("9d87fe6f-6f34-4219-af6d-c437eb04298f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

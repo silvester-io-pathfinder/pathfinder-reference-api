@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BulletDancerReload : Template
     {
-        public static readonly Guid ID = Guid.Parse("cbde1c7b-a615-464f-b3d1-aef54bbb3972");
+        public static readonly Guid ID = Guid.Parse("40ce74e9-51c9-4791-a9eb-7860854d2d03");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("745e5756-f2e1-4571-b843-5319a609e48a"), Type = TextBlockType.Text, Text = "You’ve learned to reload your simple firearms with uncanny grace, the ammunition simply falling into place as though part of a well-practiced kata. You (action: Strike) with a simple firearm, and then (action: Interact) to reload that same firearm. You don’t need a free hand to reload your simple firearm in this way" };
+            yield return new TextBlock { Id = Guid.Parse("8296977f-45ec-4a8c-b729-a66d0646730c"), Type = TextBlockType.Text, Text = "You’ve learned to reload your simple firearms with uncanny grace, the ammunition simply falling into place as though part of a well-practiced kata. You (action: Strike) with a simple firearm, and then (action: Interact) to reload that same firearm. You don’t need a free hand to reload your simple firearm in this way" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("eaff1d1d-c353-41d3-84fc-eb1264999af1"), Feats.Instances.BulletDancerBurn.ID);
+            builder.HaveSpecificFeat(Guid.Parse("40cd2311-b181-4189-b2c4-9e99d7660898"), Feats.Instances.BulletDancerBurn.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("36361d22-c4f7-4074-9192-47dee50c1886"),
+                Id = Guid.Parse("07702192-b2d2-4742-993b-c05f0db77a6c"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

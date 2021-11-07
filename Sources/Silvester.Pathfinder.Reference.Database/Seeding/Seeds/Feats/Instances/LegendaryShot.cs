@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LegendaryShot : Template
     {
-        public static readonly Guid ID = Guid.Parse("b5550c42-06d1-4359-b43e-d6fb740e516d");
+        public static readonly Guid ID = Guid.Parse("64f9e2ea-fe9c-4eee-b1ed-eba12b7e240c");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a0b6354-5f2c-42d7-807d-440bcc7987cd"), Type = TextBlockType.Text, Text = "You focus on your hunted prey, perceiving angles, air resistance, and every variable that would affect your ranged attack. If you have master proficiency with your ranged weapon, you can ignore the penalty for attacking up to five range increments away when attacking your hunted prey." };
+            yield return new TextBlock { Id = Guid.Parse("f5266945-71eb-4682-97b6-129fd43ad0c6"), Type = TextBlockType.Text, Text = "You focus on your hunted prey, perceiving angles, air resistance, and every variable that would affect your ranged attack. If you have master proficiency with your ranged weapon, you can ignore the penalty for attacking up to five range increments away when attacking your hunted prey." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("62181951-2650-423a-a8a9-e4fc606f9007"), Feats.Instances.MasterfulHunter.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("eee9a9ff-9ba8-4c2b-8047-b6f6b17dde3a"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Perception.ID);
-            builder.HaveSpecificFeat(Guid.Parse("b623ec6c-9ec4-40bc-999c-144ca7395bb4"), Feats.Instances.FarShot.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("42a8ad3b-3d9a-4891-b214-c63423fbc13d"), ClassFeatures.Rangers.MasterfulHunter.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("b2c40d9a-06bb-482b-a851-e61b4dae707d"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Perception.ID);
+            builder.HaveSpecificFeat(Guid.Parse("b83cd158-d0d5-4536-95fd-007160c688eb"), Feats.Instances.FarShot.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a263bb9f-0e66-4242-8a90-956fa6e62592"),
+                Id = Guid.Parse("6bfdfacb-11ae-42c1-b75c-0fa92c539916"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

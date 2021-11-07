@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BattlePrayer : Template
     {
-        public static readonly Guid ID = Guid.Parse("66118347-21a9-432a-950d-2638d80f9b64");
+        public static readonly Guid ID = Guid.Parse("b27dddae-e7c1-45ad-ad93-515b858aa14f");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9e6003bc-2993-4068-81fc-9215b9834e9e"), Type = TextBlockType.Text, Text = "Calling out to your deity, you recite scripture to harm a foe. When you select this feat, choose (trait: chaos | chaotic), (trait: evil), (trait: good), or (trait: law | lawful). Your choice must match one of your deity’s alignment components. This action has the trait corresponding to the chosen alignment." };
-            yield return new TextBlock { Id = Guid.Parse("eece852f-602f-4eb8-a470-3c64341690c2"), Type = TextBlockType.Text, Text = "Attempt a Religion check against the Will DC of a foe within 30 feet. The foe is then temporarily immune to Battle Prayers from your deity for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("21a4a8b3-40ac-43c0-9871-d35b4e011df3"), Type = TextBlockType.Text, Text = "Calling out to your deity, you recite scripture to harm a foe. When you select this feat, choose (trait: chaos | chaotic), (trait: evil), (trait: good), or (trait: law | lawful). Your choice must match one of your deity’s alignment components. This action has the trait corresponding to the chosen alignment." };
+            yield return new TextBlock { Id = Guid.Parse("4751a97f-28fc-462d-ba5b-439ba696a187"), Type = TextBlockType.Text, Text = "Attempt a Religion check against the Will DC of a foe within 30 feet. The foe is then temporarily immune to Battle Prayers from your deity for 1 day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("224b7042-a796-4cb3-bc0c-8c7f1c01a1c3"), Proficiencies.Instances.Master.ID, Skills.Instances.Religion.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("c92b3ef1-653e-4904-bc14-43e7717fc00f"), Proficiencies.Instances.Master.ID, Skills.Instances.Religion.ID);
-            builder.FollowAnyReligion(Guid.Parse("905110a7-7b29-43c9-af27-a266c3481d3a"));
+            builder.HaveSpecificSkillProficiency(Guid.Parse("e9f8a885-f169-4816-b740-86c85b7a6b7e"), Proficiencies.Instances.Master.ID, Skills.Instances.Religion.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("eba23c02-4852-4cb3-b95b-8a89bd2d264c"), Proficiencies.Instances.Master.ID, Skills.Instances.Religion.ID);
+            builder.FollowAnyReligion(Guid.Parse("5c5c38c5-f16b-40ad-ab62-39a1e519c3ee"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -49,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("083a4867-df13-4b7e-a1dd-f210e1bab8bc"),
+                Id = Guid.Parse("921bb0e9-42bf-44e8-b224-35093f0c1ef9"),
                 CriticalSuccess = "You deal 2d6 damage of the chosen alignment type, or 6d6 damage if you have legendary proficiency in Religion.",
                 Success = "You deal 1d6 damage of the chosen alignment type, or 3d6 damage if you have legendary proficiency in Religion.",
                 Failure = "There is no effect.",
@@ -62,7 +63,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("571a0c06-8fc0-49b6-8762-c8521c35dffb"),
+                Id = Guid.Parse("7c00d117-3de8-4e61-b7b6-e66b01b3e130"),
                 SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
                 Page = -1
             };

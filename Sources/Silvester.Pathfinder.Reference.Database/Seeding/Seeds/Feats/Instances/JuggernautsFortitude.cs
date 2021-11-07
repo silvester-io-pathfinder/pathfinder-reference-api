@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class JuggernautsFortitude : Template
     {
-        public static readonly Guid ID = Guid.Parse("0a71ca17-d420-4733-a34b-5058fe8b88d8");
+        public static readonly Guid ID = Guid.Parse("919696cb-b689-4bad-9b04-0cfd0dcd1694");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("155631ae-f114-44fd-8759-9f98dd28c30a"), Type = TextBlockType.Text, Text = "Your proficiency rank in Fortitude saves increases to master." };
+            yield return new TextBlock { Id = Guid.Parse("6bdfd342-cc1a-4457-91e3-0729229c5209"), Type = TextBlockType.Text, Text = "Your proficiency rank in Fortitude saves increases to master." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("c36d6d27-aed4-48db-b4bf-8891fb8d9466"), Feats.Instances.BarbarianDedication.ID);
-            builder.HaveSpecificSavingThrowSpecificProficiency(Guid.Parse("90fd753c-9656-47aa-8456-4cf8bb711a0e"), Proficiencies.Instances.Expert.ID, SavingThrowStats.Instances.Fortitude.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6fd86c67-00a5-443f-b2a1-291a6a95fbac"), Feats.Instances.BarbarianDedication.ID);
+            builder.HaveSpecificSavingThrowSpecificProficiency(Guid.Parse("ab193c7f-8361-4a08-84ce-5ebfe2a8b025"), Proficiencies.Instances.Expert.ID, SavingThrowStats.Instances.Fortitude.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3d1d9367-6410-4c11-b6dd-530e4f081e8a"),
+                Id = Guid.Parse("5a187a3e-e56a-40d0-a97d-a75bfe6c21f4"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

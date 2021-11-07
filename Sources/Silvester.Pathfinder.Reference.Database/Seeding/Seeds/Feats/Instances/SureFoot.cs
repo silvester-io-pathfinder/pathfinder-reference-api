@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SureFoot : Template
     {
-        public static readonly Guid ID = Guid.Parse("48eb5ee3-cd9c-4735-9478-b1a252f3cee7");
+        public static readonly Guid ID = Guid.Parse("ebcaf82b-db00-4caa-9c0c-d66f82c3378a");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bf7bdd0e-baba-4235-ad8a-baded9c87840"), Type = TextBlockType.Text, Text = "You know the secrets of moving in your favored terrain. You gain a +2 circumstance bonus to skill checks to move within your favored terrain, such as Acrobatics checks to (action: Balance) on ice, Athletics checks to (action: Swim) in rough water, Acrobatics checks to (action: Fly) in windy conditions, and so forth." };
+            yield return new TextBlock { Id = Guid.Parse("8d4755f4-9275-42bb-af73-34b6f679070e"), Type = TextBlockType.Text, Text = "You know the secrets of moving in your favored terrain. You gain a +2 circumstance bonus to skill checks to move within your favored terrain, such as Acrobatics checks to (action: Balance) on ice, Athletics checks to (action: Swim) in rough water, Acrobatics checks to (action: Fly) in windy conditions, and so forth." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("fc3a73c7-7055-4bf1-a6dc-6ad65387691f"), Feats.Instances.HorizonWalkerDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("44005f9c-8dd9-4eea-85bd-109afd75fd24"), Proficiencies.Instances.Expert.ID, Skills.Instances.Acrobatics.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("032e6b3d-5e15-4caa-a4c9-574c0adab398"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificFeat(Guid.Parse("9da9f7e5-7102-488f-a425-22b677514305"), Feats.Instances.HorizonWalkerDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("3d101478-6cf4-45da-b189-94c9bc81be15"), Proficiencies.Instances.Expert.ID, Skills.Instances.Acrobatics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("60f8e34b-b724-4425-9700-7d5d99c1cac8"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("547fad32-7c0e-429d-8e37-57194422af31"),
+                Id = Guid.Parse("fabd86a7-c342-4a34-a743-24104a709765"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

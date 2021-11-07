@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HealingGrace : Template
     {
-        public static readonly Guid ID = Guid.Parse("1fcac2e9-5563-4fa0-91ea-22ebc4a7e5fa");
+        public static readonly Guid ID = Guid.Parse("1f351172-a3b0-4b2a-ad72-b633c0301575");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6e685c23-213e-48ee-b116-f7172b852c0a"), Type = TextBlockType.Text, Text = "You gain fast healing equal to half your level. You can cast (spell: heal) once as an innate spell with a level equal to half your level rounded up." };
-            yield return new TextBlock { Id = Guid.Parse("ad10aaec-8356-4b47-9ab3-83c9cf7ab381"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ Reduce all healing you would receive or grant with a spell by half your level." };
+            yield return new TextBlock { Id = Guid.Parse("86c6b833-fded-4dd1-94ec-40aba9e83dbf"), Type = TextBlockType.Text, Text = "You gain fast healing equal to half your level. You can cast (spell: heal) once as an innate spell with a level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("10bf55eb-b262-486b-8041-8a568ab93921"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ Reduce all healing you would receive or grant with a spell by half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("af2beac4-c6e9-4a9f-b898-bb947beb0eec"),
+                Id = Guid.Parse("75cf7e88-59c6-47f6-9f08-a0026de63655"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

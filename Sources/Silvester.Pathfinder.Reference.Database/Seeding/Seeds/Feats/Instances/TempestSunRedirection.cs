@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TempestSunRedirection : Template
     {
-        public static readonly Guid ID = Guid.Parse("bb3fefe2-0d7f-4297-8812-3d0de986b99e");
+        public static readonly Guid ID = Guid.Parse("986a8b7f-1fb5-41e2-a58f-f87e407aaa61");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e9b22b25-9ba4-4f90-b6a2-c25834d49e28"), Type = TextBlockType.Text, Text = "If the next action you use is to (activity: Cast a Spell) from your spell slots that damages other creatures, you can bend some of that spell’s offensive energy, protecting allies in the area and boosting your own defenses against certain foes. Select any number of targets of the spell and reduce the spell’s damage to those targets by an amount equal to the spell’s level. Until your next turn, when one of those targets damages you, that damage is reduced by twice the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("7eec8271-97f2-4f16-be27-5e2bccf466cb"), Type = TextBlockType.Text, Text = "If the next action you use is to (activity: Cast a Spell) from your spell slots that damages other creatures, you can bend some of that spell’s offensive energy, protecting allies in the area and boosting your own defenses against certain foes. Select any number of targets of the spell and reduce the spell’s damage to those targets by an amount equal to the spell’s level. Until your next turn, when one of those targets damages you, that damage is reduced by twice the spell’s level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("18688bf3-8367-4d1b-aa55-a8fc4356f28e"), Feats.Instances.MagaambyanAttendantDedication.ID);
-            builder.Manual(Guid.Parse("6a7dd842-3f45-4a85-9184-2fce0485a72a"), "Tempest-Sun Mages affiliation");
+            builder.HaveSpecificFeat(Guid.Parse("8f97193a-9203-4115-83ae-409b9a785c38"), Feats.Instances.MagaambyanAttendantDedication.ID);
+            builder.Manual(Guid.Parse("475af19c-d149-4e21-8368-8f55beffc152"), "Tempest-Sun Mages affiliation");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4a1ae0c7-9134-4c47-a82d-44cc66e327d8"),
+                Id = Guid.Parse("d162d203-9667-4f39-bc33-b6cc5a16fb37"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

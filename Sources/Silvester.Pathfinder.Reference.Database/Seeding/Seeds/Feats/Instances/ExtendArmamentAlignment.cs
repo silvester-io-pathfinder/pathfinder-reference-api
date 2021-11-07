@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ExtendArmamentAlignment : Template
     {
-        public static readonly Guid ID = Guid.Parse("dfc53be5-11e0-4f4e-8d1e-630443831fbd");
+        public static readonly Guid ID = Guid.Parse("15d740e2-fcff-48f9-8f0b-5a7179322068");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0604c0d3-050b-4e06-aa2b-28b3e0cc1fd1"), Type = TextBlockType.Text, Text = "The alignment you impose on a weapon lasts much longer. The duration of (action: Align Armament) increases to 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("94b2a4c4-21fc-4b3d-a68f-61f975b7456c"), Type = TextBlockType.Text, Text = "The alignment you impose on a weapon lasts much longer. The duration of (action: Align Armament) increases to 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("a0118904-8122-4665-bd52-21efd950237d"), Feats.Instances.AlignArmament.ID);
+            builder.HaveSpecificFeat(Guid.Parse("bb9d68ba-aea0-48ef-9764-45708027d08d"), Feats.Instances.AlignArmament.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4ae3b78a-85bb-4551-a1ef-787936042155"),
+                Id = Guid.Parse("2c2b481a-ffaf-4f39-b106-61304bc9a4cc"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

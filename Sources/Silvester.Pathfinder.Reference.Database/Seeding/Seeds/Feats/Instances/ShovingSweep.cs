@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShovingSweep : Template
     {
-        public static readonly Guid ID = Guid.Parse("0904a343-68b8-49c1-bc1a-02c70923968e");
+        public static readonly Guid ID = Guid.Parse("22836152-0353-4cdc-b44a-d5fedac7ec0c");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("009e0674-9001-4f19-b53d-40154423692e"), Type = TextBlockType.Text, Text = "You swing your weapon at your foe, rebuffing them back. You attempt to (action: Shove) the triggering creature, ignoring the requirement that you have a hand free. The creature continues its movement after the (action: Shove)." };
+            yield return new TextBlock { Id = Guid.Parse("c0948418-93fa-40c3-a4ea-c99a7969bdc8"), Type = TextBlockType.Text, Text = "You swing your weapon at your foe, rebuffing them back. You attempt to (action: Shove) the triggering creature, ignoring the requirement that you have a hand free. The creature continues its movement after the (action: Shove)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("38b0e47e-f7c7-47a6-ba65-02c2feb529b5"), Feats.Instances.MaulerDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("ec4d3836-c853-4e3e-aad1-04b901016c87"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificFeat(Guid.Parse("282eb573-9b60-408a-b471-2c9d59316a2d"), Feats.Instances.MaulerDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("0c65e6c3-f93a-4a05-81df-03b025e85413"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6be1b1dd-b210-438a-b3b2-8ce4351489fe"),
+                Id = Guid.Parse("b7130b32-ed28-4ac4-8dba-83f223a8d06d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

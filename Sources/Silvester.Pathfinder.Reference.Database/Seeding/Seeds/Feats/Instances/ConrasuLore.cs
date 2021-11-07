@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ConrasuLore : Template
     {
-        public static readonly Guid ID = Guid.Parse("0fdbcee3-f2bd-4fd4-9ac8-8c2224aff3ab");
+        public static readonly Guid ID = Guid.Parse("70baee73-1955-4611-9e19-aca461451239");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("36ab82f8-af98-4520-93da-8b6fcb4745ff"), Type = TextBlockType.Text, Text = "You have learned about your history and your people from shapers. You gain the trained proficiency rank in Crafting and Occultism. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Conrasu Lore." };
+            yield return new TextBlock { Id = Guid.Parse("92e16b6a-74d7-4f27-9fa3-f6b56015d8d0"), Type = TextBlockType.Text, Text = "You have learned about your history and your people from shapers. You gain the trained proficiency rank in Crafting and Occultism. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Conrasu Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f1106c5e-3b9f-4096-9241-ed4dc9eb3a31"),
+                Id = Guid.Parse("edf822bd-70ea-45ce-a265-b2dd89789d49"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

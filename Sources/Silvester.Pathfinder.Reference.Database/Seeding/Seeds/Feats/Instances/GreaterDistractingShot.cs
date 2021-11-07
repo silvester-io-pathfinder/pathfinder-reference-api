@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GreaterDistractingShot : Template
     {
-        public static readonly Guid ID = Guid.Parse("af519301-1bfd-4cc9-9f62-d1f6e8c77a30");
+        public static readonly Guid ID = Guid.Parse("a6bf4732-5825-4001-8397-1ddf8712e318");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a98cf33c-89ac-4eb5-b5d0-94530304909a"), Type = TextBlockType.Text, Text = "Even a single missile can throw off your enemy’s balance, and more powerful attacks leave it flustered for longer. If you hit your hunted prey with a ranged weapon, it’s flat-footed until the start of your next turn. If you critically hit your prey or hit it twice on the same turn with a ranged weapon, it’s flat-footed until the end of your next turn instead." };
+            yield return new TextBlock { Id = Guid.Parse("1b7e2b09-de00-4ba4-b638-a5212ba6f2e9"), Type = TextBlockType.Text, Text = "Even a single missile can throw off your enemy’s balance, and more powerful attacks leave it flustered for longer. If you hit your hunted prey with a ranged weapon, it’s flat-footed until the start of your next turn. If you critically hit your prey or hit it twice on the same turn with a ranged weapon, it’s flat-footed until the end of your next turn instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("ba536d72-ded8-4fc2-a424-e60549ddca32"), Feats.Instances.DistractingShot.ID);
+            builder.HaveSpecificFeat(Guid.Parse("340d36e4-f7b9-4092-95e6-6a696098de21"), Feats.Instances.DistractingShot.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("794c1aa8-7dc9-4b61-b5ec-6bc1ebbaa0d6"),
+                Id = Guid.Parse("3d166dba-b79d-4894-b5eb-ee54e2d4ea74"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

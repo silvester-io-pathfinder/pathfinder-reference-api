@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InspiringMarshalStance : Template
     {
-        public static readonly Guid ID = Guid.Parse("1c31da78-2398-4d3a-ada7-8fad38e0ec3d");
+        public static readonly Guid ID = Guid.Parse("6f881d3f-6810-4ad5-863d-0f158013b92a");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6ebb62b3-4a58-494a-8905-5d8437b13213"), Type = TextBlockType.Text, Text = "You become a brilliant example of dedication and poise in battle, encouraging your allies to follow suit. When you spend this action, attempt a Diplomacy check. The DC is usually a standard-difficulty DC of your level, but the GM can assign a different DC based on the circumstances. The effect depends on the result of your check." };
+            yield return new TextBlock { Id = Guid.Parse("f97b16ae-08ca-4ac6-ad3b-24652ec003ff"), Type = TextBlockType.Text, Text = "You become a brilliant example of dedication and poise in battle, encouraging your allies to follow suit. When you spend this action, attempt a Diplomacy check. The DC is usually a standard-difficulty DC of your level, but the GM can assign a different DC based on the circumstances. The effect depends on the result of your check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("209038aa-a741-4fd9-8cb1-7daf8d0da275"), Feats.Instances.MarshalDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("8b9fe352-cc8b-4a1b-b405-63f809006e9e"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
+            builder.HaveSpecificFeat(Guid.Parse("053c740e-a1b1-49b6-babb-684d813255ce"), Feats.Instances.MarshalDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("4f5962db-8f38-47fc-a525-9fdc17f260f2"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("a4a4a4f2-d797-4355-a0c1-c771e5c1fa7c"),
+                Id = Guid.Parse("c796c916-9efa-4b29-8d2f-bf116d309ce0"),
                 CriticalSuccess = "Your marshal’s aura increases to a 20-foot emanation and grants you and allies a +1 status bonus to attack rolls and saves against (trait: mental) effects.",
                 Success = "As critical success, but your aura’s size doesn’t increase.",
                 Failure = "You fail to enter the stance.",
@@ -60,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("71a6b701-ab11-4d28-b8d2-45d67c7ccc35"),
+                Id = Guid.Parse("c668ae60-4fd7-411d-a8fa-78c578333ef0"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Confabulator : Template
     {
-        public static readonly Guid ID = Guid.Parse("5c250102-85b3-4c3a-a991-8d9804ac062e");
+        public static readonly Guid ID = Guid.Parse("294574bc-12ab-417f-8165-1053ab124d80");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("837c5856-a0ba-44cd-ace7-334f4cdd8003"), Type = TextBlockType.Text, Text = "Even when caught in falsehoods, you pile lie upon lie. Reduce the circumstance bonus a target gains for your previous attempts to (action: Create a Diversion) or (action: Lie) to it from +4 to +2. If you’re a master in Deception, reduce the bonus to +1, and if you’re legendary, your targets don’t get these bonuses at all." };
+            yield return new TextBlock { Id = Guid.Parse("60c83f0b-f052-4f43-82b8-788e89bc7a2b"), Type = TextBlockType.Text, Text = "Even when caught in falsehoods, you pile lie upon lie. Reduce the circumstance bonus a target gains for your previous attempts to (action: Create a Diversion) or (action: Lie) to it from +4 to +2. If you’re a master in Deception, reduce the bonus to +1, and if you’re legendary, your targets don’t get these bonuses at all." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("3af2c5e6-59de-405d-84c6-b935cfe1b3f3"), Proficiencies.Instances.Expert.ID, Skills.Instances.Deception.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("1e30412d-ea6e-42c7-a8cd-225d7a1f85e3"), Proficiencies.Instances.Expert.ID, Skills.Instances.Deception.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9b8dc56e-1cf8-476d-bd4f-e428a7c7b8d6"),
+                Id = Guid.Parse("d7e35905-34b4-42d4-8846-b85bfe990d2d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

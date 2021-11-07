@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InnerStrength : Template
     {
-        public static readonly Guid ID = Guid.Parse("255ea297-5354-4b60-bd43-6130bfcacfed");
+        public static readonly Guid ID = Guid.Parse("c6f86b33-1087-4fd0-9cf6-64ecc13370fd");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ce49396-6af7-40e0-8554-0badbcfc7305"), Type = TextBlockType.Text, Text = "Your strength is part of your rage, so as long as your anger remains, you can gather your strength and rage to overcome any sort of enfeeblement. You reduce your enfeebled condition’s value by 1." };
+            yield return new TextBlock { Id = Guid.Parse("8b7c2d5d-7a5b-41c3-9d70-e22dcaf804d6"), Type = TextBlockType.Text, Text = "Your strength is part of your rage, so as long as your anger remains, you can gather your strength and rage to overcome any sort of enfeeblement. You reduce your enfeebled condition’s value by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d73e94e0-c78b-436a-be6d-f35e205d9e29"),
+                Id = Guid.Parse("8bc5832a-cee4-4daa-ab57-b5f0bb167bf4"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

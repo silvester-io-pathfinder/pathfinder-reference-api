@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WinterCatSenses : Template
     {
-        public static readonly Guid ID = Guid.Parse("a9c45995-435a-4ce2-885d-5c2143c4ba40");
+        public static readonly Guid ID = Guid.Parse("ca587e4c-e50c-4abd-b42b-ab8287ddebcd");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("491fac2c-ed18-4ae0-b47b-4cdb65883de1"), Type = TextBlockType.Text, Text = "Your eyes are keen and accustomed to winter conditions. You ignore concealment caused by ice and snow." };
+            yield return new TextBlock { Id = Guid.Parse("9ce77beb-8449-4faf-b012-8da44cc226b8"), Type = TextBlockType.Text, Text = "Your eyes are keen and accustomed to winter conditions. You ignore concealment caused by ice and snow." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificHeritage(Guid.Parse("4709c354-23a8-4e27-b674-95a4748bbc47"), Heritages.Instances.WinterCatfolk.ID);
+            builder.HaveSpecificHeritage(Guid.Parse("5d25954f-548d-484f-b9ab-6c18c50f862a"), Heritages.Instances.WinterCatfolk.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("80b6119c-3c5f-45a6-9ad9-61c1fd4c998c"),
+                Id = Guid.Parse("7c04bfaa-fec6-4f81-a148-5ca4b913b431"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -8,7 +8,8 @@ namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 {
     public class GainSpecificUnarmedAttackEffect : BaseEffect
     {
-        public UnarmedAttack UnarmedAttack { get; set; }
+        public Guid UnarmedWeaponId { get; set; }
+        public UnarmedWeapon UnarmedWeapon { get; set; } = default!;
 
         public Guid WeaponGroupId { get; set; }
         public WeaponGroup WeaponGroup { get; set; } = default!;
@@ -21,9 +22,9 @@ namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 
     public static partial class BooleanEffectBuilderExtensions
     {
-        public static EffectBuilder GainSpecificUnarmedAttack(this BooleanEffectBuilder builder, Guid id, UnarmedAttack unarmedAttack, Guid weaponGroupId, Guid damageTypeId, string damage)
+        public static EffectBuilder GainSpecificUnarmedAttack(this BooleanEffectBuilder builder, Guid id, Guid unarmedWeaponId, Guid weaponGroupId, Guid damageTypeId, string damage)
         {
-            return builder.Add(new GainSpecificUnarmedAttackEffect { Id = id, UnarmedAttack = unarmedAttack, WeaponGroupId = weaponGroupId, Damage = damage });
+            return builder.Add(new GainSpecificUnarmedAttackEffect { Id = id, UnarmedWeaponId = unarmedWeaponId, WeaponGroupId = weaponGroupId, Damage = damage });
         }
     }
 }

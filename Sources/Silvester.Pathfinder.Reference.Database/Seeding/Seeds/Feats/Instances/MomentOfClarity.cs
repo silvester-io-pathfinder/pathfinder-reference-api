@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MomentOfClarity : Template
     {
-        public static readonly Guid ID = Guid.Parse("fb1060e2-90e3-422a-9c3d-366293f77ffc");
+        public static readonly Guid ID = Guid.Parse("f531a2b0-e1cf-4d68-af01-bdd6b8df7d15");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("58d2919d-7d42-4159-a077-90942e997ee5"), Type = TextBlockType.Text, Text = "You push back your rage for a moment in order to think clearly. Until the end of this turn, you can use actions with the (trait: concentrate) trait even if those actions don’t have the (trait: rage) trait." };
+            yield return new TextBlock { Id = Guid.Parse("fdeb74b7-70c0-4582-8575-1e1b19b42131"), Type = TextBlockType.Text, Text = "You push back your rage for a moment in order to think clearly. Until the end of this turn, you can use actions with the (trait: concentrate) trait even if those actions don’t have the (trait: rage) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e4bc4538-b5e9-4f82-83f0-010de20bb91c"),
+                Id = Guid.Parse("f5ab239f-1fd4-4aca-b04c-200111f05f31"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

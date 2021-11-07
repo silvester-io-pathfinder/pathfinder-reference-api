@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SwashbucklersRiposte : Template
     {
-        public static readonly Guid ID = Guid.Parse("58cacbc5-50dd-4bc7-a190-3e437c2135ad");
+        public static readonly Guid ID = Guid.Parse("8fc1513e-f236-4559-bc6a-c90d30b2fa69");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bf65449d-fdb2-4cc3-a769-8da075674fa6"), Type = TextBlockType.Text, Text = "You’ve learned to riposte against ill-conceived attacks. You gain the (feat: Opportune Riposte) reaction." };
+            yield return new TextBlock { Id = Guid.Parse("5140a4e1-1346-4d1e-997e-a0980d2708ca"), Type = TextBlockType.Text, Text = "You’ve learned to riposte against ill-conceived attacks. You gain the (feat: Opportune Riposte) reaction." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("01ea2d15-406e-4510-b2c2-c79b7245156b"), Feats.Instances.SwashbucklerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("a314ff49-b45d-4a35-b759-9481e6fc6467"), Feats.Instances.SwashbucklerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("991aa95d-2162-445c-9442-49841fa25d3f"),
+                Id = Guid.Parse("4d4097a0-1a3b-400c-a9f9-502fbc361cc7"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

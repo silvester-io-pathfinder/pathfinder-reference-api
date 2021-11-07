@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DangerousSorcery : Template
     {
-        public static readonly Guid ID = Guid.Parse("05d7e230-69e7-4c0b-b02a-b5329d8686a9");
+        public static readonly Guid ID = Guid.Parse("cab25fc9-1571-40f6-a8bc-4fe83d87a064");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("48a98601-0e6c-4021-846e-a10e5c7d7330"), Type = TextBlockType.Text, Text = "Your legacy grants you great destructive power. When you (activity: Cast a Spell) from your spell slots, if the spell deals damage and doesn’t have a duration, you gain a status bonus to that spell’s damage equal to the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("630e8417-e28f-409d-852b-4310a662d503"), Type = TextBlockType.Text, Text = "Your legacy grants you great destructive power. When you (activity: Cast a Spell) from your spell slots, if the spell deals damage and doesn’t have a duration, you gain a status bonus to that spell’s damage equal to the spell’s level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d5b53a75-50e9-417a-b09b-26ac00f5f26a"),
+                Id = Guid.Parse("89499dfd-42f3-4293-8535-be0f1fe649df"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

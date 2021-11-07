@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SacredDefense : Template
     {
-        public static readonly Guid ID = Guid.Parse("8d5ace2f-0a2a-4201-a232-dfe0937ee10b");
+        public static readonly Guid ID = Guid.Parse("301a8095-f0fb-444f-add7-9c2a72be2c1b");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("495d5682-901b-4352-aeeb-afd693bc41f4"), Type = TextBlockType.Text, Text = "You call upon your deity to grant you their protective blessing. Attempt a DC 30 Religion check. If you have legendary proficiency in Religion, you can instead attempt a DC 40 Religion check to increase the temporary Hit Points you gain on a successful check to 15 (25 on a critical success)." };
+            yield return new TextBlock { Id = Guid.Parse("bb5e5fcb-f7f2-4c7f-8db2-464ce713545f"), Type = TextBlockType.Text, Text = "You call upon your deity to grant you their protective blessing. Attempt a DC 30 Religion check. If you have legendary proficiency in Religion, you can instead attempt a DC 40 Religion check to increase the temporary Hit Points you gain on a successful check to 15 (25 on a critical success)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("21fa59ab-38b4-4d0f-99f7-013ea1c01013"), Proficiencies.Instances.Master.ID, Skills.Instances.Religion.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("042d1045-a932-4c64-ae23-8a9d825721be"), Proficiencies.Instances.Master.ID, Skills.Instances.Religion.ID);
-            builder.FollowAnyReligion(Guid.Parse("86155741-37aa-4ab6-8184-c3d36a847fba"));
+            builder.HaveSpecificSkillProficiency(Guid.Parse("ac4b6225-0e2e-4984-8290-d6b2d6bea7d3"), Proficiencies.Instances.Master.ID, Skills.Instances.Religion.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("633e3311-15ef-4ec1-9721-c2d3350becaf"), Proficiencies.Instances.Master.ID, Skills.Instances.Religion.ID);
+            builder.FollowAnyReligion(Guid.Parse("3f02a1b6-18fc-4057-b792-9105a92dade3"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("199688aa-a43e-487f-a6c3-e9a066afe7ff"),
+                Id = Guid.Parse("9a59ec69-2b18-413a-9ad8-50ac6dbc4239"),
                 CriticalSuccess = "You gain 10 temporary Hit Points. You lose any remaining temporary Hit Points after 1 minute.",
                 Success = "You gain 5 temporary Hit Points. You lose any remaining temporary Hit Points after 1 minute.",
                 
@@ -61,7 +62,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b7bbe247-6eb3-4edc-b6bb-e25aa7af1d8e"),
+                Id = Guid.Parse("4d2cc2a9-e9f5-4f7f-91ca-96ff7a24a0e6"),
                 SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
                 Page = -1
             };

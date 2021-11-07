@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdaptiveMaskFamiliar : Template
     {
-        public static readonly Guid ID = Guid.Parse("f079a737-788f-4588-9ed7-23dcf6c67b26");
+        public static readonly Guid ID = Guid.Parse("3b92bda3-2dfe-4e68-a49e-8f8c44bd36a6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ddb300e-812d-4b1d-b67b-53b49aee0faa"), Type = TextBlockType.Text, Text = "Your mask familiar adapts quickly to material form, allowing it to gain more familiar and master abilities. You select four master and familiar abilities each day instead of two." };
+            yield return new TextBlock { Id = Guid.Parse("9a8f49e7-6da5-4b0d-8f94-441502972abb"), Type = TextBlockType.Text, Text = "Your mask familiar adapts quickly to material form, allowing it to gain more familiar and master abilities. You select four master and familiar abilities each day instead of two." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("19ae10c9-5d18-4f6a-b3ed-2b46f15bd011"), Feats.Instances.MaskFamiliar.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d7075665-5b70-46b9-9dc9-401846b7c968"), Feats.Instances.MaskFamiliar.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("26e89cbc-1a1c-4887-99e0-7c946c0309a5"),
+                Id = Guid.Parse("b6ea4e6a-dabc-470d-bf11-85281fe3f295"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

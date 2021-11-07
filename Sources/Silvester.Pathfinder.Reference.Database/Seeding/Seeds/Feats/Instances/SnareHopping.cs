@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SnareHopping : Template
     {
-        public static readonly Guid ID = Guid.Parse("df7070f6-30fb-44c7-96b0-7bf6e2888506");
+        public static readonly Guid ID = Guid.Parse("e1259d4d-77e3-4374-8015-9ac1309c9010");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ab69e0da-3ecc-4aac-8884-2a57840c4d4f"), Type = TextBlockType.Text, Text = "You can magically move your snares around. You gain the (spell: snare hopping) warden spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("727d8652-eb54-4329-b053-c34dba3eb58a"), Type = TextBlockType.Text, Text = "You can magically move your snares around. You gain the (spell: snare hopping) warden spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("25316611-dd3d-4232-b2b0-7599bdf78677"), Feats.Instances.SnareCrafting.ID);
-            builder.HaveSpecificClass(Guid.Parse("c2bb30eb-8067-4968-a76b-b39f0b2ac12b"), Classes.Instances.Ranger.ID);
+            builder.HaveSpecificFeat(Guid.Parse("488c4108-1c98-4b0d-bb6a-b026c6e29b2d"), Feats.Instances.SnareCrafting.ID);
+            builder.HaveSpecificClass(Guid.Parse("4bbb9494-4b12-4b98-805c-d62f81993bd8"), Classes.Instances.Ranger.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6e4447d9-6222-49fc-b2dc-1057cfce14e2"),
+                Id = Guid.Parse("fb408a42-bab2-4e71-b43c-d26163dc3b9f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

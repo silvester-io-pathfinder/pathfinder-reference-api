@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EternalBane : Template
     {
-        public static readonly Guid ID = Guid.Parse("b6ad76cc-26af-437a-b1de-bf8ffc8d18b1");
+        public static readonly Guid ID = Guid.Parse("cb8ec42a-5065-4278-9b58-a140ce9dcdae");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a4c2456e-7142-40f8-bdf6-07e7074e1c9a"), Type = TextBlockType.Text, Text = "A life of evil has made you a nexus for your deity’s vile power. You’re continuously surrounded by a (spell: bane) spell with a spell level equal to half your level (rounded up). The radius is 15 feet, and you can’t increase it. You can (action: Dismiss) the spell; if you do, it returns automatically after 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("8ac896f8-e0f3-45ef-82c9-8a7841145b59"), Type = TextBlockType.Text, Text = "A life of evil has made you a nexus for your deity’s vile power. You’re continuously surrounded by a (spell: bane) spell with a spell level equal to half your level (rounded up). The radius is 15 feet, and you can’t increase it. You can (action: Dismiss) the spell; if you do, it returns automatically after 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("a25c7636-0918-46a8-a82b-6cef4a95c287"), or => 
+            builder.AddOr(Guid.Parse("302790de-644c-4955-ad9b-067e8447e8d0"), or => 
             {
-                or.HaveSpecificAlignment(Guid.Parse("043ffbce-eb3a-4d58-8aec-d9513d545c44"), Alignments.Instances.LawfulEvil.ID);
-                or.HaveSpecificAlignment(Guid.Parse("a2fa0172-0296-4295-b2a3-f6071c9c7955"), Alignments.Instances.NeutralEvil.ID);
-                or.HaveSpecificAlignment(Guid.Parse("3af0774b-7299-4cb3-b5f6-0736c525091d"), Alignments.Instances.ChaoticEvil.ID);
+                or.HaveSpecificAlignment(Guid.Parse("96f7ac54-05fb-48f3-92a8-03a27cc6cb42"), Alignments.Instances.LawfulEvil.ID);
+                or.HaveSpecificAlignment(Guid.Parse("7df00d1c-3a49-436f-a1ce-0aa2604ff50d"), Alignments.Instances.NeutralEvil.ID);
+                or.HaveSpecificAlignment(Guid.Parse("94eda256-6e76-4a8e-a5dc-6526294b0b6b"), Alignments.Instances.ChaoticEvil.ID);
             });
         }
 
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b1972793-5802-4adf-8c01-30108b2d5f0e"),
+                Id = Guid.Parse("73aed0f5-db0b-47be-b2a6-540e8bfb79a1"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UnleashReflexiveSustainment : Template
     {
-        public static readonly Guid ID = Guid.Parse("6d0f298c-4298-4fde-8589-38e0ae7d10f9");
+        public static readonly Guid ID = Guid.Parse("ee8e4ad8-ea31-4e5d-aadb-9458b10aac87");
 
         protected override Feat GetFeat()
         {
@@ -28,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9bf3cde2-78bd-4539-b2c2-5d1267160871"), Type = TextBlockType.Text, Text = "Your mind partitions itself to automatically handle some of your ongoing spells." };
-            yield return new TextBlock { Id = Guid.Parse("6a7fdd15-d9fd-4fc7-ac65-576cfbe2bc71"), Type = TextBlockType.Text, Text = "~ Benefit: You become quickened and can use the additional action only to (action: Sustain a Spell)." };
-            yield return new TextBlock { Id = Guid.Parse("2f1c360a-84e4-4f89-a0eb-7d244190c8d5"), Type = TextBlockType.Text, Text = "~ Drawback: Partitioning your mind into a second consciousness makes it more difficult to maintain spells. You can’t use reactions or free actions on other creatures’ turns, nor can you (action: Sustain a Spell) as a free action, such as with the (feat: Effortless Concentration) feat." };
+            yield return new TextBlock { Id = Guid.Parse("8424548f-8d35-4f2a-8cc4-f3816d701ce9"), Type = TextBlockType.Text, Text = "Your mind partitions itself to automatically handle some of your ongoing spells." };
+            yield return new TextBlock { Id = Guid.Parse("6dc03e8a-3d4d-45b0-874b-580ade0bd682"), Type = TextBlockType.Text, Text = "~ Benefit: You become quickened and can use the additional action only to (action: Sustain a Spell)." };
+            yield return new TextBlock { Id = Guid.Parse("8be82ff9-6d79-4528-a414-2d996349c8dc"), Type = TextBlockType.Text, Text = "~ Drawback: Partitioning your mind into a second consciousness makes it more difficult to maintain spells. You can’t use reactions or free actions on other creatures’ turns, nor can you (action: Sustain a Spell) as a free action, such as with the (feat: Effortless Concentration) feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ffe27911-f2c0-44b9-b6bc-b7109c8480f5"),
+                Id = Guid.Parse("4b1efce0-1542-4a5a-97bc-fa2f5ce04f1f"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

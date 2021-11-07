@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class KitsuneSpellExpertiseIllusoryScene : Template
     {
-        public static readonly Guid ID = Guid.Parse("928feeb2-81dd-4ffe-9c23-6d1880196e3f");
+        public static readonly Guid ID = Guid.Parse("44a89fdd-b7f0-4903-b4d0-4349ba1b0bbe");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4478af3a-b405-4d0c-8bd6-f4dc8ec69afa"), Type = TextBlockType.Text, Text = "You can cast (spell: illusory scene) as a 5th-level divine innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("f654da66-ac8a-40f3-9ea2-8806be11f285"), Type = TextBlockType.Text, Text = "You can cast (spell: illusory scene) as a 5th-level divine innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("13011280-d7be-4ecf-ad41-37cc37a720d2"),
+                Id = Guid.Parse("1e59b4ad-a347-4aa3-8a88-a2033395fc20"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

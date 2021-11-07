@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CeremonyOfTheStrengthenedHand : Template
     {
-        public static readonly Guid ID = Guid.Parse("51de15ad-e5fe-4249-8e36-1dfea64f7760");
+        public static readonly Guid ID = Guid.Parse("fe7285f6-8e96-4c6a-a0e4-a59b918a13bb");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("86f585f4-c819-42c5-8ec3-854f474be1fb"), Type = TextBlockType.Text, Text = "Your exoskeleton’s weapons are even more potent. If you have a claws unarmed attack, it gains the (trait: deadly d8) trait. If you have a branch unarmed attack, it gains the (trait: shove) and (trait: trip) traits." };
+            yield return new TextBlock { Id = Guid.Parse("618c94b7-3b12-4668-afa5-57c4718e9b47"), Type = TextBlockType.Text, Text = "Your exoskeleton’s weapons are even more potent. If you have a claws unarmed attack, it gains the (trait: deadly d8) trait. If you have a branch unarmed attack, it gains the (trait: shove) and (trait: trip) traits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("fc5ec5cb-6c30-4b93-b6ec-e435c4606423"), Feats.Instances.CeremonyOfTheEvenedHand.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d8e1ba04-85e1-4f16-9ff7-f93bd678b49d"), Feats.Instances.CeremonyOfTheEvenedHand.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5fada740-cd0d-43db-8e63-f224bc6c73f5"),
+                Id = Guid.Parse("f3221b1e-b2d2-41f5-b0f5-38320201be9d"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

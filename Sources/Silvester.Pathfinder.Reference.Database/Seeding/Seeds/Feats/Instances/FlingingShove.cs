@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FlingingShove : Template
     {
-        public static readonly Guid ID = Guid.Parse("77fbaa69-dd55-4e8e-b3a4-1337d5779eec");
+        public static readonly Guid ID = Guid.Parse("9c3afefc-2c0e-4f8f-9075-d7c83a8088ed");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("be459753-c9c8-4244-a922-5d84b04f0505"), Type = TextBlockType.Text, Text = "Increase the distance you (Action: Shove) your opponent with (Feat: Aggressive Block) or (Feat: Brutish Shove) to 10 feet on a success or 20 feet on a critical success. When you use (Feat: Aggressive Block), you can choose whether the target is flat-footed or (Action: Shoved | Shove)." };
-            yield return new TextBlock { Id = Guid.Parse("64696db9-54d8-4709-b8f2-49921a86dceb"), Type = TextBlockType.Text, Text = "When you make a (Feat: Brutish Shove), you also (Action: Shove) the target 5 feet on a failure." };
+            yield return new TextBlock { Id = Guid.Parse("a71e340d-2150-452b-9433-5b7e5aa8036f"), Type = TextBlockType.Text, Text = "Increase the distance you (Action: Shove) your opponent with (Feat: Aggressive Block) or (Feat: Brutish Shove) to 10 feet on a success or 20 feet on a critical success. When you use (Feat: Aggressive Block), you can choose whether the target is flat-footed or (Action: Shoved | Shove)." };
+            yield return new TextBlock { Id = Guid.Parse("1d2c1cda-2392-4f75-9b54-76137edbc66d"), Type = TextBlockType.Text, Text = "When you make a (Feat: Brutish Shove), you also (Action: Shove) the target 5 feet on a failure." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("99461281-8d75-4897-9315-48efbfbec1b2"), or => 
+            builder.AddOr(Guid.Parse("4a9bf4ba-d2f8-4c15-9dab-7e4fac972cb0"), or => 
             {
-                or.HaveSpecificFeat(Guid.Parse("ea63d5ca-6e4d-4840-911e-2f6982283cc3"), Feats.Instances.AggressiveBlock.ID);
-                or.HaveSpecificFeat(Guid.Parse("4a8621c8-7f6d-4b39-bc86-f1d83e5c4c26"), Feats.Instances.BrutishShove.ID);
+                or.HaveSpecificFeat(Guid.Parse("224a46b7-103b-46d4-bdbb-e8022314392d"), Feats.Instances.AggressiveBlock.ID);
+                or.HaveSpecificFeat(Guid.Parse("26ed4f46-3a13-4a17-a2a0-62641f1c270d"), Feats.Instances.BrutishShove.ID);
             });
         }
 
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("49a96695-c209-41f5-abcf-e736118f544a"),
+                Id = Guid.Parse("c142ec19-a32d-4371-ad3e-943339f27994"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

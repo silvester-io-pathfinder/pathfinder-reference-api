@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpellkeeperPrimal : Template
     {
-        public static readonly Guid ID = Guid.Parse("a89e719c-a2e1-4025-9876-bf1ce837ab3a");
+        public static readonly Guid ID = Guid.Parse("a474f2de-d9c2-47ba-9bc8-f2131f17f650");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9206614e-7afa-45d8-8a70-65ce717ab940"), Type = TextBlockType.Text, Text = "You gain a primal cantrip." };
+            yield return new TextBlock { Id = Guid.Parse("aef64701-1e78-4b13-852f-300fdc0fac3f"), Type = TextBlockType.Text, Text = "You gain a primal cantrip." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7a169925-33d9-4288-b830-dea857a767c6"),
+                Id = Guid.Parse("ae434aab-fc42-4892-a0cb-815774b23557"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

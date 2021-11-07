@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StoneCommunion : Template
     {
-        public static readonly Guid ID = Guid.Parse("df8df6e4-7805-4ca5-9342-d92742cbb6fc");
+        public static readonly Guid ID = Guid.Parse("00e01c7b-5049-4f8f-b626-277b4226b201");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e12a75be-f681-4b50-840e-c042c36648cf"), Type = TextBlockType.Text, Text = "You gain a unique communion with the earth and stones. You learn the Terran language and you can Activate your ka stone with a 10-minute activation (envision) to cast (spell: stone tell)." };
+            yield return new TextBlock { Id = Guid.Parse("914b35dc-8bea-4864-9584-c3e6c870a778"), Type = TextBlockType.Text, Text = "You gain a unique communion with the earth and stones. You learn the Terran language and you can Activate your ka stone with a 10-minute activation (envision) to cast (spell: stone tell)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("714a99e7-3bba-44a8-ae6e-37be86fc4f4e"), Feats.Instances.KaStoneRitual.ID);
+            builder.HaveSpecificFeat(Guid.Parse("18d53e9c-86f5-476e-ad63-88e1699dd274"), Feats.Instances.KaStoneRitual.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1339ce9f-de3c-468a-951e-c40b6a0b2d27"),
+                Id = Guid.Parse("60909609-ed28-489c-bdfb-1107111c71e4"),
                 SourceId = Sources.Instances.LostOmensWorldGuide.ID,
                 Page = -1
             };

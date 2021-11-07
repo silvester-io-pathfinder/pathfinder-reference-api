@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DefendSummoner : Template
     {
-        public static readonly Guid ID = Guid.Parse("563c2741-c1c8-4950-bc28-074b64a6570d");
+        public static readonly Guid ID = Guid.Parse("927fadaf-991b-46d7-b494-82dfe7a38b0c");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c030c036-6bfd-41f1-8d58-cb1820f5a33c"), Type = TextBlockType.Text, Text = "Your eidolon blocks attacks against you. After your eidolon uses this action, you gain a +2 circumstance bonus to AC until the beginning of your next turn. This bonus applies only while you’re within your eidolon’s reach (in most cases, this means your eidolon is adjacent to you or in your space)." };
+            yield return new TextBlock { Id = Guid.Parse("31eab4eb-7090-476f-a34d-f869010f84e8"), Type = TextBlockType.Text, Text = "Your eidolon blocks attacks against you. After your eidolon uses this action, you gain a +2 circumstance bonus to AC until the beginning of your next turn. This bonus applies only while you’re within your eidolon’s reach (in most cases, this means your eidolon is adjacent to you or in your space)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3c279a32-8a5d-4fb9-a594-d718d4b08878"),
+                Id = Guid.Parse("680c9421-9403-432c-89c4-4906f3341691"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

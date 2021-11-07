@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class NocturnalSense : Template
     {
-        public static readonly Guid ID = Guid.Parse("18d89e4b-9daa-4dc8-b1e6-e71fedd6537a");
+        public static readonly Guid ID = Guid.Parse("7495a685-3db4-49dc-aacd-18b27bc82d17");
 
         protected override Feat GetFeat()
         {
@@ -28,21 +29,21 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec7e574d-c9aa-4e1d-865a-0fd0d25c63da"), Type = TextBlockType.Text, Text = "Your senses gain even greater clarity. While raging, you gain darkvision if you don’t already have it, and the range of your imprecise scent increases to 60 feet." };
+            yield return new TextBlock { Id = Guid.Parse("2a1b763e-cc09-437f-816f-5bc45dc9bb2e"), Type = TextBlockType.Text, Text = "Your senses gain even greater clarity. While raging, you gain darkvision if you don’t already have it, and the range of your imprecise scent increases to 60 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("7f0f6a1a-94a9-4b93-abbf-9111131ec75a"), or => 
+            builder.AddOr(Guid.Parse("172e0495-f975-4319-8e7c-002f4c859d12"), or => 
             {
-                or.AddOr(Guid.Parse("1a90a9f7-a4e8-4a91-aa66-59ea26bd2b1a"), or => 
+                or.AddOr(Guid.Parse("76854c3b-8ffa-4e7f-a6a4-6abd915ad6d2"), or => 
                 {
-                    or.HaveSpecificFeat(Guid.Parse("33fba31f-a6a1-4bd4-86ce-433a06441be5"), Feats.Instances.AcuteScent.ID);
-                    or.HaveSpecificSense(Guid.Parse("e15c4ac1-d350-4e59-b614-e25264305131"), Senses.Instances.Scent.ID, SenseAccuracies.Instances.Precise.ID);
-                    or.HaveSpecificSense(Guid.Parse("75d60dca-70ae-4e30-a165-ab09a58602a3"), Senses.Instances.Scent.ID, SenseAccuracies.Instances.Imprecise.ID);
+                    or.HaveSpecificFeat(Guid.Parse("1f7a3c2f-9d05-498c-9657-83ee36947657"), Feats.Instances.AcuteScent.ID);
+                    or.HaveSpecificSense(Guid.Parse("30319784-cf7e-4ba9-8175-fb9944e9d233"), Senses.Instances.Scent.ID);
+                    or.HaveSpecificSense(Guid.Parse("d11f4e29-f340-4bb1-b539-6983a11816a8"), Senses.Instances.Scent.ID);
                 });
-                or.HaveSpecificSense(Guid.Parse("30e191c5-8ce5-4347-ad96-1aa776c9f203"), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
+                or.HaveSpecificSense(Guid.Parse("d9af1604-b72d-4f6d-9a7b-66cdf58f91b9"), Senses.Instances.LowLightVision.ID);
             });
         }
 
@@ -55,7 +56,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e36971c8-40e8-4f34-8eda-864847be4bb3"),
+                Id = Guid.Parse("c9301d83-0560-4893-84ae-32e6f2f9530a"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class KnockbackStrike : Template
     {
-        public static readonly Guid ID = Guid.Parse("8ede3155-9bc8-4f24-9b6b-bdf442ece0e6");
+        public static readonly Guid ID = Guid.Parse("78f6ed6e-05cb-4c75-b81b-0cc5b0cefa26");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9eee040f-c587-4cc5-94b3-0d4cd8557c3a"), Type = TextBlockType.Text, Text = "You focus your strength into a blow powerful enough to push an enemy away from you. Make an unarmed (action: Strike)." };
-            yield return new TextBlock { Id = Guid.Parse("5b383b19-ffa5-4af0-90b5-cc98c34b616f"), Type = TextBlockType.Text, Text = "If you hit, attempt an Athletics check to (action: Shove) the target. This attack uses the same multiple attack penalty as your (action: Strike), and doesn’t count toward your multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("10569106-cd1f-46bd-af9b-a3ef5deab800"), Type = TextBlockType.Text, Text = "You focus your strength into a blow powerful enough to push an enemy away from you. Make an unarmed (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("e45ae3cf-62c6-47ae-8aef-d96f2f6dac0b"), Type = TextBlockType.Text, Text = "If you hit, attempt an Athletics check to (action: Shove) the target. This attack uses the same multiple attack penalty as your (action: Strike), and doesn’t count toward your multiple attack penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5235dd57-8bba-40cb-a646-479dbd4691f5"),
+                Id = Guid.Parse("450c5c46-0592-4d3a-b048-358c71b46f00"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DebilitatingDichotomy : Template
     {
-        public static readonly Guid ID = Guid.Parse("7b43164e-9de7-4c7d-b133-6eb08c0c234c");
+        public static readonly Guid ID = Guid.Parse("f4647c63-08c2-4d43-a93e-b8f28cff06b0");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("851acfb9-e161-493a-9612-f506471397f1"), Type = TextBlockType.Text, Text = "You can give others a glimpse of the impossible conflicts and unchecked power that courses through your body. You learn the (spell: debilitating dichotomy) revelation spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("e314ba0c-67b6-4060-8c54-7c34caf63683"), Type = TextBlockType.Text, Text = "You can give others a glimpse of the impossible conflicts and unchecked power that courses through your body. You learn the (spell: debilitating dichotomy) revelation spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("943f1390-9fd9-42f4-9802-556e51cb48b4"),
+                Id = Guid.Parse("bfd801f8-9bcd-4152-962a-090765981d6a"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

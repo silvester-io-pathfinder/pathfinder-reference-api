@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ElementalEyes : Template
     {
-        public static readonly Guid ID = Guid.Parse("f79ccfbf-ab41-498b-8ea5-2be79d42829e");
+        public static readonly Guid ID = Guid.Parse("67050ebf-4dfc-405f-b004-11acb9424bcd");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3eb62928-9ce2-494b-ae30-bf2e03b93cfa"), Type = TextBlockType.Text, Text = "You can see in the darkness as easily as an elemental. You gain darkvision." };
+            yield return new TextBlock { Id = Guid.Parse("f3185e95-7368-4ec4-adfe-76bbb523dbda"), Type = TextBlockType.Text, Text = "You can see in the darkness as easily as an elemental. You gain darkvision." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSense(Guid.Parse("91ae3452-670c-44ee-b8a8-635b066485e1"), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
+            builder.HaveSpecificSense(Guid.Parse("da8b4962-2631-400c-906a-870ccdcf154b"), Senses.Instances.LowLightVision.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1c784154-3c50-4bfc-8802-eb715a536850"),
+                Id = Guid.Parse("a8a8a32c-6e73-407e-8593-2924c6634761"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

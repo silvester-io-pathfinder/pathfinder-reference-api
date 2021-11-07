@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TwoWeaponFlurry : Template
     {
-        public static readonly Guid ID = Guid.Parse("2a5fbb28-0789-4480-b17e-0391da7119b6");
+        public static readonly Guid ID = Guid.Parse("e0c3b983-07b3-48b4-a766-35844ff998df");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("638503b1-ae07-45ec-89c6-237f4aad2e42"), Type = TextBlockType.Text, Text = "You lash out with both your weapons in a sudden frenzy. (action: Strike) twice, once with each weapon." };
+            yield return new TextBlock { Id = Guid.Parse("50040571-465e-41da-8992-98d306018e76"), Type = TextBlockType.Text, Text = "You lash out with both your weapons in a sudden frenzy. (action: Strike) twice, once with each weapon." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f6f67195-f2b2-426d-907b-1df0f91f028b"), Feats.Instances.DualWeaponDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("349a922e-8e2c-450f-b2a1-8b3c0dad46e9"), Feats.Instances.DualWeaponWarriorDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bfdc694a-9696-447e-8358-31bc0a4463a3"),
+                Id = Guid.Parse("e55d22ee-5ecc-46f1-bd01-14186e11904b"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

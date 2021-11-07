@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Knockback : Template
     {
-        public static readonly Guid ID = Guid.Parse("3fbd6f4e-dd18-47e1-b6f3-d7adc1b0fb25");
+        public static readonly Guid ID = Guid.Parse("0fc84eb6-2f86-4ec9-b60d-c93528c162ac");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92091174-33b0-460a-8f35-4e8017b7c756"), Type = TextBlockType.Text, Text = "The weight of your swing drives your enemy back. You push the foe back 5 feet, with the effects of a successful (action: Shove). You can follow the foe as normal for a successful (action: Shove)." };
+            yield return new TextBlock { Id = Guid.Parse("97e6f0f6-54b1-44fd-bd4f-c8a2c21b0443"), Type = TextBlockType.Text, Text = "The weight of your swing drives your enemy back. You push the foe back 5 feet, with the effects of a successful (action: Shove). You can follow the foe as normal for a successful (action: Shove)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("77765bc2-2fe2-4e7c-952c-8273f3df6cc4"),
+                Id = Guid.Parse("2db92a39-ff80-4df2-8b5f-f00949a98b3e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RapidRecharge : Template
     {
-        public static readonly Guid ID = Guid.Parse("97254a94-0b62-4e4b-90a3-0341ad3cfa45");
+        public static readonly Guid ID = Guid.Parse("e601b5f4-6c8e-4662-b9ed-022613fd6c51");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ab8b937-3dd6-4a0b-97a6-6bd35a00c0a4"), Type = TextBlockType.Text, Text = "You tap into an arcane trick to recover your ability to meld spells and attacks. You recharge your (feat: Spellstrike)." };
+            yield return new TextBlock { Id = Guid.Parse("03d4f900-cc75-421d-aeea-2b45e7b8dbd6"), Type = TextBlockType.Text, Text = "You tap into an arcane trick to recover your ability to meld spells and attacks. You recharge your (feat: Spellstrike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("25ed356a-973b-423c-ac7b-3ec88a8fc293"), Feats.Instances.Spellstrike.ID);
+            builder.HaveSpecificFeat(Guid.Parse("0ee6e8af-11ad-4d22-8f10-525048e0161f"), Feats.Instances.Spellstrike.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("aa405077-aa5f-4df0-9e7b-ff7e7d12fb0f"),
+                Id = Guid.Parse("187befb2-0022-4531-84c3-e02a787bc8e2"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

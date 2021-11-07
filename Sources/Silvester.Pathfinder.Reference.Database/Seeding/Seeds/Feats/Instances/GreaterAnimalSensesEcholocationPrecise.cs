@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GreaterAnimalSensesEcholocationPrecise : Template
     {
-        public static readonly Guid ID = Guid.Parse("0fc06f46-50d1-4450-a122-bb4e061c367d");
+        public static readonly Guid ID = Guid.Parse("ad0c26b4-0f9a-45fc-a818-9abe6b0d779a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("345a2068-6012-45cc-8366-bf3a7b977e2f"), Type = TextBlockType.Text, Text = "You gain echolocation (precise) 30 feet. You must have imprecise echolocation before you can gain this." };
+            yield return new TextBlock { Id = Guid.Parse("ec07a3cd-8f4d-451d-a040-348d74d082bc"), Type = TextBlockType.Text, Text = "You gain echolocation (precise) 30 feet. You must have imprecise echolocation before you can gain this." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("80b879a4-a137-41ce-bd60-a14c67ff1431"),
+                Id = Guid.Parse("d3a65660-4e2a-4dc4-beb3-5a6526d3f99d"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

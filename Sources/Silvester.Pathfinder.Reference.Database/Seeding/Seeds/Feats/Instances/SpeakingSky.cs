@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpeakingSky : Template
     {
-        public static readonly Guid ID = Guid.Parse("43abde39-4d2b-4804-b860-db6877194510");
+        public static readonly Guid ID = Guid.Parse("c449ffa8-52c0-4d20-8874-0544e4ec0949");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2101cfc-5974-4ce2-8d05-94a75cef5383"), Type = TextBlockType.Text, Text = "You can hear air movement like soft whispers. You gain the (spell: speaking sky) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("13b3afca-0841-4cd7-8fc2-36855bd4568e"), Type = TextBlockType.Text, Text = "You can hear air movement like soft whispers. You gain the (spell: speaking sky) ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("0aee5119-dd33-488a-b9c8-58ed1013b8a8"), Feats.Instances.JalmeriHeavenseekerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("3c6cfd79-e507-416e-9090-f8f78c95a2f1"), Feats.Instances.JalmeriHeavenseekerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f83362c3-5a12-42f2-b184-01140f8c87a1"),
+                Id = Guid.Parse("e443a220-96cf-4939-a3cc-d19d5f5614ae"),
                 SourceId = Sources.Instances.AgentsOfEdgewatch.ID,
                 Page = -1
             };

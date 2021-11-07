@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DivineWall : Template
     {
-        public static readonly Guid ID = Guid.Parse("d84d6ed1-47f5-4b5d-ae1b-0f93c7b60420");
+        public static readonly Guid ID = Guid.Parse("270b0d38-72b9-43d3-9a74-ed1b5298ac28");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("412afb9b-73ca-4a5b-a3fd-24f71a6c4929"), Type = TextBlockType.Text, Text = "You use your shield to harry your enemies, preventing them from stepping away from or around you. All spaces adjacent to you are difficult terrain for your enemies." };
+            yield return new TextBlock { Id = Guid.Parse("854291ed-a7cc-4230-adf9-bb9982b42f00"), Type = TextBlockType.Text, Text = "You use your shield to harry your enemies, preventing them from stepping away from or around you. All spaces adjacent to you are difficult terrain for your enemies." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3a2e65f9-af4c-424e-860f-ad3a5ef3d59a"),
+                Id = Guid.Parse("35a957cb-6f99-4767-bc93-512aaeebef39"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

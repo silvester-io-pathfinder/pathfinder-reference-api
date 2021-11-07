@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CrushingGrab : Template
     {
-        public static readonly Guid ID = Guid.Parse("1459f65f-abf8-4646-add9-00289b029527");
+        public static readonly Guid ID = Guid.Parse("710c79e5-2bdb-4919-9474-25b33a8d8cde");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3aca1206-5ed0-46be-82ef-45fed439755e"), Type = TextBlockType.Text, Text = "Like a powerful constrictor, you crush targets in your unyielding grasp. When you successfully (action: Grapple) a creature, you can deal bludgeoning damage to that creature equal to your Strength modifier. You can make this attack (trait: nonlethal) with no penalty." };
+            yield return new TextBlock { Id = Guid.Parse("e79a6675-51d4-4836-9eb7-d803539b62db"), Type = TextBlockType.Text, Text = "Like a powerful constrictor, you crush targets in your unyielding grasp. When you successfully (action: Grapple) a creature, you can deal bludgeoning damage to that creature equal to your Strength modifier. You can make this attack (trait: nonlethal) with no penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cbea5bb3-f055-43a8-8f1b-4c1b4bd2493c"),
+                Id = Guid.Parse("2610dfb3-a641-4514-8a25-48cc86c757ff"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

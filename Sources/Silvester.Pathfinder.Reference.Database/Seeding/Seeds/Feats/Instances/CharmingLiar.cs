@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CharmingLiar : Template
     {
-        public static readonly Guid ID = Guid.Parse("44f93c9d-03b8-46af-b242-1a8be368dbf7");
+        public static readonly Guid ID = Guid.Parse("d971ace1-1754-47a9-a687-f17ba25d7604");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0cd4fc63-aa99-4368-ba87-bcc9d2a260ca"), Type = TextBlockType.Text, Text = "Your charm allows you to win over those you lie to. When you get a critical success using the (action: Lie) action, the target’s attitude toward you improves by one step, as though you’d succeeded at using Diplomacy to (action: Make an Impression). This works only once per conversation, and if you critically succeed against multiple targets using the same result, you choose one creature’s attitude to improve. You must be lying to impart seemingly important information, inflate your status, or ingratiate yourself, which trivial or irrelevant lies can’t achieve." };
+            yield return new TextBlock { Id = Guid.Parse("32c0997d-0f9b-4683-ae81-59697a59d1d8"), Type = TextBlockType.Text, Text = "Your charm allows you to win over those you lie to. When you get a critical success using the (action: Lie) action, the target’s attitude toward you improves by one step, as though you’d succeeded at using Diplomacy to (action: Make an Impression). This works only once per conversation, and if you critically succeed against multiple targets using the same result, you choose one creature’s attitude to improve. You must be lying to impart seemingly important information, inflate your status, or ingratiate yourself, which trivial or irrelevant lies can’t achieve." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("703d066a-580d-4ed1-b171-1b3f04dbfdc5"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("5dd5c9ef-aa4e-467c-8113-62f3a0304ec6"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ec88a904-2bab-4048-8dcb-e70a728cc578"),
+                Id = Guid.Parse("86fa9c1b-c501-46ae-9f36-fe2fc7b54646"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

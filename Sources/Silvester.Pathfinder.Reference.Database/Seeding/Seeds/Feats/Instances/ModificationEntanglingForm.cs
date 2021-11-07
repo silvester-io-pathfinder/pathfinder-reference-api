@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationEntanglingForm : Template
     {
-        public static readonly Guid ID = Guid.Parse("0f706f4c-cd1d-48b8-8c2a-261ff3798cc2");
+        public static readonly Guid ID = Guid.Parse("0df12aa8-710f-4da3-a91c-87ddc4e2ceef");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a00f4dc8-c5a7-4fc5-b58d-da783bd16192"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
-            yield return new TextBlock { Id = Guid.Parse("c7c983f6-5aea-41e2-b7ff-72f9bfaf1c88"), Type = TextBlockType.Text, Text = "You’ve altered your weapon to including tangling wires or straps, or to have a flexible construction. Your innovation gains the (trait: grapple) and (trait: trip) traits." };
+            yield return new TextBlock { Id = Guid.Parse("72c9873a-d7ea-49b7-acfe-811a9bf58de7"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
+            yield return new TextBlock { Id = Guid.Parse("39d2cfeb-0c98-4ab0-a768-be0feccac22a"), Type = TextBlockType.Text, Text = "You’ve altered your weapon to including tangling wires or straps, or to have a flexible construction. Your innovation gains the (trait: grapple) and (trait: trip) traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("df9b53f3-cf1e-43ee-9646-e25a8895f0e4"),
+                Id = Guid.Parse("988d2970-4b50-4257-acf4-c5be9f54d98b"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShareThoughts : Template
     {
-        public static readonly Guid ID = Guid.Parse("9cfd868b-31ba-488b-8383-2170f5a9dbc7");
+        public static readonly Guid ID = Guid.Parse("e2380413-0877-417e-b417-d5cb9c1019a5");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7b519272-808f-46b5-a006-2649b9c19513"), Type = TextBlockType.Text, Text = "~ Access: Mualijae, Ilverani, or Vourinoi ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("0c9679c7-d0c9-4a60-84a3-5a76920538a9"), Type = TextBlockType.Text, Text = "You have an uncanny knack of communicating with other elves without speaking, though this habit that is often uncomfortable to observers. You can cast (spell: mindlink) as an innate occult spell once per day, but you can target only other elves or half-elves." };
+            yield return new TextBlock { Id = Guid.Parse("f87d285a-7b42-4d78-9318-23ad0ce2474d"), Type = TextBlockType.Text, Text = "~ Access: Mualijae, Ilverani, or Vourinoi ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("021648db-5a99-44b2-8a29-8d7622e6ba6c"), Type = TextBlockType.Text, Text = "You have an uncanny knack of communicating with other elves without speaking, though this habit that is often uncomfortable to observers. You can cast (spell: mindlink) as an innate occult spell once per day, but you can target only other elves or half-elves." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d95bd7eb-6c44-49b1-8ca2-f3d3513ee8d6"),
+                Id = Guid.Parse("24b84995-74b3-406d-bcfe-4b9851de3310"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

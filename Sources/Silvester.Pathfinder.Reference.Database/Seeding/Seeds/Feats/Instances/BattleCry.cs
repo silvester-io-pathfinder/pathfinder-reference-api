@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BattleCry : Template
     {
-        public static readonly Guid ID = Guid.Parse("3f5816ec-12f2-4f44-8aa8-cb60f87880dd");
+        public static readonly Guid ID = Guid.Parse("a1ffe14d-dc03-4e92-a257-4c0ba7469b19");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("524088cb-a970-4bd3-a4d1-47410b1b2f30"), Type = TextBlockType.Text, Text = "When you roll initiative, you can yell a mighty battle cry and (action: Demoralize) an observed foe as a free action. If you’re legendary in Intimidation, you can use a reaction to (action: Demoralize) your foe when you critically succeed at an attack roll." };
+            yield return new TextBlock { Id = Guid.Parse("848ea824-d73b-4bdf-9a14-c1689f25a2bd"), Type = TextBlockType.Text, Text = "When you roll initiative, you can yell a mighty battle cry and (action: Demoralize) an observed foe as a free action. If you’re legendary in Intimidation, you can use a reaction to (action: Demoralize) your foe when you critically succeed at an attack roll." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("6a930da4-dcbd-41e9-9579-985cac691aa5"), Proficiencies.Instances.Master.ID, Skills.Instances.Intimidation.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("8649e474-fd79-43ab-ade8-e49e09e77dd9"), Proficiencies.Instances.Master.ID, Skills.Instances.Intimidation.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("baa35d7d-0cb3-4f90-9e74-910f23cfdb9c"),
+                Id = Guid.Parse("ba9610f4-31d0-4f53-81e1-52dc0a90c47a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

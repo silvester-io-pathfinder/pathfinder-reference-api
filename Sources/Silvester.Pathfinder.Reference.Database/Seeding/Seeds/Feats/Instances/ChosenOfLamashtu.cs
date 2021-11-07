@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ChosenOfLamashtu : Template
     {
-        public static readonly Guid ID = Guid.Parse("0096c5b0-68b3-4b88-b2c7-c4d3f8d19551");
+        public static readonly Guid ID = Guid.Parse("0f8fddec-a39c-40dc-9a2c-3a5b26321225");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("374e054e-13ae-4c7b-a9c6-9546d9ec0b0d"), Type = TextBlockType.Text, Text = "You bear the favor and blessings of Lamashtu, the Mother of Monsters. She has bestowed a mutation upon you, granting you the benefits of another heritage. Choose one goblin heritage that you do not already have; you gain that heritage and its benefits." };
+            yield return new TextBlock { Id = Guid.Parse("e0b98aef-e50f-496a-905f-7ff38e191ad0"), Type = TextBlockType.Text, Text = "You bear the favor and blessings of Lamashtu, the Mother of Monsters. She has bestowed a mutation upon you, granting you the benefits of another heritage. Choose one goblin heritage that you do not already have; you gain that heritage and its benefits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.WorshipSpecificDeity(Guid.Parse("24f8aabf-c630-4a9e-a6ab-459c1df10aa5"), Deities.Instances.Lamashtu.ID);
+            builder.WorshipSpecificDeity(Guid.Parse("ab0e72d4-89a6-4c98-9c8f-b7bb52908cae"), Deities.Instances.Lamashtu.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("19e94cf9-c27d-4b4e-877c-e82f509399d6"),
+                Id = Guid.Parse("3356bbc6-a6b3-4607-a9c5-0fd88d5569ea"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

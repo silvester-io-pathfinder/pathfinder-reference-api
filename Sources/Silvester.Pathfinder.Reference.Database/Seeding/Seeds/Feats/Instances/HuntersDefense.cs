@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HuntersDefense : Template
     {
-        public static readonly Guid ID = Guid.Parse("4923116d-c8b1-472b-9952-f5ef66439eca");
+        public static readonly Guid ID = Guid.Parse("a593b193-2513-400c-bcb8-4a371a9e6d5f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("82ea14aa-ee12-4ae1-9ec0-8779b5f4cecc"), Type = TextBlockType.Text, Text = "Your canny understanding of natural and primal creatures helps you predict and dodge their attacks. The triggering attack roll targets your Nature DC instead of your AC. Though this allows you to avoid taking penalties to your AC, it doesn’t remove any conditions or other effects causing such penalties. For example, an enemy with sneak attack would still deal extra damage to you for being flat-footed, even though you wouldn’t take the –2 circumstance penalty against the attack." };
+            yield return new TextBlock { Id = Guid.Parse("b161997a-0b36-402d-822c-86a484605d73"), Type = TextBlockType.Text, Text = "Your canny understanding of natural and primal creatures helps you predict and dodge their attacks. The triggering attack roll targets your Nature DC instead of your AC. Though this allows you to avoid taking penalties to your AC, it doesn’t remove any conditions or other effects causing such penalties. For example, an enemy with sneak attack would still deal extra damage to you for being flat-footed, even though you wouldn’t take the –2 circumstance penalty against the attack." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("e4a48ecd-76ed-4589-ada9-eada4ab08c53"), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("34475e50-e476-4943-b235-2fb5d1242c9e"), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("daecdc43-b15d-42ba-b6f7-f3ca04e91edc"),
+                Id = Guid.Parse("4d24e941-b659-484b-8eb0-fb04b28f66cb"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

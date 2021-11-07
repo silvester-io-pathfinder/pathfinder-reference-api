@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BulletDancerDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("8bb43cac-f8b0-41fe-bb06-0b3e254206f1");
+        public static readonly Guid ID = Guid.Parse("274b4ec7-50b7-416a-aaa4-7d2c46bd4bbf");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9cba82ac-da41-4a62-89a7-f7bde84bce66"), Type = TextBlockType.Text, Text = "You’ve learned how to synchronize traditional martial arts and guns. You gain the (feat: Bullet Dancer Stance) action. Whenever your proficiency in any weapon increases to expert or beyond, you gain that new proficiency with bayonets, reinforced stocks, simple firearms and unarmed attacks." };
+            yield return new TextBlock { Id = Guid.Parse("542bb175-cfb4-4eef-9d65-76d2f24ddb7b"), Type = TextBlockType.Text, Text = "You’ve learned how to synchronize traditional martial arts and guns. You gain the (feat: Bullet Dancer Stance) action. Whenever your proficiency in any weapon increases to expert or beyond, you gain that new proficiency with bayonets, reinforced stocks, simple firearms and unarmed attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("cb80fc3c-5020-406d-95f6-53487326a18b"), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.Unarmed.ID);
-            builder.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("97f12da7-f977-49a1-95ec-03a94dde5379"), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Simple.ID);
+            builder.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("c1136cba-ea09-4300-a4c9-30279a1b9389"), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.Unarmored.ID);
+            builder.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("d0658b0f-3032-4b02-93ee-0b8cb44e41ba"), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Simple.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("919688eb-eba4-47c7-80e4-01c6f3730f4b"),
+                Id = Guid.Parse("897062e4-c612-47f4-a199-4aeee3bde9f6"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

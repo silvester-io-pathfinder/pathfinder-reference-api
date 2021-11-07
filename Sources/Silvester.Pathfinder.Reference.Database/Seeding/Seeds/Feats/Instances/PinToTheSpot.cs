@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PinToTheSpot : Template
     {
-        public static readonly Guid ID = Guid.Parse("3e23062d-b08a-41e7-9dfa-0d8494a7e6a9");
+        public static readonly Guid ID = Guid.Parse("47ca9d35-78b6-4384-b3c0-3cf26184a9d3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8a82705a-26ae-4cc5-af82-7024bd226b89"), Type = TextBlockType.Text, Text = "You (action: Strike) a target within reach. If you hit and deal damage, the target is also restrained as if you had critically succeeded at an Athletics check to (action: Grapple)." };
+            yield return new TextBlock { Id = Guid.Parse("1076d6b7-fca8-4c3c-b871-92f761166b87"), Type = TextBlockType.Text, Text = "You (action: Strike) a target within reach. If you hit and deal damage, the target is also restrained as if you had critically succeeded at an Athletics check to (action: Grapple)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("ef8228ba-7216-414b-86bb-ba30b839aad5"), Feats.Instances.ProvocatorDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("eb101114-9a13-440a-93b6-67f4cae3519c"), Feats.Instances.ProvocatorDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8f3eef32-38cb-4c15-963d-d6d71d4e1a7a"),
+                Id = Guid.Parse("f9903b2e-1ae7-4384-86f7-80e3ff4532a8"),
                 SourceId = Sources.Instances.AgentsOfEdgewatch.ID,
                 Page = -1
             };

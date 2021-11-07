@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CeremonyOfSunsGift : Template
     {
-        public static readonly Guid ID = Guid.Parse("4d01cc72-ef74-4a1b-aeeb-eca64c573422");
+        public static readonly Guid ID = Guid.Parse("30dd0d5c-6660-4103-a758-504269286733");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bb934426-1894-47b2-858e-f37a0661eb66"), Type = TextBlockType.Text, Text = "Your connection to the sun has become an unbreakable bond. You don’t become temporarily immune to the effects of your Sunlight Healing, and instead of rolling to recover Hit Points, you gain the maximum number of HP possible (for example, 64 HP instead of 8d8)." };
+            yield return new TextBlock { Id = Guid.Parse("a00ad127-cdf8-4711-b881-580997d4a34b"), Type = TextBlockType.Text, Text = "Your connection to the sun has become an unbreakable bond. You don’t become temporarily immune to the effects of your Sunlight Healing, and instead of rolling to recover Hit Points, you gain the maximum number of HP possible (for example, 64 HP instead of 8d8)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0a76432f-938e-4856-ba26-5fd719ef6505"),
+                Id = Guid.Parse("9695226a-67de-455f-b986-014302878193"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

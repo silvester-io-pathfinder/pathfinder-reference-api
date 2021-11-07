@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DandyDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("4d53107d-533d-4de1-bf1d-cae5370df5b3");
+        public static readonly Guid ID = Guid.Parse("45a138d7-cfac-4a7e-97a2-6c23ded26356");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d758b108-210f-4bd7-b214-8f71e51e8348"), Type = TextBlockType.Text, Text = "You are a consummate student of dignity, etiquette, and fashion. You can use the Diplomacy skill to perform the special downtime activity, (feat: Influence Rumor)." };
-            yield return new TextBlock { Id = Guid.Parse("2983646f-9762-4275-8769-74e7bd1f85eb"), Type = TextBlockType.Text, Text = "You become trained in Deception and Society; if you were already trained, you become an expert instead." };
+            yield return new TextBlock { Id = Guid.Parse("aa9e6aa3-fd76-46d5-bc9c-3837ea547775"), Type = TextBlockType.Text, Text = "You are a consummate student of dignity, etiquette, and fashion. You can use the Diplomacy skill to perform the special downtime activity, (feat: Influence Rumor)." };
+            yield return new TextBlock { Id = Guid.Parse("ddd4b60e-82a5-48ea-946c-eadd7830d3c8"), Type = TextBlockType.Text, Text = "You become trained in Deception and Society; if you were already trained, you become an expert instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("2746a5a0-e42d-4f33-8b4b-62031759583d"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("c30018a9-7336-422a-bcbe-94fc9b61b24b"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("abed999c-5bcc-4420-a4f3-92c4854be894"),
+                Id = Guid.Parse("b8fd5263-c248-40ab-bd61-6e3ae7ca737a"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

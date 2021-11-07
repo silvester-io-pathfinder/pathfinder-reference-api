@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GenieWeaponFlourish : Template
     {
-        public static readonly Guid ID = Guid.Parse("f7f6b8f9-dfe4-46d5-a782-741d90bf2b58");
+        public static readonly Guid ID = Guid.Parse("4c7f85e9-f2f3-462b-aefa-5afcb9e17d22");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e7e1c7a0-1854-46b0-9610-984557f60dc4"), Type = TextBlockType.Text, Text = "Whenever you critically hit using a (item: falchion), (item: ranseur), (item: scimitar), (item: trident), or a (trait: geniekin | Geniekin - Item) weapon, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("0f92af64-1e15-48eb-963a-ea10b02dacf3"), Type = TextBlockType.Text, Text = "Whenever you critically hit using a (item: falchion), (item: ranseur), (item: scimitar), (item: trident), or a (trait: geniekin | Geniekin - Item) weapon, you apply the weapon’s critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("37ae56a3-17ec-4095-83fa-89d006145694"), Feats.Instances.GenieWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("aa6af4ac-e0b7-49e9-81a6-74df4b0e7915"), Feats.Instances.GenieWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("887dd75f-d19d-4352-ab7d-8dd2d90ad91a"),
+                Id = Guid.Parse("cda5ebb5-3d7d-4412-84f7-7a494af6bb40"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

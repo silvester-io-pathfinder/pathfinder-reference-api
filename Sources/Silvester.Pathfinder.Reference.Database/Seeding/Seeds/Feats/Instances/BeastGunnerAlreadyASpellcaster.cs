@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BeastGunnerAlreadyASpellcaster : Template
     {
-        public static readonly Guid ID = Guid.Parse("cbac2526-2d52-4d19-963f-9ea816abe6a3");
+        public static readonly Guid ID = Guid.Parse("7b387f4e-03aa-451e-b202-087587a07490");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c933ada6-31ab-482a-b218-ce9ff13a304d"), Type = TextBlockType.Text, Text = "You learn one additional cantrip. If you’re a prepared caster, you can prepare this spell in addition to your usual cantrips per day; if you’re a spontaneous caster, you add this cantrip to your spell repertoire." };
-            yield return new TextBlock { Id = Guid.Parse("f18b3d21-7b41-430b-aeba-f54b9dc5a682"), Type = TextBlockType.Text, Text = "__Add the extra spell slot manually.__" };
+            yield return new TextBlock { Id = Guid.Parse("713a95b1-68c1-4e60-90ba-b2b3574522bd"), Type = TextBlockType.Text, Text = "You learn one additional cantrip. If you’re a prepared caster, you can prepare this spell in addition to your usual cantrips per day; if you’re a spontaneous caster, you add this cantrip to your spell repertoire." };
+            yield return new TextBlock { Id = Guid.Parse("e514dc9d-1e5f-4fc8-96f1-d488490e3e84"), Type = TextBlockType.Text, Text = "__Add the extra spell slot manually.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e045b26c-2b19-4a9d-8168-e6896a7392d8"),
+                Id = Guid.Parse("3de8f9cd-c614-4ec5-96a3-82d3184c666c"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RapidResponse : Template
     {
-        public static readonly Guid ID = Guid.Parse("d707aa6e-79b5-42aa-a6fe-67614b135e32");
+        public static readonly Guid ID = Guid.Parse("35ed12c8-b269-44d8-b195-1106eb38a9e3");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("95d518dd-8a40-43bb-9c3f-9724e14f1c14"), Type = TextBlockType.Text, Text = "You work quickly and efficiently in times of danger to deliver needed assistance. You (action: Stride) towards the triggering ally. You gain a +10-foot circumstance bonus to your Speed during this movement." };
+            yield return new TextBlock { Id = Guid.Parse("910bce7c-662a-4627-adc7-63a4fe83ad00"), Type = TextBlockType.Text, Text = "You work quickly and efficiently in times of danger to deliver needed assistance. You (action: Stride) towards the triggering ally. You gain a +10-foot circumstance bonus to your Speed during this movement." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9a2e7867-0c19-4be0-8b52-7a0b68dafbb1"),
+                Id = Guid.Parse("b3fd692a-c5c6-4d18-8aef-ede155a52923"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

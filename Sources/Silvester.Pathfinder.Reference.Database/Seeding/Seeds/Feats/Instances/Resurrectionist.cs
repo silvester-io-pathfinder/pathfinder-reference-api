@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Resurrectionist : Template
     {
-        public static readonly Guid ID = Guid.Parse("36b62029-207e-4ff8-a646-b5c4de531e1b");
+        public static readonly Guid ID = Guid.Parse("3c76e858-a52a-4b7c-840e-cb84b8868ee5");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bffcd2d1-c1bb-4960-955e-4fcf033729f1"), Type = TextBlockType.Text, Text = "You can cause a creature you bring back from the brink of death to thrive and continue healing. When you restore Hit Points to a dying creature or bring a dead creature back to life and restore Hit Points to it, you grant that creature fast healing 5 for 1 minute. This fast healing ends if the creature is knocked unconscious." };
+            yield return new TextBlock { Id = Guid.Parse("2402d166-0693-4dd1-a972-f4020c427491"), Type = TextBlockType.Text, Text = "You can cause a creature you bring back from the brink of death to thrive and continue healing. When you restore Hit Points to a dying creature or bring a dead creature back to life and restore Hit Points to it, you grant that creature fast healing 5 for 1 minute. This fast healing ends if the creature is knocked unconscious." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("63432385-38e5-42b7-ab2a-0b072b892a09"),
+                Id = Guid.Parse("59b7486d-4dc7-438f-9079-711081fd5f00"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

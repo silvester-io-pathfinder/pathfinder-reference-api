@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShadowcasterDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("a0b228ef-644d-42f3-8f24-6f036ae14a46");
+        public static readonly Guid ID = Guid.Parse("2bd3ec77-7024-4151-b797-29db218e549c");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bb0125c0-5931-4f35-b23b-b5f17ee1f942"), Type = TextBlockType.Text, Text = "You’ve sacrificed a piece of your spirit, allowing the powers of shadow into your being and changing the nature of your magic. You can no longer cast spells that have the (trait: light) trait; if an ability, such as a class feature or ancestry feat, would automatically grant you a light spell, such as the (feat: Domain Initiate) feat granting you the (spell: dazzling flash) spell, you don’t gain that spell." };
-            yield return new TextBlock { Id = Guid.Parse("59b3089d-9ae4-45d4-a9b8-0f273ad4280c"), Type = TextBlockType.Text, Text = "You gain the (spell: cloak of shadow) domain spell. It costs 1 Focus Point to cast a focus spell. This feat grants a focus pool of 1 Focus Point that you can recover using the (action: Refocus) activity. You can (action: Refocus) by meditating to siphon power from the Shadow Plane and refill your focus pool. Your domain spells from the shadowcaster archetype are of the same tradition as the spells you used to meet the shadowcaster archetype’s prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("40a64637-2760-4ee7-a8ee-f2aad5b3a386"), Type = TextBlockType.Text, Text = "You’ve sacrificed a piece of your spirit, allowing the powers of shadow into your being and changing the nature of your magic. You can no longer cast spells that have the (trait: light) trait; if an ability, such as a class feature or ancestry feat, would automatically grant you a light spell, such as the (feat: Domain Initiate) feat granting you the (spell: dazzling flash) spell, you don’t gain that spell." };
+            yield return new TextBlock { Id = Guid.Parse("e1ee25e3-b277-4835-ab37-44df3968760c"), Type = TextBlockType.Text, Text = "You gain the (spell: cloak of shadow) domain spell. It costs 1 Focus Point to cast a focus spell. This feat grants a focus pool of 1 Focus Point that you can recover using the (action: Refocus) activity. You can (action: Refocus) by meditating to siphon power from the Shadow Plane and refill your focus pool. Your domain spells from the shadowcaster archetype are of the same tradition as the spells you used to meet the shadowcaster archetype’s prerequisites." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyMagicTradition(Guid.Parse("590c7564-b91c-4b82-8913-c8079aa1ad98"));
+            builder.HaveAnyMagicTradition(Guid.Parse("56a3d7a3-6b36-4d74-918a-3dc9dc23de04"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("78553077-6182-4079-bf34-e74ce62949ef"),
+                Id = Guid.Parse("738012ed-d442-43e6-a569-ae716539f7af"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

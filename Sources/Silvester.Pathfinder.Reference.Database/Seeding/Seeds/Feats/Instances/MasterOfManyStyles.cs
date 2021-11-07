@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MasterOfManyStyles : Template
     {
-        public static readonly Guid ID = Guid.Parse("03f007ce-fedc-4afa-8aba-1b3e1ea6c4dd");
+        public static readonly Guid ID = Guid.Parse("67d477ae-24bf-4fc2-b809-7f4aa16fc2c1");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("02b9b30f-00d4-4a15-9b96-0e9289744e5b"), Type = TextBlockType.Text, Text = "You move between stances in an unceasing dance. You use an action with the (trait: stance) trait." };
+            yield return new TextBlock { Id = Guid.Parse("58f2e8e1-b510-499e-a1c5-eb61d5e0e8f8"), Type = TextBlockType.Text, Text = "You move between stances in an unceasing dance. You use an action with the (trait: stance) trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("9b94bb08-a321-48f5-88c0-84116d76687a"), Feats.Instances.StanceSavant.ID);
+            builder.HaveSpecificFeat(Guid.Parse("426332a5-adc3-484b-a8a6-438849e1a67b"), Feats.Instances.StanceSavant.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1edd79a0-5673-484e-b161-b71d8044ef9f"),
+                Id = Guid.Parse("ed282174-f91b-4ac5-bcef-f6b280b15325"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

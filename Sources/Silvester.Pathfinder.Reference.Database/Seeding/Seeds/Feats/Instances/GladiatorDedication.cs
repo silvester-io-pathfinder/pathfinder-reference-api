@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GladiatorDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("82fa88a4-a30c-4c72-a82a-01b91b36a2c6");
+        public static readonly Guid ID = Guid.Parse("3906c498-afe1-4437-bc7a-c82637d94664");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ac74eb0d-b249-4b5c-8cfc-f9f966599271"), Type = TextBlockType.Text, Text = "You know how to turn combat into a form of entertainment. You become trained in Gladiatorial Lore; if already trained in Gladiatorial Lore, you instead become trained in another Lore skill of your choice." };
-            yield return new TextBlock { Id = Guid.Parse("22b3c866-71e8-4175-aae2-7c89b437a522"), Type = TextBlockType.Text, Text = "At the start of a combat encounter, if you have spectators, you gain a number of temporary HP equal to your character level for 1 minute and you can roll Performance for your initiative." };
-            yield return new TextBlock { Id = Guid.Parse("97113be6-52db-4578-bee4-2423eec8351f"), Type = TextBlockType.Text, Text = "If there are sapient creatures observing a combat encounter, and these onlookers are neither engaged in the combat themselves nor allied or affiliated with either side, the combatants have spectators. The GM is the final arbiter." };
+            yield return new TextBlock { Id = Guid.Parse("9a00d674-645e-475b-b0fa-6287ba178a4a"), Type = TextBlockType.Text, Text = "You know how to turn combat into a form of entertainment. You become trained in Gladiatorial Lore; if already trained in Gladiatorial Lore, you instead become trained in another Lore skill of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("828a6115-b7c4-4fbd-a259-3d2167d9edb5"), Type = TextBlockType.Text, Text = "At the start of a combat encounter, if you have spectators, you gain a number of temporary HP equal to your character level for 1 minute and you can roll Performance for your initiative." };
+            yield return new TextBlock { Id = Guid.Parse("ec0054f5-5331-450a-80df-7d2ec0406f53"), Type = TextBlockType.Text, Text = "If there are sapient creatures observing a combat encounter, and these onlookers are neither engaged in the combat themselves nor allied or affiliated with either side, the combatants have spectators. The GM is the final arbiter." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("eb93346c-37d7-4bd5-a7d2-d380c083b02e"), Feats.Instances.ImpressibePerformance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d0ca338c-a3a1-4762-bb4f-fe69a4a861e2"), Feats.Instances.ImpressivePerformance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d161a621-694e-4d11-bf14-3aaee0474500"),
+                Id = Guid.Parse("c2d3ecd7-cd82-4426-b0ff-2232f041b319"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

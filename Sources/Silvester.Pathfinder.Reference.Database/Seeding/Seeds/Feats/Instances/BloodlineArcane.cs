@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BloodlineArcane : Template
     {
-        public static readonly Guid ID = Guid.Parse("b7f1dd67-0668-4535-88cb-feb48a09cdd1");
+        public static readonly Guid ID = Guid.Parse("999263ba-9f7f-4e72-aecd-c101acda4107");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a5f1fb8-9f3d-4ddb-b547-d16a5ca32977"), Type = TextBlockType.Text, Text = "__Your bloodline is arcane.__" };
+            yield return new TextBlock { Id = Guid.Parse("8607cb02-ee69-4fb4-bb60-f6b6939b7bbb"), Type = TextBlockType.Text, Text = "__Your bloodline is arcane.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f3135a9d-6c89-4b26-81fe-2be985f01191"),
+                Id = Guid.Parse("12f94a6f-fa0b-4263-bad6-0f3f86c6bb52"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

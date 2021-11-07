@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SixthPillarDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("7f325ec4-5e38-495c-9e9d-ee140d4d8883");
+        public static readonly Guid ID = Guid.Parse("bfde807a-0298-4329-adcc-836d2906b5d4");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("16d7eefd-a0f2-4a77-bf17-61ff0510ed9f"), Type = TextBlockType.Text, Text = "You use your physical discipline to channel your magic. If your proficiency rank in unarmed attacks is at least expert, your proficiency rank in spell attacks increases to expert. Likewise, if your proficiency rank in spell attacks is at least expert, your proficiency rank in unarmed attacks improves to expert. You become an expert in Athletics, or in another trained skill if you were already expert in Athletics." };
-            yield return new TextBlock { Id = Guid.Parse("2a0d262a-0fb3-48e7-9557-5ccd1443cfd0"), Type = TextBlockType.Text, Text = "__Manually improve your spell attacks and unarmed attacks proficiencies accordingly.__" };
+            yield return new TextBlock { Id = Guid.Parse("c1b6b570-19ab-447a-94d3-e4a733c5ef26"), Type = TextBlockType.Text, Text = "You use your physical discipline to channel your magic. If your proficiency rank in unarmed attacks is at least expert, your proficiency rank in spell attacks increases to expert. Likewise, if your proficiency rank in spell attacks is at least expert, your proficiency rank in unarmed attacks improves to expert. You become an expert in Athletics, or in another trained skill if you were already expert in Athletics." };
+            yield return new TextBlock { Id = Guid.Parse("f53c3735-dd95-4aec-ade6-ee41d9d2ff00"), Type = TextBlockType.Text, Text = "__Manually improve your spell attacks and unarmed attacks proficiencies accordingly.__" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyMagicTradition(Guid.Parse("5c92335c-2f95-4b41-9592-d013e767d7e2"));
-            builder.HaveSpecificStat(Guid.Parse("a5ac072d-ec6f-4865-bf82-5fa5bfd0942c"), requiredStatValue: 14, Stats.Instances.Dexterity.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("3a641a57-57d9-444d-9846-83e350b50643"), Proficiencies.Instances.Expert.ID, Skills.Instances.Acrobatics.ID);
+            builder.HaveAnyMagicTradition(Guid.Parse("d0fb9cfa-53cd-4aef-8fa1-de56378d305d"));
+            builder.HaveSpecificStat(Guid.Parse("28f76f02-2e71-4937-8897-fcdbfec91953"), requiredStatValue: 14, Stats.Instances.Dexterity.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("0b305d29-dbe3-4f71-b947-1e7d40d90a69"), Proficiencies.Instances.Expert.ID, Skills.Instances.Acrobatics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -49,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cb3f1517-bdf9-410d-b21f-9fa303316bee"),
+                Id = Guid.Parse("6d6ebe61-3820-4d94-b1ed-f64ba4f4e10b"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

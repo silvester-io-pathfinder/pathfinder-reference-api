@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DivinerSense : Template
     {
-        public static readonly Guid ID = Guid.Parse("bb6cc394-e9f2-4571-b87e-9be8e75bcabb");
+        public static readonly Guid ID = Guid.Parse("8f2daa37-438e-4aff-ac6e-5b96c2c5c390");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fa0a7705-e901-4c68-bf77-3cbacb40abd6"), Type = TextBlockType.Text, Text = "You sense magical dangers. When using the (activity: Detect Magic) exploration activity, you can roll initiative twice and use the better result so long as at least one opponent has a (trait: magical) effect or magic item and is in range of your (spell: detect magic)." };
+            yield return new TextBlock { Id = Guid.Parse("fb9ead8f-1210-4dc1-85db-c513ec4a259f"), Type = TextBlockType.Text, Text = "You sense magical dangers. When using the (activity: Detect Magic) exploration activity, you can roll initiative twice and use the better result so long as at least one opponent has a (trait: magical) effect or magic item and is in range of your (spell: detect magic)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c44dee08-bfe5-4c94-a4f7-2193ac03f307"),
+                Id = Guid.Parse("c5506376-e193-4d82-aa7f-d82ec23f46de"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

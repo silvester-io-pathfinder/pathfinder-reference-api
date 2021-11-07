@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LivingMonolithDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("b0947f55-7876-4ce0-a25f-51a8a2b2a7d0");
+        public static readonly Guid ID = Guid.Parse("b04902b8-887e-44fd-bad2-587739876c45");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("68ec25d5-4f61-4581-8d00-992b63b64b68"), Type = TextBlockType.Text, Text = "~ Access: You are from the Golden Road region." };
-            yield return new TextBlock { Id = Guid.Parse("5c61b584-648a-46ec-be09-d5bb97dc8eaa"), Type = TextBlockType.Text, Text = "You’ve begun to inscribe a magical stone called a ka stone that you will someday tie to your soul. You gain knowledge of Ancient Osirion and a connection to your nascent ka stone. If you fail a recovery check while dying, your dying condition does not increase; if you critically fail, your dying condition increases by only 1. You become trained in Ancient Osirion Lore, or expert if you were already trained." };
+            yield return new TextBlock { Id = Guid.Parse("0a378743-da8c-47ac-8f63-7f13dfc518ad"), Type = TextBlockType.Text, Text = "~ Access: You are from the Golden Road region." };
+            yield return new TextBlock { Id = Guid.Parse("3135bfa2-1916-4756-95e6-a1a5963d3fbf"), Type = TextBlockType.Text, Text = "You’ve begun to inscribe a magical stone called a ka stone that you will someday tie to your soul. You gain knowledge of Ancient Osirion and a connection to your nascent ka stone. If you fail a recovery check while dying, your dying condition does not increase; if you critically fail, your dying condition increases by only 1. You become trained in Ancient Osirion Lore, or expert if you were already trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("214f08c9-929c-4cfb-919c-332c1e8c3809"), Feats.Instances.AncientOsiriani.ID);
-            builder.HaveSpecificLanguage(Guid.Parse("15abbacb-c116-4919-a952-1138bdb78dd6"), Languages.Instances.Sphinx.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("746816a4-0bab-4dca-ba72-b86c1ab5578c"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificLanguage(Guid.Parse("19b5534f-889e-47ac-a95d-04f4b7e96fde"), Languages.Instances.Osiriani.ID);
+            builder.HaveSpecificLanguage(Guid.Parse("7c69ceec-761e-4b60-8e07-3192c4fdcad4"), Languages.Instances.Sphinx.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("19e06ec9-ba22-43bd-b6aa-6a9c4ea5d782"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -49,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("959d6fb0-7c8c-4cc5-ba1e-27c280bc0871"),
+                Id = Guid.Parse("733a2c08-d379-4e74-8b9e-b4f3ba79ba1e"),
                 SourceId = Sources.Instances.LostOmensWorldGuide.ID,
                 Page = -1
             };

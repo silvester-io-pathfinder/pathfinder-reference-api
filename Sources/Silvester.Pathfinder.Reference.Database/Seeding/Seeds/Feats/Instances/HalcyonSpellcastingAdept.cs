@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HalcyonSpellcastingAdept : Template
     {
-        public static readonly Guid ID = Guid.Parse("9a326d6c-7a3d-44cd-8179-a71ff961dc4d");
+        public static readonly Guid ID = Guid.Parse("5ce98ae4-97ab-4e03-8220-328fe259f875");
 
         protected override Feat GetFeat()
         {
@@ -28,24 +29,24 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8e7787d2-32ef-42cb-8c7a-63a7a401e902"), Type = TextBlockType.Text, Text = "You refine your halcyon magic. You gain two common 4th-level halcyon spells and two 5th-level halcyon spells. You also gain a 4th-level halcyon spell slot and a 5th-level halcyon spell slot. Your proficiency rank in either arcane or primal spell DCs and spell attack rolls advances from trained to expert." };
+            yield return new TextBlock { Id = Guid.Parse("e7c9f12f-77fa-4040-81c5-be6183be6566"), Type = TextBlockType.Text, Text = "You refine your halcyon magic. You gain two common 4th-level halcyon spells and two 5th-level halcyon spells. You also gain a 4th-level halcyon spell slot and a 5th-level halcyon spell slot. Your proficiency rank in either arcane or primal spell DCs and spell attack rolls advances from trained to expert." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("e0e4b45a-8ae4-4a92-a166-4ab6689db12a"), Feats.Instances.HalcyonSpellcastingInitiate.ID);
-            builder.AddOr(Guid.Parse("a46673ea-9990-42cb-af58-e151dfc7ec19"), or => 
+            builder.HaveSpecificFeat(Guid.Parse("db5b2cb4-e583-44f3-88d0-9d2eb6776212"), Feats.Instances.HalcyonSpellcastingInitiate.ID);
+            builder.AddOr(Guid.Parse("91b9cc49-81ae-4f6b-8cf8-1901b636194a"), or => 
             {
-                or.AddAnd(Guid.Parse("5c81082c-a976-454d-a35f-cb97eebb68f9"), and => 
+                or.AddAnd(Guid.Parse("2de6fb26-8a44-43f0-8fa5-d64d09f381a5"), and => 
                 {
-                    and.HaveSpecificSkillProficiency(Guid.Parse("afb11a5a-0685-4c17-bcba-ff39d3f380c4"), Proficiencies.Instances.Master.ID, Skills.Instances.Arcana.ID);
-                    and.HaveSpecificSkillProficiency(Guid.Parse("7f4603da-4d98-4dca-98dc-a812e856423e"), Proficiencies.Instances.Expert.ID, Skills.Instances.Nature.ID);
+                    and.HaveSpecificSkillProficiency(Guid.Parse("d21f90ca-d43a-4090-9ba0-fb627b22ed21"), Proficiencies.Instances.Master.ID, Skills.Instances.Arcana.ID);
+                    and.HaveSpecificSkillProficiency(Guid.Parse("fe4bae79-307d-49a8-b08a-f3a7d43c4ddf"), Proficiencies.Instances.Expert.ID, Skills.Instances.Nature.ID);
                 });
-                or.AddAnd(Guid.Parse("d86cff60-319c-457c-a276-3b7cec1555d6"), and => 
+                or.AddAnd(Guid.Parse("fbc12b20-c38e-462f-8747-e8abb7cc6bef"), and => 
                 {
-                    and.HaveSpecificSkillProficiency(Guid.Parse("b828f868-4654-4f39-8162-52080b3ec897"), Proficiencies.Instances.Expert.ID, Skills.Instances.Arcana.ID);
-                    and.HaveSpecificSkillProficiency(Guid.Parse("1e101c93-d0a3-4cee-9249-875aa07e6144"), Proficiencies.Instances.Master.ID, Skills.Instances.Nature.ID);
+                    and.HaveSpecificSkillProficiency(Guid.Parse("b87895bd-efda-4321-b8fa-e30f5e294930"), Proficiencies.Instances.Expert.ID, Skills.Instances.Arcana.ID);
+                    and.HaveSpecificSkillProficiency(Guid.Parse("0aa42d37-066d-4c6a-ac4a-2318db4a44f8"), Proficiencies.Instances.Master.ID, Skills.Instances.Nature.ID);
                 });
             });
         }
@@ -59,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6a584c24-549e-4492-a6e0-3c90c650c780"),
+                Id = Guid.Parse("58f427e5-c0fa-42d5-beeb-12ad314e64a1"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

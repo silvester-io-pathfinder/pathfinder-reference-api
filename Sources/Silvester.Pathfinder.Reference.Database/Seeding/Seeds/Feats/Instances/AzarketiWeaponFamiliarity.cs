@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AzarketiWeaponFamiliarity : Template
     {
-        public static readonly Guid ID = Guid.Parse("ee389028-4264-40aa-8e48-00efafbcfced");
+        public static readonly Guid ID = Guid.Parse("9fd15dcc-e5e2-4f22-b67d-dee5ced2017c");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7ad09c19-4b0d-4f05-8f51-bb52eaf59a1c"), Type = TextBlockType.Text, Text = "You are familiar with weapons that excel underwater. You are trained with (item: crossbows | crossbow), (item: hand crossbows | hand crossbow), (item: longspears | longspear), (item: spears | spear), and (item: tridents | trident). In addition, you gain access to all uncommon azarketi weapons. For the purpose of determining your proficiency, martial azarketi weapons are simple weapons and advanced azarketi weapons are martial weapons." };
+            yield return new TextBlock { Id = Guid.Parse("0022754c-b0db-4c05-a4d9-e35414981e3c"), Type = TextBlockType.Text, Text = "You are familiar with weapons that excel underwater. You are trained with (item: crossbows | crossbow), (item: hand crossbows | hand crossbow), (item: longspears | longspear), (item: spears | spear), and (item: tridents | trident). In addition, you gain access to all uncommon azarketi weapons. For the purpose of determining your proficiency, martial azarketi weapons are simple weapons and advanced azarketi weapons are martial weapons." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e86b8aa7-7b00-47c3-b6ad-50df885ed865"),
+                Id = Guid.Parse("d0c742c6-a414-4110-ba55-efb5ec909cf2"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

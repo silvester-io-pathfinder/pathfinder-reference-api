@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DartingAttack : Template
     {
-        public static readonly Guid ID = Guid.Parse("14ef1d6a-e68e-4cc1-84b0-98942b788af8");
+        public static readonly Guid ID = Guid.Parse("0b6a772e-b921-4b14-bd5c-25b328014b52");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("164e5700-c4f0-4868-974d-d7e18b0a7342"), Type = TextBlockType.Text, Text = "The raptor (action: Steps | Step) up to 10 feet and then (action: Strikes | Strike), or (action: Strikes | Strike) and then (action: Steps | Step) up to 10 feet." };
+            yield return new TextBlock { Id = Guid.Parse("cb720d20-d0ed-4df2-aa49-c8283b035853"), Type = TextBlockType.Text, Text = "The raptor (action: Steps | Step) up to 10 feet and then (action: Strikes | Strike), or (action: Strikes | Strike) and then (action: Steps | Step) up to 10 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c783bef6-aee8-4024-8f99-9bfc0bfde0c5"),
+                Id = Guid.Parse("40ec6b2e-0d5d-4c4d-97e9-7818e28763c5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

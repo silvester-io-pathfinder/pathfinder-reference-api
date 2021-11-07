@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SchoolSpellRedirection : Template
     {
-        public static readonly Guid ID = Guid.Parse("f4d26e3e-591c-4a17-b10b-5ad8a5a6dbaa");
+        public static readonly Guid ID = Guid.Parse("d5fca088-93bd-4a51-8609-39ebddcd276d");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bbce26a1-f0e9-449d-afa3-ba05123bdfd1"), Type = TextBlockType.Text, Text = "When you (feat: Counterspell) a spell with a school matching your specialization, if you critically succeed at your counteract check, or if you succeed while using a spell of a higher level than the spell you countered, you can redirect the spell you countered. You choose the target, area, and other aspects of the spell and use your own spell DC, spell attack roll, or other statistics as appropriate to determine the effects." };
+            yield return new TextBlock { Id = Guid.Parse("ee220f5c-11a1-448c-8894-985f535ad0c9"), Type = TextBlockType.Text, Text = "When you (feat: Counterspell) a spell with a school matching your specialization, if you critically succeed at your counteract check, or if you succeed while using a spell of a higher level than the spell you countered, you can redirect the spell you countered. You choose the target, area, and other aspects of the spell and use your own spell DC, spell attack roll, or other statistics as appropriate to determine the effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("8251bf54-d359-4070-bcd9-5f4b19e8969f"), Feats.Instances.Counterspell.ID);
-            builder.HaveSpecificFeat(Guid.Parse("41d3dcf7-a3a4-4f50-a0f3-e83ab9984419"), Feats.Instances.RunelordDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("99c4976f-04cd-4a55-8495-d29b9fa57f6b"), Feats.Instances.Counterspell.ID);
+            builder.HaveSpecificFeat(Guid.Parse("74b3ce9d-af45-488e-a89c-31d0c4311480"), Feats.Instances.RunelordDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("055ddcaa-53a6-4e0f-99dc-27a8fef9f9b7"),
+                Id = Guid.Parse("bd15add8-e769-44a5-a2f3-4f1bdc1469c6"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

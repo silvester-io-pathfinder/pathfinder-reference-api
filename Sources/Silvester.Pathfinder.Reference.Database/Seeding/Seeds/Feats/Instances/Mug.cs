@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Mug : Template
     {
-        public static readonly Guid ID = Guid.Parse("75dfb478-ae2b-45e9-9d2f-92b0e5478ba6");
+        public static readonly Guid ID = Guid.Parse("40d0eb8c-e64f-4411-b984-e793ab86afb6");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9d1dbb63-1ae3-4e7b-8c64-d17c9414df1c"), Type = TextBlockType.Text, Text = "You make a quick attack and rob your foe in the process. Make a melee (action: Strike) against an adjacent foe. If you hit and deal sneak attack damage, you can also attempt to (action: Steal) from the target, even if the target is in combat." };
+            yield return new TextBlock { Id = Guid.Parse("4e421465-1332-4453-af0c-48f802c8ea9e"), Type = TextBlockType.Text, Text = "You make a quick attack and rob your foe in the process. Make a melee (action: Strike) against an adjacent foe. If you hit and deal sneak attack damage, you can also attempt to (action: Steal) from the target, even if the target is in combat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b7ee7876-8370-414d-8013-14ca698883ab"),
+                Id = Guid.Parse("44ccb9a0-5537-4d4d-a5fd-dcfebde4fb40"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

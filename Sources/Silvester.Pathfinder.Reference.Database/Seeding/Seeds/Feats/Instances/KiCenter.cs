@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class KiCenter : Template
     {
-        public static readonly Guid ID = Guid.Parse("724148c0-20af-4604-9373-88c19eb7ff97");
+        public static readonly Guid ID = Guid.Parse("7425e376-a3ef-4707-b194-f20a19ffa070");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0780f97d-681d-4af0-9dc7-335f7788cad1"), Type = TextBlockType.Text, Text = "You center yourself with the universe and draw upon its vast power. You cast a single action ki spell with the stance trait, without spending a Focus Point." };
+            yield return new TextBlock { Id = Guid.Parse("19ead337-c8b4-4fe8-8fc4-d2f386ba1c84"), Type = TextBlockType.Text, Text = "You center yourself with the universe and draw upon its vast power. You cast a single action ki spell with the stance trait, without spending a Focus Point." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyKiSpells(Guid.Parse("55f73f72-767f-4719-a5a4-1e6734b99247"));
-            builder.HaveSpecificFeat(Guid.Parse("5b81f915-1a5b-41a7-a888-e90a67559bf8"), Feats.Instances.MasterOfManyStyles.ID);
+            builder.HaveAnyKiSpells(Guid.Parse("313efd76-170b-49c2-bd08-41873c1af2f0"));
+            builder.HaveSpecificFeat(Guid.Parse("3c69ab7a-3848-4cff-8ef4-a04fcccddc9a"), Feats.Instances.MasterOfManyStyles.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8e532389-706b-4165-a567-3fe5632ba46c"),
+                Id = Guid.Parse("d6abbbf5-d7db-4578-a5dd-e17dea6417fa"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

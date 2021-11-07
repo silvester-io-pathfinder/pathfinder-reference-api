@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImprovedElementalBulwark : Template
     {
-        public static readonly Guid ID = Guid.Parse("c09cf95f-a1c6-427b-a10e-a1941de1ae5d");
+        public static readonly Guid ID = Guid.Parse("639c28df-89be-4ca5-903c-980c738e1e34");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("186016a8-8b62-4d59-b7d3-a03674218094"), Type = TextBlockType.Text, Text = "You gain resistance 10 from (feat: Elemental Bulwark) instead of 5." };
+            yield return new TextBlock { Id = Guid.Parse("2f11a2c8-5951-44af-a423-417115504d64"), Type = TextBlockType.Text, Text = "You gain resistance 10 from (feat: Elemental Bulwark) instead of 5." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("115f7f24-eb34-45a4-85e6-1a13de2664aa"), Feats.Instances.ElementalBulwark.ID);
+            builder.HaveSpecificFeat(Guid.Parse("197d710f-d481-4351-9bd8-e8f9517c001d"), Feats.Instances.ElementalBulwark.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0901b095-b072-4d01-b1f1-42d3db1aad6c"),
+                Id = Guid.Parse("9fc064f7-d65f-498c-84c8-2941c06f6005"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

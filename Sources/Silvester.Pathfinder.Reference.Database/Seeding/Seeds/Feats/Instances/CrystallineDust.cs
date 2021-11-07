@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CrystallineDust : Template
     {
-        public static readonly Guid ID = Guid.Parse("0e3b9fff-c12b-4ee5-adfb-6b9d75736747");
+        public static readonly Guid ID = Guid.Parse("0d844bc4-8893-4ac6-b591-32e7a8702264");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7fc02b34-afd3-44d3-86c9-cd6a7020122d"), Type = TextBlockType.Text, Text = "You’ve learned to disperse the crystalline motes coating your body as a haze. You become concealed, though you can’t use this concealment to (action: Hide) or (action: Sneak), as normal for concealment where your position is still obvious. The motes stay within an inch of your skin, move with you, and last for a number of rounds equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("e9d1e327-da70-4918-9dfa-dab8eff2dfb2"), Type = TextBlockType.Text, Text = "You’ve learned to disperse the crystalline motes coating your body as a haze. You become concealed, though you can’t use this concealment to (action: Hide) or (action: Sneak), as normal for concealment where your position is still obvious. The motes stay within an inch of your skin, move with you, and last for a number of rounds equal to half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("34acb0b5-940a-416b-838f-12dc1b649c25"),
+                Id = Guid.Parse("f7e132ce-c7aa-4a0b-afcd-8a7127f8ba9e"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

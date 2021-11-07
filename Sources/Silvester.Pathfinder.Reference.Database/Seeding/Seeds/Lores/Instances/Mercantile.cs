@@ -3,9 +3,9 @@ using System;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Lores.Instances
 {
-    public class Mercantile : Template
+    public class Driving : Template
     {
-        public static readonly Guid ID = Guid.Parse("a017fa74-7dd3-4e49-b0ab-e56b53acb642");
+        public static readonly Guid ID = Guid.Parse("");
 
         protected override Lore GetLore()
         {
@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Lores.Instances
             {
                 Id = ID,
                 StatModifierId = Stats.Instances.Intelligence.ID,
-                Name = "Mercantile"
+                Name = "Driving"
             };
         }
     }

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImprovisedCrafting : Template
     {
-        public static readonly Guid ID = Guid.Parse("582a0638-ae4e-4495-8ffa-3751e8d4e9e5");
+        public static readonly Guid ID = Guid.Parse("eb33a10e-0a81-4967-b353-2543c2ecc387");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("afb9902e-3154-455e-83bc-e9728e9a57d0"), Type = TextBlockType.Text, Text = "You&#39;ve learned to repair your equipment even in challenging circumstances, making use of what you have available. You can attempt to (action: Repair) an item without a (item: repair kit), instead improvising tools out of your gear or found items. This adds 5 minutes to the time it takes to (action: Repair) the item. You can also (action: Repair) an item while on the move without needing a stable surface. This adds 10 minutes to the times it takes to (action: Repair) the item." };
+            yield return new TextBlock { Id = Guid.Parse("b6c7b033-472b-44a5-8718-51fe87b51f1c"), Type = TextBlockType.Text, Text = "You&#39;ve learned to repair your equipment even in challenging circumstances, making use of what you have available. You can attempt to (action: Repair) an item without a (item: repair kit), instead improvising tools out of your gear or found items. This adds 5 minutes to the time it takes to (action: Repair) the item. You can also (action: Repair) an item while on the move without needing a stable surface. This adds 10 minutes to the times it takes to (action: Repair) the item." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("6eef0c7f-ca39-4cd1-8cd3-29b4cad1889d"), Feats.Instances.SwordmasterDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("48383586-2a9f-4a96-a921-a0f9352aab5b"), Proficiencies.Instances.Expert.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("bdae461f-166c-4a3a-bc18-24949640993b"), Feats.Instances.SwordmasterDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("ad86932f-41b1-42f4-8b57-04cb99a7da2e"), Proficiencies.Instances.Expert.ID, Skills.Instances.Crafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("dd13bd1c-0fa0-4c9e-843f-e38e47ba1e82"),
+                Id = Guid.Parse("581c3265-63c4-43df-959b-7bc68d3062db"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

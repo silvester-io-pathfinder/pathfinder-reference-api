@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CutTheBonds : Template
     {
-        public static readonly Guid ID = Guid.Parse("5ddf88e7-90cb-4cc8-9f7f-5e62b289d38e");
+        public static readonly Guid ID = Guid.Parse("db87edfd-0558-45d6-a82e-623a4dfacb27");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0e24ec57-e661-4712-b1c1-9fbc6e742a1b"), Type = TextBlockType.Text, Text = "Select a magical effect that has made an adjacent member of your crop clumsy, grabbed, paralyzed, restrained, or slowed. Attempt a counteract check using your attack modifier (including your multiple attack penalty) with a melee weapon with which you have expert proficiency. Your counteract level is half your level rounded up. On a success, you free that member from the effect; on a failure, you can’t attempt to use Cut the Bonds on that effect on that crop member until 24 hours have passed." };
+            yield return new TextBlock { Id = Guid.Parse("ddcaf719-ca9c-4b69-9608-386ac435e7ea"), Type = TextBlockType.Text, Text = "Select a magical effect that has made an adjacent member of your crop clumsy, grabbed, paralyzed, restrained, or slowed. Attempt a counteract check using your attack modifier (including your multiple attack penalty) with a melee weapon with which you have expert proficiency. Your counteract level is half your level rounded up. On a success, you free that member from the effect; on a failure, you can’t attempt to use Cut the Bonds on that effect on that crop member until 24 hours have passed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("19c69658-9e18-45d0-a168-4ff385b55d77"), Feats.Instances.BellflowerTillerDedication.ID);
-            builder.HaveAnyMeleeWeaponSpecificProficiency(Guid.Parse("a3bc842d-d65a-4fec-aac9-542c71869e2e"), Proficiencies.Instances.Expert.ID);
+            builder.HaveSpecificFeat(Guid.Parse("b5778e6a-f7e4-4ac0-9393-264febf60fb4"), Feats.Instances.BellflowerTillerDedication.ID);
+            builder.HaveAnyMeleeWeaponSpecificProficiency(Guid.Parse("ae5edd25-c746-4f93-9d5c-767d707e9872"), Proficiencies.Instances.Expert.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("354da8b9-7afa-45a0-81a4-ceeb3383ce92"),
+                Id = Guid.Parse("73e6b231-eb0c-46fc-a715-500380b4269b"),
                 SourceId = Sources.Instances.AgeOfAshes.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationSensoryArray : Template
     {
-        public static readonly Guid ID = Guid.Parse("ea4c2486-c8d9-4ae7-82b5-0e9a0c46381f");
+        public static readonly Guid ID = Guid.Parse("5e6e516b-3465-4f3f-a9e9-43dd7746a1bd");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("823c7e6d-fec0-489a-a706-34754d610440"), Type = TextBlockType.Text, Text = "Additional sensory devices give your innovation low-light vision and darkvision, as well as imprecise tremorsense out to a range of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("50fa0e97-f77d-4162-a59e-d7a02367150a"), Type = TextBlockType.Text, Text = "Additional sensory devices give your innovation low-light vision and darkvision, as well as imprecise tremorsense out to a range of 30 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("15ae68a2-8d2e-4f6f-8b08-fa95d3268f04"),
+                Id = Guid.Parse("61762556-dfef-4dcf-ad21-28d374a576a6"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

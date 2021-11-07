@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class VisionOfWeakness : Template
     {
-        public static readonly Guid ID = Guid.Parse("78d7b221-34ea-47f5-98f5-32e7797a1b8c");
+        public static readonly Guid ID = Guid.Parse("131a1ccf-d5d7-4daa-b215-703eece6fbdb");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2dcde2f2-7cc6-4613-a879-d6aae05a48de"), Type = TextBlockType.Text, Text = "You can call upon divine insights to single out your foes’ weak points. You learn the (spell: vision of weakness) revelation spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("600dbfed-e967-4fc5-bb2d-de6e5ba38231"), Type = TextBlockType.Text, Text = "You can call upon divine insights to single out your foes’ weak points. You learn the (spell: vision of weakness) revelation spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("61799d7d-ca56-4716-91cc-d344f1a8d273"),
+                Id = Guid.Parse("dca02c85-bf1f-40b7-a92c-5e732c5ea8f4"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

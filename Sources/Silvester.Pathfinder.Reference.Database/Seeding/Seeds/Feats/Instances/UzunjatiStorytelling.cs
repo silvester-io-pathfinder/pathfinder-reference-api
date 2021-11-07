@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UzunjatiStorytelling : Template
     {
-        public static readonly Guid ID = Guid.Parse("9be18e0e-84af-4148-9b17-2f55609bce1e");
+        public static readonly Guid ID = Guid.Parse("eb913c78-5105-44ba-91e1-d8bc0a216d52");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c92c6bc7-b71b-4cfd-b998-ced1f8551879"), Type = TextBlockType.Text, Text = "You tell a quick story or begin telling a longer tale. This is most useful when you want to prove your scholarly credibility or impress someone quickly. Roll a check with a skill that can be used to (action: Recall Knowledge) in which you have expert proficiency, using the result entry for the (action: Perform) action. Like (action: Performing | Perform), storytelling rarely has an effect on its own, but it might influence the DCs of subsequent Diplomacy checks against the observers – or even change their attitudes – if the GM sees fit. This action is not a performance and cannot be used in place of anything that requires you to (action: Perform)." };
+            yield return new TextBlock { Id = Guid.Parse("b1cd7551-84f5-4f84-93bc-46ad60c7026f"), Type = TextBlockType.Text, Text = "You tell a quick story or begin telling a longer tale. This is most useful when you want to prove your scholarly credibility or impress someone quickly. Roll a check with a skill that can be used to (action: Recall Knowledge) in which you have expert proficiency, using the result entry for the (action: Perform) action. Like (action: Performing | Perform), storytelling rarely has an effect on its own, but it might influence the DCs of subsequent Diplomacy checks against the observers – or even change their attitudes – if the GM sees fit. This action is not a performance and cannot be used in place of anything that requires you to (action: Perform)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("29cf145b-db39-424b-991e-d13a067fdbbe"), Feats.Instances.MagaambyanAttendantDedication.ID);
-            builder.Manual(Guid.Parse("c98a3004-2ac9-4965-a86b-98ce0533292e"), "Uzunjati affiliation");
-            builder.HaveSpecificRecallKnowledgeProficiency(Guid.Parse("42a62fce-0911-4e6b-a001-d05a9f6566b9"), Proficiencies.Instances.Master.ID, requiresAssurance: False);
+            builder.HaveSpecificFeat(Guid.Parse("44cfcac0-7f34-4874-9a01-e97285dd9821"), Feats.Instances.MagaambyanAttendantDedication.ID);
+            builder.Manual(Guid.Parse("1b9ac7cb-7ee9-4945-afad-7bb9767babec"), "Uzunjati affiliation");
+            builder.HaveSpecificRecallKnowledgeProficiency(Guid.Parse("e2849378-8005-4187-9678-7d33724276f8"), Proficiencies.Instances.Master.ID, requiresAssurance: false);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("532a91b1-691e-4dd2-8206-0c1274914c36"),
+                Id = Guid.Parse("0cf35dfd-8215-4ae1-8150-de2dac35178c"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

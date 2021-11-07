@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SorcererElementalistWater : Template
     {
-        public static readonly Guid ID = Guid.Parse("9db055ae-b9c6-4ed4-8025-cd11e8621808");
+        public static readonly Guid ID = Guid.Parse("26d258c0-1be9-45cc-8fed-059acba155c7");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fdbcaf4c-e2c7-4c8d-9f7d-86d046ed3379"), Type = TextBlockType.Text, Text = "You replace your initial bloodline spell with the initial water elemental focus spell ((spell: rising surf)), and your advanced bloodline spell (if you get it) with the advanced water elemental focus spell ((spell: pulverizing cascade))." };
-            yield return new TextBlock { Id = Guid.Parse("79065fc1-841b-45a0-a1aa-1ff449dbab89"), Type = TextBlockType.Text, Text = "You can only select this option if your bloodline&#39;s elemental type is water." };
+            yield return new TextBlock { Id = Guid.Parse("a3e9e9fa-30d2-4a55-ab60-0a6dbebdbf4b"), Type = TextBlockType.Text, Text = "You replace your initial bloodline spell with the initial water elemental focus spell ((spell: rising surf)), and your advanced bloodline spell (if you get it) with the advanced water elemental focus spell ((spell: pulverizing cascade))." };
+            yield return new TextBlock { Id = Guid.Parse("2ce49c2a-f41e-488a-8978-d083d7414c6c"), Type = TextBlockType.Text, Text = "You can only select this option if your bloodline&#39;s elemental type is water." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ca4ca6c2-fa53-4f44-bf40-e3c863b38187"),
+                Id = Guid.Parse("f067ac6d-0e30-46dc-95de-532cb887ac3d"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

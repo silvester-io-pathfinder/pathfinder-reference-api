@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TenseNegotiator : Template
     {
-        public static readonly Guid ID = Guid.Parse("c159bcd0-38ad-4322-a32a-de90db4b5550");
+        public static readonly Guid ID = Guid.Parse("10972a02-dbb6-4fa2-af49-e1742a5aff9d");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("792f8e6b-e200-4965-a86b-2ab4ac87c827"), Type = TextBlockType.Text, Text = "You often find that the best way to win a conflict means avoiding a fight in the first place. You&#39;re good at talking to potential opponents without making things worse. If you would critically fail at a check to (action: Make an Impression), you instead fail. You can attempt checks to make (action: Requests | Request) of creatures who&#39;re indifferent or unfriendly toward you." };
+            yield return new TextBlock { Id = Guid.Parse("9f3e655f-ebbf-46e3-a907-316e9939a5a9"), Type = TextBlockType.Text, Text = "You often find that the best way to win a conflict means avoiding a fight in the first place. You&#39;re good at talking to potential opponents without making things worse. If you would critically fail at a check to (action: Make an Impression), you instead fail. You can attempt checks to make (action: Requests | Request) of creatures who&#39;re indifferent or unfriendly toward you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("0be8251b-88d5-4329-b57f-7b6a741b185f"), Feats.Instances.SwordmasterDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("8c6b9b2f-b190-42f4-8eef-ff3367d852c3"), Proficiencies.Instances.Master.ID, Skills.Instances.Diplomacy.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d8632b51-e0c8-4407-b52d-7ad32b4da90d"), Feats.Instances.SwordmasterDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("c2b28fb8-ae87-42b2-a691-59006dbe4dde"), Proficiencies.Instances.Master.ID, Skills.Instances.Diplomacy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c8942f73-35e5-47e2-9d91-d5d82759d2f8"),
+                Id = Guid.Parse("44144c49-ac13-4ef0-9f13-3b990fdab30b"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

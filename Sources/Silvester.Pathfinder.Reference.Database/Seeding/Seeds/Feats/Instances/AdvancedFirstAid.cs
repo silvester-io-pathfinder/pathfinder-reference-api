@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdvancedFirstAid : Template
     {
-        public static readonly Guid ID = Guid.Parse("e8e6f265-8d9e-4a0e-afb9-06c9403a5be9");
+        public static readonly Guid ID = Guid.Parse("65ab8f38-e565-46ad-88a8-c119ff7448c4");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e93c184a-a930-4011-b60c-e48520871896"), Type = TextBlockType.Text, Text = "You use your medical training to ameliorate sickness or assuage fears. When you use Medicine to (action: Administer First Aid), instead of Stabilizing a character or Stopping Bleeding, you can reduce an ally’s frightened or sickened condition by 2, or remove either of those conditions entirely on a critical success. You can remove only one condition at a time. The DC for the Medicine check is usually the DC of the effect that caused the condition." };
+            yield return new TextBlock { Id = Guid.Parse("4b2a9766-f39b-420a-ab09-de79f2556ce9"), Type = TextBlockType.Text, Text = "You use your medical training to ameliorate sickness or assuage fears. When you use Medicine to (action: Administer First Aid), instead of Stabilizing a character or Stopping Bleeding, you can reduce an ally’s frightened or sickened condition by 2, or remove either of those conditions entirely on a critical success. You can remove only one condition at a time. The DC for the Medicine check is usually the DC of the effect that caused the condition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("947819f1-b12d-4760-afa8-6cc7f49ad398"), Proficiencies.Instances.Master.ID, Skills.Instances.Medicine.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("f58b0cd3-d71a-4447-9756-54a6bba9aebd"), Proficiencies.Instances.Master.ID, Skills.Instances.Medicine.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8e857a77-a70e-4846-bb00-46916e38fd5f"),
+                Id = Guid.Parse("3576dfee-2767-4390-a2f5-532f59cb4362"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

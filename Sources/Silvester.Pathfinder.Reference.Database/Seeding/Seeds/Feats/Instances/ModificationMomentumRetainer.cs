@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationMomentumRetainer : Template
     {
-        public static readonly Guid ID = Guid.Parse("c7e3d58c-caac-456a-b042-c8cce840ffe9");
+        public static readonly Guid ID = Guid.Parse("d0ff8bdf-7e02-4c77-a4ae-4bf375c9535d");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e827027-d699-46e0-86bb-9e538b175064"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
-            yield return new TextBlock { Id = Guid.Parse("62fc82e5-81c0-4e28-8c89-964aa2125054"), Type = TextBlockType.Text, Text = "A special weighted device lets your weapon retain more of its momentum when you attack. Your innovation gains the (trait: forceful) and (trait: versatile B) traits." };
+            yield return new TextBlock { Id = Guid.Parse("27bf7a62-a84d-47dc-959c-0d9965f8219c"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
+            yield return new TextBlock { Id = Guid.Parse("516fcb69-b266-4825-ba41-d11833539c29"), Type = TextBlockType.Text, Text = "A special weighted device lets your weapon retain more of its momentum when you attack. Your innovation gains the (trait: forceful) and (trait: versatile B) traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("35ad6d0e-d03c-4b00-b865-405e0751eb5b"),
+                Id = Guid.Parse("6776c2c9-7dd6-4eb1-81cb-35cd9e1496ba"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EldritchResearcherDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("ee073710-2b9f-42ed-82ed-5c18d3bad81d");
+        public static readonly Guid ID = Guid.Parse("a9bd0238-20a7-4ca3-b172-3cc8a42c16d5");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("781b67c2-ca8f-4606-86f3-c5cb318c87c1"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single arcane or occult cantrip of your choice (which is heightened to a spell level equal to half your level rounded up). If you weren&#39;t already, you become trained in that tradition&#39;s spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
-            yield return new TextBlock { Id = Guid.Parse("efeffce1-aa8c-4dd0-8ef9-b5d87fb55ae7"), Type = TextBlockType.Text, Text = "Regardless of whether you choose an arcane or occult cantrip, you also become an expert in your choice of either Arcana or Occultism. You also gain a +1 circumstance bonus to checks you attempt with the chosen skill when (action: Investigating | Investigate) or (action: Identifying Magic | Identify Magic)." };
+            yield return new TextBlock { Id = Guid.Parse("8cf0bf92-5cd3-4fb7-9692-3a1958760582"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single arcane or occult cantrip of your choice (which is heightened to a spell level equal to half your level rounded up). If you weren&#39;t already, you become trained in that tradition&#39;s spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
+            yield return new TextBlock { Id = Guid.Parse("9ea108cf-246d-4468-87bd-caca7bebeee3"), Type = TextBlockType.Text, Text = "Regardless of whether you choose an arcane or occult cantrip, you also become an expert in your choice of either Arcana or Occultism. You also gain a +1 circumstance bonus to checks you attempt with the chosen skill when (action: Investigating | Investigate) or (action: Identifying Magic | Identify Magic)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("9d13e3b7-a0c7-4cf5-88f4-ce73faad2e81"), Proficiencies.Instances.Trained.ID, Skills.Instances.Arcana.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("17417b11-c9ef-45c8-b14c-4094de29d2d0"), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("d8f72c57-0226-4500-aae2-1e0f866c7f72"), Proficiencies.Instances.Trained.ID, Skills.Instances.Arcana.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("80554aaf-219b-4dde-a6f1-5770991cf50f"), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("59700c42-2a6f-4464-b8b8-5a437627c7fa"),
+                Id = Guid.Parse("a201e095-a963-4d39-98e9-3cb053c50b16"),
                 SourceId = Sources.Instances.AbominationVaults.ID,
                 Page = -1
             };

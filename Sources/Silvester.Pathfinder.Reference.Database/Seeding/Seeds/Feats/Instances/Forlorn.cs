@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Forlorn : Template
     {
-        public static readonly Guid ID = Guid.Parse("13855f2b-2fa9-47bb-8a61-7bf4adbe967b");
+        public static readonly Guid ID = Guid.Parse("5bc7e34e-65e6-4b07-9755-102bc29cbd7c");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4cc58aaa-8365-492a-961b-11553542bfe1"), Type = TextBlockType.Text, Text = "Watching your friends age and die fills you with moroseness that protects you against harmful emotions. You gain a +1 circumstance bonus to saving throws against (trait: emotion) effects. If you roll a success on a saving throw against an emotion effect, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("11d322bf-e34a-4e07-99b8-9868ca9e442d"), Type = TextBlockType.Text, Text = "Watching your friends age and die fills you with moroseness that protects you against harmful emotions. You gain a +1 circumstance bonus to saving throws against (trait: emotion) effects. If you roll a success on a saving throw against an emotion effect, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ac96b250-4eb7-4b03-bf16-9c18f11bcace"),
+                Id = Guid.Parse("fb6eab1a-2c14-4a6f-9aa0-83e7ce08febf"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

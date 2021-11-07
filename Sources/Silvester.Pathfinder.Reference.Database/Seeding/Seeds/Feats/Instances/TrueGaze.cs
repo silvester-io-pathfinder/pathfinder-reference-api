@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TrueGaze : Template
     {
-        public static readonly Guid ID = Guid.Parse("6722b589-6ca5-483c-8a08-8b4540b39d4a");
+        public static readonly Guid ID = Guid.Parse("bc42c2d1-e556-4887-b20a-4c998b13b69d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ee39312c-cac8-4197-8073-aae4f77e56ab"), Type = TextBlockType.Text, Text = "When you focus your eyes carefully, your gaze can pierce through all obfuscations, even magical ones. When you use True Gaze, you gain the effects of a 6th-level (spell: true seeing) spell, using your Perception modifier for the counteract check." };
+            yield return new TextBlock { Id = Guid.Parse("eae7cf14-6d0b-4b1e-a37b-986b32017626"), Type = TextBlockType.Text, Text = "When you focus your eyes carefully, your gaze can pierce through all obfuscations, even magical ones. When you use True Gaze, you gain the effects of a 6th-level (spell: true seeing) spell, using your Perception modifier for the counteract check." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2c9efa49-1c42-4974-82af-25f55d6a2f9a"),
+                Id = Guid.Parse("7b9cbbed-b103-4955-9980-1550dd6219e7"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

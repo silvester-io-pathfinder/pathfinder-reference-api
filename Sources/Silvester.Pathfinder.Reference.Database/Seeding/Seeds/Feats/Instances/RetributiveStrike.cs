@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RetributiveStrike : Template
     {
-        public static readonly Guid ID = Guid.Parse("a5320ef3-5709-49b4-8b34-5c09a8da43f0");
+        public static readonly Guid ID = Guid.Parse("1c92e93d-ad6a-41a6-9a02-a0c569ce6d59");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6c6eab17-c0f4-44e7-a56e-a10cedd913d8"), Type = TextBlockType.Text, Text = "You protect your ally and strike your foe. The ally gains resistance to all damage against the triggering damage equal to 2 + your level. If the foe is within reach, make a melee (action: Strike) against it." };
+            yield return new TextBlock { Id = Guid.Parse("a6904f0c-4c6a-4f47-8ed4-27de3a3f401c"), Type = TextBlockType.Text, Text = "You protect your ally and strike your foe. The ally gains resistance to all damage against the triggering damage equal to 2 + your level. If the foe is within reach, make a melee (action: Strike) against it." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bd3c9b9f-0b8e-494c-920d-41f981b8c141"),
+                Id = Guid.Parse("41d350cd-d6e3-468c-822e-70963d7bcab3"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

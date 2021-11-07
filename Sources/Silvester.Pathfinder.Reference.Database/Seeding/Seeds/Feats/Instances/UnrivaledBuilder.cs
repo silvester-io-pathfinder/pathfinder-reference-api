@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UnrivaledBuilder : Template
     {
-        public static readonly Guid ID = Guid.Parse("5cb12d61-c0d9-4403-869c-088e5018d9a0");
+        public static readonly Guid ID = Guid.Parse("31a08315-cf07-4a26-8194-f0a3cb515f8f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9679b69c-64ec-4ae3-9369-339e2aa85ecd"), Type = TextBlockType.Text, Text = "Building things is like solving a puzzle, and you know how to use anything at your disposal to get the job done. You gain creation as a 5th-level innate primal spell. You must have an equivalent Bulk of material to create an item, such as wood or scrap metal to make a wheelbarrow. You can cast this spell once each day." };
+            yield return new TextBlock { Id = Guid.Parse("d8950c42-2889-457f-93e2-73b88252b423"), Type = TextBlockType.Text, Text = "Building things is like solving a puzzle, and you know how to use anything at your disposal to get the job done. You gain creation as a 5th-level innate primal spell. You must have an equivalent Bulk of material to create an item, such as wood or scrap metal to make a wheelbarrow. You can cast this spell once each day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("2b501129-6137-4b71-8918-783cf42ba5b8"), Feats.Instances.HandyWithYourPaws.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e62437b7-e921-455f-8990-89ebdf02de16"), Feats.Instances.HandyWithYourPaws.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("af230991-3606-4ddb-9109-3aab3b7684db"),
+                Id = Guid.Parse("b229245f-ff7a-4743-bd27-881b8e89e1f7"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

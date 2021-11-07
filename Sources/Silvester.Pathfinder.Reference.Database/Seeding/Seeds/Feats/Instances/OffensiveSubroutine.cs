@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OffensiveSubroutine : Template
     {
-        public static readonly Guid ID = Guid.Parse("2d3f14a5-8b77-4e6b-af5b-7d91b80d49cb");
+        public static readonly Guid ID = Guid.Parse("f0d7f600-130b-41b7-adf4-e8ccb49b3174");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e7dda14-ee4e-4e88-a980-b43018220002"), Type = TextBlockType.Text, Text = "Nanites augment your attacks. You can choose to activate (feat: Nanite Surge) when you attempt an attack roll, instead of when you attempt a skill check. If you do, you gain a +1 status bonus to the triggering attack roll." };
+            yield return new TextBlock { Id = Guid.Parse("f5aaa0f9-7a66-42bf-8644-bce194971c48"), Type = TextBlockType.Text, Text = "Nanites augment your attacks. You can choose to activate (feat: Nanite Surge) when you attempt an attack roll, instead of when you attempt a skill check. If you do, you gain a +1 status bonus to the triggering attack roll." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("7e540c12-a47a-4f2d-bc53-3ce2433b8874"), Feats.Instances.NaniteSurge.ID);
+            builder.HaveSpecificFeat(Guid.Parse("753305e8-09f2-4876-93b2-98ce700d8463"), Feats.Instances.NaniteSurge.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("16b4a058-1a1d-4b91-bb01-c906fb500fb7"),
+                Id = Guid.Parse("e614317a-602a-4e89-8cf7-1d442ea247aa"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

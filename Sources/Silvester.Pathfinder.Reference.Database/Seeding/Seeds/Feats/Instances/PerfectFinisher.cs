@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PerfectFinisher : Template
     {
-        public static readonly Guid ID = Guid.Parse("9c985dc2-e7f3-4b84-a67b-7ded8fadc93d");
+        public static readonly Guid ID = Guid.Parse("f18c0746-9406-4d9d-b668-18da2854edc5");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4eab377f-4c82-4a3b-bbc4-6b9892391c97"), Type = TextBlockType.Text, Text = "You focus your panache into an impeccable assault. Make a (action: Strike), rolling the attack roll twice and using the better result." };
+            yield return new TextBlock { Id = Guid.Parse("b58d57c2-07df-4a15-ad5c-88cc8ffaa4c4"), Type = TextBlockType.Text, Text = "You focus your panache into an impeccable assault. Make a (action: Strike), rolling the attack roll twice and using the better result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2610ae1a-2044-49f7-8ae6-9d8fc9100c56"),
+                Id = Guid.Parse("d1abc992-3bb7-4c9b-b28d-90b93eaea5b8"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

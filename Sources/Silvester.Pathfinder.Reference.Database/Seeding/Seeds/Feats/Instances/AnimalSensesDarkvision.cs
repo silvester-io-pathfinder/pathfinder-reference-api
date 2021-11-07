@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AnimalSensesDarkvision : Template
     {
-        public static readonly Guid ID = Guid.Parse("f455213d-bc9d-449b-be01-1f5c2c0ab6aa");
+        public static readonly Guid ID = Guid.Parse("8a370f94-5ae7-492e-9231-84d789e9c486");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d68fef15-89f4-49b3-95e8-69776d8765e1"), Type = TextBlockType.Text, Text = "You gain darkvision. You must have low-light vision before you can gain darkvision." };
+            yield return new TextBlock { Id = Guid.Parse("47d467e1-bb52-4945-8187-7864f37e5377"), Type = TextBlockType.Text, Text = "You gain darkvision. You must have low-light vision before you can gain darkvision." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("20c5df19-03fe-4fc3-8460-0ad7b149a71d"),
+                Id = Guid.Parse("963c8624-1b6c-41bb-b7e9-5fcdab6f3fe3"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

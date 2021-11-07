@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SharedSynergy : Template
     {
-        public static readonly Guid ID = Guid.Parse("be810e18-28f3-4f25-b61c-476fff44c45e");
+        public static readonly Guid ID = Guid.Parse("db7f362e-a573-422e-834b-c6d290ebc572");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb2ee323-bec6-41a5-8ede-4821c56fdfc0"), Type = TextBlockType.Text, Text = "You can grant the benefit from (feat: Dualistic Synergy) to an ally within 30 feet instead of yourself, either allowing that ally to (action: Recall Knowledge), granting that ally temporary Hit Points, or both, depending on the spell’s tradition." };
+            yield return new TextBlock { Id = Guid.Parse("ad2b0f73-c80a-4963-bbb9-ac6d9b7b730e"), Type = TextBlockType.Text, Text = "You can grant the benefit from (feat: Dualistic Synergy) to an ally within 30 feet instead of yourself, either allowing that ally to (action: Recall Knowledge), granting that ally temporary Hit Points, or both, depending on the spell’s tradition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("342496d4-b753-4ac9-b19a-07741339eb81"), Feats.Instances.DualisticSynergy.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ffda2e82-b9bc-46b1-aa58-23fa12ca7c6e"), Feats.Instances.DualisticSynergy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2919084c-1a8b-4516-8e15-af9c72d71bbd"),
+                Id = Guid.Parse("09cb226b-d7d0-450f-a629-564eb7fccb6e"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

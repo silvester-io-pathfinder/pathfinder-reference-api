@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PatronsBreadth : Template
     {
-        public static readonly Guid ID = Guid.Parse("4b71ee71-b77c-408c-9e43-9b2007fa1c16");
+        public static readonly Guid ID = Guid.Parse("56c77861-1201-4ba7-9649-866b7d10b0e8");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("58d049fc-4550-4727-ac36-38e5025fc6fc"), Type = TextBlockType.Text, Text = "You can cast more spells each day. Increase the spell slots you gain from witch archetype feats by 1 for each spell level other than your two highest witch spell slots." };
+            yield return new TextBlock { Id = Guid.Parse("bfb7c2dd-51a2-4f2b-9773-eb48c8615762"), Type = TextBlockType.Text, Text = "You can cast more spells each day. Increase the spell slots you gain from witch archetype feats by 1 for each spell level other than your two highest witch spell slots." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("9ea3ce38-70bc-42dd-84e8-583c68b6936c"), Feats.Instances.BasicWitchSpellcasting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("693fdd1e-3917-4dd5-9e08-4c1d3eb8cb89"), Feats.Instances.BasicWitchSpellcasting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("65f9c668-23b8-45a3-9ee9-12454fdd2e7b"),
+                Id = Guid.Parse("9c58f3a4-9ffd-41d5-9bca-3962be4be4ac"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

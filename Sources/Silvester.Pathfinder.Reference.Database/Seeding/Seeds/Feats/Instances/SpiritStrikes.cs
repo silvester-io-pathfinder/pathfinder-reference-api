@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpiritStrikes : Template
     {
-        public static readonly Guid ID = Guid.Parse("8d5cdfaf-f66d-4bac-a5cc-040b1f57717f");
+        public static readonly Guid ID = Guid.Parse("ef155f27-4ed9-4650-9e2b-010bcb68d70f");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad18d67c-91ae-4629-9b7b-0a77c18eb5d8"), Type = TextBlockType.Text, Text = "Your connection to the Boneyard empowers you to bring death to all forms of life and unlife, exploiting their weaknesses. All your weapon and unarmed (action: Strikes | Strike) are magical and deal 1 additional negative damage to living creatures and 1 additional positive damage to undead." };
+            yield return new TextBlock { Id = Guid.Parse("5b82bab1-db35-4b48-bf22-77878ce7dc68"), Type = TextBlockType.Text, Text = "Your connection to the Boneyard empowers you to bring death to all forms of life and unlife, exploiting their weaknesses. All your weapon and unarmed (action: Strikes | Strike) are magical and deal 1 additional negative damage to living creatures and 1 additional positive damage to undead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e6ca90f3-72cf-4ef3-af82-783fbd9de346"),
+                Id = Guid.Parse("86a58197-e3c6-41aa-88fb-eed04d78a787"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

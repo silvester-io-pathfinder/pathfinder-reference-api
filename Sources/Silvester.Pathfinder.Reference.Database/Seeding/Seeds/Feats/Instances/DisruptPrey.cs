@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DisruptPrey : Template
     {
-        public static readonly Guid ID = Guid.Parse("6aee18a4-b742-4bd0-a645-8eefaf509cc6");
+        public static readonly Guid ID = Guid.Parse("227ca9be-5cb7-4fe8-8996-5553552c4a35");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7d2ae70d-087c-4605-b8f6-082ef11eccc2"), Type = TextBlockType.Text, Text = "Make a melee (action: Strike) against your prey. If the attack is a critical hit, you disrupt the triggering action." };
+            yield return new TextBlock { Id = Guid.Parse("4668cac4-1162-4c0a-8357-466a8a6b8cc0"), Type = TextBlockType.Text, Text = "Make a melee (action: Strike) against your prey. If the attack is a critical hit, you disrupt the triggering action." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5c1a04d0-5a32-4942-ab5b-5eddbae3289f"),
+                Id = Guid.Parse("9d86c5f5-75da-4d4b-9827-f22d27c0d065"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

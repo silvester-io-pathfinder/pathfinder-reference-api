@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MaulerDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("b2b4afe8-9ab5-42e2-b004-0a19c3e31739");
+        public static readonly Guid ID = Guid.Parse("f7763369-4813-413d-a6f6-fab67b3e14cb");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d8c1482f-6ce0-475a-80bc-cf8b183b6f28"), Type = TextBlockType.Text, Text = "You specialize in weapons that require two hands. You become trained in all simple and martial melee weapons that require two hands to wield or have the (trait: two-hand) trait. Whenever you gain a class feature that grants you expert or greater proficiency in weapons, you also gain that proficiency rank in these weapons. If you are at least an expert in such a weapon, you gain access to the critical specialization effect with that weapon." };
+            yield return new TextBlock { Id = Guid.Parse("76fdac00-2de0-44f1-8d93-54798af6ee60"), Type = TextBlockType.Text, Text = "You specialize in weapons that require two hands. You become trained in all simple and martial melee weapons that require two hands to wield or have the (trait: two-hand) trait. Whenever you gain a class feature that grants you expert or greater proficiency in weapons, you also gain that proficiency rank in these weapons. If you are at least an expert in such a weapon, you gain access to the critical specialization effect with that weapon." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificStat(Guid.Parse("59f0721f-3b04-4855-a008-79b9c0db03fe"), requiredStatValue: 14, Stats.Instances.Strength.ID);
+            builder.HaveSpecificStat(Guid.Parse("38269746-d2aa-42ea-ad73-68869870ad6e"), requiredStatValue: 14, Stats.Instances.Strength.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9a6184b1-ceee-4c54-a456-78d464085a42"),
+                Id = Guid.Parse("9e116b41-7d47-462a-8181-e21352be9cb8"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

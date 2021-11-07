@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Darkseer : Template
     {
-        public static readonly Guid ID = Guid.Parse("b2a6b88f-4cfd-4a58-9511-d24cd2ffc3d5");
+        public static readonly Guid ID = Guid.Parse("63ec2f72-d451-4714-a6a2-9d8822e9168d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2e7616b9-27f3-4355-84d3-afd2e2188e5d"), Type = TextBlockType.Text, Text = "Zon-Kuthon smiles upon you – even if you curse his name – granting you pitch-black eyes that allow you to see in shadows and darkness. You gain darkvision." };
+            yield return new TextBlock { Id = Guid.Parse("b43921cd-8fca-4e60-9a2f-8a2b94bc1e3d"), Type = TextBlockType.Text, Text = "Zon-Kuthon smiles upon you – even if you curse his name – granting you pitch-black eyes that allow you to see in shadows and darkness. You gain darkvision." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("45a17a12-adf6-406e-8e64-f26f3a30d664"), Feats.Instances.Gloomseer.ID);
+            builder.HaveSpecificFeat(Guid.Parse("9f68ac2e-55d4-47a2-b468-55ae84a6d85c"), Feats.Instances.Gloomseer.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0e692fe6-b258-426f-87ea-61468aa55a50"),
+                Id = Guid.Parse("dbb4dadf-2ef1-4598-a9d0-13f1495dfb54"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

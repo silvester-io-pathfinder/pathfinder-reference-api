@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdvancedSeekerOfTruths : Template
     {
-        public static readonly Guid ID = Guid.Parse("a0344a11-2d7b-4a01-825a-7b8707c6f4b3");
+        public static readonly Guid ID = Guid.Parse("46647591-de48-426a-b02c-54a56e73a885");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("52100670-06ea-43a4-ac32-3ef237e2efa6"), Type = TextBlockType.Text, Text = "You have unlocked deeper secrets to uncovering and hoarding lore. You gain an advanced domain spell from one domain you selected with (feat: Seeker of Truths). Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("a2bb95d8-1a74-4de9-a5fa-beac683450d2"), Type = TextBlockType.Text, Text = "You have unlocked deeper secrets to uncovering and hoarding lore. You gain an advanced domain spell from one domain you selected with (feat: Seeker of Truths). Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("dea11299-95c6-4708-87dd-abc1e4ebf1d3"), Feats.Instances.SeekerOfTruths.ID);
+            builder.HaveSpecificFeat(Guid.Parse("127cf636-e81d-4b58-a4a9-76a26d9d4fd1"), Feats.Instances.SeekerOfTruths.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e11ba46a-aec6-433e-87ee-b056ae47f2ec"),
+                Id = Guid.Parse("31110b16-52a3-4115-bead-ad7d82b1bd3d"),
                 SourceId = Sources.Instances.AbominationVaults.ID,
                 Page = -1
             };

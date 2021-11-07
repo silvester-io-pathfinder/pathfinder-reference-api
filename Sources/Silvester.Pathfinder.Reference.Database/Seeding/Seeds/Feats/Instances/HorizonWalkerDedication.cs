@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HorizonWalkerDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("152fdaf8-e3b7-450e-97ba-0e13339cc868");
+        public static readonly Guid ID = Guid.Parse("0826fa5d-fae6-4d4f-b21f-4c141465219a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("99be0b7e-ec85-4e67-9239-aac013d4c3ae"), Type = TextBlockType.Text, Text = "You’ve mastered travel within a specific type of terrain. You gain the (feat: Favored Terrain) feat. When in your favored terrain, you gain a +10-foot circumstance bonus to your travel Speed. When other creatures (action: Follow the Expert) with you as a guide in your favored terrain, they gain both the ability to ignore non-magical difficult terrain for the purpose of their travel Speed and the bonus to travel Speed." };
+            yield return new TextBlock { Id = Guid.Parse("d0ac7065-4084-471b-bd79-86727a475eb8"), Type = TextBlockType.Text, Text = "You’ve mastered travel within a specific type of terrain. You gain the (feat: Favored Terrain) feat. When in your favored terrain, you gain a +10-foot circumstance bonus to your travel Speed. When other creatures (action: Follow the Expert) with you as a guide in your favored terrain, they gain both the ability to ignore non-magical difficult terrain for the purpose of their travel Speed and the bonus to travel Speed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("5209b564-4167-4655-bfcb-101c75315642"), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("0b6d7e22-1e2c-4ae9-b0c4-e012f829a9ca"), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ca7deb92-e4d7-499f-8942-c2dbac98b456"),
+                Id = Guid.Parse("ab9c36bd-fafb-4714-8dfd-34e022c30ed4"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

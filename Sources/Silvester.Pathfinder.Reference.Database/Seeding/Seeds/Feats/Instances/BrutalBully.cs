@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BrutalBully : Template
     {
-        public static readonly Guid ID = Guid.Parse("4574cbc8-a139-47ed-9986-218448635a73");
+        public static readonly Guid ID = Guid.Parse("99509bd3-103b-47da-b1e7-e77a3eb676f4");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4ccccb2a-ae76-4bcc-a031-dd479419fc3f"), Type = TextBlockType.Text, Text = "You push your foes around and leave bruises. While raging, when you successfully (Action: Disarm), (Action: Grapple), (Action: Shove), or (Action: Trip) a foe, you deal that foe bludgeoning damage equal to your Strength modifier; add this to the damage from a critical success to (Action: Trip)." };
+            yield return new TextBlock { Id = Guid.Parse("f42f5cff-b166-4857-86bf-35fbfe26b934"), Type = TextBlockType.Text, Text = "You push your foes around and leave bruises. While raging, when you successfully (Action: Disarm), (Action: Grapple), (Action: Shove), or (Action: Trip) a foe, you deal that foe bludgeoning damage equal to your Strength modifier; add this to the damage from a critical success to (Action: Trip)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("d962c6bd-d4b3-478b-a0c7-4f15d314a6e5"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("c1c62da3-c687-4b0d-80dd-dfddf5c0e4ec"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("32e84fcf-3ec9-46c5-b31b-e22fe0d9946e"),
+                Id = Guid.Parse("59e91863-cc3c-4598-8cf0-9cdf9ab30974"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LegendaryMonsterHunter : Template
     {
-        public static readonly Guid ID = Guid.Parse("845d6957-b1bb-4476-aad4-ed4f45451113");
+        public static readonly Guid ID = Guid.Parse("164a9022-85bc-492b-8dd7-772c5759564c");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d6084793-fc18-4f30-af73-0367ee237e80"), Type = TextBlockType.Text, Text = "Your knowledge of monsters is so incredible that it reveals glaring flaws in your prey. Your bonus from (feat: Monster Hunter) (and the bonus from (feat: Monster Warden) if you have it) increases from +1 to +2 for you and any allies who benefit." };
+            yield return new TextBlock { Id = Guid.Parse("d5f1025c-3f6f-442b-b927-1a49d24deeca"), Type = TextBlockType.Text, Text = "Your knowledge of monsters is so incredible that it reveals glaring flaws in your prey. Your bonus from (feat: Monster Hunter) (and the bonus from (feat: Monster Warden) if you have it) increases from +1 to +2 for you and any allies who benefit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("d391b317-6a2c-423d-a67a-2387a92f09bf"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Nature.ID);
-            builder.HaveSpecificFeat(Guid.Parse("b1eebecd-c863-4068-883a-db38d39e3524"), Feats.Instances.MasterMonsterHunter.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("25fe8d14-e084-4e4e-86d0-f325cdbdced5"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Nature.ID);
+            builder.HaveSpecificFeat(Guid.Parse("89721678-1d5b-4abe-bc64-aacda3bb8b11"), Feats.Instances.MasterMonsterHunter.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("db5ab6a6-2081-4f5a-840f-0b2ae8ca734a"),
+                Id = Guid.Parse("d07d1c41-d465-4c97-b97b-1882b294fa28"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

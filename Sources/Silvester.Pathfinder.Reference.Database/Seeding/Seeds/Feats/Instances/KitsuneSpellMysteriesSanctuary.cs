@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class KitsuneSpellMysteriesSanctuary : Template
     {
-        public static readonly Guid ID = Guid.Parse("305c2a66-2743-4b7a-a342-f169507a29cc");
+        public static readonly Guid ID = Guid.Parse("b4d31504-158a-428f-a4c5-910d284ec3e1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("00b4df07-0c4b-4fb9-9a83-fec06285a756"), Type = TextBlockType.Text, Text = "You can cast (spell: sanctuary) as a 1st-level divine innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("33375563-e8b4-4e51-bd81-e3775384c2e9"), Type = TextBlockType.Text, Text = "You can cast (spell: sanctuary) as a 1st-level divine innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cbd94fff-fc4e-48eb-8080-9dca02ac92da"),
+                Id = Guid.Parse("5f2255fa-046c-4ac7-b00b-de3196e08a82"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

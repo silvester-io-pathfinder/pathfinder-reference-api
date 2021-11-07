@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CannyAcumenPerception : Template
     {
-        public static readonly Guid ID = Guid.Parse("6c221357-146e-4c1b-9176-a2962dd64f56");
+        public static readonly Guid ID = Guid.Parse("daf2baa7-c444-4ad5-a6c6-8aa30f306d07");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bdcad7f4-e171-4721-ac2f-26a493a196e2"), Type = TextBlockType.Text, Text = "You become an expert in Perception. At 17th level, you become a master instead." };
+            yield return new TextBlock { Id = Guid.Parse("2de7ab62-8b99-471f-83b3-21a06ecb9bf4"), Type = TextBlockType.Text, Text = "You become an expert in Perception. At 17th level, you become a master instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3e009678-a7c4-4cc2-b9d3-b4e345ec0fa1"),
+                Id = Guid.Parse("c8a4ade8-d9c2-494b-b7ec-0b4164d112c9"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

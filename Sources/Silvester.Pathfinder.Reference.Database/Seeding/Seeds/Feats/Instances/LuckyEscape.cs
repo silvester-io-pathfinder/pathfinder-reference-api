@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LuckyEscape : Template
     {
-        public static readonly Guid ID = Guid.Parse("992f0def-0fc5-495c-9f46-bbfb6f8118d8");
+        public static readonly Guid ID = Guid.Parse("f1fb4e3b-0b83-46b6-a31b-85e53aa5463a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("11cf23bb-5c24-4412-b8e0-ac99f576c33d"), Type = TextBlockType.Text, Text = "Your enemy lies in wait, lines up the perfect shot, and pulls the trigger... then at just the right moment you duck down to notice something scrawled on the cobblestone in chalk, a shiny coin, or some other coincidental distraction, creating an opportunity for the attack to miss. The attacker must roll the attack twice and use the worse result." };
+            yield return new TextBlock { Id = Guid.Parse("0fe88f55-44aa-415b-8b90-71adb433c4a9"), Type = TextBlockType.Text, Text = "Your enemy lies in wait, lines up the perfect shot, and pulls the trigger... then at just the right moment you duck down to notice something scrawled on the cobblestone in chalk, a shiny coin, or some other coincidental distraction, creating an opportunity for the attack to miss. The attacker must roll the attack twice and use the worse result." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("9061e5dd-5718-4c96-91ec-280081dfdad0"), Feats.Instances.UnexpectedSharpshooterDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("f02afeb0-0ba1-4577-af39-4add880255e8"), Feats.Instances.UnexpectedSharpshooterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e9a0edcb-6b74-435e-b00e-082729816b92"),
+                Id = Guid.Parse("2c826f31-6e52-4fce-90b8-f3e4bae9495f"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

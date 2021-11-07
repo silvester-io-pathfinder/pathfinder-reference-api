@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GreaterBloodline : Template
     {
-        public static readonly Guid ID = Guid.Parse("474f6f79-111a-4101-99d1-86fea0c8c45f");
+        public static readonly Guid ID = Guid.Parse("d6f0e5c3-92b4-488e-b8b1-2837c3138279");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("828cea89-9057-4f0c-af65-a9d0bd83968f"), Type = TextBlockType.Text, Text = "Further communion with the legacy of your bloodline has uncovered greater secrets. You gain the greater bloodline spell associated with your bloodline. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("60d3ad4c-3966-47e4-91c9-e1bf65eb365a"), Type = TextBlockType.Text, Text = "Further communion with the legacy of your bloodline has uncovered greater secrets. You gain the greater bloodline spell associated with your bloodline. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyBloodline(Guid.Parse("16abd3f0-fd1e-4e71-948a-e7bc3577266f"));
+            builder.HaveAnyBloodline(Guid.Parse("e7afc171-0f56-4c74-877f-576e223cd7ff"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5feb3f21-daf7-4251-9ffb-627314c56f8e"),
+                Id = Guid.Parse("a3fde85a-48b4-43af-93da-df2003d1b9a2"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

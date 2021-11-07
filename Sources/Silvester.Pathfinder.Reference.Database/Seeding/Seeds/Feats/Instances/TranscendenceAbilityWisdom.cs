@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TranscendenceAbilityWisdom : Template
     {
-        public static readonly Guid ID = Guid.Parse("a70e3406-1cc5-4d99-a4be-644acb29165e");
+        public static readonly Guid ID = Guid.Parse("b59775af-5bd5-4894-a777-491fb990d5d2");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a897752c-6514-46ee-8ac0-ce797673c1c4"), Type = TextBlockType.Text, Text = "Your eidolon&#39;s Wisdom ability score increases by 2." };
+            yield return new TextBlock { Id = Guid.Parse("5f028500-93a1-4356-9cf7-5c9501a3ff80"), Type = TextBlockType.Text, Text = "Your eidolon&#39;s Wisdom ability score increases by 2." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("abfe3f5f-639a-4451-8a82-6ed0cce9c799"),
+                Id = Guid.Parse("f38a9df1-9461-4f7f-a99a-7912ebe510fe"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

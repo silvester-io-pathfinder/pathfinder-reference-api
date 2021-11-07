@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Transpose : Template
     {
-        public static readonly Guid ID = Guid.Parse("f749fa45-f5b6-4814-8696-713c11a50eb3");
+        public static readonly Guid ID = Guid.Parse("ec648e82-2fd4-4050-8457-a8344a4ef50a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e7c207e4-5b9d-4921-9bf4-dc158de948dc"), Type = TextBlockType.Text, Text = "You switch places with your eidolon. You each teleport to the other’s position." };
+            yield return new TextBlock { Id = Guid.Parse("388caf62-1402-4fcc-8d7a-fb9b52cacb41"), Type = TextBlockType.Text, Text = "You switch places with your eidolon. You each teleport to the other’s position." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bc5c26f7-4dfe-439b-b5dc-dd432d8f6271"),
+                Id = Guid.Parse("b3d94f80-8072-4b50-8643-7eb073e159ce"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SymphonyOfTheUnfetteredHeart : Template
     {
-        public static readonly Guid ID = Guid.Parse("a72871a4-6d54-44e0-b27d-576ee75670f5");
+        public static readonly Guid ID = Guid.Parse("dddfe0f4-a674-4478-90a0-3365f56452ea");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("26316bd3-138f-4dcf-9636-537871556005"), Type = TextBlockType.Text, Text = "You learn the (spell: symphony of the unfettered heart) composition spell, which enables you to protect an ally against incapacitating conditions." };
+            yield return new TextBlock { Id = Guid.Parse("c53a2fb9-4ac5-4a75-b7c0-af48d30b782f"), Type = TextBlockType.Text, Text = "You learn the (spell: symphony of the unfettered heart) composition spell, which enables you to protect an ally against incapacitating conditions." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6efb3867-c188-4899-b533-03423f804043"),
+                Id = Guid.Parse("5680742f-45a0-4b93-9392-87b63af9f1b7"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

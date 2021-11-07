@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Swift : Template
     {
-        public static readonly Guid ID = Guid.Parse("9b278118-27ad-42c9-9cec-f96551334088");
+        public static readonly Guid ID = Guid.Parse("bb44331b-2b5d-44ff-b23a-92c9cde1582d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6d9efa7e-13cf-496f-842e-e49b5bcdd2f1"), Type = TextBlockType.Text, Text = "You move with the wind always at your back. Your Speed increases by 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("75694b3b-566c-439d-be27-c353626c1867"), Type = TextBlockType.Text, Text = "You move with the wind always at your back. Your Speed increases by 5 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5c243dbc-c0a3-4d41-bdd5-2e60e74edb8b"),
+                Id = Guid.Parse("0645607c-1c24-4169-87eb-b33787588ab6"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

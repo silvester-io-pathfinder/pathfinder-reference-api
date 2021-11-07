@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShoonyLore : Template
     {
-        public static readonly Guid ID = Guid.Parse("57ade1a0-acbf-4619-b0cc-26f07c12d3af");
+        public static readonly Guid ID = Guid.Parse("e945560b-b67b-4e4a-96d7-a302d15fb69b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea4a464d-af4d-4d2a-9956-1468cccdc3ee"), Type = TextBlockType.Text, Text = "Growing up in shoony society, you learned the value of honesty, friendship, and hard work, even during trying times. You gain the trained proficiency rank in Diplomacy and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Shoony Lore." };
+            yield return new TextBlock { Id = Guid.Parse("c7a11fa3-b0b0-4732-850d-90c0bd3b9899"), Type = TextBlockType.Text, Text = "Growing up in shoony society, you learned the value of honesty, friendship, and hard work, even during trying times. You gain the trained proficiency rank in Diplomacy and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Shoony Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("afaeb35b-59c1-4aa3-85fa-ad33e8e42043"),
+                Id = Guid.Parse("66ff78a4-460c-4492-b9fa-cde094ae8ffe"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

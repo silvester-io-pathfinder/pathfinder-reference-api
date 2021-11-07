@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AstralBlink : Template
     {
-        public static readonly Guid ID = Guid.Parse("b55ffd5c-5279-4b34-ba2f-2909f0da452e");
+        public static readonly Guid ID = Guid.Parse("08ff8567-760a-4faa-9c9c-4fda4c0ce90e");
 
         protected override Feat GetFeat()
         {
@@ -28,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8f05dc5b-adbb-4dec-9db5-0e1d56c5302b"), Type = TextBlockType.Text, Text = "You’ve attuned your core to allow you to phase in and out of the Astral Plane, allowing you to teleport periodically. You can cast (spell: dimension door) once per hour as a 4th-level innate arcane spell." };
-            yield return new TextBlock { Id = Guid.Parse("62558158-abbc-409a-aa80-3490128dabf0"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("27a90b33-251b-4dc6-bb85-dcc211461a4f"), Type = TextBlockType.Text, Text = "~ Enhancement: Your attunement allows you to teleport in a series of quick jumps rather than in one big leap. You can expend your hourly use of (spell: dimension door) as a free action when you begin your turn. If you do, your (action: Strides | Stride) are augmented until the end of your turn, allowing you to instantly teleport to any point you could reach with your Speed instead of traversing normally to the location. While augmented, your (action: Strides | Stride) gain the (trait: conjuration) and (trait: teleportation) traits. Your augmented (action: Strides | Stride) don’t trigger reactions that can be triggered by (trait: move) actions or upon leaving or entering a square, unless those reactions trigger on teleportation." };
+            yield return new TextBlock { Id = Guid.Parse("de6f697c-9bea-4992-986d-e7895e4454c9"), Type = TextBlockType.Text, Text = "You’ve attuned your core to allow you to phase in and out of the Astral Plane, allowing you to teleport periodically. You can cast (spell: dimension door) once per hour as a 4th-level innate arcane spell." };
+            yield return new TextBlock { Id = Guid.Parse("249eefca-ecda-4c49-9551-0ecf607d4422"), Type = TextBlockType.Text, Text = "----" };
+            yield return new TextBlock { Id = Guid.Parse("a280f264-e4fd-4863-85cf-052b0c60498f"), Type = TextBlockType.Text, Text = "~ Enhancement: Your attunement allows you to teleport in a series of quick jumps rather than in one big leap. You can expend your hourly use of (spell: dimension door) as a free action when you begin your turn. If you do, your (action: Strides | Stride) are augmented until the end of your turn, allowing you to instantly teleport to any point you could reach with your Speed instead of traversing normally to the location. While augmented, your (action: Strides | Stride) gain the (trait: conjuration) and (trait: teleportation) traits. Your augmented (action: Strides | Stride) don’t trigger reactions that can be triggered by (trait: move) actions or upon leaving or entering a square, unless those reactions trigger on teleportation." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bd21b77b-2b9d-4839-a3c1-fd2e8b5569da"),
+                Id = Guid.Parse("49a665ce-6b89-4dba-9c5c-d1150307d9db"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

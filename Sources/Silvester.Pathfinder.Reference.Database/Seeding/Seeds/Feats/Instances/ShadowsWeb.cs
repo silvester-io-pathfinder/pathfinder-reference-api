@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShadowsWeb : Template
     {
-        public static readonly Guid ID = Guid.Parse("15e28648-c481-4a7f-b517-198c752f13e0");
+        public static readonly Guid ID = Guid.Parse("d75dc60d-bad4-4f45-9988-5cea908296c3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("471c2fc0-8f18-4931-aaf8-17d6e916b664"), Type = TextBlockType.Text, Text = "You launch a wave of shadowy ki outward from your body, damaging your opponents and potentially binding them in place. You gain the (spell: Shadow’s Web) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("51bef21f-8100-4466-87ae-ab72689ee99d"), Type = TextBlockType.Text, Text = "You launch a wave of shadowy ki outward from your body, damaging your opponents and potentially binding them in place. You gain the (spell: Shadow’s Web) ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyKiSpells(Guid.Parse("cf06c807-8909-421d-a1b5-09789eb00d53"));
+            builder.HaveAnyKiSpells(Guid.Parse("74e3098e-ac1c-4072-900b-f4761e57d570"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("01d87581-8324-4c2b-94f3-eec44bde13bb"),
+                Id = Guid.Parse("6e60bc94-dffc-4706-8201-330205abca72"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

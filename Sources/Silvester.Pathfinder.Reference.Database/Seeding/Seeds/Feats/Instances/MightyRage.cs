@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MightyRage : Template
     {
-        public static readonly Guid ID = Guid.Parse("f74df492-aa27-4b32-a484-3cdb55741f45");
+        public static readonly Guid ID = Guid.Parse("55ed71e8-5a4d-42c3-89dc-ea943c2b2514");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fbe5a4e0-c828-4e61-8225-0ac074d0aa38"), Type = TextBlockType.Text, Text = "Use an action that has the (trait: rage) trait. Alternatively, you can increase the actions of the triggering (feat: Rage) to 2 to instead use a 2-action activity with the (trait: rage) trait." };
+            yield return new TextBlock { Id = Guid.Parse("e8607e72-d302-4ca9-b51a-30bd015b00e2"), Type = TextBlockType.Text, Text = "Use an action that has the (trait: rage) trait. Alternatively, you can increase the actions of the triggering (feat: Rage) to 2 to instead use a 2-action activity with the (trait: rage) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("779270dc-31b3-4bef-8a4f-fb5f13a1c103"),
+                Id = Guid.Parse("50a72d4d-3f88-4f0b-a473-7a98539866f6"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

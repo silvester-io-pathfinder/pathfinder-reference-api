@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AnimalMagic : Template
     {
-        public static readonly Guid ID = Guid.Parse("7c392da9-eae7-46f6-938c-323dd1148782");
+        public static readonly Guid ID = Guid.Parse("796b8829-ea8d-4ae0-926a-3d9cbc86533e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("95a0c0cb-d2cc-4711-895a-27f6d345c956"), Type = TextBlockType.Text, Text = "Your shapeshifting grants you a magical connection to the animal world. You can cast (spell: animal messenger), (spell: calm emotions) (animals only), and (spell: speak with animals) as 2nd-level primal innate spells once per day each. These spells use your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("cffa6095-437b-410f-8fed-d97bfe21908b"), Type = TextBlockType.Text, Text = "Your shapeshifting grants you a magical connection to the animal world. You can cast (spell: animal messenger), (spell: calm emotions) (animals only), and (spell: speak with animals) as 2nd-level primal innate spells once per day each. These spells use your class DC or spell DC, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("fc3b4f2f-cbcc-4ce8-8027-498624794e56"),
+                Id = Guid.Parse("96603d43-eba1-49c1-a4ee-f9f72599ec4b"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

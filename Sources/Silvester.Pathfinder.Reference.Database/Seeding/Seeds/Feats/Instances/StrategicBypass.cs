@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StrategicBypass : Template
     {
-        public static readonly Guid ID = Guid.Parse("273e0f67-39aa-4b89-9c5c-c3391f0b29dd");
+        public static readonly Guid ID = Guid.Parse("6982613c-da81-478c-a32d-6c6c2d16f7b9");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8110bd6-9e82-47ed-b885-db545d03df78"), Type = TextBlockType.Text, Text = "Your plans account for your foes&#39; resistances, enabling you to strike a telling blow. When you hit with a (action: Strike) on which you substituted your attack roll due to (feat: Devising a Stratagem | Devise a Stratagem), you ignore an amount of resistance equal to your Intelligence modifier for each resistance that applies against your attack." };
+            yield return new TextBlock { Id = Guid.Parse("2c16c083-35c6-4869-9990-0c433276720b"), Type = TextBlockType.Text, Text = "Your plans account for your foes&#39; resistances, enabling you to strike a telling blow. When you hit with a (action: Strike) on which you substituted your attack roll due to (feat: Devising a Stratagem | Devise a Stratagem), you ignore an amount of resistance equal to your Intelligence modifier for each resistance that applies against your attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9c067dd3-eb67-4e09-b6c1-8742b90f1e56"),
+                Id = Guid.Parse("a38d3125-730b-4f66-b15f-e92343f2a44e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

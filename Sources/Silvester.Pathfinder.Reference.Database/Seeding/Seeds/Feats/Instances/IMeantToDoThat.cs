@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class IMeantToDoThat : Template
     {
-        public static readonly Guid ID = Guid.Parse("93887a21-b2f1-4f44-ac0c-a5dc664634e9");
+        public static readonly Guid ID = Guid.Parse("f2aca251-7f89-4dca-b41b-088f1eec6ca0");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e32329ce-efeb-4a7c-b82c-7bfa0bbcc4f6"), Type = TextBlockType.Text, Text = "Somehow your stray bullet causes an unintended reaction that creates a problem for your enemy: perhaps a ricochet knocks your foe’s weapon away or they stumble over stray debris in an attempt to dodge your bullets. Roll a Deception check to attempt to (action: Shove), (action: Trip), or (action: Disarm) the foe you missed." };
+            yield return new TextBlock { Id = Guid.Parse("744b9d10-299a-4eae-b4af-66d3915517ba"), Type = TextBlockType.Text, Text = "Somehow your stray bullet causes an unintended reaction that creates a problem for your enemy: perhaps a ricochet knocks your foe’s weapon away or they stumble over stray debris in an attempt to dodge your bullets. Roll a Deception check to attempt to (action: Shove), (action: Trip), or (action: Disarm) the foe you missed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("bf2072f7-935a-4f05-83fe-85c69e0ad579"), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
-            builder.HaveSpecificFeat(Guid.Parse("a0b93dc2-7b25-4027-bcf4-6e68d7bd2877"), Feats.Instances.UnexpectedSharpshooterDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("df3584b4-1398-48aa-8800-14caf2d7013b"), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificFeat(Guid.Parse("5dbd4fc5-563b-4723-b13a-75504389cc40"), Feats.Instances.UnexpectedSharpshooterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ec4dad61-c381-4f24-9620-79d89ce5fe05"),
+                Id = Guid.Parse("dc893f98-e8e9-4188-8d3c-9419cf1b0931"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

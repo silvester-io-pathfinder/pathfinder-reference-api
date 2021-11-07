@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BeastSpeaker : Template
     {
-        public static readonly Guid ID = Guid.Parse("395930e5-02a4-4927-be29-41daafd5f947");
+        public static readonly Guid ID = Guid.Parse("bf807ecf-b6ea-4d1b-937c-1ced13ca2285");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8149a3ef-e71d-4ffb-8f3c-c317b7b2a8b4"), Type = TextBlockType.Text, Text = "You constantly have the effects of (spell: speak with animals) as a 2nd-level innate primal spell. You gain a +2 circumstance bonus to Diplomacy checks to make a (action: Request) of animals while this spell is active." };
+            yield return new TextBlock { Id = Guid.Parse("46341005-da4a-4b22-a75d-18afafcf2323"), Type = TextBlockType.Text, Text = "You constantly have the effects of (spell: speak with animals) as a 2nd-level innate primal spell. You gain a +2 circumstance bonus to Diplomacy checks to make a (action: Request) of animals while this spell is active." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("9bb9b65f-68b7-433e-95f2-a2234a27a547"), Feats.Instances.AnimalTrainerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("21501f95-39e1-40bd-9485-ce6e43d2075b"), Feats.Instances.AnimalTrainerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c2de3aac-51c3-454a-8ae6-326fd4d9b05d"),
+                Id = Guid.Parse("a47dff6e-d96b-403b-b28d-8217d1446270"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

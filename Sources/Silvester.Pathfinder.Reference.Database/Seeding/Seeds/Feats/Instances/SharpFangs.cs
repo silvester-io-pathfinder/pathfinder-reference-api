@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SharpFangs : Template
     {
-        public static readonly Guid ID = Guid.Parse("c3a18a5b-5236-4f2f-81e7-0a8d9327e504");
+        public static readonly Guid ID = Guid.Parse("48291edb-d36c-492d-a13d-1489fa249500");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9b3c1dcc-8ef2-4fe0-bc78-d5b7b0b9931d"), Type = TextBlockType.Text, Text = "Your teeth are formidable weapons. You gain a fangs unarmed attack that deals 1d8 piercing damage." };
+            yield return new TextBlock { Id = Guid.Parse("90a7523b-10ad-466b-bc6f-db823ed8e336"), Type = TextBlockType.Text, Text = "Your teeth are formidable weapons. You gain a fangs unarmed attack that deals 1d8 piercing damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("fea0f481-6d90-49a0-8102-aadc0c0cdfba"),
+                Id = Guid.Parse("fe0e8ae1-c857-4682-b159-b5c10943baec"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

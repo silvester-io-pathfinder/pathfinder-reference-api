@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TargetingShot : Template
     {
-        public static readonly Guid ID = Guid.Parse("bd0161fc-5c82-44ae-9f64-1f57301b89eb");
+        public static readonly Guid ID = Guid.Parse("8ddfc62c-2165-4de1-94f8-b09a5517a32f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dbafba94-a85c-4680-a585-9579f1b08af6"), Type = TextBlockType.Text, Text = "You carefully track your prey’s position and defenses, allowing you to follow up around obstacles that block your shot. Make a ranged weapon (action: Strike) against your hunted prey. You ignore the target’s concealed condition and all cover." };
+            yield return new TextBlock { Id = Guid.Parse("d81785d1-678e-435b-8ef5-c71dbe468a14"), Type = TextBlockType.Text, Text = "You carefully track your prey’s position and defenses, allowing you to follow up around obstacles that block your shot. Make a ranged weapon (action: Strike) against your hunted prey. You ignore the target’s concealed condition and all cover." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("037fc4c5-6018-44f2-b18e-64314e6fa20a"), Feats.Instances.HuntersAim.ID);
+            builder.HaveSpecificFeat(Guid.Parse("49f95549-f3d5-4bc6-8f3e-db864eda2160"), Feats.Instances.HuntersAim.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("283ed65b-7f19-4fcd-86e2-4563baf6d60a"),
+                Id = Guid.Parse("b7fafa2e-1925-41ad-998e-e049c13821af"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

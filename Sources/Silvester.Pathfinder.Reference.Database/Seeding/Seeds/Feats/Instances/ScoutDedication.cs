@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ScoutDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("759df2c1-1307-44ad-98f9-83a6ffbd7cc5");
+        public static readonly Guid ID = Guid.Parse("217f3454-ff7f-4b91-abf4-a35dc1779246");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("672c45ea-27a5-4dd2-b155-416a6db79865"), Type = TextBlockType.Text, Text = "You are a highly skilled scout, capable of providing your allies a timely warning of any danger. You gain the (feat: Scout’s Warning) ranger feat. When you’re using the (action: Scout) exploration activity, you grant your allies a +2 circumstance bonus to their initiative rolls instead of a +1 circumstance bonus." };
+            yield return new TextBlock { Id = Guid.Parse("4874294e-9607-4010-9056-e7725fe812d5"), Type = TextBlockType.Text, Text = "You are a highly skilled scout, capable of providing your allies a timely warning of any danger. You gain the (feat: Scout’s Warning) ranger feat. When you’re using the (action: Scout) exploration activity, you grant your allies a +2 circumstance bonus to their initiative rolls instead of a +1 circumstance bonus." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("bf5b327e-ca81-4f03-9800-7d2bf9d9f53a"), Proficiencies.Instances.Trained.ID, Skills.Instances.Stealth.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("d6584370-c21a-4f17-8891-7ce11f233a66"), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("55219fe8-3f67-49ed-94f0-65b7eeda846a"), Proficiencies.Instances.Trained.ID, Skills.Instances.Stealth.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("5ecae656-b02a-46c0-89fc-acfe96f6f0be"), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("71aa797c-1b10-46ae-939d-68bf9f31b6cd"),
+                Id = Guid.Parse("fc1d1589-d324-41c3-8396-461b9b3b0f60"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

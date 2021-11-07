@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OverpoweringCharge : Template
     {
-        public static readonly Guid ID = Guid.Parse("3a4fe852-3c16-406a-bf9f-64668f9396c8");
+        public static readonly Guid ID = Guid.Parse("d2fa238e-0bf1-4e6c-8415-3c47c8a24cfb");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1b807699-f2b7-4e17-9295-14e9e1303169"), Type = TextBlockType.Text, Text = "You trample foes as you charge past. When you use (feat: Barreling Charge) and successfully move through a creature’s space, that creature takes bludgeoning damage equal to your Strength modifier. On a critical success, the creature takes double damage and is flat-footed until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("79be002d-2dc4-441c-9328-6198172b9f7b"), Type = TextBlockType.Text, Text = "You trample foes as you charge past. When you use (feat: Barreling Charge) and successfully move through a creature’s space, that creature takes bludgeoning damage equal to your Strength modifier. On a critical success, the creature takes double damage and is flat-footed until the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("438ff78e-22d7-43ab-9279-037fd2849ed0"), Feats.Instances.BarrelingCharge.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e9e08503-fb74-4cd9-82b4-5407ae28da31"), Feats.Instances.BarrelingCharge.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4998a214-9bd0-4ef5-be9f-b59b952a7c83"),
+                Id = Guid.Parse("847b898f-49ef-4237-9496-5acd66cc317b"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ChampionDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("792d9cb3-1307-4350-89f2-bed70a20a39b");
+        public static readonly Guid ID = Guid.Parse("12abba01-7d6d-4198-955c-9ea3f94f8882");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("30bc517d-e8ed-46b8-afe7-e4afd45963a1"), Type = TextBlockType.Text, Text = "Choose a deity and cause as you would if you were a champion. You become trained in light, medium, and heavy armor. You become trained in Religion and your deity’s associated skill; for each of these skills in which you were already trained, you instead become trained in a skill of your choice. You become trained in champion class DC." };
-            yield return new TextBlock { Id = Guid.Parse("3218cf78-a7c9-41ca-be15-1b0976c2f69c"), Type = TextBlockType.Text, Text = "You are bound by your deity’s anathema and must follow the champion’s code and alignment requirements for your cause. You don’t gain any other abilities from your choice of deity or cause." };
+            yield return new TextBlock { Id = Guid.Parse("30880815-db7a-4ff9-8027-dccab14f8654"), Type = TextBlockType.Text, Text = "Choose a deity and cause as you would if you were a champion. You become trained in light, medium, and heavy armor. You become trained in Religion and your deity’s associated skill; for each of these skills in which you were already trained, you instead become trained in a skill of your choice. You become trained in champion class DC." };
+            yield return new TextBlock { Id = Guid.Parse("e9b430cf-bff6-4b13-893c-6262aac6082c"), Type = TextBlockType.Text, Text = "You are bound by your deity’s anathema and must follow the champion’s code and alignment requirements for your cause. You don’t gain any other abilities from your choice of deity or cause." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificStat(Guid.Parse("b0ecb111-4904-41d5-962d-b5ec7900902a"), requiredStatValue: 14, Stats.Instances.Strength.ID);
-            builder.HaveSpecificStat(Guid.Parse("ad675d3b-111f-4416-8ec7-ed4f127b92c6"), requiredStatValue: 14, Stats.Instances.Charisma.ID);
+            builder.HaveSpecificStat(Guid.Parse("cdce6ed3-faa3-4eb3-9aff-efcdaa5bc1de"), requiredStatValue: 14, Stats.Instances.Strength.ID);
+            builder.HaveSpecificStat(Guid.Parse("953f7069-b3d3-4da0-84e6-cb9abd64b5da"), requiredStatValue: 14, Stats.Instances.Charisma.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7f799990-2ccb-4bf1-8633-15ad0a260e17"),
+                Id = Guid.Parse("788d815e-8a4b-45bf-80e6-83a83104cc79"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

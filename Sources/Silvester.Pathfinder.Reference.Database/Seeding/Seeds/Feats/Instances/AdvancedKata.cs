@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdvancedKata : Template
     {
-        public static readonly Guid ID = Guid.Parse("c306d276-7e91-40f9-b516-6b8cb975710a");
+        public static readonly Guid ID = Guid.Parse("cd1f868b-d47a-401b-aa96-da7a97b7b2aa");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ed6000cc-2455-4035-8ce6-f271c9fe44f2"), Type = TextBlockType.Text, Text = "You gain one monk feat. For the purpose of meeting its prerequisites, your monk level is equal to half your character level." };
+            yield return new TextBlock { Id = Guid.Parse("af451a7a-4819-49a5-8a43-d5b29568d414"), Type = TextBlockType.Text, Text = "You gain one monk feat. For the purpose of meeting its prerequisites, your monk level is equal to half your character level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("2fe2ef70-4907-44ec-ad21-55bf26d772db"), Feats.Instances.BasicKata.ID);
+            builder.HaveSpecificFeat(Guid.Parse("85e42872-e2fb-42c0-8b70-8d111ada90d1"), Feats.Instances.BasicKata.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("90a384e0-798e-41d6-82e2-3b4d92d08564"),
+                Id = Guid.Parse("113bca4f-f115-407f-af00-813a072b2463"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

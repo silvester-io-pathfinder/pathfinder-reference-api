@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SurveyWildlife : Template
     {
-        public static readonly Guid ID = Guid.Parse("5c26a49c-f3dd-495e-a8c7-e94dcde39a18");
+        public static readonly Guid ID = Guid.Parse("70658ed2-2dbb-43ff-8124-e214d32225ad");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1058f9c3-c1d2-4d2d-aa7a-bf20458405d2"), Type = TextBlockType.Text, Text = "You can study details in the wilderness to determine the presence of nearby creatures. You can spend 10 minutes assessing the area around you to find out what creatures are nearby, based on nests, scat, and marks on vegetation. Attempt a Survival check against a DC determined by the GM based on how obvious the signs are. On a success, you can attempt a (Action: Recall Knowledge) check with a -2 penalty to learn more about the creatures just from these signs. If you’re a master in Survival, you don’t take the penalty." };
+            yield return new TextBlock { Id = Guid.Parse("8d3b5268-8756-4c46-93f0-deb5839f90e1"), Type = TextBlockType.Text, Text = "You can study details in the wilderness to determine the presence of nearby creatures. You can spend 10 minutes assessing the area around you to find out what creatures are nearby, based on nests, scat, and marks on vegetation. Attempt a Survival check against a DC determined by the GM based on how obvious the signs are. On a success, you can attempt a (Action: Recall Knowledge) check with a -2 penalty to learn more about the creatures just from these signs. If you’re a master in Survival, you don’t take the penalty." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("231d6540-03b4-4684-b2e9-b0ddde6e7abd"), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("127ae89e-b25a-4f10-828d-42e2a3c7bfa6"), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0a714aa2-5bc1-4fd0-bd08-5539231a4957"),
+                Id = Guid.Parse("76a5bac4-8439-4d69-a13e-0080bd85e832"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BloodlineFocus : Template
     {
-        public static readonly Guid ID = Guid.Parse("b017ce67-7feb-4d2f-a4e2-d8aeec05fc1c");
+        public static readonly Guid ID = Guid.Parse("23e3706c-5a6a-4d04-ac43-ab57a644e8fc");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db43e53c-1578-4976-ab44-36137d005b43"), Type = TextBlockType.Text, Text = "Your focus recovers faster. If you have spent at least 2 Focus Points since the last time you (action: Refocused | Refocus), you recover 2 Focus Points when you (action: Refocus) instead of 1." };
+            yield return new TextBlock { Id = Guid.Parse("6d8636d7-5b0a-491b-8fdd-78dd56cc18c6"), Type = TextBlockType.Text, Text = "Your focus recovers faster. If you have spent at least 2 Focus Points since the last time you (action: Refocused | Refocus), you recover 2 Focus Points when you (action: Refocus) instead of 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyBloodline(Guid.Parse("ddb13973-be33-4e78-a78b-60f3ca4ce3e3"));
+            builder.HaveAnyBloodline(Guid.Parse("5a7e4a5a-cff4-48c0-af73-99c57c61057d"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0bacf3a9-b77a-42f7-942a-812c08f1383c"),
+                Id = Guid.Parse("784b75ed-2491-48d4-84f8-f78d6be75e91"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

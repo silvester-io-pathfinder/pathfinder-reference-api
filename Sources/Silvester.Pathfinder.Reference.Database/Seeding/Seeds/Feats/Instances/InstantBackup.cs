@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InstantBackup : Template
     {
-        public static readonly Guid ID = Guid.Parse("236f83b3-3429-46a4-941c-eb8d5f15d232");
+        public static readonly Guid ID = Guid.Parse("00ed8f99-216c-43c2-8f8c-f9cdd99f323e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5faeb877-51f4-4be2-a24c-9f3b42864240"), Type = TextBlockType.Text, Text = "Even as your firearm misfires, you quickly draw a backup weapon. (action: Release) the (trait: misfired|misfire) weapon if you so choose, and (action: Interact) to draw a one-handed weapon." };
+            yield return new TextBlock { Id = Guid.Parse("7e0a503c-2ec7-4a4c-9693-a334047e3c28"), Type = TextBlockType.Text, Text = "Even as your firearm misfires, you quickly draw a backup weapon. (action: Release) the (trait: misfired|misfire) weapon if you so choose, and (action: Interact) to draw a one-handed weapon." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6e38e9a5-9ff5-4445-a062-ca0e27e735e4"),
+                Id = Guid.Parse("970b28b0-891a-41e4-813e-db7fc2fde57f"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

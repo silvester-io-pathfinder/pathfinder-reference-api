@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EphemeralTracking : Template
     {
-        public static readonly Guid ID = Guid.Parse("debf17cf-da6b-42b7-be28-c6af09d84f8e");
+        public static readonly Guid ID = Guid.Parse("07b8d2a7-cdce-4668-8ee7-4ba4e1739180");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e6384490-68fb-4209-b756-76d3718066c3"), Type = TextBlockType.Text, Text = "You are able to track your quarry through impossible places. You gain the (spell: ephemeral tracking) warden spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("7f0d9c7a-a012-4ca8-8c62-fc9bff34bb8b"), Type = TextBlockType.Text, Text = "You are able to track your quarry through impossible places. You gain the (spell: ephemeral tracking) warden spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("4f1e4d74-d121-4313-a9b5-34a80108f874"), Proficiencies.Instances.Expert.ID, Skills.Instances.Survival.ID);
-            builder.HaveSpecificClass(Guid.Parse("0d00b0cb-92aa-479b-8bb9-9b7666eb69c5"), Classes.Instances.Ranger.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("f10ad8cb-b9cc-4e7e-ac8c-7b227dba43d3"), Proficiencies.Instances.Expert.ID, Skills.Instances.Survival.ID);
+            builder.HaveSpecificClass(Guid.Parse("041bedab-adf9-42a0-a8f9-53988d60691d"), Classes.Instances.Ranger.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4323ee82-e47a-4444-8aa9-96f97ec3f75f"),
+                Id = Guid.Parse("697fc2ce-5d8b-4b33-b841-1ede0221ad64"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

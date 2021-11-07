@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HuntersVision : Template
     {
-        public static readonly Guid ID = Guid.Parse("9034bb2d-4b96-4987-a48f-313604ba3974");
+        public static readonly Guid ID = Guid.Parse("53a60dbb-9d53-4aef-87fa-d607cf2909f3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("58a41a35-9209-44a5-a38a-da7cdd7a2af9"), Type = TextBlockType.Text, Text = "You are so focused on your hunted prey that you can see it clearly even beyond the limits of your senses. You gain the (spell: hunter’s vision) warden spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("fec22267-a9f3-41b6-b3bd-784339f63976"), Type = TextBlockType.Text, Text = "You are so focused on your hunted prey that you can see it clearly even beyond the limits of your senses. You gain the (spell: hunter’s vision) warden spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClass(Guid.Parse("0ce68f77-9800-4a2d-9e88-f538576f5a59"), Classes.Instances.Ranger.ID);
+            builder.HaveSpecificClass(Guid.Parse("28381edb-f9ae-4b4f-8975-0e984dade8f4"), Classes.Instances.Ranger.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7f3f25a3-186f-433b-b3c0-d9d707f82352"),
+                Id = Guid.Parse("0017999a-1921-4b75-a340-46ea748a06ff"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

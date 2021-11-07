@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImpassableWallStance : Template
     {
-        public static readonly Guid ID = Guid.Parse("f820bdd9-0098-4b40-b132-83571567d89c");
+        public static readonly Guid ID = Guid.Parse("a2034f18-1ebe-467f-92f4-e641728ddc8c");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("14d5d7bf-42dc-416c-9a51-81bcf94608d3"), Type = TextBlockType.Text, Text = "~ Access: The following class feat is available to Knights of Lastwall." };
-            yield return new TextBlock { Id = Guid.Parse("aef1813b-21a4-4926-8473-53f9aab32e5c"), Type = TextBlockType.Text, Text = "You refuse to let foes past your guard. As long as you are in this stance, when you critically hit with an (feat: Attack of Opportunity) triggered by a (trait: move) action, you disrupt that action." };
+            yield return new TextBlock { Id = Guid.Parse("bcd00787-c1e5-4b25-ad25-5dcef8851d12"), Type = TextBlockType.Text, Text = "~ Access: The following class feat is available to Knights of Lastwall." };
+            yield return new TextBlock { Id = Guid.Parse("19a9e46e-0dea-4af9-90f1-fdb8924990f0"), Type = TextBlockType.Text, Text = "You refuse to let foes past your guard. As long as you are in this stance, when you critically hit with an (feat: Attack of Opportunity) triggered by a (trait: move) action, you disrupt that action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("e055148b-9c01-4212-9d23-afd321b9ac64"), Feats.Instances.AttackOfOpportunity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("7b18f883-b2e4-4eff-9608-66bd8abf07eb"), Feats.Instances.AttackOfOpportunity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e730333f-e9e5-483f-b36c-3e6f47b76df0"),
+                Id = Guid.Parse("d0b04065-a94a-4d66-b9d3-db7e3241a9db"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CeaselessShadows : Template
     {
-        public static readonly Guid ID = Guid.Parse("2f5639ca-65d1-4722-9261-7d897898cc54");
+        public static readonly Guid ID = Guid.Parse("e15fbcda-18d6-404a-a010-2d201209d40c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cffc937f-0659-44f3-950b-e6cda158c4b4"), Type = TextBlockType.Text, Text = "You excel at going unnoticed, especially among a crowd. You no longer need to have cover or be concealed to (Action: Hide) or (Action: Sneak). If you would have lesser cover from creatures, you gain cover and can (Action: Take Cover), and if you would have cover from creatures, you gain greater cover." };
+            yield return new TextBlock { Id = Guid.Parse("da5cf73d-23e6-402e-8ce3-b0c957007563"), Type = TextBlockType.Text, Text = "You excel at going unnoticed, especially among a crowd. You no longer need to have cover or be concealed to (Action: Hide) or (Action: Sneak). If you would have lesser cover from creatures, you gain cover and can (Action: Take Cover), and if you would have cover from creatures, you gain greater cover." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1380f2fa-108e-4322-8b28-ae2e642b6c31"), Feats.Instances.DistractingShadows.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e9be8bb1-ee84-463f-8dcb-688713d72b8b"), Feats.Instances.DistractingShadows.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("694b643f-bd54-49b6-906a-793e0e3a5b77"),
+                Id = Guid.Parse("9dbc62a1-78d0-477c-99ff-c5898efd13a0"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

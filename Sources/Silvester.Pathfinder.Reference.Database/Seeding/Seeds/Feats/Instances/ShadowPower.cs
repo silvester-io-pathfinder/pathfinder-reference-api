@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShadowPower : Template
     {
-        public static readonly Guid ID = Guid.Parse("0cdfb119-fd5e-4bff-8153-838c639ead10");
+        public static readonly Guid ID = Guid.Parse("910165fc-f5a1-4701-a2d5-8f800ab293dc");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("677acade-3531-4584-8fee-07cbfc360ac4"), Type = TextBlockType.Text, Text = "You can focus the shadows into a powerful blast. You can cast (spell: shadow blast) as an innate occult spell once per day. Its level is always 1 level lower than the level of your shadowcaster focus spells. You become an expert in occult spell attack rolls and DCs." };
+            yield return new TextBlock { Id = Guid.Parse("243bd0b4-5601-4428-9d85-32a0db56f083"), Type = TextBlockType.Text, Text = "You can focus the shadows into a powerful blast. You can cast (spell: shadow blast) as an innate occult spell once per day. Its level is always 1 level lower than the level of your shadowcaster focus spells. You become an expert in occult spell attack rolls and DCs." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("35f979aa-8afb-46ac-99da-00599af80583"), Feats.Instances.ShadowMagic.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ec5ebe9a-f1d9-4875-9509-95e614b62aa7"), Feats.Instances.ShadowMagic.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ad1bc8fa-d83d-4466-b016-974bab1ef421"),
+                Id = Guid.Parse("c1978c32-b83f-4062-a0c2-6a5190676a4d"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

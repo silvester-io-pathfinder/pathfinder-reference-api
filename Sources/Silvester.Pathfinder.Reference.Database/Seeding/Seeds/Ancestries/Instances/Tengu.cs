@@ -121,7 +121,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
             builder.GainSpecificLanguage(Guid.Parse("a37a8cde-a670-451b-b1e3-a9cf5bf8ac77"), Languages.Instances.Tengu.ID);
             //TODO: Add intelligence modifier languages.
             builder.GainSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
-            builder.GainSpecificUnarmedAttack(Guid.Parse(""), UnarmedAttack.Beak, WeaponGroups.Instances.Brawling.ID, DamageTypes.Instances.Piercing.ID, damage: "1d6");
+            builder.GainSpecificUnarmedAttack(Guid.Parse(""), UnarmedWeapons.Instances.Beak.ID, WeaponGroups.Instances.Brawling.ID, DamageTypes.Instances.Piercing.ID, damage: "1d6");
         }
 
         protected override SourcePage GetSourcePage()

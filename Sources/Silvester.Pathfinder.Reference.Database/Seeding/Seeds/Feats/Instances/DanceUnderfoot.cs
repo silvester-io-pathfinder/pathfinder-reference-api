@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DanceUnderfoot : Template
     {
-        public static readonly Guid ID = Guid.Parse("6a54f0d4-9cc3-4a6c-9922-0cd76e9e3963");
+        public static readonly Guid ID = Guid.Parse("2d9af21d-fc9a-44c2-8cac-f28da678c512");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("96056ff0-2d7f-46cf-89e9-3d9363cc210d"), Type = TextBlockType.Text, Text = "You dart under the legs of your enemies in combat. You can end a successful (action: Tumble Through) action in a Large or larger enemy’s space. Also, when using the (feat: Step Lively) feat, you can (action: Step) into the triggering enemy’s space. The enemy must have limbs or otherwise leave you enough room for this maneuver, as determined by the GM. For instance, you could share space with a giant or dragon, but not an ooze." };
+            yield return new TextBlock { Id = Guid.Parse("2d705015-a469-469f-83b2-9df8795955eb"), Type = TextBlockType.Text, Text = "You dart under the legs of your enemies in combat. You can end a successful (action: Tumble Through) action in a Large or larger enemy’s space. Also, when using the (feat: Step Lively) feat, you can (action: Step) into the triggering enemy’s space. The enemy must have limbs or otherwise leave you enough room for this maneuver, as determined by the GM. For instance, you could share space with a giant or dragon, but not an ooze." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("98c80677-92d1-482c-ac7c-2f3c30bc165e"), Feats.Instances.StepLively.ID);
+            builder.HaveSpecificFeat(Guid.Parse("3f914fee-2f95-4890-a5c0-3246e71aa3ba"), Feats.Instances.StepLively.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8253d371-de50-450c-8c51-cf1272cbaa4f"),
+                Id = Guid.Parse("d2582005-57af-4c50-821f-279dfdc17932"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

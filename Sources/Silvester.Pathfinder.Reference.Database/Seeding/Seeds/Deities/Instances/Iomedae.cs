@@ -1,63 +1,122 @@
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Alignments.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DeityCategories.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DivineFonts.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Domains.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Sources.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instances
 {
     public class Iomedae : Template
     {
-        public static readonly Guid ID = Guid.Parse("8bd542ba-e5e0-4c86-80eb-15cd07d594dd");
+        public static readonly Guid ID = Guid.Parse("");
 
         protected override Deity GetDeity()
         {
-            return new Deity 
+            return new Deity
             {
                 Id = ID,
-                CategoryId = GodsOfTheInnerSea.ID, 
-                AlignmentId = LawfulGood.ID,
-                Name = "Iomedae", 
-                Description = "Iomedae is goddess of honor, justice, rulership, and valor, and she is called the Inheritor because she inherited her mantle when the god of humanity perished. Prior to her ascension, Iomedae walked the planet as a mortal. Many paladins follow her faith.",
+                CategoryId = DeityCategories.Instances.GodsOfTheInnerSea.ID,
+                AlignmentId = Alignments.Instances.LawfulGood.ID,
+                Name = "Iomedae",
                 Edicts = "Be temperate, fight for justice and honor, hold valor in your heart.",
                 Anathema = "Abandon a companion in need, dishonor yourself, refuse a challenge from an equal.",
+                Title = "The Inheritor",
+                AreasOfConcern = "Honor, justice, rulership, and valor.",
             };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetails()
+        {
+            
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Iomedae, the youngest among the prominent deities of the Inner Sea region, had already proven herself worthy of divinity before her ascension. Born in Cheliax, she followed the path of the sword and fought evil, eventually becoming a paladin of Aroden's heraldArazni. She became a legend among the Shining Crusade, leading the Knights of Ozem in a series of victories over the Whispering Tyrant. Iomedae became the third known mortal to pass the Test of the Starstone when she ascended to divinity in 3832 AR. As Arazni had been slain during the Shining Crusade, Aroden elevated the newly ascended goddess to be his new herald. When Aroden himself died, Iomedae inherited most of his worshippers and became a major deity of honor and justice." };
+        }
+
+        protected override void GetDevoteeEffect(BooleanEffectBuilder builder)
+        {
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.TrueStrike.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enlarge.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.FireShield.ID);
         }
 
         protected override IEnumerable<Guid> GetDivineFonts()
         {
-            yield return Heal.ID;
+            yield return DivineFonts.Instances.Heal.ID;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredMeleeWeapons()
+        {
+            
+            yield return MeleeWeapons.Instances.Longsword.ID;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredRangedWeapons()
+        {
+            yield break;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredUnarmedWeapons()
+        {
+            yield break;
+        }
+
+        protected override DivineIntercession? GetDivineIntercession()
+        {
+            
+            return new DivineIntercession
+            {
+                Id = Guid.Parse(""),
+                Description = "Iomedae grants her blessings to those who show valor in trying times.",
+                MinorBoon = "You always present yourself at your best. Your clothing and person are always clean and unrumpled, the metal of your blade and armor shining and unblemished. This doesn't prevent you from being exposed to diseases and other afflictions via filth, but it protects you as well as if you had washed thoroughly right away.",
+                ModerateBoon = "Your heart beats with a determined valor. Once, Iomedae ends all negative effects affecting you, unless they are from an artifact, deity, or similarly powerful source; she also restores all lost Hit Points and replenishes your spells, Focus Points, and other daily resources.",
+                MajorBoon = "Iomedae imbues your blade with great power. Longswords you wield gain the axiomatic, holy, and major striking runes while you hold them. These property runes count toward the number of runes you can have on your weapon, and if this would cause your weapon to exceed its limit, choose which ones to keep each day when you prepare. You gain a +2 status bonus to attack rolls with longswords.",
+                MinorCurse = "Your blade and armor have dulled like lead. Your weapons, armor, and shields have half their usual Hit Points and Break Threshold.",
+                ModerateCurse = "Tactical advantages never seem to work the way you planned. You can't receive a circumstance bonus to your attack rolls, and enemies don't take any circumstance penalties to their AC against your attacks.",
+                MajorCurse = "All blades reject your wicked heart. Any weapon you wield automatically becomes broken after you Strike with it. This curse can't break artifacts or similarly powerful weapons.",
+                SourcePage = new SourcePage
+                {
+                    Id = Guid.Parse(""),
+                    SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
+                    Page = 29
+                }
+            };
         }
 
         protected override IEnumerable<Guid> GetDivineSkills()
         {
-            yield return Intimidation.ID;
+            yield return Skills.Instances.Intimidation.ID;
+        }
+
+        protected override IEnumerable<Guid> GetDivineStats()
+        {
+            
+            yield return Stats.Instances.Strength.ID;
+            yield return Stats.Instances.Constitution.ID;
         }
 
         protected override IEnumerable<Guid> GetDomains()
         {
-            yield return Confidence.ID;
-            yield return Might.ID;
-            yield return Truth.ID;
-            yield return Zeal.ID;
+            yield return Domains.Instances.Confidence.ID;
+            yield return Domains.Instances.Might.ID;
+            yield return Domains.Instances.Truth.ID;
+            yield return Domains.Instances.Zeal.ID;
         }
 
         protected override IEnumerable<Guid> GetFollowerAlignments()
         {
-            yield return LawfulGood.ID;
-            yield return NeutralGood.ID;
+            yield return Alignments.Instances.LawfulGood.ID;
+            yield return Alignments.Instances.NeutralGood.ID;
         }
 
-        protected override SourcePage GetSourcePage()
+        protected override SourcePage GetSourcePage() 
         {
             return new SourcePage
             {
-                Id = Guid.Parse("03a680cd-2ff4-464d-be59-8a960ae9e8e9"),
-                SourceId = CoreRulebook.ID,
+                Id = Guid.Parse(""),
+                SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 438
             };
         }

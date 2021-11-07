@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdaptiveAdept : Template
     {
-        public static readonly Guid ID = Guid.Parse("d0ea8383-d129-48c9-88a2-574e028daa0f");
+        public static readonly Guid ID = Guid.Parse("35d30e3b-69a2-4995-a617-daec0b47d53e");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1b2f4210-af69-4430-859b-581869597d5f"), Type = TextBlockType.Text, Text = "You’ve continued adapting your magic to blend your class’s tradition with your adapted tradition. Choose a cantrip or 1st-level spell from the same magical tradition as your cantrip from (feat: Adapted Cantrip). You gain that spell, adding it to your spell repertoire, spellbook, or prepared spells just like the cantrip from (feat: Adapted Cantrip). You can cast this spell as a spell of your class’s magical tradition. If you choose a 1st-level spell, you don’t gain access to the heightened versions of that spell, meaning you can’t prepare them if you prepare spells and you can’t learn them or select the spell as a signature spell if you have a spell repertoire." };
+            yield return new TextBlock { Id = Guid.Parse("780a3c4a-7279-47a7-8513-e2157eb0d0e4"), Type = TextBlockType.Text, Text = "You’ve continued adapting your magic to blend your class’s tradition with your adapted tradition. Choose a cantrip or 1st-level spell from the same magical tradition as your cantrip from (feat: Adapted Cantrip). You gain that spell, adding it to your spell repertoire, spellbook, or prepared spells just like the cantrip from (feat: Adapted Cantrip). You can cast this spell as a spell of your class’s magical tradition. If you choose a 1st-level spell, you don’t gain access to the heightened versions of that spell, meaning you can’t prepare them if you prepare spells and you can’t learn them or select the spell as a signature spell if you have a spell repertoire." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("2ecaae49-13df-4761-af6b-243d4ee99bcf"), Feats.Instances.AdaptedCantrip.ID);
-            builder.HaveSpecificSpellSlotLevel(Guid.Parse("07948ece-98f3-4781-98ab-28af9c9f236f"), spellSlotLevel: 3);
+            builder.HaveSpecificFeat(Guid.Parse("f995f41a-209e-4393-b009-46a19c410758"), Feats.Instances.AdaptedCantrip.ID);
+            builder.HaveSpecificSpellSlotLevel(Guid.Parse("1db54632-dc49-4362-8bea-07683de39d7d"), spellSlotLevel: 3);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("972a2ec6-d001-4087-895c-1b49479104c7"),
+                Id = Guid.Parse("6c34cb2b-51b0-496d-817d-b898acea2101"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

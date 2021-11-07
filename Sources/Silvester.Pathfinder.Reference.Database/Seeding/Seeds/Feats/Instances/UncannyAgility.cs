@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UncannyAgility : Template
     {
-        public static readonly Guid ID = Guid.Parse("75ee933d-fe0e-4c31-b53f-8201da7ebbf1");
+        public static readonly Guid ID = Guid.Parse("688ff15d-5c1a-4213-bcb6-b9cc5bebd93b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a52b09f4-f145-4913-b54d-88834432d2fd"), Type = TextBlockType.Text, Text = "You have near-supernatural poise that lets you move swiftly across the most unsteady surfaces. You gain the (feat: Steady Balance) skill feat. You can (action: Step) into difficult terrain caused by uneven ground, such as a rocky field or hilly incline." };
+            yield return new TextBlock { Id = Guid.Parse("711e2b2c-ebe8-48f8-b3f1-ec4a792f317c"), Type = TextBlockType.Text, Text = "You have near-supernatural poise that lets you move swiftly across the most unsteady surfaces. You gain the (feat: Steady Balance) skill feat. You can (action: Step) into difficult terrain caused by uneven ground, such as a rocky field or hilly incline." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e5ccbbb6-4d1e-464e-95a6-2771697a9b05"),
+                Id = Guid.Parse("f961dee4-ad2f-42d5-ab35-8508a2d1da14"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpeakWithBats : Template
     {
-        public static readonly Guid ID = Guid.Parse("97c7e7c5-5db0-4e61-aacf-30230a86f4fa");
+        public static readonly Guid ID = Guid.Parse("52f2027b-19d4-4abe-9040-0d3beb313b2d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0478763e-bd19-4366-9d62-2ea43a70158e"), Type = TextBlockType.Text, Text = "You can ask questions of, receive answers from, and use the Diplomacy skill with bats. You gain a +2 circumstance bonus on all Diplomacy checks to (action: Make an Impression) on bats or (action: Request) something from bats." };
+            yield return new TextBlock { Id = Guid.Parse("8d5e2a56-7379-4051-a91e-f437d3a4efab"), Type = TextBlockType.Text, Text = "You can ask questions of, receive answers from, and use the Diplomacy skill with bats. You gain a +2 circumstance bonus on all Diplomacy checks to (action: Make an Impression) on bats or (action: Request) something from bats." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificHeritage(Guid.Parse("51deaac3-ac2f-46ad-81db-7e091e890515"), Heritages.Instances.NykteraSprite.ID);
+            builder.HaveSpecificHeritage(Guid.Parse("d89a5eea-5cca-4e83-8b42-5b1a952d13b5"), Heritages.Instances.Nyktera.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3b4c6b53-0835-4068-9440-4431e25d40f4"),
+                Id = Guid.Parse("f286791a-8bda-4a6e-8f50-0840d78ffb77"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

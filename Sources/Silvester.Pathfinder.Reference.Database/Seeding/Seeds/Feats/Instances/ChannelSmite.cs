@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ChannelSmite : Template
     {
-        public static readonly Guid ID = Guid.Parse("d471684b-2e04-4d76-9a59-ae96d3589d41");
+        public static readonly Guid ID = Guid.Parse("b0245191-3ad7-4c8b-9f06-1a7950cd2f3c");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a56fd7bf-e10e-4a88-9490-ded3347cdf30"), Type = TextBlockType.Text, Text = "You siphon the destructive energies of positive or negative energy through a melee attack and into your foe. Make a melee (action: Strike) and add the spell’s damage to the Strike’s damage. This is negative damage if you expended a (spell: harm) spell or positive damage if you expended a (spell: heal) spell." };
-            yield return new TextBlock { Id = Guid.Parse("8f0de575-8e9c-40b5-be05-b13f3d26d4f2"), Type = TextBlockType.Text, Text = "The spell is expended with no effect if your (action: Strike) fails or hits a creature that isn’t damaged by that energy type (such as if you hit a non-undead creature with a heal spell)." };
+            yield return new TextBlock { Id = Guid.Parse("bff34980-cb09-46b8-87ac-fa949c9ed336"), Type = TextBlockType.Text, Text = "You siphon the destructive energies of positive or negative energy through a melee attack and into your foe. Make a melee (action: Strike) and add the spell’s damage to the Strike’s damage. This is negative damage if you expended a (spell: harm) spell or positive damage if you expended a (spell: heal) spell." };
+            yield return new TextBlock { Id = Guid.Parse("167a8c1b-a1e1-42b5-8b5d-cf6e3302b805"), Type = TextBlockType.Text, Text = "The spell is expended with no effect if your (action: Strike) fails or hits a creature that isn’t damaged by that energy type (such as if you hit a non-undead creature with a heal spell)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("22d187e9-bcc3-438e-a476-e0bdcdaa6750"), or => 
+            builder.AddOr(Guid.Parse("59e5d12d-7540-4989-a670-ddffafc6d583"), or => 
             {
-                or.HaveSpecificDivineFont(Guid.Parse("e60bc993-2f46-42b2-ac77-97d86ace126e"), DivineFonts.Instances.Heal.ID);
-                or.HaveSpecificDivineFont(Guid.Parse("2796cf41-183c-48c2-af25-4679002ba273"), DivineFonts.Instances.Harm.ID);
+                or.HaveSpecificDivineFont(Guid.Parse("b08fef4f-775e-4442-9ac3-8994ad75dd80"), DivineFonts.Instances.Heal.ID);
+                or.HaveSpecificDivineFont(Guid.Parse("b8e20e4b-3477-4eae-b558-6bc475d724d4"), DivineFonts.Instances.Harm.ID);
             });
         }
 
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7a6acfc3-eae0-4d51-93fe-1c0fed4e0bea"),
+                Id = Guid.Parse("912e998e-8bad-4b3d-88ee-5c4730d98720"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

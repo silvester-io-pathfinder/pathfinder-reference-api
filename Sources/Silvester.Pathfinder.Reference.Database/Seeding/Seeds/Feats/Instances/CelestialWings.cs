@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CelestialWings : Template
     {
-        public static readonly Guid ID = Guid.Parse("1a5f4ac8-70f6-4772-bde3-b5e69bb566bd");
+        public static readonly Guid ID = Guid.Parse("e03f7933-e257-437a-b5f9-1f891fa1b87e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8a30ada0-690b-46f7-abc6-936591bf2cf4"), Type = TextBlockType.Text, Text = "With effort, you can call forth magical wings from your back, similar in appearance to those of your celestial forebears. These wings remain for 10 minutes. You gain a fly Speed equal to your Speed while you&#39;ve manifested your wings." };
+            yield return new TextBlock { Id = Guid.Parse("fa6f8142-df56-4fa1-a251-12cf52d79aa7"), Type = TextBlockType.Text, Text = "With effort, you can call forth magical wings from your back, similar in appearance to those of your celestial forebears. These wings remain for 10 minutes. You gain a fly Speed equal to your Speed while you&#39;ve manifested your wings." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("33c5feb6-015c-436e-abcf-a4cc08e646a3"),
+                Id = Guid.Parse("343af2ad-7599-4ac7-aee1-2ea997b7ba3d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationCamouflagePigmentation : Template
     {
-        public static readonly Guid ID = Guid.Parse("30b9ba34-8d52-4579-b97a-9393cd3234d2");
+        public static readonly Guid ID = Guid.Parse("ec06880e-d8df-4210-9c74-7e56526288b8");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2451a96f-13cb-45e6-a460-e704e4a9f92d"), Type = TextBlockType.Enumeration, Text = "*Subterfuge Suit Only**" };
-            yield return new TextBlock { Id = Guid.Parse("49b2a315-e999-4983-a206-7edf2ddd5229"), Type = TextBlockType.Text, Text = "You’ve modified your armor’s exterior to let you blend into your surroundings with ease, as long as you stay still. While wearing your armor, you can (action: Hide) even without cover or concealment, as the pigmentation shifts to match your surroundings." };
+            yield return new TextBlock { Id = Guid.Parse("859f1ea6-bde2-4cf3-9ed0-266a89597ef3"), Type = TextBlockType.Enumeration, Text = "*Subterfuge Suit Only**" };
+            yield return new TextBlock { Id = Guid.Parse("9d346758-d75e-4c56-acc1-d8080ef07f17"), Type = TextBlockType.Text, Text = "You’ve modified your armor’s exterior to let you blend into your surroundings with ease, as long as you stay still. While wearing your armor, you can (action: Hide) even without cover or concealment, as the pigmentation shifts to match your surroundings." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("47c36085-8118-4cb2-bad7-daaefbe6ce7d"),
+                Id = Guid.Parse("7889c5ba-dab7-475c-8a2a-fdd4457e3d18"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

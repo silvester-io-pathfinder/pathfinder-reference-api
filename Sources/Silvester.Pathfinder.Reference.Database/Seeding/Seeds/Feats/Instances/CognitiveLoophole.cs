@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CognitiveLoophole : Template
     {
-        public static readonly Guid ID = Guid.Parse("df5f6ce6-e574-4b55-8e75-7e3d57bf357f");
+        public static readonly Guid ID = Guid.Parse("f026c2b7-afe3-41f5-b088-d11638a7b72d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("284cdb5b-8c98-481b-b31b-3a84a1ebd37a"), Type = TextBlockType.Text, Text = "You can find a loophole in a mental effect to temporarily overcome it. Until the end of your next turn, you ignore a single (trait: mental) effect that meets the requirement. You can suppress a particular effect using Cognitive Loophole only once." };
+            yield return new TextBlock { Id = Guid.Parse("f4bc325b-e54d-40fb-a053-ed1fde67e7c8"), Type = TextBlockType.Text, Text = "You can find a loophole in a mental effect to temporarily overcome it. Until the end of your next turn, you ignore a single (trait: mental) effect that meets the requirement. You can suppress a particular effect using Cognitive Loophole only once." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("096f60ad-e5d3-475b-9f75-bf857972f560"), Feats.Instances.ShadowdancerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("38f49792-0631-45b3-b730-fb5060a493c8"), Feats.Instances.ShadowdancerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d399bb5b-2a33-4a33-864b-b5f2fbf10b97"),
+                Id = Guid.Parse("e3817110-5b5e-4a95-b7dc-30411063aa42"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

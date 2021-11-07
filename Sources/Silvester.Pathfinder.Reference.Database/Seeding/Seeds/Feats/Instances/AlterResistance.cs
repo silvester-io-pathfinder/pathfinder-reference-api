@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AlterResistance : Template
     {
-        public static readonly Guid ID = Guid.Parse("dbecfe32-fe56-4f71-bc4a-5ded51b34ae6");
+        public static readonly Guid ID = Guid.Parse("a53b4f30-14a8-423c-9812-ce5c6bd38011");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84b680b7-ba22-4c02-92bb-80227f47ddca"), Type = TextBlockType.Text, Text = "You focus on your protean forebears to change your energy resistance. The energy resistance you gain from your ganzi heritage changes to match the triggering damage. This change occurs after the damage is dealt." };
+            yield return new TextBlock { Id = Guid.Parse("f115780a-fb53-481d-89f7-5e7ded12fa22"), Type = TextBlockType.Text, Text = "You focus on your protean forebears to change your energy resistance. The energy resistance you gain from your ganzi heritage changes to match the triggering damage. This change occurs after the damage is dealt." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("583e0641-5729-4fbb-b257-07734b690b09"),
+                Id = Guid.Parse("82b4d8c2-d704-42ef-81f5-9df794cbf148"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

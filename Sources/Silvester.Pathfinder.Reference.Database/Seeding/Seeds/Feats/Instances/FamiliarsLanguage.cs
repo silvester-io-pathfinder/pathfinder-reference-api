@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FamiliarsLanguage : Template
     {
-        public static readonly Guid ID = Guid.Parse("82ac3c38-a592-4a82-966d-a7f8d24501f8");
+        public static readonly Guid ID = Guid.Parse("da117287-dee3-49d3-8477-63ec97648874");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fe927ed1-ff15-49eb-866e-75e6d7a2c7ce"), Type = TextBlockType.Text, Text = "You’ve learned to speak with your familiar and other creatures like it. You can ask questions of, receive answers from, and use the Diplomacy skill with creatures of the same family of animals as your familiar. For example, if your familiar were a cat, you could gain the effects of speak with animals for any felines (including leopards, lions, and tigers, among others). This ability doesn’t make them more friendly than normal. If your familiar ever changes to a different creature, you can’t use this ability for 1 week while you absorb your new familiar’s language." };
+            yield return new TextBlock { Id = Guid.Parse("f278cf17-beaa-4898-b25f-3dec3bb549a8"), Type = TextBlockType.Text, Text = "You’ve learned to speak with your familiar and other creatures like it. You can ask questions of, receive answers from, and use the Diplomacy skill with creatures of the same family of animals as your familiar. For example, if your familiar were a cat, you could gain the effects of speak with animals for any felines (including leopards, lions, and tigers, among others). This ability doesn’t make them more friendly than normal. If your familiar ever changes to a different creature, you can’t use this ability for 1 week while you absorb your new familiar’s language." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyFamiliar(Guid.Parse("a2f7fa7b-ae33-43af-a596-9f7076da0f97"));
+            builder.HaveAnyFamiliar(Guid.Parse("3c16d857-26ee-42e0-bf99-11d2ecc5f52c"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0c04fc11-8b99-4e71-b19f-19c0e213931b"),
+                Id = Guid.Parse("2bc229d3-96bc-41c9-8e8a-4d33d1252c00"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

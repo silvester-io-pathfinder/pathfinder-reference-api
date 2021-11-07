@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TongueDisarm : Template
     {
-        public static readonly Guid ID = Guid.Parse("6f48e23b-6a8c-4fef-9503-7562e84b0771");
+        public static readonly Guid ID = Guid.Parse("417a95b7-f58d-40b2-9199-a0ffa985a933");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f1b27220-e902-4de3-a0f3-15246d7c576a"), Type = TextBlockType.Text, Text = "You lash out with your tongue to disarm your foe. You attempt to (action: Disarm) a creature within 10 feet, ignoring the requirement that you must have at least one hand free." };
+            yield return new TextBlock { Id = Guid.Parse("f7b64707-e563-4e5a-a2b7-a984e4998349"), Type = TextBlockType.Text, Text = "You lash out with your tongue to disarm your foe. You attempt to (action: Disarm) a creature within 10 feet, ignoring the requirement that you must have at least one hand free." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("682fb00a-c779-4561-9c37-aa14e3c04b13"), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
-            builder.HaveSpecificFeat(Guid.Parse("d95828f0-e6ac-4180-9b51-bf89b88995cb"), Feats.Instances.LightningTongue.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("e48a8946-49e3-4ddc-8775-8d483bb9cbbb"), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e28b1458-9441-4888-8ce7-a33de559f270"), Feats.Instances.LightningTongue.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("adf7d9a5-7caf-44f5-8542-49345997c6c0"),
+                Id = Guid.Parse("507a5359-35ed-41ae-9167-a504161e5b90"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

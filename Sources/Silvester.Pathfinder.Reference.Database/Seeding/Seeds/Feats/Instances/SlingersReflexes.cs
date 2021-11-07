@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SlingersReflexes : Template
     {
-        public static readonly Guid ID = Guid.Parse("5e180e05-4c9d-4227-ba11-efa5ce970075");
+        public static readonly Guid ID = Guid.Parse("6236d0d5-17fd-41be-b7cd-4ad3117b4b27");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1636b200-69ae-4f70-af96-ca85f2498053"), Type = TextBlockType.Text, Text = "Your ability to react to unexpected circumstances is preternaturally sharp. At the start of each enemy’s turn, you gain an additional reaction you can use on only that turn to use a gunslinger reaction." };
+            yield return new TextBlock { Id = Guid.Parse("aac286f4-d563-404a-a8ea-430c1d4319b0"), Type = TextBlockType.Text, Text = "Your ability to react to unexpected circumstances is preternaturally sharp. At the start of each enemy’s turn, you gain an additional reaction you can use on only that turn to use a gunslinger reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("55d3bdd6-4861-4ac3-880a-f42f6b3f1439"),
+                Id = Guid.Parse("71a69160-b9f3-48e3-8b50-45be054c7144"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AberrationKinship : Template
     {
-        public static readonly Guid ID = Guid.Parse("2efdd006-8136-4600-a255-84aa9eb5a9ce");
+        public static readonly Guid ID = Guid.Parse("312badc1-8554-4cfb-a3d5-d434ca0deaf3");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb2ef42c-fbbf-4e78-8aff-9ae93640019d"), Type = TextBlockType.Text, Text = "Your mind resonates with the inscrutable thought processes that inhuman aberrations use to communicate. You can cast (spell: mindlink) as an innate occult spell once per day, but you can target only aberrations." };
+            yield return new TextBlock { Id = Guid.Parse("7c3e7ea3-97cd-492a-a293-6772820163ba"), Type = TextBlockType.Text, Text = "Your mind resonates with the inscrutable thought processes that inhuman aberrations use to communicate. You can cast (spell: mindlink) as an innate occult spell once per day, but you can target only aberrations." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b8807917-165d-4673-aa0f-64f9d2b32bdf"),
+                Id = Guid.Parse("62e4d4cd-92b6-4e58-b117-96cb5af7da61"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

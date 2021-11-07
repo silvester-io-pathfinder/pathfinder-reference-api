@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InvestigatorDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("496f2d3d-a240-4f0c-a4ae-ca65e2b7382f");
+        public static readonly Guid ID = Guid.Parse("1d09c32f-7c00-4021-9a69-1314509705a8");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("714c3058-5064-4f23-8e7b-b7af4b8d84b3"), Type = TextBlockType.Text, Text = "You gain the on the case class feature, which grants you both the (feat: Pursue a Lead) activity and (feat: Clue In) reaction. You become trained in Society and another skill of your choice. If you were already trained in Society, you instead become trained in an additional skill of your choice. You also become trained in investigator class DC." };
+            yield return new TextBlock { Id = Guid.Parse("0c4982ea-83df-483a-b73c-db81152f6909"), Type = TextBlockType.Text, Text = "You gain the on the case class feature, which grants you both the (feat: Pursue a Lead) activity and (feat: Clue In) reaction. You become trained in Society and another skill of your choice. If you were already trained in Society, you instead become trained in an additional skill of your choice. You also become trained in investigator class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificStat(Guid.Parse("98bd7535-cf4d-4eb6-963b-95e5ae6d0aa8"), requiredStatValue: 14, Stats.Instances.Intelligence.ID);
+            builder.HaveSpecificStat(Guid.Parse("a300ff8f-b4e7-45bb-96ad-1250b33b3ad0"), requiredStatValue: 14, Stats.Instances.Intelligence.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cef8ac9e-a179-436e-b289-a58e55c7d3ed"),
+                Id = Guid.Parse("a8d710ef-891b-4059-931d-de0abedb4cbe"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

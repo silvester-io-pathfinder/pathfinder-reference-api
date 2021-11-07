@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdvancedDeduction : Template
     {
-        public static readonly Guid ID = Guid.Parse("7b817744-d26e-4f84-bea4-2f2a95d8cfc9");
+        public static readonly Guid ID = Guid.Parse("4eb0289a-9b25-412c-b8bb-c2e383bded64");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27f36acb-3b5d-4b58-915c-6564ae756829"), Type = TextBlockType.Text, Text = "You gain one investigator feat. For the purpose of meeting its prerequisites, your investigator level is equal to half your character level." };
+            yield return new TextBlock { Id = Guid.Parse("18e8756b-a780-45fb-8a67-b3bed1bf361f"), Type = TextBlockType.Text, Text = "You gain one investigator feat. For the purpose of meeting its prerequisites, your investigator level is equal to half your character level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("dd6867d0-1a2c-4fd3-bfd1-5724ad955833"), Feats.Instances.BasicDeduction.ID);
+            builder.HaveSpecificFeat(Guid.Parse("bd319689-c6b7-4389-83ea-f32a56e6faed"), Feats.Instances.BasicDeduction.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ed3e18c4-d428-4368-b805-78d068d10f3a"),
+                Id = Guid.Parse("3bc6c316-1e5d-401a-bed3-06b23667d3cf"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CatchyTune : Template
     {
-        public static readonly Guid ID = Guid.Parse("d8c681a7-ef00-4cb7-8f10-55ebe91a0525");
+        public static readonly Guid ID = Guid.Parse("04ef3232-40c1-49d2-9900-da4c2f674150");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5fb0b128-e348-4a7f-894d-be5bc45f7985"), Type = TextBlockType.Text, Text = "You create a tune so catchy, your foes can’t help but dance along. Attempt a Performance check against the Will DCs of all enemies in a 30-foot emanation." };
+            yield return new TextBlock { Id = Guid.Parse("2891dbdf-b53a-4385-90df-cef617bbd0ad"), Type = TextBlockType.Text, Text = "You create a tune so catchy, your foes can’t help but dance along. Attempt a Performance check against the Will DCs of all enemies in a 30-foot emanation." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("a48c1ee6-965b-4411-a85f-b6099078deea"),
+                Id = Guid.Parse("43e77e1a-7e54-4b1e-9d6e-65165b9decd0"),
                 CriticalSuccess = "The target takes a -10-foot status penalty to its Speed and is flat-footed, both for 1 round.",
                 Success = "The target takes a –5-foot status penalty to its Speed for 1 round.",
                 
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("aac42283-d4db-4717-851b-487c54de58c3"),
+                Id = Guid.Parse("1ff52421-7f4a-4c49-9a06-1da113b0cf5f"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

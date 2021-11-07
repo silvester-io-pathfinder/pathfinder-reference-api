@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DragonDiscipleGreen : Template
     {
-        public static readonly Guid ID = Guid.Parse("d75c154d-e729-4f1c-92f7-8dfed79387c6");
+        public static readonly Guid ID = Guid.Parse("54053c0c-6ee7-445d-b502-1e64d7e73222");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a40c8d3-69ba-4549-a2d6-d122cb74a05b"), Type = TextBlockType.Text, Text = "You gain resistance equal to half your level against poison." };
+            yield return new TextBlock { Id = Guid.Parse("ce68a6f0-47e0-48b4-84b3-fc7b1ce127d4"), Type = TextBlockType.Text, Text = "You gain resistance equal to half your level against poison." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2b391630-011c-42e4-a4c8-d124b6eaa440"),
+                Id = Guid.Parse("65fbd94f-2937-49ca-b0a5-c66a937da82d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

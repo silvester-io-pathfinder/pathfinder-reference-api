@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class QuickenedAttunement : Template
     {
-        public static readonly Guid ID = Guid.Parse("afda45fe-c919-4875-bb46-6f1e1559b70c");
+        public static readonly Guid ID = Guid.Parse("378fc6fc-3689-45f7-b9f6-a7706d45de40");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ee875d69-ed8e-4dd7-80be-56512b605ce5"), Type = TextBlockType.Text, Text = "If your next action is to cast a spell that would grant your terrain attunement bonus, reduce the number of actions to cast it by 1 (to a minimum of 1 action)." };
+            yield return new TextBlock { Id = Guid.Parse("b85fa80b-2628-4c2e-8fdd-5b16b5ea0869"), Type = TextBlockType.Text, Text = "If your next action is to cast a spell that would grant your terrain attunement bonus, reduce the number of actions to cast it by 1 (to a minimum of 1 action)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("a1dab223-e522-460d-b92f-e180743a2ac3"), Feats.Instances.GeomancerDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("9f301f8a-f145-4e8b-8e0b-cc6b2f092acb"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Nature.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8b43dff4-859b-44a6-91df-9567bb1f3eb3"), Feats.Instances.GeomancerDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("ee739be3-f2a0-481c-986b-90a116eb3ba6"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Nature.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ae46f47e-73f5-41f1-b236-86764f547852"),
+                Id = Guid.Parse("9cd7d165-96bb-4f9a-b43e-a7f845d1392b"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

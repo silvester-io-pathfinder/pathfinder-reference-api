@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LivingWeaponClaws : Template
     {
-        public static readonly Guid ID = Guid.Parse("bed09f61-e47b-4f1c-a0d0-f494943c4f0c");
+        public static readonly Guid ID = Guid.Parse("d7b9556c-e45b-45c8-8b24-39c7231a1093");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2eca9b1-e4b7-4f77-a590-47bd267f8251"), Type = TextBlockType.Text, Text = "You gain a claws unarmed attack that deals 1d4 slashing damage and has the (trait: agile) and (trait: finesse) traits." };
+            yield return new TextBlock { Id = Guid.Parse("579af590-b73d-4c4c-957f-a7dc2683c060"), Type = TextBlockType.Text, Text = "You gain a claws unarmed attack that deals 1d4 slashing damage and has the (trait: agile) and (trait: finesse) traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("76417324-fdd3-470a-9db8-d9289e2f3309"),
+                Id = Guid.Parse("2488b77b-cc55-4056-8f21-75276e6543c2"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

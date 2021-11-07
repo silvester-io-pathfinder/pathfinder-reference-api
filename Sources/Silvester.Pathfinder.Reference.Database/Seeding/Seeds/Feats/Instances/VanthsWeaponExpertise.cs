@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class VanthsWeaponExpertise : Template
     {
-        public static readonly Guid ID = Guid.Parse("3030bdad-9506-48f6-ae81-0270fdf69d1b");
+        public static readonly Guid ID = Guid.Parse("52a2c900-a515-4989-ae51-788570d5d31a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b2fd48fd-fa58-43c2-a100-99515862690d"), Type = TextBlockType.Text, Text = "Vanths themselves recognize you as an honorary reaper. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in (item: bo staves | bo staff), (item: longbows | longbow), (item: composite longbows | composite longbow), (item: scythes | scythe), and (item: staves | staff)." };
+            yield return new TextBlock { Id = Guid.Parse("1fc920ea-b96f-415c-a7d8-9d839a30a527"), Type = TextBlockType.Text, Text = "Vanths themselves recognize you as an honorary reaper. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in (item: bo staves | bo staff), (item: longbows | longbow), (item: composite longbows | composite longbow), (item: scythes | scythe), and (item: staves | staff)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("cc27be91-5e35-4bd2-af51-151c1640c4a5"), Feats.Instances.VanthsWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("a71b10e8-ffe6-471e-bfe6-cd786659cf2a"), Feats.Instances.VanthsWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9bffbd8c-a14b-4578-8c29-56c27822412e"),
+                Id = Guid.Parse("e77b4da9-413e-44e1-b6f4-d56c92cd0cd8"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

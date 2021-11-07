@@ -1,63 +1,122 @@
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Alignments.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DeityCategories.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DivineFonts.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Domains.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Sources.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instances
 {
     public class Rovagug : Template
     {
-        public static readonly Guid ID = Guid.Parse("1290de63-f6c8-4319-b76f-361db860eb0e");
+        public static readonly Guid ID = Guid.Parse("");
 
         protected override Deity GetDeity()
         {
-            return new Deity 
+            return new Deity
             {
                 Id = ID,
-                CategoryId = GodsOfTheInnerSea.ID, 
-                AlignmentId = ChaoticEvil.ID,
-                Name = "Rovagug", 
-                Description = "The Rough Beast is the god of destruction, disaster, and wrath. He was long ago imprisoned within Golarion’s core at the hands of many other deities working in concert, and seeks to one day break free and wreak havoc upon the world.",
+                CategoryId = DeityCategories.Instances.GodsOfTheInnerSea.ID,
+                AlignmentId = Alignments.Instances.ChaoticEvil.ID,
+                Name = "Rovagug",
                 Edicts = "Destroy all things, free Rovagug from his prison.",
                 Anathema = "Create something new, let material ties restrain you, torture a victim or otherwise delay its destruction.",
+                Title = "The Rough Beast",
+                AreasOfConcern = "Destruction, disaster, and wrath.",
             };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetails()
+        {
+            
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Rovagug has no single holy scripture. He has little use for one, for his sole commandment is to destroy, and his followers need no instruction in how to accomplish that. The figurative and literal monsters who worship Rovagug share their myths and legends in secret shrines and hidden caves, calling him the Rough Beast, the Imprisoned King, the Tide of Fangs, the Unmaker, and the Worldbreaker. They tell each other that each life they snuff out, each piece of art they destroy, each work of labor they bring tumbling down puts a crack in the prison that holds their god. Each of their little efforts of destruction adds up and will one day free him, setting him loose to bring about the end of all things." };
+        }
+
+        protected override void GetDevoteeEffect(BooleanEffectBuilder builder)
+        {
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.BurningHands.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Enlarge.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Disintegrate.ID);
         }
 
         protected override IEnumerable<Guid> GetDivineFonts()
         {
-            yield return Harm.ID;
+            yield return DivineFonts.Instances.Harm.ID;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredMeleeWeapons()
+        {
+            
+            yield return MeleeWeapons.Instances.Greataxe.ID;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredRangedWeapons()
+        {
+            yield break;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredUnarmedWeapons()
+        {
+            yield break;
+        }
+
+        protected override DivineIntercession? GetDivineIntercession()
+        {
+            
+            return new DivineIntercession
+            {
+                Id = Guid.Parse(""),
+                Description = "Rovagug’s imprisonment means he can almost never intercede on Golarion, but some places lead far enough into the earth that the god’s profane influence can leak through. He is as likely to curse those who draw his attention as he is to reward them, though great enough acts of violence and destruction may earn his favor.",
+                MinorBoon = "Your attack becomes more destructive. Once, one of your failed or successful attacks becomes a critical hit, and your weapon or unarmed attack gains the deadly d12 trait for this attack, replacing any deadly trait it already had. Rovagug typically grants this boon when the critical hit could destroy something precious or significant.",
+                ModerateBoon = "You can devour all. You mouth grows into a horrible circular, insectile maw of needle-like teeth. You gain a bite unarmed attack that deals 1d8 piercing damage. Additionally, you can stomach eating anything you can fit down your throat—even rocks or small objects. You gain a +4 status bonus to saves resulting from eating something, such as diseases, poisons, or other effects of the ingested object. This doesn't allow you to digest magic items that would otherwise be difficult or impossible to destroy, such as cursed items or artifacts.",
+                MajorBoon = "You can crack the surface of Golarion, accelerating the release of the Rough Beast. You gain the Quaking Stomp barbarian feat.",
+                MinorCurse = "Whenever you are imprisoned, you thrash and shake as your mind fills with desperation. Any time you are restrained or otherwise imprisoned (such as being sent to jail), you are also clumsy 2 and stupefied 2.",
+                ModerateCurse = "Your destructive rage seeks to remain unbound. Any armor you wear automatically becomes broken. Other items in your possession occasionally become broken over time.",
+                MajorCurse = "You are useful only as a beacon of destruction. You are permanently confused, rampaging against anything and everything in your sight, and you deal an additional 18 damage with your unarmed and weapon Strikes.",
+                SourcePage = new SourcePage
+                {
+                    Id = Guid.Parse(""),
+                    SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
+                    Page = 41
+                }
+            };
         }
 
         protected override IEnumerable<Guid> GetDivineSkills()
         {
-            yield return Athletics.ID;
+            yield return Skills.Instances.Athletics.ID;
+        }
+
+        protected override IEnumerable<Guid> GetDivineStats()
+        {
+            
+            yield return Stats.Instances.Strength.ID;
+            yield return Stats.Instances.Constitution.ID;
         }
 
         protected override IEnumerable<Guid> GetDomains()
         {
-            yield return Air.ID;
-            yield return Destruction.ID;
-            yield return Earth.ID;
-            yield return Zeal.ID;
+            yield return Domains.Instances.Air.ID;
+            yield return Domains.Instances.Destruction.ID;
+            yield return Domains.Instances.Earth.ID;
+            yield return Domains.Instances.Zeal.ID;
         }
 
         protected override IEnumerable<Guid> GetFollowerAlignments()
         {
-            yield return NeutralEvil.ID;
-            yield return ChaoticEvil.ID;
+            yield return Alignments.Instances.NeutralEvil.ID;
+            yield return Alignments.Instances.ChaoticEvil.ID;
         }
 
-        protected override SourcePage GetSourcePage()
+        protected override SourcePage GetSourcePage() 
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8a552441-1cd8-4431-8ef2-ea69421e7d83"),
-                SourceId = CoreRulebook.ID,
+                Id = Guid.Parse(""),
+                SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 439
             };
         }

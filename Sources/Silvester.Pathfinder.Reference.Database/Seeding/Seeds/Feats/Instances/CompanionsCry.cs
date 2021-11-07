@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CompanionsCry : Template
     {
-        public static readonly Guid ID = Guid.Parse("a46b3fde-607c-4d80-bed1-18d03534f0df");
+        public static readonly Guid ID = Guid.Parse("21569857-7baa-42ae-9ed9-39927bf51a9a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7e05e31d-1b38-422a-a6e3-8374efaa5be9"), Type = TextBlockType.Text, Text = "You can urge your companion to do its utmost. You can spend 2 actions to (action: Command an Animal) instead of 1 when commanding your animal companion. If you do, your animal companion uses an additional action." };
+            yield return new TextBlock { Id = Guid.Parse("41aeffa0-1407-41e9-83dd-5c8a4c247edc"), Type = TextBlockType.Text, Text = "You can urge your companion to do its utmost. You can spend 2 actions to (action: Command an Animal) instead of 1 when commanding your animal companion. If you do, your animal companion uses an additional action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("465a0bf8-50b6-4a57-a8c9-f9447f34826e"), Feats.Instances.BeastmasterDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("921465bd-d69d-43eb-99fd-d8574fe86638"), Feats.Instances.BeastmasterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("aa00b266-3f42-4e50-8286-ce1c5909c958"),
+                Id = Guid.Parse("2c7ab163-4be8-487d-a126-c461998d4469"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

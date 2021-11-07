@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WildWindsGust : Template
     {
-        public static readonly Guid ID = Guid.Parse("519bae7e-a9be-4395-b1e3-cad3e12bf662");
+        public static readonly Guid ID = Guid.Parse("a928706f-bab4-4ba8-a825-45be21261fdf");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13bf3c43-d57b-4ee3-9a97-4e8cb6b04dac"), Type = TextBlockType.Text, Text = "You store up energy and release it in an enormous gust of rushing wind. Make a wind crash (action: Strike) against each creature in your choice of a 30-foot cone or a 60 foot line. These attacks all count toward your multiple attack penalty, but the penalty doesn’t increase until after you make all the attacks." };
+            yield return new TextBlock { Id = Guid.Parse("39291fbb-bad9-4c9b-a5b0-8e18ce65bd1c"), Type = TextBlockType.Text, Text = "You store up energy and release it in an enormous gust of rushing wind. Make a wind crash (action: Strike) against each creature in your choice of a 30-foot cone or a 60 foot line. These attacks all count toward your multiple attack penalty, but the penalty doesn’t increase until after you make all the attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1714d7a6-1a1a-46a2-a8e5-5d44b12bb2f7"), Feats.Instances.WildWindsInitiate.ID);
+            builder.HaveSpecificFeat(Guid.Parse("321359c3-ac2d-4eff-929a-8c688d879b05"), Feats.Instances.WildWindsInitiate.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("499b8995-5f94-4d35-b1d4-2648eb137fb4"),
+                Id = Guid.Parse("258f880b-ba63-427a-a984-27f5e3b2646d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MasterAlchemy : Template
     {
-        public static readonly Guid ID = Guid.Parse("114bfe0d-d371-4b64-9d8b-81cfe339cf4d");
+        public static readonly Guid ID = Guid.Parse("daef36e1-98ce-4a03-afec-195122e6f96f");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e92b7165-2150-4cac-a510-485ab6207404"), Type = TextBlockType.Text, Text = "Your advanced alchemy level increases to 7. For every level you gain beyond 12th, your advanced alchemy level increases by 1." };
+            yield return new TextBlock { Id = Guid.Parse("ee1c31b2-8f44-4899-8c30-ef294204310e"), Type = TextBlockType.Text, Text = "Your advanced alchemy level increases to 7. For every level you gain beyond 12th, your advanced alchemy level increases by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("6ddea0f0-91a9-433a-a772-9c018a64993c"), Feats.Instances.ExpertAlchemy.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("26b540bf-306c-4cca-95bc-92ca2dd03824"), Proficiencies.Instances.Master.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("9c8e02cc-e5d6-4a71-9688-d526cc848aaa"), Feats.Instances.ExpertAlchemy.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("4b87f7c2-92ad-4412-9cd9-7069c87735ed"), Proficiencies.Instances.Master.ID, Skills.Instances.Crafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("168187fb-bb64-4b6d-996d-99d15176d3fc"),
+                Id = Guid.Parse("c6c3b302-6fcf-4aa7-af71-43832c3e9fc5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

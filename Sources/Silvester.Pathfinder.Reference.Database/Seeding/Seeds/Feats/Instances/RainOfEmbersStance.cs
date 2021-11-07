@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RainOfEmbersStance : Template
     {
-        public static readonly Guid ID = Guid.Parse("887872f4-c849-4f80-9d31-0dca93668270");
+        public static readonly Guid ID = Guid.Parse("ca167faf-a0d1-4b43-9215-acebccb1d6a7");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3640c60c-1950-4f83-8547-6c98f6bf17de"), Type = TextBlockType.Text, Text = "You enter the stance of an enraged phoenix, holding your fingers as rigid as deadly talons while moving with quick, flickering gestures that dance with biting flames. The only (action: Strikes | Strike) you can make are fire talon (action: Strikes | Strike). These deal 1d4 fire damage; are in the brawling group; and have the (trait: agile), (trait: finesse), (trait: fire), (trait: nonlethal), and (trait: unarmed) traits." };
-            yield return new TextBlock { Id = Guid.Parse("3fb1e78c-b2fb-4422-85a3-f45da4111af1"), Type = TextBlockType.Text, Text = "While in Rain of Embers Stance, you gain a +1 status bonus to AC and fire resistance equal to half your level (minimum 1)." };
+            yield return new TextBlock { Id = Guid.Parse("f620c273-b486-45aa-97cb-8bfc3e136e29"), Type = TextBlockType.Text, Text = "You enter the stance of an enraged phoenix, holding your fingers as rigid as deadly talons while moving with quick, flickering gestures that dance with biting flames. The only (action: Strikes | Strike) you can make are fire talon (action: Strikes | Strike). These deal 1d4 fire damage; are in the brawling group; and have the (trait: agile), (trait: finesse), (trait: fire), (trait: nonlethal), and (trait: unarmed) traits." };
+            yield return new TextBlock { Id = Guid.Parse("5932e63e-4531-4fa6-bbd0-b6a207dcd96e"), Type = TextBlockType.Text, Text = "While in Rain of Embers Stance, you gain a +1 status bonus to AC and fire resistance equal to half your level (minimum 1)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("61a5c5d3-f7c5-4a00-9f7f-423c403530f3"),
+                Id = Guid.Parse("665a92c9-aeb4-4717-ac42-b4339e8f9687"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

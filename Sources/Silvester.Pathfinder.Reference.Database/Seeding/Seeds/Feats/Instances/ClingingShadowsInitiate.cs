@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ClingingShadowsInitiate : Template
     {
-        public static readonly Guid ID = Guid.Parse("85883fd3-ffcc-4a60-85cc-1733837dd3cf");
+        public static readonly Guid ID = Guid.Parse("151b1a4c-6844-4294-b8dc-dc96eb18507f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ee3dab2d-f1a8-41d2-a88d-3cf074af2ed7"), Type = TextBlockType.Text, Text = "You learn a mystical stance that transforms your ki into sticky smoke that shrouds your limbs, clinging to everything you touch. You gain the (spell: clinging shadows stance) ki spell. Increase the number of Focus Points in your focus pool by 1. While entering the stance uses a ki spell, the shadow grasp attacks it grants are not, so you can use them as often as you like while in the stance." };
+            yield return new TextBlock { Id = Guid.Parse("41cd2f21-d61f-46f8-874e-b7de9ae5f3fd"), Type = TextBlockType.Text, Text = "You learn a mystical stance that transforms your ki into sticky smoke that shrouds your limbs, clinging to everything you touch. You gain the (spell: clinging shadows stance) ki spell. Increase the number of Focus Points in your focus pool by 1. While entering the stance uses a ki spell, the shadow grasp attacks it grants are not, so you can use them as often as you like while in the stance." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyKiSpells(Guid.Parse("2c5e8332-bc2e-4fe0-bbba-e043d151142f"));
+            builder.HaveAnyKiSpells(Guid.Parse("63706276-19ae-4e7a-ad7d-6f08902c35a9"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8dc3961e-77dc-4349-a36a-042d1d41b38e"),
+                Id = Guid.Parse("d2c28f5d-cde1-4484-bc16-8271ec163ac5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

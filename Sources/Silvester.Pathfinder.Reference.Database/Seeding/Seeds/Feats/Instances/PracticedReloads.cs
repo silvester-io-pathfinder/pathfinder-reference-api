@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PracticedReloads : Template
     {
-        public static readonly Guid ID = Guid.Parse("7b5f657e-6bdf-4afe-9efc-353243a5d3ff");
+        public static readonly Guid ID = Guid.Parse("100485d5-c92e-4cbb-8043-edad16df5d8a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c44f2434-0360-4c1e-9f01-4167b08e24ed"), Type = TextBlockType.Text, Text = "You’ve mastered the reloading techniques and methods usually practiced by only the most dedicated firearm professionals. You gain the slinger’s reload for the way you selected with Gunslinger’s Dedication." };
+            yield return new TextBlock { Id = Guid.Parse("472376f4-0203-40cd-8925-f546914a8c96"), Type = TextBlockType.Text, Text = "You’ve mastered the reloading techniques and methods usually practiced by only the most dedicated firearm professionals. You gain the slinger’s reload for the way you selected with Gunslinger’s Dedication." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("31dcb6da-9885-405b-8234-bfe601b24b9b"), Feats.Instances.GunslingerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d2d09b72-3225-475a-a5a7-e93c3c132fd6"), Feats.Instances.GunslingerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9e66f5c3-0122-45ed-baaf-b1cffa994337"),
+                Id = Guid.Parse("25067855-fac9-4827-be8d-1a0567b11a62"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

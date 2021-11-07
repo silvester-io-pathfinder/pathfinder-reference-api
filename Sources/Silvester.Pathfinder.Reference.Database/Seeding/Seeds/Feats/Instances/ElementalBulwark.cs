@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ElementalBulwark : Template
     {
-        public static readonly Guid ID = Guid.Parse("d3e26c3b-2116-49b6-8d44-7955827cf256");
+        public static readonly Guid ID = Guid.Parse("9cb11e20-77b4-4e64-8c3a-abf87ecbc22e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d127d8d3-a062-4fee-9406-e44a15075e7e"), Type = TextBlockType.Text, Text = "You call upon the corresponding elements of your suli heritage to resist the effect. You gain resistance 5 against the triggering damage." };
+            yield return new TextBlock { Id = Guid.Parse("6702de4e-2f26-4a71-9b65-8e6e5f93fcbf"), Type = TextBlockType.Text, Text = "You call upon the corresponding elements of your suli heritage to resist the effect. You gain resistance 5 against the triggering damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ad8c3fe3-4c66-4502-8391-52dd3e5a1451"),
+                Id = Guid.Parse("741159a8-ed91-4a3d-ae42-78ae71b1025b"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShatteringStrike : Template
     {
-        public static readonly Guid ID = Guid.Parse("3126d905-a2f6-4258-877d-6b1bf15fc83a");
+        public static readonly Guid ID = Guid.Parse("58112346-7b41-4df9-888d-419152fec11f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("61e10391-c96d-4d97-93cb-c2fb4fa7d8d4"), Type = TextBlockType.Text, Text = "The improvised weapon shatters, destroying it completely but dealing an additional 3d6 piercing damage to the creature you hit with the (feat: Improvised Pummel). This extra damage you apply on the critical hit doesn’t double from the critical hit, as normal." };
+            yield return new TextBlock { Id = Guid.Parse("9bc86378-2946-4424-9f9a-22faec1207b5"), Type = TextBlockType.Text, Text = "The improvised weapon shatters, destroying it completely but dealing an additional 3d6 piercing damage to the creature you hit with the (feat: Improvised Pummel). This extra damage you apply on the critical hit doesn’t double from the critical hit, as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("80492f1f-8123-4ee7-96b8-f0a1514815cc"), Feats.Instances.ImprovisedPummel.ID);
+            builder.HaveSpecificFeat(Guid.Parse("188a1920-86e3-4c2f-a423-79d1f1c34f75"), Feats.Instances.ImprovisedPummel.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bb4bcd15-063d-4687-93fa-ef1a9a3017ea"),
+                Id = Guid.Parse("16cde26c-ed57-4d07-8d62-6cf748aeb80e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

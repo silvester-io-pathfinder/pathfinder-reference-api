@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GnollWeaponFamiliarity : Template
     {
-        public static readonly Guid ID = Guid.Parse("62890fd4-7f64-424f-9dd0-9aaba2c62530");
+        public static readonly Guid ID = Guid.Parse("df0ca9cc-0e26-4e09-ad5c-721d669c3328");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6d1c4cff-748c-4258-98de-f00f6f7e1b15"), Type = TextBlockType.Text, Text = "You were taught to be a hunter and a raider. You are trained with (item: flails | Flail), (item: khopeshes | Khopesh), (item: mambeles | Mambele), (item: spears | Spear), and (item: war flails | War Flail)." };
+            yield return new TextBlock { Id = Guid.Parse("adb4ff80-e65a-44e7-be24-2ca1e93fd6fe"), Type = TextBlockType.Text, Text = "You were taught to be a hunter and a raider. You are trained with (item: flails | Flail), (item: khopeshes | Khopesh), (item: mambeles | Mambele), (item: spears | Spear), and (item: war flails | War Flail)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("210a599e-370a-4df4-bb7e-1a6698743cb4"),
+                Id = Guid.Parse("3176c5c2-3668-4cff-9c11-5594e4e86f37"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

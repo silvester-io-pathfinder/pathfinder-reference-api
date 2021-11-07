@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UnimpededStep : Template
     {
-        public static readonly Guid ID = Guid.Parse("a905932a-2c94-49bb-a9d1-315f94082b18");
+        public static readonly Guid ID = Guid.Parse("cea79df8-7f5f-467c-b51b-eb3cb7529f2b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aa9a6c2e-60ab-437c-8353-7db5eff6097d"), Type = TextBlockType.Text, Text = "With a burst of divine liberation, your ally’s movement from your (feat: Liberating Step) is unaffected by difficult terrain, greater difficult terrain, narrow surfaces, and uneven ground." };
+            yield return new TextBlock { Id = Guid.Parse("d84feac7-780d-41b8-8ec8-9f8880b9c7da"), Type = TextBlockType.Text, Text = "With a burst of divine liberation, your ally’s movement from your (feat: Liberating Step) is unaffected by difficult terrain, greater difficult terrain, narrow surfaces, and uneven ground." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificCause(Guid.Parse("34657499-0a39-4b88-aac5-1f512fe34416"), Causes.Instances.Liberator.ID);
+            builder.HaveSpecificCause(Guid.Parse("60b83e49-f278-43ae-ab27-e2bffee4ae99"), Causes.Instances.Liberator.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d5e0b6e6-0612-4d32-8daf-6645cf97803e"),
+                Id = Guid.Parse("d2dd3f6b-fa52-4926-97cb-c5dc02e7e902"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

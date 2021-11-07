@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RicochetingLeap : Template
     {
-        public static readonly Guid ID = Guid.Parse("3ce22bc4-4eb9-418d-9998-186e2cdae39f");
+        public static readonly Guid ID = Guid.Parse("3dbf962c-1c3b-4de1-ac92-ac8f46725d27");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6e4f7649-0ae3-467c-99d8-f4f87e143b1c"), Type = TextBlockType.Text, Text = "You quickly use your momentum to topple and spring off of foes. You can use (feat: Wall Jump) to make additional jumps off of creatures larger than you as if they were walls. Once per turn when you make an additional jump off of a creature in this way, you can also attempt to (action: Shove) or (action: Trip) that creature as a free action." };
+            yield return new TextBlock { Id = Guid.Parse("6e22413c-00db-457b-b4d5-60f7d6c8f317"), Type = TextBlockType.Text, Text = "You quickly use your momentum to topple and spring off of foes. You can use (feat: Wall Jump) to make additional jumps off of creatures larger than you as if they were walls. Once per turn when you make an additional jump off of a creature in this way, you can also attempt to (action: Shove) or (action: Trip) that creature as a free action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("59626f6d-37a8-4043-b769-c18b7b0af17a"), Proficiencies.Instances.Master.ID, Skills.Instances.Athletics.ID);
-            builder.HaveSpecificFeat(Guid.Parse("42ae4998-cada-476e-8316-2472ab808e11"), Feats.Instances.WallJump.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("2e540519-8fa9-4aa1-87bd-bd4e75ba914d"), Proficiencies.Instances.Master.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificFeat(Guid.Parse("836619dd-e94e-4966-bc76-4065545299d2"), Feats.Instances.WallJump.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bd4c298f-b7f3-4e3a-8012-f56901f57f6c"),
+                Id = Guid.Parse("a593fd86-b601-4723-b8d0-3fab6fe48a44"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ConfluxFocus : Template
     {
-        public static readonly Guid ID = Guid.Parse("205ba7ec-a626-49f6-94bf-7fbf6e139e95");
+        public static readonly Guid ID = Guid.Parse("af41190d-b8e2-4035-8110-92c0ac2a13e1");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e0ef936-0f8a-4d42-8d2c-ba1bbc7396ae"), Type = TextBlockType.Text, Text = "You imagine how you’ll weave magic and combat into future battles, improving your focus. If you have spent at least 2 Focus Points since the last time you (action: Refocused | Refocus), you recover 2 Focus Points when you (action: Refocus) instead of 1." };
+            yield return new TextBlock { Id = Guid.Parse("c213611a-6156-4a7a-983e-7d60213c6ab2"), Type = TextBlockType.Text, Text = "You imagine how you’ll weave magic and combat into future battles, improving your focus. If you have spent at least 2 Focus Points since the last time you (action: Refocused | Refocus), you recover 2 Focus Points when you (action: Refocus) instead of 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("08a83041-92d2-4c23-bbaa-5159588bb807"), ClassFeatures.Magusi.ConfluxSpells.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("47da6634-0e80-472c-a408-f1d2b80627a7"), ClassFeatures.Magusi.ConfluxSpells.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("322053d0-92f7-4f54-b4b8-7cbcb077e62b"),
+                Id = Guid.Parse("2104a118-7a76-4df3-a28c-7015432db660"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UnconventionalWeaponry : Template
     {
-        public static readonly Guid ID = Guid.Parse("0304b05b-e6fb-48a2-8566-c2dd72f7b8d4");
+        public static readonly Guid ID = Guid.Parse("a2f5e623-990e-4cb6-b0ee-78afd194b604");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a705ee38-a7ad-4aac-9811-1487aa90982f"), Type = TextBlockType.Text, Text = "You’ve familiarized yourself with a particular weapon, potentially from another ancestry or culture. Choose an uncommon simple or martial weapon with a trait corresponding to an ancestry (such as dwarf, goblin, or orc) or that is common in another culture. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a simple weapon." };
-            yield return new TextBlock { Id = Guid.Parse("3349563f-ee19-42d6-89ed-71ceea17bd70"), Type = TextBlockType.Text, Text = "If you are trained in all martial weapons, you can choose an uncommon advanced weapon with such a trait. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a martial weapon." };
+            yield return new TextBlock { Id = Guid.Parse("34814f5b-0c17-4ad8-b423-33802d3ce80c"), Type = TextBlockType.Text, Text = "You’ve familiarized yourself with a particular weapon, potentially from another ancestry or culture. Choose an uncommon simple or martial weapon with a trait corresponding to an ancestry (such as dwarf, goblin, or orc) or that is common in another culture. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a simple weapon." };
+            yield return new TextBlock { Id = Guid.Parse("5118a242-117b-4a90-8ec3-c2741a7d742b"), Type = TextBlockType.Text, Text = "If you are trained in all martial weapons, you can choose an uncommon advanced weapon with such a trait. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a martial weapon." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("92f75451-6757-4341-ab03-39eada0bb8db"),
+                Id = Guid.Parse("31f71c30-6ee4-441c-8307-f729fe3c7ca7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeadlyAim : Template
     {
-        public static readonly Guid ID = Guid.Parse("3d9e93f8-25b1-4be8-b10e-a43e7e52bb7d");
+        public static readonly Guid ID = Guid.Parse("5f1523c5-cb97-419b-951c-83a32c5a68a6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c8795dd0-013f-4ee9-9259-7f14d4b1373c"), Type = TextBlockType.Text, Text = "You aim for your prey’s weak spots, making your shot more challenging but dealing more damage if you hit. Make a ranged (action: Strike) against your hunted prey at a -2 penalty. You gain a +4 circumstance bonus to damage on that (action: Strike). This bonus increases to +6 at 11th level and +8 at 15th level." };
+            yield return new TextBlock { Id = Guid.Parse("ec685595-6922-494c-aea3-fe35f31a4314"), Type = TextBlockType.Text, Text = "You aim for your prey’s weak spots, making your shot more challenging but dealing more damage if you hit. Make a ranged (action: Strike) against your hunted prey at a -2 penalty. You gain a +4 circumstance bonus to damage on that (action: Strike). This bonus increases to +6 at 11th level and +8 at 15th level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("43585cfe-b745-430f-a459-0d0b53dcab8e"), ClassFeatures.TODO.WeaponSpecialization.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("8fa35d9b-4acd-45eb-91cc-e934e35da00d"), ClassFeatures.Rangers.WeaponSpecialization.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1a5aadf6-5262-4e91-8497-66885a009c2d"),
+                Id = Guid.Parse("a499ac73-e80e-4787-b99c-596d0b96141c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

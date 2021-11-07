@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AmbushingKnockdown : Template
     {
-        public static readonly Guid ID = Guid.Parse("8f8b5cbf-abe9-4f42-ae26-8e822dd44ee1");
+        public static readonly Guid ID = Guid.Parse("67f1ced0-1024-449b-a29e-d4de6edb7955");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("07170519-e4ec-4293-8f71-750f4561f19b"), Type = TextBlockType.Text, Text = "~ Access: Side with the Washboard Dogs in the gang conflict." };
-            yield return new TextBlock { Id = Guid.Parse("b1673472-6445-404b-8b95-250cdd649b23"), Type = TextBlockType.Text, Text = "You emerge from hiding and deliver a blow that can knock an enemy sprawling to the ground. You (action: Stride) up to half your Speed, but you must end your movement next to a foe you&#39;re hidden from or undetected by. You then (action: Strike) that enemy with the required weapon; if you hit, the target is knocked prone." };
+            yield return new TextBlock { Id = Guid.Parse("032201c2-3644-4d86-9f46-39d1511b0297"), Type = TextBlockType.Text, Text = "~ Access: Side with the Washboard Dogs in the gang conflict." };
+            yield return new TextBlock { Id = Guid.Parse("eb4ec717-b2df-44a7-af3e-b8e842bfce99"), Type = TextBlockType.Text, Text = "You emerge from hiding and deliver a blow that can knock an enemy sprawling to the ground. You (action: Stride) up to half your Speed, but you must end your movement next to a foe you&#39;re hidden from or undetected by. You then (action: Strike) that enemy with the required weapon; if you hit, the target is knocked prone." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificRacket(Guid.Parse("2f4e9e80-68c0-43e0-8b46-9223d6360893"), Rackets.Instances.Ruffian.ID);
+            builder.HaveSpecificRacket(Guid.Parse("b8b9ef96-460e-453e-8adb-00c54668ada9"), Rackets.Instances.Ruffian.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5ef4d4fd-2d4b-475f-be49-74527792bd12"),
+                Id = Guid.Parse("613b6c6d-ee7d-4164-be6f-227464b22a5b"),
                 SourceId = Sources.Instances.AgentsOfEdgewatch.ID,
                 Page = -1
             };

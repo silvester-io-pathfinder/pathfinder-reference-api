@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArrayAngelicAvenger : Template
     {
-        public static readonly Guid ID = Guid.Parse("05d0f896-7add-4e71-b0f8-d5502d4ff8c2");
+        public static readonly Guid ID = Guid.Parse("f0c4364f-f3a0-4a59-b0cb-eacef51296ca");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a99627f3-ca5d-46a2-8396-c3cf511e629f"), Type = TextBlockType.Text, Text = "~ Angelic Avenger: __Str__ 18, __Dex__ 14, __Con__ 16, __Int__ 8, __Wis__ 12, __Cha__ 10; +2 AC (+3 Dex cap)" };
+            yield return new TextBlock { Id = Guid.Parse("dc0f3978-ec17-4c0f-af44-ad979840f4ab"), Type = TextBlockType.Text, Text = "~ Angelic Avenger: __Str__ 18, __Dex__ 14, __Con__ 16, __Int__ 8, __Wis__ 12, __Cha__ 10; +2 AC (+3 Dex cap)" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("780f405f-d13c-4b0c-a0c8-72e8695e6628"),
+                Id = Guid.Parse("481f46dc-5a43-4d20-9d20-0970b67aefe1"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

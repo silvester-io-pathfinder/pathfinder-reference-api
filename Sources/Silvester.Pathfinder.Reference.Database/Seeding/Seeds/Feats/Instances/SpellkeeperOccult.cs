@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpellkeeperOccult : Template
     {
-        public static readonly Guid ID = Guid.Parse("a05d6c5e-30d3-48ae-b98b-01df4b9bc758");
+        public static readonly Guid ID = Guid.Parse("34e9cfb9-2e0e-4cc3-acf8-ba9e95bef9cb");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4124d65e-9956-4983-a088-a6074d33572c"), Type = TextBlockType.Text, Text = "You gain an occult cantrip." };
+            yield return new TextBlock { Id = Guid.Parse("c7d934f1-0f7b-42b4-b53f-24ae0162f063"), Type = TextBlockType.Text, Text = "You gain an occult cantrip." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4ea1bb91-394c-42d0-8220-63d588aba51f"),
+                Id = Guid.Parse("de3a7fd7-74ba-48fd-96dd-f352c06d4985"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

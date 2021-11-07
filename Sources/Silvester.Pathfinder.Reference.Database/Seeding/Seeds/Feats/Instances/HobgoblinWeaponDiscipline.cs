@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HobgoblinWeaponDiscipline : Template
     {
-        public static readonly Guid ID = Guid.Parse("d90d08a2-cc8e-4482-8d4a-5ca128e05c9c");
+        public static readonly Guid ID = Guid.Parse("1f63db7d-6b4d-4e5a-bb16-33ffc9aa9aa0");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5bd8eeab-8397-4d78-ad70-01c4438e42d1"), Type = TextBlockType.Text, Text = "You know how to efficiently utilize the weapons soldiers use in close quarters. Whenever you score a critical hit using a weapon of the polearm, spear, or sword group, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("e026d7f0-818f-45c3-a68f-c98b59e7c6e6"), Type = TextBlockType.Text, Text = "You know how to efficiently utilize the weapons soldiers use in close quarters. Whenever you score a critical hit using a weapon of the polearm, spear, or sword group, you apply the weapon’s critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("64bb756e-8d43-4401-b662-77a6c2c9efa3"), Feats.Instances.HobgoblinWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6669127a-57a5-4367-8b4d-a01328cb2022"), Feats.Instances.HobgoblinWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6daa87f5-f48e-41d1-81ab-0f2e81ecc9ca"),
+                Id = Guid.Parse("f0f3457a-47ce-419a-83a8-20e9667e7f7a"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

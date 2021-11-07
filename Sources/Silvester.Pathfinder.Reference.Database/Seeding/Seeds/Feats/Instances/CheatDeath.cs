@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CheatDeath : Template
     {
-        public static readonly Guid ID = Guid.Parse("dea86426-2b12-4a7e-9d97-da98bb48578f");
+        public static readonly Guid ID = Guid.Parse("5bdcfc3d-45d1-4ca1-9e58-44213b49506e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ba41349e-e0ee-4875-ba8c-793c89678a7c"), Type = TextBlockType.Text, Text = "Somehow you always escape the reaper by a hair’s breadth. You avoid being knocked out or killed and remain at 1 Hit Point, but you become doomed 1 (or increase your doomed value by 1 if you were already doomed). You can’t reduce or ignore the doomed condition from Cheating Death. The doomed condition from Cheating Death lasts for 10 minutes, though this doesn’t affect the duration of any other doomed condition you have." };
+            yield return new TextBlock { Id = Guid.Parse("ebfe3ead-534e-4645-8586-c10a9b2147b2"), Type = TextBlockType.Text, Text = "Somehow you always escape the reaper by a hair’s breadth. You avoid being knocked out or killed and remain at 1 Hit Point, but you become doomed 1 (or increase your doomed value by 1 if you were already doomed). You can’t reduce or ignore the doomed condition from Cheating Death. The doomed condition from Cheating Death lasts for 10 minutes, though this doesn’t affect the duration of any other doomed condition you have." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4e70b25d-4c6b-4261-9ce4-dc72253d2d48"),
+                Id = Guid.Parse("458e7903-857d-4e80-978e-6dba0c1ba2a4"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FrighteningDisplay : Template
     {
-        public static readonly Guid ID = Guid.Parse("569f41dd-4b20-4e62-b1b5-70e30f7029c3");
+        public static readonly Guid ID = Guid.Parse("48d91959-f095-4160-a67d-83d92c5d5bbc");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b55d5297-9887-48cc-bc05-957c2a4a5e56"), Type = TextBlockType.Text, Text = "Your ape makes a loud and frightening display, throwing a foe off balance. The ape attempts to (action: Demoralize) the target creature; this display gains the (trait: visual) trait and doesn’t require language. While frightened by this ability, the target is flat-footed to your ape." };
+            yield return new TextBlock { Id = Guid.Parse("133c0c49-e815-4ef2-8d04-74fdbb2c63bd"), Type = TextBlockType.Text, Text = "Your ape makes a loud and frightening display, throwing a foe off balance. The ape attempts to (action: Demoralize) the target creature; this display gains the (trait: visual) trait and doesn’t require language. While frightened by this ability, the target is flat-footed to your ape." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0fb2a984-68bf-4d86-81cd-b3f367759080"),
+                Id = Guid.Parse("a71cff9b-780b-45be-86ec-39d8f2f72495"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

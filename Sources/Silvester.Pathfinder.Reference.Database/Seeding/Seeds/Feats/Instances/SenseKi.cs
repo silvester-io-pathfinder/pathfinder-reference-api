@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SenseKi : Template
     {
-        public static readonly Guid ID = Guid.Parse("35370b93-7fcd-41e8-af44-0e1568a4f2e0");
+        public static readonly Guid ID = Guid.Parse("fd55784e-c097-4575-a52c-45ad1c7200f4");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6eb972cd-411e-4e35-ac63-acbacf11444b"), Type = TextBlockType.Text, Text = "You can read the presence of ki in your area. You gain imprecise lifesense out to a range of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("3c928b50-1351-4e02-a88d-d319c732260f"), Type = TextBlockType.Text, Text = "You can read the presence of ki in your area. You gain imprecise lifesense out to a range of 30 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyKiSpells(Guid.Parse("206dd9cb-658e-4ea7-81d6-b213b888255a"));
+            builder.HaveAnyKiSpells(Guid.Parse("bcdfc923-9b67-4669-8232-223807aee45b"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("dc249429-e837-4a33-9f67-546f2c3c1960"),
+                Id = Guid.Parse("11867733-6f2d-4eb8-b5dc-abe23a0b5530"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

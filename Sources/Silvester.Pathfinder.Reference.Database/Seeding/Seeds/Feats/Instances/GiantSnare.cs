@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GiantSnare : Template
     {
-        public static readonly Guid ID = Guid.Parse("80b8a098-6bf2-4d43-8133-ae1b7a7f285a");
+        public static readonly Guid ID = Guid.Parse("29c97463-f815-4723-afa4-f486890f0c1a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("57661b81-c750-4f1d-8856-6dc3d0fff685"), Type = TextBlockType.Text, Text = "You can create bigger snares for quick deployment, making it more likely for a creature to walk into your snares. When you prepare snares for quick deployment, you can prepare some of them as giant snares. A giant snare takes up a 10-foot-by-10-foot area but costs two of your quick deployment snares. A giant snare can trigger from a creature entering any portion of its area, and all its effects apply over the full area." };
+            yield return new TextBlock { Id = Guid.Parse("82c036ab-db63-4c4a-b9c6-5df85e452259"), Type = TextBlockType.Text, Text = "You can create bigger snares for quick deployment, making it more likely for a creature to walk into your snares. When you prepare snares for quick deployment, you can prepare some of them as giant snares. A giant snare takes up a 10-foot-by-10-foot area but costs two of your quick deployment snares. A giant snare can trigger from a creature entering any portion of its area, and all its effects apply over the full area." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("90343182-10e9-464a-abb9-bec541aef987"), Feats.Instances.SnarecrafterDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("aec1777d-c721-4d63-bd4e-35b31e0a550c"), Feats.Instances.SnarecrafterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bc61c7ef-9cbb-4bff-a404-cbe38dc5b4ba"),
+                Id = Guid.Parse("ed63031a-568b-46e5-9569-fb0141252b68"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

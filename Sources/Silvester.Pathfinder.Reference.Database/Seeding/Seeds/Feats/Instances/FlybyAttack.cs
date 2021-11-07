@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FlybyAttack : Template
     {
-        public static readonly Guid ID = Guid.Parse("95f8f845-5161-45e5-a698-3b3a06b04adf");
+        public static readonly Guid ID = Guid.Parse("397aff92-4d46-428d-bf77-a79cab5d6345");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1526af00-0084-4406-8e06-1b26deb63506"), Type = TextBlockType.Text, Text = "The bird (action: Flies | Fly) and makes a talon (action: Strike) at any point along the way." };
+            yield return new TextBlock { Id = Guid.Parse("efbae4ce-53f8-4e16-beb1-ec6af51a4da7"), Type = TextBlockType.Text, Text = "The bird (action: Flies | Fly) and makes a talon (action: Strike) at any point along the way." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9c4eb570-3b77-4ec0-9142-3653b33ea708"),
+                Id = Guid.Parse("cfef29e5-5704-48e3-8e2a-0199042c403a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

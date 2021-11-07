@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FiendishEyes : Template
     {
-        public static readonly Guid ID = Guid.Parse("37e67144-0e8c-4625-ae51-0730f972b1fc");
+        public static readonly Guid ID = Guid.Parse("0832c78d-2d75-4892-9732-8c7ddbe2e281");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d7f57831-ae29-47bf-ba99-112d0dfad311"), Type = TextBlockType.Text, Text = "You can see in the darkness as easily as a fiend. You gain darkvision." };
+            yield return new TextBlock { Id = Guid.Parse("5aa7a873-178d-4b1e-8020-04e4a609caa7"), Type = TextBlockType.Text, Text = "You can see in the darkness as easily as a fiend. You gain darkvision." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSense(Guid.Parse("3aa2fe08-c235-43ed-8b7d-74e7d44aa81d"), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
+            builder.HaveSpecificSense(Guid.Parse("5fa25a96-5e80-452b-b3bd-99976c6add0d"), Senses.Instances.LowLightVision.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("86b98d70-82eb-4aea-925f-4c45a5359bf9"),
+                Id = Guid.Parse("fcb4c68a-4634-4dcc-a843-1ac89ab96e98"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

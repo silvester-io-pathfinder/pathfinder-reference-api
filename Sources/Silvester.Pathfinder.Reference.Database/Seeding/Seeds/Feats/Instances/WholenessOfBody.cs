@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WholenessOfBody : Template
     {
-        public static readonly Guid ID = Guid.Parse("4015b1eb-c984-471d-810f-08aced83ee48");
+        public static readonly Guid ID = Guid.Parse("449e8e81-1375-402a-a74a-d84118b9243c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e14b897b-981c-4726-9dfb-8113a7906061"), Type = TextBlockType.Text, Text = "You can restore your health by tapping into your ki. You gain the (spell: wholeness of body) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("3d1f52d5-5736-4af5-a27e-e5c9a8cfd6f6"), Type = TextBlockType.Text, Text = "You can restore your health by tapping into your ki. You gain the (spell: wholeness of body) ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyKiSpells(Guid.Parse("43cb49d7-6433-4691-9f2e-7719a4a0199c"));
+            builder.HaveAnyKiSpells(Guid.Parse("6ca03d35-000a-4e93-a779-10455817d4ad"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("41f0aac5-f69d-4224-be1d-92d474f51cb5"),
+                Id = Guid.Parse("66ff23b5-ce62-46fa-9656-5a8a20305cc1"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

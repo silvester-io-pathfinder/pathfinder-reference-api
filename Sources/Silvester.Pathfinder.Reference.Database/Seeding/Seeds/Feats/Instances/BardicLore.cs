@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BardicLore : Template
     {
-        public static readonly Guid ID = Guid.Parse("e669598b-d18e-4fce-a13f-e639fc2b9df7");
+        public static readonly Guid ID = Guid.Parse("65a5d1fd-e8bb-45c3-926e-a0d4afcea628");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c8436c7-b0ad-4af2-b936-7ee5f0ff48f0"), Type = TextBlockType.Text, Text = "Your studies make you informed on every subject. You are trained in Bardic Lore, a special Lore skill that can be used only to (action: Recall Knowledge), but on any topic. If you have legendary proficiency in Occultism, you gain expert proficiency in Bardic Lore, but you can’t increase your proficiency rank in Bardic Lore by any other means." };
+            yield return new TextBlock { Id = Guid.Parse("75660539-1749-45db-b134-f0461b948e20"), Type = TextBlockType.Text, Text = "Your studies make you informed on every subject. You are trained in Bardic Lore, a special Lore skill that can be used only to (action: Recall Knowledge), but on any topic. If you have legendary proficiency in Occultism, you gain expert proficiency in Bardic Lore, but you can’t increase your proficiency rank in Bardic Lore by any other means." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificMuse(Guid.Parse("ccf5f32e-a645-47a1-8a3a-f7b8b94f05eb"), Muses.Instances.Enigma.ID);
+            builder.HaveSpecificMuse(Guid.Parse("dd6df98b-dae0-4959-931f-657021014099"), Muses.Instances.Enigma.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ce44fe00-1ccc-472a-81b1-b5db78ea9faa"),
+                Id = Guid.Parse("3f46bbbc-1ec0-4667-bd2d-ffa8a5cddd0e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

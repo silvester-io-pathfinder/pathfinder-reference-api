@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InfectiousEmotions : Template
     {
-        public static readonly Guid ID = Guid.Parse("55b59f3d-0e88-4382-af9a-ab513031149e");
+        public static readonly Guid ID = Guid.Parse("2d688517-fe5d-4dde-a5b4-e9834f66adca");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a0404f55-c60c-45f8-8ff1-a89d603646f4"), Type = TextBlockType.Text, Text = "When you use (feat: Catharsis), one ally within 30 feet gains the catharsis activation benefits in addition to you. If these benefits require an (feat: emotional focus), they use your (feat: emotional focus) as they’re experiencing an empathic imprint of your emotions. Depending on the activation benefit, it might be impossible to grant it to an ally; for instance, (feat: pride) could only have an effect for an ally if both you and the ally critically failed the same saving throw against the same effect." };
+            yield return new TextBlock { Id = Guid.Parse("f5a3b926-0c95-4a1d-8ba8-dbfdcbe31047"), Type = TextBlockType.Text, Text = "When you use (feat: Catharsis), one ally within 30 feet gains the catharsis activation benefits in addition to you. If these benefits require an (feat: emotional focus), they use your (feat: emotional focus) as they’re experiencing an empathic imprint of your emotions. Depending on the activation benefit, it might be impossible to grant it to an ally; for instance, (feat: pride) could only have an effect for an ally if both you and the ally critically failed the same saving throw against the same effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("13fe30b2-1173-4fe6-8618-e92da97bc3b1"), Feats.Instances.CatharticMageDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("3a81b1b8-5003-4f61-bfe9-b8964f455e57"), Feats.Instances.CatharticMageDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7f3c860b-012b-41d4-866d-63205d82f016"),
+                Id = Guid.Parse("6bfd0857-c333-40fa-8814-6d15d01a9e78"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

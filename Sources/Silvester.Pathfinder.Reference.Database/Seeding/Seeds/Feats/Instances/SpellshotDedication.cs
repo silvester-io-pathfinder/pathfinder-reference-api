@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpellshotDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("7155cbab-89a1-4920-a353-78bd9a6d00c1");
+        public static readonly Guid ID = Guid.Parse("3cfca238-ff90-4145-9d56-df96d79deba3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2548d642-4712-4bae-a8de-c5db13086246"), Type = TextBlockType.Text, Text = "You’ve steeped yourself in magic and gunplay to the extent that you can conjure bullets from thin air, using a rudimentary knowledge of arcane theory to create a temporary piece of ammunition. You gain the (feat: Conjure Bullet) action." };
+            yield return new TextBlock { Id = Guid.Parse("7b24b35b-a0a9-4033-a01a-bc6e4aa331d7"), Type = TextBlockType.Text, Text = "You’ve steeped yourself in magic and gunplay to the extent that you can conjure bullets from thin air, using a rudimentary knowledge of arcane theory to create a temporary piece of ammunition. You gain the (feat: Conjure Bullet) action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificGunslingersWay(Guid.Parse("697c207c-dcca-4979-a5c5-80aa8e69c75a"), GunslingerWays.Instances.WayOfTheSpellshot.ID);
+            builder.HaveSpecificGunslingersWay(Guid.Parse("fc96192b-8173-4c37-a4a8-03af69866025"), GunslingersWays.Instances.WayOfTheSpellshot.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("73d7129d-da3f-4919-b048-308baf9d15f2"),
+                Id = Guid.Parse("987e8d75-1e56-4ef6-9a75-3a3e874f0945"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

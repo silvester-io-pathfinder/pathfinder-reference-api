@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class QuickShieldBlock : Template
     {
-        public static readonly Guid ID = Guid.Parse("1c583ade-083e-48d9-b339-1656cadd5ce3");
+        public static readonly Guid ID = Guid.Parse("3a08e1ee-a1a1-4623-bf93-c41ccd11ad4a");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e1884c56-c28e-42d0-bef0-cb6ac2575247"), Type = TextBlockType.Text, Text = "You can bring your shield into place with hardly a thought. At the start of each of your turns, you gain an additional reaction that you can use only to (feat: Shield Block)." };
+            yield return new TextBlock { Id = Guid.Parse("075d6979-0ec8-4b2e-80b3-4d298aa130d3"), Type = TextBlockType.Text, Text = "You can bring your shield into place with hardly a thought. At the start of each of your turns, you gain an additional reaction that you can use only to (feat: Shield Block)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("9cba0ea4-5260-443b-b310-526b91df6003"), Feats.Instances.VikingDedication.ID);
-            builder.HaveSpecificFeat(Guid.Parse("4b7d0640-1049-4672-b679-691c405362f8"), Feats.Instances.ShieldBlock.ID);
-            builder.HaveSpecificFeat(Guid.Parse("526f5db5-75f2-4e38-aacd-2928076489d5"), Feats.Instances.ReactiveShield.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ccba836f-b4a2-424e-b3c8-6a06b7cd1b94"), Feats.Instances.VikingDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e8729d2d-4652-4a15-864b-f60c7bd42a54"), Feats.Instances.ShieldBlock.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8241eb10-2827-47b3-b511-5517db5fcf62"), Feats.Instances.ReactiveShield.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d11825d1-988c-4deb-831f-ffeff560a56f"),
+                Id = Guid.Parse("28f227d1-1b2b-45c9-97dc-c604f5fe8582"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

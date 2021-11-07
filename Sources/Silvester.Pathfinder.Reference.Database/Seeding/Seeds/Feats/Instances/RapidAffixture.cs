@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RapidAffixture : Template
     {
-        public static readonly Guid ID = Guid.Parse("f339c53f-73d9-408b-8381-03bc149d3d26");
+        public static readonly Guid ID = Guid.Parse("c7cae256-428f-49f7-8921-d3e1a0ca2940");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("487d9603-b2ad-4106-a4cb-ab6d649c7a23"), Type = TextBlockType.Text, Text = "You take only 1 minute to (action: Affix a Talisman). If you’re legendary in Crafting, you can (action: Affix a Talisman) as a 3-action activity." };
+            yield return new TextBlock { Id = Guid.Parse("7c7c55d5-9729-4753-9672-a4b9af763377"), Type = TextBlockType.Text, Text = "You take only 1 minute to (action: Affix a Talisman). If you’re legendary in Crafting, you can (action: Affix a Talisman) as a 3-action activity." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("d5b32836-8253-46a8-93a4-d35155edf923"), Proficiencies.Instances.Master.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("681f56b9-0f59-41ec-9b24-2a38e95fdbe9"), Proficiencies.Instances.Master.ID, Skills.Instances.Crafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("62f7e918-126e-4ac0-873b-97c92a06d75e"),
+                Id = Guid.Parse("21f6f54e-8d86-4f7e-9645-c1a94d05a6d6"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

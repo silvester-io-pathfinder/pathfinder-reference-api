@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RatFamiliar : Template
     {
-        public static readonly Guid ID = Guid.Parse("9e554949-3195-4a69-a297-9b035cc56b29");
+        public static readonly Guid ID = Guid.Parse("1517b7fa-93a1-4022-b12e-2c3ab43efddd");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8e1bdad6-8730-413e-a401-080d3d1740ad"), Type = TextBlockType.Text, Text = "You have a pet rat that has become magically bonded to you. You gain a familiar which must be a rat. It still gets the benefits of familiar abilities, but its base form remains a rat." };
+            yield return new TextBlock { Id = Guid.Parse("d535b858-632f-401c-b114-6bd2ff095a6a"), Type = TextBlockType.Text, Text = "You have a pet rat that has become magically bonded to you. You gain a familiar which must be a rat. It still gets the benefits of familiar abilities, but its base form remains a rat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bd1a2671-b271-446d-b942-68b59481796e"),
+                Id = Guid.Parse("6a45f0e7-db81-439d-90ac-b576cc3ae983"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WingThrash : Template
     {
-        public static readonly Guid ID = Guid.Parse("34097598-fb6e-4a38-8d1e-b4d3dc4bf37c");
+        public static readonly Guid ID = Guid.Parse("0f32e188-fc52-41ef-bd53-562842798123");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("67d92e1b-a860-4ce1-a41f-25e28f9d581b"), Type = TextBlockType.Text, Text = "The bat thrashes wildly with its wings, making wing (action: Strikes | Strike) against up to three adjacent foes. Each attack counts toward the bat’s multiple attack penalty, but the penalty only increases after all the attacks have been made." };
+            yield return new TextBlock { Id = Guid.Parse("00e203ee-e4da-4c70-9770-0f49cf3ffefa"), Type = TextBlockType.Text, Text = "The bat thrashes wildly with its wings, making wing (action: Strikes | Strike) against up to three adjacent foes. Each attack counts toward the bat’s multiple attack penalty, but the penalty only increases after all the attacks have been made." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("acd1888a-ccb0-4e9b-adb8-002ecd2e2941"),
+                Id = Guid.Parse("54e68f05-7de8-401f-834e-5fdbef0ccf8c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

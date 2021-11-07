@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AxeThrower : Template
     {
-        public static readonly Guid ID = Guid.Parse("65e246e4-135e-4da1-86dd-9f8c4450b9b5");
+        public static readonly Guid ID = Guid.Parse("e6f865da-f74f-41b0-ab44-ebd8f2875dd2");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5e6ac6c-f07a-4676-bf02-a6c4d48fb619"), Type = TextBlockType.Text, Text = "You have mastered the weight and balance of a variety of axes and can lob them with ease. Any one-handed axe weapon you wield has the (trait: thrown | thrown 10 ft) trait with a range of 10 feet. For axes that already have the (trait: thrown) trait, the range increases by 10 feet. When you critically succeed at an attack roll with a thrown axe weapon, you apply the axe’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("3e194a5b-646e-470f-a76f-351cb7b91c35"), Type = TextBlockType.Text, Text = "You have mastered the weight and balance of a variety of axes and can lob them with ease. Any one-handed axe weapon you wield has the (trait: thrown | thrown 10 ft) trait with a range of 10 feet. For axes that already have the (trait: thrown) trait, the range increases by 10 feet. When you critically succeed at an attack roll with a thrown axe weapon, you apply the axe’s critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("a8705ddc-7df0-4d8c-a7f3-8b3f6f7783ef"), Feats.Instances.TurpinRoweLumberjackDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("0f67b119-9aaa-4ae8-b8de-a5ab2f54a38e"), Feats.Instances.TurpinRoweLumberjackDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6134b474-1760-409d-a95a-5ea1dbf6999d"),
+                Id = Guid.Parse("e2e6af6e-8505-4465-849f-d3f488b55122"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

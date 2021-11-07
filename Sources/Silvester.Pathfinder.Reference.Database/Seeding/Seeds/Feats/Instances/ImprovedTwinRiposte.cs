@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImprovedTwinRiposte : Template
     {
-        public static readonly Guid ID = Guid.Parse("248bae42-5f59-4ec4-b139-0688cf4d2218");
+        public static readonly Guid ID = Guid.Parse("cc9f2cb6-7350-476d-bb78-3bf1d952cf3c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("308736cc-725c-42ab-a1e2-19e222899033"), Type = TextBlockType.Text, Text = "Your weapons are a blur, blocking and biting at your foes. At the start of each of your turns, you gain an additional reaction that you can use only to perform a (feat: Twin Riposte). You can use this extra reaction even if you are not benefiting from (feat: Twin Parry)." };
+            yield return new TextBlock { Id = Guid.Parse("36242a7a-5ba4-4685-aec8-36dc0431ac3b"), Type = TextBlockType.Text, Text = "Your weapons are a blur, blocking and biting at your foes. At the start of each of your turns, you gain an additional reaction that you can use only to perform a (feat: Twin Riposte). You can use this extra reaction even if you are not benefiting from (feat: Twin Parry)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("457948f1-a512-41fc-9840-76125c6c33ad"), Feats.Instances.TwinRiposte.ID);
+            builder.HaveSpecificFeat(Guid.Parse("cae57bb0-56fc-4a27-aea6-4ae44c96948a"), Feats.Instances.TwinRiposte.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("58b09ae2-0201-4361-a606-f84a7588489c"),
+                Id = Guid.Parse("8c42c33a-2fd3-47c3-b48b-b465ad8ce921"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

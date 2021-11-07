@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SteadfastAlly : Template
     {
-        public static readonly Guid ID = Guid.Parse("e1cdfadb-1e90-43ce-a20c-c07de8ca4670");
+        public static readonly Guid ID = Guid.Parse("8e637830-d6d1-4e25-a94d-a55fe7139958");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("12bca14a-b6bb-4066-a4fe-1f66377b8718"), Type = TextBlockType.Text, Text = "Your presence alone is enough to provide your allies with emotional support. You can use the (Action: Aid) reaction to grant a bonus to another creature’s Will saving throw even when you haven’t prepared to help." };
+            yield return new TextBlock { Id = Guid.Parse("2ef98ebf-93ce-43fb-9797-25ac118f9dff"), Type = TextBlockType.Text, Text = "Your presence alone is enough to provide your allies with emotional support. You can use the (Action: Aid) reaction to grant a bonus to another creature’s Will saving throw even when you haven’t prepared to help." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("67ce0a46-2e80-44ce-95a6-ec4407d1faf9"), Feats.Instances.LoyalEmpath.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6720962d-0d85-4491-8a3b-5cdcbf72cef7"), Feats.Instances.LoyalEmpath.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6a97a31a-6104-47fd-bdde-18449a03809b"),
+                Id = Guid.Parse("f1f909e4-f068-41ac-921d-8097fa671d95"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

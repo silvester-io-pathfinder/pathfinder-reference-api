@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Explosion : Template
     {
-        public static readonly Guid ID = Guid.Parse("73c663e5-4cd8-4e59-9c5c-8bb8ea17d0f8");
+        public static readonly Guid ID = Guid.Parse("011e57f8-6b62-40e3-bec4-3f71b4adf25e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6aefa5c7-9b3a-462d-99f2-c84012d9ac59"), Type = TextBlockType.Text, Text = "Your innovation can explode on command. You gain the (action: Explode) action." };
+            yield return new TextBlock { Id = Guid.Parse("b00c3b18-df70-4dca-8611-d38cec8ff216"), Type = TextBlockType.Text, Text = "Your innovation can explode on command. You gain the (action: Explode) action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("45b1b4b0-ce48-4a66-8fd9-79269c1a379d"), Feats.Instances.InventorDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("9d14f8de-b568-46c8-af4b-0ce8cce9a125"), Feats.Instances.InventorDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("27795302-8dfb-48af-b8f6-04086097bcac"),
+                Id = Guid.Parse("34809707-866e-4e54-9bab-b751836134e3"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HealersHalo : Template
     {
-        public static readonly Guid ID = Guid.Parse("288eaa11-1133-4ec9-a61f-51821894dfc0");
+        public static readonly Guid ID = Guid.Parse("ecd9af3b-25c4-4012-9f5c-e23167b97f70");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("da587b3a-5929-49d4-b536-ad42430bd537"), Type = TextBlockType.Text, Text = "Your halo can enhance positive energy. Creatures who have recovered Hit Points from a (trait: positive) (trait: healing) effect recover an additional 1d6 Hit Points. Creatures who benefit from this power become temporarily immune to its effect for the next 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("1abcb862-e629-4a6c-baa3-ca1a40fd1bd3"), Type = TextBlockType.Text, Text = "Your halo can enhance positive energy. Creatures who have recovered Hit Points from a (trait: positive) (trait: healing) effect recover an additional 1d6 Hit Points. Creatures who benefit from this power become temporarily immune to its effect for the next 10 minutes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("d9a5f5d1-e1dd-49e2-b1b0-d1cb72afd39c"), Feats.Instances.Halo.ID);
+            builder.HaveSpecificFeat(Guid.Parse("042c0564-2147-4929-b12f-15b97517aedc"), Feats.Instances.Halo.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5e9483c3-babe-42c1-a47a-5d27120e348d"),
+                Id = Guid.Parse("645d59fc-ea6e-4553-8ec6-09aa88ff159f"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

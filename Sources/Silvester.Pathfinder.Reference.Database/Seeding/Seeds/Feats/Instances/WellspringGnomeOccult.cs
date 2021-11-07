@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WellspringGnomeOccult : Template
     {
-        public static readonly Guid ID = Guid.Parse("9b4fb3b6-0725-459e-864c-28a4f0361fc6");
+        public static readonly Guid ID = Guid.Parse("dc8e81c8-991f-408e-9fb4-da7b68a6b3ce");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("07a908c4-559f-4ab7-a2c4-e59be540ed38"), Type = TextBlockType.Text, Text = "You gain one cantrip from the occult spell list. You can cast this spell as an innate spell at will." };
+            yield return new TextBlock { Id = Guid.Parse("cf25a902-723f-4d03-98be-fd2d3d25c10c"), Type = TextBlockType.Text, Text = "You gain one cantrip from the occult spell list. You can cast this spell as an innate spell at will." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4785c758-57fb-4308-b8dd-2ba1ca90f342"),
+                Id = Guid.Parse("5e47f5c8-0527-424e-9727-f2a9ade50483"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

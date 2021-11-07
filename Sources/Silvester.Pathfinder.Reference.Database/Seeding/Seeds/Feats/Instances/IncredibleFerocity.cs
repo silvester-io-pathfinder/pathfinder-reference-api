@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class IncredibleFerocity : Template
     {
-        public static readonly Guid ID = Guid.Parse("5de42863-1549-4b64-a86a-807a9255041a");
+        public static readonly Guid ID = Guid.Parse("73e0aac3-c6d3-4a20-8e0c-c7efcb6d6ae3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0051d724-efc7-447c-8666-46241e9b203f"), Type = TextBlockType.Text, Text = "Given time to collect yourself after a near-death scrape, you can rebuild your ferocity and withstand additional finishing blows. You can use (feat: Orc Ferocity) with a frequency of once per hour, rather than once per day." };
+            yield return new TextBlock { Id = Guid.Parse("ae27f046-b946-4d60-8932-459d3768ce35"), Type = TextBlockType.Text, Text = "Given time to collect yourself after a near-death scrape, you can rebuild your ferocity and withstand additional finishing blows. You can use (feat: Orc Ferocity) with a frequency of once per hour, rather than once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("06600cb7-0368-40a5-a2cb-d69ed8cb14aa"), Feats.Instances.OrcFerocity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("3131ccf0-554e-4487-8f68-dacc576b41eb"), Feats.Instances.OrcFerocity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f1b961d3-acd6-4aa2-9b88-0ee2770199c4"),
+                Id = Guid.Parse("145cec37-fde6-464f-affd-2e4a2f156d0a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

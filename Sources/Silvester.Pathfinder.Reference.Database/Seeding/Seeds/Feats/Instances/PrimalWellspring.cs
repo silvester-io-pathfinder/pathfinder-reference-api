@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PrimalWellspring : Template
     {
-        public static readonly Guid ID = Guid.Parse("6e5f4786-a491-463b-aaef-889274dbaa0c");
+        public static readonly Guid ID = Guid.Parse("f3f1300b-c0d1-4dc2-91e3-d4c43fd6bef3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("484469c3-350f-40cc-ae6e-a86331dd6300"), Type = TextBlockType.Text, Text = "Your reservoir of Focus Points is a deep wellspring. If you have spent at least 3 Focus Points since the last time you (Activity: Refocused | Refocus), you recover 3 Focus Points when you (Activity: Refocus) instead of 1." };
+            yield return new TextBlock { Id = Guid.Parse("52f7d304-29dd-4d73-ab04-a2ede3de8a30"), Type = TextBlockType.Text, Text = "Your reservoir of Focus Points is a deep wellspring. If you have spent at least 3 Focus Points since the last time you (Activity: Refocused | Refocus), you recover 3 Focus Points when you (Activity: Refocus) instead of 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("0cfe0b66-872d-4cce-9c61-93f79c1bff9c"), Feats.Instances.PrimalFocus.ID);
+            builder.HaveSpecificFeat(Guid.Parse("26b4c888-2d6f-4a9c-825f-c9d7a623bded"), Feats.Instances.PrimalFocus.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3a191af4-b1e7-476a-8b22-0699664baa01"),
+                Id = Guid.Parse("5accc384-208e-4176-b078-604a4db5557c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

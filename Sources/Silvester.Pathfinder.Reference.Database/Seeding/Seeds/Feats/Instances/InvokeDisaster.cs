@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InvokeDisaster : Template
     {
-        public static readonly Guid ID = Guid.Parse("ad69144b-2285-4430-aa41-83b57cca6029");
+        public static readonly Guid ID = Guid.Parse("5b433af4-0062-449b-96d7-a5c4a0e41b70");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f3f7789f-13c6-4f32-bb77-d777fb8bd34a"), Type = TextBlockType.Text, Text = "You can invoke nature’s fury upon your foes. You gain the (Spell: storm lord) order spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("554f89f8-b44a-44f0-951f-159321e3c8be"), Type = TextBlockType.Text, Text = "You can invoke nature’s fury upon your foes. You gain the (Spell: storm lord) order spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("a6872e7e-d191-46ae-8c34-c2b2bf8b5a5d"), Feats.Instances.WindCaller.ID);
+            builder.HaveSpecificFeat(Guid.Parse("44dea119-2aae-4283-bb7a-6fde024551d5"), Feats.Instances.WindCaller.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("897c6348-e7c3-4151-a5cd-fff3a6914f24"),
+                Id = Guid.Parse("98f1bdda-7062-4fb6-a1e5-6f9ee73c0716"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

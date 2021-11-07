@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UniversalLongevity : Template
     {
-        public static readonly Guid ID = Guid.Parse("a29f9acb-3f79-405e-a83f-2b32c68a50cf");
+        public static readonly Guid ID = Guid.Parse("5c7382a3-9c2d-423e-9612-1658be67c9da");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9ded671-3a41-4a0b-a21f-682aeaab22b4"), Type = TextBlockType.Text, Text = "You’ve perfected your ability to keep up with all the skills you’ve learned over your long life, so you’re almost never truly untrained at a skill. You reflect on your life experiences, changing the skills you selected with (Feat: Ancestral Longevity) and (Feat: Expert Longevity)." };
+            yield return new TextBlock { Id = Guid.Parse("a6336928-f112-47a4-bcab-949ce60c80d9"), Type = TextBlockType.Text, Text = "You’ve perfected your ability to keep up with all the skills you’ve learned over your long life, so you’re almost never truly untrained at a skill. You reflect on your life experiences, changing the skills you selected with (Feat: Ancestral Longevity) and (Feat: Expert Longevity)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("077507d9-ceeb-492b-b9b6-df656d289545"), Feats.Instances.ExpertLongevity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("81102d25-1f59-4879-a03f-a47bf669b698"), Feats.Instances.ExpertLongevity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5fc5f389-6fda-46e6-aa3e-e60b300f962f"),
+                Id = Guid.Parse("5e05ef4d-26c0-45a3-935c-edc98320a5c5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EnhancedFamiliar : Template
     {
-        public static readonly Guid ID = Guid.Parse("7c948e19-6a91-4954-94ef-d3fa2bcbaa89");
+        public static readonly Guid ID = Guid.Parse("73b11714-6aa1-45a2-9841-e98e6f0c37fa");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("906b01fb-e585-4f7f-9adc-e06bc6489bfd"), Type = TextBlockType.Text, Text = "By applying the best of multiple traditions of magic, you’ve found a more efficient way for your familiar to store its energy. You can select four familiar or master abilities each day, instead of two." };
+            yield return new TextBlock { Id = Guid.Parse("edae13a9-f15e-4c79-885c-e6f44b3b9211"), Type = TextBlockType.Text, Text = "By applying the best of multiple traditions of magic, you’ve found a more efficient way for your familiar to store its energy. You can select four familiar or master abilities each day, instead of two." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyFamiliar(Guid.Parse("34beb49e-51c9-4e9c-b8c1-64eac3254503"));
+            builder.HaveAnyFamiliar(Guid.Parse("ec3c8d7d-e02d-44f3-b33b-6376f4581576"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cbb3534a-fb0f-48b1-9a4a-2dfee367dbc9"),
+                Id = Guid.Parse("9711ef63-8d06-4509-b83a-194ae010cedc"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

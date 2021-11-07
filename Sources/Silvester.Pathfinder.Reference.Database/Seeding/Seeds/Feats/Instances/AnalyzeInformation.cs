@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AnalyzeInformation : Template
     {
-        public static readonly Guid ID = Guid.Parse("437ef166-a1f8-4e68-a1a7-3d18a814d845");
+        public static readonly Guid ID = Guid.Parse("e18d75aa-69e4-46d7-98ea-31f74db4ed35");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e0a9aa70-1da0-4916-81e0-3bbccdc6b866"), Type = TextBlockType.Text, Text = "You can stoke your mind into a burst of analytical prowess. You can cast 3rd-level (spell: hypercognition) once per day as a divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("3963f81d-2d86-4d86-9f61-60fe66664abf"), Type = TextBlockType.Text, Text = "You can stoke your mind into a burst of analytical prowess. You can cast 3rd-level (spell: hypercognition) once per day as a divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5c542d17-7cb0-47de-9a00-b75fc29064b9"),
+                Id = Guid.Parse("2ae4c148-71c3-48a4-b316-c7a8a9ca6841"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

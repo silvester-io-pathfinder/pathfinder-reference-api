@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EidolonAbilityCharisma : Template
     {
-        public static readonly Guid ID = Guid.Parse("6bd17f45-0dc4-4b0e-ac5e-6de5417c5881");
+        public static readonly Guid ID = Guid.Parse("dfa9ead0-92a4-4872-ad54-d0ef37e23717");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ca07a60d-7a01-44d2-9b64-4572ac089d06"), Type = TextBlockType.Text, Text = "Your eidolon&#39;s Charisma ability score increases by 2, or by 1 if it&#39;s already 18 or above." };
+            yield return new TextBlock { Id = Guid.Parse("9b883809-aba0-4c98-9da4-49e98dd8901d"), Type = TextBlockType.Text, Text = "Your eidolon&#39;s Charisma ability score increases by 2, or by 1 if it&#39;s already 18 or above." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5f2c3019-d71f-48c9-8488-ac736f211b06"),
+                Id = Guid.Parse("6cd772d6-bde8-41ec-a05c-8c9bc57acc9b"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

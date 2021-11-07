@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CastDown : Template
     {
-        public static readonly Guid ID = Guid.Parse("dabd96e0-34e8-4528-b761-76477d8589be");
+        public static readonly Guid ID = Guid.Parse("839f0405-5b9c-41ab-944b-07e82711a622");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9d54339e-4b11-4ae8-9372-a182e1e13fbc"), Type = TextBlockType.Text, Text = "The sheer force of your faith can bring a foe crashing down. If the next action you use is to cast (spell: harm) or (spell: heal) to damage one creature, the target is knocked prone if it takes any damage from the spell. If the target critically fails its save against the spell, it also takes a -10-foot status penalty to its Speed for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("a2e5d420-c1fa-4832-8079-1f91855d493c"), Type = TextBlockType.Text, Text = "The sheer force of your faith can bring a foe crashing down. If the next action you use is to cast (spell: harm) or (spell: heal) to damage one creature, the target is knocked prone if it takes any damage from the spell. If the target critically fails its save against the spell, it also takes a -10-foot status penalty to its Speed for 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("62357bb3-9e09-46cf-adfc-e50f46a80d95"), or => 
+            builder.AddOr(Guid.Parse("907c6403-1a72-46f3-8696-57aca94092af"), or => 
             {
-                or.HaveSpecificDivineFont(Guid.Parse("b386a004-ac61-476d-917b-2215f3f9f470"), DivineFonts.Instances.Heal.ID);
-                or.HaveSpecificDivineFont(Guid.Parse("584b12c2-c4dd-421a-8d56-90f768adc1d6"), DivineFonts.Instances.Harm.ID);
+                or.HaveSpecificDivineFont(Guid.Parse("dd9ed3aa-2b62-485f-8a7f-91216a61daac"), DivineFonts.Instances.Heal.ID);
+                or.HaveSpecificDivineFont(Guid.Parse("3b25cf12-f6ce-47fe-843d-37f2bfd6bab6"), DivineFonts.Instances.Harm.ID);
             });
         }
 
@@ -50,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2c84367a-01c0-48dd-8b76-d9260052f7c1"),
+                Id = Guid.Parse("663dab61-c8e4-407e-a6a7-60e6f98a0654"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

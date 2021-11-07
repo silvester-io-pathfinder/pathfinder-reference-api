@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Rage : Template
     {
-        public static readonly Guid ID = Guid.Parse("a0755ff7-1071-470a-9e97-2b9261e44cf7");
+        public static readonly Guid ID = Guid.Parse("34f24acf-1d43-419f-a4b7-6f4e009d9ed4");
 
         protected override Feat GetFeat()
         {
@@ -28,11 +29,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1700559f-53d9-49ad-8a68-e2fd9010b5b4"), Type = TextBlockType.Text, Text = "You tap into your inner fury and begin raging. You gain a number of temporary Hit Points equal to your level plus your Constitution modifier. This frenzy lasts for 1 minute, until there are no enemies you can perceive, or until you fall unconscious, whichever comes first. You can’t voluntarily stop raging. While you are raging:" };
-            yield return new TextBlock { Id = Guid.Parse("bd3a6185-b4ee-4e33-9e59-6cac2749389c"), Type = TextBlockType.Enumeration, Text = " : You deal 2 additional damage with melee weapons and unarmed attacks. This additional damage is halved if your weapon or unarmed attack is (trait: agile)." };
-            yield return new TextBlock { Id = Guid.Parse("e97b1e50-b5dd-4316-9188-db12575edd8e"), Type = TextBlockType.Enumeration, Text = " : You take a -1 penalty to AC." };
-            yield return new TextBlock { Id = Guid.Parse("32808912-cd4e-4d80-b930-f16a5426e646"), Type = TextBlockType.Enumeration, Text = " : You can’t use actions with the (trait: concentrate) trait unless they also have the (trait: rage) trait. You can (action: Seek) while raging." };
-            yield return new TextBlock { Id = Guid.Parse("03f8c731-85bd-4e9d-bce6-224c90e287fc"), Type = TextBlockType.Text, Text = "After you stop raging, you lose any remaining temporary Hit Points from Rage, and you can’t Rage again for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("b474e996-6bcd-492b-a910-22cac1a0ead7"), Type = TextBlockType.Text, Text = "You tap into your inner fury and begin raging. You gain a number of temporary Hit Points equal to your level plus your Constitution modifier. This frenzy lasts for 1 minute, until there are no enemies you can perceive, or until you fall unconscious, whichever comes first. You can’t voluntarily stop raging. While you are raging:" };
+            yield return new TextBlock { Id = Guid.Parse("fb1feb22-8556-44c2-8660-0781e782f7a0"), Type = TextBlockType.Enumeration, Text = " : You deal 2 additional damage with melee weapons and unarmed attacks. This additional damage is halved if your weapon or unarmed attack is (trait: agile)." };
+            yield return new TextBlock { Id = Guid.Parse("bc39f86c-61c7-413f-ad47-7d4eea534512"), Type = TextBlockType.Enumeration, Text = " : You take a -1 penalty to AC." };
+            yield return new TextBlock { Id = Guid.Parse("c1d8d36f-23c2-4645-bfdf-a556a2e92598"), Type = TextBlockType.Enumeration, Text = " : You can’t use actions with the (trait: concentrate) trait unless they also have the (trait: rage) trait. You can (action: Seek) while raging." };
+            yield return new TextBlock { Id = Guid.Parse("40ed190d-aee6-47e4-8526-8e45da6805a9"), Type = TextBlockType.Text, Text = "After you stop raging, you lose any remaining temporary Hit Points from Rage, and you can’t Rage again for 1 minute." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -44,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c8d1f17f-1c00-4ea8-87af-2b48cb0b032e"),
+                Id = Guid.Parse("f30dd9f7-bceb-4a47-b3fe-f9669137c2d7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

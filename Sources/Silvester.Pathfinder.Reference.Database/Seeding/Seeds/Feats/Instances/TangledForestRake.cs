@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TangledForestRake : Template
     {
-        public static readonly Guid ID = Guid.Parse("c1c435b9-2362-4a49-b468-88a47e52c0da");
+        public static readonly Guid ID = Guid.Parse("3db0482d-30f6-448d-9038-9598bf306030");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fd28919d-78d7-411e-bd75-dcc62df7b855"), Type = TextBlockType.Text, Text = "You reposition foes with raking attacks. Make a lashing branch (action: Strike). If you hit and deal damage, you force the target to move 5 feet into a space within your reach. This follows the forced movement rules found on page 475." };
+            yield return new TextBlock { Id = Guid.Parse("c01b8d9f-2539-4418-925d-93804d7ca6ba"), Type = TextBlockType.Text, Text = "You reposition foes with raking attacks. Make a lashing branch (action: Strike). If you hit and deal damage, you force the target to move 5 feet into a space within your reach. This follows the forced movement rules found on page 475." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("7fd5d3fc-91be-46e6-8cf9-504bb7992525"), Feats.Instances.TangledForestStance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("14f8130c-8e08-48c6-8cc9-ced81df35919"), Feats.Instances.TangledForestStance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("de5d30c0-8700-4975-95e6-673c2066997b"),
+                Id = Guid.Parse("91967ef0-73b8-46eb-970e-8c03cf1ac5e1"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

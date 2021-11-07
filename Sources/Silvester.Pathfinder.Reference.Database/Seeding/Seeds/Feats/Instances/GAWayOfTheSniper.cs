@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GAWayOfTheSniper : Template
     {
-        public static readonly Guid ID = Guid.Parse("fc3f7c17-7cbc-43ce-b009-52ec6bdc9811");
+        public static readonly Guid ID = Guid.Parse("5d53be45-e3b7-41a6-8bb5-a9e1fbc07bd8");
 
         protected override Feat GetFeat()
         {
@@ -28,10 +29,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("86711aa7-3e3a-4107-ad32-4bdbde237f81"), Type = TextBlockType.Text, Text = "You practice a style of shooting that seeks to ensure that your first shot is perfectly placed. You keep hidden or at a distance, staying out of the fray and bringing unseen death to your foes." };
-            yield return new TextBlock { Id = Guid.Parse("8c2e8094-b7d3-451e-857e-e01cb004670e"), Type = TextBlockType.Text, Text = "~ Slinger&#39;s Reload: (feat: Covered Reload)" };
-            yield return new TextBlock { Id = Guid.Parse("4d4d07c2-1e0c-4b50-8f90-6545747c94da"), Type = TextBlockType.Text, Text = "~ Deeds: __Initial__ (feat: One Shot, One Kill); __Advanced__ (feat: Vital Shot); __Greater__ (feat: Ghost Shot)" };
-            yield return new TextBlock { Id = Guid.Parse("d9b0ab9b-37e9-4b47-9a0b-9ee2b74b2b74"), Type = TextBlockType.Text, Text = "~ Way Skill: Stealth" };
+            yield return new TextBlock { Id = Guid.Parse("9cf84afc-9440-435a-b1e4-2571f04b5ddb"), Type = TextBlockType.Text, Text = "You practice a style of shooting that seeks to ensure that your first shot is perfectly placed. You keep hidden or at a distance, staying out of the fray and bringing unseen death to your foes." };
+            yield return new TextBlock { Id = Guid.Parse("93a2f524-b816-4e1c-a7f8-c29577e964fe"), Type = TextBlockType.Text, Text = "~ Slinger&#39;s Reload: (feat: Covered Reload)" };
+            yield return new TextBlock { Id = Guid.Parse("3a96f3ae-3755-4e6a-98b0-d4a8702aaa76"), Type = TextBlockType.Text, Text = "~ Deeds: __Initial__ (feat: One Shot, One Kill); __Advanced__ (feat: Vital Shot); __Greater__ (feat: Ghost Shot)" };
+            yield return new TextBlock { Id = Guid.Parse("88ff781d-055c-4189-9240-cb7f9efe1c8e"), Type = TextBlockType.Text, Text = "~ Way Skill: Stealth" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -43,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("be2d6a85-9ffd-465d-a25f-8cf39f5b66e7"),
+                Id = Guid.Parse("ea9dd581-9a25-418f-a91f-feacba8bf740"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

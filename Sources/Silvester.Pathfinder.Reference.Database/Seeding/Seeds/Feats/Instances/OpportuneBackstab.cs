@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OpportuneBackstab : Template
     {
-        public static readonly Guid ID = Guid.Parse("5ad8d761-3819-4354-a5b2-d6525824a356");
+        public static readonly Guid ID = Guid.Parse("e201f12a-8c33-472f-85ee-794aa7c294e5");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("691e0880-f828-4798-88b0-f5e918451202"), Type = TextBlockType.Text, Text = "When your enemy is hit by your ally, you capitalize upon the distraction. Make a (action: Strike) against the triggering creature." };
+            yield return new TextBlock { Id = Guid.Parse("7f311907-7782-4eb2-9d95-0ad369b0bcbd"), Type = TextBlockType.Text, Text = "When your enemy is hit by your ally, you capitalize upon the distraction. Make a (action: Strike) against the triggering creature." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("76e1bd7f-7707-4237-b266-515fe772a7be"),
+                Id = Guid.Parse("7996546f-d25e-45f9-9e19-e958ed3f4984"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

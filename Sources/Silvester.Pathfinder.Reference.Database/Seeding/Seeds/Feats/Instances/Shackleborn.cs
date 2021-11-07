@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Shackleborn : Template
     {
-        public static readonly Guid ID = Guid.Parse("31099f5d-5258-4123-9cbe-649c0cd6ccbb");
+        public static readonly Guid ID = Guid.Parse("56045aef-b517-4fec-808b-500c1babf7ef");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("87858e0d-ac1c-4396-8ac8-bb45386f5906"), Type = TextBlockType.Text, Text = "Your lineage shows the signs of velstrac tampering, including some curious quirk bequeathed by those shadowy surgeons of flesh and souls. Your flesh heals cleanly and quickly—all the better for you to serve as a subject for their ghastly art. You gain the (feat: Fast Recovery) feat, even if you don’t meet the prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("e95acf7a-640f-48e1-b9cb-a5539967016e"), Type = TextBlockType.Text, Text = "Your lineage shows the signs of velstrac tampering, including some curious quirk bequeathed by those shadowy surgeons of flesh and souls. Your flesh heals cleanly and quickly—all the better for you to serve as a subject for their ghastly art. You gain the (feat: Fast Recovery) feat, even if you don’t meet the prerequisites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7a86cb76-1cb8-4fe9-a60a-bdc0d6090932"),
+                Id = Guid.Parse("87cd3116-ad93-4c47-b4f8-fc952ed340f8"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

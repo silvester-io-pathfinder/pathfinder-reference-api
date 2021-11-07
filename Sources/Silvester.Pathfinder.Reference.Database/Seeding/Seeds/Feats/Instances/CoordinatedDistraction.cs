@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CoordinatedDistraction : Template
     {
-        public static readonly Guid ID = Guid.Parse("849394aa-af64-4325-a9c0-b8bb9143a4da");
+        public static readonly Guid ID = Guid.Parse("bef868e5-00ca-4869-b660-2fe1f55f4386");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("02dbbc98-a9d0-4328-b3ac-2aaec45c557e"), Type = TextBlockType.Text, Text = "~ Access: Help either the Washboard Dogs or the Diobel Sweepers destroy their rival." };
-            yield return new TextBlock { Id = Guid.Parse("9034f339-33cd-4127-b62f-c372c21355d0"), Type = TextBlockType.Text, Text = "With a sharp whistle or wave of your hands, you distract an opponent from the fact that one of your allies is about to attack them. Choose a target and an ally, both of whom must be within 30 feet. The target is flat-footed against the first (action: Strike) the ally makes on their next turn; if your ally doesn&#39;t (action: Strike) that target, the effect is lost. Depending on how you describe your distraction, this action gains either the (trait: auditory) or (trait: visual) trait." };
+            yield return new TextBlock { Id = Guid.Parse("b0470b6d-1154-4d6f-8057-6c3294cd58f1"), Type = TextBlockType.Text, Text = "~ Access: Help either the Washboard Dogs or the Diobel Sweepers destroy their rival." };
+            yield return new TextBlock { Id = Guid.Parse("1c331d67-8ad0-486f-931e-b72118bc27a9"), Type = TextBlockType.Text, Text = "With a sharp whistle or wave of your hands, you distract an opponent from the fact that one of your allies is about to attack them. Choose a target and an ally, both of whom must be within 30 feet. The target is flat-footed against the first (action: Strike) the ally makes on their next turn; if your ally doesn&#39;t (action: Strike) that target, the effect is lost. Depending on how you describe your distraction, this action gains either the (trait: auditory) or (trait: visual) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("87b61f0f-fc84-4cc8-a207-71d3b8331079"),
+                Id = Guid.Parse("f9bf4b95-9ba0-4161-be84-2e0ac08e6337"),
                 SourceId = Sources.Instances.AgentsOfEdgewatch.ID,
                 Page = -1
             };

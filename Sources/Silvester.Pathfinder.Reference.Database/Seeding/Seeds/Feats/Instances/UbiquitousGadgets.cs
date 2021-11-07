@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UbiquitousGadgets : Template
     {
-        public static readonly Guid ID = Guid.Parse("ff89b04b-89b3-4ea5-a74e-edf40c9a62ce");
+        public static readonly Guid ID = Guid.Parse("63fc5d29-be77-4ee7-8664-feee222d1155");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("74a14c5a-233d-4c10-8ff9-1fa7bd2749f8"), Type = TextBlockType.Text, Text = "They thought you had used up all your devices, but they thought wrong! You have a few more gadgets up your sleeve than others expect. Increase the number of temporary gadgets you can create each day by 2." };
+            yield return new TextBlock { Id = Guid.Parse("1db5ae02-dfb4-459e-bfab-68168bb652be"), Type = TextBlockType.Text, Text = "They thought you had used up all your devices, but they thought wrong! You have a few more gadgets up your sleeve than others expect. Increase the number of temporary gadgets you can create each day by 2." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3abf078e-7e74-4fe8-9f2b-afe34466e9be"), Feats.Instances.GadgetSpecialist.ID);
+            builder.HaveSpecificFeat(Guid.Parse("f82552d6-920b-4337-8a73-ac714b092f80"), Feats.Instances.GadgetSpecialist.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5cc9ed2c-21d5-4b8c-a124-e72de001a143"),
+                Id = Guid.Parse("7a6a19de-1455-48b1-b821-33421d580140"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

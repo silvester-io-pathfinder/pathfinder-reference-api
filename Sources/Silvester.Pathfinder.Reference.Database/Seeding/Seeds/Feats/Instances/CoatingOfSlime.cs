@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CoatingOfSlime : Template
     {
-        public static readonly Guid ID = Guid.Parse("3517777b-0199-4425-8b82-990a162dba9f");
+        public static readonly Guid ID = Guid.Parse("ed864a5c-0bdf-4a9d-bff6-eaaed6aaa124");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6375a26d-c698-4b47-bc2f-90c9bb9c5e71"), Type = TextBlockType.Text, Text = "An acidic ooze coats your limbs. Your unarmed attacks deal an additional 1d4 persistent acid damage on a critical hit." };
+            yield return new TextBlock { Id = Guid.Parse("5c912aa3-f8e0-4adc-9287-4ed0d748f5ee"), Type = TextBlockType.Text, Text = "An acidic ooze coats your limbs. Your unarmed attacks deal an additional 1d4 persistent acid damage on a critical hit." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ab0bcd11-44e4-4116-b7f8-7e0b15168734"),
+                Id = Guid.Parse("5a241be9-0f70-47c0-9994-3f001a1722e4"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

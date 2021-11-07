@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LaughingGnoll : Template
     {
-        public static readonly Guid ID = Guid.Parse("033138b5-8aa4-4db1-b65d-3bcf291f483c");
+        public static readonly Guid ID = Guid.Parse("6e428d53-31e7-4944-b4f9-874f6ef8c7de");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f7a1066-c3c5-4a2d-a1da-501ad60f0728"), Type = TextBlockType.Text, Text = "A gnoll’s sinister giggle is a sound of warning and threat. You gain the (feat: Battle Cry) skill feat. You don’t take a penalty when you attempt to (action: Demoralize) a creature that doesn’t understand your language." };
+            yield return new TextBlock { Id = Guid.Parse("9b1f8109-2079-429c-b6e5-b40e2e353506"), Type = TextBlockType.Text, Text = "A gnoll’s sinister giggle is a sound of warning and threat. You gain the (feat: Battle Cry) skill feat. You don’t take a penalty when you attempt to (action: Demoralize) a creature that doesn’t understand your language." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("df748c86-db1b-42fc-9f8d-d89d35ce00f9"), Proficiencies.Instances.Master.ID, Skills.Instances.Intimidation.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("717d7b5f-a48c-4424-8793-e25bcf868297"), Proficiencies.Instances.Master.ID, Skills.Instances.Intimidation.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("38cf3c6a-a31e-498e-856e-4a034b1efc68"),
+                Id = Guid.Parse("07610249-b5e9-406d-9cde-2e55427f0964"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

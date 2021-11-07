@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArchersAim : Template
     {
-        public static readonly Guid ID = Guid.Parse("0ef1a298-a5bd-49d9-88ba-c9d4f9881607");
+        public static readonly Guid ID = Guid.Parse("b9de7bde-cfcb-4046-94e4-24be7c946fff");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5e0471bc-8a1f-4100-80f6-7152a9605a80"), Type = TextBlockType.Text, Text = "You slow down, focus, and take a careful shot. Make a ranged (action: Strike) with a weapon in the bow weapon group. You gain a +2 circumstance bonus to the attack roll and ignore the target’s concealed condition. If the target is hidden, reduce the flat check from being hidden from 11 to 5." };
+            yield return new TextBlock { Id = Guid.Parse("e597cfbb-fdff-4a7c-8bd9-66d9fcdf55ae"), Type = TextBlockType.Text, Text = "You slow down, focus, and take a careful shot. Make a ranged (action: Strike) with a weapon in the bow weapon group. You gain a +2 circumstance bonus to the attack roll and ignore the target’s concealed condition. If the target is hidden, reduce the flat check from being hidden from 11 to 5." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("af3084e3-0c75-4e58-9258-fe82eaa6371e"), Feats.Instances.ArcherDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ffbb1384-2ec0-4007-8aaa-a433770d7353"), Feats.Instances.ArcherDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8072a2d1-955d-4f3a-a072-94c040ae0b38"),
+                Id = Guid.Parse("611111de-375a-4a1f-9e7b-d7d393956f61"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

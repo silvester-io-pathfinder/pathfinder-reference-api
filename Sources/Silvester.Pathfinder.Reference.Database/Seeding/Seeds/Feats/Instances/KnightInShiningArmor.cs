@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class KnightInShiningArmor : Template
     {
-        public static readonly Guid ID = Guid.Parse("e5c7b170-ecaf-4a28-8bf4-bbf759dd7df7");
+        public static readonly Guid ID = Guid.Parse("87671181-1973-43c4-bb1c-8ef5f3ee6576");
 
         protected override Feat GetFeat()
         {
@@ -28,20 +29,20 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd534dfe-e24f-4fb9-b298-62d203a2bd03"), Type = TextBlockType.Text, Text = "As a knight in shining armor, you train daily in the heaviest armor, expanding your expertise to heavy armor. You gain expert proficiency in heavy armor." };
+            yield return new TextBlock { Id = Guid.Parse("79e401d1-a779-438c-8065-cbfc35a011b6"), Type = TextBlockType.Text, Text = "As a knight in shining armor, you train daily in the heaviest armor, expanding your expertise to heavy armor. You gain expert proficiency in heavy armor." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("c98c2dc9-cec1-4e97-9c03-31ea457df843"), Feats.Instances.KnightVigilantDedication.ID);
-            builder.AddOr(Guid.Parse("b19c88e9-1430-4d72-90e7-8b9cf8cd8716"), or => 
+            builder.HaveSpecificFeat(Guid.Parse("f4468e40-b5b8-40f8-aa0b-80c0c471c0e6"), Feats.Instances.KnightVigilantDedication.ID);
+            builder.AddOr(Guid.Parse("1c045c71-78f2-497b-b678-628553b5bf22"), or => 
             {
-                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("769c656c-07fd-49e0-8222-a7b308700d76"), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.Light.ID);
-                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("bf4826f9-d696-47ff-9419-2d4aa20540f6"), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.Medium.ID);
-                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("89e83915-e2fa-4fc7-98ef-fad890481990"), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.Unarmored.ID);
+                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("bcdb6c74-2f40-4ec9-99e5-e2782ccd60d2"), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.LightArmor.ID);
+                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("cb52fe13-36ed-4c6a-9546-837ccd621fa3"), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.MediumArmor.ID);
+                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("b60feebc-ad9f-4b42-92ce-eb4e999e7f0d"), Proficiencies.Instances.Expert.ID, ArmorCategories.Instances.Unarmored.ID);
             });
-            builder.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("6ee2c615-44b0-40f0-8228-2352e8081521"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.Heavy.ID);
+            builder.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("3bd64c65-cced-48fa-a77e-250df87966d8"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.HeavyArmor.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a991b25c-9d92-4217-b918-508e01e8fd34"),
+                Id = Guid.Parse("43c0c2d1-fb65-4867-bba1-4ad7422cc234"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DodgingRoll : Template
     {
-        public static readonly Guid ID = Guid.Parse("91a113ef-ca55-4709-acdc-aa4311eac57c");
+        public static readonly Guid ID = Guid.Parse("336fab1b-1439-4e83-a875-df3b5a2b7559");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7e38a8a8-24d6-4589-8867-47b2ed076f4e"), Type = TextBlockType.Text, Text = "You dodge a blow at the last possible moment. You (action: Step) and gain resistance to all damage equal to your level against the triggering effect. If your (action: Step) moves you out of the triggering effect’s area, this resistance is instead equal to your level plus your Dexterity modifier." };
+            yield return new TextBlock { Id = Guid.Parse("8bbda37c-0872-4072-af11-f1b70096e5a3"), Type = TextBlockType.Text, Text = "You dodge a blow at the last possible moment. You (action: Step) and gain resistance to all damage equal to your level against the triggering effect. If your (action: Step) moves you out of the triggering effect’s area, this resistance is instead equal to your level plus your Dexterity modifier." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("18f515d7-1873-4a9c-b1a8-5f81ed268bec"), Proficiencies.Instances.Master.ID, Skills.Instances.Acrobatics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("11ec869f-60d8-487d-8179-4149287dc8e0"), Proficiencies.Instances.Master.ID, Skills.Instances.Acrobatics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("28e77441-eb5f-40ed-8782-db465f014f78"),
+                Id = Guid.Parse("abb9cc1e-a914-419a-b01b-33601596c680"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

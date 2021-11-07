@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AquaticEyes : Template
     {
-        public static readonly Guid ID = Guid.Parse("1510c098-0c63-4463-8b7b-c10d2a34ed0c");
+        public static readonly Guid ID = Guid.Parse("fc68bc89-f582-4cb8-948b-df3bab4e04d0");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6af9cf25-f3e7-415a-9fc2-4a7a1eb82db8"), Type = TextBlockType.Text, Text = "As your connection to water grows, you can see more easily in places with less light, such as the depths of the ocean. You gain low-light vision, or you gain darkvision if your ancestry already has low-light vision." };
+            yield return new TextBlock { Id = Guid.Parse("c9ec1490-b446-4f6f-a118-163205b81f6c"), Type = TextBlockType.Text, Text = "As your connection to water grows, you can see more easily in places with less light, such as the depths of the ocean. You gain low-light vision, or you gain darkvision if your ancestry already has low-light vision." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("73d74159-c427-4c0f-9b04-67e394ef3cfe"),
+                Id = Guid.Parse("17b24fc5-42ae-4213-af2c-97b2d3806f85"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

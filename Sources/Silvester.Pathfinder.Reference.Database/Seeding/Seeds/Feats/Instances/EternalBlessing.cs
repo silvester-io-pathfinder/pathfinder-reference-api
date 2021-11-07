@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EternalBlessing : Template
     {
-        public static readonly Guid ID = Guid.Parse("75aed46a-148f-48ed-9602-81dfce3368cd");
+        public static readonly Guid ID = Guid.Parse("5fbf333f-1a79-4127-8242-e38fc04a4b77");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cf3d329b-8d00-46d4-9d2e-8782e58d6334"), Type = TextBlockType.Text, Text = "Your good deeds have brought your deity’s grace to you for all of eternity. You’re continuously surrounded by a (spell: bless) spell with a spell level equal to half your level (rounded up). The radius is 15 feet, and you can’t increase it. You can (action: Dismiss) the spell; if you do, it returns automatically after 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("4f2b5896-53a8-49ea-8af3-bf7c20adc58f"), Type = TextBlockType.Text, Text = "Your good deeds have brought your deity’s grace to you for all of eternity. You’re continuously surrounded by a (spell: bless) spell with a spell level equal to half your level (rounded up). The radius is 15 feet, and you can’t increase it. You can (action: Dismiss) the spell; if you do, it returns automatically after 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("3e4be9ac-2c4a-4b90-8b44-8ded1af5f0f9"), or => 
+            builder.AddOr(Guid.Parse("1efd7ce1-2283-4f72-a4df-dd67948bf9d9"), or => 
             {
-                or.HaveSpecificAlignment(Guid.Parse("706dd5e7-b3f6-4bfb-8866-e57311506dd7"), Alignments.Instances.LawfulGood.ID);
-                or.HaveSpecificAlignment(Guid.Parse("bc5aaf0b-36b1-4878-aec7-26ad24175325"), Alignments.Instances.ChaoticGood.ID);
-                or.HaveSpecificAlignment(Guid.Parse("8bffe738-1a83-4eef-8196-a018bf7aa267"), Alignments.Instances.NeutralGood.ID);
+                or.HaveSpecificAlignment(Guid.Parse("5a0cebcb-63fc-4426-bd35-e92e7579caa6"), Alignments.Instances.LawfulGood.ID);
+                or.HaveSpecificAlignment(Guid.Parse("297e0b44-fed3-49d9-8309-697e3b2d27f8"), Alignments.Instances.ChaoticGood.ID);
+                or.HaveSpecificAlignment(Guid.Parse("e397226a-bf1c-4d5b-bc14-451879ce6a3f"), Alignments.Instances.NeutralGood.ID);
             });
         }
 
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e321836a-68e8-469c-9ea6-823968f3778c"),
+                Id = Guid.Parse("5784c0e0-3ab0-4725-a5aa-186ab35aad7a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

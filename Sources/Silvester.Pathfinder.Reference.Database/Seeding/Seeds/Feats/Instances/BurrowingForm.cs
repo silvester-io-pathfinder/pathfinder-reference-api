@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BurrowingForm : Template
     {
-        public static readonly Guid ID = Guid.Parse("52810fbc-cb98-40c6-90bb-8dcfd8e1b7a6");
+        public static readonly Guid ID = Guid.Parse("1640b45e-7c3d-4bd5-9b71-86e6d9a83e8c");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e9e01c87-b7d2-4ecb-bd13-9602b077ef29"), Type = TextBlockType.Text, Text = "Your eidolon can burrow through loose dirt. Your eidolon gains a burrow Speed of 15 feet." };
+            yield return new TextBlock { Id = Guid.Parse("94ddac9a-13f8-4849-ad4f-fb52a4209c35"), Type = TextBlockType.Text, Text = "Your eidolon can burrow through loose dirt. Your eidolon gains a burrow Speed of 15 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1f78f2d1-5cb7-4b71-8a3f-f725683c951f"),
+                Id = Guid.Parse("3e3e6315-2421-46c6-88eb-4053945a30d8"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

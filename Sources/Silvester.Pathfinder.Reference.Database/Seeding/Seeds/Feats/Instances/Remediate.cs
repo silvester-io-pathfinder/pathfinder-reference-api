@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Remediate : Template
     {
-        public static readonly Guid ID = Guid.Parse("14f0b41c-ea45-494f-8791-f1440274e2ce");
+        public static readonly Guid ID = Guid.Parse("703dedd1-d99b-4e75-a315-3c9b7c74d06a");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9925dc74-4145-4f62-acc7-ad78cbe32ac0"), Type = TextBlockType.Text, Text = "If your next action is to use your divine font to cast a 3-action (spell: heal) or (spell: harm) spell to damage creatures, you can harness the residual energy to counterbalance opposing forces. You use your (spell: heal) or (spell: harm) spell to attempt to counteract one effect in the spell’s area with the chaotic, evil, good, or lawful trait. The chosen trait must oppose one component of your deity’s alignment; if your deity is neutral, you can choose any one trait." };
+            yield return new TextBlock { Id = Guid.Parse("a90405e9-c8d2-4d4a-a773-02a560581239"), Type = TextBlockType.Text, Text = "If your next action is to use your divine font to cast a 3-action (spell: heal) or (spell: harm) spell to damage creatures, you can harness the residual energy to counterbalance opposing forces. You use your (spell: heal) or (spell: harm) spell to attempt to counteract one effect in the spell’s area with the chaotic, evil, good, or lawful trait. The chosen trait must oppose one component of your deity’s alignment; if your deity is neutral, you can choose any one trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("8855542d-568e-43c7-b124-8b32139f2e77"), or => 
+            builder.AddOr(Guid.Parse("b9373ac9-b97a-415f-ae3e-c054f4c666e8"), or => 
             {
-                or.HaveSpecificDivineFont(Guid.Parse("f56b96ef-d831-4f0e-9367-e2d8c20d821a"), DivineFonts.Instances.Heal.ID);
-                or.HaveSpecificDivineFont(Guid.Parse("ccdc0287-2e50-4cdc-9d8c-3e136ab7b68b"), DivineFonts.Instances.Harm.ID);
+                or.HaveSpecificDivineFont(Guid.Parse("cc52837f-b6bf-4826-99f7-89a51bb9b855"), DivineFonts.Instances.Heal.ID);
+                or.HaveSpecificDivineFont(Guid.Parse("1f44f6c7-e0d1-4abe-b375-45946c154a41"), DivineFonts.Instances.Harm.ID);
             });
         }
 
@@ -50,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("db242b9e-a46b-4923-a152-82a32169ba1e"),
+                Id = Guid.Parse("a11007da-4321-49e3-99a0-7526d86f76ae"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

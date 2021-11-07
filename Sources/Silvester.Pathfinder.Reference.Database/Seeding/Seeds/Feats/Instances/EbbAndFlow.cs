@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EbbAndFlow : Template
     {
-        public static readonly Guid ID = Guid.Parse("bbeaf494-7c69-461a-8286-791172244ee2");
+        public static readonly Guid ID = Guid.Parse("4d75a5e2-3fa1-4399-bce3-0c4594d7c4ed");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ddc1f4eb-e5e2-430e-9b7e-6b54f61fa123"), Type = TextBlockType.Text, Text = "You can pull forth both positive and negative energy simultaneously to harm your enemies and heal your allies. If your next action is to cast a 1-action or 2-action (spell: heal) or (spell: harm) spell, choose one creature in range that would be harmed by the spell, and choose another creature within range that would be healed by the spell. Your heal or harm targets both creatures." };
+            yield return new TextBlock { Id = Guid.Parse("c0994ab6-4df4-4768-bdc6-aa84e347766f"), Type = TextBlockType.Text, Text = "You can pull forth both positive and negative energy simultaneously to harm your enemies and heal your allies. If your next action is to cast a 1-action or 2-action (spell: heal) or (spell: harm) spell, choose one creature in range that would be harmed by the spell, and choose another creature within range that would be healed by the spell. Your heal or harm targets both creatures." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("b04c6371-5b6e-430d-83b4-8020b8f69de7"), Feats.Instances.VersatileFont.ID);
+            builder.HaveSpecificFeat(Guid.Parse("c8ec6d0e-41de-43b1-91a4-ba6dff19dc46"), Feats.Instances.VersatileFont.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a39b264d-7c5b-4eab-9f5c-6aafbe56fe69"),
+                Id = Guid.Parse("17694675-c062-413e-9926-36ac2fffaeb3"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

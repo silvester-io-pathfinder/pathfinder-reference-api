@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FiendishResistanceCold : Template
     {
-        public static readonly Guid ID = Guid.Parse("7c3a5074-7c6a-40b0-b217-6e0670a75dfe");
+        public static readonly Guid ID = Guid.Parse("04ef4e6a-7f4b-492b-a108-40c31d52af22");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("80790321-337a-4c00-8510-6703d6a6ef9c"), Type = TextBlockType.Text, Text = "You gain resistance 5 to cold." };
+            yield return new TextBlock { Id = Guid.Parse("4ff0f210-86e8-469d-b358-52663e106dd5"), Type = TextBlockType.Text, Text = "You gain resistance 5 to cold." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("eade0222-11a6-4cb1-82c1-112ea285075e"),
+                Id = Guid.Parse("5bcf1513-72dc-42e6-9312-e864462c1663"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

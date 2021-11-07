@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LinkedFocus : Template
     {
-        public static readonly Guid ID = Guid.Parse("0d093575-8cbb-4c6d-b47a-76c656cbd993");
+        public static readonly Guid ID = Guid.Parse("b084649c-174a-46d8-b17d-877c3f56ca03");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("19d43905-2e63-4647-a961-dd0764b8483c"), Type = TextBlockType.Text, Text = "You have linked your bonded item to the well of energy that powers your school spells. When you (Action: Drain your Bonded Item | Drain Bonded Item) to cast a spell of your arcane school, you also regain 1 Focus Point." };
+            yield return new TextBlock { Id = Guid.Parse("809ff4bf-7dcb-4679-b756-2c27466dbb68"), Type = TextBlockType.Text, Text = "You have linked your bonded item to the well of energy that powers your school spells. When you (Action: Drain your Bonded Item | Drain Bonded Item) to cast a spell of your arcane school, you also regain 1 Focus Point." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("23074ea9-c710-4d9f-9a6c-804c04a46629"), ClassFeatures.Wizards.ArcaneBond.ID);
-            builder.HaveSpecificClassFeature(Guid.Parse("50e5578d-8e50-4e2b-bb95-bd0fd164eb56"), ClassFeatures.Wizards.ArcaneSchool.ID);
-            builder.HaveAnyMagicSchool(Guid.Parse("163634af-5620-444f-9dde-83177f534bcc"));
+            builder.HaveSpecificClassFeature(Guid.Parse("e790db6e-11d9-4a12-9e61-9fd24475d70f"), ClassFeatures.Wizards.ArcaneBond.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("ef3987bd-6379-4a9a-884b-e93d0c0cdbc8"), ClassFeatures.Wizards.ArcaneSchool.ID);
+            builder.HaveAnyMagicSchool(Guid.Parse("3cc55a20-bca7-40c4-9aaf-ec437db7ad06"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c1df64d0-e63e-46de-ae03-db79b9d38b0c"),
+                Id = Guid.Parse("dd809a17-11b0-4e95-8d8c-4632a49122f0"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

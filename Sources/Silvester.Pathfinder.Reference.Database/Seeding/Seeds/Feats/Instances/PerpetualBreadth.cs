@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PerpetualBreadth : Template
     {
-        public static readonly Guid ID = Guid.Parse("89d9bf42-b787-4163-9163-1efeb3621850");
+        public static readonly Guid ID = Guid.Parse("518a1cb3-02cf-4610-91d4-d4ca9414dacc");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c0b72d5-cb90-4092-96fd-2695440c2448"), Type = TextBlockType.Text, Text = "You have expanded your supply of near-infinite items. Choose a research field. Add one item from the list of options available to that field from perpetual infusions, or two items if you choose your own field. If you have perpetual potency or perpetual perfection, you gain an additional item (or items if you chose your own field) appropriate to the field you chose, for instance a higher-level version of the bomb you chose or a new poison." };
+            yield return new TextBlock { Id = Guid.Parse("c127251f-552d-488e-bfca-6e397043021a"), Type = TextBlockType.Text, Text = "You have expanded your supply of near-infinite items. Choose a research field. Add one item from the list of options available to that field from perpetual infusions, or two items if you choose your own field. If you have perpetual potency or perpetual perfection, you gain an additional item (or items if you chose your own field) appropriate to the field you chose, for instance a higher-level version of the bomb you chose or a new poison." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("72553b87-ad2c-4fba-b74f-447eeb7dcf28"), ClassFeatures.Alchemists.PerpetualInfusions.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("0cff430e-3f54-49c7-8541-b6eeb955b8fb"), ClassFeatures.Alchemists.PerpetualInfusions.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("debd3810-b8be-48d1-8d18-6486725f3571"),
+                Id = Guid.Parse("ede4f6c4-4d58-4cd4-9e3e-3b6389f818f7"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

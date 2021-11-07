@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RemorselessLash : Template
     {
-        public static readonly Guid ID = Guid.Parse("9cab3185-0253-4c49-b43a-36e26953bf78");
+        public static readonly Guid ID = Guid.Parse("b84f6def-5d5e-4396-b8b1-56b6e991b94a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("59507a93-3e52-44b7-a85d-0f758d9838c0"), Type = TextBlockType.Text, Text = "You’re skilled at beating a foe when their morale is already breaking. When you succeed at a melee weapon (Action: Strike) against a frightened foe, that foe can’t reduce their frightened condition below 1 until the beginning of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("859216c9-524f-406d-9c25-69614d0f723c"), Type = TextBlockType.Text, Text = "You’re skilled at beating a foe when their morale is already breaking. When you succeed at a melee weapon (Action: Strike) against a frightened foe, that foe can’t reduce their frightened condition below 1 until the beginning of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b2aba5e4-8471-42d3-ab98-4ad87c59528f"),
+                Id = Guid.Parse("975dd6cd-6ea2-47af-a0eb-6e3a23b3809f"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

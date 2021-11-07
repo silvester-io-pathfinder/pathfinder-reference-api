@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WanderingOasis : Template
     {
-        public static readonly Guid ID = Guid.Parse("a767af60-eb1e-42c4-8d42-7e18024ef917");
+        public static readonly Guid ID = Guid.Parse("5b6aa1e7-f7eb-4807-99b3-5c3757b42e63");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("750fc217-06ed-4df6-9d43-995cdd48145d"), Type = TextBlockType.Text, Text = "You’re surrounded by soothing energy. You and allies within 60 feet of you are protected from severe environmental heat and cold. If you’re legendary in Survival, you and those allies are also protected from extreme environmental heat and cold." };
+            yield return new TextBlock { Id = Guid.Parse("56a78ab4-98e2-45ed-8e07-a8e10f90e524"), Type = TextBlockType.Text, Text = "You’re surrounded by soothing energy. You and allies within 60 feet of you are protected from severe environmental heat and cold. If you’re legendary in Survival, you and those allies are also protected from extreme environmental heat and cold." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("be89b819-130a-408e-bf0e-1e0af3b91038"), Proficiencies.Instances.Master.ID, Skills.Instances.Survival.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("cc9a3b61-1178-46dc-8ea6-28b441f94b7d"), Proficiencies.Instances.Master.ID, Skills.Instances.Survival.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("db2b01d8-2f87-4544-b4ad-acb354e8acf7"),
+                Id = Guid.Parse("79604275-338a-4bac-864e-d3fbf6769d2c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

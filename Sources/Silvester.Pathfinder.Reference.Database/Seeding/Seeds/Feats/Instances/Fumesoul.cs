@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Fumesoul : Template
     {
-        public static readonly Guid ID = Guid.Parse("bfbde94e-416f-4897-80b0-dd0ce79a3986");
+        public static readonly Guid ID = Guid.Parse("385b8990-86c7-433c-bc23-c8b3dbcc4abf");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0bcf5241-bca0-4e51-92a8-6edf43844f36"), Type = TextBlockType.Text, Text = "The air inside you asserts itself as a toxic miasma, inuring you to most poisons. You gain resistance to poison equal to half your level (minimum 1)." };
+            yield return new TextBlock { Id = Guid.Parse("58ff9bda-d596-478d-8e88-a0fc1cdecc31"), Type = TextBlockType.Text, Text = "The air inside you asserts itself as a toxic miasma, inuring you to most poisons. You gain resistance to poison equal to half your level (minimum 1)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("81c12f1d-0535-4e16-b4ba-553a52838520"),
+                Id = Guid.Parse("1a78b4da-e08f-4af5-804b-f09915e92564"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TitanSlinger : Template
     {
-        public static readonly Guid ID = Guid.Parse("004d499f-b3b0-422d-b0e3-1eb665497f71");
+        public static readonly Guid ID = Guid.Parse("b9fffa3e-0586-4ee9-b35f-0c6654099f38");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8e0b8b87-a241-4cd2-9917-27d34b783cce"), Type = TextBlockType.Text, Text = "You have learned how to use your sling to fell enormous creatures. When you hit on an attack with a (item: sling) against a Large or larger creature, increase the size of the weapon damage die by one step (details on increasing weapon damage die sizes can be found on page 279)." };
+            yield return new TextBlock { Id = Guid.Parse("81f2c412-3aba-4909-b77f-4ed690f25498"), Type = TextBlockType.Text, Text = "You have learned how to use your sling to fell enormous creatures. When you hit on an attack with a (item: sling) against a Large or larger creature, increase the size of the weapon damage die by one step (details on increasing weapon damage die sizes can be found on page 279)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("add8ffb8-9ef7-4568-8e08-da9e973d1d5e"),
+                Id = Guid.Parse("d5d0c682-22a2-4c4d-880f-244d7bf543d5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

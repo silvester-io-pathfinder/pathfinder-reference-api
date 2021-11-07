@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MasterfulCompanion : Template
     {
-        public static readonly Guid ID = Guid.Parse("29f6bce9-cbe1-4fad-8d37-db6bf659d2c3");
+        public static readonly Guid ID = Guid.Parse("13326d90-37df-4d4e-9c59-0462510f4c70");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dbdffb71-7a70-4a9b-bcb4-1c1bc7178f55"), Type = TextBlockType.Text, Text = "Your animal companion shares your incredible hunting skills, allowing it to take down your shared prey with ease. When you (feat: Hunt Prey), your animal companion gains the masterful hunter benefit associated with your hunter’s edge, rather than just your original hunter’s edge benefit." };
+            yield return new TextBlock { Id = Guid.Parse("f06ee6a2-88dc-4e60-a66d-e6749958feac"), Type = TextBlockType.Text, Text = "Your animal companion shares your incredible hunting skills, allowing it to take down your shared prey with ease. When you (feat: Hunt Prey), your animal companion gains the masterful hunter benefit associated with your hunter’s edge, rather than just your original hunter’s edge benefit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1c0d8755-66c9-4f1d-a2d7-f66364e3137c"), Feats.Instances.MasterfulHunter.ID);
-            builder.HaveAnyAnimalCompanion(Guid.Parse("58d9bce4-af00-4986-b268-6848d0905ec7"));
+            builder.HaveSpecificClassFeature(Guid.Parse("29bf02ca-9f8e-4dc9-8546-78050e3b7a8b"), ClassFeatures.Rangers.MasterfulHunter.ID);
+            builder.HaveAnyAnimalCompanion(Guid.Parse("e45ae095-7115-42a6-aea7-a573d675f439"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3f1205c2-51b1-4c01-9881-7f33220155ca"),
+                Id = Guid.Parse("98f18aa3-16f7-4582-8329-44c5048eb506"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

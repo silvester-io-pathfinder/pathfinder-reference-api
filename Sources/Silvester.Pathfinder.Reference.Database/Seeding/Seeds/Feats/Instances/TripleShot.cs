@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TripleShot : Template
     {
-        public static readonly Guid ID = Guid.Parse("aca0ce09-1aa9-4f8e-a2d6-41780048f870");
+        public static readonly Guid ID = Guid.Parse("a88c12f3-4d58-4937-87ef-196259f9704b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d9b1e562-feb6-47f2-8d4b-1d8ec769ba78"), Type = TextBlockType.Text, Text = "You can quickly fire multiple shots with greater control. When you use (feat: Double Shot), you can make the attacks against the same target. You can add an additional action to (feat: Double Shot) to make three ranged (action: Strikes | Strike) instead of two. If you do, the penalty is -4. All attacks count toward your multiple attack penalty, but the penalty doesn’t increase until after you’ve made all of them." };
+            yield return new TextBlock { Id = Guid.Parse("12cb4fb9-456c-4281-a505-8f48cea5cdb2"), Type = TextBlockType.Text, Text = "You can quickly fire multiple shots with greater control. When you use (feat: Double Shot), you can make the attacks against the same target. You can add an additional action to (feat: Double Shot) to make three ranged (action: Strikes | Strike) instead of two. If you do, the penalty is -4. All attacks count toward your multiple attack penalty, but the penalty doesn’t increase until after you’ve made all of them." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("e25960be-c691-40d4-8857-28e6303088c6"), Feats.Instances.DoubleShot.ID);
+            builder.HaveSpecificFeat(Guid.Parse("02c90cb8-e43e-4d85-82ea-3d7b6dcaf689"), Feats.Instances.DoubleShot.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cd2c2efd-f16a-4cb6-a4df-ab511ce23864"),
+                Id = Guid.Parse("b200bebc-7b7e-4b50-8d0e-d8dae8b1d618"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

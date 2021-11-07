@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GracefulPoise : Template
     {
-        public static readonly Guid ID = Guid.Parse("d53fc4b6-7eba-487a-b753-1118f47684cc");
+        public static readonly Guid ID = Guid.Parse("3d47e374-73df-4daa-9472-85f4c7b28867");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("59e305ca-54ea-49fb-a554-e17c6d49397f"), Type = TextBlockType.Text, Text = "With the right positioning, your off-hand weapon can strike like a scorpion’s stinger. While you are in this stance, if you make your second (Action: Strike) from (Feat: Double Slice) with an agile weapon, (Feat: Double Slice) counts as one attack when calculating your multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("24de9de0-5f80-48c8-b970-dc4aabd6ddc8"), Type = TextBlockType.Text, Text = "With the right positioning, your off-hand weapon can strike like a scorpion’s stinger. While you are in this stance, if you make your second (Action: Strike) from (Feat: Double Slice) with an agile weapon, (Feat: Double Slice) counts as one attack when calculating your multiple attack penalty." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("fd8d5396-ab92-4789-a994-513abf6e04a5"), Feats.Instances.DoubleSlice.ID);
+            builder.HaveSpecificFeat(Guid.Parse("9f2bbe50-7fa1-42e6-8699-73b2d0f6017f"), Feats.Instances.DoubleSlice.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e3b7372c-e13c-4f03-a65b-1247aa7fdd63"),
+                Id = Guid.Parse("ae43e031-6650-4d18-bf95-a37ce0551f94"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

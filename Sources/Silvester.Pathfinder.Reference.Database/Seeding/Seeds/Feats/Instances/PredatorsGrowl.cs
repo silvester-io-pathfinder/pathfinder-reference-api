@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PredatorsGrowl : Template
     {
-        public static readonly Guid ID = Guid.Parse("255ea665-c39c-470e-8411-a81e76295350");
+        public static readonly Guid ID = Guid.Parse("6fe10bcf-bed9-4fa4-b291-d84f8f1b5eaf");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("55d453b0-14de-48d2-8c64-1aa9cdc75c41"), Type = TextBlockType.Text, Text = "You give a throaty growl to attempt to (action: Demoralize) a creature you just found. You don’t take the –4 penalty for not sharing a language with the creature." };
+            yield return new TextBlock { Id = Guid.Parse("54d10e5d-a6bf-481f-a8d1-d0ff17edbfb1"), Type = TextBlockType.Text, Text = "You give a throaty growl to attempt to (action: Demoralize) a creature you just found. You don’t take the –4 penalty for not sharing a language with the creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("9b1955bf-646a-41e5-abc0-902267de915e"), Proficiencies.Instances.Expert.ID, Skills.Instances.Intimidation.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("55001444-b929-495c-9ecd-9d3dce6f00d6"), Proficiencies.Instances.Expert.ID, Skills.Instances.Intimidation.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("dbbdc805-c4bc-4eeb-881b-98f9c1e670d3"),
+                Id = Guid.Parse("6d2848c7-e63c-4fb9-a19e-7708a6623371"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

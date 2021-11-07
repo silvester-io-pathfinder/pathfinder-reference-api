@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ExpandAura : Template
     {
-        public static readonly Guid ID = Guid.Parse("9d6dab3b-39db-4c19-9d5a-63043327157f");
+        public static readonly Guid ID = Guid.Parse("9a0334d4-313f-42c0-813b-06dea7931840");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("80627a66-e2a3-4a4a-8de1-a782e4e835e1"), Type = TextBlockType.Text, Text = "You focus your divine power to extend your influence. Select one aura you have from a champion feat or feature, such as (feat: Aura of Courage) or (feat: Aura of Life). The radius of the aura is doubled until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("8e8a8fa0-4e48-4308-8d3c-221a8bc75aad"), Type = TextBlockType.Text, Text = "You focus your divine power to extend your influence. Select one aura you have from a champion feat or feature, such as (feat: Aura of Courage) or (feat: Aura of Life). The radius of the aura is doubled until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7398c2af-33ef-44cf-8b60-c317e34e9885"),
+                Id = Guid.Parse("ec59bead-f967-4357-b485-e84ed207205e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EdgewatchDetectiveDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("95f25977-84b5-420e-8132-d67a7bb02026");
+        public static readonly Guid ID = Guid.Parse("a2bfcd85-8331-44a2-9014-aa91181d2be3");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b5fbd0fd-97cf-4c64-a650-f777fcce5e58"), Type = TextBlockType.Text, Text = "You become trained in Society or Thievery; if you are already trained in both of these skills, you instead become trained in a skill of your choice. You can use Perception instead of Survival to (action: Track), and you gain the (feat: Experienced Tracker) skill feat." };
+            yield return new TextBlock { Id = Guid.Parse("a5f1392b-e1c0-400d-9eab-befb53ce74e7"), Type = TextBlockType.Text, Text = "You become trained in Society or Thievery; if you are already trained in both of these skills, you instead become trained in a skill of your choice. You can use Perception instead of Survival to (action: Track), and you gain the (feat: Experienced Tracker) skill feat." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("95b014f9-1e0a-475b-9b13-ddd06cf66ae1"), or => 
+            builder.AddOr(Guid.Parse("c9905489-10ad-4229-8348-e72542f59d39"), or => 
             {
-                or.HaveSpecificStat(Guid.Parse("635691a1-2fb9-4b31-a754-0fd9c9d6c12a"), requiredStatValue: 14, Stats.Instances.Intelligence.ID);
-                or.HaveSpecificStat(Guid.Parse("665b0915-296a-48ea-b312-ec0ee9d907d5"), requiredStatValue: 14, Stats.Instances.Wisdom.ID);
+                or.HaveSpecificStat(Guid.Parse("01f99a77-ddfc-4ea9-a24b-46b0de427f8e"), requiredStatValue: 14, Stats.Instances.Intelligence.ID);
+                or.HaveSpecificStat(Guid.Parse("57bf2672-2b5b-4bf1-baa7-eccc60bf54d4"), requiredStatValue: 14, Stats.Instances.Wisdom.ID);
             });
         }
 
@@ -50,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0c655279-9cb7-4d06-bc60-905aa8f32df4"),
+                Id = Guid.Parse("0f244df5-9779-4885-9688-bf618deabb4a"),
                 SourceId = Sources.Instances.AgentsOfEdgewatch.ID,
                 Page = -1
             };

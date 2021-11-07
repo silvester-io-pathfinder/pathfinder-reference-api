@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EidolonOccult : Template
     {
-        public static readonly Guid ID = Guid.Parse("240b20a9-1298-4eb3-b82d-b36c97b4c70d");
+        public static readonly Guid ID = Guid.Parse("3f7117e2-4ad0-40de-b504-4c024c42fc60");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c433d2d-0171-4652-9584-25fcbd3e746e"), Type = TextBlockType.Text, Text = "__Your eidolon’s tradition is occult.__" };
+            yield return new TextBlock { Id = Guid.Parse("782a4694-24ab-46e3-9b0c-ae59db4f55ac"), Type = TextBlockType.Text, Text = "__Your eidolon’s tradition is occult.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ec82ddcb-e6cb-4f0f-9b2e-b76abfb1fc92"),
+                Id = Guid.Parse("c777ac99-ac1b-4e94-92f6-a71380c6aa8e"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

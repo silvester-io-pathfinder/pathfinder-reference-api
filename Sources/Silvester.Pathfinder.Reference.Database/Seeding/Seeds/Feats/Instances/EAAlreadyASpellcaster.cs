@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EAAlreadyASpellcaster : Template
     {
-        public static readonly Guid ID = Guid.Parse("a712ffd6-b3ee-4f68-b8b5-93207b75c684");
+        public static readonly Guid ID = Guid.Parse("4ede264f-4032-4805-bbcf-51aad4ab5463");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2853baa8-8117-4e18-86b6-e7c03013902f"), Type = TextBlockType.Text, Text = "You learn one additional cantrip from your spellcasting tradition. This cantrip must require a spell attack roll." };
+            yield return new TextBlock { Id = Guid.Parse("0a2a7b3e-d6b0-44dd-8f08-da4da1438f14"), Type = TextBlockType.Text, Text = "You learn one additional cantrip from your spellcasting tradition. This cantrip must require a spell attack roll." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0acc7084-7154-4ed8-b083-0f9e9b0ed07b"),
+                Id = Guid.Parse("28eca69b-a9f1-4e71-841f-a739e7b7d254"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

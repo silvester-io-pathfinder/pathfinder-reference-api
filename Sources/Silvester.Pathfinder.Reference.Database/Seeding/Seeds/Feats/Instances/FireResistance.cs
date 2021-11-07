@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FireResistance : Template
     {
-        public static readonly Guid ID = Guid.Parse("056e99ad-c3e7-4ae4-acba-574376032a3e");
+        public static readonly Guid ID = Guid.Parse("030e8d0f-739f-4969-a1a4-2b4a418d1756");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d82a3e2-69c9-4ff6-a7d4-2ae6696306b4"), Type = TextBlockType.Text, Text = "Your connection to heat and flame means that fire is reluctant to bring its full force to bear against you. You gain fire resistance equal to half your level, and you gain a +1 circumstance bonus to saving throws against fire effects." };
+            yield return new TextBlock { Id = Guid.Parse("47d9ad21-36bc-4cd5-9f87-d0effe500030"), Type = TextBlockType.Text, Text = "Your connection to heat and flame means that fire is reluctant to bring its full force to bear against you. You gain fire resistance equal to half your level, and you gain a +1 circumstance bonus to saving throws against fire effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificDruidicOrder(Guid.Parse("e308bc56-a581-485a-8e47-6aa1ebba75e2"), DruidicOrders.Instances.Flame.ID);
+            builder.HaveSpecificDruidicOrder(Guid.Parse("c477d290-31d1-45d3-b33d-951c767b2071"), DruidicOrders.Instances.Flame.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("608d4920-de53-4e1e-bccb-2088d451db24"),
+                Id = Guid.Parse("97a106e6-4f2b-45a1-ac5a-c1a435a6df5e"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

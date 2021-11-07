@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Gallop : Template
     {
-        public static readonly Guid ID = Guid.Parse("60a148f5-b95a-4887-a481-1c1d7b4ce6fb");
+        public static readonly Guid ID = Guid.Parse("2a328227-f9e7-4e38-ae5a-86da6fc36e4e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f5411cfe-6891-417c-9bf1-d64ce794a5a9"), Type = TextBlockType.Text, Text = "The horse (action: Strides | Stride) twice at a +10-foot circumstance bonus to Speed." };
+            yield return new TextBlock { Id = Guid.Parse("afc84262-ad84-41be-bb6d-c92236d1f283"), Type = TextBlockType.Text, Text = "The horse (action: Strides | Stride) twice at a +10-foot circumstance bonus to Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bb9c2103-9222-4d9f-a5f6-b7d1065e2b8c"),
+                Id = Guid.Parse("a3b2527f-4e53-4bfd-aed9-f2b9d5466283"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

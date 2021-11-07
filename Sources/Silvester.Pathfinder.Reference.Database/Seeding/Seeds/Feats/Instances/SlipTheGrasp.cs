@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SlipTheGrasp : Template
     {
-        public static readonly Guid ID = Guid.Parse("838c89ec-654e-41a9-a30d-bc1ee4c25029");
+        public static readonly Guid ID = Guid.Parse("22843e50-27ed-4866-a29a-f87239d653b4");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("19f47de5-c710-4e4a-b34b-8730209ecac7"), Type = TextBlockType.Text, Text = "You have some feature that allows you to quickly evade effects that restrain you. Attempt a check to (action: Escape). If you succeed, you can (action: Stride), (action: Step), or make a (action: Strike) with a melee unarmed attack targeting the creature you (action: Escaped | Escape) from. If you fail, you instead attempt to (action: Escape) a second time." };
-            yield return new TextBlock { Id = Guid.Parse("d6f92811-2622-4963-8faf-7c6029dc3e84"), Type = TextBlockType.Text, Text = "You increase your multiple attack penalty as appropriate for the actions you took, but only after completing both actions." };
+            yield return new TextBlock { Id = Guid.Parse("c4e0b46d-ebff-46ea-82d4-8c6202cc20ec"), Type = TextBlockType.Text, Text = "You have some feature that allows you to quickly evade effects that restrain you. Attempt a check to (action: Escape). If you succeed, you can (action: Stride), (action: Step), or make a (action: Strike) with a melee unarmed attack targeting the creature you (action: Escaped | Escape) from. If you fail, you instead attempt to (action: Escape) a second time." };
+            yield return new TextBlock { Id = Guid.Parse("6ea6832c-0737-4aaa-b324-5b94e525ba55"), Type = TextBlockType.Text, Text = "You increase your multiple attack penalty as appropriate for the actions you took, but only after completing both actions." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e274d7a6-bd55-44e6-b0f7-f40781051c31"),
+                Id = Guid.Parse("d28d9e45-4eb8-447c-b47f-36ba8c9f1bb5"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

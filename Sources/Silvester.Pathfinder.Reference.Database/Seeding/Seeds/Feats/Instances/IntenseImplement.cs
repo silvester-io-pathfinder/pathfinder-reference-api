@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class IntenseImplement : Template
     {
-        public static readonly Guid ID = Guid.Parse("e8d19791-597a-435c-9ec2-a2cdeaa190b4");
+        public static readonly Guid ID = Guid.Parse("ce1ea514-b820-4027-8654-5d34c4786cdf");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("22a2635e-78c6-492e-9cff-2119dbbe4161"), Type = TextBlockType.Text, Text = "You have an exceptional connection to one of your lesser implements, allowing you to tap into more of its power. You gain the adept benefit for one of your implements for which you have only the initiate benefit." };
+            yield return new TextBlock { Id = Guid.Parse("7a595022-87e2-4f95-8d23-239e724fc162"), Type = TextBlockType.Text, Text = "You have an exceptional connection to one of your lesser implements, allowing you to tap into more of its power. You gain the adept benefit for one of your implements for which you have only the initiate benefit." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ebec1cc1-23cc-486e-93ad-01c0494bd33b"),
+                Id = Guid.Parse("5625847a-d0c3-48ce-8f97-52fd07880df1"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

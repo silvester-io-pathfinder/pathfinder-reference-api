@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ContingencyGadgets : Template
     {
-        public static readonly Guid ID = Guid.Parse("960a0724-e5a4-4122-ab0d-c24bf82660f0");
+        public static readonly Guid ID = Guid.Parse("99c911e7-8d8f-4e73-b55b-f8e2a607cdf6");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5c29145c-a193-4997-9ada-121399d7dbef"), Type = TextBlockType.Text, Text = "You are too brilliant to be caught off guard, and you always have just the right gadget for the situation. When you prepare your gadgets during your daily preparations, you can choose to leave one of them as a contingency gadget that you keep ready for just this situation, rather than declaring which gadget you’re making. You can pull the contingency gadget out using an (action: Interact) action, at which point you must choose which gadget you had prepared as a contingency." };
-            yield return new TextBlock { Id = Guid.Parse("15a2416e-cfa2-481d-9f2e-643093a8fadd"), Type = TextBlockType.Text, Text = "If you’re legendary in Crafting, you can leave two contingency gadgets during your daily preparations, instead of just one." };
+            yield return new TextBlock { Id = Guid.Parse("03774035-81d2-45dc-b0dd-f2bc494e063a"), Type = TextBlockType.Text, Text = "You are too brilliant to be caught off guard, and you always have just the right gadget for the situation. When you prepare your gadgets during your daily preparations, you can choose to leave one of them as a contingency gadget that you keep ready for just this situation, rather than declaring which gadget you’re making. You can pull the contingency gadget out using an (action: Interact) action, at which point you must choose which gadget you had prepared as a contingency." };
+            yield return new TextBlock { Id = Guid.Parse("bb5f55c7-b2da-43d2-bdfb-28e67a9b9adc"), Type = TextBlockType.Text, Text = "If you’re legendary in Crafting, you can leave two contingency gadgets during your daily preparations, instead of just one." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("190566dd-092d-41fa-b789-8febb637ccfe"), Feats.Instances.GadgetSpecialist.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8af898e6-8638-499a-9fb5-f003378b0a17"), Feats.Instances.GadgetSpecialist.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("059e3aa2-9196-4e6d-886e-58d292801e74"),
+                Id = Guid.Parse("c2c054c2-1315-4dd5-8140-cc4f490401eb"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

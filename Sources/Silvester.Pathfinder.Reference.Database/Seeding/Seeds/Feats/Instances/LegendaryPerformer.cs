@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LegendaryPerformer : Template
     {
-        public static readonly Guid ID = Guid.Parse("b7df072e-3549-446d-af6c-ff78c0e2600b");
+        public static readonly Guid ID = Guid.Parse("f4c91d1d-d811-484b-885d-26b1f9a7c081");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a04a50cf-9b36-4dce-8122-5c9e04d80422"), Type = TextBlockType.Text, Text = "Your fame has spread throughout the lands. NPCs who succeed at a DC 10 Society check to (Action: Recall Knowledge) have heard of you and usually have an attitude toward you one step better than normal, depending on your reputation and the NPC’s disposition. For instance, if you’re well-known for cruel and demanding behavior, creatures might be intimidated by you, rather than be friendly toward you. When you (Action: Earn Income) with Performance, you attract higher-level audiences than your location would allow, as audiences flock to see you. For instance, rulers and angels might travel to your small tower in the woods to hear you perform. Typically, this increases the audiences available by 2 levels or more, determined by the GM." };
+            yield return new TextBlock { Id = Guid.Parse("70487dcc-833f-463a-b5c8-506cb094e8b7"), Type = TextBlockType.Text, Text = "Your fame has spread throughout the lands. NPCs who succeed at a DC 10 Society check to (Action: Recall Knowledge) have heard of you and usually have an attitude toward you one step better than normal, depending on your reputation and the NPC’s disposition. For instance, if you’re well-known for cruel and demanding behavior, creatures might be intimidated by you, rather than be friendly toward you. When you (Action: Earn Income) with Performance, you attract higher-level audiences than your location would allow, as audiences flock to see you. For instance, rulers and angels might travel to your small tower in the woods to hear you perform. Typically, this increases the audiences available by 2 levels or more, determined by the GM." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("71084e4b-864e-4d21-9983-a30786ef0920"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Performance.ID);
-            builder.HaveSpecificFeat(Guid.Parse("26037759-e688-473d-af52-8cb447857e88"), Feats.Instances.VirtuosicPerformer.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("bcfb43cc-0b9c-45b0-884a-a1af5459c405"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Performance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("61c745ba-0d4e-42bf-bd9b-2fb2c4727662"), Feats.Instances.VirtuosicPerformer.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0513ded8-70b7-4121-b4d9-401fb7bfd266"),
+                Id = Guid.Parse("1b098bc6-5a8f-48ff-bd35-ffe501fcf7f0"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

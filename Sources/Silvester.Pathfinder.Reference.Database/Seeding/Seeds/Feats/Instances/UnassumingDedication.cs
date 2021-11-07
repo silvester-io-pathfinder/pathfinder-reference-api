@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UnassumingDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("ce4fd789-2397-4cb9-8d03-d6e51cc767c1");
+        public static readonly Guid ID = Guid.Parse("5c7cdaab-3bbf-4023-851f-8ac10eb3c909");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5188c9bd-c9c2-4936-8a11-19db2773d844"), Type = TextBlockType.Text, Text = "~ Access: Uhlam ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("50451274-ec97-4ed0-a828-1c65e9f40062"), Type = TextBlockType.Text, Text = "Your family instilled the values of care and patience into you from a young age. You gain a +1 circumstance bonus to checks to perform a (trait: downtime) activity." };
+            yield return new TextBlock { Id = Guid.Parse("bf3009a4-20cc-4f8c-9271-a43c9d3688ae"), Type = TextBlockType.Text, Text = "~ Access: Uhlam ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("404f8a49-c710-490f-abbc-ebef4307ac4a"), Type = TextBlockType.Text, Text = "Your family instilled the values of care and patience into you from a young age. You gain a +1 circumstance bonus to checks to perform a (trait: downtime) activity." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5d225420-dc82-4286-b8f8-8f1e3f18ca6a"),
+                Id = Guid.Parse("9ab92a41-dc82-4a8b-975c-5f597a2f25ad"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

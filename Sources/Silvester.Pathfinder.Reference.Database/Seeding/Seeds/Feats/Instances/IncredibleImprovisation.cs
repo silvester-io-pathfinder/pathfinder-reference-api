@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class IncredibleImprovisation : Template
     {
-        public static readonly Guid ID = Guid.Parse("a25d4a6a-c3eb-4580-a2ba-a909bcc3d550");
+        public static readonly Guid ID = Guid.Parse("c0956a8e-9e77-48c1-8dfc-0631e512fba1");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c3a9c67-8a31-4c93-a569-5c904bf2de0f"), Type = TextBlockType.Text, Text = "A stroke of brilliance gives you a major advantage with a skill despite your inexperience. Gain a +4 circumstance bonus to the triggering skill check." };
+            yield return new TextBlock { Id = Guid.Parse("dba09ba8-ffe2-46b7-b93a-75e713c031e1"), Type = TextBlockType.Text, Text = "A stroke of brilliance gives you a major advantage with a skill despite your inexperience. Gain a +4 circumstance bonus to the triggering skill check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("69ac1889-7218-4962-9f82-7266c47d0dc6"), Feats.Instances.CleverImproviser.ID);
+            builder.HaveSpecificFeat(Guid.Parse("aa1bf8cf-c9ed-485c-9231-617d3050ad04"), Feats.Instances.CleverImproviser.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("adc6d7ad-e776-4b12-a3ef-c8a9efd1cc4a"),
+                Id = Guid.Parse("4dacd295-db97-43a9-bc70-7d5bd4761671"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

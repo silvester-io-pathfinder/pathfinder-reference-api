@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SymphonyOfBlood : Template
     {
-        public static readonly Guid ID = Guid.Parse("c1804a69-fc7c-41cb-807b-7cc7de20b1ee");
+        public static readonly Guid ID = Guid.Parse("dde48ae1-91ec-482b-8e66-e0eec79104b3");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("117d9483-4500-462a-8d5f-69eb22175976"), Type = TextBlockType.Text, Text = "You call forth the blood of your foes to grant you vigor. Once per day, you can cast (spell: vampiric exsanguination) as a 7th-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("2d491522-08e1-4f9e-a4e9-027220a27fb2"), Type = TextBlockType.Text, Text = "You call forth the blood of your foes to grant you vigor. Once per day, you can cast (spell: vampiric exsanguination) as a 7th-level divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a4636897-6c1f-4e75-a136-a92440ac6f23"),
+                Id = Guid.Parse("2cc41b27-b0b8-4bba-8471-2e85527914d7"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

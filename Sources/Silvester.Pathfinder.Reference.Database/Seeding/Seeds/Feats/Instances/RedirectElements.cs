@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RedirectElements : Template
     {
-        public static readonly Guid ID = Guid.Parse("186cae66-a3f5-41d1-9d58-fe8e74bc1c5b");
+        public static readonly Guid ID = Guid.Parse("0ab1d3c6-6c86-416b-9919-19dbaac82be1");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7f107659-b9ae-4ad2-9abb-7553187dccaa"), Type = TextBlockType.Text, Text = "You seize the elemental essence of an incoming spell and redirect the spell to a creature of your choice within the spell’s area. The attacker rerolls the spell’s attack roll against the new target." };
+            yield return new TextBlock { Id = Guid.Parse("a8fba2e8-268e-43f3-bb90-2cf01a608ab0"), Type = TextBlockType.Text, Text = "You seize the elemental essence of an incoming spell and redirect the spell to a creature of your choice within the spell’s area. The attacker rerolls the spell’s attack roll against the new target." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("33a09c1a-b6a9-4a4f-af25-129cc67e26be"), Feats.Instances.ElementalistDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("eedf26ae-fb50-407f-a724-26533c592417"), Feats.Instances.ElementalistDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ec411317-f11d-480f-b3b0-3bfdc6e79430"),
+                Id = Guid.Parse("ae2df59e-4950-4660-ab1e-6a5b8e8ecd88"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

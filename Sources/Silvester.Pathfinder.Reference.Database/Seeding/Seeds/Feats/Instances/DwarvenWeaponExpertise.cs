@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DwarvenWeaponExpertise : Template
     {
-        public static readonly Guid ID = Guid.Parse("645ab97b-1734-4d49-953e-a1e3f344fa51");
+        public static readonly Guid ID = Guid.Parse("64c100d0-a687-4ccf-adfa-8712f6d68c5e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("984b60a8-2246-4a76-9cf9-2f541d8dc5d9"), Type = TextBlockType.Text, Text = "Your dwarven affinity blends with your training, granting you great skill with dwarven weapons. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency for battle axes, picks, warhammers, and all dwarven weapons in which you are trained." };
+            yield return new TextBlock { Id = Guid.Parse("5e9e18f7-bebf-4b4b-8b1f-0927bb75ec54"), Type = TextBlockType.Text, Text = "Your dwarven affinity blends with your training, granting you great skill with dwarven weapons. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency for battle axes, picks, warhammers, and all dwarven weapons in which you are trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("934b4967-341f-49e1-8c0e-ffd494555b51"), Feats.Instances.DwarvenWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d40737c5-624b-4e08-b9a4-aeb14d9e81a3"), Feats.Instances.DwarvenWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a076a3c2-408c-46b9-aa10-fb4917fa054a"),
+                Id = Guid.Parse("56d823e7-9c3b-4dcc-81cf-7477dfc3bfbd"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BloodlineMetamorphosis : Template
     {
-        public static readonly Guid ID = Guid.Parse("2ae080b5-c9e2-4635-8965-dce1151dda57");
+        public static readonly Guid ID = Guid.Parse("53644afd-b893-4829-b170-55ab66e192ea");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("667b981e-d4fb-44b5-b9e8-873eaaa7b840"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor’s Pins or an alliance with Mengkare." };
-            yield return new TextBlock { Id = Guid.Parse("64e133b9-f4e8-4471-9fda-3094b2c7bdc8"), Type = TextBlockType.Text, Text = "You have learned to manipulate the innate power of your bloodline and adapt it to your needs. When making your daily preparations, you can swap out a single spell of 9th level or lower for another spell of the same level. You can’t swap out spells granted specifically by your bloodline." };
+            yield return new TextBlock { Id = Guid.Parse("8218d111-6d45-4976-9ee2-29b5da59e980"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor’s Pins or an alliance with Mengkare." };
+            yield return new TextBlock { Id = Guid.Parse("ae224236-1df9-4157-bd42-a740373ce5ce"), Type = TextBlockType.Text, Text = "You have learned to manipulate the innate power of your bloodline and adapt it to your needs. When making your daily preparations, you can swap out a single spell of 9th level or lower for another spell of the same level. You can’t swap out spells granted specifically by your bloodline." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ae9bd0bd-826f-427b-868d-8b729a53db36"),
+                Id = Guid.Parse("da8f0df1-d149-474e-9db9-b69947b88cd2"),
                 SourceId = Sources.Instances.AgeOfAshes.ID,
                 Page = -1
             };

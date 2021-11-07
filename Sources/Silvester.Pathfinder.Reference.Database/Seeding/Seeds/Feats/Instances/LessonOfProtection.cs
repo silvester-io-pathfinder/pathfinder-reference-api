@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LessonOfProtection : Template
     {
-        public static readonly Guid ID = Guid.Parse("245b02f2-5d4a-4c7c-914e-6efca2c6957e");
+        public static readonly Guid ID = Guid.Parse("a1a45f7f-5adc-45f7-8d7b-78b7c75c32f0");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0d5356c0-e43f-4b58-aa93-4f4b486b8447"), Type = TextBlockType.Text, Text = "~ Lesson Type: Basic" };
-            yield return new TextBlock { Id = Guid.Parse("9695cea4-0f93-4d0a-900e-3b20145ae732"), Type = TextBlockType.Text, Text = "You gain the (spell: blood ward) hex, and your familiar learns (spell: mage armor)." };
+            yield return new TextBlock { Id = Guid.Parse("3e9a3950-8ddb-4387-a6ee-b63a3bd221cb"), Type = TextBlockType.Text, Text = "~ Lesson Type: Basic" };
+            yield return new TextBlock { Id = Guid.Parse("393f774e-7e58-4394-a32b-98d286d3f7e9"), Type = TextBlockType.Text, Text = "You gain the (spell: blood ward) hex, and your familiar learns (spell: mage armor)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1feeef2c-7ab6-4225-aeec-e33763fbc008"),
+                Id = Guid.Parse("8d0418ac-c5a3-4173-b0bb-6a24d942e4c6"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

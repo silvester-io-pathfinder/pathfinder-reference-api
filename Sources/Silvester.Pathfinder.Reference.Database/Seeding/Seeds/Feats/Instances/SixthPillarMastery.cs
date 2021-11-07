@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SixthPillarMastery : Template
     {
-        public static readonly Guid ID = Guid.Parse("721dc98c-1143-4c81-a38b-049d9261b833");
+        public static readonly Guid ID = Guid.Parse("737e5d13-0634-4634-863a-9b9c085c54ec");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0091942f-a20c-4d82-8a96-16e6ad1c71fa"), Type = TextBlockType.Text, Text = "Your greater discipline aligns your magical and physical potential. If your proficiency rank in unarmed attacks is at least master, your proficiency rank in spell attacks increases to master. Likewise, if your proficiency rank in spell attacks is at least master, your proficiency rank in unarmed attacks improves to master." };
-            yield return new TextBlock { Id = Guid.Parse("258db470-c2ec-46e6-a7e3-7bdc8b5d1fe6"), Type = TextBlockType.Text, Text = "__Manually improve your spell attacks and unarmed attacks proficiencies accordingly.__" };
+            yield return new TextBlock { Id = Guid.Parse("073fdae4-792e-4220-98e6-5903a83fa194"), Type = TextBlockType.Text, Text = "Your greater discipline aligns your magical and physical potential. If your proficiency rank in unarmed attacks is at least master, your proficiency rank in spell attacks increases to master. Likewise, if your proficiency rank in spell attacks is at least master, your proficiency rank in unarmed attacks improves to master." };
+            yield return new TextBlock { Id = Guid.Parse("38c8867d-0e33-4929-b186-68cdab31495a"), Type = TextBlockType.Text, Text = "__Manually improve your spell attacks and unarmed attacks proficiencies accordingly.__" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("5a208861-003a-42ed-96d8-f380beba4c48"), Feats.Instances.SixthPillarDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("2c8cd01b-72e2-4a06-931e-44cc5e0d49f4"), Feats.Instances.SixthPillarDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("734a070e-f2a9-423c-bd62-e502a78bbe60"),
+                Id = Guid.Parse("327130c3-2337-4f13-94d7-5785de726cf8"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

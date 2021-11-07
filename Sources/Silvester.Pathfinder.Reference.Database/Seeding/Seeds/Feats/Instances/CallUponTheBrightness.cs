@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CallUponTheBrightness : Template
     {
-        public static readonly Guid ID = Guid.Parse("fdd0e739-ad0f-433d-b5c3-756e990f6d22");
+        public static readonly Guid ID = Guid.Parse("02202abd-90d4-4ed5-a90e-3a8512795b2d");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5dc58060-7f5f-48a2-abb0-d8116f14afea"), Type = TextBlockType.Text, Text = "You gain a +1 status bonus to the triggering check, or a +2 status bonus if the result of the augury was “woe” and you proceeded anyway." };
-            yield return new TextBlock { Id = Guid.Parse("c201db3d-f5f0-426b-8228-7bf9af412db7"), Type = TextBlockType.Text, Text = "__You can only use this reaction for the next 30 minutes after casting (spell: augury) from the (feat: Brightness Seeker) feat.__" };
+            yield return new TextBlock { Id = Guid.Parse("f53b5f1c-aaf6-4186-a48b-ce22a701bfdc"), Type = TextBlockType.Text, Text = "You gain a +1 status bonus to the triggering check, or a +2 status bonus if the result of the augury was “woe” and you proceeded anyway." };
+            yield return new TextBlock { Id = Guid.Parse("05442878-b5ce-47d8-bf8c-4cf0656d22e6"), Type = TextBlockType.Text, Text = "__You can only use this reaction for the next 30 minutes after casting (spell: augury) from the (feat: Brightness Seeker) feat.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2a2c4214-35c0-4e95-84eb-1fd0e070311f"),
+                Id = Guid.Parse("39a8b58e-6567-4ba0-9e55-a8dab6f038f4"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

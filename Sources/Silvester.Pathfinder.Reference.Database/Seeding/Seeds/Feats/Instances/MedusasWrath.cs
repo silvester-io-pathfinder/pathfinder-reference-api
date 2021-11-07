@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MedusasWrath : Template
     {
-        public static readonly Guid ID = Guid.Parse("d2379c5e-c264-40ad-a9f5-8b777c8d18de");
+        public static readonly Guid ID = Guid.Parse("15b34d0b-a7e6-454f-8f93-63f9e3c70116");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9aa7e775-457f-4ebc-add8-171471aa84be"), Type = TextBlockType.Text, Text = "You learn a monstrous ki technique that infuses your blows with the petrifying power of a medusa’s gaze. You gain the (spell: medusa’s wrath) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("5f90f4b3-ccea-4af9-97cf-33244ee1d294"), Type = TextBlockType.Text, Text = "You learn a monstrous ki technique that infuses your blows with the petrifying power of a medusa’s gaze. You gain the (spell: medusa’s wrath) ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyKiSpells(Guid.Parse("25d844d6-76c1-4e7d-8b70-ec47683b1e40"));
+            builder.HaveAnyKiSpells(Guid.Parse("b0684d3a-99b9-48fc-bba7-ab7ae27775bd"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("921a6e85-8a6b-45da-b738-28c074322e60"),
+                Id = Guid.Parse("83703905-9321-4744-a4a2-9a31b7bdd4da"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

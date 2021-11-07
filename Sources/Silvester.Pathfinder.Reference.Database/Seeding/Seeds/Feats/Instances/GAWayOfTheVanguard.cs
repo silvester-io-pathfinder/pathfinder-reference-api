@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GAWayOfTheVanguard : Template
     {
-        public static readonly Guid ID = Guid.Parse("fba298d7-3f13-435c-a12c-0075176a95cd");
+        public static readonly Guid ID = Guid.Parse("ada78c07-32d9-4409-b6ff-3f44a9f83089");
 
         protected override Feat GetFeat()
         {
@@ -28,10 +29,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bb6270f2-8c21-44e7-b6ef-da5a4b46e28e"), Type = TextBlockType.Text, Text = "You practice a style of shooting that seeks to ensure that your first shot is perfectly placed. You keep hidden or at a distance, staying out of the fray and bringing unseen death to your foes." };
-            yield return new TextBlock { Id = Guid.Parse("2866d11f-f518-432a-b1cc-727c4ef595d0"), Type = TextBlockType.Text, Text = "~ Slinger&#39;s Reload: (feat: Clear a Path)" };
-            yield return new TextBlock { Id = Guid.Parse("19a9297f-0064-4a5b-a87d-d058d9f174ca"), Type = TextBlockType.Text, Text = "~ Deeds: __Initial__ (feat: Living Fortification); __Advanced__ (feat: Spinning Crush); __Greater__ (feat: Siegebreaker)" };
-            yield return new TextBlock { Id = Guid.Parse("e8f442cb-1489-4b64-aeb5-b8c36454f5cb"), Type = TextBlockType.Text, Text = "~ Way Skill: Athletics" };
+            yield return new TextBlock { Id = Guid.Parse("ab99418b-93e3-4a30-a514-b3e67d95ebec"), Type = TextBlockType.Text, Text = "You practice a style of shooting that seeks to ensure that your first shot is perfectly placed. You keep hidden or at a distance, staying out of the fray and bringing unseen death to your foes." };
+            yield return new TextBlock { Id = Guid.Parse("2bb9f7ac-63fa-460a-a5a1-b7e3583d4fa5"), Type = TextBlockType.Text, Text = "~ Slinger&#39;s Reload: (feat: Clear a Path)" };
+            yield return new TextBlock { Id = Guid.Parse("432ff57f-c6d2-4159-a305-af9bba056978"), Type = TextBlockType.Text, Text = "~ Deeds: __Initial__ (feat: Living Fortification); __Advanced__ (feat: Spinning Crush); __Greater__ (feat: Siegebreaker)" };
+            yield return new TextBlock { Id = Guid.Parse("30bbd042-2f83-4b02-b7d5-640e5e8e3548"), Type = TextBlockType.Text, Text = "~ Way Skill: Athletics" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -43,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3d980b7f-1070-45b9-b57b-05bed376b2c9"),
+                Id = Guid.Parse("2c5cd718-e41d-4af9-99ca-96b8f3ce22bc"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

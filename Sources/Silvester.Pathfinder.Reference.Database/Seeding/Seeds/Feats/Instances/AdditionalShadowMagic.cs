@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdditionalShadowMagic : Template
     {
-        public static readonly Guid ID = Guid.Parse("705856ec-b467-4301-a73b-acec8ed103a7");
+        public static readonly Guid ID = Guid.Parse("93a9e64c-0227-4157-b18d-707d6cc2d95f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4ba29bae-da2b-4f74-8906-197cd165f88e"), Type = TextBlockType.Text, Text = "Choose an additional shadowcaster focus spell you haven’t already selected from (feat: Shadow Magic). Increase the number of Focus Points in your pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("ded760d2-0c5e-4505-97b0-6123f88ff80a"), Type = TextBlockType.Text, Text = "Choose an additional shadowcaster focus spell you haven’t already selected from (feat: Shadow Magic). Increase the number of Focus Points in your pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("9cef05ce-a11a-46a9-bde7-d8fd88cdfd5e"), Feats.Instances.ShadowMagic.ID);
+            builder.HaveSpecificFeat(Guid.Parse("a3ef4633-d396-4e46-83b0-4d9a46d559c8"), Feats.Instances.ShadowMagic.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("06f30072-d552-46c4-9dd9-1b8275690133"),
+                Id = Guid.Parse("9d088416-956c-4ef8-aa7f-96d099a2febf"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

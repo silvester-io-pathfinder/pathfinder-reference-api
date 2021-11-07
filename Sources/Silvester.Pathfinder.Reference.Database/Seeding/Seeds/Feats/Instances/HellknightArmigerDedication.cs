@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HellknightArmigerDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("23c225f6-bed6-47ef-80b9-849a2c8ca9c9");
+        public static readonly Guid ID = Guid.Parse("9329b2ae-d05f-4c2c-8205-18c28cbcca45");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27b3adf1-eede-40c8-9d46-75f4bb4841ec"), Type = TextBlockType.Text, Text = "~ Access: You are from Old Cheliax." };
-            yield return new TextBlock { Id = Guid.Parse("2c548fb0-27c2-43bb-b813-e7599bcfc43a"), Type = TextBlockType.Text, Text = "Your Hellknight training teaches you to terrorize others into compliance, but you also study the structure and hierarchy of Hell. You must survive painful tests of your body and mind called reckonings, which steady your mind against all sorts of trauma. You gain resistance to mental damage equal to 1 + your number of class feats from the Hellknight Armiger archetype and other Hellknight archetypes. You become trained in Intimidation and Hell Lore; if you were already trained, you become an expert instead." };
+            yield return new TextBlock { Id = Guid.Parse("05ccc0f1-156c-4ac2-a580-722ab5f71058"), Type = TextBlockType.Text, Text = "~ Access: You are from Old Cheliax." };
+            yield return new TextBlock { Id = Guid.Parse("f7eaedc9-a550-4a16-acb0-a12cacdefd09"), Type = TextBlockType.Text, Text = "Your Hellknight training teaches you to terrorize others into compliance, but you also study the structure and hierarchy of Hell. You must survive painful tests of your body and mind called reckonings, which steady your mind against all sorts of trauma. You gain resistance to mental damage equal to 1 + your number of class feats from the Hellknight Armiger archetype and other Hellknight archetypes. You become trained in Intimidation and Hell Lore; if you were already trained, you become an expert instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.Manual(Guid.Parse("287790a1-5df4-4ab0-bdde-e2f4e4198ebe"), "Member of a Hellknight order.");
-            builder.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("584a450a-7304-4426-82c4-1419e0dd5631"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.Heavy.ID);
-            builder.HaveFavoredWeaponSpecificProficiency(Guid.Parse("de5d263f-9949-4ea1-88c4-aaa44eb3fb3b"), Proficiencies.Instances.Trained.ID);
+            builder.Manual(Guid.Parse("eca6e00f-b773-43cd-9a8c-3d1de3de5fa2"), "Member of a Hellknight order.");
+            builder.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("a0dfaf45-e5e3-408c-b170-0c99771b6796"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.HeavyArmor.ID);
+            builder.HaveFavoredWeaponSpecificProficiency(Guid.Parse("eccc8bb2-bef7-4c5e-838d-945151e2b81d"), Proficiencies.Instances.Trained.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -49,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("34211731-de88-47ca-9692-d712cf129c9d"),
+                Id = Guid.Parse("0b521f0d-7337-4ce4-a060-79e41b27ec55"),
                 SourceId = Sources.Instances.LostOmensWorldGuide.ID,
                 Page = -1
             };

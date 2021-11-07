@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PoisonCoat : Template
     {
-        public static readonly Guid ID = Guid.Parse("7615eec8-3336-4679-baab-6d135a0bfff0");
+        public static readonly Guid ID = Guid.Parse("14c85acf-1ce5-41b2-8c50-4c12389d9e1b");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("337ed0bc-38ab-46b7-b0d7-8a46c6210429"), Type = TextBlockType.Text, Text = "In nature, certain animals are covered in venomous spines, such that even touching them is deadly. To use this reaction, you must have brushed poison onto your clothing or woven sharp poisoned needles into the garment’s fabric. This takes 10 minutes and uses one dose of (trait: contact) or (trait: injury) poison. You can have only one such poison suffused into your clothing at a time." };
-            yield return new TextBlock { Id = Guid.Parse("5dabe876-8f0a-4b33-b987-83946c3013bc"), Type = TextBlockType.Text, Text = "When you use this reaction, the triggering creature is exposed to the suffused poison." };
+            yield return new TextBlock { Id = Guid.Parse("ec8e0f42-04b4-4320-a899-d42f4737de42"), Type = TextBlockType.Text, Text = "In nature, certain animals are covered in venomous spines, such that even touching them is deadly. To use this reaction, you must have brushed poison onto your clothing or woven sharp poisoned needles into the garment’s fabric. This takes 10 minutes and uses one dose of (trait: contact) or (trait: injury) poison. You can have only one such poison suffused into your clothing at a time." };
+            yield return new TextBlock { Id = Guid.Parse("b15db5b2-8218-41b1-966d-831209508cdb"), Type = TextBlockType.Text, Text = "When you use this reaction, the triggering creature is exposed to the suffused poison." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3341e4a1-3d19-47c1-a088-d5d7252cbece"), Feats.Instances.PoisonerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8eaac9cc-4be6-4d46-b9cb-9f45dad36201"), Feats.Instances.PoisonerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d16d85ef-f742-4079-95b6-4bdf837116f9"),
+                Id = Guid.Parse("ab6063da-3363-4790-85ee-510cfd5c1815"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

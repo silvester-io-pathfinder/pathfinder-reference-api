@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RoughRider : Template
     {
-        public static readonly Guid ID = Guid.Parse("053c81df-4579-4ec9-b604-d24091ce4c41");
+        public static readonly Guid ID = Guid.Parse("facbafec-42c4-498a-b4b1-55dd5e99b85a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ccb7c867-48d9-42ab-8152-d3194ac97b11"), Type = TextBlockType.Text, Text = "You are especially good at riding traditional goblin mounts. You gain the (feat: Ride) feat, even if you don’t meet the prerequisites. You gain a +1 circumstance bonus to Nature checks to use (action: Command an Animal) on a goblin dog or wolf mount. You can always select a wolf as your animal companion, even if you would usually select an animal companion with the mount special ability, such as for a champion’s steed ally." };
+            yield return new TextBlock { Id = Guid.Parse("1969af56-a7c9-4151-9c2a-db0d0db59dc4"), Type = TextBlockType.Text, Text = "You are especially good at riding traditional goblin mounts. You gain the (feat: Ride) feat, even if you don’t meet the prerequisites. You gain a +1 circumstance bonus to Nature checks to use (action: Command an Animal) on a goblin dog or wolf mount. You can always select a wolf as your animal companion, even if you would usually select an animal companion with the mount special ability, such as for a champion’s steed ally." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("48a23a86-87b5-4f03-bc5e-ee782922a16c"),
+                Id = Guid.Parse("c21a6aa9-b766-47b3-97d4-3eeec4c68154"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

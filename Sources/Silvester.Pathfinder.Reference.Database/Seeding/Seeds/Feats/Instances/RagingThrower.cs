@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RagingThrower : Template
     {
-        public static readonly Guid ID = Guid.Parse("5f467fbd-b1d6-41f1-957a-717d22a5dde3");
+        public static readonly Guid ID = Guid.Parse("b360473c-24c0-4f87-b7de-1ef805878d0d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("855036ad-3bf3-4eca-893a-ed70e22d495c"), Type = TextBlockType.Text, Text = "Thrown weapons become especially deadly in your fury. You apply the additional damage from (Action: Rage) to your thrown weapon attacks. If you have the (Feat: Brutal Critical) feat or the devastator class feature, apply their benefits to thrown weapon attacks." };
+            yield return new TextBlock { Id = Guid.Parse("5c41aaec-d6de-4cf5-bbe4-19292b80c987"), Type = TextBlockType.Text, Text = "Thrown weapons become especially deadly in your fury. You apply the additional damage from (Action: Rage) to your thrown weapon attacks. If you have the (Feat: Brutal Critical) feat or the devastator class feature, apply their benefits to thrown weapon attacks." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a7e820d0-eb55-4950-8757-19c874b3be45"),
+                Id = Guid.Parse("46222dfe-ec98-4099-9acf-99e4ea39dcac"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FeyCaller : Template
     {
-        public static readonly Guid ID = Guid.Parse("7db9dc75-859b-45b2-9886-9a62bbfd90f9");
+        public static readonly Guid ID = Guid.Parse("e9a65e9a-c01a-4a0e-a73f-939c726a2c6e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e383c924-fd8e-4647-92d0-18c028a83967"), Type = TextBlockType.Text, Text = "You have learned some of the tricks the fey use to bend primal magic toward illusions and trickery. Add (Spell: illusory disguise), (Spell: illusory object), (Spell: illusory scene), and (Spell: veil) to your spell list as primal spells." };
+            yield return new TextBlock { Id = Guid.Parse("c1844c96-25df-4b12-97c9-da1dd6e6a2d9"), Type = TextBlockType.Text, Text = "You have learned some of the tricks the fey use to bend primal magic toward illusions and trickery. Add (Spell: illusory disguise), (Spell: illusory object), (Spell: illusory scene), and (Spell: veil) to your spell list as primal spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a208d18b-8695-4221-8f8b-9e32abce49eb"),
+                Id = Guid.Parse("084e7072-2404-4a08-8d0f-8bb7013931bc"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OldSoul : Template
     {
-        public static readonly Guid ID = Guid.Parse("b1a22faf-b15a-4775-8596-b9efb18ee314");
+        public static readonly Guid ID = Guid.Parse("3c187c62-063b-4274-a984-7882abbaa9a9");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0549e703-ea33-4526-80ba-ad71d75ec9c4"), Type = TextBlockType.Text, Text = "Your immortal lineage has granted you a lifespan much longer than most mortals, and you’ve learned a lot along the way. You become trained in two skills of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("c6d99e76-fffc-41a7-a89a-791687f7c145"), Type = TextBlockType.Text, Text = "Your immortal lineage has granted you a lifespan much longer than most mortals, and you’ve learned a lot along the way. You become trained in two skills of your choice." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificAge(Guid.Parse("fd91839f-24c1-4347-b178-77a16ab82ff3"), Comparators.GreaterThanOrEqualTo, years: 100);
+            builder.HaveSpecificAge(Guid.Parse("5aa34ce1-e4ce-421a-bf96-4ee6da612c49"), Comparator.GreaterThanOrEqualTo, years: 100);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("82a8b7d2-1f82-4624-a15b-dff0277db5ed"),
+                Id = Guid.Parse("630668be-4d25-44f0-a1ae-a2b3e5a9b0da"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

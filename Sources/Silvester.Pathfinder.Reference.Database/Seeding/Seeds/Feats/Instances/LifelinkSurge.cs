@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LifelinkSurge : Template
     {
-        public static readonly Guid ID = Guid.Parse("100ec804-c5ae-4e52-b223-db2052ab6ad5");
+        public static readonly Guid ID = Guid.Parse("ea1ce1e5-2937-4ca8-adcf-ad4c4fcbd428");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6ddf112f-44aa-44e0-887f-327279d5a36f"), Type = TextBlockType.Text, Text = "You learn the (spell: lifelink surge) link spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("be68e52f-3c3b-493b-847f-a2b35b2679da"), Type = TextBlockType.Text, Text = "You learn the (spell: lifelink surge) link spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e6172f03-a9ee-47c0-b46f-c9ab3ed04e1a"),
+                Id = Guid.Parse("40255a60-2ed6-4d84-ad09-956ae4051d84"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

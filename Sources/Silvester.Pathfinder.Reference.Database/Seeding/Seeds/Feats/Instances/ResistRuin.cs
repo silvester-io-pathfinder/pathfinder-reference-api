@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ResistRuin : Template
     {
-        public static readonly Guid ID = Guid.Parse("32641b98-c358-4d5d-ab5a-c89e4fc45d85");
+        public static readonly Guid ID = Guid.Parse("855ee9f9-87ee-4e47-a1b5-ac4550ce69bf");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("139c2d93-3447-45e2-a9c1-022be38e1dc6"), Type = TextBlockType.Text, Text = "Your duskwalker heritage allows you to extend protection against negative energy to yourself or an ally in need. You gain resistance 5 to negative energy, and once per day, you can cast (spell: death ward) as a divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("5236c379-4d06-48fc-b644-b4c08a378d65"), Type = TextBlockType.Text, Text = "Your duskwalker heritage allows you to extend protection against negative energy to yourself or an ally in need. You gain resistance 5 to negative energy, and once per day, you can cast (spell: death ward) as a divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("84350b06-d644-4f25-9ece-c9250a08b58a"),
+                Id = Guid.Parse("2c3c975d-8afa-4e3d-aedd-133af29cca3c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

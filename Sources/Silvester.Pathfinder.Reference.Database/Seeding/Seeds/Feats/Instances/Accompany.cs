@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Accompany : Template
     {
-        public static readonly Guid ID = Guid.Parse("8a04ef36-dafb-42c6-b74a-911bc61906aa");
+        public static readonly Guid ID = Guid.Parse("0873fac4-3cd7-4e67-978c-4db2061ecf31");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6046086a-fa17-424c-a7cc-59575a555b0f"), Type = TextBlockType.Text, Text = "You use your performances to supplement an ally’s spellcasting, providing magical energy for their spells. Attempt a Performance check, using a very high DC for the ally’s level, and either spend a focus Point (if the triggering spell is a focus spell) or expend a spell slot at least 1 level higher than the triggering spell. If you succeed at the Performance check, your ally’s spell doesn’t cost the focus Point or spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("d99a2a49-3852-464b-8c56-92d23bdb3e2b"), Type = TextBlockType.Text, Text = "You use your performances to supplement an ally’s spellcasting, providing magical energy for their spells. Attempt a Performance check, using a very high DC for the ally’s level, and either spend a focus Point (if the triggering spell is a focus spell) or expend a spell slot at least 1 level higher than the triggering spell. If you succeed at the Performance check, your ally’s spell doesn’t cost the focus Point or spell slot." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6997744e-aaf8-4ef5-a92a-d8404734d061"),
+                Id = Guid.Parse("e91895ca-f4a3-4e35-acab-c0974e3aa3a1"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

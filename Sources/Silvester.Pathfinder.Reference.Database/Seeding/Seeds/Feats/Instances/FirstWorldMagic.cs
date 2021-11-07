@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FirstWorldMagic : Template
     {
-        public static readonly Guid ID = Guid.Parse("96f75e6f-3860-4331-8ad2-4b9e797b0617");
+        public static readonly Guid ID = Guid.Parse("e8a2a034-7e6d-4c1a-ab01-ad7249791614");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("67e6ca5c-55fc-4ea8-bc89-6f2bdfbef282"), Type = TextBlockType.Text, Text = "Your connection to the First World grants you a primal innate spell, much like those of the fey. Choose one cantrip from the primal spell list. You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("46488947-1d2a-4dc4-980d-ef6bf8cc7d85"), Type = TextBlockType.Text, Text = "Your connection to the First World grants you a primal innate spell, much like those of the fey. Choose one cantrip from the primal spell list. You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("43b6c216-7fb5-437c-bf96-4126d9bcf0e3"),
+                Id = Guid.Parse("c3acfc5e-1a25-4848-9e2f-c3d288f6f503"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

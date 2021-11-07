@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WrongedMonksWrath : Template
     {
-        public static readonly Guid ID = Guid.Parse("972ece16-cf8f-4ff0-b7c5-8ba27b201a3f");
+        public static readonly Guid ID = Guid.Parse("62d1fc10-f8bb-45bf-92e0-0333cae69638");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("986c04b4-4e59-4aeb-9198-62040752f2f5"), Type = TextBlockType.Text, Text = "You gain the (spell: wronged monk&#39;s wrath) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("a60951c4-898d-4058-a009-77aea00a3744"), Type = TextBlockType.Text, Text = "You gain the (spell: wronged monk&#39;s wrath) ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0ca950d3-61ad-4e8c-9343-23273177cabd"),
+                Id = Guid.Parse("16784a4f-1c41-460a-bd8e-a944006a5e82"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

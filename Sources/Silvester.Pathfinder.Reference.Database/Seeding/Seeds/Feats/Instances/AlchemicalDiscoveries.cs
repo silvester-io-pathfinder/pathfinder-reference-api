@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AlchemicalDiscoveries : Template
     {
-        public static readonly Guid ID = Guid.Parse("1f506309-ce79-4ecd-b084-c704793a3d33");
+        public static readonly Guid ID = Guid.Parse("6574f793-f115-4662-b452-3d2f014d3d45");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2216db80-affc-4ca0-a896-2dc862616748"), Type = TextBlockType.Text, Text = "You&#39;ve devoted extra time in the lab to improve your knowledge of alchemy. You learn the formulas for two alchemical items each time you level up instead of one; these must still be elixirs or tools. The number of versatile vials you can create each day increases by 1 if you&#39;re an expert in Crafting, 2 if you&#39;re a master, or 3 if you&#39;re legendary." };
+            yield return new TextBlock { Id = Guid.Parse("6e595c80-84e5-454d-ab15-67bcbe96a10b"), Type = TextBlockType.Text, Text = "You&#39;ve devoted extra time in the lab to improve your knowledge of alchemy. You learn the formulas for two alchemical items each time you level up instead of one; these must still be elixirs or tools. The number of versatile vials you can create each day increases by 1 if you&#39;re an expert in Crafting, 2 if you&#39;re a master, or 3 if you&#39;re legendary." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificMethodology(Guid.Parse("05757c25-e2e2-45e7-a916-a4ba41878365"), Methodologies.Instances.AlchemicalSciences.ID);
+            builder.HaveSpecificMethodology(Guid.Parse("f4917324-ef1d-4bdd-93cd-4885e54c01b0"), Methodologies.Instances.AlchemicalSciences.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("20044e78-5c72-4136-8981-d8f307facfd6"),
+                Id = Guid.Parse("ccff9ef5-cc54-4b5b-ad61-ba5d57849c06"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

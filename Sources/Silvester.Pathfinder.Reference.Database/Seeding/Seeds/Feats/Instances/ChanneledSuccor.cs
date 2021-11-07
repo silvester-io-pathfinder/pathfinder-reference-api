@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ChanneledSuccor : Template
     {
-        public static readonly Guid ID = Guid.Parse("00bc9145-3088-4740-b575-88515d0abb91");
+        public static readonly Guid ID = Guid.Parse("6983fb47-cb4d-423e-9217-4aac91a5651c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2bd27b11-6d3c-4f85-900c-f69f4463f594"), Type = TextBlockType.Text, Text = "You can remove conditions with divine grace. You can sacrifice one (spell: heal) spell you’ve prepared in your extra slots from healing font to cast one of the following spells instead: (spell: remove curse), (spell: remove disease), (spell: remove paralysis), or (spell: restoration). The spell is heightened to the same level as the heal spell you sacrificed." };
+            yield return new TextBlock { Id = Guid.Parse("1506c35c-48fc-44bb-8f80-8cc3244bfa47"), Type = TextBlockType.Text, Text = "You can remove conditions with divine grace. You can sacrifice one (spell: heal) spell you’ve prepared in your extra slots from healing font to cast one of the following spells instead: (spell: remove curse), (spell: remove disease), (spell: remove paralysis), or (spell: restoration). The spell is heightened to the same level as the heal spell you sacrificed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificDivineFont(Guid.Parse("ba8db759-8b9b-491b-bb3c-31195fd09b25"), DivineFonts.Instances.Heal.ID);
+            builder.HaveSpecificDivineFont(Guid.Parse("726ffaca-191d-48ce-9aa6-9e378b48a9b5"), DivineFonts.Instances.Heal.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1806d223-2727-4534-9a01-8fd374c5b28a"),
+                Id = Guid.Parse("c6e6777f-9abb-4cb5-8c19-ec42d2c0b805"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MastermindsEye : Template
     {
-        public static readonly Guid ID = Guid.Parse("69bfc507-86c9-4d1f-9fff-6d89b15b81d5");
+        public static readonly Guid ID = Guid.Parse("2382f11f-8a6a-4490-9ebf-1bcfa36723d1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b2a4641e-6fa6-488b-9c3e-216cc444d865"), Type = TextBlockType.Text, Text = "When you succeed at identifying a creature using (action: Recall Knowledge), that creature is flat-footed against your attacks until the start of your next turn; if you critically succeed, it&#39;s flat-footed against your attacks for 1 minute. This feat serves as the rogue&#39;s mastermind racket for the purpose of meeting prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("d265bc4e-3dfa-4de6-bd91-e66569f43267"), Type = TextBlockType.Text, Text = "When you succeed at identifying a creature using (action: Recall Knowledge), that creature is flat-footed against your attacks until the start of your next turn; if you critically succeed, it&#39;s flat-footed against your attacks for 1 minute. This feat serves as the rogue&#39;s mastermind racket for the purpose of meeting prerequisites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("38f6997c-ed4e-47db-bf20-af45dab145f8"),
+                Id = Guid.Parse("388e25d2-cf6f-4eeb-8c4b-5b8755e31bea"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

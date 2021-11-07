@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MistStrider : Template
     {
-        public static readonly Guid ID = Guid.Parse("08e32983-4811-4a55-9591-db43d3368030");
+        public static readonly Guid ID = Guid.Parse("4e8b8c61-e3d9-4a7f-acf0-43fe16cce7f4");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e9920547-08a3-49ea-8502-09a465b5e4dd"), Type = TextBlockType.Text, Text = "You condense the moisture in the air, solidifying it so it can hold your weight. When you use (feat: Water Strider), you can walk on air. You can ascend and descend at a maximum of a 45-degree angle. You still fall at the end of your movement if you don’t end on a surface that can support you, as normal for (feat: Water Strider)." };
+            yield return new TextBlock { Id = Guid.Parse("51f554d4-581a-4bf8-80b2-935bdab1cc50"), Type = TextBlockType.Text, Text = "You condense the moisture in the air, solidifying it so it can hold your weight. When you use (feat: Water Strider), you can walk on air. You can ascend and descend at a maximum of a 45-degree angle. You still fall at the end of your movement if you don’t end on a surface that can support you, as normal for (feat: Water Strider)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("6bec818b-6224-4e3e-aea1-b665c8f1192f"), Feats.Instances.WaterStrider.ID);
+            builder.HaveSpecificFeat(Guid.Parse("1e027ffa-871f-4014-8eba-ebfed41b2549"), Feats.Instances.WaterStrider.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("919eabe2-7e58-40e9-82bd-e8f69c175d73"),
+                Id = Guid.Parse("8ec73fe7-a69c-40ee-99e6-fcbe12013614"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

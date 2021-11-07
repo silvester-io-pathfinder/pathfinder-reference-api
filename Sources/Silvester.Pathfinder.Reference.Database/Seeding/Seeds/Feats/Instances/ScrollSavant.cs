@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ScrollSavant : Template
     {
-        public static readonly Guid ID = Guid.Parse("dd14801d-9741-448b-8c06-e020209b7c45");
+        public static readonly Guid ID = Guid.Parse("7bcabeb3-5396-45c0-9b4a-1295b76153b5");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("32c365c8-bad0-448e-8c43-280250d67481"), Type = TextBlockType.Text, Text = "During your daily preparations, you can create two temporary scrolls containing arcane spells from your spellbook. These scrolls follow the normal rules for scrolls (page 564), with some additional restrictions. Each scroll must be of a different spell level, and both spell levels must be 2 or more levels lower than your highest-level spell. Any scrolls you create this way become non-magical the next time you make your daily preparations. A temporary scroll has no value." };
-            yield return new TextBlock { Id = Guid.Parse("7e280821-6bbe-4b33-9e76-60d47ce760f8"), Type = TextBlockType.Text, Text = "If you have master proficiency in arcane spell DCs, you can create three temporary scrolls during your daily preparations, and if you have legendary proficiency, you can create four temporary scrolls." };
+            yield return new TextBlock { Id = Guid.Parse("145e7755-516e-43dc-9b87-e232f13c1b63"), Type = TextBlockType.Text, Text = "During your daily preparations, you can create two temporary scrolls containing arcane spells from your spellbook. These scrolls follow the normal rules for scrolls (page 564), with some additional restrictions. Each scroll must be of a different spell level, and both spell levels must be 2 or more levels lower than your highest-level spell. Any scrolls you create this way become non-magical the next time you make your daily preparations. A temporary scroll has no value." };
+            yield return new TextBlock { Id = Guid.Parse("42080478-8234-4816-a41a-9a3b72a5235c"), Type = TextBlockType.Text, Text = "If you have master proficiency in arcane spell DCs, you can create three temporary scrolls during your daily preparations, and if you have legendary proficiency, you can create four temporary scrolls." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("742ea699-e4ff-49bf-8712-5b7461f29404"), Proficiencies.Instances.Expert.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("124dd2cd-574e-4713-abc6-db1f5452c299"), Proficiencies.Instances.Expert.ID, Skills.Instances.Crafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e0d11eb6-e1ed-446d-bfac-6947cae18859"),
+                Id = Guid.Parse("507fc015-6317-4aff-b546-969efaa5d764"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

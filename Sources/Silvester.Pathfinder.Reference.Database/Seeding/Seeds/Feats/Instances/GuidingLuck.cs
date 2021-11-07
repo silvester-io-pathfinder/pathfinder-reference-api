@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GuidingLuck : Template
     {
-        public static readonly Guid ID = Guid.Parse("4bcff955-fd80-431a-bbc5-c695e1cb0d85");
+        public static readonly Guid ID = Guid.Parse("31e9c736-7d2d-4e86-9f28-1471c051fa8f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f91d7060-e2d0-42f2-ad33-b1a78b2ac67c"), Type = TextBlockType.Text, Text = "Your luck guides you to look the right way and aim your blows unerringly. You can use (Feat: Halfling Luck) twice per day: once in response to its normal trigger, and once when you fail a Perception check or attack roll instead of the normal trigger." };
+            yield return new TextBlock { Id = Guid.Parse("2de2cede-5f66-4641-ad7c-a45760e51bb6"), Type = TextBlockType.Text, Text = "Your luck guides you to look the right way and aim your blows unerringly. You can use (Feat: Halfling Luck) twice per day: once in response to its normal trigger, and once when you fail a Perception check or attack roll instead of the normal trigger." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("4d1e8fc3-68ac-40a3-8ff7-4de242139393"), Feats.Instances.HalflingLuck.ID);
+            builder.HaveSpecificFeat(Guid.Parse("7a13fe1c-3ebf-432a-9d8f-86f6f3aacb19"), Feats.Instances.HalflingLuck.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5cdd23da-78ae-4144-bf27-8121922af0ed"),
+                Id = Guid.Parse("a845e50b-ddc8-429b-a82b-9d2d4bc117a1"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

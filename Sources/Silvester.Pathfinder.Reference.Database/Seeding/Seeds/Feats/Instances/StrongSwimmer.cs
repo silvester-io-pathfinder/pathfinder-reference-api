@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StrongSwimmer : Template
     {
-        public static readonly Guid ID = Guid.Parse("3f771caf-d1de-4dcc-8fb9-2730066aac17");
+        public static readonly Guid ID = Guid.Parse("0a2e7380-810d-4011-aa23-7abb852c5597");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("980618a2-16dc-4f8b-b18e-4c34d289eda9"), Type = TextBlockType.Text, Text = "Your swim Speed increases to match your land Speed." };
+            yield return new TextBlock { Id = Guid.Parse("3581666e-033e-4e6a-8e17-bfe813165575"), Type = TextBlockType.Text, Text = "Your swim Speed increases to match your land Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cb4af4fe-0af2-4945-b504-20b73a689e0d"),
+                Id = Guid.Parse("70556151-b281-493b-9786-af2ff0e8a27a"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

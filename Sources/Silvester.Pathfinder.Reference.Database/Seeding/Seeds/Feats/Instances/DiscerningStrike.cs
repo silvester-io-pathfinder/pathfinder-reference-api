@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DiscerningStrike : Template
     {
-        public static readonly Guid ID = Guid.Parse("d9f3cce9-e291-4270-93cf-0e887ac99848");
+        public static readonly Guid ID = Guid.Parse("3a750247-a71f-4a23-8268-202f42423fad");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b0287b2a-c3c8-4f70-9bc0-2e5f93059a1c"), Type = TextBlockType.Text, Text = "Identifying a creature is the first step in finding its weaknesses. Attempt a (action: Strike) against the target; if successful, you deal an additional 1d6 precision damage. If you have succeeded on a (action: Recall Knowledge) check against the target during this combat and their creature type was previously recorded using (feat: Thorough Reports), you also deal 1 point of persistent bleed damage. The creature is then temporarily immune to Discerning Strike for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("8d9c2296-0b6e-4bec-8acb-39b80b089d43"), Type = TextBlockType.Text, Text = "Identifying a creature is the first step in finding its weaknesses. Attempt a (action: Strike) against the target; if successful, you deal an additional 1d6 precision damage. If you have succeeded on a (action: Recall Knowledge) check against the target during this combat and their creature type was previously recorded using (feat: Thorough Reports), you also deal 1 point of persistent bleed damage. The creature is then temporarily immune to Discerning Strike for 1 day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("b9fd04e9-67e1-4ae9-ad59-9eb2277dd52f"), Feats.Instances.PathfinderAgentDedication.ID);
-            builder.HaveSpecificFeat(Guid.Parse("dc9a7b50-865d-4a7f-bf29-faba5391e65c"), Feats.Instances.ThoroughReports.ID);
+            builder.HaveSpecificFeat(Guid.Parse("1fb674dc-9fe1-48b0-8824-9c09a43c2371"), Feats.Instances.PathfinderAgentDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("53ed6564-2444-42f5-b8b8-b2e486d74b8d"), Feats.Instances.ThoroughReports.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9d03dd3b-3203-4e15-ae72-ac3acee73cc1"),
+                Id = Guid.Parse("b50097a1-2c34-4ea2-9bd5-4274fbdf5351"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

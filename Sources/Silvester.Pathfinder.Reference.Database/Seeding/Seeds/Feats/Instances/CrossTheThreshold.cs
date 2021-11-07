@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CrossTheThreshold : Template
     {
-        public static readonly Guid ID = Guid.Parse("6d98bb21-8c18-4262-b57a-cbc71352a711");
+        public static readonly Guid ID = Guid.Parse("7797c097-c981-4708-84e6-c08998f60b75");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2a0e75c5-1b4c-43b1-af77-5da4df6aa224"), Type = TextBlockType.Text, Text = "You can cast (spell: ethereal jaunt) as an occult innate spell once per day. You don&#39;t need to (activity: Sustain the Spell | Sustain a Spell); instead, it lasts for 10 minutes or until you choose to return to your material form as a free action." };
+            yield return new TextBlock { Id = Guid.Parse("c34be944-5b15-4bdf-a8d9-9bbb0f20c127"), Type = TextBlockType.Text, Text = "You can cast (spell: ethereal jaunt) as an occult innate spell once per day. You don&#39;t need to (activity: Sustain the Spell | Sustain a Spell); instead, it lasts for 10 minutes or until you choose to return to your material form as a free action." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("34e40b0c-efb2-40e2-a67e-963681c16370"),
+                Id = Guid.Parse("61f17ee2-3201-4a97-90ab-b0474407eda8"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

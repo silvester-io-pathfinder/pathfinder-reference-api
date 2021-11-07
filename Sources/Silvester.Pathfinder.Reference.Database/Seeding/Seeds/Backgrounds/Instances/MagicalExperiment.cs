@@ -54,10 +54,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                     and.AddOr(Guid.Parse(""), or => 
                     {
                         or.GainSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
-                        or.HaveSpecificSense(Guid.Parse(""), Senses.Instances.Darkvision.ID)
+                        or.GainSpecificSense(Guid.Parse(""), Senses.Instances.Darkvision.ID, SenseAccuracies.Instances.Precise.ID)
                             .AddPrerequisites(Guid.Parse(""), prerequisites => 
                             {
-                                prerequisites.HaveSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
+                                prerequisites.HaveSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID);
                             });
                     });
                 });

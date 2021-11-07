@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BlazingStreak : Template
     {
-        public static readonly Guid ID = Guid.Parse("3c2b7821-e08e-4811-a5e9-9f9964b04510");
+        public static readonly Guid ID = Guid.Parse("eae0539e-fb29-4c16-9505-8049e452213a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c0dc6046-e74d-4c62-aa99-7f12913b311a"), Type = TextBlockType.Text, Text = "(action: Stride) twice, making (action: Strikes | Strike) against up to four different creatures within reach at any point during your movement. Flashing sparks (action: Strikes | Strike) made during Blazing Streak deal fire damage instead of slashing." };
+            yield return new TextBlock { Id = Guid.Parse("7feba25c-7946-45ee-b013-9de9c1345d33"), Type = TextBlockType.Text, Text = "(action: Stride) twice, making (action: Strikes | Strike) against up to four different creatures within reach at any point during your movement. Flashing sparks (action: Strikes | Strike) made during Blazing Streak deal fire damage instead of slashing." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("814b7f00-8db9-4587-a1d8-793febf61c98"), Feats.Instances.StokedFlameStance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("93bad6bb-87cc-4489-95d1-7a0f7fc69e61"), Feats.Instances.StokedFlameStance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("89f9be4b-4c4c-4407-9f2e-6bfc07ff6aa3"),
+                Id = Guid.Parse("b8c93784-6a15-4f07-beda-3b67849cc9aa"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

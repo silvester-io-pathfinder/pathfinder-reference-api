@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShareEidolonMagic : Template
     {
-        public static readonly Guid ID = Guid.Parse("bd18dee9-a718-4009-86ff-4f6a68da50eb");
+        public static readonly Guid ID = Guid.Parse("906f5ecc-d4ab-4704-b8e5-badba3f5a685");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9bfc26f-498e-4039-8b11-918dbf349df3"), Type = TextBlockType.Text, Text = "Your eidolon shares innate spells with you. You can cast the innate spells your eidolon gained from (feat: Magical Understudy), (feat: Magical Adept), and (feat: Magical Master). You and your eidolon share the same daily uses of these innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("7d90d72b-3284-42bf-85e0-1fb90aa77b28"), Type = TextBlockType.Text, Text = "Your eidolon shares innate spells with you. You can cast the innate spells your eidolon gained from (feat: Magical Understudy), (feat: Magical Adept), and (feat: Magical Master). You and your eidolon share the same daily uses of these innate spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1b6d1d76-7e5c-447a-8204-95f05c62a378"), Feats.Instances.MagicalUnderstudy.ID);
+            builder.HaveSpecificFeat(Guid.Parse("290f8e1e-01cd-4cfa-a5e2-4cd11022e3b2"), Feats.Instances.MagicalUnderstudy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2222c061-4d59-44ac-a2d4-05eab33227ef"),
+                Id = Guid.Parse("8a580934-4172-4713-bc2d-b5356db32db9"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

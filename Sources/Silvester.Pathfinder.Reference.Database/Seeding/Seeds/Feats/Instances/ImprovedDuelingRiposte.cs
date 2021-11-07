@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImprovedDuelingRiposte : Template
     {
-        public static readonly Guid ID = Guid.Parse("ae8154c4-35e3-4cd5-b585-06ada571b7ef");
+        public static readonly Guid ID = Guid.Parse("948f5ff2-acd2-4030-9f66-bbfa483dc347");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8865d43-31e5-4bc5-854a-2c9a0cb90d83"), Type = TextBlockType.Text, Text = "Your weapon whirls and darts, striking foes whenever the opportunity presents itself. At the start of each of your turns, you gain an additional reaction that you can use only to make a (feat: Dueling Riposte). You can use this extra reaction even if you are not benefiting from (feat: Dueling Parry)." };
+            yield return new TextBlock { Id = Guid.Parse("b5d8eb8f-7a7e-40b5-9563-4169090fea7a"), Type = TextBlockType.Text, Text = "Your weapon whirls and darts, striking foes whenever the opportunity presents itself. At the start of each of your turns, you gain an additional reaction that you can use only to make a (feat: Dueling Riposte). You can use this extra reaction even if you are not benefiting from (feat: Dueling Parry)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("249ca964-5fef-41ec-b153-7fb9875af56e"), Feats.Instances.DuelingRiposte.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e9935856-7205-4e08-b026-a787c39f7344"), Feats.Instances.DuelingRiposte.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("38a6f3dc-d02d-40c7-ae69-77ea94fa8fc3"),
+                Id = Guid.Parse("618a3d78-c3fa-4417-b3cf-06d760edef8f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

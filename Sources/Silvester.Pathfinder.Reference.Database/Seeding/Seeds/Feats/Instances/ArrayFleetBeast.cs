@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArrayFleetBeast : Template
     {
-        public static readonly Guid ID = Guid.Parse("fde3a233-f8f8-4f14-ba9b-bb06b88a43e7");
+        public static readonly Guid ID = Guid.Parse("19f266e2-a87f-4849-a1e5-abcf7687a3f9");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f98f238f-27f3-44d7-a781-68fcf34e8f6e"), Type = TextBlockType.Text, Text = "~ Fleet Beast: __Str__ 14, __Dex__ 18, __Con__ 16, __Int__ 8, __Wis__ 12, __Cha__ 10; +1 AC (+4 Dex cap)" };
+            yield return new TextBlock { Id = Guid.Parse("2da2dc84-8eff-4a20-ad33-6eb3da64240f"), Type = TextBlockType.Text, Text = "~ Fleet Beast: __Str__ 14, __Dex__ 18, __Con__ 16, __Int__ 8, __Wis__ 12, __Cha__ 10; +1 AC (+4 Dex cap)" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a254b325-a40e-436a-8cca-13452115fae7"),
+                Id = Guid.Parse("a39ec0ee-4f71-46bd-b503-15fe2139c8b6"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class QuickClimb : Template
     {
-        public static readonly Guid ID = Guid.Parse("2f2beadd-0834-4ffb-9777-72e6d8c3a5f4");
+        public static readonly Guid ID = Guid.Parse("3367cbe9-1485-409f-9307-bee7bcd145f2");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("61d77be5-9569-40d0-990c-cbc97e6ee0f0"), Type = TextBlockType.Text, Text = "When (action: Climbing | Climb), you move 5 more feet on a success and 10 more feet on a critical success, to a maximum of your Speed. If you’re legendary in Athletics, you gain a climb Speed equal to your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("19c20c08-a219-4414-b9b7-4e110a777dd3"), Type = TextBlockType.Text, Text = "When (action: Climbing | Climb), you move 5 more feet on a success and 10 more feet on a critical success, to a maximum of your Speed. If you’re legendary in Athletics, you gain a climb Speed equal to your Speed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("5d7991ac-b1eb-4587-9f11-fbf8b5abc9a9"), Proficiencies.Instances.Master.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("5a4b0e52-0d6d-4e06-856a-db17c36eb3eb"), Proficiencies.Instances.Master.ID, Skills.Instances.Athletics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c302b058-38b5-44e3-a375-65028ebaf3c9"),
+                Id = Guid.Parse("2597642c-8a56-4bdd-8aad-3f966e1ac036"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

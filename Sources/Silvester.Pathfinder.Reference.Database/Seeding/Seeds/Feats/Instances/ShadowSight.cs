@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShadowSight : Template
     {
-        public static readonly Guid ID = Guid.Parse("3da3c2b9-f348-4450-aebd-32a6647ec4b0");
+        public static readonly Guid ID = Guid.Parse("f20b8bb8-1f65-4b65-9fcf-2b38ffd036e2");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2b81761b-00f8-434e-9720-bfa4d397e315"), Type = TextBlockType.Text, Text = "You draw on your connection with the Shadow Plane to see through all but the deepest darkness. You gain greater darkvision for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("d9d96b7f-8996-496f-975c-52842a696b05"), Type = TextBlockType.Text, Text = "You draw on your connection with the Shadow Plane to see through all but the deepest darkness. You gain greater darkvision for 1 minute." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ff913253-eca8-4e04-8ee8-0c8d294cda8b"),
+                Id = Guid.Parse("cbbcf785-8d28-41ab-83b0-8573fd613539"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

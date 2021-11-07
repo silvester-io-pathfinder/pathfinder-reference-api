@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MesmerizingGaze : Template
     {
-        public static readonly Guid ID = Guid.Parse("e2765d84-bf76-4c78-9009-9ac92bfb8f16");
+        public static readonly Guid ID = Guid.Parse("b2084fc6-f3ac-43c9-b100-c13c75807a5d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d40cb0af-18ad-456c-bae9-33e4bec0191b"), Type = TextBlockType.Text, Text = "Eye contact can help you invade another creature’s thoughts, as though you were peering directly through their eyes and into their mind. When you cast an (trait: enchantment) spell that targets only one creature within 30 feet who can see you, you can gaze into the creature’s eyes, causing the creature to take a –1 status penalty to their saving throw against your spell unless they choose to break the eye contact as a reaction. If they don’t look away, you’re fascinated with them until the end of your next turn as you maintain the eye contact. When you use Mesmerizing Gaze, the (action: Avert Gaze) action provides its bonus to saving throws against your spell, as the spell’s effects have become connected to the eye contact." };
+            yield return new TextBlock { Id = Guid.Parse("2ecb4b80-b599-452c-ab5a-815c0a415e56"), Type = TextBlockType.Text, Text = "Eye contact can help you invade another creature’s thoughts, as though you were peering directly through their eyes and into their mind. When you cast an (trait: enchantment) spell that targets only one creature within 30 feet who can see you, you can gaze into the creature’s eyes, causing the creature to take a –1 status penalty to their saving throw against your spell unless they choose to break the eye contact as a reaction. If they don’t look away, you’re fascinated with them until the end of your next turn as you maintain the eye contact. When you use Mesmerizing Gaze, the (action: Avert Gaze) action provides its bonus to saving throws against your spell, as the spell’s effects have become connected to the eye contact." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4059465d-5da0-4f04-8fb8-584847093bc2"),
+                Id = Guid.Parse("00fd84e2-db1a-4883-bea1-12e4ed4c6e5d"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SnareCrafting : Template
     {
-        public static readonly Guid ID = Guid.Parse("869eea1b-7506-4293-91b0-0a045f669bba");
+        public static readonly Guid ID = Guid.Parse("329491b9-01ba-414d-af4d-74de64031437");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e28e1037-a5a6-4369-a9d9-ba35ed4693ed"), Type = TextBlockType.Text, Text = "You can use the (action: Craft) activity to create snares. When you select this feat, you add the formulas for four common snares to your (item: formula book)." };
+            yield return new TextBlock { Id = Guid.Parse("83fca245-49b8-488c-bdb8-c8ef81e3d195"), Type = TextBlockType.Text, Text = "You can use the (action: Craft) activity to create snares. When you select this feat, you add the formulas for four common snares to your (item: formula book)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("9c5373e3-54a3-4c13-ab05-0a4e714114dd"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("fab8f593-76c5-4044-a04b-d91fcec57d08"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("85cb32c4-1553-4f3c-a65d-82868fe20522"),
+                Id = Guid.Parse("f1e4c60d-676e-4777-aca2-84d23f20819c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

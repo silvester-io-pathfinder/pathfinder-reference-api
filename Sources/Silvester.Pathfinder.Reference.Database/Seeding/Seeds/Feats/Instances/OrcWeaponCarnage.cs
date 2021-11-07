@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OrcWeaponCarnage : Template
     {
-        public static readonly Guid ID = Guid.Parse("56111709-2839-4bc7-80df-c038becc464e");
+        public static readonly Guid ID = Guid.Parse("27862da1-f643-450a-acdb-2f324a895b21");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a1dc5cbc-97f3-44f2-9d0c-b7048ab918b6"), Type = TextBlockType.Text, Text = "You are brutally efficient with the weapons of your orc ancestors. Whenever you critically hit using a falchion, a greataxe, or an orc weapon, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("64f0c939-1041-4608-8643-174e8a11001b"), Type = TextBlockType.Text, Text = "You are brutally efficient with the weapons of your orc ancestors. Whenever you critically hit using a falchion, a greataxe, or an orc weapon, you apply the weapon’s critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("683fe803-bdc7-4870-ba28-2e7477199480"), Feats.Instances.OrcWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("3037fbb2-3385-4371-b0a7-bd0c11583481"), Feats.Instances.OrcWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f118717e-638f-4efc-b8a5-eb5606408566"),
+                Id = Guid.Parse("d9f07bd1-9361-49d9-8ed9-9424a81493d4"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RampagingFerocity : Template
     {
-        public static readonly Guid ID = Guid.Parse("78b0ac59-763e-4d82-9c99-f51606398a61");
+        public static readonly Guid ID = Guid.Parse("85b8f7e7-8033-4933-b313-627faf9b7630");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec907c1d-cff7-4d10-862a-c35240ceb003"), Type = TextBlockType.Text, Text = "You lash out viciously even as you fend off death. Make a single melee (action: Strike). If this (action: Strike) brings a foe to 0 Hit Points, this activation of (feat: Orc Ferocity) doesn&#39;t count against its frequency." };
+            yield return new TextBlock { Id = Guid.Parse("4e350e44-df7c-43a2-ba9b-962102958b15"), Type = TextBlockType.Text, Text = "You lash out viciously even as you fend off death. Make a single melee (action: Strike). If this (action: Strike) brings a foe to 0 Hit Points, this activation of (feat: Orc Ferocity) doesn&#39;t count against its frequency." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("168df9cd-e842-4093-bf56-8ac125b47e69"), Feats.Instances.OrcFerocity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("07dd20b6-0590-4260-9afa-ac320dc2faa8"), Feats.Instances.OrcFerocity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9603ea50-5956-4ecc-a991-13fbcff46523"),
+                Id = Guid.Parse("211deef8-aa2f-4c04-827a-a8349e91c5c5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

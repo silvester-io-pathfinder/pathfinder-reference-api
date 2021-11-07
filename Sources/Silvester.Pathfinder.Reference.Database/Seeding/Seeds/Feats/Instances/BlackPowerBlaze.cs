@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BlackPowerBlaze : Template
     {
-        public static readonly Guid ID = Guid.Parse("1ab60951-9578-4366-bf9d-9059be6e4171");
+        public static readonly Guid ID = Guid.Parse("565212b9-8b5d-403e-8f56-c14040e65643");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("80fe495b-35d9-4453-b472-e577e6bbda21"), Type = TextBlockType.Text, Text = "You learn to take advantage of every shot, flying across the battlefield with the help of your weapon’s recoil. (action: Stride) and use (feat: Black Powder Boost). Make a ranged (action: Strike) with the required weapon at any point during the (feat: Black Powder Boost)." };
+            yield return new TextBlock { Id = Guid.Parse("223c7897-a90d-4a22-8755-810c9232769a"), Type = TextBlockType.Text, Text = "You learn to take advantage of every shot, flying across the battlefield with the help of your weapon’s recoil. (action: Stride) and use (feat: Black Powder Boost). Make a ranged (action: Strike) with the required weapon at any point during the (feat: Black Powder Boost)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("0175840b-27f7-4358-8ed5-c7d9716daad2"), Feats.Instances.BlackPowderBoost.ID);
+            builder.HaveSpecificFeat(Guid.Parse("3d8f378d-0d55-4682-9138-4d6f08dd13eb"), Feats.Instances.BlackPowderBoost.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("413782b6-11f4-4c14-a533-1f68de7b6c08"),
+                Id = Guid.Parse("df5fdcdc-db8a-4e93-8458-d6de8f606fb6"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

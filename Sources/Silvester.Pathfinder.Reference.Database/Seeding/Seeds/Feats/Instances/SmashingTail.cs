@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SmashingTail : Template
     {
-        public static readonly Guid ID = Guid.Parse("94772071-fc23-45e9-adb0-67ecf4eae71d");
+        public static readonly Guid ID = Guid.Parse("bf869c45-c01d-4ae2-bd11-010ae7ae52a3");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("911a66fe-f517-4ff5-8184-460602ed7b27"), Type = TextBlockType.Text, Text = "You have a tail that serves as a potent weapon. You gain a tail unarmed attack that deals 1d6 bludgeoning damage, has the (trait: sweep) trait, and is in the brawling weapon group." };
+            yield return new TextBlock { Id = Guid.Parse("de3cb16f-4597-494e-a15c-afbe433075fb"), Type = TextBlockType.Text, Text = "You have a tail that serves as a potent weapon. You gain a tail unarmed attack that deals 1d6 bludgeoning damage, has the (trait: sweep) trait, and is in the brawling weapon group." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b3668004-4786-417a-bef3-91303a30dead"),
+                Id = Guid.Parse("bb448573-1ca9-42e2-9fb0-1049e7c7477a"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TupilaqCarver : Template
     {
-        public static readonly Guid ID = Guid.Parse("f028208a-fbd6-4b2b-9281-f02b5e0298bb");
+        public static readonly Guid ID = Guid.Parse("e4b9b4d9-68ff-4e52-940b-ef6cbcf877ca");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a5ba4d9-13db-49e5-b669-57de3df75a9b"), Type = TextBlockType.Text, Text = "~ Access: Erutaki ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("4d45fdde-cb9d-45c6-b739-2d067b19d124"), Type = TextBlockType.Text, Text = "You know the truth behind old stories that tell of sending a fetish of bone and sinew to seek vengeance. These old magics allow you to conjure constructs with ease. Add the (spell: summon construct) spell to your spell list. The constructs you summon have a distinct ivory scrimshaw appearance, and if you include a drop of blood, lock of hair, or other portion of a creature’s body as part of the spell’s material component, the summoned construct gains a +4 status bonus to Perception checks to sense or locate that creature." };
+            yield return new TextBlock { Id = Guid.Parse("f1949fc9-1c90-4552-88bb-6ad5613b8a53"), Type = TextBlockType.Text, Text = "~ Access: Erutaki ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("ce40079b-7087-4be8-8738-9314a42254f3"), Type = TextBlockType.Text, Text = "You know the truth behind old stories that tell of sending a fetish of bone and sinew to seek vengeance. These old magics allow you to conjure constructs with ease. Add the (spell: summon construct) spell to your spell list. The constructs you summon have a distinct ivory scrimshaw appearance, and if you include a drop of blood, lock of hair, or other portion of a creature’s body as part of the spell’s material component, the summoned construct gains a +4 status bonus to Perception checks to sense or locate that creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("31a0a979-f8c6-4cfc-bb9b-75957aa0bbce"), or => 
+            builder.AddOr(Guid.Parse("4e819a37-2aba-41e8-9352-aec249a0797b"), or => 
             {
-                or.HaveSpecificMagicTradition(Guid.Parse("4424e6e9-355d-498b-8511-592e790d5e06"), MagicTraditions.Instances.Divine.ID);
-                or.HaveSpecificMagicTradition(Guid.Parse("f67b3cde-12bb-425e-a70f-943a1c3bdc45"), MagicTraditions.Instances.Primal.ID);
+                or.HaveSpecificMagicTradition(Guid.Parse("a68a92f1-b8df-49c8-bcbb-65dbd1f79490"), MagicTraditions.Instances.Divine.ID);
+                or.HaveSpecificMagicTradition(Guid.Parse("33ddc023-7449-4aca-b1bc-cea8dc73fef9"), MagicTraditions.Instances.Primal.ID);
             });
         }
 
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("40125ea0-9852-4b83-98df-89e0a3883ebe"),
+                Id = Guid.Parse("0d25ff55-628a-4f7b-9ab2-99415d6ecb07"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpiritsWrath : Template
     {
-        public static readonly Guid ID = Guid.Parse("fdcb4bbd-6533-499e-957c-0f68988e371c");
+        public static readonly Guid ID = Guid.Parse("5d6b1295-588d-4e13-afb4-6cb4fd5251ed");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("007f60fa-732a-49c5-9824-4615ad327688"), Type = TextBlockType.Text, Text = "You call forth an ephemeral apparition, typically the ghost of an ancestor or a nature spirit, which takes the form of a wisp. The spirit wisp makes a melee wisp rush unarmed attack against an enemy within 120 feet of you. The wisp’s attack modifier is equal to your proficiency bonus for martial weapons plus your Strength modifier plus a +2 item bonus, and it applies the same circumstance and status bonuses and penalties that you have. On a hit, the wisp deals damage equal to 4d8 plus your Constitution modifier. The damage is your choice of negative or positive damage; don’t apply your (feat: Rage) damage or your weapon specialization damage, but circumstance and status bonuses and penalties that would also affect the wisp’s damage apply. If your wisp’s (action: Strike) is a critical hit, the target becomes frightened 1. This attack uses and counts toward your multiple attack penalty as if you were the one attacking." };
+            yield return new TextBlock { Id = Guid.Parse("2a703597-88ae-42db-8fd6-e781b6e20be7"), Type = TextBlockType.Text, Text = "You call forth an ephemeral apparition, typically the ghost of an ancestor or a nature spirit, which takes the form of a wisp. The spirit wisp makes a melee wisp rush unarmed attack against an enemy within 120 feet of you. The wisp’s attack modifier is equal to your proficiency bonus for martial weapons plus your Strength modifier plus a +2 item bonus, and it applies the same circumstance and status bonuses and penalties that you have. On a hit, the wisp deals damage equal to 4d8 plus your Constitution modifier. The damage is your choice of negative or positive damage; don’t apply your (feat: Rage) damage or your weapon specialization damage, but circumstance and status bonuses and penalties that would also affect the wisp’s damage apply. If your wisp’s (action: Strike) is a critical hit, the target becomes frightened 1. This attack uses and counts toward your multiple attack penalty as if you were the one attacking." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificInstinct(Guid.Parse("131bbd29-c943-4ac0-93ac-55c270715985"), Instincts.Instances.SpiritInstinct.ID);
+            builder.HaveSpecificInstinct(Guid.Parse("be5857cc-4b22-406a-8789-92f62441eb17"), Instincts.Instances.SpiritInstinct.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4260f7c5-f023-4b73-92a4-c1ed1e6cdd00"),
+                Id = Guid.Parse("b539bcb3-7915-4692-8ddb-9ba35936f44f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

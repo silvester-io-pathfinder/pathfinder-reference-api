@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class QuickSqueeze : Template
     {
-        public static readonly Guid ID = Guid.Parse("018ceea7-e825-446f-9dc4-23605445acea");
+        public static readonly Guid ID = Guid.Parse("c6f7bc78-b354-4f0f-afe2-2b3ea323f2ea");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c2700ec1-4110-4f5e-91c8-766558a29689"), Type = TextBlockType.Text, Text = "You (action: Squeeze) 5 feet per round (10 feet on a critical success). If you’re legendary in Acrobatics, you (action: Squeeze) at full Speed." };
+            yield return new TextBlock { Id = Guid.Parse("eec6d204-257b-434f-86cf-c46391f985e9"), Type = TextBlockType.Text, Text = "You (action: Squeeze) 5 feet per round (10 feet on a critical success). If you’re legendary in Acrobatics, you (action: Squeeze) at full Speed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("178d28e7-e276-4603-8e9b-d723c1c00f1a"), Proficiencies.Instances.Trained.ID, Skills.Instances.Acrobatics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("008cddb8-a375-4bbf-9099-5704c2f2e225"), Proficiencies.Instances.Trained.ID, Skills.Instances.Acrobatics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("af1fa571-1ae5-48b2-9a17-bfaae2029f95"),
+                Id = Guid.Parse("fade03cd-247d-4f10-bd87-c00b38d6758c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

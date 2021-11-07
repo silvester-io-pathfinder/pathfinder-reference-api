@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArchaeologistDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("f035878d-155f-4040-9c0b-0a280ee5cd61");
+        public static readonly Guid ID = Guid.Parse("46c9d405-7f3d-4eba-b8b6-3e5c31babdcb");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c1b95b8-f317-457c-b9c2-0087f55a45bd"), Type = TextBlockType.Text, Text = "You are a student of peoples and their histories, and are in constant pursuit of knowledge and artifacts from the past. You become an expert in Society and Thievery, and you gain a +1 circumstance bonus to (action: Recall Knowledge) about ancient history, peoples, and cultures." };
+            yield return new TextBlock { Id = Guid.Parse("8ece5184-b5d1-4541-83ae-db8db3a4dfc4"), Type = TextBlockType.Text, Text = "You are a student of peoples and their histories, and are in constant pursuit of knowledge and artifacts from the past. You become an expert in Society and Thievery, and you gain a +1 circumstance bonus to (action: Recall Knowledge) about ancient history, peoples, and cultures." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("1748bef8-c959-42c6-9790-0a736ca90693"), Proficiencies.Instances.Trained.ID, Skills.Instances.Perception.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("a2a6f864-3923-4b6c-87e7-e155f6ac3465"), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("f9997e73-e7b3-4f10-9549-7884f07d3c8c"), Proficiencies.Instances.Trained.ID, Skills.Instances.Thievery.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("7cec1431-0254-4df2-b989-5512e1c583d5"), Proficiencies.Instances.Trained.ID, Skills.Instances.Perception.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("a3145702-e0b1-4e4b-9c87-a9d9eff69f3b"), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("50051148-41b7-4117-a707-034b31a5eb69"), Proficiencies.Instances.Trained.ID, Skills.Instances.Thievery.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("83d0cb00-a3c7-4a66-8af9-b24bf6f4d75f"),
+                Id = Guid.Parse("736d219e-2ed2-43cc-acb8-05d702953d95"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

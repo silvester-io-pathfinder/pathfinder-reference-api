@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ExpertBeastGunnerSpellcasting : Template
     {
-        public static readonly Guid ID = Guid.Parse("abdd89a4-714e-4e84-82c3-dc25d65d9d9a");
+        public static readonly Guid ID = Guid.Parse("8e49a441-2428-4c1d-b2c7-5ce76a74ebd1");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dab019fe-bb7f-4da2-a603-ff499fb4482d"), Type = TextBlockType.Text, Text = "You’ve learned the deeper secrets of beast guns, making you an expert in the magic they grant you. Your proficiency ranks for your beast gunner spell attack rolls and spell DCs increase to expert, and you gain a 4th-level spell slot. You can select a second spell from your repertoire as a signature spell. At 14th level, you gain a 5th-level spell slot, and at 16th level, you gain a 6th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("789e9c5e-7e77-447e-9bab-3d955c881596"), Type = TextBlockType.Text, Text = "You’ve learned the deeper secrets of beast guns, making you an expert in the magic they grant you. Your proficiency ranks for your beast gunner spell attack rolls and spell DCs increase to expert, and you gain a 4th-level spell slot. You can select a second spell from your repertoire as a signature spell. At 14th level, you gain a 5th-level spell slot, and at 16th level, you gain a 6th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("4fc5f6bf-8b79-4f5c-bc45-90e46d60a8c3"), Feats.Instances.BasicBeastGunnerSpellcasting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("312cd242-0634-4c65-9320-858bc77da439"), Feats.Instances.BasicBeastGunnerSpellcasting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("16e1a4d5-faa0-4f8c-b0b1-1b2ca82b06bf"),
+                Id = Guid.Parse("34ac50d0-76b4-40ad-9299-52d3cc6c5db5"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

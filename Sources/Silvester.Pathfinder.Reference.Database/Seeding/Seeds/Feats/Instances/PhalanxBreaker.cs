@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PhalanxBreaker : Template
     {
-        public static readonly Guid ID = Guid.Parse("15b319c4-9241-4c67-aec1-c8779014c58a");
+        public static readonly Guid ID = Guid.Parse("680ae0fa-c1eb-4d46-b889-3dcb539433e4");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("22c1b4e0-2dd0-4a68-816f-46011675b3a6"), Type = TextBlockType.Text, Text = "You know that to take out an enemy formation, you must punch a hole through its center. Make a ranged (action: Strike) with the required weapon against a target within the weapon’s first range increment. The target is pushed directly back 10 feet (20 feet on a critical hit), and if this pushes the target into an obstacle, the target takes bludgeoning damage equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("5a72f2e8-0972-46c9-b211-1ffc5573defb"), Type = TextBlockType.Text, Text = "You know that to take out an enemy formation, you must punch a hole through its center. Make a ranged (action: Strike) with the required weapon against a target within the weapon’s first range increment. The target is pushed directly back 10 feet (20 feet on a critical hit), and if this pushes the target into an obstacle, the target takes bludgeoning damage equal to half your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificGunslingersWay(Guid.Parse("d4838cfb-525e-46a0-a644-f7a7ca4f3b63"), GunslingerWays.Instances.WayOfTheVanguard.ID);
+            builder.HaveSpecificGunslingersWay(Guid.Parse("f55f095b-b969-4738-a9fc-40c76d2c3940"), GunslingersWays.Instances.WayOfTheVanguard.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1bbf2e20-a6ab-42fb-a117-58409da5c3b8"),
+                Id = Guid.Parse("7da4f311-71cb-4bed-9144-0223008fc295"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

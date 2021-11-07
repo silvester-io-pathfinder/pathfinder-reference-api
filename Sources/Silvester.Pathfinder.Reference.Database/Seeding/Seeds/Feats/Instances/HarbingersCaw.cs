@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HarbingersCaw : Template
     {
-        public static readonly Guid ID = Guid.Parse("7ac199b6-eb84-4ed5-ab43-d886e7934bd7");
+        public static readonly Guid ID = Guid.Parse("e0b56a4f-6e48-4afe-a654-85d9c735aeef");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("528c4ed2-97ac-4103-ad61-118af14db66b"), Type = TextBlockType.Text, Text = "You caw ominously, cursing the creature with misfortune. The target creature must roll the triggering check twice and take the lower result." };
+            yield return new TextBlock { Id = Guid.Parse("4eb2bd8a-c25c-4ccf-893a-a97bb3c37e68"), Type = TextBlockType.Text, Text = "You caw ominously, cursing the creature with misfortune. The target creature must roll the triggering check twice and take the lower result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d4bce520-23c0-45a9-b0f3-024a9ebfc5b2"),
+                Id = Guid.Parse("1a678455-120e-4731-bad4-afa43f0bd8b5"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

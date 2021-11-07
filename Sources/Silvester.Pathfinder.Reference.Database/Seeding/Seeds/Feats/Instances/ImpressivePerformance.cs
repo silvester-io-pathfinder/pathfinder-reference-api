@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImpressivePerformance : Template
     {
-        public static readonly Guid ID = Guid.Parse("6eea3488-8e51-4068-9db0-c78b1cec0a01");
+        public static readonly Guid ID = Guid.Parse("19d98319-e883-425e-a6be-3f81c605443e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1aed593a-d089-4fde-8471-d87d6a32ba22"), Type = TextBlockType.Text, Text = "Your performances inspire admiration and win you fans. You can (Action: Make an Impression) using Performance instead of Diplomacy." };
+            yield return new TextBlock { Id = Guid.Parse("bb6319bc-2ee2-4607-8baa-157a0c4d7878"), Type = TextBlockType.Text, Text = "Your performances inspire admiration and win you fans. You can (Action: Make an Impression) using Performance instead of Diplomacy." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("e57be442-b504-4b36-824d-281389d1cc34"), Proficiencies.Instances.Trained.ID, Skills.Instances.Performance.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("41ed9244-d623-46b7-85ba-1cf6b53089ad"), Proficiencies.Instances.Trained.ID, Skills.Instances.Performance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2d5bf436-abbd-4570-b81a-174a610792e3"),
+                Id = Guid.Parse("97712a77-479e-47b7-beb0-984270f7d079"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

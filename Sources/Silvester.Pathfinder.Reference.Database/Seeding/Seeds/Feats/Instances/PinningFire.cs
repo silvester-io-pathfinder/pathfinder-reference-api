@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PinningFire : Template
     {
-        public static readonly Guid ID = Guid.Parse("2450942f-0b69-4336-8fd7-77e90a065e19");
+        public static readonly Guid ID = Guid.Parse("e11533e1-9bda-49ca-ac5d-a0423c3ef3f9");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9300fbab-64f0-41cd-ac1c-509ff78f9797"), Type = TextBlockType.Text, Text = "You target your opponent’s clothing, equipment, or loose flesh with piercing projectiles to pin them to the ground or a nearby surface. If both your attacks hit, the target must succeed at a Reflex save against your class DC or become immobilized until it or an adjacent creature succeeds at a DC 10 Athletics check to remove the pinning projectiles. The creature doesn’t become stuck if it is incorporeal, is liquid (like a water elemental or some oozes), or could otherwise escape without effort." };
+            yield return new TextBlock { Id = Guid.Parse("d625c897-75c5-4dad-92c3-354f8b90cd91"), Type = TextBlockType.Text, Text = "You target your opponent’s clothing, equipment, or loose flesh with piercing projectiles to pin them to the ground or a nearby surface. If both your attacks hit, the target must succeed at a Reflex save against your class DC or become immobilized until it or an adjacent creature succeeds at a DC 10 Athletics check to remove the pinning projectiles. The creature doesn’t become stuck if it is incorporeal, is liquid (like a water elemental or some oozes), or could otherwise escape without effort." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d11c99ee-6447-4b20-8e06-76e7c2d1be82"),
+                Id = Guid.Parse("bf4f44fe-cc36-4f40-9b66-00138222058c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

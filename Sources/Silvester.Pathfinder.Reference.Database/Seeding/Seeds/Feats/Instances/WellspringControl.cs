@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WellspringControl : Template
     {
-        public static readonly Guid ID = Guid.Parse("6d79644f-8bc0-4dae-b70c-50835dd34700");
+        public static readonly Guid ID = Guid.Parse("f1b37566-04bb-49c8-8fc3-5cad050af806");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0813873c-1b43-476a-a895-f814e1b656da"), Type = TextBlockType.Text, Text = "When you generate a wellspring surge, roll twice on Table 5–2 (SoM pg. 250) and take the result of your choice. This doesn’t apply when you cause another creature to generate a wellspring surge." };
+            yield return new TextBlock { Id = Guid.Parse("196d2396-27d1-414b-8538-2816b8de99ae"), Type = TextBlockType.Text, Text = "When you generate a wellspring surge, roll twice on Table 5–2 (SoM pg. 250) and take the result of your choice. This doesn’t apply when you cause another creature to generate a wellspring surge." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("48f1fcdc-7edd-4151-9e7f-2b9870ae5d24"), Feats.Instances.WellspringMageDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("4504c708-0122-4054-b758-12a93b92c7b3"), Feats.Instances.WellspringMageDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("397e9121-1846-4a3f-aa35-d53eabe4f74b"),
+                Id = Guid.Parse("5279e95f-4590-4dfa-b90d-b1a6fe2c9c91"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

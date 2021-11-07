@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PerfectShot : Template
     {
-        public static readonly Guid ID = Guid.Parse("85a5b6e2-32cd-4740-a917-ef734d78fed3");
+        public static readonly Guid ID = Guid.Parse("1516d927-4439-4f08-add2-34e64affa19d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e96514bf-2c4c-4d8c-8889-f6b92702f1cd"), Type = TextBlockType.Text, Text = "After watching the motions of combat with incredible intensity and precision, you fire at your prey at the perfect moment to deliver maximum pain. Make a ranged (action: Strike) with the required weapon against your hunted prey. If you hit, the (action: Strike) deals maximum damage. After the (action: Strike), your turn ends." };
+            yield return new TextBlock { Id = Guid.Parse("c1b4055f-ef4a-4fd8-a059-06ae31400b4a"), Type = TextBlockType.Text, Text = "After watching the motions of combat with incredible intensity and precision, you fire at your prey at the perfect moment to deliver maximum pain. Make a ranged (action: Strike) with the required weapon against your hunted prey. If you hit, the (action: Strike) deals maximum damage. After the (action: Strike), your turn ends." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1bbf68c7-3e97-4b67-b54f-94ceb252ec5f"),
+                Id = Guid.Parse("1cf5cf31-d0ba-43d5-8d22-7492a1c354c7"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

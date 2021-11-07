@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShatteringBlows : Template
     {
-        public static readonly Guid ID = Guid.Parse("0136b61a-49ff-4ca2-aee1-ab71978bbb21");
+        public static readonly Guid ID = Guid.Parse("795ddfc4-f7a1-43d3-b187-bbb2bdd5332b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0aec98e8-3f99-4cf5-8b46-9007e29f8e08"), Type = TextBlockType.Text, Text = "Your forceful blows shatter objects with ease. While you are raging, your melee (action: Strikes | Strike) ignore 5 points of an object’s Hardness. If you have the devastator class feature, you instead ignore 10 points of an object’s Hardness." };
+            yield return new TextBlock { Id = Guid.Parse("93290b20-1634-4134-a616-5c0c2794cd79"), Type = TextBlockType.Text, Text = "Your forceful blows shatter objects with ease. While you are raging, your melee (action: Strikes | Strike) ignore 5 points of an object’s Hardness. If you have the devastator class feature, you instead ignore 10 points of an object’s Hardness." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("39cab311-4f32-4145-aa58-dd2f9bf307cd"),
+                Id = Guid.Parse("74a55cee-a50f-4e2f-8560-96d9ef9fb3df"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

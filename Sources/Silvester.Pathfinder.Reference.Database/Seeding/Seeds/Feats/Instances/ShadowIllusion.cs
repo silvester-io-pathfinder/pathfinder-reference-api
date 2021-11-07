@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShadowIllusion : Template
     {
-        public static readonly Guid ID = Guid.Parse("42cc17f1-2afb-499b-9280-7e63f207f9b6");
+        public static readonly Guid ID = Guid.Parse("eb361bfc-d6f1-4dfe-9c5d-37889cbf13f6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d7d72d8-ae58-49a4-998d-43947e758352"), Type = TextBlockType.Text, Text = "With an artful eye, you shape shadows into illusory forms. You gain the (spell: shadow illusion) focus spell. Increase the number of Focus Points in your pool by 1. You become an expert in occult spell attack rolls and DCs." };
+            yield return new TextBlock { Id = Guid.Parse("1d5c3bee-e196-405e-8666-81d8ed4555be"), Type = TextBlockType.Text, Text = "With an artful eye, you shape shadows into illusory forms. You gain the (spell: shadow illusion) focus spell. Increase the number of Focus Points in your pool by 1. You become an expert in occult spell attack rolls and DCs." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("09f57dcc-f6fe-426f-a577-15a7951857db"), Feats.Instances.ShadowMagic.ID);
+            builder.HaveSpecificFeat(Guid.Parse("9a457abd-56a2-4e04-9dad-3d1c2c50a835"), Feats.Instances.ShadowMagic.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4e8d1383-3bca-474c-b3d3-2841cee81039"),
+                Id = Guid.Parse("8a717231-aa97-4f46-9474-aebd1aad26b3"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

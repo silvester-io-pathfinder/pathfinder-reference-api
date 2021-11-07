@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FeyInfluence : Template
     {
-        public static readonly Guid ID = Guid.Parse("22e3670e-3cea-4144-9bee-9181cd862911");
+        public static readonly Guid ID = Guid.Parse("d2a338c0-5e06-45a5-a4d1-907f11e5a48e");
 
         protected override Feat GetFeat()
         {
@@ -28,12 +29,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2cba223e-b520-4d5b-a7ba-aec102f4cb14"), Type = TextBlockType.Text, Text = "You have been exposed to powerful fey magic. You become trained in primal DCs and spell attack rolls. You gain the (trait: fey) trait and one of the following features which grant an innate primal spell that can be used once per day." };
-            yield return new TextBlock { Id = Guid.Parse("f3926727-4091-4e92-9bf0-eb1d0535ee4a"), Type = TextBlockType.Enumeration, Text = " Anteater: You can launch your tongue forward as a deadly attack, gaining (spell: grim tendrils)." };
-            yield return new TextBlock { Id = Guid.Parse("b3e12f31-b319-4099-a7da-9ebbaec5a2e1"), Type = TextBlockType.Enumeration, Text = " Dryad: Your body is covered in elegant vines, granting you (spell: summon plant or fungus)." };
-            yield return new TextBlock { Id = Guid.Parse("74705c7c-6c49-47da-8bfa-6ae6c0a51a7b"), Type = TextBlockType.Enumeration, Text = " Gremlin: You have long, bat-like ears and gain (spell: bane)." };
-            yield return new TextBlock { Id = Guid.Parse("2bc3127e-adbb-49fd-bdf9-926783629d2e"), Type = TextBlockType.Enumeration, Text = " Monarch: You have vestigial, insectile features and gain (spell: spider sting)." };
-            yield return new TextBlock { Id = Guid.Parse("bdedec1d-f42d-406f-af17-2bedd2aaa5b7"), Type = TextBlockType.Text, Text = "This feat gains the trait appropriate for your ancestry (human for human, goblin for goblin, etc)." };
+            yield return new TextBlock { Id = Guid.Parse("5df2fdba-8c27-4103-93ce-4bd5dd82f69a"), Type = TextBlockType.Text, Text = "You have been exposed to powerful fey magic. You become trained in primal DCs and spell attack rolls. You gain the (trait: fey) trait and one of the following features which grant an innate primal spell that can be used once per day." };
+            yield return new TextBlock { Id = Guid.Parse("28bab903-8ecd-4df3-a214-67bd6111f0b3"), Type = TextBlockType.Enumeration, Text = " Anteater: You can launch your tongue forward as a deadly attack, gaining (spell: grim tendrils)." };
+            yield return new TextBlock { Id = Guid.Parse("51fd7366-9869-41ae-a810-3241b847be3a"), Type = TextBlockType.Enumeration, Text = " Dryad: Your body is covered in elegant vines, granting you (spell: summon plant or fungus)." };
+            yield return new TextBlock { Id = Guid.Parse("81f3fe7b-a68f-474f-84a4-4500a89bb50c"), Type = TextBlockType.Enumeration, Text = " Gremlin: You have long, bat-like ears and gain (spell: bane)." };
+            yield return new TextBlock { Id = Guid.Parse("7b2159fc-e3d2-440d-8122-64d13f6e00a9"), Type = TextBlockType.Enumeration, Text = " Monarch: You have vestigial, insectile features and gain (spell: spider sting)." };
+            yield return new TextBlock { Id = Guid.Parse("9e0db388-ae7a-4da5-81e7-df0086e8e1e5"), Type = TextBlockType.Text, Text = "This feat gains the trait appropriate for your ancestry (human for human, goblin for goblin, etc)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -45,7 +46,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f15fe2a1-e541-4d90-972c-f592f94e5999"),
+                Id = Guid.Parse("7a354f11-f791-41e2-a356-aa72a0fe930b"),
                 SourceId = Sources.Instances.PathfinderSocietyGuide.ID,
                 Page = -1
             };

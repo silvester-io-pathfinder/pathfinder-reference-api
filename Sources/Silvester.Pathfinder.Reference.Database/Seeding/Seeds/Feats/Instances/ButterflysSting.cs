@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ButterflysSting : Template
     {
-        public static readonly Guid ID = Guid.Parse("874b8e14-6a60-46d9-b37c-c2552279e4ef");
+        public static readonly Guid ID = Guid.Parse("c391b2e0-54b3-4ab0-bd3a-ef391aaff047");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d1cb8f9f-ffc5-453b-9249-516573fc8ae6"), Type = TextBlockType.Text, Text = "You gain the sneak attack class feature. You don&#39;t increase the number of dice as you gain levels." };
+            yield return new TextBlock { Id = Guid.Parse("49f3b266-9e64-4590-b8f2-d9860082b6a9"), Type = TextBlockType.Text, Text = "You gain the sneak attack class feature. You don&#39;t increase the number of dice as you gain levels." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8609053a-ce0b-417d-b7b1-336d93fc4d61"),
+                Id = Guid.Parse("5e8b7631-27e7-46b7-a265-2216712b3f77"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

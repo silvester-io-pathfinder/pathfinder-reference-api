@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TacticalEntry : Template
     {
-        public static readonly Guid ID = Guid.Parse("f8e6f0c0-f628-4548-a309-5ea438e1c8e4");
+        public static readonly Guid ID = Guid.Parse("6f69ba6a-d462-461e-a1c8-5ee734871b9d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("455b033c-f114-438e-a683-b5d4761ee1e3"), Type = TextBlockType.Text, Text = "You (action: Stride). This movement doesn’t trigger any reactions." };
+            yield return new TextBlock { Id = Guid.Parse("acc5d084-077e-49ad-aace-eac14e18e783"), Type = TextBlockType.Text, Text = "You (action: Stride). This movement doesn’t trigger any reactions." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("3370d2d3-2af6-4d41-9461-0023a8719e79"), Proficiencies.Instances.Master.ID, Skills.Instances.Stealth.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("4c09bf49-74f3-409c-92e8-4b8948013234"), Proficiencies.Instances.Master.ID, Skills.Instances.Stealth.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1a1533e2-04d3-46e0-aa7c-54f14c5114c0"),
+                Id = Guid.Parse("21bc5007-168c-432a-be59-03fa2df0428e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

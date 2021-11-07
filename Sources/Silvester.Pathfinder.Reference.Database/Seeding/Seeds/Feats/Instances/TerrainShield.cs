@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TerrainShield : Template
     {
-        public static readonly Guid ID = Guid.Parse("09fcf4f3-88ea-4e2a-9539-79d15344e743");
+        public static readonly Guid ID = Guid.Parse("50b53ad1-6f76-4879-b0d1-4e0b895fc1a9");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a4a50696-9d02-4f1f-bb7d-f014b0100066"), Type = TextBlockType.Text, Text = "You’re so attuned to the land that it rises up to protect you from a potentially fatal blow in a seeming coincidence. For instance, a branch suddenly falls from a nearby tree to take the brunt of a sword swing or a surprising change of current disrupts an enemy’s attack. You gain resistance to physical damage equal to double your level against the triggering (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("03e8337d-a826-407d-9dc5-e484f6de1b88"), Type = TextBlockType.Text, Text = "You’re so attuned to the land that it rises up to protect you from a potentially fatal blow in a seeming coincidence. For instance, a branch suddenly falls from a nearby tree to take the brunt of a sword swing or a surprising change of current disrupts an enemy’s attack. You gain resistance to physical damage equal to double your level against the triggering (action: Strike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("2c67607d-ffcd-44bd-940f-59708520a633"), Feats.Instances.GeomancerDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("bd87e9a5-9297-494d-814c-186eff236085"), Proficiencies.Instances.Master.ID, Skills.Instances.Nature.ID);
+            builder.HaveSpecificFeat(Guid.Parse("27de7d39-886d-4a70-9e1a-6df71998c351"), Feats.Instances.GeomancerDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("fa649a2e-6a7c-475b-b638-211e1106c23c"), Proficiencies.Instances.Master.ID, Skills.Instances.Nature.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cfd849f6-5cd6-4acb-afb5-e15c975dbceb"),
+                Id = Guid.Parse("9f0120aa-2ade-4b6a-a867-98f743def0ba"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

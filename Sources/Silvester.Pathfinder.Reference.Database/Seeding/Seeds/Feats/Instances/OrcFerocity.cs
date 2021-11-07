@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OrcFerocity : Template
     {
-        public static readonly Guid ID = Guid.Parse("24525a2f-7e2c-462f-8e0d-1d315a2c569b");
+        public static readonly Guid ID = Guid.Parse("99717afa-7691-4c2b-a4a9-00fa86783635");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("97f2b8a3-d757-4075-929e-aa72d34a0227"), Type = TextBlockType.Text, Text = "Fierceness in battle runs through your blood, and you refuse to fall from your injuries. You avoid being knocked out and remain at 1 Hit Point, and your wounded condition increases by 1." };
+            yield return new TextBlock { Id = Guid.Parse("ba5b0e26-0007-411d-a8c9-d4febcb23169"), Type = TextBlockType.Text, Text = "Fierceness in battle runs through your blood, and you refuse to fall from your injuries. You avoid being knocked out and remain at 1 Hit Point, and your wounded condition increases by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d027477a-e4c6-43ed-b591-01c4f220cbd2"),
+                Id = Guid.Parse("2b2af347-1898-4714-8d8f-04cb8b508fb8"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

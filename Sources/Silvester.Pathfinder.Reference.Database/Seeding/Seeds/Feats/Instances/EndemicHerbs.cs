@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EndemicHerbs : Template
     {
-        public static readonly Guid ID = Guid.Parse("db61e726-4b95-46c5-8161-9352ec477434");
+        public static readonly Guid ID = Guid.Parse("6eda7836-dc38-4afc-b6e1-480a3c4ba26d");
 
         protected override Feat GetFeat()
         {
@@ -28,22 +29,22 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd6a39c3-0928-4d9c-acc8-bd9707d308e7"), Type = TextBlockType.Text, Text = "During your daily preparations, you find medicinal plants endemic to your location. Until your next preparations, you can spend an additional batch of herbs to add a benefit to an item you create with your herbalism. The benefit of the special herbs affects the creature that the item is applied to. This adjustment counts as an (trait: additive | Additive 1), so you can’t include another additive without spoiling the item." };
-            yield return new TextBlock { Id = Guid.Parse("45f170d9-680c-4082-8b9a-8d2fd9fbdd5f"), Type = TextBlockType.Enumeration, Text = " Aquatic: For 1 minute, gain a +1 circumstance bonus to Fortitude saves." };
-            yield return new TextBlock { Id = Guid.Parse("d6f9325b-cd47-4803-b4e1-7b8f35c9b200"), Type = TextBlockType.Enumeration, Text = " Arctic: For 1 hour, treat environmental cold effects as if they were one step less severe." };
-            yield return new TextBlock { Id = Guid.Parse("e620d0a9-6277-4f63-b3b4-3112e2f8d44d"), Type = TextBlockType.Enumeration, Text = " Desert: For 1 hour, treat environmental heat effects as if they were one step less severe." };
-            yield return new TextBlock { Id = Guid.Parse("ded029ab-331e-41dd-986c-c8b42c1fbd8c"), Type = TextBlockType.Enumeration, Text = " Forest: For 1 minute, gain a +2 circumstance bonus to saves against (trait: disease) and (trait: poison) effects." };
-            yield return new TextBlock { Id = Guid.Parse("3448f314-eac5-44e2-834b-efe3353351c0"), Type = TextBlockType.Enumeration, Text = " Mountain: For 1 minute, gain a +1 circumstance bonus to Reflex saves." };
-            yield return new TextBlock { Id = Guid.Parse("ea145e81-177d-47b6-a3bf-f5a0f1e3d21d"), Type = TextBlockType.Enumeration, Text = " Plains: For 1 minute, gain a +1 circumstance bonus to Will saves." };
-            yield return new TextBlock { Id = Guid.Parse("9e9e60db-b51d-4ed0-a6ae-430bed1dc80d"), Type = TextBlockType.Enumeration, Text = " Swamp: Remove one source of persistent bleed damage." };
-            yield return new TextBlock { Id = Guid.Parse("403794ea-23ea-479b-bc13-356e67812fe2"), Type = TextBlockType.Enumeration, Text = " Underground: For 1 minute, gain a +1 circumstance bonus to Perception." };
+            yield return new TextBlock { Id = Guid.Parse("56d9d662-fa15-4026-8db2-5ef7d0d043f9"), Type = TextBlockType.Text, Text = "During your daily preparations, you find medicinal plants endemic to your location. Until your next preparations, you can spend an additional batch of herbs to add a benefit to an item you create with your herbalism. The benefit of the special herbs affects the creature that the item is applied to. This adjustment counts as an (trait: additive | Additive 1), so you can’t include another additive without spoiling the item." };
+            yield return new TextBlock { Id = Guid.Parse("ffae8d70-98ff-4ecc-97a0-c903ea3ec7db"), Type = TextBlockType.Enumeration, Text = " Aquatic: For 1 minute, gain a +1 circumstance bonus to Fortitude saves." };
+            yield return new TextBlock { Id = Guid.Parse("437e340f-2400-48cf-8672-cd8c88b7bfda"), Type = TextBlockType.Enumeration, Text = " Arctic: For 1 hour, treat environmental cold effects as if they were one step less severe." };
+            yield return new TextBlock { Id = Guid.Parse("571fcf9b-f212-4e2f-aa1b-c889971d5cd6"), Type = TextBlockType.Enumeration, Text = " Desert: For 1 hour, treat environmental heat effects as if they were one step less severe." };
+            yield return new TextBlock { Id = Guid.Parse("93247dba-3901-4b5a-9797-3cd3c5e14ca9"), Type = TextBlockType.Enumeration, Text = " Forest: For 1 minute, gain a +2 circumstance bonus to saves against (trait: disease) and (trait: poison) effects." };
+            yield return new TextBlock { Id = Guid.Parse("cbe6db52-b432-406e-9d91-cf84874141cc"), Type = TextBlockType.Enumeration, Text = " Mountain: For 1 minute, gain a +1 circumstance bonus to Reflex saves." };
+            yield return new TextBlock { Id = Guid.Parse("baec16d3-8234-4c60-b40e-8be0a65d0db8"), Type = TextBlockType.Enumeration, Text = " Plains: For 1 minute, gain a +1 circumstance bonus to Will saves." };
+            yield return new TextBlock { Id = Guid.Parse("20c25089-2ddc-4e2e-8803-a93d6e603e73"), Type = TextBlockType.Enumeration, Text = " Swamp: Remove one source of persistent bleed damage." };
+            yield return new TextBlock { Id = Guid.Parse("2adb1cf4-5397-4467-801d-bf56bf369024"), Type = TextBlockType.Enumeration, Text = " Underground: For 1 minute, gain a +1 circumstance bonus to Perception." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("b9a1b5d5-bdd8-43ef-bace-815dde5df73b"), Feats.Instances.HerbalistDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("7613915a-95c1-484b-8c5e-593ee6aef9e3"), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
+            builder.HaveSpecificFeat(Guid.Parse("13223e81-06d8-4a6b-8470-9a4df212ee74"), Feats.Instances.HerbalistDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("78f5358d-523b-46f2-a791-016515d4ac57"), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -55,7 +56,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("998ebd45-3082-4db7-a45a-fc81bea2447d"),
+                Id = Guid.Parse("5e9cf1d2-73a9-4250-aa0b-f95169209220"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

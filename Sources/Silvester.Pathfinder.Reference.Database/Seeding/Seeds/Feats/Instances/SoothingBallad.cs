@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SoothingBallad : Template
     {
-        public static readonly Guid ID = Guid.Parse("6ffa252b-3f8a-4abd-a0f4-4b15ca52b6bd");
+        public static readonly Guid ID = Guid.Parse("a17ae6fd-3759-4a0a-9f62-38a1bedf3889");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("73a47528-84c4-4e7a-83df-ba3148a9c4df"), Type = TextBlockType.Text, Text = "You soothe your allies’ wounds with the power of your performance. You learn the (spell: soothing ballad) composition spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("758ce1eb-1cf9-4566-8f4c-b82f0bfffef1"), Type = TextBlockType.Text, Text = "You soothe your allies’ wounds with the power of your performance. You learn the (spell: soothing ballad) composition spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("601413e3-e2f8-4dea-ba55-e6ba3be63288"),
+                Id = Guid.Parse("3d783690-69ae-474f-a8d7-77bffd41ac50"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

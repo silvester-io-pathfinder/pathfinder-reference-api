@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationEnhancedDamage : Template
     {
-        public static readonly Guid ID = Guid.Parse("a76b1700-bd08-461b-9bc8-ce633209ebfc");
+        public static readonly Guid ID = Guid.Parse("fc7cb7b9-3f2d-448b-805e-ab408db873af");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9f510e2f-41ce-4ddf-9988-33450285e832"), Type = TextBlockType.Text, Text = "You’ve made your innovation more powerful than other weapons of its kind. Increase your innovation’s weapon damage die by one step (d4 to d6, d6 to d8, d8 to d10, d10 to d12). As normal, you can’t increase your die by more than one size, so this modification isn’t cumulative with (feat: complex simplicity | Modification - Complex Simplicity)." };
+            yield return new TextBlock { Id = Guid.Parse("ad519204-2978-40f1-acf3-8f09123348b7"), Type = TextBlockType.Text, Text = "You’ve made your innovation more powerful than other weapons of its kind. Increase your innovation’s weapon damage die by one step (d4 to d6, d6 to d8, d8 to d10, d10 to d12). As normal, you can’t increase your die by more than one size, so this modification isn’t cumulative with (feat: complex simplicity | Modification - Complex Simplicity)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("deba223f-0efe-4135-9d99-b0eac1473ea6"),
+                Id = Guid.Parse("83a023b2-56b5-439f-8e5a-adac9823bc4c"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

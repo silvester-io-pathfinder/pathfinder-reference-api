@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WindJump : Template
     {
-        public static readonly Guid ID = Guid.Parse("5d1633b7-071c-427e-a4ab-7fa456bd505d");
+        public static readonly Guid ID = Guid.Parse("1b7baaff-fc0b-43bb-a0ec-ef3b1973623b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bbbbb207-459e-4d89-9505-5063bb14084a"), Type = TextBlockType.Text, Text = "You gather the wind beneath you, allowing you to soar as you jump. You gain the (spell: wind jump) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("4ba1671d-a77c-4e59-9d10-dc415bb92e83"), Type = TextBlockType.Text, Text = "You gather the wind beneath you, allowing you to soar as you jump. You gain the (spell: wind jump) ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyKiSpells(Guid.Parse("7a6c24e3-832c-4cb6-94a6-0df2f46609b6"));
+            builder.HaveAnyKiSpells(Guid.Parse("53f8c1ae-142d-48e1-8e26-ea22638c5218"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("01e71daf-ceba-4f4c-872b-819664a511bc"),
+                Id = Guid.Parse("d358ebba-3c96-4a57-a97b-5b21a03c46b5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

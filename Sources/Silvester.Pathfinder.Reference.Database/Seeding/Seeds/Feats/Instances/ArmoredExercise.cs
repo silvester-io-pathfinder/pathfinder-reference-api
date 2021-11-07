@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArmoredExercise : Template
     {
-        public static readonly Guid ID = Guid.Parse("13934592-e2c8-4651-9a5b-ee3710078611");
+        public static readonly Guid ID = Guid.Parse("89695ccb-cd63-43bb-a59e-1be73ca44eaa");
 
         protected override Feat GetFeat()
         {
@@ -28,18 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d4c0e18-0e88-4565-ba9f-89c3e44003d7"), Type = TextBlockType.Text, Text = "You&#39;ve spent time training in your armor alongside other agents from the Swords. Your proficiency rank for light, medium, and heavy armor increases to expert for whichever of those you already had the trained proficiency rank in." };
+            yield return new TextBlock { Id = Guid.Parse("7322093b-119c-4ba5-bf8c-7c288b5f3d3a"), Type = TextBlockType.Text, Text = "You&#39;ve spent time training in your armor alongside other agents from the Swords. Your proficiency rank for light, medium, and heavy armor increases to expert for whichever of those you already had the trained proficiency rank in." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("58f8a2ac-2d55-4316-b6a8-ede6c420acc0"), Feats.Instances.SwordmasterDedication.ID);
-            builder.AddOr(Guid.Parse("d23b5cf7-063c-41af-b3de-feeb84767266"), or => 
+            builder.HaveSpecificFeat(Guid.Parse("25c7e202-0f30-449a-ba6c-adcbd0596651"), Feats.Instances.SwordmasterDedication.ID);
+            builder.AddOr(Guid.Parse("49441c53-624f-4cb1-ad3e-6b21102b200f"), or => 
             {
-                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("47bf9e8f-f6eb-41cd-a64d-0e1295254a48"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.Light.ID);
-                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("3e92ad6c-1482-429b-8e68-4e25bba59436"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.Medium.ID);
-                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("a59b87ff-2306-416c-bf48-001dadd6a68d"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.Heavy.ID);
+                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("ee5e17fc-6511-4431-97e5-1e88da54f4c2"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.LightArmor.ID);
+                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("b72c6006-d063-4dc4-aeb5-2001dbf2563e"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.MediumArmor.ID);
+                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("b20734c2-de77-41d6-b1de-939fe4b9435b"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.HeavyArmor.ID);
             });
         }
 
@@ -52,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("41b46ce6-6311-4711-9cb2-9a143ed6ddb1"),
+                Id = Guid.Parse("38501128-0436-4b3b-ae18-9e2006d064e3"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

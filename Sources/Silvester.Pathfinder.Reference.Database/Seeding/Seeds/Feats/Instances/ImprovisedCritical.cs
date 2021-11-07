@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImprovisedCritical : Template
     {
-        public static readonly Guid ID = Guid.Parse("2683474e-f0bf-4390-b64c-788f895d25e3");
+        public static readonly Guid ID = Guid.Parse("a1b6cd42-c832-4dac-9338-17603df535e5");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6d153c5-dbe8-4878-9c61-bddc4a6c0600"), Type = TextBlockType.Text, Text = "You can apply critical specialization effects to improvised weapons you wield. For any given improvised weapon, the GM determines which critical specialization effect is most applicable, based on the type of object it is." };
+            yield return new TextBlock { Id = Guid.Parse("d66d5578-c517-46d4-929a-359994e35f43"), Type = TextBlockType.Text, Text = "You can apply critical specialization effects to improvised weapons you wield. For any given improvised weapon, the GM determines which critical specialization effect is most applicable, based on the type of object it is." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("562c2858-f785-40a3-a060-79493fd81432"), Feats.Instances.WeaponImproviserDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e60bde72-8547-4431-8e3a-667bedfd83d3"), Feats.Instances.WeaponImproviserDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("85f60b42-d3c2-4b54-b5f4-4b145ba496c2"),
+                Id = Guid.Parse("1c632926-4eb1-4277-a47b-4e3886811db1"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

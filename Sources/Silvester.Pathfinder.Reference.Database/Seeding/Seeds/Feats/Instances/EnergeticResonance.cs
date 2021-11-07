@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EnergeticResonance : Template
     {
-        public static readonly Guid ID = Guid.Parse("68538777-2f40-4898-8e0a-06db215b95c8");
+        public static readonly Guid ID = Guid.Parse("e2dee3e3-d1b1-4d5d-b6bb-b16ef27048b6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db0f3ce2-8349-4d58-a121-67ffd11b492e"), Type = TextBlockType.Text, Text = "Your body resonates with magical energy, mitigating the effects of harmful spells. Expend one of your spell slots of a level equal to or higher than that of the triggering spell. You gain resistance to one of the triggering effect’s damage types equal to twice the expended spell slot’s level." };
+            yield return new TextBlock { Id = Guid.Parse("813fb8db-8fd6-460d-89f9-e92d28ae339a"), Type = TextBlockType.Text, Text = "Your body resonates with magical energy, mitigating the effects of harmful spells. Expend one of your spell slots of a level equal to or higher than that of the triggering spell. You gain resistance to one of the triggering effect’s damage types equal to twice the expended spell slot’s level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("56361059-cfbc-4c2f-a813-bb78d0b86da7"), Feats.Instances.WellspringMageDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("b243e8bf-3dbc-4a34-a64c-541f9af4ec99"), Feats.Instances.WellspringMageDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("27de206b-3ee3-4a99-9761-e6ea3573111d"),
+                Id = Guid.Parse("aa95c53e-c344-4f65-852d-b268d7418068"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

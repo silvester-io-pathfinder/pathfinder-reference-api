@@ -21,6 +21,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities
             builder.HasJoinData<Deity, Domain>(deity, GetDomains());
             builder.HasJoinData<Deity, Skill>(deity, GetDivineSkills());
             builder.HasJoinData<Deity, Stat>(deity, GetDivineStats());
+            builder.HasJoinData<Deity, MeleeWeapon>(deity, GetFavoredMeleeWeapons());
+            builder.HasJoinData<Deity, RangedWeapon>(deity, GetFavoredRangedWeapons());
+            builder.HasJoinData<Deity, UnarmedWeapon>(deity, GetFavoredUnarmedWeapons());
             builder.AddEffect(deity, GetDevoteeEffect);
 
             DivineIntercession? intercession = GetDivineIntercession();
@@ -46,6 +49,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities
         protected abstract IEnumerable<Guid> GetDivineSkills();
         protected abstract IEnumerable<Guid> GetDivineStats();
         protected abstract IEnumerable<Guid> GetDomains();
+        protected abstract IEnumerable<Guid> GetFavoredMeleeWeapons();
+        protected abstract IEnumerable<Guid> GetFavoredRangedWeapons();
+        protected abstract IEnumerable<Guid> GetFavoredUnarmedWeapons();
         protected abstract void GetDevoteeEffect(BooleanEffectBuilder builder);
     }
 }

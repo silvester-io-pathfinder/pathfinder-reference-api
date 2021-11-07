@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FuriousVengeance : Template
     {
-        public static readonly Guid ID = Guid.Parse("85c5b0bf-fc67-4259-8b3a-6539f4876826");
+        public static readonly Guid ID = Guid.Parse("41741929-5e9e-4435-ab0c-eabafabb73a7");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc4ef223-c00a-4660-bde0-3645f744130a"), Type = TextBlockType.Text, Text = "Your enemy’s blow fuels your rage and provokes your immediate retaliation. Make a melee (action: Strike) against the triggering enemy." };
+            yield return new TextBlock { Id = Guid.Parse("5d5a786a-4c85-4cbd-b58a-b9ab8f1fe0c1"), Type = TextBlockType.Text, Text = "Your enemy’s blow fuels your rage and provokes your immediate retaliation. Make a melee (action: Strike) against the triggering enemy." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificInstinct(Guid.Parse("37032b24-90fb-4a19-a320-ae6970038a0f"), Instincts.Instances.Fury.ID);
+            builder.HaveSpecificInstinct(Guid.Parse("4fcd6df6-020d-4b17-b4f5-40b6c2a50185"), Instincts.Instances.FuryInstinct.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4f72c4b0-7d5d-4f85-8d78-b41ad8a0b0d3"),
+                Id = Guid.Parse("14bb23a8-f0ab-4689-a7a8-117feec0a9a9"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

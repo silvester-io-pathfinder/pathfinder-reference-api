@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArrowOfDeath : Template
     {
-        public static readonly Guid ID = Guid.Parse("2d56d99e-a4fa-4287-b25f-348ee0124a44");
+        public static readonly Guid ID = Guid.Parse("9bfffb06-fa98-44aa-a046-43d1885e14ee");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e0a04cee-1423-4d86-9920-5fd398e1b70a"), Type = TextBlockType.Text, Text = "You modify an arrow or bolt to bring death to your target in a single potent hit. Make a bow (action: Strike). On a hit, you deal an additional 10d10 precision damage. On a critical hit, the target must also succeed at a Fortitude saving throw against your class DC or spell DC, whichever is higher, or be immediately slain; this save has the (trait: death) and (trait: incapacitation) traits." };
+            yield return new TextBlock { Id = Guid.Parse("2e34c533-8030-4a6c-8ff3-9041d403c772"), Type = TextBlockType.Text, Text = "You modify an arrow or bolt to bring death to your target in a single potent hit. Make a bow (action: Strike). On a hit, you deal an additional 10d10 precision damage. On a critical hit, the target must also succeed at a Fortitude saving throw against your class DC or spell DC, whichever is higher, or be immediately slain; this save has the (trait: death) and (trait: incapacitation) traits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("49acfbc1-913c-41d3-834b-1c39ee8e4f5c"), Feats.Instances.EldritchArcherDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("73013d14-8c86-4002-9d06-cac1e28b688a"), Feats.Instances.EldritchArcherDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8f2528af-04c3-47ea-bee8-24a74e423814"),
+                Id = Guid.Parse("501a888f-c4be-42dd-b1f5-22d8bbb55880"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

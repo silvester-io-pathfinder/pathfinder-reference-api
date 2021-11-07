@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationSpeedBoosters : Template
     {
-        public static readonly Guid ID = Guid.Parse("e0fffcf6-30aa-4171-94db-e39a53168a82");
+        public static readonly Guid ID = Guid.Parse("64d453d8-f167-41c5-aada-a71598bb3053");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("800b2116-9858-42a0-bf25-5e8ef98e7ab7"), Type = TextBlockType.Text, Text = "You have boosters in your armor that increase your Speed. You gain a +5-foot status bonus to your Speed, which increases to a +10-foot status bonus when under the effects of (feat: Overdrive)." };
+            yield return new TextBlock { Id = Guid.Parse("28598907-7278-485f-976f-4f96b2267203"), Type = TextBlockType.Text, Text = "You have boosters in your armor that increase your Speed. You gain a +5-foot status bonus to your Speed, which increases to a +10-foot status bonus when under the effects of (feat: Overdrive)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("184336e7-9d25-42d2-8b57-f1dbba35291f"),
+                Id = Guid.Parse("9088dcce-8760-4e69-8d7a-86384d46b996"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

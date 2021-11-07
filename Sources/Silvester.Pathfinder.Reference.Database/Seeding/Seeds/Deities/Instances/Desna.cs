@@ -1,64 +1,123 @@
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Alignments.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DeityCategories.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DivineFonts.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Domains.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Sources.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instances
 {
     public class Desna : Template
     {
-        public static readonly Guid ID = Guid.Parse("8c8ec43f-d34f-4f82-806f-8c5c2db099c4");
+        public static readonly Guid ID = Guid.Parse("");
 
         protected override Deity GetDeity()
         {
-            return new Deity 
+            return new Deity
             {
                 Id = ID,
-                CategoryId = GodsOfTheInnerSea.ID, 
-                AlignmentId = ChaoticGood.ID,
-                Name = "Desna", 
-                Description = "The kindly Song of the Spheres presides over dreams, luck, stars, and travelers. An ancient goddess, Desna delights in freedom and mystery, and she encourages her followers to do the same.",
+                CategoryId = DeityCategories.Instances.GodsOfTheInnerSea.ID,
+                AlignmentId = Alignments.Instances.ChaoticGood.ID,
+                Name = "Desna",
                 Edicts = "Aid fellow travelers, explore new places, express yourself through art and song, find what life has to offer.",
-                Anathema = "Cause fear or despair, cast nightmare or use similar magic to corrupt dreams, engage in bigoted behavior.",
+                Anathema = "Cause fear or despair, cast.",
+                Title = "The Song of the Spheres",
+                AreasOfConcern = "Dreams, luck, stars, and travelers.",
             };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetails()
+        {
+            
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "The night didn't know beauty until Desna came into existence. While the other gods toiled away to create the world, she set her sights on the heavens, placing each star in the sky. After surveying her artistry, she hung the brightest star high in the north and made it her home. Her first gift to mortals was this beacon of hope, a twinkling sign in the dark sky that they could turn to when lost or unsure of themselves. Desna provides safe passage through the darkness to all, should they choose to follow." };
+        }
+
+        protected override void GetDevoteeEffect(BooleanEffectBuilder builder)
+        {
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Sleep.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Fly.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.DreamingPotential.ID);
         }
 
         protected override IEnumerable<Guid> GetDivineFonts()
         {
-            yield return Heal.ID;
+            yield return DivineFonts.Instances.Heal.ID;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredMeleeWeapons()
+        {
+            
+            yield return MeleeWeapons.Instances.Starknife.ID;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredRangedWeapons()
+        {
+            yield break;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredUnarmedWeapons()
+        {
+            yield break;
+        }
+
+        protected override DivineIntercession? GetDivineIntercession()
+        {
+            
+            return new DivineIntercession
+            {
+                Id = Guid.Parse(""),
+                Description = "Desna favors those who follow their hearts and whims without bringing harm to others.",
+                MinorBoon = "For those at the end of a journey, Desna gifts a deep sleep. Once, after you rest, you completely recover all Hit Points, remove all negative conditions, and become free of any curses or diseases.",
+                ModerateBoon = "Desna twists fortune in your favor. Once per day, after determining the result of a check, you can reroll the check and take the new result.",
+                MajorBoon = "Desna bestows you with a swirling cloud of lights that forms a pair of wondrous butterfly wings. These wings grant you a fly Speed of 40 feet and shine dim light to a range of 20 feet.",
+                MinorCurse = "You always seem to lose your way or have strange mishaps on the road that delay your travel. You (and thus any group that travels with you) travel at only 3/4 normal exploration Speed, before taking into account the terrain and other features that might slow you down further.",
+                ModerateCurse = "Misfortune follows you in your travels and requires acts of contrition or benevolence to keep at bay. You must always roll twice and take the worst result when attempting a check. This is a misfortune effect. You can express your remorse and ignore this effect for 1d4 rounds by spending an action, which has the concentrate trait. If you perform a truly selfless act of compassion, you ignore this effect for 1 day.",
+                MajorCurse = "The stars rebuke you for your ways. You are sickened 4 and slowed 1 whenever you are exposed to starlight.",
+                SourcePage = new SourcePage
+                {
+                    Id = Guid.Parse(""),
+                    SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
+                    Page = 21
+                }
+            };
         }
 
         protected override IEnumerable<Guid> GetDivineSkills()
         {
-            yield return Acrobatics.ID;
+            yield return Skills.Instances.Acrobatics.ID;
+        }
+
+        protected override IEnumerable<Guid> GetDivineStats()
+        {
+            
+            yield return Stats.Instances.Dexterity.ID;
+            yield return Stats.Instances.Charisma.ID;
         }
 
         protected override IEnumerable<Guid> GetDomains()
         {
-            yield return Dreams.ID;
-            yield return Luck.ID;
-            yield return Moon.ID;
-            yield return Travel.ID;
+            yield return Domains.Instances.Dreams.ID;
+            yield return Domains.Instances.Luck.ID;
+            yield return Domains.Instances.Moon.ID;
+            yield return Domains.Instances.Travel.ID;
         }
 
         protected override IEnumerable<Guid> GetFollowerAlignments()
         {
-            yield return NeutralGood.ID;
-            yield return ChaoticGood.ID;
-            yield return ChaoticNeutral.ID;
+            yield return Alignments.Instances.NeutralGood.ID;
+            yield return Alignments.Instances.ChaoticGood.ID;
+            yield return Alignments.Instances.ChaoticNeutral.ID;
         }
 
-        protected override SourcePage GetSourcePage()
+        protected override SourcePage GetSourcePage() 
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2d034452-80cd-4cac-aa96-819317a3cc94"),
-                SourceId = CoreRulebook.ID,
+                Id = Guid.Parse(""),
+                SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 438
             };
         }

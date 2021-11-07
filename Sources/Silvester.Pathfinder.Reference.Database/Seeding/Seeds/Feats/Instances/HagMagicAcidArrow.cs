@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HagMagicAcidArrow : Template
     {
-        public static readonly Guid ID = Guid.Parse("83a3266a-7f72-4f19-9b71-c5b548a8ffb8");
+        public static readonly Guid ID = Guid.Parse("5e1a4a31-a01d-46f9-9274-e3e7f339d46f");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f97130eb-7f79-42b8-bd39-0e61540f8c0d"), Type = TextBlockType.Text, Text = "You can cast (spell: acid arrow) once per day as a 4th-level occult innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("2684d576-ae4f-4696-8cf3-4f5a817a4619"), Type = TextBlockType.Text, Text = "You can cast (spell: acid arrow) once per day as a 4th-level occult innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e36f2118-03eb-452e-af68-30bc57b5f5c4"),
+                Id = Guid.Parse("b266d09d-1bff-411f-9313-d0fdac0e9a39"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

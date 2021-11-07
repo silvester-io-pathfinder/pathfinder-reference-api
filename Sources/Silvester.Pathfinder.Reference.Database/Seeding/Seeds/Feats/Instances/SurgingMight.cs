@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SurgingMight : Template
     {
-        public static readonly Guid ID = Guid.Parse("24feac1f-b923-45b2-9007-fdcea3278ff8");
+        public static readonly Guid ID = Guid.Parse("cb5d5a6d-5ab7-40b1-b668-5df024c2b713");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("59635da3-a762-4ac2-92fb-2dfe9c4af765"), Type = TextBlockType.Text, Text = "With a complex gesture, you focus the power of your spell to overcome enemies’ resistances. If the next action you use is to (action: Cast a Spell), the spell ignores an amount of the target’s resistance equal to your level against all the following types of damage: chaotic, evil, good, lawful, negative, and positive. This applies to all damage the spell deals, including persistent damage and damage caused by an ongoing effect of the spell, such as the positive energy within a (spell: field of life). This doesn’t cause the spell to ignore immunities, only resistances." };
+            yield return new TextBlock { Id = Guid.Parse("f045ca52-6a64-4619-ab0a-2150ff85889b"), Type = TextBlockType.Text, Text = "With a complex gesture, you focus the power of your spell to overcome enemies’ resistances. If the next action you use is to (action: Cast a Spell), the spell ignores an amount of the target’s resistance equal to your level against all the following types of damage: chaotic, evil, good, lawful, negative, and positive. This applies to all damage the spell deals, including persistent damage and damage caused by an ongoing effect of the spell, such as the positive energy within a (spell: field of life). This doesn’t cause the spell to ignore immunities, only resistances." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("46932cf9-7254-4a9c-a59c-9e5b0ae6a8f0"), Feats.Instances.WellspringMageDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ab15d4ba-d696-47ea-93d4-85489c841ea2"), Feats.Instances.WellspringMageDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f1c39032-4f9f-419d-875e-2e13515fa1c6"),
+                Id = Guid.Parse("76485db4-0272-4066-9fbc-ab19d9fcced1"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class VigorousHealth : Template
     {
-        public static readonly Guid ID = Guid.Parse("01abf42d-220c-4427-8673-c8f486c50159");
+        public static readonly Guid ID = Guid.Parse("01a88f49-5329-4c34-8636-baafba3a0699");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0fc21606-2095-4934-86ab-67bb93201499"), Type = TextBlockType.Text, Text = "Your physique is robust and can withstand blood loss startlingly well. Whenever you would gain the drained condition, you can attempt a DC 17 flat check. On a success, you don’t gain the drained condition." };
+            yield return new TextBlock { Id = Guid.Parse("c74cb801-3c61-458a-bffc-b21e91257438"), Type = TextBlockType.Text, Text = "Your physique is robust and can withstand blood loss startlingly well. Whenever you would gain the drained condition, you can attempt a DC 17 flat check. On a success, you don’t gain the drained condition." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0252bafb-d8f6-43e9-971d-703506e601f4"),
+                Id = Guid.Parse("c748186b-c1af-4968-be6e-4299ea875bc4"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

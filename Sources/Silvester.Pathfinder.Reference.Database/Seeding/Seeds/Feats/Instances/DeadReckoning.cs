@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeadReckoning : Template
     {
-        public static readonly Guid ID = Guid.Parse("c2136e19-5b89-4351-aee3-4888058e005e");
+        public static readonly Guid ID = Guid.Parse("ff2866c3-6a44-4dd3-acdf-1ae5980e2676");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("febbb17b-c820-494f-9562-fc60e4f407a6"), Type = TextBlockType.Text, Text = "You&#39;ve trained yourself to maintain a strong sense of direction at all times, even when you can&#39;t use a (item: compass) or see the sky above. You immediately intuit which direction is north (assuming the concept of north exists at your current location)." };
+            yield return new TextBlock { Id = Guid.Parse("fca60b0c-b2da-4cda-9a08-ef18aee3bafe"), Type = TextBlockType.Text, Text = "You&#39;ve trained yourself to maintain a strong sense of direction at all times, even when you can&#39;t use a (item: compass) or see the sky above. You immediately intuit which direction is north (assuming the concept of north exists at your current location)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("9aaec1fc-5786-4d82-8244-1441f1acb190"), Feats.Instances.PathfinderAgentDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("f9cb7293-dcbd-47f9-96e3-371bfb88c29c"), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e2f884ed-68c5-4f90-833e-c95ccb0162ca"), Feats.Instances.PathfinderAgentDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("7c72cb2d-f44f-4950-af0b-4348f39405a0"), Proficiencies.Instances.Trained.ID, Skills.Instances.Survival.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("893d1dca-a2fd-4f07-b251-fa8fc34f0cc8"),
+                Id = Guid.Parse("76d0f914-326c-4631-9c9a-4079a0296fd6"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

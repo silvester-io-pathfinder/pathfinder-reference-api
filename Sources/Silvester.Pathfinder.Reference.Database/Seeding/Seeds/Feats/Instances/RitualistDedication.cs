@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RitualistDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("f494791e-29e9-4775-bd5d-b3e21899a8c3");
+        public static readonly Guid ID = Guid.Parse("76545197-3829-46bb-8fdf-a01ae6a352a7");
 
         protected override Feat GetFeat()
         {
@@ -28,18 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("34c950ce-e7ff-493c-930d-1959255209c4"), Type = TextBlockType.Text, Text = "You have begun to master the difficult art of casting rituals. You gain a +2 circumstance bonus to all primary checks to perform a ritual. You learn two uncommon rituals with a level no higher than half your level; you must meet all prerequisites for casting the ritual to choose it. At 8th level and every 4 levels thereafter, you learn another uncommon ritual with a level no higher than half your level and for which you meet the prerequisites. You can cast these as the primary caster, but you can’t teach them to anyone else or allow someone else to serve as primary caster unless they know the ritual as well." };
+            yield return new TextBlock { Id = Guid.Parse("1388d6f9-30ce-46cf-a169-f59f0d50062b"), Type = TextBlockType.Text, Text = "You have begun to master the difficult art of casting rituals. You gain a +2 circumstance bonus to all primary checks to perform a ritual. You learn two uncommon rituals with a level no higher than half your level; you must meet all prerequisites for casting the ritual to choose it. At 8th level and every 4 levels thereafter, you learn another uncommon ritual with a level no higher than half your level and for which you meet the prerequisites. You can cast these as the primary caster, but you can’t teach them to anyone else or allow someone else to serve as primary caster unless they know the ritual as well." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("8e3c2dfc-8cc8-47bd-877f-1b54347b2f80"), or => 
+            builder.AddOr(Guid.Parse("a3f673f3-0d15-4bef-8793-2b415477bdba"), or => 
             {
-                or.HaveSpecificSkillProficiency(Guid.Parse("86910bb7-b944-4220-bd5e-f82e4768ac9d"), Proficiencies.Instances.Expert.ID, Skills.Instances.Arcana.ID);
-                or.HaveSpecificSkillProficiency(Guid.Parse("2025570c-0494-4498-a149-756533dbb93c"), Proficiencies.Instances.Expert.ID, Skills.Instances.Nature.ID);
-                or.HaveSpecificSkillProficiency(Guid.Parse("aaeca335-3705-4085-bd6b-50c1711f1d00"), Proficiencies.Instances.Expert.ID, Skills.Instances.Occultism.ID);
-                or.HaveSpecificSkillProficiency(Guid.Parse("fb4533e2-ec18-41b8-a510-650cce23249d"), Proficiencies.Instances.Expert.ID, Skills.Instances.Religion.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("6d261444-2268-4b99-9376-d1b98996e6c9"), Proficiencies.Instances.Expert.ID, Skills.Instances.Arcana.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("87e634bc-91e4-41de-b469-6cbe0bfb0ccb"), Proficiencies.Instances.Expert.ID, Skills.Instances.Nature.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("840defc4-de11-497b-becd-5ed6ce4cc314"), Proficiencies.Instances.Expert.ID, Skills.Instances.Occultism.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("69ba6157-260a-42dd-88a8-b58ef8425100"), Proficiencies.Instances.Expert.ID, Skills.Instances.Religion.ID);
             });
         }
 
@@ -52,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2daebd30-a5c8-43de-87c2-f1022c9dc4f6"),
+                Id = Guid.Parse("35c58ebb-3744-406e-ac90-781d6635ec9f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

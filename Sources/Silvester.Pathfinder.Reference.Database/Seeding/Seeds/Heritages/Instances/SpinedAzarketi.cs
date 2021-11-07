@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
             //TODO: Add the fact that this is a ranged unarmed attack.
-            builder.GainSpecificUnarmedAttack(Guid.Parse(""), UnarmedAttack.Spine, WeaponGroups.Instances.Dart.ID, DamageTypes.Instances.Poison.ID, damage: "1d4");
+            builder.GainSpecificUnarmedAttack(Guid.Parse(""), UnarmedWeapons.Instances.Spine.ID, WeaponGroups.Instances.Dart.ID, DamageTypes.Instances.Poison.ID, damage: "1d4");
         }
 
         protected override SourcePage GetSourcePage()

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CurrentSpell : Template
     {
-        public static readonly Guid ID = Guid.Parse("59d8bd86-88fc-4591-898d-9b63db188adc");
+        public static readonly Guid ID = Guid.Parse("49f2aa4c-58ac-4aac-88a5-e632d52b665c");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d31aaa2-1aa5-4d05-b1c6-c6186a31f886"), Type = TextBlockType.Text, Text = "As you use your magic to manipulate air or water, you divert some of its currents to form a barrier around you. If your next action is to (activity: Cast a Spell) with the (trait: air) or (trait: water) trait, until the start of your next turn, you gain a +1 circumstance bonus to AC or a +2 circumstance bonus against ranged attacks. This effect has the (trait: air) or (trait: water) trait, or both, depending on the traits of the spell you cast. You also gain a +1 circumstance bonus to all saves against effects with the (trait: air) trait, (trait: water) trait, or both until the start of your next turn, depending on the spell’s traits." };
+            yield return new TextBlock { Id = Guid.Parse("6bb74659-cefa-4819-a6f5-157364b5faa3"), Type = TextBlockType.Text, Text = "As you use your magic to manipulate air or water, you divert some of its currents to form a barrier around you. If your next action is to (activity: Cast a Spell) with the (trait: air) or (trait: water) trait, until the start of your next turn, you gain a +1 circumstance bonus to AC or a +2 circumstance bonus against ranged attacks. This effect has the (trait: air) or (trait: water) trait, or both, depending on the traits of the spell you cast. You also gain a +1 circumstance bonus to all saves against effects with the (trait: air) trait, (trait: water) trait, or both until the start of your next turn, depending on the spell’s traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3fdecf0a-c3f9-48f4-94f3-db4473a62db0"),
+                Id = Guid.Parse("cff074ea-fc2b-49be-a194-2933534848b3"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

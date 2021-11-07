@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CriticalDebilitation : Template
     {
-        public static readonly Guid ID = Guid.Parse("988d41f4-d90a-43a2-9674-46a1eaed276f");
+        public static readonly Guid ID = Guid.Parse("a627ee44-2404-41c3-b9ad-89f90e97910c");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3c9a5cc2-cf00-4b82-8bc1-9d6b599bfebf"), Type = TextBlockType.Text, Text = "Your debilitations are especially effective on your most powerful attacks. Whenever you critically succeed at an attack roll against an enemy and use (feat: Debilitating Strike), add the following debilitation to the list you can choose from." };
-            yield return new TextBlock { Id = Guid.Parse("729c1c38-a82f-445a-8a08-f134d941e665"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target attempts a Fortitude save against your class DC with the following effects." };
+            yield return new TextBlock { Id = Guid.Parse("48005b6f-52c3-4066-b3bb-71d2d556f9c2"), Type = TextBlockType.Text, Text = "Your debilitations are especially effective on your most powerful attacks. Whenever you critically succeed at an attack roll against an enemy and use (feat: Debilitating Strike), add the following debilitation to the list you can choose from." };
+            yield return new TextBlock { Id = Guid.Parse("99db8028-559e-4296-9720-db47fd9cb71d"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target attempts a Fortitude save against your class DC with the following effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("65424c40-e74f-449a-91b1-30d5f3acb946"), Feats.Instances.DebilitatingStrike.ID);
+            builder.HaveSpecificFeat(Guid.Parse("b834a980-e505-49ba-a4b9-e6dfd037b9c5"), Feats.Instances.DebilitatingStrike.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("1ea4de45-1e45-40fe-bc2f-0bc9d8b52758"),
+                Id = Guid.Parse("87d5394d-c84d-4410-ad26-c2676e19eb51"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is slowed 1 until the end of your next turn.",
                 Failure = "The target is slowed 2 until the end of your next turn.",
@@ -60,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("36a97020-bf85-47b5-9a6f-2ad3da96bc86"),
+                Id = Guid.Parse("ab72a422-2006-40fd-a8c2-f022efbb7aaf"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

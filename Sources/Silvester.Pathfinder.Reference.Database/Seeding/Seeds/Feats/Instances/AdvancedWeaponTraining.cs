@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdvancedWeaponTraining : Template
     {
-        public static readonly Guid ID = Guid.Parse("74f58186-0c8d-441b-b10b-f2347d0a0261");
+        public static readonly Guid ID = Guid.Parse("bd3e0a1c-c775-4e13-b049-53e58f3b29f5");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("360a952b-e3d8-498a-bac6-b83045099338"), Type = TextBlockType.Text, Text = "You’ve studied the art of wielding an advanced weapon. Choose a weapon group. You gain proficiency with all advanced weapons in that group as if they were martial weapons of their weapon group." };
+            yield return new TextBlock { Id = Guid.Parse("3930fa58-4262-4e63-ba9b-e7d2a02ac05b"), Type = TextBlockType.Text, Text = "You’ve studied the art of wielding an advanced weapon. Choose a weapon group. You gain proficiency with all advanced weapons in that group as if they were martial weapons of their weapon group." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f7e23f3d-4f15-46dd-8d25-bc76f632d1e8"),
+                Id = Guid.Parse("7d74c191-a5ef-4294-b91a-2dd422893ca1"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

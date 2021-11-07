@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DiscordantVoice : Template
     {
-        public static readonly Guid ID = Guid.Parse("2c4042bd-a936-4797-87f0-05993fe54e15");
+        public static readonly Guid ID = Guid.Parse("c447c01b-f04e-4360-80ea-292db37d87ec");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9592a33b-ab62-4686-b62b-d7f0220d1737"), Type = TextBlockType.Text, Text = "Your (spell: inspire courage) lets loose a discordant shriek that imbues your allies’ attacks with powerful sonic reverberations. While your allies are affected by your (spell: inspire courage), their weapon (action: Strikes | strike) and unarmed attacks deal an additional 1d6 sonic damage." };
+            yield return new TextBlock { Id = Guid.Parse("18d693e1-6a05-4dea-bf64-a69a763c6e2f"), Type = TextBlockType.Text, Text = "Your (spell: inspire courage) lets loose a discordant shriek that imbues your allies’ attacks with powerful sonic reverberations. While your allies are affected by your (spell: inspire courage), their weapon (action: Strikes | strike) and unarmed attacks deal an additional 1d6 sonic damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSpell(Guid.Parse("86ddd703-9053-46d4-b37a-2e03d1f52d29"), Spells.Instances.InspireCourage.ID);
+            builder.HaveSpecificSpell(Guid.Parse("2729d196-347b-4f0f-a7dc-c28f39fe8624"), Spells.Instances.InspireCourage.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("886e88b3-7b9b-4d15-8a14-5c114b6e2c56"),
+                Id = Guid.Parse("507c6013-8051-4b09-9757-1acfa4eb8b92"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

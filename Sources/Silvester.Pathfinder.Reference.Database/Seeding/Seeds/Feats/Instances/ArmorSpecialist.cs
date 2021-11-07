@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArmorSpecialist : Template
     {
-        public static readonly Guid ID = Guid.Parse("0f19c192-ca5f-4f82-9678-d9aa6239050f");
+        public static readonly Guid ID = Guid.Parse("a718b63d-f3a6-46e1-9812-8a54a06dfdfc");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e5eb8e7f-4303-4c1e-a291-ee38ee4c6091"), Type = TextBlockType.Text, Text = "You have trained hard to optimize your armor’s protective qualities. You gain the armor specialization effects of medium and heavy armor." };
+            yield return new TextBlock { Id = Guid.Parse("5d1ca4e9-a378-4755-860e-bd62c40e34a2"), Type = TextBlockType.Text, Text = "You have trained hard to optimize your armor’s protective qualities. You gain the armor specialization effects of medium and heavy armor." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("fd51c13b-4ebc-4b59-9fb6-0160f9dd7065"), Feats.Instances.SentinelDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ca349e72-5904-4817-8a4d-b850cb88b9dd"), Feats.Instances.SentinelDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d0d9deac-62be-46e7-beac-141bc58ddc79"),
+                Id = Guid.Parse("a633939e-78aa-4309-bad8-4883a21a618b"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DazzlingBlock : Template
     {
-        public static readonly Guid ID = Guid.Parse("98cec0e1-04be-4fd4-b943-36d45ab1c3a1");
+        public static readonly Guid ID = Guid.Parse("4314267f-e05c-422e-91a4-14164bb8ed29");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9adfd5ff-f0d4-40f8-9638-9c4fdce3351c"), Type = TextBlockType.Text, Text = "When you use (feat: Shield Block), you can create a flash of brilliant, multicolored light in a 15-foot cone. Each creature in the area must attempt a Fortitude save, with the following effects." };
+            yield return new TextBlock { Id = Guid.Parse("8b590b2d-5493-40a4-9c40-39f2cc832c16"), Type = TextBlockType.Text, Text = "When you use (feat: Shield Block), you can create a flash of brilliant, multicolored light in a 15-foot cone. Each creature in the area must attempt a Fortitude save, with the following effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("51002d4e-2233-4203-a87c-93bbea1c6812"), Feats.Instances.ArcaneCascade.ID);
-            builder.HaveSpecificHybridStudy(Guid.Parse("b119833c-ec0e-461a-a6b5-f780065b331a"), HybridStudies.Instances.SparklingTarge.ID);
+            builder.HaveSpecificFeat(Guid.Parse("16f399da-936f-48a8-968f-9e71b96a06bd"), Feats.Instances.ArcaneCascade.ID);
+            builder.HaveSpecificHybridStudy(Guid.Parse("05282d60-41c0-47bc-a612-fa52c6bc9306"), HybridStudies.Instances.SparklingTarge.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("bd9f2364-7d4d-4b6f-be4c-4a510206fd11"),
+                Id = Guid.Parse("8f2ceec5-0072-4a61-b05c-b1ed8fa16b7f"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature is dazzled for 1 round.",
                 Failure = "The creature is blinded for 1 round and dazzled for 1 minute. The creature can spend an (action: Interact) action rubbing its eyes to end this blinded condition.",
@@ -60,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a10e88d1-53b7-425b-bbfc-b3c69fd57e75"),
+                Id = Guid.Parse("cc2b18a8-5c98-4cc4-bbfd-326e5398ecb0"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

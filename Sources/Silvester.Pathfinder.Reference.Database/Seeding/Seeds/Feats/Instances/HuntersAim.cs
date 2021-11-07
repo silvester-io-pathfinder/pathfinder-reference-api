@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HuntersAim : Template
     {
-        public static readonly Guid ID = Guid.Parse("ffaa7f48-d803-49a8-aefd-6341e880aee6");
+        public static readonly Guid ID = Guid.Parse("078b2522-8a11-4317-8c14-38d8d702eea0");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3a364c12-d8aa-404d-9ef8-cd9764d33b10"), Type = TextBlockType.Text, Text = "When you focus on aiming, your attack becomes particularly accurate. Make a ranged weapon (action: Strike) against your hunted prey. On this (action: Strike), you gain a +2 circumstance bonus to the attack roll and ignore your prey’s concealed condition." };
+            yield return new TextBlock { Id = Guid.Parse("cbb9072a-c852-4398-ba5d-017e6a934553"), Type = TextBlockType.Text, Text = "When you focus on aiming, your attack becomes particularly accurate. Make a ranged weapon (action: Strike) against your hunted prey. On this (action: Strike), you gain a +2 circumstance bonus to the attack roll and ignore your prey’s concealed condition." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d6b8c9ef-18ee-4187-aac2-ea3261158650"),
+                Id = Guid.Parse("02459631-28ea-48b5-8bb5-fca01a6d69bf"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

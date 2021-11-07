@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Multitalented : Template
     {
-        public static readonly Guid ID = Guid.Parse("3420e443-6a23-49a5-b515-b166900f41d7");
+        public static readonly Guid ID = Guid.Parse("855c5669-8b7c-4c32-afa2-c080fcccad7d");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b2ed2909-075b-4f88-87b5-e791a45bce1c"), Type = TextBlockType.Text, Text = "You’ve learned to split your focus between multiple classes with ease. You gain a 2nd-level multiclass dedication feat, even if you normally couldn’t take another dedication feat until you take more feats from your current archetype." };
-            yield return new TextBlock { Id = Guid.Parse("713c018a-32ce-40b6-8123-7a0d664eb519"), Type = TextBlockType.Text, Text = "If you’re a half-elf, you don’t need to meet the feat’s ability score prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("b74f1e37-59c0-4c83-92ac-978b688301f4"), Type = TextBlockType.Text, Text = "You’ve learned to split your focus between multiple classes with ease. You gain a 2nd-level multiclass dedication feat, even if you normally couldn’t take another dedication feat until you take more feats from your current archetype." };
+            yield return new TextBlock { Id = Guid.Parse("456116e5-047f-4f9d-9909-8609cb7cb28c"), Type = TextBlockType.Text, Text = "If you’re a half-elf, you don’t need to meet the feat’s ability score prerequisites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4f1e82d7-fbd9-4fb7-a9bc-54b14d6dfbe5"),
+                Id = Guid.Parse("8c3b2b9e-c155-487a-a298-5c7e3f4f0630"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

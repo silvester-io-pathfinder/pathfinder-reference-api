@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GreaterMercy : Template
     {
-        public static readonly Guid ID = Guid.Parse("86f26e41-d1a7-4f4a-9f51-7ecaaf597f74");
+        public static readonly Guid ID = Guid.Parse("bb6783e2-cc30-4700-be4b-13fb1ea075db");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cdd02eeb-6880-46fd-a9b3-e8ce641507fc"), Type = TextBlockType.Text, Text = "Your faith enhances your ability to remove conditions. When you use (feat: Mercy), you can instead attempt to counteract the blinded, deafened, sickened, or slowed conditions." };
+            yield return new TextBlock { Id = Guid.Parse("fec48772-ff26-4508-bd3a-108e5bb7c9f0"), Type = TextBlockType.Text, Text = "Your faith enhances your ability to remove conditions. When you use (feat: Mercy), you can instead attempt to counteract the blinded, deafened, sickened, or slowed conditions." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("dfa65a9d-3e5d-42b1-9025-d99d42932eb0"), Feats.Instances.mercy.ID);
+            builder.HaveSpecificFeat(Guid.Parse("96bdf4e9-f9f0-4c11-99a8-4f029b621aed"), Feats.Instances.Mercy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d9bca6e5-d631-4ba4-9b03-99ea7e60a391"),
+                Id = Guid.Parse("85cbc0f7-f6a3-4004-b187-8c0e2dbc910f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

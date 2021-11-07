@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BendTime : Template
     {
-        public static readonly Guid ID = Guid.Parse("508c5125-8189-4356-a16d-19e0684aceda");
+        public static readonly Guid ID = Guid.Parse("b1f3df9a-b345-461f-a6ad-9153b2bd6d77");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a9f6ec88-af04-4987-8782-037ea680033c"), Type = TextBlockType.Text, Text = "You are quickened this turn. You can use your extra action only to (action: Stride)." };
+            yield return new TextBlock { Id = Guid.Parse("fd6ccb92-6f2b-49dd-a66b-8894676eef5c"), Type = TextBlockType.Text, Text = "You are quickened this turn. You can use your extra action only to (action: Stride)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("54718f7e-4d1a-41ec-bd7a-393d32a47b12"),
+                Id = Guid.Parse("21432397-b6ce-44de-9dc9-147674636e84"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

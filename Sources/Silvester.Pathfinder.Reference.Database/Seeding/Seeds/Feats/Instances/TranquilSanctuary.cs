@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TranquilSanctuary : Template
     {
-        public static readonly Guid ID = Guid.Parse("3b79c577-73c5-49e3-9981-6c7b0648c47b");
+        public static readonly Guid ID = Guid.Parse("6018aa5e-b62a-4fff-8b14-cc8c5e3a7081");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("510cb00b-f1be-481c-904b-159c6ead391d"), Type = TextBlockType.Text, Text = "Whenever possible, you follow the serene path and encourage others to do the same. You can cast (spell: sanctuary) once per day as a 1st-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("0de4cfc7-ac8e-40c7-93c9-b7b1f0d445a3"), Type = TextBlockType.Text, Text = "Whenever possible, you follow the serene path and encourage others to do the same. You can cast (spell: sanctuary) once per day as a 1st-level divine innate spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("6d109cb7-3869-46f1-baa3-0570e77a7878"), Feats.Instances.Idyllkin.ID);
+            builder.HaveSpecificFeat(Guid.Parse("2406e372-52f1-4762-acf7-3ff0b6a1d3ed"), Feats.Instances.Idyllkin.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9f29f8db-0baf-4de4-be74-0a22af813bcc"),
+                Id = Guid.Parse("33897e4d-37de-410c-ba7d-df2a0aedcd15"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

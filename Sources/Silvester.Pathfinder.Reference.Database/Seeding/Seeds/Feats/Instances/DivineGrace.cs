@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DivineGrace : Template
     {
-        public static readonly Guid ID = Guid.Parse("f225bb1a-362a-4972-90f3-769d5d29910c");
+        public static readonly Guid ID = Guid.Parse("429bceba-a346-47dd-8d97-a1ed3b4ede2f");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("64a74480-1430-435f-96ce-94880e38a276"), Type = TextBlockType.Text, Text = "You call upon your deity’s grace, gaining a +2 circumstance bonus to the save." };
+            yield return new TextBlock { Id = Guid.Parse("621c8397-60dc-4c01-be11-7e075bd8ef8e"), Type = TextBlockType.Text, Text = "You call upon your deity’s grace, gaining a +2 circumstance bonus to the save." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8386c8b5-7021-4b89-b62d-45e0279475af"),
+                Id = Guid.Parse("cdb66851-2df3-44be-ba69-30ad5f1f2b27"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

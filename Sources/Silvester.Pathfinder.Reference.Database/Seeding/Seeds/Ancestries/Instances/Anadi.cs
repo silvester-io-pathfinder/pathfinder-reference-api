@@ -104,7 +104,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
             builder.GainSpecificLanguage(Guid.Parse("dd569604-e645-460c-adf5-7ceb483ea2fd"), Languages.Instances.Anadi.ID);
             builder.GainSpecificLanguage(Guid.Parse("1e152ae0-0250-42a5-9c83-e4d3c8164907"), Languages.Instances.Mwangi.ID);
             builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.ChangeShapeAnadi.ID);
-            builder.GainSpecificUnarmedAttack(Guid.Parse(""), UnarmedAttack.Fangs, WeaponGroups.Instances.Brawling.ID, DamageTypes.Instances.Piercing.ID, damage: "1d6");
+            builder.GainSpecificUnarmedAttack(Guid.Parse(""), UnarmedWeapons.Instances.Fangs.ID, WeaponGroups.Instances.Brawling.ID, DamageTypes.Instances.Piercing.ID, damage: "1d6");
             //TODO: Add intelligence modifier languages.
         }
 

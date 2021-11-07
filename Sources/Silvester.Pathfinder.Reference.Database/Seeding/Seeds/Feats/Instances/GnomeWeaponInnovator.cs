@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GnomeWeaponInnovator : Template
     {
-        public static readonly Guid ID = Guid.Parse("85d86a39-2c32-4acc-9e2d-d863b5063a2e");
+        public static readonly Guid ID = Guid.Parse("6c0c76f3-7c72-4d8d-9947-8d392efd4fb0");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d0b09f00-c54f-4b75-bcad-e61eb80c1b94"), Type = TextBlockType.Text, Text = "You produce outstanding results when wielding unusual weapons. Whenever you critically hit using a glaive, kukri, or gnome weapon, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("4c4c1425-48de-4a76-9138-faa64135e7ce"), Type = TextBlockType.Text, Text = "You produce outstanding results when wielding unusual weapons. Whenever you critically hit using a glaive, kukri, or gnome weapon, you apply the weapon’s critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f623312a-948f-430f-9f98-74673a0cebd2"), Feats.Instances.GnomeWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d85c80b7-5e51-4068-bb4a-2d5e6f467599"), Feats.Instances.GnomeWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d8c718ef-ec5b-4f1f-8e82-9d4550fc1ba5"),
+                Id = Guid.Parse("70df2bbb-50f4-470d-a4b3-24348f1d8b82"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

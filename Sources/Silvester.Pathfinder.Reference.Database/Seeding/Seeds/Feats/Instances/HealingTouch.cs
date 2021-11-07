@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HealingTouch : Template
     {
-        public static readonly Guid ID = Guid.Parse("1dd516c6-07c9-4c27-ba04-b2a252b5ef99");
+        public static readonly Guid ID = Guid.Parse("c5ee900f-ee5c-4bf2-9fa3-89849c914b9b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c7a29023-a622-4a83-9056-007fe59f3671"), Type = TextBlockType.Text, Text = "You gain the appropriate devotion spell for your cause. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by praying or serving your deity. (For more on devotion spells, see page 107.)" };
+            yield return new TextBlock { Id = Guid.Parse("11a5ab39-e987-4495-90d2-86e9ddeaf4d4"), Type = TextBlockType.Text, Text = "You gain the appropriate devotion spell for your cause. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by praying or serving your deity. (For more on devotion spells, see page 107.)" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("20c193d6-5c9e-47a6-bfbb-774e11601129"), Feats.Instances.ChampionDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ecd9d851-8c6e-4da2-a98f-44769b4bbcc7"), Feats.Instances.ChampionDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bc2deacb-9ad5-44d4-8fd8-1a1c34803684"),
+                Id = Guid.Parse("bab9dfd0-6546-4265-871b-fddc8b49c048"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

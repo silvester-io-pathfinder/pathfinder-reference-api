@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AwesomeBlow : Template
     {
-        public static readonly Guid ID = Guid.Parse("bc33644f-0ad5-4c30-b6a9-00b6c9c7d0ed");
+        public static readonly Guid ID = Guid.Parse("89cc0da7-d8b7-4b87-9ffe-328f1dd39996");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c6ef85fb-5b02-4938-98ea-1744051cd369"), Type = TextBlockType.Text, Text = "Your attacks are so powerful, they can flatten your opponents. When you use (feat: Knockback), you can attempt an Athletics check against your target’s Fortitude DC." };
+            yield return new TextBlock { Id = Guid.Parse("a6314908-28b9-4a0e-8e5b-70cda1e4994e"), Type = TextBlockType.Text, Text = "Your attacks are so powerful, they can flatten your opponents. When you use (feat: Knockback), you can attempt an Athletics check against your target’s Fortitude DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("b1b18a73-a445-4fa4-a9f4-6d7d98efb8b0"), Feats.Instances.Knockback.ID);
+            builder.HaveSpecificFeat(Guid.Parse("f78b1ea3-0ac4-4e1a-be85-bd769bc1cc81"), Feats.Instances.Knockback.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("f9fa6707-02ea-4da5-8015-dc15d1d35f23"),
+                Id = Guid.Parse("8465e080-c0b3-44fb-9dbd-6c1f043cf286"),
                 CriticalSuccess = "You gain the critical success effect of a (action: Shove), then the critical success effect of a (action: Trip) against the target.",
                 Success = "You gain the success effect of a (action: Shove), then the success effect of a (action: Trip) against the target.",
                 Failure = "You gain the normal effect of (feat: Knockback).",
@@ -59,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("420d79c3-8f51-4ddf-b605-c9e4d0942f94"),
+                Id = Guid.Parse("33f5f596-7ea4-48e3-9d22-27cef6b2a752"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SwiftBanishment : Template
     {
-        public static readonly Guid ID = Guid.Parse("6f74d5fe-84df-489e-8eb9-477298f50ada");
+        public static readonly Guid ID = Guid.Parse("ef38779b-4149-4ad8-9e45-6a8b55bc784b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6df61aa9-86f3-48fe-b03c-9afb8a104cd2"), Type = TextBlockType.Text, Text = "The force of your blow sends your victim back to its home plane. You expend a (spell: banishment) spell you have prepared, affecting the creature you critically hit without needing to cast the spell. The creature can attempt to resist the spell as normal." };
+            yield return new TextBlock { Id = Guid.Parse("217e4a52-cf7b-43f3-8232-75606014f459"), Type = TextBlockType.Text, Text = "The force of your blow sends your victim back to its home plane. You expend a (spell: banishment) spell you have prepared, affecting the creature you critically hit without needing to cast the spell. The creature can attempt to resist the spell as normal." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("554ec873-6d1e-4038-8f07-bfc6f0259c67"),
+                Id = Guid.Parse("f44bb177-b02f-4196-a9b3-ca05bac5fd6a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

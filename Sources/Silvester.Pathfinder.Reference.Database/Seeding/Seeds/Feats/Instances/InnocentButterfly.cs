@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InnocentButterfly : Template
     {
-        public static readonly Guid ID = Guid.Parse("9c0488a7-f78a-4cdf-874f-bfcea92cf6e6");
+        public static readonly Guid ID = Guid.Parse("33627978-8da5-41bc-9dac-40865bd33e9a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aee3aa3a-51e9-4656-ada0-0b10a7f60875"), Type = TextBlockType.Text, Text = "You know how to alter the perceptions of others. You can cast (spell: aura of the unremarkable) once per day as an innate arcane spell. The spell uses your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("774e01f4-3025-4956-8774-357fbee20cf2"), Type = TextBlockType.Text, Text = "You know how to alter the perceptions of others. You can cast (spell: aura of the unremarkable) once per day as an innate arcane spell. The spell uses your class DC or spell DC, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("40382b5c-dcdc-4850-900c-af0febc0d7c5"),
+                Id = Guid.Parse("422c7438-5b27-41d0-86b9-1ef34c252394"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

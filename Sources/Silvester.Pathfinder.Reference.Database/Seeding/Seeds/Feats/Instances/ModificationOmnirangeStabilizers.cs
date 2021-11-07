@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationOmnirangeStabilizers : Template
     {
-        public static readonly Guid ID = Guid.Parse("7996119c-4295-4393-bee3-890cd98045c7");
+        public static readonly Guid ID = Guid.Parse("752136f1-2b7c-46ea-9fe2-d66b742b7767");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cac0d23d-77ba-4310-a833-1c059edb0fa1"), Type = TextBlockType.Enumeration, Text = "*Ranged Only**" };
-            yield return new TextBlock { Id = Guid.Parse("417880fc-ebef-478d-8e6a-211987b18739"), Type = TextBlockType.Text, Text = "You’ve modified your innovation to be dangerous and effective at any range. If your innovation had the (trait: volley) trait, remove the (trait: volley) trait. Otherwise, increase your innovation’s range increment by 50 feet or an amount equal to the weapon’s base range increment, whichever is more." };
+            yield return new TextBlock { Id = Guid.Parse("ad75fb6a-8632-4b64-b76f-021a347ff7d2"), Type = TextBlockType.Enumeration, Text = "*Ranged Only**" };
+            yield return new TextBlock { Id = Guid.Parse("a30929a0-c1bf-44fc-a051-51f72d9de6f1"), Type = TextBlockType.Text, Text = "You’ve modified your innovation to be dangerous and effective at any range. If your innovation had the (trait: volley) trait, remove the (trait: volley) trait. Otherwise, increase your innovation’s range increment by 50 feet or an amount equal to the weapon’s base range increment, whichever is more." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8fbf39cd-84e5-4b80-a28c-98d011bbc722"),
+                Id = Guid.Parse("68177e29-9d35-467e-a549-d5b9f6f6b673"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EmbersEyes : Template
     {
-        public static readonly Guid ID = Guid.Parse("b47f44c5-b362-4d2f-9502-ede8e1d2cba5");
+        public static readonly Guid ID = Guid.Parse("d881e269-1991-43bc-8775-1d47291c2865");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7a73c6c9-d094-4488-8df8-084256a2068f"), Type = TextBlockType.Text, Text = "Your eyes blaze with inner flame. You gain low-light vision, or you gain darkvision if your ancestry already has low-light vision." };
+            yield return new TextBlock { Id = Guid.Parse("431653e3-f174-4ff4-b90d-95062a3bad82"), Type = TextBlockType.Text, Text = "Your eyes blaze with inner flame. You gain low-light vision, or you gain darkvision if your ancestry already has low-light vision." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cf34927d-eb10-4f56-954a-cf21a23f0f65"),
+                Id = Guid.Parse("435be01b-dd30-40b0-8a6c-2bcb8a1d70c9"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

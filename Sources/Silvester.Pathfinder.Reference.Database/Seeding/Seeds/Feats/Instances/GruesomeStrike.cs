@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GruesomeStrike : Template
     {
-        public static readonly Guid ID = Guid.Parse("6542753e-975c-49d5-b573-50977ea8b95c");
+        public static readonly Guid ID = Guid.Parse("1b841f8b-7fe6-402b-8584-83488989e8b7");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c51cc355-2eeb-4a9d-a25f-93eeedaad142"), Type = TextBlockType.Text, Text = "Make a (action: Strike) against the creature that triggered your champion’s reaction. If you hit, the target takes double the extra damage from your reaction and must succeed at a Fortitude save against your class DC or be drained 1. Regardless of the result, the creature is temporarily immune to your Gruesome Strike for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("2c9b2cb2-67b0-4a5a-be27-5930358a0de4"), Type = TextBlockType.Text, Text = "Make a (action: Strike) against the creature that triggered your champion’s reaction. If you hit, the target takes double the extra damage from your reaction and must succeed at a Fortitude save against your class DC or be drained 1. Regardless of the result, the creature is temporarily immune to your Gruesome Strike for 24 hours." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificTenet(Guid.Parse("5d679185-021e-42cc-84c1-ec9150435e56"), Tenets.Instances.Evil.ID);
-            builder.Manual(Guid.Parse("cd7ddd9c-fb23-4a17-8839-b1328e2d14cc"), "Champion's reaction that grants extra damage with your Strikes");
+            builder.HaveSpecificTenet(Guid.Parse("3aa73f49-616c-41a4-a6a1-540074b458d4"), Tenets.Instances.Evil.ID);
+            builder.Manual(Guid.Parse("e2b11001-9014-4755-9174-3babc37f94ea"), "Champion's reaction that grants extra damage with your Strikes");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("16e55949-95dd-446a-b5a3-b65d9a669cbc"),
+                Id = Guid.Parse("62723ab8-84ae-400d-b010-029046f99844"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

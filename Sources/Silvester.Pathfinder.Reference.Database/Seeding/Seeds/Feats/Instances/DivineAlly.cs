@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DivineAlly : Template
     {
-        public static readonly Guid ID = Guid.Parse("c8f9d178-07fe-4161-b147-e7a717a3497d");
+        public static readonly Guid ID = Guid.Parse("d010362c-6f23-433f-b48a-3e1236ed67d8");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("35d851a8-995b-457e-8878-b2d6777d2157"), Type = TextBlockType.Text, Text = "You gain a divine ally of your choice (page 108)." };
+            yield return new TextBlock { Id = Guid.Parse("bdce012c-ee95-4eb1-a6d3-2bca8773af1e"), Type = TextBlockType.Text, Text = "You gain a divine ally of your choice (page 108)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("42fbe101-4f2b-4f92-9f87-d20b94f61edb"), Feats.Instances.ChampionDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("b0a68668-ad26-4e6c-8486-4d63be25f82b"), Feats.Instances.ChampionDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("20faefc9-8b18-44ab-8e5c-db09703d7da7"),
+                Id = Guid.Parse("96141ca3-8c5b-4dae-b0e9-f593d3f3580f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

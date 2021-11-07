@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PatronPrimal : Template
     {
-        public static readonly Guid ID = Guid.Parse("f2575e60-6223-4ae5-ad00-200e6d1fe854");
+        public static readonly Guid ID = Guid.Parse("b7dba9a4-6a53-409d-9b96-8fcd3860050c");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d7ad538b-7f56-4a8b-b507-ced44426037b"), Type = TextBlockType.Text, Text = "__Your patron’s tradition is primal.__" };
+            yield return new TextBlock { Id = Guid.Parse("4e5bf57b-c3ee-4195-8534-5b277bffcef4"), Type = TextBlockType.Text, Text = "__Your patron’s tradition is primal.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("79e9d97f-abe0-487c-8426-1c50c34a894d"),
+                Id = Guid.Parse("d09cdc27-3741-426c-b9e1-ea0f626c5d0f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

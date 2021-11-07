@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BespellWeapon : Template
     {
-        public static readonly Guid ID = Guid.Parse("d417dd31-e850-4d08-a3bf-7b0282266d46");
+        public static readonly Guid ID = Guid.Parse("0575d610-36e4-4717-9bd1-ed7a7bfe00de");
 
         protected override Feat GetFeat()
         {
@@ -28,12 +29,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5bd498c9-fdc7-4d27-a588-24241504b39b"), Type = TextBlockType.Text, Text = "You siphon the residual energy from the last spell you cast into one weapon you’re wielding. Until the end of your turn, the weapon deals an extra 1d6 damage of a type depending on the school of the spell you just cast." };
-            yield return new TextBlock { Id = Guid.Parse("756b48fd-b2af-4602-80e9-fff29b3cda54"), Type = TextBlockType.Enumeration, Text = " Abjuration: force damage" };
-            yield return new TextBlock { Id = Guid.Parse("3977c64b-b7b5-42a3-bfa5-80e2cdd1c8c1"), Type = TextBlockType.Enumeration, Text = " Conjuration or Transmutation: the same type as the weapon" };
-            yield return new TextBlock { Id = Guid.Parse("94e38e5f-1265-465c-bdbd-25be1a3cebc8"), Type = TextBlockType.Enumeration, Text = " Divination, Enchantment, or Illusion: mental damage" };
-            yield return new TextBlock { Id = Guid.Parse("5fe87aa8-141e-45e8-86c8-485a2f435132"), Type = TextBlockType.Enumeration, Text = " Evocation: a type the spell dealt, or force damage if the spell didn’t deal damage" };
-            yield return new TextBlock { Id = Guid.Parse("2685c7a2-2d7b-4d84-be98-2e6f0f7dd139"), Type = TextBlockType.Enumeration, Text = " Necromancy: negative damage" };
+            yield return new TextBlock { Id = Guid.Parse("38618d6f-47e0-42d9-90f7-b841160a5829"), Type = TextBlockType.Text, Text = "You siphon the residual energy from the last spell you cast into one weapon you’re wielding. Until the end of your turn, the weapon deals an extra 1d6 damage of a type depending on the school of the spell you just cast." };
+            yield return new TextBlock { Id = Guid.Parse("77086140-9983-4625-a4d4-147ca5b85f77"), Type = TextBlockType.Enumeration, Text = " Abjuration: force damage" };
+            yield return new TextBlock { Id = Guid.Parse("c7165f4e-86c7-4dd9-a21a-95158094d262"), Type = TextBlockType.Enumeration, Text = " Conjuration or Transmutation: the same type as the weapon" };
+            yield return new TextBlock { Id = Guid.Parse("1dd8d209-2aa7-41d6-8dd8-1224dd7bac11"), Type = TextBlockType.Enumeration, Text = " Divination, Enchantment, or Illusion: mental damage" };
+            yield return new TextBlock { Id = Guid.Parse("b2c4a5a6-c4fa-42c1-b0f8-45b7a4e8645d"), Type = TextBlockType.Enumeration, Text = " Evocation: a type the spell dealt, or force damage if the spell didn’t deal damage" };
+            yield return new TextBlock { Id = Guid.Parse("27440357-8a7f-42f5-9b46-90046016eb0a"), Type = TextBlockType.Enumeration, Text = " Necromancy: negative damage" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -45,7 +46,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("dacefec2-1dcb-4a81-a653-712d8b644701"),
+                Id = Guid.Parse("bb57c222-868c-4931-9b30-fe5c0c8eca40"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

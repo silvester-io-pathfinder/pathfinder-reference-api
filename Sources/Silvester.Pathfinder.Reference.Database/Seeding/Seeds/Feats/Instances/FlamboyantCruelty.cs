@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FlamboyantCruelty : Template
     {
-        public static readonly Guid ID = Guid.Parse("40068e22-cb58-4fa8-bee1-fbba33c4fbbb");
+        public static readonly Guid ID = Guid.Parse("4da18733-3327-41a0-8218-26098818527a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("93df4362-5a23-4dd1-b9e4-a88ebfe820b3"), Type = TextBlockType.Text, Text = "You love to kick your enemies when they’re down, and you look fabulous when you do. When you make a melee weapon (action: Strike) against a foe that has at least two of the following conditions, you gain a circumstance bonus to your damage roll equal to the number of these conditions the foe has. The qualifying conditions are clumsy, drained, enfeebled, frightened, sickened, and stupefied. If you hit such a foe, you gain a +1 circumstance bonus to skill checks to (action: Tumble Through) and to perform your style’s panache-granting actions until the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("370c6d9a-4bca-42d1-a6e7-150a87a680cc"), Type = TextBlockType.Text, Text = "You love to kick your enemies when they’re down, and you look fabulous when you do. When you make a melee weapon (action: Strike) against a foe that has at least two of the following conditions, you gain a circumstance bonus to your damage roll equal to the number of these conditions the foe has. The qualifying conditions are clumsy, drained, enfeebled, frightened, sickened, and stupefied. If you hit such a foe, you gain a +1 circumstance bonus to skill checks to (action: Tumble Through) and to perform your style’s panache-granting actions until the end of your turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("84fb69d2-3066-45c1-a644-1f9478cad3ff"),
+                Id = Guid.Parse("09e5debc-5ed0-423a-bf6e-1d0efcbee1c8"),
                 SourceId = Sources.Instances.LostOmensLegends.ID,
                 Page = -1
             };

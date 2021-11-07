@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TheoreticalAcumen : Template
     {
-        public static readonly Guid ID = Guid.Parse("cf7a8986-702b-4fd5-9369-b17cbaefd53f");
+        public static readonly Guid ID = Guid.Parse("318b67d1-9291-4de5-8b9a-b358abbaafa4");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b86a459f-267a-4058-974d-3d921256f80b"), Type = TextBlockType.Text, Text = "You study a creature’s form and behavior to hypothesize likely means of overcoming its strengths. Once before the end of your next turn, you can use the skill modifier from the triggering check in place of your saving throw modifier against one of the creature’s abilities, in place of your Perception modifier to (action: Seek) the creature, in place of your Deception modifier to (action: Feint) against the creature, or in place of your Intimidation modifier to (action: Demoralize) the creature. Alternatively, against one of the creature’s attacks, you can use your DC for the skill used in the triggering check in place of your AC." };
+            yield return new TextBlock { Id = Guid.Parse("2642c925-e3b0-4dc4-8a0e-8f6c7c1eed6b"), Type = TextBlockType.Text, Text = "You study a creature’s form and behavior to hypothesize likely means of overcoming its strengths. Once before the end of your next turn, you can use the skill modifier from the triggering check in place of your saving throw modifier against one of the creature’s abilities, in place of your Perception modifier to (action: Seek) the creature, in place of your Deception modifier to (action: Feint) against the creature, or in place of your Intimidation modifier to (action: Demoralize) the creature. Alternatively, against one of the creature’s attacks, you can use your DC for the skill used in the triggering check in place of your AC." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a9c09a9e-c76a-4623-a79a-83e0b343844f"),
+                Id = Guid.Parse("58f3b091-054f-48a5-b08a-e9392a4ddd4b"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

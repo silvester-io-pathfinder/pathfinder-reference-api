@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ClearAPath : Template
     {
-        public static readonly Guid ID = Guid.Parse("298bcb98-7faa-4407-89b3-11e595d0ae9a");
+        public static readonly Guid ID = Guid.Parse("69b12194-b0e6-4bbf-b8f5-e2e95465bff5");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("85e22329-1585-4295-b5f6-a00ff14ae6c5"), Type = TextBlockType.Text, Text = "You push outward with your weapon to clear some space before quickly reloading a fresh round. You make an Athletics check to (action: Shove) an opponent within your reach using your weapon, then (action: Interact) to reload. For this (action: Shove), you don’t need a free hand, and you add the weapon’s item bonus on attack rolls (if any) to the Athletics check. If your last action was a ranged (action: Strike) with the weapon, use the same multiple attack penalty as that (action: Strike) for the (action: Shove); the (action: Shove) still counts toward your multiple attack penalty on further attacks as normal." };
+            yield return new TextBlock { Id = Guid.Parse("fd8bb7f5-0c3a-414f-9ef0-c6765e5057f8"), Type = TextBlockType.Text, Text = "You push outward with your weapon to clear some space before quickly reloading a fresh round. You make an Athletics check to (action: Shove) an opponent within your reach using your weapon, then (action: Interact) to reload. For this (action: Shove), you don’t need a free hand, and you add the weapon’s item bonus on attack rolls (if any) to the Athletics check. If your last action was a ranged (action: Strike) with the weapon, use the same multiple attack penalty as that (action: Strike) for the (action: Shove); the (action: Shove) still counts toward your multiple attack penalty on further attacks as normal." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0eeb6fb1-3e45-48b8-ad91-6497ef4d2853"),
+                Id = Guid.Parse("8a9db811-1fb4-4374-99e5-4f01a06be8e3"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

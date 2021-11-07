@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BrutishShove : Template
     {
-        public static readonly Guid ID = Guid.Parse("9553d229-7568-4ed3-8463-59b31ecc33f5");
+        public static readonly Guid ID = Guid.Parse("37352e20-263c-4bf4-9cb6-bc420a1cba91");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("07444b4f-4967-47fc-af3f-8c8151218af0"), Type = TextBlockType.Text, Text = "Throwing your weight behind your attack, you hit your opponent hard enough to make it stumble back. Make a (Action: Strike) with a two-handed melee weapon. If you hit a target that is your size or smaller, that creature is flat-footed until the end of your current turn, and you can automatically (Action: Shove) it, with the same benefits as the (Action: Shove) action (including the critical success effect, if your (Action: Strike) was a critical hit). If you move to follow the target, your movement doesn’t trigger reactions." };
-            yield return new TextBlock { Id = Guid.Parse("d2bded7f-584b-4fdc-b5e5-496d4aca1abc"), Type = TextBlockType.Text, Text = "This (Action: Strike) has the following failure effect." };
+            yield return new TextBlock { Id = Guid.Parse("c3cf5ae8-8aeb-4265-9c75-4084521954e4"), Type = TextBlockType.Text, Text = "Throwing your weight behind your attack, you hit your opponent hard enough to make it stumble back. Make a (Action: Strike) with a two-handed melee weapon. If you hit a target that is your size or smaller, that creature is flat-footed until the end of your current turn, and you can automatically (Action: Shove) it, with the same benefits as the (Action: Shove) action (including the critical success effect, if your (Action: Strike) was a critical hit). If you move to follow the target, your movement doesn’t trigger reactions." };
+            yield return new TextBlock { Id = Guid.Parse("6ede90ce-f7ac-4b0c-a8b3-98168aa0a3d6"), Type = TextBlockType.Text, Text = "This (Action: Strike) has the following failure effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("64b9a94d-96ac-4b98-802c-4a2ea866c024"),
+                Id = Guid.Parse("4bb2f77f-5b2d-4615-a302-a4dd0d8bd5f3"),
                 
                 
                 Failure = "The target becomes flat-footed until the end of your current turn.",
@@ -54,7 +55,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("711df094-ca42-4ba0-b617-39c999bb0007"),
+                Id = Guid.Parse("d9a01e6e-4ed8-4344-b2aa-d3e31f4f6f1f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

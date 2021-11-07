@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WarningShot : Template
     {
-        public static readonly Guid ID = Guid.Parse("a5794b7f-76eb-4b08-80d9-1f8522bc0cde");
+        public static readonly Guid ID = Guid.Parse("b827a664-8433-4531-8844-8ff14b1ff1a9");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("caf3c91a-f216-4e3d-9a2c-96b9ea100c83"), Type = TextBlockType.Text, Text = "Who needs words when the roar of a gun is so much more succinct? You attempt to (action: Demoralize) a foe by firing your weapon into the air, using the firearm’s maximum range rather than the usual range of 30 feet. This check doesn’t take the –4 circumstance penalty if the target doesn’t share a language with you." };
+            yield return new TextBlock { Id = Guid.Parse("1315511d-0b7e-435e-b75d-83a4c954d517"), Type = TextBlockType.Text, Text = "Who needs words when the roar of a gun is so much more succinct? You attempt to (action: Demoralize) a foe by firing your weapon into the air, using the firearm’s maximum range rather than the usual range of 30 feet. This check doesn’t take the –4 circumstance penalty if the target doesn’t share a language with you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("77347a0c-e803-4159-af0b-28e07851a695"), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("a342458c-6ce7-4275-a324-b53e4edfefbb"), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("89364c30-fa35-4995-9d0f-e385d4d9f297"),
+                Id = Guid.Parse("f6a8f51a-fc65-4f32-8ffc-3b1dcce0c18f"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MarshalDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("9d4bbe8c-c58c-4668-b2ba-49d28fb64876");
+        public static readonly Guid ID = Guid.Parse("9f4aa032-9941-4bfd-a4e8-307668c67635");
 
         protected override Feat GetFeat()
         {
@@ -28,18 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0972408c-5a27-4908-907b-c109d4b14ab0"), Type = TextBlockType.Text, Text = "You’ve combined your social skills and combat training to become a talented combat leader. Choose Diplomacy or Intimidation. You become trained in that skill or become an expert if you were already trained in it." };
-            yield return new TextBlock { Id = Guid.Parse("775c5e59-0e18-4892-befb-0d1ba8499ddc"), Type = TextBlockType.Text, Text = "In addition, you’re surrounded by a marshal’s aura in a 10-foot emanation. Your aura has the (trait: emotion), (trait: mental), and (trait: visual) traits and grants you and allies within the aura a +1 status bonus to saving throws against (trait: fear) effects." };
+            yield return new TextBlock { Id = Guid.Parse("0fc2471d-3c80-4796-bb36-174265d6ab54"), Type = TextBlockType.Text, Text = "You’ve combined your social skills and combat training to become a talented combat leader. Choose Diplomacy or Intimidation. You become trained in that skill or become an expert if you were already trained in it." };
+            yield return new TextBlock { Id = Guid.Parse("aa2177d6-7bfa-438c-bddc-e63bdb83b0b2"), Type = TextBlockType.Text, Text = "In addition, you’re surrounded by a marshal’s aura in a 10-foot emanation. Your aura has the (trait: emotion), (trait: mental), and (trait: visual) traits and grants you and allies within the aura a +1 status bonus to saving throws against (trait: fear) effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("18b4d5de-b78d-46c2-b6d7-dc4a150cbe5d"), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Martial.ID);
-            builder.AddOr(Guid.Parse("35703fab-385b-4fcc-a81f-11ed8a86d32c"), or => 
+            builder.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("d4323489-ed2a-4976-b805-4c7502ab34ad"), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Martial.ID);
+            builder.AddOr(Guid.Parse("f6b72f0c-6dec-4129-b044-c5efc95eaf3c"), or => 
             {
-                or.HaveSpecificSkillProficiency(Guid.Parse("cb2b7abb-1373-4723-8024-a632bcc2547e"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
-                or.HaveSpecificSkillProficiency(Guid.Parse("da0fb914-14ba-4961-899e-910509c66f19"), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("f62ad97e-2115-4243-9326-629bfe5fc44e"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("278ee4ea-17fb-4def-9cbc-92f1edf22221"), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
             });
         }
 
@@ -52,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d9d1b3a0-ea4c-4afd-aab0-9f14c85d1b93"),
+                Id = Guid.Parse("a950ec01-8b91-427b-9df7-fe75e5af1e04"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

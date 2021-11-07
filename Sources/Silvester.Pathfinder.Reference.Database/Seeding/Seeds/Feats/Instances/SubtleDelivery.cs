@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SubtleDelivery : Template
     {
-        public static readonly Guid ID = Guid.Parse("54646fa3-c060-4226-bb07-81bd1f0e6ca9");
+        public static readonly Guid ID = Guid.Parse("14451e13-bfab-4aa9-9e26-60abfc8139a4");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("421cf2f4-461b-4671-b96b-6528e862f3a1"), Type = TextBlockType.Text, Text = "You can capably deliver toxins with a blowgun. Your (item: blowgun) (action: Strikes | Strike) can apply (trait: injury) poisons even if they deal no damage due to a creature’s resistance. If you critically succeed at an attack roll using a (item: blowgun) loaded with a dart you’ve poisoned and the target rolls a failure on the poison’s initial save, the target critically fails instead." };
+            yield return new TextBlock { Id = Guid.Parse("29da1bc2-1457-40b8-bdd9-b1c74ce742ed"), Type = TextBlockType.Text, Text = "You can capably deliver toxins with a blowgun. Your (item: blowgun) (action: Strikes | Strike) can apply (trait: injury) poisons even if they deal no damage due to a creature’s resistance. If you critically succeed at an attack roll using a (item: blowgun) loaded with a dart you’ve poisoned and the target rolls a failure on the poison’s initial save, the target critically fails instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("0b3de993-b45d-46a0-9e79-88e1f13207f1"), Feats.Instances.PoisonerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("fc22d03b-db72-4b90-a856-816db034204a"), Feats.Instances.PoisonerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e3555cdb-5954-4c93-9e11-55ba96991699"),
+                Id = Guid.Parse("8b16bc31-8a12-4249-bd6c-d342134ac846"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

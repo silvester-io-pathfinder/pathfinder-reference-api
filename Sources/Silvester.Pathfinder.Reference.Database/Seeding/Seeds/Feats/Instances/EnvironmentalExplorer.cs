@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EnvironmentalExplorer : Template
     {
-        public static readonly Guid ID = Guid.Parse("8d50a280-4a35-499d-8ad0-28e2297e5964");
+        public static readonly Guid ID = Guid.Parse("71ea8a56-cc2e-4452-a58c-776cf9118705");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a7ae119-2892-4a74-bd14-de1f528b7d30"), Type = TextBlockType.Text, Text = "You&#39;ve traversed enough untamed wilderness to gain an intuitive understanding of the dangers that exist in such places. Your extensive familiarity means you sometimes notice perils even when you&#39;re not trying to. Even if you aren&#39;t (action: Searching | Search) in exploration mode, you can attempt a check to find environmental hazards that normally require you to (action: Search) for them. You still need to meet any other requirements to find a particular hazard." };
+            yield return new TextBlock { Id = Guid.Parse("a4622bed-4770-416b-8cd0-2010c462b04a"), Type = TextBlockType.Text, Text = "You&#39;ve traversed enough untamed wilderness to gain an intuitive understanding of the dangers that exist in such places. Your extensive familiarity means you sometimes notice perils even when you&#39;re not trying to. Even if you aren&#39;t (action: Searching | Search) in exploration mode, you can attempt a check to find environmental hazards that normally require you to (action: Search) for them. You still need to meet any other requirements to find a particular hazard." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("71610432-99cb-48ad-937d-f9052892b346"), Feats.Instances.PathfinderAgentDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("96b22cd4-d612-4f4c-8f65-1c0241ff9e95"), Feats.Instances.PathfinderAgentDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2c4f9e79-aefb-4d68-84ce-017afb84a0a8"),
+                Id = Guid.Parse("75d59a3a-9063-49fc-866a-75e2008fb13a"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

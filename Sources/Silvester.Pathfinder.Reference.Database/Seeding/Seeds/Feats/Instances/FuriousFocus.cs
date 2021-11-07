@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FuriousFocus : Template
     {
-        public static readonly Guid ID = Guid.Parse("9726fafb-9271-4f78-b8de-5d9ba494fb6b");
+        public static readonly Guid ID = Guid.Parse("27b12c62-cc06-494e-96cc-32e48cb2343d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0d676568-3696-48e1-9320-612701fb208c"), Type = TextBlockType.Text, Text = "You’ve learned to maintain your balance even when swinging furiously. When you make a (Feat: Power Attack) with a melee weapon you’re wielding in two hands, it counts as one attack toward your multiple attack penalty instead of two." };
+            yield return new TextBlock { Id = Guid.Parse("b439fe1a-b8f6-4e45-83ee-369c0c6f6349"), Type = TextBlockType.Text, Text = "You’ve learned to maintain your balance even when swinging furiously. When you make a (Feat: Power Attack) with a melee weapon you’re wielding in two hands, it counts as one attack toward your multiple attack penalty instead of two." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("2c46649c-8597-4423-a4a5-ac4a89d9fdf1"), Feats.Instances.PowerAttack.ID);
+            builder.HaveSpecificFeat(Guid.Parse("384fcdaf-43ae-4b80-bd2e-d2bfc77ef32d"), Feats.Instances.PowerAttack.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e065c5ff-e78d-4372-a53a-dcf3aa893904"),
+                Id = Guid.Parse("15917f90-bd44-4485-8fe6-e740fe13876b"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

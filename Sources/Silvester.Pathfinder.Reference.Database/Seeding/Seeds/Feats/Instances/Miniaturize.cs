@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Miniaturize : Template
     {
-        public static readonly Guid ID = Guid.Parse("0ff82f37-162a-4f35-89b1-6ff3b8b5a138");
+        public static readonly Guid ID = Guid.Parse("ba8c8f15-ea6e-4280-a8fa-9104b8f20b50");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("71c22367-1eb2-4e92-888c-0728e545b79f"), Type = TextBlockType.Text, Text = "Your eidolon can shrink even further. When using (feat: Shrink Down), your eidolon can reduce its size to Tiny." };
+            yield return new TextBlock { Id = Guid.Parse("7ebe2f8f-7d59-44fb-84c1-e100538aa71b"), Type = TextBlockType.Text, Text = "Your eidolon can shrink even further. When using (feat: Shrink Down), your eidolon can reduce its size to Tiny." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("c88a2ca1-b366-4bb4-a80f-7e416825d094"), Feats.Instances.ShrinkDown.ID);
+            builder.HaveSpecificFeat(Guid.Parse("a559d105-e6be-4d3f-be64-898f9edf5deb"), Feats.Instances.ShrinkDown.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ab47afd5-893f-491a-ad8c-f6b20990e20f"),
+                Id = Guid.Parse("861bc8a0-318b-40ad-beee-95b1ec1d9a2e"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

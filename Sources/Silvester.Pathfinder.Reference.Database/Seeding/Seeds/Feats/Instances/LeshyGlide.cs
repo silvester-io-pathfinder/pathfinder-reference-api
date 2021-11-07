@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LeshyGlide : Template
     {
-        public static readonly Guid ID = Guid.Parse("e21ca347-438f-4bf2-a9b3-4726a4bf3898");
+        public static readonly Guid ID = Guid.Parse("4d72380a-654d-45f9-930f-c8a4279b60ea");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e9ab7aa6-94eb-4b87-bd77-dc12c405b093"), Type = TextBlockType.Text, Text = "Using your own leaves, you can control your descent. You glide slowly toward the ground, 5 feet down and up to 25 feet forward through the air. As long as you spend at least 1 action gliding each round and have not yet reached the ground, you remain in the air at the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("acc5924f-61b6-4c90-92c2-cd99890a7e6c"), Type = TextBlockType.Text, Text = "Using your own leaves, you can control your descent. You glide slowly toward the ground, 5 feet down and up to 25 feet forward through the air. As long as you spend at least 1 action gliding each round and have not yet reached the ground, you remain in the air at the end of your turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("183e6ca3-e684-452e-8a66-bfa1b4b74936"), or => 
+            builder.AddOr(Guid.Parse("25d2b9c3-c3f9-4c86-87c7-a31afb99f3b7"), or => 
             {
-                or.HaveSpecificHeritage(Guid.Parse("3aae02c9-67bf-4c12-bc3a-bd0ccac81ee7"), Heritages.Instances.LeafLeshy.ID);
-                or.HaveSpecificFeat(Guid.Parse("7d615954-79e0-4684-adb9-71f818eb55ce"), Feats.Instances.CatFall.ID);
+                or.HaveSpecificHeritage(Guid.Parse("7576d2d2-62c4-4ab7-b5d7-8a7b949921dd"), Heritages.Instances.LeafLeshy.ID);
+                or.HaveSpecificFeat(Guid.Parse("7db6d757-20b2-4d28-8847-e72a7ea0f716"), Feats.Instances.CatFall.ID);
             });
         }
 
@@ -50,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d515ee36-6c0d-4059-8d70-182cd577fe77"),
+                Id = Guid.Parse("6a294777-b04e-4ca9-9330-4fd3ecfe21b5"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

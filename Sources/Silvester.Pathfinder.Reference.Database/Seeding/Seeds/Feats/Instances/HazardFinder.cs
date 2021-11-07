@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HazardFinder : Template
     {
-        public static readonly Guid ID = Guid.Parse("3db3d565-941e-42c1-981c-34a02e2d7672");
+        public static readonly Guid ID = Guid.Parse("06ce719a-0674-48c1-9f57-8d9ab8fa5a10");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("98afd9c6-ca3b-4675-a98e-7e2a5f45aeaf"), Type = TextBlockType.Text, Text = "You have an intuitive ability to sense hazards. You gain a +1 circumstance bonus to Perception checks to find traps and hazards, to AC against their attacks, and to saves against their effects. You can find hazards that would normally require you to (action: Search) even if you aren’t (action: Searching | Search)." };
+            yield return new TextBlock { Id = Guid.Parse("54e64b46-9f68-4749-a90d-e0d46f9fa65b"), Type = TextBlockType.Text, Text = "You have an intuitive ability to sense hazards. You gain a +1 circumstance bonus to Perception checks to find traps and hazards, to AC against their attacks, and to saves against their effects. You can find hazards that would normally require you to (action: Search) even if you aren’t (action: Searching | Search)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("38e418c7-58b9-4f7e-a6f9-77f4ef4d5627"),
+                Id = Guid.Parse("fc3f2bff-d2f1-4bd0-a52e-b7af31399b6f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LightningSnares : Template
     {
-        public static readonly Guid ID = Guid.Parse("886516aa-8c3e-4f59-b537-607192d7f849");
+        public static readonly Guid ID = Guid.Parse("a8361dfc-4a51-4be9-998c-c52fc2a656ec");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e4005bc1-2e6b-409e-983a-af317edf073c"), Type = TextBlockType.Text, Text = "You can rig a trap with incredible speed. When you create a snare that normally takes 1 minute to (action: Craft), you can (action: Craft) it using a single (action: Interact) action instead." };
+            yield return new TextBlock { Id = Guid.Parse("a945f46c-708f-454d-871e-1adf0d643877"), Type = TextBlockType.Text, Text = "You can rig a trap with incredible speed. When you create a snare that normally takes 1 minute to (action: Craft), you can (action: Craft) it using a single (action: Interact) action instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("3b551bec-89c7-41e5-b8ef-37e0c4243ddc"), Proficiencies.Instances.Master.ID, Skills.Instances.Crafting.ID);
-            builder.HaveSpecificFeat(Guid.Parse("1073d082-06f9-4dd2-8d35-4bd1ef000947"), Feats.Instances.SnarecrafterDedictation.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("f8961f9b-0e74-4857-9ac5-360ed402b7f6"), Proficiencies.Instances.Master.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("dbc00e0d-6029-43e8-9d5b-c470791a45ea"), Feats.Instances.SnarecrafterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("76383a0d-3e1b-44a4-8699-9dfacbb5e54d"),
+                Id = Guid.Parse("7c0fef0b-e61e-4124-bb0f-002ab02af29f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

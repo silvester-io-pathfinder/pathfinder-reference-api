@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Truespeech : Template
     {
-        public static readonly Guid ID = Guid.Parse("5aedf30b-e4a3-437e-8f8d-9987e9be0a7c");
+        public static readonly Guid ID = Guid.Parse("a6808dc8-9e61-438e-a95e-d3a7eea65b76");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fcbdc497-9569-428f-b761-03845277f00f"), Type = TextBlockType.Text, Text = "It is paramount that you are understood and you understand others; language need not impede your message. You can cast (spell: tongues) as a 5th-level divine innate spell once per day on yourself only. You gain a +1 status bonus to Diplomacy checks for the duration of the spell when speaking to creatures with whom you already shared a language before casting." };
+            yield return new TextBlock { Id = Guid.Parse("cda878ba-5804-41cc-bf79-d11e851aed89"), Type = TextBlockType.Text, Text = "It is paramount that you are understood and you understand others; language need not impede your message. You can cast (spell: tongues) as a 5th-level divine innate spell once per day on yourself only. You gain a +1 status bonus to Diplomacy checks for the duration of the spell when speaking to creatures with whom you already shared a language before casting." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f5a3df7e-9b88-4a48-8a08-6292a505bb39"), Feats.Instances.Angelkin.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6bedc4bb-0cd9-426c-85b6-18a3d4186118"), Feats.Instances.Angelkin.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("35365e9f-1d9d-4d1b-a552-437fde5b3db1"),
+                Id = Guid.Parse("c9b76dc2-4cf0-4e37-8a80-8f81626f1f12"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

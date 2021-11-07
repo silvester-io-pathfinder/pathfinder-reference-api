@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FamiliarMasterYes : Template
     {
-        public static readonly Guid ID = Guid.Parse("43a25762-ad0b-4545-bf89-69e20801082d");
+        public static readonly Guid ID = Guid.Parse("ae507921-fec4-43ee-bd6c-3bf4835d83a1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ba7fa3f4-2c67-49a2-a2b3-38f4f39d0948"), Type = TextBlockType.Text, Text = "You already have a familiar, you gain the (feat: Enhanced Familiar) feat." };
+            yield return new TextBlock { Id = Guid.Parse("199db4bb-8c7e-490b-a61d-6e1a87425b4c"), Type = TextBlockType.Text, Text = "You already have a familiar, you gain the (feat: Enhanced Familiar) feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c9ba6be0-e87c-4f70-8405-2839289c7e52"),
+                Id = Guid.Parse("4d9631a2-bd96-411e-8548-16ac0ebdfd5a"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

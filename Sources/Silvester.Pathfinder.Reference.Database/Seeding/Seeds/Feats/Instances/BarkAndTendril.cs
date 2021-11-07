@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BarkAndTendril : Template
     {
-        public static readonly Guid ID = Guid.Parse("9858788b-1ef6-4387-a291-43f651d22d9c");
+        public static readonly Guid ID = Guid.Parse("8ba059f3-3b16-45be-aaae-31c258114c70");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("628ad408-856f-4489-b26f-4c864b56c604"), Type = TextBlockType.Text, Text = "You wield primal magic. You can cast (Spell: barkskin) and (Spell: entangle) as 2nd-level primal innate spells once per day each." };
+            yield return new TextBlock { Id = Guid.Parse("06dab214-1949-47d8-a04f-4a0abec9b9e9"), Type = TextBlockType.Text, Text = "You wield primal magic. You can cast (Spell: barkskin) and (Spell: entangle) as 2nd-level primal innate spells once per day each." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("56ea4be0-656e-426f-9822-5b09bc0a44b3"),
+                Id = Guid.Parse("0306d73b-5334-4549-8c5d-8de60f7cec73"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RokoanArts : Template
     {
-        public static readonly Guid ID = Guid.Parse("ba73c2b6-69b3-41b7-83a5-cff3665833c1");
+        public static readonly Guid ID = Guid.Parse("d632b7a5-9d3c-457a-94e7-1798c7e38ca1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2a34cc6e-986e-4244-8853-c5189fbe1263"), Type = TextBlockType.Text, Text = "Ancestral spirits have begun to bond themselves to you, granting you powers characteristic of a rokoa. You can cast (spell: speak with animals) and (spell: status) as primal innate spells once per day each." };
+            yield return new TextBlock { Id = Guid.Parse("ff6e5411-bb3a-4968-8d03-4c6a06ecfac8"), Type = TextBlockType.Text, Text = "Ancestral spirits have begun to bond themselves to you, granting you powers characteristic of a rokoa. You can cast (spell: speak with animals) and (spell: status) as primal innate spells once per day each." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("07276ddf-c9f6-4a0b-8ded-42988fbcac26"),
+                Id = Guid.Parse("4f387d5e-9d7b-433d-90f1-f799eddf15ee"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

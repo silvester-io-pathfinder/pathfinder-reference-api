@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeceptiveWorship : Template
     {
-        public static readonly Guid ID = Guid.Parse("e68f3c58-1b97-4f90-91ca-94719a58ebcb");
+        public static readonly Guid ID = Guid.Parse("8ae7a55d-7e56-4fdf-8edd-d7692ffc9aa0");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c7419a4-d927-4aef-b7b8-485c0734cd66"), Type = TextBlockType.Text, Text = "Members of your cult frequently pass themselves off as worshippers of other religions. You can use Occultism instead of Deception to (action: Impersonate) a typical worshipper of another faith or to (action: Lie) specifically to claim you are a member of the faith you are (action: Impersonating | Impersonate). You still need to use the Deception skill to (action: Impersonate) a specific worshipper or to perform other deceptive actions, such as attempting to (action: Lie) about any other matter." };
+            yield return new TextBlock { Id = Guid.Parse("71cd461c-4288-41ea-9bd1-60c3d71def2c"), Type = TextBlockType.Text, Text = "Members of your cult frequently pass themselves off as worshippers of other religions. You can use Occultism instead of Deception to (action: Impersonate) a typical worshipper of another faith or to (action: Lie) specifically to claim you are a member of the faith you are (action: Impersonating | Impersonate). You still need to use the Deception skill to (action: Impersonate) a specific worshipper or to perform other deceptive actions, such as attempting to (action: Lie) about any other matter." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("66a6e916-7fc7-4ee4-91e1-213cf7f58c22"), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("82441164-0f95-4b3f-90fa-545747360497"), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("19260661-3ba9-41b4-a717-d04b5298781d"),
+                Id = Guid.Parse("efeb9dff-d403-4490-85f5-03765de1c6ae"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

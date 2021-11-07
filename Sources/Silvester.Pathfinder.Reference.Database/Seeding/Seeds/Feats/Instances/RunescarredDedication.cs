@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RunescarredDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("ccee0d21-8da8-4224-8f33-3424d429809e");
+        public static readonly Guid ID = Guid.Parse("d0c93897-10db-4439-9890-d793e842f6b0");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c628b013-5d74-48bb-b67f-241ce57676dd"), Type = TextBlockType.Text, Text = "~ Access: You are from the Saga Lands." };
-            yield return new TextBlock { Id = Guid.Parse("248e9fca-2160-4644-98a6-37a27ff9f0f9"), Type = TextBlockType.Text, Text = "Whether through blood (if you’re Varisian, Shoanti, or New Thassilonian) or by exposure to rune magic, you have become runescarred, with visible, glowing runes on your body in the form of tattoos or scars. You might have possessed these marks before gaining the archetype, but you only truly became runescarred when you chose to study and tap into the runes’ power. You become an expert in Arcana and you also become trained in Thassilon Lore, or an expert in Thassilon Lore if you were already trained in it." };
-            yield return new TextBlock { Id = Guid.Parse("99c84fdd-b75a-498a-a70a-c3aa932d49ce"), Type = TextBlockType.Text, Text = "Choose one cantrip from the arcane list. One of the runes on your body corresponds to the chosen cantrip, and you can cast the chosen cantrip as an innate arcane spell." };
+            yield return new TextBlock { Id = Guid.Parse("68f36e19-6604-41ef-9ec7-efc27e41343b"), Type = TextBlockType.Text, Text = "~ Access: You are from the Saga Lands." };
+            yield return new TextBlock { Id = Guid.Parse("087a9536-38e6-4fa3-b2a3-7e7a94695e4a"), Type = TextBlockType.Text, Text = "Whether through blood (if you’re Varisian, Shoanti, or New Thassilonian) or by exposure to rune magic, you have become runescarred, with visible, glowing runes on your body in the form of tattoos or scars. You might have possessed these marks before gaining the archetype, but you only truly became runescarred when you chose to study and tap into the runes’ power. You become an expert in Arcana and you also become trained in Thassilon Lore, or an expert in Thassilon Lore if you were already trained in it." };
+            yield return new TextBlock { Id = Guid.Parse("09baa92e-9435-4b6c-ae33-c21354fe23e3"), Type = TextBlockType.Text, Text = "Choose one cantrip from the arcane list. One of the runes on your body corresponds to the chosen cantrip, and you can cast the chosen cantrip as an innate arcane spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("5212f593-b418-4f33-a0b4-b6127bbabcbb"), Proficiencies.Instances.Trained.ID, Skills.Instances.Arcana.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("0a710ea6-f4c3-4613-88f2-912cc5fc3799"), Proficiencies.Instances.Trained.ID, Skills.Instances.Arcana.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("33e6f148-8743-4479-a680-dc2b3db0fc0b"),
+                Id = Guid.Parse("acbef6c2-dc83-4018-912f-31dc630927af"),
                 SourceId = Sources.Instances.LostOmensWorldGuide.ID,
                 Page = -1
             };

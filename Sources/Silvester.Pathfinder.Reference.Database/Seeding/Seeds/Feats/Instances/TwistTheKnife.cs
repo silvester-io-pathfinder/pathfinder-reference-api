@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TwistTheKnife : Template
     {
-        public static readonly Guid ID = Guid.Parse("4a6f81d8-fb3e-4a08-b813-47765d0fb455");
+        public static readonly Guid ID = Guid.Parse("2a8b587e-1b17-48b1-ad76-55fdc643c18a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5cfa5b90-450b-4aad-a718-02ed3a9d7dfa"), Type = TextBlockType.Text, Text = "After stabbing your opponent in a weak spot, you tear the wound open. You deal persistent bleed damage to the target equal to your number of sneak attack damage dice." };
+            yield return new TextBlock { Id = Guid.Parse("15922fc5-19df-4534-868d-9b6dbdd33770"), Type = TextBlockType.Text, Text = "After stabbing your opponent in a weak spot, you tear the wound open. You deal persistent bleed damage to the target equal to your number of sneak attack damage dice." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3e49b066-83b4-4abf-bdfb-274e36dc8a30"),
+                Id = Guid.Parse("d116f2ca-f330-486a-bf1c-3aea4aacea2c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ScamperUnderfoot : Template
     {
-        public static readonly Guid ID = Guid.Parse("80b475d7-40a4-4183-87d8-a543120d76f2");
+        public static readonly Guid ID = Guid.Parse("6624a1c6-32bb-4537-9daa-88ff08530fd0");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("766db68b-3ccd-4f54-9101-00cc4d366981"), Type = TextBlockType.Text, Text = "You are used to ducking under foes and can scurry around the battlefield with ease. You gain a +1 circumstance bonus to Acrobatics checks to (action: Tumble Through) the spaces of Medium or larger enemies, and the presence of an enemy doesn’t make the squares difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("66aff5a0-5459-4546-a212-f2cfdf9f4cea"), Type = TextBlockType.Text, Text = "You are used to ducking under foes and can scurry around the battlefield with ease. You gain a +1 circumstance bonus to Acrobatics checks to (action: Tumble Through) the spaces of Medium or larger enemies, and the presence of an enemy doesn’t make the squares difficult terrain." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6c6dd109-bf12-4cf0-9c81-540ea50a6ac6"),
+                Id = Guid.Parse("643cdb35-8eb2-4c03-829f-247160b8f846"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

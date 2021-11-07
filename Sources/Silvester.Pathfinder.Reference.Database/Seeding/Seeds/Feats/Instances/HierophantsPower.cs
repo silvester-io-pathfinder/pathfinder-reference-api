@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HierophantsPower : Template
     {
-        public static readonly Guid ID = Guid.Parse("d7e83fa8-e286-49bc-a9f7-4a1d83ce4d1f");
+        public static readonly Guid ID = Guid.Parse("e1b215ae-bd83-448d-b5bd-efb3a4753987");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("105ee859-9ffb-4f31-8b9d-bad6ba8a524b"), Type = TextBlockType.Text, Text = "You have entwined yourself with the natural world, and its full power flows through you. You gain an additional 10th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("8a39885d-1cdf-450f-ba5a-f13b3cf1bd4e"), Type = TextBlockType.Text, Text = "You have entwined yourself with the natural world, and its full power flows through you. You gain an additional 10th-level spell slot." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3650b48a-5c86-43f8-93ac-8a955e5c9e3a"),
+                Id = Guid.Parse("6351ff82-13e2-4ae4-b6f7-d247e0977650"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

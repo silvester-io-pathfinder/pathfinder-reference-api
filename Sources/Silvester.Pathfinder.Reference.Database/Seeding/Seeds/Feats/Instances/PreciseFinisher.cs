@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PreciseFinisher : Template
     {
-        public static readonly Guid ID = Guid.Parse("f8dd0fbe-17d7-4705-9587-2277e59d76ac");
+        public static readonly Guid ID = Guid.Parse("da911e8c-2695-4c31-b197-34f10beb45f9");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("705b74c6-270d-427c-8150-b6deeba0a3b2"), Type = TextBlockType.Text, Text = "Even when your foe avoids your (feat: Confident Finisher), you can still hit a vital spot. On a failure with (feat: Confident Finisher), you apply your full precise strike damage instead of half." };
+            yield return new TextBlock { Id = Guid.Parse("c7376b35-c07c-46ce-b18c-843cc21323aa"), Type = TextBlockType.Text, Text = "Even when your foe avoids your (feat: Confident Finisher), you can still hit a vital spot. On a failure with (feat: Confident Finisher), you apply your full precise strike damage instead of half." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f85296c2-f82b-4614-87c7-8099b6ab3925"), Feats.Instances.ConfidentFinisher.ID);
+            builder.HaveSpecificFeat(Guid.Parse("b80f56c2-aaaf-4c0b-bec0-f48c0909a47c"), Feats.Instances.ConfidentFinisher.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("04a2b60b-0a53-42b5-80a4-8704c93a037c"),
+                Id = Guid.Parse("fcd1f7af-6df5-4215-98d8-5fa4a20c085e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

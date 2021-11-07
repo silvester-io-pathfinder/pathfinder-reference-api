@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class YoureNext : Template
     {
-        public static readonly Guid ID = Guid.Parse("0946943c-9a5c-4734-86cb-c645eaa917de");
+        public static readonly Guid ID = Guid.Parse("b896f9d4-0db5-42d7-9ba5-1eb09765ba0a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9f91e61a-0a98-4258-a030-b85cd275dea0"), Type = TextBlockType.Text, Text = "After downing a foe, you promise another you’re coming after them next. Attempt an Intimidation check with a +2 circumstance bonus to (action: Demoralize) a single creature that you can see and that can see you. If you’re legendary in Intimidation, you can use this as a free action with the same trigger." };
+            yield return new TextBlock { Id = Guid.Parse("5c626c7d-0750-4484-9503-0a77d5a3f2ee"), Type = TextBlockType.Text, Text = "After downing a foe, you promise another you’re coming after them next. Attempt an Intimidation check with a +2 circumstance bonus to (action: Demoralize) a single creature that you can see and that can see you. If you’re legendary in Intimidation, you can use this as a free action with the same trigger." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("5d7b27f1-3923-4884-bcde-25f8ccbaabc8"), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("20bcb5d7-ffed-433c-ae2c-5fc7ef957844"), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5696adcb-76fb-47d8-91e3-35e251f60c7f"),
+                Id = Guid.Parse("c8213212-128a-47e7-afb6-e671837cbe7c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BasicScrollCache : Template
     {
-        public static readonly Guid ID = Guid.Parse("71d77451-46bd-4bf4-af73-f991bc5a77a3");
+        public static readonly Guid ID = Guid.Parse("5834fe02-7f01-42fa-a92d-d6d16a87994e");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8e03cee-0a77-46c5-a8ab-06696d7598a6"), Type = TextBlockType.Text, Text = "You have a vast and overflowing collection of scroll scraps, riddled with errors and misspellings and leaking energy like a sieve. With enough care, you can coax these scroll scraps into functioning – briefly. Each day during your daily preparations, you can create a single temporary scroll containing a 1st-level spell. The spell must be a common spell from the Core Rulebook, or another spell you learned via (action: Learn a Spell), and it must come from a tradition in which you have the corresponding skill trained. This scroll is an unstable, temporary item and loses its magic the next time you make your daily preparations if you haven’t already used it. It can’t be used to (action: Learn the Spell | Learn a Spell)." };
-            yield return new TextBlock { Id = Guid.Parse("c86b1f25-8f9b-4ae3-b6aa-ac3d678d9c6f"), Type = TextBlockType.Text, Text = "At 8th level, add a second temporary scroll containing a 2nd-level spell." };
+            yield return new TextBlock { Id = Guid.Parse("61c2e069-6868-404a-ad9d-58ad86709ec6"), Type = TextBlockType.Text, Text = "You have a vast and overflowing collection of scroll scraps, riddled with errors and misspellings and leaking energy like a sieve. With enough care, you can coax these scroll scraps into functioning – briefly. Each day during your daily preparations, you can create a single temporary scroll containing a 1st-level spell. The spell must be a common spell from the Core Rulebook, or another spell you learned via (action: Learn a Spell), and it must come from a tradition in which you have the corresponding skill trained. This scroll is an unstable, temporary item and loses its magic the next time you make your daily preparations if you haven’t already used it. It can’t be used to (action: Learn the Spell | Learn a Spell)." };
+            yield return new TextBlock { Id = Guid.Parse("ffc46c97-3209-4686-9c56-53b8e6b2db8a"), Type = TextBlockType.Text, Text = "At 8th level, add a second temporary scroll containing a 2nd-level spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1eba5bfd-8889-4eb9-beec-d05bb42b4b61"), Feats.Instances.ScrollTricksterDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("7ae8c8c3-48a6-4144-b2ff-ac8840d0d297"), Feats.Instances.ScrollTricksterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("77aa85f3-ffe8-408e-ac16-2627f5180a02"),
+                Id = Guid.Parse("f2b718b9-74e2-4dc6-9013-1c2632949b3f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

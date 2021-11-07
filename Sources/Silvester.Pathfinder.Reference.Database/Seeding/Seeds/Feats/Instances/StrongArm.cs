@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StrongArm : Template
     {
-        public static readonly Guid ID = Guid.Parse("77728534-7cba-42d0-a45e-0ffe0b1b4ec4");
+        public static readonly Guid ID = Guid.Parse("f6c909b5-3a81-4b21-a7c2-b7f270f8634e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("647320a4-17c8-405e-b862-3212711687dd"), Type = TextBlockType.Text, Text = "When you (action: Strike) with a thrown weapon, the weapon’s range increment increases 10 feet." };
+            yield return new TextBlock { Id = Guid.Parse("ba2d399c-2fa0-453d-9c98-adde1e895203"), Type = TextBlockType.Text, Text = "When you (action: Strike) with a thrown weapon, the weapon’s range increment increases 10 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9b265cee-25b8-4410-94eb-f50e58019584"),
+                Id = Guid.Parse("44e84a79-c330-42b8-ad59-e1d144d8adb2"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

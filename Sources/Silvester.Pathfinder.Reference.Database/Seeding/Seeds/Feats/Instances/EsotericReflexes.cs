@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EsotericReflexes : Template
     {
-        public static readonly Guid ID = Guid.Parse("9a01c60c-c446-4b80-a644-2473a490f0a6");
+        public static readonly Guid ID = Guid.Parse("4c4730c7-62f0-43ee-902d-b32569f5499b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("204118a3-f60d-452f-ae67-4639f7bf9446"), Type = TextBlockType.Text, Text = "Your connection to your implements is so strong that you can use their reactive abilities almost by instinct. At the start of your turn, you gain an additional reaction, which you can use only for the reactions granted by your implements." };
+            yield return new TextBlock { Id = Guid.Parse("923861bf-b740-4960-9375-26cf30ae15d6"), Type = TextBlockType.Text, Text = "Your connection to your implements is so strong that you can use their reactive abilities almost by instinct. At the start of your turn, you gain an additional reaction, which you can use only for the reactions granted by your implements." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.Manual(Guid.Parse("e1ed75c3-6b67-4dd0-9b32-bc4e4efdbeaa"), "An implement that grants a reaction.");
+            builder.Manual(Guid.Parse("c5dd06f6-b87d-45d9-b438-aa2db09140eb"), "An implement that grants a reaction.");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("04b6580e-159d-47b6-964e-7da46302d626"),
+                Id = Guid.Parse("be92925d-e33e-4d4b-9057-cdfc2db15345"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

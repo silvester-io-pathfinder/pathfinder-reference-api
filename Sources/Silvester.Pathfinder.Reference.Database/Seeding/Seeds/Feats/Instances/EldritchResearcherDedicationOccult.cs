@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EldritchResearcherDedicationOccult : Template
     {
-        public static readonly Guid ID = Guid.Parse("24b0325d-d8ec-48d9-95c3-41491a28388b");
+        public static readonly Guid ID = Guid.Parse("6839ee9f-d0a8-404a-aeea-29868d857030");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("df67fbe1-9e09-4930-a01f-c2283b6a5192"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single occult cantrip of your choice. If you weren&#39;t already, you become trained in occult spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
+            yield return new TextBlock { Id = Guid.Parse("1d0f6a57-6a6b-43b6-9d83-52184a2c725f"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single occult cantrip of your choice. If you weren&#39;t already, you become trained in occult spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9db76837-cf72-4bfe-88c1-c1198c31ea5e"),
+                Id = Guid.Parse("4bbe2df6-f1b2-46d2-97de-b74832ee0e7a"),
                 SourceId = Sources.Instances.AbominationVaults.ID,
                 Page = -1
             };

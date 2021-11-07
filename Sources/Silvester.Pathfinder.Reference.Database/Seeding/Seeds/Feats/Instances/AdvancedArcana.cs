@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdvancedArcana : Template
     {
-        public static readonly Guid ID = Guid.Parse("5099da35-35a2-41ac-80e6-f93d69bd5d56");
+        public static readonly Guid ID = Guid.Parse("057c256d-f361-42fa-9275-6c91be178454");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d07ca018-6dd6-40d1-b7fa-c11d1d28a6e7"), Type = TextBlockType.Text, Text = "You gain one wizard feat. For the purpose of meeting its prerequisites, your wizard level is equal to half your character level." };
+            yield return new TextBlock { Id = Guid.Parse("d1044d9f-76b8-41f8-8141-36786e626244"), Type = TextBlockType.Text, Text = "You gain one wizard feat. For the purpose of meeting its prerequisites, your wizard level is equal to half your character level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("c8190e55-9e74-40c1-a75c-e1e54175c001"), Feats.Instances.BasicArcana.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d8119166-ec24-4ee4-9a3f-b9cdb7d4c6fd"), Feats.Instances.BasicArcana.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d6230343-2363-4459-9bb7-a1438e696712"),
+                Id = Guid.Parse("3441f333-66ec-46e8-890d-47e52bbc671c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

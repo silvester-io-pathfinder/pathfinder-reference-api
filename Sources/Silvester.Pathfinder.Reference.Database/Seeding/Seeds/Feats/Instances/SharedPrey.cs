@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SharedPrey : Template
     {
-        public static readonly Guid ID = Guid.Parse("1157c50a-0d0c-40ad-a629-60e9256ba46e");
+        public static readonly Guid ID = Guid.Parse("11e2e50f-ba26-44ea-b23e-30e974c7149b");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0881b6ac-30d0-4a9b-8faa-154c7a53bb12"), Type = TextBlockType.Text, Text = "Hunting as a duo, you and your ally both single out your prey. When you use (feat: Hunt Prey) and select only one prey, you can grant your (feat: Hunt Prey) benefits and hunter’s edge to an ally in addition to gaining them yourself. The ally retains these benefits until you use (feat: Hunt Prey) again." };
+            yield return new TextBlock { Id = Guid.Parse("ef9c05ec-8b94-4101-8a16-0f4c65678031"), Type = TextBlockType.Text, Text = "Hunting as a duo, you and your ally both single out your prey. When you use (feat: Hunt Prey) and select only one prey, you can grant your (feat: Hunt Prey) benefits and hunter’s edge to an ally in addition to gaining them yourself. The ally retains these benefits until you use (feat: Hunt Prey) again." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("79862c53-b1c1-484b-ae17-0a7ecbe33fb3"), Feats.Instances.DoublePrey.ID);
-            builder.HaveSpecificFeat(Guid.Parse("3cb8f926-5adf-4a32-a92a-d382af479b8d"), Feats.Instances.WardensBoon.ID);
+            builder.HaveSpecificFeat(Guid.Parse("efeff91b-c205-4fb2-b5b4-99b3da4980c9"), Feats.Instances.DoublePrey.ID);
+            builder.HaveSpecificFeat(Guid.Parse("a3caf79c-764c-4961-bccb-73b8935f0c3d"), Feats.Instances.WardensBoon.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b4a8caea-cac0-47ca-a84f-93bebac6888f"),
+                Id = Guid.Parse("399fb03c-406f-4d7a-a463-b1f4308f24b2"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

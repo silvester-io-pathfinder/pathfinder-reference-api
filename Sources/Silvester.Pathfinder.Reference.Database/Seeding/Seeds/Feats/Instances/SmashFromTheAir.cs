@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SmashFromTheAir : Template
     {
-        public static readonly Guid ID = Guid.Parse("35a303d1-2368-4ff9-9d3d-e28adf23d1de");
+        public static readonly Guid ID = Guid.Parse("1c7f3b46-6c95-4137-80c4-28e59aa3e991");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a49593d3-b8e6-4fd8-ab4c-24c9b526b3ab"), Type = TextBlockType.Text, Text = "Your expertise enables you to knock away spells. You can use (feat: Cut from the Air) against ranged spell attack rolls." };
+            yield return new TextBlock { Id = Guid.Parse("0dc0d64e-3a19-44fb-bb7c-f5bc56f56307"), Type = TextBlockType.Text, Text = "Your expertise enables you to knock away spells. You can use (feat: Cut from the Air) against ranged spell attack rolls." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("46af8f27-5b62-4e42-ab88-884f59a44571"), Feats.Instances.CutFromTheAir.ID);
+            builder.HaveSpecificFeat(Guid.Parse("faca5cff-4c78-4aba-b646-fc5f96d401ff"), Feats.Instances.CutFromTheAir.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cb4fe306-67c5-4ab9-bb1e-3725dd5b492c"),
+                Id = Guid.Parse("d6319974-5404-40ed-874b-3bc5390c65b5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

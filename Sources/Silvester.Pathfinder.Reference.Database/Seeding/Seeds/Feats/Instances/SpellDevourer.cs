@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpellDevourer : Template
     {
-        public static readonly Guid ID = Guid.Parse("b1675e67-9aac-4906-8632-1538254b5417");
+        public static readonly Guid ID = Guid.Parse("cf97c515-ff80-407b-98b1-c2fb18c286e0");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e89a4cdf-69b1-4c2a-b1bf-80c1f4452291"), Type = TextBlockType.Text, Text = "You don&#39;t just resist magic; you devour it. Whenever you succeed at a saving throw against a spell or magical effect, you gain temporary Hit Points equal to double the spell&#39;s level, or equal to the level if the magical effect isn&#39;t a spell. These temporary Hit Points last until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("428637d7-f5f8-4f20-a135-0ba31c13c06b"), Type = TextBlockType.Text, Text = "You don&#39;t just resist magic; you devour it. Whenever you succeed at a saving throw against a spell or magical effect, you gain temporary Hit Points equal to double the spell&#39;s level, or equal to the level if the magical effect isn&#39;t a spell. These temporary Hit Points last until the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("cb015ff1-4edd-4ff6-a4ae-b7629575148c"), Feats.Instances.PervasiveSuperstition.ID);
+            builder.HaveSpecificFeat(Guid.Parse("0e47a9e2-e52d-45fa-9b0b-29f2e938cbc9"), Feats.Instances.PervasiveSuperstition.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8c6ef0c1-2d35-4811-8f59-f6eab4fb561d"),
+                Id = Guid.Parse("2a93cc71-32f9-43d5-8a44-c4987eaeab6a"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

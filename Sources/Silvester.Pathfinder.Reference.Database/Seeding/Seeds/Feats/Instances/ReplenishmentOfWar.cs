@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReplenishmentOfWar : Template
     {
-        public static readonly Guid ID = Guid.Parse("f0d33c4c-9403-4731-8350-176075eba3cd");
+        public static readonly Guid ID = Guid.Parse("dc2af4fa-8d10-42e6-b9b9-27c4a097aad0");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c9bf86f5-d3ec-42af-8e34-4429010526fc"), Type = TextBlockType.Text, Text = "Striking out against your enemies draws praise and protection from your deity. When you damage a creature with a (action: Strike) using your deity’s favored weapon, you gain a number of temporary Hit Points equal to half your level, or equal to your level if the (action: Strike) was a critical hit. These temporary Hit Points last until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("307016ef-23b1-426a-b0db-e7e5d23eadd1"), Type = TextBlockType.Text, Text = "Striking out against your enemies draws praise and protection from your deity. When you damage a creature with a (action: Strike) using your deity’s favored weapon, you gain a number of temporary Hit Points equal to half your level, or equal to your level if the (action: Strike) was a critical hit. These temporary Hit Points last until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveFavoredWeaponSpecificProficiency(Guid.Parse("8610463c-2f00-4cdc-9dd2-311e639af366"), Proficiencies.Instances.Expert.ID);
+            builder.HaveFavoredWeaponSpecificProficiency(Guid.Parse("90bce786-79da-41b1-a137-c61b41c42e9e"), Proficiencies.Instances.Expert.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8d82c3ea-2edf-4dd1-a942-856dc55eba06"),
+                Id = Guid.Parse("dd1a53a2-ec96-4349-976e-af6ad85f7a98"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StudentOfTheDuelingArts : Template
     {
-        public static readonly Guid ID = Guid.Parse("c2e27cc6-e375-4cb7-a922-5ffc23827e6a");
+        public static readonly Guid ID = Guid.Parse("514b1f16-cca4-475d-99e8-d9c024fe6f74");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0e91e4dc-d914-4134-9c96-9a7486e91104"), Type = TextBlockType.Text, Text = "You have studied a great many combat techniques, which you can review each day. During your daily preparations, you can swap out any number of your duelist archetype feats for other duelist archetype feats of the appropriate level for which you are qualified. You can’t swap out (feat: Duelist Dedication) or Student of the Dueling Arts in this way." };
-            yield return new TextBlock { Id = Guid.Parse("70cc566b-fa7f-451d-a418-55ede76f1c25"), Type = TextBlockType.Text, Text = "In addition, you can enter a stance from a duelist archetype feat you don’t have by increasing the number of actions it takes to enter the stance by 1 (typically to 2 actions). You must still meet the feat’s prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("ab6bfb38-72cb-4776-a726-655f35e5467c"), Type = TextBlockType.Text, Text = "You have studied a great many combat techniques, which you can review each day. During your daily preparations, you can swap out any number of your duelist archetype feats for other duelist archetype feats of the appropriate level for which you are qualified. You can’t swap out (feat: Duelist Dedication) or Student of the Dueling Arts in this way." };
+            yield return new TextBlock { Id = Guid.Parse("3b909dcc-e0fb-4fd0-abd4-3bab98d45b32"), Type = TextBlockType.Text, Text = "In addition, you can enter a stance from a duelist archetype feat you don’t have by increasing the number of actions it takes to enter the stance by 1 (typically to 2 actions). You must still meet the feat’s prerequisites." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("2789d817-cb93-45be-8805-2535e55ae7a1"), Feats.Instances.DuelistDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("2718e8a3-6b8f-4b1b-a669-e4620583a764"), Feats.Instances.DuelistDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1b368c5a-9d20-417c-8332-879e9afda69b"),
+                Id = Guid.Parse("648ade69-08f7-4491-b4d3-7ddff07c1b83"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

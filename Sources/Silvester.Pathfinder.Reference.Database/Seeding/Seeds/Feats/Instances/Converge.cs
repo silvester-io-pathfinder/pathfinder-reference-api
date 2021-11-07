@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Converge : Template
     {
-        public static readonly Guid ID = Guid.Parse("67828a5f-85a4-4b5d-8ae9-98a0edf68720");
+        public static readonly Guid ID = Guid.Parse("4051987e-b1ba-4c33-952c-db4d3000318a");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4f99c2d6-6cd2-4e9c-940d-0ba413e375c8"), Type = TextBlockType.Text, Text = "Informing your ally of an opening created by your shot, you coordinate to set them up to hit the target at the same time. Your ally can make a melee (action: Strike) against the triggering foe as a reaction. This (action: Strike) doesn’t count toward that ally’s multiple attack penalty, and their multiple attack penalty doesn’t apply to this (action: Strike). If your ally’s (action: Strike) is successful, combine the damage from your successful ranged attack with the damage from your ally’s melee attack for the purpose of determining resistances and weaknesses." };
+            yield return new TextBlock { Id = Guid.Parse("0b42bb34-8c44-4fe1-a9fc-1127d7bf383f"), Type = TextBlockType.Text, Text = "Informing your ally of an opening created by your shot, you coordinate to set them up to hit the target at the same time. Your ally can make a melee (action: Strike) against the triggering foe as a reaction. This (action: Strike) doesn’t count toward that ally’s multiple attack penalty, and their multiple attack penalty doesn’t apply to this (action: Strike). If your ally’s (action: Strike) is successful, combine the damage from your successful ranged attack with the damage from your ally’s melee attack for the purpose of determining resistances and weaknesses." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("ca723137-e1cc-4760-8915-7ce6976f9f32"), Feats.Instances.OverwatchDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("38d082fa-4995-4a1b-ae5c-ee2ee411cddc"), Proficiencies.Instances.Master.ID, Skills.Instances.Percepton.ID);
+            builder.HaveSpecificFeat(Guid.Parse("13a75ab3-2610-402f-8c21-75aab789f3ab"), Feats.Instances.OverwatchDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("5d157438-16b4-474a-b2b7-a7bebcf59625"), Proficiencies.Instances.Master.ID, Skills.Instances.Perception.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("74ddace7-153a-4952-a66b-efd8d90eb644"),
+                Id = Guid.Parse("69d436d5-d003-43e7-b421-41f288c35c3d"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

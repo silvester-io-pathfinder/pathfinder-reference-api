@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GiantsLunge : Template
     {
-        public static readonly Guid ID = Guid.Parse("20da2cd8-fe96-45b6-b5e8-166792d6c93c");
+        public static readonly Guid ID = Guid.Parse("5b7106e8-6a7a-4e46-bec6-1dd7e4443218");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c9ff358-c575-4993-99b2-aba178da1960"), Type = TextBlockType.Text, Text = "You extend your body and prepare to attack foes outside your normal reach. Until your rage ends, all your melee weapons and unarmed attacks gain (trait: reach 10). This doesn’t increase the reach of any weapon or unarmed attack that already has the (trait: reach) trait, but it does combine with abilities that increase your reach due to increased size, such as (feat: Giant&#39;s Stature)." };
+            yield return new TextBlock { Id = Guid.Parse("03e25f0b-3388-4acf-971d-a14221f599b0"), Type = TextBlockType.Text, Text = "You extend your body and prepare to attack foes outside your normal reach. Until your rage ends, all your melee weapons and unarmed attacks gain (trait: reach 10). This doesn’t increase the reach of any weapon or unarmed attack that already has the (trait: reach) trait, but it does combine with abilities that increase your reach due to increased size, such as (feat: Giant&#39;s Stature)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificInstinct(Guid.Parse("2a3de577-3b52-47be-8943-67e0c95eeddb"), Instincts.Instances.GiantInstinct.ID);
+            builder.HaveSpecificInstinct(Guid.Parse("38cd2ac6-6bc1-4dd3-8d0a-30b1364d4bf5"), Instincts.Instances.GiantInstinct.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("87c7aab9-ea27-4417-b2e7-395fd5a7d337"),
+                Id = Guid.Parse("8d32fd21-1953-4337-89bd-d87695a715cb"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

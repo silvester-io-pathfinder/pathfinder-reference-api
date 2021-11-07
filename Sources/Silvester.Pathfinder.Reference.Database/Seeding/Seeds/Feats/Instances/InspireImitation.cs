@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InspireImitation : Template
     {
-        public static readonly Guid ID = Guid.Parse("d2537034-5395-41b9-b663-7444fa4cb88c");
+        public static readonly Guid ID = Guid.Parse("06067583-1db6-4514-b710-40c3d289bfa7");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3cac99e6-fa2d-4895-8f8c-2e504581aae8"), Type = TextBlockType.Text, Text = "Your own actions inspire your allies to great achievements. Whenever you critically succeed at a skill check, you automatically qualify to use the (action: Aid) reaction when attempting to help an ally using the same skill, even without spending an action to prepare to do so." };
+            yield return new TextBlock { Id = Guid.Parse("5c5739e7-f7cc-4932-9860-1cde2a35fa44"), Type = TextBlockType.Text, Text = "Your own actions inspire your allies to great achievements. Whenever you critically succeed at a skill check, you automatically qualify to use the (action: Aid) reaction when attempting to help an ally using the same skill, even without spending an action to prepare to do so." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("afe9eb5c-b12d-48fa-93d4-7f04b95d8176"),
+                Id = Guid.Parse("2714d969-0513-47ca-b020-231b7d6aa658"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

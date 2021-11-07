@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RevivificationProtocol : Template
     {
-        public static readonly Guid ID = Guid.Parse("554c70ae-29c4-4c47-8cfb-0f47e38fc945");
+        public static readonly Guid ID = Guid.Parse("35bda6e2-f128-484e-85a0-6b9ef43f22f0");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b539ce60-c75b-4619-b55a-63a926a1df8a"), Type = TextBlockType.Text, Text = "Your nanites are programmed to automatically revive you. You’re restored to 1 Hit Point, lose the dying and unconscious conditions, and can act normally on this turn. You gain or increase the wounded condition as normal when losing the dying condition in this way." };
+            yield return new TextBlock { Id = Guid.Parse("256b2a14-867f-4435-83a1-867f1a029429"), Type = TextBlockType.Text, Text = "Your nanites are programmed to automatically revive you. You’re restored to 1 Hit Point, lose the dying and unconscious conditions, and can act normally on this turn. You gain or increase the wounded condition as normal when losing the dying condition in this way." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f6fe2a65-1bb7-492a-83cc-462093aceba3"),
+                Id = Guid.Parse("8c4b13ed-5eef-48e6-a392-f520704ff9ec"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UndyingFerocity : Template
     {
-        public static readonly Guid ID = Guid.Parse("3d8ba5cc-783c-4b81-b360-c7a9ab216d25");
+        public static readonly Guid ID = Guid.Parse("7776b7e1-9465-4963-97e0-715397e79898");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cfee4151-2277-4799-a018-b307a9be91ab"), Type = TextBlockType.Text, Text = "You resist death&#39;s clutches with supernatural vigor. When you use (feat: Orc Ferocity), you gain temporary Hit Points equal to your level." };
+            yield return new TextBlock { Id = Guid.Parse("8ef17e68-d60d-4e4b-a1d8-59f2078fa113"), Type = TextBlockType.Text, Text = "You resist death&#39;s clutches with supernatural vigor. When you use (feat: Orc Ferocity), you gain temporary Hit Points equal to your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("55101f5c-cb84-4bcb-8a21-8dd3093aa3b2"), Feats.Instances.OrcFerocity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("f4d22a19-61af-49c4-957c-957c759e3479"), Feats.Instances.OrcFerocity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("572d59b9-1b69-4b63-80a0-20a258c773d6"),
+                Id = Guid.Parse("39e81043-0703-43c3-bc17-65a299be586e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

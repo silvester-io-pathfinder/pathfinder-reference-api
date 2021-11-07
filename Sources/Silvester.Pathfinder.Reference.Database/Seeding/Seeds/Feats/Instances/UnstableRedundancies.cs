@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UnstableRedundancies : Template
     {
-        public static readonly Guid ID = Guid.Parse("fd1d9352-25d9-4073-ad17-3a0d0d026307");
+        public static readonly Guid ID = Guid.Parse("95f5b342-da64-482f-9104-62815522133b");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8a6cbe5d-3f69-477d-99f7-5aed83ed2e20"), Type = TextBlockType.Text, Text = "You’ve built triple redundancies into your innovation and added all sorts of buffers to protect it from the harm of your unstable experiments. You automatically succeed at the triggering flat check." };
-            yield return new TextBlock { Id = Guid.Parse("f62309e8-b87a-4f83-b83f-8fba0d321b67"), Type = TextBlockType.Text, Text = "You can’t rely on your Unstable Redundancies again until you spend 10 minutes setting them back up. If you spend 10 minutes retuning your innovation so you can use (trait: unstable) actions again, you can set up your Unstable Redundancies during the same time." };
+            yield return new TextBlock { Id = Guid.Parse("77ffed67-c3dc-456a-95a6-52bf690cfbad"), Type = TextBlockType.Text, Text = "You’ve built triple redundancies into your innovation and added all sorts of buffers to protect it from the harm of your unstable experiments. You automatically succeed at the triggering flat check." };
+            yield return new TextBlock { Id = Guid.Parse("425cda7b-7b0d-4ace-b8a3-1a739969bb6b"), Type = TextBlockType.Text, Text = "You can’t rely on your Unstable Redundancies again until you spend 10 minutes setting them back up. If you spend 10 minutes retuning your innovation so you can use (trait: unstable) actions again, you can set up your Unstable Redundancies during the same time." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f453076f-f5f7-47d1-a7ad-56bb09c32209"),
+                Id = Guid.Parse("6fb20675-c207-4cee-b733-c1d1273f1fb4"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

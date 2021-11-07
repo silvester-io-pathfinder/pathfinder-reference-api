@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReflexiveCatch : Template
     {
-        public static readonly Guid ID = Guid.Parse("27e28e85-c8f6-456b-aee0-267c2ca93de6");
+        public static readonly Guid ID = Guid.Parse("cd9dc648-bc5c-41c6-b5c4-934c4cfcf923");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ceb5c417-dcb7-4208-8e29-7b49fe9375fd"), Type = TextBlockType.Text, Text = "You grab the triggering item. If you are (feat: Juggling | Juggle), you can immediately add the item to the objects you’re (feat: Juggling | Juggle) as a free action, which has the (trait: concentrate) and (trait: manipulate) traits." };
+            yield return new TextBlock { Id = Guid.Parse("d4a9ca5f-01c7-451f-ad9f-37a23eaff718"), Type = TextBlockType.Text, Text = "You grab the triggering item. If you are (feat: Juggling | Juggle), you can immediately add the item to the objects you’re (feat: Juggling | Juggle) as a free action, which has the (trait: concentrate) and (trait: manipulate) traits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("3ed96e22-7dfb-4b0a-8427-6a8373d7f76e"), Proficiencies.Instances.Expert.ID, Skills.Instances.Acrobatics.ID);
-            builder.HaveSpecificFeat(Guid.Parse("e56217c6-1869-4daf-af63-aff75e380a13"), Feats.Instances.JugglerDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("dd578320-0ddc-4ad8-9e8d-c5b79ad41839"), Proficiencies.Instances.Expert.ID, Skills.Instances.Acrobatics.ID);
+            builder.HaveSpecificFeat(Guid.Parse("85b5cf4a-a20b-4c95-bd60-b38367dea180"), Feats.Instances.JugglerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2b30f493-4879-44b1-bff3-81e39f53b95c"),
+                Id = Guid.Parse("816a4946-1cca-451f-8e06-4d4b00b8cb28"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

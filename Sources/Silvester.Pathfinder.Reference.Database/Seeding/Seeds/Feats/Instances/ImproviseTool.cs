@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImproviseTool : Template
     {
-        public static readonly Guid ID = Guid.Parse("940659c6-aa9f-4fad-bc49-79aec748debf");
+        public static readonly Guid ID = Guid.Parse("8496e5ab-587e-4723-9bbb-4787cbbe13f6");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ed249c2-93e7-4273-8d4b-22d9129b7a72"), Type = TextBlockType.Text, Text = "You can jury-rig solutions when you don’t have the proper tools on hand. You can attempt to (action: Repair) damaged items without a (item: repair kit)." };
-            yield return new TextBlock { Id = Guid.Parse("5947021f-9be1-46fc-8355-25d166102ced"), Type = TextBlockType.Text, Text = "If you have the raw materials available, you can (action: Craft) a basic (item: caltrop set | Caltrops), (item: candle), (item: compass), (item: crowbar), (item: fishing tackle), (item: flint and steel), (item: hammer), (item: ladder | Ladder 10-foot), (item: piton), (item: rope | Rope 50 feet), (item: 10-foot pole | Ten-Foot Pole), (item: replacement thieves’ picks | Replacement Picks), (item: long | Tool long) or (item: short tool | Tool short), or (item: torch) without consulting a (item: basic crafter’s book)." };
+            yield return new TextBlock { Id = Guid.Parse("457fcec1-77ab-4204-b6fa-cb1ca18b970a"), Type = TextBlockType.Text, Text = "You can jury-rig solutions when you don’t have the proper tools on hand. You can attempt to (action: Repair) damaged items without a (item: repair kit)." };
+            yield return new TextBlock { Id = Guid.Parse("2a667415-812c-4288-8e81-5fa9906fb11f"), Type = TextBlockType.Text, Text = "If you have the raw materials available, you can (action: Craft) a basic (item: caltrop set | Caltrops), (item: candle), (item: compass), (item: crowbar), (item: fishing tackle), (item: flint and steel), (item: hammer), (item: ladder | Ladder 10-foot), (item: piton), (item: rope | Rope 50 feet), (item: 10-foot pole | Ten-Foot Pole), (item: replacement thieves’ picks | Replacement Picks), (item: long | Tool long) or (item: short tool | Tool short), or (item: torch) without consulting a (item: basic crafter’s book)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("ba059dac-7ab4-401f-beb5-09ea2c867214"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("79a985ca-536c-4952-943b-52519b9cb08f"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bfa1197f-c73d-46c9-a508-02e8cae8991b"),
+                Id = Guid.Parse("fe3b685f-98e2-4b28-839b-64d5ef3f6949"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ResourcefulRitualist : Template
     {
-        public static readonly Guid ID = Guid.Parse("4ac51c52-c6b0-4417-bdab-f0d3fc2de969");
+        public static readonly Guid ID = Guid.Parse("a5727469-7356-4a35-99bf-74deaff05256");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bc123ac1-032f-4c8e-958e-42807bc6feda"), Type = TextBlockType.Text, Text = "You can cast difficult rituals that might otherwise be just beyond your skill. You can attempt checks to cast a ritual that requires expert proficiency if you are trained, master proficiency if you are an expert, or legendary proficiency if you are a master." };
+            yield return new TextBlock { Id = Guid.Parse("b8736861-0890-48ec-9ab5-d4e384fa8064"), Type = TextBlockType.Text, Text = "You can cast difficult rituals that might otherwise be just beyond your skill. You can attempt checks to cast a ritual that requires expert proficiency if you are trained, master proficiency if you are an expert, or legendary proficiency if you are a master." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f10759a5-daf8-4179-b9dd-3ecac533269f"), Feats.Instances.RitualistDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("2ce3309b-3310-4080-82e7-7b6513aed221"), Feats.Instances.RitualistDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("81d06163-9171-4c74-a8c8-ee4bf54ee07c"),
+                Id = Guid.Parse("92d65c01-705a-4526-9790-2719a3625c2d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

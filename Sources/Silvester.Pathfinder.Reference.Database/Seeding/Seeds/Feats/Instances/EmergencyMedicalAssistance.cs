@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EmergencyMedicalAssistance : Template
     {
-        public static readonly Guid ID = Guid.Parse("0b1363f4-1c76-4110-8df9-bbe333f3b5ce");
+        public static readonly Guid ID = Guid.Parse("ff6e58c9-a7a9-495e-8a2d-4934198f5def");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e03a8c92-4060-4635-994c-7a5dcb1c834b"), Type = TextBlockType.Text, Text = "You&#39;ve learned a variety of methods for helping allies who are bleeding, burning, or otherwise suffering persistent damage, from brushing off acid to patting down fires. Your ally immediately attempts a flat check to remove all types of persistent damage, and your use of this feat automatically counts as especially effective aid, reducing the DC from 15 to 10 for all future flat checks to remove the persistent damage." };
+            yield return new TextBlock { Id = Guid.Parse("cd57b92e-5f79-484d-aa03-69a6db14628c"), Type = TextBlockType.Text, Text = "You&#39;ve learned a variety of methods for helping allies who are bleeding, burning, or otherwise suffering persistent damage, from brushing off acid to patting down fires. Your ally immediately attempts a flat check to remove all types of persistent damage, and your use of this feat automatically counts as especially effective aid, reducing the DC from 15 to 10 for all future flat checks to remove the persistent damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("4a66d4d5-8727-44e9-bce1-0fe48ab454af"), Feats.Instances.SwordmasterDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("05d7c946-136b-479c-8b1d-903b2f4623b4"), Proficiencies.Instances.Master.ID, Skills.Instances.Medicine.ID);
+            builder.HaveSpecificFeat(Guid.Parse("7fea9e9a-ce23-4faf-bb34-5e74c9f8d56d"), Feats.Instances.SwordmasterDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("c499b86b-0462-4652-b5dd-ac5c0840d345"), Proficiencies.Instances.Master.ID, Skills.Instances.Medicine.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("73800393-b5dd-467a-8c57-8bf696165c38"),
+                Id = Guid.Parse("3f01eddc-2050-4163-8ec3-871a1a61357a"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

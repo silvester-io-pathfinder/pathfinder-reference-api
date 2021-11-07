@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImpossibleSnares : Template
     {
-        public static readonly Guid ID = Guid.Parse("6f40da49-9ad1-438a-bd71-5e92186d8022");
+        public static readonly Guid ID = Guid.Parse("68222e8c-1116-4b53-aebd-65bb913002a4");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ff60d10b-37d6-4725-86b4-b08b912a1d15"), Type = TextBlockType.Text, Text = "You can create endless shorter-lived snares, protecting your lair or using them against foes. Once per minute, you can (action: Craft) one of the snares you’ve prepared for quick deployment without expending the prepared snare. Once deployed, such a snare lasts for 10 minutes before losing its effectiveness." };
+            yield return new TextBlock { Id = Guid.Parse("a86f2c9f-4448-4ef5-8daf-3a5a020a8ea4"), Type = TextBlockType.Text, Text = "You can create endless shorter-lived snares, protecting your lair or using them against foes. Once per minute, you can (action: Craft) one of the snares you’ve prepared for quick deployment without expending the prepared snare. Once deployed, such a snare lasts for 10 minutes before losing its effectiveness." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("272cefd1-65fd-4a42-a320-6133d0aa1f5c"), Feats.Instances.UbiquitousSnares.ID);
+            builder.HaveSpecificFeat(Guid.Parse("08ff5a0f-91ba-4844-aa75-01d0557fbd0e"), Feats.Instances.UbiquitousSnares.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("439062b2-cbde-43ef-b464-f72265f33f1e"),
+                Id = Guid.Parse("e4535d91-b225-4bc6-94ee-70e1c10d3a42"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

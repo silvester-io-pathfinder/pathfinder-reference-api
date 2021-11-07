@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdvancedShooting : Template
     {
-        public static readonly Guid ID = Guid.Parse("2f8fe2a8-97b8-4e57-a7fc-6e78554e666b");
+        public static readonly Guid ID = Guid.Parse("d198dc7c-b7c0-4c99-b8f3-f4927a3414e5");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1915e96a-fbb7-4162-9a7e-09a39c814e63"), Type = TextBlockType.Text, Text = "You gain one gunslinger feat. For the purpose of meeting its prerequisites, your gunslinger level is equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("07bf1ffb-7351-4794-8f5c-3240f89b3a25"), Type = TextBlockType.Text, Text = "You gain one gunslinger feat. For the purpose of meeting its prerequisites, your gunslinger level is equal to half your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1125907e-55c4-422c-aa09-538ede3d645f"), Feats.Instances.BasicShooting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("7968fde5-8b7f-4339-b1a7-b04cff276983"), Feats.Instances.BasicShooting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cc764bc0-2abc-4c17-9ca5-cd0c035a9f4b"),
+                Id = Guid.Parse("a3621762-268b-4f65-bc5c-53087558bb77"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Acclimatization : Template
     {
-        public static readonly Guid ID = Guid.Parse("8a4b70f2-05b6-452f-9f6e-71b9cd60af45");
+        public static readonly Guid ID = Guid.Parse("457e802a-ed54-45ba-9cc6-18ed9f388b68");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a3a93e8e-227a-403c-91ea-cf416b105e8d"), Type = TextBlockType.Text, Text = "Your time spent in the hostile parts of the world has inured you to extreme climates. In your favored terrain, you gain resistance equal to half your level to all environmental damage and are affected by temperature effects as though they were one step less severe (incredible heat or cold becomes extreme, extreme heat or cold becomes severe, and so on). When other creatures (action: Follow the Expert) with you as a guide in your favored terrain, they too treat temperature effects as one step less severe." };
+            yield return new TextBlock { Id = Guid.Parse("41247174-5281-4991-a59e-64666d123406"), Type = TextBlockType.Text, Text = "Your time spent in the hostile parts of the world has inured you to extreme climates. In your favored terrain, you gain resistance equal to half your level to all environmental damage and are affected by temperature effects as though they were one step less severe (incredible heat or cold becomes extreme, extreme heat or cold becomes severe, and so on). When other creatures (action: Follow the Expert) with you as a guide in your favored terrain, they too treat temperature effects as one step less severe." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("2ba98dc8-d1c3-403f-9a1e-22ea892b661c"), Feats.Instances.HorizonWalkerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("0b992fd1-772b-497f-bf6a-156cc9e04f0d"), Feats.Instances.HorizonWalkerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f15837f8-6361-44ce-b7e8-32aacdea2c96"),
+                Id = Guid.Parse("9c64eb2e-e645-47e7-a4b2-23690c035240"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

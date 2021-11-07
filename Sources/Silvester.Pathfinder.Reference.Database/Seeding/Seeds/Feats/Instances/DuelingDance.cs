@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DuelingDance : Template
     {
-        public static readonly Guid ID = Guid.Parse("c02b2cc7-b900-4734-bc23-6d8cc489ba3d");
+        public static readonly Guid ID = Guid.Parse("b3c1db21-701b-40f3-8ea0-52555b1599e0");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8a9b5576-d80f-4884-9fa7-c20b4ff960a8"), Type = TextBlockType.Text, Text = "Using your free hand as pivot and balance, you both attack and defend with your weapon. While you are in this stance, you constantly have the benefits of (feat: Dueling Parry)." };
+            yield return new TextBlock { Id = Guid.Parse("1b2cc08c-7cec-41b3-9bb2-1b54fdf94966"), Type = TextBlockType.Text, Text = "Using your free hand as pivot and balance, you both attack and defend with your weapon. While you are in this stance, you constantly have the benefits of (feat: Dueling Parry)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("6dc67024-ac39-422c-8bd6-e99dfc2e1643"), Feats.Instances.DuelingParry.ID);
+            builder.HaveSpecificFeat(Guid.Parse("142e1e80-46d2-4eac-a524-a631c5eb7881"), Feats.Instances.DuelingParry.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("08925ab9-3fe0-43e9-ac8f-f6f9f56b4a6d"),
+                Id = Guid.Parse("1a4da5d9-6198-46ea-a3d8-858c2349d2a2"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

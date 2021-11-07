@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WildShape : Template
     {
-        public static readonly Guid ID = Guid.Parse("7a0bed1b-6088-4360-8167-912416016702");
+        public static readonly Guid ID = Guid.Parse("ecb74d1e-e0b7-4e2b-a865-c8fd1213e3cc");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c3a2ec0c-fbcd-4f0f-ba3d-5c28e80be875"), Type = TextBlockType.Text, Text = "You are one with the wild, always changing and adapting to meet any challenge. You gain the (Spell: wild shape) order spell, which lets you transform into a variety of forms that you can expand with druid feats." };
+            yield return new TextBlock { Id = Guid.Parse("f9a8434a-eff7-4a38-bc23-2eb2b4f54427"), Type = TextBlockType.Text, Text = "You are one with the wild, always changing and adapting to meet any challenge. You gain the (Spell: wild shape) order spell, which lets you transform into a variety of forms that you can expand with druid feats." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificDruidicOrder(Guid.Parse("c844253a-27d7-49af-872f-867550db5ecb"), DruidicOrders.Instances.Wild.ID);
+            builder.HaveSpecificDruidicOrder(Guid.Parse("a116cb7e-a05b-43ae-a323-c91e91af8830"), DruidicOrders.Instances.Wild.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3d37a6ad-01ef-4956-baca-984e0a5c4595"),
+                Id = Guid.Parse("1d24bd94-267e-4a63-b8a7-3dfd063a29cf"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

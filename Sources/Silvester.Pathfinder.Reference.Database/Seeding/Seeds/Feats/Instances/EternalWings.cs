@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EternalWings : Template
     {
-        public static readonly Guid ID = Guid.Parse("0c0efd98-5392-4949-b508-232c8c5b0645");
+        public static readonly Guid ID = Guid.Parse("94d39b26-f760-4668-9cbd-8e0d606da93e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c3841f5f-fdf0-4993-a2a2-dae15add8535"), Type = TextBlockType.Text, Text = "Your wings are now a permanent part of your body. You gain the effects of (feat: Wings of Air) at all times rather than just once per day for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("17831ecd-bef2-44d1-972b-702c017168d2"), Type = TextBlockType.Text, Text = "Your wings are now a permanent part of your body. You gain the effects of (feat: Wings of Air) at all times rather than just once per day for 10 minutes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("414a6a05-116b-4850-bc08-a9267d2ffb9b"), Feats.Instances.WingsOfAir.ID);
+            builder.HaveSpecificFeat(Guid.Parse("87e5c263-78a5-4672-9145-982c354ddbcf"), Feats.Instances.WingsOfAir.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("51b9631a-496f-44e2-af7b-f9545421939e"),
+                Id = Guid.Parse("4cdadda2-e8ab-4737-b40d-2f6387e7be67"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

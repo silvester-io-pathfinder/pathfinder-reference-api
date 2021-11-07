@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MagicalUnderstudy : Template
     {
-        public static readonly Guid ID = Guid.Parse("4a509da9-eb3f-4361-83c9-e006504f3d24");
+        public static readonly Guid ID = Guid.Parse("b6c53280-bd18-4f7b-a4c9-7c934b5841e1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("54fd84a7-3b7d-43fa-8de2-5b36c37a29e9"), Type = TextBlockType.Text, Text = "Your eidolon evolves to cast spells. It gains the (action: Cast a Spell) activity and learns two cantrips of its tradition, which it can cast as innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("04cd76d9-f241-4b92-aadd-cab8dff129f7"), Type = TextBlockType.Text, Text = "Your eidolon evolves to cast spells. It gains the (action: Cast a Spell) activity and learns two cantrips of its tradition, which it can cast as innate spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4f7be2f9-c98b-4803-a976-feef6dfcaaca"),
+                Id = Guid.Parse("a2831c69-9ed8-409d-a138-e969e36eef6d"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

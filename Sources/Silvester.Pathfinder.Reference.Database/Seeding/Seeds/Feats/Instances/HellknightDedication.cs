@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HellknightDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("bc819f38-ca71-418f-aa38-9897b854d72e");
+        public static readonly Guid ID = Guid.Parse("75ac94f3-3d01-4b09-b0d6-f7419bf6717f");
 
         protected override Feat GetFeat()
         {
@@ -28,20 +29,20 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a2516bae-eab9-470e-9fa4-193cdf16e34d"), Type = TextBlockType.Text, Text = "You have forged your body to comply with the commands of your mind – orders steeped in the Measure and the Chain. You gain expert proficiency in Intimidation (or in another skill in which you’re trained of your choice, if you were already an expert in Intimidation). You gain the armor specialization effects of Hellknight plate, and your resistance from that armor specialization is 1 higher than normal. In addition, you gain a +1 circumstance bonus to Intimidation checks while wearing your Hellknight plate." };
+            yield return new TextBlock { Id = Guid.Parse("03980dd2-8267-4faf-b851-8aa86af1bfbc"), Type = TextBlockType.Text, Text = "You have forged your body to comply with the commands of your mind – orders steeped in the Measure and the Chain. You gain expert proficiency in Intimidation (or in another skill in which you’re trained of your choice, if you were already an expert in Intimidation). You gain the armor specialization effects of Hellknight plate, and your resistance from that armor specialization is 1 higher than normal. In addition, you gain a +1 circumstance bonus to Intimidation checks while wearing your Hellknight plate." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("371652a9-014e-4829-9d30-9f4a5019737b"), Feats.Instances.HellknightArmigerDedication.ID);
-            builder.AddOr(Guid.Parse("a16ee1a1-5867-4259-a4fc-c81428414f65"), or => 
+            builder.HaveSpecificFeat(Guid.Parse("1cbedc86-f477-4a40-b85a-25622662f021"), Feats.Instances.HellknightArmigerDedication.ID);
+            builder.AddOr(Guid.Parse("09eb5c19-1eda-4c42-b806-ec0b1f5ed070"), or => 
             {
-                or.HaveSpecificAlignment(Guid.Parse("e47a34d0-7273-4c21-836d-5d0d2afa8b6b"), Alignments.Instances.LawfulGood.ID);
-                or.HaveSpecificAlignment(Guid.Parse("af24f1e2-4438-4ef8-a705-f74e97c0e055"), Alignments.Instances.LawfulEvil.ID);
+                or.HaveSpecificAlignment(Guid.Parse("f24505b8-456e-4fad-9963-67581b7dde43"), Alignments.Instances.LawfulGood.ID);
+                or.HaveSpecificAlignment(Guid.Parse("2011cd11-8b2b-41cf-9b78-7b60f5127719"), Alignments.Instances.LawfulEvil.ID);
             });
-            builder.Manual(Guid.Parse("91e0200e-fafa-4268-b8a6-70417ef49d33"), "Member of a Hellknight order.");
-            builder.Manual(Guid.Parse("dc5ff531-16c1-4f90-be56-bc027d6b7a22"), "Passed the Hellknight Test.");
+            builder.Manual(Guid.Parse("808f3581-419e-46db-9742-1cd556d9d03e"), "Member of a Hellknight order.");
+            builder.Manual(Guid.Parse("afdc3895-ca62-41c8-a89c-7bdebd9de397"), "Passed the Hellknight Test.");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e65fbeee-ddbc-470a-9a43-9c43a2299416"),
+                Id = Guid.Parse("ce7ebad0-dc61-4916-8d6b-e8825c7d82b0"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

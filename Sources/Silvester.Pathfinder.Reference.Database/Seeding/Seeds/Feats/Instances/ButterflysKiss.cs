@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ButterflysKiss : Template
     {
-        public static readonly Guid ID = Guid.Parse("9ac78927-6424-4a40-b68e-59c02477bafb");
+        public static readonly Guid ID = Guid.Parse("647f394a-45b5-4c15-92fb-fd7cf6e49878");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("71157f72-3272-4eb2-bbdc-25074dc4f0ab"), Type = TextBlockType.Text, Text = "You can make nonlethal (action: Strikes | Strike) with a (item: butterfly sword) without taking a penalty." };
+            yield return new TextBlock { Id = Guid.Parse("d6aa43f7-e7f2-4e12-b502-71d0bff3cc1b"), Type = TextBlockType.Text, Text = "You can make nonlethal (action: Strikes | Strike) with a (item: butterfly sword) without taking a penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("203e30c5-35fb-4cc0-9974-c4edbb6beb7e"),
+                Id = Guid.Parse("44133912-a242-44b5-861a-1a9c8ddb4851"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

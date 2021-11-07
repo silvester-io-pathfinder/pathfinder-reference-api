@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GladHand : Template
     {
-        public static readonly Guid ID = Guid.Parse("342ebaa3-3d4c-41bd-b42a-dc0d71bb20dc");
+        public static readonly Guid ID = Guid.Parse("3c950e1c-84f2-4331-ae09-26e357f9333b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fce784f8-2a17-4fc2-b5db-9b86cfc627b9"), Type = TextBlockType.Text, Text = "First impressions are your strong suit. When you meet someone in a casual or social situation, you can immediately attempt a Diplomacy check to (action: Make an Impression) on that creature rather than needing to converse for 1 minute. You take a -5 penalty to the check. If you fail or critically fail, you can engage in 1 minute of conversation and attempt a new check at the end of that time rather than accepting the failure or critical failure result." };
+            yield return new TextBlock { Id = Guid.Parse("f4b1e7a9-18de-4c02-8558-c3a3317af17c"), Type = TextBlockType.Text, Text = "First impressions are your strong suit. When you meet someone in a casual or social situation, you can immediately attempt a Diplomacy check to (action: Make an Impression) on that creature rather than needing to converse for 1 minute. You take a -5 penalty to the check. If you fail or critically fail, you can engage in 1 minute of conversation and attempt a new check at the end of that time rather than accepting the failure or critical failure result." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("7146f9ee-570b-440a-8be1-f46162058b15"), Proficiencies.Instances.Expert.ID, Skills.Instances.Diplomacy.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("25f0613d-6ea1-4621-afe6-ec427ff16df5"), Proficiencies.Instances.Expert.ID, Skills.Instances.Diplomacy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("79a04c9b-77af-4ddc-bc39-4897593b2997"),
+                Id = Guid.Parse("2ecbba92-95e8-4d00-a8cf-c68522a387e2"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

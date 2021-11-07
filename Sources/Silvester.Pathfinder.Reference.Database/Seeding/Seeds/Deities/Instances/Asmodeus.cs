@@ -1,62 +1,119 @@
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Alignments.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DeityCategories.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.DivineFonts.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Domains.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances;
-using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Sources.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instances
 {
     public class Asmodeus : Template
     {
-        public static readonly Guid ID = Guid.Parse("f2906fe1-abeb-4b90-ac82-5578c5d87b6b");
+        public static readonly Guid ID = Guid.Parse("");
 
         protected override Deity GetDeity()
         {
-            return new Deity 
+            return new Deity
             {
                 Id = ID,
-                CategoryId = GodsOfTheInnerSea.ID, 
-                AlignmentId = LawfulEvil.ID,
-                Name = "Asmodeus", 
-                Description = "The Prince of Darkness reigns over contracts, pride, slavery, and tyranny, and he delights in tempting mortals to the path of evil. He promotes strict hierarchies where everyone knows their place, and he takes advantage of order for his own selfish benefit.",
+                CategoryId = DeityCategories.Instances.GodsOfTheInnerSea.ID,
+                AlignmentId = Alignments.Instances.LawfulEvil.ID,
+                Name = "Asmodeus",
                 Edicts = "Negotiate contracts to your best advantage, rule tyrannically and torture weaker beings, show subservience to your betters.",
                 Anathema = "Break a contract, free a slave, insult Asmodeus by showing mercy to your enemies.",
+                Title = "The Prince of Darkness",
+                AreasOfConcern = "Contracts, pride, slavery, and tyranny.",
             };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetails()
+        {
+            
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Asmodeus is the First, the Dark Prince, the lord of darkness and law, and the ruler of the plane of Hell. If Asmodeus's own scriptures are to believed—and they are corroborated by certain other accounts, like the angel-pennedBook of the Damned—he is one of the oldest beings of the multiverse. These texts claim that in time before time, in a world not yet created, Asmodeus and his brother Ihys were among the first gods in existence. During these unnamed ages, the two gods quarreled over the fate of the souls of their creations, and Asmodeus slew his brother. Confident that Ihys's act of granting mortals free will was folly, Asmodeus made his own convictions known: that existence is best served by absolute order and discipline. These claims contradict other popular creation myths, and both theologians and immortal agents of the gods doubt Asmodeus's claims to varying degrees, but while there is no evidence to prove them, they are also difficult to refute." };
+        }
+
+        protected override void GetDevoteeEffect(BooleanEffectBuilder builder)
+        {
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Charm.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Suggestion.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.Mislead.ID);
         }
 
         protected override IEnumerable<Guid> GetDivineFonts()
         {
-            yield return Harm.ID;
+            yield return DivineFonts.Instances.Harm.ID;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredMeleeWeapons()
+        {
+            
+            yield return MeleeWeapons.Instances.Mace.ID;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredRangedWeapons()
+        {
+            yield break;
+        }
+
+        protected override IEnumerable<Guid> GetFavoredUnarmedWeapons()
+        {
+            yield break;
+        }
+
+        protected override DivineIntercession? GetDivineIntercession()
+        {
+            
+            return new DivineIntercession
+            {
+                Id = Guid.Parse(""),
+                Description = "Asmodeus tends to offer his gifts to entice those on the precipice of yielding to his vile temptations. His curses come most often in response to those who break contracts in his name, or commit other personal insults.",
+                MinorBoon = "Pleased by your talent for manipulation, Asmodeus amplifies your skills. Once, when you fail at the Diplomacy check to make a significant or consequential Request, you can cast suggestion on the target of your Request, suggesting the same course of action. This is a divine innate spell.",
+                ModerateBoon = "Your eyes glow red like embers and your skin takes on a crimson tone. You gain darkvision and fire resistance 5.",
+                MajorBoon = "Asmodeus helps enforce your bargains and contracts. When a creature enters a bargain or contract with you, uncoerced and of its own free will, it can't voluntarily violate its side of the bargain as long as you uphold your side. You can always choose to violate the bargain yourself, but if you do, the creature is no longer bound to fulfill its part.",
+                MinorCurse = "Asmodeus's flames burn you with great malice. You gain weakness 5 to fire.",
+                ModerateCurse = "Asmodeus forces your compliance. You can't voluntarily back out of an agreement or contract or go back on your word, though you need follow only the letter of the agreement, not the spirit.",
+                MajorCurse = "Asmodeus has taken note of the chaos you have wrought. You receive an ancient wound that feels older than time itself. You become permanently drained 4, and nothing short of another intercession can remove the condition. Your wound aches fiercely whenever you perform a particularly chaotic act, causing you to become sickened 1.",
+                SourcePage = new SourcePage
+                {
+                    Id = Guid.Parse(""),
+                    SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
+                    Page = 15
+                }
+            };
         }
 
         protected override IEnumerable<Guid> GetDivineSkills()
         {
-            yield return Deception.ID;
+            yield return Skills.Instances.Deception.ID;
+        }
+
+        protected override IEnumerable<Guid> GetDivineStats()
+        {
+            yield break;
         }
 
         protected override IEnumerable<Guid> GetDomains()
         {
-            yield return Confidence.ID;
-            yield return Fire.ID;
-            yield return Trickery.ID;
-            yield return Tyranny.ID;
+            yield return Domains.Instances.Confidence.ID;
+            yield return Domains.Instances.Fire.ID;
+            yield return Domains.Instances.Trickery.ID;
+            yield return Domains.Instances.Tyranny.ID;
         }
 
         protected override IEnumerable<Guid> GetFollowerAlignments()
         {
-            yield return LawfulEvil.ID;
+            yield return Alignments.Instances.LawfulEvil.ID;
         }
 
-        protected override SourcePage GetSourcePage()
+        protected override SourcePage GetSourcePage() 
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e7b62774-0f40-4bd0-862f-69e825bf36d1"),
-                SourceId = CoreRulebook.ID,
+                Id = Guid.Parse(""),
+                SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 437
             };
         }

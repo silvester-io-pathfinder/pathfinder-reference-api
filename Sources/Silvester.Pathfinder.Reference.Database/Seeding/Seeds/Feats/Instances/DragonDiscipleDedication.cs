@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DragonDiscipleDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("0713560e-aac6-4c06-920f-44bb6d0a8aae");
+        public static readonly Guid ID = Guid.Parse("7e37e5c7-e0bd-41c6-90d2-3644ca2986a0");
 
         protected override Feat GetFeat()
         {
@@ -28,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("28713c51-707d-4e4b-a064-8284125bfe7d"), Type = TextBlockType.Text, Text = "~ Access: You are a kobold with the dragonscaled or spellscaled heritage, a dragon instinct barbarian, or a draconic bloodline sorcerer." };
-            yield return new TextBlock { Id = Guid.Parse("a209f35b-67f9-4d37-b414-3e35b2ce5cc2"), Type = TextBlockType.Text, Text = "You choose to study or worship one type of dragon, and your focus grants you a measure of its power. Choose one color of dragon when you select this feat; if you are a sorcerer with the draconic bloodline, this must be the same type as your bloodline. You gain resistance equal to half your level against one type of damage determined by the chosen dragon type. The GM may allow you to choose a dragon type not listed below, and will determine the damage type appropriate for that dragon." };
-            yield return new TextBlock { Id = Guid.Parse("a48ce18d-b875-4d59-a7d3-8aac9179efa0"), Type = TextBlockType.Text, Text = "You also gain a +1 circumstance bonus to saving throws against (trait: sleep) effects and effects that would make you paralyzed." };
+            yield return new TextBlock { Id = Guid.Parse("79700971-2d09-46c4-9c4d-014a6f873f99"), Type = TextBlockType.Text, Text = "~ Access: You are a kobold with the dragonscaled or spellscaled heritage, a dragon instinct barbarian, or a draconic bloodline sorcerer." };
+            yield return new TextBlock { Id = Guid.Parse("240d1c04-8374-4ab5-aaf8-6e4ffa33f6da"), Type = TextBlockType.Text, Text = "You choose to study or worship one type of dragon, and your focus grants you a measure of its power. Choose one color of dragon when you select this feat; if you are a sorcerer with the draconic bloodline, this must be the same type as your bloodline. You gain resistance equal to half your level against one type of damage determined by the chosen dragon type. The GM may allow you to choose a dragon type not listed below, and will determine the damage type appropriate for that dragon." };
+            yield return new TextBlock { Id = Guid.Parse("137fe05e-4ccd-43ff-815b-7b463b8b4ab9"), Type = TextBlockType.Text, Text = "You also gain a +1 circumstance bonus to saving throws against (trait: sleep) effects and effects that would make you paralyzed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b1c2cd86-455e-422d-83a3-22efea5b88aa"),
+                Id = Guid.Parse("98d387d6-1428-432a-b54a-18454583885d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

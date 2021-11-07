@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BloodlettingFangs : Template
     {
-        public static readonly Guid ID = Guid.Parse("fbeacb16-6a34-4766-8057-5596136a3e61");
+        public static readonly Guid ID = Guid.Parse("02342f2e-357b-410e-9bd3-12924faa6be7");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0494988f-c388-428f-a926-c12a86ee8f4e"), Type = TextBlockType.Text, Text = "You emulate your vampiric parent&#39;s techniques for drawing blood from a victim. Your fangs (action: Strikes | Strike) deal an additional 1d4 persistent bleed damage on a critical hit." };
+            yield return new TextBlock { Id = Guid.Parse("99ba9122-bac5-4c4b-8f9d-dcbd846ce6aa"), Type = TextBlockType.Text, Text = "You emulate your vampiric parent&#39;s techniques for drawing blood from a victim. Your fangs (action: Strikes | Strike) deal an additional 1d4 persistent bleed damage on a critical hit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificUnarmedAttack(Guid.Parse("7aeda62d-2ade-47e3-8395-8c9ff3869a6a"), UnarmedAttack.Fangs);
+            builder.HaveSpecificUnarmedAttack(Guid.Parse("c6886939-f0cc-4c7f-87e9-0bec03cc2754"), UnarmedWeapons.Instances.Fangs.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("dd8a6cc9-d9d3-4055-845e-11b7302a0754"),
+                Id = Guid.Parse("019775e3-19e0-4031-8633-48723f4a2e91"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

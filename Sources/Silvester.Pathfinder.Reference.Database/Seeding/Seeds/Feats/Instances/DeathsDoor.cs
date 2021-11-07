@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeathsDoor : Template
     {
-        public static readonly Guid ID = Guid.Parse("cc06db7a-8f0a-4aaa-87f0-4a2ff35b4c80");
+        public static readonly Guid ID = Guid.Parse("eeb8c1b9-6861-4a36-a37a-22cb2f62af44");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9e14591e-17ab-40f6-900e-68a73d565705"), Type = TextBlockType.Text, Text = "You continue to fight when others would fall. Just before taking the triggering damage, you gain temporary Hit Points equal to twice your level. If you have Hit Points remaining after gaining these temporary Hit Points, you aren’t knocked unconscious, nor do you suffer the other effects of being reduced to 0 Hit Points. Any temporary Hit Points that remain after applying the damage last for up to 4 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("d9ae0d40-f859-4357-acd3-138156e24c2c"), Type = TextBlockType.Text, Text = "You continue to fight when others would fall. Just before taking the triggering damage, you gain temporary Hit Points equal to twice your level. If you have Hit Points remaining after gaining these temporary Hit Points, you aren’t knocked unconscious, nor do you suffer the other effects of being reduced to 0 Hit Points. Any temporary Hit Points that remain after applying the damage last for up to 4 rounds." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("df5c582a-f62d-45fb-a6e5-976caf424712"), Feats.Instances.SwordmasterDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("c04cbde0-407c-4b7b-afe0-5156097477f8"), Feats.Instances.SwordmasterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e3998a08-359f-41a5-8936-e0e76b85b9d8"),
+                Id = Guid.Parse("c82bf85c-e6ad-4986-bbc5-412ffbeceba6"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

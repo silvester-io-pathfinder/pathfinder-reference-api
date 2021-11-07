@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArmoredRest : Template
     {
-        public static readonly Guid ID = Guid.Parse("1a6f6293-96a9-4518-b89f-0e90967b9bcf");
+        public static readonly Guid ID = Guid.Parse("aaad4e2a-f221-48a8-a73c-62543a7ea568");
 
         protected override Feat GetFeat()
         {
@@ -28,18 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("416e052c-861e-4adf-9acf-76d1961980af"), Type = TextBlockType.Text, Text = "You&#39;ve slept many nights in your armor and gotten used to it. You can sleep in armor overnight without being fatigued the next day. If you were already fatigued before sleeping, the armor doesn&#39;t prevent you from recovering from being fatigued." };
+            yield return new TextBlock { Id = Guid.Parse("dfefb6bc-72a9-4cb6-bb80-b6e19d1730aa"), Type = TextBlockType.Text, Text = "You&#39;ve slept many nights in your armor and gotten used to it. You can sleep in armor overnight without being fatigued the next day. If you were already fatigued before sleeping, the armor doesn&#39;t prevent you from recovering from being fatigued." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3e34fdc4-d86f-4627-b5d1-98145667f699"), Feats.Instances.SwordmasterDedication.ID);
-            builder.AddOr(Guid.Parse("aa6ff64c-90c8-4bb2-a0f4-7a54c0e81eb1"), or => 
+            builder.HaveSpecificFeat(Guid.Parse("ed71a091-88cc-4362-bde1-f41d12b8789b"), Feats.Instances.SwordmasterDedication.ID);
+            builder.AddOr(Guid.Parse("a2488ded-e9c9-4505-b6b4-049020fd8071"), or => 
             {
-                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("533671cc-06df-439b-b198-6631ad0f0af0"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.Light.ID);
-                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("374f24ac-633e-4b9b-9dd5-0b56ca045334"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.Medium.ID);
-                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("874e627a-5a5a-4ec7-93b9-a940d5369f07"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.Heavy.ID);
+                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("2d073326-57dd-4d58-83bc-aef1e504d785"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.LightArmor.ID);
+                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("d993bcbd-3219-4235-8fde-117f8c42d2e7"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.MediumArmor.ID);
+                or.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("f29f0a04-44fc-47a5-8029-ba3c81c60522"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.HeavyArmor.ID);
             });
         }
 
@@ -52,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("72a73beb-c720-4ec2-b313-3821f7b81894"),
+                Id = Guid.Parse("7de9072a-fb3e-46dd-81a6-19d239a94570"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

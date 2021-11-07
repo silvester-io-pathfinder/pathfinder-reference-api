@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PowerfulShove : Template
     {
-        public static readonly Guid ID = Guid.Parse("6634c36a-bbd3-4567-8fe7-8c6283d5b764");
+        public static readonly Guid ID = Guid.Parse("d9e4ae48-ad73-417e-ae15-4123359ca9d4");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("21e20f4b-3972-4f33-a3e0-512e058055bc"), Type = TextBlockType.Text, Text = "You can push larger foes around with your attack. You can use (Feat: Aggressive Block) or (Feat: Brutish Shove) against a creature up to two sizes larger than you." };
-            yield return new TextBlock { Id = Guid.Parse("b5f0254c-b004-4846-bd0e-e88318318df6"), Type = TextBlockType.Text, Text = "When a creature you (Action: Shove) has to stop moving because it would hit an object, it takes damage equal to your Strength modifier (minimum 1). This happens regardless of how you (Action: Shoved | Shove) the creature." };
+            yield return new TextBlock { Id = Guid.Parse("2e5c4594-5431-4e81-b03a-b03ca40d1784"), Type = TextBlockType.Text, Text = "You can push larger foes around with your attack. You can use (Feat: Aggressive Block) or (Feat: Brutish Shove) against a creature up to two sizes larger than you." };
+            yield return new TextBlock { Id = Guid.Parse("ae17a046-bd97-4d15-9224-6b663f1f2bc9"), Type = TextBlockType.Text, Text = "When a creature you (Action: Shove) has to stop moving because it would hit an object, it takes damage equal to your Strength modifier (minimum 1). This happens regardless of how you (Action: Shoved | Shove) the creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("ef5e6d71-27a9-4222-ad95-0f50713aebdd"), or => 
+            builder.AddOr(Guid.Parse("71bb93ea-2611-4587-b0ef-2887a42f2d41"), or => 
             {
-                or.HaveSpecificFeat(Guid.Parse("2f20b72c-4b2e-49b3-a02f-ad8eab22f513"), Feats.Instances.AggressiveBlock.ID);
-                or.HaveSpecificFeat(Guid.Parse("22919489-ec38-448c-b9e6-0a729cd14f81"), Feats.Instances.BrutishShove.ID);
+                or.HaveSpecificFeat(Guid.Parse("a8ee284a-25c4-43dc-83ab-9de319a1f7bc"), Feats.Instances.AggressiveBlock.ID);
+                or.HaveSpecificFeat(Guid.Parse("4ff7b6c1-0001-4209-adcb-68ebf390a109"), Feats.Instances.BrutishShove.ID);
             });
         }
 
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d6d08fc2-a3a1-4ba7-a5d1-5fb95afdebb0"),
+                Id = Guid.Parse("c19b7758-c06d-4c87-aa77-2f25b3528043"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

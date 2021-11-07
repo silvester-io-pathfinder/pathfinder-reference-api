@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RightHandBlood : Template
     {
-        public static readonly Guid ID = Guid.Parse("3d8c1fb5-7ee3-435a-8d2b-8ec361533076");
+        public static readonly Guid ID = Guid.Parse("c4d33f45-a92f-4bc9-b8e1-cc875698236d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6de43918-80ee-4ab0-b7cc-09d8ed0c4533"), Type = TextBlockType.Text, Text = "It’s said that the flesh of the right side of a hyena can heal diseases, but that of the left side is poisonous. You can take 1 damage to feed someone blood from your right side and (action: Administer First Aid) or take 2d8 damage to (action: Treat Disease) or (action: Treat Wounds); in either case, you don’t need (item: healer’s tools), and gain a +1 item bonus. Blood from your left side causes the check to critically fail automatically." };
+            yield return new TextBlock { Id = Guid.Parse("84a784a0-5950-4b50-a7fb-9b9edc0af337"), Type = TextBlockType.Text, Text = "It’s said that the flesh of the right side of a hyena can heal diseases, but that of the left side is poisonous. You can take 1 damage to feed someone blood from your right side and (action: Administer First Aid) or take 2d8 damage to (action: Treat Disease) or (action: Treat Wounds); in either case, you don’t need (item: healer’s tools), and gain a +1 item bonus. Blood from your left side causes the check to critically fail automatically." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a6c2563a-92b5-49cf-9f35-e2a4bfc6c1b1"),
+                Id = Guid.Parse("f0892a9a-5883-4f73-b920-8f97db7a627d"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

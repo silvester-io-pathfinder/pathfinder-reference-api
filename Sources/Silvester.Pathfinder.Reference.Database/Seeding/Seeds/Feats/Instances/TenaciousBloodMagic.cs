@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TenaciousBloodMagic : Template
     {
-        public static readonly Guid ID = Guid.Parse("12d3935d-e826-481c-9c18-d6a1aecb6fef");
+        public static readonly Guid ID = Guid.Parse("1976cc49-39a1-4b6c-9b52-675f15e515b5");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("de4509ec-6a19-4386-8285-e9d78f919d6b"), Type = TextBlockType.Text, Text = "You have learned how to invest magic more deeply by witnessing Aroden’s works. The triggering blood magic effect lasts for 1 minute instead of 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("f1177e66-041e-42de-a432-19fe52ea2035"), Type = TextBlockType.Text, Text = "You have learned how to invest magic more deeply by witnessing Aroden’s works. The triggering blood magic effect lasts for 1 minute instead of 1 round." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d8a54bf6-bb1a-426e-94c9-e65041ff160a"),
+                Id = Guid.Parse("d2ddee9f-c450-48c3-808e-856fa93f1b46"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

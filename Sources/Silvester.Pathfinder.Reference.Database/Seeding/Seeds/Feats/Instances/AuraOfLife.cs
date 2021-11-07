@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AuraOfLife : Template
     {
-        public static readonly Guid ID = Guid.Parse("451c34d4-b2fe-4291-8943-ff542bbb9c38");
+        public static readonly Guid ID = Guid.Parse("44862fb6-05e6-422e-ba16-76e10ea1aa33");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0024d876-5482-407c-8834-313aad216f4d"), Type = TextBlockType.Text, Text = "Your aura protects against necromantic effects. You and all allies within 15 feet gain resistance 5 to negative energy and a +1 status bonus to saves against necromancy effects." };
+            yield return new TextBlock { Id = Guid.Parse("9aac5cdf-f68a-4cfc-8526-6c426d73d0b1"), Type = TextBlockType.Text, Text = "Your aura protects against necromantic effects. You and all allies within 15 feet gain resistance 5 to negative energy and a +1 status bonus to saves against necromancy effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("41908bc6-6e8a-4ed5-a101-56f1f2f7a165"), Feats.Instances.ShiningOath.ID);
+            builder.HaveSpecificFeat(Guid.Parse("a3e7a345-62e2-4abd-b8fb-71f3346ec9a8"), Feats.Instances.ShiningOath.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2555f84e-01db-459b-8d40-13840f2e05f7"),
+                Id = Guid.Parse("5dce9e98-4e0a-4599-bb8d-daa37137064c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

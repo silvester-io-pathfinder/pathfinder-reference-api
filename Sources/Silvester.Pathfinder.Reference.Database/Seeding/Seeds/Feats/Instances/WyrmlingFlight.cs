@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WyrmlingFlight : Template
     {
-        public static readonly Guid ID = Guid.Parse("b7e80c4b-fbd5-40b1-9e25-db287da69c6e");
+        public static readonly Guid ID = Guid.Parse("a7bcf562-140f-436f-aafe-49cced2c1380");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6f8f7886-5003-44d6-8afd-44dc7c3f348a"), Type = TextBlockType.Text, Text = "Your draconic wings have grown large and strong enough for flight. You gain a fly Speed equal to your Speed, using your wings to stay aloft." };
+            yield return new TextBlock { Id = Guid.Parse("8ff4f431-7d78-4a88-afc8-9b78ead20b54"), Type = TextBlockType.Text, Text = "Your draconic wings have grown large and strong enough for flight. You gain a fly Speed equal to your Speed, using your wings to stay aloft." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3170ed2b-4b93-46ce-8328-5e430b651b53"), Feats.Instances.HatchlingFlight.ID);
+            builder.HaveSpecificFeat(Guid.Parse("0163a509-2506-4e82-aea3-28c9e883bea1"), Feats.Instances.HatchlingFlight.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ebc492b3-74b2-49b7-b259-edd8d2e900df"),
+                Id = Guid.Parse("216bd45f-9890-4e7a-a46e-1cec656a6bb8"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

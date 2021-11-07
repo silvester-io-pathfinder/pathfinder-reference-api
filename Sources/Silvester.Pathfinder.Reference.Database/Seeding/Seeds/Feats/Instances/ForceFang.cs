@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ForceFang : Template
     {
-        public static readonly Guid ID = Guid.Parse("9a6d504d-fdf3-491b-b653-94e0492da9d3");
+        public static readonly Guid ID = Guid.Parse("2860b0ce-2f27-4f63-93c5-04a2729c5792");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4f1bf8ef-cc5e-4123-b790-2de6cbe2d4f3"), Type = TextBlockType.Text, Text = "You can turn your attack into an unerring blur of force. You learn the (spell: force fang) conflux spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("069dd447-5bf1-4ae0-b261-6cf91724f9af"), Type = TextBlockType.Text, Text = "You can turn your attack into an unerring blur of force. You learn the (spell: force fang) conflux spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveFocusPool(Guid.Parse("3128d4f5-6eba-4895-b78d-aebb625e2ef3"));
+            builder.HaveFocusPool(Guid.Parse("12140ece-71e3-419f-b656-a3db43e3d646"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6463d908-d6b5-4102-839c-8dc7cde75157"),
+                Id = Guid.Parse("b3c2343f-9650-4a6d-9fba-0fde538f074e"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

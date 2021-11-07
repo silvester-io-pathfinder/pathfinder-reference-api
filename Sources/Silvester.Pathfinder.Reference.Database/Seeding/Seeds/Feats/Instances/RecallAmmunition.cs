@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RecallAmmunition : Template
     {
-        public static readonly Guid ID = Guid.Parse("81a68198-7d4c-47ff-9468-2f634e4c9bbc");
+        public static readonly Guid ID = Guid.Parse("45701186-b41e-4185-a8c4-ea4afafdb750");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("468384a3-0c6d-44b2-846c-9375bfc8d905"), Type = TextBlockType.Text, Text = "You amplify the connection between bullet and firearm, calling your missed shot back into your gun. The ammunition you just fired is reloaded back into your gun and immediately ready to fire again." };
+            yield return new TextBlock { Id = Guid.Parse("b9a4b367-9f2f-4dfe-9e9a-5f8af7a9b0d0"), Type = TextBlockType.Text, Text = "You amplify the connection between bullet and firearm, calling your missed shot back into your gun. The ammunition you just fired is reloaded back into your gun and immediately ready to fire again." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("016dbebf-449a-4eca-95dc-e8af8d1f9989"),
+                Id = Guid.Parse("26be75a3-79d6-4ca5-a01c-248e243ea09f"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

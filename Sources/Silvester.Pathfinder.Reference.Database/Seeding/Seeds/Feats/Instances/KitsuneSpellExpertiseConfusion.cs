@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class KitsuneSpellExpertiseConfusion : Template
     {
-        public static readonly Guid ID = Guid.Parse("d5fd4be8-afaf-4e7b-8d10-0dd14185dab2");
+        public static readonly Guid ID = Guid.Parse("17258c3b-8cad-4bbe-b81b-d33dac5911de");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7d366475-7848-4399-8660-be1bc56d169a"), Type = TextBlockType.Text, Text = "You can cast (spell: confusion) as a 5th-level divine innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("28900be6-ac2c-4b15-917c-3897f1010db2"), Type = TextBlockType.Text, Text = "You can cast (spell: confusion) as a 5th-level divine innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e1bae82a-a00b-4e5a-b96a-8dabb7e08ea7"),
+                Id = Guid.Parse("77560fb1-cbf4-4db8-b296-ec7190c315b0"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

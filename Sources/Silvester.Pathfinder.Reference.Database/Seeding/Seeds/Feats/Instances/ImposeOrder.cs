@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImposeOrder : Template
     {
-        public static readonly Guid ID = Guid.Parse("c7604329-9ddf-46e1-bb70-60d1335357c9");
+        public static readonly Guid ID = Guid.Parse("e3f3cbb2-a330-40f5-94f5-b2b601977099");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("702b055d-8ce7-4ea9-8288-0f223aae3024"), Type = TextBlockType.Text, Text = "You shift the underlying fabric of reality to impose a baseline of order. If the trigger was a skill check, you instead receive a result of 10 + your proficiency bonus (don’t apply any other bonuses, penalties, or modifiers). If the trigger was an effect with the (trait: misfortune) trait, the (trait: misfortune) and (trait: fortune) effects cancel each other out as normal, negating the triggering (trait: misfortune) effect." };
+            yield return new TextBlock { Id = Guid.Parse("03e6a79e-cdf2-41d5-a9b5-899dd710aa98"), Type = TextBlockType.Text, Text = "You shift the underlying fabric of reality to impose a baseline of order. If the trigger was a skill check, you instead receive a result of 10 + your proficiency bonus (don’t apply any other bonuses, penalties, or modifiers). If the trigger was an effect with the (trait: misfortune) trait, the (trait: misfortune) and (trait: fortune) effects cancel each other out as normal, negating the triggering (trait: misfortune) effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7365ac45-b7dd-4e6e-a19d-d033ed64b39b"),
+                Id = Guid.Parse("f72c311b-0a5b-448a-acbf-17a69382df1d"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

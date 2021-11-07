@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpotTranslate : Template
     {
-        public static readonly Guid ID = Guid.Parse("15c1bfb3-6aa4-4484-94fa-4bb0e026abd9");
+        public static readonly Guid ID = Guid.Parse("857d75e7-e059-4b5a-96d3-18ab99e0fcef");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6da6a4da-9b1f-48cb-866f-ba09275f18be"), Type = TextBlockType.Text, Text = "You interpret a creature’s words, repeating their message in a different language that you know. If the triggering effect’s targets speak either the original language or the one you translated into, they are affected." };
+            yield return new TextBlock { Id = Guid.Parse("0edde832-5ae1-4560-a8d7-bcdf2a91970c"), Type = TextBlockType.Text, Text = "You interpret a creature’s words, repeating their message in a different language that you know. If the triggering effect’s targets speak either the original language or the one you translated into, they are affected." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3a8d35bd-213c-4aa1-95fb-3b2844e738f9"), Feats.Instances.LinguistDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("c1a6fc88-68a6-4598-a11b-bd2d897c17b2"), Feats.Instances.LinguistDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("678dd802-1c0b-4896-93d1-ec57f6e019f9"),
+                Id = Guid.Parse("133d008e-090a-44a2-8223-b8d639b08d88"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

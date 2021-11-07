@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HyenaFamiliar : Template
     {
-        public static readonly Guid ID = Guid.Parse("164e424c-fbd9-4b50-bca1-2845bbbc8ac2");
+        public static readonly Guid ID = Guid.Parse("b5f91f77-b909-4bf2-9779-0bd3bced942e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("31d70411-f8a5-4567-bcf2-2d1e6cb5457c"), Type = TextBlockType.Text, Text = "Hyenas serve gnolls as pets, trackers, and in your case, vessels for spirits. You gain a Tiny hyena as a familiar." };
+            yield return new TextBlock { Id = Guid.Parse("707c2fce-90cb-4ea7-a953-ad907bb38d83"), Type = TextBlockType.Text, Text = "Hyenas serve gnolls as pets, trackers, and in your case, vessels for spirits. You gain a Tiny hyena as a familiar." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9ac8892c-3221-4ce1-9d6c-efd065d10dcd"),
+                Id = Guid.Parse("292e3f5a-33e0-4fd5-ba90-a65bc7df90ed"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

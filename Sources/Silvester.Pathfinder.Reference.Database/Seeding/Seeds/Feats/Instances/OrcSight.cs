@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OrcSight : Template
     {
-        public static readonly Guid ID = Guid.Parse("2a2678a4-7e8d-4186-91e5-3694cedbbb35");
+        public static readonly Guid ID = Guid.Parse("a463d5aa-7049-403e-9d74-cff35ce5bb36");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a60a6e2b-c247-4903-8d55-849f1aaca02d"), Type = TextBlockType.Text, Text = "Your orc blood is strong enough to grant you the keen vision of your orc forebears. You gain darkvision, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness, you see in black and white only." };
+            yield return new TextBlock { Id = Guid.Parse("b438f559-92ac-45a5-8e34-69e41456ca4e"), Type = TextBlockType.Text, Text = "Your orc blood is strong enough to grant you the keen vision of your orc forebears. You gain darkvision, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness, you see in black and white only." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSense(Guid.Parse("40235295-ad7a-40bb-892e-5650b6e5543d"), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
+            builder.HaveSpecificSense(Guid.Parse("383bb134-3a7d-4710-8071-83f76d61cddf"), Senses.Instances.LowLightVision.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c792b91b-936a-4952-8c28-6a531fa647bd"),
+                Id = Guid.Parse("d2902c61-908c-4009-95ef-4a51021759ac"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

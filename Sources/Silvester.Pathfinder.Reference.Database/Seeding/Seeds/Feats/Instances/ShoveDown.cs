@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShoveDown : Template
     {
-        public static readonly Guid ID = Guid.Parse("fd44146e-a5c1-4940-ac20-25192631581b");
+        public static readonly Guid ID = Guid.Parse("c126ecd1-ab83-4daf-a2d4-355908df825b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8d4a121e-92b6-4c87-8cc7-81c3adca9323"), Type = TextBlockType.Text, Text = "You leverage your weight to topple foes that you move. You attempt to (action: Trip) the target, even if the target is no longer in your reach." };
+            yield return new TextBlock { Id = Guid.Parse("cea844a7-31f9-428d-b091-e7a720f8adeb"), Type = TextBlockType.Text, Text = "You leverage your weight to topple foes that you move. You attempt to (action: Trip) the target, even if the target is no longer in your reach." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("29ee03b9-ed1d-40ce-ae7e-7b51cded7b98"), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("23ef96d3-3365-4534-9a82-990619ed6f5a"), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("70c494a6-c47f-49b5-a3a0-fc2b9086268c"),
+                Id = Guid.Parse("febb09f4-3828-47ea-a91b-b45bd0bf5c46"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FirstWorldAdept : Template
     {
-        public static readonly Guid ID = Guid.Parse("fd5e536a-8c01-4260-bfa3-2ed8551ae67b");
+        public static readonly Guid ID = Guid.Parse("a55d1241-8fbb-49a9-a36b-1993344b8dfa");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8e06b044-7750-4adb-8214-c44ffff55138"), Type = TextBlockType.Text, Text = "Over time your fey magic has grown stronger. You gain (spell: faerie fire) and (spell: invisibility) as 2nd-level primal innate spells. You can cast each of these primal innate spells once per day." };
+            yield return new TextBlock { Id = Guid.Parse("12a12fbb-8559-40fd-84eb-9ceb966e7946"), Type = TextBlockType.Text, Text = "Over time your fey magic has grown stronger. You gain (spell: faerie fire) and (spell: invisibility) as 2nd-level primal innate spells. You can cast each of these primal innate spells once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bd4cace2-c1f9-4802-8ec8-cb8d36065264"),
+                Id = Guid.Parse("a48ef476-2c77-4d1d-9a26-2ffda5ee1b74"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

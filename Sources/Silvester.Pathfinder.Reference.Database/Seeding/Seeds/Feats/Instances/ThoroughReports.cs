@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ThoroughReports : Template
     {
-        public static readonly Guid ID = Guid.Parse("9667d38c-8ce7-4b9b-9b67-c32326c00c12");
+        public static readonly Guid ID = Guid.Parse("b34b360e-b5ea-4b66-ab4c-70cd05b1d96b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("47ed91ca-7ea8-42d7-8ef3-8ba87580c9fe"), Type = TextBlockType.Text, Text = "Your reports are thorough and informative, and putting your thoughts to paper helps you retain the information. Keep track of each type of creature you successfully identify with (action: Recall Knowledge). When attempting (action: Recall Knowledge) checks against creatures on your list in later encounters, you gain a +2 circumstance bonus, and you learn an additional fact about such creatures on a success." };
+            yield return new TextBlock { Id = Guid.Parse("76bdce14-5eae-4c38-9eed-6a65b39c6c98"), Type = TextBlockType.Text, Text = "Your reports are thorough and informative, and putting your thoughts to paper helps you retain the information. Keep track of each type of creature you successfully identify with (action: Recall Knowledge). When attempting (action: Recall Knowledge) checks against creatures on your list in later encounters, you gain a +2 circumstance bonus, and you learn an additional fact about such creatures on a success." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("04d594d0-e374-46ba-9ea1-b1d56f2839a2"), Feats.Instances.PathfinderAgentDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("2614dafa-74a6-47cf-a7e0-7163c4fd2808"), Feats.Instances.PathfinderAgentDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("70bbcdf7-fabe-4aa7-af44-ada2b0bae2aa"),
+                Id = Guid.Parse("71985884-feff-43e4-8758-899395996f5a"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

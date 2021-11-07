@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FledglingFlight : Template
     {
-        public static readonly Guid ID = Guid.Parse("522e7c69-b8c9-4ed7-bb12-18eb902af54e");
+        public static readonly Guid ID = Guid.Parse("a0f45caa-2fae-4600-a694-f54e10e0f0fc");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("df10510b-1c4c-4c9f-86cd-fb6ec39f8c7b"), Type = TextBlockType.Text, Text = "You can fly through the air in short bursts at half your land Speed. If you don’t end your movement on solid ground, you fall at the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("cfafcecd-a3da-4321-9e74-65630cb4e50e"), Type = TextBlockType.Text, Text = "You can fly through the air in short bursts at half your land Speed. If you don’t end your movement on solid ground, you fall at the end of your turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8edfb85f-6798-4092-9183-e6748b61021c"),
+                Id = Guid.Parse("f6491947-04f4-4ccd-b487-fbc402acba6c"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeathRoll : Template
     {
-        public static readonly Guid ID = Guid.Parse("ce3dd677-d0ca-4d60-bb45-9b55761d3633");
+        public static readonly Guid ID = Guid.Parse("e6a6742f-6dfe-4edb-a3e6-42e44470b480");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("acbaa8c8-61d3-47bf-ae83-cf62e08df921"), Type = TextBlockType.Text, Text = "The crocodile tucks its legs and rolls rapidly, twisting its victim. It makes a jaws (action: Strike) with a +2 circumstance bonus to the attack roll against the grabbed creature. If it hits, it also knocks the creature prone. If it misses, it releases the creature." };
+            yield return new TextBlock { Id = Guid.Parse("90bf47a2-f21d-44e2-b22c-a1722c913c06"), Type = TextBlockType.Text, Text = "The crocodile tucks its legs and rolls rapidly, twisting its victim. It makes a jaws (action: Strike) with a +2 circumstance bonus to the attack roll against the grabbed creature. If it hits, it also knocks the creature prone. If it misses, it releases the creature." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4daa3bd6-f372-4402-a826-d2b69fb42ff3"),
+                Id = Guid.Parse("d2dafe26-5428-4283-ac8a-c2ff3d75d328"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

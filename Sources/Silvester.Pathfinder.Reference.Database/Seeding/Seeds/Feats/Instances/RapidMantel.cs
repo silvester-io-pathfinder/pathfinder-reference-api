@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RapidMantel : Template
     {
-        public static readonly Guid ID = Guid.Parse("888675db-9069-4b46-8856-c88b5c824077");
+        public static readonly Guid ID = Guid.Parse("f428f695-844b-4b88-b88b-76c6d172ef25");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("841b678a-2e30-4fdf-bddd-019cc82f4ecb"), Type = TextBlockType.Text, Text = "You easily pull yourself onto ledges. When you (action: Grab an Edge), you can pull yourself onto that surface and stand. You can use Athletics instead of a Reflex save to (action: Grab an Edge)." };
+            yield return new TextBlock { Id = Guid.Parse("7a7e0bfd-f8fb-4113-a007-48c02592d7b6"), Type = TextBlockType.Text, Text = "You easily pull yourself onto ledges. When you (action: Grab an Edge), you can pull yourself onto that surface and stand. You can use Athletics instead of a Reflex save to (action: Grab an Edge)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("f19e7ba5-59e5-4c9e-9f88-e6a6ce12e2cb"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("71987e7e-bbec-4805-b1b9-a966bc491610"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3fd767b0-03b3-4293-bc2e-120f033b7e19"),
+                Id = Guid.Parse("d83723c5-86ae-49ab-b73a-58240c032bbd"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

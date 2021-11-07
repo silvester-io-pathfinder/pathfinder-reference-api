@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ActionCallGun : Template
     {
-        public static readonly Guid ID = Guid.Parse("43d532ec-c773-476a-8066-cbe79e55dad5");
+        public static readonly Guid ID = Guid.Parse("94681f9b-3710-4c9c-a6b3-eef8070c113d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2b9168ce-6af4-4a70-b92b-3d9a6c76eb03"), Type = TextBlockType.Text, Text = "You hold aloft a free hand and call the firearm or crossbow you chose during your daily preparations into your hand. As long as the weapon you chose is on the same plane, it appears in your hand." };
+            yield return new TextBlock { Id = Guid.Parse("36bd0284-eaf7-44ca-bacd-03317012e834"), Type = TextBlockType.Text, Text = "You hold aloft a free hand and call the firearm or crossbow you chose during your daily preparations into your hand. As long as the weapon you chose is on the same plane, it appears in your hand." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("62dbe49f-b698-45a2-a246-ed086b4165b6"),
+                Id = Guid.Parse("41963667-7107-4ce5-a0d8-e9b29548f9a9"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

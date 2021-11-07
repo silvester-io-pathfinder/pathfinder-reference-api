@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FortifiedFlesh : Template
     {
-        public static readonly Guid ID = Guid.Parse("26e8c4f7-8715-4ab4-af45-193bfb5ed637");
+        public static readonly Guid ID = Guid.Parse("1d230600-faa2-4bce-bbf1-db4a3c5811e8");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7629f6f9-d098-4754-8373-0010a30bdbfe"), Type = TextBlockType.Text, Text = "Your flesh takes on the hardness of stone. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the Living Monolith archetype." };
+            yield return new TextBlock { Id = Guid.Parse("1e301a34-44bb-40e1-984a-b1f4478d8918"), Type = TextBlockType.Text, Text = "Your flesh takes on the hardness of stone. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the Living Monolith archetype." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("25691aab-04ca-438b-b3bb-a942b9397618"), Feats.Instances.KaStoneRitual.ID);
+            builder.HaveSpecificFeat(Guid.Parse("f89fa0af-c874-4c6f-a3b1-cbaf22093298"), Feats.Instances.KaStoneRitual.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2a36af72-6cfd-4b01-abe7-ca3fa0d5e64d"),
+                Id = Guid.Parse("641f6e27-9bcc-4e72-a598-c21a9739e612"),
                 SourceId = Sources.Instances.LostOmensWorldGuide.ID,
                 Page = -1
             };

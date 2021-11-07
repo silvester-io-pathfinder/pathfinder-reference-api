@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StunningFist : Template
     {
-        public static readonly Guid ID = Guid.Parse("045f9c18-d283-4f8b-9635-9c803f85dae9");
+        public static readonly Guid ID = Guid.Parse("745ed92d-f930-4cb4-b581-f47698e181c4");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("93a613ab-2114-4550-90c6-5912d1ff18ed"), Type = TextBlockType.Text, Text = "The focused power of your flurry threatens to overwhelm your opponent. When you target the same creature with two (action: Strikes | Strike) from your (feat: Flurry of Blows), you can try to stun the creature. If either (action: Strike) hits and deals damage, the target must succeed at a Fortitude save against your class DC or be stunned 1 (or stunned 3 on a critical failure). This is an (trait: incapacitation) effect." };
+            yield return new TextBlock { Id = Guid.Parse("30de8147-014f-42f6-a22f-929276c7b937"), Type = TextBlockType.Text, Text = "The focused power of your flurry threatens to overwhelm your opponent. When you target the same creature with two (action: Strikes | Strike) from your (feat: Flurry of Blows), you can try to stun the creature. If either (action: Strike) hits and deals damage, the target must succeed at a Fortitude save against your class DC or be stunned 1 (or stunned 3 on a critical failure). This is an (trait: incapacitation) effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("c41f3594-db9b-462f-b98f-c9ce17a06cc7"), ClassFeatures.Monks.FlurryOfBlows.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ec09417d-3577-494a-9b18-e6c3105eb305"), Feats.Instances.FlurryOfBlows.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6b6ce5ec-6bc5-4c96-b47f-f3eaf7a04fba"),
+                Id = Guid.Parse("49c20dd4-c3fc-495c-9c14-183b2ca3b92e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

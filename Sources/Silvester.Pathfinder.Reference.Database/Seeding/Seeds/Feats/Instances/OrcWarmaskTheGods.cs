@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OrcWarmaskTheGods : Template
     {
-        public static readonly Guid ID = Guid.Parse("df827cb3-12d9-4ca1-b688-c931c8647c19");
+        public static readonly Guid ID = Guid.Parse("db70bd6a-1f02-4f58-b8df-949639152ca1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("48d65c5e-1b27-405c-b106-d3d06cc20c99"), Type = TextBlockType.Text, Text = "The source of your (item: warmask | warmask the gods)’s power is from the gods. You become trained in Religion and your mask&#39;s magical tradition is (trait: divine)." };
+            yield return new TextBlock { Id = Guid.Parse("4a7f9cec-4576-487a-b96c-2a7d9301e482"), Type = TextBlockType.Text, Text = "The source of your (item: warmask | warmask the gods)’s power is from the gods. You become trained in Religion and your mask&#39;s magical tradition is (trait: divine)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4c9ca0a5-5baa-4d66-b0d8-ae21ac4d857d"),
+                Id = Guid.Parse("ad3e2e48-06e1-4f1e-ac74-c71217fa2d69"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

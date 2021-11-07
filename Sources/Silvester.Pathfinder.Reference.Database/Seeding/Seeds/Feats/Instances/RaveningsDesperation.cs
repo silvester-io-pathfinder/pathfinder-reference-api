@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RaveningsDesperation : Template
     {
-        public static readonly Guid ID = Guid.Parse("d7b00c5c-4cb4-4a16-a460-d51d7d5d7031");
+        public static readonly Guid ID = Guid.Parse("1b70c74d-79c6-44ce-842f-12d635fdbb84");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ff2bd977-38b3-4c41-a8e9-e5bb0e2e4a2f"), Type = TextBlockType.Text, Text = "Your study of the Beast of Gluttondark has taught you how to make do in the most trying of circumstances rather than succumb to weakness. As long as your current Hit Points are less than half your maximum Hit Points, you gain a +1 circumstance bonus to Survival and Stealth checks. If your current Hit Points are less than a quarter your maximum Hit Points, the circumstance bonus is +2 instead." };
+            yield return new TextBlock { Id = Guid.Parse("cbf90b35-61d5-450c-b183-c66e028b9c46"), Type = TextBlockType.Text, Text = "Your study of the Beast of Gluttondark has taught you how to make do in the most trying of circumstances rather than succumb to weakness. As long as your current Hit Points are less than half your maximum Hit Points, you gain a +1 circumstance bonus to Survival and Stealth checks. If your current Hit Points are less than a quarter your maximum Hit Points, the circumstance bonus is +2 instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificLoreSpecificProficiency(Guid.Parse("f7e4b8b6-bd4e-4a4e-a8b5-6d796df5fa1f"), Proficiencies.Instances.Trained.ID, Lores.Instances.Zevgavizeb.ID);
+            builder.HaveSpecificLoreSpecificProficiency(Guid.Parse("15d08d7c-0faf-49d2-b1a8-9bbe55af02e7"), Proficiencies.Instances.Trained.ID, Lores.Instances.Zevgavizeb.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ceb4c966-94c1-4c9b-931f-bf9794746885"),
+                Id = Guid.Parse("d85272e2-8833-4c1a-8bf7-4baac2ab54c6"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

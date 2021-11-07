@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MobileShotStance : Template
     {
-        public static readonly Guid ID = Guid.Parse("38df6b53-d33e-4890-8161-9663954e9edd");
+        public static readonly Guid ID = Guid.Parse("8462ab1c-49d5-4a81-9d96-f36160eb9092");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("95580dae-3bc4-43b5-a705-0797f889bf8b"), Type = TextBlockType.Text, Text = "Your shots become nimble and deadly. While you’re in this stance, your ranged (action: Strikes | Strike) don’t trigger (feat: Attacks of Opportunity | Attack of Opportunity) or other reactions that are triggered by a ranged attack." };
-            yield return new TextBlock { Id = Guid.Parse("ee44f401-7f2b-4da0-b261-91731d792415"), Type = TextBlockType.Text, Text = "If you have (feat: Attack of Opportunity), you can use it with a loaded ranged weapon you’re wielding. The triggering creature must be within 5 feet of you for you to do so." };
+            yield return new TextBlock { Id = Guid.Parse("a654703e-ebca-4ac0-95fe-c2a1bf8a8eae"), Type = TextBlockType.Text, Text = "Your shots become nimble and deadly. While you’re in this stance, your ranged (action: Strikes | Strike) don’t trigger (feat: Attacks of Opportunity | Attack of Opportunity) or other reactions that are triggered by a ranged attack." };
+            yield return new TextBlock { Id = Guid.Parse("1654811d-b3bd-4728-b57b-0c0028196b23"), Type = TextBlockType.Text, Text = "If you have (feat: Attack of Opportunity), you can use it with a loaded ranged weapon you’re wielding. The triggering creature must be within 5 feet of you for you to do so." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1d4356cd-b141-4ff5-a870-9b49264dcb29"), Feats.Instances.ArcherDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6e8c70ba-554c-4d2a-96af-1c302bda1482"), Feats.Instances.ArcherDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("03525080-dee5-4e44-acd7-db627244bdb2"),
+                Id = Guid.Parse("b0a80975-c6a5-415c-bbbe-06e9f0b2d6ee"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

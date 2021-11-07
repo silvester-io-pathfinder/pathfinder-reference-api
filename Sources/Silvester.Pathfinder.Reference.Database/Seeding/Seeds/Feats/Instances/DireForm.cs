@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DireForm : Template
     {
-        public static readonly Guid ID = Guid.Parse("b7bab465-87bb-467b-84c0-4cb1f2c724ec");
+        public static readonly Guid ID = Guid.Parse("8a0d3b62-e09d-436b-9ef3-c8330e7ee83f");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8daacf9-0d5d-4782-9701-21733de2f3b4"), Type = TextBlockType.Text, Text = "Your hybrid shape is a hulking beast. While in your hybrid shape, you gain the effects of (spell: enlarge)." };
+            yield return new TextBlock { Id = Guid.Parse("879b3537-311d-4328-a6dc-eb24f329335e"), Type = TextBlockType.Text, Text = "Your hybrid shape is a hulking beast. While in your hybrid shape, you gain the effects of (spell: enlarge)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4b0f46ce-95c5-47e5-9158-36deaa8b03e5"),
+                Id = Guid.Parse("7152af23-d13c-42cd-b37e-1fbe5fad19f8"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

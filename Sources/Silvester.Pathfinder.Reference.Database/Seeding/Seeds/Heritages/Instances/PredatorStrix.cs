@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
             //TODO: Find a way to add traits.
-            builder.GainSpecificUnarmedAttack(Guid.Parse(""), UnarmedAttack.Talon, WeaponGroups.Instances.Brawling.ID, DamageTypes.Instances.Slashing.ID, damage: "1d3");
+            builder.GainSpecificUnarmedAttack(Guid.Parse(""), UnarmedWeapons.Instances.Talon.ID, WeaponGroups.Instances.Brawling.ID, DamageTypes.Instances.Slashing.ID, damage: "1d3");
         }
 
         protected override SourcePage GetSourcePage()

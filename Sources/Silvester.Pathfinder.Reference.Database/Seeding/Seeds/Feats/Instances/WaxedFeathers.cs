@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WaxedFeathers : Template
     {
-        public static readonly Guid ID = Guid.Parse("a5889489-a4a7-4125-bc74-e2b5f2f43d1e");
+        public static readonly Guid ID = Guid.Parse("ada2bec8-6775-41cc-97fb-1972a75ecde5");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6c632b3f-c3ee-4739-9f29-fa3013608eca"), Type = TextBlockType.Text, Text = "Your feathers are coated in a waxy substance that repels water. You gain a +1 circumstance bonus to saving throws against effects that have the (trait: water) trait. So long as you’re in a dry place, you can spend one action to shake off any water that clings to your clothing and feathers to instantly become dry." };
+            yield return new TextBlock { Id = Guid.Parse("774af703-a05f-4922-9bd2-cfa0c7e1b1da"), Type = TextBlockType.Text, Text = "Your feathers are coated in a waxy substance that repels water. You gain a +1 circumstance bonus to saving throws against effects that have the (trait: water) trait. So long as you’re in a dry place, you can spend one action to shake off any water that clings to your clothing and feathers to instantly become dry." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificHeritage(Guid.Parse("62adcaa7-4f7b-4237-a444-809189ec696e"), Heritages.Instances.WavediverTengu.ID);
+            builder.HaveSpecificHeritage(Guid.Parse("fdbfd465-1909-4c10-9de1-2ce2bcc1711d"), Heritages.Instances.WavediverTengu.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c45b7b41-5bc4-4038-81f8-2406c2c27432"),
+                Id = Guid.Parse("e76e68b0-061d-44f6-b08a-1922c71a8a2d"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

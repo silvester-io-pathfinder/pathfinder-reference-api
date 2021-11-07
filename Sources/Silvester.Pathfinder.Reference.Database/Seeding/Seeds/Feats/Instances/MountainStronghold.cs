@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MountainStronghold : Template
     {
-        public static readonly Guid ID = Guid.Parse("dd441dc0-867e-43dc-86e2-e64984250424");
+        public static readonly Guid ID = Guid.Parse("093afef9-956c-46c8-b7f4-c123869a6819");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0baf5fef-4f44-4d92-8fb3-2a9b5300f815"), Type = TextBlockType.Text, Text = "You focus on your connection to the earth and call upon the mountain to block attacks against you. You gain a +2 circumstance bonus to AC until the beginning of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("2ac07b98-e9ab-4661-b634-ef93922a2aac"), Type = TextBlockType.Text, Text = "You focus on your connection to the earth and call upon the mountain to block attacks against you. You gain a +2 circumstance bonus to AC until the beginning of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("805bec6b-05e6-4e60-80f5-e9977f6035a6"), Feats.Instances.MountainStance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("9a0839a6-0016-4e85-ab06-0adc3854180d"), Feats.Instances.MountainStance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a4706211-0f77-41a8-90f8-a1c7fae7fd9a"),
+                Id = Guid.Parse("abc28449-2568-42b3-a7a4-fa1140ef1c54"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

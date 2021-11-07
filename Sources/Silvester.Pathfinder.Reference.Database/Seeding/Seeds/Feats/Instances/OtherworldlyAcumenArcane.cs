@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OtherworldlyAcumenArcane : Template
     {
-        public static readonly Guid ID = Guid.Parse("18bc45fd-0283-4e26-a190-31f843c93be0");
+        public static readonly Guid ID = Guid.Parse("f2011bc8-e5ec-4308-b2f4-e935ea27625b");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("267b90b3-2eb8-45e3-8faf-b12547faf1f6"), Type = TextBlockType.Text, Text = "Choose one common 2nd-level spell from the arcane tradition." };
-            yield return new TextBlock { Id = Guid.Parse("343d8e74-c61d-4699-bc71-6a35bb038df0"), Type = TextBlockType.Text, Text = "You can cast that spell as an innate spell once per day. Your magic is adaptable. By spending 1 day of downtime, you can change the spell you chose to a different common 2nd-level spell from the same tradition." };
+            yield return new TextBlock { Id = Guid.Parse("5a5b76a1-501d-4d8d-94b7-c9d0ecad8380"), Type = TextBlockType.Text, Text = "Choose one common 2nd-level spell from the arcane tradition." };
+            yield return new TextBlock { Id = Guid.Parse("809f4fe4-b3a1-411b-839d-e35153fc560f"), Type = TextBlockType.Text, Text = "You can cast that spell as an innate spell once per day. Your magic is adaptable. By spending 1 day of downtime, you can change the spell you chose to a different common 2nd-level spell from the same tradition." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f6203242-be7f-4e3f-b525-7eda39ed7c5f"),
+                Id = Guid.Parse("34fcec0c-025c-4a8f-843e-fd230c6afe63"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

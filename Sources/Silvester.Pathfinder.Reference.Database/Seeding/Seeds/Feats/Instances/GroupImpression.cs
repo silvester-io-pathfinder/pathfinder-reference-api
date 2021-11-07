@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GroupImpression : Template
     {
-        public static readonly Guid ID = Guid.Parse("be9e1043-4764-486f-a547-bc6318016a63");
+        public static readonly Guid ID = Guid.Parse("194e86c8-177c-4195-9038-4516a9831440");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d03e59e-2e61-4bbf-97cd-71eebbe5ea83"), Type = TextBlockType.Text, Text = "When you (action: Make an Impression), you can compare your Diplomacy check result to the Will DCs of two targets instead of one. It’s possible to get a different degree of success for each target. The number of targets increases to four if you’re an expert, 10 if you’re a master, and 25 if you’re legendary." };
+            yield return new TextBlock { Id = Guid.Parse("395cca72-530f-490e-95de-51892357049b"), Type = TextBlockType.Text, Text = "When you (action: Make an Impression), you can compare your Diplomacy check result to the Will DCs of two targets instead of one. It’s possible to get a different degree of success for each target. The number of targets increases to four if you’re an expert, 10 if you’re a master, and 25 if you’re legendary." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("f62c86d7-b056-4442-8728-f6934caef49e"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("e4521936-3900-4231-94a3-9a524b8c2aee"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8468abbf-467e-443a-af14-1d1e31e95fe5"),
+                Id = Guid.Parse("9d652a5d-3e1e-4bf6-9c60-b3eb5de0f9b1"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SharedAvoidance : Template
     {
-        public static readonly Guid ID = Guid.Parse("0ab8fe2d-1ff5-4c0b-8794-86c8b468cc99");
+        public static readonly Guid ID = Guid.Parse("adcafcbb-b63d-41f8-9971-3437b991f771");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("777bcdaf-2ff4-47c6-be9b-009cec268bb0"), Type = TextBlockType.Text, Text = "You can project your premonitions of danger to your allies. When you use (feat: Premonition of Avoidance), allies within 15 feet of you who are rolling the same saving throw against the same hazard also gain a +2 circumstance bonus to their saving throws." };
+            yield return new TextBlock { Id = Guid.Parse("8f9d7912-ebb6-4077-8b2a-48ba0dc344b3"), Type = TextBlockType.Text, Text = "You can project your premonitions of danger to your allies. When you use (feat: Premonition of Avoidance), allies within 15 feet of you who are rolling the same saving throw against the same hazard also gain a +2 circumstance bonus to their saving throws." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("29d9b924-3ccd-4ce6-9555-9652bce70303"), Feats.Instances.PremonitionOfAvoidance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("7b99b05b-8931-4334-bc81-d8c3bfd43caf"), Feats.Instances.PremonitionOfAvoidance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1c6e7478-002e-4550-9eb4-9c463c2dde27"),
+                Id = Guid.Parse("0b8e30a3-e2b3-41ba-b995-f330e7fb4b14"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

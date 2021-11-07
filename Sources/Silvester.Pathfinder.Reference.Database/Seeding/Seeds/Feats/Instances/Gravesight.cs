@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Gravesight : Template
     {
-        public static readonly Guid ID = Guid.Parse("97a65623-aa64-4a79-a243-1bd8560c81a0");
+        public static readonly Guid ID = Guid.Parse("5dc087ce-26c1-4114-9676-9bff03284474");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1cf32ac5-6439-4cfe-8608-cd43c9b8f78a"), Type = TextBlockType.Text, Text = "You can see in the darkness as easily as a psychopomp. You gain darkvision." };
+            yield return new TextBlock { Id = Guid.Parse("54f4a638-9af4-416a-9bc9-3c945e19fb27"), Type = TextBlockType.Text, Text = "You can see in the darkness as easily as a psychopomp. You gain darkvision." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSense(Guid.Parse("004d9659-a423-400f-8183-3a87ddf494a4"), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
+            builder.HaveSpecificSense(Guid.Parse("c52903eb-18e0-4a78-b2d2-3ec37e5dd285"), Senses.Instances.LowLightVision.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ea601d33-06b6-4bda-9b56-b82fd3054fb9"),
+                Id = Guid.Parse("1a08d27d-963d-4ce9-a605-4042b16f63da"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

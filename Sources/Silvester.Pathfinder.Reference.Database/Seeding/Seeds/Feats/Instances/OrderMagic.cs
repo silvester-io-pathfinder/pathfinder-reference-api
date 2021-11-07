@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OrderMagic : Template
     {
-        public static readonly Guid ID = Guid.Parse("6892e65e-0c71-440b-962b-2cb48fcb0a95");
+        public static readonly Guid ID = Guid.Parse("839a3109-dc91-4f2a-992a-953e25ff32f6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3706ecdf-9101-4a9f-a75e-65618f71536b"), Type = TextBlockType.Text, Text = "You have delved deeper into the teaching of a new order, gaining access to a coveted order spell. Choose an order you have selected with (Feat: Order Explorer). You gain the initial order spell from that order." };
+            yield return new TextBlock { Id = Guid.Parse("fc3a5bec-d9b8-4af2-ac25-d87f12e5a761"), Type = TextBlockType.Text, Text = "You have delved deeper into the teaching of a new order, gaining access to a coveted order spell. Choose an order you have selected with (Feat: Order Explorer). You gain the initial order spell from that order." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("26e61be3-c0bd-4ffd-992e-4e5e0fff67ae"), Feats.Instances.OrderExplorer.ID);
+            builder.HaveSpecificFeat(Guid.Parse("feee5422-5b9f-4c6a-8904-fe40885d55df"), Feats.Instances.OrderExplorer.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("50a12b5f-0ab9-4539-9b68-d61c94fad731"),
+                Id = Guid.Parse("cea27b23-6845-4aa9-9a43-12705e3cdd3b"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

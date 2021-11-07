@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TwinParry : Template
     {
-        public static readonly Guid ID = Guid.Parse("ae55aa53-fe0b-4ada-82b0-c366e463ef2a");
+        public static readonly Guid ID = Guid.Parse("9a69e249-bc63-4dc8-9458-5d59ff4ac425");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("561ec790-e8ac-42ec-8d96-c4145efd2023"), Type = TextBlockType.Text, Text = "You use your two weapons to parry attacks. You gain a +1 circumstance bonus to AC until the start of your next turn, or a +2 circumstance bonus if either weapon has the (trait: parry) trait. You lose this circumstance bonus if you no longer meet this feat’s requirement." };
+            yield return new TextBlock { Id = Guid.Parse("315c358a-c9ca-4b29-9fb6-93e121f6dd46"), Type = TextBlockType.Text, Text = "You use your two weapons to parry attacks. You gain a +1 circumstance bonus to AC until the start of your next turn, or a +2 circumstance bonus if either weapon has the (trait: parry) trait. You lose this circumstance bonus if you no longer meet this feat’s requirement." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("40a0785e-54df-49a2-bc73-011908d3891e"), Feats.Instances.DualWeaponWarriorDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("a8729692-8e9d-4348-bafa-364ed4352fc1"), Feats.Instances.DualWeaponWarriorDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c3bd1809-59fb-44eb-9489-e1032196de35"),
+                Id = Guid.Parse("865e8d75-8316-422d-9d1c-9bae5e2854b5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FormationMaster : Template
     {
-        public static readonly Guid ID = Guid.Parse("27c607cb-eb87-4491-a1c1-51268a5fcc98");
+        public static readonly Guid ID = Guid.Parse("eef6ea2b-39f9-4af5-9f12-eb3d1259067f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("855017bc-25c9-4cc3-8133-c5fe17df0a8f"), Type = TextBlockType.Text, Text = "You can assemble a formation even with members of ancestries that lack the hobgoblins’ military discipline, and you can extend these benefits to your hobgoblin allies. When you are adjacent to at least two humanoid allies, you gain the benefits of (Feat: Formation Training), even if they aren’t hobgoblin allies. Hobgoblin allies adjacent to you and at least one other hobgoblin ally also gain the bonuses from your (Feat: Formation Training) feat." };
+            yield return new TextBlock { Id = Guid.Parse("865ee541-6040-4242-ae49-c32ff91ae16f"), Type = TextBlockType.Text, Text = "You can assemble a formation even with members of ancestries that lack the hobgoblins’ military discipline, and you can extend these benefits to your hobgoblin allies. When you are adjacent to at least two humanoid allies, you gain the benefits of (Feat: Formation Training), even if they aren’t hobgoblin allies. Hobgoblin allies adjacent to you and at least one other hobgoblin ally also gain the bonuses from your (Feat: Formation Training) feat." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("860eea95-4fb8-4fd1-9bea-c0360f795840"), Feats.Instances.FormationTraining.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ccc52bd1-1ec1-468f-97c1-474b8a256476"), Feats.Instances.FormationTraining.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ba56e9eb-4580-4b96-b186-2c938c9aec5a"),
+                Id = Guid.Parse("ee1494ff-58cb-49fc-ae98-351c1e6122a4"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

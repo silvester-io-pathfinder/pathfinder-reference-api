@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Grimspawn : Template
     {
-        public static readonly Guid ID = Guid.Parse("bd39b787-67a6-4ab1-8594-876136b59f63");
+        public static readonly Guid ID = Guid.Parse("a6ff088d-c6e4-4d79-b618-5bc5d3cb1fca");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("65938545-a3f2-42b3-a1ba-e369e3ec3d8f"), Type = TextBlockType.Text, Text = "Your lineage traces back to a daemon, one of the manifestations of horrific forms of death that devour souls within their foul home of Abaddon. As a result, you cling tenaciously to the last shreds of your own life force. You gain the (feat: Diehard) feat." };
+            yield return new TextBlock { Id = Guid.Parse("920c6391-6a82-4345-ba31-f68f9bab0930"), Type = TextBlockType.Text, Text = "Your lineage traces back to a daemon, one of the manifestations of horrific forms of death that devour souls within their foul home of Abaddon. As a result, you cling tenaciously to the last shreds of your own life force. You gain the (feat: Diehard) feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b89455eb-3259-43f0-9ab6-23d210da2f94"),
+                Id = Guid.Parse("d7e8f95f-9eac-4cc4-9487-5d9f092ca4e9"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

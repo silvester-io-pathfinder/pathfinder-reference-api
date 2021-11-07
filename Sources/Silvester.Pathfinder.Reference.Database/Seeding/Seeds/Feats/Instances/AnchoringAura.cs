@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AnchoringAura : Template
     {
-        public static readonly Guid ID = Guid.Parse("09d3cedb-9b53-4250-8a9e-9e926df89c1f");
+        public static readonly Guid ID = Guid.Parse("fdfe464a-f4b4-4578-bbad-530e9e4c2bfd");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0c08a39f-e8ca-4d15-876d-d12b5eb3622d"), Type = TextBlockType.Text, Text = "Your aura hampers fiends’ teleportation. Your aura attempts to counteract (trait: teleportation) spells cast by fiends within 15 feet, using the spell level and DC of your devotion spells." };
+            yield return new TextBlock { Id = Guid.Parse("e2576f6e-05d6-46ea-9cfc-4bcd45f59a5e"), Type = TextBlockType.Text, Text = "Your aura hampers fiends’ teleportation. Your aura attempts to counteract (trait: teleportation) spells cast by fiends within 15 feet, using the spell level and DC of your devotion spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("6e63522a-b19b-4cc8-83e9-fb35308a3713"), Feats.Instances.FiendsbaneOath.ID);
+            builder.HaveSpecificFeat(Guid.Parse("05efa30e-5e4a-4024-9f2e-638d866d49ca"), Feats.Instances.FiendsbaneOath.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8e757c48-3c20-4079-a7f4-db0c623539ea"),
+                Id = Guid.Parse("81dc4939-51da-4604-83de-77994e4710be"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ElasticMutagen : Template
     {
-        public static readonly Guid ID = Guid.Parse("a356225d-9d0d-42f1-8c92-8b2465bffa3a");
+        public static readonly Guid ID = Guid.Parse("074fd147-419c-4395-a911-afeb75083fff");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0718aa3e-8f38-4050-a6fc-bd94e7d69b92"), Type = TextBlockType.Text, Text = "You can cause your body to twist and flow like the quicksilver within your mutagens. Whenever you are under the effects of a quicksilver mutagen, you can stretch your legs and (action: Step) up to 10 feet, and you can squish and compress your body, allowing you to make it through tight spaces as if you were one size smaller, in addition to any effect from (action: Squeezing | Squeeze)." };
+            yield return new TextBlock { Id = Guid.Parse("85c8f6a6-c068-44f4-8988-daf07add3f1f"), Type = TextBlockType.Text, Text = "You can cause your body to twist and flow like the quicksilver within your mutagens. Whenever you are under the effects of a quicksilver mutagen, you can stretch your legs and (action: Step) up to 10 feet, and you can squish and compress your body, allowing you to make it through tight spaces as if you were one size smaller, in addition to any effect from (action: Squeezing | Squeeze)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a21f5659-27a8-443b-bbab-48ce64f6d625"),
+                Id = Guid.Parse("ce7b4b93-46ba-452c-b414-93d67e7f33a5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

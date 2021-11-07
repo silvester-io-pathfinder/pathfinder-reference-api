@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ResoundingBlow : Template
     {
-        public static readonly Guid ID = Guid.Parse("b6f6ba4a-14df-484b-845d-ef7ce85a8a29");
+        public static readonly Guid ID = Guid.Parse("db5c1e48-c5c5-4396-b5d6-087d23d80130");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1dc1d3a8-d4b5-453e-b660-2665bb49bba2"), Type = TextBlockType.Text, Text = "You strike your enemy in the head with such force that their ears ring. Make a melee (action: Strike). If the (action: Strike) hits and deals damage, the target is deafened until the start of your next turn (or for 1 minute on a critical hit)." };
+            yield return new TextBlock { Id = Guid.Parse("6bae8854-a4d3-400a-bc2d-593c127f686a"), Type = TextBlockType.Text, Text = "You strike your enemy in the head with such force that their ears ring. Make a melee (action: Strike). If the (action: Strike) hits and deals damage, the target is deafened until the start of your next turn (or for 1 minute on a critical hit)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b8b13df7-32d8-49d6-a03c-d1dd58c6d23e"),
+                Id = Guid.Parse("26a5a760-8bdc-4e75-92b0-790208bcedf8"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

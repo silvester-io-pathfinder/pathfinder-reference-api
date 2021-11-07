@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReturningThrow : Template
     {
-        public static readonly Guid ID = Guid.Parse("3ea897f6-9a04-4e60-bb33-08c656ec685e");
+        public static readonly Guid ID = Guid.Parse("7f323e1c-ceaa-4b63-b24d-963dda6c8ba3");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("201d8ba7-79fb-4e0c-a1cb-373b56eb64f5"), Type = TextBlockType.Text, Text = "You have mastered the technique of arcing a projectile so that it returns to your hand after being thrown, though this requires a moment to precisely calculate the trajectory and possible ricochets. Make a ranged (action: Strike) with a thrown weapon. Once the (action: Strike) is complete, the weapon arcs or ricochets back to your hand. If your hands are full when the weapon returns, it falls to the ground in your space." };
+            yield return new TextBlock { Id = Guid.Parse("dc65b112-19ba-4eac-a85c-292257da1641"), Type = TextBlockType.Text, Text = "You have mastered the technique of arcing a projectile so that it returns to your hand after being thrown, though this requires a moment to precisely calculate the trajectory and possible ricochets. Make a ranged (action: Strike) with a thrown weapon. Once the (action: Strike) is complete, the weapon arcs or ricochets back to your hand. If your hands are full when the weapon returns, it falls to the ground in your space." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b7bbd26a-229a-487f-9b22-4e0930f44475"),
+                Id = Guid.Parse("55cf7cfd-d944-420b-8eaa-095965f655b8"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

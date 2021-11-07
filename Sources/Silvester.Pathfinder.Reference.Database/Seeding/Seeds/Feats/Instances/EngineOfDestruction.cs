@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EngineOfDestruction : Template
     {
-        public static readonly Guid ID = Guid.Parse("e958bf04-43ca-4c2a-9d14-457a7ead15e7");
+        public static readonly Guid ID = Guid.Parse("9a550721-4f42-4d4b-a197-b627fb1cf56e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0d69d325-2dae-4f74-9b10-dec5dab39900"), Type = TextBlockType.Text, Text = "Your construct unleashes a broad swath of devastation by separating its limbs, deploying hidden armaments, or using a similar technique to wreak havoc. You Command your innovation. Instead of its normal actions, it (action: Strides | Stride) once, then makes a (action: Strike) against each foe within 30 feet of it with a +2 circumstance bonus to its attack rolls. The multiple attack penalty doesn’t increase until after the construct makes all the attacks." };
+            yield return new TextBlock { Id = Guid.Parse("07c5c32a-d433-475c-840f-f00b5c9d050f"), Type = TextBlockType.Text, Text = "Your construct unleashes a broad swath of devastation by separating its limbs, deploying hidden armaments, or using a similar technique to wreak havoc. You Command your innovation. Instead of its normal actions, it (action: Strides | Stride) once, then makes a (action: Strike) against each foe within 30 feet of it with a +2 circumstance bonus to its attack rolls. The multiple attack penalty doesn’t increase until after the construct makes all the attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificInnovation(Guid.Parse("83b21a5c-3d87-4e5c-89bc-306dc75eae9d"), Innovations.Instances.Construct.ID);
+            builder.HaveSpecificInnovation(Guid.Parse("367d459e-abe8-4e98-8727-dcbc99f0555b"), Innovations.Instances.Construct.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("02ee0666-3762-46ee-a764-5bb5323aa51c"),
+                Id = Guid.Parse("9b96c896-e345-4024-9ee7-b896c4b5bf4e"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

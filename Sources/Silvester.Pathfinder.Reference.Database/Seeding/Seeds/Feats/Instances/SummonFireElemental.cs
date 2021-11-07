@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SummonFireElemental : Template
     {
-        public static readonly Guid ID = Guid.Parse("1ce0ad71-f68f-48cc-8268-e9f4bb18f7a3");
+        public static readonly Guid ID = Guid.Parse("a766bb7e-920e-4dcd-ad85-9cef777d8c94");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("789f6dd3-0cd8-41c3-a68f-392bd78c6d36"), Type = TextBlockType.Text, Text = "You can summon an elemental ally. Once per day, you can cast (spell: summon elemental) as a 5th-level primal innate spell, but the elemental summoned must be a (trait: fire) elemental." };
+            yield return new TextBlock { Id = Guid.Parse("285ee907-9013-41e1-a249-11b6776ebc8e"), Type = TextBlockType.Text, Text = "You can summon an elemental ally. Once per day, you can cast (spell: summon elemental) as a 5th-level primal innate spell, but the elemental summoned must be a (trait: fire) elemental." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7fe5c253-d6aa-4228-b5ca-be4afff7ba75"),
+                Id = Guid.Parse("38002ae1-4d40-4788-9fb5-2f599cb3faef"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

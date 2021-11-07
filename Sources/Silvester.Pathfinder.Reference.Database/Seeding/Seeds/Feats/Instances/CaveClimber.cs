@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CaveClimber : Template
     {
-        public static readonly Guid ID = Guid.Parse("258dfe74-9e0b-41df-8a2d-40bb3bc6ec98");
+        public static readonly Guid ID = Guid.Parse("92d6ee2b-7dcb-4204-8193-32bfc2e5c05a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f7db86eb-0c95-4489-bc31-95d26ebf49d9"), Type = TextBlockType.Text, Text = "After years of crawling and climbing through caverns, you can climb easily anywhere you go. You gain a climb Speed of 10 feet." };
+            yield return new TextBlock { Id = Guid.Parse("e67bb7ca-883e-4eb5-84cc-ea1f6869e878"), Type = TextBlockType.Text, Text = "After years of crawling and climbing through caverns, you can climb easily anywhere you go. You gain a climb Speed of 10 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e25ca799-965c-4626-858d-be7cc7b5bb13"),
+                Id = Guid.Parse("7cc3f343-3191-4182-959a-7b869b4abf11"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

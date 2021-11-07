@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ChampionResiliency : Template
     {
-        public static readonly Guid ID = Guid.Parse("2f78fda3-068a-457b-ac29-86b262b6bf02");
+        public static readonly Guid ID = Guid.Parse("9d80cd4b-c166-4461-8d00-9576662a2420");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bdaddfa3-6188-4e67-974c-8d136aa0bed0"), Type = TextBlockType.Text, Text = "You gain 3 additional Hit Points for each champion archetype class feat you have. As you continue selecting champion archetype class feats, you continue to gain additional Hit Points in this way." };
+            yield return new TextBlock { Id = Guid.Parse("9350d2c8-da9b-46b0-b3e5-7e15a2536878"), Type = TextBlockType.Text, Text = "You gain 3 additional Hit Points for each champion archetype class feat you have. As you continue selecting champion archetype class feats, you continue to gain additional Hit Points in this way." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("7104a27d-ee6f-4e86-a148-f4be0a5a7743"), Feats.Instances.ChampionDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("fa3c39a2-3cd2-430a-88eb-1b2b929e6bee"), Feats.Instances.ChampionDedication.ID);
             //TODO: Add prerequisites.
         }
 
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c140ab06-97ac-44b2-b248-69b5aaa6df54"),
+                Id = Guid.Parse("efc8a784-4564-4438-bc6f-a327bb48c54f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

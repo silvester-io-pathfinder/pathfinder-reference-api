@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ResilientShell : Template
     {
-        public static readonly Guid ID = Guid.Parse("7b3e2306-ee25-47c8-9a83-50c06cead159");
+        public static readonly Guid ID = Guid.Parse("8b2073f1-f432-4d99-8d55-a2df9a4435dc");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7fae7081-98e0-4e2a-8a54-61f08a4a1b73"), Type = TextBlockType.Text, Text = "Your eidolon is resilient against attacks. It gains resistance to physical damage equal to its Constitution modifier." };
+            yield return new TextBlock { Id = Guid.Parse("7c62b78d-c9d8-48a5-bc82-be0a5358a1e5"), Type = TextBlockType.Text, Text = "Your eidolon is resilient against attacks. It gains resistance to physical damage equal to its Constitution modifier." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b8596dc0-ac0f-4ed5-ad59-1314040d8f71"),
+                Id = Guid.Parse("63e45877-f398-4b81-9676-bb369a1bf7df"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

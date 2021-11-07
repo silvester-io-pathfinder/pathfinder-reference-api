@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AnimalTrainerDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("bb6ac547-68c0-438f-a28c-b80c469ab1bc");
+        public static readonly Guid ID = Guid.Parse("6066e2ee-7105-4e7f-b72d-2c425652876e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("53977440-7376-4962-a4c4-31f6d09930fc"), Type = TextBlockType.Text, Text = "You gain the services of a young animal companion that travels with you and obeys simple commands as best as it can (page 214). This trained animal is trained in Performance instead of the skill listed for its type." };
+            yield return new TextBlock { Id = Guid.Parse("f3f36397-da4b-4a47-bda9-dc20121304be"), Type = TextBlockType.Text, Text = "You gain the services of a young animal companion that travels with you and obeys simple commands as best as it can (page 214). This trained animal is trained in Performance instead of the skill listed for its type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("5416915a-38c3-4a20-975f-ea42af9e14c1"), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("800c364c-f48b-489e-b60c-a97c552c2cdd"), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("53d37cbe-cccc-4a80-93c4-d75d8ff9105d"),
+                Id = Guid.Parse("bc482f89-9fdc-4300-b16d-1d53296deea3"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

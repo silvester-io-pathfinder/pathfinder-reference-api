@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StealthyCompanion : Template
     {
-        public static readonly Guid ID = Guid.Parse("5328f240-8772-405d-8ea5-e2a293dc9c65");
+        public static readonly Guid ID = Guid.Parse("8a772703-7e0e-43c5-8ae8-5c7e79d32a96");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9eb3ed82-23da-479d-a839-14149b3c9bfd"), Type = TextBlockType.Text, Text = "You’ve trained your animal companion to blend in to its surroundings. Your animal companion gains the benefit of the (feat: Camouflage) feat. If your companion is a specialized ambusher, its proficiency rank for Stealth increases to master (or legendary if it was already master)." };
+            yield return new TextBlock { Id = Guid.Parse("0c804b66-ecb5-46ca-b4b5-2e29707789d8"), Type = TextBlockType.Text, Text = "You’ve trained your animal companion to blend in to its surroundings. Your animal companion gains the benefit of the (feat: Camouflage) feat. If your companion is a specialized ambusher, its proficiency rank for Stealth increases to master (or legendary if it was already master)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyAnimalCompanion(Guid.Parse("12173b79-670e-4b63-b27c-3248a235b2f1"));
-            builder.HaveSpecificFeat(Guid.Parse("5c1c70a3-01fd-46be-88ae-f82a86c7262b"), Feats.Instances.Camouflage.ID);
+            builder.HaveAnyAnimalCompanion(Guid.Parse("3b8832cd-b941-4de8-86f0-808f6766b8c4"));
+            builder.HaveSpecificFeat(Guid.Parse("71f7f79d-63c1-47fa-a70c-a5bc52398089"), Feats.Instances.Camouflage.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f9535ebd-ceb5-46bc-aab5-c42c8203618b"),
+                Id = Guid.Parse("110e6fb1-6979-41e2-903c-11c6395e917d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

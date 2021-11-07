@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ThousandFaces : Template
     {
-        public static readonly Guid ID = Guid.Parse("8a3de934-373b-4915-9d45-3e625df25dcb");
+        public static readonly Guid ID = Guid.Parse("e02726e6-2859-4f5e-bbdc-3232836fe859");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81f271eb-5fbd-4864-855c-661f06a808e1"), Type = TextBlockType.Text, Text = "Your form is as mutable as the weather, changing to meet your whim. You add the forms listed in (spell: humanoid form) to your wild shape list." };
+            yield return new TextBlock { Id = Guid.Parse("ea22531b-6b9f-4778-a410-ed9cf7d420f0"), Type = TextBlockType.Text, Text = "Your form is as mutable as the weather, changing to meet your whim. You add the forms listed in (spell: humanoid form) to your wild shape list." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("5ac882d0-c27f-4b60-a5cb-78a5da216bd9"), Feats.Instances.WildShape.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d64961bd-93df-43f2-8e45-4a0237437d1c"), Feats.Instances.WildShape.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("874edc66-4465-470c-ab12-c9e9ad22b0db"),
+                Id = Guid.Parse("1e2e8d1d-eea2-4488-a19f-e942a858345f"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

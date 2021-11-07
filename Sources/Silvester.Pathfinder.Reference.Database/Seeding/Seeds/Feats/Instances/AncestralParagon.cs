@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AncestralParagon : Template
     {
-        public static readonly Guid ID = Guid.Parse("8707a28f-a33e-41c5-bf5b-c86a0b566a18");
+        public static readonly Guid ID = Guid.Parse("d8812ddb-ca84-439d-aa82-1e55ea7cff1a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1f8c3c2c-e80c-4847-bcb1-883cf6b9f7a1"), Type = TextBlockType.Text, Text = "Whether through instinct, study, or magic, you feel a deeper connection to your ancestry. You gain a 1st-level ancestry feat." };
+            yield return new TextBlock { Id = Guid.Parse("0a4e727c-df70-416b-af47-6eb593900012"), Type = TextBlockType.Text, Text = "Whether through instinct, study, or magic, you feel a deeper connection to your ancestry. You gain a 1st-level ancestry feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e5ec35b2-daf4-4f5f-adf9-090202f4b942"),
+                Id = Guid.Parse("3e0eae39-fb11-46fe-b557-edf755faae16"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

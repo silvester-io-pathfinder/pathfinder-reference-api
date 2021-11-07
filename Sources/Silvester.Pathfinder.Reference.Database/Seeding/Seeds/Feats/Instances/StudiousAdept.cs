@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StudiousAdept : Template
     {
-        public static readonly Guid ID = Guid.Parse("2fe3c8a7-fb20-42a3-aa40-f707bf1ecfad");
+        public static readonly Guid ID = Guid.Parse("77b65fe1-9fd5-41c0-b4a1-8b3fe935fd9a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad334194-6b5d-4993-a366-5184c10c3b09"), Type = TextBlockType.Text, Text = "You achieve a breakthrough in your exploration of magic. You gain (spell: humanoid form) and (spell: mirror image) as 2nd-level arcane innate spells. You can cast each of these arcane innate spells once per day." };
+            yield return new TextBlock { Id = Guid.Parse("3bbbe32b-073b-4141-be8b-03a24f0349e5"), Type = TextBlockType.Text, Text = "You achieve a breakthrough in your exploration of magic. You gain (spell: humanoid form) and (spell: mirror image) as 2nd-level arcane innate spells. You can cast each of these arcane innate spells once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("71203c29-ebf6-4550-b0aa-6eeac06c97f2"), Feats.Instances.StudiousMagic.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6c2c416a-3e14-4a2e-867d-be412b9a5913"), Feats.Instances.StudiousMagic.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5134d6e4-4b8f-459e-908f-591adf507438"),
+                Id = Guid.Parse("9606fbf9-ffdf-4d3e-b64e-a31c5b0f6085"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

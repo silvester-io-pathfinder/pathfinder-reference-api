@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReadLips : Template
     {
-        public static readonly Guid ID = Guid.Parse("19597e33-7a76-486d-b3b8-1b0f072ec1bd");
+        public static readonly Guid ID = Guid.Parse("3311aa5f-2535-4561-8fe3-d2e522f27135");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ae6dd3d-ec40-45dc-9f75-66703d87d324"), Type = TextBlockType.Text, Text = "You can read lips of others nearby who you can clearly see. When you’re at your leisure, you can do this automatically. In encounter mode or when attempting a more difficult feat of lipreading, you’re fascinated and flat-footed during each round in which you focus on lip movements, and you must succeed at a Society check (DC determined by the GM) to successfully read someone’s lips. In either case, the language read must be one that you know." };
-            yield return new TextBlock { Id = Guid.Parse("b2bfb6f6-ab57-4ab7-8067-7a4dbd791815"), Type = TextBlockType.Text, Text = "If you are deaf or hard of hearing and have Read Lips, you recognize the lip movements for the spoken form of your languages. You can also speak the spoken form of your languages clearly enough for others to understand you." };
+            yield return new TextBlock { Id = Guid.Parse("27c8b86f-9a69-4c27-8a77-ce18be3cd1ed"), Type = TextBlockType.Text, Text = "You can read lips of others nearby who you can clearly see. When you’re at your leisure, you can do this automatically. In encounter mode or when attempting a more difficult feat of lipreading, you’re fascinated and flat-footed during each round in which you focus on lip movements, and you must succeed at a Society check (DC determined by the GM) to successfully read someone’s lips. In either case, the language read must be one that you know." };
+            yield return new TextBlock { Id = Guid.Parse("dcb559bb-3e85-4b6f-ae52-c9da68dbc0e7"), Type = TextBlockType.Text, Text = "If you are deaf or hard of hearing and have Read Lips, you recognize the lip movements for the spoken form of your languages. You can also speak the spoken form of your languages clearly enough for others to understand you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("505172bf-03ab-4aeb-8752-7928aaa5c4fb"), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("fbf346c2-f122-44db-8c17-af072350b78c"), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9c057fb2-1f74-4f5a-ad95-43d71287bc08"),
+                Id = Guid.Parse("90dff721-c567-4f87-9fbe-cbf48fee08c9"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

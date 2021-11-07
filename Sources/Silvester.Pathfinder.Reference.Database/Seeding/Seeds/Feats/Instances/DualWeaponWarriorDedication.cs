@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DualWeaponWarriorDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("6936bfa3-5b2c-4de1-8f9b-d972f5892859");
+        public static readonly Guid ID = Guid.Parse("bb9e5549-e83a-4bd6-93f1-f189b1e8d044");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4580011d-4b3b-458b-810f-ba091142da14"), Type = TextBlockType.Text, Text = "You’re exceptional in your use of two weapons. You gain the (feat: Double Slice) fighter feat. This serves as (feat: Double Slice) for the purpose of meeting prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("47442ce9-b5c1-4fc5-bd62-92e55bf6eb2d"), Type = TextBlockType.Text, Text = "You’re exceptional in your use of two weapons. You gain the (feat: Double Slice) fighter feat. This serves as (feat: Double Slice) for the purpose of meeting prerequisites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ae73a7e1-3907-4a25-bca1-7693b0bb4780"),
+                Id = Guid.Parse("1da0e77b-8ef7-4775-9ff4-6e5ba35ffa9c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

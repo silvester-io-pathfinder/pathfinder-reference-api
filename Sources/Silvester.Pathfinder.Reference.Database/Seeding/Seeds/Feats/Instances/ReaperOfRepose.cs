@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReaperOfRepose : Template
     {
-        public static readonly Guid ID = Guid.Parse("0975a0a2-613a-4081-83d5-c0d73fb58301");
+        public static readonly Guid ID = Guid.Parse("8787cdf9-f6fe-45be-a870-85f0a56b01f5");
 
         protected override Feat GetFeat()
         {
@@ -28,19 +29,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8663db52-b11e-4168-a0a0-6d28b433a833"), Type = TextBlockType.Text, Text = "Your skill and fervor allow you to pierce undead defenses and exploit their weaknesses. When you make an attack using a weapon with which you have master proficiency and hit an undead creature, you ignore 5 points of the creature’s resistances, and the undead’s weaknesses are 2 higher against your attack." };
+            yield return new TextBlock { Id = Guid.Parse("883c2fcf-7f6a-4d3c-8626-bf0f273cf2d2"), Type = TextBlockType.Text, Text = "Your skill and fervor allow you to pierce undead defenses and exploit their weaknesses. When you make an attack using a weapon with which you have master proficiency and hit an undead creature, you ignore 5 points of the creature’s resistances, and the undead’s weaknesses are 2 higher against your attack." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1142d7b8-7cbb-46d7-9da0-a2b995f53e59"), Feats.Instances.KnightReclaimantDedication.ID);
-            builder.AddOr(Guid.Parse("a2288f0f-90f3-46d5-aadf-c9971c0f6725"), or => 
+            builder.HaveSpecificFeat(Guid.Parse("f4c1ff8c-8fb0-4689-8e59-7f871a1584a8"), Feats.Instances.KnightReclaimantDedication.ID);
+            builder.AddOr(Guid.Parse("f848ab92-8958-4868-b99d-dd0e080e7bb7"), or => 
             {
-                or.HaveAnyWeaponCategorySpecificProficiency(Guid.Parse("41d0a8b7-90ea-4002-92bc-94e661ce72a8"), Proficiencies.Instances.Master.ID);
-                or.HaveAnyWeaponGroupSpecificProficiency(Guid.Parse("353258d1-1bf1-4410-a8b4-a5cae46097cc"), Proficiencies.Instances.Master.ID);
-                or.HaveAnyMeleeWeaponSpecificProficiency(Guid.Parse("1a3dad4b-761e-401b-a093-787caf47fe98"), Proficiencies.Instances.Master.ID);
-                or.HaveAnyRangedWeaponSpecificProficiency(Guid.Parse("8d090b62-26a1-4943-95ab-73b41d2db864"), Proficiencies.Instances.Master.ID);
+                or.HaveAnyWeaponCategorySpecificProficiency(Guid.Parse("cda0ca19-c560-451d-893e-7abd20da8b23"), Proficiencies.Instances.Master.ID);
+                or.HaveAnyWeaponGroupSpecificProficiency(Guid.Parse("8e84a9d8-0ed1-47a1-b24a-0c6f6fafd963"), Proficiencies.Instances.Master.ID);
+                or.HaveAnyMeleeWeaponSpecificProficiency(Guid.Parse("5f3d3077-be9f-42eb-8398-e0d18e250b90"), Proficiencies.Instances.Master.ID);
+                or.HaveAnyRangedWeaponSpecificProficiency(Guid.Parse("6e1c6559-caf6-4a1c-bcf4-8613235745bf"), Proficiencies.Instances.Master.ID);
             });
         }
 
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a72e18ec-b22d-4b82-867c-7630d0bda787"),
+                Id = Guid.Parse("8026b209-114e-4f83-a404-d768a5c671e2"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

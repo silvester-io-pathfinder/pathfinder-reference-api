@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WeaponImproviserDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("ad70c2b3-dee2-4183-8e8e-cf2dfd106ba4");
+        public static readonly Guid ID = Guid.Parse("014bd55f-a69f-41df-9559-9da942b3a58c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("018a7421-8b5e-4216-9d61-f973a3b45658"), Type = TextBlockType.Text, Text = "You don’t take the normal -2 penalty to attack rolls with improvised weapons. Additionally, whenever you gain a class feature that grants you expert or greater proficiency with any weapon, you also gain that proficiency with improvised weapons." };
+            yield return new TextBlock { Id = Guid.Parse("22794f5c-4ecf-486f-9d86-e57522d77c76"), Type = TextBlockType.Text, Text = "You don’t take the normal -2 penalty to attack rolls with improvised weapons. Additionally, whenever you gain a class feature that grants you expert or greater proficiency with any weapon, you also gain that proficiency with improvised weapons." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("f2121f48-9c38-4325-afae-7dd8b58e5887"), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Martial.ID);
+            builder.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("5aac2d2e-88b7-4ed8-ac92-e0e69d5ee2f1"), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Martial.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("60acbe9e-e2d8-48ba-a053-1fc23a311cd6"),
+                Id = Guid.Parse("af81a3ee-f389-4f33-bab4-15a85ae026eb"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

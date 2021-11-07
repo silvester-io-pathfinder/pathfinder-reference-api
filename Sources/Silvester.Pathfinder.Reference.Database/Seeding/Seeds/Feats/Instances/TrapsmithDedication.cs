@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TrapsmithDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("a59d8214-ace5-4711-b9b7-af9de15db67e");
+        public static readonly Guid ID = Guid.Parse("84bed3f8-a3ff-44b1-935a-65c8670ea014");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2f8c6f49-2957-497e-a1ea-ae1e450d21eb"), Type = TextBlockType.Text, Text = "You use glimmering gears and gnashing mechanisms to manufacture snares using specialized parts. Your snares include clockwork and steam-powered cogwheels and gears, and their gush of steam can hinder those you ensnare. If you choose to construct a snare using gears and a creature fails their saving throw against the snare, all creatures are concealed to that creature for 1 round, as a burst of steam obscures its vision." };
-            yield return new TextBlock { Id = Guid.Parse("560c5f38-ee31-458e-ba1e-00aa23f5fa70"), Type = TextBlockType.Text, Text = "__You can select this dedication feat for the trapsmith archetype even if you haven’t yet gained three feats from the snarecrafter archetype.__" };
+            yield return new TextBlock { Id = Guid.Parse("225d6850-76c9-4ac7-b571-fa403baca7b2"), Type = TextBlockType.Text, Text = "You use glimmering gears and gnashing mechanisms to manufacture snares using specialized parts. Your snares include clockwork and steam-powered cogwheels and gears, and their gush of steam can hinder those you ensnare. If you choose to construct a snare using gears and a creature fails their saving throw against the snare, all creatures are concealed to that creature for 1 round, as a burst of steam obscures its vision." };
+            yield return new TextBlock { Id = Guid.Parse("fe96a184-28cf-4f73-a4c5-fcd3b47fbb44"), Type = TextBlockType.Text, Text = "__You can select this dedication feat for the trapsmith archetype even if you haven’t yet gained three feats from the snarecrafter archetype.__" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("73083bfb-522f-4684-a92b-03b1b16cbc92"), or => 
+            builder.AddOr(Guid.Parse("29a3f0ff-a489-47ab-b306-fc65989e30c4"), or => 
             {
-                or.HaveSpecificFeat(Guid.Parse("85a95745-dc1b-471e-9aee-80b372698bf6"), Feats.Instances.SnarecrafterDedication.ID);
-                or.HaveSpecificFeat(Guid.Parse("294d9d0b-d5bf-4215-9be8-7b2132424387"), Feats.Instances.SnareSpecialist.ID);
+                or.HaveSpecificFeat(Guid.Parse("c4834fea-0035-49d0-923c-1c1089b0b896"), Feats.Instances.SnarecrafterDedication.ID);
+                or.HaveSpecificFeat(Guid.Parse("0cf5a472-f80e-4068-984b-abeb04a273b5"), Feats.Instances.SnareSpecialist.ID);
             });
         }
 
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3cfe6796-fdc5-40ec-b15f-6738e853f00d"),
+                Id = Guid.Parse("0f522d89-e74f-4bee-890e-c3308a654be4"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

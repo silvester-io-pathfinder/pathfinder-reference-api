@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WeaponSupremacy : Template
     {
-        public static readonly Guid ID = Guid.Parse("a8a6b9d4-3df5-464a-9e80-561044b32918");
+        public static readonly Guid ID = Guid.Parse("0942858b-5560-43a1-bd00-9f41f8798d67");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e840d2b-5ddb-47f9-9572-65f5806c1d39"), Type = TextBlockType.Text, Text = "Your skill with weapons lets you attack swiftly at all times." };
-            yield return new TextBlock { Id = Guid.Parse("6f25a79b-e51a-4318-b8de-88994ed5ef9d"), Type = TextBlockType.Text, Text = "You’re permanently quickened. You can use your extra action only to (Action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("db6d3fed-abb3-47de-944e-139be99c8a1a"), Type = TextBlockType.Text, Text = "Your skill with weapons lets you attack swiftly at all times." };
+            yield return new TextBlock { Id = Guid.Parse("e439c1fc-f61c-416d-992c-1f5d0a7d944e"), Type = TextBlockType.Text, Text = "You’re permanently quickened. You can use your extra action only to (Action: Strike)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ea05930b-2a40-464b-b8d0-574092d7156a"),
+                Id = Guid.Parse("1ffe4033-1936-4fce-8623-5d77af670e85"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

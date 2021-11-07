@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FinishTheJob : Template
     {
-        public static readonly Guid ID = Guid.Parse("3e60271e-a5fa-40f0-bb50-5f6259dc6c53");
+        public static readonly Guid ID = Guid.Parse("d7177e79-387f-4d25-b23e-03aa5d9632ac");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7f7ead81-5441-483b-a14a-0d1d03faa022"), Type = TextBlockType.Text, Text = "Your last attack failed, but it set you up for another. Make a (action: Strike) with your other hand, using a one-handed melee weapon or unarmed attack. This (action: Strike) uses the same multiple attack penalty as the (action: Strike) that failed on the last action. Afterward, increase your multiple attack penalty normally." };
+            yield return new TextBlock { Id = Guid.Parse("37e08091-6978-43ba-9fdb-82ae869e0e00"), Type = TextBlockType.Text, Text = "Your last attack failed, but it set you up for another. Make a (action: Strike) with your other hand, using a one-handed melee weapon or unarmed attack. This (action: Strike) uses the same multiple attack penalty as the (action: Strike) that failed on the last action. Afterward, increase your multiple attack penalty normally." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d2a46a4f-8fe0-4088-9c83-1dd1f93626b3"),
+                Id = Guid.Parse("072f6281-e2b8-4a82-be59-eb1cb5b0b1ba"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

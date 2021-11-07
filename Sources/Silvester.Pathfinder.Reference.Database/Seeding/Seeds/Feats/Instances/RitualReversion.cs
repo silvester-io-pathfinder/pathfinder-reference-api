@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RitualReversion : Template
     {
-        public static readonly Guid ID = Guid.Parse("6c92a6bd-8961-4b74-9df0-359f8c4a15ff");
+        public static readonly Guid ID = Guid.Parse("ef9a423a-7238-455e-a1bf-721ca4bec1bc");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("842f6c1e-afd8-48c5-a52d-d045507ef6bf"), Type = TextBlockType.Text, Text = "You can temporarily revert to a less conspicuous form without diminishing your senses." };
-            yield return new TextBlock { Id = Guid.Parse("93232a05-234e-41df-978e-ac0c79b161fd"), Type = TextBlockType.Text, Text = "You take the form of an ordinary specimen of the type of plant or fungus that most closely resembles you, reverting to your body’s appearance just before your spirit joined with it. This otherwise has the effects of (spell: tree shape), except that your size remains Small." };
+            yield return new TextBlock { Id = Guid.Parse("5fd86171-f4d7-4514-a839-9a765a6f0bf4"), Type = TextBlockType.Text, Text = "You can temporarily revert to a less conspicuous form without diminishing your senses." };
+            yield return new TextBlock { Id = Guid.Parse("f8076ac5-04e1-4a04-92fe-2fa14383709a"), Type = TextBlockType.Text, Text = "You take the form of an ordinary specimen of the type of plant or fungus that most closely resembles you, reverting to your body’s appearance just before your spirit joined with it. This otherwise has the effects of (spell: tree shape), except that your size remains Small." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("aced5c97-25df-4cda-a3da-8db98dde8c03"),
+                Id = Guid.Parse("56de1d3d-af66-41de-8477-ea6ff8d7684e"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

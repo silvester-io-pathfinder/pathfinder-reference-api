@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StickyBomb : Template
     {
-        public static readonly Guid ID = Guid.Parse("a0428412-5139-4b83-a015-d59957799920");
+        public static readonly Guid ID = Guid.Parse("27e38f45-f809-4d2c-b382-bd58eb2f1bc8");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e08026b1-eaf1-47ba-8e61-c7e26c53c218"), Type = TextBlockType.Text, Text = "You mix in an additive to make your bomb’s contents adhere to the target and continue to deal damage. A creature that takes a direct hit from one of your sticky bombs also takes persistent damage equal to and of the same type as the bomb’s splash damage. If the bomb already deals persistent damage, combine the two amounts." };
+            yield return new TextBlock { Id = Guid.Parse("e861330e-1f58-4e75-83a3-6643bad6a503"), Type = TextBlockType.Text, Text = "You mix in an additive to make your bomb’s contents adhere to the target and continue to deal damage. A creature that takes a direct hit from one of your sticky bombs also takes persistent damage equal to and of the same type as the bomb’s splash damage. If the bomb already deals persistent damage, combine the two amounts." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ab522bdf-711c-41d0-8fe6-e9e13118800f"),
+                Id = Guid.Parse("f58558fc-4d7a-43a6-ad31-0e0927db4513"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

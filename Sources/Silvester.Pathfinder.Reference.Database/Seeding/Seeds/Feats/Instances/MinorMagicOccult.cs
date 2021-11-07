@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MinorMagicOccult : Template
     {
-        public static readonly Guid ID = Guid.Parse("9e5c878b-1487-44d9-8625-d0b524597b60");
+        public static readonly Guid ID = Guid.Parse("439b3ca7-3ad1-4fe9-a759-33cc3a2c955b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("25a38d9f-87a3-4c3f-9494-a9b1ab44b3a0"), Type = TextBlockType.Text, Text = "__Your minor magic is occult.__" };
+            yield return new TextBlock { Id = Guid.Parse("22f95548-766e-4c7f-a51f-da0c93e227f1"), Type = TextBlockType.Text, Text = "__Your minor magic is occult.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3f368538-14f4-45d5-89c9-c9aa74bc85f0"),
+                Id = Guid.Parse("af5ed6f2-4f86-4ed9-b83f-040be97a598c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

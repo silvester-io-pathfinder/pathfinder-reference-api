@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CavalierDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("2f6bc12c-5576-443c-aa07-2e29529257ac");
+        public static readonly Guid ID = Guid.Parse("ee30f0cf-9a7b-4ab2-8c5e-8a0d0ca55762");
 
         protected override Feat GetFeat()
         {
@@ -28,19 +29,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("818bab5b-233e-4a5c-a877-e8ff37a715d9"), Type = TextBlockType.Text, Text = "You gain a young animal companion (page 214) that serves as your mount. You can choose from animal companions with the mount special ability, as well as any additional options from your pledge, as determined by your GM. You must choose an animal companion that’s at least one size larger than you, but if the animal usually starts as Small, you can begin with a Medium version of that animal (changing no statistics other than its size)." };
-            yield return new TextBlock { Id = Guid.Parse("3bf1ba1e-f511-4a90-91ff-0249f6191d44"), Type = TextBlockType.Enumeration, Text = "**Cavalier Pledges***" };
-            yield return new TextBlock { Id = Guid.Parse("d28ef732-8426-48df-81dd-e7ded9709413"), Type = TextBlockType.Text, Text = ":&gt; Many cavaliers pledge themselves in service to a specific organization or individual, such as a noble family or sovereign ruler, a knightly order or another organization, or a particular ideal. A cavalier pledged to an order or ideal must uphold its edicts and is beholden to any anathema it has; for example, a cavalier pledged to the druid’s animal order would be tied to that anathema, while a cavalier pledged to the church of Abadar would be held to the same standards as a cleric of that god. If you pledge yourself to an entity or cause without a stated anathema, you should work with your GM to determine the edicts and anathema associated with your pledge." };
-            yield return new TextBlock { Id = Guid.Parse("7725c4d9-d0d4-4883-8b84-b788fec949ee"), Type = TextBlockType.Text, Text = ":&gt; Cavaliers who have pledged themselves can gain access to certain abilities related to that pledge, such as Cavalier’s Banner. If you violate the anathema of your pledge, you lose access to those feats until you benefit from an atone ritual. Changing the subject of your pledge is equivalent to retraining a class feature." };
+            yield return new TextBlock { Id = Guid.Parse("4e6a6b79-bb93-4783-accc-9e1e6273dc43"), Type = TextBlockType.Text, Text = "You gain a young animal companion (page 214) that serves as your mount. You can choose from animal companions with the mount special ability, as well as any additional options from your pledge, as determined by your GM. You must choose an animal companion that’s at least one size larger than you, but if the animal usually starts as Small, you can begin with a Medium version of that animal (changing no statistics other than its size)." };
+            yield return new TextBlock { Id = Guid.Parse("b3ca9649-73b8-455b-90e8-61a97b89043a"), Type = TextBlockType.Enumeration, Text = "**Cavalier Pledges***" };
+            yield return new TextBlock { Id = Guid.Parse("391bec08-4686-4594-a0bf-9c59f238cdb4"), Type = TextBlockType.Text, Text = ":&gt; Many cavaliers pledge themselves in service to a specific organization or individual, such as a noble family or sovereign ruler, a knightly order or another organization, or a particular ideal. A cavalier pledged to an order or ideal must uphold its edicts and is beholden to any anathema it has; for example, a cavalier pledged to the druid’s animal order would be tied to that anathema, while a cavalier pledged to the church of Abadar would be held to the same standards as a cleric of that god. If you pledge yourself to an entity or cause without a stated anathema, you should work with your GM to determine the edicts and anathema associated with your pledge." };
+            yield return new TextBlock { Id = Guid.Parse("1a419b3e-6432-40f5-a96e-bfae6e49b824"), Type = TextBlockType.Text, Text = ":&gt; Cavaliers who have pledged themselves can gain access to certain abilities related to that pledge, such as Cavalier’s Banner. If you violate the anathema of your pledge, you lose access to those feats until you benefit from an atone ritual. Changing the subject of your pledge is equivalent to retraining a class feature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("5674fc3b-bfc8-456c-8d54-b702666cf27b"), or => 
+            builder.AddOr(Guid.Parse("d4bd7d58-b9df-4556-bf7e-7a29281d51f2"), or => 
             {
-                or.HaveSpecificSkillProficiency(Guid.Parse("9443fdfe-2f29-43a7-a9a9-a577f3d62fd0"), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
-                or.HaveSpecificSkillProficiency(Guid.Parse("f19a9b09-c6aa-4e77-870f-17da378d4ef4"), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("1ad2d9d6-c867-440e-8ac3-73d58b327c9e"), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("ca4ef70a-5d11-4aaa-a20f-85192fed74d3"), Proficiencies.Instances.Trained.ID, Skills.Instances.Society.ID);
             });
         }
 
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e61e5f71-7be2-43e1-a55d-e3756d767ef4"),
+                Id = Guid.Parse("e0bd27b1-8ae6-4240-80d5-a33e5c382db0"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Bristle : Template
     {
-        public static readonly Guid ID = Guid.Parse("ff944586-a1e0-4aa2-be5a-fbcda29696f9");
+        public static readonly Guid ID = Guid.Parse("38fad89a-9e06-4650-a30d-0a1ed1281537");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81640d16-3f96-4e9b-9dfa-db7a0c8b61be"), Type = TextBlockType.Text, Text = "You curl into a posture that splays out your bone spines. You gain a +1 circumstance to AC until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("79438497-0840-45d0-920c-192e124ed5ea"), Type = TextBlockType.Text, Text = "You curl into a posture that splays out your bone spines. You gain a +1 circumstance to AC until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("717285ac-8306-45e5-92a9-5cda896108ba"),
+                Id = Guid.Parse("560c588b-da44-49ed-8947-af2c48170ce5"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

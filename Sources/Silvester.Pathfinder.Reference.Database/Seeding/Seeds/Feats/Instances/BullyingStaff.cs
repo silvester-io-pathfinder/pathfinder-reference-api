@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BullyingStaff : Template
     {
-        public static readonly Guid ID = Guid.Parse("0dac0989-d972-41b8-af44-b1a302c96daa");
+        public static readonly Guid ID = Guid.Parse("da54d333-b19a-43c1-9e72-717331da482d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("88fad6cf-660a-4ec9-a945-42e7a44f5a49"), Type = TextBlockType.Text, Text = "You can attempt to (action: Shove) or (action: Trip) creatures up to two sizes larger than you. If you have master proficiency with your staff, you can attempt to (action: Shove) or (action: Trip) creatures up to three sizes larger than you." };
+            yield return new TextBlock { Id = Guid.Parse("8d6a797d-0b12-4407-8b1e-cad68e0d1e62"), Type = TextBlockType.Text, Text = "You can attempt to (action: Shove) or (action: Trip) creatures up to two sizes larger than you. If you have master proficiency with your staff, you can attempt to (action: Shove) or (action: Trip) creatures up to three sizes larger than you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f2b20959-5ed6-4488-9c65-3571af04485f"), Feats.Instances.StaffAcrobatDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("1444503f-198b-4cfa-90a8-b10333d40072"), Feats.Instances.StaffAcrobatDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5e968cc7-ef13-4b74-85df-4e4ffb590dbb"),
+                Id = Guid.Parse("22bf001b-1831-4e3b-9c3d-cd5b4cbeb6b2"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

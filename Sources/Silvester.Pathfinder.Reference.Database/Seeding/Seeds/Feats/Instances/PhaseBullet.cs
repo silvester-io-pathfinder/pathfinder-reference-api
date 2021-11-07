@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PhaseBullet : Template
     {
-        public static readonly Guid ID = Guid.Parse("899cb726-d35e-43ae-ab1d-f59c3e6600aa");
+        public static readonly Guid ID = Guid.Parse("0005ca53-925f-4084-b891-a1e4a53e51ef");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c670cbd0-78df-44b9-8407-9605db3be031"), Type = TextBlockType.Text, Text = "You can aim your bullets not just in three normal dimensions, but in additional dimensions as well, allowing you to fire a magical shot that phases through everything but your target. Make a crossbow or firearm (action: Strike) against a foe who’s observed or hidden to you (but not undetected). The ammunition travels to your target in a straight line, passing through any non-magical barriers or walls in its way, though magical barriers and force effects stop the bullet. The shot ignores all cover, the concealed condition, the hidden condition, and circumstance bonuses to AC from shields. It has a +4 status bonus to hit creatures wearing any type of armor. The (action: Strike’s|Strike) damage can’t be reduced with a (feat: Shield Block) reaction using a non-magical shield." };
+            yield return new TextBlock { Id = Guid.Parse("4e9bc425-91fd-4d02-b4c2-e148b9e9e1d9"), Type = TextBlockType.Text, Text = "You can aim your bullets not just in three normal dimensions, but in additional dimensions as well, allowing you to fire a magical shot that phases through everything but your target. Make a crossbow or firearm (action: Strike) against a foe who’s observed or hidden to you (but not undetected). The ammunition travels to your target in a straight line, passing through any non-magical barriers or walls in its way, though magical barriers and force effects stop the bullet. The shot ignores all cover, the concealed condition, the hidden condition, and circumstance bonuses to AC from shields. It has a +4 status bonus to hit creatures wearing any type of armor. The (action: Strike’s|Strike) damage can’t be reduced with a (feat: Shield Block) reaction using a non-magical shield." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("2ff9d05e-5fd1-44e7-99c9-7ac4f65b640f"), Feats.Instances.SpellshotDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6a0ded2e-9d20-4a51-b717-f44da9467950"), Feats.Instances.SpellshotDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("52775c46-2cc9-473a-bde1-e33a54c40b36"),
+                Id = Guid.Parse("71a86b65-3ce3-424c-b682-c896156417a6"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

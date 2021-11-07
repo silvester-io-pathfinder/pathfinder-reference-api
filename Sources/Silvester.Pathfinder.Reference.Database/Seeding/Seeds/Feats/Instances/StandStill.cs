@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StandStill : Template
     {
-        public static readonly Guid ID = Guid.Parse("d56615e8-3e1d-4740-8927-1ce12c583888");
+        public static readonly Guid ID = Guid.Parse("51d2d6b7-2dc6-4230-92df-71f91fc30e3c");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d8257dd8-0841-43fa-b1d6-f36628d76343"), Type = TextBlockType.Text, Text = "You strike out when your foe tries to flee. Make a melee (action: Strike) against the triggering creature. If the attack is a critical hit and the trigger was a (trait: move) action, you disrupt that action." };
+            yield return new TextBlock { Id = Guid.Parse("edfd143d-8b6d-4ca8-aeb2-d21a0c3e6cc6"), Type = TextBlockType.Text, Text = "You strike out when your foe tries to flee. Make a melee (action: Strike) against the triggering creature. If the attack is a critical hit and the trigger was a (trait: move) action, you disrupt that action." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a8b22d30-e76c-45ef-8984-432543a7892f"),
+                Id = Guid.Parse("1b4b033f-6eb3-4a71-9464-5c4273ad3210"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

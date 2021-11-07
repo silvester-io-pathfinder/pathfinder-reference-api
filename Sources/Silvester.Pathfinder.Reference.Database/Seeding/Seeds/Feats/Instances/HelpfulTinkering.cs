@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HelpfulTinkering : Template
     {
-        public static readonly Guid ID = Guid.Parse("97d9a3fd-c84b-4bed-90f1-f6f407767a98");
+        public static readonly Guid ID = Guid.Parse("15ef8160-6c58-490b-9cc3-503ea5abaaad");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1b1f1c1d-17f0-497c-a1f4-e93957f3fcfe"), Type = TextBlockType.Text, Text = "You don’t just tinker with your own innovation, you fiddle with your allies’ weapons as well (for their benefit, of course). Choose an ally in your reach and one of their weapons. Attempt a Crafting check against a high DC for your level." };
+            yield return new TextBlock { Id = Guid.Parse("852ea089-e799-48a8-adcf-23acc70bb2d2"), Type = TextBlockType.Text, Text = "You don’t just tinker with your own innovation, you fiddle with your allies’ weapons as well (for their benefit, of course). Choose an ally in your reach and one of their weapons. Attempt a Crafting check against a high DC for your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("64225264-5e2d-469c-81dd-d6373df6652d"), ClassFeatures.Gunslingers.OffensiveBoost.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("4198805b-9444-4176-b9ca-c32a4c6512da"), ClassFeatures.Inventors.OffensiveBoost.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("33dd2f96-fefe-4490-a303-cba4b8155676"),
+                Id = Guid.Parse("6127397d-446c-4c0e-b3b9-4721dd34499e"),
                 
                 Success = "For 1 minute, the chosen ally’s (action: Strikes | Strike) with the chosen weapon gain the same offensive boost your innovation has.",
                 
@@ -59,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("eafb2200-1799-49d6-88e7-9a9327989d96"),
+                Id = Guid.Parse("d11aaa20-29b3-4973-858f-5493325ec2f3"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

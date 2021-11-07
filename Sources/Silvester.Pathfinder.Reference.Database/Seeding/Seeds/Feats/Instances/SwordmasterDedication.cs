@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SwordmasterDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("73de7391-28f1-42e2-827e-d70b7f667b65");
+        public static readonly Guid ID = Guid.Parse("4d4d69df-f903-4d93-b453-9356266a353b");
 
         protected override Feat GetFeat()
         {
@@ -28,19 +29,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5c44f728-5abd-4160-8781-b6d74474e906"), Type = TextBlockType.Text, Text = "Your Swords training taught you to never lose hold of your weapon. You gain a +2 circumstance bonus to your Reflex DC when foes attempt to (action: Disarm) you. If you have the (feat: Deft Cooperation) feat and critically succeed on a check to (action: Aid) an ally’s attack roll or skill check, you gain a +2 circumstance bonus from (feat: Deft Cooperation) (instead of a +1 bonus) the first time you attempt an attack roll or attempt a skill check where the bonus would apply." };
+            yield return new TextBlock { Id = Guid.Parse("13dd4961-7691-4abc-b2bd-b3e1ebc540a9"), Type = TextBlockType.Text, Text = "Your Swords training taught you to never lose hold of your weapon. You gain a +2 circumstance bonus to your Reflex DC when foes attempt to (action: Disarm) you. If you have the (feat: Deft Cooperation) feat and critically succeed on a check to (action: Aid) an ally’s attack roll or skill check, you gain a +2 circumstance bonus from (feat: Deft Cooperation) (instead of a +1 bonus) the first time you attempt an attack roll or attempt a skill check where the bonus would apply." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("e2ac60a8-fe47-4e88-b616-3c181d2b4097"), or => 
+            builder.AddOr(Guid.Parse("c45f95bf-a669-4d8f-90fc-afbc436ed0c8"), or => 
             {
-                or.HaveSpecificStat(Guid.Parse("1f7760a6-dace-4d7a-8b00-957e7f6b58aa"), requiredStatValue: 14, Stats.Instances.Strength.ID);
-                or.HaveSpecificStat(Guid.Parse("39dfb73f-5bf9-4dd4-9ef7-47eabf51a72a"), requiredStatValue: 14, Stats.Instances.Dexterity.ID);
-                or.HaveSpecificStat(Guid.Parse("e37430d7-894f-43e0-8ef4-a29ed79ca083"), requiredStatValue: 14, Stats.Instances.Constitution.ID);
+                or.HaveSpecificStat(Guid.Parse("68067da5-b6c0-45ff-9eca-55c02ef8b236"), requiredStatValue: 14, Stats.Instances.Strength.ID);
+                or.HaveSpecificStat(Guid.Parse("981e8cd9-a6ff-4c12-ad69-c03fbc6bc2c0"), requiredStatValue: 14, Stats.Instances.Dexterity.ID);
+                or.HaveSpecificStat(Guid.Parse("c900bf65-ed06-4916-8555-1531eb000c8e"), requiredStatValue: 14, Stats.Instances.Constitution.ID);
             });
-            builder.Manual(Guid.Parse("e989ab2c-e616-4b48-8512-a519d764b9f1"), "Member of the Pathfinder Society affiliated with the School of Swords.");
+            builder.Manual(Guid.Parse("43fb26cf-1ee4-4a52-b8db-789c1593200c"), "Member of the Pathfinder Society affiliated with the School of Swords.");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -52,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("178957fb-12dd-46c5-9cbe-c9638ec7edda"),
+                Id = Guid.Parse("687340ec-15f7-4188-a033-7e5426b610ab"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

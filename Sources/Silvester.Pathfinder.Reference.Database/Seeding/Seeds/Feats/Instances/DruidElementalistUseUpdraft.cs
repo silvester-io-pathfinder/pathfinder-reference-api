@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DruidElementalistUseUpdraft : Template
     {
-        public static readonly Guid ID = Guid.Parse("14fcc0ed-0c44-44fa-b8f6-9e94287c981d");
+        public static readonly Guid ID = Guid.Parse("d55cee27-5208-4af9-b2ef-da48e7ff8c20");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b5767d5c-78b9-432a-a275-f2b780138fb0"), Type = TextBlockType.Text, Text = "You replace your starting order spell, (spell: tempest surge), with (spell: updraft)." };
+            yield return new TextBlock { Id = Guid.Parse("db7b8a9f-85ae-4a85-9775-2aa8634f14be"), Type = TextBlockType.Text, Text = "You replace your starting order spell, (spell: tempest surge), with (spell: updraft)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8ecb3647-2740-40f5-9ba5-027ad07d4a27"),
+                Id = Guid.Parse("5abbd208-59fb-4e49-8d7f-102715b6e6e2"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

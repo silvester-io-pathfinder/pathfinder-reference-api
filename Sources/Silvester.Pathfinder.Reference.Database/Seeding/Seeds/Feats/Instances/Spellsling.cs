@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Spellsling : Template
     {
-        public static readonly Guid ID = Guid.Parse("79f1beb1-71c8-4937-bd1d-3e217a0ecf66");
+        public static readonly Guid ID = Guid.Parse("3c7f14f4-1420-48b5-86bd-f27707f81470");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a8156c0d-9728-48d3-947e-f8ea5b9cf737"), Type = TextBlockType.Text, Text = "You (activity: Cast a Spell) that takes 1 or 2 actions to cast and requires a spell attack roll. The effects of the spell do not occur immediately but are imbued into the beast gun you’re wielding. Make a (action: Strike) with that beast gun. Your spell flies with the ammunition, using your attack roll result to determine the effects of both the (action: Strike) and the spell. This counts as two attacks for the purposes of determining your multiple attack penalty, but you don’t apply the penalty until after you’ve completed resolving the attack and spell." };
+            yield return new TextBlock { Id = Guid.Parse("a07d8cf0-9c9f-4196-8170-68ff9700d897"), Type = TextBlockType.Text, Text = "You (activity: Cast a Spell) that takes 1 or 2 actions to cast and requires a spell attack roll. The effects of the spell do not occur immediately but are imbued into the beast gun you’re wielding. Make a (action: Strike) with that beast gun. Your spell flies with the ammunition, using your attack roll result to determine the effects of both the (action: Strike) and the spell. This counts as two attacks for the purposes of determining your multiple attack penalty, but you don’t apply the penalty until after you’ve completed resolving the attack and spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a62361be-c870-488c-87cc-9a9bdcbc3aea"),
+                Id = Guid.Parse("e600ed3b-3209-4152-b69d-bfa881ffc76b"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

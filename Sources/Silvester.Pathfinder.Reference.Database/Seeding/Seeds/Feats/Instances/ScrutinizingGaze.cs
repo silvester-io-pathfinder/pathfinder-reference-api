@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ScrutinizingGaze : Template
     {
-        public static readonly Guid ID = Guid.Parse("235bdeba-a78e-4196-b77c-520593bbbef5");
+        public static readonly Guid ID = Guid.Parse("6635fdaf-ee6c-4d6f-94a5-0f05d9f02feb");
 
         protected override Feat GetFeat()
         {
@@ -28,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("696fe909-eb5d-47c0-a0c0-0a18bf5cb28c"), Type = TextBlockType.Text, Text = "~ Access: You are from Dongun Hold or Alkenstar." };
-            yield return new TextBlock { Id = Guid.Parse("73da68d7-389a-4842-861e-e0a19c6f899a"), Type = TextBlockType.Text, Text = "Your family’s traditions of defending against Geb’s undead have granted you a sixth sense for detecting spirits, haunts, and other restless dead, no matter their form or the strength of their presence. You gain a +2 circumstance bonus to Perception checks to (action: Sense Motive) when trying to determine if a creature is possessed or under the influence of an effect that would make them controlled, a +2 circumstance bonus to Perception checks made to see through disguises worn by undead, and a +2 circumstance bonus when using the (action: Seek) action to find hidden or undetected haunts or undead within 30 feet of you." };
-            yield return new TextBlock { Id = Guid.Parse("776c944a-41ba-475d-bbc4-56da8ba6ba10"), Type = TextBlockType.Text, Text = "If you aren’t using the (action: Seek) action or searching, the GM automatically rolls a secret check for you to notice haunts or undead within 30 feet anyway. This check doesn’t gain the usual +2 circumstance bonus, and instead takes a –2 circumstance penalty." };
+            yield return new TextBlock { Id = Guid.Parse("259941cb-abd8-49cc-be61-3f94046f0350"), Type = TextBlockType.Text, Text = "~ Access: You are from Dongun Hold or Alkenstar." };
+            yield return new TextBlock { Id = Guid.Parse("cf428e4f-d2c8-490f-912d-7db8f7661717"), Type = TextBlockType.Text, Text = "Your family’s traditions of defending against Geb’s undead have granted you a sixth sense for detecting spirits, haunts, and other restless dead, no matter their form or the strength of their presence. You gain a +2 circumstance bonus to Perception checks to (action: Sense Motive) when trying to determine if a creature is possessed or under the influence of an effect that would make them controlled, a +2 circumstance bonus to Perception checks made to see through disguises worn by undead, and a +2 circumstance bonus when using the (action: Seek) action to find hidden or undetected haunts or undead within 30 feet of you." };
+            yield return new TextBlock { Id = Guid.Parse("1c0c906a-4e5b-436c-9688-bbe09b0cbc2c"), Type = TextBlockType.Text, Text = "If you aren’t using the (action: Seek) action or searching, the GM automatically rolls a secret check for you to notice haunts or undead within 30 feet anyway. This check doesn’t gain the usual +2 circumstance bonus, and instead takes a –2 circumstance penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("344f93a3-311e-47e0-b873-fed6903114c1"),
+                Id = Guid.Parse("b20a36ff-ee0b-468a-8d9b-42437eaaa572"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

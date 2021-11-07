@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class KeenRecollection : Template
     {
-        public static readonly Guid ID = Guid.Parse("e7a09852-3a8c-42b6-8577-c5bd7c08fe86");
+        public static readonly Guid ID = Guid.Parse("029a4fe0-ac4c-40e9-b41e-c932297e8dc5");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e8b545b-6566-4e87-8abc-81b971f5db96"), Type = TextBlockType.Text, Text = "You can recall all sorts of information. You gain the keen recollection class feature." };
+            yield return new TextBlock { Id = Guid.Parse("470e5376-c4b0-490b-8649-c48028d28322"), Type = TextBlockType.Text, Text = "You can recall all sorts of information. You gain the keen recollection class feature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3fdbb139-d77e-4299-8dbd-89d81ea9609f"), Feats.Instances.InvestigatorDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("b1a72810-466e-4b01-aee9-10b237d2bce2"), Feats.Instances.InvestigatorDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8b3ebcf3-bdc9-430d-b698-c8c7bac84322"),
+                Id = Guid.Parse("71aaf753-b85e-457f-a64c-d39f245de498"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

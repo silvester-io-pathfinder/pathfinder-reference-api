@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ThrownVoice : Template
     {
-        public static readonly Guid ID = Guid.Parse("8505859f-7224-4068-ae29-d73fa6803f55");
+        public static readonly Guid ID = Guid.Parse("c6167721-2a2b-43c4-8ece-3e5aa7a2bc30");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c2074085-5a8c-496a-bf78-f60a7078b76b"), Type = TextBlockType.Text, Text = "You’ve learned how to throw your voice through the winds, tricking others as to your location. You can cast (spell: ventriloquism) as a primal innate spell once per day. If you’re a songbird strix, you can cast it twice per day instead." };
+            yield return new TextBlock { Id = Guid.Parse("b70bc49a-db2a-4c19-997a-b6c3cf68e22a"), Type = TextBlockType.Text, Text = "You’ve learned how to throw your voice through the winds, tricking others as to your location. You can cast (spell: ventriloquism) as a primal innate spell once per day. If you’re a songbird strix, you can cast it twice per day instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4372e494-e292-48d7-882f-8abf1c186d49"),
+                Id = Guid.Parse("6745bce8-1381-4f77-b001-315104c1d9b1"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

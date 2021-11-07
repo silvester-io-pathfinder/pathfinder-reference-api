@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SteelYourResolve : Template
     {
-        public static readonly Guid ID = Guid.Parse("32808fa5-d190-4dee-8e3b-dd99d89b21ad");
+        public static readonly Guid ID = Guid.Parse("5638eef5-c3ce-46f1-8852-8830f1d9102c");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9e2413f-b67b-4629-ae5d-9f64b601821c"), Type = TextBlockType.Text, Text = "Regain Stamina Points equal to half your maximum." };
+            yield return new TextBlock { Id = Guid.Parse("73fc4076-10a3-4565-a624-c02fac479677"), Type = TextBlockType.Text, Text = "Regain Stamina Points equal to half your maximum." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("57aec4c7-68de-4ae8-b248-7ab79c555805"),
+                Id = Guid.Parse("fbf09f5d-d975-4295-9608-fcc1cd04c398"),
                 SourceId = Sources.Instances.VariantRuleForStamina.ID,
                 Page = -1
             };

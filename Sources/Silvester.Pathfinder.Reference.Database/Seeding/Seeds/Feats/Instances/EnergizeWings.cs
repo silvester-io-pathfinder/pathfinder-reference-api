@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EnergizeWings : Template
     {
-        public static readonly Guid ID = Guid.Parse("c973beca-aaf2-41d4-acc0-9d084e08a0fc");
+        public static readonly Guid ID = Guid.Parse("42117bbd-be0b-4080-bd2e-8dc4bea65fbf");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b284dd82-0a79-496c-803b-9427bb202c21"), Type = TextBlockType.Text, Text = "You stoke your magic to energize your wings, temporarily transforming them into glowing, majestic forms. For 1 minute, you gain a fly Speed of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("1d49c143-3c88-421e-adb3-9df1d640edc0"), Type = TextBlockType.Text, Text = "You stoke your magic to energize your wings, temporarily transforming them into glowing, majestic forms. For 1 minute, you gain a fly Speed of 30 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("667d6e3b-a3bd-40c9-8809-01bdc9c605fd"), Feats.Instances.EvanescentWings.ID);
+            builder.HaveSpecificFeat(Guid.Parse("cd6a22dd-ddb8-4a5a-9d3f-ff14d7cb0060"), Feats.Instances.EvanescentWings.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bdd1c70a-de6c-48ca-a5f5-e177807ee2ce"),
+                Id = Guid.Parse("6bbedc6e-1e7c-4215-aaaa-dac2a7dcf82e"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EludeTheDivine : Template
     {
-        public static readonly Guid ID = Guid.Parse("156f374a-b2fc-440b-972e-7c7209bad5c3");
+        public static readonly Guid ID = Guid.Parse("24ebb040-6f93-4e27-84fc-9a5bb69f3918");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c523f3a1-7be9-4040-96c3-5999f5738d14"), Type = TextBlockType.Text, Text = "You are able to escape inquisitions involving divine magic, allowing you to blend in well in Mzali but also to avoid unwanted attention in other oppressive theocracies. You gain the (feat: Slippery Secrets) skill feat, and its benefits also apply against (trait: divination) effects that attempt to discern your deity. When using (feat: Slippery Secrets) against a (trait: divine) (trait: divination), you gain a +2 circumstance bonus, and on a critical success, the divination reveals false information appropriate to your false persona, rather than nothing." };
+            yield return new TextBlock { Id = Guid.Parse("eb9f992d-0811-4c0a-a34f-73fe01198fa9"), Type = TextBlockType.Text, Text = "You are able to escape inquisitions involving divine magic, allowing you to blend in well in Mzali but also to avoid unwanted attention in other oppressive theocracies. You gain the (feat: Slippery Secrets) skill feat, and its benefits also apply against (trait: divination) effects that attempt to discern your deity. When using (feat: Slippery Secrets) against a (trait: divine) (trait: divination), you gain a +2 circumstance bonus, and on a critical success, the divination reveals false information appropriate to your false persona, rather than nothing." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3f9ae979-306c-4563-8872-d61ff7af41ac"), Feats.Instances.BrightLionDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d4478e45-661e-448a-b472-550f951117d0"), Feats.Instances.BrightLionDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2c65be60-46c5-47da-994e-cb612c44b3af"),
+                Id = Guid.Parse("05501a1c-3aa8-4ab1-8e0a-5fcadf068fa4"),
                 SourceId = Sources.Instances.LostOmensLegends.ID,
                 Page = -1
             };

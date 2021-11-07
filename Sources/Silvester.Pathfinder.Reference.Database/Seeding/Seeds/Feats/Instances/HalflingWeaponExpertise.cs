@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HalflingWeaponExpertise : Template
     {
-        public static readonly Guid ID = Guid.Parse("a58ca131-3efa-415a-a9d1-83829c945d83");
+        public static readonly Guid ID = Guid.Parse("8100567c-96ec-4237-8459-0cdfeba89ace");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f2a05b54-5fd8-43b0-b6de-c778a17c9e54"), Type = TextBlockType.Text, Text = "Your halfling affinity blends with your class training, granting you great skill with halfling weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the sling, halfling sling staff, shortsword, and all halfling weapons in which you are trained." };
+            yield return new TextBlock { Id = Guid.Parse("733265ff-db1d-4c3d-83da-09762777e4f0"), Type = TextBlockType.Text, Text = "Your halfling affinity blends with your class training, granting you great skill with halfling weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the sling, halfling sling staff, shortsword, and all halfling weapons in which you are trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificAncestry(Guid.Parse("d659d1fd-3db9-4456-ae55-58123953793a"), Ancestries.Instances.Halfling.ID);
-            builder.HaveSpecificFeat(Guid.Parse("20338eb6-bccb-4aa7-bf4e-b2794cc6e6f1"), Feats.Instances.WeaponFamiliarity.ID);
+            builder.HaveSpecificAncestry(Guid.Parse("287373dd-91cb-4d2d-bd33-44e9843cd956"), Ancestries.Instances.Halfling.ID);
+            builder.HaveSpecificFeat(Guid.Parse("34bdafba-f8df-4645-ab45-51477fc3b366"), Feats.Instances.HalflingWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1375e614-712c-4315-b082-a98e0c162314"),
+                Id = Guid.Parse("4f415077-2319-48d0-ae80-3860f15377d2"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Counterspell : Template
     {
-        public static readonly Guid ID = Guid.Parse("8f5122e1-ebc4-488b-9281-6867926d2e96");
+        public static readonly Guid ID = Guid.Parse("a2688d4c-8af6-4631-98c2-533ccd830c5a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("24066ad9-c24a-428e-ab67-b292e8e8dc48"), Type = TextBlockType.Text, Text = "When a foe (activity: Casts a Spell | Cast a Spell) and you can see its manifestations, you can use your own magic to disrupt it. You expend a prepared spell to counter the triggering creature’s casting of that same spell. You lose your spell slot as if you had cast the triggering spell. You then attempt to counteract the triggering spell." };
+            yield return new TextBlock { Id = Guid.Parse("1ea87200-0e88-409e-ad52-5ba2adf8db7f"), Type = TextBlockType.Text, Text = "When a foe (activity: Casts a Spell | Cast a Spell) and you can see its manifestations, you can use your own magic to disrupt it. You expend a prepared spell to counter the triggering creature’s casting of that same spell. You lose your spell slot as if you had cast the triggering spell. You then attempt to counteract the triggering spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bdfb81e2-1c8c-4e50-9b9f-2063c505c6d9"),
+                Id = Guid.Parse("0e841c71-1d9c-4a9b-bc8a-e13c142f32ba"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

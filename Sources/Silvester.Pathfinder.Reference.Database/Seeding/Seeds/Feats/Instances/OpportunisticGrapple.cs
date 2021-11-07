@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OpportunisticGrapple : Template
     {
-        public static readonly Guid ID = Guid.Parse("2cbf169b-067c-45e5-818d-a8773c796969");
+        public static readonly Guid ID = Guid.Parse("73422cca-f0c2-4b15-ae57-a1e896421dba");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c8a6bf3-a79a-4ba5-b02a-532c65ff0c9a"), Type = TextBlockType.Text, Text = "You attempt an Athletics check to (action: Grapple) your prey." };
+            yield return new TextBlock { Id = Guid.Parse("9d109f18-14a7-4f57-9509-90842d234997"), Type = TextBlockType.Text, Text = "You attempt an Athletics check to (action: Grapple) your prey." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f5b91b7d-7e39-4ca4-9970-917e8f58df7f"), Feats.Instances.BountyHunterDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("fcae2f2e-9ddf-4491-89ab-18400a15a4cd"), Feats.Instances.BountyHunterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2909982d-ad36-463d-85e3-5f60de51b7ce"),
+                Id = Guid.Parse("e6b2479e-92e7-4849-8e02-d3b24611945f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

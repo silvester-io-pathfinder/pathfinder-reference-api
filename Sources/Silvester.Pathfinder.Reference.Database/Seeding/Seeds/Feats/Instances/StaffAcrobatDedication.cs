@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StaffAcrobatDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("5da694a9-0101-4f82-80e9-7b50ac87a7f6");
+        public static readonly Guid ID = Guid.Parse("36e58c00-61b7-4188-9553-dd3860586c50");
 
         protected override Feat GetFeat()
         {
@@ -28,21 +29,21 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("47fbab92-51fe-447b-9196-29f089ed2620"), Type = TextBlockType.Text, Text = "When you (action: High Jump), (action: Leap), or (action: Long Jump) while wielding your staff, you gain a +2 circumstance bonus to any Athletics check required and add 5 feet to the distance you can (action: Leap) vertically and horizontally." };
-            yield return new TextBlock { Id = Guid.Parse("9ac4da5c-6945-44e1-ad7a-20570086724d"), Type = TextBlockType.Text, Text = "You can (action: Shove) and (action: Trip) even if you don’t have a free hand, provided you are wielding your staff." };
-            yield return new TextBlock { Id = Guid.Parse("e6a69f49-e340-444a-8edc-9021b30d035f"), Type = TextBlockType.Text, Text = "Finally, when you roll a success on a check to (action: Balance) while wielding your staff, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("3453a0ec-9fc0-4f6a-9e83-f555343596ae"), Type = TextBlockType.Text, Text = "When you (action: High Jump), (action: Leap), or (action: Long Jump) while wielding your staff, you gain a +2 circumstance bonus to any Athletics check required and add 5 feet to the distance you can (action: Leap) vertically and horizontally." };
+            yield return new TextBlock { Id = Guid.Parse("61fb5f36-693a-4729-90e5-2f155c09c06b"), Type = TextBlockType.Text, Text = "You can (action: Shove) and (action: Trip) even if you don’t have a free hand, provided you are wielding your staff." };
+            yield return new TextBlock { Id = Guid.Parse("ade19018-b951-4c08-8cd7-e021dde39982"), Type = TextBlockType.Text, Text = "Finally, when you roll a success on a check to (action: Balance) while wielding your staff, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificStat(Guid.Parse("ee3be251-d7a3-4b6b-8de4-4f32987a17a0"), requiredStatValue: 16, Stats.Instances.Dexterity.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("1a9ebbf1-307d-4781-aa4b-1112e666515c"), Proficiencies.Instances.Trained.ID, Skills.Instances.Acrobatics.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("bb4bf009-a719-4631-954a-b4c6019e16ca"), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
-            builder.AddOr(Guid.Parse("5131f0ab-3e7d-492c-9675-99c50d7b692b"), or => 
+            builder.HaveSpecificStat(Guid.Parse("37959475-75e9-49db-a94e-82aaa327a162"), requiredStatValue: 16, Stats.Instances.Dexterity.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("3e4a500f-4ff8-474d-9cf9-96e297694d1e"), Proficiencies.Instances.Trained.ID, Skills.Instances.Acrobatics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("b9c04e94-c63f-464d-9c25-29ed9159770a"), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
+            builder.AddOr(Guid.Parse("3d1a87f5-a25e-43ab-8f03-5c1de4a7b9d7"), or => 
             {
-                or.HaveSpecificWeaponGroupSpecificProficiency(Guid.Parse("2c68f4f9-eca2-4254-a3c9-ac0428f00b26"), Proficiencies.Instances.Trained.ID, WeaponGroups.Instances.Spear.ID);
-                or.HaveSpecificWeaponGroupSpecificProficiency(Guid.Parse("78d4b595-3bac-445a-ba33-af92072904f3"), Proficiencies.Instances.Trained.ID, WeaponGroups.Instances.Polearm.ID);
+                or.HaveSpecificWeaponGroupSpecificProficiency(Guid.Parse("fec59a19-51d0-4244-9051-209efc8ac119"), Proficiencies.Instances.Trained.ID, WeaponGroups.Instances.Spear.ID);
+                or.HaveSpecificWeaponGroupSpecificProficiency(Guid.Parse("f860c19e-9b84-4572-a25f-d7171cbca0f5"), Proficiencies.Instances.Trained.ID, WeaponGroups.Instances.Polearm.ID);
             });
         }
 
@@ -55,7 +56,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("eeebd15c-2ac3-4487-bec7-3af716c72fe6"),
+                Id = Guid.Parse("afec8724-80cf-4510-af31-ee0cf78ad029"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

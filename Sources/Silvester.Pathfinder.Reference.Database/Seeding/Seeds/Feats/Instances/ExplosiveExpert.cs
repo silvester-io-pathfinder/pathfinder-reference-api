@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ExplosiveExpert : Template
     {
-        public static readonly Guid ID = Guid.Parse("72509674-ce65-44bb-9ac0-f800bb5d88b2");
+        public static readonly Guid ID = Guid.Parse("c7a3f915-f167-4e30-9215-856e9e256df7");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("63a098a3-474f-4b72-a140-63f4564de848"), Type = TextBlockType.Text, Text = "~ Access: You are from Dongun Hold or Alkenstar." };
-            yield return new TextBlock { Id = Guid.Parse("82e6d578-71c7-49ba-9dce-f3b7af428261"), Type = TextBlockType.Text, Text = "You have continued training in volatile weapons and gained a deeper understanding. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency for simple and martial bombs and firearms." };
+            yield return new TextBlock { Id = Guid.Parse("951bb3c2-65ed-4837-91ad-956f9dbfe319"), Type = TextBlockType.Text, Text = "~ Access: You are from Dongun Hold or Alkenstar." };
+            yield return new TextBlock { Id = Guid.Parse("2119e911-f4f9-4b57-a63e-97e8e9701c43"), Type = TextBlockType.Text, Text = "You have continued training in volatile weapons and gained a deeper understanding. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency for simple and martial bombs and firearms." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("2b6b6b5a-4bfc-454b-899b-f6b48142e91f"), Feats.Instances.ExplosiveSavant.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8bc03d44-a42e-4fb6-a822-5fad0eba252d"), Feats.Instances.ExplosiveSavant.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2be2baf2-5055-4a7b-a264-c12c260762fe"),
+                Id = Guid.Parse("381966cd-04af-4099-b2e6-93d03cc51dc9"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

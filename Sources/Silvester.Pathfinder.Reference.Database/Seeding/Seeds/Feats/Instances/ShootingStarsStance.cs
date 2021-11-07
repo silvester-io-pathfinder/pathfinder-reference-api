@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShootingStarsStance : Template
     {
-        public static readonly Guid ID = Guid.Parse("9a69dcdb-9104-40f6-8c29-a4f11ed6a328");
+        public static readonly Guid ID = Guid.Parse("795be5f8-24ea-415f-8159-b422171442db");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f11950a-9808-4d73-9b2b-203b962b7e9f"), Type = TextBlockType.Text, Text = "You enter a stance that lets you throw shuriken with lightning speed. While in this stance, you can use your monk feats or monk abilities that normally require unarmed attacks with shuriken instead." };
+            yield return new TextBlock { Id = Guid.Parse("986c41da-6b30-495c-a43c-99290af81d93"), Type = TextBlockType.Text, Text = "You enter a stance that lets you throw shuriken with lightning speed. While in this stance, you can use your monk feats or monk abilities that normally require unarmed attacks with shuriken instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("50b5e24a-090c-47a7-b0f9-ff23744534c2"), Feats.Instances.MonasticWeaponry.ID);
+            builder.HaveSpecificFeat(Guid.Parse("c3802ee6-99b1-458c-9bdb-9f4ee4d9684a"), Feats.Instances.MonasticWeaponry.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("227af7ae-3053-454f-9878-ee8e2bc2b149"),
+                Id = Guid.Parse("683500fe-0736-4b48-b3ce-7819de1e3843"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

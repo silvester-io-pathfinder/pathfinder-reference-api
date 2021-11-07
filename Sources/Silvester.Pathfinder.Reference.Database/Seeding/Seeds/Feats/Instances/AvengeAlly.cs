@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AvengeAlly : Template
     {
-        public static readonly Guid ID = Guid.Parse("9ce06e7e-5aba-4337-83a5-46eeb3a542c8");
+        public static readonly Guid ID = Guid.Parse("beafa0ed-1640-4a5f-84f8-cb0755884a0b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d6bb4bdf-3093-488e-87e6-eb132f27f8f3"), Type = TextBlockType.Text, Text = "Though you know that you will eventually outlive your companions, seeing them at death&#39;s door brings clarity to your attacks. Make a (action: Strike). Roll twice on the attack roll and use the higher result." };
+            yield return new TextBlock { Id = Guid.Parse("2616b115-2960-4810-a8ab-5e0853aa08ae"), Type = TextBlockType.Text, Text = "Though you know that you will eventually outlive your companions, seeing them at death&#39;s door brings clarity to your attacks. Make a (action: Strike). Roll twice on the attack roll and use the higher result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("29abd15b-429b-41ad-8b27-8176d9c2a981"),
+                Id = Guid.Parse("94efd171-b0e3-4619-af9b-cd99d1847b6d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

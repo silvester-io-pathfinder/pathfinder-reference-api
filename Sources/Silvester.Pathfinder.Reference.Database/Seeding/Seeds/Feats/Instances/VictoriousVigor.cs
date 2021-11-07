@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class VictoriousVigor : Template
     {
-        public static readonly Guid ID = Guid.Parse("c7f950e9-859c-485c-b738-ee69f5df885c");
+        public static readonly Guid ID = Guid.Parse("a7f6bd8b-1b3d-4108-b57c-1fee061064a1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("45ccc312-4c2f-4416-962b-c3600a4e9cef"), Type = TextBlockType.Text, Text = "Your victories in battle fill you with pride and imbue you with the energy to fight a bit longer despite your wounds. You gain temporary Hit Points equal to your Constitution modifier until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("9c90090b-5289-49da-893b-4488accee028"), Type = TextBlockType.Text, Text = "Your victories in battle fill you with pride and imbue you with the energy to fight a bit longer despite your wounds. You gain temporary Hit Points equal to your Constitution modifier until the end of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d0793e75-d0ca-4d36-94a5-54e391d860cd"),
+                Id = Guid.Parse("f83b153c-82dc-4468-a6e5-56e9aab9ea1d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GrievousBlow : Template
     {
-        public static readonly Guid ID = Guid.Parse("3cb24c3f-46b7-4f7f-baca-da48002191b8");
+        public static readonly Guid ID = Guid.Parse("95e4aab5-a507-4f99-b7ea-c9b922f45c9e");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("41c80ed4-cd12-4b0c-a57c-0fbbb990edb7"), Type = TextBlockType.Text, Text = "You know how to deliver focused, powerful blows that bypass your enemies’ resistances. Make an unarmed melee (action: Strike). This counts as two attacks when calculating your multiple attack penalty. If this (action: Strike) hits, you deal two extra weapon damage dice. If you are at least 18th level, increase this to three extra weapon damage dice." };
-            yield return new TextBlock { Id = Guid.Parse("13731846-e69a-4d13-9d32-5ca140a77aec"), Type = TextBlockType.Text, Text = "This attack also ignores an amount of resistance to physical damage, or to a specific physical damage type, equal to your level." };
+            yield return new TextBlock { Id = Guid.Parse("4b3518a5-68e0-4cb4-945e-a7daf7c9ad26"), Type = TextBlockType.Text, Text = "You know how to deliver focused, powerful blows that bypass your enemies’ resistances. Make an unarmed melee (action: Strike). This counts as two attacks when calculating your multiple attack penalty. If this (action: Strike) hits, you deal two extra weapon damage dice. If you are at least 18th level, increase this to three extra weapon damage dice." };
+            yield return new TextBlock { Id = Guid.Parse("6b2a440d-a692-4bb2-95b6-154c1f5d438d"), Type = TextBlockType.Text, Text = "This attack also ignores an amount of resistance to physical damage, or to a specific physical damage type, equal to your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("5f60caaa-3cac-4a44-bf6a-435b8a388fad"), Feats.Instances.MartialArtistDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("76805b85-6e0b-4e54-9345-17a8ee29bbd5"), Feats.Instances.MartialArtistDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c1f2eb99-f87d-4574-8f47-9a08517f01c7"),
+                Id = Guid.Parse("03e1c223-d3bb-4aaa-a98c-9c5fe88a01c6"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PoisonWeapon : Template
     {
-        public static readonly Guid ID = Guid.Parse("14500875-6d3f-4702-ae9f-ac8a82c5b4aa");
+        public static readonly Guid ID = Guid.Parse("2a9faeaa-ab52-4c54-a231-2ea17d496963");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0cf0949a-9728-468d-b0f1-3fa6e5114c94"), Type = TextBlockType.Text, Text = "You apply a poison to the required weapon; if you have a free hand, you can (action: Interact) to draw a poison as part of this action. If your next attack with that weapon before the end of your next turn hits and deals damage, it applies the effects of the poison, provided that poison can be delivered by (trait: contact) or (trait: injury). If you critically fail the attack roll, the poison is wasted as normal." };
+            yield return new TextBlock { Id = Guid.Parse("44703bd6-7d0d-4943-b63e-3ff6ca709944"), Type = TextBlockType.Text, Text = "You apply a poison to the required weapon; if you have a free hand, you can (action: Interact) to draw a poison as part of this action. If your next attack with that weapon before the end of your next turn hits and deals damage, it applies the effects of the poison, provided that poison can be delivered by (trait: contact) or (trait: injury). If you critically fail the attack roll, the poison is wasted as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("5fec286d-cf84-4707-8dea-77b7f79a99a1"), Feats.Instances.DrowShootistDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("01a2c8a0-4620-44b8-9061-3f09f15e7080"), Feats.Instances.DrowShootistDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8212813e-133a-48d6-8a41-99989f5e1d6a"),
+                Id = Guid.Parse("05f40e3e-6e84-4a21-9e13-06daaf667551"),
                 SourceId = Sources.Instances.AbominationVaults.ID,
                 Page = -1
             };

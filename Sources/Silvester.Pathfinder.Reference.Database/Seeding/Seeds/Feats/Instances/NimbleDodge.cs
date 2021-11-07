@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class NimbleDodge : Template
     {
-        public static readonly Guid ID = Guid.Parse("a44e910c-579a-4ef0-ac8a-2458197e9e25");
+        public static readonly Guid ID = Guid.Parse("8d9e6c52-f037-42fa-b94d-fe036edf413e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3a569693-0d76-423c-81cc-7744c80a248f"), Type = TextBlockType.Text, Text = "You deftly dodge out of the way, gaining a +2 circumstance bonus to AC against the triggering attack." };
+            yield return new TextBlock { Id = Guid.Parse("0b1802fd-d1be-43ac-950b-c76b7def810b"), Type = TextBlockType.Text, Text = "You deftly dodge out of the way, gaining a +2 circumstance bonus to AC against the triggering attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e5e17d47-33cb-4823-a034-e60223fc051c"),
+                Id = Guid.Parse("aa63e25c-c235-49cb-933a-b752d4abde13"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

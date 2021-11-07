@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Assurance : Template
     {
-        public static readonly Guid ID = Guid.Parse("b5e97747-9edc-41e7-9236-39a146214bd4");
+        public static readonly Guid ID = Guid.Parse("53f5f190-365b-473c-a7c0-3ab61396357d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9a61c0c7-9bfe-482d-b3c7-227b9ab0194b"), Type = TextBlockType.Text, Text = "Even in the worst circumstances, you can perform basic tasks. Choose a skill you’re trained in. You can forgo rolling a skill check for that skill to instead receive a result of 10 + your proficiency bonus (do not apply any other bonuses, penalties, or modifiers)." };
+            yield return new TextBlock { Id = Guid.Parse("cd1462a8-4ce3-495a-8240-67ba1966289e"), Type = TextBlockType.Text, Text = "Even in the worst circumstances, you can perform basic tasks. Choose a skill you’re trained in. You can forgo rolling a skill check for that skill to instead receive a result of 10 + your proficiency bonus (do not apply any other bonuses, penalties, or modifiers)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnySkillProficiency(Guid.Parse("8576b8c7-a684-45b1-a5be-8d8d3a96ea4a"), Proficiencies.Instances.Trained.ID);
+            builder.HaveAnySkillProficiency(Guid.Parse("5a8fdb69-7698-4c6c-956c-03f75ee149ad"), Proficiencies.Instances.Trained.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("54625ce4-1036-4a3d-8c1c-28e1492c4dd8"),
+                Id = Guid.Parse("239503f1-2f16-4392-9fb1-857c08ab5d5c"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

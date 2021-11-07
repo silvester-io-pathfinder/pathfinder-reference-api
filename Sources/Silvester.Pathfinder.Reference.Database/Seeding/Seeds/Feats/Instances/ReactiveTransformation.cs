@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReactiveTransformation : Template
     {
-        public static readonly Guid ID = Guid.Parse("c210c63e-9343-4a45-949c-a98de848b2a1");
+        public static readonly Guid ID = Guid.Parse("cad87e02-afd7-44b0-9ac5-d76ab4dabe6a");
 
         protected override Feat GetFeat()
         {
@@ -28,23 +29,23 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e73dab3-04aa-4930-9c1b-58274a2a4224"), Type = TextBlockType.Text, Text = "You transform reflexively when in danger. You cast (spell: wild shape) to transform into one form granted by one of the prerequisite feats you have, depending on the trigger. Your form’s resistances and weaknesses apply against the triggering damage." };
-            yield return new TextBlock { Id = Guid.Parse("2a8ed47b-d02a-4522-8d86-60b4e34be1f0"), Type = TextBlockType.Enumeration, Text = " Trigger: You fall 10 feet or more; Effect: Choose a form from (spell: aerial form)." };
-            yield return new TextBlock { Id = Guid.Parse("b6608d42-7b2c-4c11-8b1d-7215a1b682ce"), Type = TextBlockType.Enumeration, Text = " Trigger: You take acid, cold, electricity, fire, or poison damage; Effect: Choose a form from (spell: dragon form) that resists the triggering damage." };
-            yield return new TextBlock { Id = Guid.Parse("11b3b2e5-f434-4980-a447-4650deb4246c"), Type = TextBlockType.Enumeration, Text = " Trigger: You take fire damage; Effect: Choose a fire elemental form from (spell: elemental form)." };
-            yield return new TextBlock { Id = Guid.Parse("92cab788-6943-4bae-9a95-830f6cacd845"), Type = TextBlockType.Enumeration, Text = " Trigger: You take poison damage; Effect: Choose a form from (spell: plant form)." };
+            yield return new TextBlock { Id = Guid.Parse("04c5d18b-53ee-43b5-9a8f-aae7b3380398"), Type = TextBlockType.Text, Text = "You transform reflexively when in danger. You cast (spell: wild shape) to transform into one form granted by one of the prerequisite feats you have, depending on the trigger. Your form’s resistances and weaknesses apply against the triggering damage." };
+            yield return new TextBlock { Id = Guid.Parse("5e3f7fe9-5592-42a6-8c9d-78bfa46cc465"), Type = TextBlockType.Enumeration, Text = " Trigger: You fall 10 feet or more; Effect: Choose a form from (spell: aerial form)." };
+            yield return new TextBlock { Id = Guid.Parse("9cbe79dd-0010-4fce-a1de-0065bef06193"), Type = TextBlockType.Enumeration, Text = " Trigger: You take acid, cold, electricity, fire, or poison damage; Effect: Choose a form from (spell: dragon form) that resists the triggering damage." };
+            yield return new TextBlock { Id = Guid.Parse("f19a2d4d-6c9d-4d94-91c0-c615c80b3f43"), Type = TextBlockType.Enumeration, Text = " Trigger: You take fire damage; Effect: Choose a fire elemental form from (spell: elemental form)." };
+            yield return new TextBlock { Id = Guid.Parse("289f17db-dc0c-4c3d-bd34-3a4e32b99501"), Type = TextBlockType.Enumeration, Text = " Trigger: You take poison damage; Effect: Choose a form from (spell: plant form)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("74b62657-b5fe-4862-a3dc-0ddf2140db91"), Feats.Instances.WildShape.ID);
-            builder.AddOr(Guid.Parse("8d3b96f1-7599-4b0b-82e0-ed212ef664a2"), or => 
+            builder.HaveSpecificFeat(Guid.Parse("90fb62db-d9e0-4e86-8451-21ae85888d64"), Feats.Instances.WildShape.ID);
+            builder.AddOr(Guid.Parse("ec03bfaa-ac49-4067-9b9f-2e049c106eef"), or => 
             {
-                or.HaveSpecificFeat(Guid.Parse("796958f2-f1de-477b-8c40-aac45e6fd163"), Feats.Instances.DragonShape.ID);
-                or.HaveSpecificFeat(Guid.Parse("9d86568c-5ad9-41f5-aabe-a24bf8094a4d"), Feats.Instances.ElementalShape.ID);
-                or.HaveSpecificFeat(Guid.Parse("eba5918e-a634-40a5-981c-4233fdce72a9"), Feats.Instances.PlantShape.ID);
-                or.HaveSpecificFeat(Guid.Parse("34fe4e8d-0da8-4dd9-b606-1f11601a041b"), Feats.Instances.SoaringShape.ID);
+                or.HaveSpecificFeat(Guid.Parse("eb5dff5f-f689-45b1-9301-824b2f5bacf0"), Feats.Instances.DragonShape.ID);
+                or.HaveSpecificFeat(Guid.Parse("3ad40d06-d108-4f7a-b1f9-409f1f518453"), Feats.Instances.ElementalShape.ID);
+                or.HaveSpecificFeat(Guid.Parse("53491f83-7d46-420f-9c89-bbd2608a607e"), Feats.Instances.PlantShape.ID);
+                or.HaveSpecificFeat(Guid.Parse("049c261c-167b-4dcc-8b60-86c4788ec41d"), Feats.Instances.SoaringShape.ID);
             });
         }
 
@@ -57,7 +58,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e444ca57-1a24-401b-a788-e56ac365cb7b"),
+                Id = Guid.Parse("a0f19fd9-c222-4443-b4ff-15f0687d0931"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

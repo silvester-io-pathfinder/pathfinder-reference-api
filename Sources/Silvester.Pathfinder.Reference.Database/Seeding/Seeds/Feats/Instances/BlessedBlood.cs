@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BlessedBlood : Template
     {
-        public static readonly Guid ID = Guid.Parse("cb3d4a8c-936e-4a67-a0b8-d3f4394940e2");
+        public static readonly Guid ID = Guid.Parse("7be6fe20-cb9c-4c09-83b9-2d2cfb67cd78");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f700b4a2-1af5-4862-8a6f-7eb06030acab"), Type = TextBlockType.Text, Text = "Your deity’s blessings manifest in your blood-borne power. Add up to three of your deity’s spells (spells your deity grants to clerics) to your spell list. They are not automatically added to your repertoire, but you can select them just as you would spells normally on the divine spell list." };
+            yield return new TextBlock { Id = Guid.Parse("b8bb808c-26ce-4b55-a3a1-1f1a97741a22"), Type = TextBlockType.Text, Text = "Your deity’s blessings manifest in your blood-borne power. Add up to three of your deity’s spells (spells your deity grants to clerics) to your spell list. They are not automatically added to your repertoire, but you can select them just as you would spells normally on the divine spell list." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyBloodlineSpecificMagicTradition(Guid.Parse("4d1bc976-67d1-4eb5-87db-fd3ec9e7bb1f"), MagicTraditions.Instances.Divine.ID);
-            builder.FollowAnyReligion(Guid.Parse("77552b26-e41b-4af7-a2d9-83d3a02bd9a7"));
+            builder.HaveAnyBloodlineSpecificMagicTradition(Guid.Parse("2dca2590-48ec-4908-855e-761a13a6dc89"), MagicTraditions.Instances.Divine.ID);
+            builder.FollowAnyReligion(Guid.Parse("c2344fdc-5a24-42cc-8ba2-cfbef4ecc2ab"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a174b53e-fb42-4e5f-b8a1-ba8d337b2148"),
+                Id = Guid.Parse("06fed3e7-00bc-490a-834a-4d28f7fe7ea8"),
                 SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
                 Page = -1
             };

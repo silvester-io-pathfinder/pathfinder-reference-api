@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WizardElementalistWater : Template
     {
-        public static readonly Guid ID = Guid.Parse("f8ccc043-b886-46ea-be42-3fb62619f3b7");
+        public static readonly Guid ID = Guid.Parse("2b00049f-1ce6-4702-bb02-d489a6f72dd8");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c268446-3d34-4cf7-aeb4-af3dda6aaf92"), Type = TextBlockType.Text, Text = "Instead of specializing in a school of magic, you specialize in one of the four elements: water. Any benefits your arcane school would grant you that are associated with a selected spell school, you instead apply to your selected element." };
-            yield return new TextBlock { Id = Guid.Parse("fc39085a-34e6-4991-9b55-f448a0da648c"), Type = TextBlockType.Text, Text = "In place of your arcane school spell, you learn the initial water elemental focus spell ((spell: rising surf)). If you later select the (feat: Advanced School Spell) wizard feat, instead of gaining the listed school spell, you gain the advanced water elemental focus spell ((spell: pulverizing cascade))." };
+            yield return new TextBlock { Id = Guid.Parse("1e82df84-302e-4d79-9216-c4a611287966"), Type = TextBlockType.Text, Text = "Instead of specializing in a school of magic, you specialize in one of the four elements: water. Any benefits your arcane school would grant you that are associated with a selected spell school, you instead apply to your selected element." };
+            yield return new TextBlock { Id = Guid.Parse("6dc56508-39d8-4aed-a122-9f2d04caca18"), Type = TextBlockType.Text, Text = "In place of your arcane school spell, you learn the initial water elemental focus spell ((spell: rising surf)). If you later select the (feat: Advanced School Spell) wizard feat, instead of gaining the listed school spell, you gain the advanced water elemental focus spell ((spell: pulverizing cascade))." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d72bb4aa-cc79-4ec2-94bc-2f2e817fbe56"),
+                Id = Guid.Parse("3185b60d-b1d0-45d4-b3d7-884a6da93162"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

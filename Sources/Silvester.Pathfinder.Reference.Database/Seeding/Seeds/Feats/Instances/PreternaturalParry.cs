@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PreternaturalParry : Template
     {
-        public static readonly Guid ID = Guid.Parse("5b5bd45f-ae32-447c-a64a-c32731a5398a");
+        public static readonly Guid ID = Guid.Parse("c769333a-3634-418e-b681-22c48f8a7c27");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("38c69305-4db7-4f9c-bdf3-e82e0f43c3bf"), Type = TextBlockType.Text, Text = "You snap your weapon or limb into place to ward off harm at the last second. You gain a +2 circumstance bonus to AC and saving throws against the triggering effect until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("c9dfec2c-bba0-49bb-9c9d-60dcb028af4a"), Type = TextBlockType.Text, Text = "You snap your weapon or limb into place to ward off harm at the last second. You gain a +2 circumstance bonus to AC and saving throws against the triggering effect until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3b1d2813-ccc5-48c0-b14b-1459dc1eb195"), Feats.Instances.SpellParry.ID);
+            builder.HaveSpecificFeat(Guid.Parse("1ac1cebe-e2c9-425c-8d52-060657d99ad7"), Feats.Instances.SpellParry.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0b203476-7eab-43ee-9f2f-314e0af08b00"),
+                Id = Guid.Parse("a200f2f4-a93f-4435-a05d-4c3702ff6274"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

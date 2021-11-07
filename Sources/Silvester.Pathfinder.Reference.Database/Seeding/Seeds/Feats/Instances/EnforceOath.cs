@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EnforceOath : Template
     {
-        public static readonly Guid ID = Guid.Parse("a3e25b0c-de65-4b6c-a2ff-b2ee6c9c5b70");
+        public static readonly Guid ID = Guid.Parse("4312482d-1706-4704-b6d9-8d22cf26bfd4");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("41bf5598-4046-4823-83f0-a8d8e241e20a"), Type = TextBlockType.Text, Text = "You call on your oath to embolden you in combat. When you Enforce your Oath, select one creature you can see that you’ve sworn to defeat as part of your oath. You gain a +1 status bonus to AC and saves against attacks and effects by the chosen creature. You also gain a +1 status bonus to attack rolls against the chosen creature. However, your dedication to Enforcing your Oath draws your focus away from all other foes. While you are Enforcing your Oath, you take a –1 status penalty to AC, attack rolls, and saves against all other creatures until you stop Enforcing your Oath." };
-            yield return new TextBlock { Id = Guid.Parse("414ee1c6-916c-4fe4-aa59-fbfc7e487507"), Type = TextBlockType.Text, Text = "You stop Enforcing your Oath once the chosen creature is reduced to 0 Hit Points or offers a legitimate surrender to you or your allies. You immediately stop Enforcing your Oath if you are unconscious or if the chosen creature goes unnoticed by you for more than 1 minute. You can also stop Enforcing your Oath at any time during your turn as a free action." };
+            yield return new TextBlock { Id = Guid.Parse("456f1ac8-477a-4801-89fb-314b780a6244"), Type = TextBlockType.Text, Text = "You call on your oath to embolden you in combat. When you Enforce your Oath, select one creature you can see that you’ve sworn to defeat as part of your oath. You gain a +1 status bonus to AC and saves against attacks and effects by the chosen creature. You also gain a +1 status bonus to attack rolls against the chosen creature. However, your dedication to Enforcing your Oath draws your focus away from all other foes. While you are Enforcing your Oath, you take a –1 status penalty to AC, attack rolls, and saves against all other creatures until you stop Enforcing your Oath." };
+            yield return new TextBlock { Id = Guid.Parse("6b5e4ffb-e74b-42c9-b8a6-daed54a4d8da"), Type = TextBlockType.Text, Text = "You stop Enforcing your Oath once the chosen creature is reduced to 0 Hit Points or offers a legitimate surrender to you or your allies. You immediately stop Enforcing your Oath if you are unconscious or if the chosen creature goes unnoticed by you for more than 1 minute. You can also stop Enforcing your Oath at any time during your turn as a free action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.Manual(Guid.Parse("53ca99e3-9c5b-41f7-8c12-ceae41fbaf87"), "You've sworn to an oath against a specific type of creature.");
+            builder.Manual(Guid.Parse("e78e4a49-7ed9-48b3-b45f-1a5cd51c39cc"), "You've sworn to an oath against a specific type of creature.");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("582c5542-afa7-4801-a4e7-c961d63df293"),
+                Id = Guid.Parse("7497a910-5bba-4b6d-be98-017a071691bf"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

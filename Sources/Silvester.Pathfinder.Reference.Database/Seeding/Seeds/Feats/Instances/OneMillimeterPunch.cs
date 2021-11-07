@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OneMillimeterPunch : Template
     {
-        public static readonly Guid ID = Guid.Parse("75e393f8-9ea3-40ed-81ea-00e990ba51f0");
+        public static readonly Guid ID = Guid.Parse("4624f10b-4ce6-43db-970e-0712705e931f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c966b985-c1e8-4725-81c6-d1ec92f67b45"), Type = TextBlockType.Text, Text = "Your punches have incredible force and control. When you damage a target using (feat: One-Inch Punch), you can focus your ki to send the foe flying. If you do, the target must attempt a Fortitude save against your class DC." };
+            yield return new TextBlock { Id = Guid.Parse("7bf64de2-ea39-4610-b4f2-961052c69d73"), Type = TextBlockType.Text, Text = "Your punches have incredible force and control. When you damage a target using (feat: One-Inch Punch), you can focus your ki to send the foe flying. If you do, the target must attempt a Fortitude save against your class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("98e5ea65-cc84-445b-a69b-3d4c95d0154b"), Feats.Instances.OneInchPunch.ID);
+            builder.HaveSpecificFeat(Guid.Parse("3b506df7-19a0-42cc-9ecf-82c9ca081058"), Feats.Instances.OneInchPunch.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("fe6f72d7-5447-4451-890e-3a6210abc467"),
+                Id = Guid.Parse("89fa7305-6f23-4158-b1cf-491d596734a5"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is pushed back 5 feet.",
                 Failure = "The target is pushed back 10 feet.",
@@ -59,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("be2da39a-0878-4b0c-9f40-f45da009e82e"),
+                Id = Guid.Parse("4c407d48-f214-4271-9526-a6506a2b27de"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

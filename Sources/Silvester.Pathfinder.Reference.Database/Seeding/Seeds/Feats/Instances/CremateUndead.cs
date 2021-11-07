@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CremateUndead : Template
     {
-        public static readonly Guid ID = Guid.Parse("ba806a18-833b-4c2c-a580-b5e71c78e65a");
+        public static readonly Guid ID = Guid.Parse("3097ba53-35c9-44c9-be34-aaa3d46a7756");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("32757078-740f-4cf3-8ed3-9e43185c63a0"), Type = TextBlockType.Text, Text = "Your positive energy sets undead alight. When you use a (spell: heal) spell to damage undead, each undead that takes damage also takes persistent fire damage equal to the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("1b7c138f-14fc-45c7-853f-1c8cf55c3d2f"), Type = TextBlockType.Text, Text = "Your positive energy sets undead alight. When you use a (spell: heal) spell to damage undead, each undead that takes damage also takes persistent fire damage equal to the spell’s level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cf55d407-2a19-47fd-8965-688cf28d36c1"),
+                Id = Guid.Parse("6329ee71-f212-4455-a098-f866ddf54323"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

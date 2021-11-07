@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShieldOfFaith : Template
     {
-        public static readonly Guid ID = Guid.Parse("45fe1e55-f19b-4a93-bcd5-cb2ef6c83d89");
+        public static readonly Guid ID = Guid.Parse("10591bd6-788d-4ebd-94fb-8ff3f2b6a5bc");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1addf39c-76c2-4b21-a27b-7e488b079d34"), Type = TextBlockType.Text, Text = "Residual energy from your domain spells bolsters your defenses. When you spend a Focus Point to cast a domain spell, you gain a +1 status bonus to your AC until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("eab700bd-966b-4ce0-8d1a-162c8bd818a9"), Type = TextBlockType.Text, Text = "Residual energy from your domain spells bolsters your defenses. When you spend a Focus Point to cast a domain spell, you gain a +1 status bonus to your AC until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("a90f9649-2ebc-4848-839e-2efe63b1d878"), Feats.Instances.DomainInitiate.ID);
+            builder.HaveSpecificFeat(Guid.Parse("cc9c2c85-2eda-48f1-91ca-360becde7913"), Feats.Instances.DomainInitiate.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c7a67521-db86-4e42-b698-8b21a6c9537f"),
+                Id = Guid.Parse("0cf0ee31-d80f-47f1-b9e7-1871713b9e2c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

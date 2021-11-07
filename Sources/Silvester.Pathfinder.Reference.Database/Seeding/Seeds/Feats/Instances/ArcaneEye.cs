@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArcaneEye : Template
     {
-        public static readonly Guid ID = Guid.Parse("8a902f5d-82a4-44a8-b236-d654e020f329");
+        public static readonly Guid ID = Guid.Parse("75448ad2-1e87-4ca0-b2a8-78079e2e55be");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("df036063-6f13-4d73-ace1-7dcdef3ede5d"), Type = TextBlockType.Text, Text = "Your eye has been magically enhanced to pierce darkness. You gain darkvision." };
-            yield return new TextBlock { Id = Guid.Parse("07b46ab4-3641-482d-9d12-6df518876628"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("b197320c-9d9d-4066-9446-814e2a96eeb8"), Type = TextBlockType.Text, Text = "~ Enhancement: Your eye can see invisible creatures in brief spurts. You can cast (spell: see invisibility) as an arcane innate spell once per hour." };
+            yield return new TextBlock { Id = Guid.Parse("f6883541-cd2c-44d4-8a52-ac7009918269"), Type = TextBlockType.Text, Text = "Your eye has been magically enhanced to pierce darkness. You gain darkvision." };
+            yield return new TextBlock { Id = Guid.Parse("aab446d9-7e81-42ef-afd4-0e9c019c31ac"), Type = TextBlockType.Text, Text = "----" };
+            yield return new TextBlock { Id = Guid.Parse("1c5fb12c-b507-4aa9-b129-d5af0179c773"), Type = TextBlockType.Text, Text = "~ Enhancement: Your eye can see invisible creatures in brief spurts. You can cast (spell: see invisibility) as an arcane innate spell once per hour." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSense(Guid.Parse("0d58e016-3a3d-48a4-b37b-c638a84c6cbf"), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
+            builder.HaveSpecificSense(Guid.Parse("1524695a-b3df-4c04-ae8a-1ff38580717d"), Senses.Instances.LowLightVision.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2c32b3f0-c7ac-4023-a7c5-40d4be916367"),
+                Id = Guid.Parse("762ecd36-04fb-4cc1-b53c-42e3908395b1"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

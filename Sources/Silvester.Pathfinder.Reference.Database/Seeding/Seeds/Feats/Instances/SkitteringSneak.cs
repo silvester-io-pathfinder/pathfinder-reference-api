@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SkitteringSneak : Template
     {
-        public static readonly Guid ID = Guid.Parse("f9fdbcb2-578d-4d74-a946-f8ffd76192c1");
+        public static readonly Guid ID = Guid.Parse("5eadac19-eddc-41e3-8cfe-823db6a199a4");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("203203ce-0c2d-43e0-8d46-d2a05fea0a40"), Type = TextBlockType.Text, Text = "You squish, slink, and skitter from cover to cover with great speed and stealth. You can move up to your full Speed when you (action: Sneak)." };
+            yield return new TextBlock { Id = Guid.Parse("c4899216-6cea-4033-a03d-1c6465a64428"), Type = TextBlockType.Text, Text = "You squish, slink, and skitter from cover to cover with great speed and stealth. You can move up to your full Speed when you (action: Sneak)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5dd003f0-f787-47f0-8b32-1f12893a6733"),
+                Id = Guid.Parse("8fe9fd62-2273-468c-8d5d-0d5e9e96fca7"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

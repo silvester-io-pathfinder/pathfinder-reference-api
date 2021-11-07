@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MaliciousBane : Template
     {
-        public static readonly Guid ID = Guid.Parse("77751f83-1747-455a-961a-d562196e3661");
+        public static readonly Guid ID = Guid.Parse("daea037e-4334-4461-a54a-ca685f3e2cea");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9b048777-960a-4bdf-855c-88da7a3f770d"), Type = TextBlockType.Text, Text = "Whether your heart is pure or corrupt, you can call forth a malediction upon your foes. You can cast (spell: bane) once per day as a 1st-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("3467da1f-1da8-4eee-902b-b07611767496"), Type = TextBlockType.Text, Text = "Whether your heart is pure or corrupt, you can call forth a malediction upon your foes. You can cast (spell: bane) once per day as a 1st-level divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("31a51643-1b25-4a55-a646-2e30220d0faa"),
+                Id = Guid.Parse("d2766865-18d3-4a0c-a179-57ef22f878fd"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

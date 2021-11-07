@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CelestialResistanceSonic : Template
     {
-        public static readonly Guid ID = Guid.Parse("b825dc03-3eb0-4571-823f-5e118f925c5e");
+        public static readonly Guid ID = Guid.Parse("19d63801-a4ea-47f5-8e45-f1727c27d9b1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("785899cf-a4bb-46ef-b9f0-92d7b4d0051b"), Type = TextBlockType.Text, Text = "You gain resistance 5 to sonic." };
+            yield return new TextBlock { Id = Guid.Parse("31a30729-5816-4a85-ac30-485481f7a72e"), Type = TextBlockType.Text, Text = "You gain resistance 5 to sonic." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bb955e26-b872-440a-ad7f-ea02d2847d2d"),
+                Id = Guid.Parse("056fbbaa-8ffd-48a8-9b99-d839bae3ed98"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

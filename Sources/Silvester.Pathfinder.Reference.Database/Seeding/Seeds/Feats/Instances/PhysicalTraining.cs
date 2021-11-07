@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PhysicalTraining : Template
     {
-        public static readonly Guid ID = Guid.Parse("5054aaf0-4e69-40e1-9b34-6c45d30bda9b");
+        public static readonly Guid ID = Guid.Parse("b3a03b8f-fc1f-4e62-8c2e-e2f48fcf0464");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fae28a89-2dfc-4497-b82d-a2108fb8fcfb"), Type = TextBlockType.Text, Text = "You spend a lot of time focusing on your physical fitness. You increase your proficiency rank in Acrobatics and Athletics from expert to master." };
+            yield return new TextBlock { Id = Guid.Parse("55f30682-a4e0-4feb-a58a-f6e9dd2f92d3"), Type = TextBlockType.Text, Text = "You spend a lot of time focusing on your physical fitness. You increase your proficiency rank in Acrobatics and Athletics from expert to master." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("c8c6d768-2b47-4ae8-9247-1f41fdd74a70"), Feats.Instances.SwordmasterDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("fa17bd0c-a559-43e4-878f-b908fc3f5b94"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("9644418c-225c-47f5-b78e-d40913885b23"), Proficiencies.Instances.Expert.ID, Skills.Instances.Acrobatics.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6718804c-ae9c-4ee8-8689-4c3eb4cee172"), Feats.Instances.SwordmasterDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("8799b6f7-3b7c-431b-b62c-9fbc9c49d7b5"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("64f47b0d-5c8b-4128-96d8-932ba639146e"), Proficiencies.Instances.Expert.ID, Skills.Instances.Acrobatics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d10aa9f6-a51d-4a66-b4ba-c63457e127c1"),
+                Id = Guid.Parse("43d9e55a-0e59-42cb-9071-f601041a733d"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

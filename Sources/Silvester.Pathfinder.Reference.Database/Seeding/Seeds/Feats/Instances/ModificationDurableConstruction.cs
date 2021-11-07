@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationDurableConstruction : Template
     {
-        public static readonly Guid ID = Guid.Parse("2c4d8ade-9ec6-46ac-892d-4dbb5eec567b");
+        public static readonly Guid ID = Guid.Parse("3fb04501-3041-41c7-89c6-d210ad13b42a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("682bb4bc-7f0d-4109-9c1c-029976dfe69f"), Type = TextBlockType.Text, Text = "Your innovation is solidly built; it can take significant punishment before being destroyed. Increase its maximum HP by your level." };
+            yield return new TextBlock { Id = Guid.Parse("e20ecd1c-59a6-4467-bd6e-4d4e0fa48a2b"), Type = TextBlockType.Text, Text = "Your innovation is solidly built; it can take significant punishment before being destroyed. Increase its maximum HP by your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("367a719d-6c33-46bb-b65d-e191a6f5b4e2"),
+                Id = Guid.Parse("acefffe7-c64a-43ff-810b-ab8b0f2bc754"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

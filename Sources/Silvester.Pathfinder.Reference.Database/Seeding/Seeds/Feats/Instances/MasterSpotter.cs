@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MasterSpotter : Template
     {
-        public static readonly Guid ID = Guid.Parse("d0977003-b9fd-4699-8aa1-0be4de0a0c2c");
+        public static readonly Guid ID = Guid.Parse("fb0dd11d-4092-4690-b16f-ff1dcdcee1d4");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("35cda70d-1196-4363-89ad-265960f0a6b3"), Type = TextBlockType.Text, Text = "Your incredible perception and trusty enhanced visual gear allow you to see things others miss. Your proficiency rank in Perception increases to master." };
+            yield return new TextBlock { Id = Guid.Parse("9afd83a9-85a2-439f-a3b4-f5ab4618ea73"), Type = TextBlockType.Text, Text = "Your incredible perception and trusty enhanced visual gear allow you to see things others miss. Your proficiency rank in Perception increases to master." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("ed680797-7ab7-448c-869d-e05245a6d706"), Feats.Instances.OverwatchDedication.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("05016cc6-fee0-4f1e-8dbf-a4137342756b"), Proficiencies.Instances.Expert.ID, Skills.Instances.Perception.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d28a8453-1e9e-4b25-98ac-a85a2cd9a8df"), Feats.Instances.OverwatchDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("796e18b1-b7e8-4d9f-a51c-325a7e074487"), Proficiencies.Instances.Expert.ID, Skills.Instances.Perception.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5ce69f53-46e7-44f5-bc0c-f47c5eddbf0d"),
+                Id = Guid.Parse("a75fecc0-3126-4056-aa3a-6d4f69f1945a"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

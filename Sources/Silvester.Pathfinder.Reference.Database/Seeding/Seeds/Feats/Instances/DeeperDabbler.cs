@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeeperDabbler : Template
     {
-        public static readonly Guid ID = Guid.Parse("2a70a7a4-03c0-4b3e-b0bc-7f57dc563b7f");
+        public static readonly Guid ID = Guid.Parse("64286351-a608-417f-b1dd-52ba37cd0252");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a83554ac-df5a-4dd0-aff7-9d4744039eb0"), Type = TextBlockType.Text, Text = "With some streamlining to your process and a deeper collection of talisman materials, you make a greater number of talismans every day. You can create two additional talismans during your daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("14058332-9b1d-4ba0-9011-28cf2471420f"), Type = TextBlockType.Text, Text = "With some streamlining to your process and a deeper collection of talisman materials, you make a greater number of talismans every day. You can create two additional talismans during your daily preparations." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("56b628c5-19ec-45f0-a719-b34b1430ca8f"), Feats.Instances.TalismanDabblerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("85805273-cdb0-44d9-871b-e5c9f2eeeb86"), Feats.Instances.TalismanDabblerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("83aca96c-915a-4a69-acde-61757599b780"),
+                Id = Guid.Parse("56fd7563-4582-4a05-b1ad-8cee6a7e961a"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

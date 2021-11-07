@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LieDetector : Template
     {
-        public static readonly Guid ID = Guid.Parse("f52854f2-1057-4061-b524-9a820cde41b8");
+        public static readonly Guid ID = Guid.Parse("af84bea3-c48e-4b49-bc4f-2e6fa233f866");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d9b3c5e2-b813-4103-8c22-e6dad62d0667"), Type = TextBlockType.Text, Text = "You&#39;re adept at noticing the tells of a liar – sweat, flushing, a quavering voice, a quickening pulse. You gain a +1 circumstance bonus to Perception checks to (action: Sense Motive) and to Perception DCs against attempts to (action: Lie) to you. When you determine someone is lying to you, you can use their deceit to your advantage to gain a +1 circumstance bonus to the next Deception, Diplomacy, Intimidation, or Performance check you attempt against that creature within the next minute." };
+            yield return new TextBlock { Id = Guid.Parse("119294d2-5c52-4fe3-a0b5-2e399cc1903e"), Type = TextBlockType.Text, Text = "You&#39;re adept at noticing the tells of a liar – sweat, flushing, a quavering voice, a quickening pulse. You gain a +1 circumstance bonus to Perception checks to (action: Sense Motive) and to Perception DCs against attempts to (action: Lie) to you. When you determine someone is lying to you, you can use their deceit to your advantage to gain a +1 circumstance bonus to the next Deception, Diplomacy, Intimidation, or Performance check you attempt against that creature within the next minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("eecb1059-8be0-4ce5-b6d2-f5ebc10d6987"), or => 
+            builder.AddOr(Guid.Parse("0eed43e9-2718-4900-9e16-a6a5565c4adc"), or => 
             {
-                or.HaveSpecificMethodology(Guid.Parse("fa41e90d-5a31-4742-a46d-e43ccd078d96"), Methodologies.Instances.Empiricism.ID);
-                or.HaveSpecificMethodology(Guid.Parse("afdbbe7c-ab3e-46d8-8c00-36920705fffc"), Methodologies.Instances.Interrogation.ID);
+                or.HaveSpecificMethodology(Guid.Parse("bb8a0324-a609-415a-b90e-f6c96cefe3ec"), Methodologies.Instances.Empiricism.ID);
+                or.HaveSpecificMethodology(Guid.Parse("e56b8588-b447-4fe0-b7e4-8e67a1bb8aa7"), Methodologies.Instances.Interrogation.ID);
             });
         }
 
@@ -50,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ea7619a6-1607-480d-90ed-88a06d70ecf5"),
+                Id = Guid.Parse("afcedc9b-e6ac-4cd1-accc-0989ba728f6e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

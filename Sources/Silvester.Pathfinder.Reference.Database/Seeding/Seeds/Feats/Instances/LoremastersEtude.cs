@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LoremastersEtude : Template
     {
-        public static readonly Guid ID = Guid.Parse("3c9fe063-3134-467c-aa14-92e131a9cefb");
+        public static readonly Guid ID = Guid.Parse("4a68d1a0-97f3-4d08-ada6-9068c4e51a3c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e4cbef5d-4ecf-415d-bd66-915610055d2d"), Type = TextBlockType.Text, Text = "You magically unlock memories, making them easier to recall. You learn the (spell: loremaster’s etude) composition spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("875082a1-7fd6-4a06-bcee-896c411b861e"), Type = TextBlockType.Text, Text = "You magically unlock memories, making them easier to recall. You learn the (spell: loremaster’s etude) composition spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("7e540de0-c2f3-4125-aaa5-6bf62a08a793"), Feats.Instances.LoremasteDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("4687df63-7d60-412b-8eae-e05bdfade6e2"), Feats.Instances.LoremasterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7bdadf37-dd23-4bb4-9c48-9a27f0bab9e5"),
+                Id = Guid.Parse("5b42d935-d099-4352-97fc-3813bd11c8b5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HardToFool : Template
     {
-        public static readonly Guid ID = Guid.Parse("3fbf8531-3258-4842-973f-4b1f165c9ea2");
+        public static readonly Guid ID = Guid.Parse("fc28fcfb-48d5-4440-bd58-6b33b7aad4d4");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("685675a7-c11e-4b6f-a185-29a4c9a24766"), Type = TextBlockType.Text, Text = "You’re accustomed to seeing through shifting darkness and bewildering magic. You gain a +1 circumstance bonus on Perception checks against illusions as well as to Will saves against illusions and (trait: shadow) effects." };
+            yield return new TextBlock { Id = Guid.Parse("ea8cd3af-76ef-434f-86d4-ff7cb0e6d570"), Type = TextBlockType.Text, Text = "You’re accustomed to seeing through shifting darkness and bewildering magic. You gain a +1 circumstance bonus on Perception checks against illusions as well as to Will saves against illusions and (trait: shadow) effects." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("210673a3-fea0-4814-bdeb-b550e96cb245"),
+                Id = Guid.Parse("3237714a-d7dd-4138-bd89-0aa34652636e"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

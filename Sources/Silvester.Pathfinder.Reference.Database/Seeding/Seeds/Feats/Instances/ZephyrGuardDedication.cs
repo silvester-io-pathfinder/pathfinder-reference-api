@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ZephyrGuardDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("c352db4a-7255-4ef8-8cff-ffe96e244baa");
+        public static readonly Guid ID = Guid.Parse("ff9da9a0-eeb5-4f9e-8bcc-8b7bb7d76005");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ece0133a-022f-48af-b9f8-ee0f2ae1917b"), Type = TextBlockType.Text, Text = "~ Access: You are from Katapesh." };
-            yield return new TextBlock { Id = Guid.Parse("b90b532d-02fd-48a9-a6d6-66239e3b8e73"), Type = TextBlockType.Text, Text = "As a Zephyr Guard, you’re always vigilant against crime and threats to the city’s safety. You gain a +1 circumstance bonus to Perception checks against attempts to (action: Palm an Object), (action: Steal), or (action: Conceal an Object) (including if you’re (action: Seeking | Seek) concealed objects). You become trained in Society and Katapesh Lore; if you were already trained, you become an expert instead." };
-            yield return new TextBlock { Id = Guid.Parse("f6c08659-0424-4035-a5d8-d759648d44d4"), Type = TextBlockType.Text, Text = "__(If you are already trained in Society or Katapesh Lore, override the proficiency on your character sheet.)__" };
+            yield return new TextBlock { Id = Guid.Parse("c698b6be-7738-4213-bda1-0ee751bcbb09"), Type = TextBlockType.Text, Text = "~ Access: You are from Katapesh." };
+            yield return new TextBlock { Id = Guid.Parse("305e51b1-15da-4a7b-b46b-9b316184f9a6"), Type = TextBlockType.Text, Text = "As a Zephyr Guard, you’re always vigilant against crime and threats to the city’s safety. You gain a +1 circumstance bonus to Perception checks against attempts to (action: Palm an Object), (action: Steal), or (action: Conceal an Object) (including if you’re (action: Seeking | Seek) concealed objects). You become trained in Society and Katapesh Lore; if you were already trained, you become an expert instead." };
+            yield return new TextBlock { Id = Guid.Parse("68db6dc2-5095-4ee4-9119-54d42f49a613"), Type = TextBlockType.Text, Text = "__(If you are already trained in Society or Katapesh Lore, override the proficiency on your character sheet.)__" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.Manual(Guid.Parse("bc5b09f5-9bf9-43a4-ab54-125a3c5cb115"), "Member of the Zephyr Guard");
+            builder.Manual(Guid.Parse("7f56e30a-4de1-4852-b4d3-5cab5ba488c0"), "Member of the Zephyr Guard");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1bd801f0-9bcc-40e3-8725-0d62a38968d8"),
+                Id = Guid.Parse("2c11ab2f-d6f0-4d68-89f3-59e953823fb6"),
                 SourceId = Sources.Instances.AgeOfAshes.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MiraculousFlight : Template
     {
-        public static readonly Guid ID = Guid.Parse("0e8596ac-e402-4417-96e1-8fe74bfff825");
+        public static readonly Guid ID = Guid.Parse("6c54bed0-71bc-45df-903d-5d110422c98f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2e5a5813-9c3e-48b1-abe1-3b7a2c0ce7f6"), Type = TextBlockType.Text, Text = "With superior engineering and magical application, you have freed your signature vehicle from the bonds of gravity, allowing it to soar through the sky like a dragon. The vehicle gains magical propulsion and a fly Speed equal to its fastest current Speed. If your signature vehicle already had a fly Speed, reduce the distance the vehicle needs to make a 90-degree turn to half the usual length (typically half the length of the vehicle)." };
+            yield return new TextBlock { Id = Guid.Parse("6a0814ef-eac0-495e-8fc8-a0ff4ead690a"), Type = TextBlockType.Text, Text = "With superior engineering and magical application, you have freed your signature vehicle from the bonds of gravity, allowing it to soar through the sky like a dragon. The vehicle gains magical propulsion and a fly Speed equal to its fastest current Speed. If your signature vehicle already had a fly Speed, reduce the distance the vehicle needs to make a 90-degree turn to half the usual length (typically half the length of the vehicle)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("03759d3f-a00a-499d-acbe-ba35f4fbd8fe"), Feats.Instances.VehicleMechanicDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("f240dcdc-a40d-4a84-8b77-e4af02a0816f"), Feats.Instances.VehicleMechanicDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("717cb7ff-b472-4a38-8047-9f8d716f33db"),
+                Id = Guid.Parse("1d1411ce-ad69-4885-a684-6beec1698802"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

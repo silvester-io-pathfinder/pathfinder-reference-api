@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PerfectFormControl : Template
     {
-        public static readonly Guid ID = Guid.Parse("61d70c6a-2a09-4e10-940f-27ff7a7c27f1");
+        public static readonly Guid ID = Guid.Parse("9a0a195f-02a8-41a0-abfa-e3b5ec542a2e");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f5fcc2dd-b242-4004-9c55-95eaa6927ca3"), Type = TextBlockType.Text, Text = "Thanks to magic and muscle memory, you can stay in your alternate forms indefinitely; you may have even forgotten your original form. When you use (Feat: Form Control), instead of lasting 1 hour, (Spell: wild shape) is permanent until you (Activity: Dismiss) it." };
+            yield return new TextBlock { Id = Guid.Parse("d36f495b-8b90-4133-8153-93c00924cec6"), Type = TextBlockType.Text, Text = "Thanks to magic and muscle memory, you can stay in your alternate forms indefinitely; you may have even forgotten your original form. When you use (Feat: Form Control), instead of lasting 1 hour, (Spell: wild shape) is permanent until you (Activity: Dismiss) it." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("e1e4043f-467f-4544-8a83-26a4346f5f18"), Feats.Instances.FormControl.ID);
-            builder.HaveSpecificStat(Guid.Parse("2f89493f-88f9-4fd4-a272-9afe0f72b9af"), requiredStatValue: 18, Stats.Instances.Strength.ID);
+            builder.HaveSpecificFeat(Guid.Parse("532b5d08-5755-4de1-8263-a2f4d6d09335"), Feats.Instances.FormControl.ID);
+            builder.HaveSpecificStat(Guid.Parse("2763e6de-f040-403b-8dfc-00aaeee67b7a"), requiredStatValue: 18, Stats.Instances.Strength.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4fa4da84-2fce-450d-b955-5f659596346d"),
+                Id = Guid.Parse("e691322e-d026-42e3-875d-3d6db3c10529"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

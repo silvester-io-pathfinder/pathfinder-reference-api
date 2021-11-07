@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CourageousOnslaught : Template
     {
-        public static readonly Guid ID = Guid.Parse("feab6558-651c-4521-bb9f-7d94a59dded2");
+        public static readonly Guid ID = Guid.Parse("c37ac2f3-9a0a-4ec3-83ac-63cd4dbbf5af");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c9a4fdd-d456-4b71-b27a-143293492d8a"), Type = TextBlockType.Text, Text = "You use your performance to orchestrate an onslaught against your enemies. If your next action is to cast the (spell: inspire courage) composition cantrip, one ally who gains a status bonus from the spell can immediately use a reaction to (action: Stride) and then make a melee (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("9fa1be4b-463e-49eb-aa20-44dd4dd0203e"), Type = TextBlockType.Text, Text = "You use your performance to orchestrate an onslaught against your enemies. If your next action is to cast the (spell: inspire courage) composition cantrip, one ally who gains a status bonus from the spell can immediately use a reaction to (action: Stride) and then make a melee (action: Strike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1d506a1f-a101-40da-bb02-2a0047f2e132"), Feats.Instances.CourageousAdvance.ID);
-            builder.HaveSpecificFeat(Guid.Parse("71f61bd6-4d48-4cf8-8dce-d2ee42e20cf6"), Feats.Instances.CourageousAssault.ID);
+            builder.HaveSpecificFeat(Guid.Parse("022af4d5-05b3-4371-bde6-3f1c6e5f58c4"), Feats.Instances.CourageousAdvance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("de8e05c3-0fd4-4b9c-9116-6bbc99590980"), Feats.Instances.CourageousAssault.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("400c33af-dc17-471e-a64e-2bf25996fa99"),
+                Id = Guid.Parse("5fdf0466-819f-4a63-b20f-1a20c292bba7"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WyrmbaneAura : Template
     {
-        public static readonly Guid ID = Guid.Parse("0186a8da-46e2-414d-9371-8439fa487f11");
+        public static readonly Guid ID = Guid.Parse("861b76bd-0bcd-4168-82c9-ce344a281d2b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("52a03ccb-fdd2-467a-8003-26f268a674dd"), Type = TextBlockType.Text, Text = "Your aura protects against destructive energies and dragons’ breath. You and all allies within 15 feet gain resistance equal to your Charisma modifier to acid, cold, electricity, fire, and poison. If the source of one of these types of damage is a dragon’s breath, increase the resistance to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("7c798684-1b4c-4121-9995-4ca9e97c1b67"), Type = TextBlockType.Text, Text = "Your aura protects against destructive energies and dragons’ breath. You and all allies within 15 feet gain resistance equal to your Charisma modifier to acid, cold, electricity, fire, and poison. If the source of one of these types of damage is a dragon’s breath, increase the resistance to half your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("34a1c5ec-2c97-4ad2-9754-d753ceedf866"), Feats.Instances.VengefulOath.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e4b0b124-aa14-4d8c-a569-d4ef2ed282db"), Feats.Instances.VengefulOath.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("06f02d5e-30e3-4554-854e-5d51a48abf25"),
+                Id = Guid.Parse("64d01350-0f8d-49bf-bc60-93ae78af7303"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

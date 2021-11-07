@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CombatReflexes : Template
     {
-        public static readonly Guid ID = Guid.Parse("19329f94-3b0e-4585-a4fb-3dd5142d1a9a");
+        public static readonly Guid ID = Guid.Parse("7c8c249c-f533-404b-8643-b6ee6a85474a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b7624669-2469-4c49-bd64-6eb8b8671ade"), Type = TextBlockType.Text, Text = "You are particularly swift at punishing foes who leave you openings. At the start of each of your turns when you regain your actions, you gain an additional reaction that can be used only to make an (Feat: Attack of Opportunity)." };
+            yield return new TextBlock { Id = Guid.Parse("0278870c-b269-45d8-ad87-059153ecca7d"), Type = TextBlockType.Text, Text = "You are particularly swift at punishing foes who leave you openings. At the start of each of your turns when you regain your actions, you gain an additional reaction that can be used only to make an (Feat: Attack of Opportunity)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2a014da5-e9de-4349-bcfe-059d73e8b4c9"),
+                Id = Guid.Parse("57ef57e7-7f98-4594-9f33-34d22b6f5038"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

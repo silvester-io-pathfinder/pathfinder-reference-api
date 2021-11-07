@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TetraelementalAssault : Template
     {
-        public static readonly Guid ID = Guid.Parse("44bbfce6-48fb-45f1-9192-66a3ac3a93f8");
+        public static readonly Guid ID = Guid.Parse("cb7cf658-ad95-4307-8933-d0cfd466c7ef");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d99cd190-605d-4bee-a828-c8399f4f896c"), Type = TextBlockType.Text, Text = "Your (feat: Elemental Assault) cycles through all four elements. When you use (feat: Elemental Assault), instead of choosing a single element, you can choose an element from the list when using the action, and then choose a different element at the beginning of each of your next 3 turns without spending an action; once you have chosen an element, you can’t choose it again during this (feat: Elemental Assault), meaning you must select all four elements over the course of 4 turns." };
-            yield return new TextBlock { Id = Guid.Parse("ec68f66b-c1ae-428d-b395-ea4b44165093"), Type = TextBlockType.Text, Text = "Each time you choose an element, until the beginning of your next turn, your (action: Strikes | Strike) deal an additional 1d6 damage of the indicated type and have the trait corresponding to that element." };
+            yield return new TextBlock { Id = Guid.Parse("ea298fbc-4f7d-498c-a64b-61baccb3597b"), Type = TextBlockType.Text, Text = "Your (feat: Elemental Assault) cycles through all four elements. When you use (feat: Elemental Assault), instead of choosing a single element, you can choose an element from the list when using the action, and then choose a different element at the beginning of each of your next 3 turns without spending an action; once you have chosen an element, you can’t choose it again during this (feat: Elemental Assault), meaning you must select all four elements over the course of 4 turns." };
+            yield return new TextBlock { Id = Guid.Parse("b6c0970b-d546-48a6-b250-fa44dc27e53d"), Type = TextBlockType.Text, Text = "Each time you choose an element, until the beginning of your next turn, your (action: Strikes | Strike) deal an additional 1d6 damage of the indicated type and have the trait corresponding to that element." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("9674c131-44c7-4d8e-a0e3-ba62291a885e"), Feats.Instances.ElementalAssault.ID);
+            builder.HaveSpecificFeat(Guid.Parse("fcae040e-bb18-40b5-99a1-693cb3569af2"), Feats.Instances.ElementalAssault.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b2d5d399-cff2-4926-9f56-ce5e608ebb87"),
+                Id = Guid.Parse("cbf010bd-cc18-46bc-a3be-3caa8e256214"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ElementalistDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("50db6bba-9f42-40c0-9266-1f49124130bd");
+        public static readonly Guid ID = Guid.Parse("4349cab8-fecb-4e0e-a37e-9a9f531f0eb1");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3b13bbf8-deb9-439c-80a7-78a09cd94cc1"), Type = TextBlockType.Text, Text = "Each day when you make your daily preparations, you can attune yourself to one element of your choice: air, earth, fire, or water. You gain resistance equal to half your level (minimum 1 resistance) against damage dealt by effects with your attuned elemental trait. This attunement lasts until you next make your daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("4665b2e2-392a-426a-bde6-ad0ef5738e9c"), Type = TextBlockType.Text, Text = "Each day when you make your daily preparations, you can attune yourself to one element of your choice: air, earth, fire, or water. You gain resistance equal to half your level (minimum 1 resistance) against damage dealt by effects with your attuned elemental trait. This attunement lasts until you next make your daily preparations." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("a2d6db25-7657-47c1-b5e5-402812762726"), ClassFeatures.Archetypes.ElementalMagic.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("1ecd25c7-3a6b-4cf5-8949-bcabca525f23"), ClassFeatures.Archetypes.ElementalMagic.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d6a221b1-6792-4c98-b1c1-30a7732b3198"),
+                Id = Guid.Parse("4fbf6f0e-a149-4184-a625-c95d8b822771"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

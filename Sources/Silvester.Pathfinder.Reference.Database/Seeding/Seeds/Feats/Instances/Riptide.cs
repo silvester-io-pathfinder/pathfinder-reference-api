@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Riptide : Template
     {
-        public static readonly Guid ID = Guid.Parse("9e72d9b2-3ad7-4b2b-8eeb-7e4b4bfd75aa");
+        public static readonly Guid ID = Guid.Parse("fcfc2d42-b4a9-4c5c-8915-a09b1c65b22c");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bf698d5b-75b3-4a79-abdd-14e0b530714f"), Type = TextBlockType.Text, Text = "You (action: Stride) up to 10 feet to enter the water, bringing the grabbed creature with you into the water." };
+            yield return new TextBlock { Id = Guid.Parse("99c8caad-2e7e-48fd-8efd-7fe787f31584"), Type = TextBlockType.Text, Text = "You (action: Stride) up to 10 feet to enter the water, bringing the grabbed creature with you into the water." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("cd51fed0-e495-4c76-ad1c-fa92f38f4e28"), Feats.Instances.DragDown.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("51ebb200-7508-4afc-98ae-28898101db95"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8756684e-5aff-44e9-8793-3a008c482e53"), Feats.Instances.DragDown.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("44d20644-7a9a-42b8-97b1-cdfe888504e8"), Proficiencies.Instances.Expert.ID, Skills.Instances.Athletics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1355c045-1a11-484e-9d6a-122ec3ddba30"),
+                Id = Guid.Parse("bf459cc4-c377-4868-a2ed-4be57821a758"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

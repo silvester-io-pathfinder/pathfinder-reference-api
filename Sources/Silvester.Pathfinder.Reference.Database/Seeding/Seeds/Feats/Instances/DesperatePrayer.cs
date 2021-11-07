@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DesperatePrayer : Template
     {
-        public static readonly Guid ID = Guid.Parse("ce16b2a1-1419-4a0b-a360-16359e93ddfe");
+        public static readonly Guid ID = Guid.Parse("7585e056-b206-42c6-a123-59bd26c7dce6");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8fd24514-fecd-4c4c-b5af-fb0f01603278"), Type = TextBlockType.Text, Text = "You call out to your deity in a plea for their aid. You instantly recover 1 Focus Point." };
+            yield return new TextBlock { Id = Guid.Parse("d1bd0f39-f2e5-492b-a9b1-59bb721c9527"), Type = TextBlockType.Text, Text = "You call out to your deity in a plea for their aid. You instantly recover 1 Focus Point." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0b8e44be-4652-4481-b3e6-d26b84eaf451"),
+                Id = Guid.Parse("812bb37b-190b-4768-963a-47a2aab022ae"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

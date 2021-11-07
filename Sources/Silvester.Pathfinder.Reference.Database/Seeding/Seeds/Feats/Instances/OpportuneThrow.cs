@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OpportuneThrow : Template
     {
-        public static readonly Guid ID = Guid.Parse("172d45f9-1b15-4c63-b8ba-552f157debd1");
+        public static readonly Guid ID = Guid.Parse("257d1dfd-956b-482f-88ba-243fdd7f2823");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2a99637d-527f-4823-9748-d6493c2ec1b0"), Type = TextBlockType.Text, Text = "You make a thrown ranged (action: Strike) with the required weapon against the triggering creature. If you critically succeed and the trigger was a (trait: manipulate) action, you disrupt that action." };
+            yield return new TextBlock { Id = Guid.Parse("83c04f80-6db0-4e09-a80d-0406ffdac4ad"), Type = TextBlockType.Text, Text = "You make a thrown ranged (action: Strike) with the required weapon against the triggering creature. If you critically succeed and the trigger was a (trait: manipulate) action, you disrupt that action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("3bddacf3-65ff-4e88-acdb-9146d1a347e7"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Performance.ID);
-            builder.HaveSpecificFeat(Guid.Parse("a4e87f85-42a4-4ab0-acf7-2e0051d2df6e"), Feats.Instances.JugglerDedication.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("3491f93f-c1e1-4307-8c70-d39f5b227d38"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Performance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("eda43c16-c6e5-4f6d-997d-d800a40cf9f6"), Feats.Instances.JugglerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ac0e555a-aae6-4865-b4f7-7771c1a8cd8c"),
+                Id = Guid.Parse("c2b004b9-955b-4caf-9c09-571b48cc089f"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ExhalePoison : Template
     {
-        public static readonly Guid ID = Guid.Parse("c3b15e6d-3c05-4e6a-82ac-c2b1a4b9afa8");
+        public static readonly Guid ID = Guid.Parse("9b3e2667-85c1-4e63-a271-a60b810cfc2c");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0a6cc68e-46fc-44e1-a0ea-5b0bf4af3631"), Type = TextBlockType.Text, Text = "You sharply exhale the poison that previously surrounded you in a 15-foot cone. Creatures in the area are affected by the poison; the poison’s DC and effects are unchanged." };
+            yield return new TextBlock { Id = Guid.Parse("3d902ac8-2662-44e8-a89a-d378e05b5382"), Type = TextBlockType.Text, Text = "You sharply exhale the poison that previously surrounded you in a 15-foot cone. Creatures in the area are affected by the poison; the poison’s DC and effects are unchanged." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a2eaafdf-ba5d-446f-b736-df4c8186591e"),
+                Id = Guid.Parse("ad073510-481f-46a7-9e71-ea6682b97721"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

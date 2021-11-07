@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MountainQuake : Template
     {
-        public static readonly Guid ID = Guid.Parse("98372139-4483-4d67-ade4-12660112a371");
+        public static readonly Guid ID = Guid.Parse("c2dba461-59b5-4453-99c7-b81d616f47fc");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b903480d-cdd6-4638-8a62-ef133403fd50"), Type = TextBlockType.Text, Text = "You stomp, shaking the earth beneath you. Creatures on the ground within a 20-foot emanation take damage equal to your Strength modifier (minimum 0), which they can resist with a basic Fortitude save. On a failure, they also fall prone. After you use this action, you can’t use it again for 1d4 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("2fb42ad5-c4c9-4262-b35b-88e9aeca465c"), Type = TextBlockType.Text, Text = "You stomp, shaking the earth beneath you. Creatures on the ground within a 20-foot emanation take damage equal to your Strength modifier (minimum 0), which they can resist with a basic Fortitude save. On a failure, they also fall prone. After you use this action, you can’t use it again for 1d4 rounds." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1be332a8-938b-471e-816f-ccb19465194a"), Feats.Instances.MountainStronghold.ID);
+            builder.HaveSpecificFeat(Guid.Parse("91d78a40-6611-40e7-aa14-6481fd64428b"), Feats.Instances.MountainStronghold.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1b55ae14-6507-4b50-a709-91b1b724eaee"),
+                Id = Guid.Parse("eab84778-c2d8-470b-9580-8ce60c682455"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

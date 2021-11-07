@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Fleet : Template
     {
-        public static readonly Guid ID = Guid.Parse("9c791804-36a3-404d-b3e6-757b78736628");
+        public static readonly Guid ID = Guid.Parse("494bfe28-c564-45de-9146-faad62c212ac");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("82a621f4-e84d-4eb3-8349-01827908d143"), Type = TextBlockType.Text, Text = "You move more quickly on foot. Your Speed increases by 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("93e4d57d-fe72-4e6a-9cb8-789227d88773"), Type = TextBlockType.Text, Text = "You move more quickly on foot. Your Speed increases by 5 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0a3fb596-2f5b-4219-8f57-f70393164732"),
+                Id = Guid.Parse("2008dac7-f17f-46c2-898c-d0577209ce15"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

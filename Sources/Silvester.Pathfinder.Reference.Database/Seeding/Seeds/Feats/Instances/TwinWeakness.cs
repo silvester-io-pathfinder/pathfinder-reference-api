@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TwinWeakness : Template
     {
-        public static readonly Guid ID = Guid.Parse("bd0f938e-fa6f-4d17-934c-69441084e452");
+        public static readonly Guid ID = Guid.Parse("2b290660-5f0b-4f4c-a0ce-55e92b6355c6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a88a0c89-663e-4c87-8c44-eade43a5bb20"), Type = TextBlockType.Text, Text = "As you make an attack augmented by your esoterica, you also press your implement against the creature to apply its weakness. Make a melee (action: Strike) against the subject of your (feat: Esoteric Antithesis). On any attack roll result but a critical failure, you also press your implement against the creature, applying its weakness from (feat: Esoteric Antithesis). This is in addition to any damage from your (action: Strike), including the weakness it applies. This counts as two attacks when calculating your multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("7e8fd507-4144-4d6b-b9b8-9960ef1cc235"), Type = TextBlockType.Text, Text = "As you make an attack augmented by your esoterica, you also press your implement against the creature to apply its weakness. Make a melee (action: Strike) against the subject of your (feat: Esoteric Antithesis). On any attack roll result but a critical failure, you also press your implement against the creature, applying its weakness from (feat: Esoteric Antithesis). This is in addition to any damage from your (action: Strike), including the weakness it applies. This counts as two attacks when calculating your multiple attack penalty." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("dbf756f8-8652-4e6a-9641-24a4bec4cb6b"), Feats.Instances.EsotericAntithesis.ID);
+            builder.HaveSpecificFeat(Guid.Parse("94e34168-da9e-4e52-961e-734c2da59d35"), Feats.Instances.EsotericAntithesis.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("87e370cb-f975-4a28-af7e-74d20e2450bf"),
+                Id = Guid.Parse("da4f24fe-57e2-4177-8c01-217e945f0e00"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

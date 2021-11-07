@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RelentlessStalker : Template
     {
-        public static readonly Guid ID = Guid.Parse("c30babe2-dbab-487b-baf1-0a07305fc534");
+        public static readonly Guid ID = Guid.Parse("b9502a49-e614-4005-b820-4066ecdfa17b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("60f43d4e-dd26-4724-8475-60cdda26a62d"), Type = TextBlockType.Text, Text = "Your hunted prey cannot escape your relentless pursuit. (action: Stride) up to your Speed in tandem with the triggering creature, remaining adjacent to the foe throughout its movement until it stops moving or you run out of movement. You can ignore difficult terrain during this movement unless the difficult terrain is caused by a (trait: magical) effect." };
+            yield return new TextBlock { Id = Guid.Parse("0680aa4d-b941-4488-8247-fa104fb37d78"), Type = TextBlockType.Text, Text = "Your hunted prey cannot escape your relentless pursuit. (action: Stride) up to your Speed in tandem with the triggering creature, remaining adjacent to the foe throughout its movement until it stops moving or you run out of movement. You can ignore difficult terrain during this movement unless the difficult terrain is caused by a (trait: magical) effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ab590990-4f9d-439f-a83a-7dc72469fa20"),
+                Id = Guid.Parse("55eabd3d-a295-4d85-b5fa-a825af5d62ff"),
                 SourceId = Sources.Instances.FallOfPlaguestone.ID,
                 Page = -1
             };

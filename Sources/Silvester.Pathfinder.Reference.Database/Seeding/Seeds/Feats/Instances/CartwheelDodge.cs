@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CartwheelDodge : Template
     {
-        public static readonly Guid ID = Guid.Parse("5b649d37-aca4-405a-89f6-f31a77e5d6ba");
+        public static readonly Guid ID = Guid.Parse("74dc17e9-36d9-440b-b644-33eee19de28c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("64f2f264-33c4-4419-990f-e6be51890e3e"), Type = TextBlockType.Text, Text = "You (action: Step) up to 10 feet." };
+            yield return new TextBlock { Id = Guid.Parse("9b323226-791e-4273-b1b1-718d62eb745d"), Type = TextBlockType.Text, Text = "You (action: Step) up to 10 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("cec44e7e-c170-47d6-bb03-65dd852606ad"), Feats.Instances.ProvocatorDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("dc9121ca-459a-4db0-a106-3bd034daa3f0"), Feats.Instances.ProvocatorDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("666260ca-aba0-405e-abb4-cb661abda905"),
+                Id = Guid.Parse("690dd616-9d47-4dcb-a63b-57d831a0e859"),
                 SourceId = Sources.Instances.AgentsOfEdgewatch.ID,
                 Page = -1
             };

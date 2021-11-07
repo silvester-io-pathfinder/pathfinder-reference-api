@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EarnedGlory : Template
     {
-        public static readonly Guid ID = Guid.Parse("a6a5de50-452a-4616-9c1c-57882f717f0c");
+        public static readonly Guid ID = Guid.Parse("acc89e8d-5da7-482e-a340-af35c48021f0");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("78c343b9-b476-4ff9-a79c-51a5a0af31f8"), Type = TextBlockType.Text, Text = "Elves are often skeptical of their half-elven kin, and you are experienced at telling stories of your accomplishments to gain their respect. You are trained in Performance. If you would automatically become trained in Performance (from your background or class, for example), you instead become trained in a skill of your choice." };
-            yield return new TextBlock { Id = Guid.Parse("329dec9c-65e2-411e-af74-20581835e401"), Type = TextBlockType.Text, Text = "You gain the (feat: Impressive Performance) feat. When you attempt a Performance check to (action: Make an Impression) on an elf, if you roll a critical failure, you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("f9086c5c-695c-4835-98a1-9708317c7110"), Type = TextBlockType.Text, Text = "Elves are often skeptical of their half-elven kin, and you are experienced at telling stories of your accomplishments to gain their respect. You are trained in Performance. If you would automatically become trained in Performance (from your background or class, for example), you instead become trained in a skill of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("7af80172-c406-4815-b099-a4eb6ef1e31c"), Type = TextBlockType.Text, Text = "You gain the (feat: Impressive Performance) feat. When you attempt a Performance check to (action: Make an Impression) on an elf, if you roll a critical failure, you get a failure instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("76dc6716-1bae-4103-bbfe-704c3b8cf382"),
+                Id = Guid.Parse("819eae57-43dd-48c0-aa68-458b58218d67"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

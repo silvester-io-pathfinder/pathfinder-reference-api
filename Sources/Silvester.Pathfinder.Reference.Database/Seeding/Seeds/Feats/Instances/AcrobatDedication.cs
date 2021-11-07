@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AcrobatDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("3b3b9d67-2fac-4c1b-a6f5-29971dc73ff4");
+        public static readonly Guid ID = Guid.Parse("d498ffea-1c31-4507-8a14-2fd951261992");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("df41886a-20a1-4171-a4dc-9fa7ac5845c5"), Type = TextBlockType.Text, Text = "You become an expert in Acrobatics. At 7th level, you become a master in Acrobatics, and at 15th level, you become legendary in Acrobatics. Whenever you critically succeed at an Acrobatics check to (action: Tumble Through) an enemy’s space, you don’t treat the enemy’s space as difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("3791fb58-435b-4564-bff7-659b78701ba9"), Type = TextBlockType.Text, Text = "You become an expert in Acrobatics. At 7th level, you become a master in Acrobatics, and at 15th level, you become legendary in Acrobatics. Whenever you critically succeed at an Acrobatics check to (action: Tumble Through) an enemy’s space, you don’t treat the enemy’s space as difficult terrain." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("ae2a41ac-2c0c-4c46-a61a-946082da3c0e"), Proficiencies.Instances.Trained.ID, Skills.Instances.Acrobatics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("1685e97d-0587-4f7b-aeed-2944c8d10227"), Proficiencies.Instances.Trained.ID, Skills.Instances.Acrobatics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ee7faffb-a79e-4ef9-bf84-406cf661d640"),
+                Id = Guid.Parse("c59fddb1-e4c8-4610-b789-7fa7395d86d1"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

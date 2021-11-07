@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GrippliWeaponInnovator : Template
     {
-        public static readonly Guid ID = Guid.Parse("6664f613-0b42-42c9-bf45-54d77cd975e7");
+        public static readonly Guid ID = Guid.Parse("1f53b7ea-a2fe-4f64-8fcf-6789e7de0ef6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27ea200b-8c07-4520-a81e-fd202f1bd764"), Type = TextBlockType.Text, Text = "You’ve learned devious ways to make the most of your grippli weapons. Whenever you critically hit using a (item: blowguns | Blowgun), (item: hatchets | Hatchet), (item: scythes | Scythe), (item: shortbows | Shortbow), (item: composite shortbows | Composite Shortbow), or grippli weapon, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("679503e4-dd27-4248-8599-49bf71e04824"), Type = TextBlockType.Text, Text = "You’ve learned devious ways to make the most of your grippli weapons. Whenever you critically hit using a (item: blowguns | Blowgun), (item: hatchets | Hatchet), (item: scythes | Scythe), (item: shortbows | Shortbow), (item: composite shortbows | Composite Shortbow), or grippli weapon, you apply the weapon’s critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("963412a7-c389-4591-b62b-9882eb660e89"), Feats.Instances.GrippliWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8bd7b7a1-1e25-4892-b3ad-8295356c7af2"), Feats.Instances.GrippliWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("86d332c7-fb04-4844-9d6a-df44e460574d"),
+                Id = Guid.Parse("8e784117-22c5-4e0e-a529-ee3ba5d823ec"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

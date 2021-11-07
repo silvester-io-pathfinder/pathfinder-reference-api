@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CeremonyOfSunlight : Template
     {
-        public static readonly Guid ID = Guid.Parse("1ec12887-4d4c-4d54-be62-c198e83ff561");
+        public static readonly Guid ID = Guid.Parse("7fb02ed5-4cd5-4e41-bacd-4688c08f7a63");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("33f8a299-2662-4adc-aa86-9b0549304579"), Type = TextBlockType.Text, Text = "You have learned how to master the power contained within sunlight, just like the trees that form your body. Your Sunlight Healing recovers 1d8 Hit Points per level." };
+            yield return new TextBlock { Id = Guid.Parse("d6afbb47-1c91-4bc8-bc78-ac361b2ddb82"), Type = TextBlockType.Text, Text = "You have learned how to master the power contained within sunlight, just like the trees that form your body. Your Sunlight Healing recovers 1d8 Hit Points per level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0e6d6592-fedd-4f51-9b46-488652e27327"),
+                Id = Guid.Parse("a0c0a1e7-1c25-4124-8eb5-d47648872b10"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

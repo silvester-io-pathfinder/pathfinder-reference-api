@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EnergizedFont : Template
     {
-        public static readonly Guid ID = Guid.Parse("484dead2-875e-417c-a810-de593d5f1e19");
+        public static readonly Guid ID = Guid.Parse("6d928f4b-63ab-4a40-a710-a97e3cccd134");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a7a2f258-a129-41d2-81e2-c90248612307"), Type = TextBlockType.Text, Text = "The magic within you provides increased energy you can use to focus. You regain 1 Focus Point, up to your usual maximum." };
+            yield return new TextBlock { Id = Guid.Parse("a25642ef-4765-4ee8-9d3d-fecec750429a"), Type = TextBlockType.Text, Text = "The magic within you provides increased energy you can use to focus. You regain 1 Focus Point, up to your usual maximum." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveFocusPool(Guid.Parse("168a1176-8e0a-40e3-ac25-9305566f6bbc"));
-            builder.Manual(Guid.Parse("a98e139b-485b-4653-aef1-13f70291e93c"), "At least one innate spell from a gonome heritage or ancestry feat that shares a tradition with at least one of your focus spells.");
+            builder.HaveFocusPool(Guid.Parse("4bedfb44-a3eb-42da-8f35-25c527e8fc2b"));
+            builder.Manual(Guid.Parse("23e101b7-188a-4ec6-94ce-5337caae1778"), "At least one innate spell from a gonome heritage or ancestry feat that shares a tradition with at least one of your focus spells.");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("117308f8-f2c6-403f-b98b-d27bbc26915e"),
+                Id = Guid.Parse("f69fecf3-0690-4775-befc-b9504f4cf383"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

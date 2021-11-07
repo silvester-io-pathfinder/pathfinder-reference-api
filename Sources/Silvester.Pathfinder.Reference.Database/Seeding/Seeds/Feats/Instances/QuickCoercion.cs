@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class QuickCoercion : Template
     {
-        public static readonly Guid ID = Guid.Parse("d1abc068-6264-4ee2-a9f8-c59d3cda09f2");
+        public static readonly Guid ID = Guid.Parse("2bef3c55-a595-4343-99dd-c04015d9be64");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e53d41ea-6676-4691-8147-5d33a1e2dd30"), Type = TextBlockType.Text, Text = "You can bully others with just a few choice implications. You can (action: Coerce) a creature after 1 round of conversation instead of 1 minute. You still can’t (action: Coerce) a creature in the midst of combat, or without engaging in a conversation." };
+            yield return new TextBlock { Id = Guid.Parse("a520feb0-0aae-4f4f-89ae-6b824da4de90"), Type = TextBlockType.Text, Text = "You can bully others with just a few choice implications. You can (action: Coerce) a creature after 1 round of conversation instead of 1 minute. You still can’t (action: Coerce) a creature in the midst of combat, or without engaging in a conversation." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("0aa6fd7c-90a4-417d-bc5e-7e8d62c092dd"), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("8d08c95c-3ade-4857-9cb8-6549778b0e13"), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ac58b983-194f-4718-ad96-e1b795e827b4"),
+                Id = Guid.Parse("156565e1-7229-46c2-8bf3-013bf5dfa854"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

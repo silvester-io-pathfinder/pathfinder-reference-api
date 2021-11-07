@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReassuringPresence : Template
     {
-        public static readonly Guid ID = Guid.Parse("27919a98-1773-4e01-8a89-53c012fc0dee");
+        public static readonly Guid ID = Guid.Parse("cb11beb2-24fe-4086-97fa-7055d1ad5550");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b66e18ca-4e08-48ae-9da9-102b2b27a213"), Type = TextBlockType.Text, Text = "You serve as an anchor to your close companions, calming them in times of stress. Decrease the value of the triggering ally’s frightened condition by 1. The ally is then temporarily immune to your Reassuring Presence for 1 hour." };
+            yield return new TextBlock { Id = Guid.Parse("e46b4d8b-8897-46ae-b114-7bff5aa5d114"), Type = TextBlockType.Text, Text = "You serve as an anchor to your close companions, calming them in times of stress. Decrease the value of the triggering ally’s frightened condition by 1. The ally is then temporarily immune to your Reassuring Presence for 1 hour." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("994e3a8f-0521-470b-aabf-0cb2467ff4f1"),
+                Id = Guid.Parse("44f6f21c-0d70-42eb-970c-58f8c145d346"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

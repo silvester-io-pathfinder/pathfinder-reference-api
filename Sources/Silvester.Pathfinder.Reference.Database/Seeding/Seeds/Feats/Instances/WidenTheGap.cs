@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WidenTheGap : Template
     {
-        public static readonly Guid ID = Guid.Parse("fa3b29e9-9bd9-45bf-8db6-47254ca5536b");
+        public static readonly Guid ID = Guid.Parse("29ae016a-7630-4fce-b21a-c3a352cd0e70");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4e3d635f-33c2-4660-9927-3b445bd1061d"), Type = TextBlockType.Text, Text = "Once you have penetrated a foe’s defenses, you can home in on the same spot to exploit your opponent’s wound and deal some serious damage. The second time you hit and deal damage with a melee axe (action: Strike) to the same opponent or object during your turn, you ignore half of the opponent’s or object’s Hardness, if any. If you hit and deal damage with a melee axe (action: Strike) to the same opponent or object a third or fourth time during your turn, you ignore all of its Hardness, if any." };
+            yield return new TextBlock { Id = Guid.Parse("128c9471-2d37-4d0d-987d-4d12f6174bbf"), Type = TextBlockType.Text, Text = "Once you have penetrated a foe’s defenses, you can home in on the same spot to exploit your opponent’s wound and deal some serious damage. The second time you hit and deal damage with a melee axe (action: Strike) to the same opponent or object during your turn, you ignore half of the opponent’s or object’s Hardness, if any. If you hit and deal damage with a melee axe (action: Strike) to the same opponent or object a third or fourth time during your turn, you ignore all of its Hardness, if any." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("af3c9be0-da51-419e-a279-879e04bbc38d"), Feats.Instances.TurpinRoweLumberjackDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d2dd1d6a-8557-401f-ad67-552141d23570"), Feats.Instances.TurpinRoweLumberjackDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2011967c-bfa5-42aa-bcaa-99483e78913e"),
+                Id = Guid.Parse("140e5d3c-6214-4a9b-8f46-9674a7393e62"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

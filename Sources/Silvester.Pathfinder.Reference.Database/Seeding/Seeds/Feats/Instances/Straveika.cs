@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Straveika : Template
     {
-        public static readonly Guid ID = Guid.Parse("bbc5b5ae-0c0c-4b7b-9ef8-e36722bc0415");
+        public static readonly Guid ID = Guid.Parse("55ffc919-e3c7-4e16-aebe-82a5a5cf1530");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9496d0a4-7e48-450a-8dbe-d6e9fcdb5d42"), Type = TextBlockType.Text, Text = "You descend from one of the truly ancient vampires, a nosferatu cursed to eternal life but not eternal youth. People call you straveika, or ancient-born. The vestiges of your forebear&#39;s powers of domination have left you with an understanding of how a creature&#39;s intentions change its behaviors. You gain a +1 circumstance bonus to Perception checks to (action: Sense Motive) and Perception DCs against attempts to (action: Lie) to you." };
+            yield return new TextBlock { Id = Guid.Parse("5622afe2-1aa9-463c-beda-d4874ff6f46c"), Type = TextBlockType.Text, Text = "You descend from one of the truly ancient vampires, a nosferatu cursed to eternal life but not eternal youth. People call you straveika, or ancient-born. The vestiges of your forebear&#39;s powers of domination have left you with an understanding of how a creature&#39;s intentions change its behaviors. You gain a +1 circumstance bonus to Perception checks to (action: Sense Motive) and Perception DCs against attempts to (action: Lie) to you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("91ce97d0-81c3-4506-8568-6912ccfbc51f"),
+                Id = Guid.Parse("e3baf7d9-3753-42cc-99a2-92d1d7a46323"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

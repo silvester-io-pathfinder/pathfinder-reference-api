@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LightningTongue : Template
     {
-        public static readonly Guid ID = Guid.Parse("e982c918-a097-464a-abd6-7b0eb79a0478");
+        public static readonly Guid ID = Guid.Parse("16a183b3-8161-405e-99df-2b2013229e6f");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8894f9b5-b83e-4076-a631-72ab9898faf8"), Type = TextBlockType.Text, Text = "Your tongue darts out faster than the eye can see to retrieve loose objects. You (action: Interact) to pick up a single unattended object of light Bulk or less within 10 feet of you. If you don’t have enough hands free to hold the object, it falls to the ground in your space." };
+            yield return new TextBlock { Id = Guid.Parse("79a70ed8-d693-4c9b-8cbb-bc5bf75b8003"), Type = TextBlockType.Text, Text = "Your tongue darts out faster than the eye can see to retrieve loose objects. You (action: Interact) to pick up a single unattended object of light Bulk or less within 10 feet of you. If you don’t have enough hands free to hold the object, it falls to the ground in your space." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ad97d03f-5c6f-4b90-a6de-6f1c9df696af"),
+                Id = Guid.Parse("9cc095f8-19db-4210-abbc-e6a18ad3bdb2"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

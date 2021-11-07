@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ResoundingCascade : Template
     {
-        public static readonly Guid ID = Guid.Parse("b6f0a1ee-cb2a-42d1-ad58-88e9d4324187");
+        public static readonly Guid ID = Guid.Parse("87df8954-4b48-4140-8213-02a0784b8c1d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("94ad2175-19bc-4776-a2b1-70736d6eefd2"), Type = TextBlockType.Text, Text = "When you enter your (feat: Arcane Cascade), you disperse the magical reinforcement to nearby allies. You grant the extra damage of (feat: Arcane Cascade) in an aura affecting all allies in a 5-foot emanation. This uses only the base damage of the stance, based on the ally’s weapon specialization; it doesn’t use any increase you get from bonuses, the laughing shadow hybrid study, or the like. As normal for duplicate effects, multiple (feat: Arcane Cascades | Arcane Cascade) affecting the same creature aren’t cumulative." };
+            yield return new TextBlock { Id = Guid.Parse("ae6237c2-8539-40a7-8e09-59cec35d8959"), Type = TextBlockType.Text, Text = "When you enter your (feat: Arcane Cascade), you disperse the magical reinforcement to nearby allies. You grant the extra damage of (feat: Arcane Cascade) in an aura affecting all allies in a 5-foot emanation. This uses only the base damage of the stance, based on the ally’s weapon specialization; it doesn’t use any increase you get from bonuses, the laughing shadow hybrid study, or the like. As normal for duplicate effects, multiple (feat: Arcane Cascades | Arcane Cascade) affecting the same creature aren’t cumulative." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("9470a4be-8c44-42f4-8017-0bf2fb5e53d6"), Feats.Instances.ArcaneCascade.ID);
+            builder.HaveSpecificFeat(Guid.Parse("60fb2717-2023-4eed-9697-241808eebc0f"), Feats.Instances.ArcaneCascade.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("eba4eed0-faf4-410f-a593-fe1e3b2cf793"),
+                Id = Guid.Parse("99b11440-76c5-4c5c-8b75-78838320543f"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

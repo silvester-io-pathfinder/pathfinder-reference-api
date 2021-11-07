@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CallOfElysium : Template
     {
-        public static readonly Guid ID = Guid.Parse("dff4b085-c776-43cb-9314-46991835a8e1");
+        public static readonly Guid ID = Guid.Parse("97455e63-a607-406b-ac9f-77a42c592dab");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("51e0b71a-3a63-4abd-9881-cdd9727a6c95"), Type = TextBlockType.Text, Text = "The wild wonder of Elysium harmonizes within you, and in dire straits, you can share its benefits with your allies. Your Speed increases by 5 feet; the Speed increase from this feat isn’t cumulative with any Speed increase from your ancestry feats (such as (feat: Nimble Elf)). Allies who begin their turn in combat adjacent to you gain a +5-foot status bonus to their Speed for the round." };
+            yield return new TextBlock { Id = Guid.Parse("2d98129e-8e77-4e50-8ba2-d14c8da4e16f"), Type = TextBlockType.Text, Text = "The wild wonder of Elysium harmonizes within you, and in dire straits, you can share its benefits with your allies. Your Speed increases by 5 feet; the Speed increase from this feat isn’t cumulative with any Speed increase from your ancestry feats (such as (feat: Nimble Elf)). Allies who begin their turn in combat adjacent to you gain a +5-foot status bonus to their Speed for the round." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f2132cd3-25c4-4861-9ccb-fab3d7169143"), Feats.Instances.MuseTouched.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6ce7f16a-dfc8-46b5-a1e9-763d1628bd06"), Feats.Instances.Musetouched.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("65092107-aa7e-4a20-81b1-2dc5882c0b2b"),
+                Id = Guid.Parse("0dd47f0a-f20c-42b2-9618-8f2cb16b1274"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

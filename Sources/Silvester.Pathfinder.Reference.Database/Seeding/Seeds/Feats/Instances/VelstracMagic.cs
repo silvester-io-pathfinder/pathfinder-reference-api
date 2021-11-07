@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class VelstracMagic : Template
     {
-        public static readonly Guid ID = Guid.Parse("4d28cb95-354a-4341-9eba-b0df5061a9fb");
+        public static readonly Guid ID = Guid.Parse("6d812d46-7519-4d91-9e41-45c081a609de");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d8553610-0ca0-471f-a2ed-71266cde8ee6"), Type = TextBlockType.Text, Text = "You know there’s so much more to sensation than whips and chains—but whips and chains also have their place. You can cast (spell: telekinetic maneuver) and (spell: web) once per day each as 2nd-level divine innate spells; in both cases, the spells manifest shadowy chains rather than their usual visual signifiers." };
+            yield return new TextBlock { Id = Guid.Parse("398b5d5d-c902-4e50-b79b-f576c02ceca0"), Type = TextBlockType.Text, Text = "You know there’s so much more to sensation than whips and chains—but whips and chains also have their place. You can cast (spell: telekinetic maneuver) and (spell: web) once per day each as 2nd-level divine innate spells; in both cases, the spells manifest shadowy chains rather than their usual visual signifiers." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("91452f69-a616-44a4-84a4-dc7b765b01d0"), Feats.Instances.Shackleborn.ID);
+            builder.HaveSpecificFeat(Guid.Parse("1f25e8b1-9f39-45aa-bc06-149daa4c40c4"), Feats.Instances.Shackleborn.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1c1a58ef-6f0c-47ac-80c5-071dd0a0a5c9"),
+                Id = Guid.Parse("e2013ae3-b6ca-4589-8189-ebebbb8ddf32"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

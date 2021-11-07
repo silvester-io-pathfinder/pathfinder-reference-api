@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TitansStature : Template
     {
-        public static readonly Guid ID = Guid.Parse("89865e3b-a3d2-4e05-8cc2-203e06c8e6e5");
+        public static readonly Guid ID = Guid.Parse("cc9b401f-2225-410c-891d-a1411f72ab95");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2954adfc-94ba-4787-b1e9-4780e214916b"), Type = TextBlockType.Text, Text = "You grow to even greater size. When using (feat: Giant&#39;s Stature), you can instead become Huge (increasing your reach by 10 feet if you were Medium or smaller) while you are raging. You have the clumsy 1 condition as long as you are Huge." };
+            yield return new TextBlock { Id = Guid.Parse("84868912-a029-4e7e-9dc0-be1103b13b37"), Type = TextBlockType.Text, Text = "You grow to even greater size. When using (feat: Giant&#39;s Stature), you can instead become Huge (increasing your reach by 10 feet if you were Medium or smaller) while you are raging. You have the clumsy 1 condition as long as you are Huge." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificInstinct(Guid.Parse("7c1943c5-8589-4499-bdb8-4e3d80170009"), Instincts.Instances.GiantInstinct.ID);
-            builder.HaveSpecificFeat(Guid.Parse("90dc08aa-feac-426e-9d70-05c3e9a69c7a"), Feats.Instances.GiantsStature.ID);
+            builder.HaveSpecificInstinct(Guid.Parse("6f7c112b-adda-44bb-9402-2ee6bfc19a01"), Instincts.Instances.GiantInstinct.ID);
+            builder.HaveSpecificFeat(Guid.Parse("cb3a4b21-271a-4139-a844-f3836578b56f"), Feats.Instances.GiantsStature.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5bead136-f0da-4ed9-aefe-4d278bf82c44"),
+                Id = Guid.Parse("ac84859c-bf6b-477e-b977-54eb40793913"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

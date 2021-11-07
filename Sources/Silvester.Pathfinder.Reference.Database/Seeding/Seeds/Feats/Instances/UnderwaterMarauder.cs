@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UnderwaterMarauder : Template
     {
-        public static readonly Guid ID = Guid.Parse("1acdcf02-0c98-4250-97a1-a680b579484c");
+        public static readonly Guid ID = Guid.Parse("ae454a88-be10-4807-ba26-2c78cde10523");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c229ed01-e6d2-4c8e-9754-e2fc58f36042"), Type = TextBlockType.Text, Text = "You’ve learned to fight underwater. You are not flat-footed while in water, and you don’t take the usual penalties for using a bludgeoning or slashing melee weapon in water." };
+            yield return new TextBlock { Id = Guid.Parse("eabc47ea-7e99-425a-a5ab-8bf15f522c41"), Type = TextBlockType.Text, Text = "You’ve learned to fight underwater. You are not flat-footed while in water, and you don’t take the usual penalties for using a bludgeoning or slashing melee weapon in water." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("5e57706c-efa6-4895-b750-2199db2e58c8"), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("8d588d9b-5967-46f7-b03e-350476323f21"), Proficiencies.Instances.Trained.ID, Skills.Instances.Athletics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("663bc296-242d-4973-9a3e-83d80b3b369f"),
+                Id = Guid.Parse("e7d4fc61-1714-4ed1-a95c-b0014717a421"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

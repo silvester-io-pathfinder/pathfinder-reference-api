@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DraconicSycophant : Template
     {
-        public static readonly Guid ID = Guid.Parse("ea454fe3-614d-413e-893e-993a84c83c7e");
+        public static readonly Guid ID = Guid.Parse("09c6ea1b-e60b-41be-92ae-8f6c7cf6ea01");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2fd5fafd-dcf7-4df2-8854-efb159a466eb"), Type = TextBlockType.Text, Text = "You have an affect that dragonkind find unusually pleasing—and when that fails, you know when to duck. You gain a +2 circumstance bonus to Perception checks and saving throws against dragons. In addition, whenever you meet a creature with the (trait: dragon) trait in a social situation, you can attempt a Diplomacy check to (action: Make an Impression) on that creature immediately, rather than after conversing for 1 minute; you take a –5 penalty to this check. If you fail, you can choose to engage in 1 minute of conversation and then attempt a new check rather than accept the failure or critical failure result." };
+            yield return new TextBlock { Id = Guid.Parse("dbec23ac-5815-4d4d-af0f-3d124c3d3fe0"), Type = TextBlockType.Text, Text = "You have an affect that dragonkind find unusually pleasing—and when that fails, you know when to duck. You gain a +2 circumstance bonus to Perception checks and saving throws against dragons. In addition, whenever you meet a creature with the (trait: dragon) trait in a social situation, you can attempt a Diplomacy check to (action: Make an Impression) on that creature immediately, rather than after conversing for 1 minute; you take a –5 penalty to this check. If you fail, you can choose to engage in 1 minute of conversation and then attempt a new check rather than accept the failure or critical failure result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("682f8a35-b7aa-4821-a0ce-0d547f704440"),
+                Id = Guid.Parse("1d3a650b-9f28-4ae7-9461-45cab2ca9eac"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

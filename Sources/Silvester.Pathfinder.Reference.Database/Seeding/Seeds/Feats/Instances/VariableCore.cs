@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class VariableCore : Template
     {
-        public static readonly Guid ID = Guid.Parse("f68b30b5-7384-4eac-bca5-ac604337e991");
+        public static readonly Guid ID = Guid.Parse("40d38c39-8087-43e3-bc30-03a703379517");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7a9846ff-2a2d-4fa7-bb92-a392812e5a0c"), Type = TextBlockType.Text, Text = "You adjust your innovation’s core, changing the way it explodes. When you choose this feat, select acid, cold, or electricity. Your innovation’s core runs on that power source. When using the (action: Explode) action, or any time your innovation explodes on a critical failure and damages you, change the damage type from fire damage to the type you chose." };
-            yield return new TextBlock { Id = Guid.Parse("06b044a2-9a73-45e7-bbf9-14f49e744476"), Type = TextBlockType.Text, Text = "If you have the offensive boost class feature and retrain Variable Core to a different damage type, you can also switch to a different offensive boost that deals the same damage type if you wish." };
+            yield return new TextBlock { Id = Guid.Parse("98abda9b-8a27-4223-9b40-9c3052d9e48c"), Type = TextBlockType.Text, Text = "You adjust your innovation’s core, changing the way it explodes. When you choose this feat, select acid, cold, or electricity. Your innovation’s core runs on that power source. When using the (action: Explode) action, or any time your innovation explodes on a critical failure and damages you, change the damage type from fire damage to the type you chose." };
+            yield return new TextBlock { Id = Guid.Parse("faddd02f-d7c7-44b6-88e2-5f3d46072068"), Type = TextBlockType.Text, Text = "If you have the offensive boost class feature and retrain Variable Core to a different damage type, you can also switch to a different offensive boost that deals the same damage type if you wish." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b3d49a01-afdd-4b09-b99c-ae4cae91f77d"),
+                Id = Guid.Parse("4b3d66c3-9474-4c38-bdd0-2ec3465fcef0"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

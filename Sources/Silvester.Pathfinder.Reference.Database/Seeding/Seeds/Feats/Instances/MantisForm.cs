@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MantisForm : Template
     {
-        public static readonly Guid ID = Guid.Parse("cb311e1c-a0b4-40d2-9773-acca46794c86");
+        public static readonly Guid ID = Guid.Parse("ed5c8a27-3660-40f0-a7f1-df003316c1aa");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1a1303df-b6f6-4c22-9fb3-d68d831ef6fc"), Type = TextBlockType.Text, Text = "You gain the (spell: mantis form) focus spell. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by praying to Achaekek or researching your assigned kill." };
+            yield return new TextBlock { Id = Guid.Parse("70800df8-e59d-4c0b-8b88-a01fd0acbc6b"), Type = TextBlockType.Text, Text = "You gain the (spell: mantis form) focus spell. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by praying to Achaekek or researching your assigned kill." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("d977f643-3da5-46f3-b424-8c1790cf0c2a"), Feats.Instances.BasicRedMantisMagic.ID);
+            builder.HaveSpecificFeat(Guid.Parse("33f66de0-61c4-4d25-8019-eb11ff04353f"), Feats.Instances.BasicRedMantisMagic.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5a369fba-e5a1-48da-88e6-3259c6bbc901"),
+                Id = Guid.Parse("cd142509-0c73-41a3-bfe2-3f93fd4e83c0"),
                 SourceId = Sources.Instances.LostOmensWorldGuide.ID,
                 Page = -1
             };

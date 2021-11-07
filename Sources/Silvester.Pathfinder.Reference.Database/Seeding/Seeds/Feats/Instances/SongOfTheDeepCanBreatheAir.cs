@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SongOfTheDeepCanBreatheAir : Template
     {
-        public static readonly Guid ID = Guid.Parse("4f1ad199-d6c3-45b1-8177-9a97baf183a2");
+        public static readonly Guid ID = Guid.Parse("fd694ddb-3430-4cb7-8fa3-642510087abd");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("851f7e9e-0ffd-4214-83c3-74bd331d10c7"), Type = TextBlockType.Text, Text = "You&#39;ve chosen to still be able to breathe air, a wise choice." };
+            yield return new TextBlock { Id = Guid.Parse("5f88197c-f37c-4bda-818a-6646c6dd8aee"), Type = TextBlockType.Text, Text = "You&#39;ve chosen to still be able to breathe air, a wise choice." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0f3addde-8715-4293-a7a1-f395098e806b"),
+                Id = Guid.Parse("e2b350ef-33d4-4b90-9745-591d7a5176c4"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

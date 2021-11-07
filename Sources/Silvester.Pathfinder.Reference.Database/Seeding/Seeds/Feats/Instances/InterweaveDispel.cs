@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class InterweaveDispel : Template
     {
-        public static readonly Guid ID = Guid.Parse("475bd5c2-e537-4e34-8bb4-5aa1e9e78342");
+        public static readonly Guid ID = Guid.Parse("c5857e84-4d6d-49bd-9884-7ff52f87f9ce");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("927d775a-5527-4845-a1fc-625989f92899"), Type = TextBlockType.Text, Text = "You weave dispelling energy into a spell, sending both effects at a foe. If your next action is to cast a single-target spell against a creature, and you either hit the foe with the spell attack roll or the foe fails its saving throw, you can cast (spell: dispel magic) on the foe as a free action, expending a spell slot as normal and targeting one spell effect affecting the foe." };
+            yield return new TextBlock { Id = Guid.Parse("a62ccb0d-5a66-4967-8fe8-4ae0453f00e7"), Type = TextBlockType.Text, Text = "You weave dispelling energy into a spell, sending both effects at a foe. If your next action is to cast a single-target spell against a creature, and you either hit the foe with the spell attack roll or the foe fails its saving throw, you can cast (spell: dispel magic) on the foe as a free action, expending a spell slot as normal and targeting one spell effect affecting the foe." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSpell(Guid.Parse("e0ceb91c-0587-4775-b0ab-50094ac9f00d"), Spells.Instances.DispelMagic.ID);
+            builder.HaveSpecificSpell(Guid.Parse("361abc02-ba04-4ccc-b9f4-7e3b0cfec58a"), Spells.Instances.DispelMagic.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("69007dde-f1c7-419a-a704-2f73d2e84185"),
+                Id = Guid.Parse("1fa821f0-4f14-43c7-b6b8-b3ae19fba513"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

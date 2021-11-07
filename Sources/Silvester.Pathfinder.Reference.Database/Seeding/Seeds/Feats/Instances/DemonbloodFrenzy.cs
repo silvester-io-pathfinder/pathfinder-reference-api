@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DemonbloodFrenzy : Template
     {
-        public static readonly Guid ID = Guid.Parse("a65acbc3-4095-41b9-8748-99c05cd886ef");
+        public static readonly Guid ID = Guid.Parse("a3ca284a-f12e-4631-a83c-79b3fc42a280");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("45cb094a-5683-414f-b133-9c16c617224a"), Type = TextBlockType.Text, Text = "Just the taste of fiendish blood is enough to send blood rushing through your veins in a supernatural fury. You become quickened until the end of your next turn and you can use the extra action to make a tusks (action: Strike), (action: Stride), or (action: Step)." };
+            yield return new TextBlock { Id = Guid.Parse("81cec84d-373a-45a8-88d5-b1f7816c5a7d"), Type = TextBlockType.Text, Text = "Just the taste of fiendish blood is enough to send blood rushing through your veins in a supernatural fury. You become quickened until the end of your next turn and you can use the extra action to make a tusks (action: Strike), (action: Stride), or (action: Step)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificUnarmedAttack(Guid.Parse("b0142a6b-5c41-48dd-87be-9fc73d9e1706"), UnarmedAttack.Tusks);
+            builder.HaveSpecificUnarmedAttack(Guid.Parse("6bb3647b-c44a-491c-8a4b-3e4fd2196fb0"), UnarmedWeapons.Instances.Tusks.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("44c4ce2f-ac7c-409f-832b-1f0d25f9f075"),
+                Id = Guid.Parse("04474cc6-daf6-46c3-a0f3-ddc5b178f0fd"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

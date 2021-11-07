@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FindFlaws : Template
     {
-        public static readonly Guid ID = Guid.Parse("d1107867-f5ae-424a-ba6a-578822c16dec");
+        public static readonly Guid ID = Guid.Parse("89ed3649-eb76-41d2-ad0d-51a5cb6f0171");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("32d7d528-bb9e-47b9-be4a-d0c392eb2e64"), Type = TextBlockType.Text, Text = "You determine a creature’s weaknesses, whether a literal weakness or a metaphysical one. (action: Recall Knowledge) about a creature, using your Charisma modifier instead of the usual ability modifier for the skill you’re using to (action: Recall Knowledge). The creature must be either one you can see or one you’re specifically Investigating in advance during exploration. The result depends on your (action: Recall Knowledge) check, which has the following additional effects as well as the usual effects of (action: Recall Knowledge)." };
+            yield return new TextBlock { Id = Guid.Parse("a67c5c4b-088b-414d-82e8-a2c93df66691"), Type = TextBlockType.Text, Text = "You determine a creature’s weaknesses, whether a literal weakness or a metaphysical one. (action: Recall Knowledge) about a creature, using your Charisma modifier instead of the usual ability modifier for the skill you’re using to (action: Recall Knowledge). The creature must be either one you can see or one you’re specifically Investigating in advance during exploration. The result depends on your (action: Recall Knowledge) check, which has the following additional effects as well as the usual effects of (action: Recall Knowledge)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("37f99608-7a53-4661-8e3e-0b30991daefc"),
+                Id = Guid.Parse("8137c832-672c-4767-87f7-b706414f7710"),
                 CriticalSuccess = "You learn all of the creature’s resistances, weaknesses, and immunities. If you would have learned any of them already from (action: Recall Knowledge), you learn different information instead. You can then use (feat: Esoteric Antithesis) without spending an additional action.",
                 Success = "You learn the creature’s highest weakness, if any. If you would have learned it already from (action: Recall Knowledge), you learn different information instead. You can then use (feat: Esoteric Antithesis) without spending an additional action.",
                 Failure = "You couldn’t quite figure it out, so you decide to invoke a wide range of superstitions and narrow it down from there. You can use (feat: Esoteric Antithesis) as your next action.",
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("014b5f3d-d470-42be-9fb4-350c5c502d8f"),
+                Id = Guid.Parse("6a4227db-c637-4298-9e26-2b32944ba0a4"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

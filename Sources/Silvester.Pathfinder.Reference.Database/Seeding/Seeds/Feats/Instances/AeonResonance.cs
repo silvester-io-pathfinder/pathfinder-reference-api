@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AeonResonance : Template
     {
-        public static readonly Guid ID = Guid.Parse("0598e5d1-9531-46d3-ad1d-b47ccb3a46dc");
+        public static readonly Guid ID = Guid.Parse("be314f22-0690-40d4-a85d-5c6b099ec8ac");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d0d9d98f-7cce-45d1-a798-e30f583e8ab4"), Type = TextBlockType.Text, Text = "You gain the resonant power of one embedded aeon stone as if it were placed in a wayfinder. While you can embed multiple aeon stones in your flesh, you can gain the resonance power from only one embedded stone at a time, selected each day when you make your daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("8040de2f-21f9-407e-a074-26f596edebd0"), Type = TextBlockType.Text, Text = "You gain the resonant power of one embedded aeon stone as if it were placed in a wayfinder. While you can embed multiple aeon stones in your flesh, you can gain the resonance power from only one embedded stone at a time, selected each day when you make your daily preparations." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("38f6a36b-e296-4fd8-b956-28441a0d0c52"), Feats.Instances.EmbedAeonStone.ID);
+            builder.HaveSpecificFeat(Guid.Parse("c1ba3882-f2ca-4c4f-9fdc-00f5a5e2f25f"), Feats.Instances.EmbedAeonStone.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d57da104-1f79-4cac-abef-23143716d46a"),
+                Id = Guid.Parse("a66412de-038b-4e86-aef2-60d719d4f75d"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

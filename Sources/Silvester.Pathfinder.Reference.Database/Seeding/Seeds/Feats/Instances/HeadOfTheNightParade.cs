@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HeadOfTheNightParade : Template
     {
-        public static readonly Guid ID = Guid.Parse("f3919423-44e2-45bb-8128-a0103610e8a8");
+        public static readonly Guid ID = Guid.Parse("62ed8a80-3b18-4af4-8660-a4e1fd011a92");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f3b48d4d-5573-438a-a9e1-6e97407dfa9b"), Type = TextBlockType.Text, Text = "You remember the revelry of the Night Parade and call them to your aid in a riotous display. You (action: Perform) and cast 8th-level (spell: mad monkeys) three times, except that the spell calls various apparitions such as dancing tsukumogami or drinking oni rather than monkeys. Each casting can produce a different kind of mischief. You can Sustain all three Spells each round using a single (action: Perform) action." };
+            yield return new TextBlock { Id = Guid.Parse("ea97a0bc-3edb-4af4-adcd-0c0c19704d30"), Type = TextBlockType.Text, Text = "You remember the revelry of the Night Parade and call them to your aid in a riotous display. You (action: Perform) and cast 8th-level (spell: mad monkeys) three times, except that the spell calls various apparitions such as dancing tsukumogami or drinking oni rather than monkeys. Each casting can produce a different kind of mischief. You can Sustain all three Spells each round using a single (action: Perform) action." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a86f1d1b-3a7d-4fd9-abea-faaa5d197f15"),
+                Id = Guid.Parse("5e56987d-6748-4876-ae90-09a60be71002"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

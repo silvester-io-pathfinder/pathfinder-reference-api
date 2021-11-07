@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CatfolkWeaponExpertise : Template
     {
-        public static readonly Guid ID = Guid.Parse("a5612e69-95f0-4b5f-81d8-8be50ee2ca77");
+        public static readonly Guid ID = Guid.Parse("9df3eb0c-8d4d-4fd7-ad7b-e54b7f9f3a00");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a5b884c4-bc9c-41ba-9f40-d44b7150faef"), Type = TextBlockType.Text, Text = "Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency rank in all weapons you are trained in from (feat: Catfolk Weapon Familiarity)." };
+            yield return new TextBlock { Id = Guid.Parse("a3e87d1d-0275-4661-9daf-3fbb9cd8777a"), Type = TextBlockType.Text, Text = "Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency rank in all weapons you are trained in from (feat: Catfolk Weapon Familiarity)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("46e785b2-4233-46d6-bb0c-2e1afa645a42"), Feats.Instances.CatfolkWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("839f8bbe-7ca8-483b-81a3-6ad072a8541b"), Feats.Instances.CatfolkWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c61b9fe0-67f7-47c6-9069-f63a46231b67"),
+                Id = Guid.Parse("dd3128aa-84b1-497e-b9a6-76703605bde9"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

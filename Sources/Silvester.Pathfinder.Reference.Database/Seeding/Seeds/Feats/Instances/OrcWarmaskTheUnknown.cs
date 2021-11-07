@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OrcWarmaskTheUnknown : Template
     {
-        public static readonly Guid ID = Guid.Parse("70172696-1f57-47d2-b488-9d78c5629508");
+        public static readonly Guid ID = Guid.Parse("870f02d1-60e8-4622-b144-fa5ea79509a6");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("327c1a63-20bd-4898-949a-6fae25584f32"), Type = TextBlockType.Text, Text = "The source of your (item: warmask | warmask the unknown)’s power is from the mystery of the unknown. You become trained in Occultism and your mask&#39;s magical tradition is (trait: occult)." };
+            yield return new TextBlock { Id = Guid.Parse("8445fb61-9ad9-4400-9084-26d1d4e3d64b"), Type = TextBlockType.Text, Text = "The source of your (item: warmask | warmask the unknown)’s power is from the mystery of the unknown. You become trained in Occultism and your mask&#39;s magical tradition is (trait: occult)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("70688a42-992b-472e-9e19-ad45dc1e3a19"),
+                Id = Guid.Parse("d3fa6678-c1ac-4999-89be-2befd9db813d"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

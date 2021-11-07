@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AcuteScent : Template
     {
-        public static readonly Guid ID = Guid.Parse("7444643b-8b70-4455-b2cc-3c7026efec1c");
+        public static readonly Guid ID = Guid.Parse("5f0c44d4-1852-4b1c-87f7-2edfbe73f595");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3dbe5a74-f418-44c6-bbcf-4d02da391929"), Type = TextBlockType.Text, Text = "When you (Action: Rage), your sense of smell improves. You gain imprecise scent with a range of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("6e3ceb37-f3e4-46a3-8723-2cc810e2fc1b"), Type = TextBlockType.Text, Text = "When you (Action: Rage), your sense of smell improves. You gain imprecise scent with a range of 30 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("4c2e218f-9336-4a53-8d3d-85c5b3fd0e9c"), or => 
+            builder.AddOr(Guid.Parse("83c6ad6f-7e2d-4bce-af13-cfebeebd6b8b"), or => 
             {
-                or.HaveSpecificFeat(Guid.Parse("ebb6e231-4b23-4a7d-805a-384c63c63cee"), Feats.Instances.AcuteVision.ID);
-                or.HaveSpecificSense(Guid.Parse("3d2a3a10-d157-4b0e-b990-4d3186cf5501"), Senses.Instances.Darkvision.ID);
+                or.HaveSpecificFeat(Guid.Parse("fa5ce1d3-a738-4fac-b249-8949511424a5"), Feats.Instances.AcuteVision.ID);
+                or.HaveSpecificSense(Guid.Parse("9bb2263d-0342-468f-bd8c-66a4e6906521"), Senses.Instances.Darkvision.ID);
             });
         }
 
@@ -50,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a06a8346-fd81-4cec-b027-39c95404962a"),
+                Id = Guid.Parse("e66dc4a5-4719-41a6-a3eb-56e92f63f468"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

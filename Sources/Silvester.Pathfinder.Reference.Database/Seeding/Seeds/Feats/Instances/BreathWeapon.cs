@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BreathWeapon : Template
     {
-        public static readonly Guid ID = Guid.Parse("7b4e29e4-bb72-438b-9bec-ecc5b2d8e99f");
+        public static readonly Guid ID = Guid.Parse("ff93f5f0-bd79-4f3e-bc0b-3a5dc8e654bf");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3454b27d-8697-4a26-a4cb-3cce7ca85dd7"), Type = TextBlockType.Text, Text = "Your eidolon exhales a blast of destructive energy. Your eidolon deals 1d6 damage to all creatures in the area, with a basic Reflex save against your spell DC. The area and damage type of the Breath Weapon are chosen when the eidolon gains this ability. Your eidolon then can’t use their Breath Weapon again for the next 1d4 rounds." };
-            yield return new TextBlock { Id = Guid.Parse("2c595376-220b-470d-8390-2d29d3be7974"), Type = TextBlockType.Text, Text = "At 3rd level and every 2 levels thereafter, the damage increases by 1d6." };
+            yield return new TextBlock { Id = Guid.Parse("6bb6fcdb-930a-4c28-976f-9753361454ab"), Type = TextBlockType.Text, Text = "Your eidolon exhales a blast of destructive energy. Your eidolon deals 1d6 damage to all creatures in the area, with a basic Reflex save against your spell DC. The area and damage type of the Breath Weapon are chosen when the eidolon gains this ability. Your eidolon then can’t use their Breath Weapon again for the next 1d4 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("af73bb3b-9ab0-4750-b207-b4050335ecd3"), Type = TextBlockType.Text, Text = "At 3rd level and every 2 levels thereafter, the damage increases by 1d6." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("db19d005-b4e9-4f13-909c-eceebcfe5037"),
+                Id = Guid.Parse("c447d857-33f4-4dac-a44e-f69beeca4184"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

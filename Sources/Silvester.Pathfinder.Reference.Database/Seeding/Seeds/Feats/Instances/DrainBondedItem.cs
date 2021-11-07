@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DrainBondedItem : Template
     {
-        public static readonly Guid ID = Guid.Parse("19136c15-0e06-40f3-802e-8ea18bd0e549");
+        public static readonly Guid ID = Guid.Parse("3391928d-94ff-4f43-a968-1cb062d61e5d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d282b28d-ac55-49d1-a5b4-4fa1fba565b2"), Type = TextBlockType.Text, Text = "You expend the power stored in your bonded item. During your turn, you gain the ability to cast one spell you prepared today and already cast, without spending a spell slot. You must still (activity: Cast the Spell | Cast a Spell) and meet the spell’s other requirements." };
+            yield return new TextBlock { Id = Guid.Parse("cd1e146f-bb29-4f73-b666-4a2798c2353b"), Type = TextBlockType.Text, Text = "You expend the power stored in your bonded item. During your turn, you gain the ability to cast one spell you prepared today and already cast, without spending a spell slot. You must still (activity: Cast the Spell | Cast a Spell) and meet the spell’s other requirements." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0ab207b7-4a61-409c-9e8e-6c2b8122e071"),
+                Id = Guid.Parse("416f9a0f-a9e3-4138-a759-f8c1d8c03f62"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

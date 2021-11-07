@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MagaambyanSpellcastingPrimal : Template
     {
-        public static readonly Guid ID = Guid.Parse("fb744108-c6a5-4e37-9dfc-47adc5bf70ae");
+        public static readonly Guid ID = Guid.Parse("8590ecec-6562-4e28-9026-db64d947e4bb");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("de625117-22dc-4695-b81c-54596f027157"), Type = TextBlockType.Text, Text = "__Your halcyon spellcasting is primal.__" };
+            yield return new TextBlock { Id = Guid.Parse("52836463-71a7-4ccf-ad20-9b575c8e0fbc"), Type = TextBlockType.Text, Text = "__Your halcyon spellcasting is primal.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("267fef69-35b1-4b3b-8b03-59d0c6d69b94"),
+                Id = Guid.Parse("d9fd67fb-e152-467c-91f9-a222dfd77102"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

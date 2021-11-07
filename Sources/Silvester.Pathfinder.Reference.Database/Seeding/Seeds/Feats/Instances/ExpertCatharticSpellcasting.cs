@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ExpertCatharticSpellcasting : Template
     {
-        public static readonly Guid ID = Guid.Parse("22ff554e-2810-4f62-85b2-30524aad995c");
+        public static readonly Guid ID = Guid.Parse("a8e2840b-1a32-4b37-8f56-189ec90117a1");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4343936c-71d2-4f06-a0a4-97d22a824e85"), Type = TextBlockType.Text, Text = "Your proficiency ranks for your cathartic mage spell attack rolls and spell DCs increase to expert, you gain a 4th-level spell slot and you can select a second spell from your repertoire as a signature spell. At 14th level, you gain a 5th-level spell slot, and at 16th level, you gain a 6th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("3b326928-8c8d-48b2-86ac-d8c29c82941b"), Type = TextBlockType.Text, Text = "Your proficiency ranks for your cathartic mage spell attack rolls and spell DCs increase to expert, you gain a 4th-level spell slot and you can select a second spell from your repertoire as a signature spell. At 14th level, you gain a 5th-level spell slot, and at 16th level, you gain a 6th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("2963d04a-4aa5-4e4a-bea2-7cfcbe84ed5f"), Feats.Instances.BasicCatharticSpellcasting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("493c3a43-35f0-4298-baf3-ce1258f48aeb"), Feats.Instances.BasicCatharticSpellcasting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("55a588f8-c335-4bde-9e22-f9475dbb4588"),
+                Id = Guid.Parse("80eca056-0f90-4e7f-aaf6-1fb84f6b54bf"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

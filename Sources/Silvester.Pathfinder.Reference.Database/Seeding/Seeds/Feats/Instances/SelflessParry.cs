@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SelflessParry : Template
     {
-        public static readonly Guid ID = Guid.Parse("48f6fdeb-f158-473a-aec8-303b8b6ee2f8");
+        public static readonly Guid ID = Guid.Parse("edf6826f-c0c2-44fe-854d-add79ded03f0");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("337a53b2-b64a-41a2-a02c-b794abb48ae0"), Type = TextBlockType.Text, Text = "You protect those near you with a flash of steel. When you’re benefiting from (feat: Dueling Parry), allies adjacent to you gain a +1 circumstance bonus to AC. If you have (feat: Dueling Riposte), you can use it when an enemy within your reach critically fails a (action: Strike) against an ally adjacent to you, not just against yourself." };
+            yield return new TextBlock { Id = Guid.Parse("5a310572-3a8b-4123-b5cb-8d391af094ee"), Type = TextBlockType.Text, Text = "You protect those near you with a flash of steel. When you’re benefiting from (feat: Dueling Parry), allies adjacent to you gain a +1 circumstance bonus to AC. If you have (feat: Dueling Riposte), you can use it when an enemy within your reach critically fails a (action: Strike) against an ally adjacent to you, not just against yourself." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("37146767-e40b-4bed-ae04-e517ae9c3b44"), Feats.Instances.DuelingParry.ID);
+            builder.HaveSpecificFeat(Guid.Parse("cff65d7f-0e8b-4e22-8ed5-2f9b68cfbe98"), Feats.Instances.DuelingParry.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("63dc83cb-a99e-47c8-9d2b-f31c1a199248"),
+                Id = Guid.Parse("dda0351f-3525-4314-b3a1-3872020d59de"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

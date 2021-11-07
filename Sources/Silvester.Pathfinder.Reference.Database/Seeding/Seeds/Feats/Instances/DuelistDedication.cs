@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DuelistDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("ef77c5a0-39c0-4070-9614-5fbd38d0128b");
+        public static readonly Guid ID = Guid.Parse("aa8c5bd1-5c9b-4ac7-8cdf-19cad1f135ce");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("10c6673a-2bb1-4d6e-97d6-d945c7af821b"), Type = TextBlockType.Text, Text = "You are always ready to draw your weapon and begin a duel, no matter the circumstances. You gain the (feat: Quick Draw) ranger feat, enabling you to both draw and attack with a weapon as 1 action. This serves as (feat: Quick Draw) for the purpose of meeting prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("0ec1436d-491f-4e78-bc71-c4196fd38d45"), Type = TextBlockType.Text, Text = "You are always ready to draw your weapon and begin a duel, no matter the circumstances. You gain the (feat: Quick Draw) ranger feat, enabling you to both draw and attack with a weapon as 1 action. This serves as (feat: Quick Draw) for the purpose of meeting prerequisites." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("1ca5bb2b-9e00-4d39-9869-08a57ee26475"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.Unarmored.ID);
-            builder.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("84dbe1a9-7f5b-446f-a16a-78b71b628b84"), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Simple.ID);
+            builder.HaveSpecificArmorCategorySpecificProficiency(Guid.Parse("2b8f3516-f519-4a03-8f88-3d2a436e3b52"), Proficiencies.Instances.Trained.ID, ArmorCategories.Instances.Unarmored.ID);
+            builder.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("22471f42-c861-43f2-85a8-171edb51398e"), Proficiencies.Instances.Trained.ID, WeaponCategories.Instances.Simple.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("708de53c-766b-4cca-b116-5d27754d54c7"),
+                Id = Guid.Parse("4d3fd542-527a-48b5-b4db-36fe591e9276"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

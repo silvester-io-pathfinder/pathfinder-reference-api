@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PerfectDebilitation : Template
     {
-        public static readonly Guid ID = Guid.Parse("f3433940-f938-4667-b0aa-34ef5a533214");
+        public static readonly Guid ID = Guid.Parse("d86d9847-25f9-472e-8493-477f20ee4b8f");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8099f22e-7245-4feb-88b6-4b14ccc5469d"), Type = TextBlockType.Text, Text = "You have perfected the formulas for bombs that impede your enemies. When you use (feat: Debilitating Bomb), your target avoids the condition the bomb imposes only if it critically succeeds at its saving throw." };
+            yield return new TextBlock { Id = Guid.Parse("db39548b-0004-4bcd-a389-b60e39a593aa"), Type = TextBlockType.Text, Text = "You have perfected the formulas for bombs that impede your enemies. When you use (feat: Debilitating Bomb), your target avoids the condition the bomb imposes only if it critically succeeds at its saving throw." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a5ce4c94-e9ff-4555-ac59-59b74ff62ea0"),
+                Id = Guid.Parse("fc58d2ca-fe45-4d1f-bc68-bb92ecd39cc2"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

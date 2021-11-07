@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Familiar : Template
     {
-        public static readonly Guid ID = Guid.Parse("c837d559-18d0-4ec2-959c-13c341af14d0");
+        public static readonly Guid ID = Guid.Parse("b3d7276a-b7df-4aa9-8cfa-d03c88590d23");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e72a6daa-65f2-4b80-a0b5-75165f271ece"), Type = TextBlockType.Text, Text = "Whether by following occult rituals, piecing together scraps of arcane theory, or some other method, you’ve called forth a creature that now serves as your constant companion in your studies of the supernatural. You gain a familiar." };
+            yield return new TextBlock { Id = Guid.Parse("ab2be067-e382-4ba8-81fb-75c498d56468"), Type = TextBlockType.Text, Text = "Whether by following occult rituals, piecing together scraps of arcane theory, or some other method, you’ve called forth a creature that now serves as your constant companion in your studies of the supernatural. You gain a familiar." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2486c181-3434-4c17-93ce-da8c98513aab"),
+                Id = Guid.Parse("c4d58538-0ddf-43a3-9653-0aea8790f610"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

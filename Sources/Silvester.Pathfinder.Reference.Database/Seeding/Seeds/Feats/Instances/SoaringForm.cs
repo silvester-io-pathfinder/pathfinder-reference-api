@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SoaringForm : Template
     {
-        public static readonly Guid ID = Guid.Parse("b26a1aaa-3c32-484a-8f36-35f04ef8119d");
+        public static readonly Guid ID = Guid.Parse("8ee6d825-d669-4e86-a5d1-6f33aa467e9c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b0e65490-c05e-415d-8061-e805ee9b5d42"), Type = TextBlockType.Text, Text = "Your wings grow stronger. You gain the effects of (feat: Soaring Flight) at all times." };
+            yield return new TextBlock { Id = Guid.Parse("c5b20ff4-fbfc-413f-b242-a569a5483a15"), Type = TextBlockType.Text, Text = "Your wings grow stronger. You gain the effects of (feat: Soaring Flight) at all times." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3330f283-4386-478b-ba32-e1c013492990"), Feats.Instances.SoaringFlight.ID);
+            builder.HaveSpecificFeat(Guid.Parse("db56f3eb-0509-4d4e-ab15-9f21be53942a"), Feats.Instances.SoaringFlight.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2c181895-e293-4420-9149-0ee7e7d1893b"),
+                Id = Guid.Parse("4c366ef6-9c1a-4c91-8cd7-c732b9ca8af0"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

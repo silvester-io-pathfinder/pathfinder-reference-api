@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GrandScrollEsoterica : Template
     {
-        public static readonly Guid ID = Guid.Parse("3bec48f1-fa7a-453b-a739-0042e8f6aa17");
+        public static readonly Guid ID = Guid.Parse("0054640e-74af-4c0d-a3df-50a8a1257152");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ecc57a8a-5c04-42e3-9ee7-192c3540c156"), Type = TextBlockType.Text, Text = "You’ve completed the third and final step in your assimilation of scroll esoterica, granting you daily scrolls of incredible power. In addition to your daily scrolls from (feat: Scroll Esoterica) and (feat: Elaborate Scroll Esoterica), add a single scroll with a 6th-level spell. At 20th level, add a scroll with a 7th-level spell." };
+            yield return new TextBlock { Id = Guid.Parse("52d797e8-2b8e-4d54-8985-1406099cf80f"), Type = TextBlockType.Text, Text = "You’ve completed the third and final step in your assimilation of scroll esoterica, granting you daily scrolls of incredible power. In addition to your daily scrolls from (feat: Scroll Esoterica) and (feat: Elaborate Scroll Esoterica), add a single scroll with a 6th-level spell. At 20th level, add a scroll with a 7th-level spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("b3a7aec6-3ef3-42e8-90bf-09d1ccd56d3f"), Feats.Instances.ElaborateScrollEsoterica.ID);
+            builder.HaveSpecificFeat(Guid.Parse("f9dc9d87-e565-40a6-b660-5b4b0a41c451"), Feats.Instances.ElaborateScrollEsoterica.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0ed081ce-9762-401f-af8d-27bf51dccef9"),
+                Id = Guid.Parse("91e96fec-eb5d-4a05-8ed2-3cb87a34be62"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

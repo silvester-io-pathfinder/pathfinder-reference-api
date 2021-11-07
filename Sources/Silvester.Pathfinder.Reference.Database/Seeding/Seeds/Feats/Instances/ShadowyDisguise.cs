@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShadowyDisguise : Template
     {
-        public static readonly Guid ID = Guid.Parse("b9a293b6-52ab-4087-a6bc-41da8c42762e");
+        public static readonly Guid ID = Guid.Parse("5a1522b1-994d-46f0-a407-fd1e13b21d72");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8524631b-48f8-4cb2-b18e-d6ebf84f8a39"), Type = TextBlockType.Text, Text = "You wrap yourself in shadow to change your appearance. You can cast (spell: illusory disguise) as a 1st-level occult innate spell once per day. This spell gains the (trait: shadow) trait." };
+            yield return new TextBlock { Id = Guid.Parse("2ac7019c-b8eb-4204-9cd7-9310b4c1d453"), Type = TextBlockType.Text, Text = "You wrap yourself in shadow to change your appearance. You can cast (spell: illusory disguise) as a 1st-level occult innate spell once per day. This spell gains the (trait: shadow) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f46511c3-e0ef-4682-9c69-746c35e37811"),
+                Id = Guid.Parse("0b70a90a-74d3-4511-8f25-4210affbb342"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

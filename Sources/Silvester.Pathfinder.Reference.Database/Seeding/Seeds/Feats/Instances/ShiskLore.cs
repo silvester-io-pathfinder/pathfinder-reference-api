@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShiskLore : Template
     {
-        public static readonly Guid ID = Guid.Parse("053fe1ca-4835-4c69-a67f-caf4e7c1b4a4");
+        public static readonly Guid ID = Guid.Parse("3e58ccec-201f-4905-a1a1-24a118c50936");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("52d0d9e5-d9cc-4ac8-87e4-9a15b63ae99d"), Type = TextBlockType.Text, Text = "You hoard knowledge like a dragon hoards gold. You gain the trained proficiency rank in three Lore skills of your choice. You also become trained in Shisk Lore." };
+            yield return new TextBlock { Id = Guid.Parse("9e8f23e3-1ea9-4ec8-b571-5e4c1c4da59a"), Type = TextBlockType.Text, Text = "You hoard knowledge like a dragon hoards gold. You gain the trained proficiency rank in three Lore skills of your choice. You also become trained in Shisk Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5ad444e7-0a56-4b8d-8358-6003c2e0afc0"),
+                Id = Guid.Parse("955172ea-451c-4821-bff0-e0e4061c8619"),
                 SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = -1
             };

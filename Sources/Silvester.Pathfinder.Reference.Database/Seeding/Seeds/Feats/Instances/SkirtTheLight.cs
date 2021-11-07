@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SkirtTheLight : Template
     {
-        public static readonly Guid ID = Guid.Parse("379140be-829d-4b57-adcf-a3dd5fdcfe0b");
+        public static readonly Guid ID = Guid.Parse("5e445b80-0c77-46e8-a4d7-c72e8db534aa");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("596cc08c-9018-439f-bb26-b4ad0222585d"), Type = TextBlockType.Text, Text = "You can travel the border between the Material and Shadow Planes and even bring others along. You can cast (spell: shadow walk) as an occult innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("b9cc860d-d99d-4ea6-b529-0b623fff9077"), Type = TextBlockType.Text, Text = "You can travel the border between the Material and Shadow Planes and even bring others along. You can cast (spell: shadow walk) as an occult innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("964e31ea-e8de-42db-8fe4-68c7b2c1cec1"),
+                Id = Guid.Parse("437ca55c-ed04-40f1-851c-fc9353a52473"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

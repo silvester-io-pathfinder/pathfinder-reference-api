@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BonMot : Template
     {
-        public static readonly Guid ID = Guid.Parse("5421ab09-8881-4d7c-851c-12e303b613e0");
+        public static readonly Guid ID = Guid.Parse("fa6935e8-8015-4303-b43f-8098b2f27e1e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3bd90e53-48af-4d87-a5d3-287265421647"), Type = TextBlockType.Text, Text = "You launch an insightful quip at a foe, distracting them. Choose a foe within 30 feet and roll a Diplomacy check against the target’s Will DC." };
+            yield return new TextBlock { Id = Guid.Parse("b66cd4cc-edc8-4cc1-8b9f-fd3ef4d77139"), Type = TextBlockType.Text, Text = "You launch an insightful quip at a foe, distracting them. Choose a foe within 30 feet and roll a Diplomacy check against the target’s Will DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("601f02fc-c9e7-4e91-9246-df63a2cf88b1"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("c57630d8-2283-4ac3-a646-ede47c9eb651"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("5cb58145-6efd-434b-bf73-00daf1fe903b"),
+                Id = Guid.Parse("d36b0a05-e348-4df2-b820-b6e08546895e"),
                 CriticalSuccess = "The target is distracted and takes a -3 status penalty to Perception and Will saves for 1 minute. The target can end the effect early with a retort to your Bon Mot. This can either be a single action that has the (trait: concentrate) trait or an appropriate skill action to frame their retort. The GM determines which skill actions qualify, though they must take at least 1 action. Typically, the retort needs to use a (trait: linguistic) Charisma-based skill action.",
                 Success = "As critical success, but the penalty is -2.",
                 
@@ -59,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1e31df51-0146-416a-92c2-32ffa67adbc0"),
+                Id = Guid.Parse("f9bfc44b-b902-4f54-881d-dccaaba4ecf8"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

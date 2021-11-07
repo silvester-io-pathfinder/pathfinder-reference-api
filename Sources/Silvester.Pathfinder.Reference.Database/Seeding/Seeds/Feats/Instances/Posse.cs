@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Posse : Template
     {
-        public static readonly Guid ID = Guid.Parse("37d4fdc3-3936-4afd-88a7-51f522dff856");
+        public static readonly Guid ID = Guid.Parse("1414c5a7-138c-49e7-be59-4478b80684c7");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("83431c44-722d-4d3b-aa35-01a6b6ebb0cd"), Type = TextBlockType.Text, Text = "By spending 1 minute giving guidance to help hunt down your prey, you instruct up to five willing creatures to assist you. They gain a +1 circumstance bonus to (action: Seek) your prey, to (action: Track) your prey, and to (action: Gather Information) about your prey. You and the creatures assisting you gain a +1 circumstance bonus to initiative rolls when entering combat with your prey." };
-            yield return new TextBlock { Id = Guid.Parse("cd10e3b0-65c8-4fc3-b910-58e94e0944cc"), Type = TextBlockType.Text, Text = "This benefit lasts until you designate a new prey or your prey dies, whichever comes first. An individual creature assisting you loses this benefit if they’re out of your presence for too long to benefit from your instructions. This is usually 1 hour, but is determined by the GM." };
+            yield return new TextBlock { Id = Guid.Parse("2a4cc430-f5b1-4f61-bbd2-c85d54129b64"), Type = TextBlockType.Text, Text = "By spending 1 minute giving guidance to help hunt down your prey, you instruct up to five willing creatures to assist you. They gain a +1 circumstance bonus to (action: Seek) your prey, to (action: Track) your prey, and to (action: Gather Information) about your prey. You and the creatures assisting you gain a +1 circumstance bonus to initiative rolls when entering combat with your prey." };
+            yield return new TextBlock { Id = Guid.Parse("e3eb8258-cf81-492a-b536-292e14d423f4"), Type = TextBlockType.Text, Text = "This benefit lasts until you designate a new prey or your prey dies, whichever comes first. An individual creature assisting you loses this benefit if they’re out of your presence for too long to benefit from your instructions. This is usually 1 hour, but is determined by the GM." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("bb4a5837-4d61-45eb-b0e3-0f2bc2cce646"), Feats.Instances.BountyHunterDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("4638931b-0168-44a1-bd5e-b93ae4e41ee2"), Feats.Instances.BountyHunterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3706e88e-d2d6-472c-93b8-514a79d89c6e"),
+                Id = Guid.Parse("3c08b998-3b54-4be4-8e5a-9436a3670b5f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

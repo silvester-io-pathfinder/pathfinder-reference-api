@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdvancedGeneralTraining : Template
     {
-        public static readonly Guid ID = Guid.Parse("cceb66d9-cb8e-4dfa-b07f-571d77ee04bc");
+        public static readonly Guid ID = Guid.Parse("3f7a68b6-5350-40b3-9cbc-48e7e01574e1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d805df4-4290-457c-b355-3ab943ef1671"), Type = TextBlockType.Text, Text = "Over the course of adventuring, your adaptability has let you pick up numerous useful abilities. You gain a general feat of 7th level or lower. You must meet the feat’s prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("4b2a3fff-3199-422a-b2e8-e58cd1b08172"), Type = TextBlockType.Text, Text = "Over the course of adventuring, your adaptability has let you pick up numerous useful abilities. You gain a general feat of 7th level or lower. You must meet the feat’s prerequisites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("97a3e49f-c40e-437e-8759-80f280bd4338"),
+                Id = Guid.Parse("a2e2f105-7166-4988-ad33-80ae070898b9"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

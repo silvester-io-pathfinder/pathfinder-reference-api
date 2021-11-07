@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AquaticConversationalist : Template
     {
-        public static readonly Guid ID = Guid.Parse("83441c81-ea14-49e8-b5e7-a7fa63f6119b");
+        public static readonly Guid ID = Guid.Parse("75f0dd7c-f7bf-43a3-adcf-8a6a55548ba2");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4f47cb00-ebb4-4de4-9ba8-48e46355b698"), Type = TextBlockType.Text, Text = "You can ask questions of, receive answers from, and use the Diplomacy skill with animals with the amphibious or aquatic traits. You gain a +1 circumstance bonus to (action: Make an Impression) on such animals." };
+            yield return new TextBlock { Id = Guid.Parse("7203253c-8450-4f82-b01e-5a60f065b8fe"), Type = TextBlockType.Text, Text = "You can ask questions of, receive answers from, and use the Diplomacy skill with animals with the amphibious or aquatic traits. You gain a +1 circumstance bonus to (action: Make an Impression) on such animals." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("435d62d3-d26c-455c-87d7-38b380baffb4"),
+                Id = Guid.Parse("a2a68e66-edf8-43e1-b273-93cada01bc16"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

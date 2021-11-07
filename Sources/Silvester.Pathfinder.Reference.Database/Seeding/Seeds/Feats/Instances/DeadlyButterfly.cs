@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeadlyButterfly : Template
     {
-        public static readonly Guid ID = Guid.Parse("f1cfb216-a725-4968-8de4-144c6c04d18f");
+        public static readonly Guid ID = Guid.Parse("130dc97f-4d67-403e-af42-5fe8c54fa41e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9d0d37d2-1600-4dd0-8d91-e4ddb7f6778c"), Type = TextBlockType.Text, Text = "You gain access to the (item: butterfly sword&#39;s | Butterfly Sword) critical specialization effect. If you already had access to the critical specialization effect or you gain the effect at a later time, you also gain the critical specialization effect for knives when you critically hit with a butterfly sword. You can benefit from only one critical specialization effect at a time." };
+            yield return new TextBlock { Id = Guid.Parse("979cecbc-c8f5-41c0-a7b7-3d878ad9f2a9"), Type = TextBlockType.Text, Text = "You gain access to the (item: butterfly sword&#39;s | Butterfly Sword) critical specialization effect. If you already had access to the critical specialization effect or you gain the effect at a later time, you also gain the critical specialization effect for knives when you critically hit with a butterfly sword. You can benefit from only one critical specialization effect at a time." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("68e31e15-b728-4923-9356-c5008cdcb7ff"),
+                Id = Guid.Parse("3c12e712-5d41-4ce0-a550-04dae1cc312b"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

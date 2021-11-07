@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CobraEnvenom : Template
     {
-        public static readonly Guid ID = Guid.Parse("92232593-2607-4779-aa6d-db7f4090c6b9");
+        public static readonly Guid ID = Guid.Parse("7de9566a-bcc0-422d-ab28-9b66f48dbeda");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ef7f005-ce20-4c09-accb-6fa9194390e6"), Type = TextBlockType.Text, Text = "You lash out with devious intent and the power to envenom your foe. Make a cobra fang (action: Strike). Your reach with this (action: Strike) is 5 feet greater than normal. If this (action: Strike) hits, the target takes 1d4 persistent poison damage per weapon damage die." };
+            yield return new TextBlock { Id = Guid.Parse("e8d9b83f-65a0-47d8-9b00-eb7f92c6d5e5"), Type = TextBlockType.Text, Text = "You lash out with devious intent and the power to envenom your foe. Make a cobra fang (action: Strike). Your reach with this (action: Strike) is 5 feet greater than normal. If this (action: Strike) hits, the target takes 1d4 persistent poison damage per weapon damage die." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("557be512-8e4e-4421-b042-c5be29ab95b1"), Feats.Instances.CobraStance.ID);
-            builder.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("c4103776-11c7-43e5-93a7-461d784e5aef"), Proficiencies.Instances.Expert.ID, WeaponCategories.Instances.Unarmed.ID);
+            builder.HaveSpecificFeat(Guid.Parse("490f82c8-522f-4b51-a233-f923b5d9699f"), Feats.Instances.CobraStance.ID);
+            builder.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("f7389c69-52d3-4be2-8cc0-c2160feac265"), Proficiencies.Instances.Expert.ID, WeaponCategories.Instances.Unarmed.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("45ef1894-beee-4d10-8b77-2e58b5d52486"),
+                Id = Guid.Parse("9b24e977-c067-4497-8fb7-f867939599f5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SorcererElementalistAir : Template
     {
-        public static readonly Guid ID = Guid.Parse("af7ec633-83f2-4e0d-8c69-87a150fff99e");
+        public static readonly Guid ID = Guid.Parse("53818dff-9551-4eef-9143-ddfa7fbe39a3");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d25eb379-58b9-4570-8551-e94408d324f4"), Type = TextBlockType.Text, Text = "You replace your initial bloodline spell with the initial air elemental focus spell ((spell: updraft)), and your advanced bloodline spell (if you get it) with the advanced air elemental focus spell ((spell: powerful inhalation))." };
-            yield return new TextBlock { Id = Guid.Parse("f6f38dd4-203f-44eb-a010-48869cc9ad13"), Type = TextBlockType.Text, Text = "You can only select this option if your bloodline&#39;s elemental type is air." };
+            yield return new TextBlock { Id = Guid.Parse("0c2bc833-8c75-4c09-85bb-ddf9e44a0bc7"), Type = TextBlockType.Text, Text = "You replace your initial bloodline spell with the initial air elemental focus spell ((spell: updraft)), and your advanced bloodline spell (if you get it) with the advanced air elemental focus spell ((spell: powerful inhalation))." };
+            yield return new TextBlock { Id = Guid.Parse("a06c6e1f-6c4d-4cf1-976b-87fe3965a683"), Type = TextBlockType.Text, Text = "You can only select this option if your bloodline&#39;s elemental type is air." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7ef76879-7b65-4ea7-bd36-1e1b73af146f"),
+                Id = Guid.Parse("2507eec8-17bc-440d-b43a-aea41c8a7269"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

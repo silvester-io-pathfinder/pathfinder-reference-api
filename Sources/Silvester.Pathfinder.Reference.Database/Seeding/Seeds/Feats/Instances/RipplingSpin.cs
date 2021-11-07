@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RipplingSpin : Template
     {
-        public static readonly Guid ID = Guid.Parse("c5549654-9f83-4f40-8a06-df46b35c16d8");
+        public static readonly Guid ID = Guid.Parse("8720ffff-8d25-4b53-9122-fb06228c31f0");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92b33422-327e-4eda-876e-6c9a569bf4ab"), Type = TextBlockType.Text, Text = "After the triggering attack is done, (action: Step). You must end this (action: Step) within the attacker’s reach. Then, you can attempt an Athletics check to (action: Disarm) or (action: Trip) the attacker." };
+            yield return new TextBlock { Id = Guid.Parse("9ddb63d0-a952-4dfe-bda2-31396a74fd66"), Type = TextBlockType.Text, Text = "After the triggering attack is done, (action: Step). You must end this (action: Step) within the attacker’s reach. Then, you can attempt an Athletics check to (action: Disarm) or (action: Trip) the attacker." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1a4583fa-6217-438b-8b4e-f4ce60a4fef4"), Feats.Instances.ReflectiveRippleStance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d238a975-7041-464d-8840-d19cba609325"), Feats.Instances.ReflectiveRippleStance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("be079ee2-3e0a-4171-b8bb-f6c60421b67b"),
+                Id = Guid.Parse("33e7ac9e-9ead-47e9-a7cf-3db5b357b111"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Evangelize : Template
     {
-        public static readonly Guid ID = Guid.Parse("b5a9e738-e88e-49d0-90b5-57ecdb4c8785");
+        public static readonly Guid ID = Guid.Parse("4fde96aa-1ad8-4c10-95f0-f103d9ba3e53");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e80f2f8a-d4b4-4058-8ea3-5533813cf32b"), Type = TextBlockType.Text, Text = "You point out a detail that incontrovertibly supports your faith, causing a listener’s mind to whirl. Attempt a Diplomacy check and compare the result to the Will DC of a single target that can hear you and understands your language; that target is then temporarily immune to Evangelize with respect to your deity or philosophy for 1 day. A creature that already agrees with you is unaffected, and at the GM’s discretion, a target that genuinely changes its perspective to support your faith as a result of the argument is also otherwise unaffected." };
+            yield return new TextBlock { Id = Guid.Parse("0a99e3bc-e248-415c-92b3-8a58b1b60d44"), Type = TextBlockType.Text, Text = "You point out a detail that incontrovertibly supports your faith, causing a listener’s mind to whirl. Attempt a Diplomacy check and compare the result to the Will DC of a single target that can hear you and understands your language; that target is then temporarily immune to Evangelize with respect to your deity or philosophy for 1 day. A creature that already agrees with you is unaffected, and at the GM’s discretion, a target that genuinely changes its perspective to support your faith as a result of the argument is also otherwise unaffected." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("d0364a23-f91e-43f9-928c-9d515b7cc1e1"), Proficiencies.Instances.Master.ID, Skills.Instances.Diplomacy.ID);
-            builder.AddOr(Guid.Parse("93a0391a-6482-4aab-b85e-f97ef76121e0"), or => 
+            builder.HaveSpecificSkillProficiency(Guid.Parse("99b89048-bd03-4007-a684-4bd9e6be78d2"), Proficiencies.Instances.Master.ID, Skills.Instances.Diplomacy.ID);
+            builder.AddOr(Guid.Parse("9642727d-fe83-4632-92a9-334a1ddac9fc"), or => 
             {
-                or.FollowAnyReligion(Guid.Parse("ed75c772-df07-46e3-a782-51e9736d4b46"));
-                or.FollowAnyPhilosophy(Guid.Parse("3c7d89f2-9e02-497e-a5cc-94b97470b5ca"));
+                or.FollowAnyReligion(Guid.Parse("d6f6b52c-3ddd-4df0-8eea-9e62667c1a9d"));
+                or.FollowAnyPhilosophy(Guid.Parse("f3fb87f5-ece9-443a-9dea-32589ba5b191"));
             });
         }
 
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("a76d91c8-b86d-46a1-9a5f-e4de672f043a"),
+                Id = Guid.Parse("85159498-febe-4d86-808f-c51e7e93c400"),
                 CriticalSuccess = "The target is stupefied 2 for 1 round.",
                 Success = "The target is stupefied 1 for 1 round.",
                 Failure = "The target is unaffected.",
@@ -64,7 +65,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6c507464-89d1-4983-91bb-595acf14b088"),
+                Id = Guid.Parse("ecd3a851-d588-4170-b1a9-77abcf358672"),
                 SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
                 Page = -1
             };

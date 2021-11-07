@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AzarketiWeaponExpertise : Template
     {
-        public static readonly Guid ID = Guid.Parse("3eff4dd3-b1c8-4b2a-a77a-7e0709e0bc1e");
+        public static readonly Guid ID = Guid.Parse("19c9e9e3-74d8-4bf8-8b6c-804d28ded953");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ab34410-50b8-44a7-b2a8-e09b4dccbbc8"), Type = TextBlockType.Text, Text = "Your mastery with weapons both above and below water is unmatched. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency in (item: crossbows | crossbow), (item: hand crossbows | hand crossbow), (item: longspears | longspear), (item: spears | spear), (item: tridents | trident), and all azarketi weapons in which you are trained." };
+            yield return new TextBlock { Id = Guid.Parse("681336ac-4b47-421e-ab75-aab94bfd4f44"), Type = TextBlockType.Text, Text = "Your mastery with weapons both above and below water is unmatched. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency in (item: crossbows | crossbow), (item: hand crossbows | hand crossbow), (item: longspears | longspear), (item: spears | spear), (item: tridents | trident), and all azarketi weapons in which you are trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("8d4acfa0-3519-4bf4-81f3-b892500b13d5"), Feats.Instances.AzarketiWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("4230b481-de64-40dc-98e5-070ee7183354"), Feats.Instances.AzarketiWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b881ad39-1aef-49ce-a530-5d1580f79c0b"),
+                Id = Guid.Parse("af336f03-ce5a-4745-a52a-0a19ec663fba"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

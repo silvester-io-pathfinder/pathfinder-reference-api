@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SnarecrafterDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("0648083b-47aa-4a77-a5ad-d785893aa83f");
+        public static readonly Guid ID = Guid.Parse("151c929e-f448-4ff0-a551-6e337f576558");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2ea02dd4-cc1b-4188-a4cf-ef6e36fcfacd"), Type = TextBlockType.Text, Text = "You’ve learned to create a limited number of snares at no cost. Each day during your daily preparations, you can prepare four snares from your (item: formula book) for quick deployment; if they normally take 1 minute to (action: Craft), you can (action: Craft) them with 3 (action: Interact) actions. The number of snares increases to six if you’re a master in Crafting and eight if you’re legendary. Snares prepared in this way don’t cost you any resources to (action: Craft)." };
+            yield return new TextBlock { Id = Guid.Parse("c0e76554-a6d6-499b-a719-117d97f36f2e"), Type = TextBlockType.Text, Text = "You’ve learned to create a limited number of snares at no cost. Each day during your daily preparations, you can prepare four snares from your (item: formula book) for quick deployment; if they normally take 1 minute to (action: Craft), you can (action: Craft) them with 3 (action: Interact) actions. The number of snares increases to six if you’re a master in Crafting and eight if you’re legendary. Snares prepared in this way don’t cost you any resources to (action: Craft)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("2e4e94bf-d165-46b8-b320-16cc33fd737d"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("87f42c63-02cd-4fab-88ee-983b68b451d7"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a04074da-6243-4810-bb43-9323d557cdd5"),
+                Id = Guid.Parse("8cd9569a-17d6-412f-bf23-9c3240912a3e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

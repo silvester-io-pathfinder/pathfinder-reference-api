@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EnchantingArrow : Template
     {
-        public static readonly Guid ID = Guid.Parse("254b2e8a-8be2-4bd6-bce0-17299e72b291");
+        public static readonly Guid ID = Guid.Parse("a79e26ff-0966-40b5-8b32-a6f675aabe48");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2da780d-2de0-4043-8731-96cf90814ac7"), Type = TextBlockType.Text, Text = "With a single whisper carried on the wind, you enchant your ammunition to make a foe more vulnerable to your attacks. Make a bow (action: Strike). On a hit, the target takes an additional 2d6 mental damage. On a critical hit, the target also becomes stunned 1. The mental damage increases to 3d6 if your bow has a (item: greater striking rune | Greater Striking Runestone), or to 4d6 if your bow has a (item: major striking rune | Major Striking Runestone)." };
+            yield return new TextBlock { Id = Guid.Parse("214ad469-54b7-4812-bb9f-b94b064b3beb"), Type = TextBlockType.Text, Text = "With a single whisper carried on the wind, you enchant your ammunition to make a foe more vulnerable to your attacks. Make a bow (action: Strike). On a hit, the target takes an additional 2d6 mental damage. On a critical hit, the target also becomes stunned 1. The mental damage increases to 3d6 if your bow has a (item: greater striking rune | Greater Striking Runestone), or to 4d6 if your bow has a (item: major striking rune | Major Striking Runestone)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("81b11ab3-fda7-4d72-b2b2-6e4e725cae3b"), Feats.Instances.EldritchArcherDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("5a9dc9a1-2e07-485c-96fa-e909afd2a82d"), Feats.Instances.EldritchArcherDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("448f2767-70f1-43e3-a4f8-cb69d2945d01"),
+                Id = Guid.Parse("b4a86525-452d-4e60-9999-2d9e61fd464f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

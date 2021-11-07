@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class JugglerDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("829bf5d8-8ced-4ab9-98eb-140a1b988242");
+        public static readonly Guid ID = Guid.Parse("d3d1383a-b43d-405e-aa9a-05013f01e5d8");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("18369267-26e1-4854-afef-15c54801091f"), Type = TextBlockType.Text, Text = "You become trained in Performance; if you were already trained in Performance, you instead become trained in a skill of your choice. You also gain the (feat: Juggle) skill feat, even if you don’t meet its prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("a8198d00-2073-4eca-be20-b7a42dd2f1b2"), Type = TextBlockType.Text, Text = "You become trained in Performance; if you were already trained in Performance, you instead become trained in a skill of your choice. You also gain the (feat: Juggle) skill feat, even if you don’t meet its prerequisites." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificStat(Guid.Parse("ffc144e5-ff5b-4ed6-8719-632fdacb6068"), requiredStatValue: 14, Stats.Instances.Dexterity.ID);
+            builder.HaveSpecificStat(Guid.Parse("15837f5e-70bb-4c7f-8666-35f1b464c3aa"), requiredStatValue: 14, Stats.Instances.Dexterity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7eba13bc-8ffd-4bd9-93ba-9d64151c783f"),
+                Id = Guid.Parse("c9d43985-e663-4c86-ab33-4fd82e87efcb"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SharedWarding : Template
     {
-        public static readonly Guid ID = Guid.Parse("debc0afd-af69-4b4c-9e2b-83413951683d");
+        public static readonly Guid ID = Guid.Parse("a90d885a-f513-4049-97c5-acdbb3c29c9b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7ec9cc05-cd67-4495-9fe9-2aaeb669936c"), Type = TextBlockType.Text, Text = "You ward your allies from the attacks of your foes whenever you apply those protections to yourself. When you gain a status bonus to AC and saves from (feat: Esoteric Warden), you can also choose to grant the same benefit to all allies within 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("df82b719-a800-4872-855a-5c0007089ea6"), Type = TextBlockType.Text, Text = "You ward your allies from the attacks of your foes whenever you apply those protections to yourself. When you gain a status bonus to AC and saves from (feat: Esoteric Warden), you can also choose to grant the same benefit to all allies within 30 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("0a85b510-3d85-4356-8e5b-645915905d3c"), Feats.Instances.EsotericWarden.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ae67a6ce-34af-4137-bc19-5ca074f82bcb"), Feats.Instances.EsotericWarden.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("25f2dfb1-6ec1-4cb7-aea2-33824332e9ec"),
+                Id = Guid.Parse("867daf81-e90f-485d-8db5-f6f9074a8e4a"),
                 SourceId = Sources.Instances.DarkArchive.ID,
                 Page = -1
             };

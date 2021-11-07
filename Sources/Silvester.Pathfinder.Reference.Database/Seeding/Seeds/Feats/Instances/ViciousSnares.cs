@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ViciousSnares : Template
     {
-        public static readonly Guid ID = Guid.Parse("f3429378-4c6b-4709-a445-89a67f81d332");
+        public static readonly Guid ID = Guid.Parse("53b6e1bc-2103-4f55-8a7c-5f9306af44b2");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("41810664-3a85-413f-ad6a-1dd1f645b98b"), Type = TextBlockType.Text, Text = "You’ve learned how to create traps that cause greater injuries. You deal an additional 1d6 precision damage with damaging snares you craft. This increases to 2d6 additional precision damage if you’re legendary in Crafting." };
+            yield return new TextBlock { Id = Guid.Parse("0fcaa9ae-d031-4527-b37e-634bf17c2ea3"), Type = TextBlockType.Text, Text = "You’ve learned how to create traps that cause greater injuries. You deal an additional 1d6 precision damage with damaging snares you craft. This increases to 2d6 additional precision damage if you’re legendary in Crafting." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("7efa4ad3-7d2a-421b-ac74-af4c0b418186"), Proficiencies.Instances.Expert.ID, Skills.Instances.Crafting.ID);
-            builder.HaveSpecificFeat(Guid.Parse("eadc041f-d724-402e-9384-8921562f636f"), Feats.Instances.SnareCrafting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("a5de0861-fa77-4382-9f52-c3f7cce74c2e"), Proficiencies.Instances.Expert.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("2bd9073e-1b58-4d28-a508-8003cd473b09"), Feats.Instances.SnareCrafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("17926292-5243-40fe-9d0e-1a167dfb20c9"),
+                Id = Guid.Parse("625cb04d-1758-4c73-af0f-37d79609be64"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

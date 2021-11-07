@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TriumphantInspiration : Template
     {
-        public static readonly Guid ID = Guid.Parse("bed59cbc-b724-4d82-92d3-5dfa1ccc05a6");
+        public static readonly Guid ID = Guid.Parse("d60aaa0e-b6b6-40fb-9d87-e4c93b2042a4");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("837070c6-65a3-433b-863d-f772e568ea64"), Type = TextBlockType.Text, Text = "With a triumphant shout, you inspire your allies. You cast a composition cantrip you know that normally takes a single action to cast." };
+            yield return new TextBlock { Id = Guid.Parse("29a5b695-1390-4c81-93ae-5c0a4fc749f6"), Type = TextBlockType.Text, Text = "With a triumphant shout, you inspire your allies. You cast a composition cantrip you know that normally takes a single action to cast." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificMuse(Guid.Parse("88397cb9-3890-4cee-abf3-9d423ba871df"), Muses.Instances.Warrior.ID);
+            builder.HaveSpecificMuse(Guid.Parse("bfbe6cca-16e7-41e3-ae74-b392f551702e"), Muses.Instances.Warrior.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0d904fb8-b7fe-4855-84b2-500f7a594cfb"),
+                Id = Guid.Parse("3b0e6e93-9d88-4437-86c7-ede0c03b121e"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

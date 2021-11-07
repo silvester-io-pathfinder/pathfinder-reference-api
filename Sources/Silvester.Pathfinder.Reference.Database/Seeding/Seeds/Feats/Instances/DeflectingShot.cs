@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeflectingShot : Template
     {
-        public static readonly Guid ID = Guid.Parse("88579027-17e5-4b8d-813f-fd2b56e2e5ce");
+        public static readonly Guid ID = Guid.Parse("438c5ba2-5ce0-4fe0-a733-b671e8dabca6");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4af80eb4-265b-4f68-a634-408479608406"), Type = TextBlockType.Text, Text = "You’re always ready to take a quick shot to deflect a weapon or distract a foe enough to render them off target. The ally gains a +2 circumstance bonus to their AC against the triggering attack. You use this reaction after the result of the attack roll is revealed, so you know whether the +2 will make a sufficient difference." };
+            yield return new TextBlock { Id = Guid.Parse("38800ae7-19a7-4b76-a746-90dda42c520c"), Type = TextBlockType.Text, Text = "You’re always ready to take a quick shot to deflect a weapon or distract a foe enough to render them off target. The ally gains a +2 circumstance bonus to their AC against the triggering attack. You use this reaction after the result of the attack roll is revealed, so you know whether the +2 will make a sufficient difference." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6ae71faa-609e-4883-a98e-c8b649959ff3"),
+                Id = Guid.Parse("b1a3a663-0a5b-4412-9498-bc21a30a4c80"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

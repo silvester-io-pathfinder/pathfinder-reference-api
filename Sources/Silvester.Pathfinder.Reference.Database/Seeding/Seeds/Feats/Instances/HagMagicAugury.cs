@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HagMagicAugury : Template
     {
-        public static readonly Guid ID = Guid.Parse("f30b1fa9-d56b-4e75-a2cf-67767298548f");
+        public static readonly Guid ID = Guid.Parse("49af5576-3f4b-46d5-a981-09a721da32b6");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("465fd5ea-228d-44b2-b7a8-d4df4d4624ab"), Type = TextBlockType.Text, Text = "You can cast (spell: augury) once per day as a 4th-level occult innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("93da19a0-453f-4554-9bb5-48242ec1ce6b"), Type = TextBlockType.Text, Text = "You can cast (spell: augury) once per day as a 4th-level occult innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2cdbd77c-7cfb-4238-8b19-d814f7910c06"),
+                Id = Guid.Parse("d006c86d-e50c-4020-927b-740416f3d7b6"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

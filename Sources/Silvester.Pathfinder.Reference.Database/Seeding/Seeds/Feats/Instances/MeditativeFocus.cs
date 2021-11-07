@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MeditativeFocus : Template
     {
-        public static readonly Guid ID = Guid.Parse("ff12ce74-8dd4-4523-ab9f-d9aaa395d894");
+        public static readonly Guid ID = Guid.Parse("588f37a9-3b01-4368-b53f-7cc4aa7373fc");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("22a1c2cb-3735-40bc-856f-6f68541cde03"), Type = TextBlockType.Text, Text = "Your meditation is so effective that you can achieve a deep focus. If you have spent at least 2 Focus Points since the last time you (action: Refocused | Refocus), you recover 2 Focus Points when you (action: Refocus) instead of 1." };
+            yield return new TextBlock { Id = Guid.Parse("401375aa-fc8a-48b4-8cd5-0912a1034781"), Type = TextBlockType.Text, Text = "Your meditation is so effective that you can achieve a deep focus. If you have spent at least 2 Focus Points since the last time you (action: Refocused | Refocus), you recover 2 Focus Points when you (action: Refocus) instead of 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveAnyKiSpells(Guid.Parse("44287792-52a1-4b42-860b-8e7a2e298e9a"));
+            builder.HaveAnyKiSpells(Guid.Parse("25268fd5-3993-47d6-b161-6a85fd86f620"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("aedb63c4-4a61-4551-b356-290df4dceb69"),
+                Id = Guid.Parse("cf42464c-a0fe-4efc-a74a-374a3945fc25"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

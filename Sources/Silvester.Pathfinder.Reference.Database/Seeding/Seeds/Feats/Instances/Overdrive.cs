@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Overdrive : Template
     {
-        public static readonly Guid ID = Guid.Parse("5e7474c9-61f7-4ae5-ba1f-8b1bb6478161");
+        public static readonly Guid ID = Guid.Parse("26d1e3af-fbba-4b22-93b3-04eed95e2449");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("003a7cb7-4c9b-4c7f-957e-ab6c1160f646"), Type = TextBlockType.Text, Text = "Temporarily cranking the gizmos on your body into overdrive, you try to add greater power to your attacks. Attempt a Crafting check that has a standard DC for your level." };
+            yield return new TextBlock { Id = Guid.Parse("00baea45-0941-43ff-9a13-9917831c3cb8"), Type = TextBlockType.Text, Text = "Temporarily cranking the gizmos on your body into overdrive, you try to add greater power to your attacks. Attempt a Crafting check that has a standard DC for your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("56eb33cc-0b31-45d8-a916-83f4d4130dbd"),
+                Id = Guid.Parse("2b1ef6aa-8145-48de-a351-9da79b70618a"),
                 CriticalSuccess = "Your gizmos go into a state of incredible efficiency called critical overdrive, adding great power to your attacks. Your (action: Strikes | Strike) deal additional damage equal to your Intelligence modifier for 1 minute. After the Overdrive ends, your gizmos become unusable as they cool down or reset, and you can’t use Overdrive for 1 minute.",
                 Success = "Your gizmos go into overdrive, adding power to your attacks. As critical success, except the additional damage is equal to half your Intelligence modifier.",
                 Failure = "You make a miscalculation and nothing happens.",
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1179d477-0a3a-4d6c-8a38-420ba0b84888"),
+                Id = Guid.Parse("5799584c-6b48-4176-a193-f96cd41f9c9f"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

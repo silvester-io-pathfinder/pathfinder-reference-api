@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HybridStudySpell : Template
     {
-        public static readonly Guid ID = Guid.Parse("c7d1a016-203b-44d5-a87d-78da0e71f8eb");
+        public static readonly Guid ID = Guid.Parse("9dc33a0d-e9e3-4049-9efe-934aa97b80de");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a7a9fe95-e953-47ce-81f7-b34d45e6c077"), Type = TextBlockType.Text, Text = "Gain the conflux spell from a hybrid study of your choice. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by studying your spellbook and performing a physical regimen. You don’t gain any of the hybrid study’s other benefits." };
+            yield return new TextBlock { Id = Guid.Parse("0190624e-95a4-4cbe-b160-37b8fed87654"), Type = TextBlockType.Text, Text = "Gain the conflux spell from a hybrid study of your choice. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by studying your spellbook and performing a physical regimen. You don’t gain any of the hybrid study’s other benefits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("d72ff008-1b2d-4fcb-b940-f927dd80b004"), Feats.Instances.MagusDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("78594cf2-3e23-41fb-966c-fadfc54229c2"), Feats.Instances.MagusDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("94b295cf-a24a-4995-97c0-a14058517595"),
+                Id = Guid.Parse("4ea36064-1b69-489c-b7ef-f1bf792b4f8a"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class NantambuChimeRingerDedicationOccult : Template
     {
-        public static readonly Guid ID = Guid.Parse("1b9d8681-a1a1-486e-8537-2b77905e7609");
+        public static readonly Guid ID = Guid.Parse("b482dc93-942a-47fd-ac52-27fbb4ddf2d9");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8dce85ea-e0ef-4ac8-aa98-be74b2a89b9a"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single occult cantrip of your choice. If you weren&#39;t already, you become trained in occult spell DCs and spell attack rolls with Charisma as your spellcasting ability." };
+            yield return new TextBlock { Id = Guid.Parse("ea8f6907-5d79-42ed-b606-aaca359abe9c"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single occult cantrip of your choice. If you weren&#39;t already, you become trained in occult spell DCs and spell attack rolls with Charisma as your spellcasting ability." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a421cedb-a70c-458a-8846-81d772790053"),
+                Id = Guid.Parse("6b670c2c-a397-40bc-b20d-4ac315dedb9b"),
                 SourceId = Sources.Instances.StrengthOfThousands.ID,
                 Page = -1
             };

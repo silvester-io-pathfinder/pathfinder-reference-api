@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SchoolOfPerfectionUnblinkingFlame : Template
     {
-        public static readonly Guid ID = Guid.Parse("e2a056e7-04be-40b5-b1a4-757c4454c9d4");
+        public static readonly Guid ID = Guid.Parse("5e50ed30-dfd5-469f-86f3-de40a426aeeb");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("49ea15d6-e0aa-470f-b677-339034050a4f"), Type = TextBlockType.Text, Text = "You gain the (spell: unblinking flame revelation) ki spell." };
+            yield return new TextBlock { Id = Guid.Parse("714a1da2-aa5c-41d7-9f94-24b61b7c9864"), Type = TextBlockType.Text, Text = "You gain the (spell: unblinking flame revelation) ki spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5bd4b63f-a156-4317-b991-c0c3f14206db"),
+                Id = Guid.Parse("612877c7-7d1a-4d7a-b91f-a6d7a0d1f3a0"),
                 SourceId = Sources.Instances.LostOmensWorldGuide.ID,
                 Page = -1
             };

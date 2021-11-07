@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SwaggeringInitiative : Template
     {
-        public static readonly Guid ID = Guid.Parse("df516e6b-c084-4eb1-acc1-dc024f363cfd");
+        public static readonly Guid ID = Guid.Parse("e24e63e3-cb4e-4c2a-86ad-cd7f3ea3e6c2");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("03784946-1120-44fe-8795-f4144651a49f"), Type = TextBlockType.Text, Text = "You swagger readily into any fight – even an ambush. You gain a +2 circumstance bonus to your initiative roll and can (action: Interact) to draw a weapon." };
+            yield return new TextBlock { Id = Guid.Parse("4309a2c8-6bc1-4420-9d08-d06f85fb40b0"), Type = TextBlockType.Text, Text = "You swagger readily into any fight – even an ambush. You gain a +2 circumstance bonus to your initiative roll and can (action: Interact) to draw a weapon." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5b30829e-8772-4363-bf95-469f02164b67"),
+                Id = Guid.Parse("091e7767-09f1-4cb5-a888-ae643384ef07"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

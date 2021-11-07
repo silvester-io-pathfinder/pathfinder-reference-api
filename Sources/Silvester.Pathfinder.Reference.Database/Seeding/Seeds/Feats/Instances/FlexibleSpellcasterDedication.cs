@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FlexibleSpellcasterDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("acf0673e-9302-40da-9837-04c695f33ff5");
+        public static readonly Guid ID = Guid.Parse("d8a2280e-b3c1-48ff-8d53-0fb18a62015b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d021f821-e8f8-4064-acfa-a6fa83127ff5"), Type = TextBlockType.Text, Text = "You now have four cantrips per day instead of three. At 4th level, you have five cantrips per day instead of four." };
+            yield return new TextBlock { Id = Guid.Parse("fdbe1cd4-3c29-483f-82f1-f0afe497e97e"), Type = TextBlockType.Text, Text = "You now have four cantrips per day instead of three. At 4th level, you have five cantrips per day instead of four." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.Manual(Guid.Parse("bf8180cb-0e76-40c9-986c-ab572c9fe629"), "Flexible spell preparation.");
+            builder.Manual(Guid.Parse("72e61ed1-2ce4-481e-8380-5226adae8f9f"), "Flexible spell preparation.");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6e9bc890-e5b8-4ea1-a208-d75610b36369"),
+                Id = Guid.Parse("6a1c568a-b88d-4f6c-9c72-e5f87d7f3937"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

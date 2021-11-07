@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImperviousVehicle : Template
     {
-        public static readonly Guid ID = Guid.Parse("6801a65f-bffd-4c70-be28-6eabb0854485");
+        public static readonly Guid ID = Guid.Parse("67af29c1-b976-48ed-8ff9-1585c0c0e58c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8aa416af-8f16-4ffd-8bef-c285ef333f0e"), Type = TextBlockType.Text, Text = "From armor plating and flexible components, to reinforced materials and backup redundant functionality, you have built safeguards to protect your vehicle from the rigors of combat. Your signature vehicle gains a +1 circumstance bonus to AC and Fortitude saves, and increases its Hit Points by an amount equal to twice your level." };
+            yield return new TextBlock { Id = Guid.Parse("9b1bdd31-6b21-4cdb-be47-cbee558d8ac6"), Type = TextBlockType.Text, Text = "From armor plating and flexible components, to reinforced materials and backup redundant functionality, you have built safeguards to protect your vehicle from the rigors of combat. Your signature vehicle gains a +1 circumstance bonus to AC and Fortitude saves, and increases its Hit Points by an amount equal to twice your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3799faf6-7879-4934-9d8f-dbd185d0926d"), Feats.Instances.VehicleMechanicDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("7a6fea9d-88d2-47c2-af9d-73d907f8e1b2"), Feats.Instances.VehicleMechanicDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d231ee47-d7d0-454f-a529-193cf665f1c8"),
+                Id = Guid.Parse("e66b4962-ffad-4883-a181-2b6002933249"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

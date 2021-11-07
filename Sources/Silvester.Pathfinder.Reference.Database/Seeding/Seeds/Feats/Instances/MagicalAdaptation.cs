@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MagicalAdaptation : Template
     {
-        public static readonly Guid ID = Guid.Parse("4864a65e-99ab-4230-8981-1e5f24abd404");
+        public static readonly Guid ID = Guid.Parse("d95bcd0b-634b-4746-b441-d7236b8da60b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d6d0786c-e4d8-4c8a-8f63-71c4c71481b3"), Type = TextBlockType.Text, Text = "When an obstacle bars your path, you pull a trick from your sleeve to overcome it. You can cast (spell: darkvision), (spell: spider climb), and 4th-level (spell: water breathing) as innate primal spells, each once per day." };
+            yield return new TextBlock { Id = Guid.Parse("0aeace42-bebf-40ec-986e-893102e50916"), Type = TextBlockType.Text, Text = "When an obstacle bars your path, you pull a trick from your sleeve to overcome it. You can cast (spell: darkvision), (spell: spider climb), and 4th-level (spell: water breathing) as innate primal spells, each once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("bd14a0c4-46da-4000-ba76-1901018e248e"), Feats.Instances.HorizonWalkerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("28f719b5-4400-4f88-bd02-4cfcce942b5d"), Feats.Instances.HorizonWalkerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1566b880-6014-4868-bd7d-7cb76544f0d4"),
+                Id = Guid.Parse("68d3b910-09fc-4db4-a31c-62d71fc52a40"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

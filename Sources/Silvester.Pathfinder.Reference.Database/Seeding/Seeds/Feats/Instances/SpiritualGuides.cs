@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpiritualGuides : Template
     {
-        public static readonly Guid ID = Guid.Parse("2f076e35-0e5a-475d-8708-a32b08530306");
+        public static readonly Guid ID = Guid.Parse("f07566bf-b070-4864-a9b3-cb5a55138a43");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1625c1c8-c842-442d-8195-1933496f1fc8"), Type = TextBlockType.Text, Text = "Though no one sees them and only you can hear them, the spirits around you constantly chatter, save when you are raging. Sometimes they’re even helpful. You can heed the spirits’ guidance to reroll the triggering check, using the second result even if it’s worse." };
+            yield return new TextBlock { Id = Guid.Parse("0ea2d53f-a948-453e-9697-77f464b3ffb1"), Type = TextBlockType.Text, Text = "Though no one sees them and only you can hear them, the spirits around you constantly chatter, save when you are raging. Sometimes they’re even helpful. You can heed the spirits’ guidance to reroll the triggering check, using the second result even if it’s worse." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificInstinct(Guid.Parse("5e18dcfa-a2ad-4a7e-8f4c-b9e680b39a92"), Instincts.Instances.SpiritInstinct.ID);
+            builder.HaveSpecificInstinct(Guid.Parse("1c66e2c6-ca57-4781-929f-99a552771930"), Instincts.Instances.SpiritInstinct.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("39dcf52e-cafa-4b71-8b51-c3bd1cf3e80d"),
+                Id = Guid.Parse("08571411-7043-4894-b48c-92315ff6a900"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SwiftElusion : Template
     {
-        public static readonly Guid ID = Guid.Parse("d6f37aaa-d30c-4cdb-83f8-3e0ebf172239");
+        public static readonly Guid ID = Guid.Parse("60b23792-b22d-4bb3-a831-fff7805ea6eb");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b82330d9-10aa-47d9-b87c-8afb26923cb4"), Type = TextBlockType.Text, Text = "Attempt an Acrobatics check against the foe’s Reflex DC. If you succeed, either (action: Stride) to a different space adjacent to the foe or move the foe to a different space adjacent to you." };
+            yield return new TextBlock { Id = Guid.Parse("b31298ad-8f92-4cd5-a932-0c0087f9a7d8"), Type = TextBlockType.Text, Text = "Attempt an Acrobatics check against the foe’s Reflex DC. If you succeed, either (action: Stride) to a different space adjacent to the foe or move the foe to a different space adjacent to you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("ceb0f658-ee2e-4115-830d-5ffc8f243849"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Acrobatics.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("db084827-faf2-44fd-9c50-144413dd7df8"), Proficiencies.Instances.Legendary.ID, Skills.Instances.Acrobatics.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("07284749-563d-4dc6-8c2a-95b49a9d5040"),
+                Id = Guid.Parse("1bc891d7-818c-43cf-905b-99465e13be34"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

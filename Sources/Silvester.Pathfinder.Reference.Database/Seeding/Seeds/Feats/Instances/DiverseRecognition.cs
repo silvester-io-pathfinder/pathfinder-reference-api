@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DiverseRecognition : Template
     {
-        public static readonly Guid ID = Guid.Parse("0afda4fb-a0dc-4362-92bf-861ac22f7428");
+        public static readonly Guid ID = Guid.Parse("3e49503f-f300-44f8-8d65-3af2c237a1a3");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d7240520-f445-4826-b7ca-0e9baa9398e3"), Type = TextBlockType.Text, Text = "Your Pathfinder training allows you to quickly size up numerous threats. Attempt to (action: Recall Knowledge) against a different kind of creature you can see using the same skill. You must still meet the requirements to attempt this check." };
+            yield return new TextBlock { Id = Guid.Parse("0bbf8537-a814-47dc-a354-4d416f86acba"), Type = TextBlockType.Text, Text = "Your Pathfinder training allows you to quickly size up numerous threats. Attempt to (action: Recall Knowledge) against a different kind of creature you can see using the same skill. You must still meet the requirements to attempt this check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("e0ad4275-0939-43df-b93a-54b7752ba391"), Feats.Instances.PathfinderAgentDedication.ID);
-            builder.HaveSpecificRecallKnowledgeProficiency(Guid.Parse("ccb3b63c-8e70-4a5e-8807-486f98174cc5"), Proficiencies.Instances.Master.ID, requiresAssurance: False);
+            builder.HaveSpecificFeat(Guid.Parse("50f8a5ac-7145-481d-b0f8-b817b7856406"), Feats.Instances.PathfinderAgentDedication.ID);
+            builder.HaveSpecificRecallKnowledgeProficiency(Guid.Parse("347bd02b-ae40-4d31-a78c-ddf34ea82ce2"), Proficiencies.Instances.Master.ID, requiresAssurance: false);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4ad651fb-7757-4dae-bbe3-81181248bb1d"),
+                Id = Guid.Parse("613707aa-61e7-4085-aaa9-f613ac7d7e77"),
                 SourceId = Sources.Instances.LostOmensSocietyGuide.ID,
                 Page = -1
             };

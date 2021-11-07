@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TailSpin : Template
     {
-        public static readonly Guid ID = Guid.Parse("feed61c3-9848-452a-b298-76ea0a688c23");
+        public static readonly Guid ID = Guid.Parse("88f48407-6e78-49c4-9306-3b74592b068a");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c54a0f6a-f8c8-4941-a69c-aeb53bcada4b"), Type = TextBlockType.Text, Text = "You excel at using your tail as a weapon to upend your foes. Attempt a single Athletics check to (action: Trip) up to two adjacent creatures. If you roll a success against a target, you get a critical success against that target instead." };
+            yield return new TextBlock { Id = Guid.Parse("1d808781-ff83-4c6b-b42a-3f1cc5dc8a86"), Type = TextBlockType.Text, Text = "You excel at using your tail as a weapon to upend your foes. Attempt a single Athletics check to (action: Trip) up to two adjacent creatures. If you roll a success against a target, you get a critical success against that target instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificHeritage(Guid.Parse("f591214a-8356-425b-bd75-1b4664e88a74"), Heritages.Instances.TailedGoblin.ID);
-            builder.HaveSpecificFeat(Guid.Parse("4e49e501-1d88-4a58-b08f-be1acfbeb7a5"), Feats.Instances.HardTail.ID);
+            builder.HaveSpecificHeritage(Guid.Parse("10edb3f5-6936-4ce1-9484-49fc277c9390"), Heritages.Instances.TailedGoblin.ID);
+            builder.HaveSpecificFeat(Guid.Parse("f1f222da-79a6-4ec1-8daf-da24fd60041d"), Feats.Instances.HardTail.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5bc6db21-7d70-456e-b3bd-56918aef9d56"),
+                Id = Guid.Parse("0255395a-f106-4e78-98b8-d6fa1411fd83"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

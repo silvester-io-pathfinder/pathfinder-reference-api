@@ -120,6 +120,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Stave> Staves { get; set; } = default!;
         public DbSet<Tenet> Tenets { get; set; } = default!;
         public DbSet<Trait> Traits { get; set; } = default!;
+        public DbSet<UnarmedWeapon> UnarmedWeapons { get; set; } = default!;
         public DbSet<MeleeWeapon> MeleeWeapons { get; set; } = default!;
         public DbSet<WeaponPropertyRune> WeaponPropertyRunes { get; set; } = default!;
         public DbSet<WeaponGroup> WeaponGroups { get; set; } = default!;

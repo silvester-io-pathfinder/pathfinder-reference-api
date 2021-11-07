@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MinorMagicPrimal : Template
     {
-        public static readonly Guid ID = Guid.Parse("28d0893a-2d7e-44dc-bda8-4e910bcfedcf");
+        public static readonly Guid ID = Guid.Parse("18d17854-e776-4f00-a420-a1b2f78e5b37");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("440e99d4-8a7f-4783-8e23-dc28f26ab887"), Type = TextBlockType.Text, Text = "__Your minor magic is primal.__" };
+            yield return new TextBlock { Id = Guid.Parse("aa17cac7-f4e4-46c8-81b9-96c60cbbcf85"), Type = TextBlockType.Text, Text = "__Your minor magic is primal.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c8150adf-c848-4422-829b-f87eb5f22d11"),
+                Id = Guid.Parse("0ec2a9c0-a4cb-4c6c-97e7-7547eefa640b"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

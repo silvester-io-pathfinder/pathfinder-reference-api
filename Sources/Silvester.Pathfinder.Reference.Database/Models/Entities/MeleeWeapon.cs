@@ -34,7 +34,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public SourcePage SourcePage { get; set; } = default!;
 
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
-     
+        public ICollection<Deity> Deities { get; set; } = new List<Deity>();
+
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 }

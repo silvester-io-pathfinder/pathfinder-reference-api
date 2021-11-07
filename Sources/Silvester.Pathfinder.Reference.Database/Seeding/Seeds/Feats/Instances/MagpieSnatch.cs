@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MagpieSnatch : Template
     {
-        public static readonly Guid ID = Guid.Parse("d8446b5f-318a-423d-92f3-c34d47528ecb");
+        public static readonly Guid ID = Guid.Parse("880ca82b-a97a-4e82-970d-bf8ddb56fb1a");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4ff5d0df-9716-40c7-8851-59c4a64388fb"), Type = TextBlockType.Text, Text = "You move quickly, snatching a shiny item that catches your eye. (action: Stride) twice, and you can (action: Interact) to grab an unattended object at any point during your movement." };
+            yield return new TextBlock { Id = Guid.Parse("24e0d4e7-3eae-42da-a24f-20717ce89097"), Type = TextBlockType.Text, Text = "You move quickly, snatching a shiny item that catches your eye. (action: Stride) twice, and you can (action: Interact) to grab an unattended object at any point during your movement." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1daba527-6a97-4e02-860f-042ebd5279f5"),
+                Id = Guid.Parse("8a1654ac-c2a0-4809-981d-f21a1705caae"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

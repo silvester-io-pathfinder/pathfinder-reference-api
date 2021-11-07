@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArraySwiftProtector : Template
     {
-        public static readonly Guid ID = Guid.Parse("40de501f-a47b-4ae3-9fc1-06587733b66a");
+        public static readonly Guid ID = Guid.Parse("147d2c10-d55c-42e8-90fd-26f739de09c4");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7a18b12d-4467-4a0c-a295-111e8e91e8a3"), Type = TextBlockType.Text, Text = "~ Swift Protector: __Str__ 14, __Dex__ 18, __Con__ 16, __Int__ 10, __Wis__ 10, __Cha__ 10; +1 AC (+4 Dex cap)" };
+            yield return new TextBlock { Id = Guid.Parse("597f7df0-d7f5-4f8b-b812-d2611d003e08"), Type = TextBlockType.Text, Text = "~ Swift Protector: __Str__ 14, __Dex__ 18, __Con__ 16, __Int__ 10, __Wis__ 10, __Cha__ 10; +1 AC (+4 Dex cap)" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0964fe97-938d-4d9b-9def-cea234b1fefb"),
+                Id = Guid.Parse("a2075f32-27db-48d0-b1cf-bab8372d4a0b"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

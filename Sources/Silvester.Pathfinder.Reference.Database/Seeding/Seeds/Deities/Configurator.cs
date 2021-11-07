@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities
     {
         public override Expression<Func<Deity, object?>> GetSearchProperties()
         {
-            return (e) => new { e.Name, e.Anathema, e.Description, e.Edicts };
+            return (e) => new { e.Name, e.Anathema, e.Edicts, e.AreasOfConcern };
         }
     }
 }

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ElvenWeaponElegance : Template
     {
-        public static readonly Guid ID = Guid.Parse("8f6c6b1a-3c38-45fd-9c78-e804b9e4af10");
+        public static readonly Guid ID = Guid.Parse("b0be0dc2-b979-44a1-8981-515c428786e3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e647f02e-c9b9-4fe7-b9c2-aa79b416a746"), Type = TextBlockType.Text, Text = "You are attuned to the weapons of your elven ancestors and are particularly deadly when using them. Whenever you critically hit using an elf weapon or one of the weapons listed in Elven Weapon Familiarity, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("792572c1-9943-4adc-b44c-20543761059b"), Type = TextBlockType.Text, Text = "You are attuned to the weapons of your elven ancestors and are particularly deadly when using them. Whenever you critically hit using an elf weapon or one of the weapons listed in Elven Weapon Familiarity, you apply the weapon’s critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("18a9e709-4793-487d-bf3f-e5d2975e936c"), Feats.Instances.ElvenWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("4c43aae6-36b7-4087-9c04-689479507664"), Feats.Instances.ElvenWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("728c654c-7810-44af-90c4-8ace0bf7389e"),
+                Id = Guid.Parse("e7fbb9a0-e1f6-41a4-bb04-50f82c79bb29"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

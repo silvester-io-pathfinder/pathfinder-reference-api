@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StepLively : Template
     {
-        public static readonly Guid ID = Guid.Parse("712107e9-2a6e-40f6-af2d-86ab6377c8db");
+        public static readonly Guid ID = Guid.Parse("ea45e929-6909-4763-b424-5a06db348e97");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("518bd701-5777-44e1-96ed-b9d15bffdb04"), Type = TextBlockType.Text, Text = "You are an expert at avoiding the lumbering footsteps of larger creatures. You (action: Step) to another space adjacent to the enemy." };
+            yield return new TextBlock { Id = Guid.Parse("34e2283e-7fc1-4e63-a9b6-6358c2de793f"), Type = TextBlockType.Text, Text = "You are an expert at avoiding the lumbering footsteps of larger creatures. You (action: Step) to another space adjacent to the enemy." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d92b1005-d617-4708-b256-36a287702a59"),
+                Id = Guid.Parse("a026df98-1efb-4526-af19-670978629474"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

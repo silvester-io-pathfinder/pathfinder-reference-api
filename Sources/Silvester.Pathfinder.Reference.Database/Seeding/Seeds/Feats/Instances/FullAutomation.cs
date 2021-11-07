@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FullAutomation : Template
     {
-        public static readonly Guid ID = Guid.Parse("7c1cdcdc-dc46-4ffb-bb86-243bd697163d");
+        public static readonly Guid ID = Guid.Parse("d595f7c3-b6a0-4d11-82ea-5b1b2a46b4e8");
 
         protected override Feat GetFeat()
         {
@@ -28,20 +29,20 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b2f28438-8a3e-47cb-a1ec-5860481d1eaa"), Type = TextBlockType.Text, Text = "You become so entwined with your innovations that you can use them without a second thought. You’re permanently quickened. How you can use the extra action depends on your innovation." };
-            yield return new TextBlock { Id = Guid.Parse("e6af64ab-69fc-413f-8d6b-2f31732b3a01"), Type = TextBlockType.Enumeration, Text = " Armor: Your armor responds to the most subtle stimuli to move you in the right direction as long as you are wearing it. You can use the extra action to (action: Stride), (action: Step), or use a form of movement provided by your innovation (such as (action: Fly) or (action: Swim))." };
-            yield return new TextBlock { Id = Guid.Parse("ba21d3f8-993a-4f80-903c-3595f061c4f2"), Type = TextBlockType.Enumeration, Text = " Construct: Your ability to command your construct becomes instinctive. You can use the extra action to Command your construct innovation (or to provide 1 of the actions if you choose to spend 2 actions to Command your construct)." };
-            yield return new TextBlock { Id = Guid.Parse("d3afce9c-09c8-4ddb-a720-3f725096803f"), Type = TextBlockType.Enumeration, Text = " Weapon: Your weapon becomes easier to wield with deadly efficacy, almost as if it is an extension of your body. It speeds effortlessly toward whatever target you choose as long as you are holding it. You can use the extra action to (action: Strike) with your innovation." };
+            yield return new TextBlock { Id = Guid.Parse("8623db83-9f3d-4e7a-97c5-b80e51ed2e6e"), Type = TextBlockType.Text, Text = "You become so entwined with your innovations that you can use them without a second thought. You’re permanently quickened. How you can use the extra action depends on your innovation." };
+            yield return new TextBlock { Id = Guid.Parse("c448fbd5-5d19-4389-8731-abb8e85d83ff"), Type = TextBlockType.Enumeration, Text = " Armor: Your armor responds to the most subtle stimuli to move you in the right direction as long as you are wearing it. You can use the extra action to (action: Stride), (action: Step), or use a form of movement provided by your innovation (such as (action: Fly) or (action: Swim))." };
+            yield return new TextBlock { Id = Guid.Parse("798c5b00-1252-447e-a786-8f705228534e"), Type = TextBlockType.Enumeration, Text = " Construct: Your ability to command your construct becomes instinctive. You can use the extra action to Command your construct innovation (or to provide 1 of the actions if you choose to spend 2 actions to Command your construct)." };
+            yield return new TextBlock { Id = Guid.Parse("206475e5-cf49-4a67-800f-2cd4597d7beb"), Type = TextBlockType.Enumeration, Text = " Weapon: Your weapon becomes easier to wield with deadly efficacy, almost as if it is an extension of your body. It speeds effortlessly toward whatever target you choose as long as you are holding it. You can use the extra action to (action: Strike) with your innovation." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("29917c1d-edfe-464a-81c8-da334c455929"), or => 
+            builder.AddOr(Guid.Parse("b529876e-e6ee-4e3b-8414-3b1c6dedd0a2"), or => 
             {
-                or.HaveSpecificInnovation(Guid.Parse("302a1829-25c5-41f3-9c58-7f4f7c0274e6"), Innovations.Instances.Armor.ID);
-                or.HaveSpecificInnovation(Guid.Parse("be1f1b95-668e-4792-941b-9d28b59f4f34"), Innovations.Instances.Construct.ID);
-                or.HaveSpecificInnovation(Guid.Parse("7647b38a-2bca-466b-baef-87089190c331"), Innovations.Instances.Weapon.ID);
+                or.HaveSpecificInnovation(Guid.Parse("d4c66af0-a39b-4981-94cc-5866820a7614"), Innovations.Instances.Armor.ID);
+                or.HaveSpecificInnovation(Guid.Parse("8559e97f-13d1-4dd0-9e04-35ad3a5efd45"), Innovations.Instances.Construct.ID);
+                or.HaveSpecificInnovation(Guid.Parse("adb02162-4b23-4d44-8676-d1e284d0c7e2"), Innovations.Instances.Weapon.ID);
             });
         }
 
@@ -54,7 +55,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e38d20f7-6ab1-406f-b7a1-04985354334d"),
+                Id = Guid.Parse("b0035e22-c89c-4383-b446-f92429574d89"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

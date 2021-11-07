@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RedMantisAssassinDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("cda78d2b-503d-4194-b1dc-55219e0e64b5");
+        public static readonly Guid ID = Guid.Parse("8de07624-db5f-4e67-b4b1-e8d0402574a9");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e3788d0e-1879-459d-a2e8-b3c58a1eccc5"), Type = TextBlockType.Text, Text = "~ Access: You are from Mediogalti Island." };
-            yield return new TextBlock { Id = Guid.Parse("6c3ee088-46de-48a7-8ddd-fb213241e868"), Type = TextBlockType.Text, Text = "You have learned how to stalk your foes and slay them with a sawtooth sabre. You become trained in Stealth and Assassin Lore; if you were already trained, you become an expert instead. Whenever your proficiency in any weapon increases to expert or beyond, you also gain that new proficiency with sawtooth sabers." };
+            yield return new TextBlock { Id = Guid.Parse("640970bd-2c3d-4ebe-b7ed-9e9e59f59033"), Type = TextBlockType.Text, Text = "~ Access: You are from Mediogalti Island." };
+            yield return new TextBlock { Id = Guid.Parse("25e9d061-7c42-4650-a65a-ef40c3070abc"), Type = TextBlockType.Text, Text = "You have learned how to stalk your foes and slay them with a sawtooth sabre. You become trained in Stealth and Assassin Lore; if you were already trained, you become an expert instead. Whenever your proficiency in any weapon increases to expert or beyond, you also gain that new proficiency with sawtooth sabers." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificMeleeWeaponSpecificProficiency(Guid.Parse("aa8f2db0-4ad0-4ab1-b67f-2792619c4230"), Proficiencies.Instances.Trained.ID, MeleeWeapons.Instances.SawtoothSaber.ID);
-            builder.HaveSpecificDeity(Guid.Parse("6dcb0638-bedd-4f7a-847b-0fd228f23500"), Deities.Instances.Achaekek.ID);
-            builder.HaveSpecificAlignment(Guid.Parse("03ff53f5-7b89-49a8-831c-302ad860d3d4"), Alignments.Instances.LawfulEvil.ID);
-            builder.Manual(Guid.Parse("45a18fa2-dd3b-4115-be05-9b622fc5bfe7"), "Member of the Red Mantis assassins.");
+            builder.HaveSpecificMeleeWeaponSpecificProficiency(Guid.Parse("44b08fcb-54bf-4722-87d9-8e61d31bbf70"), Proficiencies.Instances.Trained.ID, MeleeWeapons.Instances.SawtoothSaber.ID);
+            builder.HaveSpecificDeity(Guid.Parse("636fba60-7e09-4cf5-b460-8eff260e24ad"), Deities.Instances.Achaekek.ID);
+            builder.HaveSpecificAlignment(Guid.Parse("2f835a7e-ce37-48ed-ba98-10843ee277fb"), Alignments.Instances.LawfulEvil.ID);
+            builder.Manual(Guid.Parse("336ce42f-8be8-4f12-8622-8e40e30fb334"), "Member of the Red Mantis assassins.");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -50,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("210d5814-783a-4d83-a012-13c20b80e61c"),
+                Id = Guid.Parse("6a3ad350-6f09-4992-90ac-1020522fc51f"),
                 SourceId = Sources.Instances.LostOmensWorldGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MonsterWarden : Template
     {
-        public static readonly Guid ID = Guid.Parse("02f12026-f9e2-4687-b4bb-a693061b1652");
+        public static readonly Guid ID = Guid.Parse("6078adba-0676-4cd7-b709-afcae4bb959a");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db85a718-5004-4299-87f8-ba9b53f824c8"), Type = TextBlockType.Text, Text = "You understand how to defend yourself and others against your prey. When you grant bonuses from (feat: Monster Hunter), you and your allies also each gain a +1 circumstance bonus to your next saving throw against that particular creature and to your AC against that creature’s next attack against you." };
+            yield return new TextBlock { Id = Guid.Parse("9bf9dbd3-7bb7-4ff1-bad4-6517f79c0619"), Type = TextBlockType.Text, Text = "You understand how to defend yourself and others against your prey. When you grant bonuses from (feat: Monster Hunter), you and your allies also each gain a +1 circumstance bonus to your next saving throw against that particular creature and to your AC against that creature’s next attack against you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("fb86f136-4453-4187-a75c-09f547552f78"), Feats.Instances.MonsterHunter.ID);
+            builder.HaveSpecificFeat(Guid.Parse("c25c6994-f910-4324-ab30-fee9fc31d567"), Feats.Instances.MonsterHunter.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ba243851-c63a-4e55-bf42-fdc4a1d1aa7d"),
+                Id = Guid.Parse("94e1e84d-e126-45f5-94b4-725728776343"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

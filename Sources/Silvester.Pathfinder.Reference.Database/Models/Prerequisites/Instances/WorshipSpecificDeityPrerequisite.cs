@@ -16,9 +16,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static PrerequisiteBuilder WorshipSpecificDeity(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredDeityId)
+        public static PrerequisiteBuilder WorshipSpecificDeity(this BooleanPrerequisiteBuilder builder, Guid id, Guid requiredDeityId, bool isNegated = false)
         {
-            return builder.Add(new WorshipSpecificDeityPrerequisite { Id = id, RequiredDeityId = requiredDeityId});
+            return builder.Add(new WorshipSpecificDeityPrerequisite { Id = id, RequiredDeityId = requiredDeityId, IsNegated = isNegated });
         }
     }
 }

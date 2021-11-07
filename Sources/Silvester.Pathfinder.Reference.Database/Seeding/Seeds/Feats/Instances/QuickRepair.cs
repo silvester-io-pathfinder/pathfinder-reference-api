@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class QuickRepair : Template
     {
-        public static readonly Guid ID = Guid.Parse("2da00a60-15af-4bf1-95a1-a97b0990c309");
+        public static readonly Guid ID = Guid.Parse("fa61b8f4-f3e7-4e31-8891-28d5a0055cde");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f89ff09b-0646-4d6c-89fd-6cc71f32c4b5"), Type = TextBlockType.Text, Text = "You take 1 minute to (action: Repair) an item. If you’re a master in Crafting, it takes 3 actions. If you’re legendary, it takes 1 action." };
+            yield return new TextBlock { Id = Guid.Parse("9bf44520-e8ac-4536-8d1f-31a6754557df"), Type = TextBlockType.Text, Text = "You take 1 minute to (action: Repair) an item. If you’re a master in Crafting, it takes 3 actions. If you’re legendary, it takes 1 action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("643e1fd0-4175-455d-97d4-8b4608c8b979"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("4200f2b1-a2cb-4862-b985-c98f3dd63b19"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c7210c5b-abe5-441a-8a61-5e351f13f5b4"),
+                Id = Guid.Parse("1358e2cf-0db4-4dd8-be58-678ff4369495"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

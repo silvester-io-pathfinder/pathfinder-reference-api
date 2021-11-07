@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CharmedLife : Template
     {
-        public static readonly Guid ID = Guid.Parse("abec725f-5530-4f28-8ebd-62297749b98a");
+        public static readonly Guid ID = Guid.Parse("f01f1c74-a3c6-4052-bc92-df39fb4d7115");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("171dcf52-ccdc-4a3f-a41f-3e9775b67ed9"), Type = TextBlockType.Text, Text = "When danger calls, you have a strange knack for coming out on top. You gain a +2 circumstance bonus to the triggering save." };
+            yield return new TextBlock { Id = Guid.Parse("2a9f5399-b9b2-495d-983a-42087d870fd7"), Type = TextBlockType.Text, Text = "When danger calls, you have a strange knack for coming out on top. You gain a +2 circumstance bonus to the triggering save." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificStat(Guid.Parse("63558989-8eff-4f91-a6e2-341fdeefd4b9"), requiredStatValue: 14, Stats.Instances.Charisma.ID);
+            builder.HaveSpecificStat(Guid.Parse("f559edf5-9ca2-455f-ae38-c785c2d8dd50"), requiredStatValue: 14, Stats.Instances.Charisma.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("10a2a4e3-20c0-4e55-8f95-7055f020b3c8"),
+                Id = Guid.Parse("50756e21-b6a4-4655-b8ad-afb2583a0a4c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

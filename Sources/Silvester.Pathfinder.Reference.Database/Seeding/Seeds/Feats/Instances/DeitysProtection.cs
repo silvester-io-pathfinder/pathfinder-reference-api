@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeitysProtection : Template
     {
-        public static readonly Guid ID = Guid.Parse("481905b9-5af1-4a59-a38c-19eeaac4260e");
+        public static readonly Guid ID = Guid.Parse("e7e85e39-12c3-423d-9581-62661fa2f905");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0e6f4878-61ce-4bd9-9905-1423013e7a9d"), Type = TextBlockType.Text, Text = "When you call upon your deity’s power to fulfill the promise of their domain, you gain divine protection. After you cast a domain spell, you gain resistance to all damage until the start of your next turn. The amount of resistance is equal to the level of the domain spell you cast." };
+            yield return new TextBlock { Id = Guid.Parse("f9a867c4-8201-483e-8c81-14d14234a2b3"), Type = TextBlockType.Text, Text = "When you call upon your deity’s power to fulfill the promise of their domain, you gain divine protection. After you cast a domain spell, you gain resistance to all damage until the start of your next turn. The amount of resistance is equal to the level of the domain spell you cast." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("067b52db-b159-4369-8134-d78e53c33326"), Feats.Instances.AdvancedDomain.ID);
+            builder.HaveSpecificFeat(Guid.Parse("fc0519e7-083e-469c-a522-7c0c8f5ff722"), Feats.Instances.AdvancedDomain.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("15b086cd-3398-438b-bf8b-d9d0613a50fc"),
+                Id = Guid.Parse("e34e1f37-e782-4d3d-b14f-44f4fd54f31e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

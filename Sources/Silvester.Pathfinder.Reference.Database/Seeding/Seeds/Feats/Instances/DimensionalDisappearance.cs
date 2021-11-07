@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DimensionalDisappearance : Template
     {
-        public static readonly Guid ID = Guid.Parse("39b490da-aa5e-4af5-ba01-f2c09b486b89");
+        public static readonly Guid ID = Guid.Parse("2256bad9-4ebc-4c90-b3f0-52f1e75f3feb");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b26255e5-b63d-4ca6-bf17-a7e662141efc"), Type = TextBlockType.Text, Text = "You take advantage of teleportation to better hide your position. When you cast (spell: dimensional assault), you’re affected by an (spell: invisibility) spell at the end of the teleport. You can choose not to make the (action: Strike) that is normally part of (spell: dimensional assault). If you do make the (action: Strike), your (spell: invisibility) ends after the (action: Strike), as normal for (spell: invisibility)." };
+            yield return new TextBlock { Id = Guid.Parse("6b5dde78-57f3-4c8c-9f5a-1098036b8939"), Type = TextBlockType.Text, Text = "You take advantage of teleportation to better hide your position. When you cast (spell: dimensional assault), you’re affected by an (spell: invisibility) spell at the end of the teleport. You can choose not to make the (action: Strike) that is normally part of (spell: dimensional assault). If you do make the (action: Strike), your (spell: invisibility) ends after the (action: Strike), as normal for (spell: invisibility)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSpell(Guid.Parse("11f568e0-c008-46a5-9911-ea85adb058df"), Spells.Instances.DimensionalAssault.ID);
-            builder.HaveSpecificHybridStudy(Guid.Parse("414e48be-b6a2-498d-9860-197795c2e31b"), HybridStudies.Instances.LaughingShadow.ID);
+            builder.HaveSpecificSpell(Guid.Parse("73c996e8-8878-478f-9f78-056900cda9f7"), Spells.Instances.DimensionalAssault.ID);
+            builder.HaveSpecificHybridStudy(Guid.Parse("e20473a5-8b92-4651-bcfe-6f85e1350fd4"), HybridStudies.Instances.LaughingShadow.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("020cf525-ba01-48d4-a06c-a09941fb1667"),
+                Id = Guid.Parse("333c0ebd-de10-4acb-9e92-4ca0b865a4ea"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

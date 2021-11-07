@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FelineForm : Template
     {
-        public static readonly Guid ID = Guid.Parse("07b3bd92-560e-4558-91bf-6947b316f39f");
+        public static readonly Guid ID = Guid.Parse("57f65231-76f5-4f17-af03-e660271270f7");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("31dfa4f1-67a7-4ef1-b4b5-e57a5577c6d2"), Type = TextBlockType.Text, Text = "You transform into a feline form resembling a house cat, which has the statistics of 1st-level (spell: pest form). Your feline form has a consistent appearance with features that match your humanoid form, such as your eye or hair color. Using Feline Form counts as creating a disguise for the (action: Impersonate) use of Deception. You lose any unarmed (action: Strikes | Strike) you gained from a heritage or ancestry feat in this form. You can remain in your feline form indefinitely, and you can shift back to your true form by using this action again." };
+            yield return new TextBlock { Id = Guid.Parse("5479ecc6-d3f7-4013-ab10-efb9339a9fb4"), Type = TextBlockType.Text, Text = "You transform into a feline form resembling a house cat, which has the statistics of 1st-level (spell: pest form). Your feline form has a consistent appearance with features that match your humanoid form, such as your eye or hair color. Using Feline Form counts as creating a disguise for the (action: Impersonate) use of Deception. You lose any unarmed (action: Strikes | Strike) you gained from a heritage or ancestry feat in this form. You can remain in your feline form indefinitely, and you can shift back to your true form by using this action again." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("fe2ba015-d12c-4c85-a4af-8bb1fe1632a6"),
+                Id = Guid.Parse("1f6d637e-6a5a-4583-8a2a-fe7803319995"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

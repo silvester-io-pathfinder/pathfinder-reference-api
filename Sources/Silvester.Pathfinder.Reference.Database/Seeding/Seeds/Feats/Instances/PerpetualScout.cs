@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PerpetualScout : Template
     {
-        public static readonly Guid ID = Guid.Parse("fbf985dd-bdb2-4284-b376-535981fdcbe5");
+        public static readonly Guid ID = Guid.Parse("d08c4302-ad7d-48b9-ad8b-2c199d42fec6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c54ed5f6-4815-4deb-ab85-746569718d47"), Type = TextBlockType.Text, Text = "You spot anything out of place in the areas you know best. While in your favored terrain, you always gain the benefits of the (action: Scout) exploration activity, even if you are performing another exploration activity. If you’re legendary in Survival, you gain these benefits in any terrain." };
+            yield return new TextBlock { Id = Guid.Parse("fe7e0114-4d79-4338-8246-b6114449eff4"), Type = TextBlockType.Text, Text = "You spot anything out of place in the areas you know best. While in your favored terrain, you always gain the benefits of the (action: Scout) exploration activity, even if you are performing another exploration activity. If you’re legendary in Survival, you gain these benefits in any terrain." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("fa81310c-70f9-4dd4-9516-3e7360065f9e"), Feats.Instances.HorizonWalkerDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("376458dc-e78c-413a-aa2c-107ad87d82e4"), Feats.Instances.HorizonWalkerDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e000d720-ff91-4420-b09d-0f432293796e"),
+                Id = Guid.Parse("0d3c0835-8e36-49ee-9fa9-96d68719c02f"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

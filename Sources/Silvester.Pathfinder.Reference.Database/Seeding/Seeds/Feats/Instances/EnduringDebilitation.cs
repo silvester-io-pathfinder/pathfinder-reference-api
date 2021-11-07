@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EnduringDebilitation : Template
     {
-        public static readonly Guid ID = Guid.Parse("6e2df6d1-105b-4d7d-8a80-0f1f629fb548");
+        public static readonly Guid ID = Guid.Parse("30da2f93-d4de-4145-aeb4-a186768bb460");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2c5054a-d5cc-41a1-b55f-f1e1d385cf7f"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor’s Pins or an alliance with Mengkare." };
-            yield return new TextBlock { Id = Guid.Parse("3de95f65-80a5-4767-abd3-05f92307e981"), Type = TextBlockType.Text, Text = "You can make your debilitation last an exceptionally long time. The triggering debilitation lasts for 1 minute instead of until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("99c81f4d-59f4-4924-a0d2-879dff30ef43"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor’s Pins or an alliance with Mengkare." };
+            yield return new TextBlock { Id = Guid.Parse("b5e60826-dc3e-406d-a310-8ab4fa8e0b3d"), Type = TextBlockType.Text, Text = "You can make your debilitation last an exceptionally long time. The triggering debilitation lasts for 1 minute instead of until the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("8fde9d5c-5ddf-4bc4-a80d-b52f13d7bafa"), Feats.Instances.DebilitatingStrike.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ab3c6d6b-4bf2-4972-a78e-0f5e49531da8"), Feats.Instances.DebilitatingStrike.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c7f910e7-09dc-4ef8-98de-785a89b77587"),
+                Id = Guid.Parse("b2a91dcf-6ce0-4048-9bd9-c7c6db713512"),
                 SourceId = Sources.Instances.AgeOfAshes.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AxialRecall : Template
     {
-        public static readonly Guid ID = Guid.Parse("4d8e0708-3bbd-41c9-99ba-99721c3c6ae2");
+        public static readonly Guid ID = Guid.Parse("cab6bb4f-7ad6-42b4-8c47-b089e708fce1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("de913cae-446b-4e3f-a882-6dfb373761dd"), Type = TextBlockType.Text, Text = "You have reconfigured the magical resonance of your core to attune to the planar energies of Axis. You can cast (spell: plane shift) twice per week as an arcane innate spell that can only target yourself; you can travel only to Axis or the Material Plane, and your body serves as the focus component." };
+            yield return new TextBlock { Id = Guid.Parse("c09ef587-0a58-48d4-8f34-b27c225438f6"), Type = TextBlockType.Text, Text = "You have reconfigured the magical resonance of your core to attune to the planar energies of Axis. You can cast (spell: plane shift) twice per week as an arcane innate spell that can only target yourself; you can travel only to Axis or the Material Plane, and your body serves as the focus component." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0f26e448-6a02-4ef9-ac73-5b08dde12a25"),
+                Id = Guid.Parse("e34ec2a4-80ad-4661-a700-60a7cf08aa6d"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

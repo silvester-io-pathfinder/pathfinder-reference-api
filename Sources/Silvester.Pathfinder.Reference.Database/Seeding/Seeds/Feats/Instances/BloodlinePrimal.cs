@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BloodlinePrimal : Template
     {
-        public static readonly Guid ID = Guid.Parse("e2fb5d62-eef5-4a6c-ad97-ec133d14647a");
+        public static readonly Guid ID = Guid.Parse("07b2d02e-e31c-4f03-aec8-f7edaf60fe16");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7f415130-a626-406b-a42d-5e8a91abf07f"), Type = TextBlockType.Text, Text = "__Your bloodline is primal.__" };
+            yield return new TextBlock { Id = Guid.Parse("cb4871b2-a2ca-4167-b2b9-d255db41763e"), Type = TextBlockType.Text, Text = "__Your bloodline is primal.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("dc0188f1-028e-41ad-ba4f-9a8bac772cee"),
+                Id = Guid.Parse("31b13814-2d33-4f5d-97fb-77b840680960"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

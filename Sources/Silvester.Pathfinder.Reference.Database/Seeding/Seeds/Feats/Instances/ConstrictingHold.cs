@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ConstrictingHold : Template
     {
-        public static readonly Guid ID = Guid.Parse("159b03c4-6f6a-4021-9ef3-8aeb98aac533");
+        public static readonly Guid ID = Guid.Parse("b0098122-dac9-4f20-be80-73a9a8227e48");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f29f37a8-fd29-4c74-b109-3dace3ef7eb5"), Type = TextBlockType.Text, Text = "Your eidolon constricts the creature, dealing bludgeoning damage equal to your eidolon’s level plus its Strength modifier, with a basic Fortitude save against your spell DC." };
+            yield return new TextBlock { Id = Guid.Parse("908ca142-bd80-4206-82fb-a1e3aa1b7000"), Type = TextBlockType.Text, Text = "Your eidolon constricts the creature, dealing bludgeoning damage equal to your eidolon’s level plus its Strength modifier, with a basic Fortitude save against your spell DC." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1fc0cdb1-4977-4bed-b04a-f9dda52b84b2"),
+                Id = Guid.Parse("21ea1484-657f-4e21-82fd-b2f88bf519d6"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

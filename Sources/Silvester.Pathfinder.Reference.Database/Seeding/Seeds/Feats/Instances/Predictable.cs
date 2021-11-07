@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Predictable : Template
     {
-        public static readonly Guid ID = Guid.Parse("16b946e9-eb4f-4503-88e9-9bc7461ccb1c");
+        public static readonly Guid ID = Guid.Parse("275caff2-add9-49e3-8b09-2592128289b6");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("240c13e2-b7f4-4600-b452-8a7c879702de"), Type = TextBlockType.Text, Text = "By observing an opponent, you can get a sense of their next move and prepare to counter or resist it. Choose one target and attempt a Perception check to (action: Sense Motive) against the foe’s Deception DC or a hard DC of the foe’s level, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("53da7904-2dfe-4953-9c87-d7c962f99482"), Type = TextBlockType.Text, Text = "By observing an opponent, you can get a sense of their next move and prepare to counter or resist it. Choose one target and attempt a Perception check to (action: Sense Motive) against the foe’s Deception DC or a hard DC of the foe’s level, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("033498a7-2644-4f9f-96bb-6df20d5aaf36"),
+                Id = Guid.Parse("35c179ff-e902-4072-9656-59530de0ca4a"),
                 CriticalSuccess = "You precisely discern the target’s strategy, gaining a +2 circumstance bonus to AC against the creature until the start of your next turn and a +2 circumstance bonus to your next saving throw against the creature before the start of your next turn.",
                 Success = "You deduce the gist of the target’s strategy; as critical success, except the circumstance bonus is only +1.",
                 Failure = "You fail to discern the target’s strategy and gain no benefit.",
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("aa00e03a-d252-41c2-9bd5-8450ec3bcdb0"),
+                Id = Guid.Parse("898d63d6-ee66-4c22-859e-cf2942d5baf2"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

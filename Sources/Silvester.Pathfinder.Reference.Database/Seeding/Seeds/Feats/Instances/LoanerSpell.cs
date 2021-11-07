@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LoanerSpell : Template
     {
-        public static readonly Guid ID = Guid.Parse("7898953b-b91f-46f2-a98d-77df104174b3");
+        public static readonly Guid ID = Guid.Parse("25430ddd-c4f7-4063-83ae-84be5643870c");
 
         protected override Feat GetFeat()
         {
@@ -28,18 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("31dccac5-18fb-41ff-9d71-276f127be00a"), Type = TextBlockType.Text, Text = "During your daily preparations, you can gain the assistance of an allied prepared spellcaster to prepare one spell for the day. The spell can be up to 3rd level. Your ally must be able to prepare and cast it, and the spell must have a Targets entry or an area. Your ally loses a spell slot of the corresponding spell level, and you gain the ability to cast the prepared spell once that day. When you (activity: Cast the Spell | Cast a Spell), use your class DC for any saving throws required by the spell, and your class DC – 10 as a spell attack roll modifier." };
+            yield return new TextBlock { Id = Guid.Parse("cc2ee095-8292-40f3-9bcb-b8be1f1d1bcd"), Type = TextBlockType.Text, Text = "During your daily preparations, you can gain the assistance of an allied prepared spellcaster to prepare one spell for the day. The spell can be up to 3rd level. Your ally must be able to prepare and cast it, and the spell must have a Targets entry or an area. Your ally loses a spell slot of the corresponding spell level, and you gain the ability to cast the prepared spell once that day. When you (activity: Cast the Spell | Cast a Spell), use your class DC for any saving throws required by the spell, and your class DC – 10 as a spell attack roll modifier." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("58708d8b-d542-4fd7-a3db-0b32cc89731b"), or => 
+            builder.AddOr(Guid.Parse("d656f326-51b5-42e3-8d38-6895f6660b04"), or => 
             {
-                or.HaveSpecificSkillProficiency(Guid.Parse("0f5556cf-7416-4d23-9c61-f2218c19e1e4"), Proficiencies.Instances.Trained.ID, Skills.Instances.Arcana.ID);
-                or.HaveSpecificSkillProficiency(Guid.Parse("be83d0f1-5a03-408c-88f7-2303d2e3ec95"), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
-                or.HaveSpecificSkillProficiency(Guid.Parse("353acc47-d245-4f2a-8967-7806354a0be8"), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
-                or.HaveSpecificSkillProficiency(Guid.Parse("cd26a1d7-e448-48c4-965c-0f97dc4aa2e8"), Proficiencies.Instances.Trained.ID, Skills.Instances.Religion.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("6e405975-9d0a-4657-ad95-cb3a0479b733"), Proficiencies.Instances.Trained.ID, Skills.Instances.Arcana.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("a0c0496b-e02d-49ec-88ad-726ccd85f282"), Proficiencies.Instances.Trained.ID, Skills.Instances.Nature.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("21108081-cd93-4cbb-856c-fdd9ba59e98b"), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("a60ed004-5579-4b39-921b-7a457cbfc88f"), Proficiencies.Instances.Trained.ID, Skills.Instances.Religion.ID);
             });
         }
 
@@ -52,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e69b40ce-ebeb-446f-a72d-29a8db1372dd"),
+                Id = Guid.Parse("47686bf6-4397-49a3-acac-a92c042e1364"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

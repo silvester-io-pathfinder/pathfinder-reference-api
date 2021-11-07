@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BellflowerTillerDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("f6640c56-60c4-4416-a74d-4b26189f860f");
+        public static readonly Guid ID = Guid.Parse("2812bfa0-299e-4b06-9850-d832cfa34507");
 
         protected override Feat GetFeat()
         {
@@ -28,17 +29,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fff0bfd1-5e1f-4959-b485-e464cb1aa843"), Type = TextBlockType.Text, Text = "You dedicate yourself to freeing slaves and escorting them to freedom. You gain a +5-foot status bonus to your Speed." };
-            yield return new TextBlock { Id = Guid.Parse("2ee3194f-975a-4231-bca4-db2773e17b47"), Type = TextBlockType.Text, Text = "Choose up to six other people to be your “crop.” Members of your crop can use your Speed for overland travel if it’s higher than their own. Members more than 60 feet from you lose all benefits (from this or other Bellflower tiller feats) of being part of your crop, but they regain those benefits immediately when they return. You can add or remove someone from your crop by spending 10 minutes in conversation with them." };
+            yield return new TextBlock { Id = Guid.Parse("a57bd094-2595-438f-921d-7647b7ebcac7"), Type = TextBlockType.Text, Text = "You dedicate yourself to freeing slaves and escorting them to freedom. You gain a +5-foot status bonus to your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("1ca0ac44-c4d4-4baf-bedc-019b502b57cc"), Type = TextBlockType.Text, Text = "Choose up to six other people to be your “crop.” Members of your crop can use your Speed for overland travel if it’s higher than their own. Members more than 60 feet from you lose all benefits (from this or other Bellflower tiller feats) of being part of your crop, but they regain those benefits immediately when they return. You can add or remove someone from your crop by spending 10 minutes in conversation with them." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificStat(Guid.Parse("c76a9b47-e448-470d-8207-8b718d03a18d"), requiredStatValue: 14, Stats.Instances.Charisma.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("873cfc89-2841-47f8-bb74-f7047818066b"), Proficiencies.Instances.Expert.ID, Skills.Instances.Stealth.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("26269fff-e2f5-4529-9d94-fac4fef969c5"), Proficiencies.Instances.Expert.ID, Skills.Instances.Survival.ID);
-            builder.Manual(Guid.Parse("f2f36ca6-645a-4e14-a74f-c165fcf6e754"), "Member of the Bellflower Network");
+            builder.HaveSpecificStat(Guid.Parse("2106bed0-c351-4bf2-b231-1d214e23ada4"), requiredStatValue: 14, Stats.Instances.Charisma.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("dd518964-80fb-49d0-8745-c5333cc6fdf7"), Proficiencies.Instances.Expert.ID, Skills.Instances.Stealth.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("5cc41069-49fc-49f9-be7a-c1496ffd6fec"), Proficiencies.Instances.Expert.ID, Skills.Instances.Survival.ID);
+            builder.Manual(Guid.Parse("910ca8d9-796b-4329-88a6-b11f3106d078"), "Member of the Bellflower Network");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -50,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("9b686039-5deb-4e61-8d2c-f760fbd75c76"),
+                Id = Guid.Parse("762e4a89-cce8-4a66-bb1d-e3ca2fedc05a"),
                 SourceId = Sources.Instances.AgeOfAshes.ID,
                 Page = -1
             };

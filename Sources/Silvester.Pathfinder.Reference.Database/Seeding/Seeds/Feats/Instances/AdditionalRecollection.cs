@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdditionalRecollection : Template
     {
-        public static readonly Guid ID = Guid.Parse("2c97c273-3e50-4ce0-b4b0-68b634b8ca03");
+        public static readonly Guid ID = Guid.Parse("081c6ab7-6085-4866-8bf1-e5a1fee6b761");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("457108a8-e490-4267-ace3-36e70ba2042d"), Type = TextBlockType.Text, Text = "You scan the battlefield quickly, remembering critical details about multiple opponents you face. You immediately attempt a check to (action: Recall Knowledge) about a different creature you can perceive." };
+            yield return new TextBlock { Id = Guid.Parse("060dee9a-cb8f-471f-8f78-93118828ec4c"), Type = TextBlockType.Text, Text = "You scan the battlefield quickly, remembering critical details about multiple opponents you face. You immediately attempt a check to (action: Recall Knowledge) about a different creature you can perceive." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("18173acb-1db9-40aa-8f36-55b45bd326e2"),
+                Id = Guid.Parse("6236915c-06e9-40cd-a3a7-e5d617ce7b14"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

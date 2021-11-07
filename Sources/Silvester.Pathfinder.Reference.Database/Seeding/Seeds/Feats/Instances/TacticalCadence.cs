@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TacticalCadence : Template
     {
-        public static readonly Guid ID = Guid.Parse("3384a294-c280-4712-9895-91c163fc67ff");
+        public static readonly Guid ID = Guid.Parse("c08c5327-e299-4209-aefb-3dbf38d2a57e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("76ca8c2d-5abc-4526-a8e6-2688fd964dd5"), Type = TextBlockType.Text, Text = "Your remarkable breath control and concise instructions allow you to coordinate your allies more effectively. When you grant allies the quickened condition using (feat: Cadence Call), they can use the extra action to either (action: Stride) or (action: Strike), and they aren’t slowed 1 on their following turn if they use the extra action." };
+            yield return new TextBlock { Id = Guid.Parse("f1f4fae7-4e9c-49e5-8e03-ad2dadac3162"), Type = TextBlockType.Text, Text = "Your remarkable breath control and concise instructions allow you to coordinate your allies more effectively. When you grant allies the quickened condition using (feat: Cadence Call), they can use the extra action to either (action: Stride) or (action: Strike), and they aren’t slowed 1 on their following turn if they use the extra action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("3175ed59-8384-4485-8e36-2ca668cb6077"), Feats.Instances.CadenceCall.ID);
+            builder.HaveSpecificFeat(Guid.Parse("7467d6c1-5a26-4680-ae0d-ebf282899fa5"), Feats.Instances.CadenceCall.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("95900380-c766-4f80-876b-6bc2e8616e8f"),
+                Id = Guid.Parse("c3a380eb-1347-4739-a37d-078c8a9dabed"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

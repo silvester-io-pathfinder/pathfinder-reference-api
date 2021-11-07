@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SliceAndSwipe : Template
     {
-        public static readonly Guid ID = Guid.Parse("b8572dd2-ec5e-4488-a081-fcc88cf025a1");
+        public static readonly Guid ID = Guid.Parse("b184bc1a-73ce-4cee-a5fb-0140b90ff8af");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("07d198d9-686d-4dc0-bc3e-e93f71997f09"), Type = TextBlockType.Text, Text = "~ Access: Help either the Washboard Dogs or the Diobel Sweepers destroy their rival." };
-            yield return new TextBlock { Id = Guid.Parse("58dc429f-340e-4fa5-938e-303eb3dab465"), Type = TextBlockType.Text, Text = "You attempt a melee (action: Strike) with the required weapon. If you hit and deal damage and the result of your attack roll exceeds the target&#39;s Perception DC, you (action: Steal) a small object from the target (as if you had succeeded at that task using the Thievery skill). Depending on the object, the target might realize that it has been stolen, and onlookers might realize you have stolen the object if the attack roll doesn&#39;t exceed their Perception DCs." };
+            yield return new TextBlock { Id = Guid.Parse("80ea0dc5-957e-49e9-9d55-9f3c9b617144"), Type = TextBlockType.Text, Text = "~ Access: Help either the Washboard Dogs or the Diobel Sweepers destroy their rival." };
+            yield return new TextBlock { Id = Guid.Parse("070fdf66-a746-47c3-a55b-cc27b95c1440"), Type = TextBlockType.Text, Text = "You attempt a melee (action: Strike) with the required weapon. If you hit and deal damage and the result of your attack roll exceeds the target&#39;s Perception DC, you (action: Steal) a small object from the target (as if you had succeeded at that task using the Thievery skill). Depending on the object, the target might realize that it has been stolen, and onlookers might realize you have stolen the object if the attack roll doesn&#39;t exceed their Perception DCs." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8445332f-d0c4-4e8d-b0fd-3149d198a2ed"),
+                Id = Guid.Parse("49768579-149d-48c5-a2d1-462e160a3404"),
                 SourceId = Sources.Instances.AgentsOfEdgewatch.ID,
                 Page = -1
             };

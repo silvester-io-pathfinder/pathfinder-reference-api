@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ButterflyBladeDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("f5aafee6-d012-4c22-809e-c1e3359d2ed2");
+        public static readonly Guid ID = Guid.Parse("46379bc9-64a3-43c2-985d-0a9a2817ac7c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("71c718f0-0aed-4d72-9ed0-ad89ef33dfda"), Type = TextBlockType.Text, Text = "You become trained in Deception and Stealth; if you were already trained, you become an expert instead. Whenever your proficiency rank in any weapon increases to expert or beyond, you also gain that new proficiency rank with butterfly swords. You gain access to (item: butterfly swords | butterfly sword)." };
+            yield return new TextBlock { Id = Guid.Parse("ef8a4faf-653f-4ea2-b882-555ae7869b47"), Type = TextBlockType.Text, Text = "You become trained in Deception and Stealth; if you were already trained, you become an expert instead. Whenever your proficiency rank in any weapon increases to expert or beyond, you also gain that new proficiency rank with butterfly swords. You gain access to (item: butterfly swords | butterfly sword)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificMeleeWeaponSpecificProficiency(Guid.Parse("9749814b-fa7b-42ad-b062-07f1868ea650"), Proficiencies.Instances.Trained.ID, MeleeWeapons.Instances.ButterflySword.ID);
+            builder.HaveSpecificMeleeWeaponSpecificProficiency(Guid.Parse("527c032b-b451-4841-aff3-6728c0f2d368"), Proficiencies.Instances.Trained.ID, MeleeWeapons.Instances.ButterflySword.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("35d9bb49-278b-41b5-823d-4a2e9f464100"),
+                Id = Guid.Parse("94759055-e731-4665-83a6-a0c25a36fdb7"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

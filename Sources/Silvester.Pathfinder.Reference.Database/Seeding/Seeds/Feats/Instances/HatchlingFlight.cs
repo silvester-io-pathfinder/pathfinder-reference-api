@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HatchlingFlight : Template
     {
-        public static readonly Guid ID = Guid.Parse("0b96448b-a733-48cd-b8a4-d1f6138d6b58");
+        public static readonly Guid ID = Guid.Parse("bb8a218b-8c67-4dc6-9738-1a9b3ea54ae7");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a89e1764-7c79-4ab6-bc93-17810d95d845"), Type = TextBlockType.Text, Text = "You can fly a little! You (action: Fly) up to half your Speed. If you don’t end your movement on solid ground, you fall at the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("0857c8fd-b644-4946-b9bd-a00d22b7a628"), Type = TextBlockType.Text, Text = "You can fly a little! You (action: Fly) up to half your Speed. If you don’t end your movement on solid ground, you fall at the end of your turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1dad6c38-ddf3-4158-8669-c31af413e15e"), Feats.Instances.Winglets.ID);
+            builder.HaveSpecificFeat(Guid.Parse("400df2e3-5e26-466e-a5dd-b1eeb451afb1"), Feats.Instances.Winglets.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("859823b8-9e7c-4c03-a333-6e01a14af31f"),
+                Id = Guid.Parse("e061dbab-ff3d-47e1-856f-205d987ca41b"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

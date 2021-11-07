@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SteedForm : Template
     {
-        public static readonly Guid ID = Guid.Parse("eebe582b-9c4f-464b-ba58-18ee86d1138e");
+        public static readonly Guid ID = Guid.Parse("1e73ae1f-9e9a-4ce9-883a-4bd65d21cb88");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e6c5e0c7-daae-4b74-910b-35ade95db8fa"), Type = TextBlockType.Text, Text = "Your eidolon changes to make it particularly effective as your mount. While you ride it, you get your full number of actions each round instead of reducing them to 2. This applies only when you ride your eidolon, not when anyone else does (see the Riding Sapient Creatures sidebar on SoM pg. 71). Your eidolon still must be at least one size category larger than you to ride it. Since you work together to move, your eidolon’s (trait: move) actions while you’re mounted gain the (trait: tandem) trait." };
+            yield return new TextBlock { Id = Guid.Parse("87173d1c-66d1-435a-a940-729c410055e0"), Type = TextBlockType.Text, Text = "Your eidolon changes to make it particularly effective as your mount. While you ride it, you get your full number of actions each round instead of reducing them to 2. This applies only when you ride your eidolon, not when anyone else does (see the Riding Sapient Creatures sidebar on SoM pg. 71). Your eidolon still must be at least one size category larger than you to ride it. Since you work together to move, your eidolon’s (trait: move) actions while you’re mounted gain the (trait: tandem) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ffa33823-e82c-41ea-b224-1bb86dcf3edf"),
+                Id = Guid.Parse("2a9d8edb-bf83-4b82-b996-3a1c26e33637"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

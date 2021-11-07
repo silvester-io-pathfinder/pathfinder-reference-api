@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SenseThoughts : Template
     {
-        public static readonly Guid ID = Guid.Parse("fe0e6b19-f439-41ac-954b-4339375c60f0");
+        public static readonly Guid ID = Guid.Parse("46c032fb-6280-4656-bdf6-9a4ab48d0403");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0d93cb40-82e7-4bcb-87db-6ea979f6c7b3"), Type = TextBlockType.Text, Text = "You have an even stranger knack for knowing what other people are thinking. You can cast (spell: mind reading) as an innate occult spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("28fbb0e1-db04-421a-a0a9-bf784fb5e706"), Type = TextBlockType.Text, Text = "You have an even stranger knack for knowing what other people are thinking. You can cast (spell: mind reading) as an innate occult spell once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("38faae1b-bb71-47cd-b3f8-bdba23d25cf8"), Feats.Instances.ShareThoughts.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e2493664-1ef0-418a-94f5-439f2ed3c303"), Feats.Instances.ShareThoughts.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5bc57a1d-de0b-4610-897c-58d570fbb618"),
+                Id = Guid.Parse("25c1876f-8cd1-4f34-b4b8-519d54613ce6"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

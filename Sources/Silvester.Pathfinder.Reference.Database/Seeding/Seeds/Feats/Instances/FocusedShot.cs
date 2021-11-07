@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FocusedShot : Template
     {
-        public static readonly Guid ID = Guid.Parse("e31f2230-8f4e-4cf7-99bf-337450ee3ea0");
+        public static readonly Guid ID = Guid.Parse("821bcf9c-b9f3-4fcc-8a30-f34bccec1e60");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2855034-c908-4f72-9fb9-b61d64c9f4f8"), Type = TextBlockType.Text, Text = "You achieve a state of perfect calm before unleashing your attack, opening your mind to the minute movements of the world around you to increase your accuracy. Make a ranged weapon (action: Strike) against a target within your weapon’s first range increment. This (action: Strike) ignores the target’s concealed condition and all cover." };
+            yield return new TextBlock { Id = Guid.Parse("738bfd5b-d5b8-4c22-b207-2c8beb44dde8"), Type = TextBlockType.Text, Text = "You achieve a state of perfect calm before unleashing your attack, opening your mind to the minute movements of the world around you to increase your accuracy. Make a ranged weapon (action: Strike) against a target within your weapon’s first range increment. This (action: Strike) ignores the target’s concealed condition and all cover." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("bf3f34c8-e7c2-47a3-86d6-a0f953b98da4"), Feats.Instances.MonasticArcherStance.ID);
+            builder.HaveSpecificFeat(Guid.Parse("006ec759-1e04-4f63-875d-4d12cfaccf3a"), Feats.Instances.MonasticArcherStance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("59a8d2fc-63f7-45ce-8cee-5e10adbd08e9"),
+                Id = Guid.Parse("dc8b6827-342c-4a14-818d-eb22d1145c0d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

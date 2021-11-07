@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DisruptingStrikes : Template
     {
-        public static readonly Guid ID = Guid.Parse("8f601bbb-9c25-430a-bd77-18cc08b49030");
+        public static readonly Guid ID = Guid.Parse("1d77be17-355c-4f71-b65c-e5266c068948");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb7e865d-75db-4bdb-aab8-4b3931f94c18"), Type = TextBlockType.Text, Text = "You call forth positive energy from within to help you destroy undead. Your weapon and unarmed (action: Strikes | Strike) gain the effects of a (item: disrupting property rune | Disrupting Runestone) until the start of your next turn." };
-            yield return new TextBlock { Id = Guid.Parse("a04de584-2cd3-4dc1-ac75-9aed3a356003"), Type = TextBlockType.Text, Text = "If you&#39;re 14th level or higher, your (action: Strikes | Strike) instead gain the effects of a (item: greater disrupting property rune | Greater Disrupting Runestone). The DC for the rune&#39;s effect is equal to your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("7fe11efc-379b-47af-b0d0-2a6f625f30cc"), Type = TextBlockType.Text, Text = "You call forth positive energy from within to help you destroy undead. Your weapon and unarmed (action: Strikes | Strike) gain the effects of a (item: disrupting property rune | Disrupting Runestone) until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("f890775a-835f-4eec-95df-38d368854cdb"), Type = TextBlockType.Text, Text = "If you&#39;re 14th level or higher, your (action: Strikes | Strike) instead gain the effects of a (item: greater disrupting property rune | Greater Disrupting Runestone). The DC for the rune&#39;s effect is equal to your class DC or spell DC, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("63110217-7c00-4a3f-bf1b-9e7929d5b409"),
+                Id = Guid.Parse("5cfe1c69-996b-45d3-b112-ec9d4a81e206"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

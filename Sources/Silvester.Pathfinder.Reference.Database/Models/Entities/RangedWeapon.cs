@@ -41,6 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public Ammunition? Ammunition { get; set; }
      
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
+        public ICollection<Deity> Deities { get; set; } = new List<Deity>();
 
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }

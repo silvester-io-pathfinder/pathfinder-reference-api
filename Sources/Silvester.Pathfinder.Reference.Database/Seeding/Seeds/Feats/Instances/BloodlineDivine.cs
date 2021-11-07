@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BloodlineDivine : Template
     {
-        public static readonly Guid ID = Guid.Parse("d7ff42d5-427d-42ce-9362-eacf017bb7db");
+        public static readonly Guid ID = Guid.Parse("a28bf14d-2b0e-4a03-ad4a-fbcb8c8ede0b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("160352e7-3e4a-44f1-a98f-cc948785427f"), Type = TextBlockType.Text, Text = "__Your bloodline is divine.__" };
+            yield return new TextBlock { Id = Guid.Parse("c0983f17-a580-4328-86a7-f9b86b6f9016"), Type = TextBlockType.Text, Text = "__Your bloodline is divine.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("75074c5d-06da-4833-89b3-10fae0fe9e89"),
+                Id = Guid.Parse("70cd6221-9fad-44fc-b801-454119b45c1e"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

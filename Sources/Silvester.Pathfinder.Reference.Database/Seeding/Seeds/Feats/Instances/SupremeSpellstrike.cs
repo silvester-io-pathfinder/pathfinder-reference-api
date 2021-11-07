@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SupremeSpellstrike : Template
     {
-        public static readonly Guid ID = Guid.Parse("e9bd2c80-2b6f-4fd4-b05d-7c6898007808");
+        public static readonly Guid ID = Guid.Parse("52a524ba-5c3b-457d-8f2b-ff3506af3f72");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aa1f1f09-88c0-4b23-9452-c170c93814f8"), Type = TextBlockType.Text, Text = "You’ve made it almost effortless to combine spells and attacks. You’re permanently quickened. You can use your extra action only to (action: Strike) or to recharge (feat: Spellstrike)." };
+            yield return new TextBlock { Id = Guid.Parse("67a06e67-aad4-4be9-ac60-6a3a882f8404"), Type = TextBlockType.Text, Text = "You’ve made it almost effortless to combine spells and attacks. You’re permanently quickened. You can use your extra action only to (action: Strike) or to recharge (feat: Spellstrike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("e5d9d053-4995-412f-a2ba-c4c0790adecf"), Feats.Instances.Spellstrike.ID);
+            builder.HaveSpecificFeat(Guid.Parse("63df0191-7b6a-4b48-b775-5c7c565367b8"), Feats.Instances.Spellstrike.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("be70b75f-b8f0-48da-a594-c8a6dc7619f7"),
+                Id = Guid.Parse("a22b2ab3-a695-41e0-9416-95e33f002750"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

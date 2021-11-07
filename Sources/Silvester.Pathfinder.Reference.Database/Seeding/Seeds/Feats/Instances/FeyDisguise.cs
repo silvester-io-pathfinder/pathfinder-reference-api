@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FeyDisguise : Template
     {
-        public static readonly Guid ID = Guid.Parse("be9b684f-9ca1-4b0c-8890-570c47c96fa9");
+        public static readonly Guid ID = Guid.Parse("a16c3334-a069-471c-aa41-2116809f579f");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("987a95d0-90a2-400e-92f5-d0b7e2efc910"), Type = TextBlockType.Text, Text = "You can disguise yourself with magical illusions. You can cast (spell: illusory disguise) once per day as a 1st-level primal innate spell. At 7th level, the spell is heightened to 2nd level, and every 2 levels thereafter, the spell is heightened an additional spell level." };
+            yield return new TextBlock { Id = Guid.Parse("b1eb80ee-2b1f-48b1-b1ef-2dc0cd849b31"), Type = TextBlockType.Text, Text = "You can disguise yourself with magical illusions. You can cast (spell: illusory disguise) once per day as a 1st-level primal innate spell. At 7th level, the spell is heightened to 2nd level, and every 2 levels thereafter, the spell is heightened an additional spell level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("31b34d74-fb9f-4ca0-ba79-785f3a40f7a8"),
+                Id = Guid.Parse("dc6e6646-dd8f-46ee-b354-87fc9f010b0f"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

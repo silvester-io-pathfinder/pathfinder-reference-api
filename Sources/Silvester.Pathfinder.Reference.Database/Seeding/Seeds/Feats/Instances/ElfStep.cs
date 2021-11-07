@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ElfStep : Template
     {
-        public static readonly Guid ID = Guid.Parse("d53a97d4-1a03-4f8f-8840-462480d1cb79");
+        public static readonly Guid ID = Guid.Parse("07fd28a6-6e5d-4911-abf0-47ef6b9a49d5");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13d66952-ae11-4908-b415-53d76d6124f7"), Type = TextBlockType.Text, Text = "You move in a graceful dance, and even your steps are broad. You (action: Step) 5 feet twice." };
+            yield return new TextBlock { Id = Guid.Parse("a798d339-5f66-472f-a6db-b1447fa57d18"), Type = TextBlockType.Text, Text = "You move in a graceful dance, and even your steps are broad. You (action: Step) 5 feet twice." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("045c0381-d961-4c14-9e3c-99c446a32575"),
+                Id = Guid.Parse("5fd6f0fb-1590-400d-a98e-4fa38f60b973"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

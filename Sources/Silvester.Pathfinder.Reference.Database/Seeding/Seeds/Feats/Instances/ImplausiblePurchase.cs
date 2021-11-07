@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImplausiblePurchase : Template
     {
-        public static readonly Guid ID = Guid.Parse("6df56500-2986-4e86-87c4-e721c6ab3c83");
+        public static readonly Guid ID = Guid.Parse("eb065d73-7bf4-48df-b3f4-9f4903877ef6");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("06c88b12-f64e-4a33-980f-c170f859c013"), Type = TextBlockType.Text, Text = "Even when impossible, you always have exactly what you need. You can use (feat: Prescient Planner) even if you have already used it after purchasing goods, and you can (action: Interact) to draw the item as a single action instead of a 2-action activity. In addition, five times per day, you can use (feat: Prescient Planner) to pull out a common consumable item up to 6 levels lower than your level." };
+            yield return new TextBlock { Id = Guid.Parse("7a2edba7-043a-4d8b-973f-ff39f17f0d77"), Type = TextBlockType.Text, Text = "Even when impossible, you always have exactly what you need. You can use (feat: Prescient Planner) even if you have already used it after purchasing goods, and you can (action: Interact) to draw the item as a single action instead of a 2-action activity. In addition, five times per day, you can use (feat: Prescient Planner) to pull out a common consumable item up to 6 levels lower than your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("592f8e98-3ad0-402a-9741-3662cd7ba325"), Feats.Instances.PredictivePurchase.ID);
+            builder.HaveSpecificFeat(Guid.Parse("e130e793-dbf2-4997-81fb-2bb5ec4ab596"), Feats.Instances.PredictivePurchase.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4220a352-8016-47e4-afb7-db468d4f07b1"),
+                Id = Guid.Parse("8007ea3e-c984-42f1-9431-a554173eab4c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

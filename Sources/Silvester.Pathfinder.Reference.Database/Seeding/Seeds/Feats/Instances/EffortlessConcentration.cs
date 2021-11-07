@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EffortlessConcentration : Template
     {
-        public static readonly Guid ID = Guid.Parse("2b50b320-0b69-45b7-89b8-8bddf4ea1770");
+        public static readonly Guid ID = Guid.Parse("dfc3e197-57ee-4a8e-825e-500226f78dec");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d813e21a-0ea6-4f6e-a1fb-34eff524c8cb"), Type = TextBlockType.Text, Text = "You maintain a spell with hardly a thought. You immediately gain the effects of the (action: Sustain a Spell) action, allowing you to extend the duration of one of your active spells." };
+            yield return new TextBlock { Id = Guid.Parse("bba2936f-daa6-4f32-a6d0-b05dcbd478c1"), Type = TextBlockType.Text, Text = "You maintain a spell with hardly a thought. You immediately gain the effects of the (action: Sustain a Spell) action, allowing you to extend the duration of one of your active spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("1af0465a-2bbf-4723-b987-5f64d43cd6f5"),
+                Id = Guid.Parse("96d29171-7354-47ad-8291-4c2a8e640597"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

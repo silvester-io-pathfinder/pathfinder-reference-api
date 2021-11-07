@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShamelessRequest : Template
     {
-        public static readonly Guid ID = Guid.Parse("f686498d-9393-47f0-ae0c-b1cca6c3264a");
+        public static readonly Guid ID = Guid.Parse("2ddeae87-1735-443e-85f6-283971622503");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("42a144e1-9557-4b0f-90ed-37a271ede85d"), Type = TextBlockType.Text, Text = "You can downplay the consequences or outrageousness of your requests using sheer brazenness and charm. When you (action: Request) something, you reduce any DC increases for making an outrageous request by 2, and if you roll a critical failure for your (action: Request), you get a failure instead. While this means you can never cause your target to reduce their attitude toward you by making a (action: Request), they eventually tire of requests, even though they still have a positive attitude toward you." };
+            yield return new TextBlock { Id = Guid.Parse("a7806f31-09f4-474a-969a-17fa05e96a23"), Type = TextBlockType.Text, Text = "You can downplay the consequences or outrageousness of your requests using sheer brazenness and charm. When you (action: Request) something, you reduce any DC increases for making an outrageous request by 2, and if you roll a critical failure for your (action: Request), you get a failure instead. While this means you can never cause your target to reduce their attitude toward you by making a (action: Request), they eventually tire of requests, even though they still have a positive attitude toward you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("51530802-6d14-4d58-bbf4-10feb56c5197"), Proficiencies.Instances.Master.ID, Skills.Instances.Diplomacy.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("1cf8ee14-ad9e-46de-a170-1c74dce2eb62"), Proficiencies.Instances.Master.ID, Skills.Instances.Diplomacy.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("fcb6d13c-3538-4ec3-8f54-68c0c6c3c4ae"),
+                Id = Guid.Parse("0b2c5d6f-6415-4483-b3ce-4524eedd2349"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

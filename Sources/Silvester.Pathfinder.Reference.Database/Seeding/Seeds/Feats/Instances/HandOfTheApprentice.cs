@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HandOfTheApprentice : Template
     {
-        public static readonly Guid ID = Guid.Parse("80a4db3b-9a11-46a9-9850-71d9c9c81f58");
+        public static readonly Guid ID = Guid.Parse("0f8d5870-13da-43fb-83c8-5967c42b6328");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4ff69eff-4803-4a2a-b1ec-da493610baff"), Type = TextBlockType.Text, Text = "You can magically hurl your weapon at your foe. You gain the (Spell: hand of the apprentice) universalist spell. Universalist spells are a type of focus spell, much like school spells. You start with a focus pool of 1 Focus Point." };
+            yield return new TextBlock { Id = Guid.Parse("75f6af76-89e7-4bc6-b3ce-5aa4f9e74e4b"), Type = TextBlockType.Text, Text = "You can magically hurl your weapon at your foe. You gain the (Spell: hand of the apprentice) universalist spell. Universalist spells are a type of focus spell, much like school spells. You start with a focus pool of 1 Focus Point." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClass(Guid.Parse("bf965dbc-47ed-4fe9-aa76-234e8a29ae51"), Classes.Instances.Wizard.ID);
-            builder.HaveNoMagicSchool(Guid.Parse("129c1bd1-1823-4444-909d-770acec7fbc4"));
+            builder.HaveSpecificClass(Guid.Parse("8980f0c4-9835-4f88-918f-6ce13eacddf8"), Classes.Instances.Wizard.ID);
+            builder.HaveNoMagicSchool(Guid.Parse("9ac09650-f37c-40d5-adb1-300e42a37165"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("121386a9-f153-4e8e-b008-beea6c6dfb37"),
+                Id = Guid.Parse("1e51fb65-bc50-4a79-af74-fed665a8eca5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

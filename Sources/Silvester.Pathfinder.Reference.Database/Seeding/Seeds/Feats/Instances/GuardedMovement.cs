@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GuardedMovement : Template
     {
-        public static readonly Guid ID = Guid.Parse("9d2fb338-f4b8-4fab-beb1-e64dc87ccf5c");
+        public static readonly Guid ID = Guid.Parse("fe587318-08e2-4be3-ba35-b2e3939b9745");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec513642-e042-4af1-bea2-a8d37aeb9363"), Type = TextBlockType.Text, Text = "Your guard is up, even while moving. You gain a +4 circumstance bonus to AC against reactions triggered by your movement." };
+            yield return new TextBlock { Id = Guid.Parse("8b4a750b-303c-440b-af9d-4ede40d5d948"), Type = TextBlockType.Text, Text = "Your guard is up, even while moving. You gain a +4 circumstance bonus to AC against reactions triggered by your movement." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5c73b8e5-d490-4944-a211-07e469e71457"),
+                Id = Guid.Parse("33d4d4c7-01da-433c-96b3-7438c5ef7cbe"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

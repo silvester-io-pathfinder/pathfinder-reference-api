@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DraconicFrenzy : Template
     {
-        public static readonly Guid ID = Guid.Parse("eb42bc39-a899-4334-bd19-eb492c3bebed");
+        public static readonly Guid ID = Guid.Parse("18a4d03b-a74c-4118-ac2f-b45a158bb513");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("178bc01e-e419-483b-8261-b23164dde97b"), Type = TextBlockType.Text, Text = "Your eidolon makes one (action: Strike) with their primary unarmed attack and two (action: Strikes | Strike) with their secondary unarmed attack (in any order). If any of these attacks critically hits an enemy, your eidolon instantly recovers the use of their (action: Breath Weapon)." };
+            yield return new TextBlock { Id = Guid.Parse("f2738661-ac58-440c-a945-c7e79b6f80d5"), Type = TextBlockType.Text, Text = "Your eidolon makes one (action: Strike) with their primary unarmed attack and two (action: Strikes | Strike) with their secondary unarmed attack (in any order). If any of these attacks critically hits an enemy, your eidolon instantly recovers the use of their (action: Breath Weapon)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("afd0fa38-b450-45e2-8f11-af854f277aa1"),
+                Id = Guid.Parse("1ed66843-c72f-43b1-b623-dd4a240ee414"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

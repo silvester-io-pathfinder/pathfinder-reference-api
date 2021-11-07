@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SwiftRiver : Template
     {
-        public static readonly Guid ID = Guid.Parse("60992420-1320-48d9-8837-5aa79d4d2143");
+        public static readonly Guid ID = Guid.Parse("fc24cf08-ea25-45b8-9516-ef5a5ad4ed81");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b589e140-14b5-40a7-ac1e-110dc5b02a25"), Type = TextBlockType.Text, Text = "You flow like water, avoiding all restraints. End one status penalty to your speed, or end one immobilized or slowed condition affecting you." };
+            yield return new TextBlock { Id = Guid.Parse("f40c8535-4dc7-4669-a938-3c2045a05935"), Type = TextBlockType.Text, Text = "You flow like water, avoiding all restraints. End one status penalty to your speed, or end one immobilized or slowed condition affecting you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("42ad7147-0474-4abe-9776-aab98b3a3cf1"),
+                Id = Guid.Parse("4bb3424d-7e9d-4ed5-a5c4-fa088d2e37ba"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

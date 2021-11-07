@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AdvancedHuntersTrick : Template
     {
-        public static readonly Guid ID = Guid.Parse("7bde21b8-433f-4905-a307-1c2891faea5b");
+        public static readonly Guid ID = Guid.Parse("287edf5a-0609-4ea9-8904-f3a68658fa9f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a243637f-ac62-4c18-9749-145db1b5092c"), Type = TextBlockType.Text, Text = "You gain one ranger feat. For the purpose of meeting its prerequisites, your ranger level is equal to half your character level." };
+            yield return new TextBlock { Id = Guid.Parse("a83756f0-7a8c-4d91-ad0c-af78a947c7a1"), Type = TextBlockType.Text, Text = "You gain one ranger feat. For the purpose of meeting its prerequisites, your ranger level is equal to half your character level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("8fb350c7-eed4-4709-9cc1-83ba995136e4"), Feats.Instances.BasicHuntersTrick.ID);
+            builder.HaveSpecificFeat(Guid.Parse("bdb2960b-3a0c-4d0f-a3e0-4ac540568972"), Feats.Instances.BasicHuntersTrick.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cb36359c-70a7-46a8-822f-3b9bc77c65a4"),
+                Id = Guid.Parse("11c2d6ab-42ef-446e-a5d9-378ffa253dbf"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

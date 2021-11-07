@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SpecializedBeastmasterCompanion : Template
     {
-        public static readonly Guid ID = Guid.Parse("83353886-1ebe-4f91-8e3b-811a06d05ac2");
+        public static readonly Guid ID = Guid.Parse("ca5a7b65-4824-4487-b462-f123ba31a474");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6afdbf3d-5f29-456f-b157-dc05b030f518"), Type = TextBlockType.Text, Text = "Your nimble and savage animal companions become cunning enough to become specialized. Each companion gains one specialization of your choice (page 217, choose separately)." };
+            yield return new TextBlock { Id = Guid.Parse("530e8a8b-e763-4e2c-bed9-8afdfedb98d3"), Type = TextBlockType.Text, Text = "Your nimble and savage animal companions become cunning enough to become specialized. Each companion gains one specialization of your choice (page 217, choose separately)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("5fa5c52d-b1da-4cb8-98f2-8a1c3f523d7f"), Feats.Instances.IncredibleBeastasterCompanion.ID);
+            builder.HaveSpecificFeat(Guid.Parse("07593fcb-22b6-4297-bd26-349ae39e91c6"), Feats.Instances.IncredibleBeastmasterCompanion.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("91ed034a-e9f9-4f3e-ae32-5517266aa9de"),
+                Id = Guid.Parse("6ee513b0-49e6-490a-bcd2-ec82f1da66d7"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

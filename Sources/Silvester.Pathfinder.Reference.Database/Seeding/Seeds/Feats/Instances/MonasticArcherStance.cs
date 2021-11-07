@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MonasticArcherStance : Template
     {
-        public static readonly Guid ID = Guid.Parse("7e8bb88b-8983-4c68-966a-48d66c67b99b");
+        public static readonly Guid ID = Guid.Parse("bd893fa3-82e5-4932-a352-a09b19cea81d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d3ab4e2b-f4be-49a4-81d6-04967c26e47c"), Type = TextBlockType.Text, Text = "You enter a specialized stance for a unique martial art centered around the use of a bow. While in this stance, the only (action: Strikes | Strike) you can make are those using longbows, shortbows, or bows with the (trait: monk | Monk - Item) trait. You can use (feat: Flurry of Blows) with these bows. You can use your other monk feats or monk abilities that normally require unarmed attacks with these bows when attacking within half the first range increment (normally 50 feet for a longbow and 30 feet for a shortbow), so long as the feat or ability doesn’t require a single, specific (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("e4dbffff-6887-47b1-98fa-324bb032e22e"), Type = TextBlockType.Text, Text = "You enter a specialized stance for a unique martial art centered around the use of a bow. While in this stance, the only (action: Strikes | Strike) you can make are those using longbows, shortbows, or bows with the (trait: monk | Monk - Item) trait. You can use (feat: Flurry of Blows) with these bows. You can use your other monk feats or monk abilities that normally require unarmed attacks with these bows when attacking within half the first range increment (normally 50 feet for a longbow and 30 feet for a shortbow), so long as the feat or ability doesn’t require a single, specific (action: Strike)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("027708e1-dd55-460f-a150-614d6f7bd909"),
+                Id = Guid.Parse("dc4d5573-1281-415f-a24a-0386c89b7503"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class NoEvidence : Template
     {
-        public static readonly Guid ID = Guid.Parse("b95d13c3-8111-4f41-b5e5-087d7c5c5537");
+        public static readonly Guid ID = Guid.Parse("be23df4d-e3c7-4da3-be7a-4739c099928b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("387a54cd-5db2-4877-9fe9-9a9032923295"), Type = TextBlockType.Text, Text = "You leave little sign when attempting to remain unseen. When you (action: Avoid Notice), you also gain the benefits of (action: Cover Tracks) unless you choose not to." };
+            yield return new TextBlock { Id = Guid.Parse("fe5f4bb3-26cc-4f12-82b0-26920b51176a"), Type = TextBlockType.Text, Text = "You leave little sign when attempting to remain unseen. When you (action: Avoid Notice), you also gain the benefits of (action: Cover Tracks) unless you choose not to." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("f510f77d-0d17-4b60-ad14-fd388ebb1021"), Proficiencies.Instances.Expert.ID, Skills.Instances.Survival.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("995892bf-0c55-496b-8db9-0c55b46c93e7"), Proficiencies.Instances.Expert.ID, Skills.Instances.Survival.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("28e0b370-caf3-4bec-881f-ed4771bcbac4"),
+                Id = Guid.Parse("0ceae8dd-d9a5-4617-9cc5-0dfcd22e5fd2"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeterminedToughness : Template
     {
-        public static readonly Guid ID = Guid.Parse("77eeb9fe-3ca4-442f-b0a1-b789df069b78");
+        public static readonly Guid ID = Guid.Parse("cb6de3da-5b58-42ec-a459-1e228c6636f9");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("85934460-0845-4b0b-b3f4-a44e4368155e"), Type = TextBlockType.Text, Text = "Any status penalties you take from the following conditions are 1 less than their condition’s value: clumsy, drained, enfeebled, frightened, sickened, stupefied. This doesn’t change the actual condition value, or any other effects of the condition (such as stupefied’s disruption and its DC)." };
-            yield return new TextBlock { Id = Guid.Parse("a842e31d-0f3b-4724-9af4-dc44348d69b0"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ Whenever you take a status penalty from the listed conditions, you also take a –1 penalty to the same statistics." };
+            yield return new TextBlock { Id = Guid.Parse("ba191250-e287-4ba3-980b-aa76fa553af1"), Type = TextBlockType.Text, Text = "Any status penalties you take from the following conditions are 1 less than their condition’s value: clumsy, drained, enfeebled, frightened, sickened, stupefied. This doesn’t change the actual condition value, or any other effects of the condition (such as stupefied’s disruption and its DC)." };
+            yield return new TextBlock { Id = Guid.Parse("bdfd0880-94ea-4f6a-aba4-8e4cf5f10889"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ Whenever you take a status penalty from the listed conditions, you also take a –1 penalty to the same statistics." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("53ed5703-0815-442d-afe8-2f1c0d5e739b"),
+                Id = Guid.Parse("69a4df49-12da-4419-a512-0c4ceccd9cae"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

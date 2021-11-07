@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CascadeCountermeasure : Template
     {
-        public static readonly Guid ID = Guid.Parse("566864ce-3cb9-48bb-b4f3-e1341fa325bc");
+        public static readonly Guid ID = Guid.Parse("5f85a5a8-cc59-451f-8ee0-399969f82f1d");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a40fa9eb-9e44-4a0f-9f2f-e24db7deb77d"), Type = TextBlockType.Text, Text = "When in Arcane Cascade, you can make yourself resistant to magic. You learn the (spell: cascade countermeasure) conflux spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("3a34089b-9453-4cce-8bae-f7d597efeaea"), Type = TextBlockType.Text, Text = "When in Arcane Cascade, you can make yourself resistant to magic. You learn the (spell: cascade countermeasure) conflux spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("d3a53e23-08bb-40a4-a21f-9a17f4ff9f8c"), Feats.Instances.ArcaneCascade.ID);
-            builder.HaveFocusPool(Guid.Parse("8dff4e09-4cb0-4f15-afa4-f47a9f915872"));
+            builder.HaveSpecificFeat(Guid.Parse("78e10e33-4f2a-47f6-9576-bcca1c30d7d4"), Feats.Instances.ArcaneCascade.ID);
+            builder.HaveFocusPool(Guid.Parse("a9812675-6236-49be-816b-b14b5f5c6abc"));
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("63fba10b-830e-411b-925a-d7d653242cc6"),
+                Id = Guid.Parse("1886b237-69c4-49f8-b2a4-86c0f4f64565"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

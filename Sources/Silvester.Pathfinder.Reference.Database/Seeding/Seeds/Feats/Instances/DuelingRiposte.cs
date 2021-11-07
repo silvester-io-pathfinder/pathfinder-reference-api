@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DuelingRiposte : Template
     {
-        public static readonly Guid ID = Guid.Parse("f465e042-fbb5-4a53-90c1-4cfc639987c6");
+        public static readonly Guid ID = Guid.Parse("0fd48609-9b64-41c8-933e-3924efc9fd7b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("26dc125e-a7f0-4a68-9fc9-e9b440ccd00b"), Type = TextBlockType.Text, Text = "You riposte against your flailing enemy. Make a melee (action: Strike) against or attempt to (action: Disarm) the triggering creature." };
+            yield return new TextBlock { Id = Guid.Parse("e1a908d3-06b4-4250-ba62-d1da26b5fc96"), Type = TextBlockType.Text, Text = "You riposte against your flailing enemy. Make a melee (action: Strike) against or attempt to (action: Disarm) the triggering creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("e29bee0b-0b27-40ea-93bd-f1bd4ad95364"), Feats.Instances.DuelingParry.ID);
+            builder.HaveSpecificFeat(Guid.Parse("967932f0-5dff-418d-93ad-a02e052709b5"), Feats.Instances.DuelingParry.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c40a986b-afd0-4bd2-a89f-fa269e0a86ce"),
+                Id = Guid.Parse("adb65b3e-7a33-4fa5-957f-74414a1a19aa"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

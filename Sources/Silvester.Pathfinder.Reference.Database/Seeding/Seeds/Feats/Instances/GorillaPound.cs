@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GorillaPound : Template
     {
-        public static readonly Guid ID = Guid.Parse("31b081ca-75ca-4c7d-a0a9-44b649a22de4");
+        public static readonly Guid ID = Guid.Parse("0ceca4e5-8ce1-41ba-8a93-c1bbd4fe2e7b");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c9c1d649-6d56-4802-9fc3-45505f9eb054"), Type = TextBlockType.Text, Text = "You pound your chest before slamming into your foes. Attempt an Intimidation check to (action: Demoralize), then make one gorilla slam (action: Strike) against the same target. If your (action: Strike) hits, you gain a circumstance bonus to the damage roll equal to triple the value of the target’s frightened condition." };
+            yield return new TextBlock { Id = Guid.Parse("89597a1d-3125-4516-89fd-f8559ce161d5"), Type = TextBlockType.Text, Text = "You pound your chest before slamming into your foes. Attempt an Intimidation check to (action: Demoralize), then make one gorilla slam (action: Strike) against the same target. If your (action: Strike) hits, you gain a circumstance bonus to the damage roll equal to triple the value of the target’s frightened condition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("2f5adeeb-791a-4fc3-bb27-071a4fcfc784"), Proficiencies.Instances.Expert.ID, Skills.Instances.Intimidation.ID);
-            builder.HaveSpecificFeat(Guid.Parse("fc054a42-d5c3-4588-aecb-47060f42a963"), Feats.Instances.GorillaStance.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("ce2869a8-d591-4846-a780-47d146ede46c"), Proficiencies.Instances.Expert.ID, Skills.Instances.Intimidation.ID);
+            builder.HaveSpecificFeat(Guid.Parse("d30bef44-5791-43fe-936b-7ce4020e81d0"), Feats.Instances.GorillaStance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a252ffac-06bb-4c29-b760-d579209f3e84"),
+                Id = Guid.Parse("beb19eaa-3f33-4429-80c7-df9bac21560c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

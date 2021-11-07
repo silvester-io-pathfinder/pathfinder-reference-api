@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WeightOfGuilt : Template
     {
-        public static readonly Guid ID = Guid.Parse("ab30d293-d403-482e-a425-92f6d060aa51");
+        public static readonly Guid ID = Guid.Parse("fae1b82a-d30f-4d64-b4ba-e2089ee0be22");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("21ac34af-2995-4311-9e3b-2acebd197be5"), Type = TextBlockType.Text, Text = "Guilt clouds the minds of those who ignore your (feat: Glimpse of Redemption). Instead of making the triggering creature enfeebled 2, you can make it stupefied 2 for the same duration." };
+            yield return new TextBlock { Id = Guid.Parse("996cef5c-e283-49eb-b809-c7fe4ae379f3"), Type = TextBlockType.Text, Text = "Guilt clouds the minds of those who ignore your (feat: Glimpse of Redemption). Instead of making the triggering creature enfeebled 2, you can make it stupefied 2 for the same duration." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificCause(Guid.Parse("c91552c2-3cf9-4fe5-890b-7d32460234d8"), Causes.Instances.Redeemer.ID);
+            builder.HaveSpecificCause(Guid.Parse("93efd0e0-0935-4637-85b3-865ff6f3db7f"), Causes.Instances.Redeemer.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("16c5c365-f19d-4077-b55d-0a1a40da879e"),
+                Id = Guid.Parse("33b4a8e2-7eb6-4b00-890b-60b2207f4f62"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

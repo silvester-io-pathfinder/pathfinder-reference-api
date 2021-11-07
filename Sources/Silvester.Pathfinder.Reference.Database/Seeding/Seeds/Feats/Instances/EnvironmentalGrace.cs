@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EnvironmentalGrace : Template
     {
-        public static readonly Guid ID = Guid.Parse("1c76123d-ec27-4990-b652-8d0fbc8ac433");
+        public static readonly Guid ID = Guid.Parse("ffce5b58-8429-4fb0-b97d-2f2f064d9408");
 
         protected override Feat GetFeat()
         {
@@ -28,19 +29,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("89314c45-9066-41c7-a43c-7a48fa0caba5"), Type = TextBlockType.Text, Text = "You rapidly adapt to environments through a combination of skill, meditation, and divine grace. After spending an hour in an environment of severe cold or colder, you are protected from the effects of severe cold until you leave that environment. After spending an hour in an environment of severe heat or hotter, you are protected from the effects of severe heat until you leave that environment." };
+            yield return new TextBlock { Id = Guid.Parse("85f85fe7-7f81-44b0-afc4-cb0ef4c1dd4c"), Type = TextBlockType.Text, Text = "You rapidly adapt to environments through a combination of skill, meditation, and divine grace. After spending an hour in an environment of severe cold or colder, you are protected from the effects of severe cold until you leave that environment. After spending an hour in an environment of severe heat or hotter, you are protected from the effects of severe heat until you leave that environment." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("c2a20dd3-112e-43ef-997a-d67700cf45c3"), Proficiencies.Instances.Master.ID, Skills.Instances.Survival.ID);
-            builder.AddOr(Guid.Parse("19eb9d72-fba6-45e1-8886-70c494c7834d"), or => 
+            builder.HaveSpecificSkillProficiency(Guid.Parse("cd60d83b-5b48-46f4-b787-4129ebedf566"), Proficiencies.Instances.Master.ID, Skills.Instances.Survival.ID);
+            builder.AddOr(Guid.Parse("cef79a5e-d86c-4708-b48a-8e4948402216"), or => 
             {
-                or.HaveAnyDeitySpecificDomain(Guid.Parse("6d8d504f-2f00-4c7b-ad7e-15d8d9304b21"), Domains.Instances.Cold.ID);
-                or.HaveAnyDeitySpecificDomain(Guid.Parse("1fd59e2e-f7de-4a77-a108-86389e7a3fb2"), Domains.Instances.Fire.ID);
-                or.HaveAnyDeitySpecificDomain(Guid.Parse("bec0bc66-e1b7-4342-8cf9-7c44be728dfd"), Domains.Instances.Nature.ID);
-                or.HaveAnyDeitySpecificDomain(Guid.Parse("67ba12f4-50aa-49cd-ba05-f6d6f9b9c833"), Domains.Instances.Travel.ID);
+                or.HaveAnyDeitySpecificDomain(Guid.Parse("4bdbd308-2c3b-4152-a2df-0130f0d856a5"), Domains.Instances.Cold.ID);
+                or.HaveAnyDeitySpecificDomain(Guid.Parse("3c6b6972-e569-473c-9439-d1b7aada314d"), Domains.Instances.Fire.ID);
+                or.HaveAnyDeitySpecificDomain(Guid.Parse("2f9a2861-cdd3-4035-9508-c908239e49ef"), Domains.Instances.Nature.ID);
+                or.HaveAnyDeitySpecificDomain(Guid.Parse("b17da118-dd71-4c79-81fc-ff5120cecebf"), Domains.Instances.Travel.ID);
             });
         }
 
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("df966702-635b-4ee6-9b54-5bcf86e56f40"),
+                Id = Guid.Parse("31ac3ec0-1e23-4484-a607-4e0182526232"),
                 SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
                 Page = -1
             };

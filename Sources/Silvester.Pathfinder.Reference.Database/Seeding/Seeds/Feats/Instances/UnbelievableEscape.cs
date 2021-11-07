@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UnbelievableEscape : Template
     {
-        public static readonly Guid ID = Guid.Parse("5d10c0a8-c526-40f2-b969-1cb0982fbe4b");
+        public static readonly Guid ID = Guid.Parse("7068ec33-7d8c-412a-9641-244d32cb0076");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9e0dfb07-06b8-4a7e-a148-35cef89f8500"), Type = TextBlockType.Text, Text = "Your ability to narrowly evade danger defies all logic. You can use (feat: Lucky Escape) once per hour instead of once per day." };
+            yield return new TextBlock { Id = Guid.Parse("f1939606-b334-41e3-b48f-6b59229457aa"), Type = TextBlockType.Text, Text = "Your ability to narrowly evade danger defies all logic. You can use (feat: Lucky Escape) once per hour instead of once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("8d9ee826-9b7b-4f2f-87a5-af78621d5810"), Feats.Instances.UnexpectedSharpshooterDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8e2bf827-9315-4641-ab6f-7931051be41c"), Feats.Instances.UnexpectedSharpshooterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("445e6e17-c086-4058-8e7f-0427187040cc"),
+                Id = Guid.Parse("8c8f4be1-0c13-4d67-8d55-2538b248c0d5"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

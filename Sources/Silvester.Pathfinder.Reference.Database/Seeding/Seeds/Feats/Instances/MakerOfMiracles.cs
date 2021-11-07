@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MakerOfMiracles : Template
     {
-        public static readonly Guid ID = Guid.Parse("a4bef3a9-7456-45ec-a78d-a80d8411ca37");
+        public static readonly Guid ID = Guid.Parse("3bcd6bf7-a15c-43b2-8f7a-544990c26284");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("41dc1569-4380-40fd-a8af-d2d046e7ee37"), Type = TextBlockType.Text, Text = "You are a conduit for truly deific power. You gain an additional 10th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("7c2ec9d2-d809-4033-85b2-29de53bd8e97"), Type = TextBlockType.Text, Text = "You are a conduit for truly deific power. You gain an additional 10th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("c410f299-964d-423f-adb9-96a4a60c09d1"), ClassFeatures.Clerics.MiraculousSpell.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("5a166c96-060f-49dd-8f1c-cc3c6ed18e8f"), ClassFeatures.Clerics.MiraculousSpell.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6d5737c4-cb21-4f42-8a3c-ab15779c9b2c"),
+                Id = Guid.Parse("c79ad631-0ab6-4b03-8f15-be1c4dd85750"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

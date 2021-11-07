@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GravesVoice : Template
     {
-        public static readonly Guid ID = Guid.Parse("57e385cc-0665-41ce-9e11-f93b58506ef6");
+        public static readonly Guid ID = Guid.Parse("56c194ca-0274-4c4f-9b5f-b431f5c14b0f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("066cb053-34b8-4bf8-9739-0450bff14531"), Type = TextBlockType.Text, Text = "You can use your choice of Spirit Lore or Haunt Lore to (action: Make an Impression) or (action: Request) things of incorporeal creatures. At the GM&#39;s discretion, an incorporeal spirit might be willing to hear you out." };
+            yield return new TextBlock { Id = Guid.Parse("c00ab2ea-8acb-45d0-9b93-c1b01c46f70e"), Type = TextBlockType.Text, Text = "You can use your choice of Spirit Lore or Haunt Lore to (action: Make an Impression) or (action: Request) things of incorporeal creatures. At the GM&#39;s discretion, an incorporeal spirit might be willing to hear you out." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("0f992026-57be-4f32-a891-a7c4fc73ae1a"), Feats.Instances.GhostHunterDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("f06da2bf-49d5-419d-95ee-f3d7b41d2dd9"), Feats.Instances.GhostHunterDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("89f369a5-45bf-4552-b9a4-1a66f40e7405"),
+                Id = Guid.Parse("a7898edc-22ef-4cd6-84cc-d5581910e256"),
                 SourceId = Sources.Instances.AbominationVaults.ID,
                 Page = -1
             };

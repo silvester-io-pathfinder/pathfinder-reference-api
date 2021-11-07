@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OracularProvidence : Template
     {
-        public static readonly Guid ID = Guid.Parse("03a98712-704d-4f36-854e-166d801d715b");
+        public static readonly Guid ID = Guid.Parse("b9767685-1d7a-42f9-9775-af657ab8b6f8");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e4ee8897-0a90-44a4-8bd7-27729135ff48"), Type = TextBlockType.Text, Text = "Your mystery grants you access to deep reserves of truly miraculous divine power. You gain an additional 10th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("56be3f92-193f-425e-b47e-d04238f6e9c5"), Type = TextBlockType.Text, Text = "Your mystery grants you access to deep reserves of truly miraculous divine power. You gain an additional 10th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("cdafad29-9b25-42c7-8320-1fef4a740c17"), ClassFeatures.Oracles.OracularClarity.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("6535ed41-9ca5-4027-9ac2-ac9ba6baac90"), ClassFeatures.Oracles.OracularClarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4d403157-0485-4b9d-b9ec-5286a0c974b3"),
+                Id = Guid.Parse("7608d50f-6ced-4ed9-af1e-1ca56a6fba93"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

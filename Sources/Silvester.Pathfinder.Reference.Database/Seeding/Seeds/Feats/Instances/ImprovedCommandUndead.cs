@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ImprovedCommandUndead : Template
     {
-        public static readonly Guid ID = Guid.Parse("637ea7c5-421b-488e-ae78-94cbd92f0b96");
+        public static readonly Guid ID = Guid.Parse("ebef6dd7-2712-4a09-b820-6385de458429");
 
         protected override Feat GetFeat()
         {
@@ -28,19 +29,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e7d85bd0-db0e-49b0-b411-9955a96c7e26"), Type = TextBlockType.Text, Text = "Undead creatures find it all but impossible to resist your commands. When you use (action: Command Undead), if the undead succeeds at its save but doesn’t critically succeed, it is your minion for 1 round. If the undead fails its save, it is your minion for 10 minutes. If it critically fails, it is your minion for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("dbaf2a4a-372e-44ec-88ba-d18584eae703"), Type = TextBlockType.Text, Text = "Undead creatures find it all but impossible to resist your commands. When you use (action: Command Undead), if the undead succeeds at its save but doesn’t critically succeed, it is your minion for 1 round. If the undead fails its save, it is your minion for 10 minutes. If it critically fails, it is your minion for 24 hours." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificDivineFont(Guid.Parse("3e2c2837-084b-4a73-9c72-6c3013aade56"), DivineFonts.Instances.Harm.ID);
-            builder.HaveSpecificFeat(Guid.Parse("f2706741-5dcf-43ce-ba58-762215f7d165"), Feats.Instances.CommandUndead.ID);
-            builder.AddOr(Guid.Parse("94754d11-6e27-45b3-a8c2-9797fcf9bac1"), or => 
+            builder.HaveSpecificDivineFont(Guid.Parse("390caa6e-ca53-4979-9b49-d4541d50b04f"), DivineFonts.Instances.Harm.ID);
+            builder.HaveSpecificFeat(Guid.Parse("c88f515f-cfb6-4cda-806a-a22cb01206b8"), Feats.Instances.CommandUndead.ID);
+            builder.AddOr(Guid.Parse("11c49124-8b2c-4c06-b205-f16f98345542"), or => 
             {
-                or.HaveSpecificAlignment(Guid.Parse("f69c2f38-de5b-4a05-9538-780f48c17576"), Alignments.Instances.LawfulEvil.ID);
-                or.HaveSpecificAlignment(Guid.Parse("54b4984b-0407-49a3-9ff0-75054e71ca0d"), Alignments.Instances.ChaoticEvil.ID);
-                or.HaveSpecificAlignment(Guid.Parse("3480493b-e30c-4f8f-9e18-ba64b95de3a9"), Alignments.Instances.NeutralEvil.ID);
+                or.HaveSpecificAlignment(Guid.Parse("db5108c4-4aaa-4471-8dd0-55f513af69dc"), Alignments.Instances.LawfulEvil.ID);
+                or.HaveSpecificAlignment(Guid.Parse("45d4e478-77c5-4ae0-9bb0-8c9ab155481d"), Alignments.Instances.ChaoticEvil.ID);
+                or.HaveSpecificAlignment(Guid.Parse("5dc077b9-9498-44e4-ac86-4003d674f8dd"), Alignments.Instances.NeutralEvil.ID);
             });
         }
 
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7b2b5be5-3085-4018-9050-4878f456a08b"),
+                Id = Guid.Parse("00e902a4-d267-4184-8352-19e0dd7efade"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

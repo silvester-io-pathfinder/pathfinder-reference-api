@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AnkleBite : Template
     {
-        public static readonly Guid ID = Guid.Parse("8bc465a6-d24a-40be-a6fc-fcabc15a8259");
+        public static readonly Guid ID = Guid.Parse("3a37e68b-9cee-4319-824f-6438255c397b");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5b007ba2-25d9-4eeb-8a6e-42967a53b4cf"), Type = TextBlockType.Text, Text = "Whenever someone grabs onto you, you instinctively bite down hard. Sometimes that makes them let go, and sometimes it just makes them angrier, but either way, it’s both satisfying and tasty. Make a jaws (action: Strike) against the triggering foe. On a critical hit, you are no longer grabbed. This (action: Strike) doesn’t count toward your multiple attack penalty, and your multiple attack penalty doesn’t apply to this (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("ad4b29db-da66-4304-8e71-9d9059ad3e06"), Type = TextBlockType.Text, Text = "Whenever someone grabs onto you, you instinctively bite down hard. Sometimes that makes them let go, and sometimes it just makes them angrier, but either way, it’s both satisfying and tasty. Make a jaws (action: Strike) against the triggering foe. On a critical hit, you are no longer grabbed. This (action: Strike) doesn’t count toward your multiple attack penalty, and your multiple attack penalty doesn’t apply to this (action: Strike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("d1078d0e-7b73-40bb-92d2-efd3a6dea730"), or => 
+            builder.AddOr(Guid.Parse("f29ae0ef-7097-43dd-ac79-785983068864"), or => 
             {
-                or.HaveSpecificHeritage(Guid.Parse("42aef528-027b-4047-b68c-4c23443480a2"), Heritages.Instances.FangSharpenerGoblin.ID);
-                or.HaveSpecificHeritage(Guid.Parse("01923cdd-27dc-49bf-b227-45f39bad073d"), Heritages.Instances.RazortoothGoblin.ID);
+                or.HaveSpecificFeat(Guid.Parse("2a4e56c2-dbce-48db-8e6b-b44108931b98"), Feats.Instances.FangSharpener.ID);
+                or.HaveSpecificHeritage(Guid.Parse("4afd97f5-69e7-4ca6-8e4f-1e7d34832da5"), Heritages.Instances.RazortoothGoblin.ID);
             });
         }
 
@@ -50,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b8b0d8da-ac5a-4fe6-96f5-1cdc58834c4b"),
+                Id = Guid.Parse("ad6df828-ab8d-4867-be22-803545544aa1"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

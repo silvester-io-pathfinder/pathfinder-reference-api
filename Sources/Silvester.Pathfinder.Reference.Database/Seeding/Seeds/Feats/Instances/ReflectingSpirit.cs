@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReflectingSpirit : Template
     {
-        public static readonly Guid ID = Guid.Parse("cf36d4c5-ba65-43cb-b91f-a289c6703c36");
+        public static readonly Guid ID = Guid.Parse("4ce9d3e3-aac4-404a-8754-93c9afe650f9");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04bbe97a-5ead-42ff-b8f6-597b65b0ccb0"), Type = TextBlockType.Text, Text = "You gain a +2 status bonus to AC against physical ranged attacks. If an enemy’s physical ranged attack misses you, you can use your reaction to immediately attempt a ranged (action: Strike) against the attacker using the projectile that missed." };
-            yield return new TextBlock { Id = Guid.Parse("27fd114d-ce61-4b3a-b028-13eda8f23390"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ You have weakness 5 to physical ranged attacks." };
+            yield return new TextBlock { Id = Guid.Parse("c8f368c2-b36d-45ea-aaa2-a31d832e1663"), Type = TextBlockType.Text, Text = "You gain a +2 status bonus to AC against physical ranged attacks. If an enemy’s physical ranged attack misses you, you can use your reaction to immediately attempt a ranged (action: Strike) against the attacker using the projectile that missed." };
+            yield return new TextBlock { Id = Guid.Parse("cd8f5d91-b0ff-4dee-8c0e-0f5d644bacc9"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ You have weakness 5 to physical ranged attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("178fd498-3850-4b82-a63a-bd05eb02277b"),
+                Id = Guid.Parse("d68d438a-0b60-45de-824c-a4a4a6f776d1"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

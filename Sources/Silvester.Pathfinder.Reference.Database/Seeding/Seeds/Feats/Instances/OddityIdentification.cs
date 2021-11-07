@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OddityIdentification : Template
     {
-        public static readonly Guid ID = Guid.Parse("4d05bf3a-b535-4339-85ea-81a2d2252f67");
+        public static readonly Guid ID = Guid.Parse("e985f4b0-57e1-4949-b9fd-6f80455f6fe3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("46180057-acc9-40f0-a516-5b985506fd32"), Type = TextBlockType.Text, Text = "You have a sense for spells that twist minds or reveal secrets. You gain a +2 circumstance bonus to Occultism checks to (Action: Identify Magic) with the (trait: mental), (trait: possession), (trait: prediction), or (trait: scrying) traits." };
+            yield return new TextBlock { Id = Guid.Parse("6d5a9a59-abb4-49bc-aca2-0084300e2c4e"), Type = TextBlockType.Text, Text = "You have a sense for spells that twist minds or reveal secrets. You gain a +2 circumstance bonus to Occultism checks to (Action: Identify Magic) with the (trait: mental), (trait: possession), (trait: prediction), or (trait: scrying) traits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("cfedfbc1-2840-4abd-8316-ad96963faeff"), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("2f8425e2-bf76-4bb0-bbba-d466e34d3098"), Proficiencies.Instances.Trained.ID, Skills.Instances.Occultism.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ac2b34da-9498-4bc7-ab13-c4115a90a24a"),
+                Id = Guid.Parse("d8826792-ddd7-4dd1-b4c8-7025484b915a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

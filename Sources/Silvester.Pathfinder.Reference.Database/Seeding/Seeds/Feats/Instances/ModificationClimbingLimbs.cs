@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationClimbingLimbs : Template
     {
-        public static readonly Guid ID = Guid.Parse("2a03dee4-53f3-4a81-ac0c-a0d8eca14c8e");
+        public static readonly Guid ID = Guid.Parse("d4191810-e7db-4c8a-b2b8-f0357fef558b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c67d0f9-cf57-4f19-abb6-0356e35f4214"), Type = TextBlockType.Text, Text = "With appendages that can claw or create suction, your construct becomes a capable climber. Your innovation gains a climb Speed equal to half its land Speed." };
+            yield return new TextBlock { Id = Guid.Parse("c83b2761-f618-4201-b327-3b0466460223"), Type = TextBlockType.Text, Text = "With appendages that can claw or create suction, your construct becomes a capable climber. Your innovation gains a climb Speed equal to half its land Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("98fc6804-3dc9-490e-921f-7d6af5f4227c"),
+                Id = Guid.Parse("c909eb71-8afa-49d8-9401-a63a7db0e340"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

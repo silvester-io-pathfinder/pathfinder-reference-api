@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AiryStep : Template
     {
-        public static readonly Guid ID = Guid.Parse("eeaecd1e-2b89-4dae-8071-cdca73c8e77f");
+        public static readonly Guid ID = Guid.Parse("1a772a3f-a5b7-40c6-bb4a-4c62a3583e89");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d244a633-bd56-4fd2-960b-025c96ed18be"), Type = TextBlockType.Text, Text = "You create a blanket of fog in a 5-foot burst centered on one corner of your space. All creatures within that area are concealed, and all others are concealed to them. This concealment applies to the triggering effect, and the fog lasts for 1 minute or until dispersed by a strong wind. After resolving the triggering effect, you (action: Step). If an effect prevents you from (action: Stepping | Step), you attempt to (action: Escape) the effect and (action: Step) if you succeed." };
+            yield return new TextBlock { Id = Guid.Parse("0cd804b6-6ad5-448d-a38c-9a7df578f484"), Type = TextBlockType.Text, Text = "You create a blanket of fog in a 5-foot burst centered on one corner of your space. All creatures within that area are concealed, and all others are concealed to them. This concealment applies to the triggering effect, and the fog lasts for 1 minute or until dispersed by a strong wind. After resolving the triggering effect, you (action: Step). If an effect prevents you from (action: Stepping | Step), you attempt to (action: Escape) the effect and (action: Step) if you succeed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("70e88b68-d406-44a1-876b-9a1a6eb0936e"),
+                Id = Guid.Parse("dd1f2f29-80ae-4c75-bac9-280baf48bbe2"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ArrayWrathfulBerserker : Template
     {
-        public static readonly Guid ID = Guid.Parse("079d3d6b-58e4-442e-95a6-0cfcb1488870");
+        public static readonly Guid ID = Guid.Parse("4b2f35e0-7fce-45a9-b772-666967d2e602");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("16f87a16-956f-4b27-b75f-9b6a8ddfdb05"), Type = TextBlockType.Text, Text = "~ Wrathful Berserker: __Str__ 18, __Dex__ 14, __Con__ 16, __Int__ 8, __Wis__ 10, __Cha__ 12; +2 AC (+3 Dex cap)" };
+            yield return new TextBlock { Id = Guid.Parse("1d2edec5-8f69-49ac-9afb-8f794c424295"), Type = TextBlockType.Text, Text = "~ Wrathful Berserker: __Str__ 18, __Dex__ 14, __Con__ 16, __Int__ 8, __Wis__ 10, __Cha__ 12; +2 AC (+3 Dex cap)" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7ed68707-76e5-4524-a1e1-60a6ac1d9136"),
+                Id = Guid.Parse("f8729356-79d9-431d-81ea-8ad50dc6e127"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

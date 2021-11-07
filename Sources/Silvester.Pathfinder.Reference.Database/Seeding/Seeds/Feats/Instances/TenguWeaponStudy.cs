@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class TenguWeaponStudy : Template
     {
-        public static readonly Guid ID = Guid.Parse("a07ee14e-efb7-4b60-a062-6e0429fdc936");
+        public static readonly Guid ID = Guid.Parse("73f97aab-7c94-4dd7-9701-eded6d6dbf3d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("745ba5fe-769d-4083-b693-70e50e01bee9"), Type = TextBlockType.Text, Text = "You&#39;ve learned techniques for using blades and other tengu weapons. Whenever you critically hit using one of the weapons from your (feat: Tengu Weapon Familiarity), you apply the weapon&#39;s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("a7ae1279-bca9-4166-a0d5-ac398b31a9de"), Type = TextBlockType.Text, Text = "You&#39;ve learned techniques for using blades and other tengu weapons. Whenever you critically hit using one of the weapons from your (feat: Tengu Weapon Familiarity), you apply the weapon&#39;s critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f97478af-f156-41ec-bf86-3db8645296c2"), Feats.Instances.TenguWeaponFamiliarity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("267ae0e8-7b3a-4b2a-8a30-8e96d4790df6"), Feats.Instances.TenguWeaponFamiliarity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("44b6d474-48ef-4b7e-9d90-74c730b93220"),
+                Id = Guid.Parse("b9edb7fa-b2ba-48af-80f2-541ac9fe4f1d"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RogueDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("31d43246-056d-43cf-a727-fa054ac8ea7d");
+        public static readonly Guid ID = Guid.Parse("ccf1fa9f-a86b-48df-93ca-0ce4eb125153");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("88ede565-61ae-44ca-b40e-09848c1ebcf4"), Type = TextBlockType.Text, Text = "You gain a skill feat and the rogue’s surprise attack class feature (page 181). You become trained in light armor. In addition, you become trained in Stealth or Thievery plus one skill of your choice; if you are already trained in both Stealth and Thievery, you become trained in an additional skill of your choice. You become trained in rogue class DC." };
+            yield return new TextBlock { Id = Guid.Parse("c6600c03-b194-4b5f-b56e-c79855b88ff2"), Type = TextBlockType.Text, Text = "You gain a skill feat and the rogue’s surprise attack class feature (page 181). You become trained in light armor. In addition, you become trained in Stealth or Thievery plus one skill of your choice; if you are already trained in both Stealth and Thievery, you become trained in an additional skill of your choice. You become trained in rogue class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificStat(Guid.Parse("e7107021-3dcc-4fc9-b2cc-4c5964d52583"), requiredStatValue: 14, Stats.Instances.Dexterity.ID);
+            builder.HaveSpecificStat(Guid.Parse("86928f4f-044c-4ee8-a2fe-0af2caf4701f"), requiredStatValue: 14, Stats.Instances.Dexterity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ad6a7009-1365-4655-86ae-b52faf983306"),
+                Id = Guid.Parse("8791fdf2-0a9f-4242-a30d-5cbe3c87d4fd"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

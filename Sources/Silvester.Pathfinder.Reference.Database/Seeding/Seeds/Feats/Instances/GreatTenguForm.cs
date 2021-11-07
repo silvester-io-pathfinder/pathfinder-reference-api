@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GreatTenguForm : Template
     {
-        public static readonly Guid ID = Guid.Parse("fa88f199-0723-4834-aaba-00a2ba1d357e");
+        public static readonly Guid ID = Guid.Parse("6fd64221-642f-45ac-b487-2a909f110b8b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1056f2e5-51a2-45d4-bb3b-69e63e038856"), Type = TextBlockType.Text, Text = "You take on the imposing form of a large, winged oni. Once per day, as part of using (feat: Long-Nosed Form), you also gain the benefits of 4th-level (spell: enlarge) and (spell: fly). This lasts for 5 minutes or until you shift out of your (feat: Long-Nosed Form), whichever happens first." };
+            yield return new TextBlock { Id = Guid.Parse("8fbc1057-92c2-4925-a66b-9cf8b8d2a7ec"), Type = TextBlockType.Text, Text = "You take on the imposing form of a large, winged oni. Once per day, as part of using (feat: Long-Nosed Form), you also gain the benefits of 4th-level (spell: enlarge) and (spell: fly). This lasts for 5 minutes or until you shift out of your (feat: Long-Nosed Form), whichever happens first." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("7c73fe5e-affd-4bf4-b2a3-486a723f5542"), Feats.Instances.LongNosedForm.ID);
+            builder.HaveSpecificFeat(Guid.Parse("dd0f0e84-2f87-4c12-bde4-62ab9e5e2993"), Feats.Instances.LongNosedForm.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c386ea57-e862-4bca-92c7-a533907a5901"),
+                Id = Guid.Parse("dbd4d8a9-fd61-46f8-812c-022800fa4a8c"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

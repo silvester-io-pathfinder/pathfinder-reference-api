@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WaterStrider : Template
     {
-        public static readonly Guid ID = Guid.Parse("00cfeaf0-9786-4b7d-9b27-1a3b56aa370d");
+        public static readonly Guid ID = Guid.Parse("c7ded73a-4896-4eb9-a8cd-acf969d8a275");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9d012b5c-4439-4399-b155-3e2b36cac9f0"), Type = TextBlockType.Text, Text = "Water cradles your every step, allowing you to walk on its surface. (action: Stride) up to your Speed. During your movement, you can move across liquids that don’t support your weight. If you end your movement on a surface that can’t support you, you fall into the liquid at the end of your movement. You can increase the number of actions to 3 to (action: Stride) up to three times your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("947f3e94-d0e0-46bf-b78f-c7fd4f96afc5"), Type = TextBlockType.Text, Text = "Water cradles your every step, allowing you to walk on its surface. (action: Stride) up to your Speed. During your movement, you can move across liquids that don’t support your weight. If you end your movement on a surface that can’t support you, you fall into the liquid at the end of your movement. You can increase the number of actions to 3 to (action: Stride) up to three times your Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("7219fe2b-b92f-4e58-917a-7e1ccc56fc4f"),
+                Id = Guid.Parse("2195595b-1223-4ace-bfca-4096ff94e82f"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

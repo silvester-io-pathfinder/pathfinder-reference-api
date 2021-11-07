@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class LitanyAgainstWrath : Template
     {
-        public static readonly Guid ID = Guid.Parse("4d788528-1876-4162-945f-e09c8493b2a3");
+        public static readonly Guid ID = Guid.Parse("047d2fca-11bd-47fc-afeb-7d43a683db67");
 
         protected override Feat GetFeat()
         {
@@ -28,14 +29,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad8c32a1-8dbb-4078-b551-203a5b1d3878"), Type = TextBlockType.Text, Text = "You excoriate a foe for its wrath against goodly creatures. You can cast the (spell: litany against wrath) devotion spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("e9a21d97-d3c2-4e90-a1cb-114256762d70"), Type = TextBlockType.Text, Text = "You excoriate a foe for its wrath against goodly creatures. You can cast the (spell: litany against wrath) devotion spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClass(Guid.Parse("80739292-c627-43f0-b6f9-b05812f8d35a"), Classes.Instances.Champion.ID);
-            builder.HaveSpecificTenet(Guid.Parse("bba37ab1-b390-4954-99cc-9255eef9e379"), Tenets.Instances.Good.ID);
+            builder.HaveSpecificClass(Guid.Parse("f18fbcd8-cd73-41e4-8665-0e6e7d0d0666"), Classes.Instances.Champion.ID);
+            builder.HaveSpecificTenet(Guid.Parse("480c7201-2d5c-4889-8484-5e80138823cf"), Tenets.Instances.Good.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0d7e3ede-19a7-4522-850a-8c58da9dfe91"),
+                Id = Guid.Parse("04a4e82c-bb5c-4120-bedc-b91e2a6fe707"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

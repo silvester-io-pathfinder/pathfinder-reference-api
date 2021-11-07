@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PirateDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("5797f5d3-a0ed-4137-b66d-20091d1f47e1");
+        public static readonly Guid ID = Guid.Parse("1452d574-634d-46b0-a566-01037f07ba24");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("486eccfe-6d22-4a02-875c-26d818dedf3c"), Type = TextBlockType.Text, Text = "As a pirate, you sail the seas in search of enemy ships to plunder. You become trained in Sailing Lore, or become an expert in it if you were already trained. You ignore the effects of difficult terrain or uneven ground caused by a ship’s movement. Additionally, you gain the (feat: Boarding Assault) action." };
+            yield return new TextBlock { Id = Guid.Parse("7d958b97-abcd-428e-ba93-c21c59a9840b"), Type = TextBlockType.Text, Text = "As a pirate, you sail the seas in search of enemy ships to plunder. You become trained in Sailing Lore, or become an expert in it if you were already trained. You ignore the effects of difficult terrain or uneven ground caused by a ship’s movement. Additionally, you gain the (feat: Boarding Assault) action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("eab5c411-a446-4308-98e2-e8044084c1a3"), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("49ad711b-8641-4196-bb8a-edfb6deabd7c"), Proficiencies.Instances.Trained.ID, Skills.Instances.Intimidation.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a9ce42c9-a5f9-4b81-96f4-bea9e5b68b0b"),
+                Id = Guid.Parse("c74cdc31-3a19-4d52-8fa0-268d81432527"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

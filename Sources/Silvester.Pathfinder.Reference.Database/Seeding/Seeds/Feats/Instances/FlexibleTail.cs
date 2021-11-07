@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FlexibleTail : Template
     {
-        public static readonly Guid ID = Guid.Parse("6192f80a-9fc6-46d8-ad6b-e41d964cc436");
+        public static readonly Guid ID = Guid.Parse("1c0e157a-940b-4734-aa41-97b37e634114");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("60b7bfc2-848f-42f1-9027-533b6f55f71c"), Type = TextBlockType.Text, Text = "You can perform simple (action: Interact) actions with your tail, such as opening an unlocked door. Your tail can’t perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can’t use it to hold items." };
+            yield return new TextBlock { Id = Guid.Parse("ab0c899c-c3ea-442e-abfa-22db0a448769"), Type = TextBlockType.Text, Text = "You can perform simple (action: Interact) actions with your tail, such as opening an unlocked door. Your tail can’t perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can’t use it to hold items." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("bc7806b4-bc34-4478-bb7f-6f909e9f115a"),
+                Id = Guid.Parse("1d3a48ee-0f75-477e-b4cc-1c40f1d19337"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MagussAnalysis : Template
     {
-        public static readonly Guid ID = Guid.Parse("d95ed5b3-3064-449c-a8f1-efa3f1ce4bb0");
+        public static readonly Guid ID = Guid.Parse("012b5d29-4710-4061-bdae-bc17d7faca19");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cc0ef375-c941-4010-b789-d8cbcb611dd7"), Type = TextBlockType.Text, Text = "You make an assessment informed by your knowledge of how a creature fights. Attempt a check to (action: Recall Knowledge) about a creature. You gain a +1 circumstance bonus to your check if you previously hit the creature with a (action: Strike) this turn. If your check is successful, recharge your (feat: Spellstrike). The subject of your check is temporarily immune to Magus’s Analysis for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("d2c4bb75-40b9-4f79-929d-d8e8704b3a9b"), Type = TextBlockType.Text, Text = "You make an assessment informed by your knowledge of how a creature fights. Attempt a check to (action: Recall Knowledge) about a creature. You gain a +1 circumstance bonus to your check if you previously hit the creature with a (action: Strike) this turn. If your check is successful, recharge your (feat: Spellstrike). The subject of your check is temporarily immune to Magus’s Analysis for 1 day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("4978a331-a043-4cc2-8100-b84e0facb1eb"), Feats.Instances.Spellstrike.ID);
+            builder.HaveSpecificFeat(Guid.Parse("aff65198-1406-4cd2-ac8a-2c79548ea13c"), Feats.Instances.Spellstrike.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("68bf28c4-fe90-48f1-89cd-bc09b3b172c7"),
+                Id = Guid.Parse("78946f65-0abb-4064-8081-9fff3cacf946"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

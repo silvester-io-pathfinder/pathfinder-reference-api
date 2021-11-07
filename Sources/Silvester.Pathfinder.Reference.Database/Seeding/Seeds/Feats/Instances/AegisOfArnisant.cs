@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AegisOfArnisant : Template
     {
-        public static readonly Guid ID = Guid.Parse("0bdb750f-7671-4e64-8ab0-37ab87a9394e");
+        public static readonly Guid ID = Guid.Parse("31f7db78-a0ec-4002-9576-2e7f6da5466a");
 
         protected override Feat GetFeat()
         {
@@ -28,16 +29,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6e9f313e-3603-4491-8048-3a7a8e83454a"), Type = TextBlockType.Text, Text = "Inspired by the tale of Arnisant, you transform your shield into a magic ward. Until the beginning of your next turn, you gain the following reaction:" };
-            yield return new TextBlock { Id = Guid.Parse("50c73c7f-893a-4890-9f9d-679c9661014f"), Type = TextBlockType.Text, Text = "~ Absorb into the Aegis: REACTION ((trait: manipulate)) **Trigger** An enemy casts a spell that targets you or an ally within 15 feet of you; **Effect** You interpose your shield’s ward against the spell. Attempt a counteract check, using your Religion modifier as your counteract modifier. On a success, the spell is counteracted and your shield takes damage equal to four times the spell level as it absorbs and disperses the magical energy. On a failure, the shield takes damage equal to twice the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("910c6d12-e8e3-4e66-a130-1c73e8799f40"), Type = TextBlockType.Text, Text = "Inspired by the tale of Arnisant, you transform your shield into a magic ward. Until the beginning of your next turn, you gain the following reaction:" };
+            yield return new TextBlock { Id = Guid.Parse("d992b4e8-c406-46eb-b5b4-af8d7d8399c6"), Type = TextBlockType.Text, Text = "~ Absorb into the Aegis: REACTION ((trait: manipulate)) **Trigger** An enemy casts a spell that targets you or an ally within 15 feet of you; **Effect** You interpose your shield’s ward against the spell. Attempt a counteract check, using your Religion modifier as your counteract modifier. On a success, the spell is counteracted and your shield takes damage equal to four times the spell level as it absorbs and disperses the magical energy. On a failure, the shield takes damage equal to twice the spell’s level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("407f8045-546b-4d50-b897-a19f9a7ebd49"), Feats.Instances.KnightVigilantDedication.ID);
-            builder.HaveSpecificFeat(Guid.Parse("eea7da37-f90f-4fb7-9869-7d5b837997a3"), Feats.Instances.ShieldBlock.ID);
-            builder.HaveSpecificSkillProficiency(Guid.Parse("75fb7a94-7d5b-48ca-ae38-944105f4fa5e"), Proficiencies.Instances.Master.ID, Skills.Instances.Religion.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ce8e4bed-47ca-4290-b946-45f6175a220f"), Feats.Instances.KnightVigilantDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("8a749859-d1ca-4a57-92f3-82f947e61fcf"), Feats.Instances.ShieldBlock.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("ed3fea79-5738-41df-b6df-e9b5809e5e18"), Proficiencies.Instances.Master.ID, Skills.Instances.Religion.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -49,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2305656e-870f-417f-b1c1-45067ea93cc5"),
+                Id = Guid.Parse("bde8499e-4c4e-4a11-9d47-79f7c52677c1"),
                 SourceId = Sources.Instances.LostOmensCharacterGuide.ID,
                 Page = -1
             };

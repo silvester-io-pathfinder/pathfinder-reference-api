@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DistractingExplosion : Template
     {
-        public static readonly Guid ID = Guid.Parse("ae5becc9-ad77-4a5c-8994-9e35e0a3221b");
+        public static readonly Guid ID = Guid.Parse("903c9b63-10c8-47ad-948e-75d8dc15e619");
 
         protected override Feat GetFeat()
         {
@@ -28,15 +29,15 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f1835e7-5d05-4ac5-b199-47f1086b369e"), Type = TextBlockType.Text, Text = "Your enemies think they can concentrate on something else while you’re nearby? Oh, you’ll give them a distraction, all right! Make a melee (action: Strike) against the triggering creature with a weapon or unarmed attack that is benefiting from your offensive boost. This (action: Strike) doesn’t count toward your multiple attack penalty, and your multiple attack penalty doesn’t apply to this (action: Strike)." };
-            yield return new TextBlock { Id = Guid.Parse("a7be5c09-9601-4766-9ebd-62293cdbbc03"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("d33d9f97-181b-472f-81b4-5d27e935a5a1"), Type = TextBlockType.Text, Text = "~ Unstable Function: You pull out all the stops to create an explosive distraction. Add the (trait: unstable) trait to Distracting Explosion. If the attack hits, you disrupt the triggering (trait: concentrate) action." };
+            yield return new TextBlock { Id = Guid.Parse("7515dcbd-c1fa-424a-9593-01ae226c200a"), Type = TextBlockType.Text, Text = "Your enemies think they can concentrate on something else while you’re nearby? Oh, you’ll give them a distraction, all right! Make a melee (action: Strike) against the triggering creature with a weapon or unarmed attack that is benefiting from your offensive boost. This (action: Strike) doesn’t count toward your multiple attack penalty, and your multiple attack penalty doesn’t apply to this (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("89aa30e0-98a0-469d-96f0-4d0e2a022a25"), Type = TextBlockType.Text, Text = "----" };
+            yield return new TextBlock { Id = Guid.Parse("3282e6d1-d548-4c3a-b346-a3b85e413a38"), Type = TextBlockType.Text, Text = "~ Unstable Function: You pull out all the stops to create an explosive distraction. Add the (trait: unstable) trait to Distracting Explosion. If the attack hits, you disrupt the triggering (trait: concentrate) action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificClassFeature(Guid.Parse("e9dcf98b-4fc7-434f-8217-1fe91a37b935"), ClassFeatures.Gunslingers.OffensiveBoost.ID);
+            builder.HaveSpecificClassFeature(Guid.Parse("876c541e-87f1-47fc-bed4-a1f1baf4dca7"), ClassFeatures.Inventors.OffensiveBoost.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -48,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("daf5206b-b1ff-4705-bcef-da7ce2dabff7"),
+                Id = Guid.Parse("8af758dc-2281-4402-b6bb-0fbd92a971c8"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

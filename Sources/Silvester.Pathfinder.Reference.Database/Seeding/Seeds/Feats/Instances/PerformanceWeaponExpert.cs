@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PerformanceWeaponExpert : Template
     {
-        public static readonly Guid ID = Guid.Parse("6e064e21-901d-4f7e-8b16-408643a86191");
+        public static readonly Guid ID = Guid.Parse("89ab2cf2-ffc7-4483-9359-204f22dbfd35");
 
         protected override Feat GetFeat()
         {
@@ -28,19 +29,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3deaf396-8c09-4ccb-b7ae-0800b9194e44"), Type = TextBlockType.Text, Text = "Your experience has made you better with a wide variety of weapons. Your proficiency ranks for simple weapons and martial weapons increase to expert, as does your proficiency rank for your chosen advanced weapon." };
+            yield return new TextBlock { Id = Guid.Parse("529335db-61fc-44e2-91bd-4e3ca159fe00"), Type = TextBlockType.Text, Text = "Your experience has made you better with a wide variety of weapons. Your proficiency ranks for simple weapons and martial weapons increase to expert, as does your proficiency rank for your chosen advanced weapon." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("977f419e-4ffc-4d24-b66f-c0276f6eaa1e"), Feats.Instances.ProvocatorDedication.ID);
-            builder.AddOr(Guid.Parse("f512ba1c-9c81-4cf3-80cf-3243a51f0587"), or => 
+            builder.HaveSpecificFeat(Guid.Parse("1cc9cc5b-baa0-4a75-8a27-2cdb710e61db"), Feats.Instances.ProvocatorDedication.ID);
+            builder.AddOr(Guid.Parse("d35323fd-517d-4243-a7e9-2ec47cc4104a"), or => 
             {
-                or.HaveAnyMeleeWeaponSpecificProficiency(Guid.Parse("4d2aac13-6569-4099-b9f1-e5568c62b9f0"), Proficiencies.Instances.Expert.ID);
-                or.HaveAnyRangedWeaponSpecificProficiency(Guid.Parse("0f97ac36-5c5e-4a7b-9dd0-2a6bad3515ac"), Proficiencies.Instances.Expert.ID);
-                or.HaveAnyWeaponCategorySpecificProficiency(Guid.Parse("d5515085-be7c-4c39-9970-22694cb77041"), Proficiencies.Instances.Expert.ID);
-                or.HaveAnyWeaponGroupSpecificProficiency(Guid.Parse("9ab4841a-1d05-4963-8a8f-f7cc275f18c3"), Proficiencies.Instances.Expert.ID);
+                or.HaveAnyMeleeWeaponSpecificProficiency(Guid.Parse("54266e58-126d-43a3-81ad-9e66c57ce1f8"), Proficiencies.Instances.Expert.ID);
+                or.HaveAnyRangedWeaponSpecificProficiency(Guid.Parse("73e7d916-98c7-4fc7-9b99-5b22d22d1c9f"), Proficiencies.Instances.Expert.ID);
+                or.HaveAnyWeaponCategorySpecificProficiency(Guid.Parse("bdb459aa-bd21-4150-ab12-e45ea6df106c"), Proficiencies.Instances.Expert.ID);
+                or.HaveAnyWeaponGroupSpecificProficiency(Guid.Parse("92e7e106-4df9-496d-884b-9cc6e505586b"), Proficiencies.Instances.Expert.ID);
             });
         }
 
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("038eec31-8922-41e0-a0ce-deb7d0269584"),
+                Id = Guid.Parse("4ab9bf0a-ab91-4c08-b20e-e55df172c211"),
                 SourceId = Sources.Instances.AgentsOfEdgewatch.ID,
                 Page = -1
             };

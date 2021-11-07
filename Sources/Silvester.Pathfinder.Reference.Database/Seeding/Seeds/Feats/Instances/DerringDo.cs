@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DerringDo : Template
     {
-        public static readonly Guid ID = Guid.Parse("74c8a75b-04ac-42ba-9faf-e9f5a36cf623");
+        public static readonly Guid ID = Guid.Parse("a35d0aa3-2e33-4874-9733-265a833f8475");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e5146efc-b17d-43f0-a877-6448f93f685f"), Type = TextBlockType.Text, Text = "When you compound panache with even more derring-do, it somehow tends to work out. When you already have panache, you can roll twice and use the higher result on checks to which the circumstance bonus for having panache applies ((action: Tumble Through) and any skill actions listed in your swashbuckler’s style)." };
+            yield return new TextBlock { Id = Guid.Parse("3c58f5f8-425e-4166-924c-d4c633b1b814"), Type = TextBlockType.Text, Text = "When you compound panache with even more derring-do, it somehow tends to work out. When you already have panache, you can roll twice and use the higher result on checks to which the circumstance bonus for having panache applies ((action: Tumble Through) and any skill actions listed in your swashbuckler’s style)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4fa88c18-d7a7-48c0-ae96-4696fd33a9d9"),
+                Id = Guid.Parse("69c7e578-c750-41c0-84fc-b1c9d26c2fb5"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

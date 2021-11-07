@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HydraulicDeflection : Template
     {
-        public static readonly Guid ID = Guid.Parse("80855e27-c188-4b5b-882b-38ec340a4ba4");
+        public static readonly Guid ID = Guid.Parse("e5e1da5e-bcb3-46d5-9b0a-e39985a97a90");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("11cbb372-4d73-45ba-91fb-8995a6c78401"), Type = TextBlockType.Text, Text = "Drawing moisture from the atmosphere, you create a disc of hovering water that deflects attacks. You gain a +1 circumstance bonus to AC until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("82e38892-bb40-452a-91a7-533c1cf26a42"), Type = TextBlockType.Text, Text = "Drawing moisture from the atmosphere, you create a disc of hovering water that deflects attacks. You gain a +1 circumstance bonus to AC until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ef67f049-2e53-40b1-bc47-93f3e71062ef"),
+                Id = Guid.Parse("98bf9a03-2844-432f-8d91-f819de5775d9"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Intercorporate : Template
     {
-        public static readonly Guid ID = Guid.Parse("49380b98-f4ee-4b80-be69-5c5b61aefc3d");
+        public static readonly Guid ID = Guid.Parse("41be7ce0-c772-42c4-a24e-f4f3de287b33");
 
         protected override Feat GetFeat()
         {
@@ -28,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9e960d9f-a9b4-4acc-bbc8-e44c59d50490"), Type = TextBlockType.Text, Text = "Your ordered physiology rejects unwelcome elements. Choose one." };
-            yield return new TextBlock { Id = Guid.Parse("37ffc6b3-b991-479f-9544-e256df5f7b6c"), Type = TextBlockType.Enumeration, Text = " Disease or Poison: Attempt a saving throw against the affliction at its current stage. On a failure, the affliction’s stage doesn’t increase, but you suffer the effects of the stage you were already on. On a critical failure, the stage only increases by 1." };
-            yield return new TextBlock { Id = Guid.Parse("963e14a8-6713-4e5d-9fbd-0a113c1268b3"), Type = TextBlockType.Enumeration, Text = " Persistent Damage: Attempt a DC 10 flat check to recover from the persistent damage." };
+            yield return new TextBlock { Id = Guid.Parse("2a578ca7-b5ed-4903-a225-c9c839a8a2c5"), Type = TextBlockType.Text, Text = "Your ordered physiology rejects unwelcome elements. Choose one." };
+            yield return new TextBlock { Id = Guid.Parse("bea09e02-136f-4651-a8c9-e2a19c5b1579"), Type = TextBlockType.Enumeration, Text = " Disease or Poison: Attempt a saving throw against the affliction at its current stage. On a failure, the affliction’s stage doesn’t increase, but you suffer the effects of the stage you were already on. On a critical failure, the stage only increases by 1." };
+            yield return new TextBlock { Id = Guid.Parse("a6662084-fa24-4a79-96b6-1adaaf5be5b4"), Type = TextBlockType.Enumeration, Text = " Persistent Damage: Attempt a DC 10 flat check to recover from the persistent damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("411ac54c-e564-4d23-9986-8cc5e1bc7fca"),
+                Id = Guid.Parse("eb6cafa3-981d-44b7-8292-f3a705978779"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

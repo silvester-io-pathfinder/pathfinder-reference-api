@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DivineReflexes : Template
     {
-        public static readonly Guid ID = Guid.Parse("dc95c072-03fc-4443-a154-24930b7459dc");
+        public static readonly Guid ID = Guid.Parse("3230c48f-17ea-4c52-94dc-fe5090170754");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cbdb2ddd-68b7-4450-845e-06feebe2c369"), Type = TextBlockType.Text, Text = "At the start of each of your turns, you gain an additional reaction that you can use only for your champion’s reaction." };
+            yield return new TextBlock { Id = Guid.Parse("027d1baf-7da2-4236-867f-f7889ecf5fd4"), Type = TextBlockType.Text, Text = "At the start of each of your turns, you gain an additional reaction that you can use only for your champion’s reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("0a9401a9-92bb-4129-abc1-d6d8cad10eb2"),
+                Id = Guid.Parse("8df01a92-a4f4-4205-b4b9-880e994446be"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

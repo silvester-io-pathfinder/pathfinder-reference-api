@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WardingSign : Template
     {
-        public static readonly Guid ID = Guid.Parse("f2f602d1-ae02-40df-b018-240c624bd558");
+        public static readonly Guid ID = Guid.Parse("43ba0c8b-4c49-47d5-9d31-6fb963446cbf");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84c60840-7aeb-4c6c-8906-eb17e636bf2f"), Type = TextBlockType.Text, Text = "You call on the power of a personal, eldritch sign of protection, which flares brightly before slowly fading. You gain a +2 circumstance bonus to the triggering saving throw, or a +3 circumstance bonus if the effect is a (trait: curse)." };
+            yield return new TextBlock { Id = Guid.Parse("b5725b2e-2400-4c57-a137-e1afa1eb4e19"), Type = TextBlockType.Text, Text = "You call on the power of a personal, eldritch sign of protection, which flares brightly before slowly fading. You gain a +2 circumstance bonus to the triggering saving throw, or a +3 circumstance bonus if the effect is a (trait: curse)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("fffbe6fd-f1b8-41b1-a76c-4ef33d3a7a3a"),
+                Id = Guid.Parse("68283425-2531-4e26-a664-8736f61c4b01"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

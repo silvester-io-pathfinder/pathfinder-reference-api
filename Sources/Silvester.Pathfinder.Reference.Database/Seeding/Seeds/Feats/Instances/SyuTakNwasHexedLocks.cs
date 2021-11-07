@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SyuTakNwasHexedLocks : Template
     {
-        public static readonly Guid ID = Guid.Parse("07383428-bce3-437e-8109-6d7d137cbc8f");
+        public static readonly Guid ID = Guid.Parse("8c5cab02-e10c-4cab-9a5d-4aec042c3f9d");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bb691767-6f45-486a-b423-4ea49c431266"), Type = TextBlockType.Text, Text = "Your hair unarmed attack gains the (trait: reach) trait. You can deliver hexes through your hair. When you successfully cast a hex focus spell that requires 2 or more actions to cast and that doesn&#39;t require a spell attack roll, if your target is within your reach, as part of the spellcasting activity you can make a hair (action: Strike) against the foe before applying any effects of the hex. If this (action: Strike) misses, the hex has no effect." };
+            yield return new TextBlock { Id = Guid.Parse("fad9e1dc-29d4-4b96-96da-c453060f72db"), Type = TextBlockType.Text, Text = "Your hair unarmed attack gains the (trait: reach) trait. You can deliver hexes through your hair. When you successfully cast a hex focus spell that requires 2 or more actions to cast and that doesn&#39;t require a spell attack roll, if your target is within your reach, as part of the spellcasting activity you can make a hair (action: Strike) against the foe before applying any effects of the hex. If this (action: Strike) misses, the hex has no effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("a038eb3e-1173-4cd4-a527-3179f03906ba"), Feats.Instances.LivingHair.ID);
+            builder.HaveSpecificFeat(Guid.Parse("84898dde-acab-41da-b8b9-00da060b8829"), Feats.Instances.LivingHair.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6e8fe818-f78e-4173-ab0e-2a20203e0e46"),
+                Id = Guid.Parse("15f797e5-f4e9-42e6-b5c7-d8b137dbce3d"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

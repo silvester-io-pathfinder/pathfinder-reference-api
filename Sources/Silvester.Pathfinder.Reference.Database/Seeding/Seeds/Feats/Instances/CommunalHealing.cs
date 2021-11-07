@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CommunalHealing : Template
     {
-        public static readonly Guid ID = Guid.Parse("ac290946-7281-4311-a38d-da74b675a5e5");
+        public static readonly Guid ID = Guid.Parse("fbe84f1b-03c9-4b67-8d07-9076a1ba9104");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e647c647-8767-429d-af96-2b6bf34b10f8"), Type = TextBlockType.Text, Text = "You’re a conduit for positive energy, and as you channel it through you, it heals some of your minor injuries. When you cast the (spell: heal) spell to heal a single creature other than yourself, you regain Hit Points equal to the spell level of the heal spell." };
+            yield return new TextBlock { Id = Guid.Parse("06784b51-3794-4d5e-8c2d-2c71a7da37ed"), Type = TextBlockType.Text, Text = "You’re a conduit for positive energy, and as you channel it through you, it heals some of your minor injuries. When you cast the (spell: heal) spell to heal a single creature other than yourself, you regain Hit Points equal to the spell level of the heal spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e917d35a-5e3c-4ebd-8067-ffbaa36db07c"),
+                Id = Guid.Parse("6eead6c2-1d45-4f5e-ba6d-1cbb89497d30"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

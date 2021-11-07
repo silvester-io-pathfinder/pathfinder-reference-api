@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GolemGrafterDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("fc8be830-fef8-47bf-83f6-901440e9cef6");
+        public static readonly Guid ID = Guid.Parse("eb5ed88b-c55e-4e80-9015-514805d18290");
 
         protected override Feat GetFeat()
         {
@@ -28,18 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e3b42dee-e573-4f89-9ea1-fa684f907d09"), Type = TextBlockType.Text, Text = "Your flesh has been specially treated with the same arcane and alchemical processes used to toughen the skin of flesh golems. Increase your maximum Hit Points by an amount equal to your level. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the golem grafter archetype." };
+            yield return new TextBlock { Id = Guid.Parse("a1deb3fc-1a5a-4cc0-8f75-b310f01e3531"), Type = TextBlockType.Text, Text = "Your flesh has been specially treated with the same arcane and alchemical processes used to toughen the skin of flesh golems. Increase your maximum Hit Points by an amount equal to your level. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the golem grafter archetype." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("7cef30d7-1e76-456d-9f88-60de7ba63954"), or => 
+            builder.AddOr(Guid.Parse("f60972b9-8838-4a03-a9ed-5b5cb9135dd1"), or => 
             {
-                or.AddAnd(Guid.Parse("3b493432-4454-4047-bee5-5b92f06b4fa4"), and => 
+                or.AddAnd(Guid.Parse("fdb818d8-b63b-456c-a3ea-13105dfe1b33"), and => 
                 {
-                    and.HaveSpecificSkillProficiency(Guid.Parse("b0ffa153-2914-4920-b075-6ef70d817cfc"), Proficiencies.Instances.Expert.ID, Skills.Instances.Arcana.ID);
-                    and.HaveSpecificSkillProficiency(Guid.Parse("c46d68e8-9366-438a-bdb7-50099aebb865"), Proficiencies.Instances.Expert.ID, Skills.Instances.Crafting.ID);
+                    and.HaveSpecificSkillProficiency(Guid.Parse("2604ab51-7696-4497-a444-24e87f4aaf92"), Proficiencies.Instances.Expert.ID, Skills.Instances.Arcana.ID);
+                    and.HaveSpecificSkillProficiency(Guid.Parse("1a437eb9-34d7-43c9-bf63-04acc68d937c"), Proficiencies.Instances.Expert.ID, Skills.Instances.Crafting.ID);
                 });
                 //TODO: Add prerequisites.
             });
@@ -54,7 +55,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("aeb505c8-a86d-42da-9670-891e6b77f5a6"),
+                Id = Guid.Parse("fdd9e054-88b8-407e-95a5-5fad9bc2b0e7"),
                 SourceId = Sources.Instances.ExtinctionCurse.ID,
                 Page = -1
             };

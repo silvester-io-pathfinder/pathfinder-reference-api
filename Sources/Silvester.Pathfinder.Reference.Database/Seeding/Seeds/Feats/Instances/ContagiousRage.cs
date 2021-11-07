@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ContagiousRage : Template
     {
-        public static readonly Guid ID = Guid.Parse("d69ee178-ba1c-4369-b05a-cc6683a21bdc");
+        public static readonly Guid ID = Guid.Parse("fb2ba30f-8f5d-4f9f-8c8d-8c568a304d5f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("457d478e-ba39-45d6-8009-5fe3647f739b"), Type = TextBlockType.Text, Text = "You can drive your allies into a frenzy, granting them incredible benefits. You can ignore the requirements on (feat: Share Rage), using it multiple times in a (feat: Rage). Allies affected by (feat: Share Rage) who accept your anathema for the duration of the (feat: Rage) gain your instinct ability and the specialization ability it gains from weapon specialization, but not greater weapon specialization." };
+            yield return new TextBlock { Id = Guid.Parse("8ba7f5ec-b7ec-4a9e-b417-430e37151392"), Type = TextBlockType.Text, Text = "You can drive your allies into a frenzy, granting them incredible benefits. You can ignore the requirements on (feat: Share Rage), using it multiple times in a (feat: Rage). Allies affected by (feat: Share Rage) who accept your anathema for the duration of the (feat: Rage) gain your instinct ability and the specialization ability it gains from weapon specialization, but not greater weapon specialization." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("56e0fc62-1fc2-4835-aab2-d7711776c051"), Feats.Instances.ShareRage.ID);
+            builder.HaveSpecificFeat(Guid.Parse("cb8fc856-4596-4bdc-939b-b96b71befd00"), Feats.Instances.ShareRage.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a77d57cc-dcc7-4186-83a3-e7c10aa5e69a"),
+                Id = Guid.Parse("1bca98fa-aaf8-4a20-8843-1964e65467f5"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

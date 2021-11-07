@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AnimalSwiftnessFly : Template
     {
-        public static readonly Guid ID = Guid.Parse("b6a983be-6c7d-4ab9-9c22-fd03c3357c2e");
+        public static readonly Guid ID = Guid.Parse("1ab4ca15-9d71-4e43-9ee4-483a83c95a7e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("980a19b6-07aa-423f-a3ba-7aa76079df1c"), Type = TextBlockType.Text, Text = "You gain a fly Speed equal to your land Speed." };
+            yield return new TextBlock { Id = Guid.Parse("eddedf4c-3f0b-4d2a-95f2-83926b93ef71"), Type = TextBlockType.Text, Text = "You gain a fly Speed equal to your land Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cc3e37b8-036d-47f6-85b6-5ac853ee3369"),
+                Id = Guid.Parse("5b905d54-5778-4ff1-9310-ebf52a1e7787"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

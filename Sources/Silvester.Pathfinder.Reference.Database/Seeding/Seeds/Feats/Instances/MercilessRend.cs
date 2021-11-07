@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MercilessRend : Template
     {
-        public static readonly Guid ID = Guid.Parse("afc8cecf-b6db-4d4a-a98d-4bb2d76f7421");
+        public static readonly Guid ID = Guid.Parse("ab1ae656-288f-4c9e-907e-9a8d0c06481b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6dd0c001-ebad-4cfc-8cb8-d37a9774b8b8"), Type = TextBlockType.Text, Text = "Your eidolon rends its foes. It automatically deals the damage from its secondary attack to the enemy." };
+            yield return new TextBlock { Id = Guid.Parse("e0071eb1-c6e5-438b-976c-5d0f683939d9"), Type = TextBlockType.Text, Text = "Your eidolon rends its foes. It automatically deals the damage from its secondary attack to the enemy." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("952719b2-55ca-48ec-8b76-4f9ab918c9c6"),
+                Id = Guid.Parse("d480b4ac-6cde-46a2-8855-c701e8c3cbe4"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

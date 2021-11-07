@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SecondSting : Template
     {
-        public static readonly Guid ID = Guid.Parse("f25b8caf-fe32-4e93-b187-8ed233c025b6");
+        public static readonly Guid ID = Guid.Parse("7a69b742-58a4-40b9-a957-add5dccecf9e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ee01ad9e-ec93-4c67-851e-9d8e4d473fa6"), Type = TextBlockType.Text, Text = "You read your prey’s movements and transform them into openings, so failures with one weapon set up glancing blows with the other. Make a melee (action: Strike) with one of the required weapons against your hunted prey. The (action: Strike) gains the following failure effect." };
+            yield return new TextBlock { Id = Guid.Parse("4292a13a-e104-435d-8d48-565e5bc27e8e"), Type = TextBlockType.Text, Text = "You read your prey’s movements and transform them into openings, so failures with one weapon set up glancing blows with the other. Make a melee (action: Strike) with one of the required weapons against your hunted prey. The (action: Strike) gains the following failure effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("007c3e91-2ef6-4cd4-bdc0-363dd1fcaa4b"),
+                Id = Guid.Parse("16c00be2-b883-45bd-a78c-1eac6aefaa42"),
                 
                 
                 Failure = "You deal the damage the other required weapon would have dealt on a hit, excluding all damage dice. __(This removes dice from weapon runes, spells, and special abilities, not just weapon damage dice.)__",
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("8e9e3bd7-369f-46e2-b628-e879cbf38b71"),
+                Id = Guid.Parse("0fd18763-7872-4a87-afe5-35e63387554d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

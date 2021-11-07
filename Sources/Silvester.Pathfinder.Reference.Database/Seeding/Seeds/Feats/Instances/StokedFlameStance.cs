@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StokedFlameStance : Template
     {
-        public static readonly Guid ID = Guid.Parse("e0f989e4-c65e-419e-9de9-4f3c840016a2");
+        public static readonly Guid ID = Guid.Parse("44afc16a-7e53-432a-be1a-4a500106534c");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("541e7523-9beb-4f93-9987-a6a15c9751ce"), Type = TextBlockType.Text, Text = "You enter a stance of fast, fiery movements. You can make flashing spark attacks that deal 1d8 slashing damage. They are in the brawling group and have the (trait: forceful), (trait: nonlethal), (trait: sweep), and (trait: unarmed) traits. If you have access to the flashing sparks’ critical specialization effect, you can take an alternate effect instead: if your critical (action: Strike) dealt damage, the target takes 1d6 persistent fire damage." };
-            yield return new TextBlock { Id = Guid.Parse("2c5bf1e0-d097-484d-b23a-6a2e687382d3"), Type = TextBlockType.Text, Text = "While in Stoked Flame Stance, you gain a +5-foot status bonus to your Speed. If you have incredible movement, increase the benefit from incredible movement to a +15-foot status bonus plus 5 feet for every 4 levels beyond 3rd." };
+            yield return new TextBlock { Id = Guid.Parse("3642c20b-0d2b-4d79-89a1-d2e5c2fab170"), Type = TextBlockType.Text, Text = "You enter a stance of fast, fiery movements. You can make flashing spark attacks that deal 1d8 slashing damage. They are in the brawling group and have the (trait: forceful), (trait: nonlethal), (trait: sweep), and (trait: unarmed) traits. If you have access to the flashing sparks’ critical specialization effect, you can take an alternate effect instead: if your critical (action: Strike) dealt damage, the target takes 1d6 persistent fire damage." };
+            yield return new TextBlock { Id = Guid.Parse("1ee8b6d9-656c-4522-a71b-6bca3e730a1f"), Type = TextBlockType.Text, Text = "While in Stoked Flame Stance, you gain a +5-foot status bonus to your Speed. If you have incredible movement, increase the benefit from incredible movement to a +15-foot status bonus plus 5 feet for every 4 levels beyond 3rd." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2302a2e4-25c0-4668-a7da-fca72969597a"),
+                Id = Guid.Parse("651f54d7-1cb3-4a34-b9a9-051fa000270a"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

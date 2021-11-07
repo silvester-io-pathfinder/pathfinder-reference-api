@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class HarmingHands : Template
     {
-        public static readonly Guid ID = Guid.Parse("38b28f9f-5456-4951-94ae-17eba4f7d950");
+        public static readonly Guid ID = Guid.Parse("a6a81553-450e-44f5-8dad-07697c440f05");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3077eb50-f730-41f8-ba3f-f1749b917043"), Type = TextBlockType.Text, Text = "The mordant power of your negative energy grows. When you cast (spell: harm), you roll d10s instead of d8s." };
+            yield return new TextBlock { Id = Guid.Parse("d5cfef49-a6fe-4e25-adcd-708f63f8c593"), Type = TextBlockType.Text, Text = "The mordant power of your negative energy grows. When you cast (spell: harm), you roll d10s instead of d8s." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificDivineFont(Guid.Parse("2c8e9edf-c272-45f8-bf74-79af74263c10"), DivineFonts.Instances.Harm.ID);
+            builder.HaveSpecificDivineFont(Guid.Parse("f794a6b5-f9b6-4d33-8db6-402fd2bb83e4"), DivineFonts.Instances.Harm.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2c1a52c8-601f-4e2d-a42c-695f4c951275"),
+                Id = Guid.Parse("3397371a-94fb-41d5-9733-cee7c9e8bac2"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

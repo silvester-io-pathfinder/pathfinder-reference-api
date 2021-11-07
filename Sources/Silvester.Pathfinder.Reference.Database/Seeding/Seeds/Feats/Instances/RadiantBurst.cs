@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RadiantBurst : Template
     {
-        public static readonly Guid ID = Guid.Parse("340f8685-c3fa-41ac-83a3-7673b781043d");
+        public static readonly Guid ID = Guid.Parse("2a157489-e8a3-4aca-8517-94879a390447");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dfdfc442-5e71-4d39-9614-90c42aaf02da"), Type = TextBlockType.Text, Text = "Your skin glows with intensity. Creatures within 10 feet who can see you must succeed at a Fortitude save against your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("6d9a3074-9a88-4cd8-80dd-7b93f3c07f82"), Type = TextBlockType.Text, Text = "Your skin glows with intensity. Creatures within 10 feet who can see you must succeed at a Fortitude save against your class DC or spell DC, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new RollableEffect
             {
-                Id = Guid.Parse("2623c214-e952-4735-913f-c514ea031a8c"),
+                Id = Guid.Parse("b70a3cb0-3884-4aa6-ada8-3f80973e5722"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature is dazzled for 1 round.",
                 Failure = "The creature is blinded for 1 round and dazzled for 4 rounds.",
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d8a6b914-b827-490e-b96d-3559a53b1427"),
+                Id = Guid.Parse("08bd5788-ff18-4afe-b9b8-bfa2f3dd96d1"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

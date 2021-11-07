@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SnareCommando : Template
     {
-        public static readonly Guid ID = Guid.Parse("01141847-4796-4c03-a258-a9e76df99185");
+        public static readonly Guid ID = Guid.Parse("46b21292-6eb3-4793-9844-02784c114c3b");
 
         protected override Feat GetFeat()
         {
@@ -28,18 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("23e5aff4-83f8-44b0-b249-fcef613a11c2"), Type = TextBlockType.Text, Text = "Your snares are so befuddling that your victims rarely notice you slipping out of sight. If you have expert proficiency in Deception, you can (action: Create a Diversion) against the triggering creature. If you have expert proficiency in Intimidation, you can instead (action: Demoralize) the triggering creature. If you have both, choose one of the two effects." };
+            yield return new TextBlock { Id = Guid.Parse("5a5795f4-578d-40b5-a27a-9e47c0bdf688"), Type = TextBlockType.Text, Text = "Your snares are so befuddling that your victims rarely notice you slipping out of sight. If you have expert proficiency in Deception, you can (action: Create a Diversion) against the triggering creature. If you have expert proficiency in Intimidation, you can instead (action: Demoralize) the triggering creature. If you have both, choose one of the two effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("3d900360-d498-4b3f-ab6c-a9e635570081"), or => 
+            builder.AddOr(Guid.Parse("42360e5a-e259-4469-955f-385ceed35bc6"), or => 
             {
-                or.HaveSpecificSkillProficiency(Guid.Parse("255fed36-5214-4b11-a3b6-78b07022b1d0"), Proficiencies.Instances.Expert.ID, Skills.Instances.Deception.ID);
-                or.HaveSpecificSkillProficiency(Guid.Parse("ca126183-b323-4523-8688-b67c3ecf6c6a"), Proficiencies.Instances.Expert.ID, Skills.Instances.Intimidation.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("f7743de3-a8e2-4dcf-9ca0-620ae588027f"), Proficiencies.Instances.Expert.ID, Skills.Instances.Deception.ID);
+                or.HaveSpecificSkillProficiency(Guid.Parse("2bb2234d-27d6-42e2-80bf-372008f152c8"), Proficiencies.Instances.Expert.ID, Skills.Instances.Intimidation.ID);
             });
-            builder.HaveSpecificFeat(Guid.Parse("187657ba-cdaf-45eb-a9b0-fd30bea25678"), Feats.Instances.SnareCrafting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("598c2ec5-1984-4462-9dd7-66b08ec7efcc"), Feats.Instances.SnareCrafting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e67c106b-7ba3-440d-b8ef-f2ee6b28e45f"),
+                Id = Guid.Parse("7e623910-83db-4c40-93e6-222cc66091ea"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class RetractableClaws : Template
     {
-        public static readonly Guid ID = Guid.Parse("d9bc72dd-53bc-46f8-bfc2-2b00f10f6e43");
+        public static readonly Guid ID = Guid.Parse("bd4408bb-acc9-452b-a499-d7c79b763b0f");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5949ba5-401a-4c84-8826-75ca993a3b35"), Type = TextBlockType.Text, Text = "You gain a claw unarmed attack that deals 1d4 slashing damage. Your claws are in the brawling group and have the (trait: agile), (trait: finesse), and (trait: unarmed) traits." };
+            yield return new TextBlock { Id = Guid.Parse("9422c943-8d27-4c5c-9585-8548812677cf"), Type = TextBlockType.Text, Text = "You gain a claw unarmed attack that deals 1d4 slashing damage. Your claws are in the brawling group and have the (trait: agile), (trait: finesse), and (trait: unarmed) traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f6e19579-731e-49b5-a2dd-e0245d554669"),
+                Id = Guid.Parse("25cf1ab3-a111-4776-873d-694a64c98a48"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

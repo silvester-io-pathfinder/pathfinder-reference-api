@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class DeepHeritageCold : Template
     {
-        public static readonly Guid ID = Guid.Parse("31cc7474-ea37-4efc-898c-b788e3a90568");
+        public static readonly Guid ID = Guid.Parse("2195ba5d-b959-4ecc-84bd-528b9a9630c7");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fce37b6f-1592-4ffd-af9d-cff6bcc51466"), Type = TextBlockType.Text, Text = "You gain cold resistance equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("fd8e2da4-8789-464d-ad7d-6fff447b7e21"), Type = TextBlockType.Text, Text = "You gain cold resistance equal to half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6564bac2-a99a-4f2e-81ca-3f31ee37d963"),
+                Id = Guid.Parse("a20eec55-b7cc-4bd8-b224-e0ac962c29b6"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

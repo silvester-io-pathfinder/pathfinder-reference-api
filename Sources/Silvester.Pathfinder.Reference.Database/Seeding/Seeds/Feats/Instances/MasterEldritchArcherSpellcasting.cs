@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MasterEldritchArcherSpellcasting : Template
     {
-        public static readonly Guid ID = Guid.Parse("dd04452d-b6e5-4b62-b0b1-8eb2ee0af0f8");
+        public static readonly Guid ID = Guid.Parse("fb4e9a67-3b9f-4a7f-8bb7-fc7e26f82fcf");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db4b32c0-86d0-4eb4-a410-f800ddeb5e15"), Type = TextBlockType.Text, Text = "Your proficiency ranks for your eldritch archer spell attack rolls and spell DCs increase to master, and you gain a 7th-level spell slot. You can select a third spell from your repertoire as a signature spell. At 20th level, you gain an 8th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("5135b98f-9f9c-435c-9506-3fd86b90e04a"), Type = TextBlockType.Text, Text = "Your proficiency ranks for your eldritch archer spell attack rolls and spell DCs increase to master, and you gain a 7th-level spell slot. You can select a third spell from your repertoire as a signature spell. At 20th level, you gain an 8th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("adf621d8-68fe-4339-b29d-2719dee6da98"), Feats.Instances.ExpertEldritchArcherSpellcasting.ID);
+            builder.HaveSpecificFeat(Guid.Parse("4dd3f0ed-9fb4-40a8-8844-fbcb111abb39"), Feats.Instances.ExpertEldritchArcherSpellcasting.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("d5b25cb0-676a-4865-8390-1fcb306fcd14"),
+                Id = Guid.Parse("7829f1fe-2929-44f6-8bee-a64ae1580994"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

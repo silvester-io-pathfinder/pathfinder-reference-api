@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class OngoingSelfishness : Template
     {
-        public static readonly Guid ID = Guid.Parse("1327fd14-bf00-4ef4-87b8-550141257a64");
+        public static readonly Guid ID = Guid.Parse("70605fd4-5f39-4b89-b118-d6d6798cb572");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b66917e5-1873-44ef-8886-1519619548ab"), Type = TextBlockType.Text, Text = "Your powerful personality and incredible ego demand that you protect yourself above all else. After you use (feat: Selfish Shield), you gain resistance to all further damage from the triggering enemy until the end of the turn on which you used the reaction. This resistance is equal to half your (feat: Selfish Shield) resistance." };
+            yield return new TextBlock { Id = Guid.Parse("df2a6cc1-006a-4274-bb3a-8b25ee6014f2"), Type = TextBlockType.Text, Text = "Your powerful personality and incredible ego demand that you protect yourself above all else. After you use (feat: Selfish Shield), you gain resistance to all further damage from the triggering enemy until the end of the turn on which you used the reaction. This resistance is equal to half your (feat: Selfish Shield) resistance." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificCause(Guid.Parse("60d7b15d-d243-4322-918e-74ff7d8115a5"), Causes.Instances.Desecrator.ID);
+            builder.HaveSpecificCause(Guid.Parse("09423cac-6341-40da-a4ab-b1fbcf67fd87"), Causes.Instances.Desecrator.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("5195e967-d8e4-4168-b88d-4286922fe8ad"),
+                Id = Guid.Parse("62de02d7-1f47-4ee0-a246-f881093ee524"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

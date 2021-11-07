@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class CallOfTheWild : Template
     {
-        public static readonly Guid ID = Guid.Parse("54436bbb-10c5-4e25-b043-f8332fa108c2");
+        public static readonly Guid ID = Guid.Parse("c1ba884c-c08c-430c-b46d-9b3fbbf3fa24");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5b02f121-5974-413e-95be-f856ad84df75"), Type = TextBlockType.Text, Text = "You call upon the creatures of nature to come to your aid. You can spend 10 minutes in concert with nature to replace one of the spells you’ve prepared in one of your druid spell slots with a (spell: summon animal) or (spell: summon plant or fungus) spell of the same level." };
+            yield return new TextBlock { Id = Guid.Parse("3b3dbd84-5cf8-4757-9329-2e8be3ffa507"), Type = TextBlockType.Text, Text = "You call upon the creatures of nature to come to your aid. You can spend 10 minutes in concert with nature to replace one of the spells you’ve prepared in one of your druid spell slots with a (spell: summon animal) or (spell: summon plant or fungus) spell of the same level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e9ceff48-b441-4c89-9a48-6d24c6164446"),
+                Id = Guid.Parse("8edcdbb3-89a8-4fc9-aad7-66f1bab1e34a"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

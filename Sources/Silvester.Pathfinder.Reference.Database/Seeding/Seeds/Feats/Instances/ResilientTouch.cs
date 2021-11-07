@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ResilientTouch : Template
     {
-        public static readonly Guid ID = Guid.Parse("cd870de0-0444-4ae0-b737-fa0c9ee5594e");
+        public static readonly Guid ID = Guid.Parse("989f952f-cb61-4727-9ce2-9a978504b96e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("21c8bd33-50f5-4f74-86b1-61d79eadfe83"), Type = TextBlockType.Text, Text = "Your healing energies create an aura of protection that defends your allies against more than just blades and arrows. An ally that recovers Hit Points from your (spell: lay on hands) gains a +1 status bonus to their saving throws until the end of their next turn." };
+            yield return new TextBlock { Id = Guid.Parse("efce2ffb-0370-4251-89ca-179e34e99312"), Type = TextBlockType.Text, Text = "Your healing energies create an aura of protection that defends your allies against more than just blades and arrows. An ally that recovers Hit Points from your (spell: lay on hands) gains a +1 status bonus to their saving throws until the end of their next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSpell(Guid.Parse("798e0593-f6e3-4711-8e8b-3f4b39ccf5f0"), Spells.Instances.LayOnHands.ID);
+            builder.HaveSpecificSpell(Guid.Parse("10b798ac-9a37-4b64-9b2a-a712521958a2"), Spells.Instances.LayOnHands.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("da0b67d0-2495-41aa-991a-f19bb5292e50"),
+                Id = Guid.Parse("65adfe8b-23a5-462c-bec2-39db963763b6"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

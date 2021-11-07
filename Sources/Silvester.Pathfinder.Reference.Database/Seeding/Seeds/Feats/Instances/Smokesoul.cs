@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Smokesoul : Template
     {
-        public static readonly Guid ID = Guid.Parse("b9c8337b-5b60-46ae-b7aa-11f3eb7a110e");
+        public static readonly Guid ID = Guid.Parse("b1d1292f-3a92-46ad-96ec-dcaffa8b3fb6");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bf06d7af-2ffe-4399-a83c-1ed24abdeed6"), Type = TextBlockType.Text, Text = "You have a connection to smoke and haze. You gain the (feat: Smoke Blending) reaction." };
+            yield return new TextBlock { Id = Guid.Parse("26c187d5-d92a-4f08-859b-0e319c2a7d7d"), Type = TextBlockType.Text, Text = "You have a connection to smoke and haze. You gain the (feat: Smoke Blending) reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("578fa10d-bd63-42ba-ab36-a5b6792e723d"),
+                Id = Guid.Parse("17b2ee11-8cf4-4523-a219-d7d678fcb93e"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

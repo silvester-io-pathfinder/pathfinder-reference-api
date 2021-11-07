@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FolkloristDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("5b9c2734-1039-449a-811c-9bf598297c61");
+        public static readonly Guid ID = Guid.Parse("3015256d-f8b3-40ac-9e0c-db2b16048a0c");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0fda0e6a-2831-4375-876e-3501cf81380a"), Type = TextBlockType.Text, Text = "You are a master archivist and entertainer, capable of pulling wisdom from the tales you tell and weaving your allies and enemies into a powerful narrative. You gain the (feat: Spin Tale) action." };
+            yield return new TextBlock { Id = Guid.Parse("c5436988-569d-457e-bd4e-43d711cff3c5"), Type = TextBlockType.Text, Text = "You are a master archivist and entertainer, capable of pulling wisdom from the tales you tell and weaving your allies and enemies into a powerful narrative. You gain the (feat: Spin Tale) action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("e83e5b63-df32-49c9-99b7-7fe1c1edabe2"), Proficiencies.Instances.Trained.ID, Skills.Instances.Performance.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("8536bb4a-12c4-4306-aea0-1097b428fc23"), Proficiencies.Instances.Trained.ID, Skills.Instances.Performance.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("740c89ad-5751-4ec0-a507-b51d48c73276"),
+                Id = Guid.Parse("b8ba4f7b-6ec6-4841-ae01-36e57cbedb04"),
                 SourceId = Sources.Instances.StrengthOfThousands.ID,
                 Page = -1
             };

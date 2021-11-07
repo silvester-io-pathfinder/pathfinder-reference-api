@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FerociousBeasts : Template
     {
-        public static readonly Guid ID = Guid.Parse("ef761649-c55c-4ec4-ab20-ff08528c0374");
+        public static readonly Guid ID = Guid.Parse("92de2e4f-88e0-4636-bc5a-a0c3814a6fd3");
 
         protected override Feat GetFeat()
         {
@@ -28,18 +29,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c368621-4941-40f3-a2c9-34732e110a96"), Type = TextBlockType.Text, Text = "Since ancient times, the mightiest orc beast tamers would draw out the true fighting spirit of their companion beasts by feeding the creatures a draft incorporating the orc&#39;s own blood. Animal companions or bonded animals you have gain the (feat: Orc Ferocity) feat, and they gain a reaction they can use only for (feat: Orc Ferocity). If you have the (feat: Undying Ferocity) ancestry feat, all animal companions or bonded animals you have also gain the benefits of that feat when using the (feat: Orc Ferocity) reaction." };
+            yield return new TextBlock { Id = Guid.Parse("2c4e1ab1-f3b1-475b-87f5-950ed3a8b723"), Type = TextBlockType.Text, Text = "Since ancient times, the mightiest orc beast tamers would draw out the true fighting spirit of their companion beasts by feeding the creatures a draft incorporating the orc&#39;s own blood. Animal companions or bonded animals you have gain the (feat: Orc Ferocity) feat, and they gain a reaction they can use only for (feat: Orc Ferocity). If you have the (feat: Undying Ferocity) ancestry feat, all animal companions or bonded animals you have also gain the benefits of that feat when using the (feat: Orc Ferocity) reaction." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("1b92d985-2d14-4f4d-95cd-2bef3ea1a715"), or => 
+            builder.AddOr(Guid.Parse("57384ad2-c71f-41c1-91d5-d71c0ccac6b3"), or => 
             {
-                or.HaveSpecificFeat(Guid.Parse("0b06ca1b-e233-4ea8-89ae-e8c47359116a"), Feats.Instances.BeastTrainer.ID);
-                or.HaveSpecificFeat(Guid.Parse("e8237d70-c5da-4c54-ac2b-74e64276e1dc"), Feats.Instances.AnimalCompanion.ID);
+                or.HaveSpecificFeat(Guid.Parse("9fd21685-30e1-4b67-aa8b-581ee2eaa3d9"), Feats.Instances.BeastTrainer.ID);
+                or.HaveSpecificFeat(Guid.Parse("85763b68-3ee8-4e96-99fd-adb3aec11931"), Feats.Instances.AnimalCompanion.ID);
             });
-            builder.HaveSpecificFeat(Guid.Parse("a7107c5e-56cd-4b76-b27f-dbf0011c03df"), Feats.Instances.OrcFerocity.ID);
+            builder.HaveSpecificFeat(Guid.Parse("b3bfaea3-df30-468a-bf29-92e4104aeed2"), Feats.Instances.OrcFerocity.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -51,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("cb8b3237-aee3-4d4f-b08e-398d9beab936"),
+                Id = Guid.Parse("0cdaac1a-abd7-43f6-b13b-fc1d2061dfa4"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

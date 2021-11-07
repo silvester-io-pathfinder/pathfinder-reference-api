@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SubtleTheft : Template
     {
-        public static readonly Guid ID = Guid.Parse("7cc61d20-a612-4f64-9e93-8c73f98ac69e");
+        public static readonly Guid ID = Guid.Parse("7a8379ac-29a2-4e6a-8cce-b6a21c786df0");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("847ded19-6d84-40f9-8873-6cdb703db867"), Type = TextBlockType.Text, Text = "When you successfully (Action: Steal) something, observers (creatures other than the creature you stole from) take a -2 circumstance penalty to their Perception DCs to detect your theft. Additionally, if you first (Action: Create a Diversion) using Deception, taking a single (Action: Palm an Object) or (Action: Steal) action doesn’t end your undetected condition." };
+            yield return new TextBlock { Id = Guid.Parse("e8413cbb-1f3a-4fd9-a4f5-a85904ae0072"), Type = TextBlockType.Text, Text = "When you successfully (Action: Steal) something, observers (creatures other than the creature you stole from) take a -2 circumstance penalty to their Perception DCs to detect your theft. Additionally, if you first (Action: Create a Diversion) using Deception, taking a single (Action: Palm an Object) or (Action: Steal) action doesn’t end your undetected condition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificSkillProficiency(Guid.Parse("aa5c9089-207f-4acf-b4c0-6f776e94cb1c"), Proficiencies.Instances.Trained.ID, Skills.Instances.Thievery.ID);
+            builder.HaveSpecificSkillProficiency(Guid.Parse("1e997c4c-8a6b-49b7-94b2-f10a4e6ffb33"), Proficiencies.Instances.Trained.ID, Skills.Instances.Thievery.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ce061179-b337-43d7-8324-c7ff680f95bb"),
+                Id = Guid.Parse("f1c6549c-49e3-42c5-a1f2-8ca97489b097"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

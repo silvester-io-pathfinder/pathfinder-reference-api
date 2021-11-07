@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class FiendishResistanceElectricity : Template
     {
-        public static readonly Guid ID = Guid.Parse("95260182-7f8f-46a0-8733-8cfb66592107");
+        public static readonly Guid ID = Guid.Parse("74400fc6-a144-4145-a969-131bfbdd7bf2");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8b04f248-4763-4ef1-98e2-ffd6004d742c"), Type = TextBlockType.Text, Text = "You gain resistance 5 to electricity." };
+            yield return new TextBlock { Id = Guid.Parse("ed95a4a9-b3cc-47ec-a48f-b020b2296442"), Type = TextBlockType.Text, Text = "You gain resistance 5 to electricity." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f76a1914-8660-4d17-87df-ce7849012459"),
+                Id = Guid.Parse("b8b51861-0589-4210-b97b-e297f12cc4b3"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ShieldWarden : Template
     {
-        public static readonly Guid ID = Guid.Parse("4d7bf26c-a318-414b-a173-1fb611e710bb");
+        public static readonly Guid ID = Guid.Parse("93af2da8-f491-4320-819e-dc9176b6e8b3");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c88c651f-5aee-49f9-b460-4f3a39481360"), Type = TextBlockType.Text, Text = "You use your shield to protect your allies. When you have a shield raised, you can use your (feat: Shield Block) reaction when an attack is made against an ally adjacent to you. If you do, the shield prevents that ally from taking damage instead of preventing you from taking damage, following the normal rules for (feat: Shield Block)." };
+            yield return new TextBlock { Id = Guid.Parse("7a8cbbb0-6507-4d97-9fa3-404013a2de4d"), Type = TextBlockType.Text, Text = "You use your shield to protect your allies. When you have a shield raised, you can use your (feat: Shield Block) reaction when an attack is made against an ally adjacent to you. If you do, the shield prevents that ally from taking damage instead of preventing you from taking damage, following the normal rules for (feat: Shield Block)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("f9b73e11-6274-4624-aa7e-021fc9a7a11f"), Feats.Instances.BastionDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("ddd4d035-40fd-49bc-848d-79411bf1c972"), Feats.Instances.BastionDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4221570d-ffb6-42e7-93ec-c5bac247b8f7"),
+                Id = Guid.Parse("acaef4bc-b3a9-4a1a-b218-462304afaf45"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

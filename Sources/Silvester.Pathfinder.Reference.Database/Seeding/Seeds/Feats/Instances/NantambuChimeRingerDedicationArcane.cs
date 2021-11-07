@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class NantambuChimeRingerDedicationArcane : Template
     {
-        public static readonly Guid ID = Guid.Parse("e9d6f615-c19b-4871-8986-317dfebca173");
+        public static readonly Guid ID = Guid.Parse("f9377bbb-2e30-453a-ad9b-bc4002e4cbc7");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92bb208d-f253-470a-ba96-b56af8783f84"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single arcane cantrip of your choice. If you weren&#39;t already, you become trained in arcane spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
+            yield return new TextBlock { Id = Guid.Parse("f0ce127d-00ed-4baa-83d7-ef656bf13076"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single arcane cantrip of your choice. If you weren&#39;t already, you become trained in arcane spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4dc15e36-1c4e-4d4d-9d7c-a62849e93cc2"),
+                Id = Guid.Parse("3b1e291a-1660-4743-8886-db5a99d2f7a0"),
                 SourceId = Sources.Instances.StrengthOfThousands.ID,
                 Page = -1
             };

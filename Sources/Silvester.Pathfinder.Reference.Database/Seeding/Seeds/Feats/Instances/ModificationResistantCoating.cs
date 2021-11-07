@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationResistantCoating : Template
     {
-        public static readonly Guid ID = Guid.Parse("53ded05d-8851-44ca-a8ba-355d66253781");
+        public static readonly Guid ID = Guid.Parse("71d8c00c-4350-4009-b78f-5383e60ad28e");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f53cb531-64b4-42c1-9902-bac171df74ca"), Type = TextBlockType.Text, Text = "Your innovation is hard to damage by any means. It gains resistance 5 to all damage (except adamantine)." };
+            yield return new TextBlock { Id = Guid.Parse("59c5d4b3-d045-41fa-bc4d-5db25be3ebf1"), Type = TextBlockType.Text, Text = "Your innovation is hard to damage by any means. It gains resistance 5 to all damage (except adamantine)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("85d8203d-da67-424d-b245-5b523457d5e0"),
+                Id = Guid.Parse("347f0eea-61b0-48ed-88bd-2d6d63c2f9ef"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

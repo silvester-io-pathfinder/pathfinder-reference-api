@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StudentOfPerfectionDedication : Template
     {
-        public static readonly Guid ID = Guid.Parse("afcefdb7-d621-4e14-95c7-97fcdf4f4bee");
+        public static readonly Guid ID = Guid.Parse("26428566-2206-42c4-a8a9-44cf07c58fb6");
 
         protected override Feat GetFeat()
         {
@@ -28,19 +29,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1f26ea47-be1c-4272-a6ad-15f7e0731236"), Type = TextBlockType.Text, Text = "~ Access: You are from Jalmeray." };
-            yield return new TextBlock { Id = Guid.Parse("9196c6d0-6583-4dd1-ab79-bba080de90a2"), Type = TextBlockType.Text, Text = "You have learned the martial arts techniques of your House of Perfection. You become trained in your choice of Acrobatics or Athletics and Warfare Lore; if you were already trained, you become an expert instead. You gain the (feat: Ki Strike) class feat, which grants you the (spell: ki strike) ki spell and a focus pool of 1 Focus Point that you can recover using the (action: Refocus) activity as a monk does. Your ki spells from Student of Perfection are occult spells." };
+            yield return new TextBlock { Id = Guid.Parse("236160d9-3a7a-4fe9-a360-d0094e2d7813"), Type = TextBlockType.Text, Text = "~ Access: You are from Jalmeray." };
+            yield return new TextBlock { Id = Guid.Parse("ee865d75-331c-46f8-94ba-341aa362358b"), Type = TextBlockType.Text, Text = "You have learned the martial arts techniques of your House of Perfection. You become trained in your choice of Acrobatics or Athletics and Warfare Lore; if you were already trained, you become an expert instead. You gain the (feat: Ki Strike) class feat, which grants you the (spell: ki strike) ki spell and a focus pool of 1 Focus Point that you can recover using the (action: Refocus) activity as a monk does. Your ki spells from Student of Perfection are occult spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.AddOr(Guid.Parse("952c9f2b-2536-4f71-97e4-4024cbefc035"), or => 
+            builder.AddOr(Guid.Parse("b3e958bc-8acd-4216-bbd2-553fb5d4a6b8"), or => 
             {
-                or.HaveSpecificClassFeature(Guid.Parse("17477ffa-bdc5-41bc-8435-916da4a3976d"), ClassFeatures.Monks.PowerfulFist.ID);
-                or.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("bde557d5-d8db-4fe3-994a-1432c64ae697"), Proficiencies.Instances.Expert.ID, WeaponCategories.Instances.Unarmed.ID);
+                or.HaveSpecificClassFeature(Guid.Parse("6a3d05f6-b7a2-4f3c-8a7a-63564fd64169"), ClassFeatures.Monks.PowerfulFist.ID);
+                or.HaveSpecificWeaponCategorySpecificProficiency(Guid.Parse("39ac0c08-8583-4384-8ef2-af16fe3a90bd"), Proficiencies.Instances.Expert.ID, WeaponCategories.Instances.Unarmed.ID);
             });
-            builder.Manual(Guid.Parse("897b4adb-c0e6-40fc-a329-8111e8cddf19"), "Member of a House of Perfection.");
+            builder.Manual(Guid.Parse("e06be125-59cc-4d80-827b-1b9c9a2bfa4e"), "Member of a House of Perfection.");
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -52,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("712fbec2-c46c-4606-9541-1c535724c8d3"),
+                Id = Guid.Parse("c4f903a9-01a2-4430-b73c-232b62e11165"),
                 SourceId = Sources.Instances.LostOmensWorldGuide.ID,
                 Page = -1
             };

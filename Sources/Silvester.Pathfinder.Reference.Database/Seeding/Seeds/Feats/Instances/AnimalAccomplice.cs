@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AnimalAccomplice : Template
     {
-        public static readonly Guid ID = Guid.Parse("4555bcc0-4948-4a97-8409-c74cfd6ed599");
+        public static readonly Guid ID = Guid.Parse("6d10a261-516f-40b2-b08d-c78a54b889ca");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8058bd14-e7f3-4676-9661-056f743df271"), Type = TextBlockType.Text, Text = "You build a rapport with an animal, which becomes magically bonded to you. You gain a familiar using the rules on page 217. The type of animal is up to you, but most gnomes choose animals with a burrow Speed." };
+            yield return new TextBlock { Id = Guid.Parse("9f44e4bc-3683-40ba-88ca-a50615888f1e"), Type = TextBlockType.Text, Text = "You build a rapport with an animal, which becomes magically bonded to you. You gain a familiar using the rules on page 217. The type of animal is up to you, but most gnomes choose animals with a burrow Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f5d9fca0-29d5-4e58-ada4-f7f1087b2552"),
+                Id = Guid.Parse("04a1e9f6-9439-4833-8ff4-0ab73377f9e3"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

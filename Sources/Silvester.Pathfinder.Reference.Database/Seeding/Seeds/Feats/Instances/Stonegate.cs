@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Stonegate : Template
     {
-        public static readonly Guid ID = Guid.Parse("a9bc7f67-6113-4277-a338-03e254d980a9");
+        public static readonly Guid ID = Guid.Parse("5e77097e-1d12-41b0-819a-d06395e84a53");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("34484c0c-4f75-4135-ad75-d2579b4e65db"), Type = TextBlockType.Text, Text = "Earthen barriers no longer impede your progress. You gain (spell: passwall) as a 7th-level divine innate spell that you can cast once per day. Unlike the spell, however, this ability can be used only to open passages through barriers of earth or stone." };
+            yield return new TextBlock { Id = Guid.Parse("8e9a4d11-b6d7-429c-92f8-caad803b8623"), Type = TextBlockType.Text, Text = "Earthen barriers no longer impede your progress. You gain (spell: passwall) as a 7th-level divine innate spell that you can cast once per day. Unlike the spell, however, this ability can be used only to open passages through barriers of earth or stone." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("09f40925-5c94-415b-9439-6652176c7978"), Feats.Instances.Stonewalker.ID);
+            builder.HaveSpecificFeat(Guid.Parse("6e47bbb7-5766-4632-b9a6-7c0ac243edd7"), Feats.Instances.Stonewalker.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2f9e2c98-98b9-44d4-bc93-9e7b8aa4aa2c"),
+                Id = Guid.Parse("483ae096-8048-4c84-8482-1f3c7969a7fe"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

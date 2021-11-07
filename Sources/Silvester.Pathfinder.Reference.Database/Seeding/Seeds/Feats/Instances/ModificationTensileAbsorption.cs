@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationTensileAbsorption : Template
     {
-        public static readonly Guid ID = Guid.Parse("029c0c3e-f53f-4c80-952b-4b48c4eb21e8");
+        public static readonly Guid ID = Guid.Parse("600b9d63-1860-4305-8e45-1fc5e3293226");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d623b033-1d12-4c69-8b8f-46a3ced8f2f9"), Type = TextBlockType.Text, Text = "You’ve enhanced the tensile capabilities of your armor, enabling it to bend with bludgeoning attacks. While wearing your armor, you gain resistance to bludgeoning damage equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("f655a794-61b3-4fa0-9e49-53b23570569a"), Type = TextBlockType.Text, Text = "You’ve enhanced the tensile capabilities of your armor, enabling it to bend with bludgeoning attacks. While wearing your armor, you gain resistance to bludgeoning damage equal to half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("86083f66-5033-4d34-ac96-8ea84dd10e6d"),
+                Id = Guid.Parse("18ce6ad2-ba71-43d3-a695-72f4cb72511d"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

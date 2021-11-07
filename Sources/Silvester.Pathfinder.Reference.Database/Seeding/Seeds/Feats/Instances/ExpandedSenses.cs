@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ExpandedSenses : Template
     {
-        public static readonly Guid ID = Guid.Parse("3d040a9b-7687-4a2b-bd8d-4daa026d869b");
+        public static readonly Guid ID = Guid.Parse("b9eb34b7-3403-471a-957f-55aa899093d7");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d30dd5e4-ada6-4cbc-b097-8c4e3cffb682"), Type = TextBlockType.Text, Text = "Your eidolon evolves more acute senses. Your eidolon gains low-light vision and darkvision, as well as scent as an imprecise sense with a range of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("5e7a4fa7-18b9-4ced-a838-9ecd18f0e01d"), Type = TextBlockType.Text, Text = "Your eidolon evolves more acute senses. Your eidolon gains low-light vision and darkvision, as well as scent as an imprecise sense with a range of 30 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("871cf393-1157-46ed-af4e-73d405b2846f"),
+                Id = Guid.Parse("f24e94bd-2f45-430e-8ca3-02a30c297869"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

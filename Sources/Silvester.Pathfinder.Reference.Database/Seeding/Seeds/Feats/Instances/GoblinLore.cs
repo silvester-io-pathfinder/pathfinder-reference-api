@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GoblinLore : Template
     {
-        public static readonly Guid ID = Guid.Parse("64b045e8-132d-4f1f-9949-6b2f6b2810f5");
+        public static readonly Guid ID = Guid.Parse("9a8565d1-c12d-4cad-8aec-8d67c49fcd44");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ba270c0f-6f7c-480f-8032-f6dbcac16a71"), Type = TextBlockType.Text, Text = "You’ve picked up skills and tales from your goblin community. You gain the trained proficiency rank in Nature and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Goblin Lore." };
+            yield return new TextBlock { Id = Guid.Parse("874d86c0-723b-4d02-bfb4-d4e038c8713a"), Type = TextBlockType.Text, Text = "You’ve picked up skills and tales from your goblin community. You gain the trained proficiency rank in Nature and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Goblin Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("513176a6-26de-4d0c-94f8-da8185318f72"),
+                Id = Guid.Parse("20207903-6ff4-4c80-afdb-58c884c93b81"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

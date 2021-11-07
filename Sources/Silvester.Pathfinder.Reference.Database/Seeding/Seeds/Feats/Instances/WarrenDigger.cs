@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WarrenDigger : Template
     {
-        public static readonly Guid ID = Guid.Parse("fe580bbd-149a-4db4-affe-6e73a522e6ac");
+        public static readonly Guid ID = Guid.Parse("e25fc619-8476-4a21-844c-ad86023b544f");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("54f73a78-6f32-4ab6-9181-0c5a0d8f375b"), Type = TextBlockType.Text, Text = "You&#39;ve learned to put your sturdy claws to work digging through the earth. You gain a burrow Speed of 15 feet." };
+            yield return new TextBlock { Id = Guid.Parse("3cadf2ce-c44d-4751-b1a5-72c75fb32f55"), Type = TextBlockType.Text, Text = "You&#39;ve learned to put your sturdy claws to work digging through the earth. You gain a burrow Speed of 15 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("61454916-8eb5-4442-9d18-9742aa13f24b"),
+                Id = Guid.Parse("01cf9a77-a25e-4e51-b13b-22fe6b790102"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

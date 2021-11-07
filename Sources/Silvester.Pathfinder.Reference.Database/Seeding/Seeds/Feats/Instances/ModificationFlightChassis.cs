@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationFlightChassis : Template
     {
-        public static readonly Guid ID = Guid.Parse("b8e64f02-e5a3-4d36-b25d-07110408833e");
+        public static readonly Guid ID = Guid.Parse("c4cb9b8f-830c-4ac3-b686-d1267662fbd4");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bedf5cd1-3577-4d81-802a-5dfde00add70"), Type = TextBlockType.Text, Text = "You fit your construct with a means of flight, such as adding rotors or rebuilding it with wings and a lightweight construction. Your innovation gains a fly Speed of 25 feet." };
+            yield return new TextBlock { Id = Guid.Parse("6cf5490c-0eac-4e06-a3a9-416c681a8541"), Type = TextBlockType.Text, Text = "You fit your construct with a means of flight, such as adding rotors or rebuilding it with wings and a lightweight construction. Your innovation gains a fly Speed of 25 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("80d2647d-a547-464a-86a8-dc0301c27baa"),
+                Id = Guid.Parse("06a04e96-fc4a-4664-86eb-d0bc829f2e51"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

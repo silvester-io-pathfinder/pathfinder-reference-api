@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ModificationAerodynamicConstruction : Template
     {
-        public static readonly Guid ID = Guid.Parse("0d838004-c6d5-4c50-9c5b-d0f52f878bcb");
+        public static readonly Guid ID = Guid.Parse("45178594-71f4-412f-8265-61189eb30e85");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("71f28365-8794-4617-b837-5b83c6920653"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
-            yield return new TextBlock { Id = Guid.Parse("0fc7d448-97f7-4dec-b722-0a40e05ab28a"), Type = TextBlockType.Text, Text = "You carefully engineer the shape of your weapon to maintain its momentum in attacks against successive targets. Your innovation gains the (trait: sweep) trait and the (trait: versatile S) trait." };
+            yield return new TextBlock { Id = Guid.Parse("51421ae9-a606-4b0e-b13b-a85ae87d6aad"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
+            yield return new TextBlock { Id = Guid.Parse("073d4811-ac90-4dc5-9098-66ee59de7be5"), Type = TextBlockType.Text, Text = "You carefully engineer the shape of your weapon to maintain its momentum in attacks against successive targets. Your innovation gains the (trait: sweep) trait and the (trait: versatile S) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("86a43126-11e3-4f0d-a320-48ff9c6c5513"),
+                Id = Guid.Parse("82507b3c-920b-4d27-985b-34099c062994"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

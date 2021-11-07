@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class WoodlandStride : Template
     {
-        public static readonly Guid ID = Guid.Parse("7020495b-545c-4c11-a5ac-9b0189450e0c");
+        public static readonly Guid ID = Guid.Parse("7b05eb08-e7ef-4e42-8b01-fcbed2b7fd16");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("33a942d1-9d70-46a1-ad08-a6c8c63ccbbf"), Type = TextBlockType.Text, Text = "You can always find a path, almost as if foliage parted before you. You ignore any difficult terrain caused by plants, such as bushes, vines, and undergrowth. Even plants manipulated by magic don’t impede your progress." };
+            yield return new TextBlock { Id = Guid.Parse("aa9557e9-5e30-40ad-b886-aa86bb3cca37"), Type = TextBlockType.Text, Text = "You can always find a path, almost as if foliage parted before you. You ignore any difficult terrain caused by plants, such as bushes, vines, and undergrowth. Even plants manipulated by magic don’t impede your progress." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificDruidicOrder(Guid.Parse("4a44506f-e8d4-4d42-9f10-07b054f5a12b"), DruidicOrders.Instances.Leaf.ID);
+            builder.HaveSpecificDruidicOrder(Guid.Parse("5d843592-0501-41f9-a3ca-75319e396421"), DruidicOrders.Instances.Leaf.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("01d28363-283e-4f3b-b798-1f0dd0f859cd"),
+                Id = Guid.Parse("37fb5217-f651-47c8-89d0-e432d86561aa"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

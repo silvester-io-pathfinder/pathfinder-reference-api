@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class ReflexiveRiposte : Template
     {
-        public static readonly Guid ID = Guid.Parse("67c40596-fbb2-43e6-9cdd-1beffafbaa42");
+        public static readonly Guid ID = Guid.Parse("2bc51074-a154-44a8-8b53-717351ebd46f");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5fc00e49-abb5-446c-bf47-d2bc377e3cae"), Type = TextBlockType.Text, Text = "You can riposte almost without a thought. At the start of each of your turns when you regain your actions, you gain an additional reaction that can be used only to perform an (feat: Opportune Riposte)." };
+            yield return new TextBlock { Id = Guid.Parse("95d30eae-fd00-43ff-b323-e74b1ccfa15f"), Type = TextBlockType.Text, Text = "You can riposte almost without a thought. At the start of each of your turns when you regain your actions, you gain an additional reaction that can be used only to perform an (feat: Opportune Riposte)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("1a56295b-ea4a-4bd9-a0a4-0914082298bd"), Feats.Instances.OpportuneRiposte.ID);
+            builder.HaveSpecificFeat(Guid.Parse("36422cef-3f67-4580-8cfe-1b85d69ce980"), Feats.Instances.OpportuneRiposte.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("38a944ea-01f6-4b32-9b2e-54febc82b90f"),
+                Id = Guid.Parse("85ec6857-af32-4cd9-b395-b5bf097599b4"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

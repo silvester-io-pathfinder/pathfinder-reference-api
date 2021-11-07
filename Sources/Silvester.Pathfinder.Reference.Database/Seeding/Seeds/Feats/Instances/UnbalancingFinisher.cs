@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class UnbalancingFinisher : Template
     {
-        public static readonly Guid ID = Guid.Parse("83087995-50c1-4a1c-ad44-91ef7272ee79");
+        public static readonly Guid ID = Guid.Parse("0541a1f4-eca0-440e-abd6-aeeb28c6af3d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5b4870f9-acef-4b76-aa5f-0adaabf53a26"), Type = TextBlockType.Text, Text = "You attack with a flashy assault that leaves your target off balance. Make a melee (action: Strike). If you hit and deal damage, the target is flat-footed until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("4ca32b19-fcc1-4628-92fa-dae94faddbe9"), Type = TextBlockType.Text, Text = "You attack with a flashy assault that leaves your target off balance. Make a melee (action: Strike). If you hit and deal damage, the target is flat-footed until the end of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("381d7201-cf93-424e-a6fc-262de16520ba"),
+                Id = Guid.Parse("c7a6b291-9eea-46ad-9fb3-77179ef562c2"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

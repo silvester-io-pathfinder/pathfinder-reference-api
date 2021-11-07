@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AuraOfCourage : Template
     {
-        public static readonly Guid ID = Guid.Parse("46d026d4-e8af-458c-97c2-822631bac7c1");
+        public static readonly Guid ID = Guid.Parse("ab217523-e404-4ee8-9714-ae74a6b4d46b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("caf9fec9-ebd1-42ba-afea-b93127c6f8fd"), Type = TextBlockType.Text, Text = "You stand strong in the face of danger and inspire your allies to do the same. Whenever you become frightened, reduce the condition value by 1 (to a minimum of 0). At the end of your turn when you would reduce your frightened condition value by 1, you also reduce the value by 1 for all allies within 15 feet." };
+            yield return new TextBlock { Id = Guid.Parse("f94553dc-8227-4b8c-addf-04d715ea8b84"), Type = TextBlockType.Text, Text = "You stand strong in the face of danger and inspire your allies to do the same. Whenever you become frightened, reduce the condition value by 1 (to a minimum of 0). At the end of your turn when you would reduce your frightened condition value by 1, you also reduce the value by 1 for all allies within 15 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificTenet(Guid.Parse("7ab7a8d9-39ee-4a8d-abbc-6fa42c37af82"), Tenets.Instances.Good.ID);
+            builder.HaveSpecificTenet(Guid.Parse("8a1787c5-a31b-43ec-8ad1-13fe12208679"), Tenets.Instances.Good.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("e92fbbe2-107a-4508-8e77-273c8cd94272"),
+                Id = Guid.Parse("5cbb4a0b-05bc-4f72-a4d5-56994c8722bb"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

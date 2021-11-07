@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GreaterAugmentation : Template
     {
-        public static readonly Guid ID = Guid.Parse("fd02f630-8f09-4c8d-9ce8-a75b110b95fb");
+        public static readonly Guid ID = Guid.Parse("c5a9c920-0cf3-4610-8660-2d3310a8b985");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3585cf75-1e4c-4ea2-977f-6c16ef80258a"), Type = TextBlockType.Text, Text = "You’ve greatly improved your abilities and your core can support further augmentations. You gain the enhancement benefits of one of your 1st-, 5th-, 9th-, or 13th-level automaton ancestry feats." };
-            yield return new TextBlock { Id = Guid.Parse("86b69a10-b45f-400b-84cb-a8f0b2e36ed5"), Type = TextBlockType.Text, Text = "You are also capable of reconfiguring your augmentations to meet your needs. You can spend one week of downtime to change the enhancement you gain with this feat." };
+            yield return new TextBlock { Id = Guid.Parse("3bfc3a2c-d612-4566-9f88-9b1229996a56"), Type = TextBlockType.Text, Text = "You’ve greatly improved your abilities and your core can support further augmentations. You gain the enhancement benefits of one of your 1st-, 5th-, 9th-, or 13th-level automaton ancestry feats." };
+            yield return new TextBlock { Id = Guid.Parse("917dd54f-fdf1-44f3-bd48-211667e7e8b7"), Type = TextBlockType.Text, Text = "You are also capable of reconfiguring your augmentations to meet your needs. You can spend one week of downtime to change the enhancement you gain with this feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -41,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("becca1fd-f0dc-4903-a1e6-2152ffd6aa64"),
+                Id = Guid.Parse("3a31d8d5-3c43-4ec6-93a2-0a585c7a1953"),
                 SourceId = Sources.Instances.GunsAndGears.ID,
                 Page = -1
             };

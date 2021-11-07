@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MinorMagicArcane : Template
     {
-        public static readonly Guid ID = Guid.Parse("978e37fc-ec4c-432e-8efc-9be72964e163");
+        public static readonly Guid ID = Guid.Parse("12702421-3631-489e-b077-cc339dd5b1bd");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("550610c2-ba6b-4af5-9c04-4c5701b795cf"), Type = TextBlockType.Text, Text = "__Your minor magic is arcane.__" };
+            yield return new TextBlock { Id = Guid.Parse("f544ff03-0e9d-4b13-8b76-8580127a1798"), Type = TextBlockType.Text, Text = "__Your minor magic is arcane.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("39461de0-d4e3-4a3b-b8a5-46653a5a9f24"),
+                Id = Guid.Parse("b8ae878a-404d-47dd-a443-3f15adbea052"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

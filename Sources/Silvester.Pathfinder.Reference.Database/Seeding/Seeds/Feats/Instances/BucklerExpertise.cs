@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class BucklerExpertise : Template
     {
-        public static readonly Guid ID = Guid.Parse("5e42029a-508f-4dec-90a6-7a8caa704871");
+        public static readonly Guid ID = Guid.Parse("54e1145b-c101-47cb-a391-d76e2ef2f7e9");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c5e84aa3-7960-4026-afb9-ad633de60e45"), Type = TextBlockType.Text, Text = "You’ve learned a flexible way to position your buckler to provide more protection. When you (action: Raise a Shield) to gain a circumstance bonus to AC from a (item: buckler), increase the bonus from +1 to +2." };
+            yield return new TextBlock { Id = Guid.Parse("2cb29cd0-f289-4955-bf6d-b0b4a7584cc8"), Type = TextBlockType.Text, Text = "You’ve learned a flexible way to position your buckler to provide more protection. When you (action: Raise a Shield) to gain a circumstance bonus to AC from a (item: buckler), increase the bonus from +1 to +2." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("165db3f1-730a-4733-81a7-979c54f80bdf"),
+                Id = Guid.Parse("e4c7c370-438e-4310-a8c9-9ec1c2e249c3"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

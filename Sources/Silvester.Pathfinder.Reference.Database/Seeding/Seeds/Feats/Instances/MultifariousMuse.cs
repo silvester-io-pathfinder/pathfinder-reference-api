@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MultifariousMuse : Template
     {
-        public static readonly Guid ID = Guid.Parse("0a9ee014-81fe-4f76-80bb-3f7e30ed1ccc");
+        public static readonly Guid ID = Guid.Parse("86496b19-0497-4d86-8805-93bfab6dfa53");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04fbe98b-643f-4d19-ae10-6b2c27ad5598"), Type = TextBlockType.Text, Text = "Your muse doesn’t fall into a single label. Choose a type of muse other than that of your own. You gain a 1st-level feat that requires that muse, and your muse is now also a muse of that type, allowing you to take feats with the other muse as a prerequisite. You don’t gain any of the other effects of the muse you chose." };
+            yield return new TextBlock { Id = Guid.Parse("bd281377-368b-4fd7-bbef-4b9cf0453c4c"), Type = TextBlockType.Text, Text = "Your muse doesn’t fall into a single label. Choose a type of muse other than that of your own. You gain a 1st-level feat that requires that muse, and your muse is now also a muse of that type, allowing you to take feats with the other muse as a prerequisite. You don’t gain any of the other effects of the muse you chose." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("6bea042f-7005-4bc2-a39a-ea711f540388"),
+                Id = Guid.Parse("6be03b68-49e3-415b-b66a-ed9ce1c41aa1"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

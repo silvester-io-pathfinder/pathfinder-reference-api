@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SorcererElementalistDontChange : Template
     {
-        public static readonly Guid ID = Guid.Parse("8e05b780-251a-4d90-a6f1-adb60f0a7f8f");
+        public static readonly Guid ID = Guid.Parse("aa73e54e-b3dd-480b-a733-5fa605907fb1");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8578c974-3bb5-4ebc-8367-9be3e0ee59ab"), Type = TextBlockType.Text, Text = "You choose not to replace your initial and advanced bloodline spells with elemental focus spells." };
+            yield return new TextBlock { Id = Guid.Parse("786cc90c-484e-4538-9e49-4259b40ad066"), Type = TextBlockType.Text, Text = "You choose not to replace your initial and advanced bloodline spells with elemental focus spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("df0bf2fe-3a5d-42c2-81f3-a22bbe688a13"),
+                Id = Guid.Parse("0ab88851-730e-4f42-887a-1a13a165adfc"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

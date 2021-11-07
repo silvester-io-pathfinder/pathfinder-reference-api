@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EchoingSpell : Template
     {
-        public static readonly Guid ID = Guid.Parse("ac2d8bbb-10d6-496d-b2ec-be50467175d2");
+        public static readonly Guid ID = Guid.Parse("9405c706-b93c-46d2-931c-3196a341167b");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("de8797ee-0d42-4c65-aea8-33ca18ba709d"), Type = TextBlockType.Text, Text = "You time the components of your spell with exacting precision, setting up a resonance that duplicates the spell’s effects. If your next action is to (action: Cast a Spell) of 4th level or lower that has no duration, the spell’s energy reverberates and echoes. You can (action: Cast the Spell | Cast a Spell) a second time before the end of your next turn without expending a spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("5241426b-3d43-46e8-bc30-77951b6c3748"), Type = TextBlockType.Text, Text = "You time the components of your spell with exacting precision, setting up a resonance that duplicates the spell’s effects. If your next action is to (action: Cast a Spell) of 4th level or lower that has no duration, the spell’s energy reverberates and echoes. You can (action: Cast the Spell | Cast a Spell) a second time before the end of your next turn without expending a spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("7d4ad9c8-41d0-42cb-8a88-0e9c0c937ddd"), Feats.Instances.WellspringMageDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("a0eaa8e8-30ee-4e23-8729-b8dbf0b8153d"), Feats.Instances.WellspringMageDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ddd6d610-1eb1-4066-a4d8-3022cd3d8433"),
+                Id = Guid.Parse("65dfe36f-2885-4ad0-9635-20cfa85cfd63"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

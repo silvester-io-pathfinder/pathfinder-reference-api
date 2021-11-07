@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EvanescentWings : Template
     {
-        public static readonly Guid ID = Guid.Parse("f0fc2ff8-fc0e-4ca0-97fe-fe93c6cc1b06");
+        public static readonly Guid ID = Guid.Parse("ac4b91ed-918d-4365-995a-36f9c0188b76");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7faed15c-bb5f-4ff8-99ff-804a53fcebcf"), Type = TextBlockType.Text, Text = "You’ve manifested wings that can flutter for brief spurts. You don’t need to spend any additional actions to reach something in your space that a Medium creature could reach. For instance, if you wanted to open a cookie jar located four feet off the ground, you only need to spend a single (action: Interact) action to do so. When you use Evanescent Wings to flutter to a higher place in your space, your action gains the (trait: move) trait." };
+            yield return new TextBlock { Id = Guid.Parse("56545b54-7385-4d15-8765-c85aee532850"), Type = TextBlockType.Text, Text = "You’ve manifested wings that can flutter for brief spurts. You don’t need to spend any additional actions to reach something in your space that a Medium creature could reach. For instance, if you wanted to open a cookie jar located four feet off the ground, you only need to spend a single (action: Interact) action to do so. When you use Evanescent Wings to flutter to a higher place in your space, your action gains the (trait: move) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("24258393-ecab-4387-8e44-ad19fe18ea2c"),
+                Id = Guid.Parse("4f4db7e0-34bf-4428-9e87-ec56275dad74"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

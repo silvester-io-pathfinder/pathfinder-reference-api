@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SurfaceSkimmer : Template
     {
-        public static readonly Guid ID = Guid.Parse("a16ed2f1-0fcb-42cb-82ff-15bc70f29b60");
+        public static readonly Guid ID = Guid.Parse("73516ec2-f08e-4285-b62a-693cd009f235");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f85ac792-615d-4afc-a40f-dde33429530a"), Type = TextBlockType.Text, Text = "By sinking gently beneath the waves, you obscure your presence and utilize the water as a barrier between you and land combatants. While you are submerged just below the water’s surface, you have cover from attacks made by creatures out of the water." };
+            yield return new TextBlock { Id = Guid.Parse("d2c08281-bf46-46c0-b391-f7291740176d"), Type = TextBlockType.Text, Text = "By sinking gently beneath the waves, you obscure your presence and utilize the water as a barrier between you and land combatants. While you are submerged just below the water’s surface, you have cover from attacks made by creatures out of the water." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("f1c5e2bd-30e8-4432-afa5-2ebf79931983"),
+                Id = Guid.Parse("38602c3c-3425-4f8c-b969-1c793675c537"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class EmpyrealBlessing : Template
     {
-        public static readonly Guid ID = Guid.Parse("195c8462-3f3c-4226-8dd3-ce0e9f716a87");
+        public static readonly Guid ID = Guid.Parse("113a8ccc-ef98-4674-808c-e371ff3d3dee");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b7188434-7cbf-406a-b327-dcd48f045d0b"), Type = TextBlockType.Text, Text = "You can call forth a benediction upon your allies, whether you pray to a deity of the celestial realms or just find the power within yourself. You can cast (spell: bless) once per day as a 1st-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("ecbbe807-a448-47e4-b2db-c4985673fd4e"), Type = TextBlockType.Text, Text = "You can call forth a benediction upon your allies, whether you pray to a deity of the celestial realms or just find the power within yourself. You can cast (spell: bless) once per day as a 1st-level divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("b69bed5b-c0fe-426e-8f51-bf933a20c636"),
+                Id = Guid.Parse("407e14ec-c780-4cc9-84f2-ab96e0f395fe"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class GreaterAnimalSensesTremorsensePrecise : Template
     {
-        public static readonly Guid ID = Guid.Parse("2408fa22-70f7-4bf1-b644-a838166fc35d");
+        public static readonly Guid ID = Guid.Parse("7f66ee94-4cd0-4e67-b06a-f29cbfd0ace3");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cf65576b-9e66-4bb4-9425-167fb3863c41"), Type = TextBlockType.Text, Text = "You gain tremorsense (precise) 30 feet. You must have imprecise tremorsense before you can gain this." };
+            yield return new TextBlock { Id = Guid.Parse("9d026947-72a2-4c0e-9d89-8a5dcce21ee7"), Type = TextBlockType.Text, Text = "You gain tremorsense (precise) 30 feet. You must have imprecise tremorsense before you can gain this." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("3a8a3204-201f-49c0-9b06-1d36772651b8"),
+                Id = Guid.Parse("2a010910-d870-481f-a04c-34e72e77972c"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SummonersCall : Template
     {
-        public static readonly Guid ID = Guid.Parse("7a855e7f-6bbf-4aec-870d-41e13843d5a6");
+        public static readonly Guid ID = Guid.Parse("ead9bec5-ae38-4ea0-a8b2-0846c186eeaf");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3feeb58a-7ebf-4cc2-92a8-36ee664a7747"), Type = TextBlockType.Text, Text = "In a moment of danger, you call your eidolon to your side. Your eidolon teleports to an open space adjacent to you." };
+            yield return new TextBlock { Id = Guid.Parse("bbebcb38-f9ee-4841-a4e2-b513aa20088e"), Type = TextBlockType.Text, Text = "In a moment of danger, you call your eidolon to your side. Your eidolon teleports to an open space adjacent to you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("2129b2af-b747-499e-b7d6-3970ffd970ee"),
+                Id = Guid.Parse("0923fffa-b2d5-46be-a963-b49bcd5182f5"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };

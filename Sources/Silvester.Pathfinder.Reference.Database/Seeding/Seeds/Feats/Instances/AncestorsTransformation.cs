@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AncestorsTransformation : Template
     {
-        public static readonly Guid ID = Guid.Parse("2d76b208-1817-4390-9d3f-edc53239f765");
+        public static readonly Guid ID = Guid.Parse("08952ef4-18c4-40dd-8469-4b20971a167b");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2de82cec-ca3f-4619-b7b9-da6e23b0efb1"), Type = TextBlockType.Text, Text = "You can commune with ancestor spirits to assume the form of an enormous primeval strix. You can cast 5th-level (spell: aerial form) as a primal innate spell once per day, but you take the form of a primeval strix, using the statistics for a bird form." };
+            yield return new TextBlock { Id = Guid.Parse("9b712bdd-320f-4511-b1fa-2393189e51b5"), Type = TextBlockType.Text, Text = "You can commune with ancestor spirits to assume the form of an enormous primeval strix. You can cast 5th-level (spell: aerial form) as a primal innate spell once per day, but you take the form of a primeval strix, using the statistics for a bird form." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("c66133e1-1a04-4f10-92e0-52a8fe3dfb0a"),
+                Id = Guid.Parse("52cc7529-abfb-4a3d-bdde-dcb10779aae0"),
                 SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
                 Page = -1
             };

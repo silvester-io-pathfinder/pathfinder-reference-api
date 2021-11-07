@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class SyuTakNwasDeadlyHair : Template
     {
-        public static readonly Guid ID = Guid.Parse("3f4ab2d3-0f34-4952-9a79-9762d962dec3");
+        public static readonly Guid ID = Guid.Parse("7ea7d7cf-02ba-4125-92d0-ca16475d43e9");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("524a6db3-5928-4f9f-8723-0733253cf90f"), Type = TextBlockType.Text, Text = "Your hair unarmed attack deals 1d6 bludgeoning damage and gains the (trait: grapple) trait." };
+            yield return new TextBlock { Id = Guid.Parse("5a06ac0c-c26b-4136-80ec-e5c3cbfbda0c"), Type = TextBlockType.Text, Text = "Your hair unarmed attack deals 1d6 bludgeoning damage and gains the (trait: grapple) trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("8c487761-5611-4881-b181-f2bb06d6c5f1"), Feats.Instances.LivingHair.ID);
+            builder.HaveSpecificFeat(Guid.Parse("c0a2aa6e-5a6e-4188-be64-f73952a6c39a"), Feats.Instances.LivingHair.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("07d85469-ba2a-4aaa-ae4d-5487afbc280f"),
+                Id = Guid.Parse("533f06bf-1303-46a5-8c66-c0c9debce2ba"),
                 SourceId = Sources.Instances.FistOfTheRubyPhoenix.ID,
                 Page = -1
             };

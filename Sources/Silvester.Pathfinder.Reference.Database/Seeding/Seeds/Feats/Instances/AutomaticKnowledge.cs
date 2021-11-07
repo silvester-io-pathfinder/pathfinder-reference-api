@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class AutomaticKnowledge : Template
     {
-        public static readonly Guid ID = Guid.Parse("d8280ff5-85a4-4c8b-a47b-994a56e3d504");
+        public static readonly Guid ID = Guid.Parse("89ec6840-539f-480e-a09a-c0aba47f3bb8");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("182c0bab-9e13-4ccf-8a35-eca9bf5189ec"), Type = TextBlockType.Text, Text = "You know basic facts off the top of your head. When you select this feat, choose a skill you’re an expert in that has the (action: Recall Knowledge) action and for which you have the (feat: Assurance) feat. You can use the (action: Recall Knowledge) action with that skill as a free action once per round. If you do, you must use (feat: Assurance) on the skill check." };
+            yield return new TextBlock { Id = Guid.Parse("0bc39f82-d473-4a3d-986b-8b06ed6f3eec"), Type = TextBlockType.Text, Text = "You know basic facts off the top of your head. When you select this feat, choose a skill you’re an expert in that has the (action: Recall Knowledge) action and for which you have the (feat: Assurance) feat. You can use the (action: Recall Knowledge) action with that skill as a free action once per round. If you do, you must use (feat: Assurance) on the skill check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificRecallKnowledgeProficiency(Guid.Parse("82bf9e6c-1398-410a-a601-4805c547cb7f"), Proficiencies.Instances.Expert.ID, requiresAssurance: True);
+            builder.HaveSpecificRecallKnowledgeProficiency(Guid.Parse("8d325c21-af10-4b18-b6f3-8d916c34edfe"), Proficiencies.Instances.Expert.ID, requiresAssurance: true);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("fc4f7529-c148-4e35-9833-334abf803538"),
+                Id = Guid.Parse("2a9aa822-5db2-4538-a21e-0c149e2b4799"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = -1
             };

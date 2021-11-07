@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class StageFighting : Template
     {
-        public static readonly Guid ID = Guid.Parse("18ce2c10-520d-49f0-bbeb-968b4731c36e");
+        public static readonly Guid ID = Guid.Parse("7ba6a3db-215b-4098-bfbe-d30040a8a24e");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("341a1e08-345d-4ac3-8b61-c6a62cc8f7c4"), Type = TextBlockType.Text, Text = "You pull punches to give a better show. You don’t take the usual -2 circumstance penalty when making a nonlethal attack with a weapon or unarmed attack that doesn’t have the (trait: nonlethal) trait." };
+            yield return new TextBlock { Id = Guid.Parse("a4785e91-bce6-4218-9af3-650a8d027390"), Type = TextBlockType.Text, Text = "You pull punches to give a better show. You don’t take the usual -2 circumstance penalty when making a nonlethal attack with a weapon or unarmed attack that doesn’t have the (trait: nonlethal) trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("e9ae9cd0-cf7b-46a4-971f-3cb138bb8e21"), Feats.Instances.GladiatorDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("10b0599b-9955-4df6-873c-504684594e34"), Feats.Instances.GladiatorDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("dc897c0d-e397-42d5-8485-d40730243058"),
+                Id = Guid.Parse("8afb3ffe-0d01-4117-84b6-0cd461a10353"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class MightyBulwark : Template
     {
-        public static readonly Guid ID = Guid.Parse("087e7973-4656-44db-9f06-8ee0872bf2f4");
+        public static readonly Guid ID = Guid.Parse("3fa28217-dcc2-47ef-a54a-128176b88e61");
 
         protected override Feat GetFeat()
         {
@@ -28,13 +29,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc3a82c6-c779-4efc-95a1-f8519bd0ca29"), Type = TextBlockType.Text, Text = "Thanks to your incredible connection to your armor, you can use it to shrug off an incredible array of dangers. Your bonus from the (trait: bulwark) armor trait increases from +3 to +4, and it applies on all Reflex saves, not just damaging Reflex saves." };
+            yield return new TextBlock { Id = Guid.Parse("5949b3ce-c4b6-4b3e-9e34-211bf1eda25b"), Type = TextBlockType.Text, Text = "Thanks to your incredible connection to your armor, you can use it to shrug off an incredible array of dangers. Your bonus from the (trait: bulwark) armor trait increases from +3 to +4, and it applies on all Reflex saves, not just damaging Reflex saves." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
         { 
             
-            builder.HaveSpecificFeat(Guid.Parse("78956a3d-9013-4754-9ca4-c9c172229da3"), Feats.Instances.SentinelDedication.ID);
+            builder.HaveSpecificFeat(Guid.Parse("9e771f30-f6ca-4d51-b7c9-4d9f75efbed2"), Feats.Instances.SentinelDedication.ID);
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -46,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4096b6e0-0b90-49a2-a832-5faa55ed99c1"),
+                Id = Guid.Parse("81d42893-f5f9-4749-a8c3-1306986470f2"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

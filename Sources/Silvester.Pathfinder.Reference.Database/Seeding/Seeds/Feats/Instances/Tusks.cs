@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class Tusks : Template
     {
-        public static readonly Guid ID = Guid.Parse("1b025693-2a88-4984-b3a5-c54099112d2d");
+        public static readonly Guid ID = Guid.Parse("14c40193-3069-4d68-8066-6ce2602db07d");
 
         protected override Feat GetFeat()
         {
@@ -28,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("faa28b3f-5277-4aad-a9a7-0a8cf46bcd79"), Type = TextBlockType.Text, Text = "You have particularly long, jagged tusks perfect for tearing meat from bone. You gain a tusks unarmed attack that deals 1d6 piercing damage. Your tusks are in the brawling group and have the (trait: finesse) and (trait: unarmed) traits." };
+            yield return new TextBlock { Id = Guid.Parse("1d30e4c2-7687-45e3-9357-cbcbc6d703ae"), Type = TextBlockType.Text, Text = "You have particularly long, jagged tusks perfect for tearing meat from bone. You gain a tusks unarmed attack that deals 1d6 piercing damage. Your tusks are in the brawling group and have the (trait: finesse) and (trait: unarmed) traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -40,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("4960fb93-51a6-489f-b4b2-0d39bda1a33d"),
+                Id = Guid.Parse("c07bac5a-9a4d-4a4e-8729-6c6d3c2c1484"),
                 SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
                 Page = -1
             };

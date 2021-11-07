@@ -1,6 +1,7 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 {
     public class PullOfStasis : Template
     {
-        public static readonly Guid ID = Guid.Parse("627234aa-fbb0-42e5-9532-5b449567bedf");
+        public static readonly Guid ID = Guid.Parse("f8bf6459-ae74-4c53-af1d-f94a4ab6970e");
 
         protected override Feat GetFeat()
         {
@@ -28,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f80cfe0e-9465-4f5c-aa4c-199feb05e495"), Type = TextBlockType.Text, Text = "Any time you hit with the soulforged weapon, the target takes a –10-foot penalty to its Speeds for 1 round. On a critical hit, the creature is immobilized for 1 round instead." };
-            yield return new TextBlock { Id = Guid.Parse("7878ffe2-1f08-48c4-a0c2-e5ad302490d9"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ You take a –10-foot penalty to all your Speeds." };
+            yield return new TextBlock { Id = Guid.Parse("5170c93e-7a71-45ad-abdf-db59a6accfbc"), Type = TextBlockType.Text, Text = "Any time you hit with the soulforged weapon, the target takes a –10-foot penalty to its Speeds for 1 round. On a critical hit, the creature is immobilized for 1 round instead." };
+            yield return new TextBlock { Id = Guid.Parse("c7d83544-c90e-4655-9a36-3e80f8db8a71"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ You take a –10-foot penalty to all your Speeds." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -47,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("ac3fb49d-6f3c-4938-9f4b-d6769a9758cd"),
+                Id = Guid.Parse("fd1d2d73-d84b-41b8-a880-80df7c6cd33e"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = -1
             };
