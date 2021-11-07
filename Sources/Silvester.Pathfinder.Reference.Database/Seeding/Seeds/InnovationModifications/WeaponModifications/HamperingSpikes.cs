@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Hampering Spikes",
                 Description = "You've added long, snagging spikes to your weapon, which you can use to impede your foes' movement. Your innovation gains the hampering and versatile P traits.",
-                InnovationId = Innovations.Instances.WeaponInnovation.ID,
+                InnovationId = Innovations.Instances.Weapon.ID,
                 TypeId = InnovationModificationTypes.Instances.Initial.ID
             };
         }

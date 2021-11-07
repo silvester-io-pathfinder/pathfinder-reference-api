@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             builder.GainAnyAbilityBoost(Guid.Parse(""));
             builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Deception.ID);
             builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Warfare.ID);
-            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.LenghtyDiversion.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.LengthyDiversion.ID);
         }
 
         protected override SourcePage GetSourcePage()

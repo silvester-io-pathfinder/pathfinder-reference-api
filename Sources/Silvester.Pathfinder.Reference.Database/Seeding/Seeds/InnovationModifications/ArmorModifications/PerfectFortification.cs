@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Perfect Fortification",
                 Description = "You've outfitted your armor with such heavy fortifications that deadly attacks often lose their edge. Each time you're critically hit while wearing the armor, attempt a DC 13 flat check. On a success, it becomes a normal hit. This isn't cumulative with fortification runes or other abilities that reduce critical hits with a flat check. Additionally, you gain resistance 2 + half your level against precision damage.",
-                InnovationId = Innovations.Instances.ArmorInnovation.ID,
+                InnovationId = Innovations.Instances.Armor.ID,
                 TypeId = InnovationModificationTypes.Instances.Revolutionary.ID
             };
         }

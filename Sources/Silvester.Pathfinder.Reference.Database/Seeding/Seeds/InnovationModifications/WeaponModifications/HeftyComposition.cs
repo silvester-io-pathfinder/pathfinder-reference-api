@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Hefty Composition",
                 Description = "Blunt surfaces and sturdy construction make your weapon hefty and mace-like. Your innovation gains the shove and versatile B traits.",
-                InnovationId = Innovations.Instances.WeaponInnovation.ID,
+                InnovationId = Innovations.Instances.Weapon.ID,
                 TypeId = InnovationModificationTypes.Instances.Initial.ID
             };
         }

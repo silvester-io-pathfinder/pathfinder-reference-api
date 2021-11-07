@@ -56,7 +56,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             });
 
             builder.GainSpecificSense(Guid.Parse(""), Senses.Instances.Scent.ID, SenseAccuracies.Instances.Imprecise.ID, "30 feet.");
-            builder.GainSpecificFeat(Guid.Parse(""), Feats.General.ForagerFeat.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.Forager.ID);
         }
 
         protected override SourcePage GetSourcePage()

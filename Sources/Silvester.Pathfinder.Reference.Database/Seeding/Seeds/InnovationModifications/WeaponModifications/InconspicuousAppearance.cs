@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Inconspicuous Appearance",
                 Description = "Your innovation is built for easy concealment and surprise attacks. It gains the backstabber and versatile P traits. If the weapon has light Bulk, it also gains the concealable trait.",
-                InnovationId = Innovations.Instances.WeaponInnovation.ID,
+                InnovationId = Innovations.Instances.Weapon.ID,
                 TypeId = InnovationModificationTypes.Instances.Breakthrough.ID
             };
         }

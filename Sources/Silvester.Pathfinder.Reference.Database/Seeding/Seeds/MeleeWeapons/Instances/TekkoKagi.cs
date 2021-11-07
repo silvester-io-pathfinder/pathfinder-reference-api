@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             return new SourcePage
             {
                 Id = Guid.Parse("d59eec71-20e8-49a6-82d4-9e5b309fa763"),
-                SourceId = GodsAndMagic.ID,
+                SourceId = LostOmensGodsAndMagic.ID,
                 Page = 121
             };
         }

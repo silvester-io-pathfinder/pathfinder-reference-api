@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Multisensory Mask",
                 Description = "You've built a multisensory mask over your armor that protects you by distorting your figure from all senses, leaving behind only a hazy image, muffled sounds, and so forth. While wearing the armor, you gain concealment against all creatures, even if they are using a nonvisual precise sense, such as a bat's echolocation. As normal for effects that leave your location obvious, you can't use this concealment to Hide or Sneak. If you use a hostile action, the concealment ends until you restore the mask as a single action, which has the manipulate trait.",
-                InnovationId = Innovations.Instances.ArmorInnovation.ID,
+                InnovationId = Innovations.Instances.Armor.ID,
                 TypeId = InnovationModificationTypes.Instances.Revolutionary.ID
             };
         }

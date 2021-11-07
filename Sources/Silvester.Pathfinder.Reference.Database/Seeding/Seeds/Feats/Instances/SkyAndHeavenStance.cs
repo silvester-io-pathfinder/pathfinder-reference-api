@@ -1,0 +1,56 @@
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
+using System;
+using System.Collections.Generic;
+
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
+{
+    public class SkyAndHeavenStance : Template
+    {
+        public static readonly Guid ID = Guid.Parse("9dfb6c24-0aef-41b3-8031-43040d16017b");
+
+        protected override Feat GetFeat()
+        {
+            return new Feat
+            {
+                Id = ID,
+                Name = "Sky and Heaven Stance",
+                Level = 6,
+                ActionTypeId = ActionTypes.Instances.OneAction.ID,
+                CanBeLearnedMoreThanOnce = false,
+                Special = null,
+                Trigger = null,
+                Frequency = null
+            };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("3cce686d-6f55-4964-a356-45ed44bffd35"), Type = TextBlockType.Text, Text = "You enter a stance perfected by past champions of the Challenge of Sky and Heaven, allowing you to make jagged strikes like flashes of lightning through the sky. The only (action: Strikes | Strike) you can make are skyward slash unarmed attacks. These unarmed attacks deal 1d10 slashing damage; are in the brawling group; and have the (trait: nonlethal), (trait: unarmed), and (trait: versatile P) traits." };
+            yield return new TextBlock { Id = Guid.Parse("0a145fa6-0334-4263-beff-ea3161eeea9e"), Type = TextBlockType.Text, Text = "While in Sky and Heaven Stance, you gain resistance 2 to electricity and resistance 2 to sonic damage. These resistances increase to 5 at 12th level and to 8 at 18th level." };
+        }
+
+        protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
+        { 
+            
+            builder.HaveSpecificFeat(Guid.Parse("e451263f-bee0-4c00-9d57-bd9531754310"), Feats.Instances.JalmeriHeavenseekerDedication.ID);
+        }
+
+        protected override IEnumerable<Guid> GetTraits()
+        {
+            yield break;   
+        }            
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("5fce7a04-470b-43e6-bde8-416c5e960fb7"),
+                SourceId = Sources.Instances.AgentsOfEdgewatch.ID,
+                Page = -1
+            };
+        }
+    }
+}

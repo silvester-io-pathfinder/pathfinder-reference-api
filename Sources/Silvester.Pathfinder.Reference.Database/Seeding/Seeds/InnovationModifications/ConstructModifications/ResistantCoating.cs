@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Resistant Coating",
                 Description = "Your innovation is hard to damage by any means. It gains resistance 5 to all damage (except adamantine).",
-                InnovationId = Innovations.Instances.ConstructInnovation.ID,
+                InnovationId = Innovations.Instances.Construct.ID,
                 TypeId = InnovationModificationTypes.Instances.Revolutionary.ID
             };
         }

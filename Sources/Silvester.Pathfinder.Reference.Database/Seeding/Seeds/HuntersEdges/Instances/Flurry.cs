@@ -7,6 +7,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.HuntersEdges.Instances
 {
@@ -26,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.HuntersEdges.Ins
 
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            builder.ModifyFeatEffects(Guid.Parse(""), Feats.Instances.HuntPrey.ID, and => 
+            builder.ModifyFeatEffects(Guid.Parse(""), Guid.Parse(""), Feats.Instances.HuntPrey.ID, and => 
             {
                 and.ModifyMultipleAttackPenalty(Guid.Parse(""), MultipleAttackPenalty.SecondAttack, ModifierType.Subtract, modifier: 2, isWithAgileWeapon: false);
                 and.ModifyMultipleAttackPenalty(Guid.Parse(""), MultipleAttackPenalty.SecondAttack, ModifierType.Subtract, modifier: 2, isWithAgileWeapon: true);
@@ -38,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.HuntersEdges.Ins
                     and.AddPrerequisites(Guid.Parse(""), prerequisites => 
                     {
                         prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 17);
-                        prerequisites.HaveCurrentWeaponProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID);
+                        prerequisites.HaveCurrentWeaponProficiency(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, Proficiencies.Instances.Master.ID);
                     });
                     and.ModifyMultipleAttackPenalty(Guid.Parse(""), MultipleAttackPenalty.SecondAttack, ModifierType.Subtract, modifier: 3, isWithAgileWeapon: false);
                     and.ModifyMultipleAttackPenalty(Guid.Parse(""), MultipleAttackPenalty.SecondAttack, ModifierType.Subtract, modifier: 3, isWithAgileWeapon: true);

@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Enhanced Damage",
                 Description = "You've made your innovation more powerful than other weapons of its kind. Increase your innovation's weapon damage die by one step (d4 to d6, d6 to d8, d8 to d10, d10 to d12). As normal, you can't increase your die by more than one size, so this modification isn't cumulative with complex simplicity.",
-                InnovationId = Innovations.Instances.WeaponInnovation.ID,
+                InnovationId = Innovations.Instances.Weapon.ID,
                 TypeId = InnovationModificationTypes.Instances.Revolutionary.ID
             };
         }

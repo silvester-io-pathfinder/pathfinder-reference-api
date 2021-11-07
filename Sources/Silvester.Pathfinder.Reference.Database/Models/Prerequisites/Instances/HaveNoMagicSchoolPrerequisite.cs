@@ -10,7 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 
     public static partial class EffectBuilderPrerequisitesExtensions
     {
-        public static PrerequisiteBuilder HaveNoMagicSchoolll(this BooleanPrerequisiteBuilder builder, Guid id)
+        public static PrerequisiteBuilder HaveNoMagicSchool(this BooleanPrerequisiteBuilder builder, Guid id)
         {
             return builder.Add(new HaveNoMagicSchoolPrerequisite { Id = id });
         }

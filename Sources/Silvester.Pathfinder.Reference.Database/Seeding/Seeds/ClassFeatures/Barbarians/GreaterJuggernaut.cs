@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
             builder.GainSpecificSavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Legendary.ID, SavingThrowStats.Instances.Fortitude.ID);
-            builder.ModifySpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Fortitude.ID, RollResult.CriticalFailure, becomes: RollResult.Failure);
+            builder.ImproveSpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Fortitude.ID, RollResult.CriticalFailure, becomes: RollResult.Failure);
             //TODO: Add halving effect.
         }
 

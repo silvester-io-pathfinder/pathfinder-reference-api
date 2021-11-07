@@ -66,6 +66,13 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Builders
             return AddBoolean(CreateOr(id), buildAction);
         }
 
+        public BooleanEffectBuilder AddDailyPreparation(Guid id, Action<BooleanEffectBuilder> buildAction)
+        {
+            BooleanEffectBuilder builder = new BooleanEffectBuilder(new BooleanEffect { Id = id, Operator = BooleanOperator.And });
+            buildAction?.Invoke(builder);
+            return builder;
+        }
+
         private BooleanEffectBuilder AddBoolean(BooleanEffectBuilder subBuilder, Action<BooleanEffectBuilder> buildAction)
         {
             buildAction.Invoke(subBuilder);

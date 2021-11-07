@@ -35,7 +35,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             builder.AddOr(Guid.Parse(""), or =>
             {
                 or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Constitution.ID);
-                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Charisma.Wisdom);
+                or.GainSpecificAbilityBoost(Guid.Parse(""), Stats.Instances.Wisdom.ID);
             });
 
             builder.GainAnyAbilityBoost(Guid.Parse(""));

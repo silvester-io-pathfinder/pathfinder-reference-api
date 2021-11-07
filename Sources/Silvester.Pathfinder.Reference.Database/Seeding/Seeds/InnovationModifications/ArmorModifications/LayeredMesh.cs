@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Layered Mesh",
                 Description = "You've woven an incredibly powerful network of interlocking mesh around your armor, which catches piercing attacks and diffuses them. While wearing your armor, you gain resistance to piercing damage equal to half your level.",
-                InnovationId = Innovations.Instances.ArmorInnovation.ID,
+                InnovationId = Innovations.Instances.Armor.ID,
                 TypeId = InnovationModificationTypes.Instances.Breakthrough.ID
             };
         }

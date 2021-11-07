@@ -33,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Mo
 
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            builder.ModifyWeaponCategoryDamageDie(Guid.Parse(""), WeaponCategories.Instances.Unarmed.ID, ModifierType.Add, modifier: 1);
+            builder.ModifySpecificWeaponCategoryDamageDieAmount(Guid.Parse(""), WeaponCategories.Instances.Unarmed.ID, ModifierType.Add, modifier: 1);
             builder.DisableLethalUnarmedAttackPenalty(Guid.Parse(""));
         }
 

@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {
     public class ManualPrerequisite : BasePrerequisite
     {
-        public string Text { get; set; }
+        public string Text { get; set; } = default!;
     }
 
     public static partial class EffectBuilderPrerequisitesExtensions

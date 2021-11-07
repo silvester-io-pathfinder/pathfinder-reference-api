@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Climbing Limbs",
                 Description = "With appendages that can claw or create suction, your construct becomes a capable climber. Your innovation gains a climb Speed equal to half its land Speed.",
-                InnovationId = Innovations.Instances.ConstructInnovation.ID,
+                InnovationId = Innovations.Instances.Construct.ID,
                 TypeId = InnovationModificationTypes.Instances.Breakthrough.ID
             };
         }

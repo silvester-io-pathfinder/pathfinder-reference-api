@@ -1,5 +1,10 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using System;
 using System.Collections.Generic;
 
@@ -15,8 +20,28 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
             { 
                 Id = ID, 
                 RarityId = Rarities.Instances.Common.ID, 
-                Name = "Desert Elf", 
-                Description = "You live under the desert’s blazing heat, gaining incredible resilience to warm environments. You gain fire resistance equal to half your level (minimum 1), and environmental heat effects are one step less extreme for you (incredible heat becomes extreme, extreme heat becomes severe, and so on)." 
+                Name = "Desert Elf"
+            };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetails()
+        {
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You live under the desert’s blazing heat, gaining incredible resilience to warm environments. You gain fire resistance equal to half your level (minimum 1), and environmental heat effects are one step less extreme for you (incredible heat becomes extreme, extreme heat becomes severe, and so on)." };
+        }
+
+        protected override void GetEffects(BooleanEffectBuilder builder)
+        {
+            builder.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+            builder.ModifyTemperature(Guid.Parse(""), Temperature.Heat, ModifierType.Subtract, 1);
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse(""),
+                SourceId = Sources.Instances.CharacterGuide.ID,
+                Page = 25
             };
         }
 

@@ -40,19 +40,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Mo
                 prerequisites.HaveCurrentArmorCategory(Guid.Parse(""), ArmorCategories.Instances.Unarmored.ID);
             });
 
-            builder.ModifySpeed(Guid.Parse(""), ModifierType.Add, 10)
+            builder.ModifySpecificSpeed(Guid.Parse(""), MovementMethod.Walking, ModifierType.Add, 10)
                 .AddPrerequisites(Guid.Parse(""), prerequisites => { prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 3); });
 
-            builder.ModifySpeed(Guid.Parse(""), ModifierType.Add, 5)
+            builder.ModifySpecificSpeed(Guid.Parse(""), MovementMethod.Walking, ModifierType.Add, 5)
                 .AddPrerequisites(Guid.Parse(""), prerequisites => { prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 7); });
 
-            builder.ModifySpeed(Guid.Parse(""), ModifierType.Add, 5)
+            builder.ModifySpecificSpeed(Guid.Parse(""), MovementMethod.Walking, ModifierType.Add, 5)
                 .AddPrerequisites(Guid.Parse(""), prerequisites => { prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 11); });
 
-            builder.ModifySpeed(Guid.Parse(""), ModifierType.Add, 5)
+            builder.ModifySpecificSpeed(Guid.Parse(""), MovementMethod.Walking, ModifierType.Add, 5)
                 .AddPrerequisites(Guid.Parse(""), prerequisites => { prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 15); });
 
-            builder.ModifySpeed(Guid.Parse(""), ModifierType.Add, 5)
+            builder.ModifySpecificSpeed(Guid.Parse(""), MovementMethod.Walking, ModifierType.Add, 5)
                 .AddPrerequisites(Guid.Parse(""), prerequisites => { prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 19); });
         }
 

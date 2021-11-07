@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
             {
                 Id = ID, 
                 Name = "Acrobatic",
-                DedicationFeatId = Feats.Instances.AcrobaticDedication.ID 
+                DedicationFeatId = Feats.Instances.AcrobatDedication.ID 
             };
         }
 

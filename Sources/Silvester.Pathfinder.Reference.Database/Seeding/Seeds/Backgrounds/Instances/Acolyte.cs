@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             builder.GainAnyAbilityBoost(Guid.Parse(""));
             builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Religion.ID);
             builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Scribing.ID);
-            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.StudentOfTheCanonFeat.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.StudentOfTheCanon.ID);
         }
 
         protected override SourcePage GetSourcePage()

@@ -12,8 +12,6 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 
         public LanguageType Type { get; set; } = default!;
 
-        public ICollection<Ancestry> Ancestries { get; set; } = new List<Ancestry>();
-
         public ICollection<Creature> Creatures { get; set; } = new List<Creature>();
      
         public NpgsqlTsVector SearchVector { get; set; } = default!;

@@ -49,6 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Disease> Diseases { get; set; } = default!;
         public DbSet<DivineAlly> DivineAllies { get; set; } = default!;
         public DbSet<DivineFont> DivineFonts { get; set; } = default!;
+        public DbSet<DraconicExemplar> DraconicExemplars { get; set; } = default!;
         public DbSet<Doctrine> Doctrines { get; set; } = default!;
         public DbSet<Domain> Domains { get; set; } = default!;
         public DbSet<DruidicOrder> DruidicOrders { get; set; } = default!;
@@ -105,6 +106,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Racket> Rackets { get; set; } = default!;
         public DbSet<Rarity> Rarities { get; set; } = default!;
         public DbSet<ResearchField> ResearchFields { get; set; } = default!;
+        public DbSet<RuneMagic> RuneMagics { get; set; } = default!;
         public DbSet<SavingThrowStat> SavingThrowStats { get; set; } = default!;
         public DbSet<Shield> Shields { get; set; } = default!;
         public DbSet<Skill> Skills { get; set; } = default!;

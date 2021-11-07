@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Subtle Dampeners",
                 Description = "You've designed your armor to help you blend in and dampen noise slightly. When you send your armor into overdrive, the dampeners increase their effect, improving your Stealth. When under the effects of Overdrive, you gain a +1 circumstance bonus to Stealth checks. If you're a master in Crafting, this increases to a +2 circumstance bonus.",
-                InnovationId = Innovations.Instances.ArmorInnovation.ID,
+                InnovationId = Innovations.Instances.Armor.ID,
                 TypeId = InnovationModificationTypes.Instances.Initial.ID
             };
         }

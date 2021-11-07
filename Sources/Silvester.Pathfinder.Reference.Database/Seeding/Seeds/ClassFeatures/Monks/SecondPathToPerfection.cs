@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Mo
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
             builder.GainAnySavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID);
-            builder.ModifyAnySavingThrow(Guid.Parse(""), RollResult.Success, becomes: RollResult.CriticalSuccess); 
+            builder.ImproveAnySavingThrow(Guid.Parse(""), RollResult.Success, becomes: RollResult.CriticalSuccess); 
         }
 
         protected override SourcePage GetSourcePage()

@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Increased Size",
                 Description = "You built your construct innovation bigger than most. Your construct is Large. If you have this modification and your construct innovation becomes an advanced construct companion or otherwise gains the ability to become Large, you can immediately change increased size to a different initial construct modification.",
-                InnovationId = Innovations.Instances.ConstructInnovation.ID,
+                InnovationId = Innovations.Instances.Construct.ID,
                 TypeId = InnovationModificationTypes.Instances.Initial.ID
             };
         }

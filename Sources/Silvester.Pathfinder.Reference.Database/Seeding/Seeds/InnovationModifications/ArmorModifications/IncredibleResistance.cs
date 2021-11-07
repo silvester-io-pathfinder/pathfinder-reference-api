@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Incredible Resistance",
                 Description = "You've improved upon your breakthrough modification's ability to resist damage. Choose one of the following breakthrough modifications your innovation has: dense plating, layered mesh, or tensile absorption. Increase the resistance you gain from that modification to be equal to your level, instead of half your level.",
-                InnovationId = Innovations.Instances.ArmorInnovation.ID,
+                InnovationId = Innovations.Instances.Armor.ID,
                 TypeId = InnovationModificationTypes.Instances.Revolutionary.ID
             };
         }

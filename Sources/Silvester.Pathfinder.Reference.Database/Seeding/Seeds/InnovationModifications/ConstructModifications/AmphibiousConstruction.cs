@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Amphibious Construction",
                 Description = "Increased buoyancy, rudders, and a means of propulsion like a fluked tail or powerful propeller make your construct able to travel in water. Your innovation gains a swim Speed of 25 feet.",
-                InnovationId = Innovations.Instances.ConstructInnovation.ID,
+                InnovationId = Innovations.Instances.Construct.ID,
                 TypeId = InnovationModificationTypes.Instances.Initial.ID
             };
         }

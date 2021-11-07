@@ -1,0 +1,49 @@
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
+using System;
+using System.Collections.Generic;
+
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
+{
+    public class ModificationIncredibleResistance : Template
+    {
+        public static readonly Guid ID = Guid.Parse("44039e17-bb2f-45cf-9978-b122f414d78a");
+
+        protected override Feat GetFeat()
+        {
+            return new Feat
+            {
+                Id = ID,
+                Name = "Modification - Incredible Resistance",
+                Level = -1,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                CanBeLearnedMoreThanOnce = false,
+                Special = null,
+                Trigger = null,
+                Frequency = null
+            };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("a776102f-4fb2-4f88-96c1-24eab121005a"), Type = TextBlockType.Text, Text = "You’ve improved upon your breakthrough modification’s ability to resist damage. Choose one of the following breakthrough modifications your innovation has: (feat: dense plating | Modification - Dense Plating), (feat: layered mesh | Modification - Layered Mesh), or (feat: tensile absorption | Modification - Tensile Absorption). Increase the resistance you gain from that modification to be equal to your level, instead of half your level." };
+        }
+
+        protected override IEnumerable<Guid> GetTraits()
+        {
+            yield break;   
+        }            
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("5db835d0-fd76-491e-a9c9-96e0f958e75e"),
+                SourceId = Sources.Instances.GunsAndGears.ID,
+                Page = -1
+            };
+        }
+    }
+}

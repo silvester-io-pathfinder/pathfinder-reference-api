@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Flight Chassis",
                 Description = "You fit your construct with a means of flight, such as adding rotors or rebuilding it with wings and a lightweight construction. Your innovation gains a fly Speed of 25 feet.",
-                InnovationId = Innovations.Instances.ConstructInnovation.ID,
+                InnovationId = Innovations.Instances.Construct.ID,
                 TypeId = InnovationModificationTypes.Instances.Revolutionary.ID
             };
         }

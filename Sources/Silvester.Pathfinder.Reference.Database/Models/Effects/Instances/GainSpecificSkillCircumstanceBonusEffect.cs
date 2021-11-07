@@ -5,9 +5,9 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects;
 
 namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 {
-    //TODO: Determine if this needs a CheckType parameter of sorts.
     public class GainSpecificSkillCircumstanceBonusEffect : BaseEffect
     {
+        public string? Addendum { get; set; } 
         public int Bonus { get; set; }
 
         public Guid SkillId { get; set; }
@@ -16,9 +16,9 @@ namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 
     public static partial class BooleanEffectBuilderExtensions
     {
-        public static EffectBuilder GainSpecificSkillCircumstanceBonus(this BooleanEffectBuilder builder, Guid id, Guid skillId, int bonus)
+        public static EffectBuilder GainSpecificSkillCircumstanceBonus(this BooleanEffectBuilder builder, Guid id, Guid skillId, int bonus, string? addendum = null)
         {
-            return builder.Add(new GainSpecificSkillCircumstanceBonusEffect { Id = id, SkillId = skillId, Bonus = bonus });
+            return builder.Add(new GainSpecificSkillCircumstanceBonusEffect { Id = id, SkillId = skillId, Bonus = bonus, Addendum = addendum });
         }
     }
 }

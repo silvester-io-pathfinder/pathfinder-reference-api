@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Modular Head",
                 Description = "You've constructed a multi-purpose, adjustable striking surface for your weapon, or you've made special ammunition you can swiftly alter. Your innovation gains the modular trait for bludgeoning, piercing, and slashing. When you Interact to use the modular trait, you can also choose to give the weapon the nonlethal trait if it doesn't currently have it, or to remove that trait if it's currently nonlethal.",
-                InnovationId = Innovations.Instances.WeaponInnovation.ID,
+                InnovationId = Innovations.Instances.Weapon.ID,
                 TypeId = InnovationModificationTypes.Instances.Initial.ID
             };
         }

@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Creatures
             builder
                 .Entity<Creature>()
                 .HasOne(e => e.RecallKnowledge)
-                .WithOne(e => e.Creature)
+                .WithOne(e => e!.Creature)
                 .HasForeignKey<Creature>(e => e.RecallKnowledgeId);
         }
     }

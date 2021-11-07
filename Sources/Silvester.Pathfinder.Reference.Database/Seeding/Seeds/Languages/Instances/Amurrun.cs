@@ -1,0 +1,20 @@
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using System;
+
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Languages.Instances
+{
+    public class Amurrun : Template
+    {
+        public static readonly Guid ID = Guid.Parse("b968b2e8-1dc2-4c33-b108-5c58c36d85ed");
+
+        protected override Language GetLanguage()
+        {
+            return new Language
+            {
+                Id = ID,
+                TypeId = LanguageTypes.Instances.Uncommon.ID,
+                Name = "Amurrun"
+            };
+        }
+    }
+}

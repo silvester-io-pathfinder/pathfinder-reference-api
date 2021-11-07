@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
             return new SourcePage
             {
                 Id = Guid.Parse("99c5f008-3504-4b4d-9360-2f495e0b4d65"),
-                SourceId = GodsAndMagic.ID,
+                SourceId = LostOmensGodsAndMagic.ID,
                 Page = 120
             };
         }

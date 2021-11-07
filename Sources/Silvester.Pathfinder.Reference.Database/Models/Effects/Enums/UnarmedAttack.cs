@@ -5,6 +5,10 @@
         Fangs,
         Claws,
         Tusks,
-        Quill
+        Quill,
+        Jaws,
+        Beak,
+        Spine,
+        Talon
     }
 }

@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Philosophies.Ins
             return new SourcePage
             {
                 Id = Guid.Parse(""),
-                SourceId = Sources.Instances.GodsAndMagic.ID,
+                SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
                 Page = 99
             };
         }

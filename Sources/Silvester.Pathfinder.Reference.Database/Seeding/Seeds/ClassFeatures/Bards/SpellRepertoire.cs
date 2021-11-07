@@ -37,41 +37,41 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
 
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 1);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 1);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 1, requiredLevel: 2);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 1);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 1);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 1, requiredLevel: 2);
 
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 2, requiredLevel: 3);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 2, requiredLevel: 3);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 2, requiredLevel: 4);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 2, requiredLevel: 3);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 2, requiredLevel: 3);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 2, requiredLevel: 4);
 
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 3, requiredLevel: 5);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 3, requiredLevel: 5);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 3, requiredLevel: 6);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 3, requiredLevel: 5);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 3, requiredLevel: 5);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 3, requiredLevel: 6);
 
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 4, requiredLevel: 7);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 4, requiredLevel: 7);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 4, requiredLevel: 8);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 4, requiredLevel: 7);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 4, requiredLevel: 7);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 4, requiredLevel: 8);
 
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 5, requiredLevel: 9);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 5, requiredLevel: 9);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 5, requiredLevel: 10);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 5, requiredLevel: 9);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 5, requiredLevel: 9);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 5, requiredLevel: 10);
 
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 6, requiredLevel: 11);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 6, requiredLevel: 11);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 6, requiredLevel: 12);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 6, requiredLevel: 11);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 6, requiredLevel: 11);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 6, requiredLevel: 12);
 
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 7, requiredLevel: 13);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 7, requiredLevel: 13);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 7, requiredLevel: 14);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 7, requiredLevel: 13);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 7, requiredLevel: 13);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 7, requiredLevel: 14);
 
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 8, requiredLevel: 15);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 8, requiredLevel: 15);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 8, requiredLevel: 16);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 8, requiredLevel: 15);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 8, requiredLevel: 15);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 8, requiredLevel: 16);
 
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 9, requiredLevel: 17);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 9, requiredLevel: 17);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 9, requiredLevel: 18);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 9, requiredLevel: 17);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 9, requiredLevel: 17);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 9, requiredLevel: 18);
         }
 
         protected override SourcePage GetSourcePage()

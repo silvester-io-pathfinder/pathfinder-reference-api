@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Entangling Form",
                 Description = "You've altered your weapon to including tangling wires or straps, or to have a flexible construction. Your innovation gains the grapple and trip traits.",
-                InnovationId = Innovations.Instances.WeaponInnovation.ID,
+                InnovationId = Innovations.Instances.Weapon.ID,
                 TypeId = InnovationModificationTypes.Instances.Initial.ID
             };
         }

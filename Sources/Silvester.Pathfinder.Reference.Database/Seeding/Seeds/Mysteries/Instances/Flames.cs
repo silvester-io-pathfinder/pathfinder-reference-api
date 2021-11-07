@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries.Instan
                     prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 13);
                 });
                 and.GainSpecificSavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID, SavingThrowStats.Instances.Reflex.ID);
-                and.ModifySpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Reflex.ID, RollResult.Success, becomes: RollResult.CriticalSuccess);
+                and.ImproveSpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Reflex.ID, RollResult.Success, becomes: RollResult.CriticalSuccess);
             });
 
             //Trained Skill

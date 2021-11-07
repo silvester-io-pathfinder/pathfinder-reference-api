@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Razor Prongs",
                 Description = "You can knock down and slash your foes with sharp, curved blades added to your weapon. Your innovation gains the trip and versatile S traits.",
-                InnovationId = Innovations.Instances.WeaponInnovation.ID,
+                InnovationId = Innovations.Instances.Weapon.ID,
                 TypeId = InnovationModificationTypes.Instances.Initial.ID
             };
         }

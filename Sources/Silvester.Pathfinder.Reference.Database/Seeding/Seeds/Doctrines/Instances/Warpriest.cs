@@ -91,7 +91,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Doctrines.Instan
                     prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 15);
                 });
                 and.GainSpecificSavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Master.ID, SavingThrowStats.Instances.Fortitude.ID);
-                and.ModifySpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Fortitude.ID, RollResult.Success, becomes: RollResult.CriticalSuccess);
+                and.ImproveSpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Fortitude.ID, RollResult.Success, becomes: RollResult.CriticalSuccess);
             });
 
             builder.AddAnd(Guid.Parse(""), and =>

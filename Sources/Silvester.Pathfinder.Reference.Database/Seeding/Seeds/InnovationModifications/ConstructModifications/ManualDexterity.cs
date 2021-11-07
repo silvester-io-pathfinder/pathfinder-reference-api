@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Manual Dexterity",
                 Description = "Your construct innovation has articulated hands or similar appendages with significant manual dexterity. It can perform manipulate actions with up to two of its limbs. As normal for a companion, it still can't wield weapons or held items that don't have the companion trait, and it can't activate items.",
-                InnovationId = Innovations.Instances.ConstructInnovation.ID,
+                InnovationId = Innovations.Instances.Construct.ID,
                 TypeId = InnovationModificationTypes.Instances.Initial.ID
             };
         }

@@ -3,6 +3,7 @@ using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using System;
 using System.Collections.Generic;
 
@@ -32,32 +33,30 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
 
         protected override void GetRagingEffects(BooleanEffectBuilder builder)
         {
-            builder.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Bludgeoning.ID);
-
             builder.AddOr(Guid.Parse(""), or =>
             {
                 or.AddAnd(Guid.Parse(""), and =>
                 {
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.ArcaneTradition.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.OccultTradition.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.ArcaneTradition.ID, ModifierInput.Damage, ModifierType.Multiply, modifier: 0, minimum: 0);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.OccultTradition.ID, ModifierInput.Damage, ModifierType.Multiply, modifier: 0, minimum: 0);
                 });
 
                 or.AddAnd(Guid.Parse(""), and =>
                 {
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.ArcaneTradition.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.PrimalTradition.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.ArcaneTradition.ID, ModifierInput.Damage, ModifierType.Multiply, modifier: 0, minimum: 0);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.PrimalTradition.ID, ModifierInput.Damage, ModifierType.Multiply, modifier: 0, minimum: 0);
                 });
 
                 or.AddAnd(Guid.Parse(""), and =>
                 {
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.DivineTradition.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.OccultTradition.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.DivineTradition.ID, ModifierInput.Damage, ModifierType.Multiply, modifier: 0, minimum: 0);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.OccultTradition.ID, ModifierInput.Damage, ModifierType.Multiply, modifier: 0, minimum: 0);
                 });
 
                 or.AddAnd(Guid.Parse(""), and =>
                 {
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.DivineTradition.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.PrimalTradition.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.DivineTradition.ID, ModifierInput.Damage, ModifierType.Multiply, modifier: 0, minimum: 0);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.PrimalTradition.ID, ModifierInput.Damage, ModifierType.Multiply, modifier: 0, minimum: 0);
                 });
             });
         }

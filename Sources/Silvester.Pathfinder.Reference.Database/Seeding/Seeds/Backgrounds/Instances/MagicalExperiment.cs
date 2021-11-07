@@ -2,6 +2,7 @@ using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 
 
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -53,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                     and.AddOr(Guid.Parse(""), or => 
                     {
                         or.GainSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
-                        or.HaveSpecificSense(Guid.Parse(""), Senses.Instances.Darkvision.ID, SenseAccuracies.Instances.Precise.ID)
+                        or.HaveSpecificSense(Guid.Parse(""), Senses.Instances.Darkvision.ID)
                             .AddPrerequisites(Guid.Parse(""), prerequisites => 
                             {
                                 prerequisites.HaveSpecificSense(Guid.Parse(""), Senses.Instances.LowLightVision.ID, SenseAccuracies.Instances.Precise.ID);
@@ -66,21 +67,21 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 {
                     and.AddOr(Guid.Parse(""), or => 
                     {
-                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Acid.ID);
-                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID);
-                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID);
-                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID);
-                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Sonic.ID);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Acid.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Sonic.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
                     });
 
                     and.AddOr(Guid.Parse(""), or =>
                     {
                         or.Addendum("Is chosen by the GM, and should differ from the resistance type chosen by the player.");
-                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Acid.ID);
-                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID);
-                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID);
-                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID);
-                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Sonic.ID);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Acid.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+                        or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Sonic.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
                     });
                 });
 

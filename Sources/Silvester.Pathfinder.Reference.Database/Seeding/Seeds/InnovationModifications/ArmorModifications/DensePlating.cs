@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Dense Plating",
                 Description = "You have encased your armor in robust plating. While wearing your armor, you gain resistance to slashing damage equal to half your level.",
-                InnovationId = Innovations.Instances.ArmorInnovation.ID,
+                InnovationId = Innovations.Instances.Armor.ID,
                 TypeId = InnovationModificationTypes.Instances.Breakthrough.ID
             };
         }

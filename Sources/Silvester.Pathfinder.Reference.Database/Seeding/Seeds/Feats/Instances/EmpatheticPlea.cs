@@ -1,0 +1,68 @@
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
+using System;
+using System.Collections.Generic;
+
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
+{
+    public class EmpatheticPlea : Template
+    {
+        public static readonly Guid ID = Guid.Parse("f2d65886-1d8a-4f6f-9ca1-3793f1a90f14");
+
+        protected override Feat GetFeat()
+        {
+            return new Feat
+            {
+                Id = ID,
+                Name = "Empathetic Plea",
+                Level = 1,
+                ActionTypeId = ActionTypes.Instances.Reaction.ID,
+                CanBeLearnedMoreThanOnce = false,
+                Special = null,
+                Trigger = "You are attacked by a creature that you haven't yet acted hostile toward. You must use this reaction before the creature rolls its attack.",
+                Frequency = null
+            };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("69b8243e-ad2b-4455-a6c8-c59da8219ebc"), Type = TextBlockType.Text, Text = "The way you cringe or use those puppy-dog eyes you’ve been practicing elicits an empathetic response in the attacker. Attempt a Diplomacy check against your attacker’s Will DC." };
+        }
+
+        protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
+        { 
+            
+            builder.HaveSpecificSkillProficiency(Guid.Parse("4f0bd36e-5c8f-4022-8854-022308f4ea73"), Proficiencies.Instances.Trained.ID, Skills.Instances.Diplomacy.ID);
+        }
+
+        protected override IEnumerable<Guid> GetTraits()
+        {
+            yield break;   
+        }
+
+        protected override RollableEffect? GetRollableEffect()
+        {
+            return new RollableEffect
+            {
+                Id = Guid.Parse("3eea5421-bbf2-4c43-b226-7b13569610b6"),
+                CriticalSuccess = "The creature pulls its attack, wasting its action, and can’t use hostile actions against you until the beginning of its next turn.",
+                Success = "The creature takes a -2 circumstance penalty to damage on the triggering (action: Strike) and all its (action: Strikes | Strike) against you until the beginning of its next turn. The penalty is -4 if you’re an expert in Diplomacy, -6 if you’re a master, and -8 if you’re legendary.",
+                Failure = "The creature’s attack is unaffected, and the creature is temporarily immune to your Empathic Pleas for 24 hours.",
+                 
+            };
+        }
+            
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("9f19da38-32e3-49ba-a93d-a1e3c115b811"),
+                SourceId = Sources.Instances.AdvancedPlayersGuide.ID,
+                Page = -1
+            };
+        }
+    }
+}

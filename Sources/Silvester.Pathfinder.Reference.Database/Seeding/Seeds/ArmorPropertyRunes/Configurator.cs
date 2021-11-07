@@ -14,13 +14,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ArmorPropertyRun
             builder
                 .Entity<ArmorPropertyRune>()
                 .HasOne(e => e.Action)
-                .WithOne(e => e.Rune)
+                .WithOne(e => e!.Rune)
                 .HasForeignKey<ArmorPropertyRuneAction>(a => a.RuneId); ;
 
             builder
                 .Entity<ArmorPropertyRuneAction>()
                 .HasOne(e => e.Rune)
-                .WithOne(e => e.Action);
+                .WithOne(e => e!.Action);
         }
     }
 

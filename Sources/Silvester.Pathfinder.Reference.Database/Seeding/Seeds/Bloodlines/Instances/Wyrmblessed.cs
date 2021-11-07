@@ -70,7 +70,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             return new SourcePage
             {
                 Id = Guid.Parse(""),
-                SourceId = Sources.Instances.TheMwangiExpanse.ID,
+                SourceId = Sources.Instances.LostOmensMwangiExpanse.ID,
                 Page = 75
             };
         }

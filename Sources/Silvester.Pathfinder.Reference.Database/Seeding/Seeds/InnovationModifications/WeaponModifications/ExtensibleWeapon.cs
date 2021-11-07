@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Extensible Weapon",
                 Description = "You've found a way to construct your weapon so that it can extend while leaving its balance unchanged. Your innovation gains the reach trait. If the weapon already had the reach trait, it increases your reach by an additional 10 feet, instead of the usual additional 5 feet.",
-                InnovationId = Innovations.Instances.WeaponInnovation.ID,
+                InnovationId = Innovations.Instances.Weapon.ID,
                 TypeId = InnovationModificationTypes.Instances.Revolutionary.ID
             };
         }

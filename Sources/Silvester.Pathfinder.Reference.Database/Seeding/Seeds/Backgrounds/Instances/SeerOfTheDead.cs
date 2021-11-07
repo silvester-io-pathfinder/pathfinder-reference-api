@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
 
             builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Religion.ID);
             builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Undead.ID);
-            builder.GainSpecificSense(Guid.Parse(""), Senses.Instances.SpiritSense.ID);
+            builder.GainSpecificSense(Guid.Parse(""), Senses.Instances.SpiritSense.ID, SenseAccuracies.Instances.Vague.ID);
         }
 
         protected override SourcePage GetSourcePage()

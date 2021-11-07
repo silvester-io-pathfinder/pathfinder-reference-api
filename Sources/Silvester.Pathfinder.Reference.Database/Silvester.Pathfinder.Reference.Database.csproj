@@ -14,4 +14,8 @@
     <ProjectReference Include="..\Silvester.Pathfinder.Reference.Extensions\Silvester.Pathfinder.Reference.Extensions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Seeding\Seeds\Feats\Instances\" />
+  </ItemGroup>
+
 </Project>

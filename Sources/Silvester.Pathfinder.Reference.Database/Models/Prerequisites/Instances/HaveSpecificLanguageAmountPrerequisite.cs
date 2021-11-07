@@ -4,7 +4,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
 
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
-
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
 {

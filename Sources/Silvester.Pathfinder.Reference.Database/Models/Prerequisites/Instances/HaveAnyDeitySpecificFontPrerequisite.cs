@@ -1,4 +1,5 @@
-﻿using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+﻿using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using System;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances

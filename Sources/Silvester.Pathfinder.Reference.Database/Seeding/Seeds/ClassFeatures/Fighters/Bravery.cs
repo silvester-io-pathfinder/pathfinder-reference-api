@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Fi
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
             builder.GainSpecificSavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Expert.ID, SavingThrowStats.Instances.Will.ID);
-            builder.ModifySpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Will.ID, RollResult.Success, becomes: RollResult.CriticalSuccess);
+            builder.ImproveSpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Will.ID, RollResult.Success, becomes: RollResult.CriticalSuccess);
             builder.ModifySpecificCondition(Guid.Parse(""), Conditions.Instances.Frightened.ID, ModifierType.Subtract, modifier: 1);
         }
 

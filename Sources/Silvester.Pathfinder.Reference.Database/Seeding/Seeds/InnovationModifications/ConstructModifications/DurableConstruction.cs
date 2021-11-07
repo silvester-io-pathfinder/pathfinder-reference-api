@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Durable Construction",
                 Description = "Your innovation is solidly built; it can take significant punishment before being destroyed. Increase its maximum HP by your level.",
-                InnovationId = Innovations.Instances.ConstructInnovation.ID,
+                InnovationId = Innovations.Instances.Construct.ID,
                 TypeId = InnovationModificationTypes.Instances.Breakthrough.ID
             };
         }

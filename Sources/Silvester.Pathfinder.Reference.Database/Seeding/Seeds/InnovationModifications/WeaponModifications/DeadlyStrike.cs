@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Deadly Strike",
                 Description = "Through precise calculation, you've found the perfect shape for your weapon to deal extreme damage on a well-placed strike. Your innovation gains the deadly d8 trait. If your innovation was already deadly, it increases its deadly die to d12 instead of gaining deadly d8.",
-                InnovationId = Innovations.Instances.WeaponInnovation.ID,
+                InnovationId = Innovations.Instances.Weapon.ID,
                 TypeId = InnovationModificationTypes.Instances.Revolutionary.ID
             };
         }

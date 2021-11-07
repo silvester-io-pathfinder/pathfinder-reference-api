@@ -2,6 +2,7 @@ using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using System;
 using System.Collections.Generic;
@@ -32,13 +33,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
 
         protected override void GetRagingEffects(BooleanEffectBuilder builder)
         {
-            builder.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Bludgeoning.ID);
+            builder.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Bludgeoning.ID, ModifierInput.Damage, ModifierType.Multiply, modifier: 0, minimum: 0);
 
             builder.AddOr(Guid.Parse(""), or =>
             {
-                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID);
-                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID);
-                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID);
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
+                or.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
             });
         }
 

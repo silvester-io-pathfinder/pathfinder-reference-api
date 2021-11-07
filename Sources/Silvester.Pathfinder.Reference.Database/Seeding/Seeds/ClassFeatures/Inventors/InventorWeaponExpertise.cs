@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.In
             builder.GainInnovationWeaponSpecialization(Guid.Parse(""))
                 .AddPrerequisites(Guid.Parse(""), prerequisites => 
                 {
-                    prerequisites.HaveSpecificInnovation(Guid.Parse(""), Innovations.Instances.WeaponInnovation.ID);
+                    prerequisites.HaveSpecificInnovation(Guid.Parse(""), Innovations.Instances.Weapon.ID);
                 });
         }
 

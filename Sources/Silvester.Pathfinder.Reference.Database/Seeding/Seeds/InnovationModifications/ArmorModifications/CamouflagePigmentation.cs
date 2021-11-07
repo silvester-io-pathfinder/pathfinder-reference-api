@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Camouflage Pigmentation",
                 Description = "You've modified your armor's exterior to let you blend into your surroundings with ease, as long as you stay still. While wearing your armor, you can Hide even without cover or concealment, as the pigmentation shifts to match your surroundings.",
-                InnovationId = Innovations.Instances.ArmorInnovation.ID,
+                InnovationId = Innovations.Instances.Armor.ID,
                 TypeId = InnovationModificationTypes.Instances.Breakthrough.ID
             };
         }

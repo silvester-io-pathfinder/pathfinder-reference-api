@@ -7,20 +7,18 @@ namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
 {
     public class GainSpecificInnateSpellEffect : BaseEffect
     {
-        public int Level { get; set; }
-
         public Guid SpellId { get; set; }
         public Spell Spell { get; set; } = default!;
-
-        public Guid MagicTraditionId { get; set; }
+        
+        public Guid MagicTraditionId{ get; set; }
         public MagicTradition MagicTradition { get; set; } = default!;
     }
 
     public static partial class BooleanEffectBuilderExtensions
     {
-        public static EffectBuilder GainSpecificInnateSpell(this BooleanEffectBuilder builder, Guid id, Guid spellId, Guid magicTraditionId, int level)
+        public static EffectBuilder GainSpecificInnateSpell(this BooleanEffectBuilder builder, Guid id, Guid spellId, Guid magicTraditionId)
         {
-            return builder.Add(new GainSpecificInnateSpellEffect { Id = id, SpellId = spellId, MagicTraditionId = magicTraditionId, Level = level });
+            return builder.Add(new GainSpecificInnateSpellEffect { Id = id, SpellId = spellId, MagicTraditionId = magicTraditionId });
         }
     }
 }

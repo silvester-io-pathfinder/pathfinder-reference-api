@@ -11,7 +11,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances
     public class HaveSpecificSavingThrowSpecificProficiencyPrerequisite : BasePrerequisite
     {
         public Guid RequiredSavingThrowStatId { get; set; }
-        public SaviingThrowStat RequiredSavingThrowStat { get; set; } = default!;
+        public SavingThrowStat RequiredSavingThrowStat { get; set; } = default!;
 
         public Guid RequiredProficiencyId { get; set; }
         public Proficiency RequiredProficiency { get; set; } = default!;

@@ -2,6 +2,7 @@ using Silvester.Pathfinder.Reference.Database.Effects;
 using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using System;
 using System.Collections.Generic;
 
@@ -31,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
 
         protected override void GetRagingEffects(BooleanEffectBuilder builder)
         {
-            builder.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.PhysicalWeapon.ID);
+            builder.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.PhysicalWeapon.ID, ModifierInput.Damage, ModifierType.Multiply, modifier: 0, minimum: 0);
         }
       
         protected override SourcePage GetSourcePage()

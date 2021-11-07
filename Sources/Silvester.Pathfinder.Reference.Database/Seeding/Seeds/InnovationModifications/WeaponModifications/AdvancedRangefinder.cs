@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InnovationModifi
                 Id = ID,
                 Name = "Advanced Rangefinder",
                 Description = "A carefully tuned scope or targeting device makes your weapon especially good at hitting weak points. Your innovation gains the backstabber trait and increases its range increment by 10 feet.",
-                InnovationId = Innovations.Instances.WeaponInnovation.ID,
+                InnovationId = Innovations.Instances.Weapon.ID,
                 TypeId = InnovationModificationTypes.Instances.Breakthrough.ID
             };
         }

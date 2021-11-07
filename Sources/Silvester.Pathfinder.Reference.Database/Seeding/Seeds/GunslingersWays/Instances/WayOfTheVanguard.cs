@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays.
                 Name = "Way of the Vanguard",
                 InitialDeedId = Feats.Instances.LivingFortification.ID,
                 AdvancedDeedId = Feats.Instances.SpinningCrush.ID,
-                GreaterDeedId = Feats.Instances.GreaterSiegebreaker.ID,
+                GreaterDeedId = Feats.Instances.Siegebreaker.ID,
                 SlingersReloadId = Feats.Instances.ClearAPath.ID,
             };
         }
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays.
                     prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 9);
                 });
 
-            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.GreaterSiegebreaker.ID)
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.Siegebreaker.ID)
                 .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
                     prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 15);

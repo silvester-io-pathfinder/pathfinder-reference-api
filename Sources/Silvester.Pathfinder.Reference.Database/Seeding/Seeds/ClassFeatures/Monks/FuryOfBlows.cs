@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Mo
 
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.FuryOfBlows.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.FlurryOfBlows.ID);
         }
 
         protected override SourcePage GetSourcePage()

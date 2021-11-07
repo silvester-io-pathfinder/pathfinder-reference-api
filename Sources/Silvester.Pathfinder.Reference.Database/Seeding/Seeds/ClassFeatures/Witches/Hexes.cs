@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
             builder.GainFocusPoolPoint(Guid.Parse(""));
-            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.PhaseFamiliar.ID);
+            builder.GainSpecificSpell(Guid.Parse(""), Spells.Instances.PhaseFamiliar.ID);
         }
 
         protected override SourcePage GetSourcePage()

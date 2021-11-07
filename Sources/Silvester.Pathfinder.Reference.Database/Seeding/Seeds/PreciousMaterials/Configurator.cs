@@ -14,19 +14,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PreciousMaterial
             builder
                 .Entity<PreciousMaterial>()
                 .HasOne(e => e.Weapon)
-                .WithOne(e => e.Material)
+                .WithOne(e => e!.Material)
                 .HasForeignKey<PreciousMaterial>(e => e.WeaponId);
 
             builder
                 .Entity<PreciousMaterial>()
                 .HasOne(e => e.Armor)
-                .WithOne(e => e.Material)
+                .WithOne(e => e!.Material)
                 .HasForeignKey<PreciousMaterial>(e => e.ArmorId);
 
             builder
                 .Entity<PreciousMaterial>()
                 .HasOne(e => e.Shield)
-                .WithOne(e => e.Material)
+                .WithOne(e => e!.Material)
                 .HasForeignKey<PreciousMaterial>(e => e.ShieldId);
         }
     }

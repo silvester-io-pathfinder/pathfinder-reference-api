@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             builder.GainAnyAbilityBoost(Guid.Parse(""));
             builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Arcana.ID);
             builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Academia.ID);
-            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.DubiousKnowledgeFeat.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.DubiousKnowledge.ID);
         }
 
         protected override SourcePage GetSourcePage()

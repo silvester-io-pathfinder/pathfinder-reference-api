@@ -1,0 +1,51 @@
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
+using System;
+using System.Collections.Generic;
+
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
+{
+    public class TrickShot : Template
+    {
+        public static readonly Guid ID = Guid.Parse("052dfeb8-2187-489d-90b5-aecfe2b7d8ad");
+
+        protected override Feat GetFeat()
+        {
+            return new Feat
+            {
+                Id = ID,
+                Name = "Trick Shot",
+                Level = 10,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                CanBeLearnedMoreThanOnce = false,
+                Special = null,
+                Trigger = null,
+                Frequency = null
+            };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("5159d9c6-77fe-415c-8fa9-f5cd44543c0d"), Type = TextBlockType.Text, Text = "You shoot not at your foe but at an object nearby. Make a (action: Strike) with your firearm against an AC equal to an easy DC for your level. On a success, instead of hitting your foe, your attack hits an object behind or to the side of your target, creating one of the following effects. The GM might determine that a different AC is appropriate or that a particular effect isn’t a valid option, such as using the explosive barrel option when there’s no such object on the battlefield. The GM should inform you if a Trick Shot is feasible before you spend your actions, since your trained eye can easily recognize loose or volatile objects." };
+            yield return new TextBlock { Id = Guid.Parse("fe758a9c-eb4a-4c14-914c-fff1e593d864"), Type = TextBlockType.Enumeration, Text = " Dislodge Object: Your attack knocks an unattended object of no more than 2 Bulk out of position, moving it up to 10 feet in a direction of your choice. For example, the weapon could knock a wizard’s crystal ball off a table." };
+            yield return new TextBlock { Id = Guid.Parse("4303f6d3-9f0d-4d0d-84a6-781612f2fc21"), Type = TextBlockType.Enumeration, Text = " Explosive Barrel: Your attack strikes a barrel of expensive rum, a vial of volatile alchemical fluids, a demonic pustule erupting from the earth, or some other explosive object. The object explodes in a 20-foot burst, and creatures in the area take 6d6 damage with a basic Reflex save against your class DC. The damage type is chosen by the GM, based on the exploding object. Increase the damage by 1d6 for every 2 levels you have above 10th." };
+        }
+
+        protected override IEnumerable<Guid> GetTraits()
+        {
+            yield break;   
+        }            
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("a2c42027-8167-4b62-ac73-fdb824fc2108"),
+                SourceId = Sources.Instances.GunsAndGears.ID,
+                Page = -1
+            };
+        }
+    }
+}

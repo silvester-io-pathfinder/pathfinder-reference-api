@@ -1,5 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
@@ -42,42 +43,42 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
                 or.AddAnd(Guid.Parse(""), and =>
                 {
                     and.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Acid.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Acid.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Acid.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
                 });
                 or.AddAnd(Guid.Parse(""), and =>
                 {
                     and.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Cold.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Cold.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
                 });
                 or.AddAnd(Guid.Parse(""), and =>
                 {
                     and.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Electricity.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Electricity.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
                 });
                 or.AddAnd(Guid.Parse(""), and =>
                 {
                     and.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Fire.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Fire.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
                 });
                 or.AddAnd(Guid.Parse(""), and =>
                 {
                     and.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Force.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Force.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Force.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
                 });
                 or.AddAnd(Guid.Parse(""), and =>
                 {
                     and.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Negative.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Negative.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Negative.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
                 });
                 or.AddAnd(Guid.Parse(""), and =>
                 {
                     and.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Positive.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Positive.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Positive.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
                 });
                 or.AddAnd(Guid.Parse(""), and =>
                 {
                     and.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Sonic.ID);
-                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Sonic.ID);
+                    and.GainSpecificDamageResistance(Guid.Parse(""), DamageTypes.Instances.Sonic.ID, ModifierInput.Level, ModifierType.Divide, modifier: 2, minimum: 1);
                 });
             });
         }

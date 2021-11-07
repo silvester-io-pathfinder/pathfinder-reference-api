@@ -1,0 +1,57 @@
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
+using System;
+using System.Collections.Generic;
+
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
+{
+    public class FireworkTechnicianDedication : Template
+    {
+        public static readonly Guid ID = Guid.Parse("5e0ef28a-29c2-47f9-80e8-4c9758cc8c93");
+
+        protected override Feat GetFeat()
+        {
+            return new Feat
+            {
+                Id = ID,
+                Name = "Firework Technician Dedication",
+                Level = 2,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                CanBeLearnedMoreThanOnce = false,
+                Special = "You can't select another dedication feat until you've gained two other feats from the fireworks technician archetype.",
+                Trigger = null,
+                Frequency = null
+            };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("efef4088-8df2-455d-acdd-a63dfbaacbcc"), Type = TextBlockType.Text, Text = "You’ve learned the secrets of making fire and sound bloom using black powder, metals, and paper. You most likely came by this knowledge through formal training with a fireworks house in Tian Xia or a fireworks company from Vudra, though perhaps you mastered fireworks completely by yourself after finding a secret stash in an old shipwreck." };
+            yield return new TextBlock { Id = Guid.Parse("e7e2730c-5f64-4ade-aa44-1d7995cf96c0"), Type = TextBlockType.Text, Text = "You become trained in Fireworks Lore or become an expert if you were already trained in it. You gain the (feat: Alchemical Crafting) feat, a pool of infused reagents equal to your level, and advanced alchemy (allowing you to make alchemical items during your daily preparations without the normal cost or time expenditure). You can use your infused reagents only to make fireworks, (feat: Launch a Fireworks Display | Launch Fireworks Display), and use other feats from this archetype. Your advanced alchemy level is 1. The rules for these are in the Alchemical Crafting section on page 258 of the Core Rulebook, and rules for infused reagents and advanced alchemy are on page 72. If you gain infused reagents from more than one source, you use the highest number of reagents to determine your pool rather than adding them together." };
+            yield return new TextBlock { Id = Guid.Parse("89e61680-8d30-4a58-8876-aa1b6d045377"), Type = TextBlockType.Text, Text = "You can also create special fireworks displays using your infused reagents, designed to create distinctive effects you can use to make onlookers marvel and even to gain an advantage in combat. You gain the (feat: Launch Fireworks Display) action and learn some basic displays, and you can learn additional, more complex displays through other firework technician feats. The DC for any display is equal to your class DC or spell DC, whichever is higher." };
+        }
+
+        protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
+        { 
+            
+            builder.HaveSpecificSkillProficiency(Guid.Parse("d3c212b8-841e-4d4e-a93f-8b617538d3eb"), Proficiencies.Instances.Trained.ID, Skills.Instances.Crafting.ID);
+        }
+
+        protected override IEnumerable<Guid> GetTraits()
+        {
+            yield break;   
+        }            
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("c09e2460-ecae-490f-a529-3f2a25143a0f"),
+                SourceId = Sources.Instances.GunsAndGears.ID,
+                Page = -1
+            };
+        }
+    }
+}

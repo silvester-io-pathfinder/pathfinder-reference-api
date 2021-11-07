@@ -33,8 +33,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
 
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 10);
-            builder.GainAnyMagicTraditionSpell(Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 10);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 10);
+            builder.GainSpecificMagicTraditionAnySpell(Guid.Parse(""), MagicTraditions.Instances.Occult.ID, spellLevel: 10);
             builder.GainSpecificSpellSlot(Guid.Parse(""), amount: 1, spellSlotLevel: 10, isSpendingPreventable: false);
         }
 

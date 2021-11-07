@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays.
                 Id = ID, 
                 Name = "Way of the Pistolero",
                 InitialDeedId = Feats.Instances.TenPaces.ID,
-                AdvancedDeedId = Feats.Instances.PistolersRetort.ID,
+                AdvancedDeedId = Feats.Instances.PistolerosRetort.ID,
                 GreaterDeedId = Feats.Instances.GrimSwagger.ID,
                 SlingersReloadId = Feats.Instances.RaconteursReload.ID
             };
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.GunslingersWays.
         {
             builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.RaconteursReload.ID);
             builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.TenPaces.ID);
-            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.PostolersRetort.ID)
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.PistolerosRetort.ID)
                 .AddPrerequisites(Guid.Parse(""), prerequisites =>
                 {
                     prerequisites.HaveSpecificLevel(Guid.Parse(""), Comparator.GreaterThanOrEqualTo, requiredLevel: 9);

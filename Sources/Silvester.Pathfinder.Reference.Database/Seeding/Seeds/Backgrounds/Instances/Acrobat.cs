@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Backgrounds.Inst
             builder.GainAnyAbilityBoost(Guid.Parse(""));
             builder.GainSpecificSkillProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Skills.Instances.Acrobatics.ID);
             builder.GainSpecificLoreProficiency(Guid.Parse(""), Proficiencies.Instances.Trained.ID, Lores.Instances.Circus.ID);
-            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.SteadyBalanceFeat.ID);
+            builder.GainSpecificFeat(Guid.Parse(""), Feats.Instances.SteadyBalance.ID);
         }
 
         protected override SourcePage GetSourcePage()

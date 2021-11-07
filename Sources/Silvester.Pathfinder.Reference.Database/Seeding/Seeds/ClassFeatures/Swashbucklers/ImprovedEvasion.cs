@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Sw
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
             builder.GainSpecificSavingThrowProficiency(Guid.Parse(""), Proficiencies.Instances.Legendary.ID, SavingThrowStats.Instances.Reflex.ID);
-            builder.ModifySpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Reflex.ID, RollResult.CriticalFailure, becomes: RollResult.Failure);
+            builder.ImproveSpecificSavingThrow(Guid.Parse(""), SavingThrowStats.Instances.Reflex.ID, RollResult.CriticalFailure, becomes: RollResult.Failure);
             //TODO: Add half damage effect.
         }
 

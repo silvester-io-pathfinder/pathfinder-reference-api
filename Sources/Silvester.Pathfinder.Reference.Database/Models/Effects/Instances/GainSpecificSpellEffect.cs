@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Effects.Instances
     {
         public static EffectBuilder GainSpecificSpell(this BooleanEffectBuilder builder, Guid id, Guid spellId, string? restrictions = null)
         {
-            return builder.Add(new GainSpecificSpellEffect { Id = id, SpellId = spellId, Restrictions = restrictions });
+            return builder.Add(new GainSpecificSpellEffect { Id = id, SpellId = spellId, Restrictions = restrictions});
         }
     }
 }

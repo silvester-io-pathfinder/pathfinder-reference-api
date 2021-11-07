@@ -1,0 +1,49 @@
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
+using System;
+using System.Collections.Generic;
+
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
+{
+    public class SummonAirElemental : Template
+    {
+        public static readonly Guid ID = Guid.Parse("3d133ba5-be1e-4f76-a747-cfb431cdb769");
+
+        protected override Feat GetFeat()
+        {
+            return new Feat
+            {
+                Id = ID,
+                Name = "Summon Air Elemental",
+                Level = 13,
+                ActionTypeId = ActionTypes.Instances.NoAction.ID,
+                CanBeLearnedMoreThanOnce = false,
+                Special = null,
+                Trigger = null,
+                Frequency = null
+            };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("f886797e-2aa5-442b-861e-8d57c40455bb"), Type = TextBlockType.Text, Text = "You have a connection to the Inner Spheres, allowing you to summon an elemental ally. Once per day, you can cast (spell: summon elemental) as a 5th-level primal innate spell, but the elemental summoned must be an (trait: air) elemental." };
+        }
+
+        protected override IEnumerable<Guid> GetTraits()
+        {
+            yield break;   
+        }            
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("1fe6e35d-d0fa-4e26-9722-bc767286ad20"),
+                SourceId = Sources.Instances.LostOmensAncestryGuide.ID,
+                Page = -1
+            };
+        }
+    }
+}

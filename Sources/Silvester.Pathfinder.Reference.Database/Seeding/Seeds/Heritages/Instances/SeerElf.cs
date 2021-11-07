@@ -1,5 +1,10 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Instances;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
+using Silvester.Pathfinder.Reference.Database.Effects.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using System;
 using System.Collections.Generic;
 
@@ -15,8 +20,28 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
             { 
                 Id = ID, 
                 RarityId = Rarities.Instances.Common.ID, 
-                Name = "Seer Elf", 
-                Description = "You have an inborn ability to detect and understand magical phenomena. You can cast the detect magic cantrip as an arcane innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up. In addition, you gain a + 1 circumstance bonus to checks to Identify Magic and to Decipher Writing of a magical nature.These skill actions typically use the Arcana, Nature, Occultism, or Religion skill." 
+                Name = "Seer Elf"
+            };
+        }
+
+        protected override IEnumerable<TextBlock> GetDetails()
+        {
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You have an inborn ability to detect and understand magical phenomena. You can cast the detect magic cantrip as an arcane innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "In addition, you gain a +1 circumstance bonus to checks to Identify Magic and to Decipher Writing of a magical nature. These skill actions typically use the Arcana, Nature, Occultism, or Religion skill." };
+        }
+
+        protected override void GetEffects(BooleanEffectBuilder builder)
+        {
+            builder.GainSpecificInnateSpell(Guid.Parse(""), Spells.Instances.DetectMagic.ID, MagicTraditions.Instances.Arcane.ID);
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse(""),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 40
             };
         }
 
