@@ -1,0 +1,47 @@
+﻿using McMaster.Extensions.CommandLineUtils;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using Silvester.Pathfinder.Console.Core.Executors;
+using Silvester.Pathfinder.Reference.Database.Seeding.Cli.Commands;
+using Silvester.Pathfinder.Reference.Database.Seeding.DependencyInjection;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Cli
+{
+    public class Program
+    {
+        public static async Task<int> Main(string[] args)
+        {
+            return await Host.CreateDefaultBuilder()
+                .ConfigureAppConfiguration(ConfigureApplication)
+                .ConfigureServices(ConfigureServices)
+                .RunCommandLineApplicationAsync<RootCommand>(args);
+        }
+
+        private static void ConfigureApplication(HostBuilderContext context, IConfigurationBuilder builder)
+        {
+            builder.AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json"), optional: false);
+        }
+
+        private static void ConfigureServices(HostBuilderContext context, IServiceCollection services)
+        {
+            IConfiguration configuration = context.Configuration;
+
+            services.AddTransient<ICommandExecutor<SeedCommand>, SeedCommandExecutor>();
+            services.AddSeeding();
+            services.AddDbContext<ReferenceDatabase>(options => 
+            {
+                IConfigurationSection section = configuration.GetSection("Databases").GetSection("Reference");
+                string connectionString = $"Server={section["Server"]};Database={section["Database"]};User Id={section["UserId"]};Password={section["Password"]};Port={section["Port"]};Timeout={section["Timeout"]};CommandTimeout={section["CommandTimeout"]};Include Error Detail={section["IncludeErrorDetails"]}";
+
+                options.UseNpgsql(connectionString);
+                options.EnableSensitiveDataLogging(true);
+            });
+        }
+    }
+}

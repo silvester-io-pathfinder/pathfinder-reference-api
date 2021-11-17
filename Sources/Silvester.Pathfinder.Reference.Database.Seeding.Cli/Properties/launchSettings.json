@@ -1,0 +1,8 @@
+﻿{
+  "profiles": {
+    "Silvester.Pathfinder.Reference.Database.Seeding.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "seed"
+    }
+  }
+}

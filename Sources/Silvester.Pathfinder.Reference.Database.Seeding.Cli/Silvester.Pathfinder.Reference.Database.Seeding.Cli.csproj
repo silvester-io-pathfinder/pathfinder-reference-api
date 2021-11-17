@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="3.1.0" />
+	  <PackageReference Include="McMaster.Extensions.Hosting.CommandLine" Version="3.1.0" />
+	  <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Libraries\Silvester.Pathfinder.Console.Core\Silvester.Pathfinder.Console.Core.csproj" />
+    <ProjectReference Include="..\Seeding\Silvester.Pathfinder.Reference.Database.Seeding\Silvester.Pathfinder.Reference.Database.Seeding.csproj" />
+  </ItemGroup>
+
+</Project>
