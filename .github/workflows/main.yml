@@ -94,7 +94,7 @@ jobs:
       PGPASSWORD: passwordPlaceholder
     services:
       postgres:
-        image: postgres:12.9-ubuntu
+        image: postgres:12.9
         env:
           POSTGRES_PASSWORD: passwordPlaceholder
           POSTGRES_DB: database_pathfinder_reference
