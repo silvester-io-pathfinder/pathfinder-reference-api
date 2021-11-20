@@ -113,15 +113,8 @@ jobs:
     
     - name: Install PostgreSQL client
       run: |
-        tee /etc/apt/sources.list.d/pgdg.list <<END
-        deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main
-        END
-
-        wget https://www.postgresql.org/media/keys/ACCC4CF8.asc
-        apt-key add ACCC4CF8.asc
-
         apt-get update
-        apt-get install --yes postgresql-client-13
+        apt-get install --yes postgresql-client
 
     - run: dotnet publish ./Sources/Seeding/Silvester.Pathfinder.Reference.Database.Seeding.Cli/Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj -c Release -o ./build/publish
     - run: dotnet ./build/publish/Silvester.Pathfinder.Reference.Database.Seeding.Cli.dll seed
