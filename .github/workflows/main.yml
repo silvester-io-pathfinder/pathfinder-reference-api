@@ -86,7 +86,7 @@ jobs:
   database:
     needs: get-semver
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/dotnet/sdk:5.0-focale
+    container: mcr.microsoft.com/dotnet/sdk:5.0-focal
     services:
       postgres:
         image: postgres
