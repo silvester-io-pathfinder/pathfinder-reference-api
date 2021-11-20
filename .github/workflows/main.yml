@@ -116,7 +116,7 @@ jobs:
     - run: dotnet publish ./Sources/Seeding/Silvester.Pathfinder.Reference.Database.Seeding.Cli/Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj -c Release -o ./build/publish
     - run: dotnet ./build/publish/Silvester.Pathfinder.Reference.Database.Seeding.Cli.dll seed
 
-    - run: pg_dump --host postgres --port 5432 -U user_pathfinder_reference -W passwordPlaceholder -d database_pathfinder_reference -Fp -c > dump.sql
+    - run: pg_dump --host postgres --port 5432 -U user_pathfinder_reference -w -d database_pathfinder_reference -Fp -c > dump.sql
 
     - name: DOCKER - Login
       uses: docker/login-action@v1
