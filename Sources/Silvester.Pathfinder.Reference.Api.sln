@@ -34,9 +34,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Refere
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Reference.Database.Seeding", "Seeding\Silvester.Pathfinder.Reference.Database.Seeding\Silvester.Pathfinder.Reference.Database.Seeding.csproj", "{69061D19-E6E9-408F-827C-9D0C7E43E17B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Reference.Database.Seeding.Cli", "Silvester.Pathfinder.Reference.Database.Seeding.Cli\Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj", "{9F60FB60-F086-47FB-8DD6-0BAB2DD952C4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Console.Core", "Libraries\Silvester.Pathfinder.Console.Core\Silvester.Pathfinder.Console.Core.csproj", "{D89E7C5B-ACA9-4EA4-A923-76EF453D551E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Reference.Database.Seeding.Cli", "Seeding\Silvester.Pathfinder.Reference.Database.Seeding.Cli\Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj", "{01F68A91-0045-4D09-9F9B-67C8606621D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,14 +76,14 @@ Global
 		{69061D19-E6E9-408F-827C-9D0C7E43E17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69061D19-E6E9-408F-827C-9D0C7E43E17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69061D19-E6E9-408F-827C-9D0C7E43E17B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F60FB60-F086-47FB-8DD6-0BAB2DD952C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F60FB60-F086-47FB-8DD6-0BAB2DD952C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F60FB60-F086-47FB-8DD6-0BAB2DD952C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F60FB60-F086-47FB-8DD6-0BAB2DD952C4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D89E7C5B-ACA9-4EA4-A923-76EF453D551E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D89E7C5B-ACA9-4EA4-A923-76EF453D551E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D89E7C5B-ACA9-4EA4-A923-76EF453D551E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D89E7C5B-ACA9-4EA4-A923-76EF453D551E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01F68A91-0045-4D09-9F9B-67C8606621D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F68A91-0045-4D09-9F9B-67C8606621D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F68A91-0045-4D09-9F9B-67C8606621D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F68A91-0045-4D09-9F9B-67C8606621D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,8 +97,8 @@ Global
 		{D14D4860-5D39-4F8A-AEB7-B6EE9FCBB7AE} = {BE37F407-2BAE-4447-8DCB-376814234EE4}
 		{489D11BD-950D-4564-813A-C3879E1E2507} = {FAE23D9F-EA48-4FFD-BF8D-705D404EBAFF}
 		{69061D19-E6E9-408F-827C-9D0C7E43E17B} = {FAE23D9F-EA48-4FFD-BF8D-705D404EBAFF}
-		{9F60FB60-F086-47FB-8DD6-0BAB2DD952C4} = {FAE23D9F-EA48-4FFD-BF8D-705D404EBAFF}
 		{D89E7C5B-ACA9-4EA4-A923-76EF453D551E} = {BE37F407-2BAE-4447-8DCB-376814234EE4}
+		{01F68A91-0045-4D09-9F9B-67C8606621D8} = {FAE23D9F-EA48-4FFD-BF8D-705D404EBAFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {022489C1-A8F0-4D11-B41D-A9BFF1D59335}

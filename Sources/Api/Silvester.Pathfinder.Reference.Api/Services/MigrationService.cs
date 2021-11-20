@@ -49,7 +49,6 @@ namespace Silvester.Pathfinder.Reference.Api.Services
                         if (appliedMigrations.Any() == false)
                         {
                             await context.Database.MigrateAsync();
-                            await SeedAsync(context);
                         }
 
                         DatabaseState = DatabaseState.Ready;
@@ -74,12 +73,6 @@ namespace Silvester.Pathfinder.Reference.Api.Services
 
                 await Task.Delay(10000);
             }
-        }
-
-        private async Task SeedAsync(ReferenceDatabase context)
-        {
-            IEntitySeeder seeder = new EntitySeeder(context);
-            await seeder.SeedAsync();
         }
     }
 }
