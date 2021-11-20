@@ -86,7 +86,6 @@ jobs:
   database:
     needs: get-semver
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/dotnet/sdk:5.0-focal
     env:
       ASPNETCORE_ENVIRONMENT: ci
       PGPASSWORD: passwordPlaceholder
@@ -113,6 +112,10 @@ jobs:
       run: |
         apt-get update
         apt-get install --yes postgresql-client
+        
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.x'
 
     - run: dotnet publish ./Sources/Seeding/Silvester.Pathfinder.Reference.Database.Seeding.Cli/Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj -c Release -o ./build/publish
     - run: dotnet ./build/publish/Silvester.Pathfinder.Reference.Database.Seeding.Cli.dll seed
