@@ -119,8 +119,10 @@ jobs:
     - run: dotnet publish ./Sources/Seeding/Silvester.Pathfinder.Reference.Database.Seeding.Cli/Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj -c Release -o ./build/publish
     - run: dotnet ./build/publish/Silvester.Pathfinder.Reference.Database.Seeding.Cli.dll seed
     - run: pg_dump --host postgres --port 5432 -U user_pathfinder_reference -d database_pathfinder_reference -Fp -c > dump.sql
+    - run: cat dump.sql
     - name: set-output
       run: echo ::set-output name=sqlDump::$(cat dump.sql)
+    - run: echo ${{ steps.set-output.outputs.sqlDump }}
 
   publish-database:
     runs-on: ubuntu-latest
