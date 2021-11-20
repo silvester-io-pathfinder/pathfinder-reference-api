@@ -10,6 +10,7 @@ using Silvester.Pathfinder.Reference.Database.Seeding.DependencyInjection;
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Cli
 {
@@ -25,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Cli
 
         private static void ConfigureApplication(HostBuilderContext context, IConfigurationBuilder builder)
         {
-            builder.AddJsonFile(Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json"), optional: false);
+            builder.AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json"), optional: false);
         }
 
         private static void ConfigureServices(HostBuilderContext context, IServiceCollection services)
