@@ -6,8 +6,5 @@ ENV POSTGRES_PORT 5432
 ENV POSTGRES_PASSWORD passwordPlaceholder
 
 WORKDIR /build
-COPY dump.sql dump.sql
-
-RUN psql database_pathfinder_reference < dump.sql
-
+COPY dump.sql docker-entrypoint-initdb.d/seed.sql
 CMD ["postgres"]
