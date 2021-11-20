@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Libraries\Silvester.Pathfinder.Console.Core\Silvester.Pathfinder.Console.Core.csproj" />
-    <ProjectReference Include="..\Seeding\Silvester.Pathfinder.Reference.Database.Seeding\Silvester.Pathfinder.Reference.Database.Seeding.csproj" />
+    <ProjectReference Include="..\..\Libraries\Silvester.Pathfinder.Console.Core\Silvester.Pathfinder.Console.Core.csproj" />
+    <ProjectReference Include="..\..\Seeding\Silvester.Pathfinder.Reference.Database.Seeding\Silvester.Pathfinder.Reference.Database.Seeding.csproj" />
   </ItemGroup>
 
 </Project>

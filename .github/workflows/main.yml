@@ -38,7 +38,7 @@ jobs:
     - name: NUGET - Package
       run: |
         ls ./Sources -l
-        dotnet pack ./Sources/Silvester.Pathfinder.Reference.Documents/Silvester.Pathfinder.Reference.Documents.csproj -c Release -o ../build 
+        dotnet pack ./Sources/Libraries/Silvester.Pathfinder.Reference.Documents/Silvester.Pathfinder.Reference.Documents.csproj -c Release -o ../build 
 
     - name: NUGET - Source
       run: nuget sources Add -Name Artifactory -Source https://silvester.jfrog.io/artifactory/api/nuget/silvester-nuget/silvester-pathfinder/Silvester.Pathfinder.Reference.Documents -username ${{ secrets.ARTIFACTORY_USERNAME }} -password ${{ secrets.ARTIFACTORY_PASSWORD }}
@@ -54,6 +54,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: get-semver
     steps:
+    - name: Check out the repo
+      uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
+
     - name: DOCKER - Login
       uses: docker/login-action@v1
       with:
