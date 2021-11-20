@@ -86,9 +86,9 @@ jobs:
   database:
     needs: get-semver
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/dotnet/sdk:5.0-focal
+    container: mcr.microsoft.com/dotnet/sdk:5.0-focale
     services:
-      localhost:
+      postgres:
         image: postgres
         env:
           POSTGRES_PASSWORD: passwordPlaceholder
@@ -112,7 +112,27 @@ jobs:
         apt-get install --yes postgresql-client
 
     - run: dotnet publish ./Sources/Seeding/Silvester.Pathfinder.Reference.Database.Seeding.Cli/Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj -c Release -o ./build/publish
+
+    - run: |
+        echo <<< EOL
+        {
+          "databases": {
+            "reference": {
+              "database": "database_pathfinder_reference",
+              "enabled": true,
+              "password": "passwordPlaceholder",
+              "port": 5432,
+              "server": "postgres",
+              "userId": "user_pathfinder_reference",
+              "timeout": 15,
+              "commandTimeout": 20,
+              "includeErrorDetails": true
+            }
+          }
+        }
+        EOL >> ./build/publish/appsettings.json
     - run: ls -R ./build/publish
+    - run: cat ./build/publish/appsettings.json
     - run: dotnet ./build/publish/Silvester.Pathfinder.Reference.Database.Seeding.Cli.dll seed
 
     - run: pg_dump -Fp -c database_pathfinder_reference > dump.sql
