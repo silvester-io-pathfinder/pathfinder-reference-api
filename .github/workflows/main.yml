@@ -28,7 +28,7 @@ jobs:
         text: ${{ steps.read-properties.outputs.content }}
         regex: '<Version>(.*?)</Version>'  
   
-  libraries:
+  publish-libraries:
     runs-on: ubuntu-latest
     needs: get-semver
     steps:
@@ -50,7 +50,7 @@ jobs:
       if: ${{ needs.get-semver.outputs.semanticVersion != 'master'}}
       run: nuget push ../build/Silvester.Pathfinder.Reference.Documents.${{ needs.get-semver.outputs.semanticVersion }}.nupkg -Source Artifactory
 
-  api:
+  publish-api:
     runs-on: ubuntu-latest
     needs: get-semver
     steps:
@@ -83,15 +83,18 @@ jobs:
           silvester.jfrog.io/silvester-docker/pathfinder-reference-api:${{ needs.get-semver.outputs.semanticVersion }}
           silvester.jfrog.io/silvester-docker/pathfinder-reference-api:latest
 
-  database:
+  dump-database:
     needs: get-semver
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/dotnet/sdk:5.0-focal
+    outputs: 
+      sqlDump: ${{ steps.set-output.outputs.sqlDump }}
     env:
       ASPNETCORE_ENVIRONMENT: ci
       PGPASSWORD: passwordPlaceholder
     services:
       postgres:
-        image: postgres:12.9
+        image: postgres:12.9-ubuntu
         env:
           POSTGRES_PASSWORD: passwordPlaceholder
           POSTGRES_DB: database_pathfinder_reference
@@ -110,16 +113,24 @@ jobs:
     
     - name: Install PostgreSQL client
       run: |
-        sudo apt-get update
-        sudo apt-get install --yes postgresql-client
-        
-    - uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '5.0.x'
+        apt-get update
+        apt-get install --yes postgresql-client
 
     - run: dotnet publish ./Sources/Seeding/Silvester.Pathfinder.Reference.Database.Seeding.Cli/Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj -c Release -o ./build/publish
     - run: dotnet ./build/publish/Silvester.Pathfinder.Reference.Database.Seeding.Cli.dll seed
     - run: pg_dump --host postgres --port 5432 -U user_pathfinder_reference -d database_pathfinder_reference -Fp -c > dump.sql
+    - name: set-output
+      run: echo ::set-output name=sqlDump::$(cat dump.sql)
+
+  publish-database:
+    runs-on: ubuntu-latest
+    needs: dump-database
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
+
+    - name: Write dump to local file
+      run: echo ${{ needs.dump-database.outputs.sqlDump }} > dump.sql
 
     - name: DOCKER - Login
       uses: docker/login-action@v1
@@ -144,5 +155,5 @@ jobs:
           artifactoryUsername=${{ secrets.ARTIFACTORY_USERNAME }}
           artifactoryPassword=${{ secrets.ARTIFACTORY_PASSWORD }}
         tags: |
-          silvester.jfrog.io/silvester-docker/pathfinder-reference-api-database:${{ needs.get-semver.outputs.semanticVersion }}
-          silvester.jfrog.io/silvester-docker/pathfinder-reference-api-database:latest
+          silvester.jfrog.io/silvester-docker/pathfinder-reference-api:${{ needs.get-semver.outputs.semanticVersion }}
+          silvester.jfrog.io/silvester-docker/pathfinder-reference-api:latest
