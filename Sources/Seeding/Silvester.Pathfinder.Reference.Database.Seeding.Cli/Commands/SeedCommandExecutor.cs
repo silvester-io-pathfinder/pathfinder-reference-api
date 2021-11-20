@@ -34,8 +34,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Cli.Commands
         private async Task MigrateAsync()
         {
             IEnumerable<string> appliedMigrations = await Database.Database.GetAppliedMigrationsAsync();
+            System.Console.WriteLine("Detected migrations: " + appliedMigrations.Count());
+
             if (appliedMigrations.Any() == false)
             {
+                System.Console.WriteLine("Migrating ...");
                 await Database.Database.MigrateAsync();
             }
         }

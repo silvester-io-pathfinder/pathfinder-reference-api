@@ -40,6 +40,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Cli
                 IConfigurationSection section = configuration.GetSection("Databases").GetSection("Reference");
                 string connectionString = $"Server={section["Server"]};Database={section["Database"]};User Id={section["UserId"]};Password={section["Password"]};Port={section["Port"]};Timeout={section["Timeout"]};CommandTimeout={section["CommandTimeout"]};Include Error Detail={section["IncludeErrorDetails"]}";
 
+                System.Console.WriteLine("Using connection string: " + connectionString);
+
                 options.UseNpgsql(connectionString);
                 options.EnableSensitiveDataLogging(true);
             });
