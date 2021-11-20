@@ -89,14 +89,14 @@ jobs:
     container: mcr.microsoft.com/dotnet/sdk:5.0-focal
     env:
       ASPNETCORE_ENVIRONMENT: ci
-      PGPASSWORD: passwordPlaceholder
+      PGPASSWORD: password
     services:
       postgres:
         image: postgres:12.9
         env:
-          POSTGRES_PASSWORD: passwordPlaceholder
+          POSTGRES_PASSWORD: password
           POSTGRES_DB: database_pathfinder_reference
-          POSTGRES_USER: user_pathfinder_reference
+          POSTGRES_USER: postgres
           POSTGRES_PORT: 5432
         ports:
         - 5432:5432
@@ -116,7 +116,7 @@ jobs:
 
     - run: dotnet publish ./Sources/Seeding/Silvester.Pathfinder.Reference.Database.Seeding.Cli/Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj -c Release -o ./build/publish
     - run: dotnet ./build/publish/Silvester.Pathfinder.Reference.Database.Seeding.Cli.dll seed
-    - run: pg_dump --host postgres --port 5432 -U user_pathfinder_reference -d database_pathfinder_reference -Fp > seed.sql
+    - run: pg_dump --host postgres --port 5432 -U postgres -d database_pathfinder_reference -Fp > seed.sql
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
       with:

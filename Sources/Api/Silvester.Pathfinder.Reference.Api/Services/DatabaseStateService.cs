@@ -38,15 +38,17 @@ namespace Silvester.Pathfinder.Reference.Api.Services
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            while (stoppingToken.IsCancellationRequested == false)
+            while (stoppingToken.IsCancellationRequested == false && DatabaseState != DatabaseState.Ready)
             {
                 try
                 {
                     using (ReferenceDatabase context = Factory.CreateDbContext())
                     {
-                        IEnumerable<string> appliedMigrations = await context.Database.GetAppliedMigrationsAsync();
-                        DatabaseState = DatabaseState.Ready;
-                        Logger.LogInformation("Database state set to ready.");
+                        if(context.Actions.Any())
+                        {
+                            DatabaseState = DatabaseState.Ready;
+                            Logger.LogInformation("Database state set to ready.");
+                        }
                     }
                 }
                 catch (NpgsqlException exception) when (exception.InnerException != null && exception.InnerException is SocketException)
