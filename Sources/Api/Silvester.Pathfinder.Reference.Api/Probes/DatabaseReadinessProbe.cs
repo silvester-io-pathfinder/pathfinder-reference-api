@@ -9,16 +9,16 @@ namespace Silvester.Pathfinder.Reference.Api.Probes.Readiness
 {
     public class DatabaseReadinessProbe : IReadinessProbe
     {
-        private MigrationService MigrationService { get; }
+        private DatabaseStateService DatabaseStateService { get; }
 
         public DatabaseReadinessProbe(IEnumerable<IHostedService> hostedServices)
         {
-            MigrationService = hostedServices.OfType<MigrationService>().First();
+            DatabaseStateService = hostedServices.OfType<DatabaseStateService>().First();
         }
 
         public ValueTask<bool> IsReadyToAcceptTrafficAsync()
         {
-            return new ValueTask<bool>(MigrationService.DatabaseState == DatabaseState.Ready);
+            return new ValueTask<bool>(DatabaseStateService.DatabaseState == DatabaseState.Ready);
         }
     }
 }
