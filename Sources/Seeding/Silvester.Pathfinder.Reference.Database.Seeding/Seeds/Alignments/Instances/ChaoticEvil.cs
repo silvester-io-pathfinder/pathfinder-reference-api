@@ -1,5 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Alignments.Instances
 {

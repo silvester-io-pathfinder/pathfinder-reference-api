@@ -3,65 +3,140 @@ name: ci
 on:
   workflow_dispatch:
   push:
-    branches: [master]
+    branches: [master, effects]
 
 jobs:
-  main:
+
+  get-semver:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the repo
-        uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
+    - name: Check out the repo
+      uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
         
-      - name: SEMVER - Load
-        id: read-properties
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ./Sources/Properties.proj
+    - name: SEMVER - Load
+      id: read-properties
+      uses: juliangruber/read-file-action@v1
+      with:
+        path: ./Sources/Properties.proj
         
-      - name: SEMVER - Determine.
-        id: get-semantic-version
-        uses: actions-ecosystem/action-regex-match@v2
-        with:
-          text: ${{ steps.read-properties.outputs.content }}
-          regex: '<Version>(.*?)</Version>'  
-        
-      - name: NUGET - Package
-        run: |
-          ls ./Sources -l
-          dotnet pack ./Sources/Silvester.Pathfinder.Reference.Documents/Silvester.Pathfinder.Reference.Documents.csproj -c Release -o ../build 
-
-      - name: NUGET - Source
-        run: nuget sources Add -Name Artifactory -Source https://silvester.jfrog.io/artifactory/api/nuget/silvester-nuget/silvester-pathfinder/Silvester.Pathfinder.Reference.Documents -username ${{ secrets.ARTIFACTORY_USERNAME }} -password ${{ secrets.ARTIFACTORY_PASSWORD }}
-        
-      - name: NUGET - Credentials
-        run: nuget setapikey ${{ secrets.ARTIFACTORY_USERNAME }}:${{ secrets.ARTIFACTORY_PASSWORD }} -Source Artifactory
-        
-      - name: NUGET - Push
-        if: ${{ steps.get-semantic-version.outputs.group1 != 'master'}}
-        run: nuget push ../build/Silvester.Pathfinder.Reference.Documents.${{ steps.get-semantic-version.outputs.group1 }}.nupkg -Source Artifactory
-        
-      - name: DOCKER - Login
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.ARTIFACTORY_USERNAME }}
-          password: ${{ secrets.ARTIFACTORY_PASSWORD }}
-          registry: silvester.jfrog.io
+    - name: SEMVER - Determine.
+      id: get-semantic-version
+      uses: actions-ecosystem/action-regex-match@v2
+      with:
+        text: ${{ steps.read-properties.outputs.content }}
+        regex: '<Version>(.*?)</Version>'  
+  
+  libraries:
+    runs-on: ubuntu-latest
+    needs: get-semver
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
     
-      - name: DOCKER - Setup QEMU
-        uses: docker/setup-qemu-action@v1
+    - name: NUGET - Package
+      run: |
+        ls ./Sources -l
+        dotnet pack ./Sources/Silvester.Pathfinder.Reference.Documents/Silvester.Pathfinder.Reference.Documents.csproj -c Release -o ../build 
 
-      - name: DOCKER - Setup BuildX
-        uses: docker/setup-buildx-action@v1
+    - name: NUGET - Source
+      run: nuget sources Add -Name Artifactory -Source https://silvester.jfrog.io/artifactory/api/nuget/silvester-nuget/silvester-pathfinder/Silvester.Pathfinder.Reference.Documents -username ${{ secrets.ARTIFACTORY_USERNAME }} -password ${{ secrets.ARTIFACTORY_PASSWORD }}
         
-      - name: DOCKER - Build and Push
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true 
-          build-args: |
-            artifactoryUsername=${{ secrets.ARTIFACTORY_USERNAME }}
-            artifactoryPassword=${{ secrets.ARTIFACTORY_PASSWORD }}
-          tags: |
-            silvester.jfrog.io/silvester-docker/pathfinder-reference-api:${{ steps.get-semantic-version.outputs.group1 }}
-            silvester.jfrog.io/silvester-docker/pathfinder-reference-api:latest
+    - name: NUGET - Credentials
+      run: nuget setapikey ${{ secrets.ARTIFACTORY_USERNAME }}:${{ secrets.ARTIFACTORY_PASSWORD }} -Source Artifactory
+        
+    - name: NUGET - Push
+      if: ${{ jobs.get-semver.steps.get-semantic-version.outputs.group1 != 'master'}}
+      run: nuget push ../build/Silvester.Pathfinder.Reference.Documents.${{ jobs.get-semver.steps.get-semantic-version.outputs.group1 }}.nupkg -Source Artifactory
+
+  api:
+    runs-on: ubuntu-latest
+    needs: get-semver
+    steps:
+    - name: DOCKER - Login
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.ARTIFACTORY_USERNAME }}
+        password: ${{ secrets.ARTIFACTORY_PASSWORD }}
+        registry: silvester.jfrog.io
+    
+    - name: DOCKER - Setup QEMU
+      uses: docker/setup-qemu-action@v1
+
+    - name: DOCKER - Setup BuildX
+      uses: docker/setup-buildx-action@v1
+      
+    - name: DOCKER - Build and Push
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: ./api.dockerfile
+        push: true 
+        build-args: |
+          artifactoryUsername=${{ secrets.ARTIFACTORY_USERNAME }}
+          artifactoryPassword=${{ secrets.ARTIFACTORY_PASSWORD }}
+        tags: |
+          silvester.jfrog.io/silvester-docker/pathfinder-reference-api:${{ jobs.get-semver.steps.get-semantic-version.outputs.group1 }}
+          silvester.jfrog.io/silvester-docker/pathfinder-reference-api:latest
+
+  database:
+    needs: get-semver
+    runs-on: ubuntu-latest
+    container: node:10.18-jessie
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: passwordPlaceholder
+          POSTGRES_DB: database_pathfinder_reference
+          POSTGRES_USER: user_pathfinder_reference
+          POSTGRES_PORT: 5432
+        ports:
+        - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:  
+    - name: Check out the repo
+      uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
+    
+    - name: Install PostgreSQL client
+      run: |
+        apt-get update
+        apt-get install --yes postgresql-client
+
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.x' 
+
+    - run: dotnet publish ./Sources/Seeding/Silvester.Pathfinder.Reference.Database.Seeding.Cli/Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj -c Release -o ./build/publish
+    - run: dotnet ./build/publish/Silvester.Pathfinder.Reference.Database.Seeding.Cli.dll seed
+
+    - run: pg_dump -Fp -c database_pathfinder_reference > dump.sql
+
+    - name: DOCKER - Login
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.ARTIFACTORY_USERNAME }}
+        password: ${{ secrets.ARTIFACTORY_PASSWORD }}
+        registry: silvester.jfrog.io
+    
+    - name: DOCKER - Setup QEMU
+      uses: docker/setup-qemu-action@v1
+
+    - name: DOCKER - Setup BuildX
+      uses: docker/setup-buildx-action@v1
+      
+    - name: DOCKER - Build and Push
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: ./database.dockerfile
+        push: true 
+        build-args: |
+          artifactoryUsername=${{ secrets.ARTIFACTORY_USERNAME }}
+          artifactoryPassword=${{ secrets.ARTIFACTORY_PASSWORD }}
+        tags: |
+          silvester.jfrog.io/silvester-docker/pathfinder-reference-api-database:${{ jobs.get-semver.steps.get-semantic-version.outputs.group1 }}
+          silvester.jfrog.io/silvester-docker/pathfinder-reference-api-database:latest

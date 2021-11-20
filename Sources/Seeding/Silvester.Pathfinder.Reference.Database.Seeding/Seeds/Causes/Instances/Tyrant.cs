@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
             {
                 Id = ID, 
                 Name = "Tyrant",
-                DivineSmite = "The regrets of disobedience linger. If an enemy refuses your Iron Command, it takes persistent evil damage equal to your Charisma modifier.",
+                DivineSmite = MarkdownText.FromMarkdown(ID, $"The regrets of disobedience linger. If an enemy refuses your [Iron Command](feats/{Feats.Instances.IronCommand.ID}), it takes persistent evil damage equal to your [Charisma](stats/{Stats.Instances.Charisma.ID}) modifier."),
                 Exalt = "When you use Iron Command, each enemy within 15 feet of you other than the triggering creature must also either drop prone or take mental damage (the enemy chooses). These creatures take only minimum damage (typically 3 damage at 11th level, 4 at 12th, 5 at 16th, and 6 at 19th), and the effects they take can't be adjusted by anything that changes your Iron Command. For instance, the Iron Repercussions feat couldn't turn the damage into persistent mental damage for creatures other than the triggering creature.",
                 ClassId = Classes.Instances.Champion.ID,
                 AlignmentId = Alignments.Instances.LawfulEvil.ID

@@ -11,7 +11,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
     public class Cause : BaseEntity, INamedEntity, ISearchableEntity
     {
         public string Name { get; set; } = default!;
-        public string DivineSmite { get; set; } = default!;
+        public MarkdownText DivineSmite { get; set; } = default!;
         public string Exalt{ get; set; } = default!;
 
         public Guid SourcePageId { get; set; }

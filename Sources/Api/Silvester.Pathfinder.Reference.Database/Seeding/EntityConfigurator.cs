@@ -46,7 +46,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
                 {
                     entity.OwnsOne(property.PropertyType, property.Name, accessor =>
                     {
-                        Setup(property, accessor, property.PropertyType);
+                        accessor.HasKey(nameof(IOwnedEntity.OwnerId));
+                        accessor.Property(nameof(BaseEntity.Id)).ValueGeneratedOnAdd();
+                        accessor.Property<Guid>(nameof(IOwnedEntity.OwnerId)).ValueGeneratedOnAdd();
+                        accessor.WithOwner().HasForeignKey(nameof(IOwnedEntity.OwnerId));
+
+                        SetupSearchVector(property, accessor, property.PropertyType);
                     });
                 }
                 else if (IsOwnedEntityCollection(property))
@@ -54,7 +59,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
                     Type actualEntityType = property.PropertyType.GetGenericArguments()[0];
                     entity.OwnsMany(actualEntityType, property.Name, accessor =>
                     {
-                        Setup(property, accessor, actualEntityType);
+                        accessor.HasKey(nameof(BaseEntity.Id));
+                        accessor.Property(nameof(BaseEntity.Id)).ValueGeneratedOnAdd();
+                        accessor.Property<Guid>(nameof(IOwnedEntity.OwnerId)).ValueGeneratedOnAdd();
+                        accessor.WithOwner().HasForeignKey(nameof(IOwnedEntity.OwnerId));
+
+                        SetupSearchVector(property, accessor, actualEntityType);
                     });
                 }
             }
@@ -72,13 +82,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
                 && property.PropertyType.GetGenericArguments()[0].GetInterfaces().Contains(typeof(IOwnedEntity));
         }
 
-        private void Setup(PropertyInfo property, OwnedNavigationBuilder accessor, Type ownedEntityType)
+        private void SetupSearchVector(PropertyInfo property, OwnedNavigationBuilder accessor, Type ownedEntityType)
         {
-            accessor.HasKey(nameof(BaseEntity.Id));
-            accessor.Property(nameof(BaseEntity.Id)).ValueGeneratedOnAdd();
-            accessor.Property<Guid>("OwnerId").ValueGeneratedOnAdd();
-            accessor.WithOwner().HasForeignKey("OwnerId");
-
             if (ownedEntityType.GetInterfaces().Contains(typeof(ISearchableEntity)))
             {
                 MethodInfo method = typeof(EntityConfigurator<>).MakeGenericType(typeof(TEntity)).GetMethod(nameof(ConfigureOwnedEntitySearch), BindingFlags.Static | BindingFlags.NonPublic)!;

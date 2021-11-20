@@ -5,6 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{E7526797-2CB9-47EE-A9CF-602F33375545}"
 	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\api.dockerfile = ..\api.dockerfile
+		..\database.dockerfile = ..\database.dockerfile
 		..\.github\workflows\main.yml = ..\.github\workflows\main.yml
 		Properties.proj = Properties.proj
 	EndProjectSection
@@ -31,9 +34,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Refere
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Reference.Database.Seeding", "Seeding\Silvester.Pathfinder.Reference.Database.Seeding\Silvester.Pathfinder.Reference.Database.Seeding.csproj", "{69061D19-E6E9-408F-827C-9D0C7E43E17B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silvester.Pathfinder.Reference.Database.Seeding.Cli", "Silvester.Pathfinder.Reference.Database.Seeding.Cli\Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj", "{9F60FB60-F086-47FB-8DD6-0BAB2DD952C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Reference.Database.Seeding.Cli", "Silvester.Pathfinder.Reference.Database.Seeding.Cli\Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj", "{9F60FB60-F086-47FB-8DD6-0BAB2DD952C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silvester.Pathfinder.Console.Core", "Libraries\Silvester.Pathfinder.Console.Core\Silvester.Pathfinder.Console.Core.csproj", "{D89E7C5B-ACA9-4EA4-A923-76EF453D551E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Console.Core", "Libraries\Silvester.Pathfinder.Console.Core\Silvester.Pathfinder.Console.Core.csproj", "{D89E7C5B-ACA9-4EA4-A923-76EF453D551E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -14,7 +14,7 @@ using System.Reflection;
 
 namespace Silvester.Pathfinder.Reference.Api.Graphql.Extensions
 {
-    public static class TypeInjectionExtensions
+    public static class AddEntityTypesExtension
     {
         public static IRequestExecutorBuilder AddEntityTypes(this IRequestExecutorBuilder graphql)
         {

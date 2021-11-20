@@ -1,5 +1,6 @@
 using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database.Seeding;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;

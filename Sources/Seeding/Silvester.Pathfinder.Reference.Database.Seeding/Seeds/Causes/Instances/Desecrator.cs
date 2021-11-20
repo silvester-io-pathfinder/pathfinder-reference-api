@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
             {
                 Id = ID, 
                 Name = "Desecrator",
-                DivineSmite = "If your Charisma modifier is +2 or greater, your resistance against the triggering damage equals your Charisma modifier + half your level.",
+                DivineSmite = MarkdownText.FromMarkdown(ID, $"If your [Charisma](stats/{Stats.Instances.Charisma.ID}) modifier is +2 or greater, your resistance against the triggering damage equals your [Charisma](stats/{Stats.Instances.Charisma.ID}) modifier + half your level."),
                 Exalt = "When you use Selfish Shield, each enemy within 15 feet of you takes a �1 status penalty to attack rolls against you until the start of your next turn.",
                 ClassId = Classes.Instances.Champion.ID,
                 AlignmentId = Alignments.Instances.NeutralEvil.ID

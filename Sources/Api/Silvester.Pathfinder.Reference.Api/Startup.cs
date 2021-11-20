@@ -100,6 +100,7 @@ namespace Silvester.Pathfinder.Reference.Api
                 .AddType(new UuidType("Uuid", defaultFormat: 'D'))
                 .AddQueryType<Query>()
                 .AddEntityTypes()
+                .AddMarkdownFormatType()
                 .AddCaseInsensitiveFilterConvention()
                 .AddSorting()
                 .AddProjections()
@@ -107,7 +108,8 @@ namespace Silvester.Pathfinder.Reference.Api
                 .SetPagingOptions(new PagingOptions { MaxPageSize = 100, DefaultPageSize = 25, IncludeTotalCount = true })
                 .TryAddTypeInterceptor<NavigationTypeInterceptor>()
                 .TryAddTypeInterceptor<TextSearchVectorInterceptor>()
-                .TryAddTypeInterceptor<AbstractTypeInterceptor>();
+                .TryAddTypeInterceptor<AbstractTypeInterceptor>()
+                .TryAddTypeInterceptor<MarkdownTypeInterceptor>();
 
             services
                 .Configure<ForwardedHeadersOptions>(options =>

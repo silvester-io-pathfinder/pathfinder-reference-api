@@ -387,19 +387,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "MarkdownText",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Plain = table.Column<string>(type: "text", nullable: false),
-                    Markdown = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_MarkdownText", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "PlaneCategories",
                 columns: table => new
                 {
@@ -6703,7 +6690,9 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    DivineSmite = table.Column<string>(type: "text", nullable: false),
+                    DivineSmite_Plain = table.Column<string>(type: "text", nullable: false),
+                    DivineSmite_Markdown = table.Column<string>(type: "text", nullable: false),
+                    DivineSmite_Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Exalt = table.Column<string>(type: "text", nullable: false),
                     SourcePageId = table.Column<Guid>(type: "uuid", nullable: false),
                     ClassId = table.Column<Guid>(type: "uuid", nullable: false),
@@ -15628,9 +15617,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "MagicTraditionSpell");
-
-            migrationBuilder.DropTable(
-                name: "MarkdownText");
 
             migrationBuilder.DropTable(
                 name: "MasterAbilities");

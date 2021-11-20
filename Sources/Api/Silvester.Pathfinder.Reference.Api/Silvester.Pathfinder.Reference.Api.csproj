@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Seeding\Silvester.Pathfinder.Reference.Database.Seeding\Silvester.Pathfinder.Reference.Database.Seeding.csproj" />
     <ProjectReference Include="..\Silvester.Pathfinder.Reference.Database\Silvester.Pathfinder.Reference.Database.csproj" />
     <ProjectReference Include="..\..\Libraries\Silvester.Pathfinder.Reference.Documents\Silvester.Pathfinder.Reference.Documents.csproj" />
     <ProjectReference Include="..\..\Libraries\Silvester.Pathfinder.Reference.Extensions\Silvester.Pathfinder.Reference.Extensions.csproj" />

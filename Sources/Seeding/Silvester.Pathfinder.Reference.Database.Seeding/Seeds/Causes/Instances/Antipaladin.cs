@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
             {
                 Id = ID, 
                 Name = "Antipaladin",
-                DivineSmite = "An enemy damaged by the initial damage from your Destructive Vengeance also takes persistent evil damage equal to your Charisma modifier. This applies only to the damage the reaction itself deals to the triggering creature, not the damage you deal with subsequent Strikes.",
+                DivineSmite = MarkdownText.FromMarkdown(ID, $"An enemy damaged by the initial damage from your [Destructive Vengeance](feats/{Feats.Instances.DestructiveVengeance.ID}) also takes persistent evil damage equal to your [Charisma](stats/{Stats.Instances.Charisma.ID}) modifier. This applies only to the damage the reaction itself deals to the triggering creature, not the damage you deal with subsequent [Strikes](actions/{Actions.Instances.Strike.ID})."),
                 Exalt = "When you use Destructive Vengeance, each enemy within 15 feet of you other than the triggering creature takes half the damage you deal to the triggering enemy, of the same damage type you chose.",
                 ClassId = Classes.Instances.Champion.ID,
                 AlignmentId = Alignments.Instances.ChaoticEvil.ID

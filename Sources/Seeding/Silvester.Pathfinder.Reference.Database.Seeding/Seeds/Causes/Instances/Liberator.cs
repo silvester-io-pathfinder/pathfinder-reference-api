@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
             {
                 Id = ID, 
                 Name = "Liberator",
-                DivineSmite = "You punish those who ensnare your allies in bondage. If the triggering enemy was using any effects to make your ally grabbed, restrained, immobilized, or paralyzed when you used Liberating Step, that enemy takes persistent good damage equal to your Charisma modifier.",
+                DivineSmite = MarkdownText.FromMarkdown(ID, $"You punish those who ensnare your allies in bondage. If the triggering enemy was using any effects to make your ally [grabbed](conditions/{Conditions.Instances.Grabbed.ID}), [restrained](conditions/{Conditions.Instances.Restrained.ID}), [immobilized](conditions/{Conditions.Instances.Immobilized.ID}), or [paralyzed]((conditions/{Conditions.Instances.Paralyzed.ID})) when you used [Liberating Step](feats/{Feats.Instances.LiberatingStep.ID}), that enemy takes persistent good damage equal to your [Charisma](stats/{Stats.Instances.Charisma.ID}) modifier."),
                 Exalt = "You can help your whole group get into position. When you use Liberating Step, if your ally doesn�t attempt to break free of an effect, you and all allies within 15 feet can Step, in addition to the triggering ally.",
                 ClassId = Classes.Instances.Champion.ID,
                 AlignmentId = Alignments.Instances.ChaoticGood.ID

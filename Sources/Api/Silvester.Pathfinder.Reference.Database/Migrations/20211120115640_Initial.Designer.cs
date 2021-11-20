@@ -11,7 +11,7 @@ using Silvester.Pathfinder.Reference.Database;
 namespace Silvester.Pathfinder.Reference.Database.Migrations
 {
     [DbContext(typeof(ReferenceDatabase))]
-    [Migration("20211117192702_Initial")]
+    [Migration("20211120115640_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -2353,10 +2353,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
 
                     b.Property<Guid>("ClassId")
                         .HasColumnType("uuid");
-
-                    b.Property<string>("DivineSmite")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<Guid?>("EffectId")
                         .HasColumnType("uuid");
@@ -7411,25 +7407,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Table");
-                });
-
-            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Utilities.Text.MarkdownText", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Markdown")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Plain")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("MarkdownText");
                 });
 
             modelBuilder.Entity("SkillActionTrait", b =>
@@ -14150,6 +14127,32 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.OwnsOne("Silvester.Pathfinder.Reference.Database.Utilities.Text.MarkdownText", "DivineSmite", b1 =>
+                        {
+                            b1.Property<Guid>("OwnerId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Markdown")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.Property<string>("Plain")
+                                .IsRequired()
+                                .HasColumnType("text");
+
+                            b1.HasKey("OwnerId");
+
+                            b1.ToTable("Causes");
+
+                            b1.WithOwner()
+                                .HasForeignKey("OwnerId");
+                        });
+
                     b.OwnsMany("Silvester.Pathfinder.Reference.Database.Utilities.Text.TextBlock", "Details", b1 =>
                         {
                             b1.Property<Guid>("Id")
@@ -14195,6 +14198,9 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.Navigation("Class");
 
                     b.Navigation("Details");
+
+                    b.Navigation("DivineSmite")
+                        .IsRequired();
 
                     b.Navigation("Effect");
 

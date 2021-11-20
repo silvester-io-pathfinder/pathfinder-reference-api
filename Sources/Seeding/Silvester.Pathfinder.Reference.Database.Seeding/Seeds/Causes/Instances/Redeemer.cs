@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
             {
                 Id = ID, 
                 Name = "Redeemer",
-                DivineSmite = "A guilty conscience assails foes who spurn your Glimpse of Redemption. A foe that responds to your Glimpse of Redemption by dealing damage takes persistent good damage equal to your Charisma modifier.",
+                DivineSmite = MarkdownText.FromMarkdown(ID, $"A guilty conscience assails foes who spurn your Glimpse of Redemption. A foe that responds to your [Glimpse of Redemption](feats/{Feats.Instances.GlimpseOfRedemption.ID}) by dealing damage takes persistent good damage equal to your [Charisma](stats/{Stats.Instances.Charisma.ID}) modifier."),
                 Exalt = "You protect multiple allies. You can apply the resistance granted by Glimpse of Redemption to yourself and all allies within 15 feet of you, including the triggering ally, except the resistance is reduced by 2 for all.",
                 ClassId = Classes.Instances.Champion.ID,
                 AlignmentId = Alignments.Instances.NeutralGood.ID

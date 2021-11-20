@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
             {
                 Id = ID, 
                 Name = "Paladin",
-                DivineSmite = "You surround evil targets in a punishing halo. If you hit with your Retributive Strike, the target takes persistent good damage equal to your Charisma modifier.",
+                DivineSmite = MarkdownText.FromMarkdown(ID, $"You surround evil targets in a punishing halo. If you hit with your [Retributive Strike](feats/{Feats.Instances.RetributiveStrike.ID}), the target takes persistent good damage equal to your [Charisma](stats/{Stats.Instances.Charisma.ID}) modifier."),
                 Exalt = "When you use Retributive Strike, each ally within 15 feet of you with the target in their melee reach can spend a reaction to Strike the target with a �5 penalty.",
                 ClassId = Classes.Instances.Champion.ID,
                 AlignmentId = Alignments.Instances.LawfulGood.ID
