@@ -124,7 +124,7 @@ jobs:
 
   publish-database:
     runs-on: ubuntu-latest
-    needs: dump-database
+    needs: [get-semver, dump-database]
     steps:
     - name: Check out the repo
       uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
@@ -155,5 +155,5 @@ jobs:
           artifactoryUsername=${{ secrets.ARTIFACTORY_USERNAME }}
           artifactoryPassword=${{ secrets.ARTIFACTORY_PASSWORD }}
         tags: |
-          silvester.jfrog.io/silvester-docker/pathfinder-reference-api:${{ needs.get-semver.outputs.semanticVersion }}
-          silvester.jfrog.io/silvester-docker/pathfinder-reference-api:latest
+          silvester.jfrog.io/silvester-docker/pathfinder-reference-api-database:${{ needs.get-semver.outputs.semanticVersion }}
+          silvester.jfrog.io/silvester-docker/pathfinder-reference-api-database:latest
