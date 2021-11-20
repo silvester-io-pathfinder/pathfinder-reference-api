@@ -41,37 +41,7 @@ namespace Silvester.Pathfinder.Reference.Api.Services
         {
             while(stoppingToken.IsCancellationRequested == false)
             {
-                try
-                {
-                    using(ReferenceDatabase context = Factory.CreateDbContext())
-                    {
-                        IEnumerable<string> appliedMigrations = await context.Database.GetAppliedMigrationsAsync();
-                        if (appliedMigrations.Any() == false)
-                        {
-                            await context.Database.MigrateAsync();
-                        }
-
-                        DatabaseState = DatabaseState.Ready;
-                        Logger.LogInformation("Database state set to ready.");
-                    }
-                }
-                catch(NpgsqlException exception) when (exception.InnerException != null && exception.InnerException is SocketException)
-                {
-                    Logger.LogInformation("Socket exception on database connection. Interpreting as 'database not ready'.");
-
-                    //Retry next loop. 
-                    //Because we run on pre-emptible nodes, this can happen after it's been running successfully for hours, so we do have to potentially reset the state to Unready.
-
-                    DatabaseState = DatabaseState.Unready;
-                    Logger.LogInformation("Database state set to unready.");
-                }
-                catch(Exception exception)
-                {
-                    Logger.LogCritical(exception, $"Something went wrong in the background service `{nameof(MigrationService)}`.");
-                    ApplicationLifetime.StopApplication();
-                }
-
-                await Task.Delay(10000);
+               
             }
         }
     }
