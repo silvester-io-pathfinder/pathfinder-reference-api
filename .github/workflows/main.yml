@@ -116,6 +116,7 @@ jobs:
         dotnet-version: '5.0.x' 
 
     - run: dotnet publish ./Sources/Seeding/Silvester.Pathfinder.Reference.Database.Seeding.Cli/Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj -c Release -o ./build/publish
+    - run: ls -R ./build/publish
     - run: dotnet ./build/publish/Silvester.Pathfinder.Reference.Database.Seeding.Cli.dll seed
 
     - run: pg_dump -Fp -c database_pathfinder_reference > dump.sql
