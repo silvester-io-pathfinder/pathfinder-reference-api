@@ -79,7 +79,7 @@ namespace Silvester.Pathfinder.Reference.Api
 
             if(bool.Parse(Configuration.GetSection("Databases").GetSection("Reference")["Enabled"]))
             {
-                services.AddSingleton<IHostedService, MigrationService>();
+                services.AddSingleton<IHostedService, DatabaseStateService>();
             }
 
             services
