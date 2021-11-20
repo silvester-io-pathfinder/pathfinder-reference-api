@@ -26,7 +26,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Cli
 
         private static void ConfigureApplication(HostBuilderContext context, IConfigurationBuilder builder)
         {
-            builder.AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json"), optional: false);
+            if(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "ci")
+            {
+                builder.AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.ci.json"), optional: false);
+            }
+            else
+            {
+                builder.AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json"), optional: false);
+            }
         }
 
         private static void ConfigureServices(HostBuilderContext context, IServiceCollection services)
