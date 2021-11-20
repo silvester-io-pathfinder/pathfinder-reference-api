@@ -136,6 +136,8 @@ jobs:
       with:
         name: sql-seed
 
+    - run: cat seed.sql
+
     - name: DOCKER - Login
       uses: docker/login-action@v1
       with:
