@@ -11,7 +11,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Activities.Insta
 {
     public class Defend : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("aa1cb744-bbd9-4840-8451-007fb47fcae6");
         
         protected override Activity GetActivity()
         {
@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Activities.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You move at half your travel speed with your shield raised. If combat breaks out, you gain the benefits of Raising a Shield before your first turn begins." };
+            yield return new TextBlock { Id = Guid.Parse("c8a8547b-f77d-4919-91fd-e9720f5e44c5"), Type = TextBlockType.Text, Text = "You move at half your travel speed with your shield raised. If combat breaks out, you gain the benefits of Raising a Shield before your first turn begins." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Activities.Insta
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("5c9f5b39-9115-46a2-98d2-fb9111878c81"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 479
             };

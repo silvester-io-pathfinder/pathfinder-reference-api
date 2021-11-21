@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Reference.Database.Guids
     {
         static void Main(string[] args)
         {
-            foreach (string filePath in Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "Silvester.Pathfinder.Reference.Database"), "*.cs", SearchOption.AllDirectories))
+            foreach (string filePath in Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "..", "Seeding", "Silvester.Pathfinder.Reference.Database.Seeding"), "*.cs", SearchOption.AllDirectories))
             {
                 string text = File.ReadAllText(filePath);
 

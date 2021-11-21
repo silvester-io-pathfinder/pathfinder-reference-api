@@ -11,7 +11,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Activities.Insta
 {
     public class Hustle : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("195830db-7462-4b8d-8210-21f1e29795d6");
         
         protected override Activity GetActivity()
         {
@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Activities.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You strain yourself to move at double your travel speed. You can Hustle only for a number of minutes equal to your Constitution modifier × 10 (minimum 10 minutes). If you are in a group that is Hustling, use the lowest Constitution modifier among everyone to determine how fast the group can Hustle together." };
+            yield return new TextBlock { Id = Guid.Parse("76a33278-f39f-445d-bcf4-68ed8ede02a7"), Type = TextBlockType.Text, Text = "You strain yourself to move at double your travel speed. You can Hustle only for a number of minutes equal to your Constitution modifier ï¿½ 10 (minimum 10 minutes). If you are in a group that is Hustling, use the lowest Constitution modifier among everyone to determine how fast the group can Hustle together." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Activities.Insta
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("ac17cf9d-2e60-4088-8bed-08c920992b71"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 480
             };

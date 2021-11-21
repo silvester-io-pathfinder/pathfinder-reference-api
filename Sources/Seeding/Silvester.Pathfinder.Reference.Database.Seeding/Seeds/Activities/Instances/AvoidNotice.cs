@@ -11,7 +11,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Activities.Insta
 {
     public class AvoidNotice : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("bebbb301-f323-4941-b049-92f1909b2b7b");
         
         protected override Activity GetActivity()
         {
@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Activities.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You attempt a Stealth check to avoid notice while traveling at half speed. If you have the Swift Sneak feat, you can move at full Speed rather than half, but you still can’t use another exploration activity while you do so. If you have the Legendary Sneak feat, you can move at full Speed and use a second exploration activity. If you’re Avoiding Notice at the start of an encounter, you usually roll a Stealth check instead of a Perception check both to determine your initiative and to see if the enemies notice you (based on their Perception DCs, as normal for Sneak, regardless of their initiative check results)." };
+            yield return new TextBlock { Id = Guid.Parse("55ff8f2c-0d16-443f-8ebe-9b420475c056"), Type = TextBlockType.Text, Text = "You attempt a Stealth check to avoid notice while traveling at half speed. If you have the Swift Sneak feat, you can move at full Speed rather than half, but you still canï¿½t use another exploration activity while you do so. If you have the Legendary Sneak feat, you can move at full Speed and use a second exploration activity. If youï¿½re Avoiding Notice at the start of an encounter, you usually roll a Stealth check instead of a Perception check both to determine your initiative and to see if the enemies notice you (based on their Perception DCs, as normal for Sneak, regardless of their initiative check results)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Activities.Insta
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("9217de07-9c7c-4155-ac5b-3ed73aab848d"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 479
             };
