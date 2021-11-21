@@ -16,6 +16,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
 
+        public ICollection<Activity> Activities { get; set; } = new List<Activity>();
+
         public ICollection<Spell> Spells { get; set; } = new List<Spell>();
 
         public ICollection<SkillAction> SkillActions{ get; set; } = new List<SkillAction>();

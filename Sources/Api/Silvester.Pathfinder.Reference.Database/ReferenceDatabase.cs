@@ -19,6 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database
         }
 
         public DbSet<Ability> Abilities { get; set; } = default!;
+        public DbSet<Activity> Activities { get; set; } = default!;
         public DbSet<Models.Entities.Action> Actions { get; set; } = default!;
         public DbSet<ActionType> ActionTypes { get; set; } = default!;
         public DbSet<AdventuringGear> AdventuringGears { get; set; } = default!;
