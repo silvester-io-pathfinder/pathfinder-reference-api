@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Abilities.Instan
 
         protected override IEnumerable<TextBlock> GetEffects()
         {
-            yield return new TextBlock { Id = Guid.Parse("96f5ac6b-72c5-4d33-9a53-6176ba19346e"), Text = "he monster moves up to its swim Speed + 10 feet toward the triggering creature, traveling on water and on land. Once the creature is in reach, the monster makes a Strike against it. The creature is flat-footed against this Strike." };
+            yield return new TextBlock { Id = Guid.Parse("96f5ac6b-72c5-4d33-9a53-6176ba19346e"), Text = "The monster moves up to its swim Speed + 10 feet toward the triggering creature, traveling on water and on land. Once the creature is in reach, the monster makes a Strike against it. The creature is flat-footed against this Strike." };
         }
 
         protected override SourcePage GetSourcePage()

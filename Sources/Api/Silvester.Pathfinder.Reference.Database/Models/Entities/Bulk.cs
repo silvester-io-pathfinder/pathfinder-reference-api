@@ -1,6 +1,6 @@
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {
-    public class Bulk : BaseEntity
+    public class Bulk : BaseEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 

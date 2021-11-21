@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {
-    public class Background : BaseEntity, ISearchableEntity
+    public class Background : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
 
