@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("14cf7c7a-9547-46b5-9f3f-fe788f3fa2f0"), Type = TextBlockType.Text, Text = "Aquatic creatures are at home underwater. Their bludgeoning and slashing unarmed Strikes don’t take the usual –2 penalty for being underwater. Aquatic creatures can breathe water but not air." };
+            yield return new TextBlock { Id = Guid.Parse("14cf7c7a-9547-46b5-9f3f-fe788f3fa2f0"), Type = TextBlockType.Text, Text = "Aquatic creatures are at home underwater. Their bludgeoning and slashing unarmed Strikes don't take the usual –2 penalty for being underwater. Aquatic creatures can breathe water but not air." };
         }
 
         protected override SourcePage GetSourcePage()

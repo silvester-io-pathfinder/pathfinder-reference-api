@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d33c4be2-dbf2-4d34-a967-74d5f60a3b1b"), Type = TextBlockType.Text, Text = "This rarity indicates that a rules element is very difficult to find in the game world. A rare feat, spell, item or the like is available to players only if the GM decides to include it in the game, typically through discovery during play. Creatures with this trait are rare. They typically can’t be summoned. The DC of Recall Knowledge checks related to these creatures is increased by 5." };
+            yield return new TextBlock { Id = Guid.Parse("d33c4be2-dbf2-4d34-a967-74d5f60a3b1b"), Type = TextBlockType.Text, Text = "This rarity indicates that a rules element is very difficult to find in the game world. A rare feat, spell, item or the like is available to players only if the GM decides to include it in the game, typically through discovery during play. Creatures with this trait are rare. They typically can't be summoned. The DC of Recall Knowledge checks related to these creatures is increased by 5." };
         }
 
         protected override SourcePage GetSourcePage()

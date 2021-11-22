@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("088a7fc0-3d68-46c3-bf35-ebed5deceb3d"), Type = TextBlockType.Text, Text = "This weapon can be wielded with two hands. Doing so changes its weapon damage die to the indicated value. This change applies to all the weapon’s damage dice, such as those from striking runes." };
+            yield return new TextBlock { Id = Guid.Parse("088a7fc0-3d68-46c3-bf35-ebed5deceb3d"), Type = TextBlockType.Text, Text = "This weapon can be wielded with two hands. Doing so changes its weapon damage die to the indicated value. This change applies to all the weapon's damage dice, such as those from striking runes." };
         }
 
         protected override SourcePage GetSourcePage()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("335c6212-9e00-4692-a589-210c5440a4a1"), Type = TextBlockType.Text, Text = "An elixir with the mutagen trait temporarily transmogrifies the subject’s body and alters its mind. A mutagen always conveys one or more beneficial effects paired with one or more detrimental effects. Mutagens are polymorph effects, meaning you can benefit from only one at a time." };
+            yield return new TextBlock { Id = Guid.Parse("335c6212-9e00-4692-a589-210c5440a4a1"), Type = TextBlockType.Text, Text = "An elixir with the mutagen trait temporarily transmogrifies the subject's body and alters its mind. A mutagen always conveys one or more beneficial effects paired with one or more detrimental effects. Mutagens are polymorph effects, meaning you can benefit from only one at a time." };
         }
 
         protected override SourcePage GetSourcePage()

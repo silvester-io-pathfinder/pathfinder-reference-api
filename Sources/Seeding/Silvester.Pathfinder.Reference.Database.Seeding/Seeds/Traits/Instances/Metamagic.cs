@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("823c9e9a-6144-49d0-b214-174265dcb756"), Type = TextBlockType.Text, Text = "Actions with the metamagic trait, usually from metamagic feats, tweak the properties of your spells. You must use a metamagic action directly before Casting the Spell you want to alter. If you use any action (including free actions and reactions) other than Cast a Spell directly after, you waste the benefits of the metamagic action. Any additional effects added by a metamagic action are part of the spell’s effect, not of the metamagic action itself." };
+            yield return new TextBlock { Id = Guid.Parse("823c9e9a-6144-49d0-b214-174265dcb756"), Type = TextBlockType.Text, Text = "Actions with the metamagic trait, usually from metamagic feats, tweak the properties of your spells. You must use a metamagic action directly before Casting the Spell you want to alter. If you use any action (including free actions and reactions) other than Cast a Spell directly after, you waste the benefits of the metamagic action. Any additional effects added by a metamagic action are part of the spell's effect, not of the metamagic action itself." };
         }
 
         protected override SourcePage GetSourcePage()

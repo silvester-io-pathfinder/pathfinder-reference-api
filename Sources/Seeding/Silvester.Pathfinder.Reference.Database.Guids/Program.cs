@@ -11,6 +11,9 @@ namespace Silvester.Pathfinder.Reference.Database.Guids
             {
                 string text = File.ReadAllText(filePath);
 
+                text = text.Replace("’", "'");
+                text = text.Replace("&#39;", "'");
+
                 Console.WriteLine("Processing " + filePath);
                 bool wasFound = false;
                 do

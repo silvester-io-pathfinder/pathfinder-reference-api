@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("382722a4-3802-4ede-a149-7312c9ddbf1e"), Type = TextBlockType.Text, Text = "A hazard with this trait is a spiritual echo, often of someone with a tragic death. Putting a haunt to rest often involves resolving the haunt’s unfinished business. A haunt that hasn’t been properly put to rest always returns after a time." };
+            yield return new TextBlock { Id = Guid.Parse("382722a4-3802-4ede-a149-7312c9ddbf1e"), Type = TextBlockType.Text, Text = "A hazard with this trait is a spiritual echo, often of someone with a tragic death. Putting a haunt to rest often involves resolving the haunt's unfinished business. A haunt that hasn't been properly put to rest always returns after a time." };
         }
 
         protected override SourcePage GetSourcePage()

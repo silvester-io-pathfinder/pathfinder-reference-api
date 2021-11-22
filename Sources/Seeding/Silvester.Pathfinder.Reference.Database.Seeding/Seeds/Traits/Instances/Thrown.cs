@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ff057606-9360-47b9-8a18-1df0b565f440"), Type = TextBlockType.Text, Text = "You can throw this weapon as a ranged attack, and it is a ranged weapon when thrown. A thrown weapon adds your Strength modifier to damage just like a melee weapon does. When this trait appears on a melee weapon, it also includes the range increment. Ranged weapons with this trait use the range increment specified in the weapon’s Range entry." };
+            yield return new TextBlock { Id = Guid.Parse("ff057606-9360-47b9-8a18-1df0b565f440"), Type = TextBlockType.Text, Text = "You can throw this weapon as a ranged attack, and it is a ranged weapon when thrown. A thrown weapon adds your Strength modifier to damage just like a melee weapon does. When this trait appears on a melee weapon, it also includes the range increment. Ranged weapons with this trait use the range increment specified in the weapon's Range entry." };
         }
 
         protected override SourcePage GetSourcePage()

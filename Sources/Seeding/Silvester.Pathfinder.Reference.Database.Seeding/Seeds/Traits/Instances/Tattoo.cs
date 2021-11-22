@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a8b0a1ef-c1c5-45d8-89d2-f127454592c9"), Type = TextBlockType.Text, Text = "A tattoo is a type of item that is drawn or cut into a creature’s skin and usually takes the form of images or symbols." };
+            yield return new TextBlock { Id = Guid.Parse("a8b0a1ef-c1c5-45d8-89d2-f127454592c9"), Type = TextBlockType.Text, Text = "A tattoo is a type of item that is drawn or cut into a creature's skin and usually takes the form of images or symbols." };
         }
 
         protected override SourcePage GetSourcePage()

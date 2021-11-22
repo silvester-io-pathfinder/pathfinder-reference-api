@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("010bf1d9-99c0-4223-a0e6-d0e05a2eba5d"), Type = TextBlockType.Text, Text = "The fatal trait includes a die size. On a critical hit, the weapon’s damage die increases to that die size instead of the normal die size, and the weapon adds one additional damage die of the listed size." };
+            yield return new TextBlock { Id = Guid.Parse("010bf1d9-99c0-4223-a0e6-d0e05a2eba5d"), Type = TextBlockType.Text, Text = "The fatal trait includes a die size. On a critical hit, the weapon's damage die increases to that die size instead of the normal die size, and the weapon adds one additional damage die of the listed size." };
         }
 
         protected override SourcePage GetSourcePage()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("358d4b3a-92c1-4c8c-9930-5bb3d09d2b72"), Type = TextBlockType.Text, Text = "Afflictions with the virulent trait are harder to remove. You must succeed at two consecutive saves to reduce a virulent affliction’s stage by 1. A critical success reduces a virulent affliction’s stage by only 1 instead of by 2." };
+            yield return new TextBlock { Id = Guid.Parse("358d4b3a-92c1-4c8c-9930-5bb3d09d2b72"), Type = TextBlockType.Text, Text = "Afflictions with the virulent trait are harder to remove. You must succeed at two consecutive saves to reduce a virulent affliction's stage by 1. A critical success reduces a virulent affliction's stage by only 1 instead of by 2." };
         }
 
         protected override SourcePage GetSourcePage()

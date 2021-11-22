@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fa67a9a9-cad1-403a-9ed6-94e3e6eadd95"), Type = TextBlockType.Text, Text = "Elementals are creatures directly tied to an element and native to the Elemental Planes. Elementals don’t need to breathe." };
+            yield return new TextBlock { Id = Guid.Parse("fa67a9a9-cad1-403a-9ed6-94e3e6eadd95"), Type = TextBlockType.Text, Text = "Elementals are creatures directly tied to an element and native to the Elemental Planes. Elementals don't need to breathe." };
         }
 
         protected override SourcePage GetSourcePage()

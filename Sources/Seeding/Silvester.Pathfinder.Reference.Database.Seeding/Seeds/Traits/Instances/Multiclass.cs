@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d79321ae-a3a2-41f4-a36b-61298b27d83e"), Type = TextBlockType.Text, Text = "Archetypes with the multiclass trait represent diversifying your training into another class’s specialties. You can’t select a multiclass archetype’s dedication feat if you are a member of the class of the same name." };
+            yield return new TextBlock { Id = Guid.Parse("d79321ae-a3a2-41f4-a36b-61298b27d83e"), Type = TextBlockType.Text, Text = "Archetypes with the multiclass trait represent diversifying your training into another class's specialties. You can't select a multiclass archetype's dedication feat if you are a member of the class of the same name." };
         }
 
         protected override SourcePage GetSourcePage()

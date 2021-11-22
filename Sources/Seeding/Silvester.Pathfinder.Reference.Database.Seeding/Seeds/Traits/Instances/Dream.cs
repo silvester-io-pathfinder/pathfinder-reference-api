@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c577192e-6ed8-4a0d-8c8f-d46459d18fee"), Type = TextBlockType.Text, Text = "Creatures native to the Dimension of Dreams can be any alignment and possess a diverse array of abilities, although those associated with the nightmare realm of Leng are almost always evil and immune to that realm’s freezing temperatures." };
+            yield return new TextBlock { Id = Guid.Parse("c577192e-6ed8-4a0d-8c8f-d46459d18fee"), Type = TextBlockType.Text, Text = "Creatures native to the Dimension of Dreams can be any alignment and possess a diverse array of abilities, although those associated with the nightmare realm of Leng are almost always evil and immune to that realm's freezing temperatures." };
         }
 
         protected override SourcePage GetSourcePage()

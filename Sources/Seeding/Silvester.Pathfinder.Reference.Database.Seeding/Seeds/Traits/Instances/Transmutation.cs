@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("608a4c37-012b-49bd-8dcc-450c7225a60a"), Type = TextBlockType.Text, Text = "Effects and magic items with this trait are associated with the transmutation school of magic, typically changing something’s form." };
+            yield return new TextBlock { Id = Guid.Parse("608a4c37-012b-49bd-8dcc-450c7225a60a"), Type = TextBlockType.Text, Text = "Effects and magic items with this trait are associated with the transmutation school of magic, typically changing something's form." };
         }
 
         protected override SourcePage GetSourcePage()

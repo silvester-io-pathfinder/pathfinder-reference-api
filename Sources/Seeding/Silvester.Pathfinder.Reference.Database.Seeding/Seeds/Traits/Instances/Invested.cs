@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("14b3b19f-8863-4bc6-9da8-15cd92097781"), Type = TextBlockType.Text, Text = "A character can wear only 10 magical items that have the invested trait. None of the magical effects of the item apply if the character hasn’t invested it, nor can it be activated, though the character still gains any normal benefits from wearing the physical item (like a hat keeping rain off their head)." };
+            yield return new TextBlock { Id = Guid.Parse("14b3b19f-8863-4bc6-9da8-15cd92097781"), Type = TextBlockType.Text, Text = "A character can wear only 10 magical items that have the invested trait. None of the magical effects of the item apply if the character hasn't invested it, nor can it be activated, though the character still gains any normal benefits from wearing the physical item (like a hat keeping rain off their head)." };
         }
 
         protected override SourcePage GetSourcePage()

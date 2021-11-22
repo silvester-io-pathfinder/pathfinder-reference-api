@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ca2fab94-ec42-48e8-bcd8-bf84398667aa"), Type = TextBlockType.Text, Text = "The weapon has multiple configurations that you can switch between using an Interact action. Typically, switching between configurations of a modular weapon allows it to deal different types of damage (listed in the trait, such as “modular B, P, or S”), though it’s possible for a modular weapon’s description to list more complicated configurations." };
+            yield return new TextBlock { Id = Guid.Parse("ca2fab94-ec42-48e8-bcd8-bf84398667aa"), Type = TextBlockType.Text, Text = "The weapon has multiple configurations that you can switch between using an Interact action. Typically, switching between configurations of a modular weapon allows it to deal different types of damage (listed in the trait, such as “modular B, P, or S”), though it's possible for a modular weapon's description to list more complicated configurations." };
         }
 
         protected override SourcePage GetSourcePage()

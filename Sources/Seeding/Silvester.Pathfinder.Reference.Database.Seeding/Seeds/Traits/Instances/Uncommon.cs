@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8712b4ec-4465-4980-af64-8520d757922e"), Type = TextBlockType.Text, Text = "Something of uncommon rarity requires special training or comes from a particular culture or part of the world. Some character choices give access to uncommon options, and the GM can choose to allow access for anyone. Less is known about uncommon creatures than common creatures. They typically can’t be summoned. The DC of Recall Knowledge checks related to these creature is increased by 2." };
+            yield return new TextBlock { Id = Guid.Parse("8712b4ec-4465-4980-af64-8520d757922e"), Type = TextBlockType.Text, Text = "Something of uncommon rarity requires special training or comes from a particular culture or part of the world. Some character choices give access to uncommon options, and the GM can choose to allow access for anyone. Less is known about uncommon creatures than common creatures. They typically can't be summoned. The DC of Recall Knowledge checks related to these creature is increased by 2." };
         }
 
         protected override SourcePage GetSourcePage()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("58e9cf9f-b2cb-404c-ab34-43fade68bb0e"), Type = TextBlockType.Text, Text = "The physical nature of a plane with this trait can’t be changed in any way." };
+            yield return new TextBlock { Id = Guid.Parse("58e9cf9f-b2cb-404c-ab34-43fade68bb0e"), Type = TextBlockType.Text, Text = "The physical nature of a plane with this trait can't be changed in any way." };
         }
 
         protected override SourcePage GetSourcePage()

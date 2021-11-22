@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("acb79433-e007-475c-87f4-616d32f8024b"), Type = TextBlockType.Text, Text = "The armor is flexible enough that it doesn’t hinder most actions. You don’t apply its check penalty to Acrobatics or Athletics checks." };
+            yield return new TextBlock { Id = Guid.Parse("acb79433-e007-475c-87f4-616d32f8024b"), Type = TextBlockType.Text, Text = "The armor is flexible enough that it doesn't hinder most actions. You don't apply its check penalty to Acrobatics or Athletics checks." };
         }
 
         protected override SourcePage GetSourcePage()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b6b4140d-73ea-4c5d-b73b-2f0350b89e47"), Type = TextBlockType.Text, Text = "Planes with this trait loop back on themselves when a creature reaches the plane’s edge." };
+            yield return new TextBlock { Id = Guid.Parse("b6b4140d-73ea-4c5d-b73b-2f0350b89e47"), Type = TextBlockType.Text, Text = "Planes with this trait loop back on themselves when a creature reaches the plane's edge." };
         }
 
         protected override SourcePage GetSourcePage()

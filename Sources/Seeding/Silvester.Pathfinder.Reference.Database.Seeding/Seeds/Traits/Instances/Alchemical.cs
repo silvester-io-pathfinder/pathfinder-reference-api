@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c56f73e-8fec-4975-8bb6-7430e8b702cc"), Type = TextBlockType.Text, Text = "Alchemical items are powered by reactions of alchemical reagents. Alchemical items aren’t magical and don’t radiate a magical aura." };
+            yield return new TextBlock { Id = Guid.Parse("7c56f73e-8fec-4975-8bb6-7430e8b702cc"), Type = TextBlockType.Text, Text = "Alchemical items are powered by reactions of alchemical reagents. Alchemical items aren't magical and don't radiate a magical aura." };
         }
 
         protected override SourcePage GetSourcePage()

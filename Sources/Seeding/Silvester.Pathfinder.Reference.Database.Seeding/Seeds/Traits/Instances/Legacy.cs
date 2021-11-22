@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("189c2680-9a03-4a89-9225-525e96e40ff5"), Type = TextBlockType.Text, Text = "Once you’ve played through the listed Adventure Path, these rare backgrounds can become available in your future campaigns after the events of this Adventure Path." };
+            yield return new TextBlock { Id = Guid.Parse("189c2680-9a03-4a89-9225-525e96e40ff5"), Type = TextBlockType.Text, Text = "Once you've played through the listed Adventure Path, these rare backgrounds can become available in your future campaigns after the events of this Adventure Path." };
         }
 
         protected override SourcePage GetSourcePage()

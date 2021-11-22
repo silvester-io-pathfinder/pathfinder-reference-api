@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("75bf6da2-1f43-4aa6-bb7a-2cedf3975b80"), Type = TextBlockType.Text, Text = "A mental effect can alter the target’s mind. It has no effect on an object or a mindless creature." };
+            yield return new TextBlock { Id = Guid.Parse("75bf6da2-1f43-4aa6-bb7a-2cedf3975b80"), Type = TextBlockType.Text, Text = "A mental effect can alter the target's mind. It has no effect on an object or a mindless creature." };
         }
 
         protected override SourcePage GetSourcePage()

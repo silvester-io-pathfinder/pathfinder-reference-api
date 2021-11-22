@@ -21,8 +21,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("820fde1a-0326-4641-ba15-c9cd38685443"), Type = TextBlockType.Text, Text = "Effects that slightly alter a creature’s form have the morph trait. Any Strikes specifically granted by a morph effect are magical. You can be affected by multiple morph spells at once, but if you morph the same body part more than once, the second morph effect attempts to counteract the first (in the same manner as two polymorph effects, described in that trait)." };
-            yield return new TextBlock { Id = Guid.Parse("ac8eed70-000e-4eae-a2c9-b3f546246661"), Type = TextBlockType.Text, Text = "Your morph effects might also end if you are polymorphed and the polymorph effect invalidates or overrides your morph effect. The GM determines which morph effects can be used together and which can’t." };
+            yield return new TextBlock { Id = Guid.Parse("820fde1a-0326-4641-ba15-c9cd38685443"), Type = TextBlockType.Text, Text = "Effects that slightly alter a creature's form have the morph trait. Any Strikes specifically granted by a morph effect are magical. You can be affected by multiple morph spells at once, but if you morph the same body part more than once, the second morph effect attempts to counteract the first (in the same manner as two polymorph effects, described in that trait)." };
+            yield return new TextBlock { Id = Guid.Parse("ac8eed70-000e-4eae-a2c9-b3f546246661"), Type = TextBlockType.Text, Text = "Your morph effects might also end if you are polymorphed and the polymorph effect invalidates or overrides your morph effect. The GM determines which morph effects can be used together and which can't." };
         }
 
         protected override SourcePage GetSourcePage()

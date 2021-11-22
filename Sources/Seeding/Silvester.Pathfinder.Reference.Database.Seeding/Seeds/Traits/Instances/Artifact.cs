@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d050f16d-16d9-47d0-b2e1-60b71b75b33f"), Type = TextBlockType.Text, Text = "Items with this trait are artifacts. These magic items can’t be crafted by normal means, and they can’t be damaged by normal means. Artifacts are always rare or unique." };
+            yield return new TextBlock { Id = Guid.Parse("d050f16d-16d9-47d0-b2e1-60b71b75b33f"), Type = TextBlockType.Text, Text = "Items with this trait are artifacts. These magic items can't be crafted by normal means, and they can't be damaged by normal means. Artifacts are always rare or unique." };
         }
 
         protected override SourcePage GetSourcePage()

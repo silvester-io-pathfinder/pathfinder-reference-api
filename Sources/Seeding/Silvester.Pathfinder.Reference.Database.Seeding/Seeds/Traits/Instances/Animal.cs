@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fe0b7000-8586-4a07-883d-e48ccda3ee4a"), Type = TextBlockType.Text, Text = "An animal is a creature with a relatively low intelligence. It typically doesn’t have an Intelligence ability modifier over –4, can’t speak languages, and can’t be trained in Intelligence-based skills." };
+            yield return new TextBlock { Id = Guid.Parse("fe0b7000-8586-4a07-883d-e48ccda3ee4a"), Type = TextBlockType.Text, Text = "An animal is a creature with a relatively low intelligence. It typically doesn't have an Intelligence ability modifier over –4, can't speak languages, and can't be trained in Intelligence-based skills." };
         }
 
         protected override SourcePage GetSourcePage()

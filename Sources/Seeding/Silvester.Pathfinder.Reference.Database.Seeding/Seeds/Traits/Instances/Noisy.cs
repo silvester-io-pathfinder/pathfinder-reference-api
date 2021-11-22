@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c020c2c-6e31-4f56-8527-e9a681c8ac49"), Type = TextBlockType.Text, Text = "This armor is loud and likely to alert others to your presence. The armor’s check penalty applies to Stealth checks even if you meet the required Strength score." };
+            yield return new TextBlock { Id = Guid.Parse("4c020c2c-6e31-4f56-8527-e9a681c8ac49"), Type = TextBlockType.Text, Text = "This armor is loud and likely to alert others to your presence. The armor's check penalty applies to Stealth checks even if you meet the required Strength score." };
         }
 
         protected override SourcePage GetSourcePage()

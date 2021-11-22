@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ce9b2967-7fb4-4e1c-a84e-dc894f250a84"), Type = TextBlockType.Text, Text = "These maneuvers work only as the first salvo on your turn. You can use an open only if you haven’t used an action with the attack or open trait yet this turn." };
+            yield return new TextBlock { Id = Guid.Parse("ce9b2967-7fb4-4e1c-a84e-dc894f250a84"), Type = TextBlockType.Text, Text = "These maneuvers work only as the first salvo on your turn. You can use an open only if you haven't used an action with the attack or open trait yet this turn." };
         }
 
         protected override SourcePage GetSourcePage()

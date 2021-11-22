@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("34c84246-8f5f-4086-bd3f-aa849911ae2f"), Type = TextBlockType.Text, Text = "This undead is made by animating a dead creature’s skeleton with negative energy." };
+            yield return new TextBlock { Id = Guid.Parse("34c84246-8f5f-4086-bd3f-aa849911ae2f"), Type = TextBlockType.Text, Text = "This undead is made by animating a dead creature's skeleton with negative energy." };
         }
 
         protected override SourcePage GetSourcePage()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dc4af3d6-9cda-4969-b373-eecce379ef0c"), Type = TextBlockType.Text, Text = "These constructs are mentally augmented by a fragment of a once-living creature’s soul." };
+            yield return new TextBlock { Id = Guid.Parse("dc4af3d6-9cda-4969-b373-eecce379ef0c"), Type = TextBlockType.Text, Text = "These constructs are mentally augmented by a fragment of a once-living creature's soul." };
         }
 
         protected override SourcePage GetSourcePage()

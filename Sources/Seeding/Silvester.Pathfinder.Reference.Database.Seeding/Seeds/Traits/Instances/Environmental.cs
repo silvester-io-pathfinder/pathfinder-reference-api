@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("436b528e-849e-4d26-b39e-684ec6fe5eeb"), Type = TextBlockType.Text, Text = "A hazard with this trait is something dangerous that’s part of the natural world, such as quicksand or harmful mold." };
+            yield return new TextBlock { Id = Guid.Parse("436b528e-849e-4d26-b39e-684ec6fe5eeb"), Type = TextBlockType.Text, Text = "A hazard with this trait is something dangerous that's part of the natural world, such as quicksand or harmful mold." };
         }
 
         protected override SourcePage GetSourcePage()
