@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Silvester.Pathfinder.Reference.Database.Effects.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;

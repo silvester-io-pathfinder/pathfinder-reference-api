@@ -10,6 +10,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public Guid OwnerId { get; set; }
         
         public string Name { get; set; } = default!;
+        public string? Requirements { get; set; }
 
         public string? Trigger { get; set; }
 
@@ -17,5 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public ActionType ActionType { get; set; } = default!;
 
         public ICollection<TextBlock> Effects { get; set; } = new List<TextBlock>();
+
+        //TODO: Add traits. Currently they're not seeded at all.
     }
 }

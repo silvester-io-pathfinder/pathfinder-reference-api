@@ -11,11 +11,14 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
     {
         public string Name { get; set; } = default!;
 
+        public string? Requirements { get; set; }
+
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();
         public ICollection<Trait> Traits { get; set; } = new List<Trait>();
 
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
+
 
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
