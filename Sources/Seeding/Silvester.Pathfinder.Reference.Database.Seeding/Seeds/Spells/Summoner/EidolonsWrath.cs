@@ -5,55 +5,42 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
-    public class XXTemplate : Template
+    public class EidolonsWrath : Template
     {
-        public static readonly Guid ID = Guid.Parse("df38d818-b024-4de9-8032-b68503d4e68f");
+        public static readonly Guid ID = Guid.Parse("f585a1b3-830d-43c2-af96-07df465b5c94");
 
         public override Spell GetSpell()
         {
             return new Spell
             {
                 Id = ID,
-                Name = "",
-                Level =1,
-                Range = "",
-                Area = "",
-                Duration = "",
+                Name = "Eidolon's Wrath",
+                Level = 3,
+                Area = "20-foot radius emanation around your eidolon.",
+                IsSavingThrowBasic = true,
                 SavingThrowStatId = SavingThrowStats.Instances.Reflex.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
-                ClassId = Classes.Instances.Druid.ID,
                 SpellTypeId = SpellTypes.Instances.Focus.ID,
-                MagicSchoolId = MagicSchools.Instances.Conjuration.ID
+                MagicSchoolId = MagicSchools.Instances.Evocation.ID,
+                ClassId = Classes.Instances.Summoner.ID
             };
         }
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6eb635ef-0073-4d2c-9284-51de64c7b620"), Type = TextBlockType.Text, Text = "" };
+            yield return new TextBlock { Id = Guid.Parse("0255404e-9d3e-44c9-9022-c86665e40660"), Type = TextBlockType.Text, Text = "Your eidolon releases a powerful energy attack that deals 5d6 damage of the type you chose when you took the Eidolon�s Wrath feat, with a basic Reflex save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("dce9e474-b334-48c9-8e59-98e0cb28b926"),
-                Level = "+2",
+                Id = Guid.Parse("3f8837e6-24e0-4923-8611-2cd5112f6ddd"),
+                Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("d317d911-87a6-4a66-9873-69af5a15ad11"), Type = TextBlockType.Text, Text = "" }
+                    new TextBlock { Id = Guid.Parse("3cef545a-929b-4c51-b2c7-73b0cf1e1bd9"), Type = TextBlockType.Text, Text = "The damage increases by 2d6." }
                 }
-            };
-        }
-
-        public override IEnumerable<RollableEffect> GetRollableEffects()
-        {
-            yield return new RollableEffect
-            {
-                Id = Guid.Parse("1df7b0ad-d152-4c58-bb78-304745588944"),
-                CriticalSuccess = "",
-                Success = "",
-                Failure = "",
-                CriticalFailure = ""
             };
         }
 
@@ -66,16 +53,16 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<Guid> GetTraits()
         {
             yield return Traits.Instances.Uncommon.ID;
-            yield return Traits.Instances.Conjuration.ID;
-            yield return Traits.Instances.Druid.ID;
-            yield return Traits.Instances.Fire.ID;
+            yield return Traits.Instances.Eidolon.ID;
+            yield return Traits.Instances.Evocation.ID;
+            yield return Traits.Instances.Summoner.ID;
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse("66ac42ef-ee8f-4593-a2d8-2687025dc7b3"),
+                Id = Guid.Parse("ba48b867-936d-4b5e-8580-00a1f1b0cea1"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = 144
             };

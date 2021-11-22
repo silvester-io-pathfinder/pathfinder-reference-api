@@ -5,10 +5,9 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
-    /*
-    public class XXTemplate : Template
+    /*public class XXTemplate : Template
     {
-        public static readonly Guid ID = Guid.Parse("27e1d69d-9ea2-452b-a4b4-c926c08c8d1b");
+        public static readonly Guid ID = Guid.Parse("a53c7674-f7d6-4738-a4d4-5ba936740d7b");
 
         public override Spell GetSpell()
         {
@@ -18,28 +17,32 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Name = "",
                 Level = ,
                 Range = "",
+                Duration = "",
+                Targets = "",
+                Area = "",
+                CastTime = "",
                 IsSavingThrowBasic = false,
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 SpellTypeId = SpellTypes.Instances.Spell.ID,
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
-                MagicSchoolId = MagicSchools.Instances.Necromancy.ID,
+                MagicSchoolId = MagicSchools.Instances.Evocation.ID,
             };
         }
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2376b8e1-5295-43d0-a7af-cabacd000a46"), Type = TextBlockType.Text, Text = "" };
+            yield return new TextBlock { Id = Guid.Parse("7cccc3e4-b731-4989-857b-d94c730caaa8"), Type = TextBlockType.Text, Text = "" };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse("90d3ac05-0218-492b-ae7e-d9061f5e5eff"),
-                Level = "3rd",
+                Id = Guid.Parse("3b78e1ae-3c57-4539-949c-58846e929877"),
+                Level = "+1",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("10ab6b8b-650a-4301-ae39-d67606d6c17b"), Type = TextBlockType.Text, Text = "" }
+                    new TextBlock {Id = Guid.Parse("e5c97d7e-b8ca-4ed4-b76f-4d34dc364045"), Type = TextBlockType.Text, Text = "" }
                 }
             };
         }
@@ -48,8 +51,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse("e71ca84b-b61c-4171-8962-00bb990a3c4d"),
-                CriticalSuccess = "",
+                Id = Guid.Parse("56cc0d4b-9052-4a25-b361-01c1baf968d6"),
+                CriticalSuccess = "The creature is unaffected.",
                 Success = "",
                 Failure = "",
                 CriticalFailure = ""
@@ -60,7 +63,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         {
             return new StaggeredEffect
             {
-                Id = Guid.Parse("ed7f0ab3-9dfb-4cea-8128-768714889e60"),
+                Id = Guid.Parse("fb30b280-8e84-4d31-a612-ddbdc116c397"),
                 DifficultyCheck = ,
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 MaximumDuration = "2 days.",
@@ -70,11 +73,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 {
                     new StaggeredEffectStage
                     {
-                        Id = Guid.Parse("0ee503cf-b4ce-4b33-9863-87bcb0c28a17"),
+                        Id = Guid.Parse("9c110e49-c391-40f8-b605-7eb4c7381587"),
                         Duration = "1 day",
                         Effects =
                         {
-                            new ConditionEffect { Id = Guid.Parse("fa1fa987-107c-4bbf-9d73-a34e01081a17"), ConditionId = Conditions.Instances.Drained.ID, Severity = 1}
+                            new ConditionEffect { Id = Guid.Parse("1723d6cf-37ce-4ad7-af1e-748cf75e8022"), ConditionId = Conditions.Instances.Drained.ID, Severity = 1}
                         }
                     },
                 }
@@ -84,21 +87,24 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<Guid> GetSpellComponents()
         {
+            yield return SpellComponents.Instances.Material.ID;
             yield return SpellComponents.Instances.Somatic.ID;
             yield return SpellComponents.Instances.Verbal.ID;
         }
 
         public override IEnumerable<Guid> GetMagicTraditions()
         {
+            yield return MagicTraditions.Instances.Arcane.ID;
             yield return MagicTraditions.Instances.Divine.ID;
             yield return MagicTraditions.Instances.Occult.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
         }
 
         public override IEnumerable<Guid> GetTraits()
         {
-            yield return Traits.Instances.Chaotic.ID;
+            yield return Traits.Instances.Evocation.ID;
             yield return Traits.Instances.Disease.ID;
-            yield return Traits.Instances.Evil.ID;
+            yield return Traits.Instances.Necromancy.ID;
             yield return Traits.Instances.Necromancy.ID;
         }
 
@@ -106,9 +112,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse("a05d2269-8583-428d-927d-74d7b046204f"),
-                SourceId = Sources.Instances.LostOmensGodsAndMagic.ID,
-                Page = 316
+                Id = Guid.Parse("ec3b1441-b677-4931-882f-3049898fd924"),
+                SourceId = Sources.Instances.SecretsOfMagic.ID,
+                Page = 
             };
         }
     }*/
